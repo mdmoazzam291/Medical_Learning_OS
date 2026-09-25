@@ -1,0 +1,74 @@
+name: R2 backup storage smoke test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  r2-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+
+    steps:
+      - name: Validate configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${AWS_ACCESS_KEY_ID:?Missing R2_ACCESS_KEY_ID repository secret}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing R2_SECRET_ACCESS_KEY repository secret}"
+          : "${R2_BUCKET:?Missing R2_BUCKET repository variable}"
+          : "${R2_ENDPOINT:?Missing R2_ENDPOINT repository variable}"
+          case "$R2_ENDPOINT" in
+            https://*.r2.cloudflarestorage.com) ;;
+            *)
+              echo "R2_ENDPOINT must be the Cloudflare R2 S3 endpoint."
+              exit 1
+              ;;
+          esac
+
+      - name: Ensure AWS CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v aws >/dev/null 2>&1; then
+            python -m pip install --disable-pip-version-check awscli
+          fi
+          aws --version
+
+      - name: Create non-sensitive canary
+        id: canary
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="smoke-tests/github-actions-r2.json"
+          printf '{"repository":"%s","run_id":"%s","run_attempt":"%s","timestamp_utc":"%s"}\n' \
+            "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            > "$RUNNER_TEMP/r2-canary.json"
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+
+      - name: Upload canary to R2
+        shell: bash
+        run: |
+          set -euo pipefail
+          aws s3 cp "$RUNNER_TEMP/r2-canary.json" "s3://$R2_BUCKET/${{ steps.canary.outputs.key }}" \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
+
+      - name: Verify round trip
+        shell: bash
+        run: |
+          set -euo pipefail
+          aws s3api head-object --bucket "$R2_BUCKET" --key "${{ steps.canary.outputs.key }}" \
+            --endpoint-url "$R2_ENDPOINT" >/dev/null
+          aws s3 cp "s3://$R2_BUCKET/${{ steps.canary.outputs.key }}" "$RUNNER_TEMP/r2-canary-downloaded.json" \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          cmp "$RUNNER_TEMP/r2-canary.json" "$RUNNER_TEMP/r2-canary-downloaded.json"
+          echo "R2 upload/read verification passed."
