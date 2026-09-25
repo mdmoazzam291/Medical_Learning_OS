@@ -87,3 +87,11 @@ The drill:
 The original `roles.sql` and full `data.sql` remain preserved and checksum-verified in the backup archive. The local drill deliberately excludes provider-managed Auth/Storage COPY blocks and does not apply managed role settings because the local Supabase stack already owns those objects and protects some internal tables/settings. Therefore this proves recoverability of the application's Postgres schema/data, not a byte-for-byte recreation of every Supabase-managed service.
 
 No paid Supabase branch was created for this drill.
+
+## Verified restore drill — 2026-09-25 UTC
+
+Workflow run [36183482247](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36183482247) passed using the existing backup prefix above. It verified the archive checksum, all SQL checksums and manifest, restored roles/schema/data transactionally into disposable local Supabase Postgres 17, confirmed RLS on four study tables, and compared their COPY output against the original backup data exactly (ignoring row order). Cleanup passed.
+
+The original roles dump requires the local `supabase_admin` account to reproduce hosted role grants; the normal local `postgres` role received SQLSTATE 42501. The archive was not modified. This is evidence for local logical recovery of this snapshot, not a hosted failover, full application recovery, or exhaustive authorization audit. Storage bytes, provider settings and migration-history coverage remain separate concerns.
+
+The restore workflow is manual-only and fixed to this verified snapshot. It reads existing R2 objects, never receives `SUPABASE_DB_URL`, and creates no hosted database. No dump artifacts are uploaded. It consumes standard GitHub runner minutes and R2 reads; remaining free allowances determine billing. The temporary branch-only push trigger used for the initial drill was removed. Define retention/deletion rules and broader recovery checks before recurring backups.
