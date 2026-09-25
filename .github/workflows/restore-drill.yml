@@ -1,0 +1,126 @@
+name: Zero-cost local restore drill
+
+on:
+  push:
+    branches: ["infra/zero-cost-restore-drill"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  restore-drill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+      BACKUP_PREFIX: supabase/2026/09/25/20260925T191515Z
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Validate R2 configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${AWS_ACCESS_KEY_ID:?Missing R2_ACCESS_KEY_ID}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing R2_SECRET_ACCESS_KEY}"
+          : "${R2_BUCKET:?Missing R2_BUCKET}"
+          : "${R2_ENDPOINT:?Missing R2_ENDPOINT}"
+
+      - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: latest
+
+      - name: Ensure AWS CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v aws >/dev/null 2>&1; then
+            python -m pip install --disable-pip-version-check awscli
+          fi
+
+      - name: Download and verify backup
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/restore"
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz"             "$RUNNER_TEMP/restore/backup.tar.gz"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz.sha256"             "$RUNNER_TEMP/restore/backup.tar.gz.sha256"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          expected="$(awk '{print $1}' "$RUNNER_TEMP/restore/backup.tar.gz.sha256")"
+          actual="$(sha256sum "$RUNNER_TEMP/restore/backup.tar.gz" | awk '{print $1}')"
+          test "$expected" = "$actual"
+          tar -C "$RUNNER_TEMP/restore" -xzf "$RUNNER_TEMP/restore/backup.tar.gz"
+          for file in roles.sql schema.sql data.sql SHA256SUMS manifest.json; do
+            test -s "$RUNNER_TEMP/restore/$file"
+          done
+          (
+            cd "$RUNNER_TEMP/restore"
+            sha256sum -c SHA256SUMS
+          )
+
+      - name: Start disposable local Supabase
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/local-supabase"
+          cd "$RUNNER_TEMP/local-supabase"
+          supabase init
+          supabase start
+
+      - name: Prepare application-data restore
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Local Supabase already owns provider-managed auth/storage tables and
+          # some of them intentionally reject direct writes. Keep the original
+          # data.sql checksum-verified, then exclude only auth/storage COPY blocks
+          # for this no-cost application-data recoverability drill.
+          awk '
+            /^COPY (auth\.|storage\.|"auth"\.|"storage"\.)/ { skip=1; next }
+            skip && /^\\\.$/ { skip=0; next }
+            !skip { print }
+          ' "$RUNNER_TEMP/restore/data.sql" > "$RUNNER_TEMP/restore/app-data.sql"
+          test -s "$RUNNER_TEMP/restore/app-data.sql"
+
+      - name: Restore logical dump
+        shell: bash
+        run: |
+          set -euo pipefail
+          db_url="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
+          # roles.sql remains preserved in the verified archive. The local stack
+          # already owns its managed roles, so this drill restores application
+          # schema + application data without mutating provider-managed roles.
+          psql \
+            --single-transaction \
+            --variable ON_ERROR_STOP=1 \
+            --file "$RUNNER_TEMP/restore/schema.sql" \
+            --command 'SET session_replication_role = replica' \
+            --file "$RUNNER_TEMP/restore/app-data.sql" \
+            --dbname "$db_url"
+
+      - name: Verify restored database
+        shell: bash
+        run: |
+          set -euo pipefail
+          db_url="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
+          psql "$db_url" --no-psqlrc --tuples-only --command "select current_database(), current_setting('server_version');"
+          psql "$db_url" --no-psqlrc --tuples-only --command "select count(*) from information_schema.tables where table_schema not in ('pg_catalog','information_schema');"
+          restored="$(psql "$db_url" --no-psqlrc --tuples-only --no-align --command "select count(*) || ':' || min(version) || ':' || max(version) from public.study_catalog;")"
+          test "$restored" = "1:0:0"
+          echo "Application restore invariant passed: study_catalog=$restored"
+          echo "Disposable local restore completed."
+
+      - name: Stop disposable stack
+        if: always()
+        shell: bash
+        run: |
+          cd "$RUNNER_TEMP/local-supabase" 2>/dev/null || exit 0
+          supabase stop --no-backup || true
