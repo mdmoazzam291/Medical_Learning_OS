@@ -1,0 +1,42 @@
+name: Deployed study API smoke test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      STUDY_API_URL: https://iyapppmeieqhflnzslao.supabase.co/functions/v1/study-api
+
+    steps:
+      - name: Unauthenticated request is rejected by function auth
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$RUNNER_TEMP/unauthorized.json"
+          code="$(curl --silent --show-error --output "$body" --write-out '%{http_code}' "$STUDY_API_URL/progress")"
+          test "$code" = "401"
+          grep -q '"error":"unauthorized"' "$body"
+
+      - name: Local learner app origin passes preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          headers="$RUNNER_TEMP/preflight.headers"
+          code="$(curl --silent --show-error --output /dev/null --dump-header "$headers" --write-out '%{http_code}'             -X OPTIONS             -H 'Origin: http://127.0.0.1:3000'             -H 'Access-Control-Request-Method: GET'             "$STUDY_API_URL/progress")"
+          test "$code" = "200"
+          grep -qi '^access-control-allow-origin: http://127.0.0.1:3000' "$headers"
+
+      - name: Unknown browser origin is rejected
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$RUNNER_TEMP/origin.json"
+          code="$(curl --silent --show-error --output "$body" --write-out '%{http_code}'             -H 'Origin: https://example.invalid'             "$STUDY_API_URL/progress")"
+          test "$code" = "403"
+          grep -q '"error":"origin_not_allowed"' "$body"
