@@ -27,3 +27,11 @@ The learner preview now runs as browser ES modules, a pure demo state machine an
 
 ## M04a server boundary
 `src/server/study-service.js` owns credential resolution, content import, sessions, scoring and transactions. `src/server/http-api.js` supplies a loopback-only, strict JSON interface with learner identity derived from bearer credentials. `scripts/api.js` and `scripts/admin.js` start/provision it. The medical catalog stays server-only. See [server contract](SERVER_STUDY.md) for limitations and release gates. SQLite is a local single-host adapter, not a cloud deployment decision.
+
+
+## M04b cloud account boundary
+The dedicated Supabase project is now the selected cloud identity/database boundary for M04b. Public browser configuration contains only the project URL and publishable key. Access/refresh sessions are learner credentials; database passwords and Supabase secret/service-role keys remain server-only.
+
+The hosted `study-api` Edge Function validates the learner JWT and then performs trusted study operations against the existing `study_*` schema. Writes use the live atomic mutation functions so retry/session invariants remain database-enforced. Browser code never submits learner ID, correctness, concept ID, event ID or authoritative timestamps.
+
+The current live catalog is empty. This intentionally decouples account integration from M04c medical-content review. Resend/custom SMTP and a real email-confirmed account test are still required before M04b is considered fully verified. See [cloud account contract](CLOUD_ACCOUNT.md).

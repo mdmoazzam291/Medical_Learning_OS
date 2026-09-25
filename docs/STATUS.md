@@ -1,6 +1,6 @@
 # Current status
 
-Updated: 2026-09-25 (Asia/Kolkata)
+Updated: 2026-09-26 (Asia/Kolkata)
 
 ## Completed
 - M00–M02: repository governance, validated learning events, canonical content/versioning and publication gates.
@@ -22,13 +22,21 @@ M04b: real account/session integration and connect the learner UI to the server.
 ## Not implemented
 Real accounts, browser-to-server study integration, cloud database, cross-device sync, authenticated reviewers, reviewed medical content, review scheduler, NeuralVault, AI, learner backup restoration and deployment. Operator-only catalog import exists; learner restore does not. This is a local software preview, not a production medical study app. Native iOS Safari verification remains outstanding. No entire ChatGPT project or external master roadmap has been imported; see PROJECT_CONTEXT.md for limits.
 
+## M04b account integration — 2026-09-26 IST
+- Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
+- Added browser-safe Supabase Auth/session adapter, cloud account UI and public project configuration. The local M03 UUID/evidence remains deliberately separate.
+- Browser receives only project URL, publishable key and the learner's own session tokens. Trusted scoring/writes remain server-side.
+- Verified live RLS shape before wiring: sessions, attempts and bookmarks are learner-readable by `auth.uid() = learner_id`; catalog has no direct browser policy.
+- CI run 36188026011 passed all foundation and responsive-browser checks after integration UI placement was corrected.
+- Remaining M04b gate: server-side verification of Supabase access tokens plus browser-to-server study calls against the live backend. Then test two-account isolation, refresh/logout and cross-device recovery. Resend SMTP and Sentry follow this identity gate.
+
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md and docs/STATUS.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Implement the next incomplete roadmap task with meaningful verification. Update context, status and decisions. Work only in this repository.”
 
 ## Infrastructure preparation — 2026-09-25
 - A separate Supabase Free project named `medical_learning_os` was created in the existing organization in `ap-south-1`; project ref `iyapppmeieqhflnzslao`. The creation cost check returned $0/month. The original `NEETPG2027` project remains separate and active.
 - GitHub, Supabase, PostHog, and Resend are connected to the ChatGPT workflow. PostHog has an unused default project; Resend has no configured sending domain. These connections do not imply that the learner app has been deployed or configured with provider credentials.
-- No migrations, API keys, RLS policies, Auth settings, or application deployment have been applied to the new Supabase project. The M04b implementation and verification remain next. Do not point the new app at NEETPG2027 or commit secret credentials.
+- The live Supabase project already has five study migrations, four `study_*` tables, learner-scoped RLS reads and atomic study mutation functions. The earlier "no migrations" statement was stale. Historical migration SQL was not committed at the time it was applied, so `supabase/migrations/README.md` records that provenance without fabricating old SQL. Do not point the app at NEETPG2027 or commit secret credentials.
 - Cloudflare R2 backup transport is private and verified end to end from GitHub Actions (run 36147165531). The first Supabase CLI logical backup also succeeded in run 36178061717 attempt 2, producing roles/schema/data dumps and uploading a checksummed archive to `supabase/2026/09/25/20260925T191515Z`. A no-paid-infrastructure local application-data restore drill passed in GitHub Actions run 36182059722. It verified R2 checksums, restored application schema/data into a disposable local Supabase stack, and confirmed the `study_catalog` source invariant. Provider-managed Auth/Storage restoration remains a separate disaster-recovery concern if those services later hold production data.
 
 ## Restore drill — 2026-09-25 UTC
@@ -43,3 +51,11 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 
 ## Weekly backups enabled — 2026-09-26 IST
 User authorized weekly backups. Schedule: Sunday 03:47 IST / Saturday 22:17 UTC (`17 22 * * 6`). First scheduled slot: 27 September 2026. Existing limits remain active; audit/restore workflows and cleanup remain manual/report-only. Scheduling is configured, not proof of the first scheduled run. Billing controls remain unverified.
+
+
+## M04b account integration — 2026-09-26
+- Added browser Supabase Auth/session adapter and an authenticated cloud-study adapter. Passwords are never persisted; only normalized access/refresh session data is stored in the browser.
+- Added `/web/account.html` as the account boundary linked from the existing learner shell. The M03 local demo remains isolated and is not silently migrated into cloud evidence.
+- Deployed Supabase Edge Function `study-api` version 1 with gateway JWT verification enabled. It independently resolves the authenticated learner and keeps server scoring/catalog access behind server-side Supabase credentials.
+- The cloud adapter covers questions, progress, export, sessions, answer, advance, cancel and bookmarks. The live catalog intentionally contains zero published questions, so no unreviewed medical content is exposed.
+- Unit/browser verification is code-level and uses mocked Auth/Edge responses; no real learner account was created. Next dependency: Resend/custom SMTP, then one real email-confirmed account test. This backend preparation does not mean the learner app is deployed.

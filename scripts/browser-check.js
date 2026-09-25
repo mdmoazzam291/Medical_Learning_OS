@@ -112,8 +112,35 @@ try {
   assert.equal((await page.request.get(origin + '/data/content-draft.json')).status(), 404);
   assert.equal((await page.request.get(origin + '/package.json')).status(), 404);
   await context.close();
+  // Account integration: no real user or email delivery is required in CI.
+  const accountContext = await browser.newContext({ viewport: { width: 820, height: 1000 } });
+  const accountPage = await accountContext.newPage();
+  activePage = accountPage;
+  accountPage.on('pageerror', e => errors.push(e.message));
+  await accountPage.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
+    const url = route.request().url();
+    if (url.includes('/auth/v1/token?grant_type=password')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ access_token: 'jwt-test', refresh_token: 'refresh-test', expires_at: 2100000000, user: { id: '11111111-1111-1111-1111-111111111111', email: 'learner@example.com', email_confirmed_at: '2026-09-25T00:00:00Z' } }) });
+    if (url.includes('/functions/v1/study-api/progress')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ attempts: 0, correct: 0, accuracy: null, concepts: [] }) });
+    if (url.includes('/functions/v1/study-api/questions')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ questions: [] }) });
+    if (url.includes('/auth/v1/logout')) return route.fulfill({ status: 204, body: '' });
+    return route.fulfill({ status: 404, contentType: 'application/json', body: JSON.stringify({ error: 'unexpected_test_route' }) });
+  });
+  await accountPage.goto(origin + '/web/account.html');
+  await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
+  const signIn = accountPage.locator('#signin-form');
+  await signIn.getByLabel('Email').fill('learner@example.com');
+  await signIn.getByLabel('Password').fill('strong-password');
+  await signIn.getByRole('button', { name: 'Sign in' }).click();
+  await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
+  assert.match(await accountPage.locator('.metrics').textContent(), /0Server attempts/);
+  assert.match(await accountPage.locator('.metrics').textContent(), /0Published questions/);
+  await accountPage.reload();
+  await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
+  await accountPage.getByRole('button', { name: 'Sign out' }).click();
+  await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
+  await accountContext.close();
   assert.deepEqual(errors, []);
-  console.log('Concurrent submit, corrupt data protection, private-file boundary and no browser errors passed');
+  console.log('Concurrent submit, corrupt data protection, private-file boundary, account session/cloud boundary and no browser errors passed');
 } catch (error) {
   if (activePage && !activePage.isClosed()) {
     console.error(await activePage.locator('body').innerText());
