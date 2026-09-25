@@ -24,10 +24,11 @@ Finish M04b with Resend-backed Supabase Auth email delivery, then exercise one r
 - Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
 - Browser receives only the project URL, publishable key and learner-owned session tokens. Passwords are not persisted. Database passwords and Supabase secret/service-role keys remain server-only.
 - `/web/account.html` is linked from the learner shell. The M03 local UUID/evidence remains deliberately separate and is not silently promoted into cloud evidence.
-- Deployed Supabase Edge Function `study-api` version 1 has gateway JWT verification enabled and independently resolves the authenticated learner.
+- Deployed Supabase Edge Function `study-api` version 3 uses explicit Supabase Auth token validation with gateway `verify_jwt=false`, which is required for the current publishable/secret-key model. It independently resolves the authenticated learner.
 - Cloud operations cover questions, progress, export, sessions, answer, advance, cancel and bookmarks. Learner identity, correctness, concept/event IDs and authoritative timestamps are server-derived.
 - Live `study_catalog` intentionally contains zero published questions, so account work cannot expose unreviewed medical content.
 - Existing study tables use learner-scoped RLS reads; trusted mutations remain server-only through atomic database functions.
+- Live smoke verification passed in GitHub Actions run `36188568697` attempt 2: unauthenticated calls return 401, the local learner-app origin passes CORS preflight, and an unknown browser origin is rejected with 403. The test also confirms required Edge Function server configuration is present.
 - Resend is connected to the workflow but currently has no verified sending domain. No real Auth confirmation email has therefore been validated.
 - This is backend/account integration preparation, not a deployed learner application.
 
