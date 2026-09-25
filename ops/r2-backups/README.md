@@ -1,6 +1,6 @@
 # R2 backup storage
 
-Status: **R2 transport, first logical backup and disposable local restore drill verified; recurring backups remain disabled**.
+Status: **R2 transport verified, first Supabase logical backup succeeded, and a no-paid-infrastructure local application-data restore drill passed**.
 
 The private Cloudflare R2 bucket is reserved for Medical Learning OS backups. GitHub Actions holds the S3 credentials as encrypted repository secrets and the non-sensitive bucket/endpoint values as repository variables. Public access stays disabled.
 
@@ -54,7 +54,7 @@ Verified R2 prefix:
 
 `supabase/2026/09/25/20260925T191515Z`
 
-This proves database dump creation and off-provider storage transfer. Recoverability of this snapshot was subsequently checked by the local restore drill below.
+This proves database dump creation and off-provider storage transfer. It still does not prove recoverability.
 
 ## Activation gate
 
@@ -68,6 +68,25 @@ Before enabling a schedule:
 Database dumps do not contain Supabase Storage object bytes, Edge Functions, Auth settings/API keys, Realtime settings, or other provider configuration outside Postgres. Those require separate backup/configuration procedures as they become used.
 
 Never commit database passwords, R2 credentials, service-role/secret keys, or dumps to the repository.
+
+
+## Zero-cost restore drill
+
+Workflow: `.github/workflows/restore-drill.yml`
+
+Verified run: https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36182059722
+
+The drill:
+- downloads the archived backup and checksum from private R2;
+- verifies the archive SHA-256 and the per-file checksums;
+- starts a disposable local Supabase stack on the GitHub runner;
+- restores the dumped application schema and application data;
+- verifies the restored `public.study_catalog` invariant against the source snapshot;
+- destroys the disposable local stack afterward.
+
+The original `roles.sql` and full `data.sql` remain preserved and checksum-verified in the backup archive. The local drill deliberately excludes provider-managed Auth/Storage COPY blocks and does not apply managed role settings because the local Supabase stack already owns those objects and protects some internal tables/settings. Therefore this proves recoverability of the application's Postgres schema/data, not a byte-for-byte recreation of every Supabase-managed service.
+
+No paid Supabase branch was created for this drill.
 
 ## Verified restore drill — 2026-09-25 UTC
 
