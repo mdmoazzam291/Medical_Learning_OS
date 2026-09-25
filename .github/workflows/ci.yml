@@ -33,6 +33,10 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/mlos-browser" --no-audit --no-fund playwright@1.56.1
           node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
       - name: Verify responsive study flows and storage
+        env:
+          MLOS_AUTH_MODE: supabase
+          MLOS_SUPABASE_URL: https://iyapppmeieqhflnzslao.supabase.co
+          MLOS_SUPABASE_PUBLISHABLE_KEY: sb_publishable_test_only
         run: |
           npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &
           mkdir -p "$RUNNER_TEMP/mlos-screenshots"
