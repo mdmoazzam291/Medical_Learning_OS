@@ -43,11 +43,10 @@ const exactFields = (value: Json, required: string[], optional: string[] = []) =
     Object.keys(value).some((key) => !required.includes(key) && !optional.includes(key))) fail(400, "invalid_fields");
 };
 
-function cors(req: Request) {
+function corsHeaders(req: Request) {
   const origin = req.headers.get("origin");
-  if (origin && !allowedOrigins.has(origin)) fail(403, "origin_not_allowed");
   return {
-    "Access-Control-Allow-Origin": origin && allowedOrigins.has(origin) ? origin : "http://127.0.0.1:3000",
+    ...(origin && allowedOrigins.has(origin) ? { "Access-Control-Allow-Origin": origin } : {}),
     "Access-Control-Allow-Headers": "authorization, apikey, content-type",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Max-Age": "86400",
@@ -55,11 +54,17 @@ function cors(req: Request) {
   };
 }
 
+function enforceOrigin(req: Request) {
+  const origin = req.headers.get("origin");
+  if (origin && !allowedOrigins.has(origin)) fail(403, "origin_not_allowed");
+  return corsHeaders(req);
+}
+
 function response(req: Request, status: number, payload: unknown) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
-      ...cors(req),
+      ...corsHeaders(req),
       "Content-Type": "application/json; charset=utf-8",
       "Cache-Control": "no-store",
       "X-Content-Type-Options": "nosniff"
@@ -129,8 +134,8 @@ function summarize(events: any[]) {
 
 Deno.serve(async (req: Request) => {
   try {
-    const corsHeaders = cors(req);
-    if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+    const allowedCorsHeaders = enforceOrigin(req);
+    if (req.method === "OPTIONS") return new Response("ok", { headers: allowedCorsHeaders });
     if (!supabaseUrl || !publishableKey || !secretKey) fail(500, "server_configuration_error");
 
     const authorization = req.headers.get("authorization") || "";
