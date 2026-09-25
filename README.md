@@ -16,7 +16,7 @@ A concept-centered medical learning system: study → answer → understand mist
 ## Current implementation
 Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. A responsive local web preview adds learner settings, dark mode, a live personal countdown, and a persisted nonclinical study demo with bookmarks, incorrect queue and JSON export. See [learner app contract](docs/LEARNER_APP.md).
 
-M04a adds a separate [local study API](docs/SERVER_STUDY.md): credential-scoped access, SQLite persistence, trusted scoring, version eligibility, safe retries and exports. It is not connected to the browser yet. Real accounts, reviewed medical content, cloud sync, scheduling and AI remain planned.
+M04a added the trusted local study API foundation. M04b now adds the Supabase Auth/cloud-account path and a deployed authenticated `study-api` Edge Function while keeping the M03 local demo isolated. A real email-confirmed learner flow is still the completion gate; reviewed medical content, production deployment, scheduling and AI remain later milestones.
 
 ## Run locally
 Requires Node.js 24 or later. No dependency installation or API keys required.
