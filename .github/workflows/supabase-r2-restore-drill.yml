@@ -115,12 +115,15 @@ jobs:
           supabase db start >/dev/null
           local_url=postgresql://postgres:postgres@127.0.0.1:54322/postgres
           pg_isready -h 127.0.0.1 -p 54322 -U postgres >/dev/null
-          if ! psql --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
-            --variable VERBOSITY=sqlstate --quiet --file "$RUNNER_TEMP/mlos-restore/roles.sql" \
-            --file "$RUNNER_TEMP/mlos-restore/schema.sql" \
+          # Hosted role grants need the disposable instance's internal administrator.
+          container=supabase_db_mlos-local-restore
+          docker cp "$RUNNER_TEMP/mlos-restore" "$container:/tmp/mlos-restore"
+          if ! docker exec "$container" psql --username supabase_admin --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
+            --variable VERBOSITY=sqlstate --quiet --file "/tmp/mlos-restore/roles.sql" \
+            --file "/tmp/mlos-restore/schema.sql" \
             --command 'SET session_replication_role = replica' \
-            --file "$RUNNER_TEMP/mlos-restore/data.sql" \
-            --dbname "$local_url" > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
+            --file "/tmp/mlos-restore/data.sql" \
+            --dbname postgres > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
             python3 - <<'PYERR'
           import os, re
           from pathlib import Path
