@@ -7,8 +7,8 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M00 | Project governance and memory | README, AI instructions, decision log, roadmap, working verification commands | DONE |
 | M01 | Learning data foundation | Versioned attempt contract and deterministic accuracy projection with retry protection | DONE |
 | M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | DONE |
-| M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | IN VERIFICATION |
-| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | PLANNED |
+| M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | DONE |
+| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | NEXT |
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | PLANNED |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | PLANNED |
@@ -30,8 +30,8 @@ M00 → M01 → M02 → M03 → M04 is the first delivery path. M05 and M06 foll
 - [x] Reject unpublished content from learner-facing selection.
 - [x] Document the review and update workflow; preserve earlier question versions.
 
-## Immediate M03 task
-Implemented the responsive shell, local storage/identity contract and nonclinical study-session path. Complete browser verification before marking M03 done. M04 remains planned for the real reviewed-content/server study loop.
+## Completed M03 / immediate M04 task
+M03 includes the responsive shell, local storage/identity contract and nonclinical study-session path, verified at phone/tablet/desktop Chromium sizes. M04 is next: authorized application services, server persistence, trusted scoring and reviewed medical content. Local demo progress is not production medical evidence.
 
 ## MVP release gate
 M02–M06 minimal paths work together; progress survives reload; data export works; errors do not lose attempts; content is reviewed; responsive flows are exercised; no secrets reach clients. Later systems are not release prerequisites.
