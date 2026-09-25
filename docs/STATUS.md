@@ -40,3 +40,6 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 - Retention plan keeps 30 days, newest seven complete pairs and the restore-tested snapshot. Cleanup is report-only; no objects or lifecycle policies were changed.
 - Eight tests and live read-only audit [36184446054](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36184446054) passed: 11,808 bytes, five objects, two pairs, zero cleanup candidates.
 - Both audit and backup remain manual-only. Next: account billing/usage controls and backup frequency before recurring activation. The guard does not enforce an account-wide spending cap.
+
+## Weekly backups enabled — 2026-09-26 IST
+User authorized weekly backups. Schedule: Sunday 03:47 IST / Saturday 22:17 UTC (`17 22 * * 6`). First scheduled slot: 27 September 2026. Existing limits remain active; audit/restore workflows and cleanup remain manual/report-only. Scheduling is configured, not proof of the first scheduled run. Billing controls remain unverified.

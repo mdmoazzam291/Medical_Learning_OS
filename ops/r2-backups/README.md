@@ -30,7 +30,7 @@ That proves the configured repository secrets, endpoint, bucket write and bucket
 
 ## Supabase logical backup
 
-`.github/workflows/supabase-r2-backup.yml` is manual-only until its first successful backup and restore drill.
+`.github/workflows/supabase-r2-backup.yml` runs weekly on Sunday at 03:47 IST (Saturday 22:17 UTC), with manual dispatch available.
 
 It uses the official Supabase CLI dump pattern and creates:
 
@@ -112,7 +112,7 @@ Implemented in `ops/r2-backups/storage_guard.py` and checked immediately before 
 | Single archive ceiling | 250,000,000 bytes; checksum maximum 4,096 bytes |
 | Storage class | Explicit Standard uploads |
 | Cleanup execution | Report-only; no deletion API or bucket lifecycle change |
-| Recurring backup/audit | Disabled; manual dispatch only |
+| Recurring backup/audit | Backup weekly Sunday 03:47 IST; audit manual-only |
 
 The inventory counts every object in this bucket, follows pagination and blocks uploads on incomplete/error responses. The gate includes the incoming archive and checksum, and does not subtract hypothetical cleanup savings. Backup and audit workflows share one concurrency group. Other writers can still race this check.
 
@@ -121,3 +121,6 @@ Verified read-only audit: [36184446054](https://github.com/mdmoazzam291/Medical_
 This is a bucket-specific upload control, not an account-wide billing cap. Other buckets, monthly operations, in-flight multipart storage and other upload paths are outside it. The read-only audit consumes listing operations and standard runner minutes. R2's Standard free allowances are account usage allowances, not a guaranteed zero invoice. See [R2 pricing](https://developers.cloudflare.com/r2/pricing/).
 
 No age-only R2 expiration rule is installed: such a rule could remove the last recoverable backup after a prolonged outage. Before enabling cleanup, review exact candidate objects and ensure a newer restore-tested snapshot exists. Before scheduling backups, review account usage/billing controls and agree on frequency.
+
+## Weekly activation — 2026-09-26 IST
+User explicitly authorized weekly backups. Cron `17 22 * * 6` runs on the default branch; first scheduled slot is 2026-09-27 03:47 IST. GitHub may delay scheduled execution. Existing upload limits and concurrency remain active. Cleanup remains report-only: backups accumulate until manually reviewed or upload limits stop new backups. Account billing settings have not been changed or verified. To disable recurrence, remove only the `schedule` block; retain `workflow_dispatch`.
