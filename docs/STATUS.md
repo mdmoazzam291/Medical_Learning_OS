@@ -29,6 +29,7 @@ Finish M04b with Resend-backed Supabase Auth email delivery, then exercise one r
 - Live `study_catalog` intentionally contains zero published questions, so account work cannot expose unreviewed medical content.
 - Existing study tables use learner-scoped RLS reads; trusted mutations remain server-only through atomic database functions.
 - Live smoke verification passed in GitHub Actions run `36188568697` attempt 2: unauthenticated calls return 401, the local learner-app origin passes CORS preflight, and an unknown browser origin is rejected with 403. The test also confirms required Edge Function server configuration is present.
+- Email-confirmation callback handling is implemented before Resend rollout: Auth fragments landing at the local site root are forwarded to the account surface, the access token is verified with Supabase Auth before persistence, callback errors create no session, and token-bearing URL fragments are immediately removed from browser history.
 - Resend is connected to the workflow but currently has no verified sending domain. No real Auth confirmation email has therefore been validated.
 - This is backend/account integration preparation, not a deployed learner application.
 
