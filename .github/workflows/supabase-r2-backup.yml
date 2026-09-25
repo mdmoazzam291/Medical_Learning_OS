@@ -1,0 +1,135 @@
+name: Supabase logical backup to R2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-r2-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Validate backup configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${SUPABASE_DB_URL:?Missing SUPABASE_DB_URL repository secret}"
+          : "${AWS_ACCESS_KEY_ID:?Missing R2_ACCESS_KEY_ID repository secret}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing R2_SECRET_ACCESS_KEY repository secret}"
+          : "${R2_BUCKET:?Missing R2_BUCKET repository variable}"
+          : "${R2_ENDPOINT:?Missing R2_ENDPOINT repository variable}"
+          case "$SUPABASE_DB_URL" in
+            postgres://*|postgresql://*) ;;
+            *)
+              echo "SUPABASE_DB_URL must be a PostgreSQL connection string."
+              exit 1
+              ;;
+          esac
+          case "$R2_ENDPOINT" in
+            https://*.r2.cloudflarestorage.com) ;;
+            *)
+              echo "R2_ENDPOINT must be the Cloudflare R2 S3 endpoint."
+              exit 1
+              ;;
+          esac
+
+      - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: latest
+
+      - name: Ensure AWS CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v aws >/dev/null 2>&1; then
+            python -m pip install --disable-pip-version-check awscli
+          fi
+          aws --version
+          supabase --version
+
+      - name: Create Supabase logical dump set
+        id: dump
+        shell: bash
+        run: |
+          set -euo pipefail
+          timestamp="$(date -u +%Y%m%dT%H%M%SZ)"
+          day="$(date -u +%Y/%m/%d)"
+          backup_dir="$RUNNER_TEMP/mlos-backup-$timestamp"
+          mkdir -p "$backup_dir"
+
+          supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/roles.sql" --role-only
+          supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/schema.sql"
+          supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/data.sql" --use-copy --data-only
+
+          for file in roles.sql schema.sql data.sql; do
+            test -s "$backup_dir/$file"
+          done
+
+          (
+            cd "$backup_dir"
+            sha256sum roles.sql schema.sql data.sql > SHA256SUMS
+          )
+
+          cat > "$backup_dir/manifest.json" <<EOF
+          {
+            "format": "supabase-cli-sql-v1",
+            "project_ref": "iyapppmeieqhflnzslao",
+            "repository": "$GITHUB_REPOSITORY",
+            "workflow_run_id": "$GITHUB_RUN_ID",
+            "workflow_run_attempt": "$GITHUB_RUN_ATTEMPT",
+            "created_at_utc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+
+          tar -C "$backup_dir" -czf "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             roles.sql schema.sql data.sql SHA256SUMS manifest.json
+          sha256sum "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             > "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz.sha256"
+
+          echo "timestamp=$timestamp" >> "$GITHUB_OUTPUT"
+          echo "object_prefix=supabase/$day/$timestamp" >> "$GITHUB_OUTPUT"
+          echo "archive=$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz" >> "$GITHUB_OUTPUT"
+          echo "checksum=$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz.sha256" >> "$GITHUB_OUTPUT"
+
+      - name: Upload backup archive to R2
+        shell: bash
+        run: |
+          set -euo pipefail
+          prefix="${{ steps.dump.outputs.object_prefix }}"
+          archive="${{ steps.dump.outputs.archive }}"
+          checksum="${{ steps.dump.outputs.checksum }}"
+
+          aws s3 cp "$archive" "s3://$R2_BUCKET/$prefix/backup.tar.gz"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "$checksum" "s3://$R2_BUCKET/$prefix/backup.tar.gz.sha256"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+
+      - name: Verify uploaded objects
+        shell: bash
+        run: |
+          set -euo pipefail
+          prefix="${{ steps.dump.outputs.object_prefix }}"
+          archive="${{ steps.dump.outputs.archive }}"
+
+          remote_size="$(aws s3api head-object             --bucket "$R2_BUCKET"             --key "$prefix/backup.tar.gz"             --endpoint-url "$R2_ENDPOINT"             --query ContentLength             --output text)"
+          local_size="$(stat -c %s "$archive")"
+          test "$remote_size" = "$local_size"
+
+          aws s3api head-object             --bucket "$R2_BUCKET"             --key "$prefix/backup.tar.gz.sha256"             --endpoint-url "$R2_ENDPOINT" >/dev/null
+
+          echo "Supabase backup uploaded and size-verified at $prefix."
