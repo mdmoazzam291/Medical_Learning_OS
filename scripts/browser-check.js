@@ -62,9 +62,9 @@ try {
     assert.equal(exported.data.events.length, 3);
     assert.equal(exported.data.settings.dailyGoal, 20);
     await page.getByRole('link', { name: 'Demo QBank' }).click();
-    await page.getByLabel('Show', { exact: true }).selectOption('incorrect');
+    await page.getByRole('combobox', { name: 'Question filter' }).selectOption('incorrect');
     assert.equal(await page.locator('.question-list article').count(), 1);
-    await page.getByLabel('Show', { exact: true }).selectOption('bookmarks');
+    await page.getByRole('combobox', { name: 'Question filter' }).selectOption('bookmarks');
     assert.equal(await page.locator('.question-list article').count(), 1);
     await page.getByLabel('Search demo questions').fill('no match');
     await page.getByRole('heading', { name: 'No questions here yet.' }).waitFor();
