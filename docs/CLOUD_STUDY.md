@@ -1,7 +1,8 @@
 # M04b cloud learner-state schema
 
 The dedicated `medical_learning_os` Supabase project (`iyapppmeieqhflnzslao`)
-has migration `20260925112056_study_state_v1`. Keep this migration with the
+has migrations `20260925112056_study_state_v1` and
+`20260925112441_study_attempt_session_fk_index`. Keep these with the
 application code; do not apply it to the separate NEETPG2027 project.
 
 `study_sessions` freezes a question-version queue and holds the current slot.
@@ -31,4 +32,6 @@ On 2026-09-25 the applied migration was confirmed on the dedicated project.
 All three tables were empty and had RLS enabled; the catalog check confirmed
 one owner-only SELECT policy per table, authenticated SELECT grants, no
 authenticated write grants and no anon SELECT grants. This is a schema/grant
-verification, not a real-user end-to-end test.
+verification, not a real-user end-to-end test. The Supabase security advisor
+returned no findings. Its foreign-key index notice was resolved by the second
+migration; unused-index notices are expected while the tables have no rows.
