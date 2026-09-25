@@ -1,7 +1,7 @@
 # Architecture
 
 ## Implemented
-A JavaScript ES module validates attempt events and projects accuracy by concept for one learner. It has no database, network calls or AI dependency. The example prints a synthetic result in the terminal.
+A JavaScript ES module validates attempt events and projects accuracy by concept for one learner. It has no database, network calls or AI dependency. The example prints a synthetic result in the terminal. A separate content module validates canonical concept/source/question records, preserves question revisions, and enforces publication eligibility. See [content lifecycle](CONTENT_WORKFLOW.md).
 
 ## Proposed application boundaries
 | Boundary | Responsibility |

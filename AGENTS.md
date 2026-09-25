@@ -4,7 +4,7 @@
 Work only in Medical_Learning_OS. Do not access, copy, merge, or modify the separate NEETPG2027 project without explicit user authorization. NEET-PG is an exam adapter in this product.
 
 ## Start each task
-Read README.md, docs/STATUS.md, docs/ROADMAP.md and relevant architecture/data contracts. Inspect the actual implementation before claiming a feature exists. This repository is the durable source of implementation truth; chat ideas are proposals until recorded and implemented.
+Read README.md, docs/PROJECT_CONTEXT.md, docs/STATUS.md, docs/ROADMAP.md and relevant architecture/data contracts. Always take relevant reference/context from the ChatGPT project named “medical learning os”; if a decision is not available in the register or current context, retrieve it before making a conflicting choice. Separate direct user decisions from prior assistant proposals, and state retrieval limits. Inspect the actual implementation before claiming a feature exists. This repository is the durable source of implementation truth; chat ideas are proposals until recorded and implemented.
 
 ## Implementation
 - Build the smallest complete learning loop before advanced personalization.

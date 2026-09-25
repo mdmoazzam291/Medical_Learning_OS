@@ -4,6 +4,8 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Start here
 - [Current status and next task](docs/STATUS.md)
+- [Project context and continuity](docs/PROJECT_CONTEXT.md)
+- [Content lifecycle](docs/CONTENT_WORKFLOW.md)
 - [Product scope](docs/PRODUCT.md)
 - [Implementation roadmap](docs/ROADMAP.md)
 - [Architecture](docs/ARCHITECTURE.md)
@@ -12,7 +14,7 @@ A concept-centered medical learning system: study → answer → understand mist
 - [AI contributor instructions](AGENTS.md)
 
 ## Current implementation
-Repository foundation and a dependency-free JavaScript domain module for validated question-attempt events and replayable accuracy summaries. This is not yet a web application. Authentication, database persistence, QBank UI, scheduling and AI are planned.
+Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. This is not yet a web application. Authentication, database persistence, QBank UI, scheduling and AI are planned.
 
 ## Run locally
 Requires Node.js 24 or later. No dependency installation or API keys required.

@@ -6,8 +6,8 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 |---|---|---|---|
 | M00 | Project governance and memory | README, AI instructions, decision log, roadmap, working verification commands | DONE |
 | M01 | Learning data foundation | Versioned attempt contract and deterministic accuracy projection with retry protection | DONE |
-| M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | NEXT |
-| M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | PLANNED |
+| M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | DONE |
+| M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | NEXT |
 | M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | PLANNED |
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | PLANNED |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
@@ -23,12 +23,15 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 ## Dependency rules
 M00 → M01 → M02 → M03 → M04 is the first delivery path. M05 and M06 follow the persisted core loop. M07 needs sufficient longitudinal data. M08 builds on content provenance and question versions. M09 needs reviewed sources and evaluations. M10 reuses content/versioning. M12/M13 wait for a useful individual product. M11 measurement design and M14 basic security start during M03; advanced research and scale arrive later.
 
-## Immediate M02 tasks
-- [ ] Define concept and question-version schemas with stable IDs and references.
-- [ ] Add a small original content fixture, clearly marked draft until medically reviewed.
-- [ ] Validate answer-option IDs, concept links, provenance and review status.
-- [ ] Reject unpublished content from learner-facing selection.
-- [ ] Document the review and update workflow; preserve earlier question versions.
+## Completed M02 tasks
+- [x] Define concept and question-version schemas with stable IDs and references.
+- [x] Add a small original content fixture, clearly marked draft until medically reviewed.
+- [x] Validate answer-option IDs, concept links, provenance and review status.
+- [x] Reject unpublished content from learner-facing selection.
+- [x] Document the review and update workflow; preserve earlier question versions.
+
+## Immediate M03 task
+Define the first-release screen and persistence contract, reconcile project UI proposals, then build a responsive shell with learner settings and a study-session path. Keep advanced algorithms outside the initial release.
 
 ## MVP release gate
 M02–M06 minimal paths work together; progress survives reload; data export works; errors do not lose attempts; content is reviewed; responsive flows are exercised; no secrets reach clients. Later systems are not release prerequisites.

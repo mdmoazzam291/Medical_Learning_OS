@@ -17,5 +17,8 @@ All fields are required and additional fields are rejected in v1. The contract i
 
 The summary counts attempts and correct answers per concept for a requested learner. Identical retries count once; conflicting duplicate IDs raise an error. Accuracy is null with no evidence. No mastery or retention inference is made.
 
+## Content catalog v1 (implemented)
+Concept, ContentSource, QuestionVersion and embedded ReviewDecision records are implemented in `src/domain/content.js`. See [field contracts and lifecycle](CONTENT_WORKFLOW.md).
+
 ## Planned entities
-Concept, ConceptRelation, ContentSource, QuestionVersion, ReviewDecision, StudySession, ReviewSchedule, PersonalNote, ExamAdapter and LearnerProjection. Use references to one canonical concept rather than duplicating it per subject. Track original/recalled/licensed PYQ provenance explicitly; never label generated questions as genuine PYQs.
+ConceptRelation, StudySession, ReviewSchedule, PersonalNote, ExamAdapter and richer LearnerProjection. Use references to one canonical concept rather than duplicating it per subject. Track original/recalled/licensed PYQ provenance explicitly; never label generated questions as genuine PYQs.
