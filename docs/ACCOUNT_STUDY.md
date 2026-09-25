@@ -16,9 +16,10 @@ the local environment. To use cloud learner-state storage, also set
 server-only secret key in the API process. Without that mode, study data stays
 in local SQLite. The server refuses cloud mode without verified Auth, the
 dedicated project URL and a server secret. Never place the secret in a browser
-bundle, repository, log or public configuration.
-Start `npm run start:api` and `npm start` in separate terminals with the same
-environment. Open `http://127.0.0.1:3000/web/account.html`.
+bundle, repository, log or public configuration. Start `npm run start:api` with
+the server-only secret in its environment; start `npm start` separately with
+only the shared Auth URL/publishable settings. Open
+`http://127.0.0.1:3000/web/account.html`.
 
 Email/password account creation is a development path. The project's built-in
 email provider has tight limits, and no verified Resend domain is configured.
@@ -36,7 +37,8 @@ unverifiable credentials. The old operator-issued credential path remains
 available only when `MLOS_AUTH_MODE` is not `supabase`, for local M04a tests.
 
 The account UI lists only published versions, starts/resumes a session,
-submits a stable per-session-slot idempotency key, displays the saved receipt, advances,
+submits a stable per-session-slot idempotency key, displays the saved receipt,
+advances,
 bookmarks and exports the account-scoped server record. The source fixture is
 still a draft, so a real account sees an empty QBank until M04c reviewers
 publish genuinely approved content. The M03 nonclinical demo remains a
