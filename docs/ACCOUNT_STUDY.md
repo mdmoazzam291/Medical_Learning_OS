@@ -25,6 +25,12 @@ Email/password account creation is a development path. The project's built-in
 email provider has tight limits, and no verified Resend domain is configured.
 Google OAuth is not enabled without its provider credentials and redirect
 configuration. Neither provider is represented as ready for public signup.
+The page can request a password reset link and complete a Supabase
+`PASSWORD_RECOVERY` callback with a new password, then signs out for a fresh
+login. Add the exact account-page callback URL to the dedicated project's
+Auth redirect allowlist before trying the email link; email delivery and the
+live callback have not yet been verified. The preview returns `/auth-config`
+only for this project's URL and an `sb_publishable_` key, never a server secret.
 
 ## Ownership
 
@@ -59,5 +65,7 @@ content and deployment remain.
 `npm run build:account`, `npm run check`, `npm test` validate the browser
 bundle, syntax, server identity boundary and cloud-adapter recovery with fakes.
 The account smoke route can be checked locally without creating users or
-sending email. A real email confirmation/sign-in and a browser study flow
-require configured Auth delivery and reviewed content; those are not claimed.
+sending email. Browser CI checks the reset request with a mocked Auth response;
+it does not send email or complete a real recovery callback. A real email
+confirmation/sign-in and a browser study flow require configured Auth delivery
+and reviewed content; those are not claimed.
