@@ -8,7 +8,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M01 | Learning data foundation | Versioned attempt contract and deterministic accuracy projection with retry protection | DONE |
 | M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | DONE |
 | M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | DONE |
-| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | NEXT |
+| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | IN PROGRESS |
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | PLANNED |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | PLANNED |
@@ -35,3 +35,10 @@ M03 includes the responsive shell, local storage/identity contract and nonclinic
 
 ## MVP release gate
 M02–M06 minimal paths work together; progress survives reload; data export works; errors do not lose attempts; content is reviewed; responsive flows are exercised; no secrets reach clients. Later systems are not release prerequisites.
+
+## M04 slices
+- M04a — DONE locally, CI pending: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests.
+- M04b — NEXT: real account/session integration and learner UI connection; no browser-stored operator credential shortcut.
+- M04c — PLANNED: authenticated reviewer workflow, genuinely reviewed initial medical set and full medical study-loop validation.
+
+M04 is not complete until all three slices and the medical learner flow pass their release gates.

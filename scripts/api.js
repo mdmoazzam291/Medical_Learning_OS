@@ -1,0 +1,11 @@
+import { mkdirSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { StudyService } from '../src/server/study-service.js';
+import { createStudyApi } from '../src/server/http-api.js';
+process.umask(0o077);
+const path = resolve(process.env.MLOS_DB_PATH || '.local/study.sqlite');
+mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
+const service = new StudyService(path);
+const server = createStudyApi(service);
+server.listen(Number(process.env.MLOS_API_PORT || 3001), '127.0.0.1', () => console.log(`Local study API: http://127.0.0.1:${server.address().port}`));
+for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => server.close(() => { service.close(); process.exit(0); }));
