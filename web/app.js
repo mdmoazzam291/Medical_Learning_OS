@@ -5,6 +5,7 @@ const app = document.querySelector('#app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let store, state, screen = 'today', filter = 'all', search = '', busy = false;
+let operations = Promise.resolve();
 const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('mlos-local') : null;
 const nav = [['today', 'Today'], ['qbank', 'Demo QBank'], ['progress', 'Progress'], ['plan', 'Study plan']];
 const button = (label, action, cls = '', extra = '') => `<button class="${cls}" data-action="${action}" ${extra}>${label}</button>`;
@@ -66,11 +67,15 @@ async function save(action, rerender = true) {
   if (rerender) render();
 }
 function sessionAction(type, extra = {}) { return { type, sessionId: state.session?.id, index: state.session?.index, ...extra }; }
-async function run(fn) {
-  if (busy) return;
-  busy = true; notice.hidden = true; app.setAttribute('aria-busy', 'true');
-  try { await fn(); } catch (error) { announce(`Not saved: ${error.message}. Your previous saved data is retained. Reload to retry.`); }
-  finally { busy = false; app.removeAttribute('aria-busy'); }
+function run(fn) {
+  // Serialize quick user actions instead of silently dropping input while a
+  // previous IndexedDB transaction is finishing. Errors never break the queue.
+  operations = operations.then(async () => {
+    busy = true; notice.hidden = true; app.setAttribute('aria-busy', 'true');
+    try { await fn(); } catch (error) { render(); announce(`Not saved: ${error.message}. Your previous saved data is retained. Reload to retry.`); }
+    finally { busy = false; app.removeAttribute('aria-busy'); }
+  });
+  return operations;
 }
 async function navigate(next) {
   if (screen === 'study' && next !== 'study' && currentQuestion(state)) await save(sessionAction('pause'), false);

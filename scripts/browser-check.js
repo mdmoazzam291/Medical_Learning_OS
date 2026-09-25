@@ -5,10 +5,12 @@ const { chromium } = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwrig
 const browser = await chromium.launch({ headless: true });
 const origin = process.env.APP_URL || 'http://127.0.0.1:3000';
 const errors = [];
+let activePage;
 try {
   for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
     const context = await browser.newContext({ viewport: { width, height }, acceptDownloads: true });
     const page = await context.newPage();
+    activePage = page;
     page.on('pageerror', e => errors.push(e.message));
     await page.goto(origin);
     await page.getByRole('heading', { name: 'Make the next answer count.' }).waitFor();
@@ -84,6 +86,7 @@ try {
   // Real IndexedDB concurrency, independent connections: duplicate submit counts once.
   const context = await browser.newContext();
   const page = await context.newPage();
+    activePage = page;
   await page.goto(origin);
   await page.getByRole('heading', { name: 'Make the next answer count.' }).waitFor();
   const result = await page.evaluate(async () => {
@@ -108,4 +111,11 @@ try {
   await context.close();
   assert.deepEqual(errors, []);
   console.log('Concurrent submit, corrupt data protection, private-file boundary and no browser errors passed');
+} catch (error) {
+  if (activePage && !activePage.isClosed()) {
+    console.error(await activePage.locator('body').innerText());
+    console.error('Browser errors:', errors);
+    if (process.env.SCREENSHOT_DIR) await activePage.screenshot({ path: `${process.env.SCREENSHOT_DIR}/failure.png`, fullPage: true });
+  }
+  throw error;
 } finally { await browser.close(); }
