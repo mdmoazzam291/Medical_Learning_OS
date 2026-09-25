@@ -3,10 +3,17 @@ import { createClient } from '@supabase/supabase-js';
 const root = document.querySelector('#account-app');
 const notice = document.querySelector('#account-notice');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-let auth, user, questions = [], progress, session, errorMessage = '', busy = false;
+let auth, user, questions = [], progress, session, errorMessage = '', busy = false, recovering = false;
 function message(value) { notice.textContent = value; }
 function render() {
   if (errorMessage) { root.innerHTML = `<section class="panel"><h1>Account study unavailable</h1><p>${esc(errorMessage)}</p><a href="/">Use the local demo</a></section>`; return; }
+  if (recovering) {
+    root.innerHTML = `<section class="panel"><h1>Set a new password</h1><p>Choose a new password for ${esc(user?.email || 'your account')}.</p>
+      <form id="recovery-form"><label>New password<input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label>Confirm new password<input name="confirmation" type="password" autocomplete="new-password" minlength="8" required></label>
+      <button class="primary" type="submit">Save new password</button></form></section>`;
+    return;
+  }
   if (!user) {
     root.innerHTML = `<div class="page-heading"><div><span class="eyebrow">ACCOUNT STUDY</span><h1>Sign in to study.</h1>
       <p>This account workspace is separate from the nonclinical local demo.</p></div></div>
@@ -14,6 +21,8 @@ function render() {
       <label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" required></label>
       <button class="primary" name="mode" value="signin" type="submit">Sign in</button>
       <button class="secondary" name="mode" value="signup" type="submit">Create account</button></form>
+      <form id="reset-request-form"><label>Forgot your password? Enter your email<input name="email" type="email" autocomplete="email" required></label>
+      <button class="text-button" type="submit">Send password reset link</button></form>
       <p class="muted">Confirmation email uses the project's limited development email service. A production sender is not configured.</p></section>`;
     return;
   }
@@ -55,7 +64,7 @@ async function run(action) {
   if (busy) return;
   busy = true; root.setAttribute('aria-busy', 'true'); message('');
   try { await action(); }
-  catch (error) { message(`Not saved: ${error.message}. Your previous saved evidence is retained.`); }
+  catch (error) { message(`Unable to complete request: ${error.message}. Your previous saved evidence is retained.`); }
   finally { busy = false; root.removeAttribute('aria-busy'); }
 }
 root.addEventListener('submit', event => {
@@ -70,6 +79,26 @@ root.addEventListener('submit', event => {
       form.reset();
       if (!data.session) message('Check your email to confirm the account, then sign in.');
       else { user = data.user; await reload(); }
+    }
+    if (form.id === 'reset-request-form') {
+      const email = new FormData(form).get('email');
+      const redirectTo = location.origin + location.pathname;
+      const { error } = await auth.auth.resetPasswordForEmail(email, { redirectTo });
+      if (error) throw error;
+      form.reset();
+      message('If this account can receive mail, a password reset link will arrive. Check your inbox and spam folder.');
+    }
+    if (form.id === 'recovery-form') {
+      if (!recovering) return;
+      const fields = new FormData(form), password = fields.get('password');
+      if (password !== fields.get('confirmation')) throw new Error('Passwords do not match');
+      const { error } = await auth.auth.updateUser({ password });
+      if (error) throw error;
+      const { error: signOutError } = await auth.auth.signOut();
+      if (signOutError) throw signOutError;
+      recovering = false; user = null;
+      await reload();
+      message('Password changed. Sign in with your new password.');
     }
     if (form.id === 'account-answer') {
       if (!session?.question || session.receipt) return;
@@ -104,7 +133,10 @@ try {
   if (!response.ok) throw new Error('Set up the dedicated account project and start both local servers.');
   const config = await response.json();
   auth = createClient(config.url, config.publishableKey, { auth: { storageKey: 'mlos-account-auth' } });
+  auth.auth.onAuthStateChange((event, current) => {
+    if (event === 'PASSWORD_RECOVERY') { recovering = true; user = current?.user || null; render(); }
+  });
   const { data: { session: current } } = await auth.auth.getSession();
   user = current?.user || null;
-  await reload();
+  if (recovering) render(); else await reload();
 } catch (error) { errorMessage = error.message; render(); }
