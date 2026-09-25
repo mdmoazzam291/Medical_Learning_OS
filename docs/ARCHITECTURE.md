@@ -15,7 +15,7 @@ A JavaScript ES module validates attempt events and projects accuracy by concept
 Start as a modular monolith. Choose the web framework, database, authentication and hosting when building M03; no vendor is locked in by this scaffold.
 
 ## Data flow
-Reviewed question version → learner answer → server validates/scorers answer → persist attempt with idempotency key → project learner summary → choose next action. Client-supplied correctness must never be trusted by a production API. The current validator enforces structural integrity only; scoring and authorization are not implemented.
+Reviewed question version → learner answer → server validates/scores answer → persist attempt with idempotency key → project learner summary → choose next action. Client-supplied correctness must never be trusted. M04a implements this application boundary with credential-scoped access and SQLite persistence; actual reviewed content, real accounts and browser integration remain pending.
 
 ## Production requirements
 Tenant isolation must be enforced in storage/services as well as projections. Persist events transactionally with a unique event ID and reject conflicting retries. Use event version migrations. Maintain rebuildable projections. Separate immutable source content from personal annotations. Support export and deletion, including rebuilding projections after deletion; append-only history does not override privacy requirements.
@@ -24,3 +24,6 @@ Offline support will need a durable outbox, retry-safe synchronization and confl
 
 ## M03 local preview boundary
 The learner preview now runs as browser ES modules, a pure demo state machine and an IndexedDB adapter. Read [learner app contract](LEARNER_APP.md) for scope and persistence guarantees. Demo data and client-side scoring are isolated nonclinical fixtures, not the production medical data flow described above. Production service/database/authentication decisions remain pending M04.
+
+## M04a server boundary
+`src/server/study-service.js` owns credential resolution, content import, sessions, scoring and transactions. `src/server/http-api.js` supplies a loopback-only, strict JSON interface with learner identity derived from bearer credentials. `scripts/api.js` and `scripts/admin.js` start/provision it. The medical catalog stays server-only. See [server contract](SERVER_STUDY.md) for limitations and release gates. SQLite is a local single-host adapter, not a cloud deployment decision.
