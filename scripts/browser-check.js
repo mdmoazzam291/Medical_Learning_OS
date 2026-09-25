@@ -120,6 +120,7 @@ try {
   await accountPage.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
     const url = route.request().url();
     if (url.includes('/auth/v1/token?grant_type=password')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ access_token: 'jwt-test', refresh_token: 'refresh-test', expires_at: 2100000000, user: { id: '11111111-1111-1111-1111-111111111111', email: 'learner@example.com', email_confirmed_at: '2026-09-25T00:00:00Z' } }) });
+    if (url.includes('/auth/v1/user')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ id: '22222222-2222-2222-2222-222222222222', email: 'confirmed@example.com', email_confirmed_at: '2026-09-26T00:00:00Z' }) });
     if (url.includes('/functions/v1/study-api/progress')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ attempts: 0, correct: 0, accuracy: null, concepts: [] }) });
     if (url.includes('/functions/v1/study-api/questions')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ questions: [] }) });
     if (url.includes('/auth/v1/logout')) return route.fulfill({ status: 204, body: '' });
@@ -136,6 +137,16 @@ try {
   assert.match(await accountPage.locator('.metrics').textContent(), /0Published questions/);
   await accountPage.reload();
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
+  await accountPage.getByRole('button', { name: 'Sign out' }).click();
+  await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
+
+  // A Supabase implicit confirmation landing on the site root is forwarded to
+  // the account boundary, verified against /auth/v1/user, then scrubbed from history.
+  await accountPage.goto(origin + '/#access_token=callback-jwt&refresh_token=callback-refresh&expires_in=3600&type=signup');
+  await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
+  assert.match(await accountPage.locator('.page-heading').textContent(), /confirmed@example.com/);
+  assert.equal(new URL(accountPage.url()).hash, '');
+  assert.match(accountPage.url(), /\/web\/account\.html$/);
   await accountPage.getByRole('button', { name: 'Sign out' }).click();
   await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
   await accountContext.close();
