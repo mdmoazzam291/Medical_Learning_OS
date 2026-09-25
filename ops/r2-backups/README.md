@@ -1,6 +1,6 @@
 # R2 backup storage
 
-Status: **R2 transport verified; database backup workflow staged but not yet credentialed or restore-tested**.
+Status: **R2 transport verified and first Supabase logical backup succeeded; restore drill not yet completed**.
 
 The private Cloudflare R2 bucket is reserved for Medical Learning OS backups. GitHub Actions holds the S3 credentials as encrypted repository secrets and the non-sensitive bucket/endpoint values as repository variables. Public access stays disabled.
 
@@ -46,15 +46,24 @@ Use a **Session pooler** PostgreSQL connection string for `SUPABASE_DB_URL` beca
 
 The current Supabase project is `iyapppmeieqhflnzslao`. Never point this workflow at the older NEETPG2027 project.
 
+## First successful database backup
+
+GitHub Actions run 36178061717, attempt 2, completed successfully on 2026-09-25 UTC. It created the Supabase CLI logical dump set, uploaded the archive and checksum to R2, and verified the remote archive size.
+
+Verified R2 prefix:
+
+`supabase/2026/09/25/20260925T191515Z`
+
+This proves database dump creation and off-provider storage transfer. It still does not prove recoverability.
+
 ## Activation gate
 
 Before enabling a schedule:
 
-1. Add `SUPABASE_DB_URL`.
-2. Run the backup workflow manually.
-3. Confirm the archive and checksum exist in R2.
-4. Perform a documented restore drill into a disposable target.
-5. Only then enable recurring backups and retention policy.
+1. Perform a documented restore drill into a disposable target.
+2. Validate key schemas/data and application-critical invariants after restore.
+3. Define retention and deletion rules.
+4. Only then enable recurring backups.
 
 Database dumps do not contain Supabase Storage object bytes, Edge Functions, Auth settings/API keys, Realtime settings, or other provider configuration outside Postgres. Those require separate backup/configuration procedures as they become used.
 
