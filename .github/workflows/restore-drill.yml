@@ -84,7 +84,7 @@ jobs:
           # data.sql checksum-verified, then exclude only auth/storage COPY blocks
           # for this no-cost application-data recoverability drill.
           awk '
-            /^COPY (auth|storage)\./ { skip=1; next }
+            /^COPY (auth\.|storage\.|"auth"\.|"storage"\.)/ { skip=1; next }
             skip && /^\\\.$/ { skip=0; next }
             !skip { print }
           ' "$RUNNER_TEMP/restore/data.sql" > "$RUNNER_TEMP/restore/app-data.sql"
