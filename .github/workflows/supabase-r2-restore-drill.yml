@@ -142,10 +142,32 @@ jobs:
               'public.study_attempts'::regclass, 'public.study_bookmarks'::regclass
             ) AND relrowsecurity")"
           test "$tables" = 4
-          catalog="$(psql --no-psqlrc --tuples-only --no-align --variable ON_ERROR_STOP=1 \
-            --dbname "$local_url" --command 'SELECT count(*) FROM public.study_catalog WHERE version > 0')"
-          test "$catalog" = 1
-          echo 'Restore drill passed: four protected study tables and the catalog record exist in the disposable local database.'
+          python3 - <<'PYCHECK'
+          import os, re, subprocess
+          from pathlib import Path
+          tables = {'study_catalog', 'study_sessions', 'study_attempts', 'study_bookmarks'}
+          verified = set()
+          lines = iter((Path(os.environ['RUNNER_TEMP']) / 'mlos-restore/data.sql').read_text().splitlines())
+          for line in lines:
+              match = re.fullmatch(r'COPY "?public"?\."?([a-z_]+)"? \(([a-z_, "\s]+)\) FROM stdin;', line)
+              if not match or match[1] not in tables:
+                  continue
+              name, columns = match.groups()
+              expected = []
+              for row in lines:
+                  if row == r'\.':
+                      break
+                  expected.append(row)
+              result = subprocess.run(['docker', 'exec', 'supabase_db_mlos-local-restore',
+                  'psql', '-U', 'supabase_admin', '-d', 'postgres', '--no-psqlrc',
+                  '--variable', 'ON_ERROR_STOP=1', '--command',
+                  f'COPY public."{name}" ({columns}) TO STDOUT'], capture_output=True, text=True)
+              assert result.returncode == 0, 'Restored table read failed'
+              assert sorted(result.stdout.splitlines()) == sorted(expected), 'Restored table data mismatch'
+              verified.add(name)
+          assert verified == tables, 'Missing study table COPY data in backup'
+          print('Restore drill passed: four RLS-enabled study tables match backup data exactly.')
+          PYCHECK
 
       - name: Remove disposable database and downloaded backup
         if: always()
