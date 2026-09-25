@@ -9,6 +9,7 @@
   "scripts": {
     "test": "node --test",
     "check": "node scripts/check.js",
-    "demo": "node examples/study-session.js"
+    "demo": "node examples/study-session.js",
+    "start": "node scripts/serve.js"
   }
 }

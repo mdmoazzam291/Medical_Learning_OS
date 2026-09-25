@@ -3,20 +3,20 @@
 Updated: 2026-09-25 (Asia/Kolkata)
 
 ## Completed
-- M00: repository foundation and durable project documents.
-- M01: validated attempt events, retry protection and per-learner accuracy summaries.
-- M02: canonical concept/source/question contracts, reference validation, provenance categories, immutable question revisions, review gates, publication and retirement.
-- Draft-only original nonclinical fixture; learner payload excludes answer keys.
-- Standing instruction to consult the “medical learning os” project saved in AGENTS.md and PROJECT_CONTEXT.md.
+- M00–M02: repository governance, validated learning events, canonical content/versioning and publication gates.
+- M03 complete: responsive Today, Demo QBank, Progress and Study plan; editable personal countdown, dark mode and random local learner identity.
+- Nonclinical demo loop: start/resume, persisted selection and answer, explanation, bookmarks, incorrect-latest queue, completion, descriptive accuracy and JSON export.
+- IndexedDB transactions atomically save session and event ledger; stable submission IDs prevent duplicates; failed/corrupt storage never silently resets data.
+- Project context reference rule preserved; M03 reconciliation and storage boundary documented.
 
 ## Verification
-16 local tests passed; npm run check passed including all JavaScript syntax and draft catalog validation; npm run demo passed. CI repeats those commands. Synthetic test approvals are not medical reviews and do not alter the fixture.
+22 local domain tests, npm run check and npm run demo passed. GitHub Actions passed the same checks plus Chromium flows at phone (390px), tablet (820px) and desktop (1440px) widths: countdown ticks, settings/theme reload, selection/answer reload, completion, queues, JSON export, quota failure recovery, concurrent submit deduplication and corrupt-data protection. No browser runtime errors were observed. See [verification run](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36098096484); it includes responsive screenshots. Local browser installation was unavailable, so browser verification ran in GitHub Actions. Native iOS Safari remains unverified.
 
 ## Next task
-M03: reconcile the first-release UI with project context, choose the application/persistence boundary and build the responsive learner shell. Then M04 connects it to a persisted study loop.
+M04: authenticated application boundary, server persistence, trusted medical scoring and a genuinely reviewed content set. Reuse the demo's interaction pattern while keeping demo evidence separate from clinical evidence.
 
 ## Not implemented
-Web UI, accounts, database, authenticated reviewers, reviewed medical content, review scheduler, AI, deployment and cross-device sync. The domain layer is not a production content-admin service. No entire ChatGPT project or external master roadmap has been imported; see PROJECT_CONTEXT.md for source limits.
+Accounts, cloud database, cross-device sync, authenticated reviewers, reviewed medical content, review scheduler, NeuralVault, AI, restore/import and deployment. This is a local software preview, not a production medical study app. Native iOS Safari verification remains outstanding. No entire ChatGPT project or external master roadmap has been imported; see PROJECT_CONTEXT.md for limits.
 
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md and docs/STATUS.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Implement the next incomplete roadmap task with meaningful verification. Update context, status and decisions. Work only in this repository.”
