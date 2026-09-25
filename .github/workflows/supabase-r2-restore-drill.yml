@@ -1,0 +1,147 @@
+name: Supabase R2 restore drill
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ops/restore-drill-20260925]
+    paths: [.github/workflows/supabase-r2-restore-drill.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download existing archive from R2
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_EC2_METADATA_DISABLED: "true"
+          R2_BUCKET: ${{ vars.R2_BUCKET }}
+          R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+        run: |
+          set -euo pipefail
+          : "${AWS_ACCESS_KEY_ID:?Missing R2 access key}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing R2 secret key}"
+          : "${R2_BUCKET:?Missing R2 bucket}"
+          : "${R2_ENDPOINT:?Missing R2 endpoint}"
+          case "$R2_ENDPOINT" in
+            https://*.r2.cloudflarestorage.com) ;;
+            *) exit 1 ;;
+          esac
+          if ! command -v aws >/dev/null 2>&1; then
+            python3 -m pip install --disable-pip-version-check awscli
+          fi
+          prefix=supabase/2026/09/25/20260925T191515Z
+          mkdir -p "$RUNNER_TEMP/mlos-restore"
+          aws s3 cp "s3://$R2_BUCKET/$prefix/backup.tar.gz" \
+            "$RUNNER_TEMP/mlos-restore/backup.tar.gz" \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "s3://$R2_BUCKET/$prefix/backup.tar.gz.sha256" \
+            "$RUNNER_TEMP/mlos-restore/backup.tar.gz.sha256" \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
+
+      - name: Verify archive, checksums and source project
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import json
+          import os
+          import re
+          import shutil
+          import tarfile
+
+          root = Path(os.environ['RUNNER_TEMP']) / 'mlos-restore'
+          archive = root / 'backup.tar.gz'
+          checksum = (root / 'backup.tar.gz.sha256').read_text().strip()
+          assert re.fullmatch(r'[0-9a-f]{64}  \S+', checksum), 'Invalid archive checksum format'
+          expected = checksum.split()[0]
+          digest = hashlib.sha256()
+          with archive.open('rb') as source:
+              for block in iter(lambda: source.read(1024 * 1024), b''):
+                  digest.update(block)
+          assert digest.hexdigest() == expected, 'R2 archive checksum mismatch'
+
+          names = {'roles.sql', 'schema.sql', 'data.sql', 'SHA256SUMS', 'manifest.json'}
+          with tarfile.open(archive, 'r:gz') as tar:
+              members = tar.getmembers()
+              assert len(members) == len(names), 'Unexpected archive member count'
+              assert {member.name for member in members} == names, 'Unexpected archive paths'
+              assert all(member.isfile() and member.size <= 100_000_000 for member in members), 'Unsafe archive member'
+              for member in members:
+                  with tar.extractfile(member) as source, (root / member.name).open('wb') as target:
+                      shutil.copyfileobj(source, target)
+
+          manifest = json.loads((root / 'manifest.json').read_text())
+          assert manifest['project_ref'] == 'iyapppmeieqhflnzslao', 'Wrong source project'
+          assert manifest['workflow_run_id'] == '36178061717', 'Wrong backup run'
+          assert manifest['workflow_run_attempt'] == '2', 'Wrong backup attempt'
+          lines = (root / 'SHA256SUMS').read_text().splitlines()
+          assert len(lines) == 3, 'Unexpected inner checksum count'
+          actual_names = set()
+          for line in lines:
+              match = re.fullmatch(r'([0-9a-f]{64})  (roles\.sql|schema\.sql|data\.sql)', line)
+              assert match, 'Invalid inner checksum entry'
+              digest, filename = match.groups()
+              actual_names.add(filename)
+              assert hashlib.sha256((root / filename).read_bytes()).hexdigest() == digest, 'SQL checksum mismatch'
+          assert actual_names == {'roles.sql', 'schema.sql', 'data.sql'}, 'Missing SQL dump'
+          print('Existing R2 backup and all five archive members verified.')
+          PY
+
+      - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: latest
+
+      - name: Restore only into disposable local Supabase database
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v psql >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+          mkdir -p "$RUNNER_TEMP/mlos-local-restore"
+          cd "$RUNNER_TEMP/mlos-local-restore"
+          supabase init --yes >/dev/null
+          sed -i 's/^major_version = .*/major_version = 17/' supabase/config.toml
+          supabase db start >/dev/null
+          local_url=postgresql://postgres:postgres@127.0.0.1:54322/postgres
+          pg_isready -h 127.0.0.1 -p 54322 -U postgres >/dev/null
+          if ! psql --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
+            --quiet --file "$RUNNER_TEMP/mlos-restore/roles.sql" \
+            --file "$RUNNER_TEMP/mlos-restore/schema.sql" \
+            --command 'SET session_replication_role = replica' \
+            --file "$RUNNER_TEMP/mlos-restore/data.sql" \
+            --dbname "$local_url" > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
+            echo 'Local restore failed. No live database was modified.'
+            exit 1
+          fi
+          tables="$(psql --no-psqlrc --tuples-only --no-align --variable ON_ERROR_STOP=1 \
+            --dbname "$local_url" --command "SELECT count(*) FROM pg_class WHERE oid IN (
+              'public.study_catalog'::regclass, 'public.study_sessions'::regclass,
+              'public.study_attempts'::regclass, 'public.study_bookmarks'::regclass
+            ) AND relrowsecurity")"
+          test "$tables" = 4
+          catalog="$(psql --no-psqlrc --tuples-only --no-align --variable ON_ERROR_STOP=1 \
+            --dbname "$local_url" --command 'SELECT count(*) FROM public.study_catalog WHERE version > 0')"
+          test "$catalog" = 1
+          echo 'Restore drill passed: four protected study tables and the catalog record exist in the disposable local database.'
+
+      - name: Remove disposable database and downloaded backup
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/mlos-local-restore/supabase/config.toml" ]; then
+            cd "$RUNNER_TEMP/mlos-local-restore"
+            supabase stop --no-backup || true
+          fi
+          rm -rf "$RUNNER_TEMP/mlos-restore"
+          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err"
