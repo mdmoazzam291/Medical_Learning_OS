@@ -1,6 +1,6 @@
 # R2 backup storage
 
-Status: **R2 transport verified and first Supabase logical backup succeeded; restore drill not yet completed**.
+Status: **R2 transport, first logical backup and disposable local restore drill verified; recurring backups remain disabled**.
 
 The private Cloudflare R2 bucket is reserved for Medical Learning OS backups. GitHub Actions holds the S3 credentials as encrypted repository secrets and the non-sensitive bucket/endpoint values as repository variables. Public access stays disabled.
 
@@ -54,7 +54,7 @@ Verified R2 prefix:
 
 `supabase/2026/09/25/20260925T191515Z`
 
-This proves database dump creation and off-provider storage transfer. It still does not prove recoverability.
+This proves database dump creation and off-provider storage transfer. Recoverability of this snapshot was subsequently checked by the local restore drill below.
 
 ## Activation gate
 
@@ -68,3 +68,11 @@ Before enabling a schedule:
 Database dumps do not contain Supabase Storage object bytes, Edge Functions, Auth settings/API keys, Realtime settings, or other provider configuration outside Postgres. Those require separate backup/configuration procedures as they become used.
 
 Never commit database passwords, R2 credentials, service-role/secret keys, or dumps to the repository.
+
+## Verified restore drill — 2026-09-25 UTC
+
+Workflow run [36183482247](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36183482247) passed using the existing backup prefix above. It verified the archive checksum, all SQL checksums and manifest, restored roles/schema/data transactionally into disposable local Supabase Postgres 17, confirmed RLS on four study tables, and compared their COPY output against the original backup data exactly (ignoring row order). Cleanup passed.
+
+The original roles dump requires the local `supabase_admin` account to reproduce hosted role grants; the normal local `postgres` role received SQLSTATE 42501. The archive was not modified. This is evidence for local logical recovery of this snapshot, not a hosted failover, full application recovery, or exhaustive authorization audit. Storage bytes, provider settings and migration-history coverage remain separate concerns.
+
+The restore workflow is manual-only and fixed to this verified snapshot. It reads existing R2 objects, never receives `SUPABASE_DB_URL`, and creates no hosted database. No dump artifacts are uploaded. It consumes standard GitHub runner minutes and R2 reads; remaining free allowances determine billing. The temporary branch-only push trigger used for the initial drill was removed. Define retention/deletion rules and broader recovery checks before recurring backups.

@@ -2,9 +2,6 @@ name: Supabase R2 restore drill
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ops/restore-drill-20260925]
-    paths: [.github/workflows/supabase-r2-restore-drill.yml]
 
 permissions:
   contents: read

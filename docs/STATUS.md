@@ -30,3 +30,7 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 - GitHub, Supabase, PostHog, and Resend are connected to the ChatGPT workflow. PostHog has an unused default project; Resend has no configured sending domain. These connections do not imply that the learner app has been deployed or configured with provider credentials.
 - No migrations, API keys, RLS policies, Auth settings, or application deployment have been applied to the new Supabase project. The M04b implementation and verification remain next. Do not point the new app at NEETPG2027 or commit secret credentials.
 - Cloudflare R2 backup transport is private and verified end to end from GitHub Actions (run 36147165531). The first Supabase CLI logical backup also succeeded in run 36178061717 attempt 2, producing roles/schema/data dumps and uploading a checksummed archive to `supabase/2026/09/25/20260925T191515Z`. A restore drill remains the gate before recurring scheduling.
+
+## Restore drill — 2026-09-25 UTC
+- Existing R2 snapshot `supabase/2026/09/25/20260925T191515Z` restored successfully into disposable local Supabase Postgres 17 in [run 36183482247](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36183482247). Archive/SQL integrity, four study-table data comparisons, RLS flags, and cleanup passed.
+- Restore workflow is manual-only. No hosted database was provisioned, no live database was modified, and recurring backups remain disabled pending retention rules. See `ops/r2-backups/README.md` for recovery scope and limitations.
