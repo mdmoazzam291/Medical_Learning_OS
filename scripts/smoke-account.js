@@ -34,6 +34,19 @@ try {
   assert.equal((await fetch(base + '/api/progress')).status, 401);
   assert.equal((await fetch(base + '/api/progress', { headers: { Authorization: 'Bearer too-short' } })).status, 401);
   assert.equal((await fetch(base + '/docs/STATUS.md')).status, 404);
+  const badKeyPort = await freePort();
+  const badKeyWeb = spawn(process.execPath, ['scripts/serve.js'], {
+    env: { ...env, PORT: String(badKeyPort), MLOS_SUPABASE_PUBLISHABLE_KEY: 'sb_secret_must_never_appear' }, stdio: 'ignore',
+  });
+  try {
+    let badConfig;
+    for (let attempt = 0; attempt < 40; attempt++) {
+      try { badConfig = await fetch(`http://127.0.0.1:${badKeyPort}/auth-config`); break; } catch {}
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    assert.equal(badConfig.status, 503);
+    assert.deepEqual(await badConfig.json(), { error: 'account_setup_required' });
+  } finally { badKeyWeb.kill(); }
   console.log('Account preview smoke passed: routes, config, unauthenticated API and private files');
 } finally {
   web.kill(); api.kill();
