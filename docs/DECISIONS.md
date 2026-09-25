@@ -42,3 +42,8 @@ Validate backup recoverability without creating a paid Supabase branch by restor
 
 ## ADR-011 — Disposable local restore verification (accepted, 2026-09-25)
 Validate the first existing R2 backup on a standard GitHub runner with local Supabase Postgres 17, rather than provisioning a hosted project. The user authorized included free R2 reads and Actions minutes with zero additional spending intended. The workflow receives R2 credentials only during download, no live database URL, restores original SQL as the local internal administrator, checks study data against the dump and RLS flags, and removes temporary data. Keep manual-only operation after the one-time branch trigger; do not equate this snapshot drill with complete hosted disaster recovery or guaranteed zero billing when free quotas are exhausted.
+
+## ADR-012 — Preserve recovery while bounding backup growth (accepted implementation, 2026-09-26)
+User authorized the next retention/storage step after the successful restore drill. Use a read-only retention plan retaining 30 days, the newest seven complete snapshot pairs, and the explicitly restore-tested snapshot. Unknown/incomplete objects remain retained. Avoid blanket age-based expiration because extended inactivity could otherwise erase all recovery points. No deletion is implemented.
+
+Before upload, inventory the entire private backup bucket with bounded pagination and fail closed if incomplete. Count the incoming archive/checksum against a 7 GB stop threshold, report from 5 GB, and cap an archive at 250 MB. Force Standard storage. Share the backup concurrency group. These are conservative bucket controls, not enforcement of account-wide free allowances. Keep schedules off pending billing/frequency decisions.

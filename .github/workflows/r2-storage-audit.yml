@@ -2,9 +2,6 @@ name: R2 storage and retention audit
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ops/backup-storage-guard]
-    paths: [.github/workflows/r2-storage-audit.yml]
 
 permissions:
   contents: read
