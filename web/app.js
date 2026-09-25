@@ -1,3 +1,8 @@
+const authFragment = new URLSearchParams(location.hash.startsWith('#') ? location.hash.slice(1) : '');
+if (['access_token', 'refresh_token', 'error', 'error_code', 'error_description'].some(key => authFragment.has(key))) {
+  location.replace('/web/account.html' + location.hash);
+}
+
 import { openStore } from '/src/adapters/local-store.js';
 import { currentQuestion, currentAttempt, demoQuestions, queue } from '/src/domain/demo-study.js';
 import { summarizeAttempts } from '/src/domain/learning-events.js';

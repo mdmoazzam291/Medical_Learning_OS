@@ -24,6 +24,15 @@ function cleanPassword(password) {
   return password;
 }
 
+function normalizedUser(value) {
+  if (!value || typeof value !== 'object' || typeof value.id !== 'string' || !value.id) return null;
+  return {
+    id: value.id,
+    email: value.email || null,
+    emailConfirmedAt: value.email_confirmed_at || null
+  };
+}
+
 function normalizeSession(value) {
   if (!value || typeof value !== 'object' || typeof value.access_token !== 'string' || typeof value.refresh_token !== 'string') return null;
   const expiresAt = Number(value.expires_at || 0) || Math.floor(Date.now() / 1000) + Number(value.expires_in || 3600);
@@ -31,12 +40,16 @@ function normalizeSession(value) {
     accessToken: value.access_token,
     refreshToken: value.refresh_token,
     expiresAt,
-    user: value.user && typeof value.user === 'object' ? {
-      id: value.user.id,
-      email: value.user.email || null,
-      emailConfirmedAt: value.user.email_confirmed_at || null
-    } : null
+    user: normalizedUser(value.user)
   };
+}
+
+function implicitParams(urlLike) {
+  let url;
+  try { url = new URL(String(urlLike)); } catch { throw new AuthError(400, 'invalid_callback_url'); }
+  const params = new URLSearchParams(url.hash.startsWith('#') ? url.hash.slice(1) : url.hash);
+  const hasAuthSignal = ['access_token', 'refresh_token', 'error', 'error_code', 'error_description'].some(key => params.has(key));
+  return hasAuthSignal ? params : null;
 }
 
 export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn = fetch, now = Date.now }) {
@@ -91,6 +104,27 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
   }
 
   return {
+    async consumeImplicitRedirect(urlLike) {
+      const params = implicitParams(urlLike);
+      if (!params) return { handled: false, session: read() };
+      if (params.get('error') || params.get('error_code')) {
+        const code = params.get('error_code') || params.get('error') || 'auth_callback_failed';
+        throw new AuthError(400, code, params.get('error_description') || code);
+      }
+      const session = normalizeSession({
+        access_token: params.get('access_token'),
+        refresh_token: params.get('refresh_token'),
+        expires_at: params.get('expires_at'),
+        expires_in: params.get('expires_in')
+      });
+      if (!session) throw new AuthError(400, 'invalid_auth_callback');
+      const user = await api('/auth/v1/user', { method: 'GET', accessToken: session.accessToken });
+      const normalized = normalizedUser(user);
+      if (!normalized) throw new AuthError(401, 'invalid_authenticated_user');
+      session.user = normalized;
+      write(session);
+      return { handled: true, session };
+    },
     async signUp(email, password) {
       const data = await api('/auth/v1/signup', { body: { email: cleanEmail(email), password: cleanPassword(password) } });
       const session = normalizeSession(data);

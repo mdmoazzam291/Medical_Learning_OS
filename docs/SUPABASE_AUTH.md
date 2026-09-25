@@ -35,3 +35,16 @@ The live shared catalog currently has zero published questions. This is intentio
 5. Configure Sentry for client/server failure capture after the real Auth path is proven.
 
 M04b is not DONE until the real email-confirmed path succeeds. None of this is evidence that the learner application itself is deployed.
+
+
+## Email-confirmation callback
+
+Hosted Supabase projects enable email confirmation by default. The client-only flow can return the new learner session in the redirect URL fragment after confirmation. The local root app now detects Auth callback fragments and forwards them to `/web/account.html`. The account adapter:
+
+1. parses only Auth-related fragment fields,
+2. rejects callback errors without persisting a session,
+3. validates the returned access token through `/auth/v1/user`,
+4. persists the session only after a real user is returned,
+5. removes the token-bearing fragment from browser history immediately.
+
+This closes a pre-Resend gap: a delivered confirmation link can now become a usable learner session. Production still requires the deployed site URL and account callback URL to be allow-listed in Supabase Auth URL Configuration.
