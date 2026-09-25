@@ -9,11 +9,12 @@ UTC. Ordinary HTTP requests return 404.
 ## Cloudflare Git import
 
 Connect `mdmoazzam291/Medical_Learning_OS` on `main` with Worker name
-`medical-learning-os-heartbeat`, root path
-`/ops/cloudflare-heartbeat`, no build command and deploy command
-`npx wrangler deploy`. Disable preview builds. Add a **Secret** named
-`MLOS_SUPABASE_SECRET_KEY` using a new named `sb_secret_` key from the
-dedicated Supabase project. Never put it in GitHub, client code or chat.
+`medical-learning-os`, root path `/ops/cloudflare-heartbeat`, no build
+command and deploy command `npx wrangler deploy`. Disable preview builds.
+This is the heartbeat Worker; deploy the learner app separately when ready.
+Add a **runtime Secret** named `MLOS_SUPABASE_SECRET_KEY` using a new named
+`sb_secret_` key from the dedicated Supabase project. Never put it in
+GitHub, client code or chat.
 
 The Worker sends the key in the `apikey` header only. Confirm successful
 Cron Events and Supabase API activity after deployment. A saved Worker
