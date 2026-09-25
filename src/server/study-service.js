@@ -1,6 +1,6 @@
 import { DatabaseSync } from 'node:sqlite';
 import { randomBytes, randomUUID, createHash } from 'node:crypto';
-import { isDeepStrictEqual } from 'node:util';
+import { validateCatalogTransition, CatalogTransitionError } from '../domain/catalog-transition.js';
 import { validateCatalog, selectPublishedQuestions, toLearnerQuestion } from '../domain/content.js';
 import { validateAttempt, summarizeAttempts } from '../domain/learning-events.js';
 
@@ -56,19 +56,8 @@ export class StudyService {
   importCatalog(input) {
     const next = validateCatalog(input);
     return this.transaction(() => {
-      const previous = this.catalog();
-      for (const source of previous.sources) {
-        if (!isDeepStrictEqual(next.sources.find(s => s.sourceId === source.sourceId), source)) fail(409, 'source_history_is_immutable');
-      }
-      for (const old of previous.questions) {
-        const q = next.questions.find(q => q.questionVersionId === old.questionVersionId);
-        const content = ({ status, reviews, publishedAt, ...rest }) => rest;
-        if (!q || !isDeepStrictEqual(content(old), content(q)) ||
-          old.reviews.some(r => !q.reviews.some(n => isDeepStrictEqual(n, r))) ||
-          (old.publishedAt !== null && old.publishedAt !== q.publishedAt) ||
-          ['draft', 'in_review', 'verified', 'published', 'retired'].indexOf(q.status) < ['draft', 'in_review', 'verified', 'published', 'retired'].indexOf(old.status)) fail(409, 'question_history_is_immutable');
-      }
-      for (const concept of previous.concepts) if (!next.concepts.some(c => c.conceptId === concept.conceptId)) fail(409, 'concept_history_required');
+      try { validateCatalogTransition(this.catalog(), next); }
+      catch (error) { if (error instanceof CatalogTransitionError) fail(409, error.code); throw error; }
       this.db.prepare('INSERT INTO catalog VALUES(1,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body').run(JSON.stringify(next));
       return { published: selectPublishedQuestions(next).length };
     });

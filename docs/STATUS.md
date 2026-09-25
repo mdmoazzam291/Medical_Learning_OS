@@ -9,13 +9,13 @@ Updated: 2026-09-25 (Asia/Kolkata)
 - IndexedDB transactions atomically save session and event ledger; stable submission IDs prevent duplicates; failed/corrupt storage never silently resets data.
 - Project context reference rule preserved; M03 reconciliation and storage boundary documented.
 - M04a implemented: separate learner-scoped local API, hashed/expiring operator credentials, SQLite event/session persistence, server scoring, eligible version selection, immutable receipts, safe retries, bookmarks, progress and export. No real learner credentials were provisioned during implementation.
-- M04b in progress: isolated Supabase Auth account UI and opt-in transactional Supabase learner-state adapter on a separate project. No real account or reviewed medical catalog has been exercised.
+- M04b in progress: isolated Supabase Auth account UI, opt-in transactional learner-state adapter and shared draft-only scoring catalog on a separate project. No real account or reviewed medical catalog has been exercised.
 
 ## Verification
 22 local domain tests, npm run check and npm run demo passed. GitHub Actions passed the same checks plus Chromium flows at phone (390px), tablet (820px) and desktop (1440px) widths: countdown ticks, settings/theme reload, selection/answer reload, completion, queues, JSON export, quota failure recovery, concurrent submit deduplication and corrupt-data protection. No browser runtime errors were observed. See [verification run](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36098096484); it includes responsive screenshots. Local browser installation was unavailable, so browser verification ran in GitHub Actions. Native iOS Safari remains unverified.
 
 ## Next task
-Finish M04b with a real Auth/REST account flow, cross-device recovery and a shared reviewed catalog. M04c then adds authenticated reviewers and genuinely reviewed medical content. Keep demo evidence separate; M04 overall is only partially implemented.
+Finish M04b with a real Auth/REST account flow and cross-device recovery. M04c then adds authenticated reviewers and genuinely reviewed medical content to the shared catalog. Keep demo evidence separate; M04 overall is only partially implemented.
 
 ## M04a verification
 36 local tests passed, including 14 new server/HTTP groups for authorization, learner isolation, expiry/revocation, scoring, source receipts, restart recovery, safe retries, concurrent requests, catalog retirement/immutability, failed writes, payload limits and sanitized errors. Syntax/catalog checks and terminal demo passed. [GitHub CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36100640997) passed backend checks and the unchanged phone/tablet/desktop browser regression suite. Only synthetic nonclinical catalogs were published inside temporary test databases.
@@ -43,8 +43,13 @@ Real account/browser study verification, actual cross-device recovery, authentic
 - Verified real database transitions and two simulated RLS identities inside rolled-back transactions; the cloud tables remain empty. The security advisor reported no findings. Automated fake-backed API tests exercise restart recovery, owner isolation, receipts and export. Real Auth + REST + browser on two devices and a genuinely reviewed catalog remain unverified. The API still binds to loopback, and catalog sharing, deletion and independent backups remain release work.
 - Verification: 40 local tests, syntax/catalog check and account smoke passed. [GitHub CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36130791410) passed those checks plus synthetic account-browser lost-response retry and receipt recovery at phone (390px), tablet (820px) and desktop (1440px) widths. These browser scenarios used mocked Auth/API responses; they do not verify live Supabase REST credentials or native iOS Safari.
 
+## M04b shared scoring catalog — 2026-09-25
+- Applied `20260925114912_shared_study_catalog` and `20260925115339_answer_catalog_version_gate` to the dedicated project. The single server-only catalog is empty at version 0. Cloud mode now reads it for scoring, so no local SQLite file determines question eligibility on that path. The operator import command accepts drafts only and compares versions to prevent stale overwrites; no content was imported.
+- Extracted shared immutable-history validation for local and cloud imports. An answer carries its scoring catalog version; the database verifies and locks that version until the attempt commits. Stale versions leave no evidence, while saved retries keep their original receipt.
+- Verified live SQL import conflicts and stale-answer behavior inside rolled-back transactions. The learner tables remain empty. Authenticated and anonymous roles have no catalog privileges or import-function access. Supabase's security advisor has one informational no-policy notice for this intentionally server-only RLS table. Local verification: 42 tests, syntax/catalog check and account smoke passed. Real account/REST and native iOS Safari remain unverified.
+
 ## Next task
-Exercise a real Auth account and cloud REST flow without fake medical content; then move the reviewed catalog to shared server storage before multi-host deployment. Do not claim M04b complete until actual account UI, cross-device recovery and deletion/backup gates are verified.
+Exercise a real Auth account and cloud REST flow without fake medical content. Do not claim M04b complete until actual account UI, cross-device recovery and deletion/backup gates are verified; M04c handles authenticated review before publication.
 
 ## Infrastructure preparation — 2026-09-25
 - A separate Supabase Free project named `medical_learning_os` was created in the existing organization in `ap-south-1`; project ref `iyapppmeieqhflnzslao`. The creation cost check returned $0/month. The original `NEETPG2027` project remains separate and active.

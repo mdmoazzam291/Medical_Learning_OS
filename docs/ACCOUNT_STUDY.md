@@ -38,16 +38,16 @@ available only when `MLOS_AUTH_MODE` is not `supabase`, for local M04a tests.
 
 The account UI lists only published versions, starts/resumes a session,
 submits a stable per-session-slot idempotency key, displays the saved receipt,
-advances,
-bookmarks and exports the account-scoped server record. The source fixture is
+advances, bookmarks and exports the account-scoped server record. The source fixture is
 still a draft, so a real account sees an empty QBank until M04c reviewers
 publish genuinely approved content. The M03 nonclinical demo remains a
 separate IndexedDB record and is never imported as medical evidence.
 
 In cloud mode, the API stores learner state in the dedicated project's
-RLS-protected tables through server-only transactional functions. A local
-SQLite file still holds the trusted content catalog; no medical content is
-published. Account recovery across service instances was simulated, and the
+RLS-protected tables through server-only transactional functions. Its shared
+catalog lives in the same project and is empty by default. The operator-only
+cloud import accepts drafts, not approvals or published content. No medical
+content is published. Account recovery across service instances was simulated, and the
 database functions were tested in a rolled-back transaction, but a real
 account on two devices has not yet been exercised. The API and static preview
 bind to 127.0.0.1 and must not be published as a production service. Deletion,

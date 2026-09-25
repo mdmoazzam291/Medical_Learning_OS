@@ -3,7 +3,9 @@
 The dedicated `medical_learning_os` Supabase project (`iyapppmeieqhflnzslao`)
 has migrations `20260925112056_study_state_v1`,
 `20260925112441_study_attempt_session_fk_index`, and
-`20260925113131_study_atomic_mutations`. Keep these with the
+`20260925113131_study_atomic_mutations`,
+`20260925114912_shared_study_catalog`, and
+`20260925115339_answer_catalog_version_gate`. Keep these with the
 application code; do not apply it to the separate NEETPG2027 project.
 
 `study_sessions` freezes a question-version queue and holds the current slot.
@@ -25,8 +27,13 @@ secret must never reach browser bundles, logs, GitHub or public responses.
 
 The cloud adapter preserves exact retry receipts, one answer per slot,
 versioned event history, content retirement behavior and account-scoped export.
-Its catalog remains in one local SQLite file; multiple application hosts need
-a shared, reviewed catalog before deployment. Verify actual authenticated
+In cloud mode it reads a single versioned catalog from Supabase on each study
+operation; no local SQLite file supplies scoring content. The server-only
+`import-draft` command validates catalog history and uses a version compare-and-
+swap write. It rejects reviews and publication until authenticated reviewers
+exist. Answers lock and verify their catalog version while committing, so a
+concurrent import cannot save evidence scored against a retired version.
+Verify actual authenticated
 multi-device recovery, full account UI and cross-learner isolation before
 switching hosting. Deletion and independent backups remain separate gates.
 
@@ -40,4 +47,8 @@ migration; unused-index notices are expected while the tables have no rows.
 The mutation functions passed start/answer/retry/advance/owner checks with
 synthetic users inside a rolled-back transaction. RLS SELECT visibility was
 checked under two simulated authenticated identities, then rolled back. All
-three tables remained empty. This does not replace a real Auth/REST run.
+three learner-state tables remained empty. The catalog stayed at empty version
+0 after rolled-back import and stale-answer checks. It has RLS and no client
+grants or client-callable import function. Supabase's advisor reports the
+intentional informational “RLS enabled, no policy” finding for this server-only
+table; no client policy is needed. This does not replace a real Auth/REST run.

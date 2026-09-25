@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { CloudStudyService } from '../src/server/cloud-study-service.js';
+import { CloudCatalogStore } from '../src/server/cloud-catalog.js';
 import { createStudyApi } from '../src/server/http-api.js';
 import { publishQuestion, recordReview, submitForReview } from '../src/domain/content.js';
 
@@ -32,7 +33,8 @@ function catalog() {
 // Minimal fake Data API: SQL transition semantics are separately tested on the
 // dedicated project inside rolled-back transactions, not trusted to this fake.
 function fakeCloud() {
-  const tables = { study_sessions: [], study_attempts: [], study_bookmarks: [] };
+  const tables = { study_sessions: [], study_attempts: [], study_bookmarks: [],
+    study_catalog: [{ id: 1, version: 0, body: { schemaVersion: 1, concepts: [], sources: [], questions: [] } }] };
   const from = table => {
     const state = { filters: [], orders: [], columns: '*' };
     const rows = () => {
@@ -47,6 +49,7 @@ function fakeCloud() {
       order(key) { state.orders.push([key]); return this; },
       range(a, b) { return Promise.resolve({ data: rows().slice(a, b + 1), error: null }); },
       maybeSingle() { return Promise.resolve({ data: rows()[0] || null, error: null }); },
+      single() { return Promise.resolve({ data: rows()[0] || null, error: null }); },
       upsert(row) { tables[table] = tables[table].filter(old => old.learner_id !== row.learner_id ||
         old.question_version_id !== row.question_version_id); tables[table].push(row); return Promise.resolve({ data: null, error: null }); },
       delete() { return { eq(key, value) { state.filters.push([key, value]); return this; },
@@ -57,6 +60,12 @@ function fakeCloud() {
     return query;
   };
   const rpc = async (name, arg) => {
+    if (name === 'study_import_catalog') {
+      const saved = tables.study_catalog[0];
+      if (saved.version !== arg.p_expected) return { data: { error: 'stale_catalog' }, error: null };
+      saved.version++; saved.body = structuredClone(arg.p_body);
+      return { data: { version: saved.version }, error: null };
+    }
     const learner = arg.p_learner, session = tables.study_sessions.find(row => row.id === arg.p_session && row.learner_id === learner);
     const ok = data => ({ data, error: null });
     if (name === 'study_start_session') {
@@ -75,6 +84,7 @@ function fakeCloud() {
         ? { receipt: retry.receipt } : { error: 'conflicting_retry' });
       if (session.closed || session.position !== arg.p_position) return ok({ error: 'stale_session' });
       if (tables.study_attempts.some(row => row.session_id === session.id && row.position === arg.p_position)) return ok({ error: 'answer_already_recorded' });
+      if (arg.p_receipt.catalogVersion !== tables.study_catalog[0].version) return ok({ error: 'catalog_changed' });
       tables.study_attempts.push({ id: arg.p_event.eventId, learner_id: learner, request_key: arg.p_request_key,
         session_id: session.id, position: arg.p_position, option_id: arg.p_option,
         event: arg.p_event, receipt: arg.p_receipt, recorded_at: arg.p_event.occurredAt });
@@ -94,9 +104,43 @@ function fakeCloud() {
   return { from, rpc, tables };
 }
 
+test('shared catalog admits drafts, rejects false reviews and prevents stale or destructive imports', async () => {
+  const cloud = fakeCloud(), first = new CloudCatalogStore(cloud), second = new CloudCatalogStore(cloud);
+  const draft = JSON.parse(readFileSync(new URL('../data/content-draft.json', import.meta.url), 'utf8'));
+  assert.deepEqual(await first.importDraft(draft), { version: 1, published: 0 });
+  assert.equal((await second.catalog()).questions[0].status, 'draft');
+  await assert.rejects(first.importDraft(catalog()), /authenticated_review_required/);
+  const changedSource = structuredClone(draft);
+  changedSource.sources[0].title = 'Changed source';
+  await assert.rejects(first.importDraft(changedSource), /source_history_is_immutable/);
+  const [a, b] = await Promise.allSettled([first.importDraft(draft), second.importDraft(draft)]);
+  assert.equal([a, b].filter(result => result.status === 'fulfilled').length, 1);
+  assert.match([a, b].find(result => result.status === 'rejected').reason.message, /stale_catalog/);
+  assert.equal((await second.read()).version, 2);
+});
+
+test('catalog changed during scoring rejects evidence and a fresh retry succeeds', async () => {
+  const cloud = fakeCloud(); cloud.tables.study_catalog[0].body = catalog();
+  const originalRpc = cloud.rpc;
+  let changed = false;
+  cloud.rpc = (name, args) => {
+    if (name === 'study_record_attempt' && !changed) { cloud.tables.study_catalog[0].version++; changed = true; }
+    return originalRpc(name, args);
+  };
+  const service = new CloudStudyService({ client: cloud, catalog: () => new CloudCatalogStore(cloud).read() });
+  const started = await service.start(one, {});
+  const input = { requestId: 'same-slot', position: 0, optionId: 'copies' };
+  await assert.rejects(service.answer(one, started.sessionId, input), /catalog_changed/);
+  assert.equal(cloud.tables.study_attempts.length, 0);
+  const saved = await service.answer(one, started.sessionId, input);
+  assert.equal(saved.catalogVersion, 1);
+  assert.equal(saved.event.correct, false);
+});
+
 test('cloud account API recovers receipts and progress across service instances and isolates owners', async t => {
   const cloud = fakeCloud(), content = catalog();
-  const service = () => new CloudStudyService({ client: cloud, catalog: () => content });
+  cloud.tables.study_catalog[0].body = content; // test-only synthetic review, never imported remotely
+  const service = () => new CloudStudyService({ client: cloud, catalog: () => new CloudCatalogStore(cloud).read() });
   let server = createStudyApi(service(), { authenticate: async token => token === 'one' ? one : token === 'two' ? two : null });
   const listen = async () => new Promise(resolve => server.listen(0, '127.0.0.1', () => resolve(`http://127.0.0.1:${server.address().port}`)));
   let base = await listen();

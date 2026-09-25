@@ -15,7 +15,7 @@ const check = ({ data, error }) => {
 };
 const rpcErrors = {
   session_not_found: 404, conflicting_retry: 409, stale_session: 409,
-  answer_already_recorded: 409, answer_required: 409,
+  answer_already_recorded: 409, answer_required: 409, catalog_changed: 409,
 };
 
 // Trusted server adapter. The client must use a server-only service-role key;
@@ -27,7 +27,11 @@ export class CloudStudyService {
     this.readCatalog = catalog;
     this.clock = clock;
   }
-  catalog() { return validateCatalog(this.readCatalog()); }
+  async snapshot() {
+    const snapshot = await this.readCatalog();
+    if (!Number.isSafeInteger(snapshot?.version)) fail(503, 'cloud_catalog_unavailable');
+    return { version: snapshot.version, body: validateCatalog(snapshot.body) };
+  }
   async rows(table, columns, learner, order) {
     const result = [];
     for (let offset = 0;; offset += 500) {
@@ -68,7 +72,7 @@ export class CloudStudyService {
   }
   async questions(learner, filter = 'all') {
     if (!['all', 'incorrect', 'bookmarks'].includes(filter)) fail(400, 'invalid_filter');
-    let questions = selectPublishedQuestions(this.catalog());
+    let questions = selectPublishedQuestions((await this.snapshot()).body);
     if (filter === 'bookmarks') {
       const ids = new Set(await this.bookmarks(learner));
       questions = questions.filter(q => ids.has(q.questionVersionId));
@@ -138,7 +142,7 @@ export class CloudStudyService {
       return retry.receipt;
     }
     if (row.closed || row.position !== input.position) fail(409, 'stale_session');
-    const version = row.question_version_ids[row.position], catalog = this.catalog();
+    const version = row.question_version_ids[row.position], snapshot = await this.snapshot(), catalog = snapshot.body;
     const q = selectPublishedQuestions(catalog).find(q => q.questionVersionId === version);
     if (!q) fail(409, 'question_no_longer_published');
     if (!q.options.some(option => option.optionId === input.optionId)) fail(400, 'invalid_option');
@@ -147,7 +151,7 @@ export class CloudStudyService {
       learnerId: learner, questionVersionId: version, conceptId: q.conceptLinks.find(l => l.role === 'primary').conceptId,
       occurredAt: new Date(now).toISOString(), correct: q.answerOptionId === input.optionId,
       durationMs: Math.max(0, now - new Date(row.question_started_at).getTime()) });
-    const receipt = { event, selectedOptionId: input.optionId, answerOptionId: q.answerOptionId,
+    const receipt = { event, catalogVersion: snapshot.version, selectedOptionId: input.optionId, answerOptionId: q.answerOptionId,
       explanation: q.explanation, sources: catalog.sources.filter(s => q.sourceIds.includes(s.sourceId))
         .map(({ sourceId, title, url, version: sourceVersion }) => ({ sourceId, title, url, version: sourceVersion })) };
     const saved = await this.rpc('study_record_attempt', { p_learner: learner, p_session: id,
