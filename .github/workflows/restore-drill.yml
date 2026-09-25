@@ -80,7 +80,17 @@ jobs:
         run: |
           set -euo pipefail
           db_url="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
-          psql             --single-transaction             --variable ON_ERROR_STOP=1             --file "$RUNNER_TEMP/restore/roles.sql"             --file "$RUNNER_TEMP/restore/schema.sql"             --command 'SET session_replication_role = replica'             --file "$RUNNER_TEMP/restore/data.sql"             --dbname "$db_url"
+          # roles.sql is preserved and checksum-verified in the archive, but the
+          # disposable local Supabase stack already owns managed roles. Applying
+          # platform role settings here can fail on protected parameters, so this
+          # drill validates schema + data recoverability against a fresh local stack.
+          psql \
+            --single-transaction \
+            --variable ON_ERROR_STOP=1 \
+            --file "$RUNNER_TEMP/restore/schema.sql" \
+            --command 'SET session_replication_role = replica' \
+            --file "$RUNNER_TEMP/restore/data.sql" \
+            --dbname "$db_url"
 
       - name: Verify restored database
         shell: bash
