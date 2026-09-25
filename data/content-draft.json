@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "concepts": [{"conceptId": "demo:canonical-concept", "label": "Canonical concept identity (nonclinical fixture)", "aliases": [], "subjectTags": ["system-demo"]}],
+  "sources": [{"sourceId": "demo:project-doctrine:v1", "title": "Original nonclinical fixture: one concept identity across views", "url": null, "version": "1", "rights": {"status": "owned", "evidence": "Original software demonstration written for this repository; no external medical material."}}],
+  "questions": [{
+    "questionId": "demo:concept-identity", "questionVersionId": "demo:concept-identity@1", "version": 1,
+    "supersedes": null, "authorId": "fixture-author", "changeReason": "Initial nonclinical draft",
+    "stem": "In this learning-system demonstration, how should two subject views reference the same concept?",
+    "options": [{"optionId": "same-id", "text": "Use one canonical concept ID"}, {"optionId": "copies", "text": "Create an unrelated concept copy for each view"}],
+    "answerOptionId": "same-id", "explanation": "The project models subjects as views over shared concept identities.",
+    "conceptLinks": [{"conceptId": "demo:canonical-concept", "role": "primary"}],
+    "sourceIds": ["demo:project-doctrine:v1"],
+    "provenance": {"kind": "original", "exam": null, "year": null, "evidence": "Original nonclinical system question; not a PYQ or reviewed medical content."},
+    "status": "draft", "reviews": [], "publishedAt": null
+  }]
+}
