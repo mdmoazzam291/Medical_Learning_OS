@@ -1,6 +1,8 @@
 name: R2 backup storage smoke test
 
 on:
+  push:
+    branches: ["infra/r2-smoke-verification"]
   workflow_dispatch:
 
 permissions:
