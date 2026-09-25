@@ -1,0 +1,137 @@
+name: Restore drill from R2 backup
+
+on:
+  push:
+    branches: ["infra/restore-drill-local"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  restore-drill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+      BACKUP_PREFIX: supabase/2026/09/25/20260925T191515Z
+      LOCAL_DB_URL: postgresql://postgres:postgres@127.0.0.1:54322/postgres
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Validate configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${AWS_ACCESS_KEY_ID:?Missing R2_ACCESS_KEY_ID repository secret}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing R2_SECRET_ACCESS_KEY repository secret}"
+          : "${R2_BUCKET:?Missing R2_BUCKET repository variable}"
+          : "${R2_ENDPOINT:?Missing R2_ENDPOINT repository variable}"
+          case "$R2_ENDPOINT" in
+            https://*.r2.cloudflarestorage.com) ;;
+            *) echo "Invalid R2 endpoint"; exit 1 ;;
+          esac
+
+      - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: latest
+
+      - name: Ensure client tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v aws >/dev/null 2>&1; then
+            python -m pip install --disable-pip-version-check awscli
+          fi
+          if ! command -v psql >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y postgresql-client
+          fi
+          aws --version
+          psql --version
+          supabase --version
+
+      - name: Download and verify backup
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/restore-download"
+          cd "$RUNNER_TEMP/restore-download"
+
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz" ./backup.tar.gz             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz.sha256" ./backup.tar.gz.sha256             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+
+          expected="$(awk '{print $1}' backup.tar.gz.sha256)"
+          actual="$(sha256sum backup.tar.gz | awk '{print $1}')"
+          test "$expected" = "$actual"
+
+          mkdir extracted
+          tar -xzf backup.tar.gz -C extracted
+          cd extracted
+          sha256sum -c SHA256SUMS
+          test -s roles.sql
+          test -s schema.sql
+          test -s data.sql
+          test -s manifest.json
+
+      - name: Start disposable local Supabase stack
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/restore-target"
+          cd "$RUNNER_TEMP/restore-target"
+          supabase init
+          supabase start
+
+          for attempt in {1..30}; do
+            if psql "$LOCAL_DB_URL" -Atqc "select 1" >/dev/null 2>&1; then
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Local Supabase database did not become ready."
+          exit 1
+
+      - name: Restore logical dump into disposable target
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/restore-download/extracted"
+
+          psql             --single-transaction             --variable ON_ERROR_STOP=1             --file roles.sql             --file schema.sql             --command 'SET session_replication_role = replica'             --file data.sql             --dbname "$LOCAL_DB_URL"
+
+      - name: Verify restored invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          study_rows="$(psql "$LOCAL_DB_URL" -Atqc "select count(*) from public.study_catalog")"
+          min_version="$(psql "$LOCAL_DB_URL" -Atqc "select min(version) from public.study_catalog")"
+          max_version="$(psql "$LOCAL_DB_URL" -Atqc "select max(version) from public.study_catalog")"
+          auth_rows="$(psql "$LOCAL_DB_URL" -Atqc "select count(*) from auth.users")"
+          bucket_rows="$(psql "$LOCAL_DB_URL" -Atqc "select count(*) from storage.buckets")"
+          object_rows="$(psql "$LOCAL_DB_URL" -Atqc "select count(*) from storage.objects")"
+
+          test "$study_rows" = "1"
+          test "$min_version" = "0"
+          test "$max_version" = "0"
+          test "$auth_rows" = "0"
+          test "$bucket_rows" = "0"
+          test "$object_rows" = "0"
+
+          echo "Restore drill passed: source invariants match the restored disposable target."
+
+      - name: Destroy disposable Supabase stack
+        if: always()
+        shell: bash
+        run: |
+          cd "$RUNNER_TEMP/restore-target" 2>/dev/null || exit 0
+          supabase stop --no-backup || true
