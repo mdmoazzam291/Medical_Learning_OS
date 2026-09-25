@@ -1,0 +1,8 @@
+{
+  "name": "medical-learning-os-heartbeat",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-25",
+  "triggers": {
+    "crons": ["17 0,8,16 * * *"]
+  }
+}
