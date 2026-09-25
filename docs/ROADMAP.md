@@ -37,7 +37,7 @@ M03 includes the responsive shell, local storage/identity contract and nonclinic
 M02–M06 minimal paths work together; progress survives reload; data export works; errors do not lose attempts; content is reviewed; responsive flows are exercised; no secrets reach clients. Later systems are not release prerequisites.
 
 ## M04 slices
-- M04a — DONE locally, CI pending: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests.
+- M04a — DONE: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests. Local and GitHub checks passed.
 - M04b — NEXT: real account/session integration and learner UI connection; no browser-stored operator credential shortcut.
 - M04c — PLANNED: authenticated reviewer workflow, genuinely reviewed initial medical set and full medical study-loop validation.
 
