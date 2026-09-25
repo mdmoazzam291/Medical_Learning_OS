@@ -29,3 +29,9 @@ Keep M03 untouched. Do not automatically move demo results into medical evidence
 
 ## ADR-008 — Isolated Free cloud project (accepted setup, 2026-09-25)
 Create a dedicated `medical_learning_os` Supabase project in the user's existing Free organization, after a $0/month project cost check, rather than reusing the `NEETPG2027` database. Keep distinct project URL, Auth tenant, database, RLS policies, API keys, migrations and deployments. The creation was verified as active; it is otherwise unconfigured. Free-plan pausing and lack of automatic backups remain operational risks. This setup does not authorize migration of older app data or a production release.
+
+
+## ADR-009 — External logical backup before cloud data migration (accepted, 2026-09-25)
+Use a private Cloudflare R2 bucket as an independent backup destination for the dedicated Medical Learning OS Supabase project. Keep R2 public access disabled and scope its service token to Object Read & Write on only the backup bucket. GitHub Actions is the orchestration boundary; credentials remain repository secrets.
+
+Verify transport separately before treating the system as backed up. The R2 canary round trip passed from GitHub Actions. For database backups, prefer Supabase CLI logical dumps of roles, schema and data rather than raw `pg_dump`, because the CLI applies Supabase-specific filtering for managed schemas and roles. Use the Session pooler connection string for IPv4-compatible CI access. Start manual-only, validate archive/checksum upload, complete a restore drill, and only then enable a recurring schedule and retention policy. Storage object bytes and provider configuration outside Postgres require separate backup paths if those services are later adopted.
