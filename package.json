@@ -1,0 +1,14 @@
+{
+  "name": "medical-learning-os",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/domain/learning-events.js && node --check examples/study-session.js && node --check tests/learning-events.test.js",
+    "demo": "node examples/study-session.js"
+  }
+}
