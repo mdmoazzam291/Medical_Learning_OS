@@ -48,7 +48,7 @@ try {
     await page.getByRole('button', { name: 'Start or resume session' }).click();
     await page.getByRole('radio', { name: 'Copies' }).check();
     await page.getByRole('button', { name: 'Check answer' }).click();
-    await page.locator('#account-notice').getByText(/Not saved/).waitFor();
+    await page.locator('#account-notice').getByText(/Unable to complete request/).waitFor();
     await page.getByRole('button', { name: 'Check answer' }).click();
     await page.getByRole('heading', { name: 'Incorrect' }).waitFor();
     assert.equal(requests.length, 2);
@@ -62,5 +62,27 @@ try {
     assert.deepEqual(errors, []);
     await context.close();
     console.log(`${name}: account retry, receipt recovery, completion and responsive layout passed`);
+    const resetContext = await browser.newContext({ viewport: { width, height } });
+    const resetPage = await resetContext.newPage();
+    const resetErrors = [], resetRequests = [];
+    resetPage.on('pageerror', error => resetErrors.push(error.message));
+    await resetPage.route('**/auth-config', route => reply(route, {
+      url: 'https://iyapppmeieqhflnzslao.supabase.co', publishableKey: 'sb_publishable_test_only',
+    }));
+    await resetPage.route('**/auth/v1/recover**', route => {
+      resetRequests.push({ url: route.request().url(), body: route.request().postDataJSON() });
+      return reply(route, {});
+    });
+    await resetPage.goto(origin + '/web/account.html');
+    await resetPage.getByRole('heading', { name: 'Sign in to study.' }).waitFor();
+    await resetPage.locator('#reset-request-form input[name=email]').fill('learner@example.invalid');
+    await resetPage.getByRole('button', { name: 'Send password reset link' }).click();
+    await resetPage.locator('#account-notice').getByText(/If this account can receive mail/).waitFor();
+    assert.equal(resetRequests.length, 1);
+    assert.equal(resetRequests[0].body.email, 'learner@example.invalid');
+    assert.equal(new URL(resetRequests[0].url).searchParams.get('redirect_to'), origin + '/web/account.html');
+    assert.deepEqual(resetErrors, []);
+    await resetContext.close();
+    console.log(`${name}: password reset request passed`);
   }
 } finally { await browser.close(); }
