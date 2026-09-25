@@ -34,3 +34,9 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 ## Restore drill — 2026-09-25 UTC
 - Existing R2 snapshot `supabase/2026/09/25/20260925T191515Z` restored successfully into disposable local Supabase Postgres 17 in [run 36183482247](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36183482247). Archive/SQL integrity, four study-table data comparisons, RLS flags, and cleanup passed.
 - Restore workflow is manual-only. No hosted database was provisioned, no live database was modified, and recurring backups remain disabled pending retention rules. See `ops/r2-backups/README.md` for recovery scope and limitations.
+
+## Backup storage controls — 2026-09-26 IST
+- Added pre-upload storage guard: notice at projected 5 GB, stop at 7 GB, 250 MB archive ceiling, explicit Standard storage.
+- Retention plan keeps 30 days, newest seven complete pairs and the restore-tested snapshot. Cleanup is report-only; no objects or lifecycle policies were changed.
+- Eight tests and live read-only audit [36184446054](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36184446054) passed: 11,808 bytes, five objects, two pairs, zero cleanup candidates.
+- Both audit and backup remain manual-only. Next: account billing/usage controls and backup frequency before recurring activation. The guard does not enforce an account-wide spending cap.
