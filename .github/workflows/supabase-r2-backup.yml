@@ -116,8 +116,10 @@ jobs:
           archive="${{ steps.dump.outputs.archive }}"
           checksum="${{ steps.dump.outputs.checksum }}"
 
-          aws s3 cp "$archive" "s3://$R2_BUCKET/$prefix/backup.tar.gz"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
-          aws s3 cp "$checksum" "s3://$R2_BUCKET/$prefix/backup.tar.gz.sha256"             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          python3 ops/r2-backups/storage_guard.py --archive "$archive" --checksum "$checksum"
+
+          aws s3 cp "$archive" "s3://$R2_BUCKET/$prefix/backup.tar.gz"             --endpoint-url "$R2_ENDPOINT" --storage-class STANDARD --only-show-errors
+          aws s3 cp "$checksum" "s3://$R2_BUCKET/$prefix/backup.tar.gz.sha256"             --endpoint-url "$R2_ENDPOINT" --storage-class STANDARD --only-show-errors
 
       - name: Verify uploaded objects
         shell: bash
