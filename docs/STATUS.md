@@ -22,6 +22,14 @@ M04b: real account/session integration and connect the learner UI to the server.
 ## Not implemented
 Real accounts, browser-to-server study integration, cloud database, cross-device sync, authenticated reviewers, reviewed medical content, review scheduler, NeuralVault, AI, learner backup restoration and deployment. Operator-only catalog import exists; learner restore does not. This is a local software preview, not a production medical study app. Native iOS Safari verification remains outstanding. No entire ChatGPT project or external master roadmap has been imported; see PROJECT_CONTEXT.md for limits.
 
+## M04b account integration — 2026-09-26 IST
+- Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
+- Added browser-safe Supabase Auth/session adapter, cloud account UI and public project configuration. The local M03 UUID/evidence remains deliberately separate.
+- Browser receives only project URL, publishable key and the learner's own session tokens. Trusted scoring/writes remain server-side.
+- Verified live RLS shape before wiring: sessions, attempts and bookmarks are learner-readable by `auth.uid() = learner_id`; catalog has no direct browser policy.
+- CI run 36188026011 passed all foundation and responsive-browser checks after integration UI placement was corrected.
+- Remaining M04b gate: server-side verification of Supabase access tokens plus browser-to-server study calls against the live backend. Then test two-account isolation, refresh/logout and cross-device recovery. Resend SMTP and Sentry follow this identity gate.
+
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md and docs/STATUS.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Implement the next incomplete roadmap task with meaningful verification. Update context, status and decisions. Work only in this repository.”
 
