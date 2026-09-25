@@ -77,7 +77,11 @@ try {
     await resetPage.getByRole('heading', { name: 'Sign in to study.' }).waitFor();
     await resetPage.locator('#reset-request-form input[name=email]').fill('learner@example.invalid');
     await resetPage.getByRole('button', { name: 'Send password reset link' }).click();
-    await resetPage.locator('#account-notice').getByText(/If this account can receive mail/).waitFor();
+    try {
+      await resetPage.locator('#account-notice').getByText(/If this account can receive mail/).waitFor({ timeout: 8000 });
+    } catch {
+      throw new Error(`${name} reset request failed: notice=${await resetPage.locator('#account-notice').textContent()} requests=${resetRequests.length} pageErrors=${resetErrors.join(',')}`);
+    }
     assert.equal(resetRequests.length, 1);
     assert.equal(resetRequests[0].body.email, 'learner@example.invalid');
     assert.equal(new URL(resetRequests[0].url).searchParams.get('redirect_to'), origin + '/web/account.html');
