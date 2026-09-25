@@ -14,9 +14,11 @@ const server = createServer(async (req, res) => {
     if (pathname === '/auth-config') {
       const url = process.env.MLOS_SUPABASE_URL;
       const key = process.env.MLOS_SUPABASE_PUBLISHABLE_KEY;
-      res.writeHead(url && key && process.env.MLOS_AUTH_MODE === 'supabase' ? 200 : 503,
+      const configured = url === 'https://iyapppmeieqhflnzslao.supabase.co'
+        && key?.startsWith('sb_publishable_') && process.env.MLOS_AUTH_MODE === 'supabase';
+      res.writeHead(configured ? 200 : 503,
         { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
-      return res.end(JSON.stringify(url && key && process.env.MLOS_AUTH_MODE === 'supabase'
+      return res.end(JSON.stringify(configured
         ? { url, publishableKey: key } : { error: 'account_setup_required' }));
     }
     if (pathname.startsWith('/api/')) {
