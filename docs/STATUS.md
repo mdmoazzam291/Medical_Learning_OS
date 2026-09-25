@@ -51,6 +51,11 @@ Real account/browser study verification, actual cross-device recovery, authentic
 ## Next task
 Exercise a real Auth account and cloud REST flow without fake medical content. Do not claim M04b complete until actual account UI, cross-device recovery and deletion/backup gates are verified; M04c handles authenticated review before publication.
 
+## M04b account recovery and configuration guard — 2026-09-25
+- The dedicated project is active and has zero Auth users. Added password-reset request and recovery-completion UI to the separate account workspace. The callback requires the exact account page in the Auth redirect allowlist, and the current unverified email sender means real delivery remains untested.
+- The local `/auth-config` endpoint now exposes only the exact dedicated project URL paired with a publishable key. A mistakenly supplied server secret returns `account_setup_required` without revealing the key. Added browser-contract coverage for reset requests at phone/tablet/desktop sizes, plus a local negative smoke check for secret-key exposure.
+- Local build, syntax/catalog check, 42 tests and account smoke passed. Browser CI and a genuine email/callback still remain; no test user, mail or learning evidence was created. M04b remains in progress.
+
 ## Infrastructure preparation — 2026-09-25
 - A separate Supabase Free project named `medical_learning_os` was created in the existing organization in `ap-south-1`; project ref `iyapppmeieqhflnzslao`. The creation cost check returned $0/month. The original `NEETPG2027` project remains separate and active.
 - GitHub, Supabase, PostHog, and Resend are connected to the ChatGPT workflow. PostHog has an unused default project; Resend has no configured sending domain. These connections do not imply that the learner app has been deployed or configured with provider credentials.
