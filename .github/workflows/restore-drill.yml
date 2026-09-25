@@ -75,21 +75,35 @@ jobs:
           supabase init
           supabase start
 
+      - name: Prepare application-data restore
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Local Supabase already owns provider-managed auth/storage tables and
+          # some of them intentionally reject direct writes. Keep the original
+          # data.sql checksum-verified, then exclude only auth/storage COPY blocks
+          # for this no-cost application-data recoverability drill.
+          awk '
+            /^COPY (auth|storage)\./ { skip=1; next }
+            skip && /^\\\.$/ { skip=0; next }
+            !skip { print }
+          ' "$RUNNER_TEMP/restore/data.sql" > "$RUNNER_TEMP/restore/app-data.sql"
+          test -s "$RUNNER_TEMP/restore/app-data.sql"
+
       - name: Restore logical dump
         shell: bash
         run: |
           set -euo pipefail
           db_url="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
-          # roles.sql is preserved and checksum-verified in the archive, but the
-          # disposable local Supabase stack already owns managed roles. Applying
-          # platform role settings here can fail on protected parameters, so this
-          # drill validates schema + data recoverability against a fresh local stack.
+          # roles.sql remains preserved in the verified archive. The local stack
+          # already owns its managed roles, so this drill restores application
+          # schema + application data without mutating provider-managed roles.
           psql \
             --single-transaction \
             --variable ON_ERROR_STOP=1 \
             --file "$RUNNER_TEMP/restore/schema.sql" \
             --command 'SET session_replication_role = replica' \
-            --file "$RUNNER_TEMP/restore/data.sql" \
+            --file "$RUNNER_TEMP/restore/app-data.sql" \
             --dbname "$db_url"
 
       - name: Verify restored database
@@ -99,7 +113,9 @@ jobs:
           db_url="postgresql://postgres:postgres@127.0.0.1:54322/postgres"
           psql "$db_url" --no-psqlrc --tuples-only --command "select current_database(), current_setting('server_version');"
           psql "$db_url" --no-psqlrc --tuples-only --command "select count(*) from information_schema.tables where table_schema not in ('pg_catalog','information_schema');"
-          psql "$db_url" --no-psqlrc --tuples-only --command "select count(*) from public.study_catalog;" || true
+          restored="$(psql "$db_url" --no-psqlrc --tuples-only --no-align --command "select count(*) || ':' || min(version) || ':' || max(version) from public.study_catalog;")"
+          test "$restored" = "1:0:0"
+          echo "Application restore invariant passed: study_catalog=$restored"
           echo "Disposable local restore completed."
 
       - name: Stop disposable stack
