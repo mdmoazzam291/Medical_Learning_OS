@@ -21,7 +21,7 @@ async function body(req) {
     req.on('aborted', () => reject(new ServiceError(400, 'request_aborted')));
   });
 }
-export function createStudyApi(service) {
+export function createStudyApi(service, { authenticate = token => service.authenticate(token) } = {}) {
   const server = createServer(async (req, res) => {
     const send = (status, data) => {
       res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store',
@@ -34,7 +34,7 @@ export function createStudyApi(service) {
       const url = new URL(req.url, `http://${allowedHost}`);
       if (req.method === 'GET' && url.pathname === '/health' && !url.search) return send(200, { status: 'ok', scope: 'local-server-foundation' });
       const auth = req.headers.authorization || '';
-      const learner = service.authenticate(auth.startsWith('Bearer ') ? auth.slice(7) : '');
+      const learner = await authenticate(auth.startsWith('Bearer ') ? auth.slice(7) : '');
       if (url.search) throw new ServiceError(400, 'query_not_supported');
       const path = url.pathname;
       if (req.method === 'GET') {

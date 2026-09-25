@@ -24,6 +24,7 @@ function metrics() {
 }
 function today() {
   return `<section class="countdown"><div><span class="eyebrow">YOUR EXAM HORIZON</span><h2 id="countdown"></h2><p>NEET-PG · personal target ${escape(state.settings.targetDate)} · not an official exam date</p></div>${button('Edit target ↗', 'plan', 'text-button')}</section>
+  <p><a href="/web/account.html">Open account study workspace →</a> · separate from this device-local demo</p>
   <div class="page-heading"><div><span class="eyebrow">YOUR LEARNING WORKSPACE</span><h1>Make the next answer count.</h1><p>A focused session. A clearer picture of what to revisit.</p></div><span class="badge">LOCAL PREVIEW</span></div>
   <section class="hero"><div><span class="eyebrow">STUDY NOW</span><h2>${currentQuestion(state) ? 'Pick up where you left off.' : 'Try your first learning loop.'}</h2><p>Explore answering, explanations and revision queues with three nonclinical questions about this system.</p>${button(currentQuestion(state) ? 'Continue demo →' : 'Start demo →', 'start', 'primary')}<small>Nonclinical demo · about 2 minutes · saved on this browser</small></div><div class="session-card"><span class="eyebrow">THE LEARNING LOOP</span><ol><li><span>01</span> Retrieve an answer</li><li><span>02</span> Understand the explanation</li><li><span>03</span> Keep evidence for revision</li></ol><p>Observed accuracy ≠ durable mastery</p></div></section>
   <section class="panel"><div class="section-heading"><h2>Today’s demo progress</h2>${button('Edit plan', 'plan', 'text-button')}</div>${metrics()}</section>

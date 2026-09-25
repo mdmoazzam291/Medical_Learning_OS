@@ -9,8 +9,17 @@
   "scripts": {
     "test": "node --test",
     "check": "node scripts/check.js",
+    "build:account": "esbuild web/account.js --bundle --format=esm --platform=browser --target=es2022 --outfile=web/account.bundle.js",
+    "smoke:account": "npm run build:account && node scripts/smoke-account.js",
     "demo": "node examples/study-session.js",
+    "prestart": "npm run build:account",
     "start": "node scripts/serve.js",
     "start:api": "node scripts/api.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

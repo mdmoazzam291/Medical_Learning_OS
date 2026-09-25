@@ -29,3 +29,6 @@ Keep M03 untouched. Do not automatically move demo results into medical evidence
 
 ## ADR-008 — Isolated Free cloud project (accepted setup, 2026-09-25)
 Create a dedicated `medical_learning_os` Supabase project in the user's existing Free organization, after a $0/month project cost check, rather than reusing the `NEETPG2027` database. Keep distinct project URL, Auth tenant, database, RLS policies, API keys, migrations and deployments. The creation was verified as active; it is otherwise unconfigured. Free-plan pausing and lack of automatic backups remain operational risks. This setup does not authorize migration of older app data or a production release.
+
+## ADR-009 — Verified account identity before cloud study storage (implementation choice, 2026-09-25)
+M04b first uses the official Supabase browser Auth client and server-side `getUser(token)` validation with the dedicated project, preserving the existing trusted scoring boundary. Only the Auth-verified UUID becomes a learner ID. The same-origin loopback proxy avoids browser-stored operator credentials and public exposure of the SQLite API. The account page is separate from the M03 local demo. This is a bounded local integration, not cross-device sync or production hosting. Do not mark M04b complete until a real account/browser flow, durable cloud persistence and recovery are verified.

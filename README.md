@@ -4,6 +4,7 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Start here
 - [Current status and next task](docs/STATUS.md)
+- [Account study integration and limits](docs/ACCOUNT_STUDY.md)
 - [Project context and continuity](docs/PROJECT_CONTEXT.md)
 - [Content lifecycle](docs/CONTENT_WORKFLOW.md)
 - [Product scope](docs/PRODUCT.md)

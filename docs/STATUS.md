@@ -14,7 +14,7 @@ Updated: 2026-09-25 (Asia/Kolkata)
 22 local domain tests, npm run check and npm run demo passed. GitHub Actions passed the same checks plus Chromium flows at phone (390px), tablet (820px) and desktop (1440px) widths: countdown ticks, settings/theme reload, selection/answer reload, completion, queues, JSON export, quota failure recovery, concurrent submit deduplication and corrupt-data protection. No browser runtime errors were observed. See [verification run](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36098096484); it includes responsive screenshots. Local browser installation was unavailable, so browser verification ran in GitHub Actions. Native iOS Safari remains unverified.
 
 ## Next task
-M04b: real account/session integration and connect the learner UI to the server. M04c adds authenticated reviewers and genuinely reviewed medical content. Keep the demo's evidence separate; M04a is complete, while M04 overall is only partially implemented.
+Finish M04b: configure/verify a real Auth account flow and move study-state persistence to the dedicated cloud backend with recovery tests. M04c then adds authenticated reviewers and genuinely reviewed medical content. Keep the demo's evidence separate; M04a is complete, while M04 overall is only partially implemented.
 
 ## M04a verification
 36 local tests passed, including 14 new server/HTTP groups for authorization, learner isolation, expiry/revocation, scoring, source receipts, restart recovery, safe retries, concurrent requests, catalog retirement/immutability, failed writes, payload limits and sanitized errors. Syntax/catalog checks and terminal demo passed. [GitHub CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/36100640997) passed backend checks and the unchanged phone/tablet/desktop browser regression suite. Only synthetic nonclinical catalogs were published inside temporary test databases.
@@ -24,6 +24,12 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md and docs/STATUS.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Implement the next incomplete roadmap task with meaningful verification. Update context, status and decisions. Work only in this repository.”
+
+## M04b local account integration — 2026-09-25
+- An isolated account study page uses Supabase Auth and the existing server-owned scoring API. The server verifies the access token with the dedicated project's Auth service and derives the learner UUID from the verified response. Local operator credentials remain only for the previous development mode.
+- The static preview proxies same-origin API requests to its loopback API. The account UI can sign in/create an account, view published questions, start/resume, answer, advance, bookmark and export. The nonclinical IndexedDB demo remains separate.
+- The dedicated project has no verified sending domain, reviewed medical catalog or cloud study tables. Account signup and actual medical-session E2E have not been exercised. SQLite remains a local single-host persistence adapter; cross-device recovery and production deployment are not complete.
+- Verification: account bundle, syntax/catalog checks and 38 tests passed, including mocked Auth verification and cross-learner HTTP isolation. See [account path](ACCOUNT_STUDY.md). M04b remains IN PROGRESS until real Auth and UI end-to-end verification; M04c remains planned.
 
 ## Infrastructure preparation — 2026-09-25
 - A separate Supabase Free project named `medical_learning_os` was created in the existing organization in `ap-south-1`; project ref `iyapppmeieqhflnzslao`. The creation cost check returned $0/month. The original `NEETPG2027` project remains separate and active.
