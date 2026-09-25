@@ -1,6 +1,8 @@
 name: Supabase logical backup to R2
 
 on:
+  push:
+    branches: ["infra/backup-restore-hardening"]
   workflow_dispatch:
 
 permissions:
@@ -78,7 +80,7 @@ jobs:
 
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/roles.sql" --role-only
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/schema.sql"
-          supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/data.sql" --use-copy --data-only
+          supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/data.sql" --use-copy --data-only -x "storage.buckets_vectors" -x "storage.vector_indexes"
 
           for file in roles.sql schema.sql data.sql; do
             test -s "$backup_dir/$file"
