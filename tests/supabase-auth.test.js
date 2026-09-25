@@ -86,3 +86,48 @@ test('invalid credentials are rejected before network use', async () => {
   await assert.rejects(auth.signIn('bad', 'short'), error => error.code === 'invalid_email');
   assert.equal(calls, 0);
 });
+
+
+test('implicit confirmation callback verifies user before persisting session', async () => {
+  const storage = memoryStorage();
+  const calls = [];
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      calls.push({ url, options });
+      assert.match(url, /\/auth\/v1\/user$/);
+      assert.equal(options.method, 'GET');
+      assert.equal(options.headers.Authorization, 'Bearer callback-access');
+      return Response.json({ id: 'confirmed-user', email: 'confirmed@example.com', email_confirmed_at: '2026-09-26T00:00:00Z' });
+    }
+  });
+  const result = await auth.consumeImplicitRedirect('http://127.0.0.1:3000/#access_token=callback-access&refresh_token=callback-refresh&expires_in=3600&type=signup');
+  assert.equal(result.handled, true);
+  assert.equal(result.session.user.id, 'confirmed-user');
+  assert.equal(auth.currentUser().email, 'confirmed@example.com');
+  assert.equal(calls.length, 1);
+  assert.doesNotMatch(storage.dump()[0][1], /password/);
+});
+
+test('implicit callback errors are rejected without creating a session', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  await assert.rejects(
+    auth.consumeImplicitRedirect('http://127.0.0.1:3000/#error=access_denied&error_code=otp_expired&error_description=Expired'),
+    error => error instanceof AuthError && error.code === 'otp_expired'
+  );
+  assert.equal(storage.dump().length, 0);
+});
+
+test('ordinary application hashes are not treated as auth callbacks', async () => {
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage: memoryStorage(),
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  const result = await auth.consumeImplicitRedirect('http://127.0.0.1:3000/#today');
+  assert.equal(result.handled, false);
+  assert.equal(result.session, null);
+});
