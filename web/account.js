@@ -69,5 +69,21 @@ root.addEventListener('submit', event => {
   }
 });
 
+async function bootstrap() {
+  try {
+    const callback = await auth.consumeImplicitRedirect(window.location.href);
+    if (callback.handled) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      state.user = auth.currentUser();
+      announce('Email confirmed. Your cloud learner session is connected.');
+    }
+  } catch (error) {
+    if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
+    announce(`Email confirmation failed: ${error.code || error.message || 'authentication_failed'}.`);
+  }
+  if (state.user) await loadCloud();
+  else render();
+}
+
 render();
-if (state.user) loadCloud();
+bootstrap();
