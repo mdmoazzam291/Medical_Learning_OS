@@ -75,8 +75,9 @@ root.addEventListener('submit', event => {
       if (!session?.question || session.receipt) return;
       const selected = new FormData(form).get('option');
       if (!selected) throw new Error('Select an answer.');
+      // A stable key lets a retry recover the saved receipt after a lost response.
       session.receipt = await api(`/api/sessions/${session.sessionId}/answer`,
-        { requestId: crypto.randomUUID(), position: session.position, optionId: selected });
+        { requestId: `${session.sessionId}:${session.position}`, position: session.position, optionId: selected });
       render();
     }
   });

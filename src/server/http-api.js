@@ -38,23 +38,23 @@ export function createStudyApi(service, { authenticate = token => service.authen
       if (url.search) throw new ServiceError(400, 'query_not_supported');
       const path = url.pathname;
       if (req.method === 'GET') {
-        if (path === '/api/questions') return send(200, { questions: service.questions(learner) });
-        if (path === '/api/progress') return send(200, service.summary(learner));
-        if (path === '/api/export') return send(200, service.export(learner));
+        if (path === '/api/questions') return send(200, { questions: await service.questions(learner) });
+        if (path === '/api/progress') return send(200, await service.summary(learner));
+        if (path === '/api/export') return send(200, await service.export(learner));
         const match = path.match(/^\/api\/sessions\/([a-zA-Z0-9-]+)$/);
-        if (match) return send(200, service.session(learner, match[1]));
+        if (match) return send(200, await service.session(learner, match[1]));
       }
       if (req.method === 'POST') {
-        if (path === '/api/sessions') return send(200, service.start(learner, await body(req)));
-        if (path === '/api/bookmarks') return send(200, service.bookmark(learner, await body(req)));
+        if (path === '/api/sessions') return send(200, await service.start(learner, await body(req)));
+        if (path === '/api/bookmarks') return send(200, await service.bookmark(learner, await body(req)));
         const match = path.match(/^\/api\/sessions\/([a-zA-Z0-9-]+)\/(answer|next|cancel)$/);
         if (match) {
           const input = await body(req);
           if (match[2] === 'cancel') {
             fields(input, []);
-            return send(200, service.cancel(learner, match[1]));
+            return send(200, await service.cancel(learner, match[1]));
           }
-          return send(200, service[match[2]](learner, match[1], input));
+          return send(200, await service[match[2]](learner, match[1], input));
         }
       }
       throw new ServiceError(404, 'route_not_found');

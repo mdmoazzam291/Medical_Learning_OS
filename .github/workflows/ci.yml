@@ -41,6 +41,7 @@ jobs:
             sleep 1
           done
           PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/browser-check.js
+          PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/browser-account-check.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:

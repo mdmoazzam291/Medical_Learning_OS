@@ -38,7 +38,7 @@ M02–M06 minimal paths work together; progress survives reload; data export wor
 
 ## M04 slices
 - M04a — DONE: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests. Local and GitHub checks passed.
-- M04b — IN PROGRESS: local Supabase Auth and account UI/API path implemented; dedicated cloud learner-state schema/RLS applied. Trusted cloud writes, real account/browser verification and cross-device recovery still required. No browser-stored operator credential shortcut.
+- M04b — IN PROGRESS: local Supabase Auth and account UI/API path implemented; dedicated cloud learner-state schema/RLS and opt-in trusted transactional adapter applied. Real account/browser and multi-device recovery, shared reviewed catalog, deletion and backup gates still required. No browser-stored operator credential shortcut.
 - M04c — PLANNED: authenticated reviewer workflow, genuinely reviewed initial medical set and full medical study-loop validation.
 
 M04 is not complete until all three slices and the medical learner flow pass their release gates.
