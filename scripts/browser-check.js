@@ -42,6 +42,9 @@ try {
     await page.getByRole('heading', { name: 'A useful mistake to revisit.' }).waitFor();
     await page.getByRole('button', { name: 'Next question' }).click();
     for (let i = 0; i < 2; i++) {
+      // The previous question's checked radio can satisfy check() before the
+      // asynchronous Next transaction renders. Wait for the new question.
+      await page.getByText(`Question ${i + 2} of 3`, { exact: false }).waitFor();
       await page.getByRole('radio').nth(1).check();
       await page.waitForFunction(() => !document.querySelector('#submit-answer').disabled);
       await page.getByRole('button', { name: 'Check answer' }).click();
