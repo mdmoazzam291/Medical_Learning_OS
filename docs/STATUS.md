@@ -31,6 +31,11 @@ Real accounts, browser-to-server study integration, cloud database, cross-device
 - The dedicated project has no verified sending domain, reviewed medical catalog or cloud study tables. Account signup and actual medical-session E2E have not been exercised. SQLite remains a local single-host persistence adapter; cross-device recovery and production deployment are not complete.
 - Verification: account bundle, syntax/catalog checks and 38 tests passed, including mocked Auth verification and cross-learner HTTP isolation. See [account path](ACCOUNT_STUDY.md). M04b remains IN PROGRESS until real Auth and UI end-to-end verification; M04c remains planned.
 
+## M04b cloud schema — 2026-09-25
+- Applied and committed migration `20260925112056_study_state_v1` on the dedicated `medical_learning_os` project. Three empty learner-state tables cover sessions, versioned attempts/receipts and bookmarks with unique retry/slot constraints and Auth-user foreign keys.
+- Confirmed RLS, owner-only SELECT policies, no anonymous table reads and no authenticated writes. No key, learner record or content was imported. See [cloud study contract](CLOUD_STUDY.md).
+- The study API still writes local SQLite; this is a storage foundation, not cross-device recovery. Next implement the trusted transactional cloud adapter, then verify real accounts, browser study and recovery. Local verification: 38 tests, syntax/catalog check and account-route smoke passed. The smoke-test path now respects SQLite `:memory:` and waits for both local servers to be ready.
+
 ## Infrastructure preparation — 2026-09-25
 - A separate Supabase Free project named `medical_learning_os` was created in the existing organization in `ap-south-1`; project ref `iyapppmeieqhflnzslao`. The creation cost check returned $0/month. The original `NEETPG2027` project remains separate and active.
 - GitHub, Supabase, PostHog, and Resend are connected to the ChatGPT workflow. PostHog has an unused default project; Resend has no configured sending domain. These connections do not imply that the learner app has been deployed or configured with provider credentials.

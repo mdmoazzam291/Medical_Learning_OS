@@ -37,11 +37,12 @@ still a draft, so a real account sees an empty QBank until M04c reviewers
 publish genuinely approved content. The M03 nonclinical demo remains a
 separate IndexedDB record and is never imported as medical evidence.
 
-Study data is currently stored in local SQLite. An account on another device
-does not yet recover its study record. The API and static preview bind to
-127.0.0.1 and must not be published as a production service. Production work
-still needs durable cloud storage, RLS, recovery, deletion, rate limits,
-reviewer authentication, verified medical content and deployment.
+Study data is currently stored in local SQLite. The dedicated project has
+empty cloud learner-state tables with RLS, but the API has not connected them.
+An account on another device does not yet recover its study record. The API
+and static preview bind to 127.0.0.1 and must not be published as a production
+service. Production work still needs trusted cloud writes, recovery, deletion,
+rate limits, reviewer authentication, verified medical content and deployment.
 
 ## Verification
 

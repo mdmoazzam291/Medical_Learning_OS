@@ -19,7 +19,12 @@ const web = spawn(process.execPath, ['scripts/serve.js'], { env, stdio: 'ignore'
 try {
   const base = `http://127.0.0.1:${webPort}`;
   for (let attempt = 0; attempt < 40; attempt++) {
-    try { if ((await fetch(base + '/auth-config')).ok) break; } catch {}
+    try {
+      const [webReady, apiReady] = await Promise.all([
+        fetch(base + '/auth-config'), fetch(`http://127.0.0.1:${apiPort}/health`),
+      ]);
+      if (webReady.ok && apiReady.ok) break;
+    } catch {}
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   assert.equal((await fetch(base + '/web/account.html')).status, 200);

@@ -4,11 +4,12 @@ import { StudyService } from '../src/server/study-service.js';
 import { createStudyApi } from '../src/server/http-api.js';
 import { createSupabaseIdentity } from '../src/server/supabase-identity.js';
 process.umask(0o077);
-const path = resolve(process.env.MLOS_DB_PATH || '.local/study.sqlite');
-mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
-const service = new StudyService(path);
 if (process.env.MLOS_AUTH_MODE === 'supabase' && process.env.MLOS_SUPABASE_URL !== 'https://iyapppmeieqhflnzslao.supabase.co')
   throw new Error('Account API must use the dedicated Medical Learning OS Supabase project');
+const rawPath = process.env.MLOS_DB_PATH || '.local/study.sqlite';
+const path = rawPath === ':memory:' ? rawPath : resolve(rawPath);
+if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
+const service = new StudyService(path);
 const cloudIdentity = process.env.MLOS_AUTH_MODE === 'supabase'
   ? createSupabaseIdentity({ url: process.env.MLOS_SUPABASE_URL, publishableKey: process.env.MLOS_SUPABASE_PUBLISHABLE_KEY })
   : null;
