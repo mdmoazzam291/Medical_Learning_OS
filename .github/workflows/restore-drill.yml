@@ -66,8 +66,10 @@ jobs:
           mkdir -p "$RUNNER_TEMP/restore-download"
           cd "$RUNNER_TEMP/restore-download"
 
-          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz" ./backup.tar.gz             --endpoint-url "$R2_ENDPOINT" --only-show-errors
-          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz.sha256" ./backup.tar.gz.sha256             --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz" ./backup.tar.gz \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "s3://$R2_BUCKET/$BACKUP_PREFIX/backup.tar.gz.sha256" ./backup.tar.gz.sha256 \
+            --endpoint-url "$R2_ENDPOINT" --only-show-errors
 
           expected="$(awk '{print $1}' backup.tar.gz.sha256)"
           actual="$(sha256sum backup.tar.gz | awk '{print $1}')"
@@ -100,13 +102,29 @@ jobs:
           echo "Local Supabase database did not become ready."
           exit 1
 
-      - name: Restore logical dump into disposable target
+      - name: Validate role dump scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/restore-download/extracted"
+          if grep -Eq '^CREATE ROLE ' roles.sql; then
+            echo "Custom role creation detected; restore policy needs review before continuing."
+            exit 1
+          fi
+
+      - name: Restore schema and data into disposable target
         shell: bash
         run: |
           set -euo pipefail
           cd "$RUNNER_TEMP/restore-download/extracted"
 
-          psql             --single-transaction             --variable ON_ERROR_STOP=1             --file roles.sql             --file schema.sql             --command 'SET session_replication_role = replica'             --file data.sql             --dbname "$LOCAL_DB_URL"
+          psql \
+            --single-transaction \
+            --variable ON_ERROR_STOP=1 \
+            --file schema.sql \
+            --command 'SET session_replication_role = replica' \
+            --file data.sql \
+            --dbname "$LOCAL_DB_URL"
 
       - name: Verify restored invariants
         shell: bash
