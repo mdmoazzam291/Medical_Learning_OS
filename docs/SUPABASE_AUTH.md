@@ -11,7 +11,7 @@ The browser may receive only the Supabase project URL, publishable key and the l
 `src/adapters/supabase-auth.js` handles email signup, password sign-in, refresh and sign-out. `src/adapters/cloud-study.js` sends the learner JWT to the cloud study boundary and retries once after refresh on a 401.
 
 ## Trusted server boundary
-The deployed `study-api` Supabase Edge Function has JWT verification enabled. It independently resolves the authenticated user and derives the learner UUID server-side. It never accepts `learner_id`, correctness, concept ID, event ID or authoritative timestamps from the browser.
+The deployed `study-api` Supabase Edge Function performs explicit user-token validation with `auth.getUser(token)` and runs with gateway `verify_jwt=false`. This is intentional for Supabase's current publishable/secret API-key model, whose gateway verifier is legacy-JWT oriented. The function independently resolves the authenticated user and derives the learner UUID server-side. It never accepts `learner_id`, correctness, concept ID, event ID or authoritative timestamps from the browser.
 
 Trusted writes use the existing server-only atomic database functions. Direct browser reads remain constrained by RLS. `study_catalog` has no learner-facing table policy.
 
@@ -24,7 +24,8 @@ The live shared catalog currently has zero published questions. This is intentio
 - Unit tests cover session persistence/refresh, password non-persistence, unauthenticated rejection and authenticated request construction.
 - Browser CI covers sign-in, persisted session reload, cloud progress/question calls and sign-out using mocked Supabase network responses.
 - Main Foundation checks passed in run 36188364648.
-- `study-api` version 1 is active in the dedicated Supabase project with gateway JWT verification enabled.
+- `study-api` version 3 is active in the dedicated Supabase project with explicit user-token validation and gateway `verify_jwt=false`.
+- Manual deployed-API smoke run `36188568697` attempt 2 passed unauthenticated rejection, allowed-origin preflight and disallowed-origin rejection.
 
 ## Remaining M04b gate
 1. Add a verified Resend sending domain and configure it as Supabase Auth custom SMTP.
