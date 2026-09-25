@@ -2,6 +2,9 @@ name: Supabase logical backup to R2
 
 on:
   workflow_dispatch:
+  schedule:
+    # Sunday 03:47 IST = Saturday 22:17 UTC.
+    - cron: '17 22 * * 6'
 
 permissions:
   contents: read
