@@ -14,3 +14,30 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run demo
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated browser verification tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-browser" --no-audit --no-fund playwright@1.56.1
+          node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify responsive study flows and storage
+        run: |
+          npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &
+          mkdir -p "$RUNNER_TEMP/mlos-screenshots"
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 1
+          done
+          PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/browser-check.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: responsive-preview
+          path: ${{ runner.temp }}/mlos-screenshots
+          if-no-files-found: ignore

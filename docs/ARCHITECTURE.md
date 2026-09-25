@@ -21,3 +21,6 @@ Reviewed question version → learner answer → server validates/scorers answer
 Tenant isolation must be enforced in storage/services as well as projections. Persist events transactionally with a unique event ID and reject conflicting retries. Use event version migrations. Maintain rebuildable projections. Separate immutable source content from personal annotations. Support export and deletion, including rebuilding projections after deletion; append-only history does not override privacy requirements.
 
 Offline support will need a durable outbox, retry-safe synchronization and conflict handling. Nothing in the current in-memory example guarantees persistence or cross-device sync.
+
+## M03 local preview boundary
+The learner preview now runs as browser ES modules, a pure demo state machine and an IndexedDB adapter. Read [learner app contract](LEARNER_APP.md) for scope and persistence guarantees. Demo data and client-side scoring are isolated nonclinical fixtures, not the production medical data flow described above. Production service/database/authentication decisions remain pending M04.

@@ -14,7 +14,7 @@ A concept-centered medical learning system: study → answer → understand mist
 - [AI contributor instructions](AGENTS.md)
 
 ## Current implementation
-Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. This is not yet a web application. Authentication, database persistence, QBank UI, scheduling and AI are planned.
+Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. A responsive local web preview now adds learner settings, dark mode, a live personal countdown, and a persisted nonclinical study demo with bookmarks, incorrect queue and JSON export. Authentication, reviewed medical QBank content, server persistence, scheduling and AI are planned. See [learner app contract](docs/LEARNER_APP.md).
 
 ## Run locally
 Requires Node.js 24 or later. No dependency installation or API keys required.
@@ -23,9 +23,14 @@ Requires Node.js 24 or later. No dependency installation or API keys required.
 npm test
 npm run check
 npm run demo
+npm start
 ```
 
+Open `http://127.0.0.1:3000` after `npm start`. Progress stays on that browser and origin; this preview is not publicly deployed.
+
 ## Layout
+- `web/`: responsive learner preview.
+- `src/adapters/`: transactional local storage.
 - `src/domain/`: framework-independent learning logic.
 - `examples/`: synthetic executable demonstrations, not medical teaching material.
 - `tests/`: behavior and data-integrity tests.

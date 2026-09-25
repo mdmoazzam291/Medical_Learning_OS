@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { validateCatalog, selectPublishedQuestions } from '../src/domain/content.js';
-for (const directory of ['src', 'tests', 'examples', 'scripts']) {
+for (const directory of ['src', 'tests', 'examples', 'scripts', 'web']) {
   for (const path of readdirSync(directory, { recursive: true })) {
     if (!path.endsWith('.js')) continue;
     const check = spawnSync(process.execPath, ['--check', `${directory}/${path}`], { stdio: 'inherit' });

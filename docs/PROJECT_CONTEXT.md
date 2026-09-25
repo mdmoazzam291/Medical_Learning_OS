@@ -35,3 +35,8 @@ No specific frontend, database, hosting, local model or AI provider is selected 
 3. Distinguish user decisions, assistant proposals, implementation choices and verified code behavior.
 4. Record source topic/date, any unresolved conflict and the resulting bounded decision here or in DECISIONS.md.
 5. Update implementation status after verification. Keep planning documents in Drive authoritative for planning if available; GitHub records actual code and its current implementation state. Do not silently create a competing planning master.
+
+## M03 reconciliation — 2026-09-25
+Current project instructions emphasize maximum durable mastery per learner minute, canonical ownership and uncertainty. The supplied conversation context also records countdown-first dashboard preferences, start/resume, compact progress, revision priorities and dark mode from the user's earlier app. These inform the M03 interface without accessing the separate repository. Four working destinations are sufficient for this milestone; the earlier approximate eight-item ceiling is not a requirement to invent screens. The 2027-08-29 countdown is a user-selected planning target, not a verified official exam date. No broader project retrieval was needed to make a conflicting architecture decision; full-project/XMind/Drive reconciliation remains unclaimed.
+
+M03 chooses a device-local preview with explicit storage limits; this is an implementation choice, not a prior user mandate for local-only production. Reviewed clinical content, authentication, cloud persistence and server-side scoring remain M04 requirements.
