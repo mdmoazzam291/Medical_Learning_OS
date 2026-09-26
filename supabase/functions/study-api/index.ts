@@ -207,6 +207,69 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return data ?? [];
     };
+    const getOpenSession = async () => {
+      const { data, error } = await trustedRead("open_session", async () =>
+        admin.from("study_sessions").select("id")
+          .eq("learner_id", learnerId).eq("closed", false).maybeSingle()
+      );
+      if (error) fail(500, "study_read_failed");
+      return data?.id ? String(data.id) : null;
+    };
+    const studyNowEstimateMs = (lastDurationMs: unknown) => {
+      const observed = Number(lastDurationMs);
+      const base = Number.isFinite(observed) && observed >= 0 ? observed : 60000;
+      return Math.min(300000, Math.max(60000, base + 45000));
+    };
+    const buildStudyNowPlan = (
+      revisionRows: any[],
+      published: Map<string, any>,
+      availableMinutes: number,
+      maxItems: number,
+      generatedAt: string
+    ) => {
+      const nowMs = Date.parse(generatedAt);
+      const budgetMs = availableMinutes * 60000;
+      const due = revisionRows
+        .filter((row: any) => published.has(row.question_version_id))
+        .map((row: any) => ({
+          row,
+          dueMs: Date.parse(row.due_at),
+          estimatedMs: studyNowEstimateMs(row.last_duration_ms)
+        }))
+        .filter((item: any) => Number.isFinite(item.dueMs) && item.dueMs <= nowMs)
+        .sort((a: any, b: any) =>
+          a.dueMs - b.dueMs ||
+          String(a.row.question_version_id).localeCompare(String(b.row.question_version_id)));
+
+      const selected: any[] = [];
+      let estimatedMs = 0;
+      for (const item of due) {
+        if (selected.length >= maxItems) break;
+        if (estimatedMs + item.estimatedMs > budgetMs) continue;
+        selected.push({
+          questionVersionId: item.row.question_version_id,
+          dueAt: item.row.due_at,
+          overdueMs: Math.max(0, nowMs - item.dueMs),
+          estimatedMs: item.estimatedMs,
+          reason: "due-revision"
+        });
+        estimatedMs += item.estimatedMs;
+      }
+
+      return {
+        generatedAt,
+        availableMinutes,
+        budgetMs,
+        estimatedMs,
+        estimatedMinutes: Math.ceil(estimatedMs / 60000),
+        dueCount: due.length,
+        selectedCount: selected.length,
+        deferredDueCount: due.length - selected.length,
+        selected,
+        strategy: "due-oldest-first-v1",
+        provisional: true
+      };
+    };
     const questions = async (filter = "all") => {
       if (!["all", "incorrect", "bookmarks"].includes(filter)) fail(400, "invalid_filter");
       const [{ body }, bookmarks, events] = await Promise.all([getCatalog(), getBookmarks(), getEvents()]);
@@ -320,6 +383,74 @@ Deno.serve(async (req: Request) => {
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
+
+    if (req.method === "POST" && path === "/study-now/start") {
+      const input = await jsonBody(req);
+      exactFields(input, ["availableMinutes"], ["maxItems"]);
+      const availableMinutes = integer(input.availableMinutes, 5, 120);
+      const maxItems = input.maxItems === undefined ? 50 : integer(input.maxItems, 1, 50);
+
+      const existingSessionId = await getOpenSession();
+      if (existingSessionId) {
+        return response(req, 200, {
+          plan: {
+            generatedAt: new Date().toISOString(),
+            availableMinutes,
+            selectedCount: null,
+            strategy: "resume-existing",
+            provisional: true,
+            resumedExisting: true
+          },
+          session: await sessionState(existingSessionId)
+        });
+      }
+
+      await rebuildRevision();
+      const [catalog, revisionRows] = await Promise.all([getCatalog(), getRevisionState()]);
+      const published = new Map(
+        publishedQuestions(catalog.body).map((question: any) => [question.questionVersionId, question])
+      );
+      const generatedAt = new Date().toISOString();
+      const plan = buildStudyNowPlan(
+        revisionRows,
+        published,
+        availableMinutes,
+        maxItems,
+        generatedAt
+      );
+      const ids = plan.selected.map((item: any) => item.questionVersionId);
+      if (!ids.length) {
+        return response(req, 200, { plan, session: null });
+      }
+
+      const proposedId = crypto.randomUUID();
+      const { data, error } = await admin.rpc("study_start_session", {
+        p_learner: learnerId,
+        p_id: proposedId,
+        p_ids: ids,
+        p_started: generatedAt
+      });
+      if (error) fail(500, "study_write_failed");
+      if (data?.error) fail(data.error === "session_not_found" ? 404 : 409, data.error);
+
+      const actualId = String(data?.id || proposedId);
+      if (actualId !== proposedId) {
+        return response(req, 200, {
+          plan: {
+            ...plan,
+            selectedCount: null,
+            strategy: "resume-existing",
+            resumedExisting: true
+          },
+          session: await sessionState(actualId)
+        });
+      }
+
+      return response(req, 200, {
+        plan: { ...plan, resumedExisting: false },
+        session: await sessionState(actualId)
+      });
+    }
 
     if (req.method === "GET" && path === "/export") {
       const [{ data: sessions, error: sessionError }, events, bookmarks] = await Promise.all([
