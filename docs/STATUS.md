@@ -366,3 +366,17 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - GitHub checks, browser verification and the latest Render deployment passed.
 - Real memory-judgment count remains 0 because no learner rating was fabricated for historical attempts.
 - The production scheduler is still `bootstrap-binary-v1`; these ratings are not yet used to schedule reviews.
+
+
+## M05d FSRS shadow-readiness layer — 2026-09-27
+- Added a pure `buildFsrsShadowEvidence` domain projection over immutable attempts plus explicit memory judgments.
+- Missing memory ratings remain missing. Binary correctness is never converted into Again/Hard/Good/Easy.
+- Added service-only `study_fsrs_shadow_evidence(learner)` in Supabase.
+- The projection reports total/rated/unrated attempts, rating coverage, rated question count, rating distribution, rating lag, correctness-rating discordance and a chronological replay log.
+- Discordance is preserved as evidence: correct + Again and incorrect + Good/Easy are counted rather than coerced away.
+- The projection explicitly reports `fsrsControlsDueDates=false` and `livePolicyId=bootstrap-binary-v1`.
+- Authenticated `GET /revision/fsrs-shadow` is implemented with learner identity derived server-side. It returns `shadowSchedule=null` until an FSRS engine is intentionally enabled.
+- The candidate implementation is `ts-fsrs`, but the dependency/engine has not been introduced into the production scheduling path.
+- Current real state remains 1 attempt and 0 memory ratings per tested learner path, so rating coverage is 0 and there is no replayable real FSRS review evidence yet.
+- Rollback-only proof showed that one synthetic Again rating becomes one replayable review, 100% coverage for that synthetic learner history, and one correct+Again discordance while production due-date authority remains false; rollback removed the synthetic rating.
+- No arbitrary minimum-rating threshold for production FSRS authority has been invented. Readiness thresholds will be evidence-driven.
