@@ -95,7 +95,7 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Supabase Auth now has one confirmed learner user; the confirmation produced a real authenticated session and sign-in event.
 - Immediately after confirmation, the browser successfully called the deployed `study-api` `/progress` and `/questions?filter=all` routes with an authenticated JWT; both returned HTTP 200 from Edge Function version 4.
 - Server-side reads for the learner's attempts, bookmarks and catalog also returned successfully. No unreviewed medical questions were opened because the live catalog remains intentionally unpublished.
-- This closes the first real Auth → callback → session → trusted study API path. M04b is not fully closed until a second real account proves learner isolation and a second-device/reload/logout path is exercised.
+- This closes the first real Auth → callback → session → trusted study API path. Cross-device continuity has since been verified; M04b remains open for real refresh behavior and two-real-account isolation.
 
 
 ## Logout verification and correction — 2026-09-26
@@ -103,3 +103,9 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The test exposed that the raw logout endpoint defaults to global scope, which signs the learner out from every device.
 - The learner-facing Sign out action has been corrected to use `scope=local`, matching expected per-device behavior while retaining an explicit future option for “sign out everywhere.”
 - Remaining M04b checks: real token refresh and two-real-account isolation.
+
+
+## Cross-device continuity verified — 2026-09-26
+- The confirmed learner signed in from a separate browser/device context and Supabase created a distinct session for the same account.
+- That session independently reached the trusted progress and question-list routes.
+- This verifies account-scoped cloud continuity while the M03 local demo identity/evidence remains separate.
