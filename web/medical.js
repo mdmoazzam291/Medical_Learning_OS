@@ -61,13 +61,13 @@ function overview() {
   const nextDue = revision?.nextDueAt
     ? new Date(revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })
     : null;
-  const studyNowControls = revision?.dueCount
+  const studyNowControls = revision && (revision.dueCount || revision.unseenCount)
     ? '<div class="study-now-controls"><strong>Study Now</strong><p>How much uninterrupted time do you have?</p><div class="button-row">' + [10, 20, 30, 60].map(minutes => '<button class="secondary" data-action="study-now" data-minutes="' + minutes + '">' + minutes + ' min</button>').join('') + '</div></div>'
     : '';
   const revisionPanel = state.revisionError
     ? '<section class="panel"><span class="eyebrow">REVISION</span><h2>Schedule temporarily unavailable.</h2><p>The medical QBank still works. Revision state will rebuild from immutable attempts when the service is available.</p></section>'
     : revision
-      ? '<section class="panel"><span class="eyebrow">REVISION · PROVISIONAL BINARY POLICY</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for the next revision loop.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + '</p>' + studyNowControls + '<p class="muted">This is scheduling state, not a mastery score. Policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
+      ? '<section class="panel"><span class="eyebrow">REVISION & STUDY NOW · PROVISIONAL</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for review.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '') + '</p>' + studyNowControls + '<p class="muted">Scheduling state is not a mastery score. Study Now uses explainable candidate classes, not one opaque ranking number. Revision policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
       : '';
   const list = state.questions.map((q, index) =>
     '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">PUBLISHED MEDICAL</span><h2>' + escape(q.stem) + '</h2><small>' + escape(q.questionVersionId) + '</small></div></article>'
@@ -158,7 +158,7 @@ async function startStudyNow(availableMinutes) {
     const result = await cloud.studyNow(availableMinutes, 50);
     if (!result.session) {
       state.busy = false;
-      announce('Nothing is due inside this Study Now window. Future reviews were not pulled early.');
+      announce('Nothing is currently recommended inside this Study Now window. Future reviews were not pulled early.');
       await loadOverview();
       return;
     }
