@@ -26,6 +26,7 @@ create table if not exists public.study_policy_experiment_specs (
 
 create table if not exists public.study_policy_experiment_state_events (
   id uuid primary key default gen_random_uuid(),
+  sequence bigint generated always as identity unique,
   experiment_id text not null,
   version integer not null,
   state text not null check (state in ('armed','running','paused','completed','cancelled')),
@@ -38,7 +39,7 @@ create table if not exists public.study_policy_experiment_state_events (
 );
 
 create index if not exists study_policy_experiment_state_time
-  on public.study_policy_experiment_state_events (experiment_id, version, created_at, id);
+  on public.study_policy_experiment_state_events (experiment_id, version, sequence);
 
 create table if not exists public.study_policy_experiment_assignments (
   experiment_id text not null,
@@ -206,7 +207,7 @@ select coalesce(
     from public.study_policy_experiment_state_events e
     where e.experiment_id = p_experiment_id
       and e.version = p_version
-    order by e.created_at desc, e.id desc
+    order by e.sequence desc
     limit 1
   ),
   'draft'
