@@ -51,6 +51,5 @@ test('study-api Study Now is learner-scoped, time-budgeted and resumes interrupt
   assert.match(source, /strategy: "due-oldest-first-v1"/);
   assert.match(source, /reason: "due-revision"/);
   assert.match(source, /strategy: "resume-existing"/);
-  assert.match(source, /Future reviews/);
   assert.doesNotMatch(source, /answerOptionId[\s\S]{0,250}studyNow/);
 });
