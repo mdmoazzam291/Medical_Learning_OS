@@ -171,3 +171,15 @@ The live due-date policy remains `bootstrap-binary-v1`. The shadow endpoint must
 Use `ts-fsrs` as the candidate implementation when a real shadow scheduler is introduced, but do not add scheduling output merely to demonstrate the library. First collect real ratings. Then instantiate the engine behind the shadow boundary, compare its proposed due dates with bootstrap and delayed retrieval outcomes, and only later consider a controlled policy experiment.
 
 Do not hard-code a global minimum review count as scientific validation. Initial operational gates may later be introduced for safety, but promotion to production scheduling must be based on coverage, missingness, calibration/retention evidence and measured learner-time trade-offs.
+
+
+## ADR-025 — FSRS shadow scheduling requires complete rated history per exact question version (accepted, 2026-09-27)
+Use `ts-fsrs@5.4.2` as the pinned shadow scheduler implementation, with fuzz disabled so the same immutable history produces the same proposed schedule.
+
+A question version is eligible for FSRS shadow scheduling only when every observed attempt for that exact version has an explicit memory rating. If an unrated exposure exists between rated reviews, do not silently omit it and pretend the remaining ratings form a complete history. Mark that question history incomplete and produce no FSRS due date for it.
+
+The shadow response may contain proposed due dates, stability, difficulty, state and retrievability, but it has no production authority. The authoritative revision projection remains `bootstrap-binary-v1` until a later evidence-based promotion decision.
+
+Compare shadow due dates to the live bootstrap due dates explicitly. This creates paired counterfactual policy proposals without rewriting learner history.
+
+Do not treat FSRS difficulty, stability or retrievability as mastery. They are model state under a specific scheduler configuration.
