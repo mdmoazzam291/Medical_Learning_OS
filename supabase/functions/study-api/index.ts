@@ -320,6 +320,47 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return data ?? [];
     };
+    const getScheduleDecisionEvents = async () => {
+      const { data, error } = await trustedRead("schedule_decision_events", async () =>
+        admin.from("study_schedule_decision_events")
+          .select("id,attempt_id,question_version_id,policy_id,policy_version,role,config_version,evidence_cutoff_at,proposed_due_at,decision,created_at")
+          .eq("learner_id", learnerId)
+          .order("evidence_cutoff_at", { ascending: true })
+          .order("id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return data ?? [];
+    };
+    const recordScheduleDecision = async ({
+      attemptId,
+      policyId,
+      policyVersion,
+      role,
+      configVersion,
+      proposedDueAt,
+      decision
+    }: any) => {
+      const { data, error } = await admin.rpc("study_record_schedule_decision", {
+        p_learner: learnerId,
+        p_attempt: attemptId,
+        p_policy_id: policyId,
+        p_policy_version: policyVersion,
+        p_role: role,
+        p_config_version: configVersion,
+        p_proposed_due_at: proposedDueAt,
+        p_decision: decision
+      });
+      if (error || data?.error) {
+        console.warn(JSON.stringify({
+          event: "schedule_decision_deferred",
+          policyId,
+          role,
+          code: data?.error || error?.code || "schedule_decision_failed"
+        }));
+        return null;
+      }
+      return data;
+    };
     const getRecommendationEvents = async () => {
       const { data, error } = await trustedRead("recommendation_events", async () =>
         admin.from("study_recommendation_events")
@@ -588,6 +629,20 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "GET" && path === "/revision/policy-evaluation") {
+      const { data, error } = await admin.rpc("study_schedule_policy_outcomes", {
+        p_learner: learnerId
+      });
+      if (error) fail(500, "schedule_policy_outcomes_failed");
+      return response(req, 200, {
+        generatedAt: new Date().toISOString(),
+        scope: "descriptive-schedule-policy-outcomes",
+        causal: false,
+        livePolicyId: "bootstrap-binary-v1",
+        outcomes: Array.isArray(data) ? data : []
+      });
+    }
+
     if (req.method === "GET" && path === "/study-now/outcomes") {
       const { data, error } = await admin.rpc("study_recommendation_outcomes", {
         p_learner: learnerId
@@ -677,7 +732,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
@@ -685,7 +740,8 @@ Deno.serve(async (req: Request) => {
         getEvents(),
         getBookmarks(),
         getRecommendationEvents(),
-        getMemoryJudgments()
+        getMemoryJudgments(),
+        getScheduleDecisionEvents()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -696,7 +752,8 @@ Deno.serve(async (req: Request) => {
         bookmarks,
         sessions: sessions ?? [],
         recommendations,
-        memoryJudgments
+        memoryJudgments,
+        scheduleDecisions
       });
     }
 
@@ -712,6 +769,62 @@ Deno.serve(async (req: Request) => {
       });
       if (error) fail(500, "memory_judgment_write_failed");
       if (data?.error) fail(data.error === "attempt_not_found" ? 404 : 409, data.error);
+
+      try {
+        const [{ data: attemptRows, error: attemptError }, { data: evidence, error: evidenceError }, revisionRows] =
+          await Promise.all([
+            trustedRead("shadow_attempt_history", async () =>
+              admin.from("study_attempts").select("id,event,recorded_at")
+                .eq("learner_id", learnerId)
+                .order("recorded_at", { ascending: true })
+                .order("id", { ascending: true })
+            ),
+            admin.rpc("study_fsrs_shadow_evidence", { p_learner: learnerId }),
+            getRevisionState()
+          ]);
+        if (attemptError || evidenceError) throw new Error("shadow_evidence_unavailable");
+
+        const questionVersionId = String(data?.questionVersionId || "");
+        const questionAttempts = (attemptRows ?? []).filter(
+          (row: any) => String(row.event?.questionVersionId || "") === questionVersionId
+        );
+        const latestAttempt = questionAttempts.at(-1);
+        if (latestAttempt?.id === attemptId) {
+          const generatedAt = new Date().toISOString();
+          const shadow = buildFsrsShadowSchedule(evidence ?? {}, revisionRows, generatedAt);
+          const item = shadow?.items?.find(
+            (candidate: any) => candidate.questionVersionId === questionVersionId
+          );
+          if (item) {
+            await recordScheduleDecision({
+              attemptId,
+              policyId: "fsrs-shadow",
+              policyVersion: 1,
+              role: "shadow",
+              configVersion: FSRS_SHADOW_ENGINE.configVersion,
+              proposedDueAt: item.fsrsDueAt,
+              decision: {
+                engine: FSRS_SHADOW_ENGINE,
+                ratedReviewCount: item.ratedReviewCount,
+                stability: item.stability,
+                difficulty: item.difficulty,
+                scheduledDays: item.scheduledDays,
+                reps: item.reps,
+                lapses: item.lapses,
+                state: item.state,
+                liveDueAt: item.liveDueAt,
+                dueDeltaMs: item.dueDeltaMs
+              }
+            });
+          }
+        }
+      } catch (shadowError) {
+        console.warn(JSON.stringify({
+          event: "fsrs_shadow_decision_deferred",
+          code: shadowError instanceof Error ? shadowError.message : "shadow_decision_failed"
+        }));
+      }
+
       return response(req, 200, data);
     }
 
@@ -851,6 +964,37 @@ Deno.serve(async (req: Request) => {
           operation: "answer_projection",
           code: revisionError.code || "revision_projection_failed"
         }));
+      } else {
+        try {
+          const revisionRows = await getRevisionState();
+          const row = revisionRows.find(
+            (candidate: any) => candidate.question_version_id === q.questionVersionId
+          );
+          if (row && row.evidence_last_event_id === event.eventId) {
+            await recordScheduleDecision({
+              attemptId: event.eventId,
+              policyId: row.policy_id,
+              policyVersion: row.policy_version,
+              role: "authoritative",
+              configVersion: row.policy_id + "@" + row.policy_version,
+              proposedDueAt: row.due_at,
+              decision: {
+                projectionVersion: row.projection_version,
+                attempts: row.attempts,
+                correct: row.correct,
+                incorrect: row.incorrect,
+                consecutiveCorrect: row.consecutive_correct,
+                latestCorrect: row.latest_correct,
+                evidenceEventCount: row.evidence_event_count
+              }
+            });
+          }
+        } catch (decisionError) {
+          console.warn(JSON.stringify({
+            event: "authoritative_schedule_decision_deferred",
+            code: decisionError instanceof Error ? decisionError.message : "schedule_decision_failed"
+          }));
+        }
       }
 
       return response(req, 200, data?.receipt ?? receipt);
