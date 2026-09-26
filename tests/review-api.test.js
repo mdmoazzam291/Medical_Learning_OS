@@ -34,3 +34,17 @@ test('review-api retries only transient trusted reads and does not retry the rev
   assert.match(source, /admin\.rpc\("record_content_review"/);
   assert.doesNotMatch(source, /trustedRead\([^\n]+[\s\S]{0,220}admin\.rpc\("record_content_review"/);
 });
+
+
+test('review-api resolves source rights only through server-derived reviewer identity', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+
+  assert.match(source, /path === "\/source-rights"/);
+  assert.match(source, /exactFields\(input, \["sourceId", "rightsStatus", "evidence"\]\)/);
+  assert.match(source, /requireGrant\("rights"\)/);
+  assert.match(source, /admin\.rpc\("resolve_source_rights"/);
+  assert.match(source, /p_reviewer:\s*reviewerId/);
+  assert.doesNotMatch(source, /p_reviewer:\s*input\./);
+  assert.match(source, /source_rights_already_resolved/);
+  assert.match(source, /rights_not_resolved/);
+});
