@@ -76,3 +76,12 @@ On 2026-09-26 the no-domain development fallback completed its first real end-to
 This verifies the production-shaped identity boundary without claiming production email delivery. Custom SMTP is still deferred until an owned sending domain exists.
 
 Remaining M04b verification: two-real-account isolation, reload/second-device continuity, logout, and real token-refresh behavior.
+
+
+## Sign-out scope
+
+The learner-facing Sign out action is intentionally current-session only. It calls the Supabase logout endpoint with `scope=local`, clears the browser's stored session even if the remote request fails, and leaves other device sessions intact.
+
+A separate future security action may offer “sign out everywhere.” It should not be overloaded onto the ordinary Sign out button.
+
+During live M04b verification, the earlier global-default logout behavior was observed to revoke every active session for the learner. That behavior is now corrected in the browser adapter.

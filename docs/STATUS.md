@@ -96,3 +96,10 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Immediately after confirmation, the browser successfully called the deployed `study-api` `/progress` and `/questions?filter=all` routes with an authenticated JWT; both returned HTTP 200 from Edge Function version 4.
 - Server-side reads for the learner's attempts, bookmarks and catalog also returned successfully. No unreviewed medical questions were opened because the live catalog remains intentionally unpublished.
 - This closes the first real Auth → callback → session → trusted study API path. M04b is not fully closed until a second real account proves learner isolation and a second-device/reload/logout path is exercised.
+
+
+## Logout verification and correction — 2026-09-26
+- Live logout reached Supabase Auth successfully and cleared the learner's server sessions.
+- The test exposed that the raw logout endpoint defaults to global scope, which signs the learner out from every device.
+- The learner-facing Sign out action has been corrected to use `scope=local`, matching expected per-device behavior while retaining an explicit future option for “sign out everywhere.”
+- Remaining M04b checks: real token refresh and two-real-account isolation.

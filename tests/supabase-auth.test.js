@@ -59,9 +59,10 @@ test('signup can stop at confirmation without inventing a session', async () => 
   assert.match(observedUrl, /\/auth\/v1\/signup\?redirect_to=https%3A%2F%2Fpreview\.example\.com%2Fweb%2Faccount\.html$/);
 });
 
-test('sign out clears local session even if remote logout fails', async () => {
+test('sign out targets only the current Supabase session and clears local state on failure', async () => {
   const storage = memoryStorage();
   let count = 0;
+  let logoutUrl = null;
   const auth = createSupabaseAuth({
     projectUrl, publishableKey, storage,
     fetchFn: async url => {
@@ -70,6 +71,7 @@ test('sign out clears local session even if remote logout fails', async () => {
         access_token: 'access', refresh_token: 'refresh', expires_at: Math.floor(Date.now() / 1000) + 3600,
         user: { id: 'u1', email: 'x@example.com' }
       });
+      logoutUrl = url;
       return new Response(JSON.stringify({ error: 'networkish' }), { status: 503, headers: { 'Content-Type': 'application/json' } });
     }
   });
@@ -77,6 +79,7 @@ test('sign out clears local session even if remote logout fails', async () => {
   await assert.rejects(auth.signOut(), AuthError);
   assert.equal(auth.currentUser(), null);
   assert.equal(count, 2);
+  assert.match(logoutUrl, /\/auth\/v1\/logout\?scope=local$/);
 });
 
 test('invalid credentials are rejected before network use', async () => {
