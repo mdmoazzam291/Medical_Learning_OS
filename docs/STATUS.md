@@ -182,7 +182,7 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - `content_reviewer_grants` models server-only authorization for medical/reference/rights review gates.
 - `content_review_events` stores immutable review decisions with one decision per gate per question version.
 - `record_content_review` is the only application mutation path and is executable only by the trusted service role.
-- The database computes a SHA-256 fingerprint over the exact question version plus all referenced source records before recording a review.
+- The database computes a SHA-256 fingerprint for the concern reviewed by each gate; current semantics are medical, references and rights-specific.
 - Browser/learner roles have no table/function access, direct service-role inserts are not granted, and reviewer identity must later come from a trusted JWT-resolving `review-api`.
 - No reviewer has been granted, no medical review has been recorded, and the learner catalog remains closed.
 
@@ -198,7 +198,7 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 
 ## Atomic review projection foundation — 2026-09-26
 - Hardened the M04c review model so authenticated review events are the authority and catalog review metadata is updated transactionally from those events.
-- Review target hashes now exclude mutable workflow fields while still covering all substantive question fields and referenced source records.
+- Review evidence remains immutable and catalog review/status projection remains transactional. Gate-specific fingerprints now supersede the earlier single substantive-target hash.
 - A changed target invalidates prior review evidence instead of silently reusing it.
 - A rejected question version is terminal for review and must be replaced by a new version.
 - Three approved review gates advance content to `verified` only; nothing is published automatically.
@@ -206,7 +206,7 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 
 ## M04c verified publication gate — 2026-09-26
 - Added a server-only verified → published database transition.
-- Publication rechecks the current substantive target hash against all three authenticated review events and requires three approvals.
+- Publication rechecks each medical/reference/rights review against its own current fingerprint and requires three approvals.
 - Referenced source rights must still be resolved at publication time.
 - Publishing a newer version atomically retires the prior published version and increments the catalog version.
 - No browser publication endpoint exists and no medical content has been published.
@@ -215,7 +215,7 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 ## M04c live review/publication verification — 2026-09-26
 - The authenticated review-evidence schema, atomic review projection and verified publication gate are live in the dedicated Supabase project.
 - `review-api` is deployed and ACTIVE at version 2 with explicit JWT verification in the function body and gateway `verify_jwt=false`.
-- Rollback-only live verification recorded three synthetic approvals for one question version through the database review function. All three events shared one substantive target hash; the catalog projection advanced to `verified` with three canonical UTC review timestamps.
+- Historical rollback-only verification proved three-gate projection and publication mechanics under the earlier shared-hash model. The later gate-specific fingerprint migration supersedes that hash semantics before any real review events existed.
 - A second rollback-only verification published a synthetic verified v2, atomically retired the prior published v1, produced a canonical server publication timestamp and left the browser `authenticated` role unable to execute the publication function.
 - All verification transactions were rolled back. Live state remains: 0 reviewer grants, 0 review events, catalog version 0, and 0 catalog questions.
 - No medical content has been reviewed or published.
@@ -247,3 +247,13 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Reviewer grants remain 0 and authenticated review events remain 0.
 - The referenced CDC source retains `rights.status=unknown`, so the publication gate will fail closed until rights are explicitly resolved.
 - The exact review package is versioned in `data/medical-seed-anaphylaxis-review.json`; live content was loaded from that canonical repository file.
+
+
+## Gate-specific review and rights evidence — 2026-09-26
+- Replaced the too-coarse shared review target hash with separate medical, references and rights fingerprints.
+- Added immutable `source_rights_events` bound to source fingerprints.
+- Added trusted `resolve_source_rights` and `review-api/source-rights` paths; browser reviewer identity remains server-derived.
+- Rights approval now fails closed until every referenced source has allowed, current rights evidence.
+- Publication independently rechecks medical/reference/rights fingerprints plus source-rights evidence.
+- The reviewer UI can resolve source rights only inside the rights gate and disables rights approval while sources remain unresolved or restricted.
+- The current live anaphylaxis seed remains `in_review`; this change does not grant a reviewer or publish content.

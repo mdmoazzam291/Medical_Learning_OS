@@ -46,6 +46,12 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
   return {
     me() { return request('/me'); },
     queue(reviewKind) { return request(`/queue?kind=${encodeURIComponent(reviewKind)}`); },
+    resolveRights({ sourceId, rightsStatus, evidence }) {
+      return request('/source-rights', {
+        method: 'POST',
+        body: { sourceId, rightsStatus, evidence }
+      });
+    },
     record({ questionVersionId, reviewKind, decision, notes }) {
       return request('/reviews', {
         method: 'POST',

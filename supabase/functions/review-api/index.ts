@@ -95,6 +95,22 @@ function reviewKind(value: unknown) {
   return value;
 }
 
+function rightsStatus(value: unknown) {
+  const allowed = new Set(["owned", "licensed", "public_domain", "restricted"]);
+  if (typeof value !== "string" || !allowed.has(value)) fail(400, "invalid_rights_status");
+  return value;
+}
+
+function mapRightsWriteError(error: any): never {
+  const message = String(error?.message || "");
+  if (error?.code === "23505") fail(409, "source_rights_already_resolved");
+  if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+  if (message.includes("unknown_source")) fail(404, "source_not_found");
+  if (message.includes("invalid_rights_status")) fail(400, "invalid_rights_status");
+  if (message.includes("invalid_rights_evidence")) fail(400, "invalid_rights_evidence");
+  fail(500, "rights_write_failed");
+}
+
 function mapReviewWriteError(error: any): never {
   const message = String(error?.message || "");
   if (error?.code === "23505") fail(409, "review_already_recorded");
@@ -105,6 +121,7 @@ function mapReviewWriteError(error: any): never {
   if (message.includes("review_target_sources_missing")) fail(409, "review_target_invalid");
   if (message.includes("review_target_changed")) fail(409, "review_target_changed");
   if (message.includes("question_review_rejected")) fail(409, "question_review_rejected");
+  if (message.includes("rights_not_resolved")) fail(409, "rights_not_resolved");
   fail(500, "review_write_failed");
 }
 
@@ -192,6 +209,36 @@ Deno.serve(async (req: Request) => {
         }));
 
       return response(req, 200, { reviewKind: kind, items: queue });
+    }
+
+    if (req.method === "POST" && path === "/source-rights") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, ["sourceId", "rightsStatus", "evidence"]);
+      const sourceId = identifier(input.sourceId);
+      const status = rightsStatus(input.rightsStatus);
+      if (typeof input.evidence !== "string" || input.evidence.trim().length < 1 || input.evidence.trim().length > 4000) {
+        fail(400, "invalid_rights_evidence");
+      }
+      await requireGrant("rights");
+
+      const { data, error } = await admin.rpc("resolve_source_rights", {
+        p_source_id: sourceId,
+        p_reviewer: reviewerId,
+        p_rights_status: status,
+        p_evidence: input.evidence.trim()
+      });
+      if (error) mapRightsWriteError(error);
+      const receipt = Array.isArray(data) ? data[0] : data;
+      if (!receipt?.rights_event_id || !receipt?.source_fingerprint_sha256 || !receipt?.reviewed_at) fail(500, "rights_write_failed");
+
+      return response(req, 200, {
+        rightsEventId: receipt.rights_event_id,
+        sourceId,
+        rightsStatus: status,
+        sourceFingerprintSha256: receipt.source_fingerprint_sha256,
+        reviewedAt: receipt.reviewed_at
+      });
     }
 
     if (req.method === "POST" && path === "/reviews") {

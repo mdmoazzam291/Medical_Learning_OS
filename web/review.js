@@ -71,7 +71,15 @@ function unauthorized() {
 
 function sourceCard(source) {
   const rights = source?.rights || {};
-  return `<article class="source-card"><div><strong>${escape(source?.title || 'Untitled source')}</strong><p class="muted">${escape(source?.sourceId || 'unknown source')} · version ${escape(source?.version || '?')}</p></div><dl><div><dt>Rights</dt><dd>${escape(rights.status || 'unknown')}</dd></div><div><dt>Evidence</dt><dd>${escape(rights.evidence || 'None recorded')}</dd></div></dl><div>${sourceLink(source?.url)}</div></article>`;
+  const status = rights.status || 'unknown';
+  const canResolve = state.selectedKind === 'rights' && status === 'unknown';
+  const form = canResolve ? `
+    <form class="source-rights-form" data-source-id="${escape(source?.sourceId || '')}">
+      <label>Rights outcome<select name="rightsStatus" required><option value="">Choose…</option><option value="public_domain">Public domain</option><option value="licensed">Licensed</option><option value="owned">Owned</option><option value="restricted">Restricted / do not publish</option></select></label>
+      <label>Rights evidence<textarea name="evidence" minlength="1" maxlength="4000" required placeholder="Record the policy, licence, ownership evidence, or restriction."></textarea></label>
+      <button class="secondary" type="submit" ${state.submitting ? 'disabled' : ''}>Resolve source rights</button>
+    </form>` : '';
+  return `<article class="source-card"><div><strong>${escape(source?.title || 'Untitled source')}</strong><p class="muted">${escape(source?.sourceId || 'unknown source')} · version ${escape(source?.version || '?')}</p></div><dl><div><dt>Rights</dt><dd>${escape(status)}</dd></div><div><dt>Evidence</dt><dd>${escape(rights.evidence || 'None recorded')}</dd></div></dl><div>${sourceLink(source?.url)}</div>${form}</article>`;
 }
 
 function reviewItem(item, index) {
@@ -80,6 +88,7 @@ function reviewItem(item, index) {
   const options = Array.isArray(q.options) ? q.options : [];
   const primary = Array.isArray(q.conceptLinks) ? q.conceptLinks.find(link => link?.role === 'primary') : null;
   const provenance = q.provenance || {};
+  const rightsReady = state.selectedKind !== 'rights' || sources.every(source => ['owned', 'licensed', 'public_domain'].includes(source?.rights?.status));
 
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">TARGET ${index + 1}</span><h2>${escape(q.questionVersionId || 'Unknown version')}</h2></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
@@ -91,7 +100,7 @@ function reviewItem(item, index) {
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
       <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting ? 'disabled' : ''}>Approve this gate</button></div>
+      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, or public domain before approving the rights gate.</p>' : ''}
     </form>
   </article>`;
 }
@@ -162,6 +171,33 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const rightsForm = event.target.closest('.source-rights-form');
+  if (rightsForm) {
+    event.preventDefault();
+    const data = new FormData(rightsForm);
+    const sourceId = rightsForm.dataset.sourceId;
+    const rightsStatus = String(data.get('rightsStatus') || '');
+    const evidence = String(data.get('evidence') || '').trim();
+    if (!rightsStatus || !evidence) { announce('Rights outcome and evidence are required.'); return; }
+
+    (async () => {
+      state.submitting = sourceId;
+      render();
+      try {
+        const receipt = await review.resolveRights({ sourceId, rightsStatus, evidence });
+        announce(`Source rights recorded for ${sourceId}: ${receipt.rightsStatus}.`);
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'resolve_source_rights');
+        state.submitting = null;
+        render();
+        announce(`Source rights were not recorded: ${error.code || error.message || 'rights_write_failed'}.`);
+      }
+    })();
+    return;
+  }
+
   const form = event.target.closest('.review-decision-form');
   if (!form) return;
   event.preventDefault();

@@ -82,3 +82,11 @@ Use one small, clinically stable, source-grounded medical question to exercise t
 Preserve rights uncertainty rather than declaring a source reusable from broad assumptions. The first seed's CDC source remains `rights.status=unknown` because the agency site has public-domain defaults with exceptions and the page contains cited/adapted third-party material. Rights resolution is a real review task, and publication must remain blocked until it is cleared.
 
 This is a validation seed, not a content-acquisition strategy. Scaling begins only after the medical, references and rights gates produce defensible evidence on a genuine item.
+
+
+## ADR-018 — Review gates attest to different targets (accepted, 2026-09-26)
+Replace the shared cross-gate review fingerprint with gate-specific fingerprints. Medical accuracy, reference support and usage rights are different assertions and should not invalidate each other when unrelated metadata changes.
+
+Medical review binds to clinical question content. Reference review binds to question/source identity and version metadata while excluding rights projection. Rights review binds to provenance and complete source-rights metadata. Publication recomputes and validates all three independently.
+
+Rights clearance becomes immutable evidence rather than a free-form mutable source field. A versioned source receives one `source_rights_events` record bound to a source fingerprint. Rights approval and publication fail closed when the event is absent, restrictive, or stale.

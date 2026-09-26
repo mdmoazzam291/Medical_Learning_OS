@@ -155,8 +155,8 @@ Publication is allowed only when all of the following remain true at publication
 - every referenced source has resolved rights: owned, licensed or public domain,
 - exactly three review events exist for that question version,
 - all three decisions are approved,
-- all review events carry one identical target hash,
-- that hash still matches the current substantive question/source target,
+- each review event matches the current fingerprint for its own medical, references, or rights gate,
+- every referenced source has current immutable rights evidence bound to the source fingerprint,
 - no newer version of the same question has already been published.
 
 The database generates the publication timestamp, updates the target to `published`, retires any previously published version of the same question, and increments the shared catalog version in one transaction.
@@ -170,11 +170,11 @@ The live Supabase project passed rollback-only M04c verification without leaving
 
 Verified properties:
 
-- three gate approvals over the same substantive target produce one stable target hash,
+- historical three-gate verification proved transactional projection before the later gate-specific fingerprint model was introduced,
 - review events and catalog review/status projection are transactionally consistent,
 - canonical review timestamps use UTC ISO strings with milliseconds,
 - three approvals advance only to `verified`,
-- `publish_verified_content` rechecks the current target and review evidence,
+- `publish_verified_content` rechecks each gate-specific target plus current source-rights evidence,
 - publishing a newer version retires the previous published version atomically,
 - learner/browser role cannot execute the publication function,
 - no reviewer grants, review events or synthetic questions remain after rollback.
@@ -243,3 +243,40 @@ Live invariants after loading:
 - source rights remain unresolved.
 
 This is deliberate. The item can now exercise the real reviewer queue once a reviewer is explicitly authorized, while the learner study API continues to return no publishable medical content.
+
+
+## Gate-specific review fingerprints
+
+One shared review hash is too coarse because the three gates attest to different claims. The current model uses one target fingerprint per review gate:
+
+- **medical** hashes the clinical question itself: stem, options, answer key, explanation, version lineage and concept links.
+- **references** hashes the reviewable question plus source identity/version metadata, but deliberately excludes source-rights metadata.
+- **rights** hashes provenance, source IDs and the complete referenced source records including rights status/evidence.
+
+This prevents a legitimate rights-resolution update from invalidating an already completed medical or references review while still making each gate fail closed when its own relevant target changes.
+
+Publication recomputes all three current gate-specific hashes and requires each immutable review event to match its own gate's current target.
+
+## Source-rights evidence
+
+Rights status is no longer merely mutable catalog metadata.
+
+`source_rights_events` stores one immutable decision for each versioned `sourceId`:
+
+- reviewer UUID
+- owned/licensed/public-domain/restricted outcome
+- evidence
+- database timestamp
+- SHA-256 fingerprint of the source record excluding the rights projection itself
+
+Only an authenticated reviewer with the `rights` grant can create a rights event through the trusted `review-api`.
+
+The catalog's source `rights` object is updated transactionally from that event. A rights-gate approval is blocked unless every referenced source:
+
+1. has an allowed status: owned, licensed, or public domain,
+2. has a persisted rights event, and
+3. still matches the source fingerprint reviewed in that event.
+
+Publication repeats the same evidence check. If source identity/version metadata changes under the same source ID, stale rights evidence fails closed.
+
+The reviewer workspace exposes source-rights resolution only while the rights gate is selected. A restricted source can be recorded as restricted, but the question cannot receive a rights approval or publish while referencing it.
