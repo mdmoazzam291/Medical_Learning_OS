@@ -88,3 +88,15 @@ test('Study Now outcomes stay server-derived and explicitly non-causal', async (
   assert.match(source, /scope: "descriptive-recommendation-outcomes"/);
   assert.match(source, /causal: false/);
 });
+
+
+test('memory judgments are authenticated service-derived optional evidence', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/memory-judgments"/);
+  assert.match(source, /exactFields\(input, \["attemptId", "rating"\]\)/);
+  assert.match(source, /integer\(input\.rating, 1, 4\)/);
+  assert.match(source, /study_record_memory_judgment/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /session_memory_judgment/);
+  assert.match(source, /memoryJudgments/);
+});
