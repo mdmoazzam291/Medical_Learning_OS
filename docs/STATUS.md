@@ -257,3 +257,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Publication independently rechecks medical/reference/rights fingerprints plus source-rights evidence.
 - The reviewer UI can resolve source rights only inside the rights gate and disables rights approval while sources remain unresolved or restricted.
 - The current live anaphylaxis seed remains `in_review`; this change does not grant a reviewer or publish content.
+
+
+## Live gate-specific review verification — 2026-09-26
+- The gate-specific review and source-rights migration is live in the dedicated Supabase project.
+- `review-api` is ACTIVE at version 3 with source-rights resolution support.
+- Rollback-only verification on the real anaphylaxis review seed produced three review events with three distinct gate fingerprints, one immutable source-rights event, a current source fingerprint match, and a `verified` catalog projection.
+- The same rollback-only path then passed the trusted publication function with all three gate fingerprints matching their current targets.
+- After rollback, live state remains unchanged: 0 reviewer grants, 0 review events, 0 rights events, catalog version 1, one `in_review` question, zero published questions, and the CDC source rights status remains `unknown`.
+- The live Render reviewer workspace includes source-rights resolution controls only for rights reviewers; no reviewer has been authorized yet.
