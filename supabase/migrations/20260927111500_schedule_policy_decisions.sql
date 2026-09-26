@@ -174,7 +174,7 @@ select
   r.policy_version,
   'authoritative',
   r.policy_id || '@' || r.policy_version::text,
-  a.event->>'occurredAt'::text::timestamptz,
+  (a.event->>'occurredAt')::timestamptz,
   r.due_at,
   pg_catalog.jsonb_build_object(
     'projectionVersion', r.projection_version,
