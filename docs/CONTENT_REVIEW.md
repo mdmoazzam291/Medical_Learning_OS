@@ -86,3 +86,37 @@ The function is executable only by the trusted service role. A future `review-ap
 - no institution-specific reviewer policy
 
 The next M04c step is a small authenticated `review-api` that exposes pending review targets to authorized reviewers and records decisions through the database function. Publication remains a separate gate after authenticated review evidence is proven.
+
+
+## Authenticated review API
+
+`supabase/functions/review-api/index.ts` is the trusted HTTP boundary for reviewer workflows.
+
+Authentication follows the same production-shaped rule as the learner study API:
+
+1. the browser supplies only its own Supabase Auth access token,
+2. the Edge Function verifies that token with Supabase Auth,
+3. reviewer UUID is derived from the verified user,
+4. reviewer grants are loaded server-side,
+5. the browser never supplies reviewer identity.
+
+Routes:
+
+- `GET /me` returns only the authenticated reviewer's granted review kinds.
+- `GET /queue?kind=...` requires the matching grant and returns only `in_review` question targets not already decided for that gate.
+- `POST /reviews` accepts only question version, gate, decision and notes. It calls the trusted `record_content_review` function with the server-derived reviewer UUID.
+
+The API does not publish content, modify reviewer grants, expose learner evidence or accept answer/mastery data.
+
+## Live schema verification
+
+The M04c review-evidence migration has been applied to the dedicated Supabase project.
+
+A rollback-only verification proved that:
+- an authorized synthetic reviewer path can create exactly one review event,
+- the database-generated target fingerprint is 64 lowercase hexadecimal characters,
+- `service_role` may read grants/events and execute `record_content_review`,
+- `service_role` cannot directly insert review events or reviewer grants,
+- `authenticated` cannot read the review tables or execute the review-recording function.
+
+No grant or synthetic review persisted after verification.
