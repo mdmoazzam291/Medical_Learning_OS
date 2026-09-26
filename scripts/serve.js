@@ -13,6 +13,8 @@ const allowed = new Set([
   'web/favicon.svg',
   'web/account.html',
   'web/account.js',
+  'web/medical.html',
+  'web/medical.js',
   'web/review.html',
   'web/review.js',
   'web/cloud-config.js',
