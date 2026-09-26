@@ -36,7 +36,7 @@ The adapter scrubs common secret/token/email patterns and sensitive field names 
 
 ## Sentry rollout
 
-Sentry is the intended provider, but there is no connected Sentry project yet.
+Sentry is now connected for the hosted browser preview using the project public DSN/client key. No Sentry API/auth token is stored in the repository or browser.
 
 When the operator creates the Sentry project:
 
@@ -79,3 +79,26 @@ Do not page on ordinary invalid credentials, user mistakes, expected 4xx respons
 ## Success metric
 
 Observability is successful when meaningful failures are detected quickly, diagnosed with minimal learner data, and prevented from silently corrupting the learner model.
+
+
+## Current Sentry browser configuration
+
+The hosted Render preview loads the Sentry Browser JavaScript Loader only on `*.onrender.com`.
+
+Privacy constraints:
+
+- errors only
+- `sendDefaultPii: false`
+- zero breadcrumbs
+- zero trace sampling and transactions dropped
+- no Session Replay
+- no structured Logs
+- no Application Metrics
+- no learner identity set on the Sentry scope
+- request bodies/headers/cookies removed before send
+- query strings removed from request URLs
+- application-side token/email/credential scrubbing remains active
+
+CSP permits only the Sentry loader/bundle CDNs and this project's exact US ingest host.
+
+A temporary preview-only `?monitoring_test=1` trigger sends one sanitized controlled event per browser session. It is strictly a verification mechanism and must be removed immediately after the event is confirmed in Sentry.
