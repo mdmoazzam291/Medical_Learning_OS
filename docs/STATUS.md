@@ -175,3 +175,13 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The retry applies only to trusted read operations. Writes/RPC mutations are never blindly retried.
 - The retry emits only a sanitized operation/code warning to Supabase logs, with no learner data or credentials.
 - Persistent failures still fail closed with the existing `catalog_unavailable` / `study_read_failed` responses.
+
+
+## M04c authenticated review foundation — 2026-09-26
+- Added the first durable M04c schema for authenticated content review without publishing any medical content.
+- `content_reviewer_grants` models server-only authorization for medical/reference/rights review gates.
+- `content_review_events` stores immutable review decisions with one decision per gate per question version.
+- `record_content_review` is the only application mutation path and is executable only by the trusted service role.
+- The database computes a SHA-256 fingerprint over the exact question version plus all referenced source records before recording a review.
+- Browser/learner roles have no table/function access, direct service-role inserts are not granted, and reviewer identity must later come from a trusted JWT-resolving `review-api`.
+- No reviewer has been granted, no medical review has been recorded, and the learner catalog remains closed.
