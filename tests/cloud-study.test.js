@@ -69,3 +69,28 @@ test('mutation payload contains request identity but no correctness claim', asyn
   assert.deepEqual(body, { requestId: 'req-1', position: 0, optionId: 'a' });
   assert.equal(Object.hasOwn(body, 'correct'), false);
 });
+
+
+test('cloud study exposes authenticated revision due queue', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        generatedAt: '2026-09-26T17:30:00.000Z',
+        policy: { id: 'bootstrap-binary-v1', version: 1, evidence: 'binary-correctness', provisional: true },
+        dueCount: 0,
+        returnedCount: 0,
+        nextDueAt: null,
+        items: []
+      });
+    }
+  });
+
+  const result = await cloud.due(12);
+  assert.match(seenUrl, /study-api\/revision\/due\?limit=12$/);
+  assert.equal(result.policy.provisional, true);
+  assert.equal(result.dueCount, 0);
+});
