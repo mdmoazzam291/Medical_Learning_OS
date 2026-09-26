@@ -121,3 +121,21 @@ The initial selector is intentionally narrow:
 - resume an existing open session before creating a new one.
 
 This is not the final recommendation engine. Later versions may mix due revision, new learning, misconception repair, exam priorities and transfer exercises, but each added priority must be evidence-backed and explainable. The narrow first policy provides a measurable baseline without conflating scheduling urgency with mastery.
+
+
+## ADR-022 — Study Now decisions and outcomes must be auditable evidence (accepted, 2026-09-26)
+Persist every newly created Study Now recommendation as an immutable decision receipt bound atomically to the study session it creates. The receipt stores the strategy version, learner-declared time budget, selected exact question versions, candidate reasons and estimated workload.
+
+Keep recommendation reasons categorical and explainable before considering a composite ranking model. Study Now v2 uses three explicit classes:
+- `mistake-repair`: a scheduled-due item whose latest observed answer was incorrect;
+- `due-revision`: other scheduled-due revision;
+- `new-learning`: published content the learner has not attempted, considered after fitting due work.
+
+Do not pull future revision early merely to consume the learner's available time. A recent mistake can be labelled for repair when due without treating immediate repetition as evidence of durable learning.
+
+Project outcomes by joining immutable recommendation receipts to sessions and attempts. Track completion, attempted/correct counts, actual answer time and the first later retrieval of each recommended item. These are descriptive observations, not mastery and not estimates of causal treatment effect. Causal claims require controlled experiments or stronger identification designs.
+
+This creates an evaluation loop:
+learner evidence → recommendation decision → immutable receipt → learner action → later retrieval → policy evaluation.
+
+A future policy can therefore be compared against prior policies without rewriting historical learner evidence or losing why a recommendation was made.
