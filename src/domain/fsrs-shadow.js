@@ -61,6 +61,12 @@ export function buildFsrsShadowEvidence({ attempts, judgments, learnerId }) {
     a.eventId.localeCompare(b.eventId));
 
   const ratingCounts = { Again: 0, Hard: 0, Good: 0, Easy: 0 };
+  const questionStats = new Map();
+  for (const attempt of learnerAttempts) {
+    const row = questionStats.get(attempt.questionVersionId) ?? { totalAttempts: 0, ratedAttempts: 0 };
+    row.totalAttempts += 1;
+    questionStats.set(attempt.questionVersionId, row);
+  }
   let correctAgain = 0;
   let incorrectGoodOrEasy = 0;
   const reviews = [];
@@ -69,6 +75,7 @@ export function buildFsrsShadowEvidence({ attempts, judgments, learnerId }) {
     const judgment = judgmentByAttempt.get(attempt.eventId);
     if (!judgment) continue;
     ratingCounts[judgment.ratingLabel] += 1;
+    questionStats.get(attempt.questionVersionId).ratedAttempts += 1;
     if (attempt.correct && judgment.rating === 1) correctAgain += 1;
     if (!attempt.correct && judgment.rating >= 3) incorrectGoodOrEasy += 1;
 
@@ -89,6 +96,17 @@ export function buildFsrsShadowEvidence({ attempts, judgments, learnerId }) {
   const totalAttempts = learnerAttempts.length;
   const ratedAttempts = reviews.length;
   const questionIds = new Set(reviews.map(review => review.questionVersionId));
+  const questionCoverage = [...questionStats.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([questionVersionId, stats]) => Object.freeze({
+      questionVersionId,
+      totalAttempts: stats.totalAttempts,
+      ratedAttempts: stats.ratedAttempts,
+      unratedAttempts: stats.totalAttempts - stats.ratedAttempts,
+      ratingCoverage: stats.totalAttempts ? stats.ratedAttempts / stats.totalAttempts : null,
+      fullyRated: stats.totalAttempts > 0 && stats.totalAttempts === stats.ratedAttempts
+    }));
+  const fullyRatedQuestionCount = questionCoverage.filter(row => row.fullyRated).length;
 
   return Object.freeze({
     learnerId,
@@ -101,6 +119,8 @@ export function buildFsrsShadowEvidence({ attempts, judgments, learnerId }) {
     unratedAttempts: totalAttempts - ratedAttempts,
     ratingCoverage: totalAttempts ? ratedAttempts / totalAttempts : null,
     ratedQuestionCount: questionIds.size,
+    fullyRatedQuestionCount,
+    questionCoverage: Object.freeze(questionCoverage),
     ratingCounts: Object.freeze({ ...ratingCounts }),
     discordance: Object.freeze({
       correctAgain,
