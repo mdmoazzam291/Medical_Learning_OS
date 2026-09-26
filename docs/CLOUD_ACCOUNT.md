@@ -37,3 +37,17 @@ The deployed Edge Function is active with JWT verification enabled. A full real-
 - Cloud study requests retry once after token refresh on a 401.
 - No medical content is exposed merely because an account exists.
 - Cross-device data is server evidence only; local demo evidence remains local until an explicit migration design exists.
+
+
+## Authentication email delivery
+
+Resend is the selected SMTP provider, but production setup is gated by a verified sending domain. Prefer a dedicated authentication subdomain such as `auth.<owned-domain>` so auth reputation stays separate from future marketing mail.
+
+After the domain is verified:
+1. Create a Resend API key with sending-only permission restricted to that domain.
+2. Configure Supabase Auth custom SMTP with Resend.
+3. Keep the SMTP password/API key outside browser code and git.
+4. Send a real signup confirmation, confirm the account, then test sign-in, refresh, logout, and a second account for isolation.
+5. Revoke any abandoned/unrecoverable test key after explicit operator confirmation.
+
+Do not treat successful SMTP delivery as proof of learner-data isolation. Account isolation still requires the M04b end-to-end tests.
