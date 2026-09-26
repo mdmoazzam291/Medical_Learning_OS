@@ -380,3 +380,20 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Current real state remains 1 attempt and 0 memory ratings per tested learner path, so rating coverage is 0 and there is no replayable real FSRS review evidence yet.
 - Rollback-only proof showed that one synthetic Again rating becomes one replayable review, 100% coverage for that synthetic learner history, and one correct+Again discordance while production due-date authority remains false; rollback removed the synthetic rating.
 - No arbitrary minimum-rating threshold for production FSRS authority has been invented. Readiness thresholds will be evidence-driven.
+
+
+## M05d deterministic FSRS shadow scheduler — 2026-09-27
+- Added a real non-authoritative FSRS shadow scheduler to `study-api`.
+- Engine is pinned to `ts-fsrs@5.4.2`, which uses FSRS-6 defaults; fuzz is disabled for deterministic replay.
+- Shadow engine configuration is versioned as `fsrs-shadow-default-v1` with request retention 0.9 and maximum interval 36500 days.
+- `GET /revision/fsrs-shadow` now replays explicit learner ratings through the pinned engine when sufficient evidence exists.
+- Output includes proposed FSRS due time, current live bootstrap due time, delta between them, stability, difficulty, scheduled days, reps, lapses, state and current retrievability.
+- Shadow results remain explicitly non-authoritative: `schedulerControl=false`; live revision rows still use only `bootstrap-binary-v1`.
+- Added a critical completeness gate: FSRS schedule output is produced only for exact question versions whose entire observed attempt history is rated. Partially rated histories remain visible as readiness evidence but are skipped by the scheduler.
+- Added distinct shadow reasons: no real ratings, no fully rated question history, or real ratings replayed.
+- Restored the already-applied shadow-readiness migration to its original immutable contents and moved the stricter per-question coverage function into a new migration, preserving migration-history integrity.
+- New Supabase migration `fsrs_shadow_question_coverage` applied successfully.
+- `study-api` v13 deployed successfully with the pinned npm package, confirming Edge Function npm compatibility.
+- Full GitHub checks and browser checks passed before release.
+- Live state remains clean: 0 real memory judgments, 2 revision rows, live policy only `bootstrap-binary-v1`, and authenticated users cannot call the shadow SQL function directly.
+- No new Supabase security regression appeared; leaked-password protection remains the existing unrelated warning.
