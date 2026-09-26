@@ -109,7 +109,7 @@ test('FSRS shadow endpoint is learner-scoped and cannot control production due d
   assert.match(source, /p_learner: learnerId/);
   assert.match(source, /mode: "shadow-scheduler"/);
   assert.match(source, /schedulerControl: false/);
-  assert.match(source, /shadowSchedule: null/);
+  assert.match(source, /livePolicyId: evidence\.livePolicyId \?\? "bootstrap-binary-v1"/);
   assert.match(source, /no_real_memory_ratings/);
 });
 
