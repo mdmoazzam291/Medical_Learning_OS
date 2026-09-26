@@ -319,3 +319,18 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - `study-api` v6 exposes authenticated `GET /revision/due`. It returns published content only, strips answer keys, labels the policy provisional and keeps scheduling distinct from mastery.
 - Post-answer projection refresh is fail-soft: an acknowledged attempt is never rejected because revision projection failed.
 - The Medical QBank overview now has a nonblocking revision-status panel; hosted UI verification remains before M05b is marked DONE.
+
+
+## M05b hosted verification and M05c Study Now start — 2026-09-26
+- Hosted Medical QBank verified the authenticated revision projection end to end: 0 due now with the correct next scheduled review timestamp and explicit wording that scheduling is not mastery.
+- M05b is DONE.
+- Added a pure Study Now planning domain module that accepts available minutes as the primary workload input.
+- Study Now currently selects only genuinely due revision items, ordered oldest-due first. It does not pull future reviews early simply to fill spare time.
+- Per-item time estimates use the learner's observed prior response duration plus bounded review overhead; selection is capped by the available time budget rather than a fixed question target.
+- UI presets are 10, 20, 30 and 60 minutes while the API accepts 5–120 minutes.
+- If a learner already has an open session, Study Now resumes it rather than creating a competing session.
+- `POST /study-now/start` is live in `study-api` v7 and derives learner identity from the authenticated session.
+- Study Now returns learner-safe question payloads through the existing trusted session state; answer keys remain server-side until an attempt is recorded.
+- The Medical QBank shows Study Now time controls only when revision items are actually due.
+- Full GitHub checks passed and the latest Render deployment is live.
+- M05c remains IN PROGRESS until a genuinely due hosted item exercises the complete Study Now start → answer → reschedule loop.
