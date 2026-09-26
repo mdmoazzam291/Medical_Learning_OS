@@ -133,3 +133,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Immediately after the exchange, the same authenticated session successfully called `study-api/progress` and `study-api/questions`; both returned HTTP 200.
 - The two-device logout behavior was also observed from the learner UI: the signed-out device remained signed out after reload while the other device remained connected.
 - M04b's remaining live security gate is two-distinct-real-account isolation through the hosted account and study API path.
+
+
+## Observability foundation — 2026-09-26
+- Added a dependency-free browser error-monitoring boundary with application-side redaction for tokens, credentials, email addresses and sensitive fields.
+- Local learner persistence failures and unexpected cloud/account failures now pass through the monitoring boundary without changing product behavior.
+- Monitoring itself is failure-isolated and remains a no-op until a Sentry SDK/provider sink is configured.
+- Sentry remains the selected provider. No Sentry project/plugin is connected yet, so DSN/provider configuration is still an operator-side gate.
+- Session Replay and broad learner telemetry are explicitly deferred. The initial observability scope is operational errors only.
