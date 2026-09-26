@@ -13,6 +13,8 @@ const allowed = new Set([
   'web/favicon.svg',
   'web/account.html',
   'web/account.js',
+  'web/review.html',
+  'web/review.js',
   'web/cloud-config.js',
   'web/monitoring.js',
   'web/sentry-bootstrap.js',
@@ -21,6 +23,7 @@ const allowed = new Set([
   'src/adapters/local-store.js',
   'src/adapters/supabase-auth.js',
   'src/adapters/cloud-study.js',
+  'src/adapters/cloud-review.js',
   'src/adapters/error-monitoring.js'
 ]);
 

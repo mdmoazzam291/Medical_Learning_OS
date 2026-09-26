@@ -219,3 +219,13 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - A second rollback-only verification published a synthetic verified v2, atomically retired the prior published v1, produced a canonical server publication timestamp and left the browser `authenticated` role unable to execute the publication function.
 - All verification transactions were rolled back. Live state remains: 0 reviewer grants, 0 review events, catalog version 0, and 0 catalog questions.
 - No medical content has been reviewed or published.
+
+
+## M04c reviewer workspace — 2026-09-26
+- Added a responsive authenticated reviewer workspace at `/web/review.html`.
+- The Cloud account page discovers reviewer grants server-side and surfaces the workspace only to accounts with at least one granted gate.
+- The workspace displays the exact in-review question version, answer key, explanation, provenance and resolved source package for the selected review gate.
+- Medical/reference/rights guidance is gate-specific; notes are mandatory and approvals/rejections are one version at a time.
+- Review submission contains no reviewer ID. Reviewer identity remains derived from the verified Supabase session in `review-api`.
+- Browser CI covers granted access, queue rendering, review submission, queue removal and absence of browser-supplied reviewer identity.
+- There is still no publication control in the reviewer UI, no reviewer grant assigned in live data, and no medical content published.

@@ -118,6 +118,8 @@ try {
   activePage = accountPage;
   accountPage.on('pageerror', e => errors.push(e.message));
   let refreshCalls = 0;
+  let reviewRecorded = false;
+  let reviewBody = null;
   await accountPage.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
     const url = route.request().url();
     if (url.includes('/auth/v1/token?grant_type=password')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ access_token: 'jwt-test', refresh_token: 'refresh-test', expires_at: 2100000000, user: { id: '11111111-1111-1111-1111-111111111111', email: 'learner@example.com', email_confirmed_at: '2026-09-25T00:00:00Z' } }) });
@@ -125,6 +127,49 @@ try {
     if (url.includes('/auth/v1/user')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ id: '22222222-2222-2222-2222-222222222222', email: 'confirmed@example.com', email_confirmed_at: '2026-09-26T00:00:00Z' }) });
     if (url.includes('/functions/v1/study-api/progress')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ attempts: 0, correct: 0, accuracy: null, concepts: [] }) });
     if (url.includes('/functions/v1/study-api/questions')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ questions: [] }) });
+    if (url.includes('/functions/v1/review-api/me')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ reviewerId: '11111111-1111-1111-1111-111111111111', reviewKinds: ['medical'] }) });
+    if (url.includes('/functions/v1/review-api/queue?kind=medical')) {
+      const items = reviewRecorded ? [] : [{
+        question: {
+          questionId: 'demo:review',
+          questionVersionId: 'demo:review@1',
+          version: 1,
+          supersedes: null,
+          authorId: 'fixture-author',
+          changeReason: 'Review UI fixture',
+          stem: 'Which review behavior is safest?',
+          options: [{ optionId: 'server', text: 'Derive reviewer identity on the server' }, { optionId: 'browser', text: 'Trust a browser reviewer ID' }],
+          answerOptionId: 'server',
+          explanation: 'Reviewer identity must come from the authenticated server boundary.',
+          conceptLinks: [{ conceptId: 'demo:review-boundary', role: 'primary' }],
+          sourceIds: ['demo:review-source:v1'],
+          provenance: { kind: 'original', exam: null, year: null, evidence: 'Synthetic browser verification fixture.' },
+          status: 'in_review',
+          reviews: [],
+          publishedAt: null
+        },
+        sources: [{
+          sourceId: 'demo:review-source:v1',
+          title: 'Synthetic review source',
+          url: null,
+          version: '1',
+          rights: { status: 'owned', evidence: 'Synthetic browser verification fixture.' }
+        }]
+      }];
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ reviewKind: 'medical', items }) });
+    }
+    if (url.includes('/functions/v1/review-api/reviews')) {
+      reviewBody = JSON.parse(route.request().postData() || '{}');
+      reviewRecorded = true;
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        reviewId: 'review-1',
+        questionVersionId: 'demo:review@1',
+        reviewKind: 'medical',
+        decision: reviewBody.decision,
+        targetSha256: 'a'.repeat(64),
+        reviewedAt: '2026-09-26T12:00:00.000Z'
+      }) });
+    }
     if (url.includes('/auth/v1/logout')) return route.fulfill({ status: 204, body: '' });
     return route.fulfill({ status: 404, contentType: 'application/json', body: JSON.stringify({ error: 'unexpected_test_route' }) });
   });
@@ -141,6 +186,20 @@ try {
   await accountPage.getByRole('button', { name: 'Verify session refresh', exact: true }).waitFor();
   await accountPage.getByRole('alert').filter({ hasText: 'Session refresh verified in this browser.' }).waitFor();
   assert.equal(refreshCalls, 1);
+  await accountPage.getByRole('link', { name: 'Open review workspace' }).waitFor();
+  await accountPage.getByRole('link', { name: 'Open review workspace' }).click();
+  await accountPage.getByRole('heading', { name: 'Review one immutable version at a time.' }).waitFor();
+  await accountPage.getByRole('heading', { name: 'demo:review@1' }).waitFor();
+  assert.match(await accountPage.locator('.review-stem').textContent(), /Which review behavior is safest/);
+  assert.match(await accountPage.locator('.review-answer').textContent(), /Derive reviewer identity on the server/);
+  await accountPage.getByLabel('Review notes').fill('Synthetic browser review: answer and explanation checked.');
+  await accountPage.getByRole('button', { name: 'Approve this gate' }).click();
+  await accountPage.getByRole('alert').filter({ hasText: 'Approved demo:review@1' }).waitFor();
+  await accountPage.getByRole('heading', { name: 'No pending targets for this gate.' }).waitFor();
+  assert.deepEqual(Object.keys(reviewBody).sort(), ['decision', 'notes', 'questionVersionId', 'reviewKind']);
+  assert.equal('reviewerId' in reviewBody, false);
+  await accountPage.getByRole('link', { name: 'Cloud account' }).click();
+  await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
   await accountPage.reload();
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
   await accountPage.getByRole('button', { name: 'Sign out' }).click();
@@ -157,7 +216,7 @@ try {
   await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
   await accountContext.close();
   assert.deepEqual(errors, []);
-  console.log('Concurrent submit, corrupt data protection, private-file boundary, account session/cloud boundary and no browser errors passed');
+  console.log('Concurrent submit, corrupt data protection, private-file boundary, account/cloud session boundary, authenticated reviewer workflow and no browser errors passed');
 } catch (error) {
   if (activePage && !activePage.isClosed()) {
     console.error(await activePage.locator('body').innerText());

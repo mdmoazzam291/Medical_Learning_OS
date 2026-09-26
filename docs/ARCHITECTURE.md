@@ -49,3 +49,10 @@ The observability path must never become an alternate store for learner evidence
 Authenticated review evidence is normalized outside the learner catalog. Reviewer grants are mutable authorization state; review events are immutable audit evidence. A review event is bound to the exact question/source target by a server-computed SHA-256 fingerprint.
 
 The learner-facing catalog remains a publication projection, not the authority for reviewer identity. A future trusted `review-api` resolves reviewer identity from Supabase Auth, checks grant scope, and records decisions through the database function. Publication remains separate so a valid review cannot accidentally become learner-visible content.
+
+
+### Reviewer interface boundary
+
+The reviewer UI is an authenticated operational interface over `review-api`, not a learner feature and not a publication authority.
+
+The browser may submit a question version ID, one granted review kind, a decision and notes. It never supplies reviewer identity, target hash, server timestamp or publication state. Review queues are fetched only after server-side grant checks, and publication remains a separate trusted transition with no browser control.

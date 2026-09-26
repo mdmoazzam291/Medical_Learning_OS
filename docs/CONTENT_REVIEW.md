@@ -180,3 +180,25 @@ Verified properties:
 - no reviewer grants, review events or synthetic questions remain after rollback.
 
 The deployed `review-api` is active at version 2. It still has no reviewer grants to serve, by design.
+
+
+## Reviewer workspace
+
+The browser reviewer surface lives at `/web/review.html`.
+
+It is intentionally separate from the learner study interface. The page can load only after an existing Supabase Auth session is present, then calls `review-api/me` to discover server-side grants.
+
+Behavior:
+
+- accounts with no review grants see no queue and no review controls,
+- the Cloud account page shows the reviewer-workspace link only when `review-api/me` returns at least one grant,
+- reviewers may switch only among gates they are actually granted,
+- each queue item exposes the exact in-review question version plus its referenced source package,
+- answer key, explanation, provenance and source-rights evidence are visible to the reviewer,
+- review notes are mandatory,
+- decisions are submitted one version/gate at a time,
+- the browser submits only question version, review gate, decision and notes,
+- reviewer identity is never sent by browser code,
+- the workspace contains no publication control.
+
+The UI deliberately avoids bulk approval. Review throughput is secondary to trustworthy medical/reference/rights evidence.
