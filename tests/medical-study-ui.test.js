@@ -49,3 +49,12 @@ test('medical revision panel exposes time-budget Study Now only when items are d
   assert.match(source, /cloud\.studyNow\(availableMinutes, 50\)/);
   assert.match(source, /Future reviews were not pulled early/);
 });
+
+
+test('Study Now UI can offer unseen new learning without calling it mastery', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /revision\.dueCount \|\| revision\.unseenCount/);
+  assert.match(source, /unseen published question/);
+  assert.match(source, /explainable candidate classes/);
+  assert.doesNotMatch(source, /mastery score.*Study Now score/i);
+});
