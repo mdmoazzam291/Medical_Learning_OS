@@ -62,6 +62,34 @@ summary as (
       filter (where judgment_id is not null and rated_at >= reviewed_at) as mean_rating_lag_ms
   from joined
 ),
+question_coverage as (
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'questionVersionId', question_version_id,
+        'totalAttempts', total_attempts,
+        'ratedAttempts', rated_attempts,
+        'unratedAttempts', total_attempts - rated_attempts,
+        'ratingCoverage', case
+          when total_attempts = 0 then null
+          else rated_attempts::double precision / total_attempts
+        end,
+        'fullyRated', total_attempts > 0 and total_attempts = rated_attempts
+      )
+      order by question_version_id
+    ),
+    '[]'::jsonb
+  ) as rows,
+  count(*) filter (where total_attempts > 0 and total_attempts = rated_attempts)::integer as fully_rated_question_count
+  from (
+    select
+      question_version_id,
+      count(*)::integer as total_attempts,
+      count(*) filter (where judgment_id is not null)::integer as rated_attempts
+    from joined
+    group by question_version_id
+  ) x
+),
 reviews as (
   select coalesce(
     jsonb_agg(
@@ -100,6 +128,8 @@ select jsonb_build_object(
     else s.rated_attempts::double precision / s.total_attempts
   end,
   'ratedQuestionCount', s.rated_question_count,
+  'fullyRatedQuestionCount', q.fully_rated_question_count,
+  'questionCoverage', q.rows,
   'ratingCounts', jsonb_build_object(
     'Again', s.again_count,
     'Hard', s.hard_count,
@@ -119,6 +149,7 @@ select jsonb_build_object(
   'reviews', r.rows
 )
 from summary s
+cross join question_coverage q
 cross join reviews r;
 $function$;
 
