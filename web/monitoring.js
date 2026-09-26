@@ -34,30 +34,8 @@ function flushPending() {
   while (pendingEvents.length) dispatchToSentry(pendingEvents.shift());
 }
 
-function runControlledPreviewTest() {
-  const params = new URLSearchParams(location.search);
-  if (params.get('monitoring_test') !== '1') return;
-  if (sessionStorage.getItem('mlos-monitoring-test-v2') === 'sent') return;
-
-  sessionStorage.setItem('mlos-monitoring-test-v2', 'sent');
-  params.delete('monitoring_test');
-  const query = params.toString();
-  history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}${location.hash}`);
-
-  errorMonitor.capture(
-    new Error('MLOS controlled monitoring test learner@example.com with Bearer fake-test-token'),
-    {
-      component: 'observability',
-      operation: 'controlled_preview_test',
-      email: 'learner@example.com',
-      authorization: 'Bearer fake-test-token',
-      refreshToken: 'fake-refresh-token',
-      expected: 'sanitized'
-    }
-  );
+if (globalThis.__MLOS_SENTRY_READY__) flushPending();
+else if (environment === 'preview') {
+  const listeners = globalThis.__MLOS_SENTRY_READY_LISTENERS__ = globalThis.__MLOS_SENTRY_READY_LISTENERS__ || [];
+  listeners.push(flushPending);
 }
-
-if (globalThis.Sentry && typeof globalThis.Sentry.onLoad === 'function') {
-  globalThis.Sentry.onLoad(flushPending);
-}
-runControlledPreviewTest();
