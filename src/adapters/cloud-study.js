@@ -44,6 +44,12 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     questions(filter = 'all') { return request(`/questions?filter=${encodeURIComponent(filter)}`); },
     progress() { return request('/progress'); },
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
+    studyNow(availableMinutes, maxItems = 50) {
+      return request('/study-now/start', {
+        method: 'POST',
+        body: { availableMinutes, maxItems }
+      });
+    },
     exportData() { return request('/export'); },
     start({ limit = 15, filter = 'all' } = {}) { return request('/sessions', { method: 'POST', body: { limit, filter } }); },
     session(id) { return request(`/sessions/${encodeURIComponent(id)}`); },
