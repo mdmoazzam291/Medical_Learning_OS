@@ -39,6 +39,6 @@ M02–M06 minimal paths work together; progress survives reload; data export wor
 ## M04 slices
 - M04a — DONE: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests. Local and GitHub checks passed.
 - M04b — IN PROGRESS: Supabase Auth/session adapter, account UI, authenticated cloud adapter and JWT-gated `study-api` are implemented; real email-confirmed account verification remains after Resend/custom SMTP configuration. No browser-stored operator credential shortcut.
-- M04c — PLANNED: authenticated reviewer workflow, genuinely reviewed initial medical set and full medical study-loop validation.
+- M04c — DONE: authenticated reviewer workflow, gate-specific immutable evidence, source-rights resolution, first genuinely reviewed/published medical item, authenticated server-scored learner attempt, and live responsive medical QBank.
 
-M04 is not complete until all three slices and the medical learner flow pass their release gates.
+M04 is not complete until all three slices and the medical learner flow pass their release gates. M04c is complete; the remaining live M04 blocker is M04b's two-distinct-real-account hosted isolation proof.
