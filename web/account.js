@@ -1,5 +1,6 @@
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
+import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 
@@ -8,7 +9,8 @@ const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
-let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, error: null };
+const review = createCloudReview({ ...cloudConfig, auth });
+let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, reviewKinds: [], error: null };
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function reportUnexpected(error, operation) {
@@ -24,10 +26,21 @@ function signedIn() {
   const p = state.progress;
   const count = state.questions?.length ?? 0;
   const body = state.loading ? '<p>Checking the authenticated study service…</p>' : state.error ? `<p>Cloud check failed: <strong>${escape(state.error)}</strong></p>` : `<div class="metrics"><div><strong>${p?.attempts ?? 0}</strong><span>Server attempts</span></div><div><strong>${p?.correct ?? 0}</strong><span>Correct</span></div><div><strong>${count}</strong><span>Published questions</span></div></div>`;
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Your learner identity is connected.</h1><p>${escape(state.user?.email || 'Authenticated learner')} · Supabase Auth</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Cloud study record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing session…' : 'Verify session refresh'}</button></div>${body}<p class="muted">Cloud evidence is separate from the three-question local demo. With zero published questions, the medical study loop remains closed instead of serving unreviewed content.</p></section><section class="panel"><span class="eyebrow">CONTENT GATE</span><h2>Account path connected. Medical publishing still waits for review.</h2><p>M04c will add authenticated reviewers and a genuinely reviewed initial medical set before the cloud QBank opens.</p></section></main>`;
+  const reviewer = state.reviewKinds.length ? `<section class="panel reviewer-access"><div><span class="eyebrow">REVIEWER ACCESS</span><h2>Authenticated content review is available.</h2><p>Granted gates: ${state.reviewKinds.map(escape).join(', ')}. Review decisions are version-bound and cannot publish content directly.</p></div><a class="secondary action-link" href="/web/review.html">Open review workspace</a></section>` : '';
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Your learner identity is connected.</h1><p>${escape(state.user?.email || 'Authenticated learner')} · Supabase Auth</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Cloud study record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing session…' : 'Verify session refresh'}</button></div>${body}<p class="muted">Cloud evidence is separate from the three-question local demo. With zero published questions, the medical study loop remains closed instead of serving unreviewed content.</p></section>${reviewer}<section class="panel"><span class="eyebrow">CONTENT GATE</span><h2>Account path connected. Medical publishing still waits for review.</h2><p>M04c now has authenticated review infrastructure. The learner QBank remains closed until genuinely reviewed medical content passes all gates and the separate publication transition.</p></section></main>`;
 }
 
 function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
+
+async function loadReviewerAccess() {
+  try {
+    const me = await review.me();
+    state = { ...state, reviewKinds: Array.isArray(me?.reviewKinds) ? me.reviewKinds : [] };
+  } catch (error) {
+    state = { ...state, reviewKinds: [] };
+    if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'load_reviewer_access');
+  }
+}
 
 async function loadCloud({ forceRefresh = false } = {}) {
   let session;
@@ -35,16 +48,17 @@ async function loadCloud({ forceRefresh = false } = {}) {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
     reportUnexpected(error, 'refresh_session');
-    state = { user: null, loading: false, progress: null, questions: null, error: null };
+    state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null };
     render();
     announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
     return;
   }
-  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, error: null }; render(); return; }
+  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null }; render(); return; }
   state = { ...state, user: session.user, loading: true, error: null }; render();
   try {
     const [progress, result] = await Promise.all([cloud.progress(), cloud.questions('all')]);
-    state = { user: auth.currentUser() || session.user, loading: false, progress, questions: result.questions || [], error: null };
+    state = { ...state, user: auth.currentUser() || session.user, loading: false, progress, questions: result.questions || [], error: null };
+    await loadReviewerAccess();
     if (forceRefresh) announce('Session refresh verified in this browser. Cloud data reloaded.');
   } catch (error) {
     reportUnexpected(error, 'load_cloud');
@@ -59,7 +73,7 @@ root.addEventListener('click', event => {
   event.preventDefault();
   if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'signout') {
-    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
+    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
   }
 });
 
