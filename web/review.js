@@ -24,6 +24,12 @@ function announce(message) {
   notice.hidden = false;
 }
 
+function setFormBusy(form, busy) {
+  for (const control of form.querySelectorAll('button, select, textarea')) {
+    control.disabled = busy;
+  }
+}
+
 function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
   if (!status || status >= 500) {
@@ -182,7 +188,7 @@ root.addEventListener('submit', event => {
 
     (async () => {
       state.submitting = sourceId;
-      render();
+      setFormBusy(rightsForm, true);
       try {
         const receipt = await review.resolveRights({ sourceId, rightsStatus, evidence });
         announce(`Source rights recorded for ${sourceId}: ${receipt.rightsStatus}.`);
@@ -191,8 +197,8 @@ root.addEventListener('submit', event => {
       } catch (error) {
         reportUnexpected(error, 'resolve_source_rights');
         state.submitting = null;
-        render();
-        announce(`Source rights were not recorded: ${error.code || error.message || 'rights_write_failed'}.`);
+        setFormBusy(rightsForm, false);
+        announce(`Source rights were not recorded: ${error.code || error.message || 'rights_write_failed'}. Your entered evidence has been preserved; retry when the connection is stable.`);
       }
     })();
     return;
@@ -212,7 +218,7 @@ root.addEventListener('submit', event => {
 
   (async () => {
     state.submitting = questionVersionId;
-    render();
+    setFormBusy(form, true);
     try {
       const receipt = await review.record({
         questionVersionId,
@@ -226,8 +232,8 @@ root.addEventListener('submit', event => {
     } catch (error) {
       reportUnexpected(error, 'record_review');
       state.submitting = null;
-      render();
-      announce(`Review was not recorded: ${error.code || error.message || 'review_write_failed'}.`);
+      setFormBusy(form, false);
+      announce(`Review was not recorded: ${error.code || error.message || 'review_write_failed'}. Your review notes have been preserved; retry when the connection is stable.`);
     }
   })();
 });
