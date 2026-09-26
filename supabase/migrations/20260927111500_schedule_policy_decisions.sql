@@ -264,7 +264,7 @@ select coalesce(
       'retrievalOffsetMs', case
         when next_occurred_at is null then null
         else floor(
-          pg_catalog.extract(epoch from (next_occurred_at - proposed_due_at)) * 1000
+          extract(epoch from (next_occurred_at - proposed_due_at)) * 1000
         )::bigint
       end,
       'observedAfterProposedDue', case
