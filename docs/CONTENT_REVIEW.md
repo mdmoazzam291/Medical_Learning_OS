@@ -280,3 +280,19 @@ The catalog's source `rights` object is updated transactionally from that event.
 Publication repeats the same evidence check. If source identity/version metadata changes under the same source ID, stale rights evidence fails closed.
 
 The reviewer workspace exposes source-rights resolution only while the rights gate is selected. A restricted source can be recorded as restricted, but the question cannot receive a rights approval or publish while referencing it.
+
+
+### Live gate-specific verification
+
+The deployed model was exercised against the real first medical seed inside rollback-only transactions.
+
+Observed:
+- medical, references and rights produced three distinct current target hashes,
+- one source-rights event projected the source to an allowed status,
+- the rights event fingerprint matched the current source fingerprint,
+- all three review events matched their own recomputed current targets,
+- three approvals advanced the question to `verified`,
+- the publication function accepted the verified package only after those checks,
+- rollback restored the live catalog to one `in_review` question with unresolved rights and no persisted review evidence.
+
+This verifies the architecture without pretending that a synthetic operator action is a real human review.
