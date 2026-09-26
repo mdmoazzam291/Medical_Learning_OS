@@ -99,3 +99,19 @@ test('no ratings means no replayable FSRS evidence and no fabricated coverage', 
   assert.equal(result.ratingCoverage, 0);
   assert.deepEqual(result.reviews, []);
 });
+
+
+test('shadow evidence marks partially rated question histories as incomplete', () => {
+  const result = buildFsrsShadowEvidence({
+    learnerId: 'learner-a',
+    attempts: [
+      attempt({ eventId: 'a1' }),
+      attempt({ eventId: 'a2', occurredAt: '2026-09-27T01:00:00.000Z' })
+    ],
+    judgments: [judgment({ attemptId: 'a2', recordedAt: '2026-09-27T01:00:03.000Z' })]
+  });
+  assert.equal(result.questionCoverage[0].totalAttempts, 2);
+  assert.equal(result.questionCoverage[0].ratedAttempts, 1);
+  assert.equal(result.questionCoverage[0].fullyRated, false);
+  assert.equal(result.fullyRatedQuestionCount, 0);
+});
