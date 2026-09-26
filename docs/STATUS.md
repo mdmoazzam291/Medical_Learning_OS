@@ -202,3 +202,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - A changed target invalidates prior review evidence instead of silently reusing it.
 - A rejected question version is terminal for review and must be replaced by a new version.
 - Three approved review gates advance content to `verified` only; nothing is published automatically.
+
+
+## M04c verified publication gate — 2026-09-26
+- Added a server-only verified → published database transition.
+- Publication rechecks the current substantive target hash against all three authenticated review events and requires three approvals.
+- Referenced source rights must still be resolved at publication time.
+- Publishing a newer version atomically retires the prior published version and increments the catalog version.
+- No browser publication endpoint exists and no medical content has been published.

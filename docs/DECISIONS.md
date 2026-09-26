@@ -66,3 +66,11 @@ Do not maintain two independently mutable sources of review truth. Persist authe
 Fingerprint only the substantive review target: the question version excluding workflow metadata (`status`, `reviews`, `publishedAt`) plus all referenced source records. This lets medical, references and rights reviewers independently attest to the same target while the workflow metadata changes between decisions.
 
 A rejection permanently blocks that question version from additional review; corrections require a new version. Three approved gates advance the catalog only to `verified`. Publication remains a separate explicit transition.
+
+
+## ADR-016 — Separate review authority from publication authority (accepted, 2026-09-26)
+Three authenticated review approvals make a question version `verified`; they do not make it learner-visible. Publication is a separate trusted transition.
+
+At publish time, recompute the same substantive question/source fingerprint and require all three immutable review events to match it. Re-check source rights and version ordering, then atomically publish the target and retire the previous published version. This prevents stale reviews, changed references or reviewer actions alone from silently opening content to learners.
+
+Keep the publication function service-only until an explicit publisher authorization model and admin surface exist.

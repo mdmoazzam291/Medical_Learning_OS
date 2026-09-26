@@ -142,3 +142,23 @@ The review hash deliberately excludes `status`, `reviews` and `publishedAt`. Tho
 If any review decision is `rejected`, that question version is blocked from further review. The correction path is a new question version, preserving the rejected evidence instead of overwriting it.
 
 This still does **not** publish content. `verified` is only the state that makes a later publication transition eligible.
+
+
+## Verified publication gate
+
+`publish_verified_content(questionVersionId)` is the first trusted verified → published transition.
+
+Publication is allowed only when all of the following remain true at publication time:
+
+- the exact question version currently has status `verified`,
+- all referenced sources still exist,
+- every referenced source has resolved rights: owned, licensed or public domain,
+- exactly three review events exist for that question version,
+- all three decisions are approved,
+- all review events carry one identical target hash,
+- that hash still matches the current substantive question/source target,
+- no newer version of the same question has already been published.
+
+The database generates the publication timestamp, updates the target to `published`, retires any previously published version of the same question, and increments the shared catalog version in one transaction.
+
+The function is executable only by the trusted service role. There is intentionally no browser publication endpoint yet. Authenticated review and publication remain separate privileges.
