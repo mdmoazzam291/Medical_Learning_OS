@@ -336,3 +336,17 @@ The application service role may read this audit trail but cannot mutate it dire
 Therefore an expired or revoked grant fails closed even if a reviewer left a browser tab open.
 
 There is intentionally no browser grant-management UI yet. A future admin/operator API must derive the granting actor from an authenticated operator identity; it must not accept an arbitrary `actor_id` from browser input.
+
+
+### Live reviewer authorization verification
+
+The deployed authorization layer passed rollback-only grant/revoke verification:
+
+- a time-bounded medical grant became active immediately,
+- `get_active_reviewer_grants` exposed exactly that active capability,
+- revocation removed authorization immediately,
+- two immutable authorization events were recorded,
+- the browser-authenticated role could not call the grant-mutation function,
+- rollback restored the live project to zero grants and zero grant events.
+
+This proves the authorization mechanism without treating a synthetic operator action as a real reviewer appointment.
