@@ -60,3 +60,19 @@ If no product domain is owned yet, do not disable email confirmation merely to u
 For a single controlled development test, Supabase's built-in mailer may send only to a pre-authorized project-team address. The learner signup requests an explicit HTTPS callback to `/web/account.html`; localhost HTTP is accepted only for local development. Before using a public preview URL, that exact callback origin/path must be added to Supabase Auth's allowed redirect URLs.
 
 This fallback verifies the account/session path, not production email deliverability.
+
+
+## Live confirmed-account verification
+
+On 2026-09-26 the no-domain development fallback completed its first real end-to-end account flow:
+
+1. A learner signed up from the live Render preview.
+2. Supabase delivered the confirmation email through its built-in development mailer to an authorized team address.
+3. The confirmation callback returned to `/web/account.html`.
+4. The callback token was verified with Supabase Auth before the browser persisted the normalized session.
+5. The authenticated browser then called `study-api/progress` and `study-api/questions?filter=all`.
+6. Both trusted API calls returned HTTP 200 with an authenticated role on Edge Function version 4.
+
+This verifies the production-shaped identity boundary without claiming production email delivery. Custom SMTP is still deferred until an owned sending domain exists.
+
+Remaining M04b verification: two-real-account isolation, reload/second-device continuity, logout, and real token-refresh behavior.
