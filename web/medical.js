@@ -1,0 +1,228 @@
+import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
+import { createCloudStudy } from '/src/adapters/cloud-study.js';
+import { cloudConfig } from '/web/cloud-config.js';
+import { errorMonitor } from '/web/monitoring.js';
+
+const root = document.querySelector('#medical-app');
+const notice = document.querySelector('#notice');
+const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const cloud = createCloudStudy({ ...cloudConfig, auth });
+
+let state = {
+  user: auth.currentUser(),
+  loading: false,
+  busy: false,
+  questions: [],
+  progress: null,
+  session: null,
+  selectedOptionId: null,
+  receipt: null,
+  error: null
+};
+
+function announce(message) {
+  notice.textContent = message;
+  notice.hidden = false;
+}
+
+function reportUnexpected(error, operation) {
+  const status = Number(error?.status || 0);
+  if (!status || status >= 500) {
+    errorMonitor.capture(error, {
+      component: 'medical-study',
+      operation,
+      code: error?.code || null,
+      status: status || null
+    });
+  }
+}
+
+function safeSourceLink(source) {
+  if (!source?.url) return escape(source?.title || source?.sourceId || 'Source');
+  try {
+    const url = new URL(source.url);
+    if (!['https:', 'http:'].includes(url.protocol)) return escape(source?.title || source?.sourceId || 'Source');
+    return '<a href="' + escape(url.href) + '" target="_blank" rel="noopener noreferrer">' + escape(source?.title || source?.sourceId || 'Source') + ' ↗</a>';
+  } catch {
+    return escape(source?.title || source?.sourceId || 'Source');
+  }
+}
+
+function signedOut() {
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">MEDICAL QBANK</span><h1>Sign in to study reviewed medical content.</h1><p>The medical QBank uses your authenticated learner identity and server-side scoring.</p></div><span class="badge">M04c</span></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open cloud account →</a></section></main>';
+}
+
+function overview() {
+  const p = state.progress || {};
+  const list = state.questions.map((q, index) =>
+    '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">PUBLISHED MEDICAL</span><h2>' + escape(q.stem) + '</h2><small>' + escape(q.questionVersionId) + '</small></div></article>'
+  ).join('');
+  const status = state.loading
+    ? '<section class="panel"><p>Loading published medical content…</p></section>'
+    : state.error
+      ? '<section class="panel"><h2>Medical QBank unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
+      : '<section class="panel"><div class="metrics"><div><strong>' + (p.attempts ?? 0) + '</strong><span>Server attempts</span></div><div><strong>' + (p.correct ?? 0) + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Published questions</span></div></div></section><section class="panel"><div class="section-heading"><div><span class="eyebrow">REVIEWED CONTENT ONLY</span><h2>Medical QBank</h2></div><button class="primary" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Start / resume session →</button></div><div class="question-list">' + (list || '<div class="empty"><h2>No published medical questions.</h2><p>Draft and in-review content are excluded.</p></div>') + '</div></section>';
+
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Only reviewed, published versions enter this loop.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · scoring and attempt persistence stay server-side.</p></div><span class="badge">M04c</span></div>' + status + '</main>';
+}
+
+function studyView() {
+  const session = state.session;
+  if (!session) return overview();
+  if (session.closed) {
+    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">MEDICAL SESSION COMPLETE</span><h1>Your server evidence is saved.</h1><p>The attempt ledger is attached to your authenticated learner account.</p><button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
+  }
+  if (!session.question) {
+    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel"><h1>Question unavailable.</h1><p>' + escape(session.blocked || 'question_unavailable') + '</p></section></main>';
+  }
+
+  const q = session.question;
+  const receipt = state.receipt || session.receipt || null;
+  const selected = receipt?.selectedOptionId || state.selectedOptionId;
+  const answered = Boolean(receipt);
+  const options = q.options.map(option => {
+    let cls = 'option';
+    if (answered && option.optionId === receipt.answerOptionId) cls += ' correct';
+    const chosen = option.optionId === selected;
+    return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + escape(option.optionId) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>Correct answer</b>' : '') + '</label>';
+  }).join('');
+
+  const feedback = answered
+    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div></div><button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
+
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form"><fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
+}
+
+function render() {
+  if (!state.user) root.innerHTML = signedOut();
+  else root.innerHTML = state.session ? studyView() : overview();
+}
+
+async function loadOverview() {
+  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null };
+  render();
+  try {
+    const session = await auth.getSession();
+    if (!session?.user) {
+      state = { ...state, user: null, loading: false };
+      render();
+      return;
+    }
+    const [questions, progress] = await Promise.all([cloud.questions('all'), cloud.progress()]);
+    state = {
+      ...state,
+      user: auth.currentUser() || session.user,
+      loading: false,
+      questions: Array.isArray(questions?.questions) ? questions.questions : [],
+      progress,
+      error: null
+    };
+  } catch (error) {
+    reportUnexpected(error, 'load_overview');
+    state = { ...state, loading: false, error: error.code || error.message || 'medical_qbank_unavailable' };
+  }
+  render();
+}
+
+async function startSession() {
+  state.busy = true;
+  render();
+  try {
+    const session = await cloud.start({ limit: 15, filter: 'all' });
+    state = {
+      ...state,
+      busy: false,
+      session,
+      selectedOptionId: session.receipt?.selectedOptionId || null,
+      receipt: session.receipt || null,
+      error: null
+    };
+  } catch (error) {
+    reportUnexpected(error, 'start_session');
+    state = { ...state, busy: false, error: error.code || error.message || 'study_start_failed' };
+    announce('Medical session could not start: ' + state.error + '.');
+  }
+  render();
+}
+
+async function answerCurrent() {
+  const session = state.session;
+  const optionId = state.selectedOptionId;
+  if (!session || !optionId || state.busy) return;
+  const requestId = 'medical:' + session.sessionId + ':' + session.position;
+  state.busy = true;
+  render();
+  try {
+    const receipt = await cloud.answer(session.sessionId, {
+      requestId,
+      position: session.position,
+      optionId
+    });
+    state = { ...state, busy: false, receipt, error: null };
+    state.progress = await cloud.progress();
+  } catch (error) {
+    reportUnexpected(error, 'record_answer');
+    state = { ...state, busy: false, error: error.code || error.message || 'answer_write_failed' };
+    announce('Answer was not confirmed: ' + state.error + '. Your selection is preserved; retry uses the same idempotency key.');
+  }
+  render();
+}
+
+async function nextQuestion() {
+  const session = state.session;
+  if (!session || !state.receipt || state.busy) return;
+  state.busy = true;
+  render();
+  try {
+    const next = await cloud.next(session.sessionId, session.position);
+    state = {
+      ...state,
+      busy: false,
+      session: next,
+      selectedOptionId: next.receipt?.selectedOptionId || null,
+      receipt: next.receipt || null,
+      error: null
+    };
+    if (next.closed) state.progress = await cloud.progress();
+  } catch (error) {
+    reportUnexpected(error, 'advance_session');
+    state = { ...state, busy: false, error: error.code || error.message || 'study_advance_failed' };
+    announce('Session did not advance: ' + state.error + '. Retry is safe.');
+  }
+  render();
+}
+
+root.addEventListener('change', event => {
+  const input = event.target.closest('input[name="answer"]');
+  if (!input || state.receipt || state.busy) return;
+  state.selectedOptionId = input.value;
+  render();
+});
+
+root.addEventListener('submit', event => {
+  if (event.target.id !== 'medical-answer-form') return;
+  event.preventDefault();
+  answerCurrent();
+});
+
+root.addEventListener('click', event => {
+  const target = event.target.closest('[data-action]');
+  if (!target) return;
+  event.preventDefault();
+  if (target.dataset.action === 'start') startSession();
+  if (target.dataset.action === 'next') nextQuestion();
+  if (target.dataset.action === 'reload') loadOverview();
+});
+
+async function bootstrap() {
+  if (!state.user) {
+    render();
+    return;
+  }
+  await loadOverview();
+}
+
+render();
+bootstrap();
