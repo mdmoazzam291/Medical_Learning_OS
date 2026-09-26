@@ -4,10 +4,14 @@ import { createCloudReview, CloudReviewError } from '../src/adapters/cloud-revie
 
 function fakeAuth(session = { accessToken: 'jwt-one' }) {
   let refreshes = 0;
+  let current = session;
   return {
     async getSession({ forceRefresh = false } = {}) {
-      if (forceRefresh) { refreshes += 1; return { accessToken: 'jwt-two' }; }
-      return session;
+      if (forceRefresh) {
+        refreshes += 1;
+        current = current ? { ...current, accessToken: 'jwt-two' } : null;
+      }
+      return current;
     },
     refreshCount() { return refreshes; }
   };
