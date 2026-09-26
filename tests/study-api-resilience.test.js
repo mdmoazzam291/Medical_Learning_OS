@@ -78,3 +78,13 @@ test('Study Now keeps mistake repair, due revision and new learning explainable'
   assert.match(source, /studyNowAvailableCount/);
   assert.doesNotMatch(source, /priorityScore|masteryScore|recommendationScore/);
 });
+
+
+test('Study Now outcomes stay server-derived and explicitly non-causal', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/study-now\/outcomes"/);
+  assert.match(source, /study_recommendation_outcomes/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /scope: "descriptive-recommendation-outcomes"/);
+  assert.match(source, /causal: false/);
+});
