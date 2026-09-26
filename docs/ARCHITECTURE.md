@@ -42,3 +42,10 @@ The current live catalog is empty. This intentionally decouples account integrat
 Operational error monitoring sits outside the learning-evidence model. Product code emits sanitized failure envelopes through `src/adapters/error-monitoring.js`; provider-specific transport belongs behind that adapter.
 
 The observability path must never become an alternate store for learner evidence, answer payloads, medical/clinical content, authentication tokens, or credentials. Sentry is the intended first provider, but the domain boundary remains provider-agnostic so monitoring vendors can change without touching learning logic.
+
+
+## M04c review evidence boundary
+
+Authenticated review evidence is normalized outside the learner catalog. Reviewer grants are mutable authorization state; review events are immutable audit evidence. A review event is bound to the exact question/source target by a server-computed SHA-256 fingerprint.
+
+The learner-facing catalog remains a publication projection, not the authority for reviewer identity. A future trusted `review-api` resolves reviewer identity from Supabase Auth, checks grant scope, and records decisions through the database function. Publication remains separate so a valid review cannot accidentally become learner-visible content.
