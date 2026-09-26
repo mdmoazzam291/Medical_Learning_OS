@@ -336,3 +336,18 @@ The application service role may read this audit trail but cannot mutate it dire
 Therefore an expired or revoked grant fails closed even if a reviewer left a browser tab open.
 
 There is intentionally no browser grant-management UI yet. A future admin/operator API must derive the granting actor from an authenticated operator identity; it must not accept an arbitrary `actor_id` from browser input.
+
+
+### Live authorization verification
+
+Reviewer authorization governance has been exercised in the live Supabase project inside a rollback-only transaction.
+
+Observed properties:
+- service-only grant mutation works,
+- a grant can carry an expiry,
+- revocation removes active authorization,
+- grant and revoke each append immutable audit evidence,
+- the normal `authenticated` browser role cannot call the grant-management function,
+- rollback leaves no real reviewer capability or audit rows behind.
+
+The live first medical seed therefore remains unreviewed until an account is deliberately authorized outside the learner surface.
