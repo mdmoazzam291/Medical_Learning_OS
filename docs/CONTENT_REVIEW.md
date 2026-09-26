@@ -229,3 +229,17 @@ Rights policy:
 - the publication function already fails closed while any referenced source has unresolved rights.
 
 This package is intentionally tiny. Its purpose is to prove one complete genuine medical-content lifecycle before scaling ingestion.
+
+
+### Live seed state
+
+The first medical seed is now present in the dedicated Supabase catalog as catalog version 1.
+
+Live invariants after loading:
+- one `in_review` question,
+- zero `published` questions,
+- zero reviewer grants,
+- zero review events,
+- source rights remain unresolved.
+
+This is deliberate. The item can now exercise the real reviewer queue once a reviewer is explicitly authorized, while the learner study API continues to return no publishable medical content.
