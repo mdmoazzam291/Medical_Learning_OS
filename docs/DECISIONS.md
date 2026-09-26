@@ -58,3 +58,11 @@ Persist reviewer authorization separately from immutable review decisions. `cont
 Bind each decision to a database-computed SHA-256 hash of the exact question-version JSON plus all referenced source records. This prevents a review from being silently reused after the reviewed target changes. The trusted database function `record_content_review` verifies reviewer grant, review stage, source completeness and self-review rules before inserting one decision per gate/version.
 
 Do not let review evidence directly publish content. M04c must first prove authenticated reviewer identity and review capture through a trusted `review-api`; publication remains a separate transition with its own checks.
+
+
+## ADR-015 — Review events are authority; catalog review state is a transactional projection (accepted, 2026-09-26)
+Do not maintain two independently mutable sources of review truth. Persist authenticated review decisions in `content_review_events` and update the question's catalog `reviews`/status in the same database transaction that records the event.
+
+Fingerprint only the substantive review target: the question version excluding workflow metadata (`status`, `reviews`, `publishedAt`) plus all referenced source records. This lets medical, references and rights reviewers independently attest to the same target while the workflow metadata changes between decisions.
+
+A rejection permanently blocks that question version from additional review; corrections require a new version. Three approved gates advance the catalog only to `verified`. Publication remains a separate explicit transition.

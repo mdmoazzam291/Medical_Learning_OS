@@ -103,6 +103,8 @@ function mapReviewWriteError(error: any): never {
   if (message.includes("unknown_question_version")) fail(404, "question_not_found");
   if (message.includes("question_not_in_review")) fail(409, "question_not_in_review");
   if (message.includes("review_target_sources_missing")) fail(409, "review_target_invalid");
+  if (message.includes("review_target_changed")) fail(409, "review_target_changed");
+  if (message.includes("question_review_rejected")) fail(409, "question_review_rejected");
   fail(500, "review_write_failed");
 }
 

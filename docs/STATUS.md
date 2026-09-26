@@ -194,3 +194,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - `GET /queue` exposes only `in_review` content to reviewers with the matching medical/references/rights grant.
 - `POST /reviews` records decisions only through `record_content_review`; it cannot publish content or alter reviewer grants.
 - No reviewer grant has been assigned and no medical content has been reviewed or published.
+
+
+## Atomic review projection foundation — 2026-09-26
+- Hardened the M04c review model so authenticated review events are the authority and catalog review metadata is updated transactionally from those events.
+- Review target hashes now exclude mutable workflow fields while still covering all substantive question fields and referenced source records.
+- A changed target invalidates prior review evidence instead of silently reusing it.
+- A rejected question version is terminal for review and must be replaced by a new version.
+- Three approved review gates advance content to `verified` only; nothing is published automatically.

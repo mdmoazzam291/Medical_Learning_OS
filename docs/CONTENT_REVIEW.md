@@ -120,3 +120,25 @@ A rollback-only verification proved that:
 - `authenticated` cannot read the review tables or execute the review-recording function.
 
 No grant or synthetic review persisted after verification.
+
+
+## Atomic review projection
+
+Authenticated review events are the durable evidence; the catalog's `reviews` array and workflow `status` are a projection of that evidence.
+
+`record_content_review` performs both operations in one database transaction:
+
+1. authenticate the requested review gate through `content_reviewer_grants`,
+2. resolve the exact `in_review` question and referenced sources,
+3. compute a stable review-target hash,
+4. reject target drift against earlier review events,
+5. insert the immutable review event,
+6. rebuild the question's `reviews` array from persisted events,
+7. change status to `verified` only when all three gates are approved,
+8. increment the shared catalog version.
+
+The review hash deliberately excludes `status`, `reviews` and `publishedAt`. Those fields are workflow metadata changed by the review/publication process itself. All substantive question fields and the full referenced source records remain inside the fingerprint.
+
+If any review decision is `rejected`, that question version is blocked from further review. The correction path is a new question version, preserving the rejected evidence instead of overwriting it.
+
+This still does **not** publish content. `verified` is only the state that makes a later publication transition eligible.
