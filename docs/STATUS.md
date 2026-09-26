@@ -275,3 +275,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Review recording and source-rights resolution independently recheck active authorization at mutation time.
 - Grant mutation remains service-only; there is no browser self-grant or reviewer-admin UI.
 - No real reviewer grant is created by this change.
+
+
+## Live reviewer grant governance verification — 2026-09-26
+- The reviewer grant-governance migration is live and `review-api` is ACTIVE at version 4.
+- Rollback-only verification granted the medical review capability with a seven-day expiry, confirmed it was immediately active, then revoked it and confirmed authorization disappeared immediately.
+- The same transaction produced two immutable grant/revoke audit events while the normal `authenticated` browser role remained unable to execute the grant-management function.
+- After rollback, live state remains 0 reviewer grants, 0 reviewer-grant events, 0 content-review events and 0 source-rights events.
+- No reviewer authority has been silently assigned.
