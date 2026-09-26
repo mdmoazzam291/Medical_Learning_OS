@@ -238,3 +238,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The cited CDC source's rights status is deliberately unresolved rather than overclaimed; publication is therefore blocked even if medical/reference review later passes.
 - CI validates the package structure, AI provenance, review-only state and zero published questions.
 - The goal is to prove one complete high-integrity content lifecycle before importing at scale.
+
+
+## Live first medical review target — 2026-09-26
+- The first genuine medical review package has been loaded into the live shared catalog.
+- Live catalog version is now 1 with exactly one question, `emergency:anaphylaxis:first-line-drug@1`.
+- The question is `in_review`, not published. Learner-visible published question count remains 0.
+- Reviewer grants remain 0 and authenticated review events remain 0.
+- The referenced CDC source retains `rights.status=unknown`, so the publication gate will fail closed until rights are explicitly resolved.
+- The exact review package is versioned in `data/medical-seed-anaphylaxis-review.json`; live content was loaded from that canonical repository file.
