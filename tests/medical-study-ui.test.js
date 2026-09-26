@@ -39,3 +39,13 @@ test('medical overview reads revision due state without making it mastery', asyn
   assert.match(source, /This is scheduling state, not a mastery score/);
   assert.match(source, /The medical QBank still works/);
 });
+
+
+test('medical revision panel exposes time-budget Study Now only when items are due', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /revision\?\.dueCount/);
+  assert.match(source, /\[10, 20, 30, 60\]/);
+  assert.match(source, /How much uninterrupted time do you have\?/);
+  assert.match(source, /cloud\.studyNow\(availableMinutes, 50\)/);
+  assert.match(source, /Future reviews were not pulled early/);
+});
