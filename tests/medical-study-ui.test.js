@@ -41,9 +41,9 @@ test('medical overview reads revision due state without making it mastery', asyn
 });
 
 
-test('medical revision panel exposes time-budget Study Now only when items are due', async () => {
+test('medical revision panel exposes time-budget Study Now for due or unseen candidates', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
-  assert.match(source, /revision\?\.dueCount/);
+  assert.match(source, /revision && \(revision\.dueCount \|\| revision\.unseenCount\)/);
   assert.match(source, /\[10, 20, 30, 60\]/);
   assert.match(source, /How much uninterrupted time do you have\?/);
   assert.match(source, /cloud\.studyNow\(availableMinutes, 50\)/);
