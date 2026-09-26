@@ -207,6 +207,17 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return data ?? [];
     };
+    const getMemoryJudgments = async () => {
+      const { data, error } = await trustedRead("memory_judgments", async () =>
+        admin.from("study_memory_judgments")
+          .select("id,attempt_id,question_version_id,rating,scale_id,prompt_id,recorded_at")
+          .eq("learner_id", learnerId)
+          .order("recorded_at", { ascending: true })
+          .order("id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return data ?? [];
+    };
     const getRecommendationEvents = async () => {
       const { data, error } = await trustedRead("recommendation_events", async () =>
         admin.from("study_recommendation_events")
@@ -329,20 +340,42 @@ Deno.serve(async (req: Request) => {
         total: ids.length,
         closed: session.closed,
         question: null,
-        receipt: null
+        receipt: null,
+        memoryJudgment: null
       };
       if (session.closed) return result;
       const [{ body }, { data: attempt, error: attemptError }] = await Promise.all([
         getCatalog(),
         trustedRead("session_receipt", async () =>
-          admin.from("study_attempts").select("receipt").eq("session_id", sessionId)
-            .eq("position", session.position).maybeSingle()
+          admin.from("study_attempts").select("id,receipt").eq("session_id", sessionId)
+            .eq("learner_id", learnerId).eq("position", session.position).maybeSingle()
         )
       ]);
       if (attemptError) fail(500, "study_read_failed");
+      let memoryJudgment = null;
+      if (attempt?.id) {
+        const { data: judgment, error: judgmentError } = await trustedRead("session_memory_judgment", async () =>
+          admin.from("study_memory_judgments")
+            .select("id,attempt_id,question_version_id,rating,scale_id,prompt_id,recorded_at")
+            .eq("learner_id", learnerId).eq("attempt_id", attempt.id).maybeSingle()
+        );
+        if (judgmentError) fail(500, "study_read_failed");
+        memoryJudgment = judgment ? {
+          schemaVersion: 1,
+          type: "memory.rating",
+          id: judgment.id,
+          attemptId: judgment.attempt_id,
+          questionVersionId: judgment.question_version_id,
+          rating: judgment.rating,
+          ratingLabel: ["", "Again", "Hard", "Good", "Easy"][judgment.rating],
+          scaleId: judgment.scale_id,
+          promptId: judgment.prompt_id,
+          recordedAt: judgment.recorded_at
+        } : null;
+      }
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
-      if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null };
-      return { ...result, question: learnerQuestion(q), receipt: attempt?.receipt ?? null };
+      if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment };
+      return { ...result, question: learnerQuestion(q), receipt: attempt?.receipt ?? null, memoryJudgment };
     };
 
     const url = new URL(req.url);
@@ -510,14 +543,15 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
         ),
         getEvents(),
         getBookmarks(),
-        getRecommendationEvents()
+        getRecommendationEvents(),
+        getMemoryJudgments()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -527,8 +561,24 @@ Deno.serve(async (req: Request) => {
         events,
         bookmarks,
         sessions: sessions ?? [],
-        recommendations
+        recommendations,
+        memoryJudgments
       });
+    }
+
+    if (req.method === "POST" && path === "/memory-judgments") {
+      const input = await jsonBody(req);
+      exactFields(input, ["attemptId", "rating"]);
+      const attemptId = identifier(input.attemptId);
+      const rating = integer(input.rating, 1, 4);
+      const { data, error } = await admin.rpc("study_record_memory_judgment", {
+        p_learner: learnerId,
+        p_attempt: attemptId,
+        p_rating: rating
+      });
+      if (error) fail(500, "memory_judgment_write_failed");
+      if (data?.error) fail(data.error === "attempt_not_found" ? 404 : 409, data.error);
+      return response(req, 200, data);
     }
 
     const sessionMatch = path.match(/^\/sessions\/([a-zA-Z0-9-]+)$/);
