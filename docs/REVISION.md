@@ -98,3 +98,53 @@ Every created Study Now session has an immutable recommendation receipt. The pla
 - first later retrieval per selected question and its correctness.
 
 These outcome fields support policy evaluation but are not mastery measures and do not establish causality. The first later retrieval is deliberately preserved because retention after delay is a more meaningful signal than immediate Study Now correctness alone.
+
+
+## M05d FSRS-compatible evidence contract
+
+The production scheduler remains `bootstrap-binary-v1`. M05d first adds the evidence boundary required to evaluate a richer scheduler without manufacturing learner ratings.
+
+### Evidence separation
+
+A question attempt continues to record:
+- correctness;
+- response duration;
+- exact question version;
+- concept;
+- timestamp.
+
+An optional memory judgment separately records:
+- exact attempt ID;
+- exact question version;
+- rating 1–4;
+- `fsrs-4-v1` scale ID;
+- `post-answer-recall-v1` prompt ID;
+- timestamp.
+
+The four ratings are:
+1. Again
+2. Hard
+3. Good
+4. Easy
+
+The learner is asked how recall felt **before seeing the answer**. The rating is collected after answer reveal for UI practicality, so prompt versioning is preserved and this limitation can be evaluated later.
+
+### Integrity and UX rules
+
+- memory rating is optional;
+- Next is never blocked by missing rating;
+- rating does not change correctness or exam score;
+- one immutable rating is stored per exact attempt;
+- identical retries are idempotent;
+- conflicting retries fail rather than overwrite evidence;
+- historical binary attempts remain valid and unchanged;
+- missing ratings are not backfilled from correctness.
+
+### Before FSRS controls scheduling
+
+1. Collect real ratings.
+2. Measure rating coverage and missingness by context.
+3. Inspect correctness-rating contradictions rather than discarding them.
+4. Implement FSRS as a shadow projection first.
+5. Compare predicted schedules against delayed retrieval outcomes and learner time.
+6. Only then decide whether to replace or combine with the bootstrap scheduler.
