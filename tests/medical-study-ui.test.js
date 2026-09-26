@@ -13,6 +13,7 @@ test('medical learner page uses authenticated cloud study and server scoring', a
   assert.match(source, /cloud\.next/);
   assert.match(source, /'medical:' \+ session\.sessionId \+ ':' \+ session\.position/);
   assert.match(source, /receipt\.answerOptionId/);
+  assert.match(source, /String\.fromCharCode\(65 \+ index\)/);
   assert.match(source, /Answer keys and explanations are revealed only after the server records the attempt/);
   assert.doesNotMatch(source, /learnerId\s*:/);
 });
