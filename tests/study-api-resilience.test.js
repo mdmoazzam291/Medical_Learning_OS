@@ -100,3 +100,15 @@ test('memory judgments are authenticated service-derived optional evidence', asy
   assert.match(source, /session_memory_judgment/);
   assert.match(source, /memoryJudgments/);
 });
+
+
+test('FSRS shadow endpoint is learner-scoped and cannot control production due dates', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/revision\/fsrs-shadow"/);
+  assert.match(source, /study_fsrs_shadow_evidence/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /mode: "shadow-readiness"/);
+  assert.match(source, /schedulerControl: false/);
+  assert.match(source, /shadowSchedule: null/);
+  assert.match(source, /no_real_memory_ratings/);
+});
