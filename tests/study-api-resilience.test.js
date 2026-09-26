@@ -16,6 +16,7 @@ test('study-api retries only the transient PGRST303 trusted-read failure once', 
     'bookmarks',
     'revision_state',
     'open_session',
+    'recommendation_events',
     'session_state',
     'session_receipt',
     'export_sessions',
@@ -52,4 +53,16 @@ test('study-api Study Now is learner-scoped, time-budgeted and resumes interrupt
   assert.match(source, /reason: "due-revision"/);
   assert.match(source, /strategy: "resume-existing"/);
   assert.doesNotMatch(source, /answerOptionId[\s\S]{0,250}studyNow/);
+});
+
+
+test('Study Now atomically binds selection rationale to the created session', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /study_start_recommendation_session/);
+  assert.match(source, /p_available_minutes: availableMinutes/);
+  assert.match(source, /p_plan: plan/);
+  assert.match(source, /recommendationId/);
+  assert.match(source, /getRecommendationEvents/);
+  assert.match(source, /recommendations/);
+  assert.doesNotMatch(source, /p_plan: plan[\s\S]{0,800}study_start_session/);
 });
