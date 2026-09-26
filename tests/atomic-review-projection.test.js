@@ -31,3 +31,12 @@ test('review-api maps target drift and rejected-version conflicts without leakin
   assert.match(source, /review_write_failed/);
   assert.doesNotMatch(source, /return response\([^\n]+error\.message/);
 });
+
+
+test('latest review function qualifies target hash columns against PL/pgSQL output names', async () => {
+  const sql = await readFile(new URL('../supabase/migrations/20260926124000_fix_review_hash_ambiguity.sql', import.meta.url), 'utf8');
+
+  assert.match(sql, /from public\.content_review_events e/);
+  assert.match(sql, /e\.target_sha256 <> v_hash/);
+  assert.doesNotMatch(sql, /\nand target_sha256 <> v_hash/);
+});
