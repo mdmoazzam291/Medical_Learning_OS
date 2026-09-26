@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "emergency:anaphylaxis:first-line-treatment",
+      "label": "First-line treatment of anaphylaxis",
+      "aliases": ["anaphylaxis immediate treatment"],
+      "subjectTags": ["emergency-medicine", "pharmacology", "immunology"]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "cdc:immunization-adverse-reactions:2024-07-25",
+      "title": "CDC: Preventing and Managing Adverse Reactions",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+      "version": "2024-07-25",
+      "rights": {
+        "status": "unknown",
+        "evidence": "CDC states that most agency-site information is public domain unless otherwise indicated, but this clinical page also contains adapted/cited third-party material. This seed uses an original question and paraphrases only the factual recommendation that immediate intramuscular epinephrine is first-line treatment; source-level reuse rights remain intentionally unresolved for the rights reviewer."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "emergency:anaphylaxis:first-line-drug",
+      "questionVersionId": "emergency:anaphylaxis:first-line-drug@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial source-grounded medical seed for the authenticated review workflow",
+      "stem": "Minutes after vaccination, an adult develops generalized urticaria, wheeze, and hypotension. Which medication should be given first?",
+      "options": [
+        {
+          "optionId": "im-epinephrine",
+          "text": "Intramuscular epinephrine"
+        },
+        {
+          "optionId": "iv-hydrocortisone",
+          "text": "Intravenous hydrocortisone"
+        },
+        {
+          "optionId": "oral-cetirizine",
+          "text": "Oral cetirizine"
+        },
+        {
+          "optionId": "nebulized-albuterol",
+          "text": "Nebulized albuterol"
+        }
+      ],
+      "answerOptionId": "im-epinephrine",
+      "explanation": "This presentation is anaphylaxis with respiratory and cardiovascular involvement. Intramuscular epinephrine is the immediate first-line treatment. Antihistamines, glucocorticoids, and bronchodilators can be adjuncts for selected symptoms but should not delay epinephrine.",
+      "conceptLinks": [
+        {
+          "conceptId": "emergency:anaphylaxis:first-line-treatment",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:immunization-adverse-reactions:2024-07-25"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original medical item grounded in the cited CDC recommendation. It is not a recalled or licensed PYQ and is not copied from an external question bank."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
