@@ -139,3 +139,15 @@ This creates an evaluation loop:
 learner evidence → recommendation decision → immutable receipt → learner action → later retrieval → policy evaluation.
 
 A future policy can therefore be compared against prior policies without rewriting historical learner evidence or losing why a recommendation was made.
+
+
+## ADR-023 — Collect FSRS-compatible self-report separately from correctness (accepted, 2026-09-27)
+Do not mutate or reinterpret the strict binary `question.answered` event in order to adopt FSRS.
+
+Collect an optional post-answer learner self-report on an explicit four-grade `fsrs-4-v1` scale: Again, Hard, Good and Easy. Persist it as a separate immutable judgment linked to the exact attempt.
+
+Correctness, response time and self-reported recall difficulty are distinct observations. Preserve disagreement between them instead of coercing them into consistency. A wrong answer plus an Easy rating, or a correct answer plus Again, is potentially useful calibration/misconception evidence.
+
+The memory rating is optional and must never block study progression or modify exam scoring. Missing ratings remain missing evidence; do not infer them from correctness.
+
+Do not switch the production revision scheduler to FSRS merely because the event shape exists. First collect real rating coverage, measure missingness and contradictory patterns, run a shadow-policy comparison against the current scheduler, and validate delayed retrieval outcomes before allowing FSRS to control due dates.
