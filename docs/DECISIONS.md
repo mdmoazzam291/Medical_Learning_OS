@@ -90,3 +90,11 @@ Replace the shared cross-gate review fingerprint with gate-specific fingerprints
 Medical review binds to clinical question content. Reference review binds to question/source identity and version metadata while excluding rights projection. Rights review binds to provenance and complete source-rights metadata. Publication recomputes and validates all three independently.
 
 Rights clearance becomes immutable evidence rather than a free-form mutable source field. A versioned source receives one `source_rights_events` record bound to a source fingerprint. Rights approval and publication fail closed when the event is absent, restrictive, or stale.
+
+
+## ADR-019 — Reviewer authority must be auditable and time-bounded (accepted, 2026-09-26)
+Do not assign review capabilities through direct table edits or durable browser role flags. Maintain a current grant projection plus immutable grant/revoke events.
+
+Every grant records who granted it, why, and an optional expiry. Review queues and review mutations independently check active server-side grants, so revocation/expiry takes effect even in an already-open browser session.
+
+Keep grant mutation service-only until a separate authenticated operator authorization model exists. Reviewer authorization and content review are different powers and should not share the same browser control.
