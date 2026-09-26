@@ -50,3 +50,27 @@ Key properties:
 - `GET /revision/due` performs a full learner replay before returning the due queue, providing a correctness-recovery path if an earlier best-effort refresh was missed.
 
 The full replay on every due-queue read is intentionally simple for the current tiny beta dataset. It is not the intended scale architecture. Before large learner volumes, replace unconditional full replay with a dirty-watermark/event-count check while retaining replay as the repair mechanism.
+
+
+## M05c Study Now baseline
+
+Study Now v1 is a time-budgeted due-revision selector.
+
+Inputs:
+- authenticated learner;
+- current published catalog;
+- rebuilt learner revision projection;
+- available study minutes;
+- optional maximum item cap.
+
+Selection:
+1. exclude unpublished content;
+2. exclude reviews whose due time has not arrived;
+3. order due items oldest-first;
+4. estimate each item's workload from prior response duration plus bounded explanation/review overhead;
+5. admit items while they fit the learner's time budget;
+6. resume an existing open session rather than create a competing session.
+
+The current UI offers 10/20/30/60-minute presets. The API accepts 5–120 minutes.
+
+This policy deliberately leaves unused time when nothing is due. Filling spare time with early reviews would optimize visible activity rather than retention. New-learning and misconception-repair candidates will be added later as distinct recommendation classes with their own evidence and priority logic.
