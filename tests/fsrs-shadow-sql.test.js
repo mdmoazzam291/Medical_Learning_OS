@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const sql = await readFile(
-  new URL('../supabase/migrations/20260927101000_fsrs_shadow_evidence.sql', import.meta.url),
+  new URL('../supabase/migrations/20260927103500_fsrs_shadow_question_coverage.sql', import.meta.url),
   'utf8'
 );
 
