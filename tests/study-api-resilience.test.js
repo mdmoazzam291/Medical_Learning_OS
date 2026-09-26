@@ -66,3 +66,15 @@ test('Study Now atomically binds selection rationale to the created session', as
   assert.match(source, /recommendations/);
   assert.doesNotMatch(source, /p_plan: plan[\s\S]{0,800}study_start_session/);
 });
+
+
+test('Study Now keeps mistake repair, due revision and new learning explainable', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /"mistake-repair"/);
+  assert.match(source, /"due-revision"/);
+  assert.match(source, /"new-learning"/);
+  assert.match(source, /strategy: "due-then-new-v2"/);
+  assert.match(source, /unseenCount/);
+  assert.match(source, /studyNowAvailableCount/);
+  assert.doesNotMatch(source, /priorityScore|masteryScore|recommendationScore/);
+});
