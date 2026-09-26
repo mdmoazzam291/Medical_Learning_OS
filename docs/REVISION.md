@@ -261,3 +261,51 @@ Decision-ledger failures are logged and deferred rather than blocking study.
 `comparisonGroupId` is the originating attempt ID, allowing bootstrap and FSRS proposals from the same evidence boundary to be paired when both exist.
 
 This is evaluation evidence, not causal attribution and not a policy ranking. A future controlled policy experiment is required before scheduler authority changes.
+
+
+## Randomized scheduler experiment readiness
+
+The scheduler now has experiment infrastructure but no active experiment.
+
+Three immutable/server-only evidence types exist:
+
+1. `study_policy_experiment_specs`
+   - versioned experiment definition;
+   - SHA-256 fingerprint;
+   - control/treatment policy identities;
+   - learner-level allocation;
+   - eligibility and metric contracts;
+   - guardrails;
+   - optional minimum eligible population;
+   - frozen assignment salt.
+
+2. `study_policy_experiment_state_events`
+   - append-only lifecycle events;
+   - monotonic sequence ordering;
+   - explicit states: armed, running, paused, completed, cancelled.
+
+3. `study_policy_experiment_assignments`
+   - one immutable assignment per learner per experiment version;
+   - deterministic 0–9999 bucket;
+   - control or treatment arm.
+
+### Eligibility contract v1
+
+`paired-scheduler-evidence-v1` requires a learner to have at least one evidence cutoff where both:
+- the authoritative bootstrap policy produced a recorded proposal; and
+- the FSRS shadow policy produced a recorded proposal
+
+for the same exact attempt.
+
+### Safety gates
+
+- draft is the default state;
+- no assignment unless state is `running`;
+- arm requires matching immutable spec hash;
+- arm requires explicit `<experimentId>:ARM` confirmation;
+- run requires explicit `<experimentId>:RUN` confirmation;
+- browser roles cannot call registration/state/assignment functions;
+- no experiment function writes `study_revision_state`;
+- experiment infrastructure is not wired into learner scheduling.
+
+The current v1 experiment template has `minimumEligibleLearners = null`, so `canArm=false` by construction. A later threshold and final analysis plan require a new immutable experiment-spec version.
