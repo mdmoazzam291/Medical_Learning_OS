@@ -145,3 +145,26 @@ test('FSRS shadow distinguishes sparse ratings from a complete replayable histor
   assert.match(source, /no_fully_rated_question_history/);
   assert.match(source, /shadowSchedule\?\.itemCount > 0/);
 });
+
+
+test('schedule policy ledger records authoritative and shadow proposals without blocking study', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /study_record_schedule_decision/);
+  assert.match(source, /event: "schedule_decision_deferred"/);
+  assert.match(source, /role: "authoritative"/);
+  assert.match(source, /policyId: "fsrs-shadow"/);
+  assert.match(source, /latestAttempt\?\.id === attemptId/);
+  assert.match(source, /fsrs_shadow_decision_deferred/);
+  assert.match(source, /authoritative_schedule_decision_deferred/);
+});
+
+test('policy evaluation endpoint is learner-scoped and explicitly non-causal', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/revision\/policy-evaluation"/);
+  assert.match(source, /study_schedule_policy_outcomes/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /scope: "descriptive-schedule-policy-outcomes"/);
+  assert.match(source, /causal: false/);
+  assert.match(source, /livePolicyId: "bootstrap-binary-v1"/);
+  assert.match(source, /scheduleDecisions/);
+});
