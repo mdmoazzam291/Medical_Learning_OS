@@ -150,3 +150,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Application-side scrubbing still runs before provider delivery, and Sentry receives only the exact CDN/ingest origins allowed by CSP.
 - A one-shot preview-only `monitoring_test=1` query trigger exists temporarily to validate the full sanitized ingestion path. Remove it after the first verified Sentry event.
 - No Sentry API/auth token is stored in git or browser code.
+
+
+## Sentry loader-order correction — 2026-09-26
+- The first hosted verification produced no issue in Sentry.
+- Root cause was the integration not following the Loader Script ordering contract closely enough.
+- The Sentry configuration shim is now the first script, followed by the generated Loader Script, followed by Medical Learning OS application modules.
+- The second controlled test uses a new one-shot session key so browsers that attempted the first test will send again.
+- CI guards the script ordering and errors-only privacy settings.

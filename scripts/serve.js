@@ -15,6 +15,7 @@ const allowed = new Set([
   'web/account.js',
   'web/cloud-config.js',
   'web/monitoring.js',
+  'web/sentry-bootstrap.js',
   'src/domain/demo-study.js',
   'src/domain/learning-events.js',
   'src/adapters/local-store.js',
