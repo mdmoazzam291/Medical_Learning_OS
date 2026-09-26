@@ -283,3 +283,15 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The learner/browser `authenticated` role cannot execute `set_content_reviewer_grant`.
 - Rollback restored live state to 0 reviewer grants and 0 reviewer-grant events.
 - The first medical review target remains `in_review`; no medical review or publication was created.
+
+
+## First real medical publication and learner attempt — 2026-09-26
+- The anaphylaxis item completed medical, references, and rights/provenance review.
+- All three review fingerprints and the source-rights fingerprint match current targets.
+- Source use is recorded as `citation_only`; protected third-party expression is not copied or adapted.
+- The server-only publication transition published `emergency:anaphylaxis:first-line-drug@1` at catalog version 6.
+- The authenticated medical QBank delivered the published version through `study-api`.
+- The first real learner attempt persisted exactly once, selected `im-epinephrine`, was scored correct server-side, and stored a source-bearing receipt at catalog version 6.
+- One confirmed learner has this attempt; the other confirmed real account has no attempts. The hosted two-account isolation proof remains open.
+- The medical QBank option labels now render A/B/C/D instead of internal option IDs; CI and Render deploy passed.
+- The current one-question session remains open until the learner taps Finish session.
