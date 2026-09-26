@@ -151,3 +151,23 @@ Correctness, response time and self-reported recall difficulty are distinct obse
 The memory rating is optional and must never block study progression or modify exam scoring. Missing ratings remain missing evidence; do not infer them from correctness.
 
 Do not switch the production revision scheduler to FSRS merely because the event shape exists. First collect real rating coverage, measure missingness and contradictory patterns, run a shadow-policy comparison against the current scheduler, and validate delayed retrieval outcomes before allowing FSRS to control due dates.
+
+
+## ADR-024 — FSRS begins as an evidence shadow, not a scheduling switch (accepted, 2026-09-27)
+Before introducing FSRS scheduling authority, build a learner-scoped shadow evidence projection from immutable attempts plus explicit memory judgments.
+
+The shadow must expose:
+- rating coverage and missingness;
+- rating distribution;
+- exact chronological rated-review replay log;
+- rating latency after answer submission;
+- correctness-rating discordance;
+- exact question/version identity.
+
+Do not infer missing ratings from correctness. Do not discard discordant observations. Do not define a mastery score from FSRS state.
+
+The live due-date policy remains `bootstrap-binary-v1`. The shadow endpoint must explicitly report that it has no scheduling authority.
+
+Use `ts-fsrs` as the candidate implementation when a real shadow scheduler is introduced, but do not add scheduling output merely to demonstrate the library. First collect real ratings. Then instantiate the engine behind the shadow boundary, compare its proposed due dates with bootstrap and delayed retrieval outcomes, and only later consider a controlled policy experiment.
+
+Do not hard-code a global minimum review count as scientific validation. Initial operational gates may later be introduced for safety, but promotion to production scheduling must be based on coverage, missingness, calibration/retention evidence and measured learner-time trade-offs.
