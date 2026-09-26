@@ -80,3 +80,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The application server already supports explicit `0.0.0.0` binding through `MLOS_HOST` for hosted preview use.
 - Automatic service creation is currently blocked because the connected Render workspace cannot fetch the private GitHub repository. Keep the repository private; connect Render's GitHub integration to this repository instead.
 - Once connected, the generated Render URL becomes the Auth callback/origin for the controlled no-domain M04b E2E test. This remains a preview, not production deployment.
+
+
+## Live Render preview — 2026-09-26
+- Render service `medical-learning-os-preview` is live on the free Singapore plan at `https://medical-learning-os-preview.onrender.com`.
+- The service deploys the private `main` branch and runs `npm start` with `MLOS_HOST=0.0.0.0`.
+- The Supabase `study-api` CORS allowlist now includes the Render preview origin.
+- Remaining Auth blocker: add `https://medical-learning-os-preview.onrender.com/web/account.html` to Supabase Auth allowed redirect URLs, then run the real confirmation/account isolation tests.
+- This is a development preview, not production release.

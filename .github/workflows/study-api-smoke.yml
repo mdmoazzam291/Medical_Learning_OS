@@ -40,3 +40,17 @@ jobs:
           code="$(curl --silent --show-error --output "$body" --write-out '%{http_code}'             -H 'Origin: https://example.invalid'             "$STUDY_API_URL/progress")"
           test "$code" = "403"
           grep -q '"error":"origin_not_allowed"' "$body"
+
+
+      - name: Render learner preview origin passes preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          headers="$RUNNER_TEMP/render-preflight.headers"
+          code="$(curl --silent --show-error --output /dev/null --dump-header "$headers" --write-out '%{http_code}' \
+            -X OPTIONS \
+            -H 'Origin: https://medical-learning-os-preview.onrender.com' \
+            -H 'Access-Control-Request-Method: GET' \
+            "$STUDY_API_URL/progress")"
+          test "$code" = "200"
+          grep -qi '^access-control-allow-origin: https://medical-learning-os-preview.onrender.com' "$headers"

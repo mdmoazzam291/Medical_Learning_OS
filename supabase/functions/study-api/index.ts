@@ -13,6 +13,7 @@ const configuredOrigins = (Deno.env.get("MLOS_ALLOWED_ORIGINS") ?? "")
 const allowedOrigins = new Set([
   "http://127.0.0.1:3000",
   "http://localhost:3000",
+  "https://medical-learning-os-preview.onrender.com",
   ...configuredOrigins
 ]);
 
