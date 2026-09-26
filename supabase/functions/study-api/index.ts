@@ -188,6 +188,25 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return (data ?? []).map((row: any) => row.question_version_id);
     };
+    const rebuildRevision = async (questionVersionId: string | null = null) => {
+      const { data, error } = await admin.rpc("study_rebuild_revision_state", {
+        p_learner: learnerId,
+        p_question_version_id: questionVersionId
+      });
+      if (error) fail(500, "revision_projection_failed");
+      return data;
+    };
+    const getRevisionState = async () => {
+      const { data, error } = await trustedRead("revision_state", async () =>
+        admin.from("study_revision_state")
+          .select("question_version_id,concept_id,attempts,correct,incorrect,consecutive_correct,latest_correct,first_attempt_at,last_attempt_at,last_duration_ms,policy_id,policy_version,due_at,projection_version,evidence_event_count,evidence_last_event_id,projected_at")
+          .eq("learner_id", learnerId)
+          .order("due_at", { ascending: true })
+          .order("question_version_id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return data ?? [];
+    };
     const questions = async (filter = "all") => {
       if (!["all", "incorrect", "bookmarks"].includes(filter)) fail(400, "invalid_filter");
       const [{ body }, bookmarks, events] = await Promise.all([getCatalog(), getBookmarks(), getEvents()]);
@@ -238,6 +257,66 @@ Deno.serve(async (req: Request) => {
       if ([...url.searchParams.keys()].some((key) => key !== "filter")) fail(400, "query_not_supported");
       return response(req, 200, { questions: await questions(filter) });
     }
+
+    if (req.method === "GET" && path === "/revision/due") {
+      if ([...url.searchParams.keys()].some((key) => key !== "limit")) fail(400, "query_not_supported");
+      const rawLimit = url.searchParams.get("limit");
+      const limit = rawLimit === null ? 20 : integer(Number(rawLimit), 1, 50);
+
+      await rebuildRevision();
+      const [catalog, revisionRows] = await Promise.all([getCatalog(), getRevisionState()]);
+      const published = new Map(
+        publishedQuestions(catalog.body).map((question: any) => [question.questionVersionId, question])
+      );
+      const generatedAt = new Date().toISOString();
+      const nowMs = Date.parse(generatedAt);
+      const eligible = revisionRows
+        .filter((row: any) => published.has(row.question_version_id))
+        .map((row: any) => ({
+          row,
+          dueMs: Date.parse(row.due_at)
+        }))
+        .filter((item: any) => Number.isFinite(item.dueMs));
+
+      const due = eligible.filter((item: any) => item.dueMs <= nowMs);
+      const upcoming = eligible.filter((item: any) => item.dueMs > nowMs);
+      const items = due.slice(0, limit).map(({ row, dueMs }: any) => ({
+        question: learnerQuestion(published.get(row.question_version_id)),
+        schedule: {
+          dueAt: row.due_at,
+          overdueMs: Math.max(0, nowMs - dueMs),
+          policyId: row.policy_id,
+          policyVersion: row.policy_version,
+          projectionVersion: row.projection_version
+        },
+        evidence: {
+          attempts: row.attempts,
+          correct: row.correct,
+          incorrect: row.incorrect,
+          consecutiveCorrect: row.consecutive_correct,
+          latestCorrect: row.latest_correct,
+          firstAttemptAt: row.first_attempt_at,
+          lastAttemptAt: row.last_attempt_at,
+          lastDurationMs: row.last_duration_ms,
+          eventCount: row.evidence_event_count
+        }
+      }));
+
+      return response(req, 200, {
+        generatedAt,
+        policy: {
+          id: "bootstrap-binary-v1",
+          version: 1,
+          evidence: "binary-correctness",
+          provisional: true
+        },
+        dueCount: due.length,
+        returnedCount: items.length,
+        nextDueAt: upcoming.length ? upcoming[0].row.due_at : null,
+        items
+      });
+    }
+
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
@@ -387,6 +466,19 @@ Deno.serve(async (req: Request) => {
       });
       if (error) fail(500, "study_write_failed");
       if (data?.error) fail(data.error === "session_not_found" ? 404 : 409, data.error);
+
+      const { error: revisionError } = await admin.rpc("study_rebuild_revision_state", {
+        p_learner: learnerId,
+        p_question_version_id: q.questionVersionId
+      });
+      if (revisionError) {
+        console.warn(JSON.stringify({
+          event: "revision_projection_deferred",
+          operation: "answer_projection",
+          code: revisionError.code || "revision_projection_failed"
+        }));
+      }
+
       return response(req, 200, data?.receipt ?? receipt);
     }
 
