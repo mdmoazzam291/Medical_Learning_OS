@@ -74,3 +74,11 @@ Three authenticated review approvals make a question version `verified`; they do
 At publish time, recompute the same substantive question/source fingerprint and require all three immutable review events to match it. Re-check source rights and version ordering, then atomically publish the target and retire the previous published version. This prevents stale reviews, changed references or reviewer actions alone from silently opening content to learners.
 
 Keep the publication function service-only until an explicit publisher authorization model and admin surface exist.
+
+
+## ADR-017 — Prove one genuine medical item before scaling content ingestion (accepted, 2026-09-26)
+Use one small, clinically stable, source-grounded medical question to exercise the authenticated M04c lifecycle before importing a large QBank. The first seed is AI-generated, explicitly non-PYQ, source-linked and `in_review`; it is not learner-visible.
+
+Preserve rights uncertainty rather than declaring a source reusable from broad assumptions. The first seed's CDC source remains `rights.status=unknown` because the agency site has public-domain defaults with exceptions and the page contains cited/adapted third-party material. Rights resolution is a real review task, and publication must remain blocked until it is cleared.
+
+This is a validation seed, not a content-acquisition strategy. Scaling begins only after the medical, references and rights gates produce defensible evidence on a genuine item.

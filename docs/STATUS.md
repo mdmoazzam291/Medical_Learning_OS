@@ -229,3 +229,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Review submission contains no reviewer ID. Reviewer identity remains derived from the verified Supabase session in `review-api`.
 - Browser CI covers granted access, queue rendering, review submission, queue removal and absence of browser-supplied reviewer identity.
 - There is still no publication control in the reviewer UI, no reviewer grant assigned in live data, and no medical content published.
+
+
+## First medical review seed — 2026-09-26
+- Added one genuine source-grounded medical question package for M04c lifecycle validation.
+- Topic: immediate first-line treatment of anaphylaxis after vaccination.
+- The item is explicitly AI-generated, not a PYQ, and currently `in_review` with zero approvals.
+- The cited CDC source's rights status is deliberately unresolved rather than overclaimed; publication is therefore blocked even if medical/reference review later passes.
+- CI validates the package structure, AI provenance, review-only state and zero published questions.
+- The goal is to prove one complete high-integrity content lifecycle before importing at scale.
