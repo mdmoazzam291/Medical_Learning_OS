@@ -24,7 +24,7 @@ returns text
 language plpgsql
 security definer
 set search_path = public, extensions, pg_temp
-as $
+as $$
 declare
   v_source jsonb;
 begin
@@ -45,7 +45,7 @@ begin
     'hex'
   );
 end;
-$;
+$$;
 
 revoke all on function public.current_source_fingerprint_sha256(text)
   from public, anon, authenticated;
