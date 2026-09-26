@@ -121,6 +121,7 @@ function mapReviewWriteError(error: any): never {
   if (message.includes("review_target_sources_missing")) fail(409, "review_target_invalid");
   if (message.includes("review_target_changed")) fail(409, "review_target_changed");
   if (message.includes("question_review_rejected")) fail(409, "question_review_rejected");
+  if (message.includes("rights_not_resolved")) fail(409, "rights_not_resolved");
   fail(500, "review_write_failed");
 }
 
