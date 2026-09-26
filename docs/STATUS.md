@@ -96,3 +96,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Immediately after confirmation, the browser successfully called the deployed `study-api` `/progress` and `/questions?filter=all` routes with an authenticated JWT; both returned HTTP 200 from Edge Function version 4.
 - Server-side reads for the learner's attempts, bookmarks and catalog also returned successfully. No unreviewed medical questions were opened because the live catalog remains intentionally unpublished.
 - This closes the first real Auth → callback → session → trusted study API path. M04b is not fully closed until a second real account proves learner isolation and a second-device/reload/logout path is exercised.
+
+
+## Cross-device session continuity verified — 2026-09-26
+- The same confirmed learner account successfully signed in again from a separate browser/device context.
+- Supabase recorded a distinct authenticated session for the same learner, and the new session successfully called both `study-api/progress` and `study-api/questions`.
+- This verifies that cloud learner identity is account-scoped rather than tied to the M03 device-local UUID, and that the trusted API accepts a fresh Supabase session for the same learner.
+- No local demo evidence was migrated or merged during the cross-device sign-in.
+- Remaining M04b verification: explicit logout/session invalidation behavior, real refresh behavior, and two-real-account isolation.
