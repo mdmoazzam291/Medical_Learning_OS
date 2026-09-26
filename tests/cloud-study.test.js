@@ -112,3 +112,26 @@ test('cloud Study Now sends time budget but never learner identity', async () =>
   assert.deepEqual(seen.body, { availableMinutes: 20, maxItems: 12 });
   assert.equal(Object.hasOwn(seen.body, 'learnerId'), false);
 });
+
+
+test('cloud Study Now outcomes use authenticated learner context only', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        generatedAt: '2026-09-26T19:30:00.000Z',
+        scope: 'descriptive-recommendation-outcomes',
+        causal: false,
+        outcomes: []
+      });
+    }
+  });
+
+  const result = await cloud.studyNowOutcomes();
+  assert.match(seenUrl, /study-api\/study-now\/outcomes$/);
+  assert.equal(result.causal, false);
+  assert.deepEqual(result.outcomes, []);
+});
