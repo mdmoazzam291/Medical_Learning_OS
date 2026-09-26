@@ -96,7 +96,7 @@ function reviewKind(value: unknown) {
 }
 
 function rightsStatus(value: unknown) {
-  const allowed = new Set(["owned", "licensed", "public_domain", "restricted"]);
+  const allowed = new Set(["owned", "licensed", "public_domain", "citation_only", "restricted"]);
   if (typeof value !== "string" || !allowed.has(value)) fail(400, "invalid_rights_status");
   return value;
 }
