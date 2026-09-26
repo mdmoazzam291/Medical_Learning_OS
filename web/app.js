@@ -6,6 +6,7 @@ if (['access_token', 'refresh_token', 'error', 'error_code', 'error_description'
 import { openStore } from '/src/adapters/local-store.js';
 import { currentQuestion, currentAttempt, demoQuestions, queue } from '/src/domain/demo-study.js';
 import { summarizeAttempts } from '/src/domain/learning-events.js';
+import { errorMonitor } from '/web/monitoring.js';
 const app = document.querySelector('#app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -77,7 +78,7 @@ function run(fn) {
   // previous IndexedDB transaction is finishing. Errors never break the queue.
   operations = operations.then(async () => {
     busy = true; notice.hidden = true; app.setAttribute('aria-busy', 'true');
-    try { await fn(); } catch (error) { render(); announce(`Not saved: ${error.message}. Your previous saved data is retained. Reload to retry.`); }
+    try { await fn(); } catch (error) { errorMonitor.capture(error, { component: 'local-demo', operation: 'persist_action' }); render(); announce(`Not saved: ${error.message}. Your previous saved data is retained. Reload to retry.`); }
     finally { busy = false; app.removeAttribute('aria-busy'); }
   });
   return operations;
@@ -134,7 +135,8 @@ document.addEventListener('visibilitychange', () => {
 });
 try {
   store = await openStore(indexedDB); state = await store.load(); render(); setInterval(countdown, 1000);
-} catch {
+} catch (error) {
+  errorMonitor.capture(error, { component: 'local-demo', operation: 'open_workspace' });
   app.innerHTML = '<main class="startup-error"><h1>Your saved workspace could not be opened.</h1><p>Saved data has not been replaced. Enable browser storage or close other app tabs, then reload. If the problem persists, keep this browser’s data for recovery.</p><button id="reload">Reload workspace</button></main>';
   document.querySelector('#reload').onclick = () => location.reload();
 }
