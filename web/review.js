@@ -64,7 +64,7 @@ function checklist(kind) {
   if (kind === 'references') {
     return '<ul><li>Each material claim is supported by the cited source package.</li><li>Source identity/version is appropriate and current for the claim.</li><li>No important contradiction or scope mismatch is hidden.</li></ul>';
   }
-  return '<ul><li>Provenance is accurate.</li><li>Source rights status and evidence permit the intended use.</li><li>No recalled/licensed material is being represented as original.</li></ul>';
+  return '<ul><li>Provenance is accurate.</li><li>Source rights status matches the actual use: reuse rights are needed only when protected expression is copied/adapted; citation-only factual grounding must not reproduce protected text, tables, images, or other expressive material.</li><li>No recalled/licensed material is being represented as original.</li></ul>';
 }
 
 function signedOut() {
@@ -81,7 +81,7 @@ function sourceCard(source) {
   const canResolve = state.selectedKind === 'rights' && status === 'unknown';
   const form = canResolve ? `
     <form class="source-rights-form" data-source-id="${escape(source?.sourceId || '')}">
-      <label>Rights outcome<select name="rightsStatus" required><option value="">Choose…</option><option value="public_domain">Public domain</option><option value="licensed">Licensed</option><option value="owned">Owned</option><option value="restricted">Restricted / do not publish</option></select></label>
+      <label>Rights outcome<select name="rightsStatus" required><option value="">Choose…</option><option value="citation_only">Citation / factual grounding only</option><option value="public_domain">Public domain</option><option value="licensed">Licensed</option><option value="owned">Owned</option><option value="restricted">Restricted / do not publish</option></select></label>
       <label>Rights evidence<textarea name="evidence" minlength="1" maxlength="4000" required placeholder="Record the policy, licence, ownership evidence, or restriction."></textarea></label>
       <button class="secondary" type="submit" ${state.submitting ? 'disabled' : ''}>Resolve source rights</button>
     </form>` : '';
@@ -94,7 +94,7 @@ function reviewItem(item, index) {
   const options = Array.isArray(q.options) ? q.options : [];
   const primary = Array.isArray(q.conceptLinks) ? q.conceptLinks.find(link => link?.role === 'primary') : null;
   const provenance = q.provenance || {};
-  const rightsReady = state.selectedKind !== 'rights' || sources.every(source => ['owned', 'licensed', 'public_domain'].includes(source?.rights?.status));
+  const rightsReady = state.selectedKind !== 'rights' || sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
 
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">TARGET ${index + 1}</span><h2>${escape(q.questionVersionId || 'Unknown version')}</h2></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
