@@ -254,6 +254,7 @@ Deno.serve(async (req: Request) => {
 
       const selected: any[] = [];
       let estimatedMs = 0;
+      let dueSelectedCount = 0;
       for (const item of due) {
         if (selected.length >= maxItems) break;
         if (estimatedMs + item.estimatedMs > budgetMs) continue;
@@ -262,9 +263,26 @@ Deno.serve(async (req: Request) => {
           dueAt: item.row.due_at,
           overdueMs: Math.max(0, nowMs - item.dueMs),
           estimatedMs: item.estimatedMs,
-          reason: "due-revision"
+          reason: item.row.latest_correct === false ? "mistake-repair" : "due-revision"
         });
         estimatedMs += item.estimatedMs;
+        dueSelectedCount += 1;
+      }
+
+      const seen = new Set(revisionRows.map((row: any) => String(row.question_version_id)));
+      const unseen = [...published.keys()].filter((questionVersionId) => !seen.has(questionVersionId));
+      let newLearningSelectedCount = 0;
+      const newLearningEstimateMs = 120000;
+      for (const questionVersionId of unseen) {
+        if (selected.length >= maxItems) break;
+        if (estimatedMs + newLearningEstimateMs > budgetMs) continue;
+        selected.push({
+          questionVersionId,
+          estimatedMs: newLearningEstimateMs,
+          reason: "new-learning"
+        });
+        estimatedMs += newLearningEstimateMs;
+        newLearningSelectedCount += 1;
       }
 
       return {
@@ -274,10 +292,14 @@ Deno.serve(async (req: Request) => {
         estimatedMs,
         estimatedMinutes: Math.ceil(estimatedMs / 60000),
         dueCount: due.length,
+        newLearningCount: unseen.length,
         selectedCount: selected.length,
-        deferredDueCount: due.length - selected.length,
+        dueSelectedCount,
+        newLearningSelectedCount,
+        deferredDueCount: due.length - dueSelectedCount,
+        deferredNewLearningCount: unseen.length - newLearningSelectedCount,
         selected,
-        strategy: "due-oldest-first-v1",
+        strategy: "due-then-new-v2",
         provisional: true
       };
     };
@@ -354,6 +376,8 @@ Deno.serve(async (req: Request) => {
 
       const due = eligible.filter((item: any) => item.dueMs <= nowMs);
       const upcoming = eligible.filter((item: any) => item.dueMs > nowMs);
+      const seenQuestionIds = new Set(revisionRows.map((row: any) => String(row.question_version_id)));
+      const unseenCount = [...published.keys()].filter((questionVersionId) => !seenQuestionIds.has(questionVersionId)).length;
       const items = due.slice(0, limit).map(({ row, dueMs }: any) => ({
         question: learnerQuestion(published.get(row.question_version_id)),
         schedule: {
@@ -385,6 +409,8 @@ Deno.serve(async (req: Request) => {
           provisional: true
         },
         dueCount: due.length,
+        unseenCount,
+        studyNowAvailableCount: due.length + unseenCount,
         returnedCount: items.length,
         nextDueAt: upcoming.length ? upcoming[0].row.due_at : null,
         items
