@@ -156,7 +156,7 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
     async signOut() {
       const session = read();
       try {
-        if (session?.accessToken) await api('/auth/v1/logout', { accessToken: session.accessToken, body: {} });
+        if (session?.accessToken) await api('/auth/v1/logout?scope=local', { accessToken: session.accessToken, body: {} });
       } finally {
         write(null);
       }
