@@ -1,6 +1,7 @@
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
+import { errorMonitor } from '/web/monitoring.js';
 
 const root = document.querySelector('#account-app');
 const notice = document.querySelector('#notice');
@@ -10,6 +11,10 @@ const cloud = createCloudStudy({ ...cloudConfig, auth });
 let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, error: null };
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
+function reportUnexpected(error, operation) {
+  const status = Number(error?.status || 0);
+  if (!status || status >= 500) errorMonitor.capture(error, { component: 'account', operation, code: error?.code || null, status: status || null });
+}
 
 function signedOut() {
   return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Connect your learner identity.</h1><p>Supabase Auth owns account identity. Your local software demo stays separate from cloud learning evidence.</p></div><span class="badge">M04b</span></div><div class="two-column"><section class="panel"><h2>Sign in</h2><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="primary" type="submit">Sign in</button></form></section><section class="panel"><h2>Create account</h2><p>Account creation can require email confirmation. During development, only a pre-authorized Supabase team address can receive the built-in confirmation email; production SMTP remains deferred until a sending domain exists.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create account</button></form></section></div><section class="panel"><span class="eyebrow">SECURITY BOUNDARY</span><h2>No operator credential in the browser.</h2><p>The browser stores only the learner session. Answer keys and trusted scoring stay behind the authenticated study API.</p></section></main>`;
@@ -29,6 +34,7 @@ async function loadCloud({ forceRefresh = false } = {}) {
   try {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
+    reportUnexpected(error, 'refresh_session');
     state = { user: null, loading: false, progress: null, questions: null, error: null };
     render();
     announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
@@ -41,6 +47,7 @@ async function loadCloud({ forceRefresh = false } = {}) {
     state = { user: auth.currentUser() || session.user, loading: false, progress, questions: result.questions || [], error: null };
     if (forceRefresh) announce('Session refresh verified in this browser. Cloud data reloaded.');
   } catch (error) {
+    reportUnexpected(error, 'load_cloud');
     state = { ...state, loading: false, error: error.code || error.message || 'cloud_unavailable' };
   }
   render();
@@ -52,7 +59,7 @@ root.addEventListener('click', event => {
   event.preventDefault();
   if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'signout') {
-    (async () => { try { await auth.signOut(); } catch {} state = { user: null, loading: false, progress: null, questions: null, error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
+    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
   }
 });
 
@@ -63,7 +70,7 @@ root.addEventListener('submit', event => {
   if (form.id === 'signin-form') {
     (async () => {
       try { await auth.signIn(data.get('email'), data.get('password')); state.user = auth.currentUser(); await loadCloud(); announce('Signed in to your cloud learner account.'); }
-      catch (error) { announce(`Sign in failed: ${error.code || error.message || 'authentication_failed'}.`); }
+      catch (error) { reportUnexpected(error, 'sign_in'); announce(`Sign in failed: ${error.code || error.message || 'authentication_failed'}.`); }
     })();
   }
   if (form.id === 'signup-form') {
@@ -74,7 +81,7 @@ root.addEventListener('submit', event => {
         state.user = auth.currentUser();
         if (result.session) { await loadCloud(); announce('Account created and signed in.'); }
         else announce('Account created. Check your email to confirm the address before signing in.');
-      } catch (error) { announce(`Account creation failed: ${error.code || error.message || 'authentication_failed'}.`); }
+      } catch (error) { reportUnexpected(error, 'sign_up'); announce(`Account creation failed: ${error.code || error.message || 'authentication_failed'}.`); }
     })();
   }
 });
@@ -88,6 +95,7 @@ async function bootstrap() {
       announce('Email confirmed. Your cloud learner session is connected.');
     }
   } catch (error) {
+    reportUnexpected(error, 'confirmation_callback');
     if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
     announce(`Email confirmation failed: ${error.code || error.message || 'authentication_failed'}.`);
   }
