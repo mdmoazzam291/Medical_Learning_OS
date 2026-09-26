@@ -74,3 +74,27 @@ Selection:
 The current UI offers 10/20/30/60-minute presets. The API accepts 5–120 minutes.
 
 This policy deliberately leaves unused time when nothing is due. Filling spare time with early reviews would optimize visible activity rather than retention. New-learning and misconception-repair candidates will be added later as distinct recommendation classes with their own evidence and priority logic.
+
+
+## M05c Study Now v2: explainable candidate classes
+
+Study Now v2 extends the time-budget baseline without introducing an opaque score.
+
+Candidate classes:
+1. `mistake-repair` — due revision with latest observed answer incorrect.
+2. `due-revision` — other due revision.
+3. `new-learning` — published exact question versions with no learner attempt history.
+
+Ordering is currently due-first, oldest due first, then new learning in deterministic catalog order if time remains. Future reviews are not pulled forward merely to fill a study window.
+
+Every created Study Now session has an immutable recommendation receipt. The plan records exact selected question versions, reason per item, strategy, estimated workload and available minutes.
+
+`study_recommendation_outcomes` rebuilds descriptive results from recommendation + session + attempt evidence:
+- session completion and position;
+- selected vs attempted count;
+- initial correctness/accuracy;
+- estimated vs actual answer time;
+- candidate-class mix;
+- first later retrieval per selected question and its correctness.
+
+These outcome fields support policy evaluation but are not mastery measures and do not establish causality. The first later retrieval is deliberately preserved because retention after delay is a more meaningful signal than immediate Study Now correctness alone.
