@@ -30,3 +30,12 @@ test('medical option labels have explicit visual separation from option text', a
   assert.match(css, /#medical-app \.option-letter/);
   assert.match(css, /margin-right:\.35rem/);
 });
+
+
+test('medical overview reads revision due state without making it mastery', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /cloud\.due\(15\)/);
+  assert.match(source, /load_revision_due/);
+  assert.match(source, /This is scheduling state, not a mastery score/);
+  assert.match(source, /The medical QBank still works/);
+});
