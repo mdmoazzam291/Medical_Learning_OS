@@ -78,10 +78,16 @@ const buildFsrsShadowSchedule = (
   const liveByQuestion = new Map(
     (liveRevisionRows ?? []).map((row: any) => [String(row.question_version_id), row])
   );
+  const fullyRated = new Set(
+    (Array.isArray(evidence?.questionCoverage) ? evidence.questionCoverage : [])
+      .filter((row: any) => row?.fullyRated === true)
+      .map((row: any) => String(row.questionVersionId))
+  );
   const grouped = new Map<string, any[]>();
   for (const review of evidence.reviews) {
     const questionVersionId = String(review.questionVersionId ?? "");
     if (!questionVersionId) fail(500, "invalid_fsrs_shadow_review");
+    if (!fullyRated.has(questionVersionId)) continue;
     const list = grouped.get(questionVersionId) ?? [];
     list.push(review);
     grouped.set(questionVersionId, list);
@@ -127,6 +133,10 @@ const buildFsrsShadowSchedule = (
     engine: FSRS_SHADOW_ENGINE,
     generatedAt: nowIso,
     itemCount: items.length,
+    skippedIncompleteQuestionCount: Math.max(
+      0,
+      Number(evidence?.ratedQuestionCount ?? 0) - items.length
+    ),
     items
   };
 };
