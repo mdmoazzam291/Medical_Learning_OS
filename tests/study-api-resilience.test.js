@@ -50,7 +50,7 @@ test('study-api Study Now is learner-scoped, time-budgeted and resumes interrupt
   assert.match(source, /path === "\/study-now\/start"/);
   assert.match(source, /availableMinutes = integer\(input\.availableMinutes, 5, 120\)/);
   assert.match(source, /strategy: "due-then-new-v2"/);
-  assert.match(source, /reason: "due-revision"/);
+  assert.match(source, /item\.row\.latest_correct === false \? "mistake-repair" : "due-revision"/);
   assert.match(source, /strategy: "resume-existing"/);
   assert.doesNotMatch(source, /answerOptionId[\s\S]{0,250}studyNow/);
 });
