@@ -51,3 +51,12 @@ After the domain is verified:
 5. Revoke any abandoned/unrecoverable test key after explicit operator confirmation.
 
 Do not treat successful SMTP delivery as proof of learner-data isolation. Account isolation still requires the M04b end-to-end tests.
+
+
+## No-domain development fallback
+
+If no product domain is owned yet, do not disable email confirmation merely to unblock development. Keep Resend production SMTP deferred.
+
+For a single controlled development test, Supabase's built-in mailer may send only to a pre-authorized project-team address. The learner signup requests an explicit HTTPS callback to `/web/account.html`; localhost HTTP is accepted only for local development. Before using a public preview URL, that exact callback origin/path must be added to Supabase Auth's allowed redirect URLs.
+
+This fallback verifies the account/session path, not production email deliverability.
