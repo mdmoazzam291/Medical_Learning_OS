@@ -36,7 +36,7 @@ test('medical overview reads revision due state without making it mastery', asyn
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /cloud\.due\(15\)/);
   assert.match(source, /load_revision_due/);
-  assert.match(source, /This is scheduling state, not a mastery score/);
+  assert.match(source, /Scheduling state is not a mastery score/);
   assert.match(source, /The medical QBank still works/);
 });
 
