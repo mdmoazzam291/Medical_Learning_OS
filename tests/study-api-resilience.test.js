@@ -49,7 +49,7 @@ test('study-api Study Now is learner-scoped, time-budgeted and resumes interrupt
   const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
   assert.match(source, /path === "\/study-now\/start"/);
   assert.match(source, /availableMinutes = integer\(input\.availableMinutes, 5, 120\)/);
-  assert.match(source, /strategy: "due-oldest-first-v1"/);
+  assert.match(source, /strategy: "due-then-new-v2"/);
   assert.match(source, /reason: "due-revision"/);
   assert.match(source, /strategy: "resume-existing"/);
   assert.doesNotMatch(source, /answerOptionId[\s\S]{0,250}studyNow/);
