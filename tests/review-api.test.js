@@ -7,7 +7,7 @@ test('review-api derives reviewer identity server-side and never trusts browser 
 
   assert.match(source, /auth\.getUser\(token\)/);
   assert.match(source, /const reviewerId = authData\.user\.id/);
-  assert.match(source, /content_reviewer_grants/);
+  assert.match(source, /get_active_reviewer_grants/);
   assert.match(source, /record_content_review/);
   assert.match(source, /reviewer_not_authorized/);
 
