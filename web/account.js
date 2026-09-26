@@ -24,8 +24,16 @@ function signedIn() {
 
 function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
 
-async function loadCloud() {
-  const session = await auth.getSession();
+async function loadCloud({ forceRefresh = false } = {}) {
+  let session;
+  try {
+    session = await auth.getSession({ forceRefresh });
+  } catch (error) {
+    state = { user: null, loading: false, progress: null, questions: null, error: null };
+    render();
+    announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
+    return;
+  }
   if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, error: null }; render(); return; }
   state = { ...state, user: session.user, loading: true, error: null }; render();
   try {
@@ -41,7 +49,7 @@ root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
-  if (target.dataset.action === 'refresh') loadCloud();
+  if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'signout') {
     (async () => { try { await auth.signOut(); } catch {} state = { user: null, loading: false, progress: null, questions: null, error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
   }

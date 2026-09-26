@@ -86,7 +86,7 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Render service `medical-learning-os-preview` is live on the free Singapore plan at `https://medical-learning-os-preview.onrender.com`.
 - The service deploys the private `main` branch and runs `npm start` with `MLOS_HOST=0.0.0.0`.
 - The Supabase `study-api` CORS allowlist now includes the Render preview origin.
-- Remaining Auth blocker: add `https://medical-learning-os-preview.onrender.com/web/account.html` to Supabase Auth allowed redirect URLs, then run the real confirmation/account isolation tests.
+- The Render account callback URL is allowed in Supabase Auth and the real confirmation flow has passed.
 - This is a development preview, not production release.
 
 
@@ -102,10 +102,26 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Live logout reached Supabase Auth successfully and cleared the learner's server sessions.
 - The test exposed that the raw logout endpoint defaults to global scope, which signs the learner out from every device.
 - The learner-facing Sign out action has been corrected to use `scope=local`, matching expected per-device behavior while retaining an explicit future option for “sign out everywhere.”
-- Remaining M04b checks: real token refresh and two-real-account isolation.
+- The browser now has an explicit token-refresh verification path through the Cloud study Refresh action. Remaining live gates are a successful refresh after the earlier global-logout cleanup and two-real-account isolation.
 
 
 ## Cross-device continuity verified — 2026-09-26
 - The confirmed learner signed in from a separate browser/device context and Supabase created a distinct session for the same account.
 - That session independently reached the trusted progress and question-list routes.
 - This verifies account-scoped cloud continuity while the M03 local demo identity/evidence remains separate.
+
+
+## Live RLS isolation verification — 2026-09-26
+- A rollback-only live test inserted temporary session, attempt and bookmark rows for the confirmed learner, then evaluated the real RLS policies under two JWT principals.
+- The owning principal saw exactly 1 session, 1 attempt and 1 bookmark.
+- An unrelated principal saw 0 sessions, 0 attempts and 0 bookmarks.
+- The transaction was rolled back, so no test study evidence persisted.
+- The reusable harness is stored at `supabase/verification/rls-isolation.sql`.
+- This proves the live learner-scoped read policies behave correctly, but it does not replace the final two-real-account browser test.
+
+
+## Explicit refresh verification path — 2026-09-26
+- The Cloud study Refresh action now forces one Supabase session refresh before reloading learner progress/questions.
+- Browser CI verifies that the refresh-token exchange occurs and the refreshed token continues through the trusted cloud path.
+- Refresh failure clears the unusable local session and returns the learner to sign-in instead of leaving stale authenticated UI.
+- A live successful refresh still needs to be observed after fresh sessions were created; earlier refresh attempts failed because the previous global logout had already revoked their refresh tokens.
