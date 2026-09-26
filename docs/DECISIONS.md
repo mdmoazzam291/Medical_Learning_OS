@@ -98,3 +98,13 @@ Do not assign review capabilities through direct table edits or durable browser 
 Every grant records who granted it, why, and an optional expiry. Review queues and review mutations independently check active server-side grants, so revocation/expiry takes effect even in an already-open browser session.
 
 Keep grant mutation service-only until a separate authenticated operator authorization model exists. Reviewer authorization and content review are different powers and should not share the same browser control.
+
+
+## ADR-020 — Revision scheduling is a replaceable projection, not mastery (accepted, 2026-09-26)
+Build M05 revision state by replaying the immutable attempt ledger per learner and exact question version. Keep schedule state rebuildable and bind every scheduling decision to an explicit algorithm/policy version.
+
+Do not call a due date, interval, correctness streak or FSRS state “mastery.” They are scheduling signals with uncertainty, not proof of durable knowledge or transfer.
+
+The current production event contract records binary correctness but not Again/Hard/Good/Easy. Do not silently map every correct answer to Good and incorrect answer to Again as if the richer learner judgment had been observed. Start with an explicitly provisional binary interval policy to prove the queue/persistence/workload plumbing. Later FSRS integration must either collect the evidence it needs or document and validate a deliberate mapping.
+
+Because historical attempts remain immutable, a new scheduler can be evaluated and adopted by replaying the same evidence rather than rewriting learner history.
