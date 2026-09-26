@@ -158,3 +158,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The Sentry configuration shim is now the first script, followed by the generated Loader Script, followed by Medical Learning OS application modules.
 - The second controlled test uses a new one-shot session key so browsers that attempted the first test will send again.
 - CI guards the script ordering and errors-only privacy settings.
+
+
+## Sentry ingestion verified — 2026-09-26
+- Sentry received the controlled Medical Learning OS browser test event from the live Render preview.
+- The visible issue title showed the injected learner email/token material redacted, confirming the end-to-end privacy scrubber path.
+- The temporary `monitoring_test` trigger has been removed.
+- The verification also revealed that the previous static Loader Script initialized Sentry on localhost/CI, which polluted Sentry with deliberate browser-test failures. Sentry loading is now conditional on the Render preview hostname only.
+- Real unexpected preview failures continue to flow through the provider-neutral monitoring adapter; Session Replay, tracing, Logs and Application Metrics remain disabled.
