@@ -155,20 +155,36 @@ Deno.serve(async (req: Request) => {
       auth: { persistSession: false, autoRefreshToken: false }
     });
 
+    const trustedRead = async (operation: string, read: () => Promise<any>) => {
+      let result = await read();
+      if (result.error?.code === "PGRST303") {
+        console.warn(JSON.stringify({ event: "trusted_read_retry", operation, code: "PGRST303" }));
+        await new Promise((resolve) => setTimeout(resolve, 75));
+        result = await read();
+      }
+      return result;
+    };
+
     const getCatalog = async () => {
-      const { data, error } = await admin.from("study_catalog").select("version,body").eq("id", 1).single();
+      const { data, error } = await trustedRead("catalog", async () =>
+        admin.from("study_catalog").select("version,body").eq("id", 1).single()
+      );
       if (error || !data) fail(500, "catalog_unavailable");
       return data as { version: number; body: any };
     };
     const getEvents = async () => {
-      const { data, error } = await admin.from("study_attempts").select("event,recorded_at,id")
-        .eq("learner_id", learnerId).order("recorded_at", { ascending: true }).order("id", { ascending: true });
+      const { data, error } = await trustedRead("attempts", async () =>
+        admin.from("study_attempts").select("event,recorded_at,id")
+          .eq("learner_id", learnerId).order("recorded_at", { ascending: true }).order("id", { ascending: true })
+      );
       if (error) fail(500, "study_read_failed");
       return (data ?? []).map((row: any) => row.event);
     };
     const getBookmarks = async () => {
-      const { data, error } = await admin.from("study_bookmarks").select("question_version_id")
-        .eq("learner_id", learnerId).order("question_version_id", { ascending: true });
+      const { data, error } = await trustedRead("bookmarks", async () =>
+        admin.from("study_bookmarks").select("question_version_id")
+          .eq("learner_id", learnerId).order("question_version_id", { ascending: true })
+      );
       if (error) fail(500, "study_read_failed");
       return (data ?? []).map((row: any) => row.question_version_id);
     };
@@ -185,8 +201,10 @@ Deno.serve(async (req: Request) => {
       return list.map(learnerQuestion);
     };
     const sessionState = async (sessionId: string) => {
-      const { data: session, error } = await admin.from("study_sessions")
-        .select("id,position,closed,question_version_ids").eq("id", sessionId).eq("learner_id", learnerId).maybeSingle();
+      const { data: session, error } = await trustedRead("session_state", async () =>
+        admin.from("study_sessions").select("id,position,closed,question_version_ids")
+          .eq("id", sessionId).eq("learner_id", learnerId).maybeSingle()
+      );
       if (error) fail(500, "study_read_failed");
       if (!session) fail(404, "session_not_found");
       const ids = session.question_version_ids as string[];
@@ -201,7 +219,10 @@ Deno.serve(async (req: Request) => {
       if (session.closed) return result;
       const [{ body }, { data: attempt, error: attemptError }] = await Promise.all([
         getCatalog(),
-        admin.from("study_attempts").select("receipt").eq("session_id", sessionId).eq("position", session.position).maybeSingle()
+        trustedRead("session_receipt", async () =>
+          admin.from("study_attempts").select("receipt").eq("session_id", sessionId)
+            .eq("position", session.position).maybeSingle()
+        )
       ]);
       if (attemptError) fail(500, "study_read_failed");
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
@@ -223,8 +244,10 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/export") {
       const [{ data: sessions, error: sessionError }, events, bookmarks] = await Promise.all([
-        admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
-          .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true }),
+        trustedRead("export_sessions", async () =>
+          admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
+            .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
+        ),
         getEvents(),
         getBookmarks()
       ]);
@@ -312,8 +335,10 @@ Deno.serve(async (req: Request) => {
       const position = integer(input.position, 0, 49);
 
       const [{ data: session, error: sessionError }, catalog] = await Promise.all([
-        admin.from("study_sessions").select("id,position,closed,question_version_ids,question_started_at")
-          .eq("id", sessionId).eq("learner_id", learnerId).maybeSingle(),
+        trustedRead("answer_session", async () =>
+          admin.from("study_sessions").select("id,position,closed,question_version_ids,question_started_at")
+            .eq("id", sessionId).eq("learner_id", learnerId).maybeSingle()
+        ),
         getCatalog()
       ]);
       if (sessionError) fail(500, "study_read_failed");

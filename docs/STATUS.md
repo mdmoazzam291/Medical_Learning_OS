@@ -9,16 +9,16 @@ Updated: 2026-09-26 (Asia/Kolkata)
 - IndexedDB transactions atomically save session and event ledger; stable submission IDs prevent duplicates; failed/corrupt storage never silently resets data.
 - Project context reference rule preserved; M03 reconciliation and storage boundary documented.
 - M04a implemented: separate learner-scoped local API, hashed/expiring operator credentials, SQLite event/session persistence, server scoring, eligible version selection, immutable receipts, safe retries, bookmarks, progress and export.
-- M04b code path implemented: Supabase Auth browser sessions, cloud account UI, authenticated cloud-study adapter and JWT-gated Supabase `study-api`. M04b still requires one real email-confirmed account verification before DONE.
+- M04b is substantially verified: real email-confirmed Auth, cross-device continuity, current-session logout, live token refresh, trusted study API reads, RLS isolation and browser Sentry capture have passed. The remaining live gate is two-distinct-real-account isolation.
 
 ## Verification
 - Original M03 foundation/browser verification passed phone (390px), tablet (820px) and desktop (1440px) Chromium flows.
 - M04a verification passed server authorization, learner isolation, scoring, retries, restart recovery, catalog immutability, failure rollback, payload limits and sanitized errors.
 - Current main Foundation checks passed in run 36188364648 after M04b integration, including auth/cloud adapter tests and mocked browser account persistence/sign-out.
-- Native iOS Safari and a real email-confirmed cloud learner flow remain unverified.
+- A real email-confirmed cloud learner flow is verified. Native iOS Safari remains a later compatibility check.
 
 ## Current task
-Finish M04b with Resend-backed Supabase Auth email delivery, then exercise one real confirmed learner account through Auth → `study-api`. After that configure Sentry failure capture. M04c then adds authenticated reviewers and genuinely reviewed medical content.
+Keep the remaining two-real-account M04b isolation gate explicit until a second confirmable learner account is available. Meanwhile harden the trusted study path and prepare M04c authenticated review/content publication work. Production Resend SMTP remains deferred until an owned sending domain exists.
 
 ## M04b account integration
 - Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
@@ -44,10 +44,10 @@ Finish M04b with Resend-backed Supabase Auth email delivery, then exercise one r
 - Cloudflare R2 backup transport is private and verified end to end. The first logical Supabase backup succeeded and a disposable local restore drill verified archive/SQL integrity and study-data invariants.
 - Weekly backups are scheduled Sunday 03:47 IST / Saturday 22:17 UTC with storage guards and report-only retention auditing.
 - R2 and the Supabase heartbeat are infrastructure preparation only; neither implies that the learner app is deployed.
-- PostHog is connected. Resend is connected but lacks a sending domain. Sentry is not connected through the available ChatGPT integrations.
+- PostHog is connected. Resend is connected but lacks a sending domain. Sentry browser error capture is operational on the Render preview; there is no ChatGPT Sentry connector.
 
 ## Not implemented / not yet verified
-Real email-confirmed learner E2E verification, two-real-account isolation testing, reviewed medical content, authenticated reviewer workflow, production app deployment, Sentry capture, review scheduler, NeuralVault, adaptive AI, and native iOS Safari verification.
+Two-real-account isolation testing, reviewed medical content, authenticated reviewer workflow, production app deployment, review scheduler, NeuralVault, adaptive AI, and native iOS Safari verification.
 
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md, docs/STATUS.md, docs/SUPABASE_AUTH.md and docs/CLOUD_ACCOUNT.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Finish the next incomplete M04b gate with meaningful verification. Keep the local demo separate from cloud learner evidence. Work only in this repository.”
@@ -166,3 +166,12 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The temporary `monitoring_test` trigger has been removed.
 - The verification also revealed that the previous static Loader Script initialized Sentry on localhost/CI, which polluted Sentry with deliberate browser-test failures. Sentry loading is now conditional on the Render preview hostname only.
 - Real unexpected preview failures continue to flow through the provider-neutral monitoring adapter; Session Replay, tracing, Logs and Application Metrics remain disabled.
+
+
+## Trusted-read resilience — 2026-09-26
+- Sentry surfaced one real `catalog_unavailable` error from the hosted account flow.
+- Supabase logs traced it to a single internal `study_catalog` Data API read returning HTTP 401 / `PGRST303`, while the same server secret key successfully read the catalog again shortly afterward.
+- The trusted Edge Function now retries exactly once, after 75 ms, only when a server-side read fails with `PGRST303`.
+- The retry applies only to trusted read operations. Writes/RPC mutations are never blindly retried.
+- The retry emits only a sanitized operation/code warning to Supabase logs, with no learner data or credentials.
+- Persistent failures still fail closed with the existing `catalog_unavailable` / `study_read_failed` responses.
