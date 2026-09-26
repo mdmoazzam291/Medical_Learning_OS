@@ -45,6 +45,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     progress() { return request('/progress'); },
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
     fsrsShadow() { return request('/revision/fsrs-shadow'); },
+    policyEvaluation() { return request('/revision/policy-evaluation'); },
     studyNow(availableMinutes, maxItems = 50) {
       return request('/study-now/start', {
         method: 'POST',
