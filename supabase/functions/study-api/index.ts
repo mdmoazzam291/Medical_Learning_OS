@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { Rating, createEmptyCard, fsrs } from "npm:ts-fsrs@5.4.2";
 
 type Json = Record<string, unknown>;
 
@@ -39,6 +40,97 @@ const object = (value: unknown) => {
   if (!value || typeof value !== "object" || Array.isArray(value)) fail(400, "invalid_json");
   return value as Json;
 };
+const FSRS_SHADOW_ENGINE = Object.freeze({
+  package: "ts-fsrs",
+  packageVersion: "5.4.2",
+  algorithmVersion: "FSRS-6",
+  configVersion: "fsrs-shadow-default-v1",
+  requestRetention: 0.9,
+  maximumIntervalDays: 36500,
+  enableFuzz: false,
+  enableShortTerm: true
+});
+
+const fsrsShadow = fsrs({
+  request_retention: FSRS_SHADOW_ENGINE.requestRetention,
+  maximum_interval: FSRS_SHADOW_ENGINE.maximumIntervalDays,
+  enable_fuzz: FSRS_SHADOW_ENGINE.enableFuzz,
+  enable_short_term: FSRS_SHADOW_ENGINE.enableShortTerm
+});
+
+const fsrsRating = (value: unknown) => {
+  if (value === 1) return Rating.Again;
+  if (value === 2) return Rating.Hard;
+  if (value === 3) return Rating.Good;
+  if (value === 4) return Rating.Easy;
+  fail(500, "invalid_fsrs_shadow_rating");
+};
+
+const buildFsrsShadowSchedule = (
+  evidence: any,
+  liveRevisionRows: any[],
+  nowIso: string
+) => {
+  if (!evidence?.hasReplayableEvidence || !Array.isArray(evidence?.reviews) || !evidence.reviews.length) {
+    return null;
+  }
+
+  const liveByQuestion = new Map(
+    (liveRevisionRows ?? []).map((row: any) => [String(row.question_version_id), row])
+  );
+  const grouped = new Map<string, any[]>();
+  for (const review of evidence.reviews) {
+    const questionVersionId = String(review.questionVersionId ?? "");
+    if (!questionVersionId) fail(500, "invalid_fsrs_shadow_review");
+    const list = grouped.get(questionVersionId) ?? [];
+    list.push(review);
+    grouped.set(questionVersionId, list);
+  }
+
+  const now = new Date(nowIso);
+  const items = [...grouped.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([questionVersionId, reviews]) => {
+      reviews.sort((a, b) =>
+        String(a.reviewedAt).localeCompare(String(b.reviewedAt)) ||
+        String(a.attemptId).localeCompare(String(b.attemptId))
+      );
+      let card = createEmptyCard(new Date(reviews[0].reviewedAt));
+      for (const review of reviews) {
+        const next = fsrsShadow.next(card, new Date(review.reviewedAt), fsrsRating(review.rating));
+        card = next.card;
+      }
+
+      const live = liveByQuestion.get(questionVersionId);
+      const fsrsDueAt = card.due.toISOString();
+      const liveDueAt = live?.due_at ?? null;
+      const liveDueMs = liveDueAt ? Date.parse(liveDueAt) : NaN;
+      const fsrsDueMs = Date.parse(fsrsDueAt);
+
+      return {
+        questionVersionId,
+        ratedReviewCount: reviews.length,
+        fsrsDueAt,
+        liveDueAt,
+        dueDeltaMs: Number.isFinite(liveDueMs) ? fsrsDueMs - liveDueMs : null,
+        stability: card.stability,
+        difficulty: card.difficulty,
+        scheduledDays: card.scheduled_days,
+        reps: card.reps,
+        lapses: card.lapses,
+        state: card.state,
+        retrievabilityNow: fsrsShadow.get_retrievability(card, now, false)
+      };
+    });
+
+  return {
+    engine: FSRS_SHADOW_ENGINE,
+    generatedAt: nowIso,
+    itemCount: items.length,
+    items
+  };
+};
+
 const exactFields = (value: Json, required: string[], optional: string[] = []) => {
   if (required.some((key) => !(key in value)) ||
     Object.keys(value).some((key) => !required.includes(key) && !optional.includes(key))) fail(400, "invalid_fields");
@@ -452,21 +544,30 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/revision/fsrs-shadow") {
       if (url.search) fail(400, "query_not_supported");
-      const { data, error } = await admin.rpc("study_fsrs_shadow_evidence", {
-        p_learner: learnerId
-      });
+      const [{ data, error }, liveRevisionRows] = await Promise.all([
+        admin.rpc("study_fsrs_shadow_evidence", {
+          p_learner: learnerId
+        }),
+        getRevisionState()
+      ]);
       if (error) fail(500, "fsrs_shadow_projection_failed");
       const evidence = data ?? {};
+      const generatedAt = new Date().toISOString();
+      const shadowSchedule = buildFsrsShadowSchedule(
+        evidence,
+        liveRevisionRows,
+        generatedAt
+      );
       return response(req, 200, {
-        generatedAt: new Date().toISOString(),
-        mode: "shadow-readiness",
+        generatedAt,
+        mode: "shadow-scheduler",
         schedulerControl: false,
-        candidateEngine: "ts-fsrs",
+        candidateEngine: FSRS_SHADOW_ENGINE,
         livePolicyId: evidence.livePolicyId ?? "bootstrap-binary-v1",
         evidence,
-        shadowSchedule: null,
-        shadowScheduleReason: evidence.hasReplayableEvidence
-          ? "replayable_ratings_exist_engine_not_enabled"
+        shadowSchedule,
+        shadowScheduleReason: shadowSchedule
+          ? "real_memory_ratings_replayed"
           : "no_real_memory_ratings"
       });
     }
