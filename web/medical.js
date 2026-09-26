@@ -61,10 +61,13 @@ function overview() {
   const nextDue = revision?.nextDueAt
     ? new Date(revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })
     : null;
+  const studyNowControls = revision?.dueCount
+    ? '<div class="study-now-controls"><strong>Study Now</strong><p>How much uninterrupted time do you have?</p><div class="button-row">' + [10, 20, 30, 60].map(minutes => '<button class="secondary" data-action="study-now" data-minutes="' + minutes + '">' + minutes + ' min</button>').join('') + '</div></div>'
+    : '';
   const revisionPanel = state.revisionError
     ? '<section class="panel"><span class="eyebrow">REVISION</span><h2>Schedule temporarily unavailable.</h2><p>The medical QBank still works. Revision state will rebuild from immutable attempts when the service is available.</p></section>'
     : revision
-      ? '<section class="panel"><span class="eyebrow">REVISION · PROVISIONAL BINARY POLICY</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for the next revision loop.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + '</p><p class="muted">This is scheduling state, not a mastery score. Policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
+      ? '<section class="panel"><span class="eyebrow">REVISION · PROVISIONAL BINARY POLICY</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for the next revision loop.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + '</p>' + studyNowControls + '<p class="muted">This is scheduling state, not a mastery score. Policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
       : '';
   const list = state.questions.map((q, index) =>
     '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">PUBLISHED MEDICAL</span><h2>' + escape(q.stem) + '</h2><small>' + escape(q.questionVersionId) + '</small></div></article>'
@@ -143,6 +146,34 @@ async function loadOverview() {
   } catch (error) {
     reportUnexpected(error, 'load_overview');
     state = { ...state, loading: false, error: error.code || error.message || 'medical_qbank_unavailable' };
+  }
+  render();
+}
+
+async function startStudyNow(availableMinutes) {
+  if (state.busy) return;
+  state.busy = true;
+  render();
+  try {
+    const result = await cloud.studyNow(availableMinutes, 50);
+    if (!result.session) {
+      state.busy = false;
+      announce('Nothing is due inside this Study Now window. Future reviews were not pulled early.');
+      await loadOverview();
+      return;
+    }
+    state = {
+      ...state,
+      busy: false,
+      session: result.session,
+      selectedOptionId: result.session.receipt?.selectedOptionId || null,
+      receipt: result.session.receipt || null,
+      error: null
+    };
+  } catch (error) {
+    reportUnexpected(error, 'start_study_now');
+    state = { ...state, busy: false, error: error.code || error.message || 'study_now_failed' };
+    announce('Study Now could not start: ' + state.error + '.');
   }
   render();
 }
@@ -233,6 +264,7 @@ root.addEventListener('click', event => {
   if (!target) return;
   event.preventDefault();
   if (target.dataset.action === 'start') startSession();
+  if (target.dataset.action === 'study-now') startStudyNow(Number(target.dataset.minutes));
   if (target.dataset.action === 'next') nextQuestion();
   if (target.dataset.action === 'reload') loadOverview();
 });
