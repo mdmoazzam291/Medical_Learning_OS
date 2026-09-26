@@ -137,8 +137,9 @@ try {
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
   assert.match(await accountPage.locator('.metrics').textContent(), /0Server attempts/);
   assert.match(await accountPage.locator('.metrics').textContent(), /0Published questions/);
-  await accountPage.getByRole('button', { name: 'Refresh', exact: true }).click();
-  await accountPage.getByRole('button', { name: 'Refresh', exact: true }).waitFor();
+  await accountPage.getByRole('button', { name: 'Verify session refresh', exact: true }).click();
+  await accountPage.getByRole('button', { name: 'Verify session refresh', exact: true }).waitFor();
+  await accountPage.getByRole('alert').filter({ hasText: 'Session refresh verified in this browser.' }).waitFor();
   assert.equal(refreshCalls, 1);
   await accountPage.reload();
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
