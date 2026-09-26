@@ -138,3 +138,10 @@ test('FSRS shadow schedule refuses partially rated question histories', async ()
   assert.match(source, /if \(!fullyRated\.has\(questionVersionId\)\) continue/);
   assert.match(source, /skippedIncompleteQuestionCount/);
 });
+
+
+test('FSRS shadow distinguishes sparse ratings from a complete replayable history', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /no_fully_rated_question_history/);
+  assert.match(source, /shadowSchedule\?\.itemCount > 0/);
+});
