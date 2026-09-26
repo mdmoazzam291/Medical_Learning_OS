@@ -102,3 +102,10 @@ Privacy constraints:
 CSP permits only the Sentry loader/bundle CDNs and this project's exact US ingest host.
 
 A temporary preview-only `?monitoring_test=1` trigger sends one sanitized controlled event per browser session. It is strictly a verification mechanism and must be removed immediately after the event is confirmed in Sentry.
+
+
+### Loader ordering correction
+
+The first browser ingestion test produced no Sentry issue. The integration was then aligned with Sentry's Loader Script requirement: the local configuration shim now defines `window.sentryOnLoad` before the Sentry Loader Script, the Loader Script is emitted before any application module, and the full SDK is loaded eagerly with `data-lazy="no"`.
+
+The provider-neutral `web/monitoring.js` module no longer inserts the Sentry script dynamically. It only sends already-sanitized failure envelopes through the Sentry API stub/SDK exposed by the early loader.
