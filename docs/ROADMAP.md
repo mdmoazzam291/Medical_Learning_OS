@@ -41,11 +41,11 @@ M02–M06 minimal paths work together; progress survives reload; data export wor
 - M04b — DONE: Supabase Auth/session adapter, account UI, authenticated cloud adapter and JWT-gated `study-api` are live; refresh behavior and two-distinct-real-account read/write isolation passed on the hosted path. No browser-stored operator credential shortcut.
 - M04c — DONE: authenticated reviewer workflow, gate-specific immutable evidence, source-rights resolution, first genuinely reviewed/published medical item, authenticated server-scored learner attempt, and live responsive medical QBank.
 
-M04 is complete: all three slices and the authenticated medical learner flow passed their release gates, including two-distinct-real-account read/write isolation. M04c is complete; the remaining live M04 blocker is M04b's two-distinct-real-account hosted isolation proof.
+M04 is complete: all three slices and the authenticated medical learner flow passed their release gates, including two-distinct-real-account read/write isolation.
 
 
 ## M05 slices
-- M05a — IN PROGRESS: rebuildable per-question revision evidence and versioned due-queue policy boundary. The provisional binary bootstrap policy is test scaffolding, not mastery inference.
-- M05b — PLANNED: persisted learner-scoped revision projection plus authenticated due-queue API.
+- M05a — DONE: rebuildable per-question revision evidence and versioned due-queue policy boundary. The provisional binary bootstrap policy is test scaffolding, not mastery inference.
+- M05b — IN PROGRESS: persisted learner-scoped revision projection and authenticated due-queue API are live; hosted learner-page verification remains.
 - M05c — PLANNED: interruption-friendly workload controls and Study Now integration.
 - M05d — PLANNED: evaluate/introduce FSRS-compatible evidence and scheduler without silently manufacturing four-grade ratings from binary correctness.
