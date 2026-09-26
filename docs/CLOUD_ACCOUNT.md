@@ -75,7 +75,7 @@ On 2026-09-26 the no-domain development fallback completed its first real end-to
 
 This verifies the production-shaped identity boundary without claiming production email delivery. Custom SMTP is still deferred until an owned sending domain exists.
 
-Remaining M04b verification: two-real-account isolation, reload/second-device continuity, logout, and real token-refresh behavior.
+Cross-device continuity and the first real logout path have since been exercised. The remaining live gates are a successful refresh-token exchange on a fresh session and two-real-account isolation.
 
 
 ## Sign-out scope
@@ -85,3 +85,21 @@ The learner-facing Sign out action is intentionally current-session only. It cal
 A separate future security action may offer “sign out everywhere.” It should not be overloaded onto the ordinary Sign out button.
 
 During live M04b verification, the earlier global-default logout behavior was observed to revoke every active session for the learner. That behavior is now corrected in the browser adapter.
+
+
+## RLS isolation verification
+
+A rollback-only live database check exercises the actual learner read policies without persisting synthetic evidence. Temporary rows are created for one existing Auth learner, then the transaction evaluates them under two JWT principals.
+
+Expected and observed result:
+
+- owning principal: session 1, attempt 1, bookmark 1
+- unrelated principal: session 0, attempt 0, bookmark 0
+
+The harness lives at `supabase/verification/rls-isolation.sql`. This is strong evidence for the RLS boundary, but the final release gate still requires two distinct real Auth accounts.
+
+## Refresh behavior
+
+The account surface's Refresh action explicitly rotates the Supabase session before reloading cloud progress/questions. This gives M04b a controlled way to verify the refresh-token path without waiting for token expiry.
+
+If the refresh exchange fails, the adapter clears the unusable stored session and the UI returns to sign-in rather than continuing with stale account state.
