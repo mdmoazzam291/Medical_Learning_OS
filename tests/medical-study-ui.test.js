@@ -23,3 +23,10 @@ test('cloud account exposes medical QBank only when published questions exist', 
   assert.match(source, /const medicalAction = count \?/);
   assert.match(source, /\/web\/medical\.html/);
 });
+
+
+test('medical option labels have explicit visual separation from option text', async () => {
+  const css = await readFile(new URL('../web/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /#medical-app \.option-letter/);
+  assert.match(css, /margin-right:\.35rem/);
+});
