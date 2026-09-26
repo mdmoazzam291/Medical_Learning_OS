@@ -17,6 +17,41 @@ alter table public.source_rights_events enable row level security;
 revoke all on table public.source_rights_events from public, anon, authenticated, service_role;
 grant select on table public.source_rights_events to service_role;
 
+create or replace function public.current_source_fingerprint_sha256(
+  p_source_id text
+)
+returns text
+language plpgsql
+security definer
+set search_path = public, extensions, pg_temp
+as $
+declare
+  v_source jsonb;
+begin
+  select s
+    into v_source
+  from public.study_catalog c
+  cross join lateral jsonb_array_elements(c.body->'sources') s
+  where c.id = 1
+    and s->>'sourceId' = p_source_id
+  limit 1;
+
+  if v_source is null then
+    raise exception using errcode = '22023', message = 'unknown_source';
+  end if;
+
+  return encode(
+    extensions.digest(convert_to((v_source - 'rights')::text, 'UTF8'), 'sha256'),
+    'hex'
+  );
+end;
+$;
+
+revoke all on function public.current_source_fingerprint_sha256(text)
+  from public, anon, authenticated;
+grant execute on function public.current_source_fingerprint_sha256(text)
+  to service_role;
+
 create or replace function public.current_review_target_sha256(
   p_question_version_id text,
   p_review_kind text
@@ -165,10 +200,7 @@ begin
   end if;
 
   v_source_core := v_source - 'rights';
-  v_fingerprint := encode(
-    extensions.digest(convert_to(v_source_core::text, 'UTF8'), 'sha256'),
-    'hex'
-  );
+  v_fingerprint := public.current_source_fingerprint_sha256(p_source_id);
 
   insert into public.source_rights_events (
     id,
@@ -301,11 +333,17 @@ begin
     select 1
     from public.study_catalog c
     cross join lateral jsonb_array_elements(c.body->'sources') s
+    left join public.source_rights_events e
+      on e.source_id = s->>'sourceId'
     where c.id = 1
       and s->>'sourceId' in (
         select jsonb_array_elements_text(v_question->'sourceIds')
       )
-      and coalesce(s->'rights'->>'status', 'unknown') not in ('owned', 'licensed', 'public_domain')
+      and (
+        coalesce(s->'rights'->>'status', 'unknown') not in ('owned', 'licensed', 'public_domain')
+        or e.id is null
+        or e.source_fingerprint_sha256 <> public.current_source_fingerprint_sha256(s->>'sourceId')
+      )
   ) then
     raise exception using errcode = '22023', message = 'rights_not_resolved';
   end if;
@@ -453,7 +491,11 @@ begin
   if exists (
     select 1
     from jsonb_array_elements(v_sources) s
+    left join public.source_rights_events e
+      on e.source_id = s->>'sourceId'
     where coalesce(s->'rights'->>'status', 'unknown') not in ('owned', 'licensed', 'public_domain')
+       or e.id is null
+       or e.source_fingerprint_sha256 <> public.current_source_fingerprint_sha256(s->>'sourceId')
   ) then
     raise exception using errcode = '22023', message = 'publication_rights_unresolved';
   end if;
