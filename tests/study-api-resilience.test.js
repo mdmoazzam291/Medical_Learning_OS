@@ -112,3 +112,20 @@ test('FSRS shadow endpoint is learner-scoped and cannot control production due d
   assert.match(source, /shadowSchedule: null/);
   assert.match(source, /no_real_memory_ratings/);
 });
+
+
+test('FSRS shadow scheduler pins a deterministic stable engine without production authority', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /npm:ts-fsrs@5\.4\.2/);
+  assert.match(source, /algorithmVersion: "FSRS-6"/);
+  assert.match(source, /configVersion: "fsrs-shadow-default-v1"/);
+  assert.match(source, /enableFuzz: false/);
+  assert.match(source, /enableShortTerm: true/);
+  assert.match(source, /buildFsrsShadowSchedule/);
+  assert.match(source, /fsrsShadow\.next/);
+  assert.match(source, /get_retrievability/);
+  assert.match(source, /dueDeltaMs/);
+  assert.match(source, /schedulerControl: false/);
+  assert.match(source, /mode: "shadow-scheduler"/);
+  assert.match(source, /no_real_memory_ratings/);
+});
