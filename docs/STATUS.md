@@ -141,3 +141,12 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Monitoring itself is failure-isolated and remains a no-op until a Sentry SDK/provider sink is configured.
 - Sentry remains the selected provider. No Sentry project/plugin is connected yet, so DSN/provider configuration is still an operator-side gate.
 - Session Replay and broad learner telemetry are explicitly deferred. The initial observability scope is operational errors only.
+
+
+## Sentry browser wiring — 2026-09-26
+- Connected the live Render preview to the Sentry Browser JavaScript loader using the project's public DSN/client key.
+- Sentry is enabled only on the hosted Render preview; localhost/CI remain disconnected to avoid polluting the project with test noise.
+- Initial scope is errors only: PII sending disabled, breadcrumbs disabled, tracing sampled at 0, transactions dropped, Session Replay/Logs/Metrics remain off.
+- Application-side scrubbing still runs before provider delivery, and Sentry receives only the exact CDN/ingest origins allowed by CSP.
+- A one-shot preview-only `monitoring_test=1` query trigger exists temporarily to validate the full sanitized ingestion path. Remove it after the first verified Sentry event.
+- No Sentry API/auth token is stored in git or browser code.
