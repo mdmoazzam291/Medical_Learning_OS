@@ -161,3 +161,28 @@ test('cloud memory judgment submits only attempt identity and explicit rating', 
   });
   assert.equal(result.ratingLabel, 'Hard');
 });
+
+
+test('cloud FSRS shadow readiness uses authenticated learner context', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        mode: 'shadow-readiness',
+        schedulerControl: false,
+        livePolicyId: 'bootstrap-binary-v1',
+        evidence: { ratedAttempts: 0, hasReplayableEvidence: false },
+        shadowSchedule: null,
+        shadowScheduleReason: 'no_real_memory_ratings'
+      });
+    }
+  });
+  const result = await cloud.fsrsShadow();
+  assert.match(seenUrl, /study-api\/revision\/fsrs-shadow$/);
+  assert.equal(result.schedulerControl, false);
+  assert.equal(result.shadowSchedule, null);
+  assert.equal(result.evidence.ratedAttempts, 0);
+});
