@@ -3,6 +3,7 @@ const MAX_MINUTES = 120;
 const MIN_ITEM_MS = 60 * 1000;
 const MAX_ITEM_MS = 5 * 60 * 1000;
 const REVIEW_OVERHEAD_MS = 45 * 1000;
+const NEW_LEARNING_ITEM_MS = 2 * 60 * 1000;
 
 function integer(value, min, max, field) {
   if (!Number.isSafeInteger(value) || value < min || value > max) {
@@ -20,11 +21,13 @@ export function estimateRevisionItemMs(lastDurationMs) {
 
 export function buildStudyNowPlan({
   revisionItems,
+  newItems = [],
   availableMinutes,
   now,
   maxItems = 50
 }) {
   if (!Array.isArray(revisionItems)) throw new TypeError('revisionItems must be an array');
+  if (!Array.isArray(newItems)) throw new TypeError('newItems must be an array');
   const minutes = integer(availableMinutes, MIN_MINUTES, MAX_MINUTES, 'availableMinutes');
   const cap = integer(maxItems, 1, 50, 'maxItems');
   if (typeof now !== 'string' || new Date(now).toISOString() !== now) {
@@ -60,9 +63,38 @@ export function buildStudyNowPlan({
       dueAt: new Date(item.dueMs).toISOString(),
       overdueMs: Math.max(0, nowMs - item.dueMs),
       estimatedMs: item.estimateMs,
-      reason: 'due-revision'
+      reason: item.latestCorrect === false ? 'mistake-repair' : 'due-revision'
     });
     usedMs += item.estimateMs;
+  }
+
+  const selectedIds = new Set(selected.map(item => item.questionVersionId));
+  const unseen = newItems
+    .map((item, index) => {
+      if (!item || typeof item.questionVersionId !== 'string') {
+        throw new TypeError('new learning item is invalid');
+      }
+      return {
+        questionVersionId: item.questionVersionId,
+        catalogOrder: Number.isSafeInteger(item.catalogOrder) ? item.catalogOrder : index
+      };
+    })
+    .filter(item => !selectedIds.has(item.questionVersionId))
+    .sort((a, b) =>
+      a.catalogOrder - b.catalogOrder ||
+      a.questionVersionId.localeCompare(b.questionVersionId));
+
+  let newLearningSelectedCount = 0;
+  for (const item of unseen) {
+    if (selected.length >= cap) break;
+    if (usedMs + NEW_LEARNING_ITEM_MS > budgetMs) continue;
+    selected.push({
+      questionVersionId: item.questionVersionId,
+      estimatedMs: NEW_LEARNING_ITEM_MS,
+      reason: 'new-learning'
+    });
+    usedMs += NEW_LEARNING_ITEM_MS;
+    newLearningSelectedCount += 1;
   }
 
   return Object.freeze({
@@ -71,10 +103,14 @@ export function buildStudyNowPlan({
     estimatedMs: usedMs,
     estimatedMinutes: Math.ceil(usedMs / 60000),
     dueCount: due.length,
+    newLearningCount: unseen.length,
     selectedCount: selected.length,
-    deferredDueCount: due.length - selected.length,
+    dueSelectedCount: selected.length - newLearningSelectedCount,
+    newLearningSelectedCount,
+    deferredDueCount: Math.max(0, due.length - (selected.length - newLearningSelectedCount)),
+    deferredNewLearningCount: unseen.length - newLearningSelectedCount,
     selected,
     nextDueAt: due.length ? new Date(due[0].dueMs).toISOString() : null,
-    strategy: 'due-oldest-first-v1'
+    strategy: 'due-then-new-v2'
   });
 }
