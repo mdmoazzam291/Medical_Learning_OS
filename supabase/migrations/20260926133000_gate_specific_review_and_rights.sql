@@ -297,6 +297,19 @@ begin
     raise exception using errcode = '22023', message = 'question_review_rejected';
   end if;
 
+  if p_review_kind = 'rights' and p_decision = 'approved' and exists (
+    select 1
+    from public.study_catalog c
+    cross join lateral jsonb_array_elements(c.body->'sources') s
+    where c.id = 1
+      and s->>'sourceId' in (
+        select jsonb_array_elements_text(v_question->'sourceIds')
+      )
+      and coalesce(s->'rights'->>'status', 'unknown') not in ('owned', 'licensed', 'public_domain')
+  ) then
+    raise exception using errcode = '22023', message = 'rights_not_resolved';
+  end if;
+
   v_hash := public.current_review_target_sha256(
     p_question_version_id,
     p_review_kind
