@@ -108,3 +108,16 @@ Do not call a due date, interval, correctness streak or FSRS state “mastery.�
 The current production event contract records binary correctness but not Again/Hard/Good/Easy. Do not silently map every correct answer to Good and incorrect answer to Again as if the richer learner judgment had been observed. Start with an explicitly provisional binary interval policy to prove the queue/persistence/workload plumbing. Later FSRS integration must either collect the evidence it needs or document and validate a deliberate mapping.
 
 Because historical attempts remain immutable, a new scheduler can be evaluated and adopted by replaying the same evidence rather than rewriting learner history.
+
+
+## ADR-021 — Study Now begins as a time-budgeted due-revision planner (accepted, 2026-09-26)
+The first production Study Now policy uses learner-available time as the workload constraint rather than a fixed question quota.
+
+The initial selector is intentionally narrow:
+- only currently published items whose revision due time has arrived;
+- oldest due first;
+- fit items inside the declared time budget using bounded estimates from prior observed response duration plus review overhead;
+- do not pull future reviews early merely to keep the learner busy;
+- resume an existing open session before creating a new one.
+
+This is not the final recommendation engine. Later versions may mix due revision, new learning, misconception repair, exam priorities and transfer exercises, but each added priority must be evidence-backed and explainable. The narrow first policy provides a measurable baseline without conflating scheduling urgency with mastery.
