@@ -88,3 +88,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The Supabase `study-api` CORS allowlist now includes the Render preview origin.
 - Remaining Auth blocker: add `https://medical-learning-os-preview.onrender.com/web/account.html` to Supabase Auth allowed redirect URLs, then run the real confirmation/account isolation tests.
 - This is a development preview, not production release.
+
+
+## Real Auth E2E verified — 2026-09-26
+- A real learner account was created through the live Render preview, confirmed by email, and observed as confirmed in Supabase Auth.
+- Supabase Auth now has one confirmed learner user; the confirmation produced a real authenticated session and sign-in event.
+- Immediately after confirmation, the browser successfully called the deployed `study-api` `/progress` and `/questions?filter=all` routes with an authenticated JWT; both returned HTTP 200 from Edge Function version 4.
+- Server-side reads for the learner's attempts, bookmarks and catalog also returned successfully. No unreviewed medical questions were opened because the live catalog remains intentionally unpublished.
+- This closes the first real Auth → callback → session → trusted study API path. M04b is not fully closed until a second real account proves learner isolation and a second-device/reload/logout path is exercised.
