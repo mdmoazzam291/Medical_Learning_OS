@@ -9,7 +9,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | DONE |
 | M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | DONE |
 | M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | DONE |
-| M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | PLANNED |
+| M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | IN PROGRESS |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | PLANNED |
 | M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | PLANNED |
@@ -42,3 +42,10 @@ M02–M06 minimal paths work together; progress survives reload; data export wor
 - M04c — DONE: authenticated reviewer workflow, gate-specific immutable evidence, source-rights resolution, first genuinely reviewed/published medical item, authenticated server-scored learner attempt, and live responsive medical QBank.
 
 M04 is complete: all three slices and the authenticated medical learner flow passed their release gates, including two-distinct-real-account read/write isolation. M04c is complete; the remaining live M04 blocker is M04b's two-distinct-real-account hosted isolation proof.
+
+
+## M05 slices
+- M05a — IN PROGRESS: rebuildable per-question revision evidence and versioned due-queue policy boundary. The provisional binary bootstrap policy is test scaffolding, not mastery inference.
+- M05b — PLANNED: persisted learner-scoped revision projection plus authenticated due-queue API.
+- M05c — PLANNED: interruption-friendly workload controls and Study Now integration.
+- M05d — PLANNED: evaluate/introduce FSRS-compatible evidence and scheduler without silently manufacturing four-grade ratings from binary correctness.
