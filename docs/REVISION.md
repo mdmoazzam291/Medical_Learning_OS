@@ -148,3 +148,29 @@ The learner is asked how recall felt **before seeing the answer**. The rating is
 4. Implement FSRS as a shadow projection first.
 5. Compare predicted schedules against delayed retrieval outcomes and learner time.
 6. Only then decide whether to replace or combine with the bootstrap scheduler.
+
+
+## M05d shadow-readiness projection
+
+The shadow-readiness layer is deliberately upstream of an FSRS scheduling engine.
+
+For each learner it rebuilds:
+- all immutable attempts;
+- explicitly rated attempts only;
+- unrated attempt count;
+- rating coverage;
+- four-grade distribution;
+- mean rating lag after answer submission;
+- correctness + Again discordance;
+- incorrect + Good/Easy discordance;
+- chronological review records containing exact question version, review time, rating time, rating, correctness and duration.
+
+The replay log is the future FSRS engine input. It is not itself a schedule.
+
+Current API contract:
+- `GET /revision/fsrs-shadow`
+- `schedulerControl=false`
+- `livePolicyId=bootstrap-binary-v1`
+- `shadowSchedule=null` until the engine is intentionally enabled.
+
+This protects the learner from an algorithm transition driven by implementation enthusiasm rather than evidence. The next step after real ratings exist is to run a deterministic FSRS engine in shadow, persist no authoritative due dates, and compare proposed intervals with subsequent retrieval outcomes.
