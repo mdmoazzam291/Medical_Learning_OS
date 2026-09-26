@@ -247,3 +247,13 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Reviewer grants remain 0 and authenticated review events remain 0.
 - The referenced CDC source retains `rights.status=unknown`, so the publication gate will fail closed until rights are explicitly resolved.
 - The exact review package is versioned in `data/medical-seed-anaphylaxis-review.json`; live content was loaded from that canonical repository file.
+
+
+## Gate-specific review and rights evidence — 2026-09-26
+- Replaced the too-coarse shared review target hash with separate medical, references and rights fingerprints.
+- Added immutable `source_rights_events` bound to source fingerprints.
+- Added trusted `resolve_source_rights` and `review-api/source-rights` paths; browser reviewer identity remains server-derived.
+- Rights approval now fails closed until every referenced source has allowed, current rights evidence.
+- Publication independently rechecks medical/reference/rights fingerprints plus source-rights evidence.
+- The reviewer UI can resolve source rights only inside the rights gate and disables rights approval while sources remain unresolved or restricted.
+- The current live anaphylaxis seed remains `in_review`; this change does not grant a reviewer or publish content.
