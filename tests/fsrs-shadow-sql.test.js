@@ -29,3 +29,11 @@ test('shadow evidence function remains service-only', () => {
   assert.match(sql, /revoke all on function public\.study_fsrs_shadow_evidence\(uuid\)[\s\S]*authenticated/);
   assert.match(sql, /grant execute on function public\.study_fsrs_shadow_evidence\(uuid\)[\s\S]*service_role/);
 });
+
+
+test('shadow readiness exposes per-question rating completeness before scheduling', () => {
+  assert.match(sql, /question_coverage as/);
+  assert.match(sql, /fullyRated/);
+  assert.match(sql, /fullyRatedQuestionCount/);
+  assert.match(sql, /unratedAttempts/);
+});
