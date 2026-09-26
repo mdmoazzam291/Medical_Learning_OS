@@ -183,3 +183,17 @@ The shadow response may contain proposed due dates, stability, difficulty, state
 Compare shadow due dates to the live bootstrap due dates explicitly. This creates paired counterfactual policy proposals without rewriting learner history.
 
 Do not treat FSRS difficulty, stability or retrievability as mastery. They are model state under a specific scheduler configuration.
+
+
+## ADR-026 — Preserve scheduling proposals as immutable decisions before comparing policies (accepted, 2026-09-27)
+A scheduler comparison must preserve what each policy actually proposed at the time, not reconstruct only the current state later.
+
+Record each proposal as an immutable schedule-decision event linked to the exact learner attempt that forms its evidence cutoff. Store policy ID/version, config version, authoritative or shadow role, exact question version, proposed due time and policy-specific decision details.
+
+The authoritative bootstrap proposal is recorded after each successful revision projection. An FSRS proposal is recorded only when the explicit rating history for that exact question version is complete and the rated attempt is still the latest exposure. Do not backfill missing FSRS ratings, omit intervening exposures, or let later evidence leak backward into an earlier shadow proposal.
+
+Policy-ledger failures must not block question answering or memory-rating capture. The ledger is evaluation infrastructure, not a prerequisite for learning continuity.
+
+For descriptive evaluation, link each decision to the first later real retrieval of the same exact question version and measure correctness, response time, and how early/late the retrieval occurred relative to the proposed due date.
+
+These observations do not identify causal policy effects because the learner follows only one authoritative schedule. Promotion from shadow to authoritative scheduling requires a controlled experiment or another defensible identification design, not retrospective winner-picking from observational data.
