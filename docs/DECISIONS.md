@@ -50,3 +50,11 @@ Before upload, inventory the entire private backup bucket with bounded paginatio
 
 ## ADR-013 — Weekly development backups (accepted, 2026-09-26)
 Explicit user instruction enables one weekly backup at Sunday 03:47 IST, away from the top of the hour. Reuse the verified backup pipeline and existing storage guard. Manual dispatch remains available. No automatic deletion, extra restore schedule, or billing changes are introduced. A weekly interval permits up to a week of changes since the previous successful snapshot; revisit when real learner data is used.
+
+
+## ADR-014 — Authenticated review evidence before medical publication (accepted, 2026-09-26)
+Persist reviewer authorization separately from immutable review decisions. `content_reviewer_grants` is current server-only authorization state; `content_review_events` is append-only audit evidence. Learner/browser roles receive no access.
+
+Bind each decision to a database-computed SHA-256 hash of the exact question-version JSON plus all referenced source records. This prevents a review from being silently reused after the reviewed target changes. The trusted database function `record_content_review` verifies reviewer grant, review stage, source completeness and self-review rules before inserting one decision per gate/version.
+
+Do not let review evidence directly publish content. M04c must first prove authenticated reviewer identity and review capture through a trusted `review-api`; publication remains a separate transition with its own checks.
