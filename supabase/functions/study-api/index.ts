@@ -421,6 +421,19 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "GET" && path === "/study-now/outcomes") {
+      const { data, error } = await admin.rpc("study_recommendation_outcomes", {
+        p_learner: learnerId
+      });
+      if (error) fail(500, "study_outcome_projection_failed");
+      return response(req, 200, {
+        generatedAt: new Date().toISOString(),
+        scope: "descriptive-recommendation-outcomes",
+        causal: false,
+        outcomes: Array.isArray(data) ? data : []
+      });
+    }
+
     if (req.method === "POST" && path === "/study-now/start") {
       const input = await jsonBody(req);
       exactFields(input, ["availableMinutes"], ["maxItems"]);
