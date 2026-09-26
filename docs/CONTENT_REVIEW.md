@@ -162,3 +162,21 @@ Publication is allowed only when all of the following remain true at publication
 The database generates the publication timestamp, updates the target to `published`, retires any previously published version of the same question, and increments the shared catalog version in one transaction.
 
 The function is executable only by the trusted service role. There is intentionally no browser publication endpoint yet. Authenticated review and publication remain separate privileges.
+
+
+## Live verification result
+
+The live Supabase project passed rollback-only M04c verification without leaving synthetic content behind.
+
+Verified properties:
+
+- three gate approvals over the same substantive target produce one stable target hash,
+- review events and catalog review/status projection are transactionally consistent,
+- canonical review timestamps use UTC ISO strings with milliseconds,
+- three approvals advance only to `verified`,
+- `publish_verified_content` rechecks the current target and review evidence,
+- publishing a newer version retires the previous published version atomically,
+- learner/browser role cannot execute the publication function,
+- no reviewer grants, review events or synthetic questions remain after rollback.
+
+The deployed `review-api` is active at version 2. It still has no reviewer grants to serve, by design.

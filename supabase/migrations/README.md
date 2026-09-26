@@ -17,3 +17,13 @@ The resulting live schema includes `study_sessions`, `study_attempts`, `study_bo
 All future DDL must be committed as a migration in this directory before, or in the same change as, applying it to the live project. Do not rewrite the five historical versions unless their original SQL is recovered exactly.
 
 The project status must describe the live schema as existing. "No migrations" was an obsolete statement.
+
+
+## Committed migrations added after the historical baseline
+
+- `20260926120000_content_review_evidence.sql` — server-only reviewer grants, immutable review events and trusted review recording function.
+- `20260926123000_atomic_review_projection.sql` — stable substantive target hashing and transactional catalog review projection.
+- `20260926124000_fix_review_hash_ambiguity.sql` — qualifies the review hash column after live rollback verification exposed a PL/pgSQL output-name collision.
+- `20260926130000_verified_publication_gate.sql` — server-only verified → published transition with review/hash/rights/version checks.
+
+These files are the canonical repository copies for all M04c DDL applied after the historical five-migration baseline.

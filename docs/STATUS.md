@@ -210,3 +210,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Referenced source rights must still be resolved at publication time.
 - Publishing a newer version atomically retires the prior published version and increments the catalog version.
 - No browser publication endpoint exists and no medical content has been published.
+
+
+## M04c live review/publication verification — 2026-09-26
+- The authenticated review-evidence schema, atomic review projection and verified publication gate are live in the dedicated Supabase project.
+- `review-api` is deployed and ACTIVE at version 2 with explicit JWT verification in the function body and gateway `verify_jwt=false`.
+- Rollback-only live verification recorded three synthetic approvals for one question version through the database review function. All three events shared one substantive target hash; the catalog projection advanced to `verified` with three canonical UTC review timestamps.
+- A second rollback-only verification published a synthetic verified v2, atomically retired the prior published v1, produced a canonical server publication timestamp and left the browser `authenticated` role unable to execute the publication function.
+- All verification transactions were rolled back. Live state remains: 0 reviewer grants, 0 review events, catalog version 0, and 0 catalog questions.
+- No medical content has been reviewed or published.
