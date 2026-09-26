@@ -19,7 +19,7 @@ function signedIn() {
   const p = state.progress;
   const count = state.questions?.length ?? 0;
   const body = state.loading ? '<p>Checking the authenticated study service…</p>' : state.error ? `<p>Cloud check failed: <strong>${escape(state.error)}</strong></p>` : `<div class="metrics"><div><strong>${p?.attempts ?? 0}</strong><span>Server attempts</span></div><div><strong>${p?.correct ?? 0}</strong><span>Correct</span></div><div><strong>${count}</strong><span>Published questions</span></div></div>`;
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Your learner identity is connected.</h1><p>${escape(state.user?.email || 'Authenticated learner')} · Supabase Auth</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Cloud study record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh'}</button></div>${body}<p class="muted">Cloud evidence is separate from the three-question local demo. With zero published questions, the medical study loop remains closed instead of serving unreviewed content.</p></section><section class="panel"><span class="eyebrow">CONTENT GATE</span><h2>Account path connected. Medical publishing still waits for review.</h2><p>M04c will add authenticated reviewers and a genuinely reviewed initial medical set before the cloud QBank opens.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Your learner identity is connected.</h1><p>${escape(state.user?.email || 'Authenticated learner')} · Supabase Auth</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Cloud study record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing session…' : 'Verify session refresh'}</button></div>${body}<p class="muted">Cloud evidence is separate from the three-question local demo. With zero published questions, the medical study loop remains closed instead of serving unreviewed content.</p></section><section class="panel"><span class="eyebrow">CONTENT GATE</span><h2>Account path connected. Medical publishing still waits for review.</h2><p>M04c will add authenticated reviewers and a genuinely reviewed initial medical set before the cloud QBank opens.</p></section></main>`;
 }
 
 function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
@@ -39,6 +39,7 @@ async function loadCloud({ forceRefresh = false } = {}) {
   try {
     const [progress, result] = await Promise.all([cloud.progress(), cloud.questions('all')]);
     state = { user: auth.currentUser() || session.user, loading: false, progress, questions: result.questions || [], error: null };
+    if (forceRefresh) announce('Session refresh verified in this browser. Cloud data reloaded.');
   } catch (error) {
     state = { ...state, loading: false, error: error.code || error.message || 'cloud_unavailable' };
   }
