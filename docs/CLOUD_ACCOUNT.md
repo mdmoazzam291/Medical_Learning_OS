@@ -103,3 +103,10 @@ The harness lives at `supabase/verification/rls-isolation.sql`. This is strong e
 The account surface's Refresh action explicitly rotates the Supabase session before reloading cloud progress/questions. This gives M04b a controlled way to verify the refresh-token path without waiting for token expiry.
 
 If the refresh exchange fails, the adapter clears the unusable stored session and the UI returns to sign-in rather than continuing with stale account state.
+
+
+## Live refresh verification
+
+The explicit refresh control was exercised against the hosted preview on 2026-09-26. Supabase Auth accepted the refresh-token grant with HTTP 200, rotated the session tokens, and the refreshed browser session immediately completed successful trusted `progress` and `questions` reads.
+
+This closes the real refresh-token gate for M04b. The remaining live account-security check is isolation between two distinct real Auth users.

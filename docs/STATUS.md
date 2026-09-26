@@ -124,4 +124,12 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - The Cloud study Refresh action now forces one Supabase session refresh before reloading learner progress/questions.
 - Browser CI verifies that the refresh-token exchange occurs and the refreshed token continues through the trusted cloud path.
 - Refresh failure clears the unusable local session and returns the learner to sign-in instead of leaving stale authenticated UI.
-- A live successful refresh still needs to be observed after fresh sessions were created; earlier refresh attempts failed because the previous global logout had already revoked their refresh tokens.
+- A live successful refresh-token exchange has now been observed on a fresh session, followed by successful trusted cloud-study reads.
+
+
+## Live refresh-token verification — 2026-09-26
+- The live learner account successfully completed an explicit Supabase refresh-token exchange from the Render preview.
+- Supabase Auth returned HTTP 200 for the refresh-token grant.
+- Immediately after the exchange, the same authenticated session successfully called `study-api/progress` and `study-api/questions`; both returned HTTP 200.
+- The two-device logout behavior was also observed from the learner UI: the signed-out device remained signed out after reload while the other device remained connected.
+- M04b's remaining live security gate is two-distinct-real-account isolation through the hosted account and study API path.
