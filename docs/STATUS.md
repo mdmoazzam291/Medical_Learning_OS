@@ -51,3 +51,11 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 
 ## Resume prompt
 “Read AGENTS.md, docs/PROJECT_CONTEXT.md, docs/STATUS.md, docs/SUPABASE_AUTH.md and docs/CLOUD_ACCOUNT.md in Medical_Learning_OS. Consult relevant context from the ChatGPT project ‘medical learning os’. Finish the next incomplete M04b gate with meaningful verification. Keep the local demo separate from cloud learner evidence. Work only in this repository.”
+
+
+## Resend Auth email preparation — 2026-09-26
+- Resend is connected and a dedicated sending-only credential now exists for Supabase Auth SMTP.
+- No sending domain is verified yet, so custom SMTP is not production-ready and no real learner email-confirmation flow is claimed.
+- Repository documentation now defines the SMTP boundary and activation gate in `docs/RESEND_AUTH_SMTP.md`.
+- Next user-owned dependency: choose a product/auth sending domain and publish Resend DNS records. After domain verification, configure Supabase custom SMTP and run one real email-confirmed account test.
+- The SMTP credential remains secret and is intentionally absent from GitHub and browser configuration.
