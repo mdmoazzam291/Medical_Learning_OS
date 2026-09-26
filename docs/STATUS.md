@@ -59,3 +59,10 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - Repository documentation now defines the SMTP boundary and activation gate in `docs/RESEND_AUTH_SMTP.md`.
 - Next user-owned dependency: choose a product/auth sending domain and publish Resend DNS records. After domain verification, configure Supabase custom SMTP and run one real email-confirmed account test.
 - The SMTP credential remains secret and is intentionally absent from GitHub and browser configuration.
+
+
+## Auth email delivery gate — 2026-09-26
+- Resend is connected, but there is currently no verified sending domain.
+- A sending-only key named `Medical Learning OS Supabase SMTP test` exists, but its secret was shown only at creation time and is not recoverable from the provider listing. Do not depend on that credential for deployment.
+- Do not create another unrestricted production key yet. First verify a dedicated authentication sending domain, then create a domain-restricted sending-only key and configure Supabase Auth custom SMTP.
+- Until then, Supabase's built-in mailer remains development-only and is not a production delivery dependency.
