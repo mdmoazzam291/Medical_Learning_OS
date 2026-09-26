@@ -207,6 +207,17 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return data ?? [];
     };
+    const getRecommendationEvents = async () => {
+      const { data, error } = await trustedRead("recommendation_events", async () =>
+        admin.from("study_recommendation_events")
+          .select("id,session_id,strategy,available_minutes,plan,created_at")
+          .eq("learner_id", learnerId)
+          .order("created_at", { ascending: true })
+          .order("id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return data ?? [];
+    };
     const getOpenSession = async () => {
       const { data, error } = await trustedRead("open_session", async () =>
         admin.from("study_sessions").select("id")
@@ -424,42 +435,50 @@ Deno.serve(async (req: Request) => {
       }
 
       const proposedId = crypto.randomUUID();
-      const { data, error } = await admin.rpc("study_start_session", {
+      const { data, error } = await admin.rpc("study_start_recommendation_session", {
         p_learner: learnerId,
         p_id: proposedId,
         p_ids: ids,
-        p_started: generatedAt
+        p_started: generatedAt,
+        p_available_minutes: availableMinutes,
+        p_plan: plan
       });
       if (error) fail(500, "study_write_failed");
       if (data?.error) fail(data.error === "session_not_found" ? 404 : 409, data.error);
 
       const actualId = String(data?.id || proposedId);
-      if (actualId !== proposedId) {
+      if (data?.resumed === true || actualId !== proposedId) {
         return response(req, 200, {
           plan: {
             ...plan,
             selectedCount: null,
             strategy: "resume-existing",
-            resumedExisting: true
+            resumedExisting: true,
+            recommendationId: null
           },
           session: await sessionState(actualId)
         });
       }
 
       return response(req, 200, {
-        plan: { ...plan, resumedExisting: false },
+        plan: {
+          ...plan,
+          resumedExisting: false,
+          recommendationId: data?.recommendationId ?? null
+        },
         session: await sessionState(actualId)
       });
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
         ),
         getEvents(),
-        getBookmarks()
+        getBookmarks(),
+        getRecommendationEvents()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -468,7 +487,8 @@ Deno.serve(async (req: Request) => {
         learnerId,
         events,
         bookmarks,
-        sessions: sessions ?? []
+        sessions: sessions ?? [],
+        recommendations
       });
     }
 
