@@ -47,14 +47,16 @@ test('sign in stores only normalized session and refreshes near expiry', async (
 
 test('signup can stop at confirmation without inventing a session', async () => {
   const storage = memoryStorage();
+  let observedUrl;
   const auth = createSupabaseAuth({
     projectUrl, publishableKey, storage,
-    fetchFn: async () => Response.json({ user: { id: 'new-user', email: 'new@example.com' }, session: null })
+    fetchFn: async url => { observedUrl = url; return Response.json({ user: { id: 'new-user', email: 'new@example.com' }, session: null }); }
   });
-  const result = await auth.signUp('new@example.com', 'strong-password');
+  const result = await auth.signUp('new@example.com', 'strong-password', { emailRedirectTo: 'https://preview.example.com/web/account.html' });
   assert.equal(result.confirmationRequired, true);
   assert.equal(result.session, null);
   assert.equal(storage.dump().length, 0);
+  assert.match(observedUrl, /\/auth\/v1\/signup\?redirect_to=https%3A%2F%2Fpreview\.example\.com%2Fweb%2Faccount\.html$/);
 });
 
 test('sign out clears local session even if remote logout fails', async () => {
@@ -130,4 +132,16 @@ test('ordinary application hashes are not treated as auth callbacks', async () =
   const result = await auth.consumeImplicitRedirect('http://127.0.0.1:3000/#today');
   assert.equal(result.handled, false);
   assert.equal(result.session, null);
+});
+
+
+test('signup confirmation redirect rejects insecure non-local HTTP origins', async () => {
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage: memoryStorage(),
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  await assert.rejects(
+    auth.signUp('new@example.com', 'strong-password', { emailRedirectTo: 'http://preview.example.com/web/account.html' }),
+    error => error instanceof AuthError && error.code === 'invalid_redirect_url'
+  );
 });

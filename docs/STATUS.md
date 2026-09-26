@@ -66,3 +66,10 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - A sending-only key named `Medical Learning OS Supabase SMTP test` exists, but its secret was shown only at creation time and is not recoverable from the provider listing. Do not depend on that credential for deployment.
 - Do not create another unrestricted production key yet. First verify a dedicated authentication sending domain, then create a domain-restricted sending-only key and configure Supabase Auth custom SMTP.
 - Until then, Supabase's built-in mailer remains development-only and is not a production delivery dependency.
+
+
+## No-domain development path — 2026-09-26
+- No custom sending domain is currently owned, so Resend production SMTP is deliberately deferred rather than weakening email-confirmation security.
+- For one controlled development E2E, Supabase's built-in mailer may be used only with a pre-authorized organization team address. This is not a production delivery path.
+- Signup now requests an explicit callback to the account surface and accepts HTTPS redirects (plus localhost HTTP for development).
+- A public preview deployment is the next independent step so the real confirmation callback can land on a reachable application URL. Production deployment remains a separate release gate.

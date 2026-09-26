@@ -47,6 +47,7 @@ const server = createServer(async (req, res) => {
   }
 });
 
-server.listen(Number(process.env.PORT || 3000), '127.0.0.1', () => {
-  console.log('Medical Learning OS: http://127.0.0.1:' + server.address().port);
+const host = process.env.MLOS_HOST || '127.0.0.1';
+server.listen(Number(process.env.PORT || 3000), host, () => {
+  console.log(`Medical Learning OS: http://${host}:${server.address().port}`);
 });
