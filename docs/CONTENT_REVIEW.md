@@ -202,3 +202,30 @@ Behavior:
 - the workspace contains no publication control.
 
 The UI deliberately avoids bulk approval. Review throughput is secondary to trustworthy medical/reference/rights evidence.
+
+
+## First genuine medical review package
+
+The first real medical review target is stored at:
+
+`data/medical-seed-anaphylaxis-review.json`
+
+It contains one AI-generated, source-grounded question on immediate treatment of anaphylaxis after vaccination.
+
+Source:
+- CDC, *Preventing and Managing Adverse Reactions*, page dated 2024-07-25.
+- The clinical recommendation used for the original item is that immediate intramuscular epinephrine is the treatment of choice for anaphylaxis with respiratory/cardiovascular features.
+
+Provenance policy:
+- the item is explicitly `ai_generated`,
+- it does not claim NEET-PG/INI-CET/PYQ provenance,
+- wording is original rather than copied from an external question bank,
+- it enters the system as `in_review` with zero review events and no publication timestamp.
+
+Rights policy:
+- source-level rights remain `unknown` rather than inferring blanket clearance,
+- CDC's agency-material policy says most CDC site information is public domain but acknowledges exceptions, and this clinical page also contains adapted/cited third-party material,
+- the rights reviewer must resolve that uncertainty before publication,
+- the publication function already fails closed while any referenced source has unresolved rights.
+
+This package is intentionally tiny. Its purpose is to prove one complete genuine medical-content lifecycle before scaling ingestion.
