@@ -14,11 +14,13 @@ const allowed = new Set([
   'web/account.html',
   'web/account.js',
   'web/cloud-config.js',
+  'web/monitoring.js',
   'src/domain/demo-study.js',
   'src/domain/learning-events.js',
   'src/adapters/local-store.js',
   'src/adapters/supabase-auth.js',
-  'src/adapters/cloud-study.js'
+  'src/adapters/cloud-study.js',
+  'src/adapters/error-monitoring.js'
 ]);
 
 const server = createServer(async (req, res) => {

@@ -35,3 +35,10 @@ The dedicated Supabase project is now the selected cloud identity/database bound
 The hosted `study-api` Edge Function validates the learner JWT and then performs trusted study operations against the existing `study_*` schema. Writes use the live atomic mutation functions so retry/session invariants remain database-enforced. Browser code never submits learner ID, correctness, concept ID, event ID or authoritative timestamps.
 
 The current live catalog is empty. This intentionally decouples account integration from M04c medical-content review. Resend/custom SMTP and a real email-confirmed account test are still required before M04b is considered fully verified. See [cloud account contract](CLOUD_ACCOUNT.md).
+
+
+### Observability boundary
+
+Operational error monitoring sits outside the learning-evidence model. Product code emits sanitized failure envelopes through `src/adapters/error-monitoring.js`; provider-specific transport belongs behind that adapter.
+
+The observability path must never become an alternate store for learner evidence, answer payloads, medical/clinical content, authentication tokens, or credentials. Sentry is the intended first provider, but the domain boundary remains provider-agnostic so monitoring vendors can change without touching learning logic.
