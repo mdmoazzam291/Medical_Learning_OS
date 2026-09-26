@@ -94,3 +94,21 @@ test('cloud study exposes authenticated revision due queue', async () => {
   assert.equal(result.policy.provisional, true);
   assert.equal(result.dueCount, 0);
 });
+
+
+test('cloud Study Now sends time budget but never learner identity', async () => {
+  let seen;
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options) => {
+      seen = { url, body: JSON.parse(options.body) };
+      return Response.json({ plan: { selectedCount: 0 }, session: null });
+    }
+  });
+
+  await cloud.studyNow(20, 12);
+  assert.match(seen.url, /study-api\/study-now\/start$/);
+  assert.deepEqual(seen.body, { availableMinutes: 20, maxItems: 12 });
+  assert.equal(Object.hasOwn(seen.body, 'learnerId'), false);
+});
