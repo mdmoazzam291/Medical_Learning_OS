@@ -576,9 +576,11 @@ Deno.serve(async (req: Request) => {
         livePolicyId: evidence.livePolicyId ?? "bootstrap-binary-v1",
         evidence,
         shadowSchedule,
-        shadowScheduleReason: shadowSchedule
-          ? "real_memory_ratings_replayed"
-          : "no_real_memory_ratings"
+        shadowScheduleReason: !evidence.hasReplayableEvidence
+          ? "no_real_memory_ratings"
+          : shadowSchedule?.itemCount > 0
+            ? "real_memory_ratings_replayed"
+            : "no_fully_rated_question_history"
       });
     }
 
