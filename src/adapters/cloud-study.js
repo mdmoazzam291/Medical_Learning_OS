@@ -50,6 +50,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
         body: { availableMinutes, maxItems }
       });
     },
+    studyNowOutcomes() { return request('/study-now/outcomes'); },
     exportData() { return request('/export'); },
     start({ limit = 15, filter = 'all' } = {}) { return request('/sessions', { method: 'POST', body: { limit, filter } }); },
     session(id) { return request(`/sessions/${encodeURIComponent(id)}`); },
