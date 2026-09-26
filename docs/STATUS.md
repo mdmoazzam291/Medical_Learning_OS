@@ -350,3 +350,19 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Rollback-only proof produced a one-item recommendation with a correct 42-second initial response and a later incorrect 51-second retrieval; the outcome projection linked both correctly, then rollback restored live data.
 - Full GitHub checks passed before the outcomes endpoint deployment. The live outcome projection currently has no real Study Now event yet because both test learners have already seen the only published question and it is not due until the scheduled review.
 - M05c remains open until a genuine hosted Study Now recommendation is created and its answer/reschedule/outcome loop is observed end to end.
+
+
+## M05d FSRS-compatible evidence contract — 2026-09-27
+- Added a separate immutable `study_memory_judgments` evidence stream instead of changing the strict `question.answered` event contract.
+- Memory ratings use the explicit four-grade `fsrs-4-v1` scale: 1 Again, 2 Hard, 3 Good, 4 Easy.
+- The learner prompt is `post-answer-recall-v1`: "How did recall feel before seeing the answer?"
+- Rating is optional. Skipping never blocks Next, does not change question correctness, and does not alter exam score.
+- Each judgment links to the exact persisted attempt UUID; attempt correctness and duration remain independent evidence.
+- One immutable judgment is allowed per attempt. Same-rating retries are idempotent; a conflicting retry is rejected rather than silently rewriting evidence.
+- Browser roles may read only their own judgments through RLS but cannot insert/update/delete them or call the recorder function directly.
+- Authenticated `POST /memory-judgments` is live in `study-api` v11; learner identity is derived server-side.
+- Session resume now restores the saved memory judgment for the answered slot, and cloud export includes memory judgments.
+- Rollback-only proof recorded Hard, returned the same immutable row on retry, rejected a conflicting Easy retry, then removed all synthetic data.
+- GitHub checks, browser verification and the latest Render deployment passed.
+- Real memory-judgment count remains 0 because no learner rating was fabricated for historical attempts.
+- The production scheduler is still `bootstrap-binary-v1`; these ratings are not yet used to schedule reviews.
