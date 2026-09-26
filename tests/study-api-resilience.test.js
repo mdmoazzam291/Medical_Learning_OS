@@ -129,3 +129,12 @@ test('FSRS shadow scheduler pins a deterministic stable engine without productio
   assert.match(source, /mode: "shadow-scheduler"/);
   assert.match(source, /no_real_memory_ratings/);
 });
+
+
+test('FSRS shadow schedule refuses partially rated question histories', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /evidence\?\.questionCoverage/);
+  assert.match(source, /row\?\.fullyRated === true/);
+  assert.match(source, /if \(!fullyRated\.has\(questionVersionId\)\) continue/);
+  assert.match(source, /skippedIncompleteQuestionCount/);
+});
