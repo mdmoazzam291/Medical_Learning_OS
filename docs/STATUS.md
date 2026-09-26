@@ -306,3 +306,16 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Attempt-to-session learner ownership mismatches: 0.
 - Duplicate learner/question attempts in this test: 0.
 - M04 Core study loop and QBank is DONE. The next delivery path is M05 Revision and study planning.
+
+
+## M05b revision persistence foundation — 2026-09-26
+- Added `study_revision_state`, keyed by learner and exact question version, as a rebuildable scheduling projection over immutable attempts.
+- Added service-only `study_rebuild_revision_state`; authenticated browser roles cannot execute it or mutate revision rows.
+- Revision rebuild uses the same learner advisory lock as trusted attempt recording.
+- The live migration passed rollback-only preflight, then applied successfully.
+- Both existing real learners were rebuilt from their independent attempt histories: 2 projection rows for 2 learners, one row each.
+- Current evidence checks show 0 arithmetic mismatches, 0 event-count mismatches and 0 policy-version mismatches.
+- Both existing correct attempts are scheduled in the future under `bootstrap-binary-v1`; none are due immediately.
+- `study-api` v6 exposes authenticated `GET /revision/due`. It returns published content only, strips answer keys, labels the policy provisional and keeps scheduling distinct from mastery.
+- Post-answer projection refresh is fail-soft: an acknowledged attempt is never rejected because revision projection failed.
+- The Medical QBank overview now has a nonblocking revision-status panel; hosted UI verification remains before M05b is marked DONE.
