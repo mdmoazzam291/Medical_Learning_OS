@@ -18,7 +18,7 @@ test('Study Now selects only due items and orders oldest due first', () => {
   assert.deepEqual(plan.selected.map(item => item.questionVersionId), ['older@1', 'later@1']);
   assert.equal(plan.dueCount, 2);
   assert.equal(plan.deferredDueCount, 0);
-  assert.equal(plan.strategy, 'due-oldest-first-v1');
+  assert.equal(plan.strategy, 'due-then-new-v2');
 });
 
 test('Study Now respects the time budget rather than a fixed question target', () => {
@@ -53,4 +53,60 @@ test('Study Now does not pull future reviews early to fill spare time', () => {
 
   assert.equal(plan.selectedCount, 0);
   assert.equal(plan.dueCount, 0);
+});
+
+
+test('latest incorrect due evidence is labeled mistake repair, not generic mastery', () => {
+  const plan = buildStudyNowPlan({
+    availableMinutes: 10,
+    now,
+    revisionItems: [
+      { questionVersionId: 'wrong@1', dueAt: '2026-09-27T17:00:00.000Z', lastDurationMs: 30000, latestCorrect: false }
+    ]
+  });
+  assert.equal(plan.selected[0].reason, 'mistake-repair');
+});
+
+test('new learning fills remaining time only after due work', () => {
+  const plan = buildStudyNowPlan({
+    availableMinutes: 5,
+    now,
+    revisionItems: [
+      { questionVersionId: 'due@1', dueAt: '2026-09-27T17:00:00.000Z', lastDurationMs: 30000, latestCorrect: true }
+    ],
+    newItems: [
+      { questionVersionId: 'new-b@1', catalogOrder: 2 },
+      { questionVersionId: 'new-a@1', catalogOrder: 1 }
+    ]
+  });
+  assert.deepEqual(plan.selected.map(item => [item.questionVersionId, item.reason]), [
+    ['due@1', 'due-revision'],
+    ['new-a@1', 'new-learning']
+  ]);
+  assert.equal(plan.newLearningCount, 2);
+  assert.equal(plan.newLearningSelectedCount, 1);
+});
+
+test('new learning can create useful Study Now work when no revision is due', () => {
+  const plan = buildStudyNowPlan({
+    availableMinutes: 10,
+    now,
+    revisionItems: [],
+    newItems: [{ questionVersionId: 'unseen@1', catalogOrder: 0 }]
+  });
+  assert.equal(plan.dueCount, 0);
+  assert.equal(plan.selectedCount, 1);
+  assert.equal(plan.selected[0].reason, 'new-learning');
+});
+
+test('future revisions are still not pulled early when new learning exists', () => {
+  const plan = buildStudyNowPlan({
+    availableMinutes: 10,
+    now,
+    revisionItems: [
+      { questionVersionId: 'future@1', dueAt: '2026-09-28T18:00:00.000Z', lastDurationMs: 30000, latestCorrect: true }
+    ],
+    newItems: [{ questionVersionId: 'new@1', catalogOrder: 0 }]
+  });
+  assert.deepEqual(plan.selected.map(item => item.questionVersionId), ['new@1']);
 });
