@@ -73,3 +73,10 @@ Real email-confirmed learner E2E verification, two-real-account isolation testin
 - For one controlled development E2E, Supabase's built-in mailer may be used only with a pre-authorized organization team address. This is not a production delivery path.
 - Signup now requests an explicit callback to the account surface and accepts HTTPS redirects (plus localhost HTTP for development).
 - A public preview deployment is the next independent step so the real confirmation callback can land on a reachable application URL. Production deployment remains a separate release gate.
+
+
+## Preview deployment preparation — 2026-09-26
+- Added a Render Blueprint for a free Singapore Node preview with health check and deploy-after-CI behavior.
+- The application server already supports explicit `0.0.0.0` binding through `MLOS_HOST` for hosted preview use.
+- Automatic service creation is currently blocked because the connected Render workspace cannot fetch the private GitHub repository. Keep the repository private; connect Render's GitHub integration to this repository instead.
+- Once connected, the generated Render URL becomes the Auth callback/origin for the controlled no-domain M04b E2E test. This remains a preview, not production deployment.
