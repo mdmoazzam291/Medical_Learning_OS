@@ -31,3 +31,22 @@ This bootstrap exists so the M05 queue, persistence and interruption UX can be e
 3. Add interruption-friendly workload controls: available minutes, maximum due items and carry-over without streak punishment.
 4. Decide the evidence contract required for FSRS. Prefer collecting a meaningful post-answer memory judgment or using a separately validated mapping rather than silently converting binary correctness into four-grade ratings.
 5. Compare the bootstrap policy against FSRS/other scheduling policies using retention and time-to-mastery outcomes, then migrate by replaying immutable events.
+
+
+## M05b live persistence boundary
+
+`study_revision_state` is now the persisted cache/projection of immutable `study_attempts`.
+
+Key properties:
+
+- primary key is learner + exact question version;
+- evidence counts, latest result, consecutive-correct evidence and last timing are persisted;
+- every row stores policy ID/version and projection version;
+- `due_at` is scheduling state, not mastery;
+- browser roles can read only their own rows through RLS and cannot insert/update/delete them;
+- the rebuild function is service-role only;
+- rebuild takes the same learner advisory lock as attempt recording, so a full replay cannot race a study write;
+- answer recording remains authoritative: after an acknowledged attempt, revision refresh is best-effort and failure does not invalidate the attempt;
+- `GET /revision/due` performs a full learner replay before returning the due queue, providing a correctness-recovery path if an earlier best-effort refresh was missed.
+
+The full replay on every due-queue read is intentionally simple for the current tiny beta dataset. It is not the intended scale architecture. Before large learner volumes, replace unconditional full replay with a dirty-watermark/event-count check while retaining replay as the repair mechanism.
