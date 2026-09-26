@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: medical-learning-os-preview
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install --ignore-scripts --no-audit --no-fund
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: MLOS_HOST
+        value: 0.0.0.0
