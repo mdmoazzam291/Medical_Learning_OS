@@ -40,7 +40,7 @@ const server = createServer(async (req, res) => {
       'Content-Type': `${types[path.split('.').pop()]}; charset=utf-8`,
       'Cache-Control': 'no-store',
       'X-Content-Type-Options': 'nosniff',
-      'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://iyapppmeieqhflnzslao.supabase.co; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self'; img-src 'self'; connect-src 'self' https://iyapppmeieqhflnzslao.supabase.co https://o4512152153751552.ingest.us.sentry.io; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
     });
     res.end(req.method === 'HEAD' ? undefined : data);
   } catch {
