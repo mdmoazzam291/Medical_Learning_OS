@@ -20,6 +20,7 @@ let state = {
   session: null,
   selectedOptionId: null,
   receipt: null,
+  memoryJudgment: null,
   error: null
 };
 
@@ -95,6 +96,7 @@ function studyView() {
   const receipt = state.receipt || session.receipt || null;
   const selected = receipt?.selectedOptionId || state.selectedOptionId;
   const answered = Boolean(receipt);
+  const memoryJudgment = state.memoryJudgment || session.memoryJudgment || null;
   const options = q.options.map((option, index) => {
     let cls = 'option';
     if (answered && option.optionId === receipt.answerOptionId) cls += ' correct';
@@ -102,8 +104,14 @@ function studyView() {
     return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + String.fromCharCode(65 + index) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>Correct answer</b>' : '') + '</label>';
   }).join('');
 
+  const memoryPrompt = answered
+    ? memoryJudgment
+      ? '<div class="memory-rating"><strong>Memory signal saved: ' + escape(memoryJudgment.ratingLabel) + '</strong><p class="muted">Self-reported recall evidence · optional · separate from correctness.</p></div>'
+      : '<div class="memory-rating"><strong>How did recall feel before seeing the answer?</strong><p class="muted">Optional memory signal. It does not change your score or block Next.</p><div class="button-row">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(([rating, label]) => '<button class="secondary" type="button" data-action="memory-rating" data-rating="' + rating + '" ' + (state.busy ? 'disabled' : '') + '>' + label + '</button>').join('') + '</div></div>'
+    : '';
+
   const feedback = answered
-    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div></div><button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div></div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
 
   return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form"><fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
@@ -115,7 +123,7 @@ function render() {
 }
 
 async function loadOverview() {
-  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null };
+  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null };
   render();
   try {
     const session = await auth.getSession();
@@ -168,6 +176,7 @@ async function startStudyNow(availableMinutes) {
       session: result.session,
       selectedOptionId: result.session.receipt?.selectedOptionId || null,
       receipt: result.session.receipt || null,
+      memoryJudgment: result.session.memoryJudgment || null,
       error: null
     };
   } catch (error) {
@@ -189,6 +198,7 @@ async function startSession() {
       session,
       selectedOptionId: session.receipt?.selectedOptionId || null,
       receipt: session.receipt || null,
+      memoryJudgment: session.memoryJudgment || null,
       error: null
     };
   } catch (error) {
@@ -212,12 +222,29 @@ async function answerCurrent() {
       position: session.position,
       optionId
     });
-    state = { ...state, busy: false, receipt, error: null };
+    state = { ...state, busy: false, receipt, memoryJudgment: null, error: null };
     state.progress = await cloud.progress();
   } catch (error) {
     reportUnexpected(error, 'record_answer');
     state = { ...state, busy: false, error: error.code || error.message || 'answer_write_failed' };
     announce('Answer was not confirmed: ' + state.error + '. Your selection is preserved; retry uses the same idempotency key.');
+  }
+  render();
+}
+
+async function recordMemoryRating(rating) {
+  const attemptId = state.receipt?.event?.eventId;
+  if (!attemptId || state.memoryJudgment || state.busy) return;
+  state.busy = true;
+  render();
+  try {
+    const memoryJudgment = await cloud.memoryJudgment(attemptId, rating);
+    state = { ...state, busy: false, memoryJudgment, error: null };
+    announce('Memory signal saved: ' + memoryJudgment.ratingLabel + '.');
+  } catch (error) {
+    reportUnexpected(error, 'record_memory_judgment');
+    state = { ...state, busy: false, error: error.code || error.message || 'memory_judgment_failed' };
+    announce('Memory signal was not saved: ' + state.error + '. You can continue without it.');
   }
   render();
 }
@@ -235,6 +262,7 @@ async function nextQuestion() {
       session: next,
       selectedOptionId: next.receipt?.selectedOptionId || null,
       receipt: next.receipt || null,
+      memoryJudgment: next.memoryJudgment || null,
       error: null
     };
     if (next.closed) state.progress = await cloud.progress();
@@ -265,6 +293,7 @@ root.addEventListener('click', event => {
   event.preventDefault();
   if (target.dataset.action === 'start') startSession();
   if (target.dataset.action === 'study-now') startStudyNow(Number(target.dataset.minutes));
+  if (target.dataset.action === 'memory-rating') recordMemoryRating(Number(target.dataset.rating));
   if (target.dataset.action === 'next') nextQuestion();
   if (target.dataset.action === 'reload') loadOverview();
 });
