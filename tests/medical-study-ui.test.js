@@ -58,3 +58,14 @@ test('Study Now UI can offer unseen new learning without calling it mastery', as
   assert.match(source, /explainable candidate classes/);
   assert.doesNotMatch(source, /mastery score.*Study Now score/i);
 });
+
+
+test('post-answer memory rating is optional, four-grade and separate from score', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /How did recall feel before seeing the answer\?/);
+  assert.match(source, /\[\[1, 'Again'\], \[2, 'Hard'\], \[3, 'Good'\], \[4, 'Easy'\]\]/);
+  assert.match(source, /It does not change your score or block Next/);
+  assert.match(source, /recordMemoryRating/);
+  assert.match(source, /cloud\.memoryJudgment/);
+  assert.match(source, /data-action="next"/);
+});
