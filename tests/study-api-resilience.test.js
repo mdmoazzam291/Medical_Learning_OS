@@ -107,7 +107,7 @@ test('FSRS shadow endpoint is learner-scoped and cannot control production due d
   assert.match(source, /path === "\/revision\/fsrs-shadow"/);
   assert.match(source, /study_fsrs_shadow_evidence/);
   assert.match(source, /p_learner: learnerId/);
-  assert.match(source, /mode: "shadow-readiness"/);
+  assert.match(source, /mode: "shadow-scheduler"/);
   assert.match(source, /schedulerControl: false/);
   assert.match(source, /shadowSchedule: null/);
   assert.match(source, /no_real_memory_ratings/);
