@@ -47,5 +47,5 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 ## M05 slices
 - M05a — DONE: rebuildable per-question revision evidence and versioned due-queue policy boundary. The provisional binary bootstrap policy is test scaffolding, not mastery inference.
 - M05b — DONE: persisted learner-scoped revision projection, authenticated due-queue API and hosted learner-page verification are live.
-- M05c — IN PROGRESS: time-budgeted Study Now planning and interruption-safe session start are live; due-item hosted execution remains to be exercised when a review becomes due.
+- M05c — IN PROGRESS: time-budgeted Study Now v2, explainable mistake-repair/due-revision/new-learning classes, immutable recommendation receipts and descriptive outcome projection are live; a real due-item hosted start → answer → reschedule proof remains.
 - M05d — PLANNED: evaluate/introduce FSRS-compatible evidence and scheduler without silently manufacturing four-grade ratings from binary correctness.
