@@ -185,3 +185,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The database computes a SHA-256 fingerprint over the exact question version plus all referenced source records before recording a review.
 - Browser/learner roles have no table/function access, direct service-role inserts are not granted, and reviewer identity must later come from a trusted JWT-resolving `review-api`.
 - No reviewer has been granted, no medical review has been recorded, and the learner catalog remains closed.
+
+
+## M04c review API foundation — 2026-09-26
+- The authenticated review-evidence migration is live and rollback-only verification passed without persisting grants, review events or synthetic catalog content.
+- Added a dedicated `review-api` Edge Function boundary for reviewer identity, queue access and review submission.
+- Reviewer identity is always derived from a verified Supabase JWT; the browser cannot submit `reviewerId`.
+- `GET /queue` exposes only `in_review` content to reviewers with the matching medical/references/rights grant.
+- `POST /reviews` records decisions only through `record_content_review`; it cannot publish content or alter reviewer grants.
+- No reviewer grant has been assigned and no medical content has been reviewed or published.
