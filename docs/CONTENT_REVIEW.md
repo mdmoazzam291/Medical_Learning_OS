@@ -155,8 +155,8 @@ Publication is allowed only when all of the following remain true at publication
 - every referenced source has resolved rights: owned, licensed or public domain,
 - exactly three review events exist for that question version,
 - all three decisions are approved,
-- all review events carry one identical target hash,
-- that hash still matches the current substantive question/source target,
+- each review event matches the current fingerprint for its own medical, references, or rights gate,
+- every referenced source has current immutable rights evidence bound to the source fingerprint,
 - no newer version of the same question has already been published.
 
 The database generates the publication timestamp, updates the target to `published`, retires any previously published version of the same question, and increments the shared catalog version in one transaction.
@@ -170,11 +170,11 @@ The live Supabase project passed rollback-only M04c verification without leaving
 
 Verified properties:
 
-- three gate approvals over the same substantive target produce one stable target hash,
+- historical three-gate verification proved transactional projection before the later gate-specific fingerprint model was introduced,
 - review events and catalog review/status projection are transactionally consistent,
 - canonical review timestamps use UTC ISO strings with milliseconds,
 - three approvals advance only to `verified`,
-- `publish_verified_content` rechecks the current target and review evidence,
+- `publish_verified_content` rechecks each gate-specific target plus current source-rights evidence,
 - publishing a newer version retires the previous published version atomically,
 - learner/browser role cannot execute the publication function,
 - no reviewer grants, review events or synthetic questions remain after rollback.
