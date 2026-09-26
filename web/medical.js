@@ -81,11 +81,11 @@ function studyView() {
   const receipt = state.receipt || session.receipt || null;
   const selected = receipt?.selectedOptionId || state.selectedOptionId;
   const answered = Boolean(receipt);
-  const options = q.options.map(option => {
+  const options = q.options.map((option, index) => {
     let cls = 'option';
     if (answered && option.optionId === receipt.answerOptionId) cls += ' correct';
     const chosen = option.optionId === selected;
-    return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + escape(option.optionId) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>Correct answer</b>' : '') + '</label>';
+    return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + String.fromCharCode(65 + index) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>Correct answer</b>' : '') + '</label>';
   }).join('');
 
   const feedback = answered
