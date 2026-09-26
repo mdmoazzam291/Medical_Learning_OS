@@ -125,8 +125,16 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
       write(session);
       return { handled: true, session };
     },
-    async signUp(email, password) {
-      const data = await api('/auth/v1/signup', { body: { email: cleanEmail(email), password: cleanPassword(password) } });
+    async signUp(email, password, { emailRedirectTo } = {}) {
+      let path = '/auth/v1/signup';
+      if (emailRedirectTo !== undefined) {
+        let redirect;
+        try { redirect = new URL(String(emailRedirectTo)); } catch { throw new AuthError(400, 'invalid_redirect_url'); }
+        const localhost = ['127.0.0.1', 'localhost'].includes(redirect.hostname);
+        if (redirect.protocol !== 'https:' && !(localhost && redirect.protocol === 'http:')) throw new AuthError(400, 'invalid_redirect_url');
+        path += `?redirect_to=${encodeURIComponent(redirect.href)}`;
+      }
+      const data = await api(path, { body: { email: cleanEmail(email), password: cleanPassword(password) } });
       const session = normalizeSession(data);
       if (session) write(session);
       return { user: data?.user || null, session, confirmationRequired: !session };
