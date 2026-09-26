@@ -52,3 +52,10 @@ test('framework never changes scheduling authority by itself', () => {
   assert.match(sql, /'autoStart',false/);
   assert.doesNotMatch(sql, /update public\.study_revision_state/);
 });
+
+
+test('experiment state transitions use a monotonic sequence rather than timestamp plus random UUID ordering', () => {
+  assert.match(sql, /sequence bigint generated always as identity unique/);
+  assert.match(sql, /order by e\.sequence desc/);
+  assert.doesNotMatch(sql, /order by e\.created_at desc, e\.id desc/);
+});
