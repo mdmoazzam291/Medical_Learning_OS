@@ -98,3 +98,34 @@ test('review adapter fails closed without an authenticated session', async () =>
   });
   await assert.rejects(() => review.me(), /not_authenticated/);
 });
+
+
+test('source rights resolution never sends reviewer identity', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({
+        rightsEventId: 'rights-1',
+        sourceId: 'source:v1',
+        rightsStatus: 'public_domain',
+        sourceFingerprintSha256: 'a'.repeat(64),
+        reviewedAt: '2026-09-26T12:00:00.000Z'
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    }
+  });
+
+  await review.resolveRights({
+    sourceId: 'source:v1',
+    rightsStatus: 'public_domain',
+    evidence: 'Official policy reviewed.'
+  });
+
+  assert.match(calls[0].url, /\/functions\/v1\/review-api\/source-rights$/);
+  const body = JSON.parse(calls[0].init.body);
+  assert.deepEqual(Object.keys(body).sort(), ['evidence', 'rightsStatus', 'sourceId']);
+  assert.equal('reviewerId' in body, false);
+});
