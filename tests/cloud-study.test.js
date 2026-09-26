@@ -135,3 +135,29 @@ test('cloud Study Now outcomes use authenticated learner context only', async ()
   assert.equal(result.causal, false);
   assert.deepEqual(result.outcomes, []);
 });
+
+
+test('cloud memory judgment submits only attempt identity and explicit rating', async () => {
+  let seen = null;
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options) => {
+      seen = { url, options };
+      return Response.json({
+        schemaVersion: 1,
+        type: 'memory.rating',
+        attemptId: '11111111-1111-4111-8111-111111111111',
+        rating: 2,
+        ratingLabel: 'Hard'
+      });
+    }
+  });
+  const result = await cloud.memoryJudgment('11111111-1111-4111-8111-111111111111', 2);
+  assert.match(seen.url, /study-api\/memory-judgments$/);
+  assert.deepEqual(JSON.parse(seen.options.body), {
+    attemptId: '11111111-1111-4111-8111-111111111111',
+    rating: 2
+  });
+  assert.equal(result.ratingLabel, 'Hard');
+});
