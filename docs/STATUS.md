@@ -334,3 +334,19 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The Medical QBank shows Study Now time controls only when revision items are actually due.
 - Full GitHub checks passed and the latest Render deployment is live.
 - M05c remains IN PROGRESS until a genuinely due hosted item exercises the complete Study Now start → answer → reschedule loop.
+
+
+## M05c explainable Study Now v2 and evaluation evidence — 2026-09-26
+- Study Now v2 is live in `study-api` v10 and the latest Render learner UI.
+- Selection remains time-budgeted and explainable. Candidate reasons are `mistake-repair`, `due-revision` and `new-learning`; there is no composite mastery/recommendation score.
+- Due work is considered before unseen published content. Future scheduled reviews are not pulled early merely to fill time.
+- A due item whose latest answer was wrong is labelled `mistake-repair`; it is not immediately repeated before its scheduled due time.
+- Study Now now exposes unseen published content as a separate new-learning class when time remains after fitting due work.
+- Each newly created Study Now session is atomically bound to an immutable `study_recommendation_events` receipt containing strategy, available minutes, selected items, reasons and estimated workload.
+- Authenticated browser roles can read only their own recommendation receipts and cannot create or mutate them. Session creation plus receipt persistence occurs in one service-only transaction.
+- Recommendation receipts are included in learner export, preserving the rationale for future replay/evaluation.
+- Added rebuildable `study_recommendation_outcomes(learner)`: completion, planned/attempted counts, initial correctness, actual answer time, candidate mix and the first later retrieval of each selected question.
+- `GET /study-now/outcomes` returns these metrics from authenticated server-derived evidence and explicitly marks them descriptive/non-causal.
+- Rollback-only proof produced a one-item recommendation with a correct 42-second initial response and a later incorrect 51-second retrieval; the outcome projection linked both correctly, then rollback restored live data.
+- Full GitHub checks passed before the outcomes endpoint deployment. The live outcome projection currently has no real Study Now event yet because both test learners have already seen the only published question and it is not due until the scheduled review.
+- M05c remains open until a genuine hosted Study Now recommendation is created and its answer/reschedule/outcome loop is observed end to end.
