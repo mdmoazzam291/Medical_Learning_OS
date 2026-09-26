@@ -450,6 +450,27 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    if (req.method === "GET" && path === "/revision/fsrs-shadow") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("study_fsrs_shadow_evidence", {
+        p_learner: learnerId
+      });
+      if (error) fail(500, "fsrs_shadow_projection_failed");
+      const evidence = data ?? {};
+      return response(req, 200, {
+        generatedAt: new Date().toISOString(),
+        mode: "shadow-readiness",
+        schedulerControl: false,
+        candidateEngine: "ts-fsrs",
+        livePolicyId: evidence.livePolicyId ?? "bootstrap-binary-v1",
+        evidence,
+        shadowSchedule: null,
+        shadowScheduleReason: evidence.hasReplayableEvidence
+          ? "replayable_ratings_exist_engine_not_enabled"
+          : "no_real_memory_ratings"
+      });
+    }
+
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
