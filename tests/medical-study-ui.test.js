@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+
+test('medical learner page uses authenticated cloud study and server scoring', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+
+  assert.match(source, /createSupabaseAuth/);
+  assert.match(source, /createCloudStudy/);
+  assert.match(source, /cloud\.questions\('all'\)/);
+  assert.match(source, /cloud\.start/);
+  assert.match(source, /cloud\.answer/);
+  assert.match(source, /cloud\.next/);
+  assert.match(source, /'medical:' \+ session\.sessionId \+ ':' \+ session\.position/);
+  assert.match(source, /receipt\.answerOptionId/);
+  assert.match(source, /Answer keys and explanations are revealed only after the server records the attempt/);
+  assert.doesNotMatch(source, /learnerId\s*:/);
+});
+
+test('cloud account exposes medical QBank only when published questions exist', async () => {
+  const source = await readFile(new URL('../web/account.js', import.meta.url), 'utf8');
+  assert.match(source, /const medicalAction = count \?/);
+  assert.match(source, /\/web\/medical\.html/);
+});
