@@ -55,7 +55,7 @@ export function projectQuestionEvidence(events, learnerId) {
   }
 
   const seen = new Map();
-  const rows = new Map();
+  const relevant = [];
 
   for (const input of events) {
     const event = validateAttempt(input);
@@ -67,8 +67,15 @@ export function projectQuestionEvidence(events, learnerId) {
       continue;
     }
     seen.set(event.eventId, fingerprint);
-    if (event.learnerId !== learnerId) continue;
+    if (event.learnerId === learnerId) relevant.push(event);
+  }
 
+  relevant.sort((a, b) =>
+    a.occurredAt.localeCompare(b.occurredAt) ||
+    a.eventId.localeCompare(b.eventId));
+
+  const rows = new Map();
+  for (const event of relevant) {
     const current = rows.get(event.questionVersionId) ?? {
       questionVersionId: event.questionVersionId,
       conceptId: event.conceptId,
