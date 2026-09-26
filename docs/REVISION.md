@@ -214,3 +214,50 @@ Shadow output is diagnostic only:
 - no learner-facing due date changes occur from shadow computation.
 
 Promotion requires real fully-rated histories, sufficient coverage, delayed-retrieval comparison and a controlled policy experiment.
+
+
+## Schedule-policy decision ledger and outcomes
+
+Scheduling policy proposals now have their own immutable evidence stream.
+
+Each decision contains:
+- exact learner attempt ID used as the evidence cutoff;
+- exact question version;
+- policy ID and policy version;
+- config version;
+- role: authoritative or shadow;
+- proposed due timestamp;
+- policy-specific decision payload.
+
+Current policy roles:
+- `bootstrap-binary-v1`: authoritative;
+- `fsrs-shadow`: shadow.
+
+### Recording rules
+
+After a normal answer:
+1. persist the attempt;
+2. rebuild bootstrap revision state;
+3. try to append the authoritative bootstrap schedule decision.
+
+After an optional memory rating:
+1. persist the immutable rating;
+2. verify that rated attempt is still the latest exposure for that exact question version;
+3. require the full observed history for that version to be rated;
+4. compute deterministic FSRS shadow state;
+5. try to append the FSRS shadow schedule decision.
+
+Decision-ledger failures are logged and deferred rather than blocking study.
+
+### Descriptive policy outcomes
+
+`study_schedule_policy_outcomes` joins each decision to the first later real retrieval of the same exact question version. It reports:
+- observed next retrieval time;
+- correctness;
+- response duration;
+- retrieval offset from proposed due time;
+- whether retrieval occurred before or after the policy's proposed due point.
+
+`comparisonGroupId` is the originating attempt ID, allowing bootstrap and FSRS proposals from the same evidence boundary to be paired when both exist.
+
+This is evaluation evidence, not causal attribution and not a policy ranking. A future controlled policy experiment is required before scheduler authority changes.
