@@ -275,3 +275,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Review recording and source-rights resolution independently recheck active authorization at mutation time.
 - Grant mutation remains service-only; there is no browser self-grant or reviewer-admin UI.
 - No real reviewer grant is created by this change.
+
+
+## Live reviewer grant governance verification — 2026-09-26
+- Reviewer grant governance is live in Supabase and `review-api` is ACTIVE at version 5.
+- A rollback-only verification granted the existing confirmed account the medical-review capability with a one-day expiry, verified that the service role could manage the grant, revoked it, and observed two immutable grant audit events inside the transaction.
+- The learner/browser `authenticated` role cannot execute `set_content_reviewer_grant`.
+- Rollback restored live state to 0 reviewer grants and 0 reviewer-grant events.
+- The first medical review target remains `in_review`; no medical review or publication was created.
