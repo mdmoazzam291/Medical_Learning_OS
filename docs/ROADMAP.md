@@ -8,7 +8,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M01 | Learning data foundation | Versioned attempt contract and deterministic accuracy projection with retry protection | DONE |
 | M02 | Canonical knowledge and content | Concept IDs, versioned questions, references, licensing provenance and draft/review/publish workflow | DONE |
 | M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | DONE |
-| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | IN PROGRESS |
+| M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | DONE |
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | PLANNED |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | PLANNED |
@@ -38,7 +38,7 @@ M02–M06 minimal paths work together; progress survives reload; data export wor
 
 ## M04 slices
 - M04a — DONE: credential-scoped server API, SQLite persistence, trusted scoring, publication eligibility, immutable receipts, retries, bookmarks, export and failure/restart tests. Local and GitHub checks passed.
-- M04b — IN PROGRESS: Supabase Auth/session adapter, account UI, authenticated cloud adapter and JWT-gated `study-api` are implemented; real email-confirmed account verification remains after Resend/custom SMTP configuration. No browser-stored operator credential shortcut.
+- M04b — DONE: Supabase Auth/session adapter, account UI, authenticated cloud adapter and JWT-gated `study-api` are live; refresh behavior and two-distinct-real-account read/write isolation passed on the hosted path. No browser-stored operator credential shortcut.
 - M04c — DONE: authenticated reviewer workflow, gate-specific immutable evidence, source-rights resolution, first genuinely reviewed/published medical item, authenticated server-scored learner attempt, and live responsive medical QBank.
 
-M04 is not complete until all three slices and the medical learner flow pass their release gates. M04c is complete; M04b still requires the live two-distinct-account hosted isolation proof. M04c is complete; the remaining live M04 blocker is M04b's two-distinct-real-account hosted isolation proof.
+M04 is complete: all three slices and the authenticated medical learner flow passed their release gates, including two-distinct-real-account read/write isolation. M04c is complete; the remaining live M04 blocker is M04b's two-distinct-real-account hosted isolation proof.
