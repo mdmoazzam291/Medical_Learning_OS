@@ -186,3 +186,26 @@ test('cloud FSRS shadow readiness uses authenticated learner context', async () 
   assert.equal(result.shadowSchedule, null);
   assert.equal(result.evidence.ratedAttempts, 0);
 });
+
+
+test('cloud policy evaluation uses authenticated learner context', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        scope: 'descriptive-schedule-policy-outcomes',
+        causal: false,
+        livePolicyId: 'bootstrap-binary-v1',
+        outcomes: []
+      });
+    }
+  });
+  const result = await cloud.policyEvaluation();
+  assert.match(seenUrl, /study-api\/revision\/policy-evaluation$/);
+  assert.equal(result.causal, false);
+  assert.equal(result.livePolicyId, 'bootstrap-binary-v1');
+  assert.deepEqual(result.outcomes, []);
+});
