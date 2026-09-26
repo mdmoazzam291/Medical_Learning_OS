@@ -295,3 +295,14 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - One confirmed learner has this attempt; the other confirmed real account has no attempts. The hosted two-account isolation proof remains open.
 - The medical QBank option labels now render A/B/C/D instead of internal option IDs; CI and Render deploy passed.
 - The current one-question session remains open until the learner taps Finish session.
+
+
+## M04 completion — two-account hosted isolation — 2026-09-26
+- Two confirmed real learner accounts completed the hosted isolation proof.
+- Before Account B answered, its cloud record showed 0 attempts and 0 correct while Account A retained its own prior attempt, proving read isolation.
+- Account B then completed the same published medical question through the authenticated medical QBank.
+- Final database state: 2 learners with attempts, 2 total attempts, 2 total sessions, 2 closed sessions, 0 open sessions.
+- Per-learner attempt counts are [1,1] and per-learner session counts are [1,1].
+- Attempt-to-session learner ownership mismatches: 0.
+- Duplicate learner/question attempts in this test: 0.
+- M04 Core study loop and QBank is DONE. The next delivery path is M05 Revision and study planning.
