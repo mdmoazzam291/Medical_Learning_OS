@@ -266,3 +266,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The same rollback-only path then passed the trusted publication function with all three gate fingerprints matching their current targets.
 - After rollback, live state remains unchanged: 0 reviewer grants, 0 review events, 0 rights events, catalog version 1, one `in_review` question, zero published questions, and the CDC source rights status remains `unknown`.
 - The live Render reviewer workspace includes source-rights resolution controls only for rights reviewers; no reviewer has been authorized yet.
+
+
+## Reviewer grant governance — 2026-09-26
+- Added auditable grant/revoke events for medical, references and rights reviewer capabilities.
+- Current reviewer grants now record granting actor, reason and optional expiry.
+- `review-api` resolves only active grants through a database function; expired grants disappear from the reviewer workspace without relying on browser state.
+- Review recording and source-rights resolution independently recheck active authorization at mutation time.
+- Grant mutation remains service-only; there is no browser self-grant or reviewer-admin UI.
+- No real reviewer grant is created by this change.

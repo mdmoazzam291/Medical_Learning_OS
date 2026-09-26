@@ -296,3 +296,43 @@ Observed:
 - rollback restored the live catalog to one `in_review` question with unresolved rights and no persisted review evidence.
 
 This verifies the architecture without pretending that a synthetic operator action is a real human review.
+
+
+## Reviewer authorization governance
+
+Reviewer access is not a boolean attached casually to an account. The authorization layer now has two parts:
+
+### Current projection
+
+`content_reviewer_grants` stores currently granted review capabilities and now includes:
+
+- review kind
+- server timestamp
+- granting actor
+- reason
+- optional expiry
+
+A grant is active only while `expires_at` is null or still in the future.
+
+### Immutable authorization history
+
+`content_reviewer_grant_events` records every grant/revoke action with:
+
+- reviewer
+- review kind
+- actor
+- reason
+- optional grant expiry
+- database timestamp
+
+The application service role may read this audit trail but cannot mutate it directly.
+
+### Trusted mutation
+
+`set_content_reviewer_grant(...)` is the only application grant/revoke mutation path. It is service-only and records the current projection and immutable event together.
+
+`review-api` no longer reads the grants table directly. It calls `get_active_reviewer_grants`, and the database review functions independently call `has_active_reviewer_grant` at decision time.
+
+Therefore an expired or revoked grant fails closed even if a reviewer left a browser tab open.
+
+There is intentionally no browser grant-management UI yet. A future admin/operator API must derive the granting actor from an authenticated operator identity; it must not accept an arbitrary `actor_id` from browser input.

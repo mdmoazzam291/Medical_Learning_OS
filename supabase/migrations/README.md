@@ -26,5 +26,6 @@ The project status must describe the live schema as existing. "No migrations" wa
 - `20260926124000_fix_review_hash_ambiguity.sql` — qualifies the review hash column after live rollback verification exposed a PL/pgSQL output-name collision.
 - `20260926130000_verified_publication_gate.sql` — server-only verified → published transition with review/hash/rights/version checks.
 - `20260926133000_gate_specific_review_and_rights.sql` — gate-specific review fingerprints, immutable source-rights evidence, trusted rights resolution, and per-gate publication revalidation.
+- `20260926140000_reviewer_grant_governance.sql` — auditable grant/revoke events, grant actor/reason/expiry, and active-grant enforcement for review queues and mutations.
 
 These files are the canonical repository copies for all M04c DDL applied after the historical five-migration baseline.

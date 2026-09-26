@@ -159,8 +159,7 @@ Deno.serve(async (req: Request) => {
 
     const getGrants = async () => {
       const { data, error } = await trustedRead("reviewer_grants", async () =>
-        admin.from("content_reviewer_grants").select("review_kind")
-          .eq("reviewer_id", reviewerId).order("review_kind", { ascending: true })
+        admin.rpc("get_active_reviewer_grants", { p_reviewer: reviewerId })
       );
       if (error) fail(500, "review_authz_unavailable");
       return (data ?? []).map((row: any) => String(row.review_kind));
