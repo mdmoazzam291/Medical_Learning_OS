@@ -197,3 +197,25 @@ Policy-ledger failures must not block question answering or memory-rating captur
 For descriptive evaluation, link each decision to the first later real retrieval of the same exact question version and measure correctness, response time, and how early/late the retrieval occurred relative to the proposed due date.
 
 These observations do not identify causal policy effects because the learner follows only one authoritative schedule. Promotion from shadow to authoritative scheduling requires a controlled experiment or another defensible identification design, not retrospective winner-picking from observational data.
+
+
+## ADR-027 — Scheduler experiments must be immutable, learner-randomized and impossible to auto-start (accepted, 2026-09-27)
+A future comparison between `bootstrap-binary-v1` and FSRS must not be activated by changing a feature flag or by retrospectively selecting a preferred policy.
+
+Pre-register each experiment as an immutable, SHA-256-fingerprinted spec version containing control/treatment policy identities, allocation, eligibility contract, metric contract, guardrails, population threshold and assignment salt.
+
+Use learner-level randomization for the first scheduler experiment. Do not alternate scheduler policies per question or per attempt within the same learner because that creates carryover, confusing schedules and ambiguous exposure.
+
+Assignments are deterministic and immutable once created. The randomization bucket is derived from experiment ID/version, learner ID and frozen assignment salt.
+
+An experiment may be armed only when:
+- its immutable spec contains an explicit minimum eligible population;
+- paired authoritative + shadow scheduling evidence satisfies that threshold;
+- the expected spec hash matches;
+- an explicit arm confirmation is provided.
+
+Running requires a separate explicit confirmation after arming. The learner application has no endpoint that can perform these transitions.
+
+The initial `scheduler-bootstrap-vs-fsrs-v1@1` spec intentionally omits the population threshold, making that version permanently non-armable. When evidence supports a threshold and finalized analysis plan, create a new immutable version rather than editing the draft.
+
+Experiment infrastructure must not itself change scheduler authority. Authority wiring is a separate future release gate.
