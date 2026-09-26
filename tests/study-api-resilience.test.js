@@ -15,6 +15,7 @@ test('study-api retries only the transient PGRST303 trusted-read failure once', 
     'attempts',
     'bookmarks',
     'revision_state',
+    'open_session',
     'session_state',
     'session_receipt',
     'export_sessions',
@@ -40,4 +41,16 @@ test('study-api revision projection is non-authoritative for attempt writes', as
   assert.match(source, /if \(revisionError\) \{/);
   assert.match(source, /return response\(req, 200, data\?\.receipt \?\? receipt\)/);
   assert.doesNotMatch(source, /if \(revisionError\) fail\(/);
+});
+
+
+test('study-api Study Now is learner-scoped, time-budgeted and resumes interruptions', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/study-now\/start"/);
+  assert.match(source, /availableMinutes = integer\(input\.availableMinutes, 5, 120\)/);
+  assert.match(source, /strategy: "due-oldest-first-v1"/);
+  assert.match(source, /reason: "due-revision"/);
+  assert.match(source, /strategy: "resume-existing"/);
+  assert.match(source, /Future reviews/);
+  assert.doesNotMatch(source, /answerOptionId[\s\S]{0,250}studyNow/);
 });
