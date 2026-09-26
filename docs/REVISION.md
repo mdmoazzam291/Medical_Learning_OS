@@ -174,3 +174,43 @@ Current API contract:
 - `shadowSchedule=null` until the engine is intentionally enabled.
 
 This protects the learner from an algorithm transition driven by implementation enthusiasm rather than evidence. The next step after real ratings exist is to run a deterministic FSRS engine in shadow, persist no authoritative due dates, and compare proposed intervals with subsequent retrieval outcomes.
+
+
+## Deterministic FSRS shadow scheduler
+
+The shadow engine is now implemented with `ts-fsrs@5.4.2` using FSRS-6 defaults.
+
+Configuration:
+- request retention: 0.9;
+- maximum interval: 36500 days;
+- fuzz: disabled;
+- short-term scheduling: enabled;
+- config version: `fsrs-shadow-default-v1`.
+
+For each fully rated exact question-version history, the engine replays ratings chronologically and returns:
+- proposed FSRS due time;
+- current live bootstrap due time;
+- due-time delta;
+- stability;
+- difficulty;
+- scheduled days;
+- reps;
+- lapses;
+- scheduler state;
+- retrievability at request time.
+
+### Completeness rule
+
+A partially rated history does not receive a shadow due date.
+
+This matters because ignoring an unrated exposure between rated reviews would give FSRS a fictitious history. The readiness projection therefore reports per-question total/rated/unrated attempts and `fullyRated`. Only `fullyRated=true` histories enter the shadow engine.
+
+### Authority boundary
+
+Shadow output is diagnostic only:
+- `schedulerControl=false`;
+- production policy remains `bootstrap-binary-v1`;
+- no FSRS values are written into authoritative revision rows;
+- no learner-facing due date changes occur from shadow computation.
+
+Promotion requires real fully-rated histories, sufficient coverage, delayed-retrieval comparison and a controlled policy experiment.
