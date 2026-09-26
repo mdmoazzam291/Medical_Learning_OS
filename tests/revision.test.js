@@ -89,3 +89,14 @@ test('identical retries deduplicate and conflicting event ids fail closed', () =
     { ...same, correct: false }
   ], 'learner-a'), /Conflicting eventId/);
 });
+
+
+test('projection is deterministic when input event order changes', () => {
+  const first = event({ eventId: 'first', correct: true, occurredAt: '2026-09-26T09:00:00.000Z' });
+  const second = event({ eventId: 'second', correct: false, occurredAt: '2026-09-26T10:00:00.000Z' });
+  const ordered = projectQuestionEvidence([first, second], 'learner-a');
+  const reversed = projectQuestionEvidence([second, first], 'learner-a');
+  assert.deepEqual(reversed, ordered);
+  assert.equal(ordered[0].latestCorrect, false);
+  assert.equal(ordered[0].consecutiveCorrect, 0);
+});
