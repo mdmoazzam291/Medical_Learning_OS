@@ -114,15 +114,28 @@ This measures pipeline pressure. It does not infer medical quality, reviewer qua
 - Question revision intake (v2+) is not implemented.
 - Bulk publication is intentionally absent.
 
+## First live pilot
+
+`pilot:rabies:20260927:01` is the first real controlled batch:
+
+- 5 questions;
+- 5 new canonical concepts;
+- 2 official Government of India NRCP sources;
+- all questions `ai_generated`, `in_review`, non-PYQ and unpublished;
+- all new sources entered with rights `unknown`;
+- catalog promotion: v6 → v7;
+- current review backlog: Medical 5 / References 5 / Rights 5;
+- published stable inventory remains 1.
+
 ## Next production step
 
-Create the first **small, source-grounded real candidate batch**, preferably 5–10 questions, then measure:
+Complete the pilot's independent review loop and record:
 
-- structural rejection rate;
-- exact duplicate rejection rate;
 - time per review gate;
-- rejection reasons by gate;
+- rejection/revision reasons by gate;
+- source-rights resolution effort;
 - verified-to-published conversion;
-- reviewer bottleneck by gate.
+- reviewer bottleneck by gate;
+- any semantic near-duplicate or ambiguity failures that structural validation missed.
 
-Only after this loop is clean should generation/import volume rise toward the 180-question mock threshold.
+Do not increase generation/import volume merely because staging works. Scale only after this five-item loop produces clean, measurable review behavior.
