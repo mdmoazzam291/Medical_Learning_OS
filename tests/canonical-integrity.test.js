@@ -63,3 +63,18 @@ test('canonical bytes and SHA-256 stay stable for a known vector', async () => {
     'd3626ac30a87e6f7a6428233b3c68299976865fa5508e4267c5415c76af7a772'
   );
 });
+
+
+test('canonicalization rejects hidden, accessor and custom array properties', () => {
+  const hidden = { a: 1 };
+  Object.defineProperty(hidden, 'secret', { value: 2, enumerable: false });
+  assert.throws(() => canonicalize(hidden), /hidden properties/);
+
+  const accessor = {};
+  Object.defineProperty(accessor, 'a', { enumerable: true, get() { return 1; } });
+  assert.throws(() => canonicalize(accessor), /ordinary data properties/);
+
+  const array = [1, 2];
+  array.note = 'not-json';
+  assert.throws(() => canonicalize(array), /custom properties/);
+});
