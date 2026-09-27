@@ -36,6 +36,9 @@ begin
 end;
 $function$;
 
+revoke all on function public.prevent_exam_rule_set_mutation()
+  from public, anon, authenticated, service_role;
+
 drop trigger if exists exam_rule_sets_no_update_delete on public.exam_rule_sets;
 create trigger exam_rule_sets_no_update_delete
 before update or delete on public.exam_rule_sets

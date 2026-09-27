@@ -91,6 +91,9 @@ begin
 end;
 $function$;
 
+revoke all on function public.prevent_exam_ledger_mutation()
+  from public, anon, authenticated, service_role;
+
 drop trigger if exists exam_run_events_no_update_delete on public.exam_run_events;
 create trigger exam_run_events_no_update_delete
 before update or delete on public.exam_run_events

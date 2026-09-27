@@ -122,6 +122,9 @@ begin
 end;
 $function$;
 
+revoke all on function public.prevent_question_exam_evidence_mutation()
+  from public, anon, authenticated, service_role;
+
 drop trigger if exists question_exam_evidence_no_update_delete
   on public.question_exam_evidence_events;
 create trigger question_exam_evidence_no_update_delete
