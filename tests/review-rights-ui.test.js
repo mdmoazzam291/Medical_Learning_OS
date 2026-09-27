@@ -75,3 +75,24 @@ test('review assist failure is nonblocking for authenticated review queues', asy
   assert.match(source, /\.catch\(\(\) => state\.reviewAssist\)/);
   assert.match(source, /Promise\.all\(\[\s*queuePromise,\s*pipelinePromise,\s*assistPromise/s);
 });
+
+
+test('review assist can prefill editable notes but cannot submit a review decision', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /use-review-assist-note/);
+  assert.match(source, /gate\.draftNote/);
+  assert.match(source, /Review notes already contain text/);
+  assert.match(source, /Edit it after your independent review/);
+  assert.doesNotMatch(source, /requestSubmit\(/);
+  assert.doesNotMatch(source, /click\(\).*Approve this gate/);
+});
+
+test('source-policy assist prefills evidence but never selects or submits a rights outcome', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /use-rights-assist-evidence/);
+  assert.match(source, /draftRightsEvidence/);
+  assert.match(source, /Rights evidence already contains text/);
+  assert.match(source, /Independently choose the rights outcome/);
+  assert.doesNotMatch(source, /rightsStatus\.value\s*=/);
+  assert.doesNotMatch(source, /requestSubmit\(/);
+});

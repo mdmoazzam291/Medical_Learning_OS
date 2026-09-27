@@ -96,14 +96,27 @@ function pipelinePanel() {
   </section>`;
 }
 
+function assistQuestion(questionVersionId) {
+  const items = Array.isArray(state.reviewAssist?.questions) ? state.reviewAssist.questions : [];
+  return items.find(item => item?.questionVersionId === questionVersionId) || null;
+}
+
+function assistSource(sourceId) {
+  const items = Array.isArray(state.reviewAssist?.sourceEvidence) ? state.reviewAssist.sourceEvidence : [];
+  return items.find(item => item?.sourceId === sourceId) || null;
+}
+
 function reviewAssistPanel(questionVersionId) {
   const packet = state.reviewAssist;
-  const items = Array.isArray(packet?.questions) ? packet.questions : [];
-  const assist = items.find(item => item?.questionVersionId === questionVersionId);
+  const assist = assistQuestion(questionVersionId);
   const gate = assist?.[state.selectedKind];
   if (!assist || !gate) return '';
 
-  const referenced = Array.isArray(gate.sourceIds) ? gate.sourceIds : [];
+  const referenced = Array.isArray(gate.sourceIds)
+    ? gate.sourceIds
+    : Array.isArray(assist?.references?.sourceIds)
+      ? assist.references.sourceIds
+      : [];
   const sourceEvidence = Array.isArray(packet?.sourceEvidence)
     ? packet.sourceEvidence.filter(source => referenced.includes(source?.sourceId))
     : [];
@@ -113,12 +126,16 @@ function reviewAssistPanel(questionVersionId) {
         .map(source => `<div>${sourceLink(source.rightsBasisUrl)}</div>`)
         .join('')
     : '';
+  const draftButton = gate.draftNote
+    ? `<button class="secondary" type="button" data-action="use-review-assist-note" data-question-version-id="${escape(questionVersionId)}">Use as draft note</button>`
+    : '';
 
   return `<section class="review-section review-assist">
     <div class="section-heading"><div><span class="eyebrow">REVIEW ASSIST</span><h3>AI/source preflight</h3></div><span class="badge">Non-authoritative</span></div>
     <p><strong>${escape(gate.result || 'preflight')}</strong> · ${escape(gate.summary || 'No summary recorded.')}</p>
     ${rightsLinks}
-    <p class="muted">Generated ${escape(packet.generatedDate || 'unknown date')}. This evidence cannot approve, verify or publish content. Independently inspect the question and cited source before deciding this gate.</p>
+    ${draftButton}
+    <p class="muted">Generated ${escape(packet.generatedDate || 'unknown date')}. Draft text is editable and cannot approve, verify or publish content. Independently inspect the question and cited source before deciding this gate.</p>
   </section>`;
 }
 
@@ -134,10 +151,15 @@ function sourceCard(source) {
   const rights = source?.rights || {};
   const status = rights.status || 'unknown';
   const canResolve = state.selectedKind === 'rights' && status === 'unknown';
+  const sourceAssist = assistSource(source?.sourceId);
+  const draftEvidenceButton = canResolve && sourceAssist?.draftRightsEvidence
+    ? `<button class="secondary" type="button" data-action="use-rights-assist-evidence" data-source-id="${escape(source?.sourceId || '')}">Use source-policy draft</button>`
+    : '';
   const form = canResolve ? `
     <form class="source-rights-form" data-source-id="${escape(source?.sourceId || '')}">
       <label>Rights outcome<select name="rightsStatus" required><option value="">Choose…</option><option value="citation_only">Citation / factual grounding only</option><option value="public_domain">Public domain</option><option value="licensed">Licensed</option><option value="owned">Owned</option><option value="restricted">Restricted / do not publish</option></select></label>
       <label>Rights evidence<textarea name="evidence" minlength="1" maxlength="4000" required placeholder="Record the policy, licence, ownership evidence, or restriction."></textarea></label>
+      ${draftEvidenceButton}
       <button class="secondary" type="submit" ${state.submitting ? 'disabled' : ''}>Resolve source rights</button>
     </form>` : '';
   return `<article class="source-card"><div><strong>${escape(source?.title || 'Untitled source')}</strong><p class="muted">${escape(source?.sourceId || 'unknown source')} · version ${escape(source?.version || '?')}</p></div><dl><div><dt>Rights</dt><dd>${escape(status)}</dd></div><div><dt>Evidence</dt><dd>${escape(rights.evidence || 'None recorded')}</dd></div></dl><div>${sourceLink(source?.url)}</div>${form}</article>`;
@@ -278,7 +300,44 @@ root.addEventListener('change', event => {
 
 root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
-  if (target?.dataset.action === 'reload') loadQueue();
+  if (!target) return;
+  if (target.dataset.action === 'reload') {
+    loadQueue();
+    return;
+  }
+
+  if (target.dataset.action === 'use-review-assist-note') {
+    const questionVersionId = target.dataset.questionVersionId;
+    const gate = assistQuestion(questionVersionId)?.[state.selectedKind];
+    const form = [...root.querySelectorAll('.review-decision-form')]
+      .find(candidate => candidate.dataset.questionVersionId === questionVersionId);
+    const textarea = form?.querySelector('textarea[name="notes"]');
+    if (!textarea || !gate?.draftNote) return;
+    if (textarea.value.trim()) {
+      announce('Review notes already contain text. Clear them before applying the preflight draft.');
+      return;
+    }
+    textarea.value = gate.draftNote;
+    textarea.focus();
+    announce('Preflight draft copied into review notes. Edit it after your independent review, then submit your own decision.');
+    return;
+  }
+
+  if (target.dataset.action === 'use-rights-assist-evidence') {
+    const sourceId = target.dataset.sourceId;
+    const sourceDraft = assistSource(sourceId)?.draftRightsEvidence;
+    const form = [...root.querySelectorAll('.source-rights-form')]
+      .find(candidate => candidate.dataset.sourceId === sourceId);
+    const textarea = form?.querySelector('textarea[name="evidence"]');
+    if (!textarea || !sourceDraft) return;
+    if (textarea.value.trim()) {
+      announce('Rights evidence already contains text. Clear it before applying the source-policy draft.');
+      return;
+    }
+    textarea.value = sourceDraft;
+    textarea.focus();
+    announce('Source-policy draft copied into rights evidence. Independently choose the rights outcome and submit it yourself.');
+  }
 });
 
 root.addEventListener('submit', event => {

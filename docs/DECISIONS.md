@@ -490,3 +490,27 @@ Exact normalized-stem duplication remains a hard mechanical rejection in the int
 
 This boundary lets the 25-question scale pilot catch obvious paraphrase clones while preserving uncertainty and avoiding an opaque similarity score as truth.
 
+## ADR-043 — Review assist may prefill editable evidence, never the decision (accepted, 2026-09-27)
+The main review bottleneck in the first real content pilot was repeated evidence entry, especially Rights review. Reduce clerical work without weakening reviewer authority.
+
+A review-assist packet may provide:
+- source-grounding summaries;
+- editable draft Medical/References/Rights notes;
+- editable source-policy evidence drafts;
+- links to the exact source and rights-policy material.
+
+The reviewer UI may copy those drafts into empty text fields only after an explicit click.
+
+Review assist must never:
+- choose Approved or Rejected;
+- choose a source-rights outcome;
+- submit either form;
+- overwrite reviewer-entered text;
+- create review/source-rights events;
+- verify or publish content.
+
+A prefilled note is therefore draft evidence, not a review decision. The authenticated reviewer remains responsible for inspecting the immutable question/source target, editing or discarding the draft, choosing the outcome and submitting it.
+
+This preserves the useful automation boundary:
+source-grounded preflight → lower clerical cost → independent human judgment → authenticated immutable evidence.
+
