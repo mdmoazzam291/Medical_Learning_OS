@@ -114,14 +114,21 @@ This measures pipeline pressure. It does not infer medical quality, reviewer qua
 - Question revision intake (v2+) is not implemented.
 - Bulk publication is intentionally absent.
 
+## First controlled production pilot
+
+Batch `pilot:rabies:20260927:01` contains five original AI-drafted questions grounded in current National Rabies Control Programme material. It passed staging and promotion and is now fully in `in_review`; no question became learner-visible through intake.
+
+The reviewer surface also has a **non-authoritative review-assist packet**. It summarizes current source support and conservative rights recommendations but cannot approve a gate, mark content verified or publish. The reviewer still inspects the exact target/source package and submits the authenticated decision.
+
+The preflight currently finds four straightforwardly supported items and one supported item with a wording note: the category III RIG stem is medically correct among its options but is slightly under-specified because wound washing is also part of rabies PEP. That uncertainty is preserved for the reviewer instead of being auto-resolved.
+
 ## Next production step
 
-Create the first **small, source-grounded real candidate batch**, preferably 5–10 questions, then measure:
+Complete the five-question Medical/References/Rights review lifecycle and measure:
 
-- structural rejection rate;
-- exact duplicate rejection rate;
 - time per review gate;
-- rejection reasons by gate;
+- rejection/revision reasons by gate;
+- source-rights resolution effort;
 - verified-to-published conversion;
 - reviewer bottleneck by gate.
 
