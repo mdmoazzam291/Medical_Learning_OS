@@ -636,6 +636,55 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    if (req.method === "GET" && path === "/vault/concepts") {
+      if (url.search) fail(400, "query_not_supported");
+      const [catalog, { data: canonicalRows, error: canonicalError }, annotations] = await Promise.all([
+        getCatalog(),
+        trustedRead("vault_canonical_index", async () =>
+          admin.from("neural_canonical_note_versions")
+            .select("id,concept_id,version,title,published_at")
+            .eq("status", "published")
+            .order("concept_id", { ascending: true })
+        ),
+        getVaultAnnotations()
+      ]);
+      if (canonicalError) fail(500, "vault_read_failed");
+
+      const canonicalByConcept = new Map(
+        (canonicalRows ?? []).map((row: any) => [String(row.concept_id), row])
+      );
+      const annotationCounts = new Map<string, number>();
+      for (const row of annotations) {
+        const conceptId = String(row.concept_id);
+        annotationCounts.set(conceptId, (annotationCounts.get(conceptId) ?? 0) + 1);
+      }
+
+      const concepts = Array.isArray(catalog.body?.concepts)
+        ? catalog.body.concepts.map((concept: any) => {
+            const canonical = canonicalByConcept.get(String(concept.conceptId));
+            return {
+              conceptId: concept.conceptId,
+              label: concept.label,
+              aliases: Array.isArray(concept.aliases) ? concept.aliases : [],
+              subjectTags: Array.isArray(concept.subjectTags) ? concept.subjectTags : [],
+              canonicalNote: canonical ? {
+                noteVersionId: canonical.id,
+                version: canonical.version,
+                title: canonical.title,
+                publishedAt: canonical.published_at
+              } : null,
+              annotationCount: annotationCounts.get(String(concept.conceptId)) ?? 0
+            };
+          })
+        : [];
+
+      return response(req, 200, {
+        catalogVersion: catalog.version,
+        count: concepts.length,
+        concepts
+      });
+    }
+
     const vaultConceptMatch = path.match(/^\/vault\/concepts\/([^/]{1,480})$/);
     if (req.method === "GET" && vaultConceptMatch) {
       if (url.search) fail(400, "query_not_supported");
