@@ -77,3 +77,11 @@ test('medical study loop deep-links exact concept identity into NeuralVault', as
   assert.match(source, /encodeURIComponent\(q\.conceptId\)/);
   assert.match(source, /Open concept in NeuralVault/);
 });
+
+
+test('medical NeuralVault link tolerates old learner payloads via primary conceptLinks fallback', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /q\.conceptId \|\| q\.conceptLinks\?\.find/);
+  assert.match(source, /role === 'primary'/);
+  assert.match(source, /encodeURIComponent\(primaryConceptId\)/);
+});
