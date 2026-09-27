@@ -925,3 +925,21 @@ Verification for this slice is repository diff review because there is no domain
 - Canonical delivery references remain opaque `storage://mlos-media/...`. The learner API now converts them to 15-minute signed URLs; raw bucket paths and service credentials are not browser-facing.
 - No question links or annotations have been created yet, so existing question review fingerprints and simulator eligibility are unchanged.
 - Next task: Batch 06, at least 25 breadth-first questions, with these five assets linked to selected radiology/pathology questions before AI-test Medical/References/Rights review so media is included in the original review fingerprints.
+
+
+## M02b/M10a controlled multimodal breadth pilot 06 — 2026-09-28
+- PR #86 merged `pilot:multimodal-breadth:20260928:06`: 25 original AI-drafted questions, 25 new canonical concepts and 9 source clusters.
+- Breadth coverage: neonatal resuscitation, acute pancreatitis, epilepsy evaluation, depression, radiology and pathology.
+- The first 5 real multimodal questions are linked to exact immutable media versions before review: 3 radiology + 2 pathology, all prompt role with `blindFirstLook=true`.
+- The five media assets are private-storage-backed, exact-byte SHA-256 identified and carry canonical `rightsStatus=public_domain` from CC0 sources.
+- NICE-derived draft items were removed before intake after current NICE AI-reuse terms were checked; neurology/psychiatry items instead use NINDS/NIMH public-domain sources.
+- Exact merged manifest passed live intake validation 25/25 with 0 lexical-overlap flags at threshold 0.55.
+- Manifest SHA-256: `a9d3cc5b3f60a5b8996755c06c52fa460d6d23314a4ab76325ffc2635e51d45b`.
+- Promotion advanced canonical catalog version 33 → 34.
+- Production state remains 25 `in_review`, 0 verified and 0 published for Pilot 06; 0 human review events and 0 production source-rights events were created.
+- Separate `ai-test-review-v1` evidence recorded 9 source-rights decisions and 75 question-gate approvals. All 75 question fingerprints and all 9 source fingerprints match current targets after media linking.
+- Live media integrity proof: 5/5 question-media links resolve to public-domain prompt assets with blind-first-look enabled.
+- Internal-test readiness is now **131/180**: 6 human-published + 125 AI-test-only, shortage 49.
+- Production readiness remains **6/180**, shortage 174.
+- Human production review backlog is now Medical 125 / References 125 / Rights 125.
+- The next autonomous content batch should contain exactly 49 breadth-first source-grounded questions if quality permits, reaching the internal simulator requirement without unnecessary overproduction.
