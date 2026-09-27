@@ -253,3 +253,27 @@ test('Study Now session state restores explainable recommendation context from i
   assert.match(source, /source: "study-now"/);
   assert.match(source, /recommendationContext/);
 });
+
+
+test('concept diagnostics expose observations and explicitly withhold mastery inference', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/diagnostics\/concepts"/);
+  assert.match(source, /study_concept_evidence/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /scope: "observed-concept-evidence"/);
+  assert.match(source, /inferenceEnabled: false/);
+  assert.match(source, /knowledgeState: "unestimated"/);
+  assert.match(source, /mastery: null/);
+  assert.match(source, /forgetting: null/);
+  assert.match(source, /confidence: null/);
+});
+
+test('concept diagnostics preserve uncertainty from sparse and missing evidence', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /single-question-version-only/);
+  assert.match(source, /no-repeat-retrieval/);
+  assert.match(source, /no-memory-self-report/);
+  assert.match(source, /partial-memory-self-report/);
+  assert.match(source, /transfer-evidence-not-modeled/);
+  assert.match(source, /concept-not-in-current-catalog/);
+});
