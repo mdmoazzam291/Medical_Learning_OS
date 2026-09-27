@@ -49,3 +49,9 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 - M05b — DONE: persisted learner-scoped revision projection, authenticated due-queue API and hosted learner-page verification are live.
 - M05c — IN PROGRESS: time-budgeted Study Now v2, explainable mistake-repair/due-revision/new-learning classes, immutable recommendation receipts and descriptive outcome projection are live; a real due-item hosted start → answer → reschedule proof remains.
 - M05d — IN PROGRESS: FSRS-compatible memory evidence, deterministic shadow scheduling, immutable policy evaluation and an inert randomized-experiment framework are live; production remains bootstrap-controlled until real fully-rated histories and delayed-retrieval evidence justify a separately versioned experiment.
+
+
+## M06 slices
+- M06a — IN PROGRESS: canonical concept-linked note version storage, learner-scoped personal annotation CRUD, export and responsive hosted NeuralVault workspace are live; one real authenticated personal-note lifecycle remains to be exercised on the hosted UI.
+- M06b — NEXT: extend the existing content-review/publication system to canonical NeuralVault note versions; no medical canonical note may become learner-visible without source/review/right gates.
+- M06c — PLANNED: concept/note search, update-aware annotation UX and retrieval links from Study Now/QBank.
