@@ -861,6 +861,72 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "GET" && path === "/diagnostics/mistakes") {
+      const [{ data, error }, catalog] = await Promise.all([
+        admin.rpc("study_mistake_evidence", { p_learner: learnerId }),
+        getCatalog()
+      ]);
+      if (error) fail(500, "mistake_evidence_projection_failed");
+
+      const conceptMap = new Map(
+        (Array.isArray(catalog.body?.concepts) ? catalog.body.concepts : [])
+          .map((concept: any) => [String(concept.conceptId), concept])
+      );
+      const publishedQuestionMap = new Map(
+        publishedQuestions(catalog.body)
+          .map((question: any) => [String(question.questionVersionId), question])
+      );
+
+      const fingerprints = (Array.isArray(data?.fingerprints) ? data.fingerprints : []).map((row: any) => {
+        const conceptId = String(row.conceptId ?? "");
+        const concept = conceptMap.get(conceptId);
+        const episodes = (Array.isArray(row.episodes) ? row.episodes : []).map((episode: any) => {
+          const currentQuestion = publishedQuestionMap.get(String(episode.questionVersionId ?? ""));
+          return {
+            ...episode,
+            currentQuestion: currentQuestion ? {
+              questionVersionId: currentQuestion.questionVersionId,
+              stem: currentQuestion.stem
+            } : null
+          };
+        });
+        const uncertaintyReasons = ["error-cause-not-observed", "transfer-error-pattern-not-modeled"];
+        if (Number(row.affectedQuestionVersions ?? 0) < 2) {
+          uncertaintyReasons.push("single-question-version-error-evidence");
+        }
+        if (!episodes.some((episode: any) => Number.isInteger(episode.memoryRating))) {
+          uncertaintyReasons.push("no-error-memory-self-report");
+        }
+
+        return {
+          conceptId,
+          label: concept?.label ?? conceptId,
+          aliases: Array.isArray(concept?.aliases) ? concept.aliases : [],
+          subjectTags: Array.isArray(concept?.subjectTags) ? concept.subjectTags : [],
+          observed: {
+            ...row,
+            episodes
+          },
+          interpretation: {
+            status: "observational-only",
+            causeInferenceEnabled: false,
+            causes: []
+          },
+          uncertainty: {
+            reasons: uncertaintyReasons
+          }
+        };
+      });
+
+      return response(req, 200, {
+        generatedAt: new Date().toISOString(),
+        contractId: data?.contractId ?? "mistake-observation-v1",
+        scope: "observed-mistake-evidence",
+        causeInferenceEnabled: false,
+        fingerprints
+      });
+    }
+
     if (req.method === "GET" && path === "/diagnostics/concepts") {
       const [{ data, error }, catalog] = await Promise.all([
         admin.rpc("study_concept_evidence", { p_learner: learnerId }),
