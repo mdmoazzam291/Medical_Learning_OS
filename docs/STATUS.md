@@ -477,3 +477,13 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - This closes M06b: the canonical note lifecycle has now been exercised end to end without collapsing review approval into publication.
 - During M06c verification, a deep-link startup defect was identified: QBank generated `/web/vault.html?concept=<conceptId>`, but NeuralVault startup ignored the query parameter and merely selected the first catalog concept.
 - NeuralVault startup now reads the requested `concept` query parameter and passes it through normal catalog validation before loading the detail. This preserves correct navigation as the concept catalog grows.
+
+
+## M06 hosted search + personal annotation create/edit proof — 2026-09-27
+- Real authenticated NeuralVault search for `anaphylaxis` returned the exact canonical concept and showed the published canonical-note indicator.
+- Learner created a personal annotation for `emergency:anaphylaxis:first-line-treatment` and edited it once in the hosted UI.
+- Backend verification shows exactly one annotation row for that concept, revision 2, created and updated in separate writes.
+- The annotation is anchored to canonical note version 1, and that anchor currently points to the published canonical note.
+- Current database state for this concept contains one personal annotation total, so no duplicate row was created by the edit path.
+- Hosted create/edit persistence is therefore confirmed. M06a still retains the explicit hosted delete/reload proof before its CRUD release gate is fully closed.
+- M06c search/deep-link/personal-note hosted proof is complete; later Study Now → NeuralVault retrieval integration remains.
