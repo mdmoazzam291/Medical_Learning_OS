@@ -391,3 +391,23 @@ Completion is a special atomic transition that also creates exactly one immutabl
 Browser clients do not directly mutate exam-run tables or ledgers. They act through trusted application services.
 
 Do not start a nominal 180-question full mock unless 180 distinct eligible reviewed/published question versions can actually be assembled. Duplicating a tiny content pool to satisfy the count would create fake exam realism and corrupt subsequent analytics.
+
+
+## ADR-038 — Separate exam-rule fidelity from content-mix fidelity and content capacity (accepted, 2026-09-27)
+A simulator can faithfully reproduce timing, scoring and navigation while still having an unrepresentative question pool. These are different properties and must never be collapsed into one readiness label.
+
+For every full mock, report at least:
+- exact pinned ruleset identity and rule fingerprint;
+- required unique question count;
+- eligible unique stable-question count;
+- shortage;
+- assembly-policy identity;
+- whether an exam-blueprint content distribution has actually been established.
+
+Published versions of the same stable question count once toward capacity. This prevents version history from manufacturing fake inventory.
+
+The current assembly policy may sample distinct reviewed/published questions deterministically from the available pool, but it is explicitly `unstratified-reviewed-pool` with `examBlueprintFidelity=false`.
+
+Therefore, passing the 180-question capacity gate means only that a technically valid full-length mock can be assembled without duplicate stable items. It does not prove that the subject/topic mix mirrors NEET-PG.
+
+Do not expose answer keys through readiness or assembly APIs. Assembly remains a trusted server operation and the browser receives only the readiness summary until a run is actually created.
