@@ -625,3 +625,27 @@ Stable domain/artifact identity must remain independent of any future signature,
 
 No production signing key, proof system, blockchain anchor, credential system or post-quantum primitive is introduced by this ADR.
 
+## ADR-048 — Learner evidence is append-only in normal operation but erasable through one explicit privacy transaction (accepted, 2026-09-28)
+Append-only evidence and privacy rights are both invariants. Neither overrides the other.
+
+Normal operation:
+- observed learner evidence, memory self-report, Study Now recommendation receipts, scheduler decision evidence and experiment assignment evidence cannot be UPDATEd or DELETEd;
+- exam transition/completion ledgers remain immutable;
+- mutable application state such as sessions, revision projections, bookmarks and personal annotations remains mutable under its existing domain rules.
+
+Privacy erasure:
+- one service-only transaction may DELETE learner-scoped data across the complete registered privacy scope;
+- the transaction uses a narrow transaction-local DELETE bypass that is opened only inside the erasure function and explicitly closed before receipt creation;
+- UPDATE remains forbidden even during erasure;
+- deletion order respects foreign-key dependencies;
+- the function fails closed if any future public table with a `learner_id` column is not mapped into the current privacy scope;
+- the function verifies that zero scoped rows remain before returning success.
+
+The durable erasure receipt must not retain learner ID, learner hash/digest, subject ID or other learner-derived identifier. It stores only a random erasure receipt ID, scope/contract version, coarse reason class, total row count and completion time.
+
+Erasure v1 deletes product data only. Supabase Auth user deletion and auth-session/token revocation are separate application/admin operations. For account closure, revoke sessions first, erase product data second, then delete the Auth user. Do not assume deleting `auth.users` first is sufficient; current foreign keys/immutable ledgers intentionally make that fail closed.
+
+De-identification is not implemented in v1 because there is no current population-research store whose retention benefit justifies the additional privacy complexity. If de-identified research retention becomes necessary, define it separately with re-identification risk analysis and explicit retention policy.
+
+Database evolution rule: any new learner-scoped table must update the privacy scope in the same change. A migration that introduces personal learner storage without an erasure mapping is incomplete.
+

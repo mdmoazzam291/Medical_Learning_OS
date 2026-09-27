@@ -79,3 +79,18 @@ Accepted governing principles:
 
 Implementation is intentionally smaller than the full conceptual technology list: shared canonical integrity, a semantic capability vocabulary and pure action/audit contracts. Model/agent/tool/trust provider runtimes are deferred until an active milestone requires them.
 
+## Privacy/evidence integrity reconciliation — 2026-09-28
+
+The canonical evidence-ledger architecture now explicitly reconciles append-only history with learner privacy rights.
+
+Accepted rule:
+- ordinary learning evidence is append-only;
+- privacy erasure is a separately authorized destructive operation;
+- no subsystem may use append-only/audit requirements as a reason to retain learner-identifying evidence after a valid erasure request;
+- no subsystem may use privacy deletion as permission for routine history rewriting;
+- new learner-scoped storage must ship with an erasure mapping;
+- durable erasure receipts must avoid learner identifiers/derived fingerprints;
+- account closure requires auth-session revocation and Auth-user deletion outside the product-data erasure transaction.
+
+Current implementation is erasure-only. De-identification/research retention is deliberately deferred until there is a concrete M11 research requirement and explicit re-identification-risk review.
+

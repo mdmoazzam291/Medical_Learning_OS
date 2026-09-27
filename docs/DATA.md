@@ -163,3 +163,30 @@ Digest envelopes include algorithm/profile metadata. This is the future migratio
 
 Stable domain identifiers remain separate from database/location/provider identity. A concept/question/exam/artifact identifier must not depend on a Supabase URL, R2 path, cloud host, signature algorithm or future ledger.
 
+## Learner erasure contract v1
+
+Contract IDs:
+- scope: `learner-privacy-scope-v1`;
+- preview: `learner-erasure-preview-v1`;
+- erasure: `learner-erasure-v1`.
+
+Current registered learner-data tables:
+- `exam_run_events`;
+- `exam_run_receipts`;
+- `exam_runs`;
+- `neural_personal_annotations`;
+- `study_attempts`;
+- `study_bookmarks`;
+- `study_memory_judgments`;
+- `study_policy_experiment_assignments`;
+- `study_recommendation_events`;
+- `study_revision_state`;
+- `study_schedule_decision_events`;
+- `study_sessions`.
+
+The scope function compares this allowlist to the live schema's public `learner_id` columns. Missing or unmapped tables make erasure unavailable until the scope contract is updated.
+
+The persistent receipt table intentionally stores no learner identifier or derived learner fingerprint. Per-table deletion counts are transient response data only.
+
+Projection behavior after erasure is simple in v1: all learner-owned projections/state rows are deleted together with their source evidence. There is therefore no residual learner projection to rebuild. If future shared/population projections retain de-identified contributions, they require a separate privacy/rebuild contract.
+
