@@ -568,3 +568,60 @@ Physical evidence stores may remain specialized. A source becomes part of the ca
 
 Current integrity caveat: several pre-ADR evidence tables are application-append-only but do not yet have database UPDATE/DELETE guards. Do not add blanket DELETE blockers until the privacy deletion/de-identification path is defined. Source hardening and privacy purge semantics must be designed together.
 
+## ADR-046 — Future Capability Kernel is a set of seams, not a speculative subsystem (accepted, 2026-09-28)
+Medical Learning OS should maximize future optionality while minimizing present infrastructure.
+
+The durable Learning Core remains:
+- canonical medical knowledge/content;
+- canonical learner evidence and replay;
+- Preparation Digital Twin projections;
+- Memory and Mistake systems;
+- Study Now;
+- Adaptive Teaching;
+- QBank/NeuralVault/exam/clinical/multimodal actuators;
+- analytics and validated research projections.
+
+Technology-specific intelligence, agent, interoperability, identity, trust and cryptographic systems stay outside that core behind small semantic contracts when they earn their complexity.
+
+The first Future Capability foundation is deliberately limited to:
+- deterministic canonical serialization + digest metadata;
+- a small vendor-neutral capability vocabulary;
+- versioned ActionEnvelope / ActionReceipt validation.
+
+Domain code should name stable capabilities such as `learning.study.recommend` rather than vendor/framework names.
+
+Future actors may include humans, system services, institutions or bounded agents, but no actor gains arbitrary database-write authority. Canonical mutation must continue through authorization/policy → domain command → validation → transaction → canonical event/state → receipt.
+
+Do not create unused provider classes merely because a future technology is imaginable. Introduce provider/runtime interfaces when a real implementation boundary exists or replacement cost is material.
+
+Explicitly inactive today:
+- commercial/frontier AI SDK dependencies;
+- autonomous agent runtime, multi-agent runtime or swarms;
+- MCP/A2A servers or protocol-specific internal architecture;
+- blockchain/Web3/token/wallet infrastructure;
+- ZK proving infrastructure;
+- DID/credential-wallet infrastructure;
+- production signing keys or signing service;
+- post-quantum runtime/libraries.
+
+Activation requires a concrete product, security or interoperability requirement that justifies cost, risk, operational burden and vendor dependency. Basic learning must continue if every optional provider is unavailable.
+
+## ADR-047 — New attestable artifacts use explicit canonicalization/digest profiles; historical hashes are never rewritten (accepted, 2026-09-28)
+New integrity-aware contracts may use the shared `canonical-integrity` primitive.
+
+Current profile:
+- `profileVersion=1`;
+- `canonicalizationAlgorithm=JCS-RFC8785`;
+- `digestAlgorithm=SHA-256`.
+
+For supported JSON-domain values:
+same logical value → same canonical bytes → same digest, independent of ordinary object property insertion order.
+
+Digest envelopes carry the profile and algorithms with the digest. Unsupported profiles fail closed.
+
+This does **not** migrate, recompute or reinterpret historical fingerprints already stored by content review, exam rules, intake manifests, recommendation policies, NeuralVault or other existing systems. Their historical semantics remain authoritative for those records.
+
+Stable domain/artifact identity must remain independent of any future signature, proof or ledger witness. A later signature/proof layer may bind to a digest, but changing signing/proof technology must not change the underlying artifact identity.
+
+No production signing key, proof system, blockchain anchor, credential system or post-quantum primitive is introduced by this ADR.
+
