@@ -104,3 +104,13 @@ Study Now continues to own next-action policy. A Digital Twin model may provide 
 
 No fixed sample-size/calibration thresholds are treated as universal truth. Production thresholds must be justified and locked by each future model's research/validation plan.
 
+## Autonomous medical-question intake authorization — 2026-09-28
+
+The user explicitly authorized Medical Learning OS to create and add source-grounded medical-question batches without requiring repeated user intervention.
+
+Interpretation:
+- autonomous drafting, source verification, duplicate/overlap preflight, repository integration, staging and promotion into `in_review` are authorized;
+- this authorization does not permit fabrication of human review events, rights decisions, or publication approvals;
+- batch size should be chosen by the system according to quality/review capacity rather than maximizing raw question count;
+- review debt, concept coverage, source reuse, medical uncertainty and measurable learner value should determine when another batch is worthwhile.
+
