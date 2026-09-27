@@ -676,3 +676,29 @@ Prospective experiment eligibility additionally requires prospective shadow comp
 
 The gate itself introduces no learner-state table, no mastery score, no model training pipeline and no production prediction. It is a safety/validation contract only.
 
+## ADR-050 — AI review may authorize internal testing but never production publication (accepted, 2026-09-28)
+
+The user authorized Medical Learning OS to perform Medical, References and Rights review autonomously until enough questions exist to exercise the exam-testing path, unless the user explicitly takes review back over.
+
+This creates a separate evidence class rather than weakening or impersonating the human-review system.
+
+AI-test review:
+- is recorded in `content_ai_test_review_events` and `content_ai_test_source_rights`;
+- identifies the reviewer principal, policy, model label, notes, target/source fingerprint and timestamp;
+- is immutable after recording;
+- is available only through service-role trusted functions;
+- may make an original/AI-generated `in_review` item eligible for **internal simulator testing** after all three AI-test gates are current and approved;
+- cannot change the question to `verified` or `published`;
+- cannot write human `content_review_events`;
+- cannot create production `source_rights_events`;
+- cannot grant itself browser or production publication authority.
+
+Production learner content remains governed by the existing human Medical/References/Rights evidence and separate trusted publication transition.
+
+The simulator therefore has two distinct readiness contracts:
+- production readiness: human-reviewed, published content only;
+- internal-test readiness: production-published content plus explicitly AI-test-reviewed content.
+
+An internal-test-ready mock is not evidence of production content quality or exam-blueprint fidelity.
+
+Autonomous content prioritization should target NEET-PG and INI-CET value. Verified Exam DNA/PYQ evidence has first priority when it exists. When it does not exist, use transparent heuristics such as canonical coverage gaps, prerequisite/clinical-transfer value and source-cluster efficiency, while never inventing exam frequency or PYQ provenance.

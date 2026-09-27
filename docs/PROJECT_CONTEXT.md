@@ -114,3 +114,16 @@ Interpretation:
 - batch size should be chosen by the system according to quality/review capacity rather than maximizing raw question count;
 - review debt, concept coverage, source reuse, medical uncertainty and measurable learner value should determine when another batch is worthwhile.
 
+## AI test-review and exam-value intake authorization — 2026-09-28
+
+The user explicitly extended autonomous content authority:
+- Medical Learning OS should choose future medical-question concepts using NEET-PG/INI-CET value and coverage rather than raw inventory growth;
+- the system may itself perform Medical, References and Rights assessment until enough questions exist for the required internal testing, unless the user explicitly says they will take those approvals over;
+- each autonomous batch should contain at least 25 questions when a new batch is warranted.
+
+Implementation interpretation:
+- AI review is truthful `internal_testing_only` evidence, never a fabricated human review;
+- human Medical/References/Rights events and production publication remain a separate trust boundary;
+- AI-reviewed items may exercise internal simulator/QBank engineering paths but cannot become production learner content solely through AI approval;
+- verified Exam DNA/PYQ evidence should drive exam prioritization when available; otherwise prioritization is explicitly heuristic and must not invent exam frequency or PYQ provenance;
+- generation stops when the verified test-inventory requirement is reached unless replacement items are necessary.

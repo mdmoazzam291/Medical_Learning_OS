@@ -179,3 +179,29 @@ Batch `pilot:infectious-prevention:20260927:02` scales the same governed loop to
 The first pilot showed that evidence entry, particularly Rights review, consumes meaningful reviewer time. The reviewer workspace may therefore prefill **editable draft notes** and **editable source-policy evidence** from the non-authoritative preflight packet. The reviewer must still inspect the exact target, choose every review/right outcome and submit every decision. No draft text has authority by itself.
 
 Do not create the next content batch until this 25-question review loop yields measured throughput, rejection/revision reasons and source-reuse effects.
+
+## AI test-only review lane — 2026-09-28
+
+The earlier 25-question throughput hold remains the rule for **production human-review scaling**, but it no longer blocks a separate internal-testing lane.
+
+The user has authorized autonomous AI Medical/References/Rights assessment until the internal simulator inventory reaches the verified question requirement or the user explicitly takes review back over.
+
+The two lanes must never be conflated:
+
+| Lane | Review evidence | Eligible use | Production publish? |
+|---|---|---|---|
+| Production | authenticated human Medical + References + Rights + source-rights evidence | learner-facing QBank / production exam content | yes, through the separate trusted publication transition |
+| Internal test | immutable AI-test Medical + References + Rights + AI-test source-rights evidence | simulator/QBank engineering and internal test readiness | **no** |
+
+AI-test review:
+- applies only to original/AI-generated `in_review` questions;
+- records the exact current gate/source fingerprints;
+- records AI principal, policy, model label and evidence notes;
+- is immutable and service-only;
+- must reject or withhold approval when medical/source/rights evidence is not adequately supported;
+- never writes `content_review_events` or `source_rights_events`;
+- never changes catalog status to `verified` or `published`.
+
+Future autonomous batches use at least 25 questions and are selected for NEET-PG/INI-CET value. Verified Exam DNA/PYQ evidence takes priority when it exists. Otherwise selection is explicitly heuristic from canonical coverage, transfer/prerequisite value and source efficiency. Exam frequency must never be invented.
+
+Internal generation stops when the verified exam rule-set question requirement is met, except when rejected or invalid items require replacement.
