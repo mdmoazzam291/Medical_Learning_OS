@@ -56,3 +56,22 @@ test('review-api reads only active reviewer grants through the database policy',
   assert.match(source, /admin\.rpc\("get_active_reviewer_grants", \{ p_reviewer: reviewerId \}\)/);
   assert.doesNotMatch(source, /admin\.from\("content_reviewer_grants"\).*select\("review_kind"\)/s);
 });
+
+
+test('review-api exposes NeuralVault note queues through the same active reviewer grants', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/note-queue"/);
+  assert.match(source, /neural_canonical_note_versions/);
+  assert.match(source, /target_type", "neural_note_version"/);
+  assert.match(source, /note\?\.author_id !== reviewerId/);
+  assert.match(source, /requireGrant\(kind\)/);
+});
+
+test('review-api records NeuralVault gate decisions with server-derived reviewer identity', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/note-reviews"/);
+  assert.match(source, /record_neural_note_review/);
+  assert.match(source, /p_reviewer: reviewerId/);
+  assert.doesNotMatch(source, /p_reviewer:\s*input\./);
+  assert.match(source, /neural_note_not_in_review/);
+});
