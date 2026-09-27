@@ -7,9 +7,10 @@
     "batchKeys": [
       "pilot:rabies:20260927:01",
       "pilot:infectious-prevention:20260927:02",
-      "pilot:acute-medicine:20260928:03"
+      "pilot:acute-medicine:20260928:03",
+      "pilot:india-national-programs:20260928:04"
     ],
-    "questionCount": 55
+    "questionCount": 80
   },
   "policy": {
     "mayApproveReviewGate": false,
@@ -124,6 +125,51 @@
       "rightsBasisUrl": "https://diabetesjournals.org/journals/pages/reprints-and-permissions",
       "rightsBasisSummary": "ADA states that journal content is protected by copyright and may require permission for reuse. Medical Learning OS uses factual diagnostic thresholds only to draft original questions and does not reproduce ADA tables, figures, or article wording; citation_only is the conservative review-assist recommendation.",
       "draftRightsEvidence": "ADA states that journal content is protected by copyright and may require permission for reuse. Medical Learning OS uses factual diagnostic thresholds only to draft original questions and does not reproduce ADA tables, figures, or article wording; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
+    },
+    {
+      "sourceId": "mohfw:uip:nis-accessed-2026-09-28",
+      "sourceUrl": "https://mohfw.gov.in/sites/default/files/Unit2NationalImmunizationSchedule.pdf",
+      "supportSummary": "The official MoHFW National Immunization Schedule supports hepatitis B birth dose within 24 hours, OPV-0 within the first 15 days, fractional IPV at 6 and 14 weeks, PCV booster at 9–12 months, and MR first dose at 9–12 months.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://mohfw.gov.in/sites/default/files/Unit2NationalImmunizationSchedule.pdf",
+      "rightsBasisSummary": "No programme-specific reuse licence is asserted here. The items use only factual schedule propositions in original wording and reproduce no table/layout; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+      "draftRightsEvidence": "No programme-specific reuse licence is asserted here. The items use only factual schedule propositions in original wording and reproduce no table/layout; citation_only is the conservative internal-test recommendation pending independent production rights review. Record citation_only for this source unless independent production rights review supports a different exact-use status."
+    },
+    {
+      "sourceId": "dghs:nlep:revised-treatment-accessed-2026-09-28",
+      "sourceUrl": "https://dghs.mohfw.gov.in/nlep.php",
+      "supportSummary": "The current DGHS/NLEP page supports the revised PB/MB classification, nerve-involvement criterion, three-drug MDT for both PB and MB, and adult treatment durations of 6 months for PB and 12 months for MB.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://dghs.mohfw.gov.in/nlep.php",
+      "rightsBasisSummary": "No programme-specific reuse licence is asserted here. The items use programme facts in original wording without copying the NLEP classification/treatment table; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+      "draftRightsEvidence": "No programme-specific reuse licence is asserted here. The items use programme facts in original wording without copying the NLEP classification/treatment table; citation_only is the conservative internal-test recommendation pending independent production rights review. Record citation_only for this source unless independent production rights review supports a different exact-use status."
+    },
+    {
+      "sourceId": "ncvbdc:malaria-control-accessed-2026-09-28",
+      "sourceUrl": "https://ncvbdc.mohfw.gov.in/index4.php?font=Decrease&lang=1&level=0&lid=3707&linkid=421",
+      "supportSummary": "Current NCVBDC malaria strategy supports parasitological confirmation by quality-assured RDT or microscopy, the testing-treating-tracking approach, the 2027 Category-0 target for all States/UTs, and current definitions of relapse and recrudescence.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://ncvbdc.mohfw.gov.in/index4.php?lang=1&level=0&lid=3827&linkid=537",
+      "rightsBasisSummary": "NCVBDC permits use subject to prominent source acknowledgement and excludes third-party copyrighted material from blanket permission. The questions use original wording and factual propositions only; citation_only is the conservative internal-test recommendation.",
+      "draftRightsEvidence": "NCVBDC permits use subject to prominent source acknowledgement and excludes third-party copyrighted material from blanket permission. The questions use original wording and factual propositions only; citation_only is the conservative internal-test recommendation. Record citation_only for this source unless independent production rights review supports a different exact-use status."
+    },
+    {
+      "sourceId": "ntep:drtb-guidelines-2025-accessed-2026-09-28",
+      "sourceUrl": "https://tbcindia.mohfw.gov.in/wp-content/uploads/2025/03/National-Guidelines-for-Management-of-DR-TB_27-3-2025.pdf",
+      "supportSummary": "The current NTEP DR-TB guideline supports BPaLM composition, BPaLM first preference for eligible MDR/RR-TB patients aged 14 years or older, the requirement that FQ resistance not be detected for the 9–11 month shorter oral regimen, a 26-week BPaLM course with possible extension to 39 weeks, and additional microbiological evaluation when clinical improvement is absent by 9 weeks.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://tbcindia.mohfw.gov.in/copyright-policy/",
+      "rightsBasisSummary": "Central TB Division permits reuse subject to prominent acknowledgement while excluding third-party copyrighted material. The questions use original wording and do not reproduce guideline tables/algorithms; citation_only is the conservative internal-test recommendation.",
+      "draftRightsEvidence": "Central TB Division permits reuse subject to prominent acknowledgement while excluding third-party copyrighted material. The questions use original wording and do not reproduce guideline tables/algorithms; citation_only is the conservative internal-test recommendation. Record citation_only for this source unless independent production rights review supports a different exact-use status."
+    },
+    {
+      "sourceId": "naco:hiv-care-treatment-2021-accessed-2026-09-28",
+      "sourceUrl": "https://naco.gov.in/sites/default/files/National_Guidelines_for_HIV_Care_and_Treatment_2021.pdf",
+      "supportSummary": "NACO HIV care guidance supports PEP consideration within 72 hours, a 28-day ARV course, national-programme coverage for occupational exposures and sexual-assault victims, informed-consent source testing when feasible, and comprehensive PEP management including first aid, counselling, risk assessment, investigations, ARVs and follow-up.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://www.sochtraining.naco.gov.in/index.html",
+      "rightsBasisSummary": "NACO's SOCH copyright policy requires acknowledgement/permission conditions and excludes third-party material. The questions use factual propositions in original wording and reproduce no protected tables or source text; citation_only is the conservative internal-test recommendation.",
+      "draftRightsEvidence": "NACO's SOCH copyright policy requires acknowledgement/permission conditions and excludes third-party material. The questions use factual propositions in original wording and reproduce no protected tables or source text; citation_only is the conservative internal-test recommendation. Record citation_only for this source unless independent production rights review supports a different exact-use status."
     }
   ],
   "questions": [
@@ -1470,6 +1516,631 @@
           "ada:diagnosis-classification:2026-accessed-2026-09-28"
         ],
         "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "immunization:uip:hepb-birth-24h@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The National Immunization Schedule places the hepatitis B birth dose at birth or as early as possible within 24 hours.",
+        "draftNote": "Current Ministry of Health and Family Welfare: National Immunization Schedule supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The cited Ministry of Health and Family Welfare: National Immunization Schedule source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Ministry of Health and Family Welfare: National Immunization Schedule, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "immunization:uip:opv0-first-15-days@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The schedule lists OPV-0 at birth or as early as possible within the first 15 days.",
+        "draftNote": "Current Ministry of Health and Family Welfare: National Immunization Schedule supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The cited Ministry of Health and Family Welfare: National Immunization Schedule source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Ministry of Health and Family Welfare: National Immunization Schedule, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "immunization:uip:fipv-6-14-weeks@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The schedule gives fractional IPV at 6 and 14 weeks.",
+        "draftNote": "Current Ministry of Health and Family Welfare: National Immunization Schedule supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The cited Ministry of Health and Family Welfare: National Immunization Schedule source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Ministry of Health and Family Welfare: National Immunization Schedule, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "immunization:uip:pcv-booster-9-12m@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The National Immunization Schedule places the PCV booster at 9–12 months after primary doses at 6 and 14 weeks.",
+        "draftNote": "Current Ministry of Health and Family Welfare: National Immunization Schedule supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The cited Ministry of Health and Family Welfare: National Immunization Schedule source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Ministry of Health and Family Welfare: National Immunization Schedule, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "immunization:uip:mr1-9-12m@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The schedule gives the first measles-rubella dose at 9 completed months to 12 months.",
+        "draftNote": "Current Ministry of Health and Family Welfare: National Immunization Schedule supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The cited Ministry of Health and Family Welfare: National Immunization Schedule source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Ministry of Health and Family Welfare: National Immunization Schedule, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "mohfw:uip:nis-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:leprosy:pb-revised-classification@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The revised NLEP table classifies PB disease by 1–5 lesions, no nerve involvement and a negative slit-skin smear.",
+        "draftNote": "Current DGHS National Leprosy Eradication Programme: revised classification and treatment protocol supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The cited DGHS National Leprosy Eradication Programme: revised classification and treatment protocol source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, DGHS National Leprosy Eradication Programme: revised classification and treatment protocol, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:leprosy:nerve-involvement-mb@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The revised classification places one or more involved nerves in the multibacillary category.",
+        "draftNote": "Current DGHS National Leprosy Eradication Programme: revised classification and treatment protocol supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The cited DGHS National Leprosy Eradication Programme: revised classification and treatment protocol source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, DGHS National Leprosy Eradication Programme: revised classification and treatment protocol, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:leprosy:three-drug-mdt-both@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The revised protocol uses three-drug MDT with rifampicin, dapsone and clofazimine for both PB and MB disease.",
+        "draftNote": "Current DGHS National Leprosy Eradication Programme: revised classification and treatment protocol supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The cited DGHS National Leprosy Eradication Programme: revised classification and treatment protocol source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, DGHS National Leprosy Eradication Programme: revised classification and treatment protocol, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:leprosy:pb-adult-six-months@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The revised NLEP regimen lists 6 months of MDT for adult paucibacillary disease.",
+        "draftNote": "Current DGHS National Leprosy Eradication Programme: revised classification and treatment protocol supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The cited DGHS National Leprosy Eradication Programme: revised classification and treatment protocol source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, DGHS National Leprosy Eradication Programme: revised classification and treatment protocol, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:leprosy:mb-adult-twelve-months@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The revised NLEP regimen lists 12 months of MDT for adult multibacillary disease.",
+        "draftNote": "Current DGHS National Leprosy Eradication Programme: revised classification and treatment protocol supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The cited DGHS National Leprosy Eradication Programme: revised classification and treatment protocol source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, DGHS National Leprosy Eradication Programme: revised classification and treatment protocol, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "dghs:nlep:revised-treatment-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:malaria:parasitological-confirmation@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "Current NCVBDC strategy emphasizes timely parasitological confirmation of suspected malaria using quality-assured RDTs or microscopy.",
+        "draftNote": "Current NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The cited NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, NCVBDC: Malaria control strategies and National Strategic Plan 2023-27, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:malaria:test-treat-track@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The strategy explicitly describes universal access to malaria diagnosis and treatment as testing, treating and tracking.",
+        "draftNote": "Current NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The cited NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, NCVBDC: Malaria control strategies and National Strategic Plan 2023-27, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:malaria:states-category-zero-2027@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The National Strategic Plan 2023–27 states that all States and Union Territories should reach Category 0, meaning zero indigenous cases, by 2027.",
+        "draftNote": "Current NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The cited NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, NCVBDC: Malaria control strategies and National Strategic Plan 2023-27, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:malaria:relapse-vivax-ovale@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The current national strategic plan defines relapse as malaria attributed to activation of previously acquired P. vivax or P. ovale hypnozoites.",
+        "draftNote": "Current NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The cited NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, NCVBDC: Malaria control strategies and National Strategic Plan 2023-27, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:malaria:recrudescence-definition@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The current national strategic plan defines recrudescence as recurrence of asexual parasitemia after treatment due to incomplete clearance of parasites of the same genotype.",
+        "draftNote": "Current NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The cited NCVBDC: Malaria control strategies and National Strategic Plan 2023-27 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, NCVBDC: Malaria control strategies and National Strategic Plan 2023-27, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ncvbdc:malaria-control-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:drtb:bpalm-components@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "BPaLM denotes bedaquiline, pretomanid, linezolid and moxifloxacin.",
+        "draftNote": "Current Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The cited Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:drtb:bpalm-first-preference-age14@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The guideline states that in patients aged 14 years or above with MDR/RR-TB, BPaLM is the first preference when eligible.",
+        "draftNote": "Current Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The cited Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:drtb:shorter-regimen-fq-susceptible@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "Eligibility includes rifampicin resistance with fluoroquinolone resistance not detected.",
+        "draftNote": "Current Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The cited Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:drtb:bpalm-duration-26-weeks@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The BPaLM follow-up schedule lists a 26-week course, with extension up to 39 weeks under specified criteria.",
+        "draftNote": "Current Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The cited Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:drtb:bpalm-no-improvement-week9@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "The guideline recommends additional microbiological evaluation and referral if a patient deteriorates or fails to improve by about 9 weeks.",
+        "draftNote": "Current Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The cited Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:hiv:pep-within-72h@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "NACO guidance states that PEP provision should be based on clinical consideration within 72 hours of exposure.",
+        "draftNote": "Current National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The cited National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:hiv:pep-duration-28-days@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "NACO describes PEP as including a short 28-day course of antiretroviral drugs with follow-up and support.",
+        "draftNote": "Current National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The cited National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:hiv:pep-program-coverage@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "NACO states that the national programme provides PEP for occupational exposures and victims of sexual assault; it does not extend programme PEP to every other high-risk exposure category.",
+        "draftNote": "Current National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The cited National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:hiv:pep-source-testing-consent@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "NACO guidance states that an identified source with unknown serostatus may be counselled and tested for HIV under informed consent.",
+        "draftNote": "Current National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The cited National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "infectious:hiv:pep-comprehensive-management@1",
+      "medical": {
+        "result": "supported",
+        "uncertainty": "low",
+        "summary": "NACO describes PEP as comprehensive management, not merely drug dispensing: it includes first aid, counselling, risk assessment, relevant baseline investigations, ARVs and follow-up support.",
+        "draftNote": "Current National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 supports the keyed answer for this original item. I checked the stem, options, answer key and explanation against the cited programme/guideline claim; no material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The cited National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021 source directly supports the keyed factual rule and explanation for this question.",
+        "draftNote": "The cited source, National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021, directly supports the keyed answer and explanation for this question. The source identity and programme/guideline context match the claim; no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "sourceIds": [
+          "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+        ],
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative internal-test recommendation pending independent production rights review.",
+        "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
       }
     }
   ]
