@@ -112,3 +112,37 @@ This is the long-term data moat. Raw clicks or total questions completed are ins
 ### Privacy and deletion
 
 Append-only evidence is an integrity pattern, not an exemption from deletion rights. Learner deletion must remove or irreversibly de-identify applicable learner evidence and rebuild affected projections according to the project's privacy contract.
+
+## Canonical learning event stream v1
+
+The repository now defines a canonical **replay contract** over selected existing learner evidence. It does not replace the physical source tables.
+
+Contract: `study-learning-event-stream-v1`.
+
+Mapped event families:
+- `question.answered` → class `observation`;
+- `memory.rating` → class `self_report`;
+- `study.recommendation_generated` → class `policy_decision`.
+
+Each stream event exposes:
+- stable `eventKey`;
+- event schema version, family and class;
+- `occurredAt` and `recordedAt`;
+- canonical `conceptId` / `questionVersionId` when the source supports them;
+- `sessionId` when available;
+- exact physical source table/id;
+- source-specific versioned payload.
+
+Ordering is deterministic by `recordedAt,eventKey`; replay supports a cursor over those two fields.
+
+This stream does **not** infer learner state. `inferenceAuthority=false` and `masteryInferenceEnabled=false` are part of the contract.
+
+Not yet mapped:
+- session start/end and exposure events, because current session storage is mutable state rather than immutable events;
+- answer-change, confidence, hint and explanation-view events, because they are not yet collected under explicit contracts;
+- scheduler policy decisions, which remain in their dedicated immutable-decision design;
+- raw exam-run transitions, pending canonical modality mappings;
+- NeuralVault personal annotations, which are mutable learner-owned content.
+
+The event-family roadmap remains additive and versioned. New sources join the canonical stream only after their semantics and privacy/integrity behavior are explicit.
+
