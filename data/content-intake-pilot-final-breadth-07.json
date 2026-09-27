@@ -1,0 +1,2909 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "obgyn:pph:early-action-300ml-vitals",
+      "label": "Early PPH action threshold",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "emergency-care",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:calibrated-drape",
+      "label": "Objective postpartum blood-loss measurement",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "measurement",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:motive-bundle",
+      "label": "MOTIVE PPH treatment bundle",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "treatment-bundle",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:uterine-massage",
+      "label": "Uterine massage in PPH",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "uterine-atony",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:txa-within-3h",
+      "label": "TXA timing in postpartum haemorrhage",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "tranexamic-acid",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:txa-dose-repeat",
+      "label": "TXA dose and repeat criterion in PPH",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "tranexamic-acid",
+        "pharmacology"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:persistent-bleeding-escalation",
+      "label": "Escalation for persistent PPH",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "postpartum-haemorrhage",
+        "escalation",
+        "guideline-who"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:optic-nerve",
+      "label": "Glaucoma optic-nerve injury",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "optic-nerve"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:open-angle-common",
+      "label": "Most common glaucoma type",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "open-angle"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:early-symptoms",
+      "label": "Early open-angle glaucoma symptoms",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "screening"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:diagnosis-dilated-field",
+      "label": "Glaucoma diagnostic examination",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "diagnosis"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:treatment-modalities",
+      "label": "Glaucoma treatment modalities",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "treatment"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:angle-closure-emergency",
+      "label": "Acute angle-closure glaucoma emergency",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "angle-closure",
+        "emergency-care"
+      ]
+    },
+    {
+      "conceptId": "ophthal:glaucoma:angle-closure-mechanism",
+      "label": "Angle-closure drainage mechanism",
+      "aliases": [],
+      "subjectTags": [
+        "ophthalmology",
+        "glaucoma",
+        "aqueous-humour"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:impulse-or-chronic",
+      "label": "Noise-induced hearing-loss exposure patterns",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "hearing-loss",
+        "noise"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:85dba-risk",
+      "label": "Repeated noise threshold associated with NIHL risk",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "decibel",
+        "noise"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:70dba-low-risk",
+      "label": "Lower sound level and hearing risk",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "decibel",
+        "prevention"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:hair-cells-do-not-regrow",
+      "label": "Cochlear hair-cell irreversibility",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "cochlea",
+        "hair-cells"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:temporary-or-permanent",
+      "label": "Clinical course of NIHL",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "hearing-loss"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:tinnitus",
+      "label": "Noise exposure and tinnitus",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "tinnitus",
+        "noise"
+      ]
+    },
+    {
+      "conceptId": "ent:nihl:louder-shorter-time",
+      "label": "Noise dose relationship",
+      "aliases": [],
+      "subjectTags": [
+        "ent",
+        "audiology",
+        "noise-dose",
+        "prevention"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:silent-disease",
+      "label": "Osteoporosis is often clinically silent",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "metabolic-bone"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:common-fracture-sites",
+      "label": "Common osteoporotic fracture sites",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "fracture"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:dxa-hip-spine",
+      "label": "Preferred bone-density assessment sites",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "dxa",
+        "diagnosis"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:qus-needs-dxa",
+      "label": "Heel ultrasound limitation",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "screening",
+        "dxa"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:glucocorticoid-risk",
+      "label": "Medication risk factor for osteoporosis",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "glucocorticoids",
+        "risk-factor"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:vertebral-fracture-signs",
+      "label": "Vertebral osteoporotic fracture presentation",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "vertebral-fracture"
+      ]
+    },
+    {
+      "conceptId": "ortho:osteoporosis:bisphosphonate-action",
+      "label": "Bisphosphonates in osteoporosis",
+      "aliases": [],
+      "subjectTags": [
+        "orthopedics",
+        "osteoporosis",
+        "bisphosphonates",
+        "pharmacology"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:clear-liquids-2h",
+      "label": "Preoperative clear-liquid fasting interval",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "aspiration"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:breast-milk-4h",
+      "label": "Preoperative breast-milk fasting interval",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "pediatrics"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:infant-formula-6h",
+      "label": "Preoperative infant-formula fasting interval",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "pediatrics"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:light-meal-6h",
+      "label": "Preoperative light-meal fasting interval",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "aspiration"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:fatty-meal-8h",
+      "label": "Fasting after fatty food or meat",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "gastric-emptying"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:clear-liquids-no-alcohol",
+      "label": "Definition of acceptable clear liquids",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "clear-liquids"
+      ]
+    },
+    {
+      "conceptId": "anesthesia:fasting:noncompliance-risk-benefit",
+      "label": "Management when fasting instructions are not followed",
+      "aliases": [],
+      "subjectTags": [
+        "anesthesia",
+        "preoperative-fasting",
+        "risk-assessment"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:common-symptoms",
+      "label": "Common carbon-monoxide poisoning symptoms",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "emergency-care"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:confirm-cohb",
+      "label": "Confirmatory test for CO poisoning",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "diagnosis"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:cohb-support-thresholds",
+      "label": "COHb levels strongly supporting CO poisoning",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "co-oximetry"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:oxygen-100-percent",
+      "label": "Initial oxygen therapy for CO poisoning",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "treatment"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:hbo-indications",
+      "label": "Hyperbaric oxygen consideration in CO poisoning",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "hyperbaric-oxygen"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:pregnancy-hbo",
+      "label": "CO poisoning in pregnancy",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "pregnancy"
+      ]
+    },
+    {
+      "conceptId": "toxicology:co:pulse-oximeter-limitation",
+      "label": "Conventional pulse oximetry in CO poisoning",
+      "aliases": [],
+      "subjectTags": [
+        "toxicology",
+        "forensic-medicine",
+        "carbon-monoxide",
+        "pulse-oximetry"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:immune-mediated",
+      "label": "Psoriasis pathophysiology",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "immunology"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:plaque-most-common",
+      "label": "Plaque psoriasis pattern",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "plaque"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:guttate-strep",
+      "label": "Guttate psoriasis trigger",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "guttate",
+        "streptococcus"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:inverse-flexures",
+      "label": "Inverse psoriasis distribution",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "inverse"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:erythrodermic-severe",
+      "label": "Erythrodermic psoriasis",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "erythrodermic"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:topical-mild-moderate",
+      "label": "Treatment of mild-to-moderate psoriasis",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "treatment",
+        "topical-steroids"
+      ]
+    },
+    {
+      "conceptId": "derm:psoriasis:phototherapy-large-area",
+      "label": "Phototherapy in psoriasis",
+      "aliases": [],
+      "subjectTags": [
+        "dermatology",
+        "psoriasis",
+        "phototherapy"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "who:pph:consolidated:2025",
+      "title": "WHO Consolidated guidelines for prevention, diagnosis and treatment of postpartum haemorrhage",
+      "url": "https://www.who.int/publications/i/item/9789240115637",
+      "version": "2025",
+      "rights": {
+        "status": "unknown",
+        "evidence": "WHO 2025 consolidated PPH guidance used only for factual grounding of original questions; no source tables, figures, layout, or substantial wording are reproduced. Production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "who:pph:txa:2017",
+      "title": "WHO recommendation on tranexamic acid for treatment of postpartum haemorrhage",
+      "url": "https://www.who.int/publications/i/item/9789241550154",
+      "version": "2017 recommendation accessed 2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "WHO TXA recommendation used only for factual grounding of original questions; no source tables, figures, layout, or substantial wording are reproduced. Production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "nei:glaucoma:accessed-2026-09-28",
+      "title": "National Eye Institute: Glaucoma",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "U.S. National Eye Institute material used for factual grounding of original questions. Government-source reuse status will be independently confirmed for production."
+      }
+    },
+    {
+      "sourceId": "nidcd:nihl:accessed-2026-09-28",
+      "title": "NIDCD: Noise-Induced Hearing Loss",
+      "url": "https://www.nidcd.nih.gov/health/noise-induced-hearing-loss",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "U.S. NIDCD material used for factual grounding of original questions. Government-source reuse status will be independently confirmed for production."
+      }
+    },
+    {
+      "sourceId": "niams:osteoporosis:accessed-2026-09-28",
+      "title": "NIAMS: Osteoporosis",
+      "url": "https://www.niams.nih.gov/health-topics/osteoporosis/basics/diagnosis-treatment-and-steps-to-take",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "U.S. NIAMS material used for factual grounding of original questions. Government-source reuse status will be independently confirmed for production."
+      }
+    },
+    {
+      "sourceId": "asa:preop-fasting:2017",
+      "title": "ASA Practice Guidelines for Preoperative Fasting",
+      "url": "https://www.asahq.org/~/media/sites/asahq/files/public/resources/standards-guidelines/practice-guidelines-for-preoperative-fasting.pdf",
+      "version": "2017 core guideline accessed 2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "ASA guideline used only for factual grounding of original questions; no tables, figures, layout, or substantial source expression are reproduced. Production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+      "title": "CDC Clinical Guidance for Carbon Monoxide Poisoning",
+      "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+      "version": "2024-07-08",
+      "rights": {
+        "status": "unknown",
+        "evidence": "CDC clinical guidance used for factual grounding of original questions. Government-source reuse status will be independently confirmed for production."
+      }
+    },
+    {
+      "sourceId": "niams:psoriasis:2023-10",
+      "title": "NIAMS: Psoriasis",
+      "url": "https://www.niams.nih.gov/health-topics/psoriasis",
+      "version": "last-reviewed-2023-10",
+      "rights": {
+        "status": "unknown",
+        "evidence": "U.S. NIAMS material used for factual grounding of original questions. Government-source reuse status will be independently confirmed for production."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "obgyn:pph:early-action-300ml-vitals",
+      "questionVersionId": "obgyn:pph:early-action-300ml-vitals@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "After a vaginal birth, measured blood loss reaches 320 mL and the patient develops abnormal vital signs. Under the 2025 WHO PPH guidance, what is the best interpretation?",
+      "options": [
+        {
+          "optionId": "act",
+          "text": "Treat this as an early trigger for postpartum haemorrhage action"
+        },
+        {
+          "optionId": "wait500",
+          "text": "Wait until blood loss reaches 500 mL regardless of vital signs"
+        },
+        {
+          "optionId": "wait1000",
+          "text": "Wait until blood loss reaches 1000 mL"
+        },
+        {
+          "optionId": "observe",
+          "text": "Observe without escalation if the uterus is firm"
+        }
+      ],
+      "answerOptionId": "act",
+      "explanation": "The 2025 WHO guidance advises action when postpartum blood loss reaches about 300 mL together with abnormal vital signs, allowing earlier recognition than a volume-only threshold.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:early-action-300ml-vitals",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:consolidated:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:calibrated-drape",
+      "questionVersionId": "obgyn:pph:calibrated-drape@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which tool is specifically promoted by WHO to improve early quantitative detection of postpartum blood loss after birth?",
+      "options": [
+        {
+          "optionId": "drape",
+          "text": "A calibrated blood-collection drape"
+        },
+        {
+          "optionId": "visual",
+          "text": "Visual estimation alone"
+        },
+        {
+          "optionId": "ct",
+          "text": "Abdominal CT"
+        },
+        {
+          "optionId": "urine",
+          "text": "Hourly urine volume alone"
+        }
+      ],
+      "answerOptionId": "drape",
+      "explanation": "WHO recommends objective postpartum blood-loss assessment, including calibrated drapes, to improve early recognition of excessive bleeding.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:calibrated-drape",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:consolidated:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:motive-bundle",
+      "questionVersionId": "obgyn:pph:motive-bundle@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which set best reflects the WHO MOTIVE response once postpartum haemorrhage is diagnosed?",
+      "options": [
+        {
+          "optionId": "motive",
+          "text": "Uterine massage, oxytocic drug, tranexamic acid, IV fluids, genital-tract examination, and escalation of care"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Antibiotic, diuretic, anticoagulation, CT, and observation"
+        },
+        {
+          "optionId": "surgeryonly",
+          "text": "Immediate hysterectomy without initial medical treatment"
+        },
+        {
+          "optionId": "uterotoniconly",
+          "text": "Uterotonic drug alone with no examination or resuscitation"
+        }
+      ],
+      "answerOptionId": "motive",
+      "explanation": "WHO describes an immediate bundled response combining uterine massage, oxytocic medication, tranexamic acid, intravenous fluids, genital-tract examination and escalation when bleeding persists.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:motive-bundle",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:consolidated:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:uterine-massage",
+      "questionVersionId": "obgyn:pph:uterine-massage@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A woman develops postpartum haemorrhage immediately after delivery. Which bedside intervention is part of the WHO first-response treatment bundle?",
+      "options": [
+        {
+          "optionId": "massage",
+          "text": "Uterine massage"
+        },
+        {
+          "optionId": "none",
+          "text": "Avoid uterine manipulation in all cases"
+        },
+        {
+          "optionId": "fundal-pressure",
+          "text": "Sustained fundal pressure to invert the uterus"
+        },
+        {
+          "optionId": "ice",
+          "text": "Apply only an abdominal ice pack"
+        }
+      ],
+      "answerOptionId": "massage",
+      "explanation": "Uterine massage is included in WHO's immediate PPH response bundle.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:uterine-massage",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:consolidated:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:txa-within-3h",
+      "questionVersionId": "obgyn:pph:txa-within-3h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "For clinically diagnosed postpartum haemorrhage, when should intravenous tranexamic acid be started according to WHO?",
+      "options": [
+        {
+          "optionId": "within3",
+          "text": "As early as possible and within 3 hours of birth"
+        },
+        {
+          "optionId": "after3",
+          "text": "Only after 3 hours have elapsed"
+        },
+        {
+          "optionId": "day2",
+          "text": "On the second postpartum day"
+        },
+        {
+          "optionId": "discharge",
+          "text": "At discharge if bleeding has stopped"
+        }
+      ],
+      "answerOptionId": "within3",
+      "explanation": "WHO recommends early intravenous tranexamic acid, started as soon as possible and within 3 hours of birth, in addition to standard PPH care.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:txa-within-3h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:txa:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:txa-dose-repeat",
+      "questionVersionId": "obgyn:pph:txa-dose-repeat@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which WHO tranexamic-acid regimen is used for postpartum haemorrhage?",
+      "options": [
+        {
+          "optionId": "regimen",
+          "text": "1 g IV over about 10 minutes, with a second 1 g dose if bleeding continues after 30 minutes or restarts within 24 hours"
+        },
+        {
+          "optionId": "bolus5",
+          "text": "5 g IV bolus repeated every 5 minutes"
+        },
+        {
+          "optionId": "oral",
+          "text": "1 g orally once"
+        },
+        {
+          "optionId": "infusion24",
+          "text": "Continuous 24-hour infusion without a loading dose"
+        }
+      ],
+      "answerOptionId": "regimen",
+      "explanation": "WHO supports 1 g IV over roughly 10 minutes, with one repeat 1 g dose if bleeding continues after 30 minutes or restarts within 24 hours.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:txa-dose-repeat",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:txa:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:persistent-bleeding-escalation",
+      "questionVersionId": "obgyn:pph:persistent-bleeding-escalation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Postpartum haemorrhage continues despite the initial treatment bundle. What principle does the current WHO guidance emphasize next?",
+      "options": [
+        {
+          "optionId": "escalate",
+          "text": "Escalate promptly to definitive interventions such as blood transfusion or surgery when indicated"
+        },
+        {
+          "optionId": "delay",
+          "text": "Delay escalation until the next day"
+        },
+        {
+          "optionId": "oralonly",
+          "text": "Switch to oral fluids only"
+        },
+        {
+          "optionId": "discharge",
+          "text": "Discharge if blood pressure transiently improves"
+        }
+      ],
+      "answerOptionId": "escalate",
+      "explanation": "WHO emphasizes rapid escalation of care when bleeding persists, including transfusion and operative intervention when clinically required.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:persistent-bleeding-escalation",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph:consolidated:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:optic-nerve",
+      "questionVersionId": "ophthal:glaucoma:optic-nerve@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which structure is primarily damaged in glaucoma and accounts for progressive visual loss?",
+      "options": [
+        {
+          "optionId": "optic",
+          "text": "Optic nerve"
+        },
+        {
+          "optionId": "lens",
+          "text": "Lens"
+        },
+        {
+          "optionId": "cornea",
+          "text": "Corneal epithelium"
+        },
+        {
+          "optionId": "lacrimal",
+          "text": "Lacrimal gland"
+        }
+      ],
+      "answerOptionId": "optic",
+      "explanation": "Glaucoma is a group of eye diseases that can cause vision loss by damaging the optic nerve.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:optic-nerve",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:open-angle-common",
+      "questionVersionId": "ophthal:glaucoma:open-angle-common@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which glaucoma type is the most common form described by the National Eye Institute?",
+      "options": [
+        {
+          "optionId": "open",
+          "text": "Open-angle glaucoma"
+        },
+        {
+          "optionId": "congenital",
+          "text": "Congenital glaucoma"
+        },
+        {
+          "optionId": "acute",
+          "text": "Acute angle-closure glaucoma"
+        },
+        {
+          "optionId": "traumatic",
+          "text": "Traumatic glaucoma"
+        }
+      ],
+      "answerOptionId": "open",
+      "explanation": "Open-angle glaucoma is the most common form of glaucoma.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:open-angle-common",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:early-symptoms",
+      "questionVersionId": "ophthal:glaucoma:early-symptoms@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What is typical of early open-angle glaucoma?",
+      "options": [
+        {
+          "optionId": "none",
+          "text": "It often causes no noticeable symptoms"
+        },
+        {
+          "optionId": "pain",
+          "text": "Severe eye pain is usually the first symptom"
+        },
+        {
+          "optionId": "diplopia",
+          "text": "Diplopia is universal"
+        },
+        {
+          "optionId": "redness",
+          "text": "Marked red eye is always present"
+        }
+      ],
+      "answerOptionId": "none",
+      "explanation": "Glaucoma can progress slowly and often has no noticeable early symptoms.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:early-symptoms",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:diagnosis-dilated-field",
+      "questionVersionId": "ophthal:glaucoma:diagnosis-dilated-field@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which evaluation is central to detecting glaucoma?",
+      "options": [
+        {
+          "optionId": "dilated",
+          "text": "Comprehensive dilated eye examination with visual-field testing"
+        },
+        {
+          "optionId": "xray",
+          "text": "Orbital X-ray alone"
+        },
+        {
+          "optionId": "culture",
+          "text": "Conjunctival culture"
+        },
+        {
+          "optionId": "color",
+          "text": "Color-vision testing alone"
+        }
+      ],
+      "answerOptionId": "dilated",
+      "explanation": "The National Eye Institute describes a comprehensive dilated eye examination with visual-field testing as central to glaucoma diagnosis.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:diagnosis-dilated-field",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:treatment-modalities",
+      "questionVersionId": "ophthal:glaucoma:treatment-modalities@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which group contains established glaucoma treatments?",
+      "options": [
+        {
+          "optionId": "all",
+          "text": "Eye-drop medicines, laser treatment, and surgery"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Oral antibiotics alone"
+        },
+        {
+          "optionId": "patch",
+          "text": "Eye patching alone"
+        },
+        {
+          "optionId": "vitamin",
+          "text": "Vitamin supplementation alone"
+        }
+      ],
+      "answerOptionId": "all",
+      "explanation": "Glaucoma treatment can include medicines, laser treatment and surgery to lower risk of further damage.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:treatment-modalities",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:angle-closure-emergency",
+      "questionVersionId": "ophthal:glaucoma:angle-closure-emergency@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A patient develops sudden intense eye pain, nausea, red eye and blurred vision. Which diagnosis requires emergency treatment?",
+      "options": [
+        {
+          "optionId": "angle",
+          "text": "Acute angle-closure glaucoma"
+        },
+        {
+          "optionId": "open",
+          "text": "Early open-angle glaucoma"
+        },
+        {
+          "optionId": "cataract",
+          "text": "Age-related cataract"
+        },
+        {
+          "optionId": "presbyopia",
+          "text": "Presbyopia"
+        }
+      ],
+      "answerOptionId": "angle",
+      "explanation": "Sudden severe eye pain with nausea, redness and blurred vision is characteristic of acute angle-closure glaucoma, a medical emergency.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:angle-closure-emergency",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ophthal:glaucoma:angle-closure-mechanism",
+      "questionVersionId": "ophthal:glaucoma:angle-closure-mechanism@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "In angle-closure glaucoma, what directly blocks aqueous drainage from the anterior chamber?",
+      "options": [
+        {
+          "optionId": "iris",
+          "text": "The outer edge of the iris blocks the drainage angle"
+        },
+        {
+          "optionId": "lens",
+          "text": "The lens dissolves the trabecular meshwork"
+        },
+        {
+          "optionId": "retina",
+          "text": "The retina blocks Schlemm canal"
+        },
+        {
+          "optionId": "optic",
+          "text": "The optic nerve blocks the pupil"
+        }
+      ],
+      "answerOptionId": "iris",
+      "explanation": "In angle-closure glaucoma, the peripheral iris obstructs the drainage angle, causing rapid pressure elevation.",
+      "conceptLinks": [
+        {
+          "conceptId": "ophthal:glaucoma:angle-closure-mechanism",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nei:glaucoma:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:impulse-or-chronic",
+      "questionVersionId": "ent:nihl:impulse-or-chronic@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which exposure pattern can cause noise-induced hearing loss?",
+      "options": [
+        {
+          "optionId": "both",
+          "text": "Either a single intense impulse sound or prolonged/repeated loud noise"
+        },
+        {
+          "optionId": "quiet",
+          "text": "Only prolonged exposure to quiet conversation"
+        },
+        {
+          "optionId": "infection",
+          "text": "Only viral infection"
+        },
+        {
+          "optionId": "aging",
+          "text": "Only normal aging"
+        }
+      ],
+      "answerOptionId": "both",
+      "explanation": "Noise-induced hearing loss can follow a single intense impulse or repeated/prolonged exposure to harmful sound.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:impulse-or-chronic",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:85dba-risk",
+      "questionVersionId": "ent:nihl:85dba-risk@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Long or repeated exposure at approximately what sound level can cause noise-induced hearing loss?",
+      "options": [
+        {
+          "optionId": "85",
+          "text": "85 dBA or higher"
+        },
+        {
+          "optionId": "20",
+          "text": "20 dBA or higher"
+        },
+        {
+          "optionId": "40",
+          "text": "40 dBA or higher"
+        },
+        {
+          "optionId": "55",
+          "text": "55 dBA or higher"
+        }
+      ],
+      "answerOptionId": "85",
+      "explanation": "NIDCD notes that long or repeated exposure at or above about 85 dBA can cause hearing loss.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:85dba-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:70dba-low-risk",
+      "questionVersionId": "ent:nihl:70dba-low-risk@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which statement about prolonged sound exposure is supported by NIDCD?",
+      "options": [
+        {
+          "optionId": "seventy",
+          "text": "Sounds at or below about 70 dBA are unlikely to cause hearing loss even after long exposure"
+        },
+        {
+          "optionId": "forty",
+          "text": "40 dBA routinely causes permanent hearing loss"
+        },
+        {
+          "optionId": "sixty",
+          "text": "Normal conversation usually causes NIHL"
+        },
+        {
+          "optionId": "all",
+          "text": "Any audible sound causes cumulative cochlear injury"
+        }
+      ],
+      "answerOptionId": "seventy",
+      "explanation": "NIDCD states that sounds around 70 dBA or lower are unlikely to cause hearing loss, even with long exposure.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:70dba-low-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:hair-cells-do-not-regrow",
+      "questionVersionId": "ent:nihl:hair-cells-do-not-regrow@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Why can severe noise injury lead to permanent sensorineural hearing loss in humans?",
+      "options": [
+        {
+          "optionId": "no-regrow",
+          "text": "Damaged human inner-ear hair cells do not regenerate"
+        },
+        {
+          "optionId": "ossicles",
+          "text": "All noise exposure fuses the ossicles"
+        },
+        {
+          "optionId": "tm",
+          "text": "The tympanic membrane can never heal"
+        },
+        {
+          "optionId": "nerve",
+          "text": "The facial nerve is always destroyed"
+        }
+      ],
+      "answerOptionId": "no-regrow",
+      "explanation": "Unlike some animal species, human sensory hair cells of the inner ear do not regrow after destruction.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:hair-cells-do-not-regrow",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:temporary-or-permanent",
+      "questionVersionId": "ent:nihl:temporary-or-permanent@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which description of noise-induced hearing loss is accurate?",
+      "options": [
+        {
+          "optionId": "variable",
+          "text": "It may be immediate or delayed, temporary or permanent, and affect one or both ears"
+        },
+        {
+          "optionId": "alwaysbilateral",
+          "text": "It is always immediate, permanent and bilateral"
+        },
+        {
+          "optionId": "alwaystemporary",
+          "text": "It is always temporary"
+        },
+        {
+          "optionId": "conductiveonly",
+          "text": "It is exclusively conductive hearing loss"
+        }
+      ],
+      "answerOptionId": "variable",
+      "explanation": "NIDCD notes that NIHL can vary in timing, permanence and laterality.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:temporary-or-permanent",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:tinnitus",
+      "questionVersionId": "ent:nihl:tinnitus@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A worker exposed to repeated loud machinery develops ringing in the ears. Which association is recognized by NIDCD?",
+      "options": [
+        {
+          "optionId": "tinnitus",
+          "text": "Loud-noise exposure can cause tinnitus as well as hearing loss"
+        },
+        {
+          "optionId": "none",
+          "text": "Tinnitus excludes noise injury"
+        },
+        {
+          "optionId": "vision",
+          "text": "Noise injury primarily causes visual aura"
+        },
+        {
+          "optionId": "vertigoonly",
+          "text": "Noise exposure causes only vertigo without auditory symptoms"
+        }
+      ],
+      "answerOptionId": "tinnitus",
+      "explanation": "Loud-noise exposure can produce tinnitus, described as ringing, buzzing or roaring in the ears or head.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:tinnitus",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ent:nihl:louder-shorter-time",
+      "questionVersionId": "ent:nihl:louder-shorter-time@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "As sound intensity increases, what happens to the duration of exposure needed to produce noise-induced hearing damage?",
+      "options": [
+        {
+          "optionId": "shorter",
+          "text": "The harmful exposure time becomes shorter"
+        },
+        {
+          "optionId": "longer",
+          "text": "The harmful exposure time becomes longer"
+        },
+        {
+          "optionId": "same",
+          "text": "Duration becomes irrelevant"
+        },
+        {
+          "optionId": "zero",
+          "text": "Only frequency, not loudness, matters"
+        }
+      ],
+      "answerOptionId": "shorter",
+      "explanation": "The louder the sound, the shorter the exposure needed to cause noise-induced hearing damage.",
+      "conceptLinks": [
+        {
+          "conceptId": "ent:nihl:louder-shorter-time",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nidcd:nihl:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:silent-disease",
+      "questionVersionId": "ortho:osteoporosis:silent-disease@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Why is osteoporosis often called a silent disease?",
+      "options": [
+        {
+          "optionId": "fracture",
+          "text": "It commonly produces no symptoms until a fracture occurs"
+        },
+        {
+          "optionId": "fever",
+          "text": "It begins with fever before bone loss"
+        },
+        {
+          "optionId": "rash",
+          "text": "It causes a diagnostic rash"
+        },
+        {
+          "optionId": "painalways",
+          "text": "It always causes severe bone pain before fracture"
+        }
+      ],
+      "answerOptionId": "fracture",
+      "explanation": "Osteoporosis often remains asymptomatic until fragility fracture occurs.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:silent-disease",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:common-fracture-sites",
+      "questionVersionId": "ortho:osteoporosis:common-fracture-sites@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which combination contains common osteoporotic fracture sites?",
+      "options": [
+        {
+          "optionId": "sites",
+          "text": "Hip, vertebral spine, and wrist"
+        },
+        {
+          "optionId": "skull",
+          "text": "Skull, mandible, and patella only"
+        },
+        {
+          "optionId": "ribs",
+          "text": "Ribs alone"
+        },
+        {
+          "optionId": "ankle",
+          "text": "Ankle and clavicle only"
+        }
+      ],
+      "answerOptionId": "sites",
+      "explanation": "Fragility fractures due to osteoporosis commonly involve the hip, vertebrae and wrist.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:common-fracture-sites",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:dxa-hip-spine",
+      "questionVersionId": "ortho:osteoporosis:dxa-hip-spine@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which investigation is generally the most reliable for diagnosing osteoporosis and predicting fracture risk?",
+      "options": [
+        {
+          "optionId": "dxa",
+          "text": "DXA measurement at the hip and spine"
+        },
+        {
+          "optionId": "qus",
+          "text": "Heel ultrasound alone"
+        },
+        {
+          "optionId": "xray",
+          "text": "Plain X-ray of the hand alone"
+        },
+        {
+          "optionId": "cthead",
+          "text": "CT of the head"
+        }
+      ],
+      "answerOptionId": "dxa",
+      "explanation": "DXA at the hip and spine is generally considered the most reliable approach for diagnosing osteoporosis and estimating fracture risk.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:dxa-hip-spine",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:qus-needs-dxa",
+      "questionVersionId": "ortho:osteoporosis:qus-needs-dxa@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A heel quantitative ultrasound suggests bone loss. What is the appropriate next principle?",
+      "options": [
+        {
+          "optionId": "dxa",
+          "text": "DXA is still needed to diagnose bone loss/osteoporosis"
+        },
+        {
+          "optionId": "enough",
+          "text": "Heel ultrasound alone establishes the definitive BMD diagnosis"
+        },
+        {
+          "optionId": "mri",
+          "text": "MRI is mandatory instead of DXA"
+        },
+        {
+          "optionId": "none",
+          "text": "No further assessment can be useful"
+        }
+      ],
+      "answerOptionId": "dxa",
+      "explanation": "Heel quantitative ultrasound can suggest bone loss but does not measure BMD in the same way as DXA; DXA remains needed for diagnosis.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:qus-needs-dxa",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:glucocorticoid-risk",
+      "questionVersionId": "ortho:osteoporosis:glucocorticoid-risk@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which medication exposure is a recognized risk factor for osteoporosis?",
+      "options": [
+        {
+          "optionId": "glucocorticoid",
+          "text": "Long-term glucocorticoid therapy"
+        },
+        {
+          "optionId": "topical",
+          "text": "Occasional topical emollient use"
+        },
+        {
+          "optionId": "saline",
+          "text": "Normal saline infusion"
+        },
+        {
+          "optionId": "antacid",
+          "text": "Single-dose antacid use"
+        }
+      ],
+      "answerOptionId": "glucocorticoid",
+      "explanation": "Long-term glucocorticoid use is an established contributor to bone loss and osteoporosis risk.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:glucocorticoid-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:vertebral-fracture-signs",
+      "questionVersionId": "ortho:osteoporosis:vertebral-fracture-signs@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which finding is compatible with an osteoporotic vertebral fracture?",
+      "options": [
+        {
+          "optionId": "height",
+          "text": "Back pain with loss of height and kyphotic posture"
+        },
+        {
+          "optionId": "jaundice",
+          "text": "Jaundice with hepatomegaly"
+        },
+        {
+          "optionId": "hemoptysis",
+          "text": "Hemoptysis with clubbing"
+        },
+        {
+          "optionId": "rash",
+          "text": "Photosensitive rash"
+        }
+      ],
+      "answerOptionId": "height",
+      "explanation": "Vertebral fractures may present with severe back pain, height loss and kyphotic or stooped posture.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:vertebral-fracture-signs",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "ortho:osteoporosis:bisphosphonate-action",
+      "questionVersionId": "ortho:osteoporosis:bisphosphonate-action@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What is the principal therapeutic effect of bisphosphonates in osteoporosis?",
+      "options": [
+        {
+          "optionId": "slow",
+          "text": "They slow bone loss and reduce fracture risk"
+        },
+        {
+          "optionId": "stimhemolysis",
+          "text": "They increase hemolysis"
+        },
+        {
+          "optionId": "destroy",
+          "text": "They accelerate osteoclast-mediated bone loss"
+        },
+        {
+          "optionId": "sedate",
+          "text": "They act primarily as sedatives"
+        }
+      ],
+      "answerOptionId": "slow",
+      "explanation": "Bisphosphonates help preserve bone density by slowing bone loss, thereby reducing fracture risk.",
+      "conceptLinks": [
+        {
+          "conceptId": "ortho:osteoporosis:bisphosphonate-action",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:osteoporosis:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:clear-liquids-2h",
+      "questionVersionId": "anesthesia:fasting:clear-liquids-2h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "For an otherwise healthy patient undergoing an elective procedure requiring anesthesia or sedation, how long should clear liquids generally be withheld before the procedure under ASA guidance?",
+      "options": [
+        {
+          "optionId": "2h",
+          "text": "At least 2 hours"
+        },
+        {
+          "optionId": "30m",
+          "text": "30 minutes"
+        },
+        {
+          "optionId": "6h",
+          "text": "6 hours"
+        },
+        {
+          "optionId": "12h",
+          "text": "12 hours"
+        }
+      ],
+      "answerOptionId": "2h",
+      "explanation": "ASA guidance permits clear liquids until 2 hours before elective anesthesia, regional anesthesia or procedural sedation in otherwise healthy patients.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:clear-liquids-2h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:breast-milk-4h",
+      "questionVersionId": "anesthesia:fasting:breast-milk-4h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What fasting interval is recommended after breast milk before an elective procedure requiring anesthesia in an otherwise healthy infant?",
+      "options": [
+        {
+          "optionId": "4h",
+          "text": "At least 4 hours"
+        },
+        {
+          "optionId": "2h",
+          "text": "At least 2 hours"
+        },
+        {
+          "optionId": "8h",
+          "text": "At least 8 hours"
+        },
+        {
+          "optionId": "12h",
+          "text": "At least 12 hours"
+        }
+      ],
+      "answerOptionId": "4h",
+      "explanation": "ASA guidance uses a minimum 4-hour fasting interval after breast milk.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:breast-milk-4h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:infant-formula-6h",
+      "questionVersionId": "anesthesia:fasting:infant-formula-6h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What fasting interval is recommended after infant formula before elective anesthesia?",
+      "options": [
+        {
+          "optionId": "6h",
+          "text": "At least 6 hours"
+        },
+        {
+          "optionId": "2h",
+          "text": "At least 2 hours"
+        },
+        {
+          "optionId": "4h",
+          "text": "At least 4 hours"
+        },
+        {
+          "optionId": "10h",
+          "text": "At least 10 hours"
+        }
+      ],
+      "answerOptionId": "6h",
+      "explanation": "ASA guidance recommends at least 6 hours of fasting after infant formula.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:infant-formula-6h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:light-meal-6h",
+      "questionVersionId": "anesthesia:fasting:light-meal-6h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "An otherwise healthy adult has a light meal before elective anesthesia. What minimum fasting interval is generally recommended?",
+      "options": [
+        {
+          "optionId": "6h",
+          "text": "At least 6 hours"
+        },
+        {
+          "optionId": "2h",
+          "text": "At least 2 hours"
+        },
+        {
+          "optionId": "3h",
+          "text": "At least 3 hours"
+        },
+        {
+          "optionId": "24h",
+          "text": "At least 24 hours"
+        }
+      ],
+      "answerOptionId": "6h",
+      "explanation": "ASA guidance generally uses a 6-hour fasting interval after a light meal or nonhuman milk.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:light-meal-6h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:fatty-meal-8h",
+      "questionVersionId": "anesthesia:fasting:fatty-meal-8h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "How should fasting be adjusted after fried or fatty food or meat before elective anesthesia?",
+      "options": [
+        {
+          "optionId": "8h",
+          "text": "A longer interval, such as 8 hours or more, may be needed"
+        },
+        {
+          "optionId": "2h",
+          "text": "Two hours is always sufficient"
+        },
+        {
+          "optionId": "none",
+          "text": "No fasting is required"
+        },
+        {
+          "optionId": "1h",
+          "text": "One hour is recommended"
+        }
+      ],
+      "answerOptionId": "8h",
+      "explanation": "Because fatty foods and meat can delay gastric emptying, ASA guidance notes that 8 hours or more may be needed.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:fatty-meal-8h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:clear-liquids-no-alcohol",
+      "questionVersionId": "anesthesia:fasting:clear-liquids-no-alcohol@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which beverage does not fit ASA's acceptable preoperative clear-liquid category?",
+      "options": [
+        {
+          "optionId": "alcohol",
+          "text": "Alcohol"
+        },
+        {
+          "optionId": "water",
+          "text": "Water"
+        },
+        {
+          "optionId": "blackcoffee",
+          "text": "Black coffee"
+        },
+        {
+          "optionId": "cleartea",
+          "text": "Clear tea"
+        }
+      ],
+      "answerOptionId": "alcohol",
+      "explanation": "ASA's clear-liquid guidance excludes alcohol; examples of clear liquids include water, pulp-free juice, clear tea and black coffee.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:clear-liquids-no-alcohol",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "anesthesia:fasting:noncompliance-risk-benefit",
+      "questionVersionId": "anesthesia:fasting:noncompliance-risk-benefit@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A patient inadvertently eats shortly before elective anesthesia. What does ASA guidance recommend conceptually?",
+      "options": [
+        {
+          "optionId": "balance",
+          "text": "Compare the risks and benefits of proceeding, considering the amount and type ingested"
+        },
+        {
+          "optionId": "automatic",
+          "text": "Always proceed without reassessment"
+        },
+        {
+          "optionId": "cancelall",
+          "text": "Always cancel regardless of intake"
+        },
+        {
+          "optionId": "ignore",
+          "text": "Ignore the intake if the patient feels well"
+        }
+      ],
+      "answerOptionId": "balance",
+      "explanation": "When fasting instructions are not followed, ASA guidance calls for individualized risk-benefit assessment that considers what and how much was ingested.",
+      "conceptLinks": [
+        {
+          "conceptId": "anesthesia:fasting:noncompliance-risk-benefit",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "asa:preop-fasting:2017"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:common-symptoms",
+      "questionVersionId": "toxicology:co:common-symptoms@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which symptom cluster is typical of carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "cluster",
+          "text": "Headache, dizziness, weakness, nausea or vomiting, chest pain, and altered mental status"
+        },
+        {
+          "optionId": "rash",
+          "text": "Urticaria with isolated pruritus"
+        },
+        {
+          "optionId": "diarrhea",
+          "text": "Profuse watery diarrhea only"
+        },
+        {
+          "optionId": "arthritis",
+          "text": "Migratory arthritis only"
+        }
+      ],
+      "answerOptionId": "cluster",
+      "explanation": "CDC describes headache, dizziness, weakness, nausea/vomiting, chest pain and altered mental status among common CO-poisoning symptoms.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:common-symptoms",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:confirm-cohb",
+      "questionVersionId": "toxicology:co:confirm-cohb@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What laboratory measurement is central to confirming suspected carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "cohb",
+          "text": "Carboxyhemoglobin level"
+        },
+        {
+          "optionId": "methemoglobin",
+          "text": "Methemoglobin level only"
+        },
+        {
+          "optionId": "bilirubin",
+          "text": "Serum bilirubin"
+        },
+        {
+          "optionId": "amylase",
+          "text": "Serum amylase"
+        }
+      ],
+      "answerOptionId": "cohb",
+      "explanation": "Measurement of carboxyhemoglobin is the key confirmatory test in suspected CO poisoning.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:confirm-cohb",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:cohb-support-thresholds",
+      "questionVersionId": "toxicology:co:cohb-support-thresholds@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which carboxyhemoglobin result strongly supports CO poisoning according to CDC guidance?",
+      "options": [
+        {
+          "optionId": "threshold",
+          "text": "At least about 2% in a nonsmoker or above 9% in a smoker"
+        },
+        {
+          "optionId": "zero",
+          "text": "Any value above 0% in everyone"
+        },
+        {
+          "optionId": "fifty",
+          "text": "Only values above 50%"
+        },
+        {
+          "optionId": "same",
+          "text": "Exactly the same threshold for smokers and nonsmokers"
+        }
+      ],
+      "answerOptionId": "threshold",
+      "explanation": "CDC notes that COHb around 2% or more in nonsmokers and above 9% in smokers strongly supports the diagnosis.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:cohb-support-thresholds",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:oxygen-100-percent",
+      "questionVersionId": "toxicology:co:oxygen-100-percent@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "What oxygen therapy does CDC recommend for symptomatic carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "oxygen",
+          "text": "Administer 100% oxygen until the patient is symptom-free, often for about 4–5 hours"
+        },
+        {
+          "optionId": "room",
+          "text": "Room air only"
+        },
+        {
+          "optionId": "low",
+          "text": "1 L/min nasal oxygen for 10 minutes"
+        },
+        {
+          "optionId": "none",
+          "text": "No oxygen unless cyanosis is visible"
+        }
+      ],
+      "answerOptionId": "oxygen",
+      "explanation": "CDC recommends 100% oxygen until symptoms resolve, commonly for roughly 4–5 hours, with serial neurologic assessment.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:oxygen-100-percent",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:hbo-indications",
+      "questionVersionId": "toxicology:co:hbo-indications@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which finding is an indication to consider hyperbaric oxygen therapy in carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "severe",
+          "text": "COHb above about 25–30%, cardiac involvement, severe acidosis, loss of consciousness, or neurologic impairment"
+        },
+        {
+          "optionId": "mild",
+          "text": "Any isolated mild headache with normal evaluation"
+        },
+        {
+          "optionId": "skin",
+          "text": "A localized skin rash"
+        },
+        {
+          "optionId": "fever",
+          "text": "Fever without exposure history"
+        }
+      ],
+      "answerOptionId": "severe",
+      "explanation": "CDC recommends considering hyperbaric oxygen for substantial COHb elevation or major cardiac, neurologic, acid-base or consciousness abnormalities.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:hbo-indications",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:pregnancy-hbo",
+      "questionVersionId": "toxicology:co:pregnancy-hbo@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "How does CDC guidance treat pregnancy in the context of carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "hbo",
+          "text": "Hyperbaric oxygen is favored aggressively and is described as the treatment of choice for pregnant patients"
+        },
+        {
+          "optionId": "contra",
+          "text": "Pregnancy is an absolute contraindication to hyperbaric oxygen"
+        },
+        {
+          "optionId": "none",
+          "text": "Pregnancy does not alter treatment considerations"
+        },
+        {
+          "optionId": "delay",
+          "text": "Treatment should wait until fetal monitoring becomes abnormal"
+        }
+      ],
+      "answerOptionId": "hbo",
+      "explanation": "CDC guidance supports a more aggressive hyperbaric-oxygen approach in pregnancy and describes it as the treatment of choice even with less severe poisoning.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:pregnancy-hbo",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "toxicology:co:pulse-oximeter-limitation",
+      "questionVersionId": "toxicology:co:pulse-oximeter-limitation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Why can standard two-wavelength pulse oximetry be misleading in carbon-monoxide poisoning?",
+      "options": [
+        {
+          "optionId": "inaccurate",
+          "text": "It is not accurate when significant carboxyhemoglobin is present"
+        },
+        {
+          "optionId": "none",
+          "text": "It directly measures carboxyhemoglobin accurately"
+        },
+        {
+          "optionId": "glucose",
+          "text": "It measures blood glucose instead of oxygenation"
+        },
+        {
+          "optionId": "bp",
+          "text": "It measures only blood pressure"
+        }
+      ],
+      "answerOptionId": "inaccurate",
+      "explanation": "Conventional pulse oximetry cannot reliably distinguish oxyhemoglobin from carboxyhemoglobin and may therefore appear falsely reassuring.",
+      "conceptLinks": [
+        {
+          "conceptId": "toxicology:co:pulse-oximeter-limitation",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:co:clinical-guidance:2024-07-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:immune-mediated",
+      "questionVersionId": "derm:psoriasis:immune-mediated@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which description best characterizes psoriasis?",
+      "options": [
+        {
+          "optionId": "immune",
+          "text": "A chronic immune-mediated disease with accelerated skin-cell turnover and inflammation"
+        },
+        {
+          "optionId": "bacterial",
+          "text": "An acute bacterial skin infection"
+        },
+        {
+          "optionId": "fungal",
+          "text": "A superficial fungal infection in every case"
+        },
+        {
+          "optionId": "vascular",
+          "text": "A purely vascular disorder"
+        }
+      ],
+      "answerOptionId": "immune",
+      "explanation": "Psoriasis is a chronic immune-mediated disease in which overactive immune signaling accelerates skin-cell production and produces inflamed, scaly lesions.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:immune-mediated",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:plaque-most-common",
+      "questionVersionId": "derm:psoriasis:plaque-most-common@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which psoriasis type is the most common?",
+      "options": [
+        {
+          "optionId": "plaque",
+          "text": "Plaque psoriasis"
+        },
+        {
+          "optionId": "guttate",
+          "text": "Guttate psoriasis"
+        },
+        {
+          "optionId": "pustular",
+          "text": "Pustular psoriasis"
+        },
+        {
+          "optionId": "erythrodermic",
+          "text": "Erythrodermic psoriasis"
+        }
+      ],
+      "answerOptionId": "plaque",
+      "explanation": "Plaque psoriasis is the most common type and typically produces raised erythematous plaques with silvery-white scale.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:plaque-most-common",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:guttate-strep",
+      "questionVersionId": "derm:psoriasis:guttate-strep@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "A young patient develops numerous small erythematous lesions after a recent streptococcal upper-respiratory infection. Which psoriasis subtype is most likely?",
+      "options": [
+        {
+          "optionId": "guttate",
+          "text": "Guttate psoriasis"
+        },
+        {
+          "optionId": "inverse",
+          "text": "Inverse psoriasis"
+        },
+        {
+          "optionId": "plaque",
+          "text": "Plaque psoriasis only"
+        },
+        {
+          "optionId": "erythro",
+          "text": "Erythrodermic psoriasis"
+        }
+      ],
+      "answerOptionId": "guttate",
+      "explanation": "Guttate psoriasis often appears in children or young adults and may follow streptococcal upper-respiratory infection.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:guttate-strep",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:inverse-flexures",
+      "questionVersionId": "derm:psoriasis:inverse-flexures@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which distribution is typical of inverse psoriasis?",
+      "options": [
+        {
+          "optionId": "folds",
+          "text": "Smooth erythematous patches in skin folds such as groin, axillae or beneath the breasts"
+        },
+        {
+          "optionId": "extensor",
+          "text": "Only thick plaques on extensor elbows"
+        },
+        {
+          "optionId": "scalp",
+          "text": "Only scalp involvement"
+        },
+        {
+          "optionId": "palms",
+          "text": "Only pustules on palms"
+        }
+      ],
+      "answerOptionId": "folds",
+      "explanation": "Inverse psoriasis characteristically affects intertriginous folds and may worsen with friction and sweating.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:inverse-flexures",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:erythrodermic-severe",
+      "questionVersionId": "derm:psoriasis:erythrodermic-severe@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which psoriasis subtype is rare, potentially severe, and may involve red scaly skin over most of the body?",
+      "options": [
+        {
+          "optionId": "erythro",
+          "text": "Erythrodermic psoriasis"
+        },
+        {
+          "optionId": "guttate",
+          "text": "Guttate psoriasis"
+        },
+        {
+          "optionId": "inverse",
+          "text": "Inverse psoriasis"
+        },
+        {
+          "optionId": "nail",
+          "text": "Isolated nail psoriasis"
+        }
+      ],
+      "answerOptionId": "erythro",
+      "explanation": "Erythrodermic psoriasis is a rare severe form with widespread erythema and scaling.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:erythrodermic-severe",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:topical-mild-moderate",
+      "questionVersionId": "derm:psoriasis:topical-mild-moderate@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "Which therapy is commonly used for mild-to-moderate psoriasis?",
+      "options": [
+        {
+          "optionId": "topical",
+          "text": "Topical treatment such as corticosteroid-containing creams or ointments"
+        },
+        {
+          "optionId": "chemo",
+          "text": "Cytotoxic chemotherapy as routine first-line treatment"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Long-term antibiotics for all patients"
+        },
+        {
+          "optionId": "none",
+          "text": "No treatment can control symptoms"
+        }
+      ],
+      "answerOptionId": "topical",
+      "explanation": "Topical therapies, particularly corticosteroid-containing preparations, are commonly used in mild-to-moderate psoriasis.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:topical-mild-moderate",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "derm:psoriasis:phototherapy-large-area",
+      "questionVersionId": "derm:psoriasis:phototherapy-large-area@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Final breadth-first simulator-capacity batch 07",
+      "stem": "When is ultraviolet phototherapy commonly considered in psoriasis?",
+      "options": [
+        {
+          "optionId": "large",
+          "text": "When larger areas of skin are affected or topical therapy is insufficient"
+        },
+        {
+          "optionId": "single",
+          "text": "Only for one tiny isolated lesion"
+        },
+        {
+          "optionId": "infection",
+          "text": "Only for bacterial superinfection"
+        },
+        {
+          "optionId": "never",
+          "text": "Phototherapy has no role in psoriasis"
+        }
+      ],
+      "answerOptionId": "large",
+      "explanation": "NIAMS notes that phototherapy is often used when extensive areas of skin are affected.",
+      "conceptLinks": [
+        {
+          "conceptId": "derm:psoriasis:phototherapy-large-area",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "niams:psoriasis:2023-10"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited authoritative source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is breadth-first and heuristic where verified historical Exam DNA/PYQ frequency evidence is absent."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
