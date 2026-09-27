@@ -241,3 +241,15 @@ test('learner question exposes stable primary canonical concept identity', async
   assert.match(source, /const primaryConcept = q\.conceptLinks\?\.find/);
   assert.match(source, /conceptId: primaryConcept\?\.conceptId \?\? null/);
 });
+
+
+test('Study Now session state restores explainable recommendation context from immutable receipt', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /session_recommendation_context/);
+  assert.match(source, /study_recommendation_events/);
+  assert.match(source, /\.eq\("session_id", sessionId\)/);
+  assert.match(source, /\.eq\("learner_id", learnerId\)/);
+  assert.match(source, /"mistake-repair", "due-revision", "new-learning"/);
+  assert.match(source, /source: "study-now"/);
+  assert.match(source, /recommendationContext/);
+});
