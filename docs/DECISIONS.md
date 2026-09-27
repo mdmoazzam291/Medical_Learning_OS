@@ -448,3 +448,24 @@ Exact normalized-stem deduplication is only a mechanical first gate. It does not
 Use bounded batches (maximum 100 questions in v1), immutable intake events and an explicit abandon transition. This keeps failed or conflicting batches auditable without deleting history and makes throughput measurable as:
 staged → promoted/in-review → gate approvals → verified → published.
 
+## ADR-041 — AI may assist review, but only humans/authorized reviewers create review authority (accepted, 2026-09-27)
+Content-review assistance and content-review authority are separate systems.
+
+An AI/source preflight may summarize current source support, flag ambiguity, suggest a conservative rights classification and expose uncertainty. It must remain explicitly non-authoritative.
+
+Preflight evidence may not:
+- create or impersonate a reviewer identity;
+- record a Medical, References or Rights decision;
+- resolve source-rights evidence under another person's identity;
+- advance content to `verified`;
+- publish content;
+- suppress a detected wording/source concern merely to improve throughput.
+
+The reviewer UI may display preflight evidence next to the exact question/source target, but the reviewer must independently inspect the target and submit their own authenticated decision and notes.
+
+If preflight finds a material wording or source problem, preserve it. Do not auto-correct an already promoted immutable question version in place. Use the normal rejection/new-version path when correction is required.
+
+This keeps the useful loop:
+AI/source checking → lower reviewer lookup cost → genuine reviewer decision → immutable evidence,
+without turning AI confidence into medical truth.
+
