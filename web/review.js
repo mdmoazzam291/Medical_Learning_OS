@@ -120,11 +120,13 @@ function noteReviewItem(item, index) {
   const sources = Array.isArray(item?.sources) ? item.sources : [];
   const rightsReady = state.selectedKind !== 'rights' ||
     sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+  const provenance = note?.provenance || {};
 
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">NEURALVAULT TARGET ${index + 1}</span><h2>${escape(note.title || 'Untitled canonical note')}</h2><p class="muted">${escape(note.noteVersionId || '')} · concept ${escape(note.conceptId || '')} · v${escape(note.version || '?')}</p></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
     <section class="review-section"><h3>Canonical note body</h3><pre class="vault-markdown">${escape(note.bodyMarkdown || '')}</pre></section>
     <div class="review-metadata"><div><span>Concept</span><strong>${escape(note.conceptId || 'Unknown')}</strong></div><div><span>Version</span><strong>${escape(note.version || '?')}</strong></div><div><span>Fingerprint</span><strong>${escape((note.contentSha256 || '').slice(0, 16))}…</strong></div></div>
+    <section class="review-section"><h3>Provenance</h3><p><strong>${escape(provenance.kind || 'unknown')}</strong></p><p>${escape(provenance.evidence || 'No provenance evidence recorded.')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-note-version-id="${escape(note.noteVersionId || '')}">
