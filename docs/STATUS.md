@@ -466,3 +466,14 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Full unit/check suite passed and responsive browser verification passed before deployment.
 - Render latest deployment is live and `study-api` v17 is active.
 - M06c remains IN PROGRESS for one real hosted search/deep-link verification and later Study Now-to-NeuralVault retrieval integration.
+
+
+## M06b first canonical note published + deep-link startup fix — 2026-09-27
+- NeuralVault note version `6ac9305b-2ce1-4fdb-9705-fa22c8eefa12` for `emergency:anaphylaxis:first-line-treatment` passed all three required gates: Medical, References and Rights.
+- All stored review target SHA-256 fingerprints were rechecked against the current targets immediately before publication; all three matched exactly.
+- The note reached `verified` with `published_at = null`, then was published through the separate trusted `publish_verified_neural_note(uuid)` transition.
+- Final note state is `published`, version 1, published at 2026-09-27T06:02:19.108546Z.
+- Published content hash is `e8d1f1b5d55e6b99dd20bed0ca45149fc1dd81bf67db45b702c5eda5b1c602d2`.
+- This closes M06b: the canonical note lifecycle has now been exercised end to end without collapsing review approval into publication.
+- During M06c verification, a deep-link startup defect was identified: QBank generated `/web/vault.html?concept=<conceptId>`, but NeuralVault startup ignored the query parameter and merely selected the first catalog concept.
+- NeuralVault startup now reads the requested `concept` query parameter and passes it through normal catalog validation before loading the detail. This preserves correct navigation as the concept catalog grows.
