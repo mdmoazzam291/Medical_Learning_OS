@@ -151,7 +151,7 @@ function corsHeaders(req: Request) {
   return {
     ...(origin && allowedOrigins.has(origin) ? { "Access-Control-Allow-Origin": origin } : {}),
     "Access-Control-Allow-Headers": "authorization, apikey, content-type",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, PATCH, DELETE, OPTIONS",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin"
   };
@@ -175,12 +175,12 @@ function response(req: Request, status: number, payload: unknown) {
   });
 }
 
-async function jsonBody(req: Request) {
+async function jsonBody(req: Request, maxBytes = 8192) {
   const length = Number(req.headers.get("content-length") || 0);
-  if (length > 8192) fail(413, "body_too_large");
+  if (length > maxBytes) fail(413, "body_too_large");
   if (!/^application\/json(?:\s*;|$)/i.test(req.headers.get("content-type") || "")) fail(415, "json_required");
   const text = await req.text();
-  if (new TextEncoder().encode(text).byteLength > 8192) fail(413, "body_too_large");
+  if (new TextEncoder().encode(text).byteLength > maxBytes) fail(413, "body_too_large");
   try { return object(JSON.parse(text || "{}")); }
   catch { fail(400, "invalid_json"); }
 }
@@ -305,6 +305,17 @@ Deno.serve(async (req: Request) => {
           .eq("learner_id", learnerId)
           .order("due_at", { ascending: true })
           .order("question_version_id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return data ?? [];
+    };
+    const getVaultAnnotations = async () => {
+      const { data, error } = await trustedRead("vault_annotations", async () =>
+        admin.from("neural_personal_annotations")
+          .select("id,concept_id,body_markdown,anchor_note_version_id,revision,created_at,updated_at")
+          .eq("learner_id", learnerId)
+          .order("updated_at", { ascending: false })
+          .order("id", { ascending: true })
       );
       if (error) fail(500, "study_read_failed");
       return data ?? [];
@@ -625,6 +636,55 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    const vaultConceptMatch = path.match(/^\/vault\/concepts\/([a-zA-Z0-9:_@.\-]{1,160})$/);
+    if (req.method === "GET" && vaultConceptMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const conceptId = identifier(vaultConceptMatch[1]);
+      const [
+        { data: concept, error: conceptError },
+        { data: canonical, error: canonicalError },
+        { data: annotations, error: annotationError }
+      ] = await Promise.all([
+        admin.rpc("neural_catalog_concept", { p_concept_id: conceptId }),
+        trustedRead("vault_canonical_note", async () =>
+          admin.from("neural_canonical_note_versions")
+            .select("id,concept_id,version,title,body_markdown,source_ids,content_sha256,published_at")
+            .eq("concept_id", conceptId).eq("status", "published").maybeSingle()
+        ),
+        trustedRead("vault_concept_annotations", async () =>
+          admin.from("neural_personal_annotations")
+            .select("id,concept_id,body_markdown,anchor_note_version_id,revision,created_at,updated_at")
+            .eq("learner_id", learnerId).eq("concept_id", conceptId)
+            .order("updated_at", { ascending: false })
+            .order("id", { ascending: true })
+        )
+      ]);
+      if (conceptError || canonicalError || annotationError) fail(500, "vault_read_failed");
+      if (!concept) fail(404, "vault_concept_not_found");
+      return response(req, 200, {
+        concept,
+        canonicalNote: canonical ? {
+          noteVersionId: canonical.id,
+          conceptId: canonical.concept_id,
+          version: canonical.version,
+          title: canonical.title,
+          bodyMarkdown: canonical.body_markdown,
+          sourceIds: canonical.source_ids,
+          contentSha256: canonical.content_sha256,
+          publishedAt: canonical.published_at
+        } : null,
+        annotations: (annotations ?? []).map((row: any) => ({
+          annotationId: row.id,
+          conceptId: row.concept_id,
+          bodyMarkdown: row.body_markdown,
+          anchorNoteVersionId: row.anchor_note_version_id,
+          revision: row.revision,
+          createdAt: row.created_at,
+          updatedAt: row.updated_at
+        }))
+      });
+    }
+
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
@@ -732,7 +792,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions, vaultAnnotations] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
@@ -741,7 +801,8 @@ Deno.serve(async (req: Request) => {
         getBookmarks(),
         getRecommendationEvents(),
         getMemoryJudgments(),
-        getScheduleDecisionEvents()
+        getScheduleDecisionEvents(),
+        getVaultAnnotations()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -753,8 +814,57 @@ Deno.serve(async (req: Request) => {
         sessions: sessions ?? [],
         recommendations,
         memoryJudgments,
-        scheduleDecisions
+        scheduleDecisions,
+        neuralVault: {
+          annotations: vaultAnnotations
+        }
       });
+    }
+
+    if (req.method === "POST" && path === "/vault/annotations") {
+      const input = await jsonBody(req, 24576);
+      exactFields(input, ["conceptId", "bodyMarkdown"], ["anchorNoteVersionId"]);
+      const conceptId = identifier(input.conceptId);
+      if (typeof input.bodyMarkdown !== "string") fail(400, "invalid_note_body");
+      const anchorNoteVersionId =
+        input.anchorNoteVersionId === undefined || input.anchorNoteVersionId === null
+          ? null
+          : identifier(input.anchorNoteVersionId);
+      const { data, error } = await admin.rpc("neural_create_annotation", {
+        p_learner: learnerId,
+        p_concept_id: conceptId,
+        p_body_markdown: input.bodyMarkdown,
+        p_anchor_note_version_id: anchorNoteVersionId
+      });
+      if (error) fail(500, "vault_write_failed");
+      if (data?.error) fail(data.error === "neural_concept_unknown" ? 404 : 409, data.error);
+      return response(req, 200, data);
+    }
+
+    const vaultAnnotationMatch = path.match(/^\/vault\/annotations\/([a-zA-Z0-9-]+)$/);
+    if (req.method === "PATCH" && vaultAnnotationMatch) {
+      const input = await jsonBody(req, 24576);
+      exactFields(input, ["expectedRevision", "bodyMarkdown"]);
+      if (typeof input.bodyMarkdown !== "string") fail(400, "invalid_note_body");
+      const { data, error } = await admin.rpc("neural_update_annotation", {
+        p_learner: learnerId,
+        p_annotation_id: identifier(vaultAnnotationMatch[1]),
+        p_expected_revision: integer(input.expectedRevision, 1, 1000000),
+        p_body_markdown: input.bodyMarkdown
+      });
+      if (error) fail(500, "vault_write_failed");
+      if (data?.error) fail(data.error === "neural_annotation_not_found" ? 404 : 409, data.error);
+      return response(req, 200, data);
+    }
+
+    if (req.method === "DELETE" && vaultAnnotationMatch) {
+      const { data, error } = await admin.rpc("neural_delete_annotation", {
+        p_learner: learnerId,
+        p_annotation_id: identifier(vaultAnnotationMatch[1])
+      });
+      if (error) fail(500, "vault_write_failed");
+      if (data?.error) fail(404, data.error);
+      return response(req, 200, data);
     }
 
     if (req.method === "POST" && path === "/memory-judgments") {
