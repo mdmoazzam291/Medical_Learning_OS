@@ -686,3 +686,14 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Live migration history contains `content_intake_pipeline`, `content_intake_trigger_permissions` and `internal_trigger_rpc_permissions`; trigger-only SECURITY DEFINER helpers are not exposed as application RPCs.
 - Remaining M02b gate: run the first real controlled 5–10-question source-grounded batch and measure review throughput before increasing generation/import volume.
 
+## M02b first real content-intake pilot + review assist — 2026-09-27
+- Batch `pilot:rabies:20260927:01` staged and promoted successfully through the live service-only intake pipeline.
+- The batch contains 5 distinct source-grounded AI-drafted rabies PEP questions linked to 5 canonical concepts and 2 current National Rabies Control Programme sources.
+- Production pipeline state after promotion: 0 staged questions, 1 promoted batch, 5 in-review questions, 1 previously published stable question.
+- All 5 pilot questions remain blocked behind Medical, References and Rights review. Intake did not publish or learner-expose any of them.
+- Current source verification supports wound washing, category III RIG infiltration, IM days 0/3/7/14/28, ID days 0/3/7/28 and adult deltoid administration.
+- NRCP's current copyright policy supports source-attributed use while excluding third-party material; the conservative review-assist recommendation is therefore `citation_only`, not public-domain.
+- Added `data/content-review-assist.json`, a non-authoritative AI/source preflight artifact shown only as reviewer assistance. It has no gate approval, verification or publication authority.
+- Four pilot items are straightforwardly supported. The category III RIG item is supported but carries an explicit wording note because wound washing is also part of PEP; the human reviewer decides whether that wording is acceptable or requires a new version.
+- The next M02b gate is genuine reviewer decisions plus measured per-gate throughput. Do not increase generation volume before this loop is observed.
+
