@@ -1,5 +1,5 @@
 import { getCapability } from './capabilities.js';
-import { validateDigestEnvelope } from './canonical-integrity.js';
+import { canonicalize, validateDigestEnvelope } from './canonical-integrity.js';
 
 const actorTypes = new Set([
   'human_learner',
@@ -83,7 +83,7 @@ function stringList(value, label, maxItems = 100) {
 function jsonObject(value, label) {
   if (!isPlainObject(value)) fail(`Invalid ${label}`);
   try {
-    structuredClone(value);
+    canonicalize(value);
   } catch {
     fail(`Invalid ${label}`);
   }
