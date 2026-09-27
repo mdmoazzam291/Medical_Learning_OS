@@ -427,3 +427,24 @@ The assembly RPC's selected membership is not treated as sufficient ordering evi
 
 Do not expose an early-section-advance endpoint for a ruleset that forbids early advance. Cancellation and GT Autopsy are separate later slices. The full-mock learner launch remains blocked until the content-capacity gate reaches 180 distinct eligible published questions.
 
+## ADR-040 — Scalable content enters through service-only staging, never directly into publication (accepted, 2026-09-27)
+Scaling the reviewed QBank requires a separate intake boundary before the canonical learner catalog.
+
+Accept candidate batches into a server-only staging layer first. Staging records the exact manifest and SHA-256 fingerprint, validates structural integrity, stable IDs, exact source/concept references, answer-key integrity and exact normalized-stem duplicates, but does not make any question learner-visible.
+
+Promotion is an explicit second transition. It revalidates against the current locked catalog and may append only:
+- new canonical concepts;
+- new sources whose rights state is explicitly `unknown`;
+- new stable version-1 questions with empty reviews, no publication timestamp and status `in_review`.
+
+Promotion has no publication authority. Medical, References and Rights review remain the existing immutable evidence gates, and publication remains a separate trusted transition after all three gates pass with current fingerprints.
+
+Intake v1 deliberately accepts only `original` and `ai_generated` provenance. Recalled/licensed PYQ evidence belongs in the separate exam-occurrence/PYQ evidence ledger and must not be smuggled through bulk content intake.
+
+Do not let reviewers become content operators merely because they hold a review grant. Intake staging/promotion remains service-role-only until a separate operator authorization model is designed. Reviewers may receive a read-only pipeline-status view so backlog pressure is visible without widening mutation authority.
+
+Exact normalized-stem deduplication is only a mechanical first gate. It does not claim semantic near-duplicate detection, medical quality scoring or blueprint fidelity. Those require later content-quality systems and measured validation.
+
+Use bounded batches (maximum 100 questions in v1), immutable intake events and an explicit abandon transition. This keeps failed or conflicting batches auditable without deleting history and makes throughput measurable as:
+staged → promoted/in-review → gate approvals → verified → published.
+
