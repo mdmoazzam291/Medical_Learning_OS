@@ -692,3 +692,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - PR #59 added descriptive backlog metrics to the authenticated reviewer workspace; intake mutation authority remains absent from browser/reviewer code.
 - Remaining M02b gate: complete independent Medical/References/Rights review of the five-question pilot, measure gate times and rejection reasons, then decide whether to scale batch size.
 
+## M02b non-authoritative review assist — 2026-09-27
+- Added `data/content-review-assist.json` for the five-question rabies pilot.
+- The packet summarizes source support and conservative source-rights recommendations but has `authority=none` and cannot approve, verify or publish content.
+- Reviewer cards display the preflight beside the exact target while retaining mandatory authenticated reviewer notes and decisions.
+- Current source verification supports wound washing, category III RIG infiltration, IM days 0/3/7/14/28, ID days 0/3/7/28 and adult deltoid administration.
+- NRCP's copyright policy supports attributed use while excluding third-party material; review-assist therefore recommends `citation_only` rather than claiming public-domain status.
+- Four pilot items are straightforwardly supported. The category III RIG item carries a wording note because wound washing is also part of PEP; the reviewer decides whether to approve or require a new version.
+

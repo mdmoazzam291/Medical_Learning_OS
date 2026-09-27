@@ -16,6 +16,7 @@ let state = {
   targetType: 'questions',
   items: [],
   pipelineStatus: null,
+  reviewAssist: null,
   loading: false,
   submitting: null,
   error: null
@@ -95,6 +96,32 @@ function pipelinePanel() {
   </section>`;
 }
 
+function reviewAssistPanel(questionVersionId) {
+  const packet = state.reviewAssist;
+  const items = Array.isArray(packet?.questions) ? packet.questions : [];
+  const assist = items.find(item => item?.questionVersionId === questionVersionId);
+  const gate = assist?.[state.selectedKind];
+  if (!assist || !gate) return '';
+
+  const referenced = Array.isArray(gate.sourceIds) ? gate.sourceIds : [];
+  const sourceEvidence = Array.isArray(packet?.sourceEvidence)
+    ? packet.sourceEvidence.filter(source => referenced.includes(source?.sourceId))
+    : [];
+  const rightsLinks = state.selectedKind === 'rights'
+    ? sourceEvidence
+        .filter(source => source?.rightsBasisUrl)
+        .map(source => `<div>${sourceLink(source.rightsBasisUrl)}</div>`)
+        .join('')
+    : '';
+
+  return `<section class="review-section review-assist">
+    <div class="section-heading"><div><span class="eyebrow">REVIEW ASSIST</span><h3>AI/source preflight</h3></div><span class="badge">Non-authoritative</span></div>
+    <p><strong>${escape(gate.result || 'preflight')}</strong> · ${escape(gate.summary || 'No summary recorded.')}</p>
+    ${rightsLinks}
+    <p class="muted">Generated ${escape(packet.generatedDate || 'unknown date')}. This evidence cannot approve, verify or publish content. Independently inspect the question and cited source before deciding this gate.</p>
+  </section>`;
+}
+
 function signedOut() {
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">CONTENT REVIEW</span><h1>Sign in before reviewing.</h1><p>The review workspace uses your existing Supabase account session. Reviewer identity and privileges are resolved server-side.</p></div><span class="badge">M04c</span></div><section class="panel"><h2>No review session</h2><p>Sign in on the Cloud account page, then return here. Learner accounts do not become reviewers automatically.</p><a class="primary action-link" href="/web/account.html">Open cloud account</a></section></main>`;
 }
@@ -131,10 +158,11 @@ function reviewItem(item, index) {
     <div class="review-metadata"><div><span>Primary concept</span><strong>${escape(primary?.conceptId || 'Not linked')}</strong></div><div><span>Provenance</span><strong>${escape(provenance.kind || 'unknown')}</strong></div><div><span>Exam/year</span><strong>${escape(provenance.exam || 'N/A')} ${escape(provenance.year ?? '')}</strong></div></div>
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
+    ${reviewAssistPanel(q.questionVersionId)}
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
       <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, or public domain before approving the rights gate.</p>' : ''}
+      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
     </form>
   </article>`;
 }
@@ -192,12 +220,22 @@ async function loadQueue(kind = state.selectedKind) {
       reportUnexpected(error, 'load_pipeline_status');
       return state.pipelineStatus;
     });
-    const [result, pipelineStatus] = await Promise.all([queuePromise, pipelinePromise]);
+    const assistPromise = state.targetType === 'questions'
+      ? fetch('/data/content-review-assist.json', { cache: 'no-store' })
+          .then(response => response.ok ? response.json() : null)
+          .catch(() => state.reviewAssist)
+      : Promise.resolve(state.reviewAssist);
+    const [result, pipelineStatus, reviewAssist] = await Promise.all([
+      queuePromise,
+      pipelinePromise,
+      assistPromise
+    ]);
     state = {
       ...state,
       loading: false,
       items: Array.isArray(result?.items) ? result.items : [],
       pipelineStatus,
+      reviewAssist,
       error: null
     };
   } catch (error) {
@@ -221,7 +259,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };

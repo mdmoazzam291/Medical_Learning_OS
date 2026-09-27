@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "assistType": "ai_source_preflight",
+  "authority": "none",
+  "generatedDate": "2026-09-27",
+  "scope": {
+    "batchKey": "pilot:rabies:20260927:01",
+    "questionCount": 5
+  },
+  "policy": {
+    "mayApproveReviewGate": false,
+    "mayVerifyContent": false,
+    "mayPublishContent": false,
+    "requiresIndependentReviewerDecision": true,
+    "staleIfReviewTargetChanges": true
+  },
+  "sourceEvidence": [
+    {
+      "sourceId": "nrcp:rabies-faq:accessed-2026-09-27",
+      "sourceUrl": "https://rabiesfreeindia.mohfw.gov.in/faq",
+      "supportSummary": "The current NRCP FAQ states that animal-bite wounds and scratches should be washed immediately with soap or detergent and thoroughly flushed with copious running water for up to about 15 minutes, followed by further assessment and prophylaxis.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://rabiesfreeindia.mohfw.gov.in/copyright-policy",
+      "rightsBasisSummary": "NRCP states that website content may be reproduced when the source is duly and prominently acknowledged, while third-party material requires separate authorization. The Medical Learning OS item uses original wording for factual grounding rather than reproducing protected source expression."
+    },
+    {
+      "sourceId": "nrcp:rabies-vaccination-dose:2026-09-18",
+      "sourceUrl": "https://rabiesfreeindia.mohfw.gov.in/vaccination_dose?tab=nhrl",
+      "supportSummary": "The current NRCP schedule page lists IM post-exposure vaccination on days 0, 3, 7, 14 and 28; ID vaccination on days 0, 3, 7 and 28; deltoid administration for adults; and rabies immunoglobulin infiltration for category III bite wounds.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://rabiesfreeindia.mohfw.gov.in/copyright-policy",
+      "rightsBasisSummary": "NRCP states that website content may be reproduced when the source is duly and prominently acknowledged, while third-party material requires separate authorization. The Medical Learning OS items use original wording for factual grounding rather than reproducing protected source expression."
+    }
+  ],
+  "questions": [
+    {
+      "questionVersionId": "infectious:rabies:pep-wound-wash-15min@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The answer key and explanation match current NRCP first-aid guidance on immediate wound washing with soap or detergent and running water for roughly 15 minutes.",
+        "uncertainty": "low"
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited NRCP FAQ directly supports the keyed action and explanation.",
+        "sourceIds": ["nrcp:rabies-faq:accessed-2026-09-27"]
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the source only for factual grounding; NRCP copyright policy requires source acknowledgement and excludes third-party material from blanket permission."
+      }
+    },
+    {
+      "questionVersionId": "infectious:rabies:category-iii-rig-infiltration@1",
+      "medical": {
+        "result": "supported_with_wording_note",
+        "summary": "NRCP supports RIG infiltration for category III exposure. The keyed option is correct. The stem could be made more specific in a future version because wound washing is also part of PEP, but among the listed options only RIG is the indicated additional intervention.",
+        "uncertainty": "low"
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited NRCP schedule page directly states that category III bite wounds require rabies immunoglobulin infiltration.",
+        "sourceIds": ["nrcp:rabies-vaccination-dose:2026-09-18"]
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the NRCP page only for factual grounding."
+      }
+    },
+    {
+      "questionVersionId": "infectious:rabies:im-pep-days-india@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The keyed IM schedule of days 0, 3, 7, 14 and 28 matches the current NRCP schedule for a previously unvaccinated person.",
+        "uncertainty": "low"
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited NRCP schedule page directly supports the five-visit intramuscular regimen.",
+        "sourceIds": ["nrcp:rabies-vaccination-dose:2026-09-18"]
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the NRCP page only for factual grounding."
+      }
+    },
+    {
+      "questionVersionId": "infectious:rabies:id-pep-days-india@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The keyed ID schedule of days 0, 3, 7 and 28 matches the current NRCP schedule for a previously unvaccinated person.",
+        "uncertainty": "low"
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited NRCP schedule page directly supports the four-visit intradermal regimen.",
+        "sourceIds": ["nrcp:rabies-vaccination-dose:2026-09-18"]
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the NRCP page only for factual grounding."
+      }
+    },
+    {
+      "questionVersionId": "infectious:rabies:adult-im-vaccine-site@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The keyed adult intramuscular injection site, the deltoid muscle, matches current NRCP guidance. The explanation correctly distinguishes the anterolateral thigh option used for infants/children receiving IM vaccine.",
+        "uncertainty": "low"
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited NRCP schedule page directly supports the deltoid site for adults.",
+        "sourceIds": ["nrcp:rabies-vaccination-dose:2026-09-18"]
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the NRCP page only for factual grounding."
+      }
+    }
+  ]
+}
