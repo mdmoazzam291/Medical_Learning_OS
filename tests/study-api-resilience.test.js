@@ -234,3 +234,10 @@ test('NeuralVault concept detail exposes update-aware annotation anchor state', 
   assert.match(source, /"anchor-unavailable"/);
   assert.match(source, /"unanchored"/);
 });
+
+
+test('learner question exposes stable primary canonical concept identity', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /const primaryConcept = q\.conceptLinks\?\.find/);
+  assert.match(source, /conceptId: primaryConcept\?\.conceptId \?\? null/);
+});
