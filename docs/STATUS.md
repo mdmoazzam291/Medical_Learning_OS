@@ -504,3 +504,18 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - The published canonical note remained intact as version 1 and stayed visible after deletion.
 - This closes the real hosted personal-annotation CRUD lifecycle: create → edit → refresh persistence → delete → refresh absence.
 - M06a is DONE.
+
+
+## M06c Study Now → NeuralVault contextual retrieval handoff — 2026-09-27
+- Active Study Now session state now restores recommendation context from the immutable `study_recommendation_events` receipt on every load/resume.
+- Only allowlisted recommendation reasons are exposed to the learner: `mistake-repair`, `due-revision`, and `new-learning`.
+- Recommendation context is shown only after the learner has answered. NeuralVault is not exposed as a pre-answer cue that could weaken retrieval practice.
+- The answered Study Now flow now displays an explainable "Why Study Now sent this" block and a contextual `Review this concept in NeuralVault →` link.
+- The link carries canonical `conceptId` plus allowlisted `from=study-now` and `reason=<...>` parameters.
+- NeuralVault validates the reason against the same allowlist and shows a concept-specific Study Now handoff panel only when the handoff concept matches the opened canonical concept.
+- The handoff is explicitly presentational: it does not modify score, personal notes, mastery state, revision state or scheduling.
+- Refresh/resume preserves the recommendation reason because the API reconstructs it from immutable recommendation evidence rather than browser-only state.
+- Full unit/check suite passed and responsive browser verification passed.
+- Render deployment `dep-dasbmejtqb8s739kgl00` is live and `study-api` v19 is active.
+- M06c is DONE. A future real due-item Study Now handoff will be observed as part of M05c's longitudinal hosted proof and does not block NeuralVault completion.
+- M06 is now DONE: M06a personal annotation lifecycle, M06b canonical review/publication, and M06c search/update-safe retrieval links have all reached their release gates.
