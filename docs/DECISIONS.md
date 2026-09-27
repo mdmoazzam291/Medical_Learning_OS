@@ -469,3 +469,24 @@ This keeps the useful loop:
 AI/source checking → lower reviewer lookup cost → genuine reviewer decision → immutable evidence,
 without turning AI confidence into medical truth.
 
+## ADR-042 — Lexical overlap is a preflight signal, not semantic duplicate truth (accepted, 2026-09-27)
+Before scaling candidate batches, surface suspiciously similar question stems without turning a heuristic into publication authority.
+
+Use a deterministic token-set overlap report across:
+- questions within the candidate batch;
+- candidate questions versus the live catalog;
+- candidate questions versus other staged batches.
+
+The report is service-only and advisory. It may flag candidates for human/content-operator inspection, but it does not block staging or promotion by itself.
+
+A lexical-overlap value is not:
+- proof that two questions test the same concept;
+- proof that two questions are medically redundant;
+- a medical-quality score;
+- an exam-blueprint signal;
+- semantic duplicate detection.
+
+Exact normalized-stem duplication remains a hard mechanical rejection in the intake validator. True semantic deduplication remains a later content-quality capability requiring a separately validated method.
+
+This boundary lets the 25-question scale pilot catch obvious paraphrase clones while preserving uncertainty and avoiding an opaque similarity score as truth.
+

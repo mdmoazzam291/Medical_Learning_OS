@@ -107,7 +107,7 @@ This measures pipeline pressure. It does not infer medical quality, reviewer qua
 
 ## Current limitations
 
-- Semantic near-duplicate detection is not implemented.
+- True semantic near-duplicate detection is not implemented. A service-only lexical token-overlap preflight is advisory and may flag suspiciously similar stems before staging.
 - Exam-blueprint/content-mix targeting is not implemented.
 - No AI generation service is connected to intake yet.
 - No browser/operator staging or promotion mutation endpoint exists; writes remain service-role-only.
