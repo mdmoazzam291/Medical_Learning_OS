@@ -75,3 +75,20 @@ test('batch intentionally spans five prevention/management families', () => {
     assert.equal(ids.filter(id => id.startsWith(prefix)).length, 5);
   }
 });
+
+
+test('pilot overlap flags are explicitly dispositioned without claiming semantic truth', async () => {
+  const preflight = JSON.parse(await readFile(
+    new URL('../data/content-intake-pilot-infectious-prevention-02-preflight.json', import.meta.url),
+    'utf8'
+  ));
+  assert.equal(preflight.authority, 'none');
+  assert.equal(preflight.validation.valid, true);
+  assert.equal(preflight.validation.publicationAuthority, false);
+  assert.equal(preflight.overlap.blocking, false);
+  assert.equal(preflight.overlap.semanticDuplicateDetection, false);
+  assert.equal(preflight.overlap.medicalQualityInference, false);
+  assert.equal(preflight.overlap.flagCount, 2);
+  assert.ok(preflight.overlap.flags.every(flag => flag.disposition === 'retain_distinct'));
+  assert.equal(preflight.contentMix.examBlueprintFidelity, false);
+});
