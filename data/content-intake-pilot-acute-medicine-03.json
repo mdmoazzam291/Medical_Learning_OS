@@ -1,0 +1,1534 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "resuscitation:adult-bls:pulse-check-ten-seconds",
+      "label": "Adult BLS pulse check limited to 10 seconds",
+      "aliases": [
+        "adult pulse check duration"
+      ],
+      "subjectTags": [
+        "emergency-medicine",
+        "resuscitation",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "resuscitation:adult-bls:compression-rate-100-120",
+      "label": "Adult chest compression rate of 100–120 per minute",
+      "aliases": [
+        "adult CPR compression rate"
+      ],
+      "subjectTags": [
+        "emergency-medicine",
+        "resuscitation",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "resuscitation:adult-bls:compression-depth-5-6cm",
+      "label": "Adult chest compression depth of 5–6 cm",
+      "aliases": [
+        "adult CPR compression depth"
+      ],
+      "subjectTags": [
+        "emergency-medicine",
+        "resuscitation",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "resuscitation:adult-bls:compression-ventilation-30-2",
+      "label": "Adult CPR 30:2 compression-to-ventilation ratio without an advanced airway",
+      "aliases": [
+        "adult CPR 30:2"
+      ],
+      "subjectTags": [
+        "emergency-medicine",
+        "resuscitation",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "resuscitation:adult-bls:rescue-breathing-pulse-present",
+      "label": "Adult rescue breathing with pulse present",
+      "aliases": [
+        "adult respiratory arrest ventilation rate"
+      ],
+      "subjectTags": [
+        "emergency-medicine",
+        "resuscitation",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "critical-care:sepsis:measure-lactate",
+      "label": "Blood lactate measurement in suspected sepsis",
+      "aliases": [
+        "sepsis lactate"
+      ],
+      "subjectTags": [
+        "critical-care",
+        "internal-medicine",
+        "guideline-global-sccm"
+      ]
+    },
+    {
+      "conceptId": "critical-care:sepsis:initial-crystalloid-30mlkg-3h",
+      "label": "Initial 30 mL/kg crystalloid within 3 hours for sepsis-induced hypoperfusion or septic shock",
+      "aliases": [
+        "sepsis 30 mL/kg"
+      ],
+      "subjectTags": [
+        "critical-care",
+        "internal-medicine",
+        "guideline-global-sccm"
+      ]
+    },
+    {
+      "conceptId": "critical-care:septic-shock:initial-map-65",
+      "label": "Initial MAP target of 65 mm Hg in septic shock",
+      "aliases": [
+        "septic shock MAP target"
+      ],
+      "subjectTags": [
+        "critical-care",
+        "internal-medicine",
+        "guideline-global-sccm"
+      ]
+    },
+    {
+      "conceptId": "critical-care:sepsis:antimicrobials-within-one-hour",
+      "label": "Immediate antimicrobial therapy within about 1 hour for septic shock/high-likelihood sepsis",
+      "aliases": [
+        "sepsis antibiotics one hour"
+      ],
+      "subjectTags": [
+        "critical-care",
+        "internal-medicine",
+        "guideline-global-sccm"
+      ]
+    },
+    {
+      "conceptId": "critical-care:septic-shock:norepinephrine-first-line",
+      "label": "Norepinephrine as first-line vasopressor in septic shock",
+      "aliases": [
+        "septic shock norepinephrine"
+      ],
+      "subjectTags": [
+        "critical-care",
+        "internal-medicine",
+        "guideline-global-sccm"
+      ]
+    },
+    {
+      "conceptId": "respiratory:asthma:gina-track1-preferred",
+      "label": "GINA Track 1 preferred approach for adults and adolescents",
+      "aliases": [
+        "GINA Track 1"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gina"
+      ]
+    },
+    {
+      "conceptId": "respiratory:asthma:gina-steps1-2-air-only",
+      "label": "As-needed low-dose ICS-formoterol at GINA Track 1 Steps 1–2",
+      "aliases": [
+        "AIR-only asthma"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gina"
+      ]
+    },
+    {
+      "conceptId": "respiratory:asthma:gina-mart-step3",
+      "label": "Maintenance-and-reliever therapy beginning at GINA Track 1 Step 3",
+      "aliases": [
+        "MART Step 3"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gina"
+      ]
+    },
+    {
+      "conceptId": "respiratory:asthma:gina-mart-ics-formoterol-only",
+      "label": "ICS-formoterol as the ICS-LABA used for MART",
+      "aliases": [
+        "ICS formoterol MART"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gina"
+      ]
+    },
+    {
+      "conceptId": "respiratory:asthma:gina-step5-expert-assessment",
+      "label": "GINA Step 5 expert assessment and phenotyping",
+      "aliases": [
+        "GINA Step 5"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gina"
+      ]
+    },
+    {
+      "conceptId": "respiratory:copd:post-bd-fev1-fvc-below-0-7",
+      "label": "Post-bronchodilator FEV1/FVC below 0.7 as GOLD spirometric COPD criterion",
+      "aliases": [
+        "COPD spirometry 0.7"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gold"
+      ]
+    },
+    {
+      "conceptId": "respiratory:copd:exacerbation-initial-short-acting-bronchodilator",
+      "label": "Short-acting bronchodilators as initial treatment for COPD exacerbation",
+      "aliases": [
+        "COPD exacerbation SABA SAMA"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gold"
+      ]
+    },
+    {
+      "conceptId": "respiratory:copd:exacerbation-systemic-steroid-five-days",
+      "label": "Five-day systemic corticosteroid course for COPD exacerbation",
+      "aliases": [
+        "COPD steroid 5 days"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gold"
+      ]
+    },
+    {
+      "conceptId": "respiratory:copd:exacerbation-antibiotic-indications",
+      "label": "Antibiotic indications in COPD exacerbation",
+      "aliases": [
+        "COPD exacerbation antibiotics"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gold"
+      ]
+    },
+    {
+      "conceptId": "respiratory:copd:hypercapnic-failure-niv",
+      "label": "Noninvasive ventilation for COPD exacerbation with hypercapnic respiratory failure",
+      "aliases": [
+        "COPD NIV hypercapnia"
+      ],
+      "subjectTags": [
+        "respiratory-medicine",
+        "internal-medicine",
+        "guideline-global-gold"
+      ]
+    },
+    {
+      "conceptId": "endocrine:diabetes:diagnosis-a1c-6-5",
+      "label": "Diabetes diagnostic A1C threshold of 6.5%",
+      "aliases": [
+        "A1C diabetes diagnosis"
+      ],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-us-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:diabetes:diagnosis-fpg-126",
+      "label": "Diabetes fasting plasma glucose threshold of 126 mg/dL",
+      "aliases": [
+        "FPG diabetes diagnosis"
+      ],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-us-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:diabetes:diagnosis-ogtt-2h-200",
+      "label": "Diabetes 2-hour OGTT threshold of 200 mg/dL",
+      "aliases": [
+        "OGTT diabetes diagnosis"
+      ],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-us-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:diabetes:diagnosis-random-200-symptoms",
+      "label": "Random plasma glucose 200 mg/dL with classic symptoms as a diabetes criterion",
+      "aliases": [
+        "random glucose diabetes symptoms"
+      ],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-us-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:diabetes:diagnosis-confirmation-asymptomatic",
+      "label": "Confirmatory testing for diabetes without unequivocal hyperglycemia",
+      "aliases": [
+        "confirm diabetes repeat test"
+      ],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-us-ada"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "aha:adult-bls:2025-accessed-2026-09-28",
+      "title": "American Heart Association: 2025 Adult Basic Life Support Guidelines",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "version": "2025-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official AHA adult BLS guideline page used only for factual grounding of original questions. No source text, tables, algorithms, figures, or illustrations are intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "sccm:adult-sepsis-guidelines:accessed-2026-09-28",
+      "title": "Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official SCCM Surviving Sepsis Campaign adult guideline page used only for factual grounding of original questions. No source text, tables, figures, or algorithms are intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "gina:strategy-report:2026-accessed-2026-09-28",
+      "title": "Global Initiative for Asthma: 2026 GINA Strategy Report",
+      "url": "https://ginasthma.org/2026-gina-strategy-report/",
+      "version": "2026-report-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official 2026 GINA strategy resource used only for factual grounding of original questions. GINA states its documents are copyright protected; no source text, tables, figures, or treatment boxes are intended to be reproduced. Independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "gold:copd-report:2026-accessed-2026-09-28",
+      "title": "Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report",
+      "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "version": "2026-report-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official 2026 GOLD COPD strategy resource used only for factual grounding of original questions. No source text, tables, figures, or algorithms are intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "ada:diagnosis-classification:2026-accessed-2026-09-28",
+      "title": "American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026",
+      "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S27/163926/2-Diagnosis-and-Classification-of-Diabetes",
+      "version": "2026-standards-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official ADA Standards of Care journal article used only for factual grounding of original questions. ADA journal content is copyright protected; no source text, tables, figures, or other expressive material are intended to be reproduced. Independent rights review remains required before publication."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "resuscitation:adult-bls:pulse-check-duration",
+      "questionVersionId": "resuscitation:adult-bls:pulse-check-duration@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "A healthcare professional assesses an unresponsive adult with absent or abnormal breathing. Under the 2025 AHA adult BLS guidance, how long should the pulse check take before chest compressions are started if a pulse is not definitely felt?",
+      "options": [
+        {
+          "optionId": "ten-seconds",
+          "text": "No more than 10 seconds"
+        },
+        {
+          "optionId": "thirty-seconds",
+          "text": "30 seconds"
+        },
+        {
+          "optionId": "one-minute",
+          "text": "1 minute"
+        },
+        {
+          "optionId": "until-certain",
+          "text": "Continue until the rescuer is certain"
+        }
+      ],
+      "answerOptionId": "ten-seconds",
+      "explanation": "The 2025 AHA adult BLS guidance says the healthcare professional should minimize the pulse check to no more than 10 seconds; if a pulse is not definitely felt, chest compressions should be started.",
+      "conceptLinks": [
+        {
+          "conceptId": "resuscitation:adult-bls:pulse-check-ten-seconds",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:adult-bls:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "resuscitation:adult-bls:compression-rate",
+      "questionVersionId": "resuscitation:adult-bls:compression-rate@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "During high-quality manual CPR for an adult in cardiac arrest, which chest-compression rate is recommended by the 2025 AHA adult BLS guidance?",
+      "options": [
+        {
+          "optionId": "60-80",
+          "text": "60–80/min"
+        },
+        {
+          "optionId": "80-100",
+          "text": "80–100/min"
+        },
+        {
+          "optionId": "100-120",
+          "text": "100–120/min"
+        },
+        {
+          "optionId": "130-150",
+          "text": "130–150/min"
+        }
+      ],
+      "answerOptionId": "100-120",
+      "explanation": "For adults in cardiac arrest, the AHA recommends a chest-compression rate of 100 to 120 per minute.",
+      "conceptLinks": [
+        {
+          "conceptId": "resuscitation:adult-bls:compression-rate-100-120",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:adult-bls:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "resuscitation:adult-bls:compression-depth",
+      "questionVersionId": "resuscitation:adult-bls:compression-depth@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which chest-compression depth best matches the 2025 AHA adult BLS recommendation for an average adult in cardiac arrest?",
+      "options": [
+        {
+          "optionId": "2-3cm",
+          "text": "2–3 cm"
+        },
+        {
+          "optionId": "at-least-5-avoid-over-6",
+          "text": "At least 5 cm while avoiding depths greater than 6 cm"
+        },
+        {
+          "optionId": "7-8cm",
+          "text": "7–8 cm"
+        },
+        {
+          "optionId": "depth-unimportant",
+          "text": "Depth is not specified if the rate is correct"
+        }
+      ],
+      "answerOptionId": "at-least-5-avoid-over-6",
+      "explanation": "AHA guidance recommends compressing at least 2 inches (5 cm) in an average adult while avoiding excessive depth greater than 2.4 inches (6 cm).",
+      "conceptLinks": [
+        {
+          "conceptId": "resuscitation:adult-bls:compression-depth-5-6cm",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:adult-bls:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "resuscitation:adult-bls:thirty-to-two",
+      "questionVersionId": "resuscitation:adult-bls:thirty-to-two@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult in cardiac arrest is receiving CPR without an advanced airway. What compression-to-ventilation pattern is used in the 2025 AHA adult BLS algorithm?",
+      "options": [
+        {
+          "optionId": "15-2",
+          "text": "15 compressions to 2 breaths"
+        },
+        {
+          "optionId": "30-1",
+          "text": "30 compressions to 1 breath"
+        },
+        {
+          "optionId": "30-2",
+          "text": "30 compressions to 2 breaths"
+        },
+        {
+          "optionId": "continuous-no-breaths",
+          "text": "Continuous compressions with no ventilations in all circumstances"
+        }
+      ],
+      "answerOptionId": "30-2",
+      "explanation": "The adult BLS algorithm uses cycles of 30 chest compressions and 2 breaths when an advanced airway is not in place.",
+      "conceptLinks": [
+        {
+          "conceptId": "resuscitation:adult-bls:compression-ventilation-30-2",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:adult-bls:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "resuscitation:adult-bls:pulse-present-rescue-breathing",
+      "questionVersionId": "resuscitation:adult-bls:pulse-present-rescue-breathing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult has a definite pulse but abnormal or absent breathing. According to the 2025 AHA adult BLS algorithm, what ventilation rate should a healthcare professional provide?",
+      "options": [
+        {
+          "optionId": "one-every-2s",
+          "text": "1 breath every 2 seconds"
+        },
+        {
+          "optionId": "one-every-6s",
+          "text": "1 breath every 6 seconds"
+        },
+        {
+          "optionId": "two-every-30s",
+          "text": "2 breaths every 30 seconds"
+        },
+        {
+          "optionId": "no-ventilation",
+          "text": "No ventilation is needed while a pulse is present"
+        }
+      ],
+      "answerOptionId": "one-every-6s",
+      "explanation": "For an adult with a pulse but abnormal breathing, the AHA adult BLS algorithm calls for 1 breath every 6 seconds, approximately 10 breaths per minute.",
+      "conceptLinks": [
+        {
+          "conceptId": "resuscitation:adult-bls:rescue-breathing-pulse-present",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:adult-bls:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "critical-care:sepsis:lactate-measurement",
+      "questionVersionId": "critical-care:sepsis:lactate-measurement@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An acutely ill adult is suspected of having sepsis. Which laboratory measurement is specifically suggested by current SCCM Surviving Sepsis Campaign adult guidance as part of the initial evaluation?",
+      "options": [
+        {
+          "optionId": "lactate",
+          "text": "Blood lactate"
+        },
+        {
+          "optionId": "troponin-only",
+          "text": "Troponin as the sole sepsis biomarker"
+        },
+        {
+          "optionId": "d-dimer-only",
+          "text": "D-dimer as the sole sepsis biomarker"
+        },
+        {
+          "optionId": "ammonia",
+          "text": "Serum ammonia"
+        }
+      ],
+      "answerOptionId": "lactate",
+      "explanation": "Current Surviving Sepsis Campaign adult guidance suggests measuring blood lactate in adults with possible, probable, or definite sepsis or septic shock.",
+      "conceptLinks": [
+        {
+          "conceptId": "critical-care:sepsis:measure-lactate",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "critical-care:sepsis:initial-fluid-volume",
+      "questionVersionId": "critical-care:sepsis:initial-fluid-volume@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult has sepsis-induced hypoperfusion. According to current SCCM Surviving Sepsis Campaign adult guidance, what initial crystalloid volume is suggested during early resuscitation?",
+      "options": [
+        {
+          "optionId": "10mlkg-6h",
+          "text": "10 mL/kg over 6 hours"
+        },
+        {
+          "optionId": "20mlkg-24h",
+          "text": "20 mL/kg over 24 hours"
+        },
+        {
+          "optionId": "at-least-30mlkg-3h",
+          "text": "At least 30 mL/kg within the first 3 hours"
+        },
+        {
+          "optionId": "fixed-500ml",
+          "text": "A fixed 500 mL for every adult"
+        }
+      ],
+      "answerOptionId": "at-least-30mlkg-3h",
+      "explanation": "For sepsis-induced hypoperfusion or septic shock, the guidance suggests at least 30 mL/kg of IV crystalloid during the first 3 hours, with subsequent fluid decisions individualized and reassessed.",
+      "conceptLinks": [
+        {
+          "conceptId": "critical-care:sepsis:initial-crystalloid-30mlkg-3h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "critical-care:septic-shock:initial-map-target",
+      "questionVersionId": "critical-care:septic-shock:initial-map-target@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult with septic shock requires vasopressors. What initial mean arterial pressure target is recommended by current SCCM Surviving Sepsis Campaign adult guidance for most adults?",
+      "options": [
+        {
+          "optionId": "50",
+          "text": "50 mm Hg"
+        },
+        {
+          "optionId": "65",
+          "text": "65 mm Hg"
+        },
+        {
+          "optionId": "80",
+          "text": "80 mm Hg"
+        },
+        {
+          "optionId": "100",
+          "text": "100 mm Hg"
+        }
+      ],
+      "answerOptionId": "65",
+      "explanation": "For adults with septic shock, the guideline recommends an initial MAP target of 65 mm Hg rather than higher targets, with clinical individualization as needed.",
+      "conceptLinks": [
+        {
+          "conceptId": "critical-care:septic-shock:initial-map-65",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "critical-care:septic-shock:antimicrobial-timing",
+      "questionVersionId": "critical-care:septic-shock:antimicrobial-timing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult is recognized as having septic shock. What antimicrobial timing best matches current SCCM Surviving Sepsis Campaign adult guidance?",
+      "options": [
+        {
+          "optionId": "within-1h",
+          "text": "Administer immediately, ideally within 1 hour of recognition"
+        },
+        {
+          "optionId": "after-6h",
+          "text": "Wait at least 6 hours for cultures to finalize"
+        },
+        {
+          "optionId": "after-procalcitonin",
+          "text": "Withhold until procalcitonin confirms infection"
+        },
+        {
+          "optionId": "after-24h",
+          "text": "Start within 24 hours if fever persists"
+        }
+      ],
+      "answerOptionId": "within-1h",
+      "explanation": "For possible, probable, or definite septic shock, current guidance recommends antimicrobial therapy immediately, ideally within 1 hour of recognition.",
+      "conceptLinks": [
+        {
+          "conceptId": "critical-care:sepsis:antimicrobials-within-one-hour",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "critical-care:septic-shock:first-line-vasopressor",
+      "questionVersionId": "critical-care:septic-shock:first-line-vasopressor@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which vasopressor is recommended as the first-line agent for most adults with septic shock in current SCCM Surviving Sepsis Campaign adult guidance?",
+      "options": [
+        {
+          "optionId": "dopamine",
+          "text": "Dopamine"
+        },
+        {
+          "optionId": "norepinephrine",
+          "text": "Norepinephrine"
+        },
+        {
+          "optionId": "terlipressin",
+          "text": "Terlipressin"
+        },
+        {
+          "optionId": "phenylephrine",
+          "text": "Phenylephrine"
+        }
+      ],
+      "answerOptionId": "norepinephrine",
+      "explanation": "Current Surviving Sepsis Campaign adult guidance recommends norepinephrine as the first-line vasopressor in septic shock over several alternatives.",
+      "conceptLinks": [
+        {
+          "conceptId": "critical-care:septic-shock:norepinephrine-first-line",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:asthma:gina-track1-preferred-reliever",
+      "questionVersionId": "respiratory:asthma:gina-track1-preferred-reliever@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "For adults and adolescents with asthma, which reliever-based treatment track is preferred in the 2026 GINA strategy because it reduces severe exacerbation risk compared with SABA-reliever regimens?",
+      "options": [
+        {
+          "optionId": "track1-ics-formoterol",
+          "text": "Track 1 using low-dose ICS-formoterol as the reliever"
+        },
+        {
+          "optionId": "saba-only",
+          "text": "SABA-only treatment"
+        },
+        {
+          "optionId": "oral-theophylline",
+          "text": "Oral theophylline as reliever"
+        },
+        {
+          "optionId": "maintenance-antibiotic",
+          "text": "Maintenance antibiotic therapy"
+        }
+      ],
+      "answerOptionId": "track1-ics-formoterol",
+      "explanation": "GINA 2026 identifies Track 1, which uses low-dose ICS-formoterol as the anti-inflammatory reliever, as the preferred approach for adults and adolescents.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:asthma:gina-track1-preferred",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gina:strategy-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:asthma:gina-steps1-2-treatment",
+      "questionVersionId": "respiratory:asthma:gina-steps1-2-treatment@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "In GINA 2026 Track 1 for adults and adolescents, what is the usual treatment approach at Steps 1–2?",
+      "options": [
+        {
+          "optionId": "air-only",
+          "text": "As-needed low-dose ICS-formoterol without scheduled maintenance dosing"
+        },
+        {
+          "optionId": "daily-oral-steroid",
+          "text": "Daily oral corticosteroid"
+        },
+        {
+          "optionId": "laba-alone",
+          "text": "LABA monotherapy"
+        },
+        {
+          "optionId": "saba-only",
+          "text": "SABA-only therapy"
+        }
+      ],
+      "answerOptionId": "air-only",
+      "explanation": "At Track 1 Steps 1–2, GINA uses as-needed-only low-dose ICS-formoterol as anti-inflammatory reliever therapy.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:asthma:gina-steps1-2-air-only",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gina:strategy-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:asthma:gina-mart-begins-step3",
+      "questionVersionId": "respiratory:asthma:gina-mart-begins-step3@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "At which GINA 2026 Track 1 step does maintenance-and-reliever therapy (MART) begin for adults and adolescents?",
+      "options": [
+        {
+          "optionId": "step1",
+          "text": "Step 1"
+        },
+        {
+          "optionId": "step2",
+          "text": "Step 2"
+        },
+        {
+          "optionId": "step3",
+          "text": "Step 3"
+        },
+        {
+          "optionId": "step5-only",
+          "text": "Only Step 5"
+        }
+      ],
+      "answerOptionId": "step3",
+      "explanation": "In GINA Track 1, Steps 1–2 use as-needed-only ICS-formoterol, while Step 3 introduces maintenance ICS-formoterol plus the same inhaler as reliever, i.e. MART.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:asthma:gina-mart-step3",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gina:strategy-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:asthma:gina-mart-laba-component",
+      "questionVersionId": "respiratory:asthma:gina-mart-laba-component@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which ICS-LABA combination type is used for maintenance-and-reliever therapy (MART) in the 2026 GINA strategy?",
+      "options": [
+        {
+          "optionId": "ics-formoterol",
+          "text": "An ICS-formoterol combination"
+        },
+        {
+          "optionId": "ics-salmeterol-anytime",
+          "text": "Any ICS-salmeterol combination used as-needed"
+        },
+        {
+          "optionId": "laba-alone",
+          "text": "LABA alone"
+        },
+        {
+          "optionId": "ics-anticholinergic",
+          "text": "ICS plus a short-acting anticholinergic"
+        }
+      ],
+      "answerOptionId": "ics-formoterol",
+      "explanation": "GINA states that ICS-formoterol is the ICS-LABA used for MART because formoterol provides the rapid-onset reliever component.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:asthma:gina-mart-ics-formoterol-only",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gina:strategy-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:asthma:gina-step5-next-action",
+      "questionVersionId": "respiratory:asthma:gina-step5-next-action@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An adult remains uncontrolled despite optimized Step 4 asthma therapy. What is the central next action at GINA 2026 Step 5?",
+      "options": [
+        {
+          "optionId": "expert-assessment",
+          "text": "Refer for expert assessment, phenotyping, and consideration of add-on therapy"
+        },
+        {
+          "optionId": "stop-ics",
+          "text": "Stop inhaled corticosteroid treatment"
+        },
+        {
+          "optionId": "saba-monotherapy",
+          "text": "Switch to SABA monotherapy"
+        },
+        {
+          "optionId": "routine-antibiotic",
+          "text": "Start routine long-term antibiotics for all patients"
+        }
+      ],
+      "answerOptionId": "expert-assessment",
+      "explanation": "GINA Step 5 emphasizes expert assessment and phenotyping to guide add-on treatment for severe or difficult-to-treat asthma.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:asthma:gina-step5-expert-assessment",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gina:strategy-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:copd:spirometric-diagnostic-criterion",
+      "questionVersionId": "respiratory:copd:spirometric-diagnostic-criterion@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which spirometric finding is required by GOLD for the diagnosis of persistent airflow obstruction compatible with COPD?",
+      "options": [
+        {
+          "optionId": "post-bd-below-0-7",
+          "text": "Post-bronchodilator FEV1/FVC below 0.7"
+        },
+        {
+          "optionId": "pre-bd-above-0-8",
+          "text": "Pre-bronchodilator FEV1/FVC above 0.8"
+        },
+        {
+          "optionId": "normal-ratio-low-fvc",
+          "text": "A normal FEV1/FVC with isolated low FVC"
+        },
+        {
+          "optionId": "peak-flow-only",
+          "text": "Reduced peak expiratory flow alone"
+        }
+      ],
+      "answerOptionId": "post-bd-below-0-7",
+      "explanation": "GOLD uses a post-bronchodilator FEV1/FVC ratio below 0.7 as the spirometric criterion for persistent airflow obstruction in COPD.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:copd:post-bd-fev1-fvc-below-0-7",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gold:copd-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:copd:exacerbation-first-bronchodilator",
+      "questionVersionId": "respiratory:copd:exacerbation-first-bronchodilator@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "A patient presents with an acute COPD exacerbation. Which bronchodilator approach is recommended initially in the 2026 GOLD report?",
+      "options": [
+        {
+          "optionId": "saba-with-or-without-sama",
+          "text": "A short-acting inhaled beta2-agonist, with or without a short-acting anticholinergic"
+        },
+        {
+          "optionId": "laba-only",
+          "text": "A LABA alone as the sole immediate rescue drug"
+        },
+        {
+          "optionId": "theophylline-first",
+          "text": "IV methylxanthine as first-line bronchodilator"
+        },
+        {
+          "optionId": "no-bronchodilator",
+          "text": "Avoid bronchodilators during exacerbations"
+        }
+      ],
+      "answerOptionId": "saba-with-or-without-sama",
+      "explanation": "GOLD recommends short-acting inhaled beta2-agonists, with or without short-acting anticholinergics, as initial bronchodilators for an acute COPD exacerbation.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:copd:exacerbation-initial-short-acting-bronchodilator",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gold:copd-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:copd:exacerbation-steroid-duration",
+      "questionVersionId": "respiratory:copd:exacerbation-steroid-duration@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "For a COPD exacerbation in which systemic corticosteroids are indicated, what duration is recommended in the 2026 GOLD report?",
+      "options": [
+        {
+          "optionId": "one-day",
+          "text": "1 day"
+        },
+        {
+          "optionId": "five-days",
+          "text": "5 days"
+        },
+        {
+          "optionId": "fourteen-days",
+          "text": "14 days"
+        },
+        {
+          "optionId": "one-month",
+          "text": "1 month"
+        }
+      ],
+      "answerOptionId": "five-days",
+      "explanation": "GOLD 2026 states that systemic corticosteroid therapy for COPD exacerbations should be limited to a 5-day course in usual management.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:copd:exacerbation-systemic-steroid-five-days",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gold:copd-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:copd:exacerbation-antibiotic-mechanical-ventilation",
+      "questionVersionId": "respiratory:copd:exacerbation-antibiotic-mechanical-ventilation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which finding is an indication for antibiotics during a COPD exacerbation according to the 2026 GOLD report?",
+      "options": [
+        {
+          "optionId": "mechanical-ventilation",
+          "text": "Requirement for invasive or noninvasive mechanical ventilation"
+        },
+        {
+          "optionId": "isolated-wheeze",
+          "text": "Isolated wheeze with no other bacterial features"
+        },
+        {
+          "optionId": "stable-chronic-dyspnea",
+          "text": "Stable chronic exertional dyspnea"
+        },
+        {
+          "optionId": "normal-sputum-no-ventilation",
+          "text": "Normal sputum and no ventilatory support requirement"
+        }
+      ],
+      "answerOptionId": "mechanical-ventilation",
+      "explanation": "GOLD includes need for invasive or noninvasive mechanical ventilation among indications for antibiotics during COPD exacerbations.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:copd:exacerbation-antibiotic-indications",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gold:copd-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "respiratory:copd:hypercapnic-failure-ventilation",
+      "questionVersionId": "respiratory:copd:hypercapnic-failure-ventilation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "A patient with COPD exacerbation develops hypercapnic respiratory failure and has no absolute contraindication to noninvasive support. Which ventilatory strategy is favored by the 2026 GOLD report?",
+      "options": [
+        {
+          "optionId": "niv",
+          "text": "Noninvasive ventilation"
+        },
+        {
+          "optionId": "routine-immediate-intubation",
+          "text": "Immediate invasive ventilation for every patient"
+        },
+        {
+          "optionId": "no-support",
+          "text": "No ventilatory support"
+        },
+        {
+          "optionId": "cpap-for-all",
+          "text": "CPAP alone for all COPD exacerbations regardless of physiology"
+        }
+      ],
+      "answerOptionId": "niv",
+      "explanation": "GOLD recommends noninvasive ventilation for COPD exacerbation with hypercapnic respiratory failure when there is no absolute contraindication, because it can improve gas exchange and reduce intubation.",
+      "conceptLinks": [
+        {
+          "conceptId": "respiratory:copd:hypercapnic-failure-niv",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "gold:copd-report:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:diabetes:diagnostic-a1c-threshold",
+      "questionVersionId": "endocrine:diabetes:diagnostic-a1c-threshold@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "According to the ADA Standards of Care in Diabetes—2026, which laboratory A1C value meets a diagnostic threshold for diabetes in a nonpregnant individual?",
+      "options": [
+        {
+          "optionId": "5-0",
+          "text": "5.0%"
+        },
+        {
+          "optionId": "5-7",
+          "text": "5.7%"
+        },
+        {
+          "optionId": "6-5",
+          "text": "6.5%"
+        },
+        {
+          "optionId": "8-0",
+          "text": "8.0% only"
+        }
+      ],
+      "answerOptionId": "6-5",
+      "explanation": "The ADA diagnostic threshold for diabetes is an A1C of at least 6.5% when measured with an appropriate standardized laboratory method.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:diabetes:diagnosis-a1c-6-5",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:diagnosis-classification:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:diabetes:diagnostic-fasting-glucose",
+      "questionVersionId": "endocrine:diabetes:diagnostic-fasting-glucose@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "Which fasting plasma glucose value meets the ADA 2026 diagnostic threshold for diabetes in a nonpregnant individual?",
+      "options": [
+        {
+          "optionId": "100",
+          "text": "100 mg/dL"
+        },
+        {
+          "optionId": "110",
+          "text": "110 mg/dL"
+        },
+        {
+          "optionId": "126",
+          "text": "126 mg/dL"
+        },
+        {
+          "optionId": "200",
+          "text": "200 mg/dL only if fasting"
+        }
+      ],
+      "answerOptionId": "126",
+      "explanation": "The ADA diagnostic fasting plasma glucose threshold is at least 126 mg/dL (7.0 mmol/L) after at least 8 hours without caloric intake.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:diabetes:diagnosis-fpg-126",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:diagnosis-classification:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:diabetes:diagnostic-ogtt",
+      "questionVersionId": "endocrine:diabetes:diagnostic-ogtt@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "During a 75-g oral glucose tolerance test, which 2-hour plasma glucose value meets the ADA 2026 diagnostic threshold for diabetes?",
+      "options": [
+        {
+          "optionId": "126",
+          "text": "126 mg/dL"
+        },
+        {
+          "optionId": "140",
+          "text": "140 mg/dL"
+        },
+        {
+          "optionId": "180",
+          "text": "180 mg/dL"
+        },
+        {
+          "optionId": "200",
+          "text": "200 mg/dL"
+        }
+      ],
+      "answerOptionId": "200",
+      "explanation": "A 2-hour plasma glucose of at least 200 mg/dL (11.1 mmol/L) during a 75-g OGTT meets the ADA diagnostic criterion for diabetes.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:diabetes:diagnosis-ogtt-2h-200",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:diagnosis-classification:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:diabetes:random-glucose-classic-symptoms",
+      "questionVersionId": "endocrine:diabetes:random-glucose-classic-symptoms@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "A patient has polyuria, polydipsia, and unexplained weight loss. Which random plasma glucose result is sufficient to meet an ADA 2026 diagnostic criterion for diabetes in this symptomatic context?",
+      "options": [
+        {
+          "optionId": "126",
+          "text": "126 mg/dL"
+        },
+        {
+          "optionId": "140",
+          "text": "140 mg/dL"
+        },
+        {
+          "optionId": "180",
+          "text": "180 mg/dL"
+        },
+        {
+          "optionId": "200",
+          "text": "At least 200 mg/dL"
+        }
+      ],
+      "answerOptionId": "200",
+      "explanation": "In a person with classic hyperglycemic symptoms or hyperglycemic crisis, a random plasma glucose of at least 200 mg/dL meets an ADA diagnostic criterion for diabetes.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:diabetes:diagnosis-random-200-symptoms",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:diagnosis-classification:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:diabetes:asymptomatic-confirmation",
+      "questionVersionId": "endocrine:diabetes:asymptomatic-confirmation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Third controlled source-grounded intake batch",
+      "stem": "An asymptomatic adult has a single laboratory result above an ADA diagnostic threshold for diabetes, without unequivocal hyperglycemia. What is the appropriate next diagnostic principle under the 2026 Standards of Care?",
+      "options": [
+        {
+          "optionId": "confirm",
+          "text": "Confirm the diagnosis with a second abnormal result, from the same or a different accepted test"
+        },
+        {
+          "optionId": "ignore",
+          "text": "Ignore the result unless symptoms appear"
+        },
+        {
+          "optionId": "diagnose-no-confirm",
+          "text": "Diagnose diabetes from any single abnormal result without confirmation"
+        },
+        {
+          "optionId": "use-cgm-only",
+          "text": "Use continuous glucose monitoring as the required confirmatory test"
+        }
+      ],
+      "answerOptionId": "confirm",
+      "explanation": "In the absence of unequivocal hyperglycemia, ADA guidance requires confirmatory testing, using two abnormal results obtained either at the same time or at different time points.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:diabetes:diagnosis-confirmation-asymptomatic",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:diagnosis-classification:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current guideline source. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
