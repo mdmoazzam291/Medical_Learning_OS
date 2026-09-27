@@ -540,3 +540,31 @@ Consequences:
 8. Database evolution is forward-only from the repository's current timestamped migrations. Old planning sketches must not renumber or replace deployed history.
 
 This ADR does **not** authorize M07c probabilistic mastery inference before evidence-sufficiency/calibration rules and validation data exist. It also introduces no production schema change by itself; implementation remains milestone-gated.
+
+## ADR-045 — One learner ledger means one canonical replay contract, not one giant table (accepted, 2026-09-27)
+ADR-044 requires one replayable learner-history authority. Do not satisfy that requirement by prematurely collapsing every modality, policy decision and mutable application row into one generic physical table.
+
+Introduce a versioned canonical replay surface over evidence stores that already have clear semantics. Version 1 maps:
+- `question.answered` from immutable attempt receipts as `observation`;
+- `memory.rating` from explicit learner self-report as `self_report`;
+- `study.recommendation_generated` from Study Now recommendation receipts as `policy_decision`.
+
+Every emitted event carries a stable event key, exact source table/id, recorded/occurred time, canonical concept/question references when available, session reference and source-specific payload.
+
+The stream is:
+- service-only;
+- read-only;
+- deterministically ordered by persisted record time plus event key;
+- cursor-paginated;
+- explicitly non-authoritative for mastery, forgetting, ability or confidence inference.
+
+Do not force currently unmapped data into the stream merely to increase coverage. In particular:
+- mutable `study_sessions` are not session events;
+- mutable NeuralVault annotations are learner-owned content, not immutable learning evidence;
+- scheduler decision events remain a dedicated policy-decision ledger until a canonical event-family mapping is accepted;
+- raw exam-run transition events remain outside until their modality semantics are normalized.
+
+Physical evidence stores may remain specialized. A source becomes part of the canonical learner ledger only after a versioned adapter defines its semantics, traceability and replay behavior.
+
+Current integrity caveat: several pre-ADR evidence tables are application-append-only but do not yet have database UPDATE/DELETE guards. Do not add blanket DELETE blockers until the privacy deletion/de-identification path is defined. Source hardening and privacy purge semantics must be designed together.
+
