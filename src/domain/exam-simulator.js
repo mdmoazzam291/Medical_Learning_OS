@@ -6,7 +6,7 @@ import {
   setExamReview,
   examRunProgress,
   scoreLockedSectionExamRun
-} from '../../supabase/functions/_shared/exam-runtime.js';
+} from '../../supabase/functions/study-api/_shared/exam-runtime.js';
 
 function fail(message) { throw new TypeError(message); }
 
