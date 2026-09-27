@@ -219,3 +219,17 @@ Running requires a separate explicit confirmation after arming. The learner appl
 The initial `scheduler-bootstrap-vs-fsrs-v1@1` spec intentionally omits the population threshold, making that version permanently non-armable. When evidence supports a threshold and finalized analysis plan, create a new immutable version rather than editing the draft.
 
 Experiment infrastructure must not itself change scheduler authority. Authority wiring is a separate future release gate.
+
+
+## ADR-028 — NeuralVault separates canonical knowledge from learner annotations (accepted, 2026-09-27)
+NeuralVault must reuse the Medical Knowledge Graph's stable canonical concept identity rather than create note-specific concept copies.
+
+Canonical notes and personal annotations have different ownership:
+- canonical note versions are immutable, source-linked content that must pass content-quality/publication gates;
+- personal annotations are mutable learner-owned data linked to the stable concept ID and optionally anchored to the canonical note version visible when the learner wrote the note.
+
+A canonical content update must never silently rewrite a learner annotation. An annotation anchored to an older canonical note should remain intact and be surfaced as update-aware context.
+
+Personal notes are subject to privacy operations, including real deletion. Canonical content retains version history.
+
+NeuralVault must not generate medical prose merely because a concept lacks a published canonical note. An empty canonical layer is preferable to unreviewed medical content presented as authoritative.
