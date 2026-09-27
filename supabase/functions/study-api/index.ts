@@ -1069,6 +1069,7 @@ Deno.serve(async (req: Request) => {
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
     if (req.method === "POST" && path === "/exam-simulator/runs") {
+      if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
       exactFields(input, ["ruleSetId"]);
       const ruleSetId = identifier(input.ruleSetId);
@@ -1182,6 +1183,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/exam-simulator/runs/current") {
+      if (url.search) fail(400, "query_not_supported");
       const row = await getOpenExamRun();
       if (!row) return response(req, 200, { contractId: "exam-run-view-v1", run: null });
       const now = new Date().toISOString();
@@ -1191,6 +1193,7 @@ Deno.serve(async (req: Request) => {
 
     const examRunReadMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)$/);
     if (req.method === "GET" && examRunReadMatch) {
+      if (url.search) fail(400, "query_not_supported");
       const now = new Date().toISOString();
       const row = await getExamRun(identifier(examRunReadMatch[1]));
       const synced = await syncExamClock(row, now);
@@ -1199,6 +1202,7 @@ Deno.serve(async (req: Request) => {
 
     const examRunActionMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)\/(answer|review)$/);
     if (req.method === "POST" && examRunActionMatch) {
+      if (url.search) fail(400, "query_not_supported");
       const runId = identifier(examRunActionMatch[1]);
       const action = examRunActionMatch[2];
       const input = await jsonBody(req);
