@@ -129,3 +129,19 @@ The deepest invariant is: **content never owns learner state**. A learner can st
 Do not rename or rewrite historical events merely to fit a newer vocabulary. Introduce explicit event/schema versions and adapters/projections. New modalities such as viva, virtual patients, AR or workplace assessment should map into stable semantic event families while preserving their modality-specific payloads.
 
 Database work remains forward-only from the existing timestamped Supabase migrations. PostgreSQL/Supabase stays authoritative unless a later measured need justifies a graph/search/analytics projection; such a projection must be rebuildable from canonical records.
+
+## Canonical replay boundary
+
+The Learning Event Ledger in the architecture diagram is a **logical replay boundary**, not a requirement that every event live in one database table.
+
+`study_learning_event_stream_v1` is the first canonical adapter over existing learner-history stores. Digital Twin projections should eventually consume this contract, or a later explicitly versioned successor, instead of independently querying ad hoc tables.
+
+This boundary preserves three distinctions:
+1. observed learner evidence;
+2. learner self-report;
+3. policy decisions.
+
+They may coexist in the same replay stream but retain distinct `eventClass` values. A policy decision must never become evidence that the learner knows something merely because it appears in chronological history.
+
+Unmapped source tables remain outside the ledger until their semantics are explicit. This is preferable to creating a generic event blob that silently mixes mutable state, content, policy output and learner evidence.
+
