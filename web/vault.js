@@ -16,6 +16,8 @@ let state = {
   catalogVersion: null,
   selectedConceptId: new URLSearchParams(location.search).get('concept'),
   detail: null,
+  searchQuery: '',
+  searchResults: null,
   busy: false,
   error: null
 };
@@ -55,7 +57,13 @@ function canonicalSection(detail) {
 }
 
 function annotationCard(annotation) {
-  return '<article class="vault-note"><form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '"><label>Your note<textarea name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label><div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + (annotation.anchorNoteVersionId ? 'Anchored to canonical version' : 'Concept-linked · unanchored') + '</span></div><div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save changes</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete</button></div></form></article>';
+  const anchorLabel = {
+    current: 'Anchored to current canonical version',
+    'canonical-updated': 'Canonical note updated since this annotation',
+    'anchor-unavailable': 'Anchored canonical version is unavailable',
+    unanchored: 'Concept-linked · unanchored'
+  }[annotation.anchorState] || 'Concept-linked';
+  return '<article class="vault-note"><form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '"><label>Your note<textarea name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label><div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + escape(anchorLabel) + '</span></div><div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save changes</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete</button></div></form></article>';
 }
 
 function detailPanel() {
@@ -74,11 +82,12 @@ function detailPanel() {
 }
 
 function signedIn() {
-  const list = state.concepts.length
-    ? state.concepts.map(conceptButton).join('')
-    : '<p class="muted">No canonical concepts are available yet.</p>';
+  const visibleConcepts = Array.isArray(state.searchResults) ? state.searchResults : state.concepts;
+  const list = visibleConcepts.length
+    ? visibleConcepts.map(conceptButton).join('')
+    : '<p class="muted">' + (state.searchResults ? 'No NeuralVault matches.' : 'No canonical concepts are available yet.') + '</p>';
   const error = state.error ? '<section class="panel"><p>NeuralVault load failed: <strong>' + escape(state.error) + '</strong></p></section>' : '';
-  return '<main id="main" class="vault-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">NEURALVAULT</span><h1>One concept. Canonical knowledge. Your annotations.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · catalog v' + escape(state.catalogVersion ?? '—') + '</p></div><span class="badge">M06a</span></div>' + error + '<div class="vault-layout"><aside class="vault-index panel"><div class="section-heading"><h2>Concepts</h2><span class="muted">' + state.concepts.length + '</span></div><div class="vault-concept-list">' + list + '</div></aside><section class="vault-detail">' + (state.loading ? '<section class="panel"><p>Loading concept…</p></section>' : detailPanel()) + '</section></div></main>';
+  return '<main id="main" class="vault-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">NEURALVAULT</span><h1>One concept. Canonical knowledge. Your annotations.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · catalog v' + escape(state.catalogVersion ?? '—') + '</p></div><span class="badge">M06c</span></div>' + error + '<div class="vault-layout"><aside class="vault-index panel"><div class="section-heading"><h2>Concepts</h2><span class="muted">' + visibleConcepts.length + '</span></div><form id="vault-search-form"><label>Search NeuralVault<input name="q" type="search" minlength="2" maxlength="120" value="' + escape(state.searchQuery) + '" placeholder="Concept, alias, note, or your annotation"></label><div class="button-row"><button class="secondary" type="submit">Search</button>' + (state.searchResults ? '<button class="text-button" type="button" data-action="clear-search">Clear</button>' : '') + '</div></form><div class="vault-concept-list">' + list + '</div></aside><section class="vault-detail">' + (state.loading ? '<section class="panel"><p>Loading concept…</p></section>' : detailPanel()) + '</section></div></main>';
 }
 
 function render() {
@@ -152,6 +161,11 @@ root.addEventListener('click', event => {
     loadDetail(target.dataset.conceptId);
   }
 
+  if (target.dataset.action === 'clear-search') {
+    state = { ...state, searchQuery: '', searchResults: null, error: null };
+    render();
+  }
+
   if (target.dataset.action === 'delete-note') {
     const annotationId = target.dataset.annotationId;
     if (!annotationId || state.busy) return;
@@ -176,6 +190,24 @@ root.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.target;
   if (state.busy) return;
+
+  if (form.id === 'vault-search-form') {
+    (async () => {
+      const data = new FormData(form);
+      const query = String(data.get('q') || '').trim();
+      if (query.length < 2 || state.busy) return;
+      state = { ...state, busy: true, searchQuery: query, error: null };
+      render();
+      try {
+        const result = await cloud.vaultSearch(query);
+        state = { ...state, busy: false, searchResults: Array.isArray(result?.results) ? result.results : [], error: null };
+      } catch (error) {
+        reportUnexpected(error, 'search_vault');
+        state = { ...state, busy: false, error: error.code || error.message || 'vault_search_failed' };
+      }
+      render();
+    })();
+  }
 
   if (form.id === 'create-note-form') {
     (async () => {
