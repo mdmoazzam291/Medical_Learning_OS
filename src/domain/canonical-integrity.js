@@ -49,8 +49,17 @@ function serialize(value, stack) {
   stack.add(value);
   try {
     if (Array.isArray(value)) {
+      if (Object.getOwnPropertySymbols(value).length) fail('Canonical JSON arrays cannot carry symbol properties');
+      const visibleKeys = Object.keys(value);
+      if (visibleKeys.some(key => !/^(0|[1-9]\\d*)$/.test(key) || Number(key) >= value.length)) {
+        fail('Canonical JSON arrays cannot carry custom properties');
+      }
       for (let i = 0; i < value.length; i += 1) {
         if (!Object.hasOwn(value, i)) fail('Canonical JSON arrays cannot be sparse');
+        const descriptor = Object.getOwnPropertyDescriptor(value, String(i));
+        if (!descriptor || !Object.hasOwn(descriptor, 'value') || descriptor.enumerable !== true) {
+          fail('Canonical JSON arrays require ordinary data elements');
+        }
       }
       return `[${value.map(item => serialize(item, stack)).join(',')}]`;
     }
@@ -59,9 +68,15 @@ function serialize(value, stack) {
       fail('Canonical JSON requires plain JSON objects');
     }
 
+    const ownNames = Object.getOwnPropertyNames(value);
     const keys = Object.keys(value);
+    if (ownNames.length !== keys.length) fail('Canonical JSON objects cannot carry hidden properties');
     for (const key of keys) {
       assertUnicodeScalarString(key, 'object key');
+      const descriptor = Object.getOwnPropertyDescriptor(value, key);
+      if (!descriptor || !Object.hasOwn(descriptor, 'value') || descriptor.enumerable !== true) {
+        fail('Canonical JSON objects require ordinary data properties');
+      }
       if (value[key] === undefined || typeof value[key] === 'function' || typeof value[key] === 'symbol') {
         fail('Canonical JSON object values must be JSON values');
       }
