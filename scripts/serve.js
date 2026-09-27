@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
-const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml' };
+const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', json: 'application/json' };
 
 // Explicit public surface: no catalogs, docs, dotfiles, credentials or arbitrary paths.
 const allowed = new Set([
@@ -22,6 +22,7 @@ const allowed = new Set([
   'web/cloud-config.js',
   'web/monitoring.js',
   'web/sentry-bootstrap.js',
+  'data/content-review-assist.json',
   'src/domain/demo-study.js',
   'src/domain/learning-events.js',
   'src/adapters/local-store.js',
