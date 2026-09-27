@@ -48,6 +48,10 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     policyEvaluation() { return request('/revision/policy-evaluation'); },
     conceptDiagnostics() { return request('/diagnostics/concepts'); },
     mistakeDiagnostics() { return request('/diagnostics/mistakes'); },
+    examDna(examId = null) {
+      const suffix = examId === null ? '' : `?examId=${encodeURIComponent(examId)}`;
+      return request(`/exam-dna${suffix}`);
+    },
     vaultConcepts() { return request('/vault/concepts'); },
     vaultSearch(query) { return request(`/vault/search?q=${encodeURIComponent(query)}`); },
     vaultConcept(conceptId) {
