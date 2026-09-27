@@ -32,3 +32,12 @@ test('personal note text is escaped before HTML rendering', () => {
   assert.match(source, /escape\(annotation\.bodyMarkdown\)/);
   assert.match(source, /escape\(note\.bodyMarkdown\)/);
 });
+
+
+test('NeuralVault UI supports authenticated search and update-aware anchor messaging', () => {
+  assert.match(source, /vault-search-form/);
+  assert.match(source, /cloud\.vaultSearch\(query\)/);
+  assert.match(source, /clear-search/);
+  assert.match(source, /Canonical note updated since this annotation/);
+  assert.match(source, /Anchored canonical version is unavailable/);
+});
