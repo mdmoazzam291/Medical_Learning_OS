@@ -9,7 +9,7 @@ import {
   examRunProgress,
   scoreLockedSectionExamRun,
   seededQuestionOrder
-} from "../_shared/exam-runtime.js";
+} from "./_shared/exam-runtime.js";
 
 type Json = Record<string, unknown>;
 
