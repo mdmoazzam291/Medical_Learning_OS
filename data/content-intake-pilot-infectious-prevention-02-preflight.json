@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:infectious-prevention:20260927:02",
+  "label": "Infectious prevention controlled pilot 02",
+  "generatedDate": "2026-09-27",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 25,
+    "conceptCount": 25,
+    "sourceCount": 5,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flagCount": 2,
+    "flags": [
+      {
+        "candidateQuestionVersionId": "infectious:tetanus:clean-minor-last-dose-11y@1",
+        "otherQuestionVersionId": "infectious:tetanus:dirty-wound-last-dose-6y@1",
+        "lexicalOverlap": 0.6957,
+        "disposition": "retain_distinct",
+        "rationale": "Both test tetanus booster timing, but the clean/minor wound item tests the 10-year threshold while the dirty/major wound item tests the 5-year threshold. These are distinct policy states and retaining both improves discrimination of a commonly confused rule."
+      },
+      {
+        "candidateQuestionVersionId": "infectious:hbv-exposure:antihbs-low-source-positive-management@1",
+        "otherQuestionVersionId": "infectious:hbv-exposure:nonresponder-two-series-positive-source@1",
+        "lexicalOverlap": 0.5769,
+        "disposition": "retain_distinct",
+        "rationale": "The first item covers low anti-HBs after a completed series with HBIG plus revaccination; the second covers documented nonresponse after two complete series with two HBIG doses and no additional vaccine. The management states are clinically distinct."
+      }
+    ]
+  },
+  "contentMix": {
+    "examBlueprintFidelity": false,
+    "note": "This is a controlled source/review-throughput pilot across five prevention/management source packages, not an NEET-PG blueprint sample."
+  }
+}
