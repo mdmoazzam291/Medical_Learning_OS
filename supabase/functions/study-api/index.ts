@@ -497,17 +497,43 @@ Deno.serve(async (req: Request) => {
         closed: session.closed,
         question: null,
         receipt: null,
-        memoryJudgment: null
+        memoryJudgment: null,
+        recommendationContext: null
       };
       if (session.closed) return result;
-      const [{ body }, { data: attempt, error: attemptError }] = await Promise.all([
+      const [{ body }, { data: attempt, error: attemptError }, { data: recommendation, error: recommendationError }] = await Promise.all([
         getCatalog(),
         trustedRead("session_receipt", async () =>
           admin.from("study_attempts").select("id,receipt").eq("session_id", sessionId)
             .eq("learner_id", learnerId).eq("position", session.position).maybeSingle()
+        ),
+        trustedRead("session_recommendation_context", async () =>
+          admin.from("study_recommendation_events")
+            .select("strategy,available_minutes,plan,created_at")
+            .eq("session_id", sessionId)
+            .eq("learner_id", learnerId)
+            .maybeSingle()
         )
       ]);
-      if (attemptError) fail(500, "study_read_failed");
+      if (attemptError || recommendationError) fail(500, "study_read_failed");
+
+      const currentQuestionVersionId = ids[session.position];
+      const allowedRecommendationReasons = new Set(["mistake-repair", "due-revision", "new-learning"]);
+      const selectedRecommendation = Array.isArray(recommendation?.plan?.selected)
+        ? recommendation.plan.selected.find(
+            (item: any) => String(item?.questionVersionId ?? "") === currentQuestionVersionId
+          )
+        : null;
+      const recommendationReason = allowedRecommendationReasons.has(selectedRecommendation?.reason)
+        ? selectedRecommendation.reason
+        : null;
+      const recommendationContext = recommendation && recommendationReason ? {
+        source: "study-now",
+        reason: recommendationReason,
+        strategy: String(recommendation.strategy ?? ""),
+        availableMinutes: Number(recommendation.available_minutes),
+        createdAt: recommendation.created_at
+      } : null;
       let memoryJudgment = null;
       if (attempt?.id) {
         const { data: judgment, error: judgmentError } = await trustedRead("session_memory_judgment", async () =>
@@ -530,8 +556,8 @@ Deno.serve(async (req: Request) => {
         } : null;
       }
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
-      if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment };
-      return { ...result, question: learnerQuestion(q), receipt: attempt?.receipt ?? null, memoryJudgment };
+      if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
+      return { ...result, question: learnerQuestion(q), receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
     };
 
     const url = new URL(req.url);
