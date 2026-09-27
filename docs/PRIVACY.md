@@ -1,6 +1,6 @@
 # Learner privacy erasure
 
-Status: database contract implemented for product-data erasure v1.
+Status: database contract **LIVE in production** for product-data erasure v1.
 
 ## Purpose
 
