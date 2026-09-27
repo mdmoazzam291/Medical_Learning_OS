@@ -268,3 +268,25 @@ test('cloud NeuralVault search encodes the learner query', async () => {
   await cloud.vaultSearch('anaphylaxis first');
   assert.match(seenUrl, /study-api\/vault\/search\?q=anaphylaxis%20first$/);
 });
+
+
+test('cloud concept diagnostics use authenticated learner context', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        contractId: 'concept-observation-v1',
+        scope: 'observed-concept-evidence',
+        inferenceEnabled: false,
+        concepts: []
+      });
+    }
+  });
+  const result = await cloud.conceptDiagnostics();
+  assert.match(seenUrl, /study-api\/diagnostics\/concepts$/);
+  assert.equal(result.inferenceEnabled, false);
+  assert.deepEqual(result.concepts, []);
+});
