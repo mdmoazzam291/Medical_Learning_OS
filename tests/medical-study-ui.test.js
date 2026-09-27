@@ -108,3 +108,25 @@ test('medical overview shows full-mock capacity without overstating blueprint fi
   assert.match(source, /The QBank and Study Now remain available/);
   assert.doesNotMatch(source, /Start full mock/);
 });
+
+
+test('medical study view renders blind-first-look media without diagnosis or annotation metadata', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /questionMedia\(q\.media\)/);
+  assert.match(source, /blind first look/);
+  assert.match(source, /safeMediaUrl/);
+  assert.match(source, /url\.protocol === 'https:'/);
+  assert.match(source, /referrerpolicy="no-referrer"/);
+  assert.doesNotMatch(source, /diagnosisEvidence/);
+  assert.doesNotMatch(source, /annotationVersionId/);
+  assert.doesNotMatch(source, /rightsStatus/);
+});
+
+test('medical image layout remains responsive and bounded', async () => {
+  const css = await readFile(new URL('../web/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.question-media-list/);
+  assert.match(css, /\.question-media img/);
+  assert.match(css, /object-fit:contain/);
+  assert.match(css, /max-height:560px/);
+  assert.match(css, /@media\(max-width:650px\).*\.question-media img\{max-height:420px\}/s);
+});
