@@ -198,3 +198,10 @@ test('learner export includes personal NeuralVault annotations', async () => {
   assert.match(source, /neuralVault:/);
   assert.match(source, /annotations: vaultAnnotations/);
 });
+
+
+test('NeuralVault concept route decodes encoded canonical IDs and enforces note byte ceiling', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /decodeURIComponent\(vaultConceptMatch\[1\]\)/);
+  assert.match(source, /new TextEncoder\(\)\.encode\(input\.bodyMarkdown\)\.byteLength > 20000/);
+});
