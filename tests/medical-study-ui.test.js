@@ -85,3 +85,15 @@ test('medical NeuralVault link tolerates old learner payloads via primary concep
   assert.match(source, /role === 'primary'/);
   assert.match(source, /encodeURIComponent\(primaryConceptId\)/);
 });
+
+
+test('answered Study Now item carries recommendation reason into NeuralVault handoff', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /Why Study Now sent this/);
+  assert.match(source, /'mistake-repair'/);
+  assert.match(source, /'due-revision'/);
+  assert.match(source, /'new-learning'/);
+  assert.match(source, /vaultParams\.set\('from', 'study-now'\)/);
+  assert.match(source, /vaultParams\.set\('reason', recommendationReason\)/);
+  assert.match(source, /Review this concept in NeuralVault/);
+});
