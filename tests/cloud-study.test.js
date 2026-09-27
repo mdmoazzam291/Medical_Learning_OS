@@ -290,3 +290,25 @@ test('cloud concept diagnostics use authenticated learner context', async () => 
   assert.equal(result.inferenceEnabled, false);
   assert.deepEqual(result.concepts, []);
 });
+
+
+test('cloud mistake diagnostics use authenticated learner context', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        contractId: 'mistake-observation-v1',
+        scope: 'observed-mistake-evidence',
+        causeInferenceEnabled: false,
+        fingerprints: []
+      });
+    }
+  });
+  const result = await cloud.mistakeDiagnostics();
+  assert.match(seenUrl, /study-api\/diagnostics\/mistakes$/);
+  assert.equal(result.causeInferenceEnabled, false);
+  assert.deepEqual(result.fingerprints, []);
+});
