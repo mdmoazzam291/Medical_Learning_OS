@@ -361,3 +361,73 @@ test('cloud exam simulator readiness requires an exact encoded ruleset ID', asyn
   assert.equal(result.ready, false);
   assert.equal(result.shortage, 179);
 });
+
+
+test('cloud exam run adapter starts and resumes without sending learner identity', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({
+        url,
+        method: options.method || 'GET',
+        body: options.body ? JSON.parse(options.body) : null
+      });
+      return Response.json({ contractId: 'exam-run-view-v1', runId: 'run-1' });
+    }
+  });
+
+  await cloud.startExamRun('neet-pg:2026@1');
+  await cloud.resumeExamRun();
+
+  assert.match(seen[0].url, /study-api\/exam-simulator\/runs$/);
+  assert.equal(seen[0].method, 'POST');
+  assert.deepEqual(seen[0].body, { ruleSetId: 'neet-pg:2026@1' });
+  assert.equal(Object.hasOwn(seen[0].body, 'learnerId'), false);
+  assert.match(seen[1].url, /study-api\/exam-simulator\/runs\/current$/);
+  assert.equal(seen[1].method, 'GET');
+});
+
+test('cloud exam run mutations send revisioned intent but no scoring claim', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({ url, body: JSON.parse(options.body) });
+      return Response.json({ contractId: 'exam-run-view-v1', revision: 2 });
+    }
+  });
+
+  await cloud.setExamRunAnswer('run-1', {
+    requestId: 'request-1',
+    expectedRevision: 0,
+    questionVersionId: 'qv-1',
+    optionId: 'b'
+  });
+  await cloud.setExamRunReview('run-1', {
+    requestId: 'request-2',
+    expectedRevision: 1,
+    questionVersionId: 'qv-1',
+    markedForReview: true
+  });
+
+  assert.match(seen[0].url, /exam-simulator\/runs\/run-1\/answer$/);
+  assert.deepEqual(seen[0].body, {
+    requestId: 'request-1',
+    expectedRevision: 0,
+    questionVersionId: 'qv-1',
+    optionId: 'b'
+  });
+  assert.equal(Object.hasOwn(seen[0].body, 'correct'), false);
+  assert.equal(Object.hasOwn(seen[0].body, 'answerOptionId'), false);
+
+  assert.match(seen[1].url, /exam-simulator\/runs\/run-1\/review$/);
+  assert.deepEqual(seen[1].body, {
+    requestId: 'request-2',
+    expectedRevision: 1,
+    questionVersionId: 'qv-1',
+    markedForReview: true
+  });
+});
