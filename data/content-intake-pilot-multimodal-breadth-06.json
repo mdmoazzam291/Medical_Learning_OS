@@ -197,133 +197,133 @@
       ]
     },
     {
-      "conceptId": "neurology:epilepsy:focal-first-line",
-      "label": "Lamotrigine or levetiracetam first line for focal seizures",
+      "conceptId": "neurology:epilepsy:diagnosis-two-unprovoked",
+      "label": "Two or more unprovoked seizures separated by at least 24 hours",
       "aliases": [
-        "First-line monotherapy for focal seizures"
-      ],
-      "subjectTags": [
-        "neurology",
-        "epilepsy",
-        "pharmacology",
-        "guideline-nice-ng217"
-      ]
-    },
-    {
-      "conceptId": "neurology:epilepsy:absence-ethosuximide",
-      "label": "Ethosuximide first line for absence seizures",
-      "aliases": [
-        "First-line treatment for absence seizures"
-      ],
-      "subjectTags": [
-        "neurology",
-        "pediatrics",
-        "epilepsy",
-        "guideline-nice-ng217"
-      ]
-    },
-    {
-      "conceptId": "neurology:epilepsy:gtcs-first-line",
-      "label": "Lamotrigine, levetiracetam or sodium valproate are first-line options",
-      "aliases": [
-        "First-line monotherapy for generalized tonic-clonic seizures"
-      ],
-      "subjectTags": [
-        "neurology",
-        "epilepsy",
-        "pharmacology",
-        "guideline-nice-ng217"
-      ]
-    },
-    {
-      "conceptId": "neurology:epilepsy:first-seizure-treatment",
-      "label": "Consider treatment if EEG shows unequivocal epileptic activity",
-      "aliases": [
-        "When to consider medication after first unprovoked seizure"
+        "Epilepsy diagnostic pattern"
       ],
       "subjectTags": [
         "neurology",
         "epilepsy",
         "diagnosis",
-        "guideline-nice-ng217"
+        "nih-ninds"
       ]
     },
     {
-      "conceptId": "neurology:epilepsy:absence-exacerbating-drug",
-      "label": "Carbamazepine can exacerbate absence seizures",
+      "conceptId": "neurology:epilepsy:eeg-purpose",
+      "label": "EEG measures brain electrical activity and helps evaluate seizure disorders",
       "aliases": [
-        "Drug that may worsen absence seizures"
+        "EEG in epilepsy evaluation"
       ],
       "subjectTags": [
         "neurology",
         "epilepsy",
-        "pharmacology",
-        "guideline-nice-ng217"
+        "neurophysiology",
+        "nih-ninds"
       ]
     },
     {
-      "conceptId": "psychiatry:depression:two-question-identification",
-      "label": "Ask about depressed mood and loss of interest/pleasure",
+      "conceptId": "neurology:epilepsy:video-eeg-differential",
+      "label": "Video EEG helps characterize events and distinguish mimics",
       "aliases": [
-        "Depression identification questions"
+        "Video EEG purpose"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "diagnosis",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:seeg-localization",
+      "label": "SEEG localizes seizure origin for surgical evaluation",
+      "aliases": [
+        "SEEG purpose"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "neurosurgery",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:meg-surgical-planning",
+      "label": "MEG can localize abnormal magnetic activity for epilepsy surgery planning",
+      "aliases": [
+        "MEG role in epilepsy"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "neurophysiology",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:treatment-modalities",
+      "label": "Psychotherapy, medication, or both",
+      "aliases": [
+        "Core depression treatment modalities"
       ],
       "subjectTags": [
         "psychiatry",
         "depression",
-        "screening",
-        "guideline-nice-ng222"
+        "treatment",
+        "nih-nimh"
       ]
     },
     {
-      "conceptId": "psychiatry:depression:review-2-4-weeks",
-      "label": "Review response 2–4 weeks after treatment starts",
+      "conceptId": "psychiatry:depression:mild-psychotherapy-first",
+      "label": "Psychotherapy is often tried first in milder depression",
       "aliases": [
-        "Early review after starting depression treatment"
-      ],
-      "subjectTags": [
-        "psychiatry",
-        "depression",
-        "follow-up",
-        "guideline-nice-ng222"
-      ]
-    },
-    {
-      "conceptId": "psychiatry:depression:less-severe-antidepressant",
-      "label": "Do not routinely offer antidepressants first line unless informed preference",
-      "aliases": [
-        "Antidepressants in less severe depression"
-      ],
-      "subjectTags": [
-        "psychiatry",
-        "depression",
-        "pharmacology",
-        "guideline-nice-ng222"
-      ]
-    },
-    {
-      "conceptId": "psychiatry:depression:psychotic-combination",
-      "label": "Consider antidepressant plus antipsychotic",
-      "aliases": [
-        "Treatment approach in psychotic depression"
-      ],
-      "subjectTags": [
-        "psychiatry",
-        "depression",
-        "psychosis",
-        "guideline-nice-ng222"
-      ]
-    },
-    {
-      "conceptId": "psychiatry:depression:more-severe-cbt-antidepressant",
-      "label": "Individual CBT plus antidepressant is a first-line option",
-      "aliases": [
-        "Combination option for more severe depression"
+        "Milder depression treatment"
       ],
       "subjectTags": [
         "psychiatry",
         "depression",
         "psychotherapy",
-        "guideline-nice-ng222"
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:moderate-severe-medication",
+      "label": "Medication commonly forms part of the initial plan",
+      "aliases": [
+        "Moderate-to-severe depression treatment"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "pharmacology",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:evidence-based-psychotherapies",
+      "label": "CBT and interpersonal therapy are evidence-based options",
+      "aliases": [
+        "Evidence-based psychotherapy for depression"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "psychotherapy",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:antidepressant-onset",
+      "label": "Antidepressants commonly take 4–8 weeks to work",
+      "aliases": [
+        "Antidepressant response time"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "pharmacology",
+        "nih-nimh"
       ]
     }
   ],
@@ -346,26 +346,6 @@
       "rights": {
         "status": "unknown",
         "evidence": "Official ACG guideline highlights used only for factual grounding of original questions. No tables, figures, or source wording are intended to be reproduced; production rights review remains separate."
-      }
-    },
-    {
-      "sourceId": "nice:epilepsy-ng217:2025",
-      "title": "NICE NG217 Epilepsies in children, young people and adults",
-      "url": "https://www.nice.org.uk/guidance/ng217/chapter/treating-epileptic-seizures-in-children-young-people-and-adults",
-      "version": "updated-2025-accessed-2026-09-28",
-      "rights": {
-        "status": "unknown",
-        "evidence": "Official NICE guidance used only for factual grounding of original questions. No tables, figures, or source wording are intended to be reproduced; production rights review remains separate."
-      }
-    },
-    {
-      "sourceId": "nice:depression-ng222:2026-review",
-      "title": "NICE NG222 Depression in adults: treatment and management",
-      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations",
-      "version": "reviewed-2026-01-30-accessed-2026-09-28",
-      "rights": {
-        "status": "unknown",
-        "evidence": "Official NICE guidance used only for factual grounding of original questions. No tables, figures, or source wording are intended to be reproduced; production rights review remains separate."
       }
     },
     {
@@ -416,6 +396,26 @@
       "rights": {
         "status": "unknown",
         "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "ninds:epilepsy-seizures:2024",
+      "title": "NINDS: Epilepsy and Seizures",
+      "url": "https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures",
+      "version": "publication-2024-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NINDS/NIH text used for factual grounding of original questions. NIH states that most information on NIH web servers is in the public domain unless otherwise indicated; production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "nimh:depression:2026",
+      "title": "NIMH: Depression",
+      "url": "https://www.nimh.nih.gov/health/publications/depression",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NIMH/NIH text used for factual grounding of original questions. NIMH states its website information is in the public domain and may be copied/reused unless otherwise indicated; production rights review remains separate."
       }
     }
   ],
@@ -1126,41 +1126,41 @@
       "publishedAt": null
     },
     {
-      "questionId": "neurology:epilepsy:focal-first-line",
-      "questionVersionId": "neurology:epilepsy:focal-first-line@1",
+      "questionId": "neurology:epilepsy:diagnosis-two-unprovoked",
+      "questionVersionId": "neurology:epilepsy:diagnosis-two-unprovoked@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "Which pair is recommended as first-line monotherapy options for focal seizures in NICE NG217?",
+      "stem": "Which history most closely matches the general diagnostic pattern for epilepsy described by NINDS?",
       "options": [
         {
-          "optionId": "lam-lev",
-          "text": "Lamotrigine or levetiracetam"
+          "optionId": "two-unprovoked",
+          "text": "Two or more unprovoked seizures separated by at least 24 hours"
         },
         {
-          "optionId": "pheny-phenobarb",
-          "text": "Phenytoin or phenobarbital"
+          "optionId": "single-provoked",
+          "text": "One seizure during severe hypoglycemia"
         },
         {
-          "optionId": "ethos-clobazam",
-          "text": "Ethosuximide or clobazam"
+          "optionId": "syncope-only",
+          "text": "Two episodes of vasovagal syncope"
         },
         {
-          "optionId": "gab-pregab",
-          "text": "Gabapentin or pregabalin"
+          "optionId": "febrile-only",
+          "text": "One simple febrile seizure in childhood"
         }
       ],
-      "answerOptionId": "lam-lev",
-      "explanation": "NICE recommends lamotrigine or levetiracetam as first-line monotherapy options for focal seizures.",
+      "answerOptionId": "two-unprovoked",
+      "explanation": "NINDS notes that epilepsy is generally diagnosed after two or more unprovoked seizures separated by at least 24 hours.",
       "conceptLinks": [
         {
-          "conceptId": "neurology:epilepsy:focal-first-line",
+          "conceptId": "neurology:epilepsy:diagnosis-two-unprovoked",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:epilepsy-ng217:2025"
+        "ninds:epilepsy-seizures:2024"
       ],
       "provenance": {
         "kind": "ai_generated",
@@ -1173,41 +1173,41 @@
       "publishedAt": null
     },
     {
-      "questionId": "neurology:epilepsy:absence-ethosuximide",
-      "questionVersionId": "neurology:epilepsy:absence-ethosuximide@1",
+      "questionId": "neurology:epilepsy:eeg-purpose",
+      "questionVersionId": "neurology:epilepsy:eeg-purpose@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "A child has typical absence seizures without other seizure types. Which medication is first-line in NICE NG217?",
+      "stem": "What is the principal role of EEG in a patient being evaluated for recurrent seizures?",
       "options": [
         {
-          "optionId": "ethosuximide",
-          "text": "Ethosuximide"
+          "optionId": "electrical",
+          "text": "Measure brain electrical activity and look for abnormalities relevant to seizure disorders"
         },
         {
-          "optionId": "carbamazepine",
-          "text": "Carbamazepine"
+          "optionId": "anatomy",
+          "text": "Provide high-resolution structural anatomy like MRI"
         },
         {
-          "optionId": "phenytoin",
-          "text": "Phenytoin"
+          "optionId": "csf",
+          "text": "Measure cerebrospinal-fluid pressure"
         },
         {
-          "optionId": "gabapentin",
-          "text": "Gabapentin"
+          "optionId": "perfusion",
+          "text": "Directly measure cerebral perfusion"
         }
       ],
-      "answerOptionId": "ethosuximide",
-      "explanation": "NICE recommends ethosuximide as first-line treatment for absence seizures.",
+      "answerOptionId": "electrical",
+      "explanation": "NINDS describes EEG as monitoring the brain's electrical activity and helping diagnose seizure disorders by identifying abnormal brain-wave patterns.",
       "conceptLinks": [
         {
-          "conceptId": "neurology:epilepsy:absence-ethosuximide",
+          "conceptId": "neurology:epilepsy:eeg-purpose",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:epilepsy-ng217:2025"
+        "ninds:epilepsy-seizures:2024"
       ],
       "provenance": {
         "kind": "ai_generated",
@@ -1220,41 +1220,41 @@
       "publishedAt": null
     },
     {
-      "questionId": "neurology:epilepsy:gtcs-first-line",
-      "questionVersionId": "neurology:epilepsy:gtcs-first-line@1",
+      "questionId": "neurology:epilepsy:video-eeg-differential",
+      "questionVersionId": "neurology:epilepsy:video-eeg-differential@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "Which set contains only NICE first-line monotherapy options for generalized tonic-clonic seizures, subject to valproate safety restrictions?",
+      "stem": "Why may video monitoring be combined with EEG during epilepsy evaluation?",
       "options": [
         {
-          "optionId": "correct",
-          "text": "Lamotrigine, levetiracetam, sodium valproate"
+          "optionId": "characterize",
+          "text": "To characterize the events and help rule out disorders that may look like epilepsy"
         },
         {
-          "optionId": "wrong1",
-          "text": "Carbamazepine, gabapentin, pregabalin"
+          "optionId": "measure-icp",
+          "text": "To measure intracranial pressure"
         },
         {
-          "optionId": "wrong2",
-          "text": "Ethosuximide, tiagabine, vigabatrin"
+          "optionId": "treat-seizure",
+          "text": "To terminate seizures electrically"
         },
         {
-          "optionId": "wrong3",
-          "text": "Phenobarbital, primidone, zonisamide only"
+          "optionId": "replace-history",
+          "text": "To eliminate the need for clinical history"
         }
       ],
-      "answerOptionId": "correct",
-      "explanation": "NICE lists lamotrigine, levetiracetam and sodium valproate as first-line monotherapy options, with specific safety restrictions for valproate.",
+      "answerOptionId": "characterize",
+      "explanation": "NINDS notes that video monitoring may be used with EEG to determine the nature of seizures and help rule out other disorders that resemble epilepsy.",
       "conceptLinks": [
         {
-          "conceptId": "neurology:epilepsy:gtcs-first-line",
+          "conceptId": "neurology:epilepsy:video-eeg-differential",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:epilepsy-ng217:2025"
+        "ninds:epilepsy-seizures:2024"
       ],
       "provenance": {
         "kind": "ai_generated",
@@ -1267,41 +1267,41 @@
       "publishedAt": null
     },
     {
-      "questionId": "neurology:epilepsy:first-seizure-treatment",
-      "questionVersionId": "neurology:epilepsy:first-seizure-treatment@1",
+      "questionId": "neurology:epilepsy:seeg-localization",
+      "questionVersionId": "neurology:epilepsy:seeg-localization@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "After a first unprovoked seizure, which finding is a NICE indication to consider starting antiseizure medication?",
+      "stem": "What is the main purpose of stereoelectroencephalography (SEEG) in selected patients with epilepsy?",
       "options": [
         {
-          "optionId": "epileptic-eeg",
-          "text": "EEG showing unequivocal epileptic activity"
+          "optionId": "localize",
+          "text": "Implant electrodes to better localize where seizures originate"
         },
         {
-          "optionId": "normal-exam",
-          "text": "Normal neurological examination"
+          "optionId": "screen-hearing",
+          "text": "Screen for hearing loss"
         },
         {
-          "optionId": "normal-imaging",
-          "text": "Normal brain imaging"
+          "optionId": "measure-csf",
+          "text": "Measure CSF glucose"
         },
         {
-          "optionId": "low-risk",
-          "text": "Patient considers recurrence risk acceptable and has no other risk factors"
+          "optionId": "treat-migraine",
+          "text": "Treat migraine aura"
         }
       ],
-      "answerOptionId": "epileptic-eeg",
-      "explanation": "NICE advises considering antiseizure medication after a first unprovoked seizure when the EEG shows unequivocal epileptic activity, among other specified risk factors.",
+      "answerOptionId": "localize",
+      "explanation": "NINDS describes SEEG as surgically implanted brain electrodes used to better identify where seizures are located and to help determine surgical candidacy.",
       "conceptLinks": [
         {
-          "conceptId": "neurology:epilepsy:first-seizure-treatment",
+          "conceptId": "neurology:epilepsy:seeg-localization",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:epilepsy-ng217:2025"
+        "ninds:epilepsy-seizures:2024"
       ],
       "provenance": {
         "kind": "ai_generated",
@@ -1314,41 +1314,41 @@
       "publishedAt": null
     },
     {
-      "questionId": "neurology:epilepsy:absence-exacerbating-drug",
-      "questionVersionId": "neurology:epilepsy:absence-exacerbating-drug@1",
+      "questionId": "neurology:epilepsy:meg-surgical-planning",
+      "questionVersionId": "neurology:epilepsy:meg-surgical-planning@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "Which antiseizure medication may exacerbate absence seizures and should therefore raise concern in this seizure type?",
+      "stem": "In epilepsy evaluation, magnetoencephalography (MEG) is particularly useful for which purpose?",
       "options": [
         {
-          "optionId": "carbamazepine",
-          "text": "Carbamazepine"
+          "optionId": "localize",
+          "text": "Localizing unusual brain activity to help plan surgery while protecting normal functional regions"
         },
         {
-          "optionId": "ethosuximide",
-          "text": "Ethosuximide"
+          "optionId": "diagnose-meningitis",
+          "text": "Diagnosing meningitis from CSF"
         },
         {
-          "optionId": "levetiracetam",
-          "text": "Levetiracetam"
+          "optionId": "measure-blood",
+          "text": "Measuring serum antiseizure drug concentration"
         },
         {
-          "optionId": "valproate",
-          "text": "Sodium valproate"
+          "optionId": "cardiac",
+          "text": "Detecting cardiac arrhythmias"
         }
       ],
-      "answerOptionId": "carbamazepine",
-      "explanation": "NICE lists carbamazepine among antiseizure medicines that may exacerbate absence seizures.",
+      "answerOptionId": "localize",
+      "explanation": "NINDS explains that MEG measures magnetic signals generated by neurons and can help surgeons localize abnormal activity when planning epilepsy surgery.",
       "conceptLinks": [
         {
-          "conceptId": "neurology:epilepsy:absence-exacerbating-drug",
+          "conceptId": "neurology:epilepsy:meg-surgical-planning",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:epilepsy-ng217:2025"
+        "ninds:epilepsy-seizures:2024"
       ],
       "provenance": {
         "kind": "ai_generated",
@@ -1361,229 +1361,229 @@
       "publishedAt": null
     },
     {
-      "questionId": "psychiatry:depression:two-question-identification",
-      "questionVersionId": "psychiatry:depression:two-question-identification@1",
+      "questionId": "psychiatry:depression:treatment-modalities",
+      "questionVersionId": "psychiatry:depression:treatment-modalities@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "Which pair best reflects NICE's brief identification questions for possible depression?",
+      "stem": "Which statement best reflects the usual treatment framework for depression described by NIMH?",
       "options": [
         {
-          "optionId": "mood-anhedonia",
-          "text": "Feeling down/depressed/hopeless and having little interest or pleasure"
+          "optionId": "psych-med",
+          "text": "Treatment commonly involves psychotherapy, medication, or both"
         },
         {
-          "optionId": "sleep-appetite",
-          "text": "Insomnia and reduced appetite only"
-        },
-        {
-          "optionId": "panic-obsession",
-          "text": "Panic attacks and intrusive thoughts"
-        },
-        {
-          "optionId": "mania-psychosis",
-          "text": "Elevated mood and hallucinations"
-        }
-      ],
-      "answerOptionId": "mood-anhedonia",
-      "explanation": "NICE advises asking about frequent depressed or hopeless mood and little interest or pleasure during the last month when considering possible depression.",
-      "conceptLinks": [
-        {
-          "conceptId": "psychiatry:depression:two-question-identification",
-          "role": "primary"
-        }
-      ],
-      "sourceIds": [
-        "nice:depression-ng222:2026-review"
-      ],
-      "provenance": {
-        "kind": "ai_generated",
-        "exam": null,
-        "year": null,
-        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
-      },
-      "status": "in_review",
-      "reviews": [],
-      "publishedAt": null
-    },
-    {
-      "questionId": "psychiatry:depression:review-2-4-weeks",
-      "questionVersionId": "psychiatry:depression:review-2-4-weeks@1",
-      "version": 1,
-      "supersedes": null,
-      "authorId": "mlos-ai-drafter",
-      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "When should treatment effectiveness generally be reviewed after starting treatment for depression according to NICE NG222?",
-      "options": [
-        {
-          "optionId": "two-four",
-          "text": "Between 2 and 4 weeks"
-        },
-        {
-          "optionId": "same-day",
-          "text": "Within 24 hours in every patient"
-        },
-        {
-          "optionId": "three-months",
-          "text": "Only after 3 months"
-        },
-        {
-          "optionId": "one-year",
-          "text": "At 1 year"
-        }
-      ],
-      "answerOptionId": "two-four",
-      "explanation": "NICE recommends reviewing how well treatment is working between 2 and 4 weeks after treatment starts, while also monitoring adherence, harms and suicidal ideation.",
-      "conceptLinks": [
-        {
-          "conceptId": "psychiatry:depression:review-2-4-weeks",
-          "role": "primary"
-        }
-      ],
-      "sourceIds": [
-        "nice:depression-ng222:2026-review"
-      ],
-      "provenance": {
-        "kind": "ai_generated",
-        "exam": null,
-        "year": null,
-        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
-      },
-      "status": "in_review",
-      "reviews": [],
-      "publishedAt": null
-    },
-    {
-      "questionId": "psychiatry:depression:less-severe-antidepressant",
-      "questionVersionId": "psychiatry:depression:less-severe-antidepressant@1",
-      "version": 1,
-      "supersedes": null,
-      "authorId": "mlos-ai-drafter",
-      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "For a new episode of less severe depression, what does NICE advise about antidepressant medication as first-line treatment?",
-      "options": [
-        {
-          "optionId": "not-routine",
-          "text": "Do not routinely offer it first line unless it is the person's informed preference"
-        },
-        {
-          "optionId": "mandatory",
-          "text": "Offer it to every patient regardless of preference"
-        },
-        {
-          "optionId": "contraindicated",
-          "text": "Never use an antidepressant in less severe depression"
-        },
-        {
-          "optionId": "maoi-first",
-          "text": "Use an MAOI as routine first-line therapy"
-        }
-      ],
-      "answerOptionId": "not-routine",
-      "explanation": "NICE states that antidepressant medication should not routinely be offered first line for less severe depression unless that is the person's informed preference.",
-      "conceptLinks": [
-        {
-          "conceptId": "psychiatry:depression:less-severe-antidepressant",
-          "role": "primary"
-        }
-      ],
-      "sourceIds": [
-        "nice:depression-ng222:2026-review"
-      ],
-      "provenance": {
-        "kind": "ai_generated",
-        "exam": null,
-        "year": null,
-        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
-      },
-      "status": "in_review",
-      "reviews": [],
-      "publishedAt": null
-    },
-    {
-      "questionId": "psychiatry:depression:psychotic-combination",
-      "questionVersionId": "psychiatry:depression:psychotic-combination@1",
-      "version": 1,
-      "supersedes": null,
-      "authorId": "mlos-ai-drafter",
-      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "A person has major depression with psychotic symptoms. Which pharmacologic approach does NICE say to consider?",
-      "options": [
-        {
-          "optionId": "combo",
-          "text": "An antidepressant plus an antipsychotic"
-        },
-        {
-          "optionId": "stimulant",
-          "text": "A stimulant alone"
-        },
-        {
-          "optionId": "benzo",
-          "text": "A benzodiazepine alone"
-        },
-        {
-          "optionId": "no-medication",
-          "text": "No medication under any circumstance"
-        }
-      ],
-      "answerOptionId": "combo",
-      "explanation": "NICE advises considering combination treatment with an antidepressant and an antipsychotic for depression with psychotic symptoms.",
-      "conceptLinks": [
-        {
-          "conceptId": "psychiatry:depression:psychotic-combination",
-          "role": "primary"
-        }
-      ],
-      "sourceIds": [
-        "nice:depression-ng222:2026-review"
-      ],
-      "provenance": {
-        "kind": "ai_generated",
-        "exam": null,
-        "year": null,
-        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
-      },
-      "status": "in_review",
-      "reviews": [],
-      "publishedAt": null
-    },
-    {
-      "questionId": "psychiatry:depression:more-severe-cbt-antidepressant",
-      "questionVersionId": "psychiatry:depression:more-severe-cbt-antidepressant@1",
-      "version": 1,
-      "supersedes": null,
-      "authorId": "mlos-ai-drafter",
-      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
-      "stem": "Which treatment is explicitly listed by NICE as a first-line option for a new episode of more severe depression?",
-      "options": [
-        {
-          "optionId": "cbt-antidepressant",
-          "text": "Individual CBT combined with an antidepressant"
+          "optionId": "surgery-only",
+          "text": "Neurosurgery is first-line for most patients"
         },
         {
           "optionId": "antibiotic",
-          "text": "An antibiotic plus supportive counselling"
+          "text": "Antibiotics are the standard initial treatment"
         },
         {
-          "optionId": "benzodiazepine-only",
-          "text": "Long-term benzodiazepine monotherapy"
-        },
-        {
-          "optionId": "stimulant-only",
-          "text": "Stimulant monotherapy"
+          "optionId": "no-treatment",
+          "text": "Depression generally resolves without treatment"
         }
       ],
-      "answerOptionId": "cbt-antidepressant",
-      "explanation": "For more severe depression, NICE includes combined individual CBT and antidepressant medication among first-line treatment options considered through shared decision-making.",
+      "answerOptionId": "psych-med",
+      "explanation": "NIMH states that depression treatment typically involves psychotherapy, medication, or both, with treatment selected according to individual needs and clinical circumstances.",
       "conceptLinks": [
         {
-          "conceptId": "psychiatry:depression:more-severe-cbt-antidepressant",
+          "conceptId": "psychiatry:depression:treatment-modalities",
           "role": "primary"
         }
       ],
       "sourceIds": [
-        "nice:depression-ng222:2026-review"
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:mild-psychotherapy-first",
+      "questionVersionId": "psychiatry:depression:mild-psychotherapy-first@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "For a milder form of depression, what treatment sequence is commonly described by NIMH?",
+      "options": [
+        {
+          "optionId": "therapy-first",
+          "text": "Psychotherapy is often tried first, with medication added if response is inadequate"
+        },
+        {
+          "optionId": "ect-first",
+          "text": "ECT is routinely the first intervention"
+        },
+        {
+          "optionId": "polypharmacy",
+          "text": "Multiple antidepressants are started simultaneously"
+        },
+        {
+          "optionId": "no-followup",
+          "text": "No active treatment or follow-up is needed"
+        }
+      ],
+      "answerOptionId": "therapy-first",
+      "explanation": "NIMH notes that psychotherapy is often tried first for milder depression, with medication added later if psychotherapy alone does not produce a good response.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:mild-psychotherapy-first",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:moderate-severe-medication",
+      "questionVersionId": "psychiatry:depression:moderate-severe-medication@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "For moderate or severe depression, which approach is commonly part of the initial treatment plan according to NIMH?",
+      "options": [
+        {
+          "optionId": "medication",
+          "text": "Medication, often alongside psychotherapy according to individual needs"
+        },
+        {
+          "optionId": "no-treatment",
+          "text": "Observation alone regardless of severity"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Antibiotic therapy"
+        },
+        {
+          "optionId": "stimulant-only",
+          "text": "Stimulant monotherapy in all patients"
+        }
+      ],
+      "answerOptionId": "medication",
+      "explanation": "NIMH states that people with moderate or severe depression usually are prescribed medication as part of the initial treatment plan.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:moderate-severe-medication",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:evidence-based-psychotherapies",
+      "questionVersionId": "psychiatry:depression:evidence-based-psychotherapies@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Which pair is specifically identified by NIMH as evidence-based psychotherapy for depression?",
+      "options": [
+        {
+          "optionId": "cbt-ipt",
+          "text": "Cognitive behavioral therapy and interpersonal therapy"
+        },
+        {
+          "optionId": "aversion-hypnosis",
+          "text": "Aversion therapy and hypnosis"
+        },
+        {
+          "optionId": "sleep-deprivation-only",
+          "text": "Sleep deprivation and supportive silence"
+        },
+        {
+          "optionId": "psychoanalysis-only",
+          "text": "Long-term psychoanalysis as the only evidence-based choice"
+        }
+      ],
+      "answerOptionId": "cbt-ipt",
+      "explanation": "NIMH lists cognitive behavioral therapy and interpersonal therapy among evidence-based psychotherapies for depression.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:evidence-based-psychotherapies",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:antidepressant-onset",
+      "questionVersionId": "psychiatry:depression:antidepressant-onset@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient begins an antidepressant for depression. What general time course does NIMH describe before antidepressants exert their therapeutic effect?",
+      "options": [
+        {
+          "optionId": "four-eight",
+          "text": "Usually about 4–8 weeks"
+        },
+        {
+          "optionId": "minutes",
+          "text": "Usually within minutes"
+        },
+        {
+          "optionId": "one-day",
+          "text": "Always within 24 hours"
+        },
+        {
+          "optionId": "one-year",
+          "text": "Only after one year"
+        }
+      ],
+      "answerOptionId": "four-eight",
+      "explanation": "NIMH notes that antidepressants usually take about 4–8 weeks to work, and some symptoms such as sleep, appetite, and concentration may improve before mood.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:antidepressant-onset",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
       ],
       "provenance": {
         "kind": "ai_generated",
