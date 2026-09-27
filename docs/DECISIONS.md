@@ -411,3 +411,19 @@ The current assembly policy may sample distinct reviewed/published questions det
 Therefore, passing the 180-question capacity gate means only that a technically valid full-length mock can be assembled without duplicate stable items. It does not prove that the subject/topic mix mirrors NEET-PG.
 
 Do not expose answer keys through readiness or assembly APIs. Assembly remains a trusted server operation and the browser receives only the readiness summary until a run is actually created.
+
+## ADR-039 — Full-mock run APIs are trusted, revisioned and section-minimal (accepted, 2026-09-27)
+A full-mock browser is a client of the exam state machine, not an authority over it.
+
+Start a run only through the authenticated trusted API. The server resolves learner identity, checks the exact ruleset's capacity gate, generates the assembly seed, deterministically restores the seeded question order, creates the absolute section schedule and persists the initial run through the service-only ledger boundary. The browser cannot choose the learner, exam order, clock or answer key.
+
+Expose only the currently open section's question content and response state. Future sections remain undisclosed through the run view, and correctness/answer keys remain absent until the run reaches trusted completion.
+
+Answer and marked-for-review mutations require both a client request ID and expected state revision. Before accepting either mutation, synchronize the server clock so elapsed sections close at their scheduled boundaries. Identical request retries are resolved from the immutable ledger before stale-revision rejection; reusing a request ID for different intent is rejected.
+
+A server-side completion transition derives the answer key from the pinned exact question versions, applies the pinned ruleset scoring, and atomically stores the immutable completion receipt. No client-provided correctness or score is accepted.
+
+The assembly RPC's selected membership is not treated as sufficient ordering evidence because its returned JSON array is lexicographically aggregated. The trusted runtime reorders that selected set using the same server-generated SHA-256 seed before assigning questions to sections. Same seed means same sequence; different seeds can change sequence without changing membership.
+
+Do not expose an early-section-advance endpoint for a ruleset that forbids early advance. Cancellation and GT Autopsy are separate later slices. The full-mock learner launch remains blocked until the content-capacity gate reaches 180 distinct eligible published questions.
+
