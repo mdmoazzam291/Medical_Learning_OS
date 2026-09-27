@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "policyId": "exam-value-autonomous-intake-v1",
+  "objective": "maximize durable medical mastery per learner minute while building enough trustworthy internal-test inventory to exercise the exam simulator",
+  "targetExams": [
+    "neet-pg",
+    "ini-cet"
+  ],
+  "batchSizing": {
+    "minimumQuestions": 25,
+    "maximumQuestions": 100,
+    "rule": "Choose the smallest batch at or above 25 that meaningfully closes exam-value coverage gaps without unnecessary duplication."
+  },
+  "conceptSelectionOrder": [
+    {
+      "factor": "verified_exam_evidence",
+      "rule": "Use verified Exam DNA/PYQ evidence when available. Never infer or invent exam frequency, recurrence, or PYQ provenance."
+    },
+    {
+      "factor": "coverage_gap",
+      "rule": "Prefer high-value canonical concepts not yet represented by enough distinct testable items."
+    },
+    {
+      "factor": "cross_exam_transfer",
+      "rule": "Prefer concepts useful to both NEET-PG and INI-CET when evidence and medical scope support that reuse."
+    },
+    {
+      "factor": "clinical_transfer_and_prerequisites",
+      "rule": "Prefer concepts that unlock reasoning, prerequisites, emergency decisions, or multiple related concepts."
+    },
+    {
+      "factor": "source_cluster_efficiency",
+      "rule": "Cluster several original questions around authoritative current sources so reference and rights review evidence is reusable."
+    },
+    {
+      "factor": "duplication_penalty",
+      "rule": "Deprioritize semantically redundant questions even when more inventory would be easy to generate."
+    }
+  ],
+  "examValueUncertainty": {
+    "rule": "When verified exam evidence is insufficient, mark prioritization as heuristic and do not present inferred weights as observed exam frequency."
+  },
+  "internalTesting": {
+    "ruleSetId": "neet-pg:2026@1",
+    "requiredDistinctQuestions": "read_from_verified_rule_set",
+    "stopWhenReady": true,
+    "allowHumanPublishedQuestions": true,
+    "allowAiTestReviewedQuestions": true,
+    "productionEquivalent": false
+  },
+  "aiReviewAuthority": {
+    "policyId": "ai-test-review-v1",
+    "reviewerPrincipal": "ai:mlos-autonomous-reviewer-v1",
+    "allowedGates": [
+      "medical",
+      "references",
+      "rights"
+    ],
+    "scope": "internal_testing_only",
+    "allowedUntil": "internal_test_readiness_reached_or_user_takeover",
+    "humanReviewLedgerUnchanged": true,
+    "productionPublicationAuthority": false,
+    "mayRepresentAiReviewAsHuman": false,
+    "productionPublicationRequiresHumanReview": true
+  }
+}
