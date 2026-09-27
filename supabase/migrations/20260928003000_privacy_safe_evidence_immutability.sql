@@ -28,6 +28,14 @@ revoke all on table public.learner_privacy_erasure_receipts
 grant select on table public.learner_privacy_erasure_receipts
   to service_role;
 
+drop policy if exists learner_privacy_erasure_receipts_service_read
+  on public.learner_privacy_erasure_receipts;
+create policy learner_privacy_erasure_receipts_service_read
+  on public.learner_privacy_erasure_receipts
+  for select
+  to service_role
+  using (true);
+
 create or replace function public.prevent_privacy_erasure_receipt_mutation()
 returns trigger
 language plpgsql
