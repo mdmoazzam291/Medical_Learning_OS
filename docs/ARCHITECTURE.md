@@ -56,3 +56,13 @@ The learner-facing catalog remains a publication projection, not the authority f
 The reviewer UI is an authenticated operational interface over `review-api`, not a learner feature and not a publication authority.
 
 The browser may submit a question version ID, one granted review kind, a decision and notes. It never supplies reviewer identity, target hash, server timestamp or publication state. Review queues are fetched only after server-side grant checks, and publication remains a separate trusted transition with no browser control.
+
+
+## M06a NeuralVault boundary
+NeuralVault is concept-centered rather than document-centered.
+
+The latest canonical catalog owns concept identity. Canonical NeuralVault note versions reference that identity and may reference existing catalog sources. Personal annotations reference the same concept ID but remain learner-owned mutable data.
+
+The authenticated study API is the application boundary for learner annotation reads/writes. Browser roles cannot mutate the underlying tables or invoke trusted mutation functions directly. Optimistic revision checks prevent stale-tab overwrites.
+
+Canonical note content is intentionally separate from the personal annotation layer. Canonical publishing is a content-quality action and remains outside the learner CRUD API.
