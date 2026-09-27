@@ -235,7 +235,7 @@ Deno.serve(async (req: Request) => {
       ] = await Promise.all([
         trustedRead("neural_note_queue", async () =>
           admin.from("neural_canonical_note_versions")
-            .select("id,concept_id,version,supersedes_id,title,body_markdown,source_ids,status,content_sha256,author_id,created_at")
+            .select("id,concept_id,version,supersedes_id,title,body_markdown,source_ids,provenance,status,content_sha256,author_id,created_at")
             .eq("status", "in_review")
             .order("created_at", { ascending: true })
             .order("id", { ascending: true })
@@ -268,6 +268,7 @@ Deno.serve(async (req: Request) => {
             title: note.title,
             bodyMarkdown: note.body_markdown,
             sourceIds: note.source_ids,
+            provenance: note.provenance,
             status: note.status,
             contentSha256: note.content_sha256,
             createdAt: note.created_at
