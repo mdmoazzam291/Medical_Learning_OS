@@ -250,3 +250,16 @@ Return stable `conceptId` as the navigation identity. QBank and future Study Now
 Personal annotations remain a distinct learner-owned layer. Search may use their text only for that learner. Canonical note updates do not rewrite annotations; instead expose anchor state explicitly as current, canonical-updated, anchor-unavailable or unanchored.
 
 The current substring search is intentionally simple for the tiny beta corpus. Before large-scale content, replace it with an indexed search layer while preserving the same authorization and concept-identity contract.
+
+
+## ADR-029 — NeuralVault handoff from Study Now occurs after retrieval and preserves the recommendation reason (accepted, 2026-09-27)
+Study Now may deep-link into NeuralVault only after the learner has attempted the question and the server has recorded the answer. Do not show the canonical concept note as a pre-answer shortcut, because that would contaminate retrieval practice.
+
+Recover the handoff reason from the immutable Study Now recommendation receipt on the server rather than browser-only state. Allow only the canonical recommendation classes `mistake-repair`, `due-revision`, and `new-learning`.
+
+Carry the stable canonical `conceptId` plus the allowlisted reason into NeuralVault. The receiving page may explain why the learner arrived, but the handoff is contextual only: it must not mutate score, mastery, personal annotation content, revision state or scheduling.
+
+If no immutable Study Now recommendation exists for the active session, fall back to the ordinary QBank → NeuralVault concept link with no Study Now framing.
+
+This keeps the learning sequence explicit:
+retrieval attempt → feedback → explanation of recommendation reason → canonical concept review → later re-test.
