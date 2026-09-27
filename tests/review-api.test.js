@@ -82,3 +82,14 @@ test('NeuralVault review queue exposes canonical note provenance for reviewer in
   assert.match(source, /source_ids,provenance,status/);
   assert.match(source, /provenance: note\.provenance/);
 });
+
+
+test('review-api exposes read-only pipeline status only to authenticated reviewers', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/pipeline-status"/);
+  assert.match(source, /const grants = await getGrants\(\)/);
+  assert.match(source, /if \(!grants\.length\) fail\(403, "reviewer_not_authorized"\)/);
+  assert.match(source, /admin\.rpc\("content_intake_pipeline_status"\)/);
+  assert.match(source, /content_pipeline_status_unavailable/);
+  assert.doesNotMatch(source, /path === "\/pipeline-status"[\s\S]{0,900}content_stage_intake_batch/);
+});
