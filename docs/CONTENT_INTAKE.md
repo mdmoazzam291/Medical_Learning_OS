@@ -127,6 +127,12 @@ This measures pipeline pressure. It does not infer medical quality, reviewer qua
 - current review backlog: Medical 5 / References 5 / Rights 5;
 - published stable inventory remains 1.
 
+## Reviewer preflight assistance
+
+The reviewer surface may load a versioned **non-authoritative review-assist packet**. It summarizes current source support, preserves wording concerns and suggests conservative rights handling, but it cannot approve a gate, mark content verified or publish.
+
+For the first rabies pilot, the preflight finds four straightforwardly supported items and one supported item with a wording note: the category III RIG stem is correct among its options but slightly under-specified because wound washing is also part of rabies PEP. The concern remains visible to the reviewer rather than being auto-resolved.
+
 ## Next production step
 
 Complete the pilot's independent review loop and record:
