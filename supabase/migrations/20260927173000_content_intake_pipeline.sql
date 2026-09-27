@@ -982,6 +982,9 @@ begin
 end;
 $function$;
 
+revoke all on function public.guard_content_intake_batch_mutation()
+  from public, anon, authenticated, service_role;
+
 drop trigger if exists content_intake_batches_guard on public.content_intake_batches;
 create trigger content_intake_batches_guard
 before update or delete on public.content_intake_batches
@@ -997,6 +1000,9 @@ begin
   raise exception using errcode = '55000', message = 'content_intake_event_immutable';
 end;
 $function$;
+
+revoke all on function public.prevent_content_intake_event_mutation()
+  from public, anon, authenticated, service_role;
 
 drop trigger if exists content_intake_events_no_update_delete on public.content_intake_events;
 create trigger content_intake_events_no_update_delete
