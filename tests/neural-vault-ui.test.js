@@ -41,3 +41,9 @@ test('NeuralVault UI supports authenticated search and update-aware anchor messa
   assert.match(source, /Canonical note updated since this annotation/);
   assert.match(source, /Anchored canonical version is unavailable/);
 });
+
+
+test('NeuralVault startup honors exact concept deep links', () => {
+  assert.match(source, /new URL\(location\.href\)\.searchParams\.get\('concept'\)/);
+  assert.match(source, /reloadVault\(initialConceptId\)/);
+});
