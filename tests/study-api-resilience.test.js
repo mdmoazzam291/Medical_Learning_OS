@@ -205,3 +205,13 @@ test('NeuralVault concept route decodes encoded canonical IDs and enforces note 
   assert.match(source, /decodeURIComponent\(vaultConceptMatch\[1\]\)/);
   assert.match(source, /new TextEncoder\(\)\.encode\(input\.bodyMarkdown\)\.byteLength > 20000/);
 });
+
+
+test('NeuralVault concept index comes from canonical catalog identity with learner note counts', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/vault\/concepts"/);
+  assert.match(source, /catalog\.body\?\.concepts/);
+  assert.match(source, /annotationCounts/);
+  assert.match(source, /canonicalByConcept/);
+  assert.match(source, /catalogVersion/);
+});
