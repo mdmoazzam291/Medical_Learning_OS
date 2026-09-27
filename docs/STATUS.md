@@ -534,3 +534,20 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Full GitHub checks and responsive browser checks passed before deployment.
 - `study-api` v20 is active.
 - M07a is DONE.
+
+
+## M07b observed Mistake Fingerprint — 2026-09-27
+- Added service-only `study_mistake_evidence(learner)`, rebuilt entirely from immutable attempts plus explicit memory judgments.
+- Contract `mistake-observation-v1` records exact error episodes and observable signals only.
+- Observable v1 signals include `incorrect-response`, `repeat-error-same-question`, `repeat-same-distractor`, and `incorrect-with-good-easy-recall`.
+- Every incorrect episode is linked, when available, to the first later retrieval of the same exact question version and marked `recovered-next-retrieval`, `repeated-error-next-retrieval`, or `awaiting-retest`.
+- Added authenticated `GET /diagnostics/mistakes` and cloud adapter `mistakeDiagnostics()`.
+- Current published question text is attached only when that exact version remains published; historical IDs remain usable without leaking non-current question content.
+- Diagnostics explicitly return `causeInferenceEnabled=false`, `causes=[]`, and uncertainty reasons including error-cause-not-observed and transfer-error-pattern-not-modeled.
+- The system does not label a wrong answer as careless, guessing, weak knowledge, poor attention or any other unobserved psychological cause.
+- Rollback-only synthetic proof exercised wrong → same wrong distractor → correct. It correctly detected repeated error, repeated distractor, wrong + Good recall discordance, immediate repeated error and later recovery, then rolled all synthetic data back.
+- Both real learner accounts currently return an empty Mistake Fingerprint because neither has a genuine incorrect attempt.
+- Migration `mistake_evidence_projection` applied successfully.
+- Full GitHub checks and responsive browser checks passed before deployment.
+- `study-api` v21 is active.
+- M07b is DONE.
