@@ -46,6 +46,7 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
   return {
     me() { return request('/me'); },
     queue(reviewKind) { return request(`/queue?kind=${encodeURIComponent(reviewKind)}`); },
+    noteQueue(reviewKind) { return request(`/note-queue?kind=${encodeURIComponent(reviewKind)}`); },
     resolveRights({ sourceId, rightsStatus, evidence }) {
       return request('/source-rights', {
         method: 'POST',
@@ -56,6 +57,12 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
       return request('/reviews', {
         method: 'POST',
         body: { questionVersionId, reviewKind, decision, notes }
+      });
+    },
+    recordNote({ noteVersionId, reviewKind, decision, notes }) {
+      return request('/note-reviews', {
+        method: 'POST',
+        body: { noteVersionId, reviewKind, decision, notes }
       });
     }
   };
