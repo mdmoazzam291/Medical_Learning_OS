@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "assistType": "ai_source_preflight",
   "authority": "none",
-  "generatedDate": "2026-09-27",
+  "generatedDate": "2026-09-28",
   "scope": {
     "batchKeys": [
       "pilot:rabies:20260927:01",
-      "pilot:infectious-prevention:20260927:02"
+      "pilot:infectious-prevention:20260927:02",
+      "pilot:acute-medicine:20260928:03"
     ],
-    "questionCount": 30
+    "questionCount": 55
   },
   "policy": {
     "mayApproveReviewGate": false,
@@ -78,6 +79,51 @@
       "rightsBasisUrl": "https://www.cdc.gov/other/agencymaterials.html",
       "rightsBasisSummary": "CDC states that most CDC/ATSDR website information is public domain but identifies exceptions for contractor, grantee, licensed, state/local, and other third-party material. Medical Learning OS uses these pages only for factual grounding with original question wording; citation_only is the conservative review-assist recommendation unless the reviewer confirms public-domain status for the exact material used.",
       "draftRightsEvidence": "CDC's Use of Agency Materials policy states that most CDC/ATSDR website information is public domain but notes exceptions for contractor, grantee, licensed, state/local, and other third-party material. This Medical Learning OS item uses the CDC page only for factual grounding and uses original wording rather than reproducing source text, tables, images, or other expressive material. Record citation_only unless independent inspection supports a different rights status for the exact material used."
+    },
+    {
+      "sourceId": "aha:adult-bls:2025-accessed-2026-09-28",
+      "sourceUrl": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "supportSummary": "The 2025 AHA adult BLS guidance supports pulse checks no longer than 10 seconds, a 100–120/min compression rate, approximately 5–6 cm compression depth, 30:2 CPR without an advanced airway, and rescue breathing at about 10 breaths/min when a pulse is present.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://www.heart.org/en/about-us/statements-and-policies/copyright-permission-guidelines",
+      "rightsBasisSummary": "AHA states that its website and guideline materials are copyrighted and reproduction generally requires permission. Medical Learning OS uses only factual propositions to draft original questions and does not reproduce AHA algorithms, tables, figures, or source wording; citation_only is the conservative review-assist recommendation.",
+      "draftRightsEvidence": "AHA states that its website and guideline materials are copyrighted and reproduction generally requires permission. Medical Learning OS uses only factual propositions to draft original questions and does not reproduce AHA algorithms, tables, figures, or source wording; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
+    },
+    {
+      "sourceId": "sccm:adult-sepsis-guidelines:accessed-2026-09-28",
+      "sourceUrl": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "supportSummary": "Current SCCM Surviving Sepsis Campaign adult guidance supports lactate measurement, early crystalloid resuscitation, initial MAP around 65 mm Hg, immediate/approximately one-hour antimicrobials for septic shock, and norepinephrine as first-line vasopressor.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://www.sccm.org/about-sccm/terms-and-conditions",
+      "rightsBasisSummary": "SCCM states that site content is protected and generally may not be reproduced or republished without permission. Medical Learning OS uses only factual guidance to create original questions and does not reproduce tables, figures, recommendation blocks, or source wording; citation_only is the conservative review-assist recommendation.",
+      "draftRightsEvidence": "SCCM states that site content is protected and generally may not be reproduced or republished without permission. Medical Learning OS uses only factual guidance to create original questions and does not reproduce tables, figures, recommendation blocks, or source wording; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
+    },
+    {
+      "sourceId": "gina:strategy-report:2026-accessed-2026-09-28",
+      "sourceUrl": "https://ginasthma.org/2026-gina-strategy-report/",
+      "supportSummary": "GINA 2026 supports Track 1 low-dose ICS-formoterol as the preferred adult/adolescent approach, AIR-only Steps 1–2, MART beginning at Step 3, ICS-formoterol as the MART combination, and expert assessment/phenotyping at Step 5.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://ginasthma.org/2026-gina-strategy-report/",
+      "rightsBasisSummary": "GINA explicitly states that its documents are copyright protected and may not be copied or distributed without authorization. Medical Learning OS uses factual guidance only to create original question wording and does not reproduce GINA tables, figures, boxes, or source text; citation_only is the conservative review-assist recommendation.",
+      "draftRightsEvidence": "GINA explicitly states that its documents are copyright protected and may not be copied or distributed without authorization. Medical Learning OS uses factual guidance only to create original question wording and does not reproduce GINA tables, figures, boxes, or source text; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
+    },
+    {
+      "sourceId": "gold:copd-report:2026-accessed-2026-09-28",
+      "sourceUrl": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "supportSummary": "GOLD 2026 supports post-bronchodilator FEV1/FVC below 0.7 for COPD diagnosis, short-acting bronchodilators as initial exacerbation treatment, five-day systemic corticosteroids, antibiotic indications including mechanical ventilation, and NIV for hypercapnic respiratory failure.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "rightsBasisSummary": "GOLD distributes copyrighted strategy/report materials with stated use restrictions. Medical Learning OS uses factual guidance only to create original questions and does not reproduce GOLD figures, tables, algorithms, or source wording; citation_only is the conservative review-assist recommendation.",
+      "draftRightsEvidence": "GOLD distributes copyrighted strategy/report materials with stated use restrictions. Medical Learning OS uses factual guidance only to create original questions and does not reproduce GOLD figures, tables, algorithms, or source wording; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
+    },
+    {
+      "sourceId": "ada:diagnosis-classification:2026-accessed-2026-09-28",
+      "sourceUrl": "https://diabetesjournals.org/care/article/49/Supplement_1/S27/163926/2-Diagnosis-and-Classification-of-Diabetes",
+      "supportSummary": "ADA Standards of Care in Diabetes—2026 supports diagnostic thresholds of A1C ≥6.5%, fasting plasma glucose ≥126 mg/dL, 2-hour 75-g OGTT glucose ≥200 mg/dL, random plasma glucose ≥200 mg/dL with classic symptoms/crisis, and confirmatory testing when hyperglycemia is not unequivocal.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://diabetesjournals.org/journals/pages/reprints-and-permissions",
+      "rightsBasisSummary": "ADA states that journal content is protected by copyright and may require permission for reuse. Medical Learning OS uses factual diagnostic thresholds only to draft original questions and does not reproduce ADA tables, figures, or article wording; citation_only is the conservative review-assist recommendation.",
+      "draftRightsEvidence": "ADA states that journal content is protected by copyright and may require permission for reuse. Medical Learning OS uses factual diagnostic thresholds only to draft original questions and does not reproduce ADA tables, figures, or article wording; citation_only is the conservative review-assist recommendation. Record citation_only unless independent rights review supports a different status for the exact factual use."
     }
   ],
   "questions": [
@@ -799,6 +845,631 @@
           "cdc:hbv-exposure-hcp:2024-05-16"
         ],
         "draftNote": "Provenance is accurately recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The cited CDC source is used only for factual grounding, while the question and explanation use original wording and do not intentionally copy protected text, tables, images, or other expressive material. Source rights must be independently resolved before approval of this gate."
+      }
+    },
+    {
+      "questionVersionId": "resuscitation:adult-bls:pulse-check-duration@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The 2025 AHA adult BLS guidance says the healthcare professional should minimize the pulse check to no more than 10 seconds; if a pulse is not definitely felt, chest compressions should be started.",
+        "uncertainty": "low",
+        "draftNote": "Current American Heart Association: 2025 Adult Basic Life Support Guidelines supports the keyed answer for this item. The 2025 AHA adult BLS guidance says the healthcare professional should minimize the pulse check to no more than 10 seconds; if a pulse is not definitely felt, chest compressions should be started. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Heart Association: 2025 Adult Basic Life Support Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Heart Association: 2025 Adult Basic Life Support Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "resuscitation:adult-bls:compression-rate@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For adults in cardiac arrest, the AHA recommends a chest-compression rate of 100 to 120 per minute.",
+        "uncertainty": "low",
+        "draftNote": "Current American Heart Association: 2025 Adult Basic Life Support Guidelines supports the keyed answer for this item. For adults in cardiac arrest, the AHA recommends a chest-compression rate of 100 to 120 per minute. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Heart Association: 2025 Adult Basic Life Support Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Heart Association: 2025 Adult Basic Life Support Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "resuscitation:adult-bls:compression-depth@1",
+      "medical": {
+        "result": "supported",
+        "summary": "AHA guidance recommends compressing at least 2 inches (5 cm) in an average adult while avoiding excessive depth greater than 2.4 inches (6 cm).",
+        "uncertainty": "low",
+        "draftNote": "Current American Heart Association: 2025 Adult Basic Life Support Guidelines supports the keyed answer for this item. AHA guidance recommends compressing at least 2 inches (5 cm) in an average adult while avoiding excessive depth greater than 2.4 inches (6 cm). I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Heart Association: 2025 Adult Basic Life Support Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Heart Association: 2025 Adult Basic Life Support Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "resuscitation:adult-bls:thirty-to-two@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The adult BLS algorithm uses cycles of 30 chest compressions and 2 breaths when an advanced airway is not in place.",
+        "uncertainty": "low",
+        "draftNote": "Current American Heart Association: 2025 Adult Basic Life Support Guidelines supports the keyed answer for this item. The adult BLS algorithm uses cycles of 30 chest compressions and 2 breaths when an advanced airway is not in place. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Heart Association: 2025 Adult Basic Life Support Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Heart Association: 2025 Adult Basic Life Support Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "resuscitation:adult-bls:pulse-present-rescue-breathing@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For an adult with a pulse but abnormal breathing, the AHA adult BLS algorithm calls for 1 breath every 6 seconds, approximately 10 breaths per minute.",
+        "uncertainty": "low",
+        "draftNote": "Current American Heart Association: 2025 Adult Basic Life Support Guidelines supports the keyed answer for this item. For an adult with a pulse but abnormal breathing, the AHA adult BLS algorithm calls for 1 breath every 6 seconds, approximately 10 breaths per minute. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Heart Association: 2025 Adult Basic Life Support Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Heart Association: 2025 Adult Basic Life Support Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "aha:adult-bls:2025-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "critical-care:sepsis:lactate-measurement@1",
+      "medical": {
+        "result": "supported",
+        "summary": "Current Surviving Sepsis Campaign adult guidance suggests measuring blood lactate in adults with possible, probable, or definite sepsis or septic shock.",
+        "uncertainty": "low",
+        "draftNote": "Current Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines supports the keyed answer for this item. Current Surviving Sepsis Campaign adult guidance suggests measuring blood lactate in adults with possible, probable, or definite sepsis or septic shock. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "critical-care:sepsis:initial-fluid-volume@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For sepsis-induced hypoperfusion or septic shock, the guidance suggests at least 30 mL/kg of IV crystalloid during the first 3 hours, with subsequent fluid decisions individualized and reassessed.",
+        "uncertainty": "low",
+        "draftNote": "Current Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines supports the keyed answer for this item. For sepsis-induced hypoperfusion or septic shock, the guidance suggests at least 30 mL/kg of IV crystalloid during the first 3 hours, with subsequent fluid decisions individualized and reassessed. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "critical-care:septic-shock:initial-map-target@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For adults with septic shock, the guideline recommends an initial MAP target of 65 mm Hg rather than higher targets, with clinical individualization as needed.",
+        "uncertainty": "low",
+        "draftNote": "Current Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines supports the keyed answer for this item. For adults with septic shock, the guideline recommends an initial MAP target of 65 mm Hg rather than higher targets, with clinical individualization as needed. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "critical-care:septic-shock:antimicrobial-timing@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For possible, probable, or definite septic shock, current guidance recommends antimicrobial therapy immediately, ideally within 1 hour of recognition.",
+        "uncertainty": "low",
+        "draftNote": "Current Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines supports the keyed answer for this item. For possible, probable, or definite septic shock, current guidance recommends antimicrobial therapy immediately, ideally within 1 hour of recognition. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "critical-care:septic-shock:first-line-vasopressor@1",
+      "medical": {
+        "result": "supported",
+        "summary": "Current Surviving Sepsis Campaign adult guidance recommends norepinephrine as the first-line vasopressor in septic shock over several alternatives.",
+        "uncertainty": "low",
+        "draftNote": "Current Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines supports the keyed answer for this item. Current Surviving Sepsis Campaign adult guidance recommends norepinephrine as the first-line vasopressor in septic shock over several alternatives. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Society of Critical Care Medicine: Surviving Sepsis Campaign Adult Guidelines, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "sccm:adult-sepsis-guidelines:accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:asthma:gina-track1-preferred-reliever@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GINA 2026 identifies Track 1, which uses low-dose ICS-formoterol as the anti-inflammatory reliever, as the preferred approach for adults and adolescents.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Asthma: 2026 GINA Strategy Report supports the keyed answer for this item. GINA 2026 identifies Track 1, which uses low-dose ICS-formoterol as the anti-inflammatory reliever, as the preferred approach for adults and adolescents. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Asthma: 2026 GINA Strategy Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Asthma: 2026 GINA Strategy Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:asthma:gina-steps1-2-treatment@1",
+      "medical": {
+        "result": "supported",
+        "summary": "At Track 1 Steps 1–2, GINA uses as-needed-only low-dose ICS-formoterol as anti-inflammatory reliever therapy.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Asthma: 2026 GINA Strategy Report supports the keyed answer for this item. At Track 1 Steps 1–2, GINA uses as-needed-only low-dose ICS-formoterol as anti-inflammatory reliever therapy. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Asthma: 2026 GINA Strategy Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Asthma: 2026 GINA Strategy Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:asthma:gina-mart-begins-step3@1",
+      "medical": {
+        "result": "supported",
+        "summary": "In GINA Track 1, Steps 1–2 use as-needed-only ICS-formoterol, while Step 3 introduces maintenance ICS-formoterol plus the same inhaler as reliever, i.e. MART.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Asthma: 2026 GINA Strategy Report supports the keyed answer for this item. In GINA Track 1, Steps 1–2 use as-needed-only ICS-formoterol, while Step 3 introduces maintenance ICS-formoterol plus the same inhaler as reliever, i.e. MART. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Asthma: 2026 GINA Strategy Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Asthma: 2026 GINA Strategy Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:asthma:gina-mart-laba-component@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GINA states that ICS-formoterol is the ICS-LABA used for MART because formoterol provides the rapid-onset reliever component.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Asthma: 2026 GINA Strategy Report supports the keyed answer for this item. GINA states that ICS-formoterol is the ICS-LABA used for MART because formoterol provides the rapid-onset reliever component. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Asthma: 2026 GINA Strategy Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Asthma: 2026 GINA Strategy Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:asthma:gina-step5-next-action@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GINA Step 5 emphasizes expert assessment and phenotyping to guide add-on treatment for severe or difficult-to-treat asthma.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Asthma: 2026 GINA Strategy Report supports the keyed answer for this item. GINA Step 5 emphasizes expert assessment and phenotyping to guide add-on treatment for severe or difficult-to-treat asthma. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Asthma: 2026 GINA Strategy Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Asthma: 2026 GINA Strategy Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gina:strategy-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:copd:spirometric-diagnostic-criterion@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GOLD uses a post-bronchodilator FEV1/FVC ratio below 0.7 as the spirometric criterion for persistent airflow obstruction in COPD.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report supports the keyed answer for this item. GOLD uses a post-bronchodilator FEV1/FVC ratio below 0.7 as the spirometric criterion for persistent airflow obstruction in COPD. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:copd:exacerbation-first-bronchodilator@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GOLD recommends short-acting inhaled beta2-agonists, with or without short-acting anticholinergics, as initial bronchodilators for an acute COPD exacerbation.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report supports the keyed answer for this item. GOLD recommends short-acting inhaled beta2-agonists, with or without short-acting anticholinergics, as initial bronchodilators for an acute COPD exacerbation. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:copd:exacerbation-steroid-duration@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GOLD 2026 states that systemic corticosteroid therapy for COPD exacerbations should be limited to a 5-day course in usual management.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report supports the keyed answer for this item. GOLD 2026 states that systemic corticosteroid therapy for COPD exacerbations should be limited to a 5-day course in usual management. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:copd:exacerbation-antibiotic-mechanical-ventilation@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GOLD includes need for invasive or noninvasive mechanical ventilation among indications for antibiotics during COPD exacerbations.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report supports the keyed answer for this item. GOLD includes need for invasive or noninvasive mechanical ventilation among indications for antibiotics during COPD exacerbations. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "respiratory:copd:hypercapnic-failure-ventilation@1",
+      "medical": {
+        "result": "supported",
+        "summary": "GOLD recommends noninvasive ventilation for COPD exacerbation with hypercapnic respiratory failure when there is no absolute contraindication, because it can improve gas exchange and reduce intubation.",
+        "uncertainty": "low",
+        "draftNote": "Current Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report supports the keyed answer for this item. GOLD recommends noninvasive ventilation for COPD exacerbation with hypercapnic respiratory failure when there is no absolute contraindication, because it can improve gas exchange and reduce intubation. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, Global Initiative for Chronic Obstructive Lung Disease: 2026 GOLD Report, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "gold:copd-report:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "endocrine:diabetes:diagnostic-a1c-threshold@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The ADA diagnostic threshold for diabetes is an A1C of at least 6.5% when measured with an appropriate standardized laboratory method.",
+        "uncertainty": "low",
+        "draftNote": "Current American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 supports the keyed answer for this item. The ADA diagnostic threshold for diabetes is an A1C of at least 6.5% when measured with an appropriate standardized laboratory method. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "endocrine:diabetes:diagnostic-fasting-glucose@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The ADA diagnostic fasting plasma glucose threshold is at least 126 mg/dL (7.0 mmol/L) after at least 8 hours without caloric intake.",
+        "uncertainty": "low",
+        "draftNote": "Current American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 supports the keyed answer for this item. The ADA diagnostic fasting plasma glucose threshold is at least 126 mg/dL (7.0 mmol/L) after at least 8 hours without caloric intake. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "endocrine:diabetes:diagnostic-ogtt@1",
+      "medical": {
+        "result": "supported",
+        "summary": "A 2-hour plasma glucose of at least 200 mg/dL (11.1 mmol/L) during a 75-g OGTT meets the ADA diagnostic criterion for diabetes.",
+        "uncertainty": "low",
+        "draftNote": "Current American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 supports the keyed answer for this item. A 2-hour plasma glucose of at least 200 mg/dL (11.1 mmol/L) during a 75-g OGTT meets the ADA diagnostic criterion for diabetes. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "endocrine:diabetes:random-glucose-classic-symptoms@1",
+      "medical": {
+        "result": "supported",
+        "summary": "In a person with classic hyperglycemic symptoms or hyperglycemic crisis, a random plasma glucose of at least 200 mg/dL meets an ADA diagnostic criterion for diabetes.",
+        "uncertainty": "low",
+        "draftNote": "Current American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 supports the keyed answer for this item. In a person with classic hyperglycemic symptoms or hyperglycemic crisis, a random plasma glucose of at least 200 mg/dL meets an ADA diagnostic criterion for diabetes. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
+      }
+    },
+    {
+      "questionVersionId": "endocrine:diabetes:asymptomatic-confirmation@1",
+      "medical": {
+        "result": "supported",
+        "summary": "In the absence of unequivocal hyperglycemia, ADA guidance requires confirmatory testing, using two abnormal results obtained either at the same time or at different time points.",
+        "uncertainty": "low",
+        "draftNote": "Current American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 supports the keyed answer for this item. In the absence of unequivocal hyperglycemia, ADA guidance requires confirmatory testing, using two abnormal results obtained either at the same time or at different time points. I checked the stem, options, answer key, explanation, and guideline context for material contradiction or unsafe ambiguity; no material issue was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026 source directly supports the keyed factual rule and explanation for this question.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "The cited source, American Diabetes Association: Diagnosis and Classification of Diabetes, Standards of Care in Diabetes—2026, directly supports the keyed answer and explanation for this question. The source identity/version match the stated guideline context, and no material source-scope mismatch was identified in this non-authoritative preflight."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "The item uses original wording for factual grounding and does not intentionally reproduce protected source expression; citation_only is the conservative review-assist recommendation pending independent rights review.",
+        "sourceIds": [
+          "ada:diagnosis-classification:2026-accessed-2026-09-28"
+        ],
+        "draftNote": "Provenance is recorded as an AI-generated original question and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the question/explanation use original wording and do not intentionally copy protected text, tables, figures, algorithms, or other expressive material. Source rights must still be independently resolved before approval."
       }
     }
   ]
