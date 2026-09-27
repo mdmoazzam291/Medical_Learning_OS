@@ -277,3 +277,26 @@ test('concept diagnostics preserve uncertainty from sparse and missing evidence'
   assert.match(source, /transfer-evidence-not-modeled/);
   assert.match(source, /concept-not-in-current-catalog/);
 });
+
+
+test('mistake diagnostics expose observed error patterns without inferring causes', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/diagnostics\/mistakes"/);
+  assert.match(source, /study_mistake_evidence/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /scope: "observed-mistake-evidence"/);
+  assert.match(source, /causeInferenceEnabled: false/);
+  assert.match(source, /causes: \[\]/);
+  assert.match(source, /error-cause-not-observed/);
+  assert.match(source, /single-question-version-error-evidence/);
+  assert.match(source, /no-error-memory-self-report/);
+  assert.match(source, /transfer-error-pattern-not-modeled/);
+});
+
+test('mistake diagnostics expose question text only for currently published versions', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /publishedQuestionMap/);
+  assert.match(source, /currentQuestion: currentQuestion \?/);
+  assert.match(source, /stem: currentQuestion\.stem/);
+  assert.match(source, /: null/);
+});
