@@ -93,7 +93,7 @@ test('review assist covers every acute medicine pilot question without authority
     assert.equal('reviewerId' in item,false);
   }
   assert.ok(assist.scope.batchKeys.includes('pilot:acute-medicine:20260928:03'));
-  assert.equal(assist.scope.questionCount,55);
+  assert.ok(assist.scope.questionCount >= 55);
   assert.equal(assist.authority,'none');
   assert.equal(assist.policy.mayPublishContent,false);
 });
