@@ -318,7 +318,7 @@ test('Exam DNA endpoint validates optional exam identity instead of accepting ar
 });
 
 
-test('exam simulator readiness endpoint is authenticated, pinned and read-only', async () => {
+test('exam simulator readiness stays read-only while trusted run start owns assembly', async () => {
   const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
   assert.match(source, /path === "\/exam-simulator\/readiness"/);
   assert.match(source, /searchParams\.get\("ruleSetId"\)/);
@@ -326,5 +326,9 @@ test('exam simulator readiness endpoint is authenticated, pinned and read-only',
   assert.match(source, /exam_mock_readiness/);
   assert.match(source, /p_rule_set_id: ruleSetId/);
   assert.match(source, /exam_mock_readiness_failed/);
-  assert.doesNotMatch(source, /exam_assemble_mock/);
+
+  const startRoute = source.indexOf('path === "/exam-simulator/runs"');
+  const readinessRoute = source.indexOf('path === "/exam-simulator/readiness"');
+  const assemblyCall = source.indexOf('admin.rpc("exam_assemble_mock"', startRoute);
+  assert.ok(startRoute >= 0 && assemblyCall > startRoute && readinessRoute > assemblyCall);
 });
