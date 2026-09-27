@@ -241,3 +241,19 @@ Annotations are separately versioned and may be hotspot, bounding box or polygon
 `toLearnerMediaPrompt` intentionally excludes diagnosis evidence, provenance/licence/review metadata and annotations. `toLearnerMediaAnnotations` is a separate explicit projection for post-answer teaching/localization flows.
 
 The checked-in media fixture is synthetic software-test data, not medical content.
+
+
+## Hosted multimodal persistence v1 — M10a
+
+Production migration `20260927222051_m10a_media_persistence_review_binding` materializes the Phase-1 media contract as three service-only immutable tables:
+- `content_media_assets` — exact asset version, SHA-256 byte identity, modality, format, dimensions, delivery reference, source/licence/rights metadata, diagnosis evidence and review metadata;
+- `content_media_annotations` — exact annotation version, asset anchor, normalized geometry payload, label, canonical concept and author metadata;
+- `content_question_media_links` — exact question-version to exact media-version relationship, role, order, blind-first-look flag and annotation-version references.
+
+Direct browser table access is denied. Registration occurs through service-only `content_register_media_bundle_v1`, which accepts new v1 media/annotation records and links only to current canonical concepts and question versions.
+
+Existing Medical/References/Rights review remains the only content review system. `current_review_target_sha256` includes media only when a question has media links, preserving historical hashes for text-only questions while binding future reviews to exact image bytes and linked annotations.
+
+Image usage rights are normalized separately from licence prose. Rights review approval fails closed when any linked media asset has `rightsStatus=unknown`. For actual learner-visible image content, `citation_only` is intentionally not a permitted media-rights state.
+
+`content_media_prompt` is a learner-safe projection and intentionally excludes diagnosis evidence, source/licence/rights metadata, review metadata and ground-truth annotations.

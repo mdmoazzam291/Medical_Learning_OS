@@ -717,3 +717,14 @@ Blind-first-look is a product/content invariant: pre-answer learner payloads mus
 Start with JPEG/PNG/WebP and simple hotspot/bbox/polygon annotations. DICOM, whole-slide pathology, video and advanced imaging are deferred until measured use justifies them.
 
 This foundation does not make an image medically verified or production publishable. Production authority remains separate from AI assistance and from the internal-test lane.
+
+
+## ADR-052 — Media reuses content review authority and requires normalized image rights (accepted, 2026-09-28)
+
+Do not create a separate medical/reference/rights authority for images. Existing question review events remain authoritative; when a question links media, each gate fingerprint expands to include the exact media material relevant to that gate.
+
+Backward compatibility is mandatory: text-only questions keep the historical fingerprint shape exactly. Adding or changing a media link, exact image bytes, diagnosis evidence, source identity, rights metadata or linked annotation invalidates the applicable current review fingerprint rather than silently reusing old approval.
+
+Image reuse rights must be machine-checkable. Media source records therefore carry `rightsStatus = unknown | owned | licensed | public_domain` in addition to human-readable licence/evidence text. `citation_only` is not sufficient to display/reproduce an image asset and is deliberately excluded.
+
+Browser roles never query canonical media tables directly. Learner delivery goes through a trusted API and a narrow prompt projection that cannot expose diagnosis evidence, rights/provenance metadata or annotations before answer submission.

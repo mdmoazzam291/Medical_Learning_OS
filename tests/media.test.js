@@ -92,3 +92,15 @@ test('supported phase-1 modalities and formats are deliberately narrow', () => {
     assert.equal(validateMediaBundle(c).assets[0].mimeType, mimeType);
   }
 });
+
+
+test('media source carries a normalized rights state instead of relying on licence prose', () => {
+  for (const rightsStatus of ['unknown','owned','licensed','public_domain']) {
+    const c = fixture();
+    c.assets[0].source.rightsStatus = rightsStatus;
+    assert.equal(validateMediaBundle(c).assets[0].source.rightsStatus, rightsStatus);
+  }
+  const invalid = fixture();
+  invalid.assets[0].source.rightsStatus = 'citation_only';
+  assert.throws(() => validateMediaBundle(invalid), /rights status/);
+});

@@ -431,3 +431,24 @@ test('cloud exam run mutations send revisioned intent but no scoring claim', asy
     markedForReview: true
   });
 });
+
+
+test('cloud media prompt requests exact question version without learner or answer data', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        contractId: 'content-media-prompt-v1',
+        questionVersionId: 'radiology:demo@1',
+        media: []
+      });
+    }
+  });
+  const result = await cloud.mediaPrompt('radiology:demo@1');
+  assert.match(seenUrl, /study-api\/media\?questionVersionId=radiology%3Ademo%401$/);
+  assert.equal(result.questionVersionId, 'radiology:demo@1');
+  assert.deepEqual(result.media, []);
+});
