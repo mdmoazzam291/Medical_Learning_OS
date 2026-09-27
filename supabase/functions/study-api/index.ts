@@ -268,6 +268,12 @@ Deno.serve(async (req: Request) => {
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
+    const requireExamRunAccess = (row: any) => {
+      if (row?.state?.assembly?.testingOnly === true && !internalExamTester) {
+        fail(403, "internal_exam_test_forbidden");
+      }
+      return row;
+    };
 
     const trustedRead = async (operation: string, read: () => Promise<any>) => {
       let result = await read();
@@ -1372,6 +1378,7 @@ Deno.serve(async (req: Request) => {
       if (url.search) fail(400, "query_not_supported");
       const row = await getOpenExamRun();
       if (!row) return response(req, 200, { contractId: "exam-run-view-v1", run: null });
+      requireExamRunAccess(row);
       const now = new Date().toISOString();
       const synced = await syncExamClock(row, now);
       return response(req, 200, await examRunView(synced, now, true));
@@ -1382,6 +1389,7 @@ Deno.serve(async (req: Request) => {
       if (url.search) fail(400, "query_not_supported");
       const now = new Date().toISOString();
       const row = await getExamRun(identifier(examRunReadMatch[1]));
+      requireExamRunAccess(row);
       const synced = await syncExamClock(row, now);
       return response(req, 200, await examRunView(synced, now, true));
     }
@@ -1419,6 +1427,7 @@ Deno.serve(async (req: Request) => {
             priorEvent.event?.markedForReview === markedForReview;
         if (!sameIntent) fail(409, "exam_request_key_collision");
         let current = await getExamRun(runId);
+        requireExamRunAccess(current);
         current = await syncExamClock(current, now);
         return response(req, 200, {
           ...(await examRunView(current, now, true)),
@@ -1427,6 +1436,7 @@ Deno.serve(async (req: Request) => {
       }
 
       let row = await getExamRun(runId);
+      requireExamRunAccess(row);
       row = await syncExamClock(row, now);
       if (row.status !== "in_progress") {
         return response(req, 409, {
