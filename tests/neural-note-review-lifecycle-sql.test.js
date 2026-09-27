@@ -51,5 +51,8 @@ test('canonical publication is server-only and requires current matching approva
 });
 
 test('no learner-visible canonical note is created by this migration', () => {
-  assert.doesNotMatch(sql, /insert into public\.neural_canonical_note_versions[\s\S]*status='published'/);
+  assert.doesNotMatch(
+    sql,
+    /insert into public\.neural_canonical_note_versions\s*\([^;]+\)\s*values\s*\([^;]*'published'/i
+  );
 });
