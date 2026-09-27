@@ -433,3 +433,20 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Live production state: 1 draft experiment spec, 0 state events, 0 assignments, 0 eligible learners, `canArm=false`, assignments disabled.
 - Authenticated browser roles cannot register experiment specs, mutate experiment state, create assignments or call the trusted experiment functions directly.
 - This framework is not connected to learner scheduling authority. It is research infrastructure only.
+
+
+## M06a NeuralVault foundation — 2026-09-27
+- Added `src/domain/neural-vault.js` with strict canonical concept IDs, a 20 KB personal-note boundary and update-aware annotation anchor states.
+- Added live `neural_canonical_note_versions`: immutable concept-linked versions with source IDs, SHA-256 fingerprint, sequential versioning and at most one published version per concept.
+- Added live `neural_personal_annotations`: mutable learner-owned notes linked to stable canonical concept IDs with optional canonical-version anchor and optimistic revision control.
+- Personal annotations support real deletion. Stale updates return a revision conflict rather than silently overwriting newer text.
+- Canonical note draft creation validates both the concept and source IDs against the current catalog. Canonical-note publication is intentionally not implemented yet.
+- Authenticated `study-api` v16 exposes NeuralVault concept index/detail plus create/update/delete personal annotation routes. Browser learner identity is server-derived.
+- NeuralVault routes support URL-encoded canonical IDs and enforce the same 20,000-byte personal-note ceiling as the domain contract.
+- Learner export now includes NeuralVault personal annotations.
+- Added hosted `/web/vault.html` workspace with canonical-content and personal-annotation layers rendered separately.
+- The account page links into NeuralVault. The concept index comes from the canonical catalog rather than QBank-local copies.
+- Full GitHub checks and responsive browser checks passed; latest Render deployment is live.
+- Production remains clean: 1 canonical catalog concept, 0 canonical NeuralVault notes and 0 personal annotations. No medical note or learner note was fabricated for release proof.
+- Authenticated browser roles cannot mutate NeuralVault tables or trusted NeuralVault SQL functions directly.
+- M06a remains IN PROGRESS only for one real authenticated hosted create → edit → reload → delete proof.
