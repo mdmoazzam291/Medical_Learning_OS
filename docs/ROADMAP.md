@@ -10,7 +10,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M03 | Learner application and access | Responsive shell, learner settings, identity strategy, storage choice and accessible navigation | DONE |
 | M04 | Core study loop and QBank | Start/resume, answer, explanation, bookmark, incorrect queue, persistence and end-to-end checks | DONE |
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | IN PROGRESS |
-| M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | PLANNED |
+| M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | IN PROGRESS |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | PLANNED |
 | M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | PLANNED |
 | M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | PLANNED |
@@ -53,5 +53,5 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 
 ## M06 slices
 - M06a — IN PROGRESS: canonical concept-linked note version storage, learner-scoped personal annotation CRUD, export and responsive hosted NeuralVault workspace are live; one real authenticated personal-note lifecycle remains to be exercised on the hosted UI.
-- M06b — IN PROGRESS: the existing Medical/References/Rights review ledger now supports canonical NeuralVault note versions, mandatory provenance and server-only publication; the first real canonical note is in review.
-- M06c — IN PROGRESS: learner-safe concept/note search, update-aware annotation anchor states and exact concept deep links from QBank are live; hosted search/deep-link verification and later Study Now retrieval integration remain.
+- M06b — DONE: the first real canonical NeuralVault note passed Medical/References/Rights review with matching immutable fingerprints and was separately published server-side; learner publication/search boundaries are live.
+- M06c — IN PROGRESS: learner-safe concept/note search, update-aware annotation anchor states and exact concept deep links from QBank are live; startup now honors the requested concept query parameter. Hosted search/deep-link verification and later Study Now retrieval integration remain.
