@@ -495,3 +495,12 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Backend verification confirms one annotation row for `emergency:anaphylaxis:first-line-treatment`, revision 2, anchored to canonical note version 1.
 - The canonical anchor remains published and the learner UI correctly reports `Anchored to current canonical version`.
 - This closes the hosted create → edit → refresh persistence gate. The remaining M06a CRUD proof is delete → refresh → absence.
+
+
+## M06a hosted delete/reload CRUD proof — 2026-09-27
+- Learner deleted the hosted anaphylaxis personal annotation from NeuralVault.
+- After refresh, the learner UI showed no personal notes for the concept.
+- Backend verification confirms 0 personal annotations for the learner and 0 annotations for `emergency:anaphylaxis:first-line-treatment`.
+- The published canonical note remained intact as version 1 and stayed visible after deletion.
+- This closes the real hosted personal-annotation CRUD lifecycle: create → edit → refresh persistence → delete → refresh absence.
+- M06a is DONE.
