@@ -46,6 +46,26 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
     fsrsShadow() { return request('/revision/fsrs-shadow'); },
     policyEvaluation() { return request('/revision/policy-evaluation'); },
+    vaultConcept(conceptId) {
+      return request(`/vault/concepts/${encodeURIComponent(conceptId)}`);
+    },
+    createVaultAnnotation({ conceptId, bodyMarkdown, anchorNoteVersionId = null }) {
+      return request('/vault/annotations', {
+        method: 'POST',
+        body: { conceptId, bodyMarkdown, anchorNoteVersionId }
+      });
+    },
+    updateVaultAnnotation(annotationId, expectedRevision, bodyMarkdown) {
+      return request(`/vault/annotations/${encodeURIComponent(annotationId)}`, {
+        method: 'PATCH',
+        body: { expectedRevision, bodyMarkdown }
+      });
+    },
+    deleteVaultAnnotation(annotationId) {
+      return request(`/vault/annotations/${encodeURIComponent(annotationId)}`, {
+        method: 'DELETE'
+      });
+    },
     studyNow(availableMinutes, maxItems = 50) {
       return request('/study-now/start', {
         method: 'POST',
