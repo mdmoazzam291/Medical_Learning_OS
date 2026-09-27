@@ -1,4 +1,93 @@
 {
   "schemaVersion": 1,
-  "ruleSets": []
+  "ruleSets": [
+    {
+      "examId": "neet-pg",
+      "ruleSetId": "neet-pg:2026@1",
+      "version": 1,
+      "supersedes": null,
+      "label": "NEET-PG 2026 published examination scheme",
+      "session": "2026",
+      "effectiveFrom": "2026-07-01",
+      "effectiveUntil": null,
+      "verification": {
+        "status": "verified",
+        "verifiedBy": "medical-learning-os-maintainer",
+        "verifiedDate": "2026-09-27",
+        "notes": "Verified against the NBEMS NEET-PG 2026 Information Bulletin, Scheme of NEET-PG 2026, clauses 5.1-5.7 (pages 32-34). The simulator preset represents the published examination scheme. The bulletin itself preserves an operational caveat that the actual number of time-restricted sections may vary based on total question count and operational feasibility. timeCarryForwardAllowed=false is derived from the explicit requirements that candidates cannot proceed before the prior section's allotted time is complete and that the next section starts automatically when that time completes."
+      },
+      "caveats": [
+        "The NBEMS bulletin states that the actual number of time-restricted sections may vary based on the total number of questions and operational feasibility; this preset represents the published five-section scheme.",
+        "timeCarryForwardAllowed=false is derived from the fixed section timer, prohibition on early section advance, and automatic start of the next section after the prior section's allotted time ends."
+      ],
+      "sources": [
+        {
+          "sourceId": "nbems:neet-pg:2026:information-bulletin-v2.1",
+          "title": "NEET-PG 2026 Information Bulletin 01-07-2026 v2.1",
+          "authority": "National Board of Examinations in Medical Sciences (NBEMS)",
+          "url": "https://drive.google.com/file/d/1WmFcaFZhEAaRFrBBgTGUENX81cQwQkVT/view?usp=sharing",
+          "publishedDate": "2026-07-01",
+          "kind": "official"
+        },
+        {
+          "sourceId": "nbems:neet-pg:official-exam-page:2026",
+          "title": "NBEMS NEET-PG official examination page",
+          "authority": "National Board of Examinations in Medical Sciences (NBEMS)",
+          "url": "https://www.natboard.edu.in/viewnbeexam?exam=neetpg",
+          "publishedDate": "2026-07-01",
+          "kind": "official"
+        }
+      ],
+      "rules": {
+        "deliveryMode": "computer_based",
+        "itemType": "single_best_answer",
+        "totalQuestions": 180,
+        "totalDurationSeconds": 12600,
+        "sections": [
+          {
+            "sectionId": "A",
+            "label": "Group A",
+            "questionCount": 36,
+            "durationSeconds": 2520
+          },
+          {
+            "sectionId": "B",
+            "label": "Group B",
+            "questionCount": 36,
+            "durationSeconds": 2520
+          },
+          {
+            "sectionId": "C",
+            "label": "Group C",
+            "questionCount": 36,
+            "durationSeconds": 2520
+          },
+          {
+            "sectionId": "D",
+            "label": "Group D",
+            "questionCount": 36,
+            "durationSeconds": 2520
+          },
+          {
+            "sectionId": "E",
+            "label": "Group E",
+            "questionCount": 36,
+            "durationSeconds": 2520
+          }
+        ],
+        "scoring": {
+          "correct": 4,
+          "incorrect": -1,
+          "unanswered": 0,
+          "markedForReviewScored": true
+        },
+        "navigation": {
+          "earlySectionAdvanceAllowed": false,
+          "revisitClosedSectionsAllowed": false,
+          "timeCarryForwardAllowed": false,
+          "reviewWithinOpenSectionAllowed": true
+        }
+      }
+    }
+  ]
 }
