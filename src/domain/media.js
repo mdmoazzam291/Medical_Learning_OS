@@ -8,9 +8,6 @@ function fail(message) { throw new TypeError(message); }
 function text(value, label) {
   if (typeof value !== 'string' || !value.trim()) fail(`Invalid ${label}`);
 }
-function nullableText(value, label) {
-  if (value !== null) text(value, label);
-}
 function shape(value, keys) {
   if (!value || typeof value !== 'object' || Array.isArray(value) ||
       Object.keys(value).length !== keys.length || keys.some(key => !Object.hasOwn(value, key))) {
