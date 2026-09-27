@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   createLockedSectionRuntimeRun,
   seededQuestionOrder
-} from '../supabase/functions/_shared/exam-runtime.js';
+} from '../supabase/functions/study-api/_shared/exam-runtime.js';
 
 test('seeded exam ordering is deterministic and changes sequence without changing membership', async () => {
   const ids = Array.from({ length: 180 }, (_, index) => `qv-${String(index + 1).padStart(3, '0')}`);
