@@ -26,3 +26,12 @@ test('reviewer UI can switch between question and NeuralVault canonical note tar
   assert.match(source, /review\.recordNote/);
   assert.match(source, /data-note-version-id/);
 });
+
+
+test('NeuralVault reviewer card shows provenance before gate decision', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /const provenance = note\?\.provenance/);
+  assert.match(source, /<h3>Provenance<\/h3>/);
+  assert.match(source, /provenance\.kind/);
+  assert.match(source, /provenance\.evidence/);
+});
