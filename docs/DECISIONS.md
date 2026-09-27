@@ -281,3 +281,22 @@ Catalog labels are presentation metadata and may evolve. Historical learner evid
 This boundary supports a future chain:
 immutable observations → evidence sufficiency → versioned inference → intervention → outcome validation,
 without allowing current UI pressure to create false precision.
+
+
+## ADR-031 — Mistake Fingerprints classify observed error patterns, not presumed causes (accepted, 2026-09-27)
+A wrong answer is an observation, not a diagnosis.
+
+The Mistake Fingerprint may classify longitudinal facts that are directly supported by learner evidence:
+- an incorrect response occurred;
+- the same exact question was answered incorrectly again;
+- the same distractor was selected again on that exact question;
+- an explicit Good/Easy recall self-report accompanied an incorrect response;
+- the first later retrieval recovered, remained incorrect, or has not yet occurred.
+
+Do not translate those observations directly into labels such as carelessness, guessing, weak knowledge, poor attention, anxiety or failure to study. Those are possible explanations that require additional evidence and, where appropriate, explicit learner input or validated models.
+
+Keep error episodes tied to exact immutable attempt IDs, exact question versions, selected option IDs and canonical concept IDs. This makes the fingerprint rebuildable and lets future content semantics classify distractor meaning without rewriting historical learner evidence.
+
+A repeated distractor can become stronger misconception evidence only when the distractor itself has a reviewed semantic tag. Until then it is merely repeated selection of the same wrong option.
+
+Recovery on a later retrieval is outcome evidence, not proof that the underlying concept is mastered. Transfer and retention remain separate questions.
