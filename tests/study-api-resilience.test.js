@@ -168,3 +168,33 @@ test('policy evaluation endpoint is learner-scoped and explicitly non-causal', a
   assert.match(source, /livePolicyId: "bootstrap-binary-v1"/);
   assert.match(source, /scheduleDecisions/);
 });
+
+
+test('NeuralVault API derives learner identity and separates canonical content from personal annotations', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /vaultConceptMatch/);
+  assert.match(source, /neural_catalog_concept/);
+  assert.match(source, /neural_canonical_note_versions/);
+  assert.match(source, /neural_personal_annotations/);
+  assert.match(source, /\.eq\("learner_id", learnerId\)/);
+  assert.match(source, /canonicalNote/);
+  assert.match(source, /annotations/);
+});
+
+test('NeuralVault mutations use trusted RPCs, optimistic revisions and browser-safe CORS', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /GET, POST, PATCH, DELETE, OPTIONS/);
+  assert.match(source, /path === "\/vault\/annotations"/);
+  assert.match(source, /neural_create_annotation/);
+  assert.match(source, /neural_update_annotation/);
+  assert.match(source, /expectedRevision/);
+  assert.match(source, /neural_delete_annotation/);
+  assert.match(source, /jsonBody\(req, 24576\)/);
+});
+
+test('learner export includes personal NeuralVault annotations', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /getVaultAnnotations/);
+  assert.match(source, /neuralVault:/);
+  assert.match(source, /annotations: vaultAnnotations/);
+});
