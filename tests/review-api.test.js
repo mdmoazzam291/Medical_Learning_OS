@@ -75,3 +75,10 @@ test('review-api records NeuralVault gate decisions with server-derived reviewer
   assert.doesNotMatch(source, /p_reviewer:\s*input\./);
   assert.match(source, /neural_note_not_in_review/);
 });
+
+
+test('NeuralVault review queue exposes canonical note provenance for reviewer inspection', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /source_ids,provenance,status/);
+  assert.match(source, /provenance: note\.provenance/);
+});
