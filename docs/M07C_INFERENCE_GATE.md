@@ -128,3 +128,23 @@ Future inferred state must be a rebuildable, versioned projection carrying:
 ## Test values
 
 Numbers appearing in unit tests are synthetic fixtures used to exercise comparison logic. They are not product thresholds and must not be copied into a future preregistration plan without independent justification.
+
+## Current production evidence snapshot
+
+As of 2026-09-28, the live system has:
+- 2 learners with recorded attempts;
+- 4 attempts;
+- 1 distinct question version;
+- 1 distinct concept;
+- 1 memory rating;
+- 2 same-question follow-up observations;
+- 0 same-question follow-ups at or beyond 1 day;
+- 0 same-question follow-ups at or beyond 7 days;
+- 0 Study Now recommendation receipts;
+- 4 scheduler decision events;
+- no canonical transfer-outcome event family.
+
+This snapshot is **not an activation threshold evaluation**. The 1-day and 7-day counts are descriptive timing buckets only.
+
+Interpretation: M07c1 should not yet preregister a real learner-state model. The current evidence is too narrow to define/validate a meaningful generalizable retention target, and transfer has no accepted observed-outcome contract yet. Continue collecting authentic longitudinal evidence through the existing learning loop rather than manufacturing data for model readiness.
+
