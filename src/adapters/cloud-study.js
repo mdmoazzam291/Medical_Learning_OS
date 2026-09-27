@@ -46,6 +46,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
     fsrsShadow() { return request('/revision/fsrs-shadow'); },
     policyEvaluation() { return request('/revision/policy-evaluation'); },
+    conceptDiagnostics() { return request('/diagnostics/concepts'); },
     vaultConcepts() { return request('/vault/concepts'); },
     vaultSearch(query) { return request(`/vault/search?q=${encodeURIComponent(query)}`); },
     vaultConcept(conceptId) {
