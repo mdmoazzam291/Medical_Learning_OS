@@ -1,0 +1,1484 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "cardiology:acs:pci-p2y12-preference",
+      "label": "Preferred P2Y12 inhibitor in ACS undergoing PCI",
+      "aliases": [],
+      "subjectTags": [
+        "cardiology",
+        "internal-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "cardiology:acs:default-dapt-duration",
+      "label": "Default DAPT duration after ACS without high bleeding risk",
+      "aliases": [],
+      "subjectTags": [
+        "cardiology",
+        "internal-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "cardiology:acs:high-intensity-statin",
+      "label": "High-intensity statin therapy after ACS",
+      "aliases": [],
+      "subjectTags": [
+        "cardiology",
+        "internal-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "cardiology:acs:nste-invasive-hospital",
+      "label": "Invasive strategy for intermediate/high-risk NSTE-ACS",
+      "aliases": [],
+      "subjectTags": [
+        "cardiology",
+        "internal-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "cardiology:acs:radial-pci",
+      "label": "Radial access preference for PCI in ACS",
+      "aliases": [],
+      "subjectTags": [
+        "cardiology",
+        "internal-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "neurology:ais:thrombolysis-4-5h",
+      "label": "IV thrombolysis treatment window in selected AIS",
+      "aliases": [],
+      "subjectTags": [
+        "neurology",
+        "emergency-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "neurology:ais:no-adjuvant-antithrombotic-ivt",
+      "label": "No adjuvant antithrombotic to enhance IV thrombolysis",
+      "aliases": [],
+      "subjectTags": [
+        "neurology",
+        "emergency-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "neurology:ais:basilar-evt-24h-nihss10",
+      "label": "EVT for basilar artery occlusion within 24 hours with NIHSS at least 10",
+      "aliases": [],
+      "subjectTags": [
+        "neurology",
+        "emergency-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "neurology:ais:avoid-intensive-glucose-80-130",
+      "label": "Avoid intensive glucose target 80–130 mg/dL in AIS",
+      "aliases": [],
+      "subjectTags": [
+        "neurology",
+        "emergency-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "neurology:ais:avoid-sbp-under140-post-reperfusion",
+      "label": "Avoid intensive SBP lowering below 140 after reperfusion therapy",
+      "aliases": [],
+      "subjectTags": [
+        "neurology",
+        "emergency-medicine",
+        "guideline-us-aha"
+      ]
+    },
+    {
+      "conceptId": "endocrine:dka:diagnostic-triad",
+      "label": "Current diagnostic components of DKA",
+      "aliases": [],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-consensus-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:dka:glucose-threshold-200",
+      "label": "Updated DKA glucose criterion",
+      "aliases": [],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-consensus-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:dka:beta-hydroxybutyrate-3",
+      "label": "β-hydroxybutyrate threshold for DKA",
+      "aliases": [],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-consensus-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:dka:dextrose-below250",
+      "label": "Add dextrose when DKA glucose falls below 250 mg/dL",
+      "aliases": [],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-consensus-ada"
+      ]
+    },
+    {
+      "conceptId": "endocrine:dka:potassium-delay-insulin-under3-5",
+      "label": "Delay insulin in DKA with potassium below 3.5 mmol/L",
+      "aliases": [],
+      "subjectTags": [
+        "endocrinology",
+        "internal-medicine",
+        "guideline-consensus-ada"
+      ]
+    },
+    {
+      "conceptId": "nephrology:ckd:ras-a3-no-diabetes",
+      "label": "RAS inhibition for CKD with A3 albuminuria without diabetes",
+      "aliases": [],
+      "subjectTags": [
+        "nephrology",
+        "internal-medicine",
+        "guideline-global-kdigo"
+      ]
+    },
+    {
+      "conceptId": "nephrology:ckd:avoid-dual-ras",
+      "label": "Avoid combined ACEi/ARB/direct renin inhibition in CKD",
+      "aliases": [],
+      "subjectTags": [
+        "nephrology",
+        "internal-medicine",
+        "guideline-global-kdigo"
+      ]
+    },
+    {
+      "conceptId": "nephrology:ckd:ras-monitor-2-4weeks",
+      "label": "Check creatinine and potassium 2–4 weeks after RAS inhibitor change",
+      "aliases": [],
+      "subjectTags": [
+        "nephrology",
+        "internal-medicine",
+        "guideline-global-kdigo"
+      ]
+    },
+    {
+      "conceptId": "nephrology:ckd:acei-creatinine-30percent",
+      "label": "ACEi/ARB continuation unless creatinine rises over 30% within 4 weeks",
+      "aliases": [],
+      "subjectTags": [
+        "nephrology",
+        "internal-medicine",
+        "guideline-global-kdigo"
+      ]
+    },
+    {
+      "conceptId": "nephrology:ckd:sglt2-egfr20-acr200",
+      "label": "SGLT2 inhibitor for CKD with eGFR at least 20 and ACR at least 200 mg/g",
+      "aliases": [],
+      "subjectTags": [
+        "nephrology",
+        "internal-medicine",
+        "guideline-global-kdigo"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:early-trigger-300-warning",
+      "label": "Early PPH treatment trigger at 300 mL plus warning sign",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "obgyn",
+        "guideline-global-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:objective-blood-loss",
+      "label": "Objective postpartum blood-loss measurement",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "obgyn",
+        "guideline-global-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:motive-bundle",
+      "label": "MOTIVE first-response bundle for PPH",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "obgyn",
+        "guideline-global-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:txa-within3hours",
+      "label": "Early IV tranexamic acid within 3 hours for PPH",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "obgyn",
+        "guideline-global-who"
+      ]
+    },
+    {
+      "conceptId": "obgyn:pph:prevent-uterotonic-1min",
+      "label": "Prophylactic uterotonic shortly after birth",
+      "aliases": [],
+      "subjectTags": [
+        "obstetrics",
+        "obgyn",
+        "guideline-global-who"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "aha:acs-guideline:2025-accessed-2026-09-28",
+      "title": "American Heart Association: 2025 Guideline for the Management of Patients With Acute Coronary Syndromes",
+      "url": "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know",
+      "version": "2025-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official AHA guideline summary used only for factual grounding of original questions. No source text, figures, tables, or algorithms are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "aha:ais-guideline:2026-accessed-2026-09-28",
+      "title": "American Heart Association/American Stroke Association: 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke",
+      "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke/top-things-to-know",
+      "version": "2026-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official AHA/ASA guideline summary used only for factual grounding of original questions. No source text, figures, tables, or algorithms are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28",
+      "title": "Hyperglycemic Crises in Adults With Diabetes: 2024 Consensus Report",
+      "url": "https://diabetesjournals.org/care/article/47/8/1257/156808/Hyperglycemic-Crises-in-Adults-With-Diabetes-A",
+      "version": "2024-consensus-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "ADA journal consensus report used only for factual grounding of original questions. No source text, tables, figures, or algorithms are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "kdigo:ckd-guideline:2024-accessed-2026-09-28",
+      "title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease: Executive Summary",
+      "url": "https://kdigo.org/guidelines/ckd-evaluation-and-management/kdigo-2024-ckd-guideline-executive-summary/",
+      "version": "2024-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official KDIGO guideline summary used only for factual grounding of original questions. No source text, tables, figures, or algorithms are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "who:pph-consolidated-guideline:2025-accessed-2026-09-28",
+      "title": "WHO/FIGO/ICM Consolidated Guidelines for the Prevention, Diagnosis and Treatment of Postpartum Haemorrhage",
+      "url": "https://www.who.int/publications/b/81071",
+      "version": "2025-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "WHO consolidated PPH guidance used for factual grounding of original questions. Production rights classification remains independently reviewable."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "cardiology:acs:pci-p2y12-preference",
+      "questionVersionId": "cardiology:acs:pci-p2y12-preference@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "An adult with acute coronary syndrome is proceeding to PCI and has no contraindication to potent P2Y12 inhibition. Which P2Y12 strategy is preferred by the 2025 ACC/AHA ACS guideline?",
+      "options": [
+        {
+          "optionId": "ticagrelor-prasugrel",
+          "text": "Use ticagrelor or prasugrel in preference to clopidogrel"
+        },
+        {
+          "optionId": "clopidogrel-only",
+          "text": "Use clopidogrel in preference to ticagrelor or prasugrel"
+        },
+        {
+          "optionId": "aspirin-only",
+          "text": "Use aspirin alone without a P2Y12 inhibitor"
+        },
+        {
+          "optionId": "dipyridamole",
+          "text": "Use dipyridamole as the preferred P2Y12 inhibitor"
+        }
+      ],
+      "answerOptionId": "ticagrelor-prasugrel",
+      "explanation": "For ACS patients undergoing PCI, the guideline prefers ticagrelor or prasugrel over clopidogrel when appropriate.",
+      "conceptLinks": [
+        {
+          "conceptId": "cardiology:acs:pci-p2y12-preference",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:acs-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "cardiology:acs:default-dapt-duration",
+      "questionVersionId": "cardiology:acs:default-dapt-duration@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient with acute coronary syndrome is not at high bleeding risk. What is the default duration of dual antiplatelet therapy recommended by the 2025 ACC/AHA ACS guideline?",
+      "options": [
+        {
+          "optionId": "12-months",
+          "text": "At least 12 months"
+        },
+        {
+          "optionId": "one-week",
+          "text": "1 week"
+        },
+        {
+          "optionId": "one-month",
+          "text": "1 month"
+        },
+        {
+          "optionId": "lifelong-triple",
+          "text": "Lifelong triple antithrombotic therapy"
+        }
+      ],
+      "answerOptionId": "12-months",
+      "explanation": "Aspirin plus an oral P2Y12 inhibitor for at least 12 months is the default ACS strategy when bleeding risk is not high.",
+      "conceptLinks": [
+        {
+          "conceptId": "cardiology:acs:default-dapt-duration",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:acs-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "cardiology:acs:high-intensity-statin",
+      "questionVersionId": "cardiology:acs:high-intensity-statin@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which lipid-lowering treatment is recommended for all patients with acute coronary syndrome in the 2025 ACC/AHA guideline?",
+      "options": [
+        {
+          "optionId": "high-intensity-statin",
+          "text": "High-intensity statin therapy"
+        },
+        {
+          "optionId": "fibrate-only",
+          "text": "Fibrate monotherapy"
+        },
+        {
+          "optionId": "no-lipid-therapy",
+          "text": "No lipid-lowering therapy until 6 months"
+        },
+        {
+          "optionId": "omega3-only",
+          "text": "Omega-3 fatty acid monotherapy"
+        }
+      ],
+      "answerOptionId": "high-intensity-statin",
+      "explanation": "High-intensity statin therapy is recommended for all ACS patients.",
+      "conceptLinks": [
+        {
+          "conceptId": "cardiology:acs:high-intensity-statin",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:acs-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "cardiology:acs:nste-invasive-hospital",
+      "questionVersionId": "cardiology:acs:nste-invasive-hospital@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient with NSTE-ACS is judged to be at intermediate-to-high ischemic risk. Which general management strategy is recommended during hospitalization?",
+      "options": [
+        {
+          "optionId": "invasive",
+          "text": "An invasive approach with intent to proceed with revascularization"
+        },
+        {
+          "optionId": "discharge-no-stratification",
+          "text": "Immediate discharge without further risk stratification"
+        },
+        {
+          "optionId": "thrombolysis-routine",
+          "text": "Routine fibrinolysis for all NSTE-ACS"
+        },
+        {
+          "optionId": "avoid-angiography",
+          "text": "Avoid coronary angiography during the admission"
+        }
+      ],
+      "answerOptionId": "invasive",
+      "explanation": "For intermediate- or high-risk NSTE-ACS, an invasive approach during hospitalization is recommended to reduce major adverse cardiovascular events.",
+      "conceptLinks": [
+        {
+          "conceptId": "cardiology:acs:nste-invasive-hospital",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:acs-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "cardiology:acs:radial-pci",
+      "questionVersionId": "cardiology:acs:radial-pci@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "For an ACS patient undergoing PCI, which arterial access approach is preferred when feasible according to the 2025 guideline?",
+      "options": [
+        {
+          "optionId": "radial",
+          "text": "Radial access"
+        },
+        {
+          "optionId": "femoral",
+          "text": "Femoral access"
+        },
+        {
+          "optionId": "brachial",
+          "text": "Brachial access"
+        },
+        {
+          "optionId": "carotid",
+          "text": "Carotid access"
+        }
+      ],
+      "answerOptionId": "radial",
+      "explanation": "Radial access is preferred over femoral access for ACS PCI because it reduces bleeding and vascular complications and is associated with lower mortality.",
+      "conceptLinks": [
+        {
+          "conceptId": "cardiology:acs:radial-pci",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:acs-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:ais:thrombolysis-4-5h",
+      "questionVersionId": "neurology:ais:thrombolysis-4-5h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A selected patient with acute ischemic stroke arrives within 4.5 hours of symptom onset and is otherwise eligible for intravenous thrombolysis. Which statement best reflects 2026 AHA/ASA guidance?",
+      "options": [
+        {
+          "optionId": "alteplase-or-tenecteplase",
+          "text": "IV alteplase or tenecteplase may be used in appropriate selected patients"
+        },
+        {
+          "optionId": "no-thrombolysis",
+          "text": "IV thrombolysis is never used within 4.5 hours"
+        },
+        {
+          "optionId": "heparin-first",
+          "text": "IV heparin should replace thrombolysis"
+        },
+        {
+          "optionId": "aspirin-only",
+          "text": "Aspirin is the only reperfusion treatment"
+        }
+      ],
+      "answerOptionId": "alteplase-or-tenecteplase",
+      "explanation": "The 2026 guideline expands the role of tenecteplase and retains IV thrombolysis as a mainstay for eligible AIS patients in the appropriate treatment window.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:ais:thrombolysis-4-5h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:ais-guideline:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:ais:no-adjuvant-antithrombotic-ivt",
+      "questionVersionId": "neurology:ais:no-adjuvant-antithrombotic-ivt@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "An eligible patient is receiving intravenous thrombolysis for acute ischemic stroke. Which additional strategy is not recommended simply to enhance the outcome of thrombolytic therapy?",
+      "options": [
+        {
+          "optionId": "adjuvant-antithrombotic",
+          "text": "Adding an adjuvant antithrombotic drug"
+        },
+        {
+          "optionId": "stroke-unit-care",
+          "text": "Organized acute stroke care"
+        },
+        {
+          "optionId": "reperfusion-assessment",
+          "text": "Assessment for appropriate reperfusion treatment"
+        },
+        {
+          "optionId": "physiologic-monitoring",
+          "text": "Monitoring blood pressure and glucose"
+        }
+      ],
+      "answerOptionId": "adjuvant-antithrombotic",
+      "explanation": "The 2026 AHA/ASA guideline states that adjuvant antithrombotic drugs are not recommended to enhance outcomes from thrombolytic therapy.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:ais:no-adjuvant-antithrombotic-ivt",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:ais-guideline:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:ais:basilar-evt-24h-nihss10",
+      "questionVersionId": "neurology:ais:basilar-evt-24h-nihss10@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient has acute ischemic stroke from basilar artery occlusion, presents within 24 hours of symptom onset, and has an NIHSS score of 12. Which reperfusion strategy has a strong recommendation in the 2026 AHA/ASA guideline?",
+      "options": [
+        {
+          "optionId": "evt",
+          "text": "Endovascular thrombectomy"
+        },
+        {
+          "optionId": "no-reperfusion",
+          "text": "No reperfusion therapy because the posterior circulation is involved"
+        },
+        {
+          "optionId": "carotid-endarterectomy",
+          "text": "Immediate carotid endarterectomy"
+        },
+        {
+          "optionId": "warfarin-loading",
+          "text": "Immediate warfarin loading as reperfusion therapy"
+        }
+      ],
+      "answerOptionId": "evt",
+      "explanation": "The 2026 guideline strongly recommends EVT for basilar artery occlusion presenting within 24 hours when NIHSS is at least 10.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:ais:basilar-evt-24h-nihss10",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:ais-guideline:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:ais:avoid-intensive-glucose-80-130",
+      "questionVersionId": "neurology:ais:avoid-intensive-glucose-80-130@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "In acute ischemic stroke, which glycemic strategy is specifically not recommended to improve clinical outcome because it increases severe hypoglycemia risk?",
+      "options": [
+        {
+          "optionId": "intensive-80-130",
+          "text": "Intensive glucose control to 80–130 mg/dL"
+        },
+        {
+          "optionId": "avoid-hypoglycemia",
+          "text": "Avoiding hypoglycemia"
+        },
+        {
+          "optionId": "monitor-glucose",
+          "text": "Monitoring blood glucose"
+        },
+        {
+          "optionId": "treat-emergency",
+          "text": "Treating clinically important metabolic derangements"
+        }
+      ],
+      "answerOptionId": "intensive-80-130",
+      "explanation": "The 2026 guideline does not recommend intensive glucose control to 80–130 mg/dL for outcome improvement in AIS because it increases severe hypoglycemia.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:ais:avoid-intensive-glucose-80-130",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:ais-guideline:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:ais:avoid-sbp-under140-post-reperfusion",
+      "questionVersionId": "neurology:ais:avoid-sbp-under140-post-reperfusion@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "After IV thrombolysis or endovascular thrombectomy for acute ischemic stroke, which blood-pressure strategy is not recommended as a routine attempt to improve functional outcome?",
+      "options": [
+        {
+          "optionId": "sbp-under140",
+          "text": "Intensive systolic blood-pressure lowering to below 140 mm Hg"
+        },
+        {
+          "optionId": "standard-monitoring",
+          "text": "Guideline-directed blood-pressure monitoring"
+        },
+        {
+          "optionId": "avoid-hypotension",
+          "text": "Avoidance of clinically important hypotension"
+        },
+        {
+          "optionId": "individual-assessment",
+          "text": "Individualized management according to the clinical situation"
+        }
+      ],
+      "answerOptionId": "sbp-under140",
+      "explanation": "More intensive systolic blood-pressure lowering to below 140 mm Hg is not recommended after IV thrombolysis and may cause harm after EVT.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:ais:avoid-sbp-under140-post-reperfusion",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:ais-guideline:2026-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:dka:diagnostic-triad",
+      "questionVersionId": "endocrine:dka:diagnostic-triad@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which combination is required for the diagnosis of diabetic ketoacidosis in the 2024 hyperglycemic-crises consensus report?",
+      "options": [
+        {
+          "optionId": "glucose-ketosis-acidosis",
+          "text": "Diabetes or hyperglycemia plus ketosis plus metabolic acidosis"
+        },
+        {
+          "optionId": "glucose-only",
+          "text": "Hyperglycemia alone"
+        },
+        {
+          "optionId": "ketosis-only",
+          "text": "Ketonemia alone"
+        },
+        {
+          "optionId": "anion-gap-only",
+          "text": "An elevated anion gap alone"
+        }
+      ],
+      "answerOptionId": "glucose-ketosis-acidosis",
+      "explanation": "DKA diagnosis requires all three components: diabetes or hyperglycemia, elevated ketones, and metabolic acidosis.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:dka:diagnostic-triad",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:dka:glucose-threshold-200",
+      "questionVersionId": "endocrine:dka:glucose-threshold-200@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Under the 2024 consensus criteria, which glucose-related condition can satisfy the diabetes/hyperglycemia component of DKA diagnosis?",
+      "options": [
+        {
+          "optionId": "ge200-or-prior",
+          "text": "Plasma glucose at least 200 mg/dL or a prior history of diabetes"
+        },
+        {
+          "optionId": "ge600-only",
+          "text": "Only plasma glucose at least 600 mg/dL"
+        },
+        {
+          "optionId": "ge70",
+          "text": "Plasma glucose at least 70 mg/dL regardless of diabetes history"
+        },
+        {
+          "optionId": "a1c-only",
+          "text": "Only an HbA1c above 6.5%"
+        }
+      ],
+      "answerOptionId": "ge200-or-prior",
+      "explanation": "The updated DKA criterion accepts glucose at least 200 mg/dL or a prior history of diabetes, with ketosis and acidosis still required.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:dka:glucose-threshold-200",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:dka:beta-hydroxybutyrate-3",
+      "questionVersionId": "endocrine:dka:beta-hydroxybutyrate-3@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which blood β-hydroxybutyrate concentration meets the ketonemia criterion used in the 2024 DKA consensus criteria?",
+      "options": [
+        {
+          "optionId": "ge3",
+          "text": "At least 3.0 mmol/L"
+        },
+        {
+          "optionId": "ge0-3",
+          "text": "At least 0.3 mmol/L"
+        },
+        {
+          "optionId": "ge10",
+          "text": "At least 10 mmol/L"
+        },
+        {
+          "optionId": "zero",
+          "text": "Any value including zero"
+        }
+      ],
+      "answerOptionId": "ge3",
+      "explanation": "A blood β-hydroxybutyrate concentration of at least 3.0 mmol/L meets the DKA ketonemia criterion.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:dka:beta-hydroxybutyrate-3",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:dka:dextrose-below250",
+      "questionVersionId": "endocrine:dka:dextrose-below250@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "During IV insulin treatment of DKA, plasma glucose has fallen below 250 mg/dL but ketoacidosis has not resolved. What adjustment is recommended?",
+      "options": [
+        {
+          "optionId": "add-dextrose-reduce-insulin",
+          "text": "Add 5–10% dextrose and reduce the insulin infusion rate"
+        },
+        {
+          "optionId": "stop-insulin",
+          "text": "Stop insulin immediately"
+        },
+        {
+          "optionId": "give-bicarbonate-routine",
+          "text": "Give routine bicarbonate instead of insulin"
+        },
+        {
+          "optionId": "restrict-fluids",
+          "text": "Stop IV fluids"
+        }
+      ],
+      "answerOptionId": "add-dextrose-reduce-insulin",
+      "explanation": "When glucose falls below 250 mg/dL, dextrose is added and the insulin infusion is reduced so insulin can continue until ketoacidosis resolves.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:dka:dextrose-below250",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "endocrine:dka:potassium-delay-insulin-under3-5",
+      "questionVersionId": "endocrine:dka:potassium-delay-insulin-under3-5@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient with DKA has a serum potassium of 3.2 mmol/L before insulin is started. What is the recommended immediate priority?",
+      "options": [
+        {
+          "optionId": "replace-k-delay-insulin",
+          "text": "Begin potassium replacement and delay insulin until potassium is above 3.5 mmol/L"
+        },
+        {
+          "optionId": "start-insulin-full",
+          "text": "Start full-rate insulin immediately without potassium replacement"
+        },
+        {
+          "optionId": "give-calcium-only",
+          "text": "Give calcium alone and ignore potassium"
+        },
+        {
+          "optionId": "dialysis-all",
+          "text": "Start dialysis solely because potassium is low"
+        }
+      ],
+      "answerOptionId": "replace-k-delay-insulin",
+      "explanation": "With potassium below 3.5 mmol/L, potassium replacement should begin and insulin should be delayed until potassium rises above 3.5 mmol/L.",
+      "conceptLinks": [
+        {
+          "conceptId": "endocrine:dka:potassium-delay-insulin-under3-5",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ada:hyperglycemic-crises-consensus:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "nephrology:ckd:ras-a3-no-diabetes",
+      "questionVersionId": "nephrology:ckd:ras-a3-no-diabetes@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient with CKD G3 and severely increased albuminuria (A3) does not have diabetes. Which drug class is recommended by KDIGO 2024 to slow progression?",
+      "options": [
+        {
+          "optionId": "acei-arb",
+          "text": "An ACE inhibitor or ARB"
+        },
+        {
+          "optionId": "dual-acei-arb",
+          "text": "Combined ACE inhibitor plus ARB"
+        },
+        {
+          "optionId": "direct-renin-plus-arb",
+          "text": "A direct renin inhibitor plus ARB"
+        },
+        {
+          "optionId": "no-ras",
+          "text": "Avoid all renin-angiotensin system inhibition"
+        }
+      ],
+      "answerOptionId": "acei-arb",
+      "explanation": "KDIGO recommends starting an ACE inhibitor or ARB for CKD G1–G4 with A3 albuminuria even without diabetes.",
+      "conceptLinks": [
+        {
+          "conceptId": "nephrology:ckd:ras-a3-no-diabetes",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "kdigo:ckd-guideline:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "nephrology:ckd:avoid-dual-ras",
+      "questionVersionId": "nephrology:ckd:avoid-dual-ras@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which renin-angiotensin system strategy should be avoided in people with CKD according to KDIGO 2024?",
+      "options": [
+        {
+          "optionId": "combination",
+          "text": "Combining ACE inhibitor, ARB, and/or direct renin inhibitor therapy"
+        },
+        {
+          "optionId": "single-acei",
+          "text": "Using a single ACE inhibitor when indicated"
+        },
+        {
+          "optionId": "single-arb",
+          "text": "Using a single ARB when indicated"
+        },
+        {
+          "optionId": "monitoring",
+          "text": "Monitoring creatinine and potassium after starting therapy"
+        }
+      ],
+      "answerOptionId": "combination",
+      "explanation": "KDIGO recommends avoiding combinations of ACE inhibitors, ARBs, and direct renin inhibitors in CKD.",
+      "conceptLinks": [
+        {
+          "conceptId": "nephrology:ckd:avoid-dual-ras",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "kdigo:ckd-guideline:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "nephrology:ckd:ras-monitor-2-4weeks",
+      "questionVersionId": "nephrology:ckd:ras-monitor-2-4weeks@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "After starting or increasing the dose of an ACE inhibitor or ARB in CKD, when should blood pressure, serum creatinine, and serum potassium generally be checked?",
+      "options": [
+        {
+          "optionId": "2-4-weeks",
+          "text": "Within 2–4 weeks"
+        },
+        {
+          "optionId": "one-year",
+          "text": "After 1 year only"
+        },
+        {
+          "optionId": "never",
+          "text": "Routine checking is unnecessary"
+        },
+        {
+          "optionId": "same-minute",
+          "text": "Only within the first minute"
+        }
+      ],
+      "answerOptionId": "2-4-weeks",
+      "explanation": "KDIGO advises checking blood pressure, creatinine, and potassium within 2–4 weeks after starting or increasing a RAS inhibitor.",
+      "conceptLinks": [
+        {
+          "conceptId": "nephrology:ckd:ras-monitor-2-4weeks",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "kdigo:ckd-guideline:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "nephrology:ckd:acei-creatinine-30percent",
+      "questionVersionId": "nephrology:ckd:acei-creatinine-30percent@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient with CKD starts an ACE inhibitor. Which creatinine change is the KDIGO 2024 threshold that should prompt evaluation rather than routine continuation?",
+      "options": [
+        {
+          "optionId": "over30",
+          "text": "A rise of more than 30% within 4 weeks"
+        },
+        {
+          "optionId": "one-percent",
+          "text": "A rise of 1%"
+        },
+        {
+          "optionId": "any-rise",
+          "text": "Any detectable rise at all"
+        },
+        {
+          "optionId": "zero-change",
+          "text": "Only if creatinine does not change"
+        }
+      ],
+      "answerOptionId": "over30",
+      "explanation": "KDIGO advises continuing ACEi or ARB unless serum creatinine rises by more than 30% within 4 weeks after initiation or dose increase.",
+      "conceptLinks": [
+        {
+          "conceptId": "nephrology:ckd:acei-creatinine-30percent",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "kdigo:ckd-guideline:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "nephrology:ckd:sglt2-egfr20-acr200",
+      "questionVersionId": "nephrology:ckd:sglt2-egfr20-acr200@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which adult with CKD clearly meets a KDIGO 2024 strong indication for an SGLT2 inhibitor regardless of diabetes status?",
+      "options": [
+        {
+          "optionId": "egfr20-acr200",
+          "text": "eGFR ≥20 mL/min/1.73 m² with urine ACR ≥200 mg/g"
+        },
+        {
+          "optionId": "egfr5-no-context",
+          "text": "eGFR 5 mL/min/1.73 m² with no other information"
+        },
+        {
+          "optionId": "normal-kidneys",
+          "text": "Normal kidney function with no CKD"
+        },
+        {
+          "optionId": "dialysis-only",
+          "text": "Maintenance dialysis solely because dialysis is present"
+        }
+      ],
+      "answerOptionId": "egfr20-acr200",
+      "explanation": "KDIGO recommends SGLT2 inhibitor therapy in adults with CKD when eGFR is at least 20 and urine ACR is at least 200 mg/g; heart failure is another qualifying indication irrespective of albuminuria.",
+      "conceptLinks": [
+        {
+          "conceptId": "nephrology:ckd:sglt2-egfr20-acr200",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "kdigo:ckd-guideline:2024-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:early-trigger-300-warning",
+      "questionVersionId": "obgyn:pph:early-trigger-300-warning@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "After childbirth, measured blood loss reaches 350 mL and the patient has an abnormal vital sign. Under the 2025 WHO consolidated PPH guidance, what should happen?",
+      "options": [
+        {
+          "optionId": "act-pph",
+          "text": "Initiate the postpartum haemorrhage response rather than waiting for 500 mL"
+        },
+        {
+          "optionId": "wait-1000",
+          "text": "Wait until blood loss reaches 1000 mL"
+        },
+        {
+          "optionId": "ignore-vitals",
+          "text": "Ignore vital signs if loss is below 500 mL"
+        },
+        {
+          "optionId": "discharge",
+          "text": "Discharge without further assessment"
+        }
+      ],
+      "answerOptionId": "act-pph",
+      "explanation": "Current WHO guidance supports acting at blood loss of at least 300 mL when accompanied by an abnormal warning sign.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:early-trigger-300-warning",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph-consolidated-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:objective-blood-loss",
+      "questionVersionId": "obgyn:pph:objective-blood-loss@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which method is emphasized by current WHO guidance to improve early detection of postpartum haemorrhage after birth?",
+      "options": [
+        {
+          "optionId": "calibrated-drape",
+          "text": "Objective blood-loss measurement using a calibrated collection drape when available"
+        },
+        {
+          "optionId": "visual-only",
+          "text": "Visual estimation alone without measurement"
+        },
+        {
+          "optionId": "hemoglobin-only",
+          "text": "Waiting for a later hemoglobin result before assessing bleeding"
+        },
+        {
+          "optionId": "ultrasound-only",
+          "text": "Using ultrasound alone to quantify external blood loss"
+        }
+      ],
+      "answerOptionId": "calibrated-drape",
+      "explanation": "WHO emphasizes objective measurement of postpartum blood loss, including calibrated drapes, to support earlier detection and treatment.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:objective-blood-loss",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph-consolidated-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:motive-bundle",
+      "questionVersionId": "obgyn:pph:motive-bundle@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which set best represents the WHO MOTIVE first-response bundle once postpartum haemorrhage is diagnosed?",
+      "options": [
+        {
+          "optionId": "motive",
+          "text": "Uterine massage, oxytocic drug, tranexamic acid, IV fluids, genital-tract examination, and escalation of care"
+        },
+        {
+          "optionId": "antibiotics-only",
+          "text": "Antibiotics alone"
+        },
+        {
+          "optionId": "observe-only",
+          "text": "Observation without active treatment"
+        },
+        {
+          "optionId": "hysterectomy-first",
+          "text": "Immediate hysterectomy for every patient before initial measures"
+        }
+      ],
+      "answerOptionId": "motive",
+      "explanation": "The MOTIVE bundle combines uterine massage, oxytocic therapy, tranexamic acid, IV fluids, examination of the vaginal or genital tract, and escalation when bleeding persists.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:motive-bundle",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph-consolidated-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:txa-within3hours",
+      "questionVersionId": "obgyn:pph:txa-within3hours@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "A patient develops postpartum haemorrhage soon after delivery. Which timing principle applies to IV tranexamic acid in WHO guidance?",
+      "options": [
+        {
+          "optionId": "within3",
+          "text": "Give it as early as possible and within 3 hours of birth as part of standard PPH treatment"
+        },
+        {
+          "optionId": "after24",
+          "text": "Delay it until at least 24 hours after birth"
+        },
+        {
+          "optionId": "only-after-surgery",
+          "text": "Use it only after surgery has failed"
+        },
+        {
+          "optionId": "never-trauma",
+          "text": "Avoid it when genital-tract trauma contributes to bleeding"
+        }
+      ],
+      "answerOptionId": "within3",
+      "explanation": "WHO recommends early IV tranexamic acid within 3 hours of birth, in addition to standard care, for postpartum haemorrhage.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:txa-within3hours",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph-consolidated-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "obgyn:pph:prevent-uterotonic-1min",
+      "questionVersionId": "obgyn:pph:prevent-uterotonic-1min@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded cross-exam core intake batch",
+      "stem": "Which preventive action appears in WHO's updated postpartum haemorrhage quick guidance immediately after birth?",
+      "options": [
+        {
+          "optionId": "uterotonic",
+          "text": "Administer a uterotonic within about 1 minute of birth"
+        },
+        {
+          "optionId": "wait-bleeding",
+          "text": "Withhold all uterotonics until haemorrhage is established"
+        },
+        {
+          "optionId": "routine-txa-all",
+          "text": "Give tranexamic acid routinely to every woman solely for prevention"
+        },
+        {
+          "optionId": "no-prevention",
+          "text": "No pharmacologic prevention is recommended"
+        }
+      ],
+      "answerOptionId": "uterotonic",
+      "explanation": "WHO's updated quick guidance includes administration of a uterotonic promptly after birth, with oxytocin among the recommended options.",
+      "conceptLinks": [
+        {
+          "conceptId": "obgyn:pph:prevent-uterotonic-1min",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "who:pph-consolidated-guideline:2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current authoritative source. It is not a recalled or licensed PYQ and is pending independent production Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
