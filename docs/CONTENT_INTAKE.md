@@ -205,3 +205,26 @@ AI-test review:
 Future autonomous batches use at least 25 questions and are selected for NEET-PG/INI-CET value. Verified Exam DNA/PYQ evidence takes priority when it exists. Otherwise selection is explicitly heuristic from canonical coverage, transfer/prerequisite value and source efficiency. Exam frequency must never be invented.
 
 Internal generation stops when the verified exam rule-set question requirement is met, except when rejected or invalid items require replacement.
+
+
+## Fifth controlled scale pilot: India national programmes — 2026-09-28
+
+Batch `pilot:india-national-programs:20260928:05` adds 25 original source-grounded questions across five official Indian programme clusters: immunization, leprosy, malaria, drug-resistant TB and HIV PEP.
+
+The batch is deliberately not labelled as observed NEET-PG/INI-CET frequency evidence. Until genuine historical Exam DNA/PYQ evidence is ingested, its exam-value prioritization remains heuristic from canonical coverage gaps, cross-exam/clinical transfer and source-cluster efficiency.
+
+Live pipeline result:
+- structural intake validation: 25/25 passed;
+- overlap preflight: 2 non-blocking intentional contrast pairs, both retained with explicit rationale;
+- catalog version: 32 → 33;
+- production content state: 25 in review, 0 verified, 0 published;
+- human review evidence created by autonomous flow: 0;
+- AI-test evidence: 5 current source-rights decisions + 75 current gate approvals;
+- internal-test readiness: 106/180, shortage 74;
+- production readiness: 6/180, shortage 174.
+
+The AI-test lane remains an engineering/test eligibility mechanism only. It does not resolve the production human-review backlog and cannot publish learner-facing medical content.
+
+### Next scaling step
+
+Close the remaining 74-question internal-test shortage with one or more source-grounded batches of at least 25 questions, chosen by the existing exam-value policy. Stop generation when the verified rule-set requirement is met; do not create excess inventory merely to inflate question count.
