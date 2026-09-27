@@ -893,3 +893,16 @@ Verification for this slice is repository diff review because there is no domain
 - Blind-first-look learner projection excludes diagnosis evidence, source/licence/review metadata and ground-truth annotations.
 - Added a synthetic nonclinical media fixture and domain tests; no medical image has been claimed as reviewed or learner-ready by this slice.
 - This is the prerequisite for image-based questions, not completion of M10. Next gate is persistence/media-bound review integrity and the first sourced radiology/pathology image pilot.
+
+
+## M10a hosted media persistence + review binding — 2026-09-28
+- Applied production migration `20260927222051_m10a_media_persistence_review_binding`.
+- Added service-only, RLS-enabled immutable tables for media asset versions, annotation versions and exact question-media links.
+- Media sources now carry normalized `rightsStatus = unknown | owned | licensed | public_domain`; image Rights approval fails closed when linked media remains `unknown`.
+- `current_review_target_sha256` now conditionally incorporates exact media bytes, source/provenance metadata and linked annotations. Text-only questions use the historical target shape unchanged.
+- Post-migration compatibility proof: 18/18 current human review fingerprints and 300/300 AI-test review fingerprints still match.
+- Browser roles have no direct SELECT access to media tables and cannot execute the media registration RPC; service-role registration remains available.
+- Added service-only `content_media_prompt`, returning only learner-safe prompt metadata: exact media version, modality, MIME type, dimensions, delivery reference and blind-first-look flag.
+- Added authenticated `GET /study-api/media?questionVersionId=...` and cloud adapter support. The Edge API checks that the question is currently published before returning media.
+- Rollback-only live test proved: adding media changes review hashes, learner prompt projection omits diagnosis/source/rights/annotations, unresolved image rights block Rights approval, and zero synthetic rows survive rollback.
+- M10a remains IN PROGRESS. The next gate is the first real licensed/public-domain radiology + pathology pilot and learner-page rendering.
