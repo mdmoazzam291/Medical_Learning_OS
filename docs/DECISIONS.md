@@ -233,3 +233,20 @@ A canonical content update must never silently rewrite a learner annotation. An 
 Personal notes are subject to privacy operations, including real deletion. Canonical content retains version history.
 
 NeuralVault must not generate medical prose merely because a concept lacks a published canonical note. An empty canonical layer is preferable to unreviewed medical content presented as authoritative.
+
+
+## ADR-028 — NeuralVault search follows canonical concept identity and publication boundaries (accepted, 2026-09-27)
+NeuralVault search is concept-centered rather than document-centered.
+
+Search may match:
+- canonical catalog concept label, aliases and subject tags;
+- published canonical-note title/body;
+- the authenticated learner's own personal annotations.
+
+Never include draft, in-review, verified-but-unpublished, rejected or retired canonical-note prose in learner search merely because it exists in the database. Publication status is part of the search authorization boundary, not only a UI filter.
+
+Return stable `conceptId` as the navigation identity. QBank and future Study Now links should deep-link using the exact canonical concept ID rather than copied topic names.
+
+Personal annotations remain a distinct learner-owned layer. Search may use their text only for that learner. Canonical note updates do not rewrite annotations; instead expose anchor state explicitly as current, canonical-updated, anchor-unavailable or unanchored.
+
+The current substring search is intentionally simple for the tiny beta corpus. Before large-scale content, replace it with an indexed search layer while preserving the same authorization and concept-identity contract.
