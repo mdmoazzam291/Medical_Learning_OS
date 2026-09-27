@@ -64,3 +64,47 @@ test('exam run routes reject unsupported query text instead of silently widening
   const matches = source.match(/if \(url\.search\) fail\(400, "query_not_supported"\);/g) ?? [];
   assert.ok(matches.length >= 4);
 });
+
+
+test('internal test run start is a separate app-metadata-gated route', () => {
+  assert.match(source, /path === "\/exam-simulator\/test-runs"/);
+  assert.match(source, /authData\.user\.app_metadata\?\.medical_learning_os_internal_tester === true/);
+  assert.match(source, /if \(!internalExamTester\) fail\(403, "internal_exam_test_forbidden"\)/);
+  assert.doesNotMatch(source, /user_metadata\?\.medical_learning_os_internal_tester/);
+  assert.match(source, /admin\.rpc\("exam_mock_test_readiness"/);
+  assert.match(source, /admin\.rpc\("exam_assemble_test_mock"/);
+  assert.match(source, /testingOnly: true/);
+  assert.match(source, /productionEquivalent: false/);
+});
+
+test('production run start remains published-only and does not use test readiness', () => {
+  const productionStart = source.indexOf('path === "/exam-simulator/runs"');
+  const productionEnd = source.indexOf('path === "/exam-simulator/runs/current"', productionStart);
+  const block = source.slice(productionStart, productionEnd);
+  assert.match(block, /admin\.rpc\("exam_mock_readiness"/);
+  assert.match(block, /admin\.rpc\("exam_assemble_mock"/);
+  assert.doesNotMatch(block, /exam_mock_test_readiness/);
+  assert.doesNotMatch(block, /exam_assemble_test_mock/);
+  assert.match(block, /exam_internal_test_run_already_open/);
+});
+
+test('test-run authorization is rechecked on read and mutation after grant revocation', () => {
+  assert.match(source, /const requireExamRunAccess = \(row: any\) =>/);
+  assert.match(source, /row\?\.state\?\.assembly\?\.testingOnly === true && !internalExamTester/);
+  const currentRead = source.indexOf('path === "/exam-simulator/runs/current"');
+  assert.ok(source.indexOf('requireExamRunAccess(row);', currentRead) > currentRead);
+  const specificRead = source.indexOf('const examRunReadMatch');
+  assert.ok(source.indexOf('requireExamRunAccess(row);', specificRead) > specificRead);
+  const actions = source.indexOf('const examRunActionMatch');
+  assert.ok(source.indexOf('requireExamRunAccess(row);', actions) > actions);
+});
+
+test('simulator question view attaches learner-safe signed media projection', () => {
+  const view = source.indexOf('const examRunView = async');
+  const end = source.indexOf('const sessionState = async', view);
+  const block = source.slice(view, end);
+  assert.match(block, /await Promise\.all\(currentSection\.questionVersionIds\.map/);
+  assert.match(block, /media: await learnerMediaPrompt\(String\(questionVersionId\)\)/);
+  assert.doesNotMatch(block, /diagnosisEvidence/);
+  assert.doesNotMatch(block, /annotationVersionIds/);
+});
