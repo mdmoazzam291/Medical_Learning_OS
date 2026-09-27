@@ -83,3 +83,24 @@ test('content intake migration never combines CROSS JOIN LATERAL with an ON clau
   );
   assert.match(sql, /join lateral pg_catalog\.jsonb_array_elements\([\s\S]{0,220}?\)\s+existing\s+on /);
 });
+
+
+test('content intake trigger helpers are internal-only and cannot be invoked as public RPCs', async () => {
+  assert.match(
+    sql,
+    /revoke all on function public\.guard_content_intake_batch_mutation\(\)[\s\S]*from public, anon, authenticated, service_role/
+  );
+  assert.match(
+    sql,
+    /revoke all on function public\.prevent_content_intake_event_mutation\(\)[\s\S]*from public, anon, authenticated, service_role/
+  );
+
+  const followup = await readFile(
+    new URL('../supabase/migrations/20260927174500_content_intake_trigger_permissions.sql', import.meta.url),
+    'utf8'
+  );
+  assert.match(followup, /guard_content_intake_batch_mutation\(\)/);
+  assert.match(followup, /prevent_content_intake_event_mutation\(\)/);
+  assert.match(followup, /from public, anon, authenticated, service_role/);
+  assert.doesNotMatch(followup, /grant execute/i);
+});
