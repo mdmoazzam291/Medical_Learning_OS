@@ -215,3 +215,22 @@ test('NeuralVault concept index comes from canonical catalog identity with learn
   assert.match(source, /canonicalByConcept/);
   assert.match(source, /catalogVersion/);
 });
+
+
+test('NeuralVault search is learner-scoped and never searches unpublished canonical notes', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/vault\/search"/);
+  assert.match(source, /q\.length < 2 \|\| q\.length > 120/);
+  assert.match(source, /vault_search_canonical/);
+  assert.match(source, /\.eq\("status", "published"\)/);
+  assert.match(source, /getVaultAnnotations\(\)/);
+  assert.match(source, /matchedIn/);
+});
+
+test('NeuralVault concept detail exposes update-aware annotation anchor state', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /"current"/);
+  assert.match(source, /"canonical-updated"/);
+  assert.match(source, /"anchor-unavailable"/);
+  assert.match(source, /"unanchored"/);
+});
