@@ -24,8 +24,8 @@
       ]
     },
     {
-      "conceptId": "obgyn:pph:motive-bundle",
-      "label": "MOTIVE PPH treatment bundle",
+      "conceptId": "obgyn:pph:genital-tract-exam",
+      "label": "Genital-tract examination in the immediate PPH bundle",
       "aliases": [],
       "subjectTags": [
         "obstetrics",
@@ -697,36 +697,36 @@
       "publishedAt": null
     },
     {
-      "questionId": "obgyn:pph:motive-bundle",
-      "questionVersionId": "obgyn:pph:motive-bundle@1",
+      "questionId": "obgyn:pph:genital-tract-exam",
+      "questionVersionId": "obgyn:pph:genital-tract-exam@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Final breadth-first simulator-capacity batch 07",
-      "stem": "Which set best reflects the WHO MOTIVE response once postpartum haemorrhage is diagnosed?",
+      "stem": "A woman has newly diagnosed postpartum haemorrhage. Which examination is explicitly included in the WHO immediate treatment bundle?",
       "options": [
         {
-          "optionId": "motive",
-          "text": "Uterine massage, oxytocic drug, tranexamic acid, IV fluids, genital-tract examination, and escalation of care"
+          "optionId": "genital",
+          "text": "Vaginal and genital-tract examination"
         },
         {
-          "optionId": "antibiotic",
-          "text": "Antibiotic, diuretic, anticoagulation, CT, and observation"
+          "optionId": "fundoscopy",
+          "text": "Fundoscopy"
         },
         {
-          "optionId": "surgeryonly",
-          "text": "Immediate hysterectomy without initial medical treatment"
+          "optionId": "otoscopy",
+          "text": "Otoscopy"
         },
         {
-          "optionId": "uterotoniconly",
-          "text": "Uterotonic drug alone with no examination or resuscitation"
+          "optionId": "thyroid",
+          "text": "Thyroid examination only"
         }
       ],
-      "answerOptionId": "motive",
-      "explanation": "WHO describes an immediate bundled response combining uterine massage, oxytocic medication, tranexamic acid, intravenous fluids, genital-tract examination and escalation when bleeding persists.",
+      "answerOptionId": "genital",
+      "explanation": "WHO's immediate PPH response includes vaginal and genital-tract examination alongside uterine massage, oxytocic drugs, tranexamic acid, intravenous fluids and escalation of care.",
       "conceptLinks": [
         {
-          "conceptId": "obgyn:pph:motive-bundle",
+          "conceptId": "obgyn:pph:genital-tract-exam",
           "role": "primary"
         }
       ],
