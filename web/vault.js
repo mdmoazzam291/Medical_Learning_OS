@@ -8,13 +8,21 @@ const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
+const initialParams = new URLSearchParams(location.search);
+const initialConceptId = initialParams.get('concept');
+const allowedEntryReasons = new Set(['mistake-repair', 'due-revision', 'new-learning']);
+const initialEntryReason = allowedEntryReasons.has(initialParams.get('reason')) ? initialParams.get('reason') : null;
+const initialEntryContext = initialParams.get('from') === 'study-now' && initialConceptId && initialEntryReason
+  ? { source: 'study-now', conceptId: initialConceptId, reason: initialEntryReason }
+  : null;
 
 let state = {
   user: auth.currentUser(),
   loading: false,
   concepts: [],
   catalogVersion: null,
-  selectedConceptId: new URLSearchParams(location.search).get('concept'),
+  selectedConceptId: initialConceptId,
+  entryContext: initialEntryContext,
   detail: null,
   searchQuery: '',
   searchResults: null,
@@ -66,6 +74,18 @@ function annotationCard(annotation) {
   return '<article class="vault-note"><form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '"><label>Your note<textarea name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label><div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + escape(anchorLabel) + '</span></div><div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save changes</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete</button></div></form></article>';
 }
 
+function entryContextPanel() {
+  const entry = state.entryContext;
+  if (!entry || entry.source !== 'study-now' || entry.conceptId !== state.selectedConceptId) return '';
+  const copy = {
+    'mistake-repair': ['Mistake repair', 'You arrived from Study Now after a due item with a prior incorrect answer. Use the canonical note to repair the concept after retrieval.'],
+    'due-revision': ['Due revision', 'You arrived from Study Now after a scheduled retrieval. Use the canonical note to consolidate the concept after testing yourself.'],
+    'new-learning': ['New learning', 'You arrived from Study Now after an unseen published item. Use the canonical note to connect the question to the underlying concept.']
+  }[entry.reason];
+  if (!copy) return '';
+  return '<section class="panel"><span class="eyebrow">STUDY NOW HANDOFF</span><h2>' + escape(copy[0]) + '</h2><p>' + escape(copy[1]) + '</p><p class="muted">This handoff is context only. It does not change your score, note content, mastery state, or revision schedule.</p></section>';
+}
+
 function detailPanel() {
   const detail = state.detail;
   if (!detail) return '<section class="panel empty"><p>Select a concept to open its NeuralVault workspace.</p></section>';
@@ -76,7 +96,7 @@ function detailPanel() {
     ? annotations.map(annotationCard).join('')
     : '<p class="muted">No personal notes for this concept yet.</p>';
 
-  return '<div><section class="panel"><span class="eyebrow">CANONICAL CONCEPT</span><h1>' + escape(concept.label) + '</h1><p>' + escape((concept.aliases || []).join(' · ') || concept.conceptId) + '</p><div class="vault-tags">' + (concept.subjectTags || []).map(tag => '<span class="badge">' + escape(tag) + '</span>').join('') + '</div></section>' +
+  return '<div>' + entryContextPanel() + '<section class="panel"><span class="eyebrow">CANONICAL CONCEPT</span><h1>' + escape(concept.label) + '</h1><p>' + escape((concept.aliases || []).join(' · ') || concept.conceptId) + '</p><div class="vault-tags">' + (concept.subjectTags || []).map(tag => '<span class="badge">' + escape(tag) + '</span>').join('') + '</div></section>' +
     canonicalSection(detail) +
     '<section class="panel"><span class="eyebrow">PERSONAL ANNOTATIONS</span><h2>Your layer stays yours.</h2><p>Edits use revision checks, so an older tab cannot silently overwrite a newer note.</p><div class="vault-note-list">' + annotationList + '</div><form id="create-note-form" class="vault-editor"><label>Add a personal note<textarea name="bodyMarkdown" maxlength="20000" placeholder="Write a concise recall cue, connection, or correction…" required></textarea></label><input type="hidden" name="anchorNoteVersionId" value="' + escape(anchor || '') + '"><button class="primary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save note</button></form></section></div>';
 }
@@ -257,5 +277,4 @@ root.addEventListener('submit', event => {
 });
 
 render();
-const initialConceptId = new URL(location.href).searchParams.get('concept');
 reloadVault(initialConceptId);
