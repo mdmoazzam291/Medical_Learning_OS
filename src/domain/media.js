@@ -62,11 +62,12 @@ function validateReview(review) {
   timestamp(review.reviewedAt);
 }
 function validateSource(source) {
-  shape(source, ['sourceId', 'provider', 'originalIdentifier', 'url', 'copyright', 'license', 'rightsEvidence']);
+  shape(source, ['sourceId', 'provider', 'originalIdentifier', 'url', 'copyright', 'license', 'rightsStatus', 'rightsEvidence']);
   for (const key of ['sourceId', 'provider', 'originalIdentifier', 'copyright', 'license', 'rightsEvidence']) {
     text(source[key], key);
   }
   httpsUrl(source.url, 'source URL');
+  if (!['unknown', 'owned', 'licensed', 'public_domain'].includes(source.rightsStatus)) fail('Invalid media rights status');
 }
 function validateAsset(asset) {
   shape(asset, [
