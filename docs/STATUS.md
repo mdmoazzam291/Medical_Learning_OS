@@ -883,3 +883,13 @@ Verification for this slice is repository diff review because there is no domain
 - Production readiness remains **6/180**, shortage 174. AI review did not alter production publication eligibility.
 - Global production human-review backlog is now Medical 100 / References 100 / Rights 100; this debt is intentionally independent from the internal-test lane.
 - Next autonomous content target is the remaining 74 internal-test questions. Batch size must remain ≥25 and source-grounded, and generation stops once the verified 180-question testing requirement is satisfied except for replacement of rejected/invalid items.
+
+
+## M10a multimodal foundation started — 2026-09-28
+- User selected subject-breadth-first scaling for the remaining simulator content gap and immediate inclusion of image-based radiology/pathology content.
+- Added `src/domain/media.js`, a provider-independent Phase-1 media contract for JPEG/PNG/WebP across radiology, pathology, dermatology, ophthalmology, anatomy and ECG images.
+- Media versions bind SHA-256 byte identity, dimensions, an opaque delivery reference, source/provider/original identifier, copyright/licence/rights evidence, diagnosis evidence and explicit review state.
+- Added separately versioned hotspot/bounding-box/polygon annotations with normalized geometry and exact question-media links.
+- Blind-first-look learner projection excludes diagnosis evidence, source/licence/review metadata and ground-truth annotations.
+- Added a synthetic nonclinical media fixture and domain tests; no medical image has been claimed as reviewed or learner-ready by this slice.
+- This is the prerequisite for image-based questions, not completion of M10. Next gate is persistence/media-bound review integrity and the first sourced radiology/pathology image pilot.
