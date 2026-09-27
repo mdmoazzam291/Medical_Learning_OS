@@ -514,3 +514,29 @@ A prefilled note is therefore draft evidence, not a review decision. The authent
 This preserves the useful automation boundary:
 source-grounded preflight → lower clerical cost → independent human judgment → authenticated immutable evidence.
 
+## ADR-044 — One replayable evidence ledger feeds one learner-state authority (accepted, 2026-09-27)
+
+Medical Learning OS will not allow each learning subsystem to create its own authoritative mastery state.
+
+Canonical ownership:
+- canonical concepts/content/exam evidence describe the object being learned/tested;
+- immutable versioned learning events describe what the learner actually did;
+- the Preparation Digital Twin owns inferred learner-concept state and uncertainty as a rebuildable, versioned projection;
+- Memory Engine contributes retention/forgetting estimates;
+- Mistake Intelligence contributes error/misconception/confusion hypotheses with confidence;
+- Study Now owns the next-action decision and its policy receipt;
+- Adaptive Teaching owns intervention selection after a target is chosen;
+- QBank, NeuralVault, mocks, image/clinical engines and AI are actuators/evidence producers;
+- analytics is derived and cannot silently become another state authority.
+
+Consequences:
+1. No subsystem may introduce a second independent `mastery`, `weakness` or `recommended_action` truth without an explicit ADR.
+2. Learner-state projections must be rebuildable from retained evidence and carry model/projection version plus uncertainty/evidence sufficiency.
+3. Recommendation decisions must record enough state/policy context to be evaluated later; the recommendation itself is not evidence that the learner needed it.
+4. Intervention effectiveness must be measured with later retention/transfer outcomes where feasible, not only immediate accuracy or engagement.
+5. Existing `question.answered` v1 history is preserved. New event vocabulary is additive/versioned; historical events are not rewritten for naming consistency.
+6. AI can assist classification, explanation, generation and teaching but cannot own durable learner state, medical truth or review authority.
+7. PostgreSQL/Supabase remains the authoritative persistence boundary. Future graph/search/analytics stores are rebuildable projections unless a later ADR explicitly changes authority.
+8. Database evolution is forward-only from the repository's current timestamped migrations. Old planning sketches must not renumber or replace deployed history.
+
+This ADR does **not** authorize M07c probabilistic mastery inference before evidence-sufficiency/calibration rules and validation data exist. It also introduces no production schema change by itself; implementation remains milestone-gated.

@@ -66,3 +66,66 @@ The latest canonical catalog owns concept identity. Canonical NeuralVault note v
 The authenticated study API is the application boundary for learner annotation reads/writes. Browser roles cannot mutate the underlying tables or invoke trusted mutation functions directly. Optimistic revision checks prevent stale-tab overwrites.
 
 Canonical note content is intentionally separate from the personal annotation layer. Canonical publishing is a content-quality action and remains outside the learner CRUD API.
+
+## Canonical learning-intelligence ownership
+
+The project now treats the following ownership model as the architectural default. It consolidates the Digital Twin, Memory Engine, Mistake Intelligence, Study Now, NeuralVault, Exam DNA, clinical reasoning and AI plans without creating duplicate state.
+
+| System | Owns | Must not own |
+|---|---|---|
+| Medical Knowledge Graph | canonical concept identity, typed relationships, medical assertions/provenance | learner mastery or exam-specific copies of medical concepts |
+| Content / Question Intelligence | immutable content versions, item meaning, concept mappings, distractor/item metadata and later psychometrics | learner state |
+| Exam DNA / adapters | versioned exam rules, exam relevance, historical exam evidence and uncertainty | canonical medical truth |
+| Learning Event Ledger | immutable/replayable learner observations and exact context/version references | inferred mastery |
+| Preparation Digital Twin | versioned inferred learner-concept state and uncertainty | raw historical evidence |
+| Memory Engine | retention/retrievability/forgetting estimates and memory-route projections | separate canonical mastery store |
+| Mistake Intelligence | mistake hypotheses, recurrence and confusion evidence with inference confidence | subject-level duplicate mastery |
+| Study Now | next-action policy, candidate/constraint/recommendation history | medical truth or direct mutation of evidence history |
+| Adaptive Teaching | intervention selection for an already selected learning target | overall study priority |
+| NeuralVault | learner-owned annotations/representations linked to canonical concepts | canonical medical content or separate mastery |
+| Clinical / multimodal engines | interaction environments and higher-order evidence | independent learner model |
+| Analytics | projections, explanations and outcome reporting | new authoritative learner state |
+| AI gateway | provider-independent execution of bounded tasks | persistent truth, provider-owned memory, or unreviewed authority |
+
+### Canonical control loop
+
+```text
+OBSERVE
+  learner interaction
+      ↓
+RECORD
+  immutable versioned evidence
+      ↓
+INFER
+  Digital Twin + memory + mistake hypotheses
+      ↓
+DECIDE
+  Study Now policy
+      ↓
+TEACH / CHALLENGE
+  Adaptive Teaching chooses an intervention;
+  QBank / NeuralVault / image / case / mock / AI executes it
+      ↓
+MEASURE
+  immediate response → delayed retention → transfer
+      ↓
+UPDATE
+  append new evidence and rebuild projections
+      ↺
+```
+
+The deepest invariant is: **content never owns learner state**. A learner can study from an internal question, NeuralVault note, imported resource, future educator content or clinical simulation and still update the same canonical learner × concept model.
+
+### Source-of-truth hierarchy
+
+1. Canonical content/evidence records define the exact medical/content/exam object and version used.
+2. Immutable learning events record what actually happened.
+3. Rebuildable projections infer current learner state from those observations.
+4. Policy outputs are decisions made from a state snapshot, not facts about the learner.
+5. Analytics and AI consume these layers; neither becomes a hidden second source of truth.
+
+### Evolution rule
+
+Do not rename or rewrite historical events merely to fit a newer vocabulary. Introduce explicit event/schema versions and adapters/projections. New modalities such as viva, virtual patients, AR or workplace assessment should map into stable semantic event families while preserving their modality-specific payloads.
+
+Database work remains forward-only from the existing timestamped Supabase migrations. PostgreSQL/Supabase stays authoritative unless a later measured need justifies a graph/search/analytics projection; such a projection must be rebuildable from canonical records.

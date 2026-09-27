@@ -43,3 +43,21 @@ M03 chooses a device-local preview with explicit storage limits; this is an impl
 
 ## M04a reconciliation — 2026-09-25
 The user's continuation authorizes the next implementation slice. The visible project doctrine and current repository are sufficient for server-side evidence ownership, source/version preservation and uncertainty requirements. No new retrieval claims are made. M04a is a bounded implementation choice, not completion of accounts, cloud sync, reviewer verification or reviewed medical content. Its default-empty published catalog prevents scaffolding tests from becoming false clinical evidence. See ADR-007 and SERVER_STUDY.md.
+
+## Canonical architecture reconciliation — 2026-09-27
+
+The user asked to incorporate the latest Medical Learning OS architecture/moat discussion into the durable project roadmap and authorized cautious direct repository work.
+
+Accepted consolidation:
+- one canonical medical concept model;
+- one versioned/replayable learner evidence ledger;
+- one Preparation Digital Twin as owner of inferred learner state;
+- Memory and Mistake systems as specialized inference/evidence layers rather than competing mastery stores;
+- Study Now as the "what next" policy layer;
+- Adaptive Teaching as the "how to teach/remediate" layer;
+- QBank, NeuralVault, mocks, multimodal/clinical interactions and AI as actuators/evidence producers;
+- analytics as derived/read-only with respect to canonical learner truth;
+- provider-independent AI with no ownership of durable learner state;
+- intervention → immediate outcome → delayed retention → transfer linkage as the long-term data-moat target.
+
+This reconciliation is architectural guidance, not a claim that M07c inference, all planned event families, intervention-effectiveness models or clinical/multimodal systems are implemented. It also does not reset existing milestones or migration history. New database work must extend the current timestamped Supabase migrations forward after inspecting the live/current schema.

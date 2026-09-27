@@ -72,3 +72,55 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 - M08b — IN PROGRESS: stable exam occurrence identities, immutable/retractable PYQ evidence, and the simulator-ready NEET-PG 2026 published-scheme preset are live and source-verified; genuine historical PYQ evidence ingestion remains the open data task.
 - M08c — DONE: service-only and authenticated descriptive Exam DNA observations are live, separated by licensed exact/corroborated recall/single recall evidence with breadth and uncertainty; predictive inference is explicitly disabled.
 - M08d — IN PROGRESS: deterministic locked-section state machine, durable append-only run ledger, immutable completion receipts, runtime rules mirror, authenticated mock-readiness API, distinct-question assembly gate, learner readiness UI and trusted run-start/resume/read/answer/review API are live; v24 passed deployed auth/CORS smoke verification. Remaining gates are 180-question content capacity, authenticated hosted end-to-end full-mock proof, cancellation/abandon semantics and GT Autopsy.
+
+## Canonical learning-intelligence architecture
+
+Accepted 2026-09-27 as a cross-cutting roadmap guardrail. This does **not** reset milestone numbering, reopen completed work, or replace the current timestamped Supabase migration history.
+
+The durable core is:
+
+```text
+Canonical medical concepts + versioned content/exam evidence
+                         ↓
+              immutable learning evidence
+                         ↓
+              Preparation Digital Twin
+             ↙          ↓          ↘
+       Memory model  Mistake model  uncertainty
+             \          |          /
+                      Study Now
+                         ↓
+               Adaptive Teaching
+                         ↓
+          question / recall / image /
+             NeuralVault / case / AI
+                         ↓
+              new learning evidence
+                         ↺
+```
+
+Ownership rules:
+- The learning/evidence ledger is the replayable historical source of learner observations.
+- The Preparation Digital Twin owns inferred learner state. Its projections must remain rebuildable and uncertainty-aware.
+- Memory Engine estimates retention/forgetting; Mistake Intelligence estimates error mechanisms/confusions. Neither owns a competing mastery database.
+- Study Now owns **what the learner should do next**. Adaptive Teaching owns **how a selected target should be taught or remediated**.
+- QBank, NeuralVault, clinical cases, image drills, mocks and AI are content/interaction actuators and evidence producers, not independent learner-state authorities.
+- Exam DNA changes objective weighting and exam-specific evidence; it does not redefine canonical medical truth.
+- Analytics reads canonical events/projections and must not create a parallel source of learner truth.
+- AI remains behind provider-independent task contracts and may assist inference/delivery, but it does not own medical truth, learner history or durable mastery state.
+
+### Architecture-preserving implementation sequence
+
+Keep the current M05–M08 work moving; add the following only at the milestone where it becomes necessary:
+
+1. **M05/M07 telemetry preservation:** continue capturing stable IDs, exact content versions, timing, answer changes, confidence/help signals when explicitly collected, intervention/recommendation IDs, and delayed/transfer outcomes.
+2. **M07c inferred state contract:** when validation data are sufficient, introduce a versioned learner-concept state projection with separate knowledge, retention, reasoning/transfer, speed, calibration and uncertainty dimensions. Do not collapse these into one permanent mastery percentage.
+3. **Intervention outcome linkage:** before adaptive teaching optimization, preserve state-before → intervention → immediate outcome → delayed retention → transfer so later policies can be evaluated causally rather than from click/accuracy correlations.
+4. **Study Now policy history:** every generated recommendation should be attributable to a policy/model version and its candidate/constraint context so recommendation quality can be evaluated and replayed.
+5. **M09+ AI/adaptation:** AI may classify, explain, generate or teach only through versioned contracts; persistent learner state stays outside provider conversation memory.
+6. **M10+ clinical/multimodal:** new interaction types emit the same canonical evidence vocabulary rather than inventing separate analytics stores.
+7. **Long term:** population models may learn forgetting, misconception, prerequisite and intervention-effectiveness relationships, but must remain distinguishable from canonical medical knowledge and individual observed evidence.
+
+### Non-negotiable migration rule
+
+All database evolution is **forward-only from the repository's existing timestamped migrations**. Do not introduce replacement "001–007" migrations, renumber history, or rebuild the live schema from an old planning sketch. New schema work must inspect the deployed/current schema first and add narrowly scoped migrations with rollback/rebuild implications documented.
