@@ -111,11 +111,35 @@ function studyView() {
     : '';
 
   const primaryConceptId = q.conceptId || q.conceptLinks?.find(link => link?.role === 'primary')?.conceptId || null;
-  const vaultLink = primaryConceptId
-    ? '<a class="text-button" href="/web/vault.html?concept=' + encodeURIComponent(primaryConceptId) + '">Open concept in NeuralVault →</a>'
+  const recommendationContext = session.recommendationContext || null;
+  const recommendationCopy = {
+    'mistake-repair': {
+      label: 'Mistake repair',
+      detail: 'Study Now selected this because the latest prior answer was incorrect and the review was due.'
+    },
+    'due-revision': {
+      label: 'Due revision',
+      detail: 'Study Now selected this because its scheduled review was due.'
+    },
+    'new-learning': {
+      label: 'New learning',
+      detail: 'Study Now selected this as unseen published material after due work fit your available time.'
+    }
+  };
+  const recommendationReason = recommendationCopy[recommendationContext?.reason] ? recommendationContext.reason : null;
+  const recommendationBanner = answered && recommendationReason
+    ? '<div class="memory-rating"><strong>Why Study Now sent this: ' + escape(recommendationCopy[recommendationReason].label) + '</strong><p class="muted">' + escape(recommendationCopy[recommendationReason].detail) + '</p></div>'
+    : '';
+  const vaultParams = primaryConceptId ? new URLSearchParams({ concept: primaryConceptId }) : null;
+  if (vaultParams && answered && recommendationReason) {
+    vaultParams.set('from', 'study-now');
+    vaultParams.set('reason', recommendationReason);
+  }
+  const vaultLink = vaultParams
+    ? '<a class="text-button" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review this concept in NeuralVault →' : 'Open concept in NeuralVault →') + '</a>'
     : '';
   const feedback = answered
-    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
 
   return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form"><fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
