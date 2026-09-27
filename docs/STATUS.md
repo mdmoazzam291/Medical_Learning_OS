@@ -815,3 +815,11 @@ Verification for this slice is repository diff review because there is no domain
 - Executed the exact branch module in an isolated JavaScript runtime: blocked, shadow-only and experiment-eligible paths all behaved as specified; invalid plan digest failed closed.
 - No database schema, learner-state store, mastery percentage, model training pipeline or production inference was introduced.
 
+## M07c current evidence baseline — 2026-09-28
+- Live production evidence inventory after M07c0 deployment: 2 learners with attempts, 4 total attempts, 1 distinct question version, 1 distinct concept, 1 memory-rating event, 0 Study Now recommendation receipts and 4 schedule-decision events.
+- There are 2 observed same-question follow-up attempts, both correct, but 0 follow-ups at or beyond 1 day and 0 at or beyond 7 days in the current data.
+- No canonical transfer event family or clinical-transfer outcome is currently available.
+- These interval buckets are descriptive inventory checks only; they are not preregistered retention thresholds and do not define a production model target.
+- M07c1 remains PLANNED/not started. Current data are suitable for integration/smoke validation only, not for locking a meaningful retention/transfer model preregistration.
+- Do not create a learner-state table or train/activate a Digital Twin inference model merely to make progress. The next M07c move should follow naturally from real longitudinal learner evidence and an M11 research plan.
+
