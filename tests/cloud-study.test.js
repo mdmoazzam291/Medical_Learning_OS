@@ -253,3 +253,18 @@ test('cloud NeuralVault concept index uses authenticated API', async () => {
   assert.match(seenUrl, /study-api\/vault\/concepts$/);
   assert.deepEqual(result.concepts, []);
 });
+
+
+test('cloud NeuralVault search encodes the learner query', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({ query: 'anaphylaxis first', count: 0, results: [] });
+    }
+  });
+  await cloud.vaultSearch('anaphylaxis first');
+  assert.match(seenUrl, /study-api\/vault\/search\?q=anaphylaxis%20first$/);
+});
