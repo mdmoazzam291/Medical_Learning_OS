@@ -15,3 +15,14 @@ test('reviewer UI requires source-rights resolution before rights approval', asy
   assert.match(source, /review\.resolveRights/);
   assert.doesNotMatch(source, /reviewerId\s*:/);
 });
+
+
+test('reviewer UI can switch between question and NeuralVault canonical note targets', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /review-target/);
+  assert.match(source, /NeuralVault canonical notes/);
+  assert.match(source, /review\.noteQueue/);
+  assert.match(source, /noteReviewItem/);
+  assert.match(source, /review\.recordNote/);
+  assert.match(source, /data-note-version-id/);
+});
