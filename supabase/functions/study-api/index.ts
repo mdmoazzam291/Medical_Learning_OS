@@ -861,6 +861,68 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "GET" && path === "/diagnostics/concepts") {
+      const [{ data, error }, catalog] = await Promise.all([
+        admin.rpc("study_concept_evidence", { p_learner: learnerId }),
+        getCatalog()
+      ]);
+      if (error) fail(500, "concept_evidence_projection_failed");
+
+      const catalogConcepts = new Map(
+        (Array.isArray(catalog.body?.concepts) ? catalog.body.concepts : [])
+          .map((concept: any) => [String(concept.conceptId), concept])
+      );
+
+      const concepts = (Array.isArray(data?.concepts) ? data.concepts : []).map((row: any) => {
+        const conceptId = String(row.conceptId ?? "");
+        const concept = catalogConcepts.get(conceptId);
+        const uncertaintyReasons: string[] = [];
+
+        if (Number(row.distinctQuestionVersions ?? 0) < 2) {
+          uncertaintyReasons.push("single-question-version-only");
+        }
+        if (Number(row.repeatAttemptCount ?? 0) < 1) {
+          uncertaintyReasons.push("no-repeat-retrieval");
+        }
+        if (Number(row.ratedAttempts ?? 0) === 0) {
+          uncertaintyReasons.push("no-memory-self-report");
+        } else if (Number(row.ratedAttempts ?? 0) < Number(row.totalAttempts ?? 0)) {
+          uncertaintyReasons.push("partial-memory-self-report");
+        }
+        uncertaintyReasons.push("transfer-evidence-not-modeled");
+        if (!concept) uncertaintyReasons.push("concept-not-in-current-catalog");
+
+        return {
+          conceptId,
+          label: concept?.label ?? conceptId,
+          aliases: Array.isArray(concept?.aliases) ? concept.aliases : [],
+          subjectTags: Array.isArray(concept?.subjectTags) ? concept.subjectTags : [],
+          observed: row,
+          inference: {
+            status: "withheld",
+            knowledgeState: "unestimated",
+            mastery: null,
+            forgetting: null,
+            confidence: null
+          },
+          uncertainty: {
+            reasons: uncertaintyReasons,
+            distinctQuestionVersions: Number(row.distinctQuestionVersions ?? 0),
+            repeatAttemptCount: Number(row.repeatAttemptCount ?? 0),
+            ratingCoverage: row.ratingCoverage ?? null
+          }
+        };
+      });
+
+      return response(req, 200, {
+        generatedAt: new Date().toISOString(),
+        contractId: data?.contractId ?? "concept-observation-v1",
+        scope: "observed-concept-evidence",
+        inferenceEnabled: false,
+        concepts
+      });
+    }
+
     if (req.method === "GET" && path === "/revision/policy-evaluation") {
       const { data, error } = await admin.rpc("study_schedule_policy_outcomes", {
         p_learner: learnerId
