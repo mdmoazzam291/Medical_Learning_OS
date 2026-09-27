@@ -332,3 +332,15 @@ test('exam simulator readiness stays read-only while trusted run start owns asse
   const assemblyCall = source.indexOf('admin.rpc("exam_assemble_mock"', startRoute);
   assert.ok(startRoute >= 0 && assemblyCall > startRoute && readinessRoute > assemblyCall);
 });
+
+
+test('media prompt API exposes only published-question media through the trusted service RPC', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/media"/);
+  assert.match(source, /questionVersionId/);
+  assert.match(source, /publishedQuestions\(catalog\.body\)\.some/);
+  assert.match(source, /admin\.rpc\("content_media_prompt"/);
+  assert.match(source, /question_not_available/);
+  assert.match(source, /media_prompt_failed/);
+  assert.doesNotMatch(source, /content_media_assets"\)\.select/);
+});
