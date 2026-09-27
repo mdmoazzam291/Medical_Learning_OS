@@ -106,3 +106,10 @@ test('erasure rejects a missing reason before mutation', () => {
     /if p_reason_class is null[\s\S]*privacy_reason_invalid/
   );
 });
+
+
+test('erasure receipt table has an explicit service-only read policy', () => {
+  assert.match(sql, /create policy learner_privacy_erasure_receipts_service_read/);
+  assert.match(sql, /for select[\s\S]*to service_role[\s\S]*using \(true\)/);
+  assert.doesNotMatch(sql, /grant select on table public\.learner_privacy_erasure_receipts[\s\S]*to authenticated/);
+});
