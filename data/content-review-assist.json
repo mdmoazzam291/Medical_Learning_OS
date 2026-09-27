@@ -8,9 +8,10 @@
       "pilot:rabies:20260927:01",
       "pilot:infectious-prevention:20260927:02",
       "pilot:acute-medicine:20260928:03",
-      "pilot:india-national-programs:20260928:05"
+      "pilot:india-national-programs:20260928:05",
+      "pilot:multimodal-breadth:20260928:06"
     ],
-    "questionCount": 80
+    "questionCount": 105
   },
   "policy": {
     "mayApproveReviewGate": false,
@@ -170,6 +171,87 @@
       "rightsBasisUrl": "https://www.sochtraining.naco.gov.in/index.html",
       "rightsBasisSummary": "NACO's SOCH copyright policy requires acknowledgement/permission conditions and excludes third-party material. The questions use factual propositions in original wording and reproduce no protected tables or source text; citation_only is the conservative internal-test recommendation.",
       "draftRightsEvidence": "NACO's SOCH copyright policy requires acknowledgement/permission conditions and excludes third-party material. The questions use factual propositions in original wording and reproduce no protected tables or source text; citation_only is the conservative internal-test recommendation. Record citation_only for this source unless independent production rights review supports a different exact-use status."
+    },
+    {
+      "sourceId": "aha:neonatal-resuscitation:2025",
+      "sourceUrl": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+      "supportSummary": "The 2025 AHA/AAP neonatal resuscitation guideline directly supports assisted ventilation for apnea/gasping or persistent HR <100, compressions for HR <60 after 30 seconds of effective ventilation, the 3:1 compression-to-ventilation ratio, intravascular epinephrine 0.01–0.03 mg/kg, and initial 21% oxygen for respiratory support in infants at least 35 weeks.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://www.heart.org/en/about-us/statements-and-policies/copyright-permission-guidelines",
+      "rightsBasisSummary": "AHA states its website and guideline materials are copyrighted and reproduction requires permission. These items use original wording and only factual propositions, with no AHA table, algorithm, figure, or source expression reproduced; citation-only factual grounding is the conservative internal-test recommendation.",
+      "draftRightsEvidence": "AHA states its website and guideline materials are copyrighted and reproduction requires permission. These items use original wording and only factual propositions, with no AHA table, algorithm, figure, or source expression reproduced; citation-only factual grounding is the conservative internal-test recommendation. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "acg:acute-pancreatitis:2024-highlights",
+      "sourceUrl": "https://webfiles.gi.org/links/journals/AJG-Clinical-Guidelines-Highlights-Acute-Pancreatitis-2024-FINAL.pdf",
+      "supportSummary": "The 2024 ACG acute pancreatitis guideline highlights directly support reserving CT for diagnostic uncertainty or failure to improve after 48–72 hours, preferring Lactated Ringer solution, early low-fat solid oral feeding within 24–48 hours as tolerated in mild disease, ERCP within 24 hours when cholangitis is present, and cholecystectomy before discharge for mild acute biliary pancreatitis.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://webfiles.gi.org/links/journals/AJG-Clinical-Guidelines-Highlights-Acute-Pancreatitis-2024-FINAL.pdf",
+      "rightsBasisSummary": "No permissive reuse licence is asserted for the ACG guideline highlights. The questions paraphrase factual recommendations in original wording and reproduce no table, figure, layout, or substantial source expression; citation-only factual grounding is the conservative internal-test recommendation.",
+      "draftRightsEvidence": "No permissive reuse licence is asserted for the ACG guideline highlights. The questions paraphrase factual recommendations in original wording and reproduce no table, figure, layout, or substantial source expression; citation-only factual grounding is the conservative internal-test recommendation. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "wikimedia:expired-xray-pneumothorax:2018",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Expired_X-ray_of_pneumothorax.jpg",
+      "supportSummary": "The Wikimedia Commons file page identifies the source image as an expiratory chest radiograph demonstrating a left pneumothorax that is substantially more conspicuous on expiration.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://commons.wikimedia.org/wiki/File:Expired_X-ray_of_pneumothorax.jpg",
+      "rightsBasisSummary": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered in Medical Learning OS with CC0/public-domain rights, exact byte SHA-256, and immutable media identity.",
+      "draftRightsEvidence": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered in Medical Learning OS with CC0/public-domain rights, exact byte SHA-256, and immutable media identity. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "wikimedia:kidney-stone-window-ct:2018",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CT_measurement_of_kidney_stone_in_soft_tissue_and_bone_window.jpg",
+      "supportSummary": "The Wikimedia Commons file page identifies the source image as CT measurement of a kidney stone displayed in soft-tissue and bone windows.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://commons.wikimedia.org/wiki/File:CT_measurement_of_kidney_stone_in_soft_tissue_and_bone_window.jpg",
+      "rightsBasisSummary": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity.",
+      "draftRightsEvidence": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "wikimedia:lobar-pneumonia-cxr:2018",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
+      "supportSummary": "The Wikimedia Commons file page identifies the source chest radiograph as lobar pneumonia involving the right middle lobe.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
+      "rightsBasisSummary": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity.",
+      "draftRightsEvidence": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "wikimedia:clear-cell-rcc-grade1:2021",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_intermediate_magnification.jpg",
+      "supportSummary": "The Wikimedia Commons file page identifies the H&E image as grade 1 clear cell renal cell carcinoma at intermediate magnification.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_intermediate_magnification.jpg",
+      "rightsBasisSummary": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity.",
+      "draftRightsEvidence": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "wikimedia:seminoma-intermediate:2022",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Histopathology_of_seminoma,_intermediate_magnification.jpg",
+      "supportSummary": "The Wikimedia Commons file page identifies the H&E image as seminoma at intermediate magnification.",
+      "rightsRecommendation": "citation_only",
+      "rightsBasisUrl": "https://commons.wikimedia.org/wiki/File:Histopathology_of_seminoma,_intermediate_magnification.jpg",
+      "rightsBasisSummary": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity.",
+      "draftRightsEvidence": "The question uses the file-page diagnosis only for factual grounding. The actual image bytes are separately registered with CC0/public-domain rights and exact byte identity. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "ninds:epilepsy-seizures:2024",
+      "sourceUrl": "https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures",
+      "supportSummary": "NINDS directly supports the general epilepsy diagnostic pattern of two or more unprovoked seizures separated by at least 24 hours, EEG as a measure of brain electrical activity used in seizure evaluation, video-EEG for event characterization and mimics, SEEG for seizure localization, and MEG for localization relevant to surgical planning.",
+      "rightsRecommendation": "public_domain",
+      "rightsBasisUrl": "https://www.nih.gov/about-nih/frequently-asked-questions",
+      "rightsBasisSummary": "NIH states that most information on NIH web servers is in the public domain unless otherwise indicated. No contrary copyright notice is asserted for the cited NINDS text; source attribution remains appropriate.",
+      "draftRightsEvidence": "NIH states that most information on NIH web servers is in the public domain unless otherwise indicated. No contrary copyright notice is asserted for the cited NINDS text; source attribution remains appropriate. Production human rights review remains independent."
+    },
+    {
+      "sourceId": "nimh:depression:2026",
+      "sourceUrl": "https://www.nimh.nih.gov/health/publications/depression",
+      "supportSummary": "NIMH directly supports depression treatment with psychotherapy, medication, or both; psychotherapy-first treatment commonly used for milder depression; medication as part of initial treatment for moderate or severe depression; CBT and interpersonal therapy as evidence-based psychotherapies; and the usual 4–8 week time course for antidepressant benefit.",
+      "rightsRecommendation": "public_domain",
+      "rightsBasisUrl": "https://www.nimh.nih.gov/site-info/policies",
+      "rightsBasisSummary": "NIMH explicitly states that its website information and materials are in the public domain and may be copied and reused unless otherwise indicated, with attribution requested.",
+      "draftRightsEvidence": "NIMH explicitly states that its website information and materials are in the public domain and may be copied and reused unless otherwise indicated, with attribution requested. Production human rights review remains independent."
     }
   ],
   "questions": [
@@ -2141,6 +2223,631 @@
           "naco:hiv-care-treatment-2021-accessed-2026-09-28"
         ],
         "draftNote": "Provenance is AI-generated original content and does not claim recalled, licensed, or PYQ provenance. The source is used only for factual grounding; the item does not intentionally copy source text, tables, figures, algorithms, or other expressive material."
+      }
+    },
+    {
+      "questionVersionId": "visual:pneumothorax:cxr-recognition@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The source image is identified as an expiratory chest radiograph demonstrating a left pneumothorax, which becomes much more conspicuous on expiration.",
+        "uncertainty": "low",
+        "draftNote": "The keyed diagnosis was checked against the cited file-page diagnosis and the exact canonical media asset selected for this question. The stem, options, keyed answer and explanation are consistent with Wikimedia Commons: Expired X-ray of pneumothorax. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source Wikimedia Commons: Expired X-ray of pneumothorax directly supports the keyed factual claim and explanation. The linked prompt image is the exact separately registered canonical asset derived from that source file.",
+        "sourceIds": [
+          "wikimedia:expired-xray-pneumothorax:2018"
+        ],
+        "draftNote": "Source identity and scope match the claim. The question must be media-linked before review so the gate fingerprint binds the exact image SHA-256."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original. File-page text is used only for factual grounding; the actual prompt image is separately registered CC0/public-domain media with exact-byte SHA-256 and must be linked before Rights review.",
+        "sourceIds": [
+          "wikimedia:expired-xray-pneumothorax:2018"
+        ],
+        "draftNote": "Approve internal-test Rights only after confirming the current linked media asset has rightsStatus=public_domain and the question review fingerprint includes that exact media version."
+      }
+    },
+    {
+      "questionVersionId": "visual:urolithiasis:ct-window-recognition@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The source image specifically depicts CT measurement of a kidney stone in soft-tissue and bone windows.",
+        "uncertainty": "low",
+        "draftNote": "The keyed diagnosis was checked against the cited file-page diagnosis and the exact canonical media asset selected for this question. The stem, options, keyed answer and explanation are consistent with Wikimedia Commons: CT measurement of kidney stone in soft tissue and bone window. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source Wikimedia Commons: CT measurement of kidney stone in soft tissue and bone window directly supports the keyed factual claim and explanation. The linked prompt image is the exact separately registered canonical asset derived from that source file.",
+        "sourceIds": [
+          "wikimedia:kidney-stone-window-ct:2018"
+        ],
+        "draftNote": "Source identity and scope match the claim. The question must be media-linked before review so the gate fingerprint binds the exact image SHA-256."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original. File-page text is used only for factual grounding; the actual prompt image is separately registered CC0/public-domain media with exact-byte SHA-256 and must be linked before Rights review.",
+        "sourceIds": [
+          "wikimedia:kidney-stone-window-ct:2018"
+        ],
+        "draftNote": "Approve internal-test Rights only after confirming the current linked media asset has rightsStatus=public_domain and the question review fingerprint includes that exact media version."
+      }
+    },
+    {
+      "questionVersionId": "visual:pneumonia:right-middle-lobe-cxr@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The source description identifies lobar pneumonia affecting the right middle lobe.",
+        "uncertainty": "low",
+        "draftNote": "The keyed diagnosis was checked against the cited file-page diagnosis and the exact canonical media asset selected for this question. The stem, options, keyed answer and explanation are consistent with Wikimedia Commons: X-ray of lobar pneumonia. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source Wikimedia Commons: X-ray of lobar pneumonia directly supports the keyed factual claim and explanation. The linked prompt image is the exact separately registered canonical asset derived from that source file.",
+        "sourceIds": [
+          "wikimedia:lobar-pneumonia-cxr:2018"
+        ],
+        "draftNote": "Source identity and scope match the claim. The question must be media-linked before review so the gate fingerprint binds the exact image SHA-256."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original. File-page text is used only for factual grounding; the actual prompt image is separately registered CC0/public-domain media with exact-byte SHA-256 and must be linked before Rights review.",
+        "sourceIds": [
+          "wikimedia:lobar-pneumonia-cxr:2018"
+        ],
+        "draftNote": "Approve internal-test Rights only after confirming the current linked media asset has rightsStatus=public_domain and the question review fingerprint includes that exact media version."
+      }
+    },
+    {
+      "questionVersionId": "visual:pathology:clear-cell-rcc@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The source caption identifies this H&E image as grade 1 clear cell renal cell carcinoma at intermediate magnification.",
+        "uncertainty": "low",
+        "draftNote": "The keyed diagnosis was checked against the cited file-page diagnosis and the exact canonical media asset selected for this question. The stem, options, keyed answer and explanation are consistent with Wikimedia Commons: Clear cell renal cell carcinoma grade 1 histopathology. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source Wikimedia Commons: Clear cell renal cell carcinoma grade 1 histopathology directly supports the keyed factual claim and explanation. The linked prompt image is the exact separately registered canonical asset derived from that source file.",
+        "sourceIds": [
+          "wikimedia:clear-cell-rcc-grade1:2021"
+        ],
+        "draftNote": "Source identity and scope match the claim. The question must be media-linked before review so the gate fingerprint binds the exact image SHA-256."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original. File-page text is used only for factual grounding; the actual prompt image is separately registered CC0/public-domain media with exact-byte SHA-256 and must be linked before Rights review.",
+        "sourceIds": [
+          "wikimedia:clear-cell-rcc-grade1:2021"
+        ],
+        "draftNote": "Approve internal-test Rights only after confirming the current linked media asset has rightsStatus=public_domain and the question review fingerprint includes that exact media version."
+      }
+    },
+    {
+      "questionVersionId": "visual:pathology:seminoma@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The source caption identifies this H&E image as seminoma at intermediate magnification.",
+        "uncertainty": "low",
+        "draftNote": "The keyed diagnosis was checked against the cited file-page diagnosis and the exact canonical media asset selected for this question. The stem, options, keyed answer and explanation are consistent with Wikimedia Commons: Seminoma histopathology intermediate magnification. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source Wikimedia Commons: Seminoma histopathology intermediate magnification directly supports the keyed factual claim and explanation. The linked prompt image is the exact separately registered canonical asset derived from that source file.",
+        "sourceIds": [
+          "wikimedia:seminoma-intermediate:2022"
+        ],
+        "draftNote": "Source identity and scope match the claim. The question must be media-linked before review so the gate fingerprint binds the exact image SHA-256."
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original. File-page text is used only for factual grounding; the actual prompt image is separately registered CC0/public-domain media with exact-byte SHA-256 and must be linked before Rights review.",
+        "sourceIds": [
+          "wikimedia:seminoma-intermediate:2022"
+        ],
+        "draftNote": "Approve internal-test Rights only after confirming the current linked media asset has rightsStatus=public_domain and the question review fingerprint includes that exact media version."
+      }
+    },
+    {
+      "questionVersionId": "pediatrics:nrp:ventilate-within-60s@1",
+      "medical": {
+        "result": "supported",
+        "summary": "Ventilation should be provided within 60 seconds after birth for newborns who are gasping or apneic or remain bradycardic below 100/min despite initial steps.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with 2025 AHA/AAP Guidelines: Neonatal Resuscitation. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source 2025 AHA/AAP Guidelines: Neonatal Resuscitation directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "pediatrics:nrp:compressions-after-ventilation@1",
+      "medical": {
+        "result": "supported",
+        "summary": "Chest compressions are recommended when the heart rate remains below 60/min despite 30 seconds of ventilation that inflates the lungs.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with 2025 AHA/AAP Guidelines: Neonatal Resuscitation. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source 2025 AHA/AAP Guidelines: Neonatal Resuscitation directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "pediatrics:nrp:compression-ventilation-ratio@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The 2025 guideline supports repeated cycles of 3 compressions followed by 1 ventilation breath, a 3:1 ratio.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with 2025 AHA/AAP Guidelines: Neonatal Resuscitation. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source 2025 AHA/AAP Guidelines: Neonatal Resuscitation directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "pediatrics:nrp:iv-epinephrine-dose@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The guideline recommends intravascular epinephrine 0.01–0.03 mg/kg when the heart rate has not risen to at least 60/min after optimized ventilation and compressions.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with 2025 AHA/AAP Guidelines: Neonatal Resuscitation. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source 2025 AHA/AAP Guidelines: Neonatal Resuscitation directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "pediatrics:nrp:term-initial-oxygen@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For term and late-preterm newborns at 35 weeks or more receiving respiratory support at birth, beginning with 21% oxygen is reasonable.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with 2025 AHA/AAP Guidelines: Neonatal Resuscitation. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source 2025 AHA/AAP Guidelines: Neonatal Resuscitation directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "aha:neonatal-resuscitation:2025"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "gastro:acute-pancreatitis:ct-timing@1",
+      "medical": {
+        "result": "supported",
+        "summary": "ACG recommends reserving CT for diagnostic uncertainty or failure to improve within 48–72 hours rather than routine early CT.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with ACG Guideline Highlights: Acute Pancreatitis 2024. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source ACG Guideline Highlights: Acute Pancreatitis 2024 directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "gastro:acute-pancreatitis:lr-fluid@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The 2024 ACG guideline highlights list Lactated Ringer solution as the preferred fluid.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with ACG Guideline Highlights: Acute Pancreatitis 2024. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source ACG Guideline Highlights: Acute Pancreatitis 2024 directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "gastro:acute-pancreatitis:early-feeding@1",
+      "medical": {
+        "result": "supported",
+        "summary": "For mild acute pancreatitis, ACG supports early oral feeding with a low-fat solid diet within 24–48 hours as tolerated.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with ACG Guideline Highlights: Acute Pancreatitis 2024. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source ACG Guideline Highlights: Acute Pancreatitis 2024 directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "gastro:acute-pancreatitis:ercp-cholangitis@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The 2024 ACG guideline highlights recommend ERCP within 24 hours when acute pancreatitis is complicated by cholangitis.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with ACG Guideline Highlights: Acute Pancreatitis 2024. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source ACG Guideline Highlights: Acute Pancreatitis 2024 directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "gastro:acute-pancreatitis:biliary-cholecystectomy@1",
+      "medical": {
+        "result": "supported",
+        "summary": "ACG recommends cholecystectomy preferably before discharge in mild acute biliary pancreatitis.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with ACG Guideline Highlights: Acute Pancreatitis 2024. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source ACG Guideline Highlights: Acute Pancreatitis 2024 directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "citation_only_recommended",
+        "summary": "Question wording is original and uses the copyrighted source only for factual grounding; no source table, figure, algorithm, layout, or substantial expression is reproduced.",
+        "sourceIds": [
+          "acg:acute-pancreatitis:2024-highlights"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "neurology:epilepsy:diagnosis-two-unprovoked@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NINDS notes that epilepsy is generally diagnosed after two or more unprovoked seizures separated by at least 24 hours.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NINDS: Epilepsy and Seizures. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NINDS: Epilepsy and Seizures directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "neurology:epilepsy:eeg-purpose@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NINDS describes EEG as monitoring the brain's electrical activity and helping diagnose seizure disorders by identifying abnormal brain-wave patterns.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NINDS: Epilepsy and Seizures. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NINDS: Epilepsy and Seizures directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "neurology:epilepsy:video-eeg-differential@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NINDS notes that video monitoring may be used with EEG to determine the nature of seizures and help rule out other disorders that resemble epilepsy.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NINDS: Epilepsy and Seizures. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NINDS: Epilepsy and Seizures directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "neurology:epilepsy:seeg-localization@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NINDS describes SEEG as surgically implanted brain electrodes used to better identify where seizures are located and to help determine surgical candidacy.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NINDS: Epilepsy and Seizures. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NINDS: Epilepsy and Seizures directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "neurology:epilepsy:meg-surgical-planning@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NINDS explains that MEG measures magnetic signals generated by neurons and can help surgeons localize abnormal activity when planning epilepsy surgery.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NINDS: Epilepsy and Seizures. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NINDS: Epilepsy and Seizures directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "ninds:epilepsy-seizures:2024"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "psychiatry:depression:treatment-modalities@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NIMH states that depression treatment typically involves psychotherapy, medication, or both, with treatment selected according to individual needs and clinical circumstances.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NIMH: Depression. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NIMH: Depression directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "psychiatry:depression:mild-psychotherapy-first@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NIMH notes that psychotherapy is often tried first for milder depression, with medication added later if psychotherapy alone does not produce a good response.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NIMH: Depression. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NIMH: Depression directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "psychiatry:depression:moderate-severe-medication@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NIMH states that people with moderate or severe depression usually are prescribed medication as part of the initial treatment plan.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NIMH: Depression. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NIMH: Depression directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "psychiatry:depression:evidence-based-psychotherapies@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NIMH lists cognitive behavioral therapy and interpersonal therapy among evidence-based psychotherapies for depression.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NIMH: Depression. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NIMH: Depression directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "psychiatry:depression:antidepressant-onset@1",
+      "medical": {
+        "result": "supported",
+        "summary": "NIMH notes that antidepressants usually take about 4–8 weeks to work, and some symptoms such as sleep, appetite, and concentration may improve before mood.",
+        "uncertainty": "low",
+        "draftNote": "The stem, options, keyed answer and explanation are consistent with NIMH: Depression. No material contradiction or unsafe ambiguity was identified in this non-authoritative preflight."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "The cited source NIMH: Depression directly supports the keyed factual claim and explanation.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "Source identity and scope match the claim. "
+      },
+      "rights": {
+        "result": "public_domain_recommended",
+        "summary": "Question wording is original and the cited NIH/NIMH text is public-domain government information unless otherwise indicated.",
+        "sourceIds": [
+          "nimh:depression:2026"
+        ],
+        "draftNote": "This recommendation is for internal testing only and does not create production publication authority."
       }
     }
   ]
