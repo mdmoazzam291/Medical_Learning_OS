@@ -12,7 +12,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M05 | Revision and study planning | Due queue, configurable workload, tested scheduler, interruption-friendly intern mode | IN PROGRESS |
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | DONE |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | IN PROGRESS |
-| M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | PLANNED |
+| M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | IN PROGRESS |
 | M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | PLANNED |
 | M10 | Multimodal and clinical learning | Licensed images, annotations, finding-first exercises, later voice/video encounters | PLANNED |
 | M11 | Research and quality validation | Retention endpoints, intervention experiments, data-quality monitoring and outcome review | PLANNED |
@@ -61,3 +61,10 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 - M07a — DONE: rebuildable learner-scoped canonical-concept observation projection and authenticated diagnostics endpoint are live. Evidence breadth, repetition, timing, optional memory self-report and discordance are exposed while mastery/forgetting/confidence inference is explicitly withheld.
 - M07b — DONE: rebuildable learner-scoped Mistake Fingerprint and authenticated diagnostics endpoint are live, using only observable error recurrence, distractor recurrence, explicit recall discordance and later retrieval outcomes; causal explanations are withheld.
 - M07c — PLANNED: introduce versioned inferred learner-state models only after evidence sufficiency/calibration rules and validation data exist.
+
+
+## M08 slices
+- M08a — DONE: versioned exam-rule contract, sequential amendment history, source provenance, verification state and strict simulator-readiness gate are implemented. The production registry intentionally starts empty so no stale or partially verified exam pattern becomes simulator truth.
+- M08b — NEXT: source and verify current exam-specific presets, then normalize PYQ provenance from free-text exam/year into stable exam occurrence identities without changing question medical content.
+- M08c — PLANNED: build descriptive Exam DNA projections from verified/recalled PYQ evidence with uncertainty and provenance weighting; do not present historical frequency as a guaranteed future probability.
+- M08d — PLANNED: exam simulator state machine, immutable exam-run receipts and GT Autopsy built against an exact pinned ruleset version.
