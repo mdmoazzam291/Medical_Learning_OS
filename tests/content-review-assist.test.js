@@ -30,7 +30,7 @@ test('review assist covers every rabies pilot question without becoming review a
 test('review assist keeps source evidence tied to canonical NRCP sources and conservative rights recommendation', () => {
   const packet = assist();
   const nrcpSources = packet.sourceEvidence.filter(source =>
-    source.sourceId.startsWith('nrcp:rabies:')
+    source.sourceId.startsWith('nrcp:rabies')
   );
   assert.equal(nrcpSources.length, 2);
   for (const source of nrcpSources) {
