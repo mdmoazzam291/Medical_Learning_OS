@@ -49,3 +49,15 @@ test('overlap report validates manifests before advisory comparison', () => {
   assert.match(sql, /content_overlap_threshold_invalid/);
   assert.match(sql, /limit 100/);
 });
+
+
+test('tokenization uses a PostgreSQL-safe whitespace class', async () => {
+  const fix = await readFile(
+    new URL('../supabase/migrations/20260927182000_fix_content_intake_overlap_tokenization.sql', import.meta.url),
+    'utf8'
+  );
+  assert.match(fix, /regexp_split_to_table/);
+  assert.match(fix, /\[\[:space:\]\]\+/);
+  assert.doesNotMatch(fix, /'\\\\s\+'/);
+  assert.match(fix, /revoke all on function public\.content_intake_token_set\(text\)[\s\S]*service_role/);
+});
