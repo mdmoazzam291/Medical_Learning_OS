@@ -285,6 +285,37 @@ Deno.serve(async (req: Request) => {
       if (error || !data) fail(500, "catalog_unavailable");
       return data as { version: number; body: any };
     };
+    const learnerMediaPrompt = async (questionVersionId: string) => {
+      const { data, error } = await admin.rpc("content_media_prompt", {
+        p_question_version_id: questionVersionId
+      });
+      if (error) fail(500, "media_prompt_failed");
+      const sourceMedia = Array.isArray(data?.media) ? data.media : [];
+      const media = [];
+      for (const item of sourceMedia) {
+        const deliveryRef = String(item?.deliveryRef ?? "");
+        if (deliveryRef.startsWith("https://")) {
+          media.push(item);
+          continue;
+        }
+        const prefix = "storage://mlos-media/";
+        if (!deliveryRef.startsWith(prefix)) fail(500, "media_delivery_ref_invalid");
+        const objectPath = deliveryRef.slice(prefix.length);
+        if (!objectPath || objectPath.startsWith("/") || objectPath.includes("..")) {
+          fail(500, "media_delivery_ref_invalid");
+        }
+        const { data: signed, error: signedError } = await admin.storage
+          .from("mlos-media")
+          .createSignedUrl(objectPath, 900);
+        if (signedError || !signed?.signedUrl) fail(500, "media_delivery_failed");
+        media.push({ ...item, deliveryRef: signed.signedUrl });
+      }
+      return {
+        contractId: "content-media-prompt-v1",
+        questionVersionId,
+        media
+      };
+    };
     const getEvents = async () => {
       const { data, error } = await trustedRead("attempts", async () =>
         admin.from("study_attempts").select("event,recorded_at,id")
@@ -764,15 +795,12 @@ Deno.serve(async (req: Request) => {
       }
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
       if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
-      const { data: mediaPrompt, error: mediaError } = await admin.rpc("content_media_prompt", {
-        p_question_version_id: q.questionVersionId
-      });
-      if (mediaError) fail(500, "media_prompt_failed");
+      const mediaPrompt = await learnerMediaPrompt(q.questionVersionId);
       return {
         ...result,
         question: {
           ...learnerQuestion(q),
-          media: Array.isArray(mediaPrompt?.media) ? mediaPrompt.media : []
+          media: mediaPrompt.media
         },
         receipt: attempt?.receipt ?? null,
         memoryJudgment,
@@ -801,15 +829,7 @@ Deno.serve(async (req: Request) => {
         question.questionVersionId === questionVersionId
       )) fail(404, "question_not_available");
 
-      const { data, error } = await admin.rpc("content_media_prompt", {
-        p_question_version_id: questionVersionId
-      });
-      if (error) fail(500, "media_prompt_failed");
-      return response(req, 200, data ?? {
-        contractId: "content-media-prompt-v1",
-        questionVersionId,
-        media: []
-      });
+      return response(req, 200, await learnerMediaPrompt(questionVersionId));
     }
 
     if (req.method === "GET" && path === "/revision/due") {
