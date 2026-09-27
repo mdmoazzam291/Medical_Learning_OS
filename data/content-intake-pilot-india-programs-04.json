@@ -158,36 +158,10 @@
       ]
     },
     {
-      "conceptId": "infectious:malaria:india-elimination-2030",
-      "label": "National malaria elimination target of 2030",
-      "aliases": [
-        "India malaria elimination target"
-      ],
-      "subjectTags": [
-        "community-medicine",
-        "infectious-disease",
-        "public-health",
-        "guideline-india-ncvbdc"
-      ]
-    },
-    {
       "conceptId": "infectious:malaria:relapse-vivax-ovale",
       "label": "P. vivax and P. ovale are associated with relapse",
       "aliases": [
         "Relapse species in malaria"
-      ],
-      "subjectTags": [
-        "community-medicine",
-        "infectious-disease",
-        "parasitology",
-        "guideline-india-ncvbdc"
-      ]
-    },
-    {
-      "conceptId": "infectious:malaria:recrudescence-falciparum-malariae",
-      "label": "P. falciparum and P. malariae are associated with recrudescence",
-      "aliases": [
-        "Recrudescence species in malaria"
       ],
       "subjectTags": [
         "community-medicine",
@@ -324,6 +298,32 @@
         "infectious-disease",
         "pharmacology",
         "guideline-india-naco"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:states-category-zero-2027",
+      "label": "All States/UTs reach Category 0 for malaria by 2027",
+      "aliases": [
+        "malaria Category 0 2027"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "public-health",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:recrudescence-definition",
+      "label": "Malaria recrudescence after incomplete parasite clearance",
+      "aliases": [
+        "malaria recrudescence definition"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "parasitology",
+        "guideline-india-ncvbdc"
       ]
     }
   ],
@@ -945,36 +945,36 @@
       "publishedAt": null
     },
     {
-      "questionId": "infectious:malaria:india-elimination-2030",
-      "questionVersionId": "infectious:malaria:india-elimination-2030@1",
+      "questionId": "infectious:malaria:states-category-zero-2027",
+      "questionVersionId": "infectious:malaria:states-category-zero-2027@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
-      "stem": "What national target year is stated by NCVBDC for malaria elimination in India?",
+      "stem": "Under India’s National Strategic Plan for Malaria 2023–27, by which year should all States and Union Territories reach Category 0, meaning zero indigenous malaria cases?",
       "options": [
-        {
-          "optionId": "2030",
-          "text": "2030"
-        },
         {
           "optionId": "2027",
           "text": "2027"
         },
         {
-          "optionId": "2035",
-          "text": "2035"
+          "optionId": "2025",
+          "text": "2025"
         },
         {
-          "optionId": "2040",
-          "text": "2040"
+          "optionId": "2030",
+          "text": "2030"
+        },
+        {
+          "optionId": "2035",
+          "text": "2035"
         }
       ],
-      "answerOptionId": "2030",
-      "explanation": "NCVBDC states the national objective of eliminating malaria by 2030.",
+      "answerOptionId": "2027",
+      "explanation": "The National Strategic Plan 2023–27 states that all States and Union Territories should reach Category 0, meaning zero indigenous cases, by 2027.",
       "conceptLinks": [
         {
-          "conceptId": "infectious:malaria:india-elimination-2030",
+          "conceptId": "infectious:malaria:states-category-zero-2027",
           "role": "primary"
         }
       ],
@@ -998,27 +998,27 @@
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
-      "stem": "Which pair is specifically noted in India’s malaria strategy as being associated with relapse?",
+      "stem": "Which description matches a malaria relapse in India’s National Strategic Plan for Malaria 2023–27?",
       "options": [
         {
-          "optionId": "vivax-ovale",
-          "text": "Plasmodium vivax and Plasmodium ovale"
+          "optionId": "hypnozoite-reactivation",
+          "text": "Activation of previously acquired Plasmodium vivax or Plasmodium ovale hypnozoites"
         },
         {
-          "optionId": "falciparum-malariae",
-          "text": "Plasmodium falciparum and Plasmodium malariae"
+          "optionId": "incomplete-clearance",
+          "text": "Recurrence of asexual parasitemia because the original infection was incompletely cleared"
         },
         {
-          "optionId": "falciparum-vivax",
-          "text": "Plasmodium falciparum and Plasmodium vivax"
+          "optionId": "new-mosquito",
+          "text": "A new mosquito-borne infection acquired after complete cure"
         },
         {
-          "optionId": "malariae-ovale",
-          "text": "Plasmodium malariae and Plasmodium ovale"
+          "optionId": "transfusion",
+          "text": "A case caused by blood transfusion"
         }
       ],
-      "answerOptionId": "vivax-ovale",
-      "explanation": "The current national strategy notes relapse with P. vivax and P. ovale.",
+      "answerOptionId": "hypnozoite-reactivation",
+      "explanation": "The current national strategic plan defines relapse as malaria attributed to activation of previously acquired P. vivax or P. ovale hypnozoites.",
       "conceptLinks": [
         {
           "conceptId": "infectious:malaria:relapse-vivax-ovale",
@@ -1039,36 +1039,36 @@
       "publishedAt": null
     },
     {
-      "questionId": "infectious:malaria:recrudescence-falciparum-malariae",
-      "questionVersionId": "infectious:malaria:recrudescence-falciparum-malariae@1",
+      "questionId": "infectious:malaria:recrudescence-definition",
+      "questionVersionId": "infectious:malaria:recrudescence-definition@1",
       "version": 1,
       "supersedes": null,
       "authorId": "mlos-ai-drafter",
       "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
-      "stem": "Which pair is specifically noted in India’s malaria strategy as being associated mainly with recrudescence?",
+      "stem": "Which description matches malaria recrudescence in India’s National Strategic Plan for Malaria 2023–27?",
       "options": [
         {
-          "optionId": "falciparum-malariae",
-          "text": "Plasmodium falciparum and Plasmodium malariae"
+          "optionId": "incomplete-clearance",
+          "text": "Recurrence of asexual parasitemia after treatment because parasites of the same genotype were incompletely cleared"
         },
         {
-          "optionId": "vivax-ovale",
-          "text": "Plasmodium vivax and Plasmodium ovale"
+          "optionId": "hypnozoite-reactivation",
+          "text": "Activation of dormant Plasmodium vivax or Plasmodium ovale hypnozoites"
         },
         {
-          "optionId": "vivax-falciparum",
-          "text": "Plasmodium vivax and Plasmodium falciparum"
+          "optionId": "imported",
+          "text": "A new infection acquired outside the area where it is diagnosed"
         },
         {
-          "optionId": "ovale-malariae",
-          "text": "Plasmodium ovale and Plasmodium malariae"
+          "optionId": "induced",
+          "text": "A case acquired by transfusion or another parenteral inoculation"
         }
       ],
-      "answerOptionId": "falciparum-malariae",
-      "explanation": "The national strategy notes recrudescence mainly with P. falciparum and P. malariae.",
+      "answerOptionId": "incomplete-clearance",
+      "explanation": "The current national strategic plan defines recrudescence as recurrence of asexual parasitemia after treatment due to incomplete clearance of parasites of the same genotype.",
       "conceptLinks": [
         {
-          "conceptId": "infectious:malaria:recrudescence-falciparum-malariae",
+          "conceptId": "infectious:malaria:recrudescence-definition",
           "role": "primary"
         }
       ],
