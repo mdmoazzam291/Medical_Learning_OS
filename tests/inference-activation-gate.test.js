@@ -65,7 +65,7 @@ const packet = (overrides = {}) => ({
 test('offline-qualified model can enter hidden shadow inference but not production', () => {
   const result = evaluateInferenceActivationGate(packet());
   assert.equal(result.mode, 'shadow_only');
-  assert.equal(result.inferenceAuthority, true);
+  assert.equal(result.shadowInferenceAllowed, true);
   assert.equal(result.generalProductionAuthorized, false);
   assert.equal(result.policyAuthorityOwnedByModel, false);
   assert.deepEqual(result.blockers, []);
@@ -93,7 +93,7 @@ test('evidence below preregistered minima blocks inference', () => {
     ]
   }));
   assert.equal(result.mode, 'blocked');
-  assert.equal(result.inferenceAuthority, false);
+  assert.equal(result.shadowInferenceAllowed, false);
   assert.ok(result.blockers.includes('evidence_below_preregistered_gate:eligible-learners'));
 });
 
@@ -144,6 +144,7 @@ test('controlled experiment eligibility requires prospective shadow evidence and
   });
   const result = evaluateInferenceActivationGate(ready);
   assert.equal(result.mode, 'eligible_for_controlled_experiment');
+  assert.equal(result.controlledExperimentEligible, true);
   assert.equal(result.generalProductionAuthorized, false);
   assert.deepEqual(result.experimentBlockers, []);
 });
