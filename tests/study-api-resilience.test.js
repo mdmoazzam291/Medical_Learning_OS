@@ -300,3 +300,19 @@ test('mistake diagnostics expose question text only for currently published vers
   assert.match(source, /stem: currentQuestion\.stem/);
   assert.match(source, /: null/);
 });
+
+
+test('Exam DNA endpoint exposes descriptive historical evidence without prediction', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/exam-dna"/);
+  assert.match(source, /exam_dna_observations/);
+  assert.match(source, /p_exam_id: examId/);
+  assert.match(source, /exam_dna_projection_failed/);
+  assert.doesNotMatch(source, /examDnaPrediction|predictedChance|forecastScore/);
+});
+
+test('Exam DNA endpoint validates optional exam identity instead of accepting arbitrary query text', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /searchParams\.get\("examId"\)/);
+  assert.match(source, /examParam === null \|\| examParam === "" \? null : identifier\(examParam\)/);
+});
