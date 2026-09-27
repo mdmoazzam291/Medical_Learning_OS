@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:final-breadth:20260928:07",
+  "label": "Final breadth simulator-capacity pilot 07",
+  "generatedDate": "2026-09-28",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 49,
+    "conceptCount": 49,
+    "sourceCount": 8,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "flagCount": 0,
+    "maxFlaggedOverlap": 0,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flags": []
+  },
+  "contentMix": {
+    "targetExams": [
+      "neet-pg",
+      "ini-cet"
+    ],
+    "examBlueprintFidelity": false,
+    "prioritizationEvidence": "breadth-first-heuristic-no-verified-pyq-frequency",
+    "breadthFirst": true,
+    "domains": [
+      "obstetrics-postpartum-haemorrhage",
+      "ophthalmology-glaucoma",
+      "ent-noise-induced-hearing-loss",
+      "orthopedics-osteoporosis",
+      "anesthesia-preoperative-fasting",
+      "toxicology-carbon-monoxide",
+      "dermatology-psoriasis"
+    ],
+    "note": "This batch is sized to close the exact 49-question internal-test simulator shortage. No observed exam-frequency or PYQ recurrence claim is made."
+  }
+}
