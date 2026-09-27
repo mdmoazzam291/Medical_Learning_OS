@@ -48,3 +48,13 @@ test('clock synchronization closes elapsed sections before learner actions', () 
   assert.ok(actionRoute >= 0 && sync > actionRoute && revision > sync);
   assert.match(source, /eventType = completed \? "run\.completed" : "clock\.advanced"/);
 });
+
+
+test('identical mutation retries are resolved from the immutable ledger before revision rejection', () => {
+  const actionRoute = source.indexOf('const examRunActionMatch');
+  const priorEvent = source.indexOf('getExamRunEvent(runId, requestId)', actionRoute);
+  const revisionCheck = source.indexOf('Number(row.state_revision) !== expectedRevision', actionRoute);
+  assert.ok(actionRoute >= 0 && priorEvent > actionRoute && revisionCheck > priorEvent);
+  assert.match(source, /idempotent: true/);
+  assert.match(source, /exam_request_key_collision/);
+});
