@@ -837,3 +837,16 @@ Verification for this slice is repository diff review because there is no domain
 - Review-assist now covers 55 questions across the three controlled batches and remains explicitly non-authoritative.
 - Autonomous content creation does not imply autonomous publication. Independent review evidence remains a separate integrity gate.
 
+## AI test-only review authority live — 2026-09-28
+- User authorization now permits autonomous Medical/References/Rights assessment for **internal testing only** until the simulator content target is reached or the user explicitly takes review back over.
+- Production migration `20260927213048_ai_test_review_authority` is applied.
+- Added immutable, service-only `content_ai_test_source_rights` and `content_ai_test_review_events`.
+- Added service-only `record_ai_test_source_rights` and `record_ai_test_review`; AI evidence is structurally separate from human review evidence and cannot set `verified`/`published`.
+- Added `exam_mock_test_readiness` and `exam_assemble_test_mock`. These may count current AI-test-reviewed questions for engineering/simulator testing while leaving `exam_mock_readiness` unchanged.
+- Browser roles have no AI-test review mutation authority. AI-test evidence is append-only.
+- Added `data/autonomous-content-policy.json`: future batches are at least 25 questions and prioritize verified NEET-PG/INI-CET exam evidence when available, then coverage gaps, cross-exam/clinical transfer, source efficiency and duplication avoidance. Unverified exam-frequency claims are forbidden.
+- Existing 50-question Batch 02 + Batch 03 backlog passed the current preflight consistency gate: 50/50 low-uncertainty medically supported, 50/50 direct-source support, 50/50 conservative citation-only rights recommendation.
+- Recorded 10 AI-test source-rights approvals and 150 AI-test question-gate approvals (50 Medical + 50 References + 50 Rights), all labeled `ai:mlos-autonomous-reviewer-v1` / `ai-test-review-v1`.
+- Internal-test readiness is now **56/180**: 6 human-published + 50 AI-test-only, shortage 124.
+- Production readiness remains **6/180**, shortage 174. No AI-test event altered human review queues, publication state or learner-facing eligibility.
+- Next content work should close the 124-question internal-test shortage in source-grounded batches of at least 25, stopping when the verified rule-set requirement is met. Human review can continue independently for production release.
