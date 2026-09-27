@@ -136,3 +136,10 @@ All database evolution is **forward-only from the repository's existing timestam
 - Signature/credential/proof/ledger providers — LATER / OPTIONAL: no implementation until a concrete trust/credential/interoperability requirement exists.
 - Blockchain, ZK and PQC infrastructure — REJECT NOW: preserve crypto agility and proof-readiness through canonical IDs/digests/version metadata rather than deploying speculative infrastructure.
 
+## Cross-cutting privacy and evidence integrity
+- Privacy-safe evidence immutability — DONE: normal learner-evidence ledgers are append-only at the database layer while `privacy_erase_learner_data` provides one service-only atomic erasure path.
+- Privacy scope completeness — DONE: erasure v1 covers every current public table containing `learner_id` and fails closed if a future learner table is added without updating the scope.
+- Non-identifying erasure receipts — DONE: persistent receipts contain no learner ID/hash; transient per-table counts are returned only to the trusted caller.
+- Auth account closure orchestration — LATER / APPLICATION LAYER: trusted backend must revoke sessions/tokens, execute product-data erasure, verify completion, then delete the Supabase Auth user. No learner/browser self-service route is added by this database slice.
+- De-identified research retention — LATER / EXPERIMENTAL: do not implement until M11 has a concrete research use, retention policy and re-identification-risk review.
+

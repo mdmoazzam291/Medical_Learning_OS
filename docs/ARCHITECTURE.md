@@ -170,3 +170,30 @@ Provider failure is fail-soft with respect to core learning: AI, agent runtime, 
 
 Do not introduce interfaces/classes merely to mirror a technology wishlist. Provider boundaries are added only when they reduce real replacement cost, protect a high-value invariant, or support more than one meaningful implementation.
 
+## Privacy-safe evidence immutability
+
+Learner history uses two different mutation models:
+
+1. **Evidence ledgers** are append-only during ordinary product operation.
+2. **Privacy erasure** is a separately authorized destructive transaction.
+
+The privacy erasure boundary spans all current public tables keyed by `learner_id`, including study evidence/state, NeuralVault personal annotations and exam run data. The erasure function checks that its registered scope exactly matches the current schema before deleting anything. A newly added learner table therefore blocks erasure until the migration explicitly maps it.
+
+The database erasure function is not a browser capability and does not delete Supabase Auth identity/session state. Account closure should be orchestrated by a trusted application/admin boundary:
+
+```text
+authenticated/verified privacy request
+        ↓
+revoke auth sessions / stop active access
+        ↓
+preview registered learner-data scope
+        ↓
+atomic product-data erasure
+        ↓
+verify zero scoped rows + retain non-identifying receipt
+        ↓
+delete Auth user
+```
+
+Append-only triggers deliberately prevent “delete the Auth user first and hope cascades handle it.” This protects both evidence integrity and complete privacy cleanup.
+
