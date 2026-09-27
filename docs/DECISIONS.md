@@ -366,3 +366,28 @@ Historical frequency must not be presented as the probability that a concept wil
 Absence from the observed PYQ corpus is not evidence that a concept is unimportant or will not appear. Sparse corpus coverage, rights restrictions, recall bias and changing exam blueprints can all distort historical observations.
 
 Any future predictive Exam DNA model requires a separately versioned inference layer, a defined target, historical back-testing, calibration analysis and comparison against simple baselines. Until then, the system reports evidence, not prophecy.
+
+
+## ADR-036 — Exam timing locks are server-authoritative and derived from scheduled boundaries (accepted, 2026-09-27)
+A browser timer is display state, not examination authority.
+
+Every locked-section exam run pins an exact verified ruleset and absolute scheduled section boundaries at creation. Before accepting an answer or review-state mutation, the trusted simulator must first advance the run clock to the supplied authoritative time and close every elapsed section.
+
+A late or stale client cannot extend a section. Reconnecting after several section boundaries closes all elapsed sections at their scheduled end times rather than at reconnect time.
+
+Do not carry unused time into the next NEET-PG 2026 section. Do not permit early section advance or reopening of a closed section for the pinned published scheme.
+
+Answer keys and correctness are absent from live run state. Scoring occurs only after run completion in the trusted layer.
+
+## ADR-037 — Durable exam runs use immutable transitions plus an optimistic current projection (accepted, 2026-09-27)
+Persist exam simulation as two complementary layers:
+- an append-only transition ledger for auditability and reconstruction;
+- a revisioned current-state projection for fast resume.
+
+Every transition carries a request key, expected state revision, immutable event payload and SHA-256 transition fingerprint. Identical retries are idempotent. Reusing a request key with a different transition is an error. A stale expected revision is an explicit conflict rather than last-write-wins.
+
+Completion is a special atomic transition that also creates exactly one immutable receipt pinned to the exact ruleset used by the run.
+
+Browser clients do not directly mutate exam-run tables or ledgers. They act through trusted application services.
+
+Do not start a nominal 180-question full mock unless 180 distinct eligible reviewed/published question versions can actually be assembled. Duplicating a tiny content pool to satisfy the count would create fake exam realism and corrupt subsequent analytics.
