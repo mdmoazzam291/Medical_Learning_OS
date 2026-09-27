@@ -228,3 +228,28 @@ The AI-test lane remains an engineering/test eligibility mechanism only. It does
 ### Next scaling step
 
 Close the remaining 74-question internal-test shortage with one or more source-grounded batches of at least 25 questions, chosen by the existing exam-value policy. Stop generation when the verified rule-set requirement is met; do not create excess inventory merely to inflate question count.
+
+
+## Sixth controlled scale pilot: multimodal breadth — 2026-09-28
+
+Batch `pilot:multimodal-breadth:20260928:06` is the first intake where canonical medical images are part of the review target rather than informal attachments.
+
+Live result:
+- 25 questions / 25 concepts / 9 source clusters;
+- 5 image-linked questions: 3 radiology, 2 pathology;
+- exact media links were created **after promotion but before any AI-test review**, ensuring Medical/References/Rights hashes include the relevant media target;
+- all five media assets have exact-byte SHA-256 identity, private storage delivery and `public_domain` media rights;
+- structural validation: 25/25 passed;
+- lexical overlap: 0 flags at 0.55;
+- catalog version 33 → 34;
+- 75/75 current AI-test review fingerprints match;
+- 9/9 current AI-test source-rights fingerprints match;
+- production content state remains in-review only.
+
+This establishes the first complete M10a content-side path:
+`canonical media bytes → immutable media identity → question link → media-bound review hash → internal-test eligibility`.
+
+It does not authorize AI-only production publication. Human content review remains independently required.
+
+### Next scaling step
+The verified simulator shortage is 49. Prefer one final 49-question breadth-first batch, within the existing 25–100 autonomous batch rule, rather than two minimum-size batches that would add avoidable inventory.
