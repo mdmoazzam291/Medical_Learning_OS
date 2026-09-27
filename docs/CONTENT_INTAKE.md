@@ -162,3 +162,20 @@ Run a second controlled batch at approximately 25 questions, still source-ground
 - semantic near-duplicate/ambiguity failures missed by structural validation.
 
 Do not jump directly to 180 generated questions. Increase volume only if the 25-question loop preserves review quality and auditability.
+
+
+## Second controlled scale pilot
+
+Batch `pilot:infectious-prevention:20260927:02` scales the same governed loop to 25 questions:
+
+- 25 new canonical concepts and 25 new question versions;
+- 5 official CDC source packages, with five questions sharing each package;
+- jurisdiction explicitly tagged `guideline-us-cdc`;
+- no PYQ claims and no exam-blueprint-fidelity claim;
+- live structural validator passed all 25 candidates;
+- advisory lexical-overlap report flagged 2 intentional policy-state pairs, both inspected and dispositioned `retain_distinct`;
+- promoted questions remain entirely learner-hidden until the existing three review gates and trusted publication transition succeed.
+
+The first pilot showed that evidence entry, particularly Rights review, consumes meaningful reviewer time. The reviewer workspace may therefore prefill **editable draft notes** and **editable source-policy evidence** from the non-authoritative preflight packet. The reviewer must still inspect the exact target, choose every review/right outcome and submit every decision. No draft text has authority by itself.
+
+Do not create the next content batch until this 25-question review loop yields measured throughput, rejection/revision reasons and source-reuse effects.
