@@ -487,3 +487,11 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Current database state for this concept contains one personal annotation total, so no duplicate row was created by the edit path.
 - Hosted create/edit persistence is therefore confirmed. M06a still retains the explicit hosted delete/reload proof before its CRUD release gate is fully closed.
 - M06c search/deep-link/personal-note hosted proof is complete; later Study Now → NeuralVault retrieval integration remains.
+
+
+## M06 hosted annotation refresh persistence proof — 2026-09-27
+- Learner refreshed the hosted NeuralVault page after creating and editing the anaphylaxis personal annotation.
+- The annotation reloaded from the server as revision 2 with the same persisted content.
+- Backend verification confirms one annotation row for `emergency:anaphylaxis:first-line-treatment`, revision 2, anchored to canonical note version 1.
+- The canonical anchor remains published and the learner UI correctly reports `Anchored to current canonical version`.
+- This closes the hosted create → edit → refresh persistence gate. The remaining M06a CRUD proof is delete → refresh → absence.
