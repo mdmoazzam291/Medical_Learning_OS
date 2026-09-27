@@ -450,3 +450,19 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Production remains clean: 1 canonical catalog concept, 0 canonical NeuralVault notes and 0 personal annotations. No medical note or learner note was fabricated for release proof.
 - Authenticated browser roles cannot mutate NeuralVault tables or trusted NeuralVault SQL functions directly.
 - M06a remains IN PROGRESS only for one real authenticated hosted create → edit → reload → delete proof.
+
+
+## M06c NeuralVault search and retrieval links — 2026-09-27
+- Added authenticated `GET /vault/search?q=...` in `study-api` v17.
+- Search spans canonical catalog concept labels, aliases and subject tags; published canonical-note title/body; and only the authenticated learner's personal annotations.
+- Unpublished canonical notes are excluded at the data-query boundary. The current in-review anaphylaxis canonical note therefore cannot leak through learner search.
+- Search query length is bounded to 2–120 characters and results are capped at 50.
+- Search returns match-source metadata plus stable canonical `conceptId`; learner search results do not expose answer keys or review drafts.
+- Added NeuralVault search UI and cloud adapter.
+- Added update-aware annotation anchor states in concept detail: `current`, `canonical-updated`, `anchor-unavailable`, and `unanchored`.
+- Personal note text remains escaped in learner HTML rendering.
+- Added exact concept deep links from the medical answer/explanation flow to `/web/vault.html?concept=<conceptId>`.
+- The link uses canonical concept identity rather than question-local labels, preserving update-safe navigation.
+- Full unit/check suite passed and responsive browser verification passed before deployment.
+- Render latest deployment is live and `study-api` v17 is active.
+- M06c remains IN PROGRESS for one real hosted search/deep-link verification and later Study Now-to-NeuralVault retrieval integration.
