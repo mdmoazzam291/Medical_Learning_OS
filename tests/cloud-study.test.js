@@ -209,3 +209,31 @@ test('cloud policy evaluation uses authenticated learner context', async () => {
   assert.equal(result.livePolicyId, 'bootstrap-binary-v1');
   assert.deepEqual(result.outcomes, []);
 });
+
+
+test('cloud NeuralVault adapter reads concepts and performs revision-safe annotation mutations', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({ url, method: options.method || 'GET', body: options.body ? JSON.parse(options.body) : null });
+      return Response.json({ ok: true });
+    }
+  });
+
+  await cloud.vaultConcept('emergency:anaphylaxis:first-line-treatment');
+  await cloud.createVaultAnnotation({
+    conceptId: 'emergency:anaphylaxis:first-line-treatment',
+    bodyMarkdown: 'My note'
+  });
+  await cloud.updateVaultAnnotation('11111111-1111-4111-8111-111111111111', 2, 'Updated note');
+  await cloud.deleteVaultAnnotation('11111111-1111-4111-8111-111111111111');
+
+  assert.match(seen[0].url, /vault\/concepts\/emergency%3Aanaphylaxis%3Afirst-line-treatment$/);
+  assert.equal(seen[1].method, 'POST');
+  assert.equal(seen[1].body.anchorNoteVersionId, null);
+  assert.equal(seen[2].method, 'PATCH');
+  assert.deepEqual(seen[2].body, { expectedRevision: 2, bodyMarkdown: 'Updated note' });
+  assert.equal(seen[3].method, 'DELETE');
+});
