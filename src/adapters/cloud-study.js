@@ -52,6 +52,9 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
       const suffix = examId === null ? '' : `?examId=${encodeURIComponent(examId)}`;
       return request(`/exam-dna${suffix}`);
     },
+    examSimulatorReadiness(ruleSetId) {
+      return request(`/exam-simulator/readiness?ruleSetId=${encodeURIComponent(ruleSetId)}`);
+    },
     vaultConcepts() { return request('/vault/concepts'); },
     vaultSearch(query) { return request(`/vault/search?q=${encodeURIComponent(query)}`); },
     vaultConcept(conceptId) {
