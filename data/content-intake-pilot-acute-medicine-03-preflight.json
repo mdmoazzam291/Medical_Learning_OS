@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:acute-medicine:20260928:03",
+  "label": "Acute medicine controlled pilot 03",
+  "generatedDate": "2026-09-28",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 25,
+    "conceptCount": 25,
+    "sourceCount": 5,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flagCount": 1,
+    "flags": [
+      {
+        "candidateQuestionVersionId": "endocrine:diabetes:diagnostic-a1c-threshold@1",
+        "otherQuestionVersionId": "endocrine:diabetes:diagnostic-fasting-glucose@1",
+        "lexicalOverlap": 0.5625,
+        "disposition": "retain_distinct",
+        "rationale": "Both questions intentionally use similar ADA diagnostic framing but test different independent diagnostic criteria: A1C versus fasting plasma glucose. Keeping both improves criterion discrimination and does not duplicate the tested fact."
+      }
+    ]
+  },
+  "contentMix": {
+    "examBlueprintFidelity": false,
+    "note": "This is a controlled source/review-throughput batch across five acute/internal-medicine guideline packages, not a claim of NEET-PG blueprint fidelity."
+  }
+}
