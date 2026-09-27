@@ -728,3 +728,19 @@ Backward compatibility is mandatory: text-only questions keep the historical fin
 Image reuse rights must be machine-checkable. Media source records therefore carry `rightsStatus = unknown | owned | licensed | public_domain` in addition to human-readable licence/evidence text. `citation_only` is not sufficient to display/reproduce an image asset and is deliberately excluded.
 
 Browser roles never query canonical media tables directly. Learner delivery goes through a trusted API and a narrow prompt projection that cannot expose diagnosis evidence, rights/provenance metadata or annotations before answer submission.
+
+
+## ADR-052 — Internal simulator uses a separate authorization and assembly lane (accepted, 2026-09-28)
+
+The 180-question internal simulator pool contains AI-test-reviewed content that is intentionally not production-published. Therefore the production simulator start boundary must remain published-only.
+
+Decision:
+- Keep `POST /exam-simulator/runs` on `exam_mock_readiness` + `exam_assemble_mock`.
+- Add `POST /exam-simulator/test-runs` for engineering validation only.
+- Authorize the test route only from server-verified Supabase Auth `app_metadata.medical_learning_os_internal_tester === true`; never use user-editable metadata.
+- Mark every such run `testingOnly=true` and `productionEquivalent=false`.
+- Re-check the current authorization grant on every read/mutation of a test run so revocation is effective immediately.
+- A production start must not silently resume an internal-test run, and a test start must not silently adopt a production run.
+- Reuse the same locked-section state machine, immutable run ledger, scoring path and safe media projection so the engineering test exercises real simulator mechanics without creating a second simulator implementation.
+
+This is a test-access boundary, not a content publication shortcut. AI-test review remains structurally separate from human Medical/References/Rights review and cannot make learner-facing production content eligible.
