@@ -22,7 +22,6 @@ test('review assist covers every rabies pilot question without becoming review a
   assert.equal(packet.policy.requiresIndependentReviewerDecision, true);
 
   const covered = new Set(packet.questions.map(item => item.questionVersionId));
-  assert.equal(covered.size, candidate.questions.length);
   for (const question of candidate.questions) {
     assert.ok(covered.has(question.questionVersionId));
   }
@@ -30,8 +29,11 @@ test('review assist covers every rabies pilot question without becoming review a
 
 test('review assist keeps source evidence tied to canonical NRCP sources and conservative rights recommendation', () => {
   const packet = assist();
-  assert.equal(packet.sourceEvidence.length, 2);
-  for (const source of packet.sourceEvidence) {
+  const nrcpSources = packet.sourceEvidence.filter(source =>
+    source.sourceId.startsWith('nrcp:rabies:')
+  );
+  assert.equal(nrcpSources.length, 2);
+  for (const source of nrcpSources) {
     assert.match(source.sourceUrl, /^https:\/\/rabiesfreeindia\.mohfw\.gov\.in\//);
     assert.match(source.rightsBasisUrl, /^https:\/\/rabiesfreeindia\.mohfw\.gov\.in\/copyright-policy$/);
     assert.equal(source.rightsRecommendation, 'citation_only');
@@ -62,4 +64,55 @@ test('category III pilot item carries its wording caveat instead of hiding uncer
   );
   assert.equal(item.medical.result, 'supported_with_wording_note');
   assert.match(item.medical.summary, /wound washing/i);
+});
+
+
+test('review assist covers all 25 questions in infectious prevention pilot 02', () => {
+  const packet = assist();
+  const pilot02 = JSON.parse(readFileSync(
+    new URL('../data/content-intake-pilot-infectious-prevention-02.json', import.meta.url),
+    'utf8'
+  ));
+  const covered = new Map(packet.questions.map(item => [item.questionVersionId, item]));
+  assert.equal(pilot02.questions.length, 25);
+  for (const question of pilot02.questions) {
+    const item = covered.get(question.questionVersionId);
+    assert.ok(item, `missing assist for ${question.questionVersionId}`);
+    for (const kind of ['medical', 'references', 'rights']) {
+      assert.ok(item[kind]?.result);
+      assert.ok(item[kind]?.summary);
+      assert.ok(item[kind]?.draftNote);
+    }
+    assert.equal('decision' in item, false);
+    assert.equal('approved' in item, false);
+    assert.equal('reviewerId' in item, false);
+  }
+});
+
+test('pilot 02 source assist covers five CDC sources with conservative editable rights drafts', () => {
+  const packet = assist();
+  const cdcSources = packet.sourceEvidence.filter(source => source.sourceId.startsWith('cdc:'));
+  assert.equal(cdcSources.length, 5);
+  for (const source of cdcSources) {
+    assert.match(source.sourceUrl, /^https:\/\/www\.cdc\.gov\//);
+    assert.equal(source.rightsRecommendation, 'citation_only');
+    assert.equal(source.rightsBasisUrl, 'https://www.cdc.gov/other/agencymaterials.html');
+    assert.match(source.rightsBasisSummary, /public domain/i);
+    assert.match(source.rightsBasisSummary, /third-party/i);
+    assert.match(source.draftRightsEvidence, /factual grounding/i);
+  }
+});
+
+test('multi-batch assist remains explicitly non-authoritative', () => {
+  const packet = assist();
+  assert.deepEqual(packet.scope.batchKeys, [
+    'pilot:rabies:20260927:01',
+    'pilot:infectious-prevention:20260927:02'
+  ]);
+  assert.equal(packet.scope.questionCount, 30);
+  assert.equal(packet.authority, 'none');
+  assert.equal(packet.policy.mayApproveReviewGate, false);
+  assert.equal(packet.policy.mayVerifyContent, false);
+  assert.equal(packet.policy.mayPublishContent, false);
+  assert.equal(packet.policy.requiresIndependentReviewerDecision, true);
 });
