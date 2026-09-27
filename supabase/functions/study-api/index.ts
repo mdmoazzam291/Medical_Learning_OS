@@ -1,6 +1,15 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { Rating, createEmptyCard, fsrs } from "npm:ts-fsrs@5.4.2";
+import {
+  createLockedSectionRuntimeRun,
+  advanceExamRunClock,
+  setExamAnswer,
+  setExamReview,
+  examRunProgress,
+  scoreLockedSectionExamRun,
+  seededQuestionOrder
+} from "../_shared/exam-runtime.js";
 
 type Json = Record<string, unknown>;
 
@@ -482,6 +491,204 @@ Deno.serve(async (req: Request) => {
       }
       return list.map(learnerQuestion);
     };
+    const getExamRuleSet = async (ruleSetId: string) => {
+      const { data, error } = await trustedRead("exam_rule_set", async () =>
+        admin.from("exam_rule_sets")
+          .select("rule_set_id,exam_id,version,verification_status,total_questions,total_duration_seconds,rule_set,rule_set_sha256")
+          .eq("rule_set_id", ruleSetId)
+          .eq("verification_status", "verified")
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_rule_set_read_failed");
+      if (!data) fail(404, "exam_rule_set_not_available");
+      return data as any;
+    };
+    const getOpenExamRun = async () => {
+      const { data, error } = await trustedRead("open_exam_run", async () =>
+        admin.from("exam_runs")
+          .select("id,learner_id,exam_id,rule_set_id,engine_id,status,state_revision,state,started_at,scheduled_end_at,completed_at,created_at,updated_at")
+          .eq("learner_id", learnerId)
+          .eq("status", "in_progress")
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      return data as any ?? null;
+    };
+    const getExamRun = async (runId: string) => {
+      const { data, error } = await trustedRead("exam_run", async () =>
+        admin.from("exam_runs")
+          .select("id,learner_id,exam_id,rule_set_id,engine_id,status,state_revision,state,started_at,scheduled_end_at,completed_at,created_at,updated_at")
+          .eq("id", runId)
+          .eq("learner_id", learnerId)
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      if (!data) fail(404, "exam_run_not_found");
+      return data as any;
+    };
+    const getExamRunEvent = async (runId: string, requestKey: string) => {
+      const { data, error } = await trustedRead("exam_run_event", async () =>
+        admin.from("exam_run_events")
+          .select("event_type,event,revision_after")
+          .eq("run_id", runId)
+          .eq("learner_id", learnerId)
+          .eq("request_key", requestKey)
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      return data as any ?? null;
+    };
+    const getExamReceipt = async (runId: string) => {
+      const { data, error } = await trustedRead("exam_receipt", async () =>
+        admin.from("exam_run_receipts")
+          .select("receipt,completed_at,recorded_at")
+          .eq("run_id", runId)
+          .eq("learner_id", learnerId)
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      return data?.receipt ?? null;
+    };
+    const examCatalogQuestionMap = async () => {
+      const catalog = await getCatalog();
+      const rows = Array.isArray(catalog.body?.questions) ? catalog.body.questions : [];
+      return {
+        catalog,
+        byVersion: new Map(rows
+          .filter((question: any) => typeof question?.questionVersionId === "string")
+          .map((question: any) => [String(question.questionVersionId), question]))
+      };
+    };
+    const buildExamCompletionReceipt = async (run: any) => {
+      const [rule, catalogData] = await Promise.all([
+        getExamRuleSet(String(run.ruleSetId)),
+        examCatalogQuestionMap()
+      ]);
+      const ids = run.sections.flatMap((section: any) => section.questionVersionIds);
+      const answerKey: Record<string, string> = {};
+      for (const questionVersionId of ids) {
+        const question: any = catalogData.byVersion.get(String(questionVersionId));
+        if (!question || typeof question.answerOptionId !== "string" || !question.answerOptionId) {
+          fail(500, "exam_answer_key_unavailable");
+        }
+        answerKey[String(questionVersionId)] = question.answerOptionId;
+      }
+      const score = scoreLockedSectionExamRun({
+        run,
+        ruleSetId: String(rule.rule_set_id),
+        scoring: rule.rule_set.rules.scoring,
+        answerKey
+      });
+      return {
+        contractId: "exam-completion-v1",
+        ...score,
+        ruleSetSha256: rule.rule_set_sha256,
+        catalogVersionAtScoring: catalogData.catalog.version,
+        assembly: run.assembly ?? null
+      };
+    };
+    const syncExamClock = async (row: any, at: string) => {
+      if (row.status !== "in_progress") return row;
+      const nextState = advanceExamRunClock(row.state, at);
+      if (JSON.stringify(nextState) === JSON.stringify(row.state)) return row;
+
+      const completed = nextState.status === "completed";
+      const completionReceipt = completed
+        ? await buildExamCompletionReceipt(nextState)
+        : null;
+      const eventType = completed ? "run.completed" : "clock.advanced";
+      const event = {
+        fromSectionIndex: row.state.currentSectionIndex,
+        toSectionIndex: nextState.currentSectionIndex,
+        serverObservedAt: at,
+        scheduledCompletionAt: completed ? nextState.completedAt : null
+      };
+      const requestKey = completed
+        ? `clock:complete:${nextState.completedAt}`
+        : `clock:section:${nextState.currentSectionIndex}:${nextState.sections[nextState.currentSectionIndex].scheduledStartAt}`;
+
+      const { data, error } = await admin.rpc("exam_apply_transition", {
+        p_learner: learnerId,
+        p_run: row.id,
+        p_request_key: requestKey,
+        p_expected_revision: row.state_revision,
+        p_event_type: eventType,
+        p_event: event,
+        p_next_state: nextState,
+        p_occurred_at: at,
+        p_completion_receipt: completionReceipt
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_revision_conflict")) return await getExamRun(String(row.id));
+        fail(500, "exam_clock_write_failed");
+      }
+      return {
+        ...row,
+        state_revision: Number(data?.revision ?? row.state_revision + 1),
+        status: String(data?.status ?? nextState.status),
+        state: data?.state ?? nextState,
+        completed_at: nextState.completedAt ?? row.completed_at,
+        updated_at: at
+      };
+    };
+    const examRunView = async (row: any, at: string, resumedExisting = false) => {
+      const state = row.state;
+      const progress = examRunProgress(state, at);
+      const catalogData = await examCatalogQuestionMap();
+      const currentSection = state.currentSectionIndex === null
+        ? null
+        : state.sections[state.currentSectionIndex];
+      const questions = currentSection
+        ? currentSection.questionVersionIds.map((questionVersionId: string) => {
+            const question: any = catalogData.byVersion.get(String(questionVersionId));
+            if (!question) fail(500, "exam_question_version_unavailable");
+            return learnerQuestion(question);
+          })
+        : [];
+      const responses = currentSection
+        ? Object.fromEntries(currentSection.questionVersionIds.map((questionVersionId: string) => [
+            questionVersionId,
+            state.responses?.[questionVersionId] ?? {
+              optionId: null,
+              markedForReview: false,
+              answeredAt: null,
+              updatedAt: null
+            }
+          ]))
+        : {};
+      const receipt = state.status === "completed"
+        ? await getExamReceipt(String(row.id))
+        : null;
+
+      return {
+        contractId: "exam-run-view-v1",
+        runId: row.id,
+        examId: row.exam_id,
+        ruleSetId: row.rule_set_id,
+        engineId: row.engine_id,
+        revision: row.state_revision,
+        status: state.status,
+        startedAt: state.startedAt,
+        scheduledEndAt: state.scheduledEndAt,
+        completedAt: state.completedAt,
+        caveats: state.caveats,
+        assembly: state.assembly ?? null,
+        resumedExisting,
+        progress,
+        currentSection: currentSection ? {
+          sectionId: currentSection.sectionId,
+          label: currentSection.label,
+          scheduledStartAt: currentSection.scheduledStartAt,
+          scheduledEndAt: currentSection.scheduledEndAt,
+          closedAt: currentSection.closedAt,
+          questions,
+          responses
+        } : null,
+        receipt
+      };
+    };
+
     const sessionState = async (sessionId: string) => {
       const { data: session, error } = await trustedRead("session_state", async () =>
         admin.from("study_sessions").select("id,position,closed,question_version_ids")
@@ -860,6 +1067,269 @@ Deno.serve(async (req: Request) => {
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
+
+    if (req.method === "POST" && path === "/exam-simulator/runs") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, ["ruleSetId"]);
+      const ruleSetId = identifier(input.ruleSetId);
+      const now = new Date().toISOString();
+
+      const existing = await getOpenExamRun();
+      if (existing) {
+        const synced = await syncExamClock(existing, now);
+        if (synced.status === "in_progress" && synced.rule_set_id !== ruleSetId) {
+          return response(req, 409, {
+            error: "exam_run_already_open",
+            run: await examRunView(synced, now, true)
+          });
+        }
+        if (synced.status === "in_progress") {
+          return response(req, 200, await examRunView(synced, now, true));
+        }
+      }
+
+      const { data: readiness, error: readinessError } = await admin.rpc("exam_mock_readiness", {
+        p_rule_set_id: ruleSetId
+      });
+      if (readinessError) {
+        const message = String(readinessError.message || "");
+        if (message.includes("exam_rule_set_not_available")) fail(404, "exam_rule_set_not_available");
+        fail(500, "exam_mock_readiness_failed");
+      }
+      if (readiness?.ready !== true) {
+        return response(req, 409, {
+          error: "exam_mock_not_ready",
+          readiness: {
+            ...readiness,
+            generatedAt: now
+          }
+        });
+      }
+
+      const rule = await getExamRuleSet(ruleSetId);
+      const runId = crypto.randomUUID();
+      const assemblySeed = crypto.randomUUID();
+      const { data: assembly, error: assemblyError } = await admin.rpc("exam_assemble_mock", {
+        p_rule_set_id: ruleSetId,
+        p_seed: assemblySeed
+      });
+      if (assemblyError) fail(500, "exam_mock_assembly_failed");
+      if (assembly?.ready !== true || !Array.isArray(assembly?.questionVersionIds)) {
+        return response(req, 409, {
+          error: "exam_mock_not_ready",
+          readiness: assembly
+        });
+      }
+      const orderedIds = await seededQuestionOrder(
+        assembly.questionVersionIds.map((value: unknown) => identifier(value)),
+        assemblySeed
+      );
+      const baseState = createLockedSectionRuntimeRun({
+        runId,
+        examId: String(rule.exam_id),
+        ruleSetId: String(rule.rule_set_id),
+        caveats: Array.isArray(rule.rule_set?.caveats) ? rule.rule_set.caveats : [],
+        sections: rule.rule_set.rules.sections,
+        totalQuestions: Number(rule.total_questions),
+        totalDurationSeconds: Number(rule.total_duration_seconds),
+        questionVersionIds: orderedIds,
+        startedAt: now
+      });
+      const state = {
+        ...structuredClone(baseState),
+        assembly: {
+          policyId: String(assembly.policyId || "distinct-published-randomized-v1"),
+          catalogVersion: Number(assembly.catalogVersion),
+          ruleSetSha256: String(rule.rule_set_sha256),
+          examBlueprintFidelity: assembly.examBlueprintFidelity === true,
+          contentMixFidelity: String(assembly.contentMixFidelity || "unstratified-reviewed-pool")
+        }
+      };
+      const { data, error } = await admin.rpc("exam_create_run", {
+        p_learner: learnerId,
+        p_run: runId,
+        p_exam_id: rule.exam_id,
+        p_rule_set_id: rule.rule_set_id,
+        p_engine_id: state.engineId,
+        p_state: state,
+        p_started_at: state.startedAt,
+        p_scheduled_end_at: state.scheduledEndAt
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_run_already_open")) {
+          const open = await getOpenExamRun();
+          if (open) return response(req, 200, await examRunView(open, now, true));
+        }
+        fail(500, "exam_run_create_failed");
+      }
+      const row = {
+        id: data?.runId ?? runId,
+        learner_id: learnerId,
+        exam_id: rule.exam_id,
+        rule_set_id: rule.rule_set_id,
+        engine_id: state.engineId,
+        status: data?.status ?? state.status,
+        state_revision: Number(data?.revision ?? 0),
+        state: data?.state ?? state,
+        started_at: state.startedAt,
+        scheduled_end_at: state.scheduledEndAt,
+        completed_at: null,
+        created_at: now,
+        updated_at: now
+      };
+      return response(req, 200, await examRunView(row, now, false));
+    }
+
+    if (req.method === "GET" && path === "/exam-simulator/runs/current") {
+      if (url.search) fail(400, "query_not_supported");
+      const row = await getOpenExamRun();
+      if (!row) return response(req, 200, { contractId: "exam-run-view-v1", run: null });
+      const now = new Date().toISOString();
+      const synced = await syncExamClock(row, now);
+      return response(req, 200, await examRunView(synced, now, true));
+    }
+
+    const examRunReadMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)$/);
+    if (req.method === "GET" && examRunReadMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const now = new Date().toISOString();
+      const row = await getExamRun(identifier(examRunReadMatch[1]));
+      const synced = await syncExamClock(row, now);
+      return response(req, 200, await examRunView(synced, now, true));
+    }
+
+    const examRunActionMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)\/(answer|review)$/);
+    if (req.method === "POST" && examRunActionMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const runId = identifier(examRunActionMatch[1]);
+      const action = examRunActionMatch[2];
+      const input = await jsonBody(req);
+      const now = new Date().toISOString();
+
+      if (action === "answer") {
+        exactFields(input, ["requestId", "expectedRevision", "questionVersionId", "optionId"]);
+      } else {
+        exactFields(input, ["requestId", "expectedRevision", "questionVersionId", "markedForReview"]);
+      }
+      const requestId = identifier(input.requestId);
+      const expectedRevision = integer(input.expectedRevision, 0, 1000000);
+      const questionVersionId = identifier(input.questionVersionId);
+      const optionId = action === "answer"
+        ? (input.optionId === null ? null : identifier(input.optionId))
+        : null;
+      const markedForReview = action === "review" ? input.markedForReview : null;
+      if (action === "review" && typeof markedForReview !== "boolean") fail(400, "invalid_review_flag");
+
+      const priorEvent = await getExamRunEvent(runId, requestId);
+      if (priorEvent) {
+        const sameIntent = action === "answer"
+          ? priorEvent.event_type === "answer.set" &&
+            priorEvent.event?.questionVersionId === questionVersionId &&
+            priorEvent.event?.optionId === optionId
+          : priorEvent.event_type === "review.set" &&
+            priorEvent.event?.questionVersionId === questionVersionId &&
+            priorEvent.event?.markedForReview === markedForReview;
+        if (!sameIntent) fail(409, "exam_request_key_collision");
+        let current = await getExamRun(runId);
+        current = await syncExamClock(current, now);
+        return response(req, 200, {
+          ...(await examRunView(current, now, true)),
+          idempotent: true
+        });
+      }
+
+      let row = await getExamRun(runId);
+      row = await syncExamClock(row, now);
+      if (row.status !== "in_progress") {
+        return response(req, 409, {
+          error: "exam_run_completed",
+          run: await examRunView(row, now, true)
+        });
+      }
+      if (Number(row.state_revision) !== expectedRevision) {
+        return response(req, 409, {
+          error: "exam_revision_conflict",
+          run: await examRunView(row, now, true)
+        });
+      }
+
+      let nextState: any;
+      let event: any;
+      let eventType: string;
+      try {
+        if (action === "answer") {
+          if (optionId !== null) {
+            const catalogData = await examCatalogQuestionMap();
+            const question: any = catalogData.byVersion.get(questionVersionId);
+            if (!question) fail(500, "exam_question_version_unavailable");
+            if (!Array.isArray(question.options) ||
+                !question.options.some((option: any) => option?.optionId === optionId)) {
+              fail(400, "invalid_option");
+            }
+          }
+          nextState = setExamAnswer(row.state, { questionVersionId, optionId, at: now });
+          eventType = "answer.set";
+          event = { questionVersionId, optionId, serverRecordedAt: now };
+        } else {
+          nextState = setExamReview(row.state, {
+            questionVersionId,
+            markedForReview,
+            at: now
+          });
+          eventType = "review.set";
+          event = {
+            questionVersionId,
+            markedForReview,
+            serverRecordedAt: now
+          };
+        }
+      } catch (transitionError) {
+        const code = transitionError instanceof Error ? transitionError.message : "exam_transition_rejected";
+        if (["section_locked", "future_section_locked", "question_not_in_exam_run", "exam_run_completed"].includes(code)) {
+          return response(req, 409, {
+            error: code,
+            run: await examRunView(row, now, true)
+          });
+        }
+        throw transitionError;
+      }
+
+      const { data, error } = await admin.rpc("exam_apply_transition", {
+        p_learner: learnerId,
+        p_run: runId,
+        p_request_key: requestId,
+        p_expected_revision: expectedRevision,
+        p_event_type: eventType,
+        p_event: event,
+        p_next_state: nextState,
+        p_occurred_at: now,
+        p_completion_receipt: null
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_revision_conflict")) {
+          const fresh = await getExamRun(runId);
+          return response(req, 409, {
+            error: "exam_revision_conflict",
+            run: await examRunView(fresh, now, true)
+          });
+        }
+        if (message.includes("exam_request_key_collision")) fail(409, "exam_request_key_collision");
+        if (message.includes("exam_run_not_open")) fail(409, "exam_run_completed");
+        fail(500, "exam_run_write_failed");
+      }
+
+      row = {
+        ...row,
+        state_revision: Number(data?.revision ?? expectedRevision + 1),
+        status: String(data?.status ?? nextState.status),
+        state: data?.state ?? nextState,
+        updated_at: now
+      };
+      return response(req, 200, await examRunView(row, now, false));
+    }
 
     if (req.method === "GET" && path === "/exam-simulator/readiness") {
       const rawRuleSetId = new URL(req.url).searchParams.get("ruleSetId");
