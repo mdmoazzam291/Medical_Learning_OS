@@ -190,3 +190,23 @@ The persistent receipt table intentionally stores no learner identifier or deriv
 
 Projection behavior after erasure is simple in v1: all learner-owned projections/state rows are deleted together with their source evidence. There is therefore no residual learner projection to rebuild. If future shared/population projections retain de-identified contributions, they require a separate privacy/rebuild contract.
 
+## M07c inference activation evidence
+
+The activation contract is `digital-twin-inference-activation-v1`.
+
+A candidate packet contains:
+- exact model/version;
+- locked preregistration plan ID + SHA-256 digest;
+- observed target contract and baseline;
+- declared knowledge/retention/transfer claim scope;
+- preregistered evidence-sufficiency criteria with direction/threshold/observed values;
+- offline validation metrics with frozen thresholds;
+- prospective validation metrics when shadow validation has completed;
+- binary checks for leakage, uncertainty, missingness, subgroup evaluation, rollback/monitoring and intervention attribution.
+
+The platform intentionally does not hardcode sample-size or calibration thresholds in this gate. Candidate-specific thresholds must be locked before evaluation.
+
+Test fixtures may contain synthetic example numbers; they are not Medical Learning OS production thresholds.
+
+No learner-state persistence is introduced by this contract. Future shadow predictions must remain segregated from canonical observed evidence and from authoritative Digital Twin projections until a separately versioned storage contract is accepted.
+
