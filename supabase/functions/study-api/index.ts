@@ -861,6 +861,19 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "GET" && path === "/exam-dna") {
+      const examParam = new URL(req.url).searchParams.get("examId");
+      const examId = examParam === null || examParam === "" ? null : identifier(examParam);
+      const { data, error } = await admin.rpc("exam_dna_observations", {
+        p_exam_id: examId
+      });
+      if (error) fail(500, "exam_dna_projection_failed");
+      return response(req, 200, {
+        ...data,
+        generatedAt: new Date().toISOString()
+      });
+    }
+
     if (req.method === "GET" && path === "/diagnostics/mistakes") {
       const [{ data, error }, catalog] = await Promise.all([
         admin.rpc("study_mistake_evidence", { p_learner: learnerId }),
