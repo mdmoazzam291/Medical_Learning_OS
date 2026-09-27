@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:india-national-programs:20260928:04",
+  "label": "India national-program controlled pilot 04",
+  "generatedDate": "2026-09-28",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 25,
+    "conceptCount": 25,
+    "sourceCount": 5,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flagCount": 2,
+    "flags": [
+      {
+        "candidateQuestionVersionId": "infectious:malaria:recrudescence-definition@1",
+        "otherQuestionVersionId": "infectious:malaria:relapse-vivax-ovale@1",
+        "lexicalOverlap": 0.8,
+        "disposition": "retain_distinct",
+        "rationale": "Intentional contrast pair: relapse tests hypnozoite reactivation, while recrudescence tests recurrence after incomplete clearance of the same genotype."
+      },
+      {
+        "candidateQuestionVersionId": "infectious:leprosy:mb-adult-twelve-months@1",
+        "otherQuestionVersionId": "infectious:leprosy:pb-adult-six-months@1",
+        "lexicalOverlap": 0.75,
+        "disposition": "retain_distinct",
+        "rationale": "Intentional treatment-duration contrast: adult PB MDT is 6 months while adult MB MDT is 12 months."
+      }
+    ]
+  },
+  "contentMix": {
+    "targetExams": [
+      "neet-pg",
+      "ini-cet"
+    ],
+    "examBlueprintFidelity": false,
+    "prioritizationEvidence": "heuristic-no-verified-pyq-frequency",
+    "note": "The batch closes India-program/community-medicine coverage across immunization, leprosy, malaria, DR-TB and HIV PEP. Verified Exam DNA/PYQ frequency evidence is not yet available, so no recurrence or weight claim is made."
+  }
+}
