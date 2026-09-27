@@ -317,12 +317,13 @@ begin
       message = 'privacy_confirmation_mismatch';
   end if;
 
-  if p_reason_class not in (
-    'user_request',
-    'account_closure',
-    'legal_requirement',
-    'test_cleanup'
-  ) then
+  if p_reason_class is null
+     or p_reason_class not in (
+       'user_request',
+       'account_closure',
+       'legal_requirement',
+       'test_cleanup'
+     ) then
     raise exception using
       errcode = '22023',
       message = 'privacy_reason_invalid';
