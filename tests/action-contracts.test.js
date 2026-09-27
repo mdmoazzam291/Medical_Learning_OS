@@ -78,3 +78,15 @@ test('receipt fails closed on chronology, unsupported capability or inconsistent
     error: null
   }), /requires an error/);
 });
+
+
+test('action metadata must remain canonical JSON and portable', () => {
+  assert.throws(() => validateActionEnvelope({
+    ...envelope(),
+    metadata: { generatedAt: new Date('2026-09-27T18:00:00.000Z') }
+  }), /metadata/);
+  assert.throws(() => validateActionEnvelope({
+    ...envelope(),
+    metadata: { transient: undefined }
+  }), /metadata/);
+});
