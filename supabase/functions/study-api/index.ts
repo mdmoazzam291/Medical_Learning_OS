@@ -201,10 +201,12 @@ function publishedQuestions(catalog: any) {
 }
 
 function learnerQuestion(q: any) {
+  const primaryConcept = q.conceptLinks?.find((link: any) => link?.role === "primary");
   return {
     questionVersionId: q.questionVersionId,
     questionId: q.questionId,
     version: q.version,
+    conceptId: primaryConcept?.conceptId ?? null,
     stem: q.stem,
     options: q.options.map((option: any) => ({ optionId: option.optionId, text: option.text })),
     conceptLinks: q.conceptLinks,
