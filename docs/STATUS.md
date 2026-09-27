@@ -567,3 +567,20 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Synthetic tests prove a complete verified rule set can become simulator-ready while draft/secondary/partial rule sets remain blocked.
 - Full GitHub checks and responsive browser verification passed.
 - M08a is DONE.
+
+
+## M08b stable exam occurrence and PYQ evidence foundation — 2026-09-27
+- Added canonical `exam_occurrences` with stable exam/session identity independent of exam mechanics.
+- Seeded `neet-pg:2026` from the official NBEMS NEET-PG page as a verified occurrence identity only.
+- The occurrence verification note explicitly does not claim that detailed 2026 simulator rules have been verified.
+- Added immutable `question_exam_evidence_events` for PYQ provenance claims.
+- PYQ evidence is attached to exact reviewed `questionVersionId` plus stable `examOccurrenceId`; it does not mutate medical question content.
+- Recalled PYQ evidence is constrained to `reconstructed_item` plus `single_recall` or `corroborated_recall`.
+- Licensed PYQ evidence is constrained to `exact_item` plus `licensed_primary_source` and a non-empty source reference.
+- Assertions are immutable. Retraction creates a new event targeting the assertion; update/delete are blocked.
+- `current_question_exam_evidence()` projects only active assertions and excludes retracted evidence.
+- Browser roles cannot directly read or write the ledger; service-role functions own assertion/retraction.
+- Rollback-only proof successfully exercised assert → current projection → retract → empty projection with no synthetic PYQ evidence retained.
+- Production verification confirms the current AI-generated anaphylaxis item has zero active PYQ evidence.
+- Migration `exam_occurrence_pyq_evidence` applied successfully after full GitHub and responsive browser checks passed.
+- M08b remains IN PROGRESS until current exam mechanics are fully sourced into a simulator-ready ruleset and genuine PYQ evidence is ingested.
