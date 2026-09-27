@@ -149,9 +149,11 @@ All database evolution is **forward-only from the repository's existing timestam
 
 ### M02b autonomous content expansion rule
 - Autonomous source-grounded drafting/intake may proceed without repeated user intervention.
-- Batch size remains bounded and review-aware; question count is not itself a success metric.
-- Do not create additional batches merely to increase inventory while unresolved Medical/References/Rights review debt is accumulating.
-- Prefer source-clustered batches (multiple questions per authoritative source) because one source review can amortize reference/rights work across multiple items.
-- Publication still requires the accepted review authority contract; AI/source preflight is evidence assistance, not an approval event.
-- The next scaling decision should be driven by measured review throughput, rejection/revision rates, concept coverage gaps and learner demand rather than a fixed target number of questions.
+- New autonomous batches use **25 questions as a floor**, with a maximum of 100 under the existing intake contract; choose the smallest batch that meaningfully closes coverage/testing gaps.
+- Prioritize verified NEET-PG/INI-CET Exam DNA/PYQ evidence when available, then canonical coverage gaps, cross-exam/clinical-transfer value, prerequisite value, source-cluster efficiency and duplication avoidance. Never invent exam frequency or PYQ provenance.
+- Prefer source-clustered batches because source review can be amortized across multiple original questions.
+- AI may perform Medical/References/Rights review under the separate `ai-test-review-v1` contract **only for internal testing** until the verified simulator question requirement is reached or the user takes review over.
+- AI-test evidence never becomes human review evidence and cannot set `verified` or `published`.
+- Production publication still requires the accepted human review + source-rights contracts.
+- Stop autonomous inventory expansion once internal-test readiness meets the verified rule-set requirement, except for replacement of rejected/invalid items.
 
