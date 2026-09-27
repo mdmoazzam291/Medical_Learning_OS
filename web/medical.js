@@ -17,6 +17,8 @@ let state = {
   progress: null,
   revision: null,
   revisionError: null,
+  examReadiness: null,
+  examReadinessError: null,
   session: null,
   selectedOptionId: null,
   receipt: null,
@@ -70,6 +72,12 @@ function overview() {
     : revision
       ? '<section class="panel"><span class="eyebrow">REVISION & STUDY NOW · PROVISIONAL</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for review.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '') + '</p>' + studyNowControls + '<p class="muted">Scheduling state is not a mastery score. Study Now uses explainable candidate classes, not one opaque ranking number. Revision policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
       : '';
+  const exam = state.examReadiness;
+  const examPanel = state.examReadinessError
+    ? '<section class="panel"><span class="eyebrow">NEET-PG FULL MOCK</span><h2>Readiness temporarily unavailable.</h2><p>The QBank and Study Now remain available.</p></section>'
+    : exam
+      ? '<section class="panel"><span class="eyebrow">NEET-PG FULL MOCK · RULESET ' + escape(exam.ruleSetId) + '</span><h2>' + exam.eligibleUniqueQuestions + ' / ' + exam.requiredUniqueQuestions + ' unique reviewed questions ready</h2><p>' + (exam.ready ? 'The content-capacity gate has passed.' : exam.shortage + ' more distinct published questions are required before a full mock can start.') + '</p><p class="muted">Timing and navigation use the verified published scheme. Current content assembly is an unstratified reviewed pool and does not claim exam-blueprint fidelity.</p></section>'
+      : '';
   const list = state.questions.map((q, index) =>
     '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">PUBLISHED MEDICAL</span><h2>' + escape(q.stem) + '</h2><small>' + escape(q.questionVersionId) + '</small></div></article>'
   ).join('');
@@ -79,7 +87,7 @@ function overview() {
       ? '<section class="panel"><h2>Medical QBank unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
       : '<section class="panel"><div class="metrics"><div><strong>' + (p.attempts ?? 0) + '</strong><span>Server attempts</span></div><div><strong>' + (p.correct ?? 0) + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Published questions</span></div></div></section><section class="panel"><div class="section-heading"><div><span class="eyebrow">REVIEWED CONTENT ONLY</span><h2>Medical QBank</h2></div><button class="primary" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Start / resume session →</button></div><div class="question-list">' + (list || '<div class="empty"><h2>No published medical questions.</h2><p>Draft and in-review content are excluded.</p></div>') + '</div></section>';
 
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Only reviewed, published versions enter this loop.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · scoring and attempt persistence stay server-side.</p></div><span class="badge">M05</span></div>' + status + revisionPanel + '</main>';
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Only reviewed, published versions enter this loop.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · scoring and attempt persistence stay server-side.</p></div><span class="badge">M05</span></div>' + status + revisionPanel + examPanel + '</main>';
 }
 
 function studyView() {
@@ -169,6 +177,14 @@ async function loadOverview() {
       reportUnexpected(error, 'load_revision_due');
       revisionError = error.code || error.message || 'revision_unavailable';
     }
+    let examReadiness = null;
+    let examReadinessError = null;
+    try {
+      examReadiness = await cloud.examSimulatorReadiness('neet-pg:2026@1');
+    } catch (error) {
+      reportUnexpected(error, 'load_exam_readiness');
+      examReadinessError = error.code || error.message || 'exam_readiness_unavailable';
+    }
     state = {
       ...state,
       user: auth.currentUser() || session.user,
@@ -177,6 +193,8 @@ async function loadOverview() {
       progress,
       revision,
       revisionError,
+      examReadiness,
+      examReadinessError,
       error: null
     };
   } catch (error) {
