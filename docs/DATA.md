@@ -21,7 +21,15 @@ The summary counts attempts and correct answers per concept for a requested lear
 Concept, ContentSource, QuestionVersion and embedded ReviewDecision records are implemented in `src/domain/content.js`. See [field contracts and lifecycle](CONTENT_WORKFLOW.md).
 
 ## Planned entities
-ConceptRelation, ReviewSchedule, PersonalNote, ExamAdapter and richer LearnerProjection. Use references to one canonical concept rather than duplicating it per subject. Track original/recalled/licensed PYQ provenance explicitly; never label generated questions as genuine PYQs.
+ConceptRelation, ReviewSchedule, ExamAdapter and richer LearnerProjection. Use references to one canonical concept rather than duplicating it per subject. Track original/recalled/licensed PYQ provenance explicitly; never label generated questions as genuine PYQs.
 
 ## Server study persistence v1 (M04a)
 SQLite tables: catalog, credentials (hash/learner/expiry), sessions (owner, frozen version queue, position, closed flag, question start), attempts (v1 event plus immutable submission receipt), bookmarks. Unique learner/request and session/position keys protect retries and answered slots. Sessions and bookmarks are learner-scoped. See [HTTP and persistence contracts](SERVER_STUDY.md). Server `durationMs` is wall time including interruptions, not the demo's estimated active time; do not combine these time measures into one metric.
+
+
+## NeuralVault v1 (M06a)
+Implemented cloud entities:
+- `neural_canonical_note_versions`: immutable canonical note versions keyed to existing catalog `conceptId`, with source IDs, supersedes link, status and SHA-256 content fingerprint.
+- `neural_personal_annotations`: learner-owned mutable notes keyed to canonical `conceptId`, optional canonical-note version anchor, optimistic `revision`, and real deletion support.
+
+Canonical note storage does not imply publication. Learner-visible canonical medical notes require a later review/publication gate. Personal annotations are exported with learner data and remain separate from canonical content.
