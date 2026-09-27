@@ -54,4 +54,4 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 ## M06 slices
 - M06a — IN PROGRESS: canonical concept-linked note version storage, learner-scoped personal annotation CRUD, export and responsive hosted NeuralVault workspace are live; one real authenticated personal-note lifecycle remains to be exercised on the hosted UI.
 - M06b — IN PROGRESS: the existing Medical/References/Rights review ledger now supports canonical NeuralVault note versions, mandatory provenance and server-only publication; the first real canonical note is in review.
-- M06c — PLANNED: concept/note search, update-aware annotation UX and retrieval links from Study Now/QBank.
+- M06c — IN PROGRESS: learner-safe concept/note search, update-aware annotation anchor states and exact concept deep links from QBank are live; hosted search/deep-link verification and later Study Now retrieval integration remain.
