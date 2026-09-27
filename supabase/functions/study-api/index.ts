@@ -764,7 +764,20 @@ Deno.serve(async (req: Request) => {
       }
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
       if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
-      return { ...result, question: learnerQuestion(q), receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
+      const { data: mediaPrompt, error: mediaError } = await admin.rpc("content_media_prompt", {
+        p_question_version_id: q.questionVersionId
+      });
+      if (mediaError) fail(500, "media_prompt_failed");
+      return {
+        ...result,
+        question: {
+          ...learnerQuestion(q),
+          media: Array.isArray(mediaPrompt?.media) ? mediaPrompt.media : []
+        },
+        receipt: attempt?.receipt ?? null,
+        memoryJudgment,
+        recommendationContext
+      };
     };
 
     const url = new URL(req.url);
