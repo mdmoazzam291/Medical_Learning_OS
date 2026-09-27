@@ -111,6 +111,19 @@ function mapRightsWriteError(error: any): never {
   fail(500, "rights_write_failed");
 }
 
+function mapNeuralNoteReviewWriteError(error: any): never {
+  const message = String(error?.message || "");
+  if (error?.code === "23505") fail(409, "review_already_recorded");
+  if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+  if (message.includes("author_cannot_self_review")) fail(403, "author_cannot_self_review");
+  if (message.includes("neural_note_unknown")) fail(404, "neural_note_not_found");
+  if (message.includes("neural_note_not_in_review")) fail(409, "neural_note_not_in_review");
+  if (message.includes("neural_note_review_rejected")) fail(409, "neural_note_review_rejected");
+  if (message.includes("review_target_sources_missing")) fail(409, "review_target_invalid");
+  if (message.includes("rights_not_resolved")) fail(409, "rights_not_resolved");
+  fail(500, "review_write_failed");
+}
+
 function mapReviewWriteError(error: any): never {
   const message = String(error?.message || "");
   if (error?.code === "23505") fail(409, "review_already_recorded");
@@ -210,6 +223,68 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, { reviewKind: kind, items: queue });
     }
 
+    if (req.method === "GET" && path === "/note-queue") {
+      if ([...url.searchParams.keys()].some((key) => key !== "kind")) fail(400, "query_not_supported");
+      const kind = reviewKind(url.searchParams.get("kind"));
+      await requireGrant(kind);
+
+      const [
+        { data: notes, error: noteError },
+        { data: decisions, error: decisionError },
+        { data: catalog, error: catalogError }
+      ] = await Promise.all([
+        trustedRead("neural_note_queue", async () =>
+          admin.from("neural_canonical_note_versions")
+            .select("id,concept_id,version,supersedes_id,title,body_markdown,source_ids,status,content_sha256,author_id,created_at")
+            .eq("status", "in_review")
+            .order("created_at", { ascending: true })
+            .order("id", { ascending: true })
+        ),
+        trustedRead("neural_note_decisions", async () =>
+          admin.from("content_review_events").select("target_id")
+            .eq("target_type", "neural_note_version")
+            .eq("review_kind", kind)
+            .order("reviewed_at", { ascending: true })
+        ),
+        trustedRead("neural_note_catalog", async () =>
+          admin.from("study_catalog").select("body,version").eq("id", 1).single()
+        )
+      ]);
+
+      if (noteError) fail(500, "review_note_queue_unavailable");
+      if (decisionError) fail(500, "review_evidence_unavailable");
+      if (catalogError || !catalog) fail(500, "review_catalog_unavailable");
+
+      const reviewed = new Set((decisions ?? []).map((row: any) => String(row.target_id)));
+      const sources = Array.isArray((catalog.body as any)?.sources) ? (catalog.body as any).sources : [];
+      const queue = (notes ?? [])
+        .filter((note: any) => note?.author_id !== reviewerId && !reviewed.has(String(note?.id)))
+        .map((note: any) => ({
+          note: {
+            noteVersionId: note.id,
+            conceptId: note.concept_id,
+            version: note.version,
+            supersedesNoteVersionId: note.supersedes_id,
+            title: note.title,
+            bodyMarkdown: note.body_markdown,
+            sourceIds: note.source_ids,
+            status: note.status,
+            contentSha256: note.content_sha256,
+            createdAt: note.created_at
+          },
+          sources: sources.filter(
+            (source: any) => Array.isArray(note.source_ids) && note.source_ids.includes(source?.sourceId)
+          )
+        }));
+
+      return response(req, 200, {
+        reviewKind: kind,
+        targetType: "neural_note_version",
+        catalogVersion: catalog.version,
+        items: queue
+      });
+    }
+
     if (req.method === "POST" && path === "/source-rights") {
       if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
@@ -237,6 +312,41 @@ Deno.serve(async (req: Request) => {
         rightsStatus: status,
         sourceFingerprintSha256: receipt.source_fingerprint_sha256,
         reviewedAt: receipt.reviewed_at
+      });
+    }
+
+    if (req.method === "POST" && path === "/note-reviews") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, ["noteVersionId", "reviewKind", "decision", "notes"]);
+      const noteVersionId = identifier(input.noteVersionId);
+      const kind = reviewKind(input.reviewKind);
+      if (!["approved", "rejected"].includes(String(input.decision))) fail(400, "invalid_review_decision");
+      if (typeof input.notes !== "string" || input.notes.trim().length < 1 || input.notes.trim().length > 4000) {
+        fail(400, "invalid_review_notes");
+      }
+      await requireGrant(kind);
+
+      const { data, error } = await admin.rpc("record_neural_note_review", {
+        p_note_version_id: noteVersionId,
+        p_review_kind: kind,
+        p_reviewer: reviewerId,
+        p_decision: String(input.decision),
+        p_notes: input.notes.trim()
+      });
+      if (error) mapNeuralNoteReviewWriteError(error);
+      const receipt = Array.isArray(data) ? data[0] : data;
+      if (!receipt?.review_id || !receipt?.target_sha256 || !receipt?.reviewed_at) fail(500, "review_write_failed");
+
+      return response(req, 200, {
+        reviewId: receipt.review_id,
+        noteVersionId,
+        targetType: "neural_note_version",
+        reviewKind: kind,
+        decision: String(input.decision),
+        targetSha256: receipt.target_sha256,
+        reviewedAt: receipt.reviewed_at,
+        noteStatus: receipt.note_status
       });
     }
 
