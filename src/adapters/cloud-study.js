@@ -55,6 +55,30 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     examSimulatorReadiness(ruleSetId) {
       return request(`/exam-simulator/readiness?ruleSetId=${encodeURIComponent(ruleSetId)}`);
     },
+    startExamRun(ruleSetId) {
+      return request('/exam-simulator/runs', {
+        method: 'POST',
+        body: { ruleSetId }
+      });
+    },
+    resumeExamRun() {
+      return request('/exam-simulator/runs/current');
+    },
+    examRun(runId) {
+      return request(`/exam-simulator/runs/${encodeURIComponent(runId)}`);
+    },
+    setExamRunAnswer(runId, { requestId, expectedRevision, questionVersionId, optionId }) {
+      return request(`/exam-simulator/runs/${encodeURIComponent(runId)}/answer`, {
+        method: 'POST',
+        body: { requestId, expectedRevision, questionVersionId, optionId }
+      });
+    },
+    setExamRunReview(runId, { requestId, expectedRevision, questionVersionId, markedForReview }) {
+      return request(`/exam-simulator/runs/${encodeURIComponent(runId)}/review`, {
+        method: 'POST',
+        body: { requestId, expectedRevision, questionVersionId, markedForReview }
+      });
+    },
     vaultConcepts() { return request('/vault/concepts'); },
     vaultSearch(query) { return request(`/vault/search?q=${encodeURIComponent(query)}`); },
     vaultConcept(conceptId) {
