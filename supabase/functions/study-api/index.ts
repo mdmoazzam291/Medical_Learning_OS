@@ -526,6 +526,18 @@ Deno.serve(async (req: Request) => {
       if (!data) fail(404, "exam_run_not_found");
       return data as any;
     };
+    const getExamRunEvent = async (runId: string, requestKey: string) => {
+      const { data, error } = await trustedRead("exam_run_event", async () =>
+        admin.from("exam_run_events")
+          .select("event_type,event,revision_after")
+          .eq("run_id", runId)
+          .eq("learner_id", learnerId)
+          .eq("request_key", requestKey)
+          .maybeSingle()
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      return data as any ?? null;
+    };
     const getExamReceipt = async (runId: string) => {
       const { data, error } = await trustedRead("exam_receipt", async () =>
         admin.from("exam_run_receipts")
@@ -1200,6 +1212,29 @@ Deno.serve(async (req: Request) => {
       const requestId = identifier(input.requestId);
       const expectedRevision = integer(input.expectedRevision, 0, 1000000);
       const questionVersionId = identifier(input.questionVersionId);
+      const optionId = action === "answer"
+        ? (input.optionId === null ? null : identifier(input.optionId))
+        : null;
+      const markedForReview = action === "review" ? input.markedForReview : null;
+      if (action === "review" && typeof markedForReview !== "boolean") fail(400, "invalid_review_flag");
+
+      const priorEvent = await getExamRunEvent(runId, requestId);
+      if (priorEvent) {
+        const sameIntent = action === "answer"
+          ? priorEvent.event_type === "answer.set" &&
+            priorEvent.event?.questionVersionId === questionVersionId &&
+            priorEvent.event?.optionId === optionId
+          : priorEvent.event_type === "review.set" &&
+            priorEvent.event?.questionVersionId === questionVersionId &&
+            priorEvent.event?.markedForReview === markedForReview;
+        if (!sameIntent) fail(409, "exam_request_key_collision");
+        let current = await getExamRun(runId);
+        current = await syncExamClock(current, now);
+        return response(req, 200, {
+          ...(await examRunView(current, now, true)),
+          idempotent: true
+        });
+      }
 
       let row = await getExamRun(runId);
       row = await syncExamClock(row, now);
@@ -1221,7 +1256,6 @@ Deno.serve(async (req: Request) => {
       let eventType: string;
       try {
         if (action === "answer") {
-          const optionId = input.optionId === null ? null : identifier(input.optionId);
           if (optionId !== null) {
             const catalogData = await examCatalogQuestionMap();
             const question: any = catalogData.byVersion.get(questionVersionId);
@@ -1235,16 +1269,15 @@ Deno.serve(async (req: Request) => {
           eventType = "answer.set";
           event = { questionVersionId, optionId, serverRecordedAt: now };
         } else {
-          if (typeof input.markedForReview !== "boolean") fail(400, "invalid_review_flag");
           nextState = setExamReview(row.state, {
             questionVersionId,
-            markedForReview: input.markedForReview,
+            markedForReview,
             at: now
           });
           eventType = "review.set";
           event = {
             questionVersionId,
-            markedForReview: input.markedForReview,
+            markedForReview,
             serverRecordedAt: now
           };
         }
