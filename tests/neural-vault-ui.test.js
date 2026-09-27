@@ -47,3 +47,10 @@ test('NeuralVault startup honors exact concept deep links', () => {
   assert.match(source, /new URL\(location\.href\)\.searchParams\.get\('concept'\)/);
   assert.match(source, /reloadVault\(initialConceptId\)/);
 });
+
+
+test('production static server exposes NeuralVault HTML and module assets', async () => {
+  const serverSource = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
+  assert.match(serverSource, /'web\/vault\.html'/);
+  assert.match(serverSource, /'web\/vault\.js'/);
+});
