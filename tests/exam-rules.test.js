@@ -33,6 +33,7 @@ const complete = () => ({
     verifiedDate: '2026-01-02',
     notes: 'Synthetic test rules only'
   },
+  caveats: [],
   sources: [source()],
   rules: {
     deliveryMode: 'computer_based',
@@ -53,10 +54,37 @@ const complete = () => ({
   }
 });
 
-test('production exam registry starts empty until a ruleset is verified', () => {
+test('production registry contains a verified simulator-ready NEET-PG 2026 published-scheme preset', () => {
   const registry = JSON.parse(readFileSync(new URL('../data/exam-rules.json', import.meta.url), 'utf8'));
-  assert.deepEqual(validateExamRuleRegistry(registry), { schemaVersion: 1, ruleSets: [] });
-  assert.deepEqual(simulatorReadyRuleSets(registry), []);
+  const validated = validateExamRuleRegistry(registry);
+  const ready = simulatorReadyRuleSets(validated);
+  assert.equal(ready.length, 1);
+  const neet = ready[0];
+  assert.equal(neet.examId, 'neet-pg');
+  assert.equal(neet.ruleSetId, 'neet-pg:2026@1');
+  assert.equal(neet.rules.totalQuestions, 180);
+  assert.equal(neet.rules.totalDurationSeconds, 210 * 60);
+  assert.deepEqual(neet.rules.sections.map(s => s.questionCount), [36, 36, 36, 36, 36]);
+  assert.deepEqual(neet.rules.sections.map(s => s.durationSeconds), [42 * 60, 42 * 60, 42 * 60, 42 * 60, 42 * 60]);
+  assert.deepEqual(neet.rules.scoring, {
+    correct: 4,
+    incorrect: -1,
+    unanswered: 0,
+    markedForReviewScored: true
+  });
+  assert.deepEqual(neet.rules.navigation, {
+    earlySectionAdvanceAllowed: false,
+    revisitClosedSectionsAllowed: false,
+    timeCarryForwardAllowed: false,
+    reviewWithinOpenSectionAllowed: true
+  });
+  assert.equal(neet.sources.some(s => s.kind === 'official' && /drive\.google\.com/.test(s.url)), true);
+  assert.equal(neet.caveats.some(c => /actual number.*sections may vary/i.test(c)), true);
+
+  const preset = toExamSimulationPreset(neet);
+  assert.equal(preset.totalQuestions, 180);
+  assert.equal(preset.sections.length, 5);
+  assert.equal(preset.caveats.length > 0, true);
 });
 
 test('verified fully specified rules become an immutable simulator preset', () => {
@@ -135,4 +163,14 @@ test('ruleset history is sequential and cannot cross exam identities', () => {
   const crossExam = structuredClone(second);
   crossExam.examId = 'other-exam';
   assert.throws(() => validateExamRuleRegistry({ schemaVersion: 1, ruleSets: [first, crossExam] }), /different exam/);
+});
+
+
+test('operational caveats survive validation and simulator-preset conversion', () => {
+  const rules = complete();
+  rules.caveats = ['Synthetic operational caveat'];
+  const preset = toExamSimulationPreset(rules);
+  assert.deepEqual(preset.caveats, ['Synthetic operational caveat']);
+  rules.caveats[0] = 'changed';
+  assert.deepEqual(preset.caveats, ['Synthetic operational caveat']);
 });
