@@ -42,6 +42,9 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
 
   return {
     questions(filter = 'all') { return request(`/questions?filter=${encodeURIComponent(filter)}`); },
+    mediaPrompt(questionVersionId) {
+      return request(`/media?questionVersionId=${encodeURIComponent(questionVersionId)}`);
+    },
     progress() { return request('/progress'); },
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
     fsrsShadow() { return request('/revision/fsrs-shadow'); },
