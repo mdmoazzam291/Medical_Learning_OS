@@ -1,0 +1,1559 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "infectious:tetanus:dirty-major-wound-classification",
+      "label": "Dirty or major wound classification for tetanus prophylaxis",
+      "aliases": [
+        "tetanus-prone wound classification"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "emergency-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:tetanus:no-vaccine-under-five-years",
+      "label": "No tetanus vaccine after recent dose with completed primary series",
+      "aliases": [
+        "recent tetanus booster after wound"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "emergency-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:tetanus:clean-wound-ten-year-booster",
+      "label": "Tetanus booster interval for clean minor wounds",
+      "aliases": [
+        "clean wound booster interval"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "emergency-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:tetanus:dirty-wound-five-year-booster",
+      "label": "Tetanus booster interval for dirty or major wounds",
+      "aliases": [
+        "dirty wound booster interval"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "emergency-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:tetanus:tig-unknown-history-dirty-wound",
+      "label": "TIG prophylaxis for dirty wounds with unknown tetanus vaccination history",
+      "aliases": [
+        "tetanus immune globulin indication"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "emergency-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:gas-pharyngitis:viral-features-no-testing",
+      "label": "No GAS testing when clear viral pharyngitis features are present",
+      "aliases": [
+        "viral pharyngitis no strep test"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "microbiology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:gas-pharyngitis:testing-without-viral-features",
+      "label": "Microbiologic testing when viral features are absent in suspected GAS pharyngitis",
+      "aliases": [
+        "GAS pharyngitis RADT culture"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "microbiology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:gas-pharyngitis:negative-radt-child-culture",
+      "label": "Backup throat culture after a negative RADT in children",
+      "aliases": [
+        "negative RADT child throat culture"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "microbiology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:gas-pharyngitis:first-line-antibiotic",
+      "label": "First-line antibiotic choice for confirmed GAS pharyngitis",
+      "aliases": [
+        "penicillin amoxicillin GAS"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "microbiology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:gas-pharyngitis:return-after-antibiotics",
+      "label": "Return to school or work after treatment for GAS pharyngitis",
+      "aliases": [
+        "GAS contagious after antibiotics"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "microbiology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:pertussis:household-pep-window",
+      "label": "Pertussis PEP timing for asymptomatic household contacts",
+      "aliases": [
+        "pertussis household PEP 21 days"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:pertussis:infants-high-risk",
+      "label": "Infants as a high-risk group for severe pertussis",
+      "aliases": [
+        "severe pertussis infant risk"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:pertussis:comorbidity-high-risk",
+      "label": "Pre-existing conditions that increase risk from pertussis",
+      "aliases": [
+        "pertussis high risk asthma immunocompromise"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:pertussis:third-trimester-contact-risk",
+      "label": "Pertussis PEP consideration for people who will contact high-risk infants",
+      "aliases": [
+        "third trimester pertussis PEP"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:pertussis:widespread-transmission-monitoring",
+      "label": "Pertussis contact management during ongoing widespread transmission",
+      "aliases": [
+        "pertussis widespread outbreak monitoring"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "pediatrics",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:meningococcal:close-contact-prophylaxis",
+      "label": "Chemoprophylaxis for close contacts of invasive meningococcal disease",
+      "aliases": [
+        "meningococcal contact prophylaxis"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "microbiology",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:meningococcal:airway-exposure-contact",
+      "label": "Healthcare airway exposure as a meningococcal chemoprophylaxis indication",
+      "aliases": [
+        "meningococcal oral secretion exposure"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "microbiology",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:meningococcal:prophylaxis-early-timing",
+      "label": "Early timing of meningococcal contact chemoprophylaxis",
+      "aliases": [
+        "meningococcal prophylaxis within 24 hours"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "microbiology",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:meningococcal:late-prophylaxis-limited",
+      "label": "Limited value of delayed meningococcal chemoprophylaxis",
+      "aliases": [
+        "meningococcal prophylaxis after 14 days"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "microbiology",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:meningococcal:no-screening-culture-before-pep",
+      "label": "Screening cultures are not used to decide meningococcal chemoprophylaxis",
+      "aliases": [
+        "meningococcal contact throat culture"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "microbiology",
+        "community-medicine",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:hbv-exposure:documented-responder-no-pep",
+      "label": "HBV occupational exposure management for a documented vaccine responder",
+      "aliases": [
+        "anti-HBs 10 no HBV PEP"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "occupational-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:hbv-exposure:vaccinated-no-antihbs-tests",
+      "label": "Immediate testing after exposure when vaccine response is undocumented",
+      "aliases": [
+        "vaccinated clinician no anti-HBs documentation"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "occupational-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:hbv-exposure:low-antihbs-source-positive",
+      "label": "HBV PEP for low anti-HBs after a complete series with positive or unknown source",
+      "aliases": [
+        "HBIG revaccination anti-HBs under 10"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "occupational-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:hbv-exposure:two-series-nonresponder",
+      "label": "HBV PEP for documented nonresponse after two complete vaccine series",
+      "aliases": [
+        "HBV nonresponder HBIG two doses"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "occupational-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:hbv-exposure:unvaccinated-source-positive",
+      "label": "HBV PEP for an unvaccinated clinician exposed to a positive or unknown source",
+      "aliases": [
+        "unvaccinated HBV exposure HBIG vaccine"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "occupational-medicine",
+        "immunology",
+        "guideline-us-cdc"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "cdc:tetanus-wound-management:2026-09-08",
+      "title": "CDC: Clinical Guidance for Wound Management to Prevent Tetanus",
+      "url": "https://www.cdc.gov/tetanus/hcp/clinical-guidance/index.html",
+      "version": "updated-2026-09-08",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official CDC clinical guidance page used only for factual grounding of original questions. No source text is intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "cdc:gas-pharyngitis:2025-11-18",
+      "title": "CDC: Clinical Guidance for Group A Streptococcal Pharyngitis",
+      "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "version": "updated-2025-11-18",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official CDC clinical guidance page used only for factual grounding of original questions. No source text is intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "cdc:pertussis-pep:2025-12-02",
+      "title": "CDC: Postexposure Antimicrobial Prophylaxis for Pertussis",
+      "url": "https://www.cdc.gov/pertussis/php/postexposure-prophylaxis/",
+      "version": "updated-2025-12-02",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official CDC public-health guidance page used only for factual grounding of original questions. No source text is intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27",
+      "title": "CDC: Manual for the Surveillance of Vaccine-Preventable Diseases, Chapter 8: Meningococcal Disease",
+      "url": "https://www.cdc.gov/surv-manual/php/table-of-contents/chapter-8-meningococcal-disease.html",
+      "version": "accessed-2026-09-27",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official CDC surveillance guidance page used only for factual grounding of original questions. No source text is intended to be reproduced; independent rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "cdc:hbv-exposure-hcp:2024-05-16",
+      "title": "CDC: Responding to HBV Exposures in Health Care Settings",
+      "url": "https://www.cdc.gov/hepatitis-b/hcp/infection-control/index.html",
+      "version": "updated-2024-05-16",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official CDC clinical guidance page used only for factual grounding of original questions. No source text is intended to be reproduced; independent rights review remains required before publication."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "infectious:tetanus:soil-puncture-wound-classification",
+      "questionVersionId": "infectious:tetanus:soil-puncture-wound-classification@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient presents with a puncture wound visibly contaminated with soil. Under current CDC tetanus wound guidance, how should this injury be classified for tetanus exposure risk?",
+      "options": [
+        {
+          "optionId": "dirty-major",
+          "text": "Dirty or major wound"
+        },
+        {
+          "optionId": "clean-minor",
+          "text": "Clean and minor wound"
+        },
+        {
+          "optionId": "no-risk",
+          "text": "No tetanus-risk wound"
+        },
+        {
+          "optionId": "infection-only",
+          "text": "Classify only if clinical infection develops"
+        }
+      ],
+      "answerOptionId": "dirty-major",
+      "explanation": "CDC categorizes penetrating or puncture wounds and wounds contaminated with soil as dirty or major wounds for tetanus-risk assessment.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:tetanus:dirty-major-wound-classification",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:tetanus-wound-management:2026-09-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:tetanus:complete-series-last-dose-3y-crush",
+      "questionVersionId": "infectious:tetanus:complete-series-last-dose-3y-crush@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "An immunocompetent adult completed the primary tetanus vaccine series and received the last tetanus-containing vaccine 3 years ago. The patient now has a crush injury. What does current CDC wound guidance recommend regarding tetanus vaccination?",
+      "options": [
+        {
+          "optionId": "no-vaccine",
+          "text": "No tetanus vaccination is needed for this wound"
+        },
+        {
+          "optionId": "booster-now",
+          "text": "Give a tetanus-containing booster now"
+        },
+        {
+          "optionId": "restart-series",
+          "text": "Restart the primary tetanus series"
+        },
+        {
+          "optionId": "tig-only",
+          "text": "Give TIG instead of considering vaccination"
+        }
+      ],
+      "answerOptionId": "no-vaccine",
+      "explanation": "When the primary series is complete and the most recent tetanus vaccination was less than 5 years ago, CDC does not recommend another tetanus vaccine regardless of wound type.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:tetanus:no-vaccine-under-five-years",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:tetanus-wound-management:2026-09-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:tetanus:clean-minor-last-dose-11y",
+      "questionVersionId": "infectious:tetanus:clean-minor-last-dose-11y@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient with a complete tetanus primary series has a clean, minor laceration. The last tetanus-containing vaccine was 11 years ago. Which vaccination action is indicated under current CDC wound guidance?",
+      "options": [
+        {
+          "optionId": "booster",
+          "text": "Administer a tetanus-containing vaccine booster"
+        },
+        {
+          "optionId": "no-vaccine",
+          "text": "No tetanus vaccination is indicated"
+        },
+        {
+          "optionId": "tig",
+          "text": "Administer TIG without a vaccine"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Give prophylactic antibiotics instead of vaccination"
+        }
+      ],
+      "answerOptionId": "booster",
+      "explanation": "For a clean and minor wound in someone with a complete primary series, CDC recommends a tetanus-containing vaccine when 10 or more years have elapsed since the last dose.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:tetanus:clean-wound-ten-year-booster",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:tetanus-wound-management:2026-09-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:tetanus:dirty-wound-last-dose-6y",
+      "questionVersionId": "infectious:tetanus:dirty-wound-last-dose-6y@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient with a complete tetanus primary series sustains a dirty wound. The last tetanus-containing vaccine was 6 years ago. What vaccination action is recommended by current CDC wound guidance?",
+      "options": [
+        {
+          "optionId": "booster",
+          "text": "Administer a tetanus-containing vaccine booster"
+        },
+        {
+          "optionId": "no-vaccine",
+          "text": "No tetanus vaccination is needed"
+        },
+        {
+          "optionId": "restart-series",
+          "text": "Restart the entire primary series"
+        },
+        {
+          "optionId": "tig-only",
+          "text": "Use TIG as a substitute for vaccination"
+        }
+      ],
+      "answerOptionId": "booster",
+      "explanation": "For dirty or major wounds in people with a complete primary series, CDC recommends a tetanus-containing vaccine when 5 or more years have elapsed since the last dose.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:tetanus:dirty-wound-five-year-booster",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:tetanus-wound-management:2026-09-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:tetanus:dirty-puncture-unknown-vaccine-history",
+      "questionVersionId": "infectious:tetanus:dirty-puncture-unknown-vaccine-history@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient with an unknown tetanus vaccination history presents with a dirty puncture wound. Which passive prophylaxis is indicated under current CDC wound guidance?",
+      "options": [
+        {
+          "optionId": "tig",
+          "text": "Tetanus immune globulin is indicated"
+        },
+        {
+          "optionId": "no-tig",
+          "text": "Tetanus immune globulin is never indicated"
+        },
+        {
+          "optionId": "ivig",
+          "text": "Routine intravenous immunoglobulin is the preferred prophylaxis"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Antibiotic prophylaxis replaces passive immunization"
+        }
+      ],
+      "answerOptionId": "tig",
+      "explanation": "CDC recommends tetanus immune globulin for dirty or major wounds when tetanus vaccination history is unknown, absent, or the primary series is incomplete.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:tetanus:tig-unknown-history-dirty-wound",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:tetanus-wound-management:2026-09-08"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:gas-pharyngitis:viral-symptoms-testing",
+      "questionVersionId": "infectious:gas-pharyngitis:viral-symptoms-testing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient with sore throat also has cough, rhinorrhea, and hoarseness. According to current CDC group A streptococcal pharyngitis guidance, what is the appropriate testing approach?",
+      "options": [
+        {
+          "optionId": "no-gas-test",
+          "text": "Do not test for group A streptococcus when the viral features are clear"
+        },
+        {
+          "optionId": "culture-all",
+          "text": "Perform a throat culture in every case"
+        },
+        {
+          "optionId": "rad-all",
+          "text": "Perform a rapid antigen test in every case"
+        },
+        {
+          "optionId": "serology",
+          "text": "Order streptococcal antibody serology for acute diagnosis"
+        }
+      ],
+      "answerOptionId": "no-gas-test",
+      "explanation": "CDC states that patients with clear viral symptoms can be diagnosed clinically with viral pharyngitis and do not need testing for group A streptococcus.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:gas-pharyngitis:viral-features-no-testing",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:gas-pharyngitis:2025-11-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:gas-pharyngitis:no-viral-features-diagnostic-approach",
+      "questionVersionId": "infectious:gas-pharyngitis:no-viral-features-diagnostic-approach@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A school-age child has acute pharyngitis without cough, rhinorrhea, hoarseness, oral ulcers, or conjunctivitis. Which diagnostic approach is supported by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "radt-or-culture",
+          "text": "Use a rapid antigen detection test or throat culture to confirm group A streptococcal pharyngitis"
+        },
+        {
+          "optionId": "clinical-only",
+          "text": "Diagnose group A streptococcal pharyngitis by clinical examination alone"
+        },
+        {
+          "optionId": "antibody-test",
+          "text": "Use antistreptolysin O titre as the primary acute diagnostic test"
+        },
+        {
+          "optionId": "no-test",
+          "text": "No microbiologic testing is useful"
+        }
+      ],
+      "answerOptionId": "radt-or-culture",
+      "explanation": "When clear viral symptoms are absent, clinical examination alone cannot reliably distinguish viral from group A streptococcal pharyngitis; CDC supports RADT or throat culture for confirmation.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:gas-pharyngitis:testing-without-viral-features",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:gas-pharyngitis:2025-11-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:gas-pharyngitis:child-negative-radt-next-test",
+      "questionVersionId": "infectious:gas-pharyngitis:child-negative-radt-next-test@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "An 8-year-old with suspected group A streptococcal pharyngitis has a negative rapid antigen detection test. What is the recommended next diagnostic step under current CDC guidance?",
+      "options": [
+        {
+          "optionId": "culture",
+          "text": "Obtain a backup throat culture"
+        },
+        {
+          "optionId": "no-followup",
+          "text": "No further testing is routinely needed"
+        },
+        {
+          "optionId": "blood-culture",
+          "text": "Obtain a blood culture"
+        },
+        {
+          "optionId": "aso",
+          "text": "Order an antistreptolysin O titre"
+        }
+      ],
+      "answerOptionId": "culture",
+      "explanation": "CDC recommends confirming a negative RADT with a throat culture in symptomatic children aged 3 years or older.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:gas-pharyngitis:negative-radt-child-culture",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:gas-pharyngitis:2025-11-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:gas-pharyngitis:confirmed-first-line-treatment",
+      "questionVersionId": "infectious:gas-pharyngitis:confirmed-first-line-treatment@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A patient has group A streptococcal pharyngitis confirmed by a positive diagnostic test and has no penicillin allergy. Which antibiotic choice is preferred by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "pen-amox",
+          "text": "Penicillin or amoxicillin"
+        },
+        {
+          "optionId": "azithro",
+          "text": "Azithromycin as the universal first choice"
+        },
+        {
+          "optionId": "cipro",
+          "text": "Ciprofloxacin"
+        },
+        {
+          "optionId": "metronidazole",
+          "text": "Metronidazole"
+        }
+      ],
+      "answerOptionId": "pen-amox",
+      "explanation": "CDC lists penicillin or amoxicillin as the antibiotic of choice for confirmed group A streptococcal pharyngitis.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:gas-pharyngitis:first-line-antibiotic",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:gas-pharyngitis:2025-11-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:gas-pharyngitis:return-school-timing",
+      "questionVersionId": "infectious:gas-pharyngitis:return-school-timing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A child with confirmed group A streptococcal pharyngitis has started appropriate antibiotics. Which condition best matches current CDC advice before returning to school?",
+      "options": [
+        {
+          "optionId": "afebrile-12-24",
+          "text": "The child is afebrile and at least 12–24 hours have passed after starting appropriate antibiotics"
+        },
+        {
+          "optionId": "immediate",
+          "text": "Return immediately after the first antibiotic dose regardless of fever"
+        },
+        {
+          "optionId": "seven-days",
+          "text": "Remain home for 7 days after starting antibiotics"
+        },
+        {
+          "optionId": "culture-negative",
+          "text": "Remain home until a repeat throat culture is negative"
+        }
+      ],
+      "answerOptionId": "afebrile-12-24",
+      "explanation": "CDC advises that people with group A streptococcal pharyngitis remain home until afebrile and at least 12–24 hours after appropriate antibiotic therapy has begun.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:gas-pharyngitis:return-after-antibiotics",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:gas-pharyngitis:2025-11-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:pertussis:household-contact-pep-timing",
+      "questionVersionId": "infectious:pertussis:household-contact-pep-timing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "An asymptomatic household member has been exposed to a person with pertussis. Within what interval does current CDC guidance support providing postexposure prophylaxis to household contacts?",
+      "options": [
+        {
+          "optionId": "21-index-cough",
+          "text": "Within 21 days of cough onset in the index patient"
+        },
+        {
+          "optionId": "48-hours",
+          "text": "Only within 48 hours of cough onset"
+        },
+        {
+          "optionId": "six-weeks",
+          "text": "Only after 6 weeks have passed"
+        },
+        {
+          "optionId": "symptoms-only",
+          "text": "Only after the household contact develops symptoms"
+        }
+      ],
+      "answerOptionId": "21-index-cough",
+      "explanation": "CDC supports pertussis PEP for all asymptomatic household contacts within 21 days of onset of cough in the index patient.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:pertussis:household-pep-window",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:pertussis-pep:2025-12-02"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:pertussis:high-risk-age-group",
+      "questionVersionId": "infectious:pertussis:high-risk-age-group@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "Which exposed person is specifically identified by current CDC guidance as being at high risk of severe pertussis infection?",
+      "options": [
+        {
+          "optionId": "infant",
+          "text": "An infant younger than 12 months"
+        },
+        {
+          "optionId": "healthy-teen",
+          "text": "A healthy 16-year-old with no risk factors"
+        },
+        {
+          "optionId": "healthy-young-adult",
+          "text": "A healthy 25-year-old with no risk factors"
+        },
+        {
+          "optionId": "healthy-middle-age",
+          "text": "A healthy 45-year-old with no risk factors"
+        }
+      ],
+      "answerOptionId": "infant",
+      "explanation": "CDC identifies infants under 12 months as a group at high risk for severe pertussis, with particularly serious complications in very young infants.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:pertussis:infants-high-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:pertussis-pep:2025-12-02"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:pertussis:asthma-high-risk-pep",
+      "questionVersionId": "infectious:pertussis:asthma-high-risk-pep@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A person exposed to pertussis has moderate-to-severe medically treated asthma. How does current CDC PEP guidance categorize this person?",
+      "options": [
+        {
+          "optionId": "high-risk",
+          "text": "As having a condition that may increase the risk of severe pertussis and therefore deserving PEP consideration"
+        },
+        {
+          "optionId": "low-risk",
+          "text": "As automatically low risk because asthma is unrelated"
+        },
+        {
+          "optionId": "contraindicated",
+          "text": "As having a contraindication to pertussis PEP"
+        },
+        {
+          "optionId": "vaccine-only",
+          "text": "As needing vaccination only, never antimicrobial PEP"
+        }
+      ],
+      "answerOptionId": "high-risk",
+      "explanation": "CDC includes people with pre-existing conditions that may be exacerbated by pertussis, including moderate-to-severe medically treated asthma, among those at high risk of severe infection.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:pertussis:comorbidity-high-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:pertussis-pep:2025-12-02"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:pertussis:third-trimester-exposure-pep",
+      "questionVersionId": "infectious:pertussis:third-trimester-exposure-pep@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A woman in the third trimester of pregnancy is exposed to an infectious pertussis case. Which statement best reflects current CDC postexposure guidance?",
+      "options": [
+        {
+          "optionId": "pep-supported",
+          "text": "PEP is supported because she will soon have contact with a newborn at high risk of severe pertussis"
+        },
+        {
+          "optionId": "never-pep",
+          "text": "PEP is never used during pregnancy"
+        },
+        {
+          "optionId": "wait-symptoms",
+          "text": "PEP should be withheld until she develops cough"
+        },
+        {
+          "optionId": "newborn-only",
+          "text": "Only the newborn can receive any preventive intervention"
+        }
+      ],
+      "answerOptionId": "pep-supported",
+      "explanation": "CDC supports PEP for people who will have contact with individuals at high risk, and specifically notes third-trimester pregnant women because they may transmit pertussis to their newborn.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:pertussis:third-trimester-contact-risk",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:pertussis-pep:2025-12-02"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:pertussis:ongoing-transmission-multiple-pep-rounds",
+      "questionVersionId": "infectious:pertussis:ongoing-transmission-multiple-pep-rounds@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "In a setting with continuing pertussis transmission despite earlier interventions, which strategy is supported by current CDC guidance rather than repeated rounds of antibiotics for exposed people?",
+      "options": [
+        {
+          "optionId": "monitor-21",
+          "text": "Monitor exposed people for pertussis signs and symptoms for 21 days"
+        },
+        {
+          "optionId": "repeat-antibiotics",
+          "text": "Give repeated antibiotic courses to every contact indefinitely"
+        },
+        {
+          "optionId": "ignore",
+          "text": "Stop all surveillance and follow-up"
+        },
+        {
+          "optionId": "culture-weekly",
+          "text": "Require weekly cultures from every exposed person"
+        }
+      ],
+      "answerOptionId": "monitor-21",
+      "explanation": "When continued pertussis transmission is evident, CDC does not recommend multiple rounds of antibiotics and instead advises monitoring exposed people for symptoms for 21 days.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:pertussis:widespread-transmission-monitoring",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:pertussis-pep:2025-12-02"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:meningococcal:vaccinated-household-contact-prophylaxis",
+      "questionVersionId": "infectious:meningococcal:vaccinated-household-contact-prophylaxis@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A vaccinated household member has had close contact with a patient with invasive meningococcal disease. What does current CDC guidance recommend?",
+      "options": [
+        {
+          "optionId": "chemoprophylaxis",
+          "text": "Give antimicrobial chemoprophylaxis despite vaccination status"
+        },
+        {
+          "optionId": "none-vaccinated",
+          "text": "No chemoprophylaxis is needed because the contact is vaccinated"
+        },
+        {
+          "optionId": "culture-first",
+          "text": "Delay prophylaxis until a throat culture is positive"
+        },
+        {
+          "optionId": "vaccine-only",
+          "text": "Use vaccination alone as immediate contact management"
+        }
+      ],
+      "answerOptionId": "chemoprophylaxis",
+      "explanation": "CDC recommends antimicrobial chemoprophylaxis for close contacts of meningococcal disease regardless of vaccination status.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:meningococcal:close-contact-prophylaxis",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:meningococcal:intubation-exposure-prophylaxis",
+      "questionVersionId": "infectious:meningococcal:intubation-exposure-prophylaxis@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A healthcare worker performed endotracheal intubation on a patient later confirmed to have meningococcal disease and was directly exposed to respiratory secretions. Which action is supported by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "prophylaxis",
+          "text": "Provide antimicrobial chemoprophylaxis"
+        },
+        {
+          "optionId": "none",
+          "text": "No action because healthcare workers are never considered close contacts"
+        },
+        {
+          "optionId": "culture-only",
+          "text": "Obtain a nasopharyngeal culture and treat only if positive"
+        },
+        {
+          "optionId": "isolation-only",
+          "text": "Use work exclusion alone without considering prophylaxis"
+        }
+      ],
+      "answerOptionId": "prophylaxis",
+      "explanation": "CDC includes healthcare personnel who manage an airway or are exposed to respiratory secretions among contacts who should receive meningococcal chemoprophylaxis.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:meningococcal:airway-exposure-contact",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:meningococcal:close-contact-prophylaxis-timing",
+      "questionVersionId": "infectious:meningococcal:close-contact-prophylaxis-timing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A close contact of a patient with invasive meningococcal disease is identified. When should chemoprophylaxis ideally be administered according to current CDC guidance?",
+      "options": [
+        {
+          "optionId": "asap-24",
+          "text": "As soon as possible, ideally within 24 hours after identification of the index patient"
+        },
+        {
+          "optionId": "day-7",
+          "text": "Wait until at least 7 days after the case is identified"
+        },
+        {
+          "optionId": "day-14",
+          "text": "Wait until 14 days after symptom onset"
+        },
+        {
+          "optionId": "culture-first",
+          "text": "Only after screening cultures return"
+        }
+      ],
+      "answerOptionId": "asap-24",
+      "explanation": "The risk of secondary meningococcal disease is highest early, so CDC recommends chemoprophylaxis as soon as possible, ideally within 24 hours after identification of the index patient.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:meningococcal:prophylaxis-early-timing",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:meningococcal:prophylaxis-after-14-days",
+      "questionVersionId": "infectious:meningococcal:prophylaxis-after-14-days@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A close contact first presents more than 14 days after the index patient's meningococcal disease began. Which statement best matches current CDC guidance?",
+      "options": [
+        {
+          "optionId": "limited-benefit",
+          "text": "Chemoprophylaxis given this late is probably of limited or no benefit"
+        },
+        {
+          "optionId": "more-effective",
+          "text": "Chemoprophylaxis becomes more effective after 14 days"
+        },
+        {
+          "optionId": "mandatory-double",
+          "text": "A double-duration prophylaxis course is mandatory"
+        },
+        {
+          "optionId": "culture-determines",
+          "text": "Prophylaxis is required only if a screening culture is positive"
+        }
+      ],
+      "answerOptionId": "limited-benefit",
+      "explanation": "CDC notes that meningococcal chemoprophylaxis administered more than 14 days after onset of disease in the index patient is probably of limited or no benefit.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:meningococcal:late-prophylaxis-limited",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:meningococcal:contact-culture-before-prophylaxis",
+      "questionVersionId": "infectious:meningococcal:contact-culture-before-prophylaxis@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "Before giving chemoprophylaxis to an eligible close contact of invasive meningococcal disease, should an oropharyngeal or nasopharyngeal culture be used to decide whether prophylaxis is necessary?",
+      "options": [
+        {
+          "optionId": "no",
+          "text": "No; screening cultures are not useful for deciding the need for chemoprophylaxis and can delay prevention"
+        },
+        {
+          "optionId": "yes-always",
+          "text": "Yes; prophylaxis should never be given without a positive culture"
+        },
+        {
+          "optionId": "blood-culture",
+          "text": "Only a blood culture can determine eligibility"
+        },
+        {
+          "optionId": "serology",
+          "text": "Only meningococcal antibody testing can determine eligibility"
+        }
+      ],
+      "answerOptionId": "no",
+      "explanation": "CDC states that oropharyngeal or nasopharyngeal cultures are not useful for determining the need for meningococcal chemoprophylaxis and may delay effective prevention.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:meningococcal:no-screening-culture-before-pep",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:meningococcal-surveillance-ch8:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hbv-exposure:documented-responder-management",
+      "questionVersionId": "infectious:hbv-exposure:documented-responder-management@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A clinician has written documentation of a complete hepatitis B vaccine series and a prior anti-HBs concentration of at least 10 mIU/mL. After an occupational blood exposure, what postexposure management is recommended by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "no-pep",
+          "text": "No HBV postexposure prophylaxis is needed regardless of the source patient's HBsAg status"
+        },
+        {
+          "optionId": "hbig",
+          "text": "Give HBIG routinely"
+        },
+        {
+          "optionId": "restart",
+          "text": "Restart the hepatitis B vaccine series"
+        },
+        {
+          "optionId": "hbig-vaccine",
+          "text": "Give both HBIG and a new vaccine series"
+        }
+      ],
+      "answerOptionId": "no-pep",
+      "explanation": "CDC considers a vaccinated clinician with documented anti-HBs of at least 10 mIU/mL protected; no HBV postexposure prophylaxis is needed regardless of source HBsAg status.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hbv-exposure:documented-responder-no-pep",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:hbv-exposure-hcp:2024-05-16"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hbv-exposure:complete-series-no-antihbs-next-step",
+      "questionVersionId": "infectious:hbv-exposure:complete-series-no-antihbs-next-step@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A clinician has documentation of a complete hepatitis B vaccine series but no previous anti-HBs result and sustains an occupational exposure. Which immediate testing strategy is recommended by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "both-tests",
+          "text": "Test the clinician for anti-HBs and test the source patient for HBsAg without delay"
+        },
+        {
+          "optionId": "source-only",
+          "text": "Test only the source patient"
+        },
+        {
+          "optionId": "clinician-only",
+          "text": "Test only the clinician for HBsAg"
+        },
+        {
+          "optionId": "no-tests",
+          "text": "No testing is needed because vaccination was documented"
+        }
+      ],
+      "answerOptionId": "both-tests",
+      "explanation": "For vaccinated clinicians without prior anti-HBs documentation, CDC recommends testing the clinician for anti-HBs and the source patient, if known, for HBsAg without delay.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hbv-exposure:vaccinated-no-antihbs-tests",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:hbv-exposure-hcp:2024-05-16"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hbv-exposure:antihbs-low-source-positive-management",
+      "questionVersionId": "infectious:hbv-exposure:antihbs-low-source-positive-management@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A clinician completed a hepatitis B vaccine series but has anti-HBs below 10 mIU/mL at the time of exposure. The source patient is HBsAg-positive. What management is recommended by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "hbig-revaccinate",
+          "text": "Give one dose of HBIG and begin revaccination as soon as possible"
+        },
+        {
+          "optionId": "nothing",
+          "text": "No postexposure action is needed"
+        },
+        {
+          "optionId": "vaccine-only",
+          "text": "Give vaccine only and never HBIG"
+        },
+        {
+          "optionId": "hbig-two-no-vaccine",
+          "text": "Give two HBIG doses one month apart regardless of prior vaccine-response history"
+        }
+      ],
+      "answerOptionId": "hbig-revaccinate",
+      "explanation": "For a clinician with anti-HBs below 10 mIU/mL after a complete series and an HBsAg-positive or unknown source, CDC recommends one dose of HBIG and revaccination as soon as possible.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hbv-exposure:low-antihbs-source-positive",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:hbv-exposure-hcp:2024-05-16"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hbv-exposure:nonresponder-two-series-positive-source",
+      "questionVersionId": "infectious:hbv-exposure:nonresponder-two-series-positive-source@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "A clinician has anti-HBs below 10 mIU/mL after two complete hepatitis B vaccine series and is exposed to an HBsAg-positive source patient. Which postexposure regimen is recommended by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "two-hbig",
+          "text": "Give two doses of HBIG separated by 1 month; additional HepB vaccine is not recommended"
+        },
+        {
+          "optionId": "restart-third",
+          "text": "Start a third complete hepatitis B vaccine series"
+        },
+        {
+          "optionId": "no-action",
+          "text": "No action is required"
+        },
+        {
+          "optionId": "single-vaccine",
+          "text": "Give only one HepB vaccine dose"
+        }
+      ],
+      "answerOptionId": "two-hbig",
+      "explanation": "CDC recommends two HBIG doses, the first as soon as possible and the second 1 month later, for a documented nonresponder after two complete vaccine series exposed to an HBsAg-positive or unknown source; additional HepB vaccination is not recommended.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hbv-exposure:two-series-nonresponder",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:hbv-exposure-hcp:2024-05-16"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hbv-exposure:unvaccinated-positive-source-management",
+      "questionVersionId": "infectious:hbv-exposure:unvaccinated-positive-source-management@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Second controlled source-grounded intake batch",
+      "stem": "An unvaccinated clinician sustains an occupational blood exposure from a patient who is HBsAg-positive. Which immediate prophylaxis is recommended by current CDC guidance?",
+      "options": [
+        {
+          "optionId": "hbig-vaccine",
+          "text": "Give one dose of HBIG and one dose of HepB vaccine as soon as possible, then complete the vaccine series"
+        },
+        {
+          "optionId": "hbig-only",
+          "text": "Give HBIG only and do not vaccinate"
+        },
+        {
+          "optionId": "vaccine-delay",
+          "text": "Delay vaccination until 6 months after exposure"
+        },
+        {
+          "optionId": "nothing",
+          "text": "No prophylaxis is indicated"
+        }
+      ],
+      "answerOptionId": "hbig-vaccine",
+      "explanation": "CDC recommends one dose of HBIG plus one dose of hepatitis B vaccine as soon as possible for an unvaccinated or incompletely vaccinated clinician exposed to an HBsAg-positive or unknown source, followed by completion of the vaccine series.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hbv-exposure:unvaccinated-source-positive",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "cdc:hbv-exposure-hcp:2024-05-16"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited current CDC factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
