@@ -636,6 +636,92 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+
+    if (req.method === "GET" && path === "/vault/search") {
+      const qRaw = url.searchParams.get("q") ?? "";
+      if ([...url.searchParams.keys()].some(key => key !== "q")) fail(400, "query_not_supported");
+      const q = qRaw.trim().toLocaleLowerCase();
+      if (q.length < 2 || q.length > 120) fail(400, "vault_search_query_invalid");
+
+      const [catalog, { data: canonicalRows, error: canonicalError }, annotations] = await Promise.all([
+        getCatalog(),
+        trustedRead("vault_search_canonical", async () =>
+          admin.from("neural_canonical_note_versions")
+            .select("id,concept_id,version,title,body_markdown,published_at")
+            .eq("status", "published")
+            .order("concept_id", { ascending: true })
+        ),
+        getVaultAnnotations()
+      ]);
+      if (canonicalError) fail(500, "vault_read_failed");
+
+      const canonicalByConcept = new Map(
+        (canonicalRows ?? []).map((row: any) => [String(row.concept_id), row])
+      );
+      const annotationsByConcept = new Map<string, any[]>();
+      for (const row of annotations) {
+        const conceptId = String(row.concept_id);
+        const list = annotationsByConcept.get(conceptId) ?? [];
+        list.push(row);
+        annotationsByConcept.set(conceptId, list);
+      }
+
+      const normalize = (value: unknown) => String(value ?? "").toLocaleLowerCase();
+      const concepts = Array.isArray(catalog.body?.concepts) ? catalog.body.concepts : [];
+      const results = concepts.flatMap((concept: any, catalogOrder: number) => {
+        const conceptId = String(concept.conceptId);
+        const canonical = canonicalByConcept.get(conceptId);
+        const personal = annotationsByConcept.get(conceptId) ?? [];
+        const fields = {
+          label: normalize(concept.label),
+          aliases: normalize((Array.isArray(concept.aliases) ? concept.aliases : []).join(" ")),
+          subjectTags: normalize((Array.isArray(concept.subjectTags) ? concept.subjectTags : []).join(" ")),
+          canonicalTitle: normalize(canonical?.title),
+          canonicalBody: normalize(canonical?.body_markdown),
+          personal: normalize(personal.map((row: any) => row.body_markdown).join(" "))
+        };
+        const matchedIn = Object.entries(fields)
+          .filter(([, value]) => value.includes(q))
+          .map(([field]) => field);
+        if (!matchedIn.length) return [];
+
+        const rank =
+          (fields.label === q ? 0 : fields.label.includes(q) ? 1 : 10) +
+          (fields.aliases.includes(q) ? 2 : 0) +
+          (fields.subjectTags.includes(q) ? 3 : 0) +
+          (fields.canonicalTitle.includes(q) ? 4 : 0) +
+          (fields.personal.includes(q) ? 5 : 0) +
+          (fields.canonicalBody.includes(q) ? 6 : 0);
+
+        return [{
+          conceptId,
+          label: concept.label,
+          aliases: Array.isArray(concept.aliases) ? concept.aliases : [],
+          subjectTags: Array.isArray(concept.subjectTags) ? concept.subjectTags : [],
+          matchedIn,
+          canonicalNote: canonical ? {
+            noteVersionId: canonical.id,
+            version: canonical.version,
+            title: canonical.title,
+            publishedAt: canonical.published_at
+          } : null,
+          annotationCount: personal.length,
+          rank,
+          catalogOrder
+        }];
+      }).sort((a: any, b: any) =>
+        a.rank - b.rank ||
+        a.catalogOrder - b.catalogOrder ||
+        String(a.conceptId).localeCompare(String(b.conceptId))
+      ).slice(0, 50).map(({ rank, catalogOrder, ...row }: any) => row);
+
+      return response(req, 200, {
+        query: qRaw.trim(),
+        count: results.length,
+        results
+      });
+    }
+
     if (req.method === "GET" && path === "/vault/concepts") {
       if (url.search) fail(400, "query_not_supported");
       const [catalog, { data: canonicalRows, error: canonicalError }, annotations] = await Promise.all([
@@ -729,6 +815,13 @@ Deno.serve(async (req: Request) => {
           conceptId: row.concept_id,
           bodyMarkdown: row.body_markdown,
           anchorNoteVersionId: row.anchor_note_version_id,
+          anchorState: row.anchor_note_version_id
+            ? canonical
+              ? row.anchor_note_version_id === canonical.id
+                ? "current"
+                : "canonical-updated"
+              : "anchor-unavailable"
+            : "unanchored",
           revision: row.revision,
           createdAt: row.created_at,
           updatedAt: row.updated_at
