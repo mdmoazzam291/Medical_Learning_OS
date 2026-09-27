@@ -787,3 +787,18 @@ Verification for this slice is repository diff review because there is no domain
 - A second rollback proof verified missing reason fails before mutation, append-only protection remains active, valid erasure succeeds, the transaction-local bypass returns to `off`, browser/authenticated roles cannot execute erasure and the durable receipt contains no learner identifier.
 - Production remained unchanged after both rollback proofs.
 
+## Privacy erasure production deployment complete — 2026-09-28
+- PR #71 merged to `main` as `cd0f8776a96b6a92171a55491d6b0463298bd10e`.
+- Supabase migration `privacy_safe_evidence_immutability` is applied in production migration history.
+- Production privacy scope is complete across all 12 current public `learner_id` tables; missing/unmapped lists are empty.
+- `learner_privacy_erasure_receipts` is live with 0 receipts created by deployment/verification.
+- Receipt schema contains only `erasure_id`, `contract_id`, `scope_version`, `reason_class`, `rows_deleted`, and `completed_at`.
+- Service role can execute erasure; `authenticated` and `anon` cannot.
+- Service-role UPDATE/DELETE privileges are removed from the five study evidence/assignment ledgers.
+- Eight immutable guard triggers are live across study evidence, exam ledgers and erasure receipts.
+- The erasure preview for a nonexistent learner returns zero rows and `authUserPresent=false`; no real learner data was erased during deployment verification.
+- Post-deploy Supabase advisor baseline is unchanged: 19 existing RLS-no-policy infos, the existing leaked-password-protection warning, 6 existing unindexed-FK infos and 3 existing unused-index infos.
+- Current `study-api` writes append-only study evidence through trusted RPCs; its only direct table mutations in the checked path are bookmarks, which remain intentionally mutable.
+- Render deployed the exact main commit and is LIVE.
+- Account-closure UI/API orchestration is still not implemented. The database erasure capability remains service-only and should not be exposed directly to learner/browser code.
+
