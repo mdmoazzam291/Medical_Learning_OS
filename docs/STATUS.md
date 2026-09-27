@@ -955,3 +955,15 @@ Verification for this slice is repository diff review because there is no domain
 - Current-request authorization is rechecked when reading or mutating an existing test run, so removing the app-metadata grant cuts off access without changing immutable run history.
 - Simulator question views now attach the same learner-safe signed media projection already used by the QBank; diagnosis/source/rights/annotation ground truth is not added to pre-answer payloads.
 - No user account has been granted the internal-test flag by this change. This avoids guessing an operator/test identity or contaminating a real learner account.
+
+
+## M08d internal-test simulator route deployed — 2026-09-28
+- PR #89 merged the separate internal-test simulator start boundary.
+- Supabase `study-api` version 28 is ACTIVE with the exact merged source.
+- `POST /exam-simulator/test-runs` requires server-verified `app_metadata.medical_learning_os_internal_tester === true` and uses `exam_mock_test_readiness` + `exam_assemble_test_mock`.
+- Existing production `POST /exam-simulator/runs` remains on `exam_mock_readiness` + `exam_assemble_mock`; production eligibility is still 6/180 published questions.
+- Test-run state is marked `testingOnly=true` and `productionEquivalent=false`; production and test starts cannot silently resume each other.
+- Read/write access to an existing test run rechecks the current app-metadata grant, so authorization revocation cuts off subsequent access.
+- Simulator question views now attach the same signed learner-safe media projection as the QBank, enabling the five exact-byte radiology/pathology prompts without pre-answer annotation/diagnosis leakage.
+- Deployed source verification confirmed route, app-metadata gate, test readiness/assembly RPCs and media attachment are present.
+- No existing real learner account was automatically granted internal-test access. The remaining hosted E2E gate is to use a deliberately designated internal test identity, grant that identity the app-metadata flag, then exercise a full 180-question run without mixing engineering evidence into a real learner's longitudinal history.
