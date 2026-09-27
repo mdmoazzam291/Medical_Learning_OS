@@ -337,3 +337,27 @@ test('cloud Exam DNA adapter requests descriptive evidence with an optional enco
   assert.equal(all.predictiveInferenceEnabled, false);
   assert.equal(neet.predictiveInferenceEnabled, false);
 });
+
+
+test('cloud exam simulator readiness requires an exact encoded ruleset ID', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        contractId: 'exam-mock-readiness-v1',
+        ruleSetId: 'neet-pg:2026@1',
+        requiredUniqueQuestions: 180,
+        eligibleUniqueQuestions: 1,
+        shortage: 179,
+        ready: false
+      });
+    }
+  });
+  const result = await cloud.examSimulatorReadiness('neet-pg:2026@1');
+  assert.match(seenUrl, /study-api\/exam-simulator\/readiness\?ruleSetId=neet-pg%3A2026%401$/);
+  assert.equal(result.ready, false);
+  assert.equal(result.shortage, 179);
+});
