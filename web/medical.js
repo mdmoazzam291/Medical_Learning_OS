@@ -110,8 +110,9 @@ function studyView() {
       : '<div class="memory-rating"><strong>How did recall feel before seeing the answer?</strong><p class="muted">Optional memory signal. It does not change your score or block Next.</p><div class="button-row">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(([rating, label]) => '<button class="secondary" type="button" data-action="memory-rating" data-rating="' + rating + '" ' + (state.busy ? 'disabled' : '') + '>' + label + '</button>').join('') + '</div></div>'
     : '';
 
-  const vaultLink = q.conceptId
-    ? '<a class="text-button" href="/web/vault.html?concept=' + encodeURIComponent(q.conceptId) + '">Open concept in NeuralVault →</a>'
+  const primaryConceptId = q.conceptId || q.conceptLinks?.find(link => link?.role === 'primary')?.conceptId || null;
+  const vaultLink = primaryConceptId
+    ? '<a class="text-button" href="/web/vault.html?concept=' + encodeURIComponent(primaryConceptId) + '">Open concept in NeuralVault →</a>'
     : '';
   const feedback = answered
     ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
