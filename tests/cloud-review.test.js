@@ -160,3 +160,26 @@ test('review adapter supports NeuralVault queues and decisions without reviewer 
   assert.deepEqual(Object.keys(body).sort(), ['decision', 'noteVersionId', 'notes', 'reviewKind']);
   assert.equal('reviewerId' in body, false);
 });
+
+
+test('review adapter reads pipeline status without any mutation payload', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({
+        contractId: 'content-intake-status-v1',
+        intake: { stagedBatches: 0, stagedQuestions: 0 }
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    }
+  });
+
+  const status = await review.pipelineStatus();
+  assert.equal(status.contractId, 'content-intake-status-v1');
+  assert.match(calls[0].url, /\/functions\/v1\/review-api\/pipeline-status$/);
+  assert.equal(calls[0].init.method, 'GET');
+  assert.equal(calls[0].init.body, undefined);
+});
