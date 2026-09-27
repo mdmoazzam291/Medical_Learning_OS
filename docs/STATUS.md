@@ -943,3 +943,15 @@ Verification for this slice is repository diff review because there is no domain
 - Production readiness remains **6/180**, shortage 174.
 - Human production review backlog is now Medical 125 / References 125 / Rights 125.
 - The next autonomous content batch should contain exactly 49 breadth-first source-grounded questions if quality permits, reaching the internal simulator requirement without unnecessary overproduction.
+
+
+## M08d internal 180-question simulator lane — 2026-09-28
+- Internal-test content capacity reached exactly 180/180 distinct questions: 174 AI-test-only + 6 human-published. Production readiness remains 6/180 and published-only.
+- The deterministic internal assembly contract produced 180/180 distinct question versions, including all 5 currently linked radiology/pathology image questions.
+- Added a separate authenticated `POST /exam-simulator/test-runs` boundary. It never replaces or widens `POST /exam-simulator/runs`.
+- Internal test-run start requires server-verified Supabase Auth `app_metadata.medical_learning_os_internal_tester === true`; `user_metadata` is not used for authorization.
+- The test route uses only `exam_mock_test_readiness` + `exam_assemble_test_mock`; the production route remains pinned to `exam_mock_readiness` + `exam_assemble_mock`.
+- Test-run state is permanently marked `testingOnly=true` and `productionEquivalent=false`.
+- Current-request authorization is rechecked when reading or mutating an existing test run, so removing the app-metadata grant cuts off access without changing immutable run history.
+- Simulator question views now attach the same learner-safe signed media projection already used by the QBank; diagnosis/source/rights/annotation ground truth is not added to pre-answer payloads.
+- No user account has been granted the internal-test flag by this change. This avoids guessing an operator/test identity or contaminating a real learner account.
