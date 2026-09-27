@@ -187,7 +187,7 @@ begin
     select 1
     from pg_catalog.jsonb_array_elements(p_manifest->'concepts') c
     join public.study_catalog catalog on catalog.id = 1
-    cross join lateral pg_catalog.jsonb_array_elements(
+    join lateral pg_catalog.jsonb_array_elements(
       coalesce(catalog.body->'concepts','[]'::jsonb)
     ) existing
     on existing->>'conceptId' = c->>'conceptId'
@@ -253,7 +253,7 @@ begin
     select 1
     from pg_catalog.jsonb_array_elements(p_manifest->'sources') s
     join public.study_catalog catalog on catalog.id = 1
-    cross join lateral pg_catalog.jsonb_array_elements(
+    join lateral pg_catalog.jsonb_array_elements(
       coalesce(catalog.body->'sources','[]'::jsonb)
     ) existing
     on existing->>'sourceId' = s->>'sourceId'
@@ -479,7 +479,7 @@ begin
     select 1
     from pg_catalog.jsonb_array_elements(p_manifest->'questions') q
     join public.study_catalog catalog on catalog.id = 1
-    cross join lateral pg_catalog.jsonb_array_elements(
+    join lateral pg_catalog.jsonb_array_elements(
       coalesce(catalog.body->'questions','[]'::jsonb)
     ) existing
     on existing->>'questionId' = q->>'questionId'
@@ -503,7 +503,7 @@ begin
     select 1
     from pg_catalog.jsonb_array_elements(p_manifest->'questions') q
     join public.study_catalog catalog on catalog.id = 1
-    cross join lateral pg_catalog.jsonb_array_elements(
+    join lateral pg_catalog.jsonb_array_elements(
       coalesce(catalog.body->'questions','[]'::jsonb)
     ) existing
     on public.content_intake_normalize_text(existing->>'stem')

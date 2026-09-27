@@ -74,3 +74,12 @@ test('service role owns intake mutations; browser roles receive no intake RPC au
     assert.match(sql, new RegExp(`grant execute on function public\\.${signature}[\\s\\S]*service_role`));
   }
 });
+
+
+test('content intake migration never combines CROSS JOIN LATERAL with an ON clause', () => {
+  assert.doesNotMatch(
+    sql,
+    /cross join lateral pg_catalog\.jsonb_array_elements\([\s\S]{0,220}?\)\s+existing\s+on /
+  );
+  assert.match(sql, /join lateral pg_catalog\.jsonb_array_elements\([\s\S]{0,220}?\)\s+existing\s+on /);
+});
