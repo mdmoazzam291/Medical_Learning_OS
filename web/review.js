@@ -13,6 +13,7 @@ let state = {
   user: auth.currentUser(),
   grants: [],
   selectedKind: null,
+  targetType: 'questions',
   items: [],
   loading: false,
   submitting: null,
@@ -58,6 +59,9 @@ function gateLabel(kind) {
 }
 
 function checklist(kind) {
+  if (kind === 'medical' && state.targetType === 'neural-notes') {
+    return '<ul><li>Medical statements are accurate for the stated scope.</li><li>Wording is clinically safe and appropriately qualified.</li><li>The note does not introduce unsupported claims or false precision.</li></ul>';
+  }
   if (kind === 'medical') {
     return '<ul><li>Answer key is medically correct for the stated context.</li><li>Stem/options are unambiguous and clinically safe.</li><li>Explanation supports reasoning without introducing unsupported claims.</li></ul>';
   }
@@ -111,6 +115,25 @@ function reviewItem(item, index) {
   </article>`;
 }
 
+function noteReviewItem(item, index) {
+  const note = item?.note || {};
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  const rightsReady = state.selectedKind !== 'rights' ||
+    sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+
+  return `<article class="review-card">
+    <div class="review-card-heading"><div><span class="eyebrow">NEURALVAULT TARGET ${index + 1}</span><h2>${escape(note.title || 'Untitled canonical note')}</h2><p class="muted">${escape(note.noteVersionId || '')} · concept ${escape(note.conceptId || '')} · v${escape(note.version || '?')}</p></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
+    <section class="review-section"><h3>Canonical note body</h3><pre class="vault-markdown">${escape(note.bodyMarkdown || '')}</pre></section>
+    <div class="review-metadata"><div><span>Concept</span><strong>${escape(note.conceptId || 'Unknown')}</strong></div><div><span>Version</span><strong>${escape(note.version || '?')}</strong></div><div><span>Fingerprint</span><strong>${escape((note.contentSha256 || '').slice(0, 16))}…</strong></div></div>
+    <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
+    <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
+    <form class="review-decision-form" data-note-version-id="${escape(note.noteVersionId || '')}">
+      <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
+      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
+    </form>
+  </article>`;
+}
+
 function authorized() {
   const kinds = state.grants;
   const body = state.loading
@@ -118,11 +141,11 @@ function authorized() {
     : state.error
       ? `<section class="panel"><h2>Review queue unavailable</h2><p>${escape(state.error)}</p><button class="secondary" data-action="reload">Retry</button></section>`
       : state.items.length
-        ? `<div class="review-list">${state.items.map(reviewItem).join('')}</div>`
+        ? `<div class="review-list">${state.items.map(state.targetType === 'neural-notes' ? noteReviewItem : reviewItem).join('')}</div>`
         : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
 
-  return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact question/source target.</p></div><span class="badge">M04c</span></div>
-  <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></section>
+  return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
+  <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${body}</main>`;
 }
 
@@ -135,7 +158,9 @@ async function loadQueue(kind = state.selectedKind) {
   state = { ...state, selectedKind: kind, loading: true, error: null, items: [] };
   render();
   try {
-    const result = await review.queue(kind);
+    const result = state.targetType === 'neural-notes'
+      ? await review.noteQueue(kind)
+      : await review.queue(kind);
     state = { ...state, loading: false, items: Array.isArray(result?.items) ? result.items : [], error: null };
   } catch (error) {
     reportUnexpected(error, 'load_queue');
@@ -158,7 +183,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, items: [], loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
@@ -169,6 +194,10 @@ async function bootstrap() {
 
 root.addEventListener('change', event => {
   if (event.target.id === 'review-kind') loadQueue(event.target.value);
+  if (event.target.id === 'review-target') {
+    state.targetType = event.target.value === 'neural-notes' ? 'neural-notes' : 'questions';
+    loadQueue(state.selectedKind);
+  }
 });
 
 root.addEventListener('click', event => {
@@ -214,19 +243,28 @@ root.addEventListener('submit', event => {
   const data = new FormData(form);
   const notes = String(data.get('notes') || '').trim();
   const questionVersionId = form.dataset.questionVersionId;
-  if (!notes) { announce('Review notes are required.'); return; }
+  const noteVersionId = form.dataset.noteVersionId;
+  const targetId = noteVersionId || questionVersionId;
+  if (!notes || !targetId) { announce('Review notes are required.'); return; }
 
   (async () => {
-    state.submitting = questionVersionId;
+    state.submitting = targetId;
     setFormBusy(form, true);
     try {
-      const receipt = await review.record({
-        questionVersionId,
-        reviewKind: state.selectedKind,
-        decision,
-        notes
-      });
-      announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${questionVersionId} for ${gateLabel(state.selectedKind)}. Review receipt ${receipt.reviewId} recorded.`);
+      const receipt = noteVersionId
+        ? await review.recordNote({
+            noteVersionId,
+            reviewKind: state.selectedKind,
+            decision,
+            notes
+          })
+        : await review.record({
+            questionVersionId,
+            reviewKind: state.selectedKind,
+            decision,
+            notes
+          });
+      announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${targetId} for ${gateLabel(state.selectedKind)}. Review receipt ${receipt.reviewId} recorded.`);
       state.submitting = null;
       await loadQueue(state.selectedKind);
     } catch (error) {
