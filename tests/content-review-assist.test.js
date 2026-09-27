@@ -107,12 +107,35 @@ test('multi-batch assist remains explicitly non-authoritative', () => {
   const packet = assist();
   assert.deepEqual(packet.scope.batchKeys, [
     'pilot:rabies:20260927:01',
-    'pilot:infectious-prevention:20260927:02'
+    'pilot:infectious-prevention:20260927:02',
+    'pilot:acute-medicine:20260928:03',
+    'pilot:india-national-programs:20260928:05'
   ]);
-  assert.equal(packet.scope.questionCount, 30);
+  assert.equal(packet.scope.questionCount, 80);
   assert.equal(packet.authority, 'none');
   assert.equal(packet.policy.mayApproveReviewGate, false);
   assert.equal(packet.policy.mayVerifyContent, false);
   assert.equal(packet.policy.mayPublishContent, false);
   assert.equal(packet.policy.requiresIndependentReviewerDecision, true);
+});
+
+
+test('review assist covers all 25 India national-program pilot 05 questions', () => {
+  const packet = assist();
+  const pilot05 = JSON.parse(readFileSync(
+    new URL('../data/content-intake-pilot-india-programs-05.json', import.meta.url), 'utf8'
+  ));
+  const covered = new Map(packet.questions.map(item => [item.questionVersionId, item]));
+  for (const question of pilot05.questions) {
+    const item = covered.get(question.questionVersionId);
+    assert.ok(item, `missing assist for ${question.questionVersionId}`);
+    assert.equal(item.medical?.result, 'supported');
+    assert.equal(item.medical?.uncertainty, 'low');
+    assert.equal(item.references?.result, 'direct_support');
+    assert.equal(item.rights?.result, 'citation_only_recommended');
+    assert.ok(item.medical?.draftNote && item.references?.draftNote && item.rights?.draftNote);
+    assert.equal('decision' in item, false);
+    assert.equal('approved' in item, false);
+    assert.equal('reviewerId' in item, false);
+  }
 });
