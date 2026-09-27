@@ -129,3 +129,34 @@ test('source rights resolution never sends reviewer identity', async () => {
   assert.deepEqual(Object.keys(body).sort(), ['evidence', 'rightsStatus', 'sourceId']);
   assert.equal('reviewerId' in body, false);
 });
+
+
+test('review adapter supports NeuralVault queues and decisions without reviewer identity', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({ items: [], reviewId: 'r-note' }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  });
+
+  await review.noteQueue('medical');
+  await review.recordNote({
+    noteVersionId: '11111111-1111-4111-8111-111111111111',
+    reviewKind: 'medical',
+    decision: 'approved',
+    notes: 'Reviewed.'
+  });
+
+  assert.match(calls[0].url, /\/note-queue\?kind=medical$/);
+  assert.match(calls[1].url, /\/note-reviews$/);
+  const body = JSON.parse(calls[1].init.body);
+  assert.deepEqual(Object.keys(body).sort(), ['decision', 'noteVersionId', 'notes', 'reviewKind']);
+  assert.equal('reviewerId' in body, false);
+});
