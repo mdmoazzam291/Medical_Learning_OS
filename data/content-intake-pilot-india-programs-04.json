@@ -1,0 +1,1559 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "immunization:uip:hepb-birth-24h",
+      "label": "Hepatitis B birth dose within 24 hours",
+      "aliases": [
+        "Hepatitis B birth dose timing"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "pediatrics",
+        "immunization",
+        "guideline-india-uip"
+      ]
+    },
+    {
+      "conceptId": "immunization:uip:opv0-first-15-days",
+      "label": "OPV-0 within the first 15 days",
+      "aliases": [
+        "OPV zero-dose timing"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "pediatrics",
+        "immunization",
+        "guideline-india-uip"
+      ]
+    },
+    {
+      "conceptId": "immunization:uip:fipv-6-14-weeks",
+      "label": "Fractional IPV at 6 and 14 weeks",
+      "aliases": [
+        "Fractional IPV schedule"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "pediatrics",
+        "immunization",
+        "guideline-india-uip"
+      ]
+    },
+    {
+      "conceptId": "immunization:uip:pcv-booster-9-12m",
+      "label": "PCV booster at 9–12 months",
+      "aliases": [
+        "PCV booster timing"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "pediatrics",
+        "immunization",
+        "guideline-india-uip"
+      ]
+    },
+    {
+      "conceptId": "immunization:uip:mr1-9-12m",
+      "label": "MR first dose at 9–12 months",
+      "aliases": [
+        "MR first-dose timing"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "pediatrics",
+        "immunization",
+        "guideline-india-uip"
+      ]
+    },
+    {
+      "conceptId": "infectious:leprosy:pb-revised-classification",
+      "label": "PB leprosy: 1–5 lesions, no nerve involvement, smear negative",
+      "aliases": [
+        "Revised PB leprosy classification"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "dermatology",
+        "infectious-disease",
+        "guideline-india-nlep"
+      ]
+    },
+    {
+      "conceptId": "infectious:leprosy:nerve-involvement-mb",
+      "label": "One or more involved nerves classifies leprosy as MB",
+      "aliases": [
+        "Nerve involvement and MB leprosy"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "dermatology",
+        "infectious-disease",
+        "guideline-india-nlep"
+      ]
+    },
+    {
+      "conceptId": "infectious:leprosy:three-drug-mdt-both",
+      "label": "Rifampicin, dapsone and clofazimine for both PB and MB",
+      "aliases": [
+        "Three-drug MDT for PB and MB leprosy"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "dermatology",
+        "pharmacology",
+        "guideline-india-nlep"
+      ]
+    },
+    {
+      "conceptId": "infectious:leprosy:pb-adult-six-months",
+      "label": "Adult PB MDT duration of 6 months",
+      "aliases": [
+        "Adult PB leprosy MDT duration"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "dermatology",
+        "pharmacology",
+        "guideline-india-nlep"
+      ]
+    },
+    {
+      "conceptId": "infectious:leprosy:mb-adult-twelve-months",
+      "label": "Adult MB MDT duration of 12 months",
+      "aliases": [
+        "Adult MB leprosy MDT duration"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "dermatology",
+        "pharmacology",
+        "guideline-india-nlep"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:parasitological-confirmation",
+      "label": "Confirm suspected malaria by microscopy or RDT",
+      "aliases": [
+        "Parasitological confirmation of malaria"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "parasitology",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:test-treat-track",
+      "label": "Testing, treating and tracking confirmed malaria",
+      "aliases": [
+        "Malaria testing-treating-tracking strategy"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "parasitology",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:india-elimination-2030",
+      "label": "National malaria elimination target of 2030",
+      "aliases": [
+        "India malaria elimination target"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "public-health",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:relapse-vivax-ovale",
+      "label": "P. vivax and P. ovale are associated with relapse",
+      "aliases": [
+        "Relapse species in malaria"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "parasitology",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:malaria:recrudescence-falciparum-malariae",
+      "label": "P. falciparum and P. malariae are associated with recrudescence",
+      "aliases": [
+        "Recrudescence species in malaria"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "parasitology",
+        "guideline-india-ncvbdc"
+      ]
+    },
+    {
+      "conceptId": "infectious:drtb:bpalm-components",
+      "label": "Bedaquiline, pretomanid, linezolid and moxifloxacin",
+      "aliases": [
+        "BPaLM regimen components"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pulmonology",
+        "guideline-india-ntep"
+      ]
+    },
+    {
+      "conceptId": "infectious:drtb:bpalm-first-preference-age14",
+      "label": "BPaLM is first preference from age 14 years in eligible MDR/RR-TB",
+      "aliases": [
+        "BPaLM first preference in eligible MDR/RR-TB age 14+"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pulmonology",
+        "guideline-india-ntep"
+      ]
+    },
+    {
+      "conceptId": "infectious:drtb:shorter-regimen-fq-susceptible",
+      "label": "Fluoroquinolone resistance must not be detected",
+      "aliases": [
+        "FQ criterion for 9–11 month MDR/RR-TB regimen"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pulmonology",
+        "guideline-india-ntep"
+      ]
+    },
+    {
+      "conceptId": "infectious:drtb:bpalm-duration-26-weeks",
+      "label": "BPaLM duration 26 weeks with possible extension to 39 weeks",
+      "aliases": [
+        "BPaLM treatment duration"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pulmonology",
+        "guideline-india-ntep"
+      ]
+    },
+    {
+      "conceptId": "infectious:drtb:bpalm-no-improvement-week9",
+      "label": "Additional microbiological evaluation when not improving by 9 weeks",
+      "aliases": [
+        "BPaLM lack of improvement at week 9"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pulmonology",
+        "guideline-india-ntep"
+      ]
+    },
+    {
+      "conceptId": "infectious:hiv:pep-within-72h",
+      "label": "HIV PEP decision and initiation within 72 hours",
+      "aliases": [
+        "HIV PEP initiation window"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pharmacology",
+        "guideline-india-naco"
+      ]
+    },
+    {
+      "conceptId": "infectious:hiv:pep-duration-28-days",
+      "label": "HIV PEP antiretroviral course of 28 days",
+      "aliases": [
+        "HIV PEP duration"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pharmacology",
+        "guideline-india-naco"
+      ]
+    },
+    {
+      "conceptId": "infectious:hiv:pep-program-coverage",
+      "label": "Occupational exposures and sexual-assault victims covered under the national programme",
+      "aliases": [
+        "NACP PEP service coverage"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "public-health",
+        "guideline-india-naco"
+      ]
+    },
+    {
+      "conceptId": "infectious:hiv:pep-source-testing-consent",
+      "label": "Unknown source status should be tested with informed consent where possible",
+      "aliases": [
+        "Source-person HIV testing consent"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "ethics",
+        "guideline-india-naco"
+      ]
+    },
+    {
+      "conceptId": "infectious:hiv:pep-comprehensive-management",
+      "label": "First aid, counselling, risk assessment, baseline investigations, ARVs and follow-up",
+      "aliases": [
+        "Comprehensive HIV PEP management"
+      ],
+      "subjectTags": [
+        "community-medicine",
+        "infectious-disease",
+        "pharmacology",
+        "guideline-india-naco"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "mohfw:uip:nis-accessed-2026-09-28",
+      "title": "Ministry of Health and Family Welfare: National Immunization Schedule",
+      "url": "https://mohfw.gov.in/sites/default/files/Unit2NationalImmunizationSchedule.pdf",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official MoHFW National Immunization Schedule used only for factual grounding of original questions. No schedule table, layout, figures, or source wording are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "dghs:nlep:revised-treatment-accessed-2026-09-28",
+      "title": "DGHS National Leprosy Eradication Programme: revised classification and treatment protocol",
+      "url": "https://dghs.mohfw.gov.in/nlep.php",
+      "version": "updated-2026-09-15-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official DGHS/NLEP page used only for factual grounding of original questions. No protected page expression, tables, images, or layout are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "ncvbdc:malaria-control-accessed-2026-09-28",
+      "title": "NCVBDC: Malaria control strategies and National Strategic Plan 2023-27",
+      "url": "https://ncvbdc.mohfw.gov.in/index4.php?font=Decrease&lang=1&level=0&lid=3707&linkid=421",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NCVBDC malaria programme material used only for factual grounding of original questions. No source tables, figures, or wording are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "ntep:drtb-guidelines-2025-accessed-2026-09-28",
+      "title": "Central Tuberculosis Division: National Guidelines for Management of Drug Resistant TB",
+      "url": "https://tbcindia.mohfw.gov.in/wp-content/uploads/2025/03/National-Guidelines-for-Management-of-DR-TB_27-3-2025.pdf",
+      "version": "2025-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NTEP DR-TB guideline used only for factual grounding of original questions. No tables, algorithms, figures, or source wording are intended to be reproduced; independent production rights review remains required."
+      }
+    },
+    {
+      "sourceId": "naco:hiv-care-treatment-2021-accessed-2026-09-28",
+      "title": "National AIDS Control Organisation: National Guidelines for HIV Care and Treatment 2021",
+      "url": "https://naco.gov.in/sites/default/files/National_Guidelines_for_HIV_Care_and_Treatment_2021.pdf",
+      "version": "2021-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NACO guideline used only for factual grounding of original questions. No tables, figures, algorithms, or source wording are intended to be reproduced; independent production rights review remains required."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "immunization:uip:hepb-birth-24h",
+      "questionVersionId": "immunization:uip:hepb-birth-24h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "A term newborn is clinically stable after delivery. Under India’s National Immunization Schedule, by when should the hepatitis B birth dose ideally be administered?",
+      "options": [
+        {
+          "optionId": "within-24h",
+          "text": "Within 24 hours of birth"
+        },
+        {
+          "optionId": "six-weeks",
+          "text": "At 6 weeks"
+        },
+        {
+          "optionId": "nine-months",
+          "text": "At 9 months"
+        },
+        {
+          "optionId": "five-years",
+          "text": "At 5 years"
+        }
+      ],
+      "answerOptionId": "within-24h",
+      "explanation": "The National Immunization Schedule places the hepatitis B birth dose at birth or as early as possible within 24 hours.",
+      "conceptLinks": [
+        {
+          "conceptId": "immunization:uip:hepb-birth-24h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "mohfw:uip:nis-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "immunization:uip:opv0-first-15-days",
+      "questionVersionId": "immunization:uip:opv0-first-15-days@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "A newborn misses OPV-0 on the day of birth. According to India’s National Immunization Schedule, what is the stated latest window for the OPV zero dose?",
+      "options": [
+        {
+          "optionId": "first-15-days",
+          "text": "Within the first 15 days"
+        },
+        {
+          "optionId": "six-weeks",
+          "text": "At 6 weeks only"
+        },
+        {
+          "optionId": "six-months",
+          "text": "Any time before 6 months"
+        },
+        {
+          "optionId": "one-year",
+          "text": "Any time before 1 year"
+        }
+      ],
+      "answerOptionId": "first-15-days",
+      "explanation": "The schedule lists OPV-0 at birth or as early as possible within the first 15 days.",
+      "conceptLinks": [
+        {
+          "conceptId": "immunization:uip:opv0-first-15-days",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "mohfw:uip:nis-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "immunization:uip:fipv-6-14-weeks",
+      "questionVersionId": "immunization:uip:fipv-6-14-weeks@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which timing matches the fractional IPV primary schedule in India’s National Immunization Schedule?",
+      "options": [
+        {
+          "optionId": "six-fourteen",
+          "text": "6 and 14 weeks"
+        },
+        {
+          "optionId": "birth-six",
+          "text": "Birth and 6 weeks"
+        },
+        {
+          "optionId": "ten-fourteen",
+          "text": "10 and 14 weeks"
+        },
+        {
+          "optionId": "nine-twelve-months",
+          "text": "9 and 12 months"
+        }
+      ],
+      "answerOptionId": "six-fourteen",
+      "explanation": "The schedule gives fractional IPV at 6 and 14 weeks.",
+      "conceptLinks": [
+        {
+          "conceptId": "immunization:uip:fipv-6-14-weeks",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "mohfw:uip:nis-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "immunization:uip:pcv-booster-9-12m",
+      "questionVersionId": "immunization:uip:pcv-booster-9-12m@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "After the primary pneumococcal conjugate vaccine doses under India’s National Immunization Schedule, when is the booster scheduled?",
+      "options": [
+        {
+          "optionId": "nine-twelve",
+          "text": "9–12 months"
+        },
+        {
+          "optionId": "six-weeks",
+          "text": "6 weeks"
+        },
+        {
+          "optionId": "sixteen-twentyfour",
+          "text": "16–24 months"
+        },
+        {
+          "optionId": "five-six-years",
+          "text": "5–6 years"
+        }
+      ],
+      "answerOptionId": "nine-twelve",
+      "explanation": "The National Immunization Schedule places the PCV booster at 9–12 months after primary doses at 6 and 14 weeks.",
+      "conceptLinks": [
+        {
+          "conceptId": "immunization:uip:pcv-booster-9-12m",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "mohfw:uip:nis-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "immunization:uip:mr1-9-12m",
+      "questionVersionId": "immunization:uip:mr1-9-12m@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "At what age is the first measles-rubella dose scheduled under India’s National Immunization Schedule?",
+      "options": [
+        {
+          "optionId": "nine-twelve",
+          "text": "9–12 months"
+        },
+        {
+          "optionId": "birth",
+          "text": "At birth"
+        },
+        {
+          "optionId": "six-weeks",
+          "text": "6 weeks"
+        },
+        {
+          "optionId": "five-six-years",
+          "text": "5–6 years"
+        }
+      ],
+      "answerOptionId": "nine-twelve",
+      "explanation": "The schedule gives the first measles-rubella dose at 9 completed months to 12 months.",
+      "conceptLinks": [
+        {
+          "conceptId": "immunization:uip:mr1-9-12m",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "mohfw:uip:nis-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:leprosy:pb-revised-classification",
+      "questionVersionId": "infectious:leprosy:pb-revised-classification@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Under India’s revised NLEP classification, which profile best fits paucibacillary leprosy?",
+      "options": [
+        {
+          "optionId": "pb-profile",
+          "text": "1–5 skin lesions, no nerve involvement, slit-skin smear negative"
+        },
+        {
+          "optionId": "mb-nerve",
+          "text": "1 skin lesion with a thickened involved peripheral nerve"
+        },
+        {
+          "optionId": "mb-many",
+          "text": "More than 5 skin lesions"
+        },
+        {
+          "optionId": "mb-smear",
+          "text": "Any lesion count with a positive slit-skin smear"
+        }
+      ],
+      "answerOptionId": "pb-profile",
+      "explanation": "The revised NLEP table classifies PB disease by 1–5 lesions, no nerve involvement and a negative slit-skin smear.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:leprosy:pb-revised-classification",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "dghs:nlep:revised-treatment-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:leprosy:nerve-involvement-mb",
+      "questionVersionId": "infectious:leprosy:nerve-involvement-mb@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "A patient has only three typical leprosy skin lesions but has involvement of one peripheral nerve. Under the revised NLEP classification, how is the case categorized?",
+      "options": [
+        {
+          "optionId": "mb",
+          "text": "Multibacillary"
+        },
+        {
+          "optionId": "pb",
+          "text": "Paucibacillary"
+        },
+        {
+          "optionId": "indeterminate",
+          "text": "Indeterminate only"
+        },
+        {
+          "optionId": "classification-unaffected",
+          "text": "Nerve involvement does not affect classification"
+        }
+      ],
+      "answerOptionId": "mb",
+      "explanation": "The revised classification places one or more involved nerves in the multibacillary category.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:leprosy:nerve-involvement-mb",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "dghs:nlep:revised-treatment-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:leprosy:three-drug-mdt-both",
+      "questionVersionId": "infectious:leprosy:three-drug-mdt-both@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which statement reflects the revised NLEP treatment protocol implemented nationally from April 2025?",
+      "options": [
+        {
+          "optionId": "three-both",
+          "text": "Both PB and MB disease use rifampicin, dapsone and clofazimine"
+        },
+        {
+          "optionId": "pb-two",
+          "text": "PB disease uses rifampicin and dapsone only"
+        },
+        {
+          "optionId": "mb-two",
+          "text": "MB disease uses rifampicin and clofazimine only"
+        },
+        {
+          "optionId": "mono",
+          "text": "Both forms are treated with rifampicin monotherapy"
+        }
+      ],
+      "answerOptionId": "three-both",
+      "explanation": "The revised protocol uses three-drug MDT with rifampicin, dapsone and clofazimine for both PB and MB disease.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:leprosy:three-drug-mdt-both",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "dghs:nlep:revised-treatment-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:leprosy:pb-adult-six-months",
+      "questionVersionId": "infectious:leprosy:pb-adult-six-months@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "What is the adult treatment duration for paucibacillary leprosy under the revised NLEP regimen?",
+      "options": [
+        {
+          "optionId": "six-months",
+          "text": "6 months"
+        },
+        {
+          "optionId": "one-month",
+          "text": "1 month"
+        },
+        {
+          "optionId": "twelve-months",
+          "text": "12 months"
+        },
+        {
+          "optionId": "twentyfour-months",
+          "text": "24 months"
+        }
+      ],
+      "answerOptionId": "six-months",
+      "explanation": "The revised NLEP regimen lists 6 months of MDT for adult paucibacillary disease.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:leprosy:pb-adult-six-months",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "dghs:nlep:revised-treatment-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:leprosy:mb-adult-twelve-months",
+      "questionVersionId": "infectious:leprosy:mb-adult-twelve-months@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "What is the adult treatment duration for multibacillary leprosy under the revised NLEP regimen?",
+      "options": [
+        {
+          "optionId": "twelve-months",
+          "text": "12 months"
+        },
+        {
+          "optionId": "six-months",
+          "text": "6 months"
+        },
+        {
+          "optionId": "three-months",
+          "text": "3 months"
+        },
+        {
+          "optionId": "twentyfour-months",
+          "text": "24 months"
+        }
+      ],
+      "answerOptionId": "twelve-months",
+      "explanation": "The revised NLEP regimen lists 12 months of MDT for adult multibacillary disease.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:leprosy:mb-adult-twelve-months",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "dghs:nlep:revised-treatment-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:malaria:parasitological-confirmation",
+      "questionVersionId": "infectious:malaria:parasitological-confirmation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "A patient in an endemic area has fever suspicious for malaria. Which diagnostic principle is emphasized by current NCVBDC malaria strategy?",
+      "options": [
+        {
+          "optionId": "confirm",
+          "text": "Obtain parasitological confirmation with quality-assured microscopy or an RDT"
+        },
+        {
+          "optionId": "clinical-only",
+          "text": "Treat every fever as malaria without testing"
+        },
+        {
+          "optionId": "serology",
+          "text": "Use malaria antibody serology as the routine acute test"
+        },
+        {
+          "optionId": "ct",
+          "text": "Use CT imaging before any parasitological test"
+        }
+      ],
+      "answerOptionId": "confirm",
+      "explanation": "Current NCVBDC strategy emphasizes timely parasitological confirmation of suspected malaria using quality-assured RDTs or microscopy.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:malaria:parasitological-confirmation",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ncvbdc:malaria-control-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:malaria:test-treat-track",
+      "questionVersionId": "infectious:malaria:test-treat-track@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which phrase best summarizes the case-management approach highlighted in India’s current malaria elimination strategy?",
+      "options": [
+        {
+          "optionId": "ttt",
+          "text": "Testing, treating and tracking"
+        },
+        {
+          "optionId": "screen-isolate-vaccinate",
+          "text": "Screening, isolation and vaccination"
+        },
+        {
+          "optionId": "treat-only",
+          "text": "Treatment without diagnostic confirmation or follow-up"
+        },
+        {
+          "optionId": "vector-only",
+          "text": "Vector control without case management"
+        }
+      ],
+      "answerOptionId": "ttt",
+      "explanation": "The strategy explicitly describes universal access to malaria diagnosis and treatment as testing, treating and tracking.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:malaria:test-treat-track",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ncvbdc:malaria-control-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:malaria:india-elimination-2030",
+      "questionVersionId": "infectious:malaria:india-elimination-2030@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "What national target year is stated by NCVBDC for malaria elimination in India?",
+      "options": [
+        {
+          "optionId": "2030",
+          "text": "2030"
+        },
+        {
+          "optionId": "2027",
+          "text": "2027"
+        },
+        {
+          "optionId": "2035",
+          "text": "2035"
+        },
+        {
+          "optionId": "2040",
+          "text": "2040"
+        }
+      ],
+      "answerOptionId": "2030",
+      "explanation": "NCVBDC states the national objective of eliminating malaria by 2030.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:malaria:india-elimination-2030",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ncvbdc:malaria-control-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:malaria:relapse-vivax-ovale",
+      "questionVersionId": "infectious:malaria:relapse-vivax-ovale@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which pair is specifically noted in India’s malaria strategy as being associated with relapse?",
+      "options": [
+        {
+          "optionId": "vivax-ovale",
+          "text": "Plasmodium vivax and Plasmodium ovale"
+        },
+        {
+          "optionId": "falciparum-malariae",
+          "text": "Plasmodium falciparum and Plasmodium malariae"
+        },
+        {
+          "optionId": "falciparum-vivax",
+          "text": "Plasmodium falciparum and Plasmodium vivax"
+        },
+        {
+          "optionId": "malariae-ovale",
+          "text": "Plasmodium malariae and Plasmodium ovale"
+        }
+      ],
+      "answerOptionId": "vivax-ovale",
+      "explanation": "The current national strategy notes relapse with P. vivax and P. ovale.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:malaria:relapse-vivax-ovale",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ncvbdc:malaria-control-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:malaria:recrudescence-falciparum-malariae",
+      "questionVersionId": "infectious:malaria:recrudescence-falciparum-malariae@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which pair is specifically noted in India’s malaria strategy as being associated mainly with recrudescence?",
+      "options": [
+        {
+          "optionId": "falciparum-malariae",
+          "text": "Plasmodium falciparum and Plasmodium malariae"
+        },
+        {
+          "optionId": "vivax-ovale",
+          "text": "Plasmodium vivax and Plasmodium ovale"
+        },
+        {
+          "optionId": "vivax-falciparum",
+          "text": "Plasmodium vivax and Plasmodium falciparum"
+        },
+        {
+          "optionId": "ovale-malariae",
+          "text": "Plasmodium ovale and Plasmodium malariae"
+        }
+      ],
+      "answerOptionId": "falciparum-malariae",
+      "explanation": "The national strategy notes recrudescence mainly with P. falciparum and P. malariae.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:malaria:recrudescence-falciparum-malariae",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ncvbdc:malaria-control-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:drtb:bpalm-components",
+      "questionVersionId": "infectious:drtb:bpalm-components@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which set correctly expands the BPaLM regimen used in India’s current DR-TB guidance?",
+      "options": [
+        {
+          "optionId": "bpalm",
+          "text": "Bedaquiline, pretomanid, linezolid and moxifloxacin"
+        },
+        {
+          "optionId": "bpalc",
+          "text": "Bedaquiline, pyrazinamide, linezolid and clofazimine"
+        },
+        {
+          "optionId": "hrze",
+          "text": "Isoniazid, rifampicin, pyrazinamide and ethambutol"
+        },
+        {
+          "optionId": "blam",
+          "text": "Bedaquiline, levofloxacin, amikacin and meropenem"
+        }
+      ],
+      "answerOptionId": "bpalm",
+      "explanation": "BPaLM denotes bedaquiline, pretomanid, linezolid and moxifloxacin.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:drtb:bpalm-components",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:drtb:bpalm-first-preference-age14",
+      "questionVersionId": "infectious:drtb:bpalm-first-preference-age14@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Under India’s 2025 DR-TB guidance, which regimen is the first preference for an eligible patient aged 14 years or older with MDR/RR-TB?",
+      "options": [
+        {
+          "optionId": "bpalm",
+          "text": "BPaLM"
+        },
+        {
+          "optionId": "shorter-only",
+          "text": "The 9–11 month shorter oral regimen in every case"
+        },
+        {
+          "optionId": "injectable",
+          "text": "An injectable-based regimen"
+        },
+        {
+          "optionId": "hrze",
+          "text": "Standard HRZE regardless of resistance"
+        }
+      ],
+      "answerOptionId": "bpalm",
+      "explanation": "The guideline states that in patients aged 14 years or above with MDR/RR-TB, BPaLM is the first preference when eligible.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:drtb:bpalm-first-preference-age14",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:drtb:shorter-regimen-fq-susceptible",
+      "questionVersionId": "infectious:drtb:shorter-regimen-fq-susceptible@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which resistance result is required for eligibility for the 9–11 month shorter oral MDR/RR-TB regimen under current NTEP guidance?",
+      "options": [
+        {
+          "optionId": "fq-not-detected",
+          "text": "Fluoroquinolone resistance not detected"
+        },
+        {
+          "optionId": "fq-required",
+          "text": "Fluoroquinolone resistance must be present"
+        },
+        {
+          "optionId": "rif-susceptible",
+          "text": "Rifampicin susceptibility must be confirmed"
+        },
+        {
+          "optionId": "all-drug-resistant",
+          "text": "Resistance to every second-line drug must be present"
+        }
+      ],
+      "answerOptionId": "fq-not-detected",
+      "explanation": "Eligibility includes rifampicin resistance with fluoroquinolone resistance not detected.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:drtb:shorter-regimen-fq-susceptible",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:drtb:bpalm-duration-26-weeks",
+      "questionVersionId": "infectious:drtb:bpalm-duration-26-weeks@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "What duration is listed for the standard BPaLM course in current NTEP guidance?",
+      "options": [
+        {
+          "optionId": "26-weeks",
+          "text": "26 weeks, with extension up to 39 weeks when indicated"
+        },
+        {
+          "optionId": "9-11-months",
+          "text": "Always 9–11 months"
+        },
+        {
+          "optionId": "18-20-months",
+          "text": "Always 18–20 months"
+        },
+        {
+          "optionId": "two-weeks",
+          "text": "2 weeks"
+        }
+      ],
+      "answerOptionId": "26-weeks",
+      "explanation": "The BPaLM follow-up schedule lists a 26-week course, with extension up to 39 weeks under specified criteria.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:drtb:bpalm-duration-26-weeks",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:drtb:bpalm-no-improvement-week9",
+      "questionVersionId": "infectious:drtb:bpalm-no-improvement-week9@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "A patient on BPaLM has no clinical improvement by week 9. What does current NTEP guidance recommend?",
+      "options": [
+        {
+          "optionId": "additional-workup",
+          "text": "Send an additional specimen for smear, rapid molecular testing and culture/drug-susceptibility testing, with specialist referral"
+        },
+        {
+          "optionId": "continue-blindly",
+          "text": "Continue unchanged without further evaluation"
+        },
+        {
+          "optionId": "stop-all",
+          "text": "Stop all TB treatment immediately without testing"
+        },
+        {
+          "optionId": "serology",
+          "text": "Order TB antibody serology only"
+        }
+      ],
+      "answerOptionId": "additional-workup",
+      "explanation": "The guideline recommends additional microbiological evaluation and referral if a patient deteriorates or fails to improve by about 9 weeks.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:drtb:bpalm-no-improvement-week9",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ntep:drtb-guidelines-2025-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hiv:pep-within-72h",
+      "questionVersionId": "infectious:hiv:pep-within-72h@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "After a potentially significant HIV exposure, within what maximum interval should PEP be considered according to NACO guidance?",
+      "options": [
+        {
+          "optionId": "72-hours",
+          "text": "Within 72 hours"
+        },
+        {
+          "optionId": "seven-days",
+          "text": "Within 7 days"
+        },
+        {
+          "optionId": "fourteen-days",
+          "text": "Within 14 days"
+        },
+        {
+          "optionId": "one-month",
+          "text": "Within 1 month"
+        }
+      ],
+      "answerOptionId": "72-hours",
+      "explanation": "NACO guidance states that PEP provision should be based on clinical consideration within 72 hours of exposure.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hiv:pep-within-72h",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hiv:pep-duration-28-days",
+      "questionVersionId": "infectious:hiv:pep-duration-28-days@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "What antiretroviral duration is specified for HIV post-exposure prophylaxis in NACO guidance?",
+      "options": [
+        {
+          "optionId": "28-days",
+          "text": "28 days"
+        },
+        {
+          "optionId": "three-days",
+          "text": "3 days"
+        },
+        {
+          "optionId": "seven-days",
+          "text": "7 days"
+        },
+        {
+          "optionId": "six-months",
+          "text": "6 months"
+        }
+      ],
+      "answerOptionId": "28-days",
+      "explanation": "NACO describes PEP as including a short 28-day course of antiretroviral drugs with follow-up and support.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hiv:pep-duration-28-days",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hiv:pep-program-coverage",
+      "questionVersionId": "infectious:hiv:pep-program-coverage@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which exposure is explicitly covered by HIV PEP services under India’s national programme according to NACO guidance?",
+      "options": [
+        {
+          "optionId": "sexual-assault",
+          "text": "A victim of sexual assault"
+        },
+        {
+          "optionId": "consensual-unprotected",
+          "text": "Any consensual unprotected sexual exposure regardless of programme criteria"
+        },
+        {
+          "optionId": "no-occupational",
+          "text": "Occupational exposure is excluded"
+        },
+        {
+          "optionId": "none",
+          "text": "The national programme provides no PEP services"
+        }
+      ],
+      "answerOptionId": "sexual-assault",
+      "explanation": "NACO states that the national programme provides PEP for occupational exposures and victims of sexual assault; it does not extend programme PEP to every other high-risk exposure category.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hiv:pep-program-coverage",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hiv:pep-source-testing-consent",
+      "questionVersionId": "infectious:hiv:pep-source-testing-consent@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "After a needle-stick exposure, the source patient’s HIV status is unknown. What approach is supported by NACO guidance?",
+      "options": [
+        {
+          "optionId": "consent-test",
+          "text": "Counsel the source person and offer HIV testing with informed consent"
+        },
+        {
+          "optionId": "secret-test",
+          "text": "Test the source person secretly without consent"
+        },
+        {
+          "optionId": "no-test-ever",
+          "text": "Never test the source person"
+        },
+        {
+          "optionId": "delay-months",
+          "text": "Delay all source evaluation for several months"
+        }
+      ],
+      "answerOptionId": "consent-test",
+      "explanation": "NACO guidance states that an identified source with unknown serostatus may be counselled and tested for HIV under informed consent.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hiv:pep-source-testing-consent",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:hiv:pep-comprehensive-management",
+      "questionVersionId": "infectious:hiv:pep-comprehensive-management@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Fourth controlled source-grounded intake batch; India national-program coverage",
+      "stem": "Which option best describes HIV PEP as defined in NACO guidance?",
+      "options": [
+        {
+          "optionId": "comprehensive",
+          "text": "First aid, counselling, exposure-risk assessment, relevant baseline investigations, a short ARV course, and follow-up support"
+        },
+        {
+          "optionId": "drug-only",
+          "text": "Only an antiretroviral prescription with no assessment or follow-up"
+        },
+        {
+          "optionId": "vaccine-only",
+          "text": "Vaccination alone"
+        },
+        {
+          "optionId": "observe-only",
+          "text": "Observation without risk assessment or preventive treatment"
+        }
+      ],
+      "answerOptionId": "comprehensive",
+      "explanation": "NACO describes PEP as comprehensive management, not merely drug dispensing: it includes first aid, counselling, risk assessment, relevant baseline investigations, ARVs and follow-up support.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:hiv:pep-comprehensive-management",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "naco:hiv-care-treatment-2021-accessed-2026-09-28"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited official Indian programme/guideline source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization for this batch is heuristic because verified exam-frequency evidence is not yet available."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
