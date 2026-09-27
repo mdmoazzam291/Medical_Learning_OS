@@ -74,7 +74,7 @@ test('post-answer memory rating is optional, four-grade and separate from score'
 test('medical study loop deep-links exact concept identity into NeuralVault', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /\/web\/vault\.html\?concept=/);
-  assert.match(source, /encodeURIComponent\(q\.conceptId\)/);
+  assert.match(source, /encodeURIComponent\(primaryConceptId\)/);
   assert.match(source, /Open concept in NeuralVault/);
 });
 
