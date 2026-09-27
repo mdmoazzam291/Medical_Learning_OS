@@ -53,3 +53,13 @@ test('unsupported digest metadata fails safely', async () => {
   assert.throws(() => validateDigestEnvelope({ ...envelope, digestAlgorithm: 'MD5' }), /Unsupported/);
   assert.throws(() => validateDigestEnvelope({ ...envelope, digestHex: 'xyz' }), /digest/);
 });
+
+
+test('canonical bytes and SHA-256 stay stable for a known vector', async () => {
+  const value = { b: 1, a: 2 };
+  assert.equal(canonicalize(value), '{"a":2,"b":1}');
+  assert.equal(
+    (await digestCanonical(value)).digestHex,
+    'd3626ac30a87e6f7a6428233b3c68299976865fa5508e4267c5415c76af7a772'
+  );
+});
