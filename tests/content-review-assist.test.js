@@ -109,9 +109,10 @@ test('multi-batch assist remains explicitly non-authoritative', () => {
     'pilot:rabies:20260927:01',
     'pilot:infectious-prevention:20260927:02',
     'pilot:acute-medicine:20260928:03',
-    'pilot:india-national-programs:20260928:05'
+    'pilot:india-national-programs:20260928:05',
+    'pilot:multimodal-breadth:20260928:06'
   ]);
-  assert.equal(packet.scope.questionCount, 80);
+  assert.equal(packet.scope.questionCount, 105);
   assert.equal(packet.authority, 'none');
   assert.equal(packet.policy.mayApproveReviewGate, false);
   assert.equal(packet.policy.mayVerifyContent, false);
@@ -133,6 +134,28 @@ test('review assist covers all 25 India national-program pilot 05 questions', ()
     assert.equal(item.medical?.uncertainty, 'low');
     assert.equal(item.references?.result, 'direct_support');
     assert.equal(item.rights?.result, 'citation_only_recommended');
+    assert.ok(item.medical?.draftNote && item.references?.draftNote && item.rights?.draftNote);
+    assert.equal('decision' in item, false);
+    assert.equal('approved' in item, false);
+    assert.equal('reviewerId' in item, false);
+  }
+});
+
+
+test('review assist covers all 25 multimodal breadth pilot 06 questions', () => {
+  const packet = assist();
+  const pilot06 = JSON.parse(readFileSync(
+    new URL('../data/content-intake-pilot-multimodal-breadth-06.json', import.meta.url), 'utf8'
+  ));
+  const covered = new Map(packet.questions.map(item => [item.questionVersionId, item]));
+  assert.equal(pilot06.questions.length, 25);
+  for (const question of pilot06.questions) {
+    const item = covered.get(question.questionVersionId);
+    assert.ok(item, `missing assist for ${question.questionVersionId}`);
+    assert.equal(item.medical?.result, 'supported');
+    assert.equal(item.medical?.uncertainty, 'low');
+    assert.equal(item.references?.result, 'direct_support');
+    assert.match(item.rights?.result || '', /^(citation_only|public_domain)_recommended$/);
     assert.ok(item.medical?.draftNote && item.references?.draftNote && item.rights?.draftNote);
     assert.equal('decision' in item, false);
     assert.equal('approved' in item, false);

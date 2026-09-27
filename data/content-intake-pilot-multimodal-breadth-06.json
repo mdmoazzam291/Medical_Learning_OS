@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "visual:pneumothorax:cxr-recognition",
+      "label": "Recognize pneumothorax on expiratory chest radiograph",
+      "aliases": [
+        "Pneumothorax on chest radiograph"
+      ],
+      "subjectTags": [
+        "radiology",
+        "respiratory-medicine",
+        "emergency-medicine",
+        "visual-diagnosis"
+      ]
+    },
+    {
+      "conceptId": "visual:urolithiasis:ct-window-recognition",
+      "label": "Recognize renal calculus on CT window comparison",
+      "aliases": [
+        "Renal calculus on CT"
+      ],
+      "subjectTags": [
+        "radiology",
+        "urology",
+        "renal",
+        "visual-diagnosis"
+      ]
+    },
+    {
+      "conceptId": "visual:pneumonia:right-middle-lobe-cxr",
+      "label": "Localize lobar pneumonia on chest radiograph",
+      "aliases": [
+        "Right middle lobe lobar pneumonia"
+      ],
+      "subjectTags": [
+        "radiology",
+        "respiratory-medicine",
+        "infectious-disease",
+        "visual-diagnosis"
+      ]
+    },
+    {
+      "conceptId": "visual:pathology:clear-cell-rcc",
+      "label": "Recognize clear cell RCC histopathology",
+      "aliases": [
+        "Clear cell renal cell carcinoma histology"
+      ],
+      "subjectTags": [
+        "pathology",
+        "urology",
+        "oncology",
+        "visual-diagnosis"
+      ]
+    },
+    {
+      "conceptId": "visual:pathology:seminoma",
+      "label": "Recognize seminoma histopathology",
+      "aliases": [
+        "Seminoma histology"
+      ],
+      "subjectTags": [
+        "pathology",
+        "urology",
+        "oncology",
+        "visual-diagnosis"
+      ]
+    },
+    {
+      "conceptId": "pediatrics:nrp:ventilate-within-60s",
+      "label": "Ventilate within 60 seconds for apnea/gasping or persistent HR <100",
+      "aliases": [
+        "Neonatal assisted ventilation indication"
+      ],
+      "subjectTags": [
+        "pediatrics",
+        "neonatology",
+        "resuscitation",
+        "guideline-aha-2025"
+      ]
+    },
+    {
+      "conceptId": "pediatrics:nrp:compressions-after-ventilation",
+      "label": "Chest compressions after HR <60 despite 30 seconds effective ventilation",
+      "aliases": [
+        "Neonatal chest compression threshold"
+      ],
+      "subjectTags": [
+        "pediatrics",
+        "neonatology",
+        "resuscitation",
+        "guideline-aha-2025"
+      ]
+    },
+    {
+      "conceptId": "pediatrics:nrp:compression-ventilation-ratio",
+      "label": "Use 3:1 compression-to-ventilation ratio",
+      "aliases": [
+        "Neonatal compression-to-ventilation ratio"
+      ],
+      "subjectTags": [
+        "pediatrics",
+        "neonatology",
+        "resuscitation",
+        "guideline-aha-2025"
+      ]
+    },
+    {
+      "conceptId": "pediatrics:nrp:iv-epinephrine-dose",
+      "label": "Intravascular epinephrine 0.01–0.03 mg/kg",
+      "aliases": [
+        "Neonatal intravascular epinephrine dose"
+      ],
+      "subjectTags": [
+        "pediatrics",
+        "neonatology",
+        "pharmacology",
+        "guideline-aha-2025"
+      ]
+    },
+    {
+      "conceptId": "pediatrics:nrp:term-initial-oxygen",
+      "label": "Begin with 21% oxygen at ≥35 weeks when respiratory support is needed",
+      "aliases": [
+        "Initial oxygen for term neonatal respiratory support"
+      ],
+      "subjectTags": [
+        "pediatrics",
+        "neonatology",
+        "resuscitation",
+        "guideline-aha-2025"
+      ]
+    },
+    {
+      "conceptId": "gastro:acute-pancreatitis:ct-timing",
+      "label": "Reserve CT for uncertain diagnosis or failure to improve by 48–72 hours",
+      "aliases": [
+        "CT use in acute pancreatitis"
+      ],
+      "subjectTags": [
+        "gastroenterology",
+        "surgery",
+        "acute-pancreatitis",
+        "guideline-acg-2024"
+      ]
+    },
+    {
+      "conceptId": "gastro:acute-pancreatitis:lr-fluid",
+      "label": "Prefer Lactated Ringer solution",
+      "aliases": [
+        "Fluid choice in acute pancreatitis"
+      ],
+      "subjectTags": [
+        "gastroenterology",
+        "surgery",
+        "fluid-therapy",
+        "guideline-acg-2024"
+      ]
+    },
+    {
+      "conceptId": "gastro:acute-pancreatitis:early-feeding",
+      "label": "Low-fat solid oral feeding within 24–48 hours as tolerated",
+      "aliases": [
+        "Early oral feeding in mild acute pancreatitis"
+      ],
+      "subjectTags": [
+        "gastroenterology",
+        "surgery",
+        "nutrition",
+        "guideline-acg-2024"
+      ]
+    },
+    {
+      "conceptId": "gastro:acute-pancreatitis:ercp-cholangitis",
+      "label": "ERCP within 24 hours for acute pancreatitis complicated by cholangitis",
+      "aliases": [
+        "ERCP timing with cholangitis"
+      ],
+      "subjectTags": [
+        "gastroenterology",
+        "surgery",
+        "endoscopy",
+        "guideline-acg-2024"
+      ]
+    },
+    {
+      "conceptId": "gastro:acute-pancreatitis:biliary-cholecystectomy",
+      "label": "Cholecystectomy before discharge",
+      "aliases": [
+        "Cholecystectomy in mild acute biliary pancreatitis"
+      ],
+      "subjectTags": [
+        "gastroenterology",
+        "surgery",
+        "biliary-disease",
+        "guideline-acg-2024"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:diagnosis-two-unprovoked",
+      "label": "Two or more unprovoked seizures separated by at least 24 hours",
+      "aliases": [
+        "Epilepsy diagnostic pattern"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "diagnosis",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:eeg-purpose",
+      "label": "EEG measures brain electrical activity and helps evaluate seizure disorders",
+      "aliases": [
+        "EEG in epilepsy evaluation"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "neurophysiology",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:video-eeg-differential",
+      "label": "Video EEG helps characterize events and distinguish mimics",
+      "aliases": [
+        "Video EEG purpose"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "diagnosis",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:seeg-localization",
+      "label": "SEEG localizes seizure origin for surgical evaluation",
+      "aliases": [
+        "SEEG purpose"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "neurosurgery",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "neurology:epilepsy:meg-surgical-planning",
+      "label": "MEG can localize abnormal magnetic activity for epilepsy surgery planning",
+      "aliases": [
+        "MEG role in epilepsy"
+      ],
+      "subjectTags": [
+        "neurology",
+        "epilepsy",
+        "neurophysiology",
+        "nih-ninds"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:treatment-modalities",
+      "label": "Psychotherapy, medication, or both",
+      "aliases": [
+        "Core depression treatment modalities"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "treatment",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:mild-psychotherapy-first",
+      "label": "Psychotherapy is often tried first in milder depression",
+      "aliases": [
+        "Milder depression treatment"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "psychotherapy",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:moderate-severe-medication",
+      "label": "Medication commonly forms part of the initial plan",
+      "aliases": [
+        "Moderate-to-severe depression treatment"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "pharmacology",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:evidence-based-psychotherapies",
+      "label": "CBT and interpersonal therapy are evidence-based options",
+      "aliases": [
+        "Evidence-based psychotherapy for depression"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "psychotherapy",
+        "nih-nimh"
+      ]
+    },
+    {
+      "conceptId": "psychiatry:depression:antidepressant-onset",
+      "label": "Antidepressants commonly take 4–8 weeks to work",
+      "aliases": [
+        "Antidepressant response time"
+      ],
+      "subjectTags": [
+        "psychiatry",
+        "depression",
+        "pharmacology",
+        "nih-nimh"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "aha:neonatal-resuscitation:2025",
+      "title": "2025 AHA/AAP Guidelines: Neonatal Resuscitation",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+      "version": "2025-guideline-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official AHA/AAP guideline used only for factual grounding of original questions. No tables, figures, or source wording are intended to be reproduced; production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "acg:acute-pancreatitis:2024-highlights",
+      "title": "ACG Guideline Highlights: Acute Pancreatitis 2024",
+      "url": "https://webfiles.gi.org/links/journals/AJG-Clinical-Guidelines-Highlights-Acute-Pancreatitis-2024-FINAL.pdf",
+      "version": "2024-guideline-highlights-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official ACG guideline highlights used only for factual grounding of original questions. No tables, figures, or source wording are intended to be reproduced; production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "wikimedia:expired-xray-pneumothorax:2018",
+      "title": "Wikimedia Commons: Expired X-ray of pneumothorax",
+      "url": "https://commons.wikimedia.org/wiki/File:Expired_X-ray_of_pneumothorax.jpg",
+      "version": "2018-file-page-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "wikimedia:kidney-stone-window-ct:2018",
+      "title": "Wikimedia Commons: CT measurement of kidney stone in soft tissue and bone window",
+      "url": "https://commons.wikimedia.org/wiki/File:CT_measurement_of_kidney_stone_in_soft_tissue_and_bone_window.jpg",
+      "version": "2018-file-page-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "wikimedia:lobar-pneumonia-cxr:2018",
+      "title": "Wikimedia Commons: X-ray of lobar pneumonia",
+      "url": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
+      "version": "2018-file-page-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "wikimedia:clear-cell-rcc-grade1:2021",
+      "title": "Wikimedia Commons: Clear cell renal cell carcinoma grade 1 histopathology",
+      "url": "https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_intermediate_magnification.jpg",
+      "version": "2021-file-page-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "wikimedia:seminoma-intermediate:2022",
+      "title": "Wikimedia Commons: Seminoma histopathology intermediate magnification",
+      "url": "https://commons.wikimedia.org/wiki/File:Histopathology_of_seminoma,_intermediate_magnification.jpg",
+      "version": "2022-file-page-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "File-page diagnosis/caption used for factual grounding. The linked image itself is separately registered as a CC0/public-domain media asset; catalog-source rights remain independently reviewed."
+      }
+    },
+    {
+      "sourceId": "ninds:epilepsy-seizures:2024",
+      "title": "NINDS: Epilepsy and Seizures",
+      "url": "https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures",
+      "version": "publication-2024-accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NINDS/NIH text used for factual grounding of original questions. NIH states that most information on NIH web servers is in the public domain unless otherwise indicated; production rights review remains separate."
+      }
+    },
+    {
+      "sourceId": "nimh:depression:2026",
+      "title": "NIMH: Depression",
+      "url": "https://www.nimh.nih.gov/health/publications/depression",
+      "version": "accessed-2026-09-28",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official NIMH/NIH text used for factual grounding of original questions. NIMH states its website information is in the public domain and may be copied/reused unless otherwise indicated; production rights review remains separate."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "visual:pneumothorax:cxr-recognition",
+      "questionVersionId": "visual:pneumothorax:cxr-recognition@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "The accompanying expiratory chest radiograph shows a large hyperlucent left hemithorax with absent peripheral vascular markings. What is the diagnosis?",
+      "options": [
+        {
+          "optionId": "pneumothorax",
+          "text": "Left pneumothorax"
+        },
+        {
+          "optionId": "effusion",
+          "text": "Left pleural effusion"
+        },
+        {
+          "optionId": "pneumonia",
+          "text": "Left lobar pneumonia"
+        },
+        {
+          "optionId": "edema",
+          "text": "Pulmonary edema"
+        }
+      ],
+      "answerOptionId": "pneumothorax",
+      "explanation": "The source image is identified as an expiratory chest radiograph demonstrating a left pneumothorax, which becomes much more conspicuous on expiration.",
+      "conceptLinks": [
+        {
+          "conceptId": "visual:pneumothorax:cxr-recognition",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "wikimedia:expired-xray-pneumothorax:2018"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "visual:urolithiasis:ct-window-recognition",
+      "questionVersionId": "visual:urolithiasis:ct-window-recognition@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "The accompanying CT comparison shows the same small hyperattenuating focus measured in soft-tissue and bone windows. What is being measured?",
+      "options": [
+        {
+          "optionId": "renal-calculus",
+          "text": "A renal calculus"
+        },
+        {
+          "optionId": "gallstone",
+          "text": "A gallstone"
+        },
+        {
+          "optionId": "fibroid",
+          "text": "A calcified uterine fibroid"
+        },
+        {
+          "optionId": "contrast",
+          "text": "An intravascular contrast bolus"
+        }
+      ],
+      "answerOptionId": "renal-calculus",
+      "explanation": "The source image specifically depicts CT measurement of a kidney stone in soft-tissue and bone windows.",
+      "conceptLinks": [
+        {
+          "conceptId": "visual:urolithiasis:ct-window-recognition",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "wikimedia:kidney-stone-window-ct:2018"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "visual:pneumonia:right-middle-lobe-cxr",
+      "questionVersionId": "visual:pneumonia:right-middle-lobe-cxr@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "The accompanying chest radiograph demonstrates focal air-space opacity in the right mid-to-lower lung. Which diagnosis and location best matches the source-confirmed finding?",
+      "options": [
+        {
+          "optionId": "rml-pneumonia",
+          "text": "Right middle lobe lobar pneumonia"
+        },
+        {
+          "optionId": "rul-collapse",
+          "text": "Right upper lobe collapse"
+        },
+        {
+          "optionId": "lll-pneumonia",
+          "text": "Left lower lobe pneumonia"
+        },
+        {
+          "optionId": "pulmonary-edema",
+          "text": "Bilateral pulmonary edema"
+        }
+      ],
+      "answerOptionId": "rml-pneumonia",
+      "explanation": "The source description identifies lobar pneumonia affecting the right middle lobe.",
+      "conceptLinks": [
+        {
+          "conceptId": "visual:pneumonia:right-middle-lobe-cxr",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "wikimedia:lobar-pneumonia-cxr:2018"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "visual:pathology:clear-cell-rcc",
+      "questionVersionId": "visual:pathology:clear-cell-rcc@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "The accompanying H&E micrograph is source-confirmed as a grade 1 renal malignancy with clear-cell morphology. What is the diagnosis?",
+      "options": [
+        {
+          "optionId": "ccrcc",
+          "text": "Clear cell renal cell carcinoma"
+        },
+        {
+          "optionId": "papillary-rcc",
+          "text": "Papillary renal cell carcinoma"
+        },
+        {
+          "optionId": "chromophobe-rcc",
+          "text": "Chromophobe renal cell carcinoma"
+        },
+        {
+          "optionId": "oncocytoma",
+          "text": "Renal oncocytoma"
+        }
+      ],
+      "answerOptionId": "ccrcc",
+      "explanation": "The source caption identifies this H&E image as grade 1 clear cell renal cell carcinoma at intermediate magnification.",
+      "conceptLinks": [
+        {
+          "conceptId": "visual:pathology:clear-cell-rcc",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "wikimedia:clear-cell-rcc-grade1:2021"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "visual:pathology:seminoma",
+      "questionVersionId": "visual:pathology:seminoma@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "The accompanying H&E micrograph is source-confirmed as a germ-cell tumor at intermediate magnification. What is the diagnosis?",
+      "options": [
+        {
+          "optionId": "seminoma",
+          "text": "Seminoma"
+        },
+        {
+          "optionId": "embryonal",
+          "text": "Embryonal carcinoma"
+        },
+        {
+          "optionId": "yolk-sac",
+          "text": "Yolk sac tumor"
+        },
+        {
+          "optionId": "choriocarcinoma",
+          "text": "Choriocarcinoma"
+        }
+      ],
+      "answerOptionId": "seminoma",
+      "explanation": "The source caption identifies this H&E image as seminoma at intermediate magnification.",
+      "conceptLinks": [
+        {
+          "conceptId": "visual:pathology:seminoma",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "wikimedia:seminoma-intermediate:2022"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "pediatrics:nrp:ventilate-within-60s",
+      "questionVersionId": "pediatrics:nrp:ventilate-within-60s@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A newborn remains apneic after appropriate initial steps and the heart rate is 90/min. According to the 2025 AHA/AAP neonatal resuscitation guideline, what should occur next?",
+      "options": [
+        {
+          "optionId": "ventilation",
+          "text": "Begin assisted ventilation within 60 seconds after birth"
+        },
+        {
+          "optionId": "compressions",
+          "text": "Start chest compressions immediately"
+        },
+        {
+          "optionId": "epinephrine",
+          "text": "Give intravascular epinephrine immediately"
+        },
+        {
+          "optionId": "observe",
+          "text": "Observe without respiratory support for 5 minutes"
+        }
+      ],
+      "answerOptionId": "ventilation",
+      "explanation": "Ventilation should be provided within 60 seconds after birth for newborns who are gasping or apneic or remain bradycardic below 100/min despite initial steps.",
+      "conceptLinks": [
+        {
+          "conceptId": "pediatrics:nrp:ventilate-within-60s",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:neonatal-resuscitation:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "pediatrics:nrp:compressions-after-ventilation",
+      "questionVersionId": "pediatrics:nrp:compressions-after-ventilation@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A newborn's heart rate remains 50/min after 30 seconds of ventilation that visibly inflates the lungs. What is the recommended next intervention?",
+      "options": [
+        {
+          "optionId": "compressions",
+          "text": "Begin chest compressions"
+        },
+        {
+          "optionId": "observe",
+          "text": "Continue observation only"
+        },
+        {
+          "optionId": "atropine",
+          "text": "Give atropine"
+        },
+        {
+          "optionId": "stop-ventilation",
+          "text": "Stop ventilation and reassess in 5 minutes"
+        }
+      ],
+      "answerOptionId": "compressions",
+      "explanation": "Chest compressions are recommended when the heart rate remains below 60/min despite 30 seconds of ventilation that inflates the lungs.",
+      "conceptLinks": [
+        {
+          "conceptId": "pediatrics:nrp:compressions-after-ventilation",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:neonatal-resuscitation:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "pediatrics:nrp:compression-ventilation-ratio",
+      "questionVersionId": "pediatrics:nrp:compression-ventilation-ratio@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "When chest compressions are required during neonatal resuscitation, which synchronized compression-to-ventilation ratio is recommended as reasonable?",
+      "options": [
+        {
+          "optionId": "three-one",
+          "text": "3:1"
+        },
+        {
+          "optionId": "fifteen-two",
+          "text": "15:2"
+        },
+        {
+          "optionId": "thirty-two",
+          "text": "30:2"
+        },
+        {
+          "optionId": "five-one",
+          "text": "5:1"
+        }
+      ],
+      "answerOptionId": "three-one",
+      "explanation": "The 2025 guideline supports repeated cycles of 3 compressions followed by 1 ventilation breath, a 3:1 ratio.",
+      "conceptLinks": [
+        {
+          "conceptId": "pediatrics:nrp:compression-ventilation-ratio",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:neonatal-resuscitation:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "pediatrics:nrp:iv-epinephrine-dose",
+      "questionVersionId": "pediatrics:nrp:iv-epinephrine-dose@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A newborn remains below 60/min despite optimized ventilation and chest compressions. Which intravascular epinephrine dose is recommended?",
+      "options": [
+        {
+          "optionId": "dose-correct",
+          "text": "0.01–0.03 mg/kg"
+        },
+        {
+          "optionId": "dose-low",
+          "text": "0.001 mg/kg"
+        },
+        {
+          "optionId": "dose-high",
+          "text": "0.1–0.3 mg/kg"
+        },
+        {
+          "optionId": "dose-fixed",
+          "text": "1 mg regardless of weight"
+        }
+      ],
+      "answerOptionId": "dose-correct",
+      "explanation": "The guideline recommends intravascular epinephrine 0.01–0.03 mg/kg when the heart rate has not risen to at least 60/min after optimized ventilation and compressions.",
+      "conceptLinks": [
+        {
+          "conceptId": "pediatrics:nrp:iv-epinephrine-dose",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:neonatal-resuscitation:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "pediatrics:nrp:term-initial-oxygen",
+      "questionVersionId": "pediatrics:nrp:term-initial-oxygen@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A term newborn at 39 weeks requires respiratory support at birth but not chest compressions. What initial oxygen concentration is reasonable?",
+      "options": [
+        {
+          "optionId": "air",
+          "text": "21% oxygen (room air)"
+        },
+        {
+          "optionId": "hundred",
+          "text": "100% oxygen"
+        },
+        {
+          "optionId": "sixty",
+          "text": "60% oxygen"
+        },
+        {
+          "optionId": "forty",
+          "text": "40% oxygen"
+        }
+      ],
+      "answerOptionId": "air",
+      "explanation": "For term and late-preterm newborns at 35 weeks or more receiving respiratory support at birth, beginning with 21% oxygen is reasonable.",
+      "conceptLinks": [
+        {
+          "conceptId": "pediatrics:nrp:term-initial-oxygen",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "aha:neonatal-resuscitation:2025"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "gastro:acute-pancreatitis:ct-timing",
+      "questionVersionId": "gastro:acute-pancreatitis:ct-timing@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient has typical acute pancreatitis and improves clinically during the first day. According to the 2024 ACG guideline highlights, what is the best approach to contrast CT?",
+      "options": [
+        {
+          "optionId": "reserve",
+          "text": "Reserve CT for uncertain diagnosis or failure to improve after 48–72 hours"
+        },
+        {
+          "optionId": "routine",
+          "text": "Obtain CT routinely at admission in every patient"
+        },
+        {
+          "optionId": "daily",
+          "text": "Repeat CT daily until lipase normalizes"
+        },
+        {
+          "optionId": "never",
+          "text": "Never use CT in acute pancreatitis"
+        }
+      ],
+      "answerOptionId": "reserve",
+      "explanation": "ACG recommends reserving CT for diagnostic uncertainty or failure to improve within 48–72 hours rather than routine early CT.",
+      "conceptLinks": [
+        {
+          "conceptId": "gastro:acute-pancreatitis:ct-timing",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "acg:acute-pancreatitis:2024-highlights"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "gastro:acute-pancreatitis:lr-fluid",
+      "questionVersionId": "gastro:acute-pancreatitis:lr-fluid@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Which crystalloid is preferred for initial intravenous hydration in acute pancreatitis according to the 2024 ACG guideline highlights?",
+      "options": [
+        {
+          "optionId": "lr",
+          "text": "Lactated Ringer solution"
+        },
+        {
+          "optionId": "d5w",
+          "text": "5% dextrose in water"
+        },
+        {
+          "optionId": "three-percent",
+          "text": "3% saline"
+        },
+        {
+          "optionId": "half-normal",
+          "text": "0.45% saline"
+        }
+      ],
+      "answerOptionId": "lr",
+      "explanation": "The 2024 ACG guideline highlights list Lactated Ringer solution as the preferred fluid.",
+      "conceptLinks": [
+        {
+          "conceptId": "gastro:acute-pancreatitis:lr-fluid",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "acg:acute-pancreatitis:2024-highlights"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "gastro:acute-pancreatitis:early-feeding",
+      "questionVersionId": "gastro:acute-pancreatitis:early-feeding@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient has mild acute pancreatitis without persistent vomiting. What feeding strategy is recommended?",
+      "options": [
+        {
+          "optionId": "early-low-fat",
+          "text": "Begin a low-fat solid oral diet within 24–48 hours as tolerated"
+        },
+        {
+          "optionId": "npo-week",
+          "text": "Keep nil by mouth for 7 days"
+        },
+        {
+          "optionId": "tpn-first",
+          "text": "Start total parenteral nutrition immediately"
+        },
+        {
+          "optionId": "clear-only",
+          "text": "Use clear liquids only until pancreatic enzymes normalize"
+        }
+      ],
+      "answerOptionId": "early-low-fat",
+      "explanation": "For mild acute pancreatitis, ACG supports early oral feeding with a low-fat solid diet within 24–48 hours as tolerated.",
+      "conceptLinks": [
+        {
+          "conceptId": "gastro:acute-pancreatitis:early-feeding",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "acg:acute-pancreatitis:2024-highlights"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "gastro:acute-pancreatitis:ercp-cholangitis",
+      "questionVersionId": "gastro:acute-pancreatitis:ercp-cholangitis@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient with acute gallstone pancreatitis has concurrent acute cholangitis. What procedure timing is recommended?",
+      "options": [
+        {
+          "optionId": "ercp-24",
+          "text": "ERCP within 24 hours"
+        },
+        {
+          "optionId": "ercp-month",
+          "text": "ERCP after 4–6 weeks"
+        },
+        {
+          "optionId": "no-ercp",
+          "text": "ERCP is contraindicated"
+        },
+        {
+          "optionId": "surgery-only",
+          "text": "Immediate pancreatic surgery without ERCP"
+        }
+      ],
+      "answerOptionId": "ercp-24",
+      "explanation": "The 2024 ACG guideline highlights recommend ERCP within 24 hours when acute pancreatitis is complicated by cholangitis.",
+      "conceptLinks": [
+        {
+          "conceptId": "gastro:acute-pancreatitis:ercp-cholangitis",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "acg:acute-pancreatitis:2024-highlights"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "gastro:acute-pancreatitis:biliary-cholecystectomy",
+      "questionVersionId": "gastro:acute-pancreatitis:biliary-cholecystectomy@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient recovers from mild acute biliary pancreatitis during the index admission. When should cholecystectomy preferably be performed?",
+      "options": [
+        {
+          "optionId": "before-discharge",
+          "text": "Before discharge from the index admission"
+        },
+        {
+          "optionId": "six-months",
+          "text": "Six months later routinely"
+        },
+        {
+          "optionId": "never",
+          "text": "Never after a first attack"
+        },
+        {
+          "optionId": "after-recurrence",
+          "text": "Only after a second episode"
+        }
+      ],
+      "answerOptionId": "before-discharge",
+      "explanation": "ACG recommends cholecystectomy preferably before discharge in mild acute biliary pancreatitis.",
+      "conceptLinks": [
+        {
+          "conceptId": "gastro:acute-pancreatitis:biliary-cholecystectomy",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "acg:acute-pancreatitis:2024-highlights"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:epilepsy:diagnosis-two-unprovoked",
+      "questionVersionId": "neurology:epilepsy:diagnosis-two-unprovoked@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Which history most closely matches the general diagnostic pattern for epilepsy described by NINDS?",
+      "options": [
+        {
+          "optionId": "two-unprovoked",
+          "text": "Two or more unprovoked seizures separated by at least 24 hours"
+        },
+        {
+          "optionId": "single-provoked",
+          "text": "One seizure during severe hypoglycemia"
+        },
+        {
+          "optionId": "syncope-only",
+          "text": "Two episodes of vasovagal syncope"
+        },
+        {
+          "optionId": "febrile-only",
+          "text": "One simple febrile seizure in childhood"
+        }
+      ],
+      "answerOptionId": "two-unprovoked",
+      "explanation": "NINDS notes that epilepsy is generally diagnosed after two or more unprovoked seizures separated by at least 24 hours.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:epilepsy:diagnosis-two-unprovoked",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ninds:epilepsy-seizures:2024"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:epilepsy:eeg-purpose",
+      "questionVersionId": "neurology:epilepsy:eeg-purpose@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "What is the principal role of EEG in a patient being evaluated for recurrent seizures?",
+      "options": [
+        {
+          "optionId": "electrical",
+          "text": "Measure brain electrical activity and look for abnormalities relevant to seizure disorders"
+        },
+        {
+          "optionId": "anatomy",
+          "text": "Provide high-resolution structural anatomy like MRI"
+        },
+        {
+          "optionId": "csf",
+          "text": "Measure cerebrospinal-fluid pressure"
+        },
+        {
+          "optionId": "perfusion",
+          "text": "Directly measure cerebral perfusion"
+        }
+      ],
+      "answerOptionId": "electrical",
+      "explanation": "NINDS describes EEG as monitoring the brain's electrical activity and helping diagnose seizure disorders by identifying abnormal brain-wave patterns.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:epilepsy:eeg-purpose",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ninds:epilepsy-seizures:2024"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:epilepsy:video-eeg-differential",
+      "questionVersionId": "neurology:epilepsy:video-eeg-differential@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Why may video monitoring be combined with EEG during epilepsy evaluation?",
+      "options": [
+        {
+          "optionId": "characterize",
+          "text": "To characterize the events and help rule out disorders that may look like epilepsy"
+        },
+        {
+          "optionId": "measure-icp",
+          "text": "To measure intracranial pressure"
+        },
+        {
+          "optionId": "treat-seizure",
+          "text": "To terminate seizures electrically"
+        },
+        {
+          "optionId": "replace-history",
+          "text": "To eliminate the need for clinical history"
+        }
+      ],
+      "answerOptionId": "characterize",
+      "explanation": "NINDS notes that video monitoring may be used with EEG to determine the nature of seizures and help rule out other disorders that resemble epilepsy.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:epilepsy:video-eeg-differential",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ninds:epilepsy-seizures:2024"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:epilepsy:seeg-localization",
+      "questionVersionId": "neurology:epilepsy:seeg-localization@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "What is the main purpose of stereoelectroencephalography (SEEG) in selected patients with epilepsy?",
+      "options": [
+        {
+          "optionId": "localize",
+          "text": "Implant electrodes to better localize where seizures originate"
+        },
+        {
+          "optionId": "screen-hearing",
+          "text": "Screen for hearing loss"
+        },
+        {
+          "optionId": "measure-csf",
+          "text": "Measure CSF glucose"
+        },
+        {
+          "optionId": "treat-migraine",
+          "text": "Treat migraine aura"
+        }
+      ],
+      "answerOptionId": "localize",
+      "explanation": "NINDS describes SEEG as surgically implanted brain electrodes used to better identify where seizures are located and to help determine surgical candidacy.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:epilepsy:seeg-localization",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ninds:epilepsy-seizures:2024"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "neurology:epilepsy:meg-surgical-planning",
+      "questionVersionId": "neurology:epilepsy:meg-surgical-planning@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "In epilepsy evaluation, magnetoencephalography (MEG) is particularly useful for which purpose?",
+      "options": [
+        {
+          "optionId": "localize",
+          "text": "Localizing unusual brain activity to help plan surgery while protecting normal functional regions"
+        },
+        {
+          "optionId": "diagnose-meningitis",
+          "text": "Diagnosing meningitis from CSF"
+        },
+        {
+          "optionId": "measure-blood",
+          "text": "Measuring serum antiseizure drug concentration"
+        },
+        {
+          "optionId": "cardiac",
+          "text": "Detecting cardiac arrhythmias"
+        }
+      ],
+      "answerOptionId": "localize",
+      "explanation": "NINDS explains that MEG measures magnetic signals generated by neurons and can help surgeons localize abnormal activity when planning epilepsy surgery.",
+      "conceptLinks": [
+        {
+          "conceptId": "neurology:epilepsy:meg-surgical-planning",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "ninds:epilepsy-seizures:2024"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:treatment-modalities",
+      "questionVersionId": "psychiatry:depression:treatment-modalities@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Which statement best reflects the usual treatment framework for depression described by NIMH?",
+      "options": [
+        {
+          "optionId": "psych-med",
+          "text": "Treatment commonly involves psychotherapy, medication, or both"
+        },
+        {
+          "optionId": "surgery-only",
+          "text": "Neurosurgery is first-line for most patients"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Antibiotics are the standard initial treatment"
+        },
+        {
+          "optionId": "no-treatment",
+          "text": "Depression generally resolves without treatment"
+        }
+      ],
+      "answerOptionId": "psych-med",
+      "explanation": "NIMH states that depression treatment typically involves psychotherapy, medication, or both, with treatment selected according to individual needs and clinical circumstances.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:treatment-modalities",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:mild-psychotherapy-first",
+      "questionVersionId": "psychiatry:depression:mild-psychotherapy-first@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "For a milder form of depression, what treatment sequence is commonly described by NIMH?",
+      "options": [
+        {
+          "optionId": "therapy-first",
+          "text": "Psychotherapy is often tried first, with medication added if response is inadequate"
+        },
+        {
+          "optionId": "ect-first",
+          "text": "ECT is routinely the first intervention"
+        },
+        {
+          "optionId": "polypharmacy",
+          "text": "Multiple antidepressants are started simultaneously"
+        },
+        {
+          "optionId": "no-followup",
+          "text": "No active treatment or follow-up is needed"
+        }
+      ],
+      "answerOptionId": "therapy-first",
+      "explanation": "NIMH notes that psychotherapy is often tried first for milder depression, with medication added later if psychotherapy alone does not produce a good response.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:mild-psychotherapy-first",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:moderate-severe-medication",
+      "questionVersionId": "psychiatry:depression:moderate-severe-medication@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "For moderate or severe depression, which approach is commonly part of the initial treatment plan according to NIMH?",
+      "options": [
+        {
+          "optionId": "medication",
+          "text": "Medication, often alongside psychotherapy according to individual needs"
+        },
+        {
+          "optionId": "no-treatment",
+          "text": "Observation alone regardless of severity"
+        },
+        {
+          "optionId": "antibiotic",
+          "text": "Antibiotic therapy"
+        },
+        {
+          "optionId": "stimulant-only",
+          "text": "Stimulant monotherapy in all patients"
+        }
+      ],
+      "answerOptionId": "medication",
+      "explanation": "NIMH states that people with moderate or severe depression usually are prescribed medication as part of the initial treatment plan.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:moderate-severe-medication",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:evidence-based-psychotherapies",
+      "questionVersionId": "psychiatry:depression:evidence-based-psychotherapies@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "Which pair is specifically identified by NIMH as evidence-based psychotherapy for depression?",
+      "options": [
+        {
+          "optionId": "cbt-ipt",
+          "text": "Cognitive behavioral therapy and interpersonal therapy"
+        },
+        {
+          "optionId": "aversion-hypnosis",
+          "text": "Aversion therapy and hypnosis"
+        },
+        {
+          "optionId": "sleep-deprivation-only",
+          "text": "Sleep deprivation and supportive silence"
+        },
+        {
+          "optionId": "psychoanalysis-only",
+          "text": "Long-term psychoanalysis as the only evidence-based choice"
+        }
+      ],
+      "answerOptionId": "cbt-ipt",
+      "explanation": "NIMH lists cognitive behavioral therapy and interpersonal therapy among evidence-based psychotherapies for depression.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:evidence-based-psychotherapies",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "psychiatry:depression:antidepressant-onset",
+      "questionVersionId": "psychiatry:depression:antidepressant-onset@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Sixth controlled breadth-first source-grounded intake batch; first multimodal radiology/pathology questions",
+      "stem": "A patient begins an antidepressant for depression. What general time course does NIMH describe before antidepressants exert their therapeutic effect?",
+      "options": [
+        {
+          "optionId": "four-eight",
+          "text": "Usually about 4–8 weeks"
+        },
+        {
+          "optionId": "minutes",
+          "text": "Usually within minutes"
+        },
+        {
+          "optionId": "one-day",
+          "text": "Always within 24 hours"
+        },
+        {
+          "optionId": "one-year",
+          "text": "Only after one year"
+        }
+      ],
+      "answerOptionId": "four-eight",
+      "explanation": "NIMH notes that antidepressants usually take about 4–8 weeks to work, and some symptoms such as sleep, appetite, and concentration may improve before mood.",
+      "conceptLinks": [
+        {
+          "conceptId": "psychiatry:depression:antidepressant-onset",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nimh:depression:2026"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited source. It is not a recalled or licensed PYQ. NEET-PG/INI-CET prioritization is heuristic because verified historical exam-frequency evidence is insufficient for a frequency claim."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
