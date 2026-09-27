@@ -44,7 +44,8 @@ test('NeuralVault UI supports authenticated search and update-aware anchor messa
 
 
 test('NeuralVault startup honors exact concept deep links', () => {
-  assert.match(source, /new URL\(location\.href\)\.searchParams\.get\('concept'\)/);
+  assert.match(source, /const initialParams = new URLSearchParams\(location\.search\)/);
+  assert.match(source, /const initialConceptId = initialParams\.get\('concept'\)/);
   assert.match(source, /reloadVault\(initialConceptId\)/);
 });
 
