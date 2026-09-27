@@ -160,6 +160,6 @@ All database evolution is **forward-only from the repository's existing timestam
 
 
 ## M10 slices
-- M10a — IN PROGRESS: provider-independent Phase-1 MediaAsset/annotation/question-link domain contract is implemented for JPEG/PNG/WebP and radiology/pathology/dermatology/ophthalmology/anatomy/ECG image modalities. The contract preserves byte identity, provenance/licence evidence, review state, normalized hotspot/bbox/polygon annotations and blind-first-look learner safety. Remaining M10a gates are persistence/storage, media-bound review fingerprints, learner/API rendering and the first sourced radiology/pathology pilot.
+- M10a — IN PROGRESS: provider-independent Phase-1 MediaAsset/annotation/question-link contract plus hosted immutable persistence, normalized media-rights state, media-bound review fingerprints and authenticated learner-safe media API are live. Remaining M10a gates are durable byte hosting/delivery verification, learner-page image rendering and the first sourced radiology/pathology pilot.
 - M10b — PLANNED: visual learner interactions and evidence events for detection, localization, description, interpretation and discrimination; integrate visual-error fingerprints with Mistake Intelligence and Study Now.
 - M10c — LATER: DICOM/DICOMweb, CT/MRI stacks, whole-slide pathology, measurements and multi-series studies only after Phase-1 usage proves the need.
