@@ -147,3 +147,11 @@ All database evolution is **forward-only from the repository's existing timestam
 - Auth account closure orchestration — LATER / APPLICATION LAYER: trusted backend must revoke sessions/tokens, execute product-data erasure, verify completion, then delete the Supabase Auth user. No learner/browser self-service route is added by this database slice.
 - De-identified research retention — LATER / EXPERIMENTAL: do not implement until M11 has a concrete research use, retention policy and re-identification-risk review.
 
+### M02b autonomous content expansion rule
+- Autonomous source-grounded drafting/intake may proceed without repeated user intervention.
+- Batch size remains bounded and review-aware; question count is not itself a success metric.
+- Do not create additional batches merely to increase inventory while unresolved Medical/References/Rights review debt is accumulating.
+- Prefer source-clustered batches (multiple questions per authoritative source) because one source review can amortize reference/rights work across multiple items.
+- Publication still requires the accepted review authority contract; AI/source preflight is evidence assistance, not an approval event.
+- The next scaling decision should be driven by measured review throughput, rejection/revision rates, concept coverage gaps and learner demand rather than a fixed target number of questions.
+
