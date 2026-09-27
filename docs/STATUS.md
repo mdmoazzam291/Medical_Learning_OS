@@ -551,3 +551,19 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Full GitHub checks and responsive browser checks passed before deployment.
 - `study-api` v21 is active.
 - M07b is DONE.
+
+
+## M08a versioned exam-rule boundary — 2026-09-27
+- Added pure domain module `src/domain/exam-rules.js`.
+- Exam rules are versioned independently from learner state, QBank medical content and Study Now.
+- Each rule set carries stable `examId`, immutable `ruleSetId`, sequential version/supersedes history, applicability dates, verification evidence and explicit source provenance.
+- Rule coverage includes delivery mode, item type, total questions, total duration, section structure, scoring and navigation constraints.
+- Partial knowledge is represented as `null`; the contract does not fill missing rules by convention or memory.
+- `examSimulationReadiness()` blocks simulator use unless the rule set is verified, has at least one official source, and every operational timing/scoring/navigation field is known.
+- `toExamSimulationPreset()` returns a deeply immutable config pinned to the exact verified ruleset.
+- Section question counts and section durations must reconcile with declared exam totals.
+- Ruleset amendments must be sequential and cannot supersede a different exam identity.
+- Added `data/exam-rules.json` with an intentionally empty production registry. No current NEET-PG/INI-CET preset is activated until its current rules are fully sourced and verified.
+- Synthetic tests prove a complete verified rule set can become simulator-ready while draft/secondary/partial rule sets remain blocked.
+- Full GitHub checks and responsive browser verification passed.
+- M08a is DONE.
