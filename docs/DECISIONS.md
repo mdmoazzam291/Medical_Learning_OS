@@ -649,3 +649,30 @@ De-identification is not implemented in v1 because there is no current populatio
 
 Database evolution rule: any new learner-scoped table must update the privacy scope in the same change. A migration that introduces personal learner storage without an erasure mapping is incomplete.
 
+## ADR-049 — Digital Twin inference activates through preregistered evidence gates, never by implementation availability (accepted, 2026-09-28)
+M07c probabilistic learner-state inference must not become authoritative merely because a model can be trained or a prediction can be computed.
+
+Every candidate model must use a locked preregistration plan before evaluation. The plan identifies:
+- model/version;
+- observed target contract;
+- baseline comparator;
+- evidence-sufficiency criteria;
+- validation metrics and pass thresholds;
+- claim scope (knowledge, retention, transfer);
+- uncertainty/missingness/subgroup evaluation requirements.
+
+Thresholds are **not global constants in the platform**. They are preregistered per candidate before seeing evaluation results, then evaluated deterministically. This avoids both false precision and post-hoc moving of success criteria.
+
+The activation gate has only three outcomes:
+1. `blocked` — no inferred learner-state use;
+2. `shadow_only` — hidden/non-authoritative predictions may be generated for prospective validation but may not affect learner UI or Study Now;
+3. `eligible_for_controlled_experiment` — a separately governed randomized/controlled policy experiment may consume the pinned model version.
+
+The gate can never authorize general production. General production use requires a later explicit governance decision after prospective evidence. The model never owns Study Now policy authority.
+
+Retention or transfer claims require corresponding observed outcome contracts. A model may not infer transfer from recall-only evidence merely because its internal representation supports such a score.
+
+Prospective experiment eligibility additionally requires prospective shadow completion, preregistered prospective metrics, subgroup guardrails, rollback/monitoring plans, a pinned model version, and intervention-attribution readiness.
+
+The gate itself introduces no learner-state table, no mastery score, no model training pipeline and no production prediction. It is a safety/validation contract only.
+

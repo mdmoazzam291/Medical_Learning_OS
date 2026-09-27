@@ -94,3 +94,13 @@ Accepted rule:
 
 Current implementation is erasure-only. De-identification/research retention is deliberately deferred until there is a concrete M11 research requirement and explicit re-identification-risk review.
 
+## M07c inference-governance reconciliation — 2026-09-28
+
+The project now has an explicit rule for when probabilistic Preparation Digital Twin inference may begin.
+
+A model's existence is not evidence of readiness. Candidate-specific evidence and validation thresholds must be preregistered before evaluation. Offline success permits hidden shadow inference only. Prospective shadow success plus operational guardrails may make a pinned model eligible for a controlled policy experiment. Neither state authorizes general production.
+
+Study Now continues to own next-action policy. A Digital Twin model may provide validated state estimates but cannot grant itself recommendation authority.
+
+No fixed sample-size/calibration thresholds are treated as universal truth. Production thresholds must be justified and locked by each future model's research/validation plan.
+

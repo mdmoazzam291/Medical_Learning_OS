@@ -802,3 +802,16 @@ Verification for this slice is repository diff review because there is no domain
 - Render deployed the exact main commit and is LIVE.
 - Account-closure UI/API orchestration is still not implemented. The database erasure capability remains service-only and should not be exposed directly to learner/browser code.
 
+## M07c inference activation gate foundation — 2026-09-28
+- Added pure domain contract `src/domain/inference-activation-gate.js`.
+- Gate contract: `digital-twin-inference-activation-v1`.
+- Candidate models must provide a locked preregistration plan digest, observed target contract, baseline, claim scope, evidence-sufficiency criteria, offline metrics and explicit safety/validation checks.
+- Evidence/metric thresholds are candidate-specific preregistered values, not platform-global constants.
+- Result modes are limited to `blocked`, `shadow_only`, and `eligible_for_controlled_experiment`.
+- The gate always returns `generalProductionAuthorized=false` and `policyAuthorityOwnedByModel=false`.
+- Retention/transfer claims require corresponding observed outcome definitions.
+- Controlled-experiment eligibility additionally requires completed prospective shadow validation, passing prospective metrics, subgroup guardrails, rollback/monitoring plans, pinned model version and intervention attribution readiness.
+- Added focused regression tests for evidence insufficiency, offline calibration failure, claim/outcome mismatch, shadow-only qualification, controlled-experiment qualification, malformed preregistration and no model-owned policy authority.
+- Executed the exact branch module in an isolated JavaScript runtime: blocked, shadow-only and experiment-eligible paths all behaved as specified; invalid plan digest failed closed.
+- No database schema, learner-state store, mastery percentage, model training pipeline or production inference was introduced.
+

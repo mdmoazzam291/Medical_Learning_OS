@@ -197,3 +197,21 @@ delete Auth user
 
 Append-only triggers deliberately prevent “delete the Auth user first and hope cascades handle it.” This protects both evidence integrity and complete privacy cleanup.
 
+## Digital Twin inference activation boundary
+
+The Preparation Digital Twin remains the owner of inferred learner state, but **ownership does not imply permission to infer**.
+
+`src/domain/inference-activation-gate.js` defines the M07c activation contract. It separates:
+- data/evidence sufficiency;
+- offline holdout validation;
+- hidden prospective shadow validation;
+- controlled policy experimentation;
+- general production authorization.
+
+The current gate can only reach `blocked`, `shadow_only`, or `eligible_for_controlled_experiment`. General production is deliberately outside the gate.
+
+A shadow model must remain non-authoritative. It cannot modify canonical evidence, learner-visible mastery, Study Now recommendations, Adaptive Teaching choices, or exam readiness. A controlled experiment remains governed by Study Now/experiment policy, not by the model itself.
+
+This keeps the causal chain explicit:
+observed outcomes → preregistered model → offline validation → prospective shadow → controlled intervention experiment → later production governance.
+
