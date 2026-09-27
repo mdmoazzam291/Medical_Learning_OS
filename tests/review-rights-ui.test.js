@@ -54,7 +54,7 @@ test('pipeline status failure does not block the review queue', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /pipelineStatus\(\)\.catch/);
   assert.match(source, /return state\.pipelineStatus/);
-  assert.match(source, /Promise\.all\(\[queuePromise, pipelinePromise\]\)/);
+  assert.match(source, /Promise\.all\(\[\s*queuePromise,\s*pipelinePromise,\s*assistPromise/s);
 });
 
 
