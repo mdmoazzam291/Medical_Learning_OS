@@ -145,3 +145,28 @@ They may coexist in the same replay stream but retain distinct `eventClass` valu
 
 Unmapped source tables remain outside the ledger until their semantics are explicit. This is preferable to creating a generic event blob that silently mixes mutable state, content, policy output and learner evidence.
 
+## Future Capability boundary
+
+Future-proofing is an outer execution/trust seam around the Learning Core, not a new source of learning truth.
+
+```text
+Experience layer
+      ↓
+semantic capability + policy/action boundary
+      ↓
+Learning Core
+      ↓
+canonical private data/evidence
+
+optional replaceable providers:
+intelligence · tools/interop · identity/trust · future cryptography
+```
+
+The domain requests capabilities rather than vendors. Current semantic capability IDs live in `src/domain/capabilities.js`.
+
+`ActionEnvelope` / `ActionReceipt` are pure contracts only. They do not authorize execution by themselves. Any future human/service/agent execution must still pass the existing trusted application/domain boundaries. An agent must never receive arbitrary SQL/database mutation power.
+
+Provider failure is fail-soft with respect to core learning: AI, agent runtime, credential service, proof system, ledger, MCP/A2A or any future provider may be unavailable without corrupting canonical learner evidence or preventing deterministic study/scoring/revision behavior.
+
+Do not introduce interfaces/classes merely to mirror a technology wishlist. Provider boundaries are added only when they reduce real replacement cost, protect a high-value invariant, or support more than one meaningful implementation.
+

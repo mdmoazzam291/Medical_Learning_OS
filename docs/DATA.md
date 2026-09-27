@@ -146,3 +146,20 @@ Not yet mapped:
 
 The event-family roadmap remains additive and versioned. New sources join the canonical stream only after their semantics and privacy/integrity behavior are explicit.
 
+## Canonical integrity profile
+
+New attestable JSON-domain artifacts may use `src/domain/canonical-integrity.js`.
+
+Current profile:
+- profile version: `1`;
+- canonicalization: `JCS-RFC8785`;
+- digest: `SHA-256`.
+
+The canonicalizer rejects non-JSON/ambiguous values, non-finite numbers, sparse arrays, cycles, non-plain objects and invalid Unicode scalar sequences. Ordinary object property order therefore cannot alter the digest.
+
+Digest envelopes include algorithm/profile metadata. This is the future migration seam for classical → hybrid → future cryptographic systems, but no signing/proof/PQC implementation exists today.
+
+**Historical fingerprint rule:** do not recompute or migrate existing hashes merely to use this shared primitive. Existing review/source/exam/intake/other fingerprints retain the exact historical function and semantics that created them.
+
+Stable domain identifiers remain separate from database/location/provider identity. A concept/question/exam/artifact identifier must not depend on a Supabase URL, R2 path, cloud host, signature algorithm or future ledger.
+

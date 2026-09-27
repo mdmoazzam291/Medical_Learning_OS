@@ -1,6 +1,6 @@
 # Medical Learning OS — context register
 
-Last reconciled: 2026-09-25 (Asia/Kolkata).
+Last reconciled: 2026-09-28 (Asia/Kolkata).
 
 ## Standing user instruction
 Take reference/context from the ChatGPT project named **“medical learning os”** when deciding or implementing the next step. Work only in Medical_Learning_OS. The older NEETPG2027 repository is excluded unless explicitly authorized.
@@ -61,3 +61,21 @@ Accepted consolidation:
 - intervention → immediate outcome → delayed retention → transfer linkage as the long-term data-moat target.
 
 This reconciliation is architectural guidance, not a claim that M07c inference, all planned event families, intervention-effectiveness models or clinical/multimodal systems are implemented. It also does not reset existing milestones or migration history. New database work must extend the current timestamped Supabase migrations forward after inspecting the live/current schema.
+
+## Future-proofing reconciliation — 2026-09-28
+
+The user authorized direct incorporation of a long-horizon future-proofing doctrine into the existing Medical Learning OS repository.
+
+Accepted governing principles:
+- maximum future optionality, minimum present infrastructure;
+- future-proof against technological change itself rather than one predicted technology;
+- Learning Core semantics outlive AI vendors/models, agent frameworks, MCP/A2A or successors, cloud providers, blockchains/proof systems and cryptographic generations;
+- deterministic code remains preferred where it solves the problem correctly;
+- provider-owned AI memory is never canonical learner/medical truth;
+- future agents cannot bypass authorization/domain validation or receive arbitrary database write authority;
+- blockchain, ZK, DID/VC and post-quantum systems remain optional adapters and are not current dependencies;
+- personal learner evidence remains private, portable and deletable/de-identifiable despite any future trust technology;
+- approximately zero new recurring infrastructure cost is the default acceptance criterion for this architectural preparation.
+
+Implementation is intentionally smaller than the full conceptual technology list: shared canonical integrity, a semantic capability vocabulary and pure action/audit contracts. Model/agent/tool/trust provider runtimes are deferred until an active milestone requires them.
+
