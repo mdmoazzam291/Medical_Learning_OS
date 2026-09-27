@@ -38,6 +38,9 @@ begin
 end;
 $function$;
 
+revoke all on function public.content_review_fill_target_identity()
+  from public, anon, authenticated, service_role;
+
 drop trigger if exists content_review_fill_target_identity
   on public.content_review_events;
 create trigger content_review_fill_target_identity
