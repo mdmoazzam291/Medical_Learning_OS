@@ -58,3 +58,9 @@ test('identical mutation retries are resolved from the immutable ledger before r
   assert.match(source, /idempotent: true/);
   assert.match(source, /exam_request_key_collision/);
 });
+
+
+test('exam run routes reject unsupported query text instead of silently widening the contract', () => {
+  const matches = source.match(/if \(url\.search\) fail\(400, "query_not_supported"\);/g) ?? [];
+  assert.ok(matches.length >= 4);
+});
