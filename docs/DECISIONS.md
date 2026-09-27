@@ -341,3 +341,28 @@ An exact-item claim requires licensed provenance and a primary source reference.
 Retractions never rewrite or delete earlier assertions. Current projections omit retracted evidence while the audit trail remains intact.
 
 Exam DNA must later consume these evidence classes explicitly rather than assigning the same weight to recalled and licensed items.
+
+
+## ADR-034 — A simulator preset represents a published ruleset, not an unconditional promise about examination-day operations (accepted, 2026-09-27)
+When an examination authority publishes a concrete scheme but also reserves operational flexibility, preserve both.
+
+For NEET-PG 2026, the NBEMS bulletin publishes a five-section A–E scheme with 36 questions and 42 minutes per section while also stating that the actual number of time-restricted sections may vary based on question count and operational feasibility.
+
+The Medical Learning OS therefore stores the five-section structure as the verified published-scheme preset and stores the authority's operational caveat alongside it. Do not delete the caveat merely because it complicates the simulator.
+
+A simulator run pins the exact ruleset ID and caveats used at run creation. If NBEMS later publishes an amendment, create a new ruleset version rather than mutating historical runs.
+
+Fields that are derived rather than verbatim must be identified as such. For the current preset, no time carry-forward is derived from the fixed section timers, prohibition on early advance, and automatic transition after each allotted section time.
+
+## ADR-035 — Exam DNA describes historical evidence before it predicts anything (accepted, 2026-09-27)
+Exam DNA begins as an observation system.
+
+It may count and group active PYQ evidence by exact question version, exam occurrence, canonical concept, subject tag and provenance stratum. It may expose breadth and sparse-evidence warnings.
+
+It must keep licensed exact items, corroborated recalls and single recalls separate. Do not compress those evidence classes into an unexplained confidence score.
+
+Historical frequency must not be presented as the probability that a concept will appear on a future examination. The v1 contract therefore sets `predictiveInferenceEnabled=false`.
+
+Absence from the observed PYQ corpus is not evidence that a concept is unimportant or will not appear. Sparse corpus coverage, rights restrictions, recall bias and changing exam blueprints can all distort historical observations.
+
+Any future predictive Exam DNA model requires a separately versioned inference layer, a defined target, historical back-testing, calibration analysis and comparison against simple baselines. Until then, the system reports evidence, not prophecy.
