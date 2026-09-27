@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "conceptId": "infectious:rabies:pep-wound-washing",
+      "label": "Immediate wound washing in rabies post-exposure prophylaxis",
+      "aliases": [
+        "rabies wound toilet",
+        "animal-bite wound washing"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "community-medicine",
+        "emergency-medicine"
+      ]
+    },
+    {
+      "conceptId": "infectious:rabies:category-iii-rig",
+      "label": "Rabies immunoglobulin for category III exposure",
+      "aliases": [
+        "RIG for category III bite"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "community-medicine",
+        "immunology"
+      ]
+    },
+    {
+      "conceptId": "infectious:rabies:im-pep-schedule-india",
+      "label": "Intramuscular rabies PEP schedule in India",
+      "aliases": [
+        "IM rabies vaccine schedule"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "community-medicine",
+        "pharmacology"
+      ]
+    },
+    {
+      "conceptId": "infectious:rabies:id-pep-schedule-india",
+      "label": "Intradermal rabies PEP schedule in India",
+      "aliases": [
+        "ID rabies vaccine schedule"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "community-medicine",
+        "pharmacology"
+      ]
+    },
+    {
+      "conceptId": "infectious:rabies:vaccine-injection-site",
+      "label": "Recommended anatomical site for rabies vaccine administration",
+      "aliases": [
+        "rabies vaccine injection site"
+      ],
+      "subjectTags": [
+        "infectious-diseases",
+        "community-medicine",
+        "pharmacology"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "nrcp:rabies-faq:accessed-2026-09-27",
+      "title": "National Rabies Control Programme: Frequently Asked Questions",
+      "url": "https://rabiesfreeindia.mohfw.gov.in/faq",
+      "version": "accessed-2026-09-27",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official Government of India National Rabies Control Programme page used only for factual grounding of original questions. No source text is intended to be reproduced; rights review remains required before publication."
+      }
+    },
+    {
+      "sourceId": "nrcp:rabies-vaccination-dose:2026-09-18",
+      "title": "National Rabies Control Programme: Know Your Rabies Vaccination Schedule",
+      "url": "https://rabiesfreeindia.mohfw.gov.in/vaccination_dose?tab=nhrl",
+      "version": "updated-2026-09-18",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Official Government of India National Rabies Control Programme page used only for factual grounding of original questions. No source text is intended to be reproduced; rights review remains required before publication."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "infectious:rabies:pep-wound-wash-15min",
+      "questionVersionId": "infectious:rabies:pep-wound-wash-15min@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial controlled source-grounded intake pilot",
+      "stem": "A person presents immediately after a potentially rabies-exposing animal bite. Which wound-care action should be performed promptly as part of first aid?",
+      "options": [
+        {
+          "optionId": "wash-15",
+          "text": "Wash and flush the wound thoroughly with soap or detergent and running water for about 15 minutes"
+        },
+        {
+          "optionId": "suture-first",
+          "text": "Close the wound immediately before washing it"
+        },
+        {
+          "optionId": "antibiotic-only",
+          "text": "Give an oral antibiotic without local wound cleansing"
+        },
+        {
+          "optionId": "cover-dry",
+          "text": "Cover the wound with a dry dressing and avoid washing"
+        }
+      ],
+      "answerOptionId": "wash-15",
+      "explanation": "Prompt, thorough wound washing is a core component of rabies post-exposure care. The National Rabies Control Programme advises washing and flushing wounds or scratches with soap or detergent and copious running water for about 15 minutes before further assessment and prophylaxis.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:rabies:pep-wound-washing",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nrcp:rabies-faq:accessed-2026-09-27"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original single-best-answer item grounded in the cited Government of India NRCP factual guidance. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:rabies:category-iii-rig-infiltration",
+      "questionVersionId": "infectious:rabies:category-iii-rig-infiltration@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial controlled source-grounded intake pilot",
+      "stem": "An unvaccinated patient has a category III rabies exposure with a transdermal bite wound. Which additional intervention is indicated along with rabies vaccination?",
+      "options": [
+        {
+          "optionId": "rig-wound",
+          "text": "Rabies immunoglobulin infiltrated into the bite wound"
+        },
+        {
+          "optionId": "no-rig",
+          "text": "No rabies immunoglobulin is needed for category III exposure"
+        },
+        {
+          "optionId": "rig-gluteal",
+          "text": "Rabies immunoglobulin given only as a gluteal injection away from the wound"
+        },
+        {
+          "optionId": "antibiotic-substitute",
+          "text": "An antibiotic course instead of rabies immunoglobulin"
+        }
+      ],
+      "answerOptionId": "rig-wound",
+      "explanation": "For category III exposure in a previously unvaccinated person, rabies immunoglobulin is part of post-exposure prophylaxis and should be infiltrated into the exposure wound according to the National Rabies Control Programme.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:rabies:category-iii-rig",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nrcp:rabies-vaccination-dose:2026-09-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original item grounded in the cited Government of India NRCP schedule page. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:rabies:im-pep-days-india",
+      "questionVersionId": "infectious:rabies:im-pep-days-india@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial controlled source-grounded intake pilot",
+      "stem": "For a previously unvaccinated person receiving the intramuscular rabies post-exposure vaccine regimen under the Indian National Rabies Control Programme, which schedule is listed?",
+      "options": [
+        {
+          "optionId": "0-3-7-14-28",
+          "text": "Days 0, 3, 7, 14, and 28"
+        },
+        {
+          "optionId": "0-7-21",
+          "text": "Days 0, 7, and 21"
+        },
+        {
+          "optionId": "0-3-14",
+          "text": "Days 0, 3, and 14"
+        },
+        {
+          "optionId": "0-14-28",
+          "text": "Days 0, 14, and 28"
+        }
+      ],
+      "answerOptionId": "0-3-7-14-28",
+      "explanation": "The current NRCP vaccination-schedule page lists a five-visit intramuscular PEP regimen on days 0, 3, 7, 14, and 28 for a person who has not previously been vaccinated against rabies.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:rabies:im-pep-schedule-india",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nrcp:rabies-vaccination-dose:2026-09-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original item grounded in the cited current Government of India NRCP schedule page. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:rabies:id-pep-days-india",
+      "questionVersionId": "infectious:rabies:id-pep-days-india@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial controlled source-grounded intake pilot",
+      "stem": "Which visit schedule matches the intradermal rabies post-exposure vaccination regimen shown by the Indian National Rabies Control Programme for a previously unvaccinated person?",
+      "options": [
+        {
+          "optionId": "0-3-7-28",
+          "text": "Days 0, 3, 7, and 28"
+        },
+        {
+          "optionId": "0-3-7-14-28",
+          "text": "Days 0, 3, 7, 14, and 28"
+        },
+        {
+          "optionId": "0-7-21",
+          "text": "Days 0, 7, and 21"
+        },
+        {
+          "optionId": "0-14",
+          "text": "Days 0 and 14"
+        }
+      ],
+      "answerOptionId": "0-3-7-28",
+      "explanation": "The NRCP schedule page shows the intradermal regimen as four visits on days 0, 3, 7, and 28, with no day-14 intradermal visit in that schedule.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:rabies:id-pep-schedule-india",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nrcp:rabies-vaccination-dose:2026-09-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original item grounded in the cited current Government of India NRCP schedule page. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    },
+    {
+      "questionId": "infectious:rabies:adult-im-vaccine-site",
+      "questionVersionId": "infectious:rabies:adult-im-vaccine-site@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Initial controlled source-grounded intake pilot",
+      "stem": "What is the recommended anatomical site for intramuscular rabies vaccine administration in an adult according to the Indian National Rabies Control Programme?",
+      "options": [
+        {
+          "optionId": "deltoid",
+          "text": "Deltoid muscle"
+        },
+        {
+          "optionId": "gluteal",
+          "text": "Gluteal region"
+        },
+        {
+          "optionId": "abdomen",
+          "text": "Anterior abdominal wall"
+        },
+        {
+          "optionId": "forearm",
+          "text": "Volar forearm"
+        }
+      ],
+      "answerOptionId": "deltoid",
+      "explanation": "The NRCP schedule page lists the deltoid muscle as the injection site for adults and children receiving rabies vaccine and specifies the anterolateral thigh for infants and children receiving intramuscular vaccine.",
+      "conceptLinks": [
+        {
+          "conceptId": "infectious:rabies:vaccine-injection-site",
+          "role": "primary"
+        }
+      ],
+      "sourceIds": [
+        "nrcp:rabies-vaccination-dose:2026-09-18"
+      ],
+      "provenance": {
+        "kind": "ai_generated",
+        "exam": null,
+        "year": null,
+        "evidence": "AI-generated original item grounded in the cited current Government of India NRCP schedule page. It is not a recalled or licensed PYQ and is pending independent Medical, References, and Rights review."
+      },
+      "status": "in_review",
+      "reviews": [],
+      "publishedAt": null
+    }
+  ]
+}
