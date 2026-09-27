@@ -192,6 +192,15 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, { reviewerId, reviewKinds: await getGrants() });
     }
 
+    if (req.method === "GET" && path === "/pipeline-status") {
+      if (url.search) fail(400, "query_not_supported");
+      const grants = await getGrants();
+      if (!grants.length) fail(403, "reviewer_not_authorized");
+      const { data, error } = await admin.rpc("content_intake_pipeline_status");
+      if (error) fail(500, "content_pipeline_status_unavailable");
+      return response(req, 200, data);
+    }
+
     if (req.method === "GET" && path === "/queue") {
       if ([...url.searchParams.keys()].some((key) => key !== "kind")) fail(400, "query_not_supported");
       const kind = reviewKind(url.searchParams.get("kind"));
