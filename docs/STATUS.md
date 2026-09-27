@@ -610,3 +610,25 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - `study-api` v22 is active.
 - Production currently has zero active PYQ assertions; therefore the real NEET-PG Exam DNA correctly returns an empty concept list with `no-pyq-evidence`.
 - M08c is DONE.
+
+
+## M08d exam-simulator state machine and durable ledger foundation — 2026-09-27
+- Added pure deterministic `locked-time-sections-v1` engine in `src/domain/exam-simulator.js`.
+- The engine consumes the exact verified simulator preset rather than hardcoded exam constants.
+- A run pins `examId`, exact `ruleSetId`, engine ID and the ruleset caveats at creation.
+- For `neet-pg:2026@1`, 180 distinct immutable question versions are split into five 36-question sections with fixed 42-minute boundaries.
+- Future-section writes are rejected, closed-section writes are rejected, early manual section advance is rejected, and write operations advance the authoritative clock before accepting a response so stale clients cannot answer after a deadline.
+- Section closure times are deterministic scheduled boundaries; reconnecting late closes every elapsed section without carrying time forward.
+- Live run state contains selected responses and marked-for-review state but never answer keys or correctness.
+- Trusted scoring is allowed only after completion, is pinned to the exact ruleset marking scheme, and treats marked-for-review responses according to the verified rule field.
+- Added durable `exam_runs` current projection plus append-only `exam_run_events` and immutable `exam_run_receipts`.
+- Only one full exam run may remain open per learner.
+- `exam_create_run` and `exam_apply_transition` are service-role-only trusted write boundaries.
+- Transitions use optimistic state revisions plus request-key idempotency and a SHA-256 transition fingerprint. Same-request retries are idempotent; stale revisions and request-key payload collisions are rejected.
+- Completion receipt creation is atomic with the final run transition and pinned to the run's exact ruleset.
+- Event and receipt update/delete operations are blocked by immutable-ledger triggers.
+- Rollback-only persistence proof verified create → answer → idempotent retry → stale revision rejection → completion → immutable receipt, then removed every synthetic row.
+- Migration `exam_run_ledger` applied successfully after current-head GitHub checks and responsive browser checks passed.
+- Live production sanity check: 0 exam runs, 0 exam-run events, 0 exam receipts and 0 active PYQ assertions.
+- The learner-facing full mock remains intentionally unavailable because the reviewed/published medical catalog currently contains only one unique question; the system will not duplicate it to fabricate a 180-question exam.
+- M08d remains IN PROGRESS.
