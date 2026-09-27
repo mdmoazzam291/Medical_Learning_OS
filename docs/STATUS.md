@@ -584,3 +584,29 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Production verification confirms the current AI-generated anaphylaxis item has zero active PYQ evidence.
 - Migration `exam_occurrence_pyq_evidence` applied successfully after full GitHub and responsive browser checks passed.
 - M08b remains IN PROGRESS until current exam mechanics are fully sourced into a simulator-ready ruleset and genuine PYQ evidence is ingested.
+
+
+## NEET-PG 2026 published-scheme preset verified — 2026-09-27
+- The official NBEMS NEET-PG 2026 Information Bulletin linked from the official exam page was read directly.
+- Scheme clauses 5.1–5.7 specify a computer-based single-shift exam, 180 MCQs, 210 minutes total, four response options, +4 correct, -1 incorrect, 0 unattempted, and normal scoring for marked-for-review questions.
+- The published scheme specifies Groups A–E, 36 questions and 42 minutes per section, no early advance, no review/modification after a section closes, and automatic transition after each section timer expires.
+- The bulletin also states that the actual number of time-restricted sections may vary based on total question count and operational feasibility. This caveat is preserved in the ruleset rather than discarded.
+- `data/exam-rules.json` now contains verified immutable ruleset `neet-pg:2026@1`.
+- `timeCarryForwardAllowed=false` is recorded as a documented derivation from fixed section timers, the prohibition on early advance, and automatic transition after the prior timer completes, not as a verbatim bulletin field.
+- The ruleset passes `examSimulationReadiness()` and converts to an immutable simulator preset.
+- Full current-head GitHub checks and responsive browser checks passed.
+
+## M08c descriptive Exam DNA — 2026-09-27
+- Added service-only `exam_dna_observations(exam_id)`, contract `exam-dna-observation-v1`.
+- The projection consumes only active, non-retracted PYQ evidence linked to verified exam occurrences.
+- It reports active assertions, distinct exact question versions, distinct exam occurrences, canonical concepts, current subject tags and evidence strata.
+- Evidence strata remain separate: licensed exact items, corroborated recalls and single recalls are never collapsed into one confidence number.
+- Per-concept uncertainty includes single-occurrence-only, recalled-evidence-only and sparse-concept-sample.
+- Empty evidence explicitly returns `no-pyq-evidence`.
+- The contract states `predictiveInferenceEnabled=false` and records that historical evidence is not a future-exam probability.
+- Rollback-only proof with one synthetic recalled PYQ produced the expected descriptive concept signal and sparse-evidence warnings; all synthetic evidence was rolled back.
+- Added authenticated `GET /exam-dna?examId=...` and cloud adapter `examDna(examId)`.
+- Migration `exam_dna_observations` applied successfully after all checks passed.
+- `study-api` v22 is active.
+- Production currently has zero active PYQ assertions; therefore the real NEET-PG Exam DNA correctly returns an empty concept list with `no-pyq-evidence`.
+- M08c is DONE.
