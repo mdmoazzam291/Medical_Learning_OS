@@ -322,3 +322,22 @@ A ruleset becomes simulator-eligible only when:
 The production exam registry may legitimately be empty. An empty verified registry is safer than a confident but stale preset.
 
 Keep question/PYQ provenance separate from exam mechanics. M08b will normalize provenance to stable exam-occurrence identities rather than expanding the exam-rules object into another content database.
+
+
+## ADR-033 — Exam occurrence identity, PYQ evidence and exam mechanics are separate objects (accepted, 2026-09-27)
+Do not collapse “NEET-PG 2026 existed”, “this question appeared in NEET-PG 2026”, and “NEET-PG 2026 used these simulator rules” into one field.
+
+Use three distinct layers:
+1. exam occurrence identity: stable exam + session identity;
+2. PYQ evidence: immutable, retractable claims linking exact question versions to that occurrence;
+3. exam ruleset: separately versioned and independently verified operational mechanics.
+
+A verified exam occurrence does not make a ruleset simulator-ready.
+
+A recalled PYQ is a reconstructed item, not an exact historical question. It may use single-recall or corroborated-recall evidence, but it must never be represented as licensed/verbatim content merely because multiple people remember it.
+
+An exact-item claim requires licensed provenance and a primary source reference. Rights review remains a separate content-governance concern.
+
+Retractions never rewrite or delete earlier assertions. Current projections omit retracted evidence while the audit trail remains intact.
+
+Exam DNA must later consume these evidence classes explicitly rather than assigning the same weight to recalled and licensed items.
