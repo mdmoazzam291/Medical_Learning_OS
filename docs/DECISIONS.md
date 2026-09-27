@@ -702,3 +702,18 @@ The simulator therefore has two distinct readiness contracts:
 An internal-test-ready mock is not evidence of production content quality or exam-blueprint fidelity.
 
 Autonomous content prioritization should target NEET-PG and INI-CET value. Verified Exam DNA/PYQ evidence has first priority when it exists. When it does not exist, use transparent heuristics such as canonical coverage gaps, prerequisite/clinical-transfer value and source-cluster efficiency, while never inventing exam frequency or PYQ provenance.
+
+
+## ADR-051 — Versioned media is canonical content, not an attachment field (accepted, 2026-09-28)
+
+The user selected breadth-first remaining content and immediate image-based radiology/pathology expansion.
+
+Do not add arbitrary image URLs directly to question stems or create a second visual-QBank truth store. Introduce a versioned `MediaAsset` domain object and explicit question-media links.
+
+Phase-1 assets bind exact bytes (SHA-256), dimensions, delivery reference, modality, source/provider/original identifier, copyright/licence/rights evidence, diagnosis evidence and review state. Annotations are separately versioned so corrected regions never silently rewrite prior learner interactions.
+
+Blind-first-look is a product/content invariant: pre-answer learner payloads must not expose diagnosis evidence, source/licence metadata, review metadata or ground-truth annotations.
+
+Start with JPEG/PNG/WebP and simple hotspot/bbox/polygon annotations. DICOM, whole-slide pathology, video and advanced imaging are deferred until measured use justifies them.
+
+This foundation does not make an image medically verified or production publishable. Production authority remains separate from AI assistance and from the internal-test lane.
