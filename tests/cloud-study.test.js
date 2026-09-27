@@ -237,3 +237,19 @@ test('cloud NeuralVault adapter reads concepts and performs revision-safe annota
   assert.deepEqual(seen[2].body, { expectedRevision: 2, bodyMarkdown: 'Updated note' });
   assert.equal(seen[3].method, 'DELETE');
 });
+
+
+test('cloud NeuralVault concept index uses authenticated API', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({ catalogVersion: 1, count: 0, concepts: [] });
+    }
+  });
+  const result = await cloud.vaultConcepts();
+  assert.match(seenUrl, /study-api\/vault\/concepts$/);
+  assert.deepEqual(result.concepts, []);
+});
