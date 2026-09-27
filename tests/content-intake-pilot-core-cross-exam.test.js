@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+const manifest=JSON.parse(await readFile(new URL('../data/content-intake-pilot-core-cross-exam-04.json',import.meta.url),'utf8'));
+const preflight=JSON.parse(await readFile(new URL('../data/content-intake-pilot-core-cross-exam-04-preflight.json',import.meta.url),'utf8'));
+test('pilot 04 has five source clusters and 25 safe in-review questions',()=>{assert.equal(manifest.concepts.length,25);assert.equal(manifest.sources.length,5);assert.equal(manifest.questions.length,25);for(const q of manifest.questions){assert.equal(q.status,'in_review');assert.deepEqual(q.reviews,[]);assert.equal(q.publishedAt,null);assert.equal(q.provenance.kind,'ai_generated');assert.equal(q.provenance.exam,null);assert.equal(q.provenance.year,null);assert.equal(q.options.length,4);assert.ok(q.options.some(o=>o.optionId===q.answerOptionId));}});
+test('each source contributes five questions and remains rights-unknown at intake',()=>{const counts=new Map();for(const q of manifest.questions){assert.equal(q.sourceIds.length,1);counts.set(q.sourceIds[0],(counts.get(q.sourceIds[0])||0)+1);}assert.deepEqual([...counts.values()].sort((a,b)=>a-b),[5,5,5,5,5]);for(const s of manifest.sources)assert.equal(s.rights.status,'unknown');});
+test('preflight passed without pretending blueprint or semantic authority',()=>{assert.equal(preflight.validation.valid,true);assert.equal(preflight.overlap.flagCount,0);assert.equal(preflight.validation.publicationAuthority,false);assert.equal(preflight.contentMix.examBlueprintFidelity,false);assert.match(preflight.contentMix.note,/too sparse/i);});
