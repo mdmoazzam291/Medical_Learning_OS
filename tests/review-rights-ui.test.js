@@ -56,3 +56,21 @@ test('pipeline status failure does not block the review queue', async () => {
   assert.match(source, /return state\.pipelineStatus/);
   assert.match(source, /Promise\.all\(\[queuePromise, pipelinePromise\]\)/);
 });
+
+
+test('reviewer UI presents AI/source preflight without granting approval authority', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /content-review-assist\.json/);
+  assert.match(source, /AI\/source preflight/);
+  assert.match(source, /Non-authoritative/);
+  assert.match(source, /cannot approve, verify or publish content/);
+  assert.match(source, /Independently inspect the question and cited source/);
+  assert.doesNotMatch(source, /autoApprove|automaticApproval|reviewAssist.*decision\s*=/);
+});
+
+test('review assist failure is nonblocking for authenticated review queues', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /fetch\('\/data\/content-review-assist\.json'/);
+  assert.match(source, /\.catch\(\(\) => state\.reviewAssist\)/);
+  assert.match(source, /Promise\.all\(\[\s*queuePromise,\s*pipelinePromise,\s*assistPromise/s);
+});
