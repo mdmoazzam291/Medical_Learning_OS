@@ -98,3 +98,11 @@ test('auth user deletion and session revocation are deliberately outside databas
   assert.doesNotMatch(sql, /delete from auth\.users/i);
   assert.doesNotMatch(sql, /delete from auth\.sessions/i);
 });
+
+
+test('erasure rejects a missing reason before mutation', () => {
+  assert.match(
+    sql,
+    /if p_reason_class is null[\s\S]*privacy_reason_invalid/
+  );
+});
