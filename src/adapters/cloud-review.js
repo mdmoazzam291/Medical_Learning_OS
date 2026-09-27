@@ -45,6 +45,7 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
 
   return {
     me() { return request('/me'); },
+    pipelineStatus() { return request('/pipeline-status'); },
     queue(reviewKind) { return request(`/queue?kind=${encodeURIComponent(reviewKind)}`); },
     noteQueue(reviewKind) { return request(`/note-queue?kind=${encodeURIComponent(reviewKind)}`); },
     resolveRights({ sourceId, rightsStatus, evidence }) {
