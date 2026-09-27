@@ -354,3 +354,21 @@ test('session state binds learner-safe media prompt to the exact published quest
   assert.match(source.slice(sessionQuestion, mediaRpc + 700), /p_question_version_id: q\.questionVersionId/);
   assert.match(source.slice(sessionQuestion, mediaRpc + 900), /media: Array\.isArray\(mediaPrompt\?\.media\) \? mediaPrompt\.media : \[\]/);
 });
+
+
+test('private storage media refs become short-lived signed learner URLs', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /const learnerMediaPrompt = async/);
+  assert.match(source, /storage:\/\/mlos-media\//);
+  assert.match(source, /\.from\("mlos-media"\)\s*\.createSignedUrl\(objectPath, 900\)/s);
+  assert.match(source, /deliveryRef: signed\.signedUrl/);
+  assert.match(source, /objectPath\.includes\("\.\."\)/);
+  assert.match(source, /media_delivery_ref_invalid/);
+  assert.match(source, /media_delivery_failed/);
+});
+
+test('both session state and explicit media endpoint use the same signed-media resolver', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /const mediaPrompt = await learnerMediaPrompt\(q\.questionVersionId\)/);
+  assert.match(source, /response\(req, 200, await learnerMediaPrompt\(questionVersionId\)\)/);
+});
