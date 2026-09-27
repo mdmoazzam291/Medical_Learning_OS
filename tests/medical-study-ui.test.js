@@ -97,3 +97,14 @@ test('answered Study Now item carries recommendation reason into NeuralVault han
   assert.match(source, /vaultParams\.set\('reason', recommendationReason\)/);
   assert.match(source, /Review this concept in NeuralVault/);
 });
+
+
+test('medical overview shows full-mock capacity without overstating blueprint fidelity', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /cloud\.examSimulatorReadiness\('neet-pg:2026@1'\)/);
+  assert.match(source, /unique reviewed questions ready/);
+  assert.match(source, /more distinct published questions are required/);
+  assert.match(source, /does not claim exam-blueprint fidelity/);
+  assert.match(source, /The QBank and Study Now remain available/);
+  assert.doesNotMatch(source, /Start full mock/);
+});
