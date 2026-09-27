@@ -215,3 +215,22 @@ A shadow model must remain non-authoritative. It cannot modify canonical evidenc
 This keeps the causal chain explicit:
 observed outcomes → preregistered model → offline validation → prospective shadow → controlled intervention experiment → later production governance.
 
+
+
+## M10a multimodal media boundary
+
+Multimodal content reuses the existing canonical-content and learner-evidence architecture rather than creating a separate image-learning product.
+
+`src/domain/media.js` defines the first provider-independent Phase-1 contract:
+- immutable/versioned `MediaAsset` identity separate from question identity;
+- JPEG/PNG/WebP only;
+- radiology, pathology, dermatology, ophthalmology, anatomy and ECG image modalities;
+- source/provider/original identifier/copyright/licence/rights evidence on every asset;
+- SHA-256 content identity and pixel dimensions bound to the media version;
+- versioned hotspot, bounding-box and polygon annotations with normalized coordinates;
+- question-to-media links with prompt/explanation/comparison roles and blind-first-look metadata;
+- learner prompt projection that exposes delivery metadata only, withholding diagnosis evidence, source/licence/review fields and annotations before answer submission.
+
+Media and annotations remain **content/interaction evidence**, not learner-state stores. Their future attempts must feed the same canonical learning-event boundary and Mistake Intelligence rather than create a separate mastery model.
+
+M10a deliberately does not implement DICOM, CT/MRI stacks, whole-slide pathology, video, media storage, production medical review or simulator rendering. Those follow after the Phase-1 asset contract is verified.
