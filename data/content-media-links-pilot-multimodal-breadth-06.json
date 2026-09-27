@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:multimodal-breadth:20260928:06",
+  "links": [
+    {
+      "questionVersionId": "visual:pneumothorax:cxr-recognition@1",
+      "mediaAssetVersionId": "media:radiology:pneumothorax-expiratory-cxr@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": []
+    },
+    {
+      "questionVersionId": "visual:urolithiasis:ct-window-recognition@1",
+      "mediaAssetVersionId": "media:radiology:kidney-stone-window-ct@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": []
+    },
+    {
+      "questionVersionId": "visual:pneumonia:right-middle-lobe-cxr@1",
+      "mediaAssetVersionId": "media:radiology:lobar-pneumonia-cxr@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": []
+    },
+    {
+      "questionVersionId": "visual:pathology:clear-cell-rcc@1",
+      "mediaAssetVersionId": "media:pathology:clear-cell-rcc-grade1@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": []
+    },
+    {
+      "questionVersionId": "visual:pathology:seminoma@1",
+      "mediaAssetVersionId": "media:pathology:seminoma-intermediate@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": []
+    }
+  ]
+}
