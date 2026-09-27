@@ -263,3 +263,21 @@ If no immutable Study Now recommendation exists for the active session, fall bac
 
 This keeps the learning sequence explicit:
 retrieval attempt → feedback → explanation of recommendation reason → canonical concept review → later re-test.
+
+
+## ADR-030 — The Digital Twin starts with observations, not mastery scores (accepted, 2026-09-27)
+Separate learner evidence from inferred learner state.
+
+The first Digital Twin contract is a rebuildable, learner-scoped concept observation projection derived from immutable attempts and explicit memory judgments. It may report what happened: correctness, timing, repetition, question-version breadth, self-report coverage and signal discordance.
+
+It must not infer mastery, forgetting, ability or confidence merely because observations exist. Those fields remain explicitly withheld until a versioned inference model has stated evidence requirements and has been validated against relevant outcomes.
+
+Question repetition is not concept breadth. Multiple correct attempts on one exact question version are repeated retrieval evidence for that item, not independent evidence that the learner can transfer the concept to different wording, contexts or clinical presentations.
+
+Memory self-report is complementary evidence rather than ground truth. Missing ratings remain missing, and disagreement between correctness and self-report is preserved for later calibration/misconception analysis.
+
+Catalog labels are presentation metadata and may evolve. Historical learner evidence is keyed to stable canonical concept IDs and exact question versions rather than copied labels.
+
+This boundary supports a future chain:
+immutable observations → evidence sufficiency → versioned inference → intervention → outcome validation,
+without allowing current UI pressure to create false precision.
