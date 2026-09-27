@@ -65,6 +65,6 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 
 ## M08 slices
 - M08a — DONE: versioned exam-rule contract, sequential amendment history, source provenance, verification state and strict simulator-readiness gate are implemented. The production registry intentionally starts empty so no stale or partially verified exam pattern becomes simulator truth.
-- M08b — IN PROGRESS: stable exam occurrence identities and immutable/retractable PYQ evidence are live; NEET-PG 2026 occurrence identity is verified from the official NBEMS exam page, while current simulator-rule verification and genuine PYQ ingestion remain open.
-- M08c — PLANNED: build descriptive Exam DNA projections from verified/recalled PYQ evidence with uncertainty and provenance weighting; do not present historical frequency as a guaranteed future probability.
-- M08d — PLANNED: exam simulator state machine, immutable exam-run receipts and GT Autopsy built against an exact pinned ruleset version.
+- M08b — IN PROGRESS: stable exam occurrence identities, immutable/retractable PYQ evidence, and the simulator-ready NEET-PG 2026 published-scheme preset are live and source-verified; genuine historical PYQ evidence ingestion remains the open data task.
+- M08c — DONE: service-only and authenticated descriptive Exam DNA observations are live, separated by licensed exact/corroborated recall/single recall evidence with breadth and uncertainty; predictive inference is explicitly disabled.
+- M08d — NEXT: exam simulator state machine, immutable exam-run receipts and GT Autopsy built against an exact pinned ruleset version.
