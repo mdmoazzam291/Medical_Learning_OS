@@ -32,7 +32,7 @@ M00 → M01 → M02 → M03 → M04 is the first delivery path. M05 and M06 foll
 
 ## M02 scale extension
 - M02a — DONE: canonical concept/question versioning, provenance, review and publication gates.
-- M02b — IN PROGRESS: service-only immutable batch intake, structural/exact-dedup validation, atomic promotion to `in_review`, auditable abandon flow and reviewer-visible backlog status are live. Remaining work is a controlled real 5–10-question source-grounded batch, measured review throughput, semantic near-duplicate detection and later blueprint-aware content planning.
+- M02b — IN PROGRESS: service-only immutable batch intake, structural/exact-dedup validation, atomic promotion to `in_review`, auditable abandon flow and reviewer-visible backlog status are live. The first real 5-question rabies PEP pilot is promoted and awaiting independent Medical/References/Rights review. Remaining work is measured review throughput/rejection analysis, semantic near-duplicate detection and later blueprint-aware content planning.
 
 ## Completed M03 / immediate M04 task
 M03 includes the responsive shell, local storage/identity contract and nonclinical study-session path, verified at phone/tablet/desktop Chromium sizes. M04 is next: authorized application services, server persistence, trusted scoring and reviewed medical content. Local demo progress is not production medical evidence.
