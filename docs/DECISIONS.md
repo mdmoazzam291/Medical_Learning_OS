@@ -300,3 +300,25 @@ Keep error episodes tied to exact immutable attempt IDs, exact question versions
 A repeated distractor can become stronger misconception evidence only when the distractor itself has a reviewed semantic tag. Until then it is merely repeated selection of the same wrong option.
 
 Recovery on a later retrieval is outcome evidence, not proof that the underlying concept is mastered. Transfer and retention remain separate questions.
+
+
+## ADR-032 — Exam rules are versioned adapters, not hardcoded product behavior (accepted, 2026-09-27)
+Keep exam-specific mechanics outside the canonical learner model and core medical-content model.
+
+Represent each exam scheme as an immutable, versioned ruleset with stable `examId`, exact `ruleSetId`, sequential amendment history, effective dates, explicit source provenance and verification state.
+
+A simulator run must pin one exact ruleset version. Never reinterpret an old exam run using today's rules.
+
+Unknown or unverified fields remain null. Do not silently infer question counts, timing, negative marking, section locks, review behavior or carry-forward rules from previous years, coaching conventions or remembered patterns.
+
+A ruleset becomes simulator-eligible only when:
+- it is explicitly verified;
+- at least one source is official;
+- total questions and total duration are known;
+- every section's question count and duration are known;
+- scoring behavior is complete;
+- navigation/locking behavior is complete.
+
+The production exam registry may legitimately be empty. An empty verified registry is safer than a confident but stale preset.
+
+Keep question/PYQ provenance separate from exam mechanics. M08b will normalize provenance to stable exam-occurrence identities rather than expanding the exam-rules object into another content database.
