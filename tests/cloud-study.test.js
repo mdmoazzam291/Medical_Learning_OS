@@ -312,3 +312,28 @@ test('cloud mistake diagnostics use authenticated learner context', async () => 
   assert.equal(result.causeInferenceEnabled, false);
   assert.deepEqual(result.fingerprints, []);
 });
+
+
+test('cloud Exam DNA adapter requests descriptive evidence with an optional encoded exam ID', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seen.push(url);
+      return Response.json({
+        contractId: 'exam-dna-observation-v1',
+        scope: 'descriptive-historical-pyq-evidence',
+        predictiveInferenceEnabled: false,
+        concepts: []
+      });
+    }
+  });
+
+  const all = await cloud.examDna();
+  const neet = await cloud.examDna('neet-pg');
+  assert.match(seen[0], /study-api\/exam-dna$/);
+  assert.match(seen[1], /study-api\/exam-dna\?examId=neet-pg$/);
+  assert.equal(all.predictiveInferenceEnabled, false);
+  assert.equal(neet.predictiveInferenceEnabled, false);
+});
