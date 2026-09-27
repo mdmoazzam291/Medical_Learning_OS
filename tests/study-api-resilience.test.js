@@ -316,3 +316,15 @@ test('Exam DNA endpoint validates optional exam identity instead of accepting ar
   assert.match(source, /searchParams\.get\("examId"\)/);
   assert.match(source, /examParam === null \|\| examParam === "" \? null : identifier\(examParam\)/);
 });
+
+
+test('exam simulator readiness endpoint is authenticated, pinned and read-only', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/exam-simulator\/readiness"/);
+  assert.match(source, /searchParams\.get\("ruleSetId"\)/);
+  assert.match(source, /exam_rule_set_required/);
+  assert.match(source, /exam_mock_readiness/);
+  assert.match(source, /p_rule_set_id: ruleSetId/);
+  assert.match(source, /exam_mock_readiness_failed/);
+  assert.doesNotMatch(source, /exam_assemble_mock/);
+});
