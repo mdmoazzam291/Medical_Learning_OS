@@ -257,4 +257,5 @@ root.addEventListener('submit', event => {
 });
 
 render();
-reloadVault();
+const initialConceptId = new URL(location.href).searchParams.get('concept');
+reloadVault(initialConceptId);
