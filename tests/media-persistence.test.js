@@ -10,6 +10,10 @@ const studyApi = await readFile(
   new URL('../supabase/functions/study-api/index.ts', import.meta.url),
   'utf8'
 );
+const mediaLinkMigration = await readFile(
+  new URL('../supabase/migrations/20260927224500_m10a_existing_media_link.sql', import.meta.url),
+  'utf8'
+);
 
 test('M10a media persistence is service-only, RLS-enabled and immutable', () => {
   for (const table of [
@@ -67,4 +71,15 @@ test('study API exposes media only for currently published questions via trusted
   assert.match(studyApi, /admin\.rpc\("content_media_prompt"/);
   assert.match(studyApi, /question_not_available/);
   assert.match(studyApi, /media_prompt_failed/);
+});
+
+
+test('existing canonical media can only be linked to questions through the service role', () => {
+  assert.match(mediaLinkMigration, /content_link_question_media_v1/);
+  assert.match(mediaLinkMigration, /question_media_question_unknown/);
+  assert.match(mediaLinkMigration, /question_media_asset_unknown/);
+  assert.match(mediaLinkMigration, /question_media_annotation_invalid/);
+  assert.match(mediaLinkMigration, /revoke all on function public\.content_link_question_media_v1[\s\S]*from public, anon, authenticated/);
+  assert.match(mediaLinkMigration, /grant execute on function public\.content_link_question_media_v1[\s\S]*to service_role/);
+  assert.match(mediaLinkMigration, /publicationAuthority',false/);
 });
