@@ -906,3 +906,11 @@ Verification for this slice is repository diff review because there is no domain
 - Added authenticated `GET /study-api/media?questionVersionId=...` and cloud adapter support. The Edge API checks that the question is currently published before returning media.
 - Rollback-only live test proved: adding media changes review hashes, learner prompt projection omits diagnosis/source/rights/annotations, unresolved image rights block Rights approval, and zero synthetic rows survive rollback.
 - M10a remains IN PROGRESS. The next gate is the first real licensed/public-domain radiology + pathology pilot and learner-page rendering.
+
+
+## M10a learner image rendering — 2026-09-28
+- Study session state now attaches the service-derived `content-media-prompt-v1` projection to the exact published question version.
+- Medical QBank renders prompt media before the stem with a generic modality label and no diagnostic clue.
+- Learner UI accepts HTTPS delivery only, sends no referrer, uses bounded responsive `object-fit: contain`, and exposes no diagnosis evidence, annotations or rights/provenance metadata.
+- Existing text-only questions receive `media: []` and retain their current study behavior.
+- The next M10a task is no longer generic UI plumbing: ingest and verify the first real permissioned radiology/pathology media assets, then exercise the full image question path.

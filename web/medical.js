@@ -43,6 +43,29 @@ function reportUnexpected(error, operation) {
   }
 }
 
+function safeMediaUrl(value) {
+  try {
+    const url = new URL(String(value ?? ''));
+    return url.protocol === 'https:' ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function questionMedia(media) {
+  if (!Array.isArray(media) || !media.length) return '';
+  const items = media.map((item, index) => {
+    const url = safeMediaUrl(item?.deliveryRef);
+    const modality = escape(item?.modality || 'medical');
+    const label = 'Medical ' + modality + ' image ' + (index + 1);
+    if (!url) {
+      return '<div class="question-media-unavailable" role="status"><strong>Image unavailable.</strong><span>This question requires a verified media delivery URL.</span></div>';
+    }
+    return '<figure class="question-media"><img src="' + escape(url) + '" alt="' + escape(label) + '" loading="eager" decoding="async" referrerpolicy="no-referrer"><figcaption>' + modality + ' · blind first look</figcaption></figure>';
+  }).join('');
+  return '<div class="question-media-list" aria-label="Question media">' + items + '</div>';
+}
+
 function safeSourceLink(source) {
   if (!source?.url) return escape(source?.title || source?.sourceId || 'Source');
   try {
@@ -150,7 +173,7 @@ function studyView() {
     ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
 
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form"><fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
 }
 
 function render() {
