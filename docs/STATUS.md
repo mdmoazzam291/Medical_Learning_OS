@@ -672,3 +672,23 @@ Two-real-account isolation testing, reviewed medical content, authenticated revi
 - Post-smoke production verification remains `ready=false`: 1 eligible unique question / 180 required, shortage 179, with 0 `exam_runs`, 0 `exam_run_events` and 0 `exam_run_receipts`.
 - Trusted run-start/resume/read/answer/review API deployment is complete. M08d remains IN PROGRESS because real full-mock launch still requires 180 distinct eligible published questions, an authenticated hosted end-to-end full-mock proof, explicit cancellation/abandon semantics and GT Autopsy.
 
+## Scalable content intake foundation — 2026-09-27
+- Added service-only content staging through `content_intake_batches` plus immutable `content_intake_events`.
+- A staged batch is fingerprinted with SHA-256 and bounded to at most 100 new questions in v1.
+- Intake v1 accepts only new stable version-1 `original` or `ai_generated` questions. Recalled/licensed PYQ claims remain in the separate exam-occurrence/PYQ evidence ledger.
+- Structural validation checks stable IDs, exact option/key integrity, one primary concept, source/concept references, catalog/staged-batch collisions, and exact normalized-stem duplicates.
+- New sources must enter with `rights.status=unknown`; intake cannot manufacture source-rights clearance.
+- Promotion locks and revalidates against the current catalog before atomically appending candidates. Promoted questions enter only as `in_review` with zero review events and no publication timestamp.
+- Promotion has `publicationAuthority=false`; Medical, References and Rights review plus the separate publication transition remain mandatory.
+- Added explicit staged-batch abandonment rather than deleting failed/conflicting intake history.
+- Added `content_intake_pipeline_status()` to expose staged/promoted/abandoned volume, catalog state, and outstanding Medical/References/Rights backlog without inventing a content-quality score.
+- Added authenticated read-only `GET /pipeline-status` to `review-api`; reviewer grants do not confer intake mutation authority.
+- `review-api` v9 is ACTIVE with the pipeline-status route.
+- Production migrations `content_intake_pipeline`, `content_intake_trigger_permissions`, and `internal_trigger_rpc_permissions` are applied.
+- Supabase security-advisor follow-up removed all direct-call SECURITY DEFINER warnings for internal trigger helpers, including four older helpers discovered during this work. Remaining security warning is the pre-existing Auth leaked-password-protection setting; RLS-without-policy notices are informational for intentionally unexposed service-only tables.
+- Rollback-only production proof exercised stage → promote on one synthetic nonclinical candidate. Inside the proof it became `in_review`, retained source rights `unknown`, had zero reviews/no publication timestamp, and did not increase NEET-PG mock eligibility.
+- The proof rolled back completely: 0 synthetic batches, 0 intake events, 0 synthetic questions retained; catalog version remains 6.
+- Current real intake queue is empty: 0 staged batches, 0 promoted intake batches, 0 in-review questions and 1 published stable medical question.
+- NEET-PG full-mock capacity therefore remains correctly blocked at 1/180, shortage 179.
+- This foundation is DONE. The next content-capacity step is a small source-grounded candidate-production pilot that measures reviewer throughput and defect/rejection rates before attempting 180-question scale.
+
