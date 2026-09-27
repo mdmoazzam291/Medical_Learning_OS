@@ -263,6 +263,7 @@ Deno.serve(async (req: Request) => {
     const { data: authData, error: authError } = await userClient.auth.getUser(token);
     if (authError || !authData.user?.id) fail(401, "unauthorized");
     const learnerId = authData.user.id;
+    const internalExamTester = authData.user.app_metadata?.medical_learning_os_internal_tester === true;
 
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
@@ -671,11 +672,14 @@ Deno.serve(async (req: Request) => {
         ? null
         : state.sections[state.currentSectionIndex];
       const questions = currentSection
-        ? currentSection.questionVersionIds.map((questionVersionId: string) => {
+        ? await Promise.all(currentSection.questionVersionIds.map(async (questionVersionId: string) => {
             const question: any = catalogData.byVersion.get(String(questionVersionId));
             if (!question) fail(500, "exam_question_version_unavailable");
-            return learnerQuestion(question);
-          })
+            return {
+              ...learnerQuestion(question),
+              media: await learnerMediaPrompt(String(questionVersionId))
+            };
+          }))
         : [];
       const responses = currentSection
         ? Object.fromEntries(currentSection.questionVersionIds.map((questionVersionId: string) => [
@@ -1124,6 +1128,129 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
 
+    if (req.method === "POST" && path === "/exam-simulator/test-runs") {
+      if (url.search) fail(400, "query_not_supported");
+      if (!internalExamTester) fail(403, "internal_exam_test_forbidden");
+      const input = await jsonBody(req);
+      exactFields(input, ["ruleSetId"]);
+      const ruleSetId = identifier(input.ruleSetId);
+      const now = new Date().toISOString();
+
+      const existing = await getOpenExamRun();
+      if (existing) {
+        const synced = await syncExamClock(existing, now);
+        const existingIsTest = synced.state?.assembly?.testingOnly === true;
+        if (synced.status === "in_progress" && !existingIsTest) {
+          return response(req, 409, { error: "exam_production_run_already_open" });
+        }
+        if (synced.status === "in_progress" && synced.rule_set_id !== ruleSetId) {
+          return response(req, 409, { error: "exam_run_already_open" });
+        }
+        if (synced.status === "in_progress" && existingIsTest) {
+          return response(req, 200, await examRunView(synced, now, true));
+        }
+      }
+
+      const { data: readiness, error: readinessError } = await admin.rpc("exam_mock_test_readiness", {
+        p_rule_set_id: ruleSetId
+      });
+      if (readinessError) {
+        const message = String(readinessError.message || "");
+        if (message.includes("exam_rule_set_not_available")) fail(404, "exam_rule_set_not_available");
+        fail(500, "exam_mock_test_readiness_failed");
+      }
+      if (readiness?.ready !== true) {
+        return response(req, 409, {
+          error: "exam_mock_test_not_ready",
+          readiness: { ...readiness, generatedAt: now }
+        });
+      }
+
+      const rule = await getExamRuleSet(ruleSetId);
+      const runId = crypto.randomUUID();
+      const assemblySeed = crypto.randomUUID();
+      const { data: assembly, error: assemblyError } = await admin.rpc("exam_assemble_test_mock", {
+        p_rule_set_id: ruleSetId,
+        p_seed: assemblySeed
+      });
+      if (assemblyError) fail(500, "exam_mock_test_assembly_failed");
+      if (assembly?.ready !== true || !Array.isArray(assembly?.questionVersionIds) || assembly?.testingOnly !== true) {
+        return response(req, 409, {
+          error: "exam_mock_test_not_ready",
+          readiness: assembly
+        });
+      }
+
+      const orderedIds = await seededQuestionOrder(
+        assembly.questionVersionIds.map((value: unknown) => identifier(value)),
+        assemblySeed
+      );
+      const baseState = createLockedSectionRuntimeRun({
+        runId,
+        examId: String(rule.exam_id),
+        ruleSetId: String(rule.rule_set_id),
+        caveats: [
+          ...(Array.isArray(rule.rule_set?.caveats) ? rule.rule_set.caveats : []),
+          "Internal engineering test content may include AI-test-reviewed items that are not production published."
+        ],
+        sections: rule.rule_set.rules.sections,
+        totalQuestions: Number(rule.total_questions),
+        totalDurationSeconds: Number(rule.total_duration_seconds),
+        questionVersionIds: orderedIds,
+        startedAt: now
+      });
+      const state = {
+        ...structuredClone(baseState),
+        assembly: {
+          policyId: String(assembly.policyId || "human-published-plus-ai-test-reviewed-v1"),
+          catalogVersion: Number(assembly.catalogVersion),
+          ruleSetSha256: String(rule.rule_set_sha256),
+          examBlueprintFidelity: assembly.examBlueprintFidelity === true,
+          contentMixFidelity: String(assembly.contentMixFidelity || "exam-priority-planned-not-yet-validated"),
+          testingOnly: true,
+          productionEquivalent: false,
+          aiTestOnlyQuestions: Number(assembly.aiTestOnlyQuestions ?? 0)
+        }
+      };
+      const { data, error } = await admin.rpc("exam_create_run", {
+        p_learner: learnerId,
+        p_run: runId,
+        p_exam_id: rule.exam_id,
+        p_rule_set_id: rule.rule_set_id,
+        p_engine_id: state.engineId,
+        p_state: state,
+        p_started_at: state.startedAt,
+        p_scheduled_end_at: state.scheduledEndAt
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_run_already_open")) {
+          const open = await getOpenExamRun();
+          if (open?.state?.assembly?.testingOnly === true) {
+            return response(req, 200, await examRunView(open, now, true));
+          }
+          return response(req, 409, { error: "exam_production_run_already_open" });
+        }
+        fail(500, "exam_run_create_failed");
+      }
+      const row = {
+        id: data?.runId ?? runId,
+        learner_id: learnerId,
+        exam_id: rule.exam_id,
+        rule_set_id: rule.rule_set_id,
+        engine_id: state.engineId,
+        status: data?.status ?? state.status,
+        state_revision: Number(data?.revision ?? 0),
+        state: data?.state ?? state,
+        started_at: state.startedAt,
+        scheduled_end_at: state.scheduledEndAt,
+        completed_at: null,
+        created_at: now,
+        updated_at: now
+      };
+      return response(req, 200, await examRunView(row, now, false));
+    }
+
     if (req.method === "POST" && path === "/exam-simulator/runs") {
       if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
@@ -1134,6 +1261,9 @@ Deno.serve(async (req: Request) => {
       const existing = await getOpenExamRun();
       if (existing) {
         const synced = await syncExamClock(existing, now);
+        if (synced.status === "in_progress" && synced.state?.assembly?.testingOnly === true) {
+          return response(req, 409, { error: "exam_internal_test_run_already_open" });
+        }
         if (synced.status === "in_progress" && synced.rule_set_id !== ruleSetId) {
           return response(req, 409, {
             error: "exam_run_already_open",
