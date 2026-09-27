@@ -127,3 +127,15 @@ Implementation interpretation:
 - AI-reviewed items may exercise internal simulator/QBank engineering paths but cannot become production learner content solely through AI approval;
 - verified Exam DNA/PYQ evidence should drive exam prioritization when available; otherwise prioritization is explicitly heuristic and must not invent exam frequency or PYQ provenance;
 - generation stops when the verified test-inventory requirement is reached unless replacement items are necessary.
+
+
+## Breadth-first multimodal content direction — 2026-09-28
+
+The user selected both of the proposed content-scaling choices:
+- prioritize **subject breadth** while closing the remaining internal-test question gap rather than deepening already-covered clusters first;
+- begin **image-based radiology/pathology content now** rather than postponing multimodal work until after the 180-question simulator threshold.
+
+Implementation interpretation:
+- breadth is a coverage policy, not permission to invent exam weights; verified Exam DNA/PYQ evidence remains authoritative when available;
+- multimodal content must enter through a canonical, versioned media contract with provenance, rights/review metadata and non-leaking learner projections;
+- an image question is not internal-test eligible merely because a picture URL exists; media integrity and delivery must be established first.

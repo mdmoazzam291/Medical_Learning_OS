@@ -14,7 +14,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | IN PROGRESS |
 | M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | IN PROGRESS |
 | M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | PLANNED |
-| M10 | Multimodal and clinical learning | Licensed images, annotations, finding-first exercises, later voice/video encounters | PLANNED |
+| M10 | Multimodal and clinical learning | Licensed images, annotations, finding-first exercises, later voice/video encounters | IN PROGRESS |
 | M11 | Research and quality validation | Retention endpoints, intervention experiments, data-quality monitoring and outcome review | PLANNED |
 | M12 | Community and educator platform | Moderation, verified contributions, import/API contracts and quality-controlled marketplace | PLANNED |
 | M13 | Institutions and sustainable business | Privacy-scoped faculty views, entitlements, unit economics and institutional pilots | PLANNED |
@@ -157,3 +157,9 @@ All database evolution is **forward-only from the repository's existing timestam
 - Production publication still requires the accepted human review + source-rights contracts.
 - Stop autonomous inventory expansion once internal-test readiness meets the verified rule-set requirement, except for replacement of rejected/invalid items.
 
+
+
+## M10 slices
+- M10a — IN PROGRESS: provider-independent Phase-1 MediaAsset/annotation/question-link domain contract is implemented for JPEG/PNG/WebP and radiology/pathology/dermatology/ophthalmology/anatomy/ECG image modalities. The contract preserves byte identity, provenance/licence evidence, review state, normalized hotspot/bbox/polygon annotations and blind-first-look learner safety. Remaining M10a gates are persistence/storage, media-bound review fingerprints, learner/API rendering and the first sourced radiology/pathology pilot.
+- M10b — PLANNED: visual learner interactions and evidence events for detection, localization, description, interpretation and discrimination; integrate visual-error fingerprints with Mistake Intelligence and Study Now.
+- M10c — LATER: DICOM/DICOMweb, CT/MRI stacks, whole-slide pathology, measurements and multi-series studies only after Phase-1 usage proves the need.

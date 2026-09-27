@@ -210,3 +210,34 @@ Test fixtures may contain synthetic example numbers; they are not Medical Learni
 
 No learner-state persistence is introduced by this contract. Future shadow predictions must remain segregated from canonical observed evidence and from authoritative Digital Twin projections until a separately versioned storage contract is accepted.
 
+
+
+## Multimodal media bundle v1 — M10a
+
+Implemented pure domain contract in `src/domain/media.js`.
+
+Top-level:
+- `schemaVersion: 1`
+- `assets[]`
+- `annotations[]`
+- `questionLinks[]`
+
+Each media asset version binds:
+- stable asset/version identity and sequential supersedes link;
+- modality;
+- JPEG/PNG/WebP MIME type;
+- SHA-256 of exact bytes;
+- width/height;
+- opaque delivery reference;
+- source ID/provider/original identifier/source URL;
+- copyright, licence and rights evidence;
+- diagnosis evidence;
+- review state.
+
+Review-state vocabulary is `unverified | ai_assisted | single_review | double_review | gold_standard`. Unverified assets cannot carry reviewer identity or a review timestamp.
+
+Annotations are separately versioned and may be hotspot, bounding box or polygon geometry using normalized 0–1 coordinates. Question links reference exact media/annotation versions and declare role, display order and whether the first look is blind.
+
+`toLearnerMediaPrompt` intentionally excludes diagnosis evidence, provenance/licence/review metadata and annotations. `toLearnerMediaAnnotations` is a separate explicit projection for post-answer teaching/localization flows.
+
+The checked-in media fixture is synthetic software-test data, not medical content.

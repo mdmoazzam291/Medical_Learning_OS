@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "mediaAssetId": "demo:synthetic-cxr",
+      "mediaAssetVersionId": "demo:synthetic-cxr@1",
+      "version": 1,
+      "supersedes": null,
+      "modality": "radiology",
+      "mimeType": "image/png",
+      "contentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 1024,
+      "height": 1024,
+      "deliveryRef": "media://demo/synthetic-cxr@1",
+      "source": {
+        "sourceId": "demo:source",
+        "provider": "Synthetic software fixture",
+        "originalIdentifier": "demo-synthetic-cxr-001",
+        "url": "https://example.com/medical-learning-os-media-fixture",
+        "copyright": "Synthetic test fixture",
+        "license": "Test-only fixture; not medical content",
+        "rightsEvidence": "Created solely to exercise the media contract. It is not learner-ready medical evidence."
+      },
+      "diagnosisEvidence": "Synthetic nonclinical fixture; no diagnosis claim.",
+      "review": {
+        "status": "unverified",
+        "reviewerId": null,
+        "reviewedAt": null
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "annotationId": "demo:synthetic-cxr:region",
+      "annotationVersionId": "demo:synthetic-cxr:region@1",
+      "version": 1,
+      "supersedes": null,
+      "mediaAssetVersionId": "demo:synthetic-cxr@1",
+      "kind": "bbox",
+      "geometry": {
+        "x": 0.2,
+        "y": 0.25,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "label": "Synthetic region",
+      "conceptId": "demo:visual-finding",
+      "authorId": "test-fixture",
+      "review": {
+        "status": "unverified",
+        "reviewerId": null,
+        "reviewedAt": null
+      }
+    }
+  ],
+  "questionLinks": [
+    {
+      "questionVersionId": "demo:image-question@1",
+      "mediaAssetVersionId": "demo:synthetic-cxr@1",
+      "role": "prompt",
+      "displayOrder": 0,
+      "blindFirstLook": true,
+      "annotationVersionIds": [
+        "demo:synthetic-cxr:region@1"
+      ]
+    }
+  ]
+}
