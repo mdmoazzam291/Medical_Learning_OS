@@ -54,3 +54,13 @@ test('production static server exposes NeuralVault HTML and module assets', asyn
   assert.match(serverSource, /'web\/vault\.html'/);
   assert.match(serverSource, /'web\/vault\.js'/);
 });
+
+
+test('NeuralVault renders only allowlisted Study Now arrival context for the exact concept', () => {
+  assert.match(source, /allowedEntryReasons = new Set\(\['mistake-repair', 'due-revision', 'new-learning'\]\)/);
+  assert.match(source, /initialParams\.get\('from'\) === 'study-now'/);
+  assert.match(source, /entry\.conceptId !== state\.selectedConceptId/);
+  assert.match(source, /STUDY NOW HANDOFF/);
+  assert.match(source, /This handoff is context only/);
+  assert.match(source, /does not change your score, note content, mastery state, or revision schedule/);
+});
