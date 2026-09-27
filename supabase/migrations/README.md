@@ -29,3 +29,20 @@ The project status must describe the live schema as existing. "No migrations" wa
 - `20260926140000_reviewer_grant_governance.sql` — auditable grant/revoke events, grant actor/reason/expiry, and active-grant enforcement for review queues and mutations.
 
 These files are the canonical repository copies for all M04c DDL applied after the historical five-migration baseline.
+
+## Content-intake live migration mapping — 2026-09-27
+
+Repository dependency order:
+
+- `20260927173000_content_intake_pipeline.sql`
+- `20260927174500_content_intake_trigger_permissions.sql`
+- `20260927175500_internal_trigger_rpc_permissions.sql`
+
+The dedicated live project recorded the same changes under deployment-time versions:
+
+- `20260927102048 content_intake_pipeline`
+- `20260927102558 content_intake_trigger_permissions`
+- `20260927103229 internal_trigger_rpc_permissions`
+
+The two follow-up SQL bodies were recovered from `supabase_migrations.schema_migrations`. Repository filenames intentionally remain after the intake foundation so a fresh lexical migration replay cannot reference trigger helpers before they exist.
+
