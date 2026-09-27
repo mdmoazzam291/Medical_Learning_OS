@@ -636,10 +636,12 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    const vaultConceptMatch = path.match(/^\/vault\/concepts\/([a-zA-Z0-9:_@.\-]{1,160})$/);
+    const vaultConceptMatch = path.match(/^\/vault\/concepts\/([^/]{1,480})$/);
     if (req.method === "GET" && vaultConceptMatch) {
       if (url.search) fail(400, "query_not_supported");
-      const conceptId = identifier(vaultConceptMatch[1]);
+      let conceptId;
+      try { conceptId = identifier(decodeURIComponent(vaultConceptMatch[1])); }
+      catch { fail(400, "invalid_identifier"); }
       const [
         { data: concept, error: conceptError },
         { data: canonical, error: canonicalError },
@@ -825,7 +827,10 @@ Deno.serve(async (req: Request) => {
       const input = await jsonBody(req, 24576);
       exactFields(input, ["conceptId", "bodyMarkdown"], ["anchorNoteVersionId"]);
       const conceptId = identifier(input.conceptId);
-      if (typeof input.bodyMarkdown !== "string") fail(400, "invalid_note_body");
+      if (typeof input.bodyMarkdown !== "string" ||
+          new TextEncoder().encode(input.bodyMarkdown).byteLength > 20000) {
+        fail(400, "invalid_note_body");
+      }
       const anchorNoteVersionId =
         input.anchorNoteVersionId === undefined || input.anchorNoteVersionId === null
           ? null
@@ -845,7 +850,10 @@ Deno.serve(async (req: Request) => {
     if (req.method === "PATCH" && vaultAnnotationMatch) {
       const input = await jsonBody(req, 24576);
       exactFields(input, ["expectedRevision", "bodyMarkdown"]);
-      if (typeof input.bodyMarkdown !== "string") fail(400, "invalid_note_body");
+      if (typeof input.bodyMarkdown !== "string" ||
+          new TextEncoder().encode(input.bodyMarkdown).byteLength > 20000) {
+        fail(400, "invalid_note_body");
+      }
       const { data, error } = await admin.rpc("neural_update_annotation", {
         p_learner: learnerId,
         p_annotation_id: identifier(vaultAnnotationMatch[1]),
