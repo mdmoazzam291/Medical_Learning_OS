@@ -121,11 +121,13 @@ This measures pipeline pressure. It does not infer medical quality, reviewer qua
 - 5 questions;
 - 5 new canonical concepts;
 - 2 official Government of India NRCP sources;
-- all questions `ai_generated`, `in_review`, non-PYQ and unpublished;
-- all new sources entered with rights `unknown`;
+- all questions entered as `ai_generated`, `in_review`, non-PYQ and unpublished;
+- both new sources entered with rights `unknown`, then were independently resolved to `citation_only`;
 - catalog promotion: v6 → v7;
-- current review backlog: Medical 5 / References 5 / Rights 5;
-- published stable inventory remains 1.
+- authenticated review completed 15/15 gate decisions with current immutable fingerprints;
+- trusted publication completed for all 5 questions;
+- current review backlog: Medical 0 / References 0 / Rights 0;
+- published stable inventory is now 6.
 
 ## Reviewer preflight assistance
 
@@ -133,15 +135,30 @@ The reviewer surface may load a versioned **non-authoritative review-assist pack
 
 For the first rabies pilot, the preflight finds four straightforwardly supported items and one supported item with a wording note: the category III RIG stem is correct among its options but slightly under-specified because wound washing is also part of rabies PEP. The concern remains visible to the reviewer rather than being auto-resolved.
 
+## First observed review-throughput baseline
+
+The first five-question pilot completed its full authenticated review/publication loop.
+
+Observed immutable event timing:
+- 15 review decisions over a 26.6-minute first-to-last event span;
+- Medical gate span: 5.9 minutes for 5 decisions;
+- References gate span: 6.0 minutes for 5 decisions;
+- Rights gate span: 8.8 minutes for 5 decisions;
+- 2 source-rights decisions were also recorded;
+- 5/5 verified questions published successfully;
+- 0 rejected versions in this pilot.
+
+This is a tiny operational sample, not a stable throughput estimate. Rights is the apparent bottleneck and should be measured again rather than optimized prematurely.
+
 ## Next production step
 
-Complete the pilot's independent review loop and record:
+Run a second controlled batch at approximately 25 questions, still source-grounded and review-gated, while measuring:
 
-- time per review gate;
-- rejection/revision reasons by gate;
-- source-rights resolution effort;
+- structural/exact-duplicate rejection rate;
+- per-gate review time and source-rights reuse;
+- revision/rejection reasons;
+- reviewer bottleneck;
 - verified-to-published conversion;
-- reviewer bottleneck by gate;
-- any semantic near-duplicate or ambiguity failures that structural validation missed.
+- semantic near-duplicate/ambiguity failures missed by structural validation.
 
-Do not increase generation/import volume merely because staging works. Scale only after this five-item loop produces clean, measurable review behavior.
+Do not jump directly to 180 generated questions. Increase volume only if the 25-question loop preserves review quality and auditability.
