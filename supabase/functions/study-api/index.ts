@@ -776,6 +776,29 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, { questions: await questions(filter) });
     }
 
+    if (req.method === "GET" && path === "/media") {
+      const params = new URL(req.url).searchParams;
+      if ([...params.keys()].some((key) => key !== "questionVersionId")) fail(400, "query_not_supported");
+      const rawQuestionVersionId = params.get("questionVersionId");
+      if (!rawQuestionVersionId) fail(400, "question_version_required");
+      const questionVersionId = identifier(rawQuestionVersionId);
+
+      const catalog = await getCatalog();
+      if (!publishedQuestions(catalog.body).some((question: any) =>
+        question.questionVersionId === questionVersionId
+      )) fail(404, "question_not_available");
+
+      const { data, error } = await admin.rpc("content_media_prompt", {
+        p_question_version_id: questionVersionId
+      });
+      if (error) fail(500, "media_prompt_failed");
+      return response(req, 200, data ?? {
+        contractId: "content-media-prompt-v1",
+        questionVersionId,
+        media: []
+      });
+    }
+
     if (req.method === "GET" && path === "/revision/due") {
       if ([...url.searchParams.keys()].some((key) => key !== "limit")) fail(400, "query_not_supported");
       const rawLimit = url.searchParams.get("limit");
