@@ -105,7 +105,7 @@ function validateNavigation(navigation) {
 export function validateExamRuleSet(input) {
   exactShape(input, [
     'examId', 'ruleSetId', 'version', 'supersedes', 'label', 'session',
-    'effectiveFrom', 'effectiveUntil', 'verification', 'sources', 'rules'
+    'effectiveFrom', 'effectiveUntil', 'verification', 'caveats', 'sources', 'rules'
   ], 'exam ruleset');
 
   text(input.examId, 'examId');
@@ -131,6 +131,10 @@ export function validateExamRuleSet(input) {
       (input.verification.verifiedBy !== null || input.verification.verifiedDate !== null)) {
     fail('Draft rules cannot carry verification identity');
   }
+
+  if (!Array.isArray(input.caveats)) fail('Invalid caveats');
+  input.caveats.forEach(value => text(value, 'caveat'));
+  unique(input.caveats, 'caveat');
 
   if (!Array.isArray(input.sources)) fail('Invalid sources');
   input.sources.forEach(validateSource);
@@ -200,6 +204,7 @@ export function toExamSimulationPreset(input) {
     examId: ruleSet.examId,
     ruleSetId: ruleSet.ruleSetId,
     session: ruleSet.session,
+    caveats: ruleSet.caveats,
     totalQuestions: ruleSet.rules.totalQuestions,
     totalDurationSeconds: ruleSet.rules.totalDurationSeconds,
     sections: ruleSet.rules.sections,
