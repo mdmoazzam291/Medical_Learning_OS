@@ -35,3 +35,24 @@ test('NeuralVault reviewer card shows provenance before gate decision', async ()
   assert.match(source, /provenance\.kind/);
   assert.match(source, /provenance\.evidence/);
 });
+
+
+test('reviewer UI shows descriptive pipeline backlog without granting intake authority', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /review\.pipelineStatus\(\)/);
+  assert.match(source, /Review backlog/);
+  assert.match(source, /Medical pending/);
+  assert.match(source, /References pending/);
+  assert.match(source, /Rights pending/);
+  assert.match(source, /Published stable questions/);
+  assert.match(source, /publicationAuthority/);
+  assert.match(source, /Semantic near-duplicate detection/);
+  assert.doesNotMatch(source, /content_stage_intake_batch|content_promote_intake_batch/);
+});
+
+test('pipeline status failure does not block the review queue', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /pipelineStatus\(\)\.catch/);
+  assert.match(source, /return state\.pipelineStatus/);
+  assert.match(source, /Promise\.all\(\[queuePromise, pipelinePromise\]\)/);
+});

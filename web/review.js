@@ -15,6 +15,7 @@ let state = {
   selectedKind: null,
   targetType: 'questions',
   items: [],
+  pipelineStatus: null,
   loading: false,
   submitting: null,
   error: null
@@ -69,6 +70,29 @@ function checklist(kind) {
     return '<ul><li>Each material claim is supported by the cited source package.</li><li>Source identity/version is appropriate and current for the claim.</li><li>No important contradiction or scope mismatch is hidden.</li></ul>';
   }
   return '<ul><li>Provenance is accurate.</li><li>Source rights status matches the actual use: reuse rights are needed only when protected expression is copied/adapted; citation-only factual grounding must not reproduce protected text, tables, images, or other expressive material.</li><li>No recalled/licensed material is being represented as original.</li></ul>';
+}
+
+function pipelinePanel() {
+  const pipeline = state.pipelineStatus;
+  if (!pipeline) return '';
+
+  const intake = pipeline.intake || {};
+  const catalog = pipeline.catalog || {};
+  const outstanding = pipeline.reviewOutstanding || {};
+  const number = value => Number.isFinite(Number(value)) ? Number(value) : 0;
+
+  return `<section class="panel">
+    <div class="section-heading"><div><span class="eyebrow">CONTENT PIPELINE</span><h2>Review backlog</h2></div><span class="badge">${escape(number(catalog.inReviewQuestions))} in review</span></div>
+    <div class="review-metadata">
+      <div><span>Medical pending</span><strong>${escape(number(outstanding.medical))}</strong></div>
+      <div><span>References pending</span><strong>${escape(number(outstanding.references))}</strong></div>
+      <div><span>Rights pending</span><strong>${escape(number(outstanding.rights))}</strong></div>
+      <div><span>Published stable questions</span><strong>${escape(number(catalog.publishedStableQuestions))}</strong></div>
+      <div><span>Staged questions</span><strong>${escape(number(intake.stagedQuestions))}</strong></div>
+      <div><span>Promoted batches</span><strong>${escape(number(intake.promotedBatches))}</strong></div>
+    </div>
+    <p class="muted">Pipeline metrics are descriptive only. Intake publication authority: <strong>${pipeline.publicationAuthority === true ? 'enabled' : 'none'}</strong>. Semantic near-duplicate detection: <strong>${pipeline.semanticDuplicateDetection === true ? 'enabled' : 'not yet enabled'}</strong>.</p>
+  </section>`;
 }
 
 function signedOut() {
@@ -147,6 +171,7 @@ function authorized() {
         : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
 
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
+  ${pipelinePanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${body}</main>`;
 }
@@ -160,10 +185,21 @@ async function loadQueue(kind = state.selectedKind) {
   state = { ...state, selectedKind: kind, loading: true, error: null, items: [] };
   render();
   try {
-    const result = state.targetType === 'neural-notes'
-      ? await review.noteQueue(kind)
-      : await review.queue(kind);
-    state = { ...state, loading: false, items: Array.isArray(result?.items) ? result.items : [], error: null };
+    const queuePromise = state.targetType === 'neural-notes'
+      ? review.noteQueue(kind)
+      : review.queue(kind);
+    const pipelinePromise = review.pipelineStatus().catch(error => {
+      reportUnexpected(error, 'load_pipeline_status');
+      return state.pipelineStatus;
+    });
+    const [result, pipelineStatus] = await Promise.all([queuePromise, pipelinePromise]);
+    state = {
+      ...state,
+      loading: false,
+      items: Array.isArray(result?.items) ? result.items : [],
+      pipelineStatus,
+      error: null
+    };
   } catch (error) {
     reportUnexpected(error, 'load_queue');
     state = { ...state, loading: false, items: [], error: error.code || error.message || 'review_queue_unavailable' };
@@ -185,7 +221,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
