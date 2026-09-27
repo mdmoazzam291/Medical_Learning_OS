@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:core-cross-exam:20260928:04",
+  "label": "Core cross-exam controlled pilot 04",
+  "generatedDate": "2026-09-28",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 25,
+    "conceptCount": 25,
+    "sourceCount": 5,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flagCount": 0,
+    "flags": []
+  },
+  "contentMix": {
+    "examBlueprintFidelity": false,
+    "priorityPolicy": "exam-value-autonomous-intake-v1",
+    "note": "Selection prioritizes uncovered cross-exam core concepts. Verified historical Exam DNA/PYQ frequency is currently too sparse to claim observed exam-frequency fidelity."
+  }
+}
