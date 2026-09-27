@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "batchKey": "pilot:multimodal-breadth:20260928:06",
+  "label": "Multimodal breadth controlled pilot 06",
+  "generatedDate": "2026-09-28",
+  "authority": "none",
+  "validation": {
+    "contractId": "content-intake-validation-v1",
+    "valid": true,
+    "questionCount": 25,
+    "conceptCount": 25,
+    "sourceCount": 9,
+    "publicationAuthority": false,
+    "semanticDuplicateDetection": false
+  },
+  "overlap": {
+    "contractId": "content-intake-overlap-report-v1",
+    "signalType": "token-set-jaccard-v1",
+    "threshold": 0.55,
+    "blocking": false,
+    "flagCount": 0,
+    "maxFlaggedOverlap": 0,
+    "semanticDuplicateDetection": false,
+    "medicalQualityInference": false,
+    "flags": []
+  },
+  "contentMix": {
+    "targetExams": [
+      "neet-pg",
+      "ini-cet"
+    ],
+    "examBlueprintFidelity": false,
+    "prioritizationEvidence": "heuristic-no-verified-pyq-frequency",
+    "breadthFirst": true,
+    "textDomains": [
+      "pediatrics-neonatology",
+      "gastroenterology-surgery",
+      "neurology",
+      "psychiatry"
+    ],
+    "multimodal": {
+      "imageQuestionCount": 5,
+      "mediaAssetCount": 5,
+      "modalities": {
+        "radiology": 3,
+        "pathology": 2
+      },
+      "byteIntegrity": "sha256-from-private-stored-bytes",
+      "mediaRights": "CC0/public_domain",
+      "blindFirstLook": true
+    },
+    "note": "Verified historical Exam DNA/PYQ frequency remains insufficient for observed-frequency claims. This batch intentionally broadens uncovered canonical subject and modality coverage."
+  }
+}
