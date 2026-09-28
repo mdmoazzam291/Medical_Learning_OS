@@ -83,11 +83,12 @@ function reviewFor(runCase, verdict='pass') {
       : 'Synthetic contract review failure.'
   }));
   return {
-    schemaVersion:1,
+    schemaVersion:2,
     evaluationSetId:evaluationSet.evaluationSetId,
     evaluationSetVersion:evaluationSet.version,
     caseId:runCase.caseId,
     providerRunRef:runCase.providerRunRef,
+    reviewTargetDigest:runCase.reviewTargetDigest,
     reviewerId:'reviewer:synthetic-test',
     reviewedAt:'2026-09-28T09:10:00.000Z',
     dimensions,
@@ -114,7 +115,7 @@ test('evaluation task is grounded, evaluation-only and exposes observed wrong op
 
 test('valid sandbox provider run remains awaiting human semantic review and never gains production authority', async () => {
   const run=await runSemanticTeachingProviderEvaluation(runArgs());
-  assert.equal(run.contractId,'semantic-teaching-provider-evaluation-run-v1');
+  assert.equal(run.contractId,'semantic-teaching-provider-evaluation-run-v2');
   assert.equal(run.cases.length,6);
   assert.equal(run.summary.deterministicPassCount,6);
   assert.equal(run.summary.deterministicBlockCount,0);
@@ -125,6 +126,7 @@ test('valid sandbox provider run remains awaiting human semantic review and neve
   assert.ok(run.cases.every(item=>item.executionStatus==='awaiting_human_review'));
   assert.ok(run.cases.every(item=>item.deliveryPreview.source==='provider'));
   assert.ok(run.cases.every(item=>item.humanChecklist.dimensions.length===5));
+  assert.ok(run.cases.every(item=>item.reviewTargetDigest?.digestHex?.length===64));
   assert.ok(Object.isFrozen(run.cases[0].providerResult));
 });
 
@@ -319,11 +321,12 @@ test('breadth v2 all-pass human reviews still cannot produce production qualific
     requestedAt:'2026-09-28T09:00:00.000Z'
   });
   const reviews=run.cases.map(runCase=>({
-    schemaVersion:1,
+    schemaVersion:2,
     evaluationSetId:breadthSet.evaluationSetId,
     evaluationSetVersion:breadthSet.version,
     caseId:runCase.caseId,
     providerRunRef:runCase.providerRunRef,
+    reviewTargetDigest:runCase.reviewTargetDigest,
     reviewerId:'reviewer:synthetic-test',
     reviewedAt:'2026-09-28T09:10:00.000Z',
     dimensions:[
@@ -346,4 +349,31 @@ test('breadth v2 all-pass human reviews still cannot produce production qualific
   assert.equal(summary.productionQualificationAuthority,false);
   assert.equal(summary.productionQualified,false);
   assert.equal(summary.qualificationScope,'bootstrap_only');
+});
+
+
+test('target-bound semantic review rejects stale or substituted provider output', async () => {
+  const run=await runSemanticTeachingProviderEvaluation(runArgs());
+  const review=reviewFor(run.cases[0],'pass');
+  review.reviewTargetDigest={
+    ...review.reviewTargetDigest,
+    digestHex:'0'.repeat(64)
+  };
+  assert.throws(()=>finalizeSemanticTeachingProviderEvaluation({
+    evaluationSet,
+    run,
+    reviews:[review]
+  }),/target digest mismatch/);
+});
+
+test('v2 evaluation run rejects legacy unbound v1 human review', async () => {
+  const run=await runSemanticTeachingProviderEvaluation(runArgs());
+  const review=reviewFor(run.cases[0],'pass');
+  delete review.reviewTargetDigest;
+  review.schemaVersion=1;
+  assert.throws(()=>finalizeSemanticTeachingProviderEvaluation({
+    evaluationSet,
+    run,
+    reviews:[review]
+  }),/Target-bound semantic review is required/);
 });
