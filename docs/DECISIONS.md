@@ -889,3 +889,20 @@ Decision:
 - add production qualification only in a separately versioned policy after broader specialty/modality coverage and explicit acceptance criteria are established.
 
 This makes provider testing useful without letting the test harness become a hidden model router or deployment switch.
+
+
+## ADR-058 — Broaden provider evaluation before adding a production model (accepted, 2026-09-28)
+
+The six-case bootstrap is too narrow to justify a medical teaching provider because it is mostly one infectious-disease cluster and exercises only concise explanation.
+
+Decision:
+- preserve that bootstrap unchanged as the first human-reviewed semantic anchor;
+- add a separate schema-v2 development breadth set rather than relabel AI-test content as human-reviewed gold;
+- exercise every current grounded-teaching action before provider activation;
+- test multiple textual task representations and specialties;
+- require explicit observed-belief evidence for misconception-repair cases;
+- preserve human semantic review as the authority for medical correctness, actual source support and unsupported-claim detection;
+- keep all breadth-set outcomes non-authoritative for production provider qualification;
+- defer visual/multimodal provider qualification until the provider input contract can carry media explicitly.
+
+This prevents a provider from appearing safe because it performs well on a tiny homogeneous text set.
