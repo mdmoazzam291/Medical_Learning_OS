@@ -53,7 +53,7 @@ test('browser uses only the v2 atomic References pilot and leaves v1 evidence hi
   assert.doesNotMatch(ui,/reviewMeasurementForQuestion/);
   assert.doesNotMatch(ui,/review\.recordMeasurement\(/);
   assert.match(ui,/recordReferencesBatch/);
-  assert.match(ui,/never used for reviewer scoring or publication authority/);
+  assert.match(ui,/This records review evidence only\. It cannot publish content or approve Medical\/Rights gates/);
 });
 
 test('client adapter does not send reviewer identity in measurement payload', () => {
