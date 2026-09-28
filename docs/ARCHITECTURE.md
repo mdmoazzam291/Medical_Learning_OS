@@ -379,3 +379,34 @@ A single wrong answer is not treated as evidence of a specific misconception. Un
 Correct answers do not automatically trigger remediation. Incorrect answers use the exact reviewed canonical explanation; the producer may decline to form the structured block if grounding identity is unavailable or the existing content breaches the contract, in which case the legacy reviewed explanation path remains available.
 
 The browser consumes only the structured canonical fallback currently. Future provider output must pass the same M09b evaluator before the learner UI is allowed to render it.
+
+
+## M09c provider-evaluation boundary
+
+Provider qualification remains outside learner delivery:
+
+```text
+curated semantic evaluation case
+        ↓
+evaluation-only IntelligenceTask
+        ↓
+replaceable provider
+        ↓
+M09a envelope validation
+        ↓
+M09b deterministic grounded-teaching evaluation
+   ┌───────────────┴────────────────┐
+ fail / error                       pass
+   ↓                                  ↓
+canonical fallback preview       human semantic checklist
+                                      ↓
+                              explicit human review
+                                      ↓
+                          bootstrap verdict only
+```
+
+The evaluation runner never writes learner evidence and never changes provider production eligibility. A provider result that fails deterministic structure/grounding validation is blocked before human review. Provider execution failures are isolated per case rather than turning the whole suite into an exception.
+
+Human semantic review is attached to an exact `providerRunRef`, preventing a review from being replayed against a different provider output/case. Finalization is conjunctive and still emits `productionQualified=false` because the bootstrap set is intentionally too narrow for production authorization.
+
+The runner is pure/rebuildable evaluation infrastructure. A future persisted provider-run ledger should be added only when real provider executions and material cost/audit needs exist.
