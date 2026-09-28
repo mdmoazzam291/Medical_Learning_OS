@@ -51,7 +51,7 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 ## M05 slices
 - M05a — DONE: rebuildable per-question revision evidence and versioned due-queue policy boundary. The provisional binary bootstrap policy is test scaffolding, not mastery inference.
 - M05b — DONE: persisted learner-scoped revision projection, authenticated due-queue API and hosted learner-page verification are live.
-- M05c — IN PROGRESS: time-budgeted Study Now v2, explainable mistake-repair/due-revision/new-learning classes, immutable recommendation receipts and descriptive outcome projection are live; a real due-item hosted start → answer → reschedule proof remains.
+- M05c — IN PROGRESS: time-budgeted Study Now v2, explainable mistake-repair/due-revision/new-learning classes, immutable recommendation receipts and descriptive outcome projection are live. A real overdue QA item has now passed the hosted Supabase backend path end to end: recommendation session → correct answer → revision rebuild → authoritative schedule receipt → next-day reschedule → session close, with all identities/due timestamps aligned. Remaining gate is transport-only: repeat the same cycle through the authenticated Study Now HTTP/browser route.
 - M05d — IN PROGRESS: FSRS-compatible memory evidence, deterministic shadow scheduling, immutable policy evaluation and an inert randomized-experiment framework are live; production remains bootstrap-controlled until real fully-rated histories and delayed-retrieval evidence justify a separately versioned experiment.
 
 
