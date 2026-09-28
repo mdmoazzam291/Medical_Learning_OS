@@ -60,6 +60,26 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
         body: { questionVersionId, reviewKind, decision, notes }
       });
     },
+    recordFullQuestionReview({
+      questionVersionId,
+      medicalNotes,
+      referencesNotes,
+      rightsNotes,
+      attestationVersion = 'full-question-review-attestation-v1',
+      attested
+    }) {
+      return request('/full-question-review', {
+        method: 'POST',
+        body: {
+          questionVersionId,
+          medicalNotes,
+          referencesNotes,
+          rightsNotes,
+          attestationVersion,
+          attested
+        }
+      });
+    },
     recordMeasurement({
       reviewId,
       workflowMode,
