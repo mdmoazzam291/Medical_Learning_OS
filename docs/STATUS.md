@@ -1485,3 +1485,17 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - The old v1 measurement history remains intact. V2 changes submission mechanics, not the treatment/comparator source identities or review authority.
 - Both new mutation functions are service-only; reviewer identity remains derived from authenticated JWT at the review API. Browser payloads never contain reviewer UUID.
 - Actual production review remains human authority. These changes reduce navigation/submission overhead; they do not let AI/source preflight become a reviewer.
+
+
+## M11b1 preregistered retention-probe feasibility protocol — 2026-09-29
+- The connected-learning anaphylaxis alternate `emergency:anaphylaxis:no-rash-first-action@1` had three current human approvals (Medical, References, Rights) and passed a rollback publication smoke through the existing server-only publication gate.
+- It was then separately published. Live catalog readiness is now **7 published question versions / 7 distinct question identities / 6 primary concepts / 1 published alternate-item pair**.
+- The structural blocker `no-published-alternate-item-pair` is therefore removed.
+- Live migration `20260928224239_m11b1_retention_probe_preregistration` adds immutable service-only protocol registry `study_retention_probe_protocols`, preregisters `retention-probe-feasibility-v1`, and exposes read-only protocol/activation-readiness functions.
+- Protocol SHA-256: `3877a0083b95481911966d2109c395f03065c7fc62381df29e4a809311ff19c9`.
+- Fixed feasibility choices before any assignment: 7-day target, 6–8 day window, max 1 probe/learner/7 days, max 20 total assignments, max 56 days from first assignment, no displacement of due/mistake-repair work, explicit learner opt-in required.
+- Clean descriptive analysis excludes observed same-concept contamination or prior target exposure. Outside-platform exposure remains potentially unobserved.
+- Primary endpoint is alternate-item correctness inside the 6–8 day window. Response time, optional memory rating, window completion, contamination and transport failure are secondary descriptive outcomes.
+- No causal claim, hypothesis-testing claim, mastery/forgetting inference or model fitting is authorized.
+- Activation remains **false**. Current blockers are validated alternate-pair novelty/comparability metadata, learner opt-in path, and separate activation authorization.
+- Supabase security advisor added only the expected service-only RLS/no-policy INFO for the new protocol table; leaked-password protection remains the single actionable Auth WARN.
