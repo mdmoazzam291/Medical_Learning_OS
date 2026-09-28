@@ -1147,3 +1147,14 @@ Verification for this slice is repository diff review because there is no domain
 - Direct execution with a fake replaceable provider passed all 12 deterministic contracts and routed all 12 to `awaiting_human_review`; production qualification authority remained false.
 - The set is explicitly **not** human production-reviewed. Automated checks and prior AI-test content review cannot substitute for human semantic provider review.
 - Visual/multimodal teaching evaluation is intentionally not smuggled into this text contract; it remains a later M09/M10 bridge requiring media-bearing provider input.
+
+## M09c target-bound human semantic review — 2026-09-28
+- Closed an integrity gap in the semantic provider gate: a human review can no longer be attached only to a movable `providerRunRef`.
+- New evaluation runs use `semantic-teaching-provider-evaluation-run-v2`.
+- Every deterministic-pass case receives a canonical JCS/RFC-8785 + SHA-256 `reviewTargetDigest` over the exact evaluation case, task/provider attribution, provider teaching output and citation references.
+- Semantic review schema v2 carries that digest; finalization requires an exact profile + digest match.
+- A stale/substituted target or legacy unbound v1 review is rejected for a v2 run.
+- Provider-error and deterministic-blocked cases receive no review target and cannot be laundered into human approval.
+- Existing production authority remains unchanged: `productionQualificationAuthority=false` and `productionQualified=false`.
+- No model SDK, provider credential, learner-facing AI route, database migration or recurring AI cost is introduced.
+- Next M09c gate remains genuine human semantic review of real provider outputs before any separately governed provider-activation policy can exist.
