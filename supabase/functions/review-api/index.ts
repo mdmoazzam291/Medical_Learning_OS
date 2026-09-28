@@ -526,6 +526,61 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, data);
     }
 
+    if (req.method === "POST" && path === "/full-question-review") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, [
+        "questionVersionId",
+        "medicalNotes",
+        "referencesNotes",
+        "rightsNotes",
+        "attestationVersion",
+        "attested"
+      ]);
+      const questionVersionId = identifier(input.questionVersionId);
+      for (const kind of ["medical", "references", "rights"]) await requireGrant(kind);
+      for (const field of ["medicalNotes", "referencesNotes", "rightsNotes"]) {
+        const value = input[field];
+        if (typeof value !== "string" || value.trim().length < 1 || value.trim().length > 4000) {
+          fail(400, "invalid_review_notes");
+        }
+      }
+      if (input.attestationVersion !== "full-question-review-attestation-v1" || input.attested !== true) {
+        fail(400, "full_review_attestation_required");
+      }
+
+      const { data, error } = await admin.rpc("record_full_question_review_bundle", {
+        p_question_version_id: questionVersionId,
+        p_reviewer: reviewerId,
+        p_medical_notes: String(input.medicalNotes).trim(),
+        p_references_notes: String(input.referencesNotes).trim(),
+        p_rights_notes: String(input.rightsNotes).trim(),
+        p_attestation_version: String(input.attestationVersion),
+        p_attested: true
+      });
+      if (error) {
+        const message = String(error?.message || "");
+        if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+        if (message.includes("unknown_question_version")) fail(404, "question_not_found");
+        if (message.includes("question_not_in_review") ||
+            message.includes("full_review_requires_unreviewed_version") ||
+            message.includes("rights_not_resolved") ||
+            error?.code === "23505") fail(409, "full_review_not_available");
+        if (message.includes("full_review_") || message.includes("invalid_review_notes")) {
+          fail(400, message.match(/(?:full_review|invalid_review_notes)[a-z_]*/)?.[0] || "full_review_invalid");
+        }
+        fail(500, "review_write_failed");
+      }
+      if (data?.contractId !== "full-question-review-bundle-receipt-v1" ||
+          data?.questionVersionId !== questionVersionId ||
+          data?.reviewCount !== 3 ||
+          !Array.isArray(data?.reviews) ||
+          data.reviews.length !== 3) {
+        fail(500, "review_write_failed");
+      }
+      return response(req, 200, data);
+    }
+
     if (req.method === "POST" && path === "/reviews") {
       if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
