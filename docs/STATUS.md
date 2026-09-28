@@ -1009,3 +1009,23 @@ Verification for this slice is repository diff review because there is no domain
 - Completed runs hand off to descriptive GT Autopsy; cancelled runs explicitly receive no completion score/autopsy.
 - Internal engineering readiness is visible only when the server-authorized test-readiness route succeeds; a 403 hides that lane from ordinary learners.
 - Exact-head static safety checks passed. Hosted browser deployment/viewport verification remains pending merge/deploy.
+
+
+## M08d accelerated full-mock acceptance proof — 2026-09-28
+- The real internal-test assembly was reloaded from production data: 180/180 distinct question versions, five sections, 36 questions/section, 2520 seconds (42 minutes)/section, 12600 seconds total.
+- The verified ruleset still pins `earlySectionAdvanceAllowed=false`, `revisitClosedSectionsAllowed=false` and `timeCarryForwardAllowed=false`.
+- The runtime intentionally exposes **no early-section-advance command**. Section progression occurs only through the trusted clock transition.
+- A direct write into a future section was rejected with `future_section_locked`.
+- After each server deadline transition, writes back into the closed prior section were rejected with `section_locked`.
+- Accelerated pure-runtime execution traversed the complete real 180-question assembly and all five real section deadlines:
+  - 180 distinct questions;
+  - 36 questions in each section;
+  - all five sections closed;
+  - final status `completed`;
+  - 180 correct, 0 incorrect, 0 unanswered;
+  - 18 marked-for-review responses preserved;
+  - trusted score 720/720.
+- A rollback-only database persistence drill then used the same real 180-item run and real section deadlines, persisted one answer in each section plus all five clock transitions, created the terminal completion receipt, verified the append-only ledger/revision count, and rolled the transaction back.
+- Rollback residue check: 0 `exam_runs`, 0 `exam_run_events`, 0 `exam_run_receipts` for the synthetic proof run.
+- This proves the core full-length state machine + persistence path without waiting 210 wall-clock minutes and without contaminating either existing learner account.
+- The remaining hosted acceptance gate is a deliberately separate internal QA Auth identity so the live browser can execute the same 180-question path end-to-end.
