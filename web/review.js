@@ -1,7 +1,7 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesSourceFocus, filterReferencesBySource } from '/src/domain/references-source-focus.js';
 import { referencesPanel } from '/web/references-panel.js';
-import { REFERENCES_WORKFLOW_EXPERIMENT_V1, REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
+import { REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -25,8 +25,6 @@ let state = {
   referencesSourceId: null,
   referencesError: null,
   referencesExperimentArm: 'all',
-  referencesMeasurementSummary: null,
-  referencesMeasurementError: null,
   referencesBatchMeasurementSummary: null,
   referencesBatchMeasurementError: null,
   selectedTargetIds: [],
@@ -654,7 +652,7 @@ let queueGeneration = 0;
 async function loadQueue(kind = state.selectedKind) {
   const generation = ++queueGeneration;
   if (!kind) return;
-  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesMeasurementSummary: null, referencesMeasurementError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [] };
+  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [] };
   render();
   try {
     const queuePromise = state.targetType === 'neural-notes'
@@ -713,8 +711,6 @@ async function loadQueue(kind = state.selectedKind) {
       referencesSourceId: sourceStillPresent ? state.referencesSourceId : null,
       referencesWorkspace,
       referencesError,
-      referencesMeasurementSummary,
-      referencesMeasurementError,
       referencesBatchMeasurementSummary,
       referencesBatchMeasurementError,
       loading: false,
@@ -746,7 +742,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesMeasurementSummary: null, referencesMeasurementError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
