@@ -1534,13 +1534,10 @@ Deno.serve(async (req: Request) => {
       if (url.search) fail(400, "query_not_supported");
       const runId = identifier(examRunCancelMatch[1]);
       const input = await jsonBody(req);
-      exactFields(input, ["requestId", "expectedRevision", "reason"]);
+      exactFields(input, ["requestId", "expectedRevision"]);
       const requestId = identifier(input.requestId);
       const expectedRevision = integer(input.expectedRevision, 0, 1000000);
-      const reason = identifier(input.reason);
-      if (!["user_abandoned", "operator_cancelled"].includes(reason)) {
-        fail(400, "invalid_exam_cancellation_reason");
-      }
+      const reason = "user_abandoned";
       const now = new Date().toISOString();
 
       const priorEvent = await getExamRunEvent(runId, requestId);
