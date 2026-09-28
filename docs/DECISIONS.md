@@ -1075,3 +1075,20 @@ The latest user instruction asks for notes and concepts in the quantity needed f
 - Canonical notes keep the existing single-concept storage contract. Cross-concept relationships use existing question concept roles; no speculative graph store or many-concept note migration is required here.
 
 See `CONNECTED_LEARNING_PILOT.md`. Research activation, item comparability and the remaining authenticated Study Now acceptance gate remain separate.
+
+
+## ADR-071 — Human review attestation may batch receipts, never judgments (accepted, 2026-09-29)
+
+Per-target immutable review evidence is necessary, but forcing a human to repeat identical navigation and submission mechanics for every gate/item creates avoidable operational burden. The optimization must remove interface overhead without converting AI preflight into medical authority.
+
+Decision:
+- an authenticated reviewer may submit multiple judgments in one atomic transaction only when each exact target and each item-level decision/note are explicitly visible in that human session;
+- a full-question bundle may fan one explicit reviewer attestation into separate Medical, References and Rights receipts only when the reviewer currently holds all three grants, the question has no prior review event, source-rights prerequisites are satisfied and each gate retains its own note and independently computed target hash;
+- a References batch may submit seven item-level decisions/notes together, but it cannot supply or infer those decisions automatically;
+- batch failure, stale targets or authorization drift must roll back the whole batch rather than leave partial approvals;
+- human identity is always derived from the authenticated server-side session, never supplied by browser payload;
+- review-assist/source packets may prefill editable evidence notes but cannot choose a decision, assert human inspection or publish content;
+- batch/full-review shortcuts never include publication authority;
+- measured experiments must not use the full three-gate shortcut inside their References arms because that would contaminate the workflow comparison.
+
+This permits **human judgment compression** while prohibiting **human authority substitution**.
