@@ -93,3 +93,23 @@ test('review-api exposes read-only pipeline status only to authenticated reviewe
   assert.match(source, /content_pipeline_status_unavailable/);
   assert.doesNotMatch(source, /path === "\/pipeline-status"[\s\S]{0,900}content_stage_intake_batch/);
 });
+
+
+test('review-api exposes media-bound review targets only through authorized reviewer queue', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /content_media_review_target/);
+  assert.match(source, /current_review_target_sha256/);
+  assert.match(source, /review_media_assets/);
+  assert.match(source, /createSignedUrl\(objectPath, 900\)/);
+  assert.match(source, /mediaReview: await signedReviewMedia/);
+  assert.match(source, /await requireGrant\(kind\)/);
+  assert.doesNotMatch(source, /p_review_kind:\s*input\./);
+});
+
+test('media review surface returns gate hash and exact target rather than a browser-derived summary', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /contractId: "content-media-review-surface-v1"/);
+  assert.match(source, /targetSha256: String\(targetSha256/);
+  assert.match(source, /target: reviewTarget/);
+  assert.match(source, /mediaAssetVersionId/);
+});

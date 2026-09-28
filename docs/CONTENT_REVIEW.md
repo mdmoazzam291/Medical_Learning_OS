@@ -351,3 +351,17 @@ Observed properties:
 - rollback leaves no real reviewer capability or audit rows behind.
 
 The live first medical seed therefore remains unreviewed until an account is deliberately authorized outside the learner surface.
+
+## Media-bound question review
+
+A question with linked media cannot be defensibly reviewed from stem/options/source text alone. The authenticated review queue therefore supplies an exact media review packet for the selected gate.
+
+The packet contains:
+- signed short-lived media delivery for the reviewer;
+- immutable media-version identity and display role;
+- the current gate-specific media review target;
+- the same current target SHA-256 that the review mutation will bind to.
+
+Medical, References and Rights packets deliberately differ because each gate inspects different evidence. Reviewers must inspect the media packet before approving. AI/source preflight remains non-authoritative and cannot substitute for this human decision.
+
+The detailed media-target RPC is service-backend-only; learner and ordinary authenticated roles cannot call it directly.
