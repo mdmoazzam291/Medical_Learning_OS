@@ -70,6 +70,9 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     examRun(runId) {
       return request(`/exam-simulator/runs/${encodeURIComponent(runId)}`);
     },
+    examRunAutopsy(runId) {
+      return request(`/exam-simulator/runs/${encodeURIComponent(runId)}/autopsy`);
+    },
     setExamRunAnswer(runId, { requestId, expectedRevision, questionVersionId, optionId }) {
       return request(`/exam-simulator/runs/${encodeURIComponent(runId)}/answer`, {
         method: 'POST',
