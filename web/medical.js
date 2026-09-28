@@ -307,6 +307,11 @@ async function startStudyNow(availableMinutes) {
       memoryJudgment: result.session.memoryJudgment || null,
       error: null
     };
+    if (result.plan?.resumedExisting === true) {
+      announce(result.session.receipt
+        ? 'Resumed your unfinished Study Now session. This question was already answered earlier; review the saved feedback, then finish or continue.'
+        : 'Resumed your unfinished Study Now session.');
+    }
   } catch (error) {
     reportUnexpected(error, 'start_study_now');
     state = { ...state, busy: false, error: error.code || error.message || 'study_now_failed' };
