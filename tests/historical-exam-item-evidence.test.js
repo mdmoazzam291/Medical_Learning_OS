@@ -26,7 +26,7 @@ test('verified INI-CET July 2023 occurrence is grounded only as occurrence ident
   assert.equal(pilot.examOccurrence.examDate, '2023-05-07');
   assert.match(pilot.examOccurrence.officialOccurrenceSource, /aiimsexams\.ac\.in/);
   assert.match(sql, /written CBT was held on 07 May 2023/);
-  assert.match(sql, /does not verify recalled item wording or answer keys/);
+  assert.match(sql, /not recalled item wording or answer keys/);
 });
 
 test('multiple web copies cannot silently become corroborated recall', () => {
