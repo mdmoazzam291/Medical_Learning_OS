@@ -1,3 +1,5 @@
+import { validateDigestEnvelope } from './canonical-integrity.js';
+
 const DIMENSIONS = Object.freeze([
   'medicalCorrectness',
   'errorCorrection',
@@ -256,16 +258,28 @@ export function semanticTeachingChecklist(setValue, caseId) {
 
 export function validateSemanticTeachingReview(setValue, review) {
   const set=validateSemanticTeachingEvaluationSet(setValue);
-  exactKeys(review,[
+  if(!plain(review) || (review.schemaVersion!==1 && review.schemaVersion!==2)) {
+    fail('Unsupported semantic teaching review version');
+  }
+  const reviewKeysV1=[
     'schemaVersion','evaluationSetId','evaluationSetVersion','caseId','providerRunRef',
     'reviewerId','reviewedAt','dimensions','overallVerdict','notes'
-  ],'semantic teaching review');
-  if(review.schemaVersion!==1) fail('Unsupported semantic teaching review version');
+  ];
+  const reviewKeysV2=[
+    'schemaVersion','evaluationSetId','evaluationSetVersion','caseId','providerRunRef',
+    'reviewTargetDigest','reviewerId','reviewedAt','dimensions','overallVerdict','notes'
+  ];
+  exactKeys(
+    review,
+    review.schemaVersion===2 ? reviewKeysV2 : reviewKeysV1,
+    'semantic teaching review'
+  );
   if(review.evaluationSetId!==set.evaluationSetId||review.evaluationSetVersion!==set.version) {
     fail('Semantic teaching review set mismatch');
   }
   if(!set.cases.some(item=>item.caseId===review.caseId)) fail('Unknown semantic teaching case');
   text(review.providerRunRef,'providerRunRef',240);
+  if(review.schemaVersion===2) validateDigestEnvelope(review.reviewTargetDigest);
   text(review.reviewerId,'reviewerId',200);
   timestamp(review.reviewedAt,'reviewedAt');
   if(!Array.isArray(review.dimensions)||review.dimensions.length!==DIMENSIONS.length) fail('Invalid semantic review dimensions');
