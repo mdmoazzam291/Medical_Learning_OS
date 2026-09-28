@@ -195,3 +195,10 @@ test('visual detection affordance remains evidence language rather than mastery 
   assert.match(css, /\.visual-task-note/);
   assert.match(css, /\.visual-evidence-status/);
 });
+
+
+test('preview server exposes Exam Mode assets for browser acceptance', async () => {
+  const source = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
+  assert.match(source, /'web\/exam\.html'/);
+  assert.match(source, /'web\/exam\.js'/);
+});
