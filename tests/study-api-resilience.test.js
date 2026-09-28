@@ -413,3 +413,15 @@ test('learner content reports require explicit correction sharing and cannot aff
   const route = source.slice(start, end);
   assert.doesNotMatch(route, /study_rebuild_revision_state|study_record_memory_judgment|study_start_recommendation_session/);
 });
+
+
+test('learner export includes private corrections and submitted content issue reports', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /getVaultAnnotations/);
+  assert.match(source, /getContentIssueReports/);
+  assert.match(source, /learner_content_issue_reports/);
+  assert.match(source, /contentIssueReports/);
+  assert.match(source, /suggestedCorrection/);
+  assert.match(source, /canonicalAuthority: false/);
+  assert.match(source, /learnerModelAuthority: false/);
+});
