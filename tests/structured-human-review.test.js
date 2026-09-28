@@ -49,8 +49,8 @@ test('browser exposes quick, selected and super actions with explicit master att
   assert.match(ui,/MASTER REVIEW/);
   assert.match(ui,/Approve selected/);
   assert.match(ui,/Reject selected/);
-  assert.match(ui,/Super approve all eligible/);
-  assert.match(ui,/Super reject all eligible/);
+  assert.match(ui,/Super approve \$\{escape\(superApproveIds\.length\)\} preflight-clean/);
+  assert.match(ui,/Super reject all \$\{escape\(reviewableIds\.length\)\} reviewable/);
   assert.match(ui,/master-review-attested/);
   assert.match(ui,/globalThis\.confirm/);
   assert.match(ui,/The batch is atomic/);
@@ -67,4 +67,16 @@ test('client sends target identity and structured decision only, never reviewer 
   assert.match(section,/targetIds/);
   assert.match(section,/reasonCode/);
   assert.match(section,/attested/);
+});
+
+
+test('super approval is stricter than ordinary human-selected approval', () => {
+  assert.match(ui,/function superApprovalEligible\(item\)/);
+  assert.match(ui,/state\.targetType !== 'questions'/);
+  assert.match(ui,/mediaReview\?\.media/);
+  assert.match(ui,/assist\?\.medical\?\.result === 'supported'/);
+  assert.match(ui,/assist\?\.medical\?\.uncertainty === 'low'/);
+  assert.match(ui,/assist\?\.references\?\.result === 'direct_support'/);
+  assert.match(ui,/function superApprovalItems\(\)/);
+  assert.match(ui,/At least one selected target is not approvable for this gate/);
 });
