@@ -69,6 +69,16 @@ jobs:
           aws --version
           supabase --version
 
+      - name: Verify live service-only privilege boundaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v psql >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+          psql "$SUPABASE_DB_URL" --no-psqlrc --file supabase/verification/service-boundary-audit.sql
+
       - name: Create Supabase logical dump set
         id: dump
         shell: bash
