@@ -133,3 +133,31 @@ test('cancellation checks terminal state before writing and cannot score a cance
   assert.match(block, /row\.status === "cancelled"/);
   assert.doesNotMatch(block, /buildExamCompletionReceipt/);
 });
+
+
+test('GT Autopsy route is completed-run-only, learner scoped and rechecks internal-test access', () => {
+  const route = source.indexOf('const examRunAutopsyMatch');
+  const action = source.indexOf('const examRunActionMatch', route);
+  assert.ok(route >= 0 && action > route);
+  const block = source.slice(route, action);
+  assert.match(block, /getExamRun\(runId\)/);
+  assert.match(block, /requireExamRunAccess\(row\)/);
+  assert.match(block, /row = await syncExamClock\(row, now\)/);
+  assert.match(block, /gt_autopsy_requires_completed_run/);
+  assert.match(block, /getExamReceipt\(runId\)/);
+  assert.match(block, /getExamRunEvents\(runId\)/);
+  assert.match(block, /getExamMediaMetadata\(ids\)/);
+  assert.match(block, /buildGtAutopsyV1/);
+});
+
+test('GT Autopsy does not expose answer keys or enable unsupported inference', () => {
+  assert.match(source, /import \{ buildGtAutopsyV1 \} from "\.\/_shared\/gt-autopsy\.js"/);
+  const route = source.indexOf('const examRunAutopsyMatch');
+  const action = source.indexOf('const examRunActionMatch', route);
+  const block = source.slice(route, action);
+  assert.doesNotMatch(block, /answerOptionId/);
+  assert.doesNotMatch(block, /mastery/);
+  assert.doesNotMatch(block, /preventable/);
+  assert.doesNotMatch(block, /fatigue/);
+  assert.doesNotMatch(block, /confidence/);
+});

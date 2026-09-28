@@ -979,3 +979,18 @@ Verification for this slice is repository diff review because there is no domain
 - The existing database ledger already supports immutable `run.cancelled` events, so no schema change is required.
 - Direct pure-runtime verification passed: prior answer preserved, active section closed at cancellation time, later writes rejected, scoring rejected, and a naturally completed run cannot be retroactively cancelled.
 - M08d cancellation/abandon semantics are now implemented. Remaining gates are the deliberately designated internal-test identity for hosted full-mock proof and GT Autopsy.
+
+
+## M08d GT Autopsy v1 foundation — 2026-09-28
+- Added a pure, provider-independent `gt-autopsy-v1` projection for **completed exam runs only**.
+- The projection reconciles the immutable completion receipt against final run responses before producing analytics; a mismatch fails closed.
+- V1 exposes trusted result totals, section-by-section anatomy, primary-concept observations, current visual-question performance, and exact observed answer-change behavior from the immutable run-event ledger.
+- Answer-change analysis reports beneficial, harmful and wrong→wrong changes plus the exact scoring impact of those observed changes under the pinned scoring rule.
+- The prescription layer is deliberately limited to up to five **descriptive remediation candidates** ranked by observed incorrect/unanswered counts. It does not claim causal root cause, mastery, exam importance or expected marks recovered.
+- Unsupported inference is explicitly disabled: no mastery inference, preventable-marks inference, fatigue inference or confidence calibration.
+- Added authenticated `GET /exam-simulator/runs/:runId/autopsy`. It is learner-scoped, rechecks the internal-test grant for testing-only runs, synchronizes the trusted exam clock first and rejects non-completed/cancelled runs.
+- Media performance is derived from canonical prompt-media links and modality metadata without generating signed image URLs or exposing diagnosis/rights/annotation data.
+- Media lookups are chunked for full 180-question runs rather than relying on a single oversized query.
+- Added `examRunAutopsy(runId)` to the cloud adapter.
+- Direct pure-projection verification passed result/section reconciliation, visual metrics, concept aggregation, answer-change score impact, descriptive candidate ordering, receipt mismatch rejection and cancelled-run rejection.
+- Live Edge Function deployment remains the final step for this slice after merge.

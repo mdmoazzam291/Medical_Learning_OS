@@ -257,3 +257,25 @@ Existing Medical/References/Rights review remains the only content review system
 Image usage rights are normalized separately from licence prose. Rights review approval fails closed when any linked media asset has `rightsStatus=unknown`. For actual learner-visible image content, `citation_only` is intentionally not a permitted media-rights state.
 
 `content_media_prompt` is a learner-safe projection and intentionally excludes diagnosis evidence, source/licence/rights metadata, review metadata and ground-truth annotations.
+
+
+## GT Autopsy v1
+
+`gt-autopsy-v1` is a rebuildable read projection and adds no new persistence table.
+
+Inputs:
+- completed `exam_runs.state`;
+- matching immutable `exam_run_receipts.receipt`;
+- ordered `exam_run_events`;
+- exact question versions and primary canonical concept links from `study_catalog`;
+- prompt media links/modalities from canonical media tables.
+
+Outputs:
+- trusted overall result;
+- section-level question/correct/incorrect/unanswered/marked-for-review/score totals;
+- concept-level observed attempts and outcomes;
+- visual-question observed outcomes and modality list;
+- observed answer-change counts and exact score impact;
+- up to five non-causal `review-and-retest` candidates.
+
+The projection returns explicit false flags for mastery inference, preventable-marks inference, fatigue inference and confidence calibration. Wall-clock answer timestamps are not represented as active question time.

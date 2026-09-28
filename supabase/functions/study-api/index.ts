@@ -11,6 +11,7 @@ import {
   scoreLockedSectionExamRun,
   seededQuestionOrder
 } from "./_shared/exam-runtime.js";
+import { buildGtAutopsyV1 } from "./_shared/gt-autopsy.js";
 
 type Json = Record<string, unknown>;
 
@@ -587,6 +588,60 @@ Deno.serve(async (req: Request) => {
       );
       if (error) fail(500, "exam_run_read_failed");
       return data?.receipt ?? null;
+    };
+    const getExamRunEvents = async (runId: string) => {
+      const { data, error } = await trustedRead("exam_run_events", async () =>
+        admin.from("exam_run_events")
+          .select("event_type,event,revision_after,occurred_at")
+          .eq("run_id", runId)
+          .eq("learner_id", learnerId)
+          .order("revision_after", { ascending: true })
+      );
+      if (error) fail(500, "exam_run_read_failed");
+      return data ?? [];
+    };
+    const getExamMediaMetadata = async (questionVersionIds: string[]) => {
+      if (!questionVersionIds.length) return [];
+      const chunks = <T,>(values: T[], size = 50) =>
+        Array.from({ length: Math.ceil(values.length / size) }, (_, index) =>
+          values.slice(index * size, (index + 1) * size)
+        );
+
+      const links: any[] = [];
+      for (const ids of chunks(questionVersionIds)) {
+        const { data, error } = await trustedRead("exam_media_links", async () =>
+          admin.from("content_question_media_links")
+            .select("question_version_id,media_asset_version_id,role")
+            .in("question_version_id", ids)
+            .eq("role", "prompt")
+        );
+        if (error) fail(500, "exam_media_read_failed");
+        links.push(...(data ?? []));
+      }
+
+      const assetIds = [...new Set(links.map((row: any) => String(row.media_asset_version_id)))];
+      if (!assetIds.length) return [];
+      const assets: any[] = [];
+      for (const ids of chunks(assetIds)) {
+        const { data, error } = await trustedRead("exam_media_assets", async () =>
+          admin.from("content_media_assets")
+            .select("media_asset_version_id,modality")
+            .in("media_asset_version_id", ids)
+        );
+        if (error) fail(500, "exam_media_read_failed");
+        assets.push(...(data ?? []));
+      }
+
+      const modalityByAsset = new Map(
+        assets.map((row: any) => [String(row.media_asset_version_id), String(row.modality)])
+      );
+      return links.flatMap((row: any) => {
+        const modality = modalityByAsset.get(String(row.media_asset_version_id));
+        return modality ? [{
+          questionVersionId: String(row.question_version_id),
+          modality
+        }] : [];
+      });
     };
     const examCatalogQuestionMap = async () => {
       const catalog = await getCatalog();
@@ -1394,6 +1449,58 @@ Deno.serve(async (req: Request) => {
       requireExamRunAccess(row);
       const synced = await syncExamClock(row, now);
       return response(req, 200, await examRunView(synced, now, true));
+    }
+
+    const examRunAutopsyMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)\/autopsy$/);
+    if (req.method === "GET" && examRunAutopsyMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const runId = identifier(examRunAutopsyMatch[1]);
+      const now = new Date().toISOString();
+      let row = await getExamRun(runId);
+      requireExamRunAccess(row);
+      row = await syncExamClock(row, now);
+      if (row.status !== "completed" || row.state?.status !== "completed") {
+        return response(req, 409, {
+          error: "gt_autopsy_requires_completed_run",
+          status: row.state?.status ?? row.status
+        });
+      }
+
+      const receipt = await getExamReceipt(runId);
+      if (!receipt) fail(500, "gt_autopsy_receipt_unavailable");
+      const ids = row.state.sections.flatMap((section: any) =>
+        Array.isArray(section?.questionVersionIds) ? section.questionVersionIds.map((id: unknown) => identifier(id)) : []
+      );
+      const [catalogData, events, media] = await Promise.all([
+        examCatalogQuestionMap(),
+        getExamRunEvents(runId),
+        getExamMediaMetadata(ids)
+      ]);
+      const questions = ids.map((questionVersionId: string) => {
+        const question = catalogData.byVersion.get(questionVersionId);
+        if (!question) fail(500, "exam_question_version_unavailable");
+        return question;
+      });
+      const concepts = Array.isArray(catalogData.catalog.body?.concepts)
+        ? catalogData.catalog.body.concepts
+        : [];
+
+      let autopsy;
+      try {
+        autopsy = buildGtAutopsyV1({
+          run: row.state,
+          receipt,
+          questions,
+          concepts,
+          events,
+          media
+        });
+      } catch (autopsyError) {
+        const code = autopsyError instanceof Error ? autopsyError.message : "gt_autopsy_projection_failed";
+        console.warn(JSON.stringify({ event: "gt_autopsy_projection_failed", code }));
+        fail(500, "gt_autopsy_projection_failed");
+      }
+      return response(req, 200, autopsy);
     }
 
     const examRunActionMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)\/(answer|review)$/);
