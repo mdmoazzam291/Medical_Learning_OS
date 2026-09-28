@@ -100,3 +100,8 @@
 .references-workspace { min-width: 0; overflow-wrap: anywhere; }
 .references-workspace .section-heading { flex-wrap: wrap; }
 .references-workspace pre { white-space: pre-wrap; }
+
+/* Account provider separation */
+.oauth-google{display:inline-flex;justify-content:center;width:100%;box-sizing:border-box}
+.auth-divider{display:flex;align-items:center;gap:10px;margin:16px 0;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.auth-divider::before,.auth-divider::after{content:"";height:1px;background:var(--line);flex:1}
