@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "historicalItemId": "ini-cet:2023-07:recall:cpr-quality@1",
+  "examOccurrence": {
+    "examOccurrenceId": "ini-cet:2023-07",
+    "examId": "ini-cet",
+    "session": "2023-07",
+    "label": "INI-CET July 2023",
+    "officialAuthority": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+    "officialOccurrenceSource": "https://docs.aiimsexams.ac.in/sites/INI-CET%20notice.pdf",
+    "examDate": "2023-05-07"
+  },
+  "reconstruction": {
+    "wordingMode": "nonverbatim_summary_only",
+    "officialItemWordingStored": false,
+    "summary": "A recalled adult CPR item tested high-quality chest-compression depth and rate, adequate recoil, and recognition that a markedly excessive ventilation rate is inconsistent with high-quality CPR.",
+    "conceptIds": [
+      "resuscitation:adult-bls:compression-depth-5-6cm",
+      "resuscitation:adult-bls:compression-rate-100-120",
+      "resuscitation:adult-bls:compression-ventilation-30-2"
+    ]
+  },
+  "evidence": {
+    "basis": "single_recall",
+    "sourceLineageStatus": "unknown",
+    "recallSources": [
+      {
+        "publisher": "PrepLadder",
+        "url": "https://www.prepladder.com/neet-pg-study-material/previous-years-question-papers/ini-cet-previous-year-question-papers",
+        "accessedAt": "2026-09-28"
+      },
+      {
+        "publisher": "ReflexPrep",
+        "url": "https://www.reflexprep.com/inicet-previous-year-questions",
+        "accessedAt": "2026-09-28"
+      },
+      {
+        "publisher": "Oncourse AI",
+        "url": "https://getoncourse.ai/previous-year-papers/ini-cet/2023/anesthesiology/",
+        "accessedAt": "2026-09-28"
+      }
+    ],
+    "medicalVerificationSources": [
+      {
+        "authority": "American Heart Association",
+        "title": "Highlights of the 2020 American Heart Association Guidelines for CPR and ECC",
+        "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/Highlights/Hghlghts_2020_ECC_Guidelines_English.pdf",
+        "version": "2020"
+      }
+    ],
+    "limitations": [
+      "The public recall sources agree on the fact pattern but may share upstream recall lineage.",
+      "This evidence is therefore classified as single_recall, not corroborated_recall.",
+      "No official question wording or official answer key is claimed or stored.",
+      "Historical evidence is descriptive and does not imply future exam probability."
+    ]
+  }
+}
