@@ -320,3 +320,37 @@ The provider is an execution adapter, not a policy authority. It cannot write ca
 Grounding is explicit. When a task declares `groundingMode=required`, a successful result must cite at least one supplied reference and may not cite anything outside the supplied set. This is a transport/provenance invariant, not yet proof that individual medical claims are fully supported.
 
 No live provider is selected by M09a. Deterministic core behavior therefore remains unchanged if every AI provider is absent.
+
+
+## M09b grounded teaching delivery boundary
+
+The first learner-facing intelligence-shaped output is deliberately narrower than a chat response:
+
+```text
+Study Now chooses target
+        ↓
+Adaptive Teaching chooses action
+        ↓
+canonical grounded teaching task
+        ↓
+replaceable provider (optional)
+        ↓
+structured grounded-teaching-output@1
+        ↓
+deterministic evaluator
+   ┌─────────────┴─────────────┐
+ pass                         fail / abstain / unavailable
+   ↓                              ↓
+provider teaching          reviewed canonical fallback
+   └─────────────┬─────────────┘
+                 ↓
+            learner delivery
+```
+
+Provider output is allowed to control expression only. It cannot change the selected concept, selected teaching action, canonical learner evidence or medical truth.
+
+A ready output consists of typed medical teaching claims with claim-level references to supplied grounding. Misconception repair additionally binds the observed learner belief to explicit correction and discriminator claims. Unsupported claims, absent citations, action/concept drift, structural correction failure and excessive verbosity fail closed.
+
+Canonical fallback is carried inside the task as already-reviewed teaching content using the same output schema and the same grounding boundary. Provider outage therefore degrades personalization/wording rather than blocking learning.
+
+The evaluator proves structural integrity, provenance containment and bounded behavior. It does **not** establish medical semantic truth merely because a citation is present. Provider/model qualification needs a curated medical evaluation set before production use.

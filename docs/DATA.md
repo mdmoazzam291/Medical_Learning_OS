@@ -306,3 +306,32 @@ M09a adds **runtime contracts only**. It does not create database tables or lear
 These envelopes are not learner state, medical truth, mastery estimates, learning evidence or content-publication records. If a later M09 run ledger is added, it must remain operational/audit data and any learning-relevant outcome must enter the canonical learning-event architecture through an explicit versioned event contract.
 
 Provider conversation/session identifiers are deliberately absent from the cross-provider contract. Any adapter-internal transient state must not become the durable source of learner memory.
+
+
+## Grounded teaching contracts — M09b
+
+`GroundedTeachingTask@1` is the capability-specific specialization of `IntelligenceTask@1` for `learning.teaching.render`.
+
+Required task input:
+- `teachingAction`: one of concise explanation, contrastive explanation, misconception repair, prerequisite remediation;
+- `conceptId`;
+- canonical `learnerEvidenceRef` (reference only, not provider-owned memory);
+- optional observed misconception; required for misconception repair;
+- `canonicalFallback`: reviewed deterministic teaching content using the same output schema.
+
+`grounded-teaching-output@1` contains:
+- exact action + concept identity;
+- `renderStatus = ready | abstained`;
+- `sourceMode = provider | canonical_fallback`;
+- compact headline;
+- up to six claims with roles `explanation | correction | discriminator | prerequisite | example`;
+- claim-level citation references;
+- optional misconception-correction mapping from the exact observed belief to correction/discriminator claim IDs;
+- one next learner prompt;
+- bounded abstention reason when not ready.
+
+`grounded-teaching-evaluation-v1` is rebuildable and non-persistent. It checks the generic result envelope plus capability-specific output integrity and returns deterministic failure codes.
+
+`grounded-teaching-delivery-v1` is also rebuildable. It exposes either validated provider teaching or canonical fallback plus a fallback reason. Neither evaluation nor delivery is learner evidence, mastery state or publication authority.
+
+Initial verbosity caps are engineering defaults encoded in the version-1 validator, not evidence-backed personalization parameters. Any future change that can alter learner-facing acceptance behavior requires a new contract/evaluation version.

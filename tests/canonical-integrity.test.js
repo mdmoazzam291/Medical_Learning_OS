@@ -78,3 +78,13 @@ test('canonicalization rejects hidden, accessor and custom array properties', ()
   array.note = 'not-json';
   assert.throws(() => canonicalize(array), /custom properties/);
 });
+
+
+test('canonicalization accepts ordinary dense arrays with multi-digit indices', () => {
+  const values = Array.from({ length: 12 }, (_, index) => ({ index, values: [index, index + 1] }));
+  assert.doesNotThrow(() => canonicalize(values));
+  assert.equal(
+    canonicalize([0, 1, 2]),
+    '[0,1,2]'
+  );
+});

@@ -820,3 +820,23 @@ Decision:
 The v1 citation rule proves **reference containment**, not claim-level factual completeness. A provider citing an allowed source does not prove that every medical claim is supported. Grounded teaching therefore needs a separately validated output/claim contract and evaluation set before learner-facing provider execution is enabled.
 
 Provider failure must remain fail-soft: deterministic study, scoring, revision, canonical explanations and other non-AI learning paths must continue without provider availability.
+
+
+## ADR-057 — Grounded AI teaching must fail closed to canonical teaching (accepted, 2026-09-28)
+
+A provider may render an intervention already chosen by Adaptive Teaching, but provider prose is never trusted merely because it is fluent or cites an allowed source.
+
+Decision:
+- require a capability-specific `grounded-teaching-output@1` rather than free-form tutor prose;
+- bind output to the exact concept and teaching action selected upstream;
+- require claim-level citations for every ready medical teaching claim;
+- require misconception repair to address the exact observed learner belief through explicit correction + discriminator claims;
+- impose conservative versioned verbosity ceilings so a model cannot convert a micro-remediation into an essay;
+- allow explicit abstention for insufficient grounding or medical uncertainty;
+- evaluate deterministically before learner delivery;
+- fall back to reviewed canonical teaching content on provider absence, failure, rejection, abstention or evaluation failure;
+- never expose invalid provider output as a partial success.
+
+Reference containment is necessary but insufficient for medical correctness. A citation does not prove that the claim is supported by the cited source. Real provider activation therefore remains gated by a curated semantic medical-teaching evaluation set.
+
+During implementation, the canonical JSON array-index validator was found to be incorrectly double-escaped. Fixing that foundational integrity bug is part of this slice because M09 contracts contain normal arrays and cannot be reliably evaluated otherwise.
