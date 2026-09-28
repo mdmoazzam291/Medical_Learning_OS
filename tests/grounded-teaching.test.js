@@ -173,7 +173,7 @@ test('verbosity ceilings fail closed instead of rewarding tutor chatter', () => 
   const verbose = success();
   verbose.output.claims[0].text = Array.from(
     {length:groundedTeachingVerbosityCap('misconception_repair') + 10},
-    () => 'word'
+    () => 'w'
   ).join(' ');
   const evaluation = evaluateGroundedTeachingResult(task(),verbose);
   assert.equal(evaluation.passed,false);
