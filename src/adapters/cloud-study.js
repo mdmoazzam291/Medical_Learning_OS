@@ -82,10 +82,10 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
         body: { requestId, expectedRevision, questionVersionId, markedForReview }
       });
     },
-    cancelExamRun(runId, { requestId, expectedRevision, reason = 'user_abandoned' }) {
+    cancelExamRun(runId, { requestId, expectedRevision }) {
       return request(`/exam-simulator/runs/${encodeURIComponent(runId)}/cancel`, {
         method: 'POST',
-        body: { requestId, expectedRevision, reason }
+        body: { requestId, expectedRevision }
       });
     },
     vaultConcepts() { return request('/vault/concepts'); },
