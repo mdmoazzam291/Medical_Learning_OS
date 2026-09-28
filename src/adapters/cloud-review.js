@@ -60,6 +60,31 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
         body: { questionVersionId, reviewKind, decision, notes }
       });
     },
+    recordMeasurement({
+      reviewId,
+      workflowMode,
+      experimentId,
+      clientSessionId,
+      foregroundActiveMs,
+      elapsedWallMs,
+      queueSize
+    }) {
+      return request('/review-measurements', {
+        method: 'POST',
+        body: {
+          reviewId,
+          workflowMode,
+          experimentId,
+          clientSessionId,
+          foregroundActiveMs,
+          elapsedWallMs,
+          queueSize
+        }
+      });
+    },
+    measurementSummary(experimentId) {
+      return request('/review-measurements/summary?experimentId=' + encodeURIComponent(experimentId));
+    },
     recordNote({ noteVersionId, reviewKind, decision, notes }) {
       return request('/note-reviews', {
         method: 'POST',
