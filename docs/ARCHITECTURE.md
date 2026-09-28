@@ -246,3 +246,19 @@ The simulator has two terminal meanings that must remain distinct:
 Learner-facing cancellation is recorded as `user_abandoned`. A browser cannot self-assert operator cancellation. Internal-test runs continue to require the current server-verified tester grant for cancellation as well as read/answer/review.
 
 GT Autopsy and future analytics must never treat a cancelled run as equivalent to a completed mock or silently score unanswered remainder as though the learner sat the whole examination.
+
+
+## GT Autopsy boundary
+
+`gt-autopsy-v1` is a deterministic read projection over:
+- a completed locked-section run;
+- its immutable completion receipt;
+- immutable run events;
+- exact canonical question/concept versions;
+- canonical prompt-media modality links.
+
+The projection verifies receipt consistency before returning analytics. It may describe what happened, including score, section outcomes, concept-linked misses, visual-item outcomes and exact answer-change score effects.
+
+It is **not** a learner-state authority. Root-cause, mastery, fatigue, confidence and preventable-mark inference are disabled in v1. Its compressed remediation candidates are inputs that a later Study Now policy may evaluate, not recommendations with causal authority.
+
+Cancelled runs cannot be autopsied as completed exams. Internal-test runs retain `testingOnly` / `productionEquivalent=false` in the autopsy assembly metadata, and the current tester grant is rechecked before access.
