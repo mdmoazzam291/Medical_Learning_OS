@@ -253,3 +253,26 @@ It does not authorize AI-only production publication. Human content review remai
 
 ### Next scaling step
 The verified simulator shortage is 49. Prefer one final 49-question breadth-first batch, within the existing 25–100 autonomous batch rule, rather than two minimum-size batches that would add avoidable inventory.
+
+
+## M02c source-grounded verification layer — 2026-09-28
+
+M02c complements intake; it does not replace it.
+
+A new pure domain contract in `src/domain/source-grounded-verification.js` can assemble a non-authoritative review packet from:
+
+- atomic claim candidates;
+- exact source IDs + source versions;
+- structured chapter/page/section locators;
+- passage/content SHA-256 digests;
+- claim ↔ source support classifications;
+- source authority classes and rights modes;
+- deterministic content-check results.
+
+The deterministic router produces `routine`, `focused` or `expert` review priority. Every lane still requires the existing production Medical/References/Rights approvals and separate trusted publication transition.
+
+The implementation is deliberately demand-driven: retrieve and ground only claims needed by actual questions/concepts rather than pre-extracting entire textbooks.
+
+`citation_only` is now recognized by the pure content-domain validator, matching the live rights-review model. This means a standard reference may support verification without being treated as a license to reproduce its text.
+
+Persistent passage/claim/packet tables and internal source-ingestion APIs are specified in [SOURCE_GROUNDED_VERIFICATION.md](SOURCE_GROUNDED_VERIFICATION.md) but are not deployed yet. They should remain gated until a controlled batch shows lower reviewer effort without a higher correction/error rate.
