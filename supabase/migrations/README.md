@@ -54,3 +54,9 @@ The live project and repository now share these exact forward-only migrations:
 - `20260928112441_m10b_visual_interaction_fk_indexes.sql` — covering indexes for the new media and session-owner foreign keys after the Supabase performance advisor identified them.
 
 The migration body for `20260928112019` was recovered directly from `supabase_migrations.schema_migrations` after deployment so the repository copy matches the live applied SQL.
+
+## M10b canonical visual interaction profile — 2026-09-28
+
+- `20260928120011_m10b_canonical_visual_interaction_profile.sql` adds immutable service-only visual task metadata, emits the descriptor through learner media prompts, and binds it into all media-aware review fingerprints.
+- The first profile is the in-review clear-cell RCC pathology item classified as `detection`.
+- Task metadata must be declared before review/publish; later semantic reclassification requires a new version rather than mutation.

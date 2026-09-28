@@ -953,3 +953,17 @@ Decision:
 - this first route supports only deterministic detection/SBA scoring. Localization requires geometry + annotation evaluation, while free-text description/interpretation requires a separately validated semantic grading contract.
 
 This keeps one canonical answer truth while allowing multimodal evidence to compound around it.
+
+## ADR-064 — Visual task type is immutable review-bound content metadata (accepted, 2026-09-28)
+
+The same image can test detection, localization, description, interpretation or discrimination. The client must never infer which cognitive task is being assessed from the presence of media.
+
+Decision:
+- store the visual interaction task as an immutable canonical content profile bound to the exact question version + prompt-media version;
+- permit profile creation only while the question is `in_review`;
+- include the profile in learner media prompts only as an explicit versioned descriptor;
+- include the same profile inside Medical, References and Rights media review targets so changing task semantics changes the review fingerprint;
+- prohibit browser-side or post-publication task reclassification;
+- keep one v1 interaction profile per question version; richer multi-step visual tasks require a later versioned contract rather than overloading this field.
+
+This makes visual-task semantics part of reviewed content, not UI behavior or analytics inference.
