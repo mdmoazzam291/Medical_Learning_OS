@@ -840,3 +840,19 @@ Decision:
 Reference containment is necessary but insufficient for medical correctness. A citation does not prove that the claim is supported by the cited source. Real provider activation therefore remains gated by a curated semantic medical-teaching evaluation set.
 
 During implementation, the canonical JSON array-index validator was found to be incorrectly double-escaped. Fixing that foundational integrity bug is part of this slice because M09 contracts contain normal arrays and cannot be reliably evaluated otherwise.
+
+
+## ADR-058 — Ship deterministic teaching before provider-generated teaching (accepted, 2026-09-28)
+
+The first learner-facing use of the grounded-teaching contract is reviewed canonical content, not a live model.
+
+Decision:
+- on a server-scored incorrect answer, choose only `concise_explanation` unless stronger mistake evidence exists;
+- do not infer a misconception from one wrong answer;
+- reuse the exact reviewed/published explanation and canonical source identities;
+- persist the teaching decision and exact structured teaching payload in the immutable answer receipt;
+- render the structured block in the learner UI when valid, with legacy explanation fallback for old/non-conforming receipts;
+- do not create an extra teaching block after correct answers merely to increase interaction;
+- never truncate or rewrite medical content to force it under a contract limit; fail soft to the existing reviewed path instead.
+
+This gives the future AI provider a real bounded job to improve while proving that the core teaching loop remains functional with zero AI availability.
