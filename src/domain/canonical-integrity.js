@@ -51,7 +51,7 @@ function serialize(value, stack) {
     if (Array.isArray(value)) {
       if (Object.getOwnPropertySymbols(value).length) fail('Canonical JSON arrays cannot carry symbol properties');
       const visibleKeys = Object.keys(value);
-      if (visibleKeys.some(key => !/^(0|[1-9]\\d*)$/.test(key) || Number(key) >= value.length)) {
+      if (visibleKeys.some(key => !/^(0|[1-9]\d*)$/.test(key) || Number(key) >= value.length)) {
         fail('Canonical JSON arrays cannot carry custom properties');
       }
       for (let i = 0; i < value.length; i += 1) {
