@@ -937,3 +937,19 @@ Decision:
 - this integrity mechanism does not grant production qualification or replace human medical judgment.
 
 This reuses the existing canonical-integrity primitive and makes the future review trail auditable without adding a signing service, blockchain, model vendor or new infrastructure.
+
+## ADR-063 — Visual MCQ evidence enriches the canonical scored attempt; it does not create a second answer authority (accepted, 2026-09-28)
+
+A visual single-best-answer question is still a question attempt. Its image-specific evidence should add perceptual context without splitting correctness, scheduling or mistake history into a parallel scoring system.
+
+Decision:
+- the authenticated client submits only response intent: request key, current position, option ID, exact prompt-media version, help use and optional intervention reference;
+- the server derives the question, primary concept, answer key, correctness, timestamp and latency from the owned session plus canonical catalog;
+- the normal immutable `question.answered` attempt remains the authoritative scored retrieval event used by revision, QBank and existing mistake evidence;
+- a separate `media.interaction.completed` observation is then attached to that attempt and exact media version;
+- the visual observation is explicitly non-authoritative for mastery and cannot overwrite the scored attempt;
+- retry identity is anchored in the persisted attempt receipt, so changing media/help/intervention under the same request key is rejected;
+- production learners may use only published visual questions; current AI-test-reviewed `in_review` content is restricted to the existing internal tester principal;
+- this first route supports only deterministic detection/SBA scoring. Localization requires geometry + annotation evaluation, while free-text description/interpretation requires a separately validated semantic grading contract.
+
+This keeps one canonical answer truth while allowing multimodal evidence to compound around it.
