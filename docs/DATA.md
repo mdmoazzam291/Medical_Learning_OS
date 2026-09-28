@@ -348,3 +348,30 @@ These fields are immutable receipt context attached to the scored attempt. They 
 For current canonical teaching, the single `explanation` claim uses the exact reviewed question explanation and references the question's canonical source IDs/versions. Existing historical receipts without these fields remain valid and the learner UI falls back to the legacy `explanation` field.
 
 This receipt structure preserves intervention observability so later evaluation can link an observed post-answer teaching action to later retrieval/transfer without rewriting the original attempt.
+
+
+## Semantic teaching provider evaluation — M09c bootstrap
+
+`grounded-teaching-semantic-bootstrap-v1` is a curated evaluation dataset sourced from current human-reviewed/published question content.
+
+Each case binds:
+- exact published question version and canonical concept;
+- one observed wrong option used as the remediation context;
+- permitted canonical grounding references;
+- exact reviewed canonical explanation;
+- required facts whose meaning must be preserved;
+- explicit forbidden medical claims derived from the observed error;
+- semantic rubric with a micro-remediation word ceiling.
+
+The evaluation contract deliberately separates deterministic checks from human semantic judgment. Medical correctness, error correction and unsupported-claim detection cannot be satisfied by keyword matching or citation containment alone.
+
+`semantic-teaching-checklist-v1` is a derived read contract for reviewers.
+
+A semantic review record carries one pass/fail verdict for each of:
+- medical correctness;
+- error correction;
+- grounding;
+- unsupported claims;
+- verbosity.
+
+Overall pass is conjunctive: every dimension must pass. The bootstrap evaluation set itself cannot qualify production use.

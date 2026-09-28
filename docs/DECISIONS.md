@@ -856,3 +856,19 @@ Decision:
 - never truncate or rewrite medical content to force it under a contract limit; fail soft to the existing reviewed path instead.
 
 This gives the future AI provider a real bounded job to improve while proving that the core teaching loop remains functional with zero AI availability.
+
+
+## ADR-059 — Provider qualification requires human semantic medical evaluation (accepted, 2026-09-28)
+
+Structured output, citation containment and schema validity are necessary but insufficient for medical tutoring.
+
+Decision:
+- maintain a curated semantic teaching evaluation set grounded in human-reviewed/published canonical content;
+- include both facts that must be preserved and dangerous/incorrect claims that must not appear;
+- require explicit human review of medical correctness, correction of the observed learner error and unsupported claims;
+- combine deterministic grounding/verbosity checks with human semantic grounding review rather than replacing one with the other;
+- make provider qualification conjunctive: one failed required dimension means the case fails;
+- give bootstrap sets no production-qualification authority;
+- broaden evaluation coverage across specialties, modalities and teaching actions before production provider delivery.
+
+This prevents a fluent, well-cited but medically wrong explanation from passing merely because its JSON shape and source IDs are valid.

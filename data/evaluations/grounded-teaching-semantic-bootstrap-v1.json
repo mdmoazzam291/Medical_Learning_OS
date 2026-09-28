@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "evaluationSetId": "grounded-teaching-semantic-bootstrap",
+  "version": "1",
+  "basis": "all-current-human-reviewed-published-medical-questions",
+  "reviewMode": "human_semantic_review_required",
+  "productionQualificationAuthority": false,
+  "notes": [
+    "This bootstrap set covers the six currently human-reviewed/published questions only.",
+    "Automated structure/grounding/verbosity checks are necessary but do not establish semantic medical correctness.",
+    "A real provider must not reach production learners solely by passing this bootstrap set."
+  ],
+  "cases": [
+    {
+      "caseId": "gt-semantic:anaphylaxis-first-line@1",
+      "questionVersionId": "emergency:anaphylaxis:first-line-drug@1",
+      "conceptId": "emergency:anaphylaxis:first-line-treatment",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "iv-hydrocortisone",
+        "selectedOptionText": "Intravenous hydrocortisone"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "cdc:immunization-adverse-reactions:2024-07-25",
+          "version": "2024-07-25"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "This presentation is anaphylaxis with respiratory and cardiovascular involvement. Intramuscular epinephrine is the immediate first-line treatment. Antihistamines, glucocorticoids, and bronchodilators can be adjuncts for selected symptoms but should not delay epinephrine.",
+        "requiredFacts": [
+          "The presentation is anaphylaxis with respiratory and cardiovascular involvement.",
+          "Intramuscular epinephrine is the immediate first-line treatment.",
+          "Adjunctive antihistamines, glucocorticoids, or bronchodilators must not delay epinephrine."
+        ],
+        "forbiddenClaims": [
+          "Intravenous hydrocortisone is the immediate first-line treatment.",
+          "Epinephrine should be delayed until adjunctive therapy is given."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-semantic:rabies-adult-vaccine-site@1",
+      "questionVersionId": "infectious:rabies:adult-im-vaccine-site@1",
+      "conceptId": "infectious:rabies:vaccine-injection-site",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "gluteal",
+        "selectedOptionText": "Gluteal region"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nrcp:rabies-vaccination-dose:2026-09-18",
+          "version": "updated-2026-09-18"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "The NRCP schedule page lists the deltoid muscle as the injection site for adults and children receiving rabies vaccine and specifies the anterolateral thigh for infants and children receiving intramuscular vaccine.",
+        "requiredFacts": [
+          "The recommended adult intramuscular rabies vaccine site is the deltoid muscle."
+        ],
+        "forbiddenClaims": [
+          "The gluteal region is the recommended adult intramuscular rabies vaccine site."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-semantic:rabies-category-iii-rig@1",
+      "questionVersionId": "infectious:rabies:category-iii-rig-infiltration@1",
+      "conceptId": "infectious:rabies:category-iii-rig",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "no-rig",
+        "selectedOptionText": "No rabies immunoglobulin is needed for category III exposure"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nrcp:rabies-vaccination-dose:2026-09-18",
+          "version": "updated-2026-09-18"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "For category III exposure in a previously unvaccinated person, rabies immunoglobulin is part of post-exposure prophylaxis and should be infiltrated into the exposure wound according to the National Rabies Control Programme.",
+        "requiredFacts": [
+          "A previously unvaccinated person with category III exposure requires rabies immunoglobulin as part of post-exposure prophylaxis.",
+          "Rabies immunoglobulin should be infiltrated into the exposure wound."
+        ],
+        "forbiddenClaims": [
+          "Rabies immunoglobulin is unnecessary for category III exposure in a previously unvaccinated person."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-semantic:rabies-id-schedule@1",
+      "questionVersionId": "infectious:rabies:id-pep-days-india@1",
+      "conceptId": "infectious:rabies:id-pep-schedule-india",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "0-3-7-14-28",
+        "selectedOptionText": "Days 0, 3, 7, 14, and 28"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nrcp:rabies-vaccination-dose:2026-09-18",
+          "version": "updated-2026-09-18"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "The NRCP schedule page shows the intradermal regimen as four visits on days 0, 3, 7, and 28, with no day-14 intradermal visit in that schedule.",
+        "requiredFacts": [
+          "The intradermal regimen is scheduled on days 0, 3, 7, and 28.",
+          "There is no day-14 visit in that intradermal schedule."
+        ],
+        "forbiddenClaims": [
+          "The intradermal regimen includes a day-14 visit."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-semantic:rabies-im-schedule@1",
+      "questionVersionId": "infectious:rabies:im-pep-days-india@1",
+      "conceptId": "infectious:rabies:im-pep-schedule-india",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "0-7-21",
+        "selectedOptionText": "Days 0, 7, and 21"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nrcp:rabies-vaccination-dose:2026-09-18",
+          "version": "updated-2026-09-18"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "The current NRCP vaccination-schedule page lists a five-visit intramuscular PEP regimen on days 0, 3, 7, 14, and 28 for a person who has not previously been vaccinated against rabies.",
+        "requiredFacts": [
+          "The intramuscular PEP regimen is scheduled on days 0, 3, 7, 14, and 28 for a previously unvaccinated person."
+        ],
+        "forbiddenClaims": [
+          "The intramuscular PEP regimen is scheduled only on days 0, 7, and 21."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-semantic:rabies-wound-wash@1",
+      "questionVersionId": "infectious:rabies:pep-wound-wash-15min@1",
+      "conceptId": "infectious:rabies:pep-wound-washing",
+      "teachingAction": "concise_explanation",
+      "learnerError": {
+        "selectedOptionId": "suture-first",
+        "selectedOptionText": "Close the wound immediately before washing it"
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nrcp:rabies-faq:accessed-2026-09-27",
+          "version": "accessed-2026-09-27"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "Prompt, thorough wound washing is a core component of rabies post-exposure care. The National Rabies Control Programme advises washing and flushing wounds or scratches with soap or detergent and copious running water for about 15 minutes before further assessment and prophylaxis.",
+        "requiredFacts": [
+          "Rabies-exposure wounds should be washed and flushed promptly with soap or detergent and copious running water for about 15 minutes.",
+          "Wound washing should precede further assessment and prophylaxis."
+        ],
+        "forbiddenClaims": [
+          "The wound should be closed before washing.",
+          "Local wound cleansing can be omitted if other prophylaxis is planned."
+        ]
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    }
+  ]
+}
