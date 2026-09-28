@@ -1,3 +1,4 @@
+import { digestCanonical } from './canonical-integrity.js';
 import {
   canonicalGroundedTeachingFallback,
   evaluateGroundedTeachingResult,
@@ -157,6 +158,23 @@ export function buildSemanticTeachingEvaluationTask(setValue, caseId, {
   });
 }
 
+function semanticReviewTargetValue({set,item,task,result,providerRunRef}) {
+  return {
+    contractId:'semantic-teaching-review-target-v1',
+    evaluationSet:{
+      schemaVersion:set.schemaVersion,
+      id:set.evaluationSetId,
+      version:set.version
+    },
+    case:item,
+    taskId:task.taskId,
+    providerRunRef,
+    provider:result.provider,
+    output:result.output,
+    citationRefs:result.citationRefs
+  };
+}
+
 function executionError(error) {
   const message = error instanceof Error ? error.message : String(error);
   return {
@@ -199,11 +217,21 @@ export async function runSemanticTeachingProviderEvaluation({
     }
 
     const deterministicPassed = deterministicEvaluation?.passed === true;
+    const reviewTargetDigest = deterministicPassed
+      ? await digestCanonical(semanticReviewTargetValue({
+          set,
+          item,
+          task,
+          result,
+          providerRunRef
+        }))
+      : null;
     cases.push({
       caseId: item.caseId,
       questionVersionId: item.questionVersionId,
       taskId: task.taskId,
       providerRunRef,
+      reviewTargetDigest,
       executionStatus: error
         ? 'provider_error'
         : deterministicPassed
@@ -226,7 +254,7 @@ export async function runSemanticTeachingProviderEvaluation({
   const deterministicBlockCount = cases.length - deterministicPassCount - providerErrorCount;
 
   return deepFreezeCopy({
-    contractId: 'semantic-teaching-provider-evaluation-run-v1',
+    contractId: 'semantic-teaching-provider-evaluation-run-v2',
     evaluationRunId: runId,
     evaluationSetId: set.evaluationSetId,
     evaluationSetVersion: set.version,
@@ -246,8 +274,10 @@ export async function runSemanticTeachingProviderEvaluation({
 }
 
 function validateRunForFinalization(run, set) {
+  const supportedContract = run?.contractId === 'semantic-teaching-provider-evaluation-run-v1' ||
+    run?.contractId === 'semantic-teaching-provider-evaluation-run-v2';
   if (!run || typeof run !== 'object' || Array.isArray(run) ||
-      run.contractId !== 'semantic-teaching-provider-evaluation-run-v1' ||
+      !supportedContract ||
       run.evaluationSetId !== set.evaluationSetId ||
       run.evaluationSetVersion !== set.version ||
       run.productionQualificationAuthority !== false ||
@@ -255,6 +285,13 @@ function validateRunForFinalization(run, set) {
       !Array.isArray(run.cases) ||
       run.cases.length !== set.cases.length) {
     fail('Invalid semantic teaching provider evaluation run');
+  }
+  if (run.contractId === 'semantic-teaching-provider-evaluation-run-v2') {
+    for (const item of run.cases) {
+      if (item.humanReviewRequired === true && !item.reviewTargetDigest) {
+        fail('Missing semantic review target digest');
+      }
+    }
   }
 }
 
@@ -275,6 +312,17 @@ export function finalizeSemanticTeachingProviderEvaluation({
     if (!runCase) fail('Semantic review is outside evaluation run');
     if (runCase.humanReviewRequired !== true) fail('Blocked provider case cannot receive passing semantic review');
     if (review.providerRunRef !== runCase.providerRunRef) fail('Semantic review providerRunRef mismatch');
+    if (run.contractId === 'semantic-teaching-provider-evaluation-run-v2') {
+      if (review.schemaVersion !== 2) fail('Target-bound semantic review is required');
+      const target = runCase.reviewTargetDigest;
+      if (!target ||
+          review.reviewTargetDigest.profileVersion !== target.profileVersion ||
+          review.reviewTargetDigest.canonicalizationAlgorithm !== target.canonicalizationAlgorithm ||
+          review.reviewTargetDigest.digestAlgorithm !== target.digestAlgorithm ||
+          review.reviewTargetDigest.digestHex !== target.digestHex) {
+        fail('Semantic review target digest mismatch');
+      }
+    }
     reviewByCase.set(review.caseId, review);
   }
 
@@ -307,7 +355,9 @@ export function finalizeSemanticTeachingProviderEvaluation({
       : 'pass';
 
   return deepFreezeCopy({
-    contractId: 'semantic-teaching-provider-evaluation-summary-v1',
+    contractId: run.contractId === 'semantic-teaching-provider-evaluation-run-v2'
+      ? 'semantic-teaching-provider-evaluation-summary-v2'
+      : 'semantic-teaching-provider-evaluation-summary-v1',
     evaluationRunId: run.evaluationRunId,
     evaluationSetId: set.evaluationSetId,
     evaluationSetVersion: set.version,
