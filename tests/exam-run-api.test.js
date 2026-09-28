@@ -114,8 +114,9 @@ test('exam cancellation is revisioned, idempotent and receipt-free', () => {
   const route = source.indexOf('const examRunCancelMatch');
   assert.ok(route >= 0);
   const tail = source.slice(route);
-  assert.match(tail, /exactFields\(input, \["requestId", "expectedRevision", "reason"\]\)/);
-  assert.match(tail, /"user_abandoned", "operator_cancelled"/);
+  assert.match(tail, /exactFields\(input, \["requestId", "expectedRevision"\]\)/);
+  assert.match(tail, /const reason = "user_abandoned"/);
+  assert.doesNotMatch(tail, /identifier\(input\.reason\)/);
   assert.match(tail, /priorEvent\.event_type === "run\.cancelled"/);
   assert.match(tail, /p_event_type: "run\.cancelled"/);
   assert.match(tail, /p_completion_receipt: null/);
