@@ -13,6 +13,7 @@ import {
 } from "./_shared/exam-runtime.js";
 import { buildGtAutopsyV1 } from "./_shared/gt-autopsy.js";
 import { buildCanonicalPostAnswerTeaching } from "./_shared/post-answer-teaching.js";
+import { buildServerScoredVisualDetectionEvent } from "./_shared/visual-detection.js";
 
 type Json = Record<string, unknown>;
 
@@ -325,6 +326,34 @@ Deno.serve(async (req: Request) => {
         questionVersionId,
         media
       };
+    };
+    const internalVisualQuestionReady = async (questionVersionId: string) => {
+      if (!internalExamTester) return false;
+      for (const reviewKind of ["medical", "references", "rights"]) {
+        const [{ data: targetSha, error: targetError }, { data: review, error: reviewError }] = await Promise.all([
+          admin.rpc("current_review_target_sha256", {
+            p_question_version_id: questionVersionId,
+            p_review_kind: reviewKind
+          }),
+          trustedRead("visual_ai_test_review", async () =>
+            admin.from("content_ai_test_review_events")
+              .select("decision,policy_id,target_sha256,reviewed_at")
+              .eq("question_version_id", questionVersionId)
+              .eq("review_kind", reviewKind)
+              .order("reviewed_at", { ascending: false })
+              .limit(1)
+              .maybeSingle()
+          )
+        ]);
+        if (targetError || reviewError ||
+            !review ||
+            review.policy_id !== "ai-test-review-v1" ||
+            review.decision !== "approved" ||
+            review.target_sha256 !== targetSha) {
+          return false;
+        }
+      }
+      return true;
     };
     const getEvents = async () => {
       const { data, error } = await trustedRead("attempts", async () =>
@@ -2213,6 +2242,232 @@ Deno.serve(async (req: Request) => {
         if (error) fail(500, "study_write_failed");
       }
       return response(req, 200, { questionVersionId, bookmarked: input.bookmarked });
+    }
+
+    const visualDetectionMatch = path.match(/^\/sessions\/([a-zA-Z0-9-]+)\/visual-detection$/);
+    if (req.method === "POST" && visualDetectionMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const sessionId = identifier(visualDetectionMatch[1]);
+      const input = await jsonBody(req);
+      exactFields(
+        input,
+        ["requestId", "position", "optionId", "mediaAssetVersionId", "helpUsed"],
+        ["interventionRef"]
+      );
+      const requestId = identifier(input.requestId);
+      const position = integer(input.position, 0, 49);
+      const optionId = identifier(input.optionId);
+      const mediaAssetVersionId = identifier(input.mediaAssetVersionId);
+      if (typeof input.helpUsed !== "boolean") fail(400, "invalid_help_used");
+      const interventionRef =
+        input.interventionRef === undefined || input.interventionRef === null
+          ? null
+          : identifier(input.interventionRef);
+
+      const [{ data: session, error: sessionError }, catalog] = await Promise.all([
+        trustedRead("visual_detection_session", async () =>
+          admin.from("study_sessions")
+            .select("id,position,closed,question_version_ids,question_started_at")
+            .eq("id", sessionId)
+            .eq("learner_id", learnerId)
+            .maybeSingle()
+        ),
+        getCatalog()
+      ]);
+      if (sessionError) fail(500, "study_read_failed");
+      if (!session) fail(404, "session_not_found");
+      if (session.closed || Number(session.position) !== position) fail(409, "stale_session");
+
+      const questionVersionId = (session.question_version_ids as string[])[position];
+      if (!questionVersionId) fail(409, "stale_session");
+      const allQuestions = Array.isArray(catalog.body?.questions) ? catalog.body.questions : [];
+      const question = allQuestions.find(
+        (candidate: any) => candidate?.questionVersionId === questionVersionId
+      );
+      if (!question) fail(409, "question_no_longer_available");
+
+      const productionEligible =
+        question.status === "published" &&
+        typeof question.publishedAt === "string" &&
+        question.publishedAt.length > 0;
+      const internalEligible =
+        question.status === "in_review" &&
+        await internalVisualQuestionReady(questionVersionId);
+      if (!productionEligible && !internalEligible) {
+        fail(409, "visual_question_not_review_ready");
+      }
+
+      if (!Array.isArray(question.options) ||
+          !question.options.some((option: any) => option?.optionId === optionId)) {
+        fail(400, "invalid_option");
+      }
+      const primary = question.conceptLinks?.find((link: any) => link?.role === "primary");
+      if (!primary?.conceptId) fail(500, "catalog_invalid");
+
+      const mediaPrompt = await learnerMediaPrompt(questionVersionId);
+      if (!Array.isArray(mediaPrompt.media) ||
+          !mediaPrompt.media.some(
+            (item: any) => item?.mediaAssetVersionId === mediaAssetVersionId
+          )) {
+        fail(400, "visual_media_not_in_prompt");
+      }
+
+      const nowMs = Date.now();
+      const startedMs = new Date(session.question_started_at).getTime();
+      const occurredAt = new Date(nowMs).toISOString();
+      const durationMs = Math.min(
+        3600000,
+        Math.max(0, Number.isFinite(startedMs) ? nowMs - startedMs : 0)
+      );
+      const attemptEvent = {
+        schemaVersion: 1,
+        type: "question.answered",
+        eventId: crypto.randomUUID(),
+        learnerId,
+        questionVersionId,
+        conceptId: primary.conceptId,
+        occurredAt,
+        correct: question.answerOptionId === optionId,
+        durationMs
+      };
+      const sources = (catalog.body.sources || [])
+        .filter((source: any) => question.sourceIds?.includes(source.sourceId))
+        .map((source: any) => ({
+          sourceId: source.sourceId,
+          title: source.title,
+          url: source.url ?? null,
+          version: source.version ?? null
+        }));
+      const postAnswerTeaching = buildCanonicalPostAnswerTeaching({
+        correct: attemptEvent.correct,
+        conceptId: primary.conceptId,
+        explanation: question.explanation,
+        sources
+      });
+      const visualMetadata = {
+        schemaVersion: 1,
+        eventId: crypto.randomUUID(),
+        taskType: "detection",
+        mediaAssetVersionId,
+        occurredAt,
+        latencyMs: durationMs,
+        helpUsed: input.helpUsed,
+        interventionRef
+      };
+      const proposedReceipt = {
+        event: attemptEvent,
+        selectedOptionId: optionId,
+        answerOptionId: question.answerOptionId,
+        explanation: question.explanation,
+        sources,
+        catalogVersion: catalog.version,
+        teachingDecision: postAnswerTeaching?.decision ?? null,
+        teaching: postAnswerTeaching?.teaching ?? null,
+        visualDetection: visualMetadata
+      };
+
+      const { data: attemptData, error: attemptError } = await admin.rpc("study_record_attempt", {
+        p_learner: learnerId,
+        p_session: sessionId,
+        p_request_key: requestId,
+        p_position: position,
+        p_option: optionId,
+        p_event: attemptEvent,
+        p_receipt: proposedReceipt
+      });
+      if (attemptError) fail(500, "study_write_failed");
+      if (attemptData?.error) {
+        fail(attemptData.error === "session_not_found" ? 404 : 409, attemptData.error);
+      }
+
+      const receipt = attemptData?.receipt ?? proposedReceipt;
+      const storedVisual = receipt?.visualDetection;
+      if (!storedVisual ||
+          storedVisual.schemaVersion !== 1 ||
+          storedVisual.taskType !== "detection" ||
+          storedVisual.mediaAssetVersionId !== mediaAssetVersionId ||
+          storedVisual.helpUsed !== input.helpUsed ||
+          (storedVisual.interventionRef ?? null) !== interventionRef) {
+        fail(409, "visual_request_key_collision");
+      }
+
+      const visualEvent = buildServerScoredVisualDetectionEvent({
+        visualEventId: storedVisual.eventId,
+        learnerId,
+        sessionId,
+        attemptEvent: receipt.event,
+        question,
+        selectedOptionId: receipt.selectedOptionId,
+        mediaAssetVersionId: storedVisual.mediaAssetVersionId,
+        occurredAt: storedVisual.occurredAt,
+        latencyMs: storedVisual.latencyMs,
+        helpUsed: storedVisual.helpUsed,
+        interventionRef: storedVisual.interventionRef ?? null
+      });
+      const { data: visualReceipt, error: visualError } = await admin.rpc(
+        "study_record_visual_interaction",
+        {
+          p_learner: learnerId,
+          p_event: visualEvent
+        }
+      );
+      if (visualError) fail(500, "visual_interaction_write_failed");
+      if (visualReceipt?.error) fail(409, visualReceipt.error);
+
+      const { error: revisionError } = await admin.rpc("study_rebuild_revision_state", {
+        p_learner: learnerId,
+        p_question_version_id: questionVersionId
+      });
+      if (revisionError) {
+        console.warn(JSON.stringify({
+          event: "revision_projection_deferred",
+          operation: "visual_detection_projection",
+          code: revisionError.code || "revision_projection_failed"
+        }));
+      } else {
+        try {
+          const revisionRows = await getRevisionState();
+          const row = revisionRows.find(
+            (candidate: any) => candidate.question_version_id === questionVersionId
+          );
+          if (row && row.evidence_last_event_id === receipt.event.eventId) {
+            await recordScheduleDecision({
+              attemptId: receipt.event.eventId,
+              policyId: row.policy_id,
+              policyVersion: row.policy_version,
+              role: "authoritative",
+              configVersion: row.policy_id + "@" + row.policy_version,
+              proposedDueAt: row.due_at,
+              decision: {
+                projectionVersion: row.projection_version,
+                attempts: row.attempts,
+                correct: row.correct,
+                incorrect: row.incorrect,
+                consecutiveCorrect: row.consecutive_correct,
+                latestCorrect: row.latest_correct,
+                evidenceEventCount: row.evidence_event_count
+              }
+            });
+          }
+        } catch (decisionError) {
+          console.warn(JSON.stringify({
+            event: "visual_detection_schedule_decision_deferred",
+            code: decisionError instanceof Error
+              ? decisionError.message
+              : "schedule_decision_failed"
+          }));
+        }
+      }
+
+      return response(req, 200, {
+        contractId: "server-scored-visual-detection-v1",
+        serverScored: true,
+        taskType: "detection",
+        authoritativeForMastery: false,
+        internalTestContent: !productionEligible,
+        attemptReceipt: receipt,
+        visualReceipt
+      });
     }
 
     const actionMatch = path.match(/^\/sessions\/([a-zA-Z0-9-]+)\/(answer|next|cancel)$/);
