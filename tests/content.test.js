@@ -94,3 +94,13 @@ test('retirement removes eligibility without losing history or resurfacing old c
   assert.throws(() => publishQuestion(c, id, '2026-09-25T03:00:00.000Z'), /verified/);
   assert.throws(() => submitForReview(c, id), /drafts/);
 });
+
+
+test('citation-only sources are resolved rights and remain publication-eligible after review', () => {
+  const c = fixture();
+  c.sources[0].rights.status = 'citation_only';
+  c.sources[0].rights.evidence = 'Synthetic test: citation-only use is resolved, not a reuse license';
+  const published = publishQuestion(verify(c), id, '2026-09-25T01:00:00.000Z');
+  assert.equal(selectPublishedQuestions(published).length, 1);
+  assert.equal(published.sources[0].rights.status, 'citation_only');
+});
