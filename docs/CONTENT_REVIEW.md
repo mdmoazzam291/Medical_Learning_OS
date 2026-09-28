@@ -445,3 +445,52 @@ Promotion path:
 Even a qualified AI review receipt should not directly publish content. Publication must recheck current target hashes, source-rights evidence, authority-policy version and all required gate receipts.
 
 This creates a clean future transition from human-every-item review toward **AI-first, human-on-exception** without rewriting the canonical review ledger.
+
+
+## Learner-originated content issue triage
+
+Learner-private corrections remain a NeuralVault learner-owned overlay. When a learner separately submits a possible canonical error, that report now enters the existing authenticated reviewer workspace as a triage signal.
+
+### Reviewer inbox
+
+`GET /learner-reports` is available only after the normal reviewer JWT boundary resolves at least one active Medical, References or Rights grant.
+
+The server:
+- reads learner reports and prior triage evidence through the trusted service boundary;
+- removes already-triaged reports;
+- excludes the current reviewer's own learner reports;
+- groups remaining reports only when target type, exact target ID and target SHA-256 all match;
+- attaches the current/historical canonical question or note plus source package when available;
+- strips learner identity before returning the browser payload.
+
+The browser sees report category, optional learner-supplied details and only correction text the learner explicitly chose to share. It never receives learner UUID/email from this workflow.
+
+### Final triage
+
+`POST /learner-reports/triage` accepts:
+- exact report IDs;
+- one reviewer gate;
+- one final outcome;
+- one structured reason;
+- the required human inspection attestation.
+
+Reviewer identity is derived from the verified JWT and never accepted from browser input.
+
+The database function `triage_learner_content_issue_reports` independently:
+- checks the reviewer still has the selected active grant;
+- blocks reviewer self-triage;
+- requires all report IDs to bind the same exact target snapshot;
+- records one immutable triage event per report;
+- rejects repeated triage.
+
+Outcomes:
+- `no_canonical_issue` closes the report after inspection;
+- `correction_required` creates durable correction-needed evidence only.
+
+Neither outcome mutates canonical content, learner state, publication status, Study Now, scoring or mastery. A warranted correction must be authored as a new canonical/question version and pass the normal review/publication gates.
+
+### Privacy
+
+The triage table contains reviewer identity but no copied learner identity. It references the original learner report. Learner privacy erasure deletes the report and cascades its triage receipt only inside the existing transaction-scoped erasure exception.
+
+Repeated report counts may prioritize reviewer attention. They never function as correctness votes or automatic review decisions.
