@@ -1074,6 +1074,47 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const learnerReportForm = event.target.closest('.learner-report-triage-form');
+  if (learnerReportForm) {
+    event.preventDefault();
+    const data = new FormData(learnerReportForm);
+    const reportIds = String(learnerReportForm.dataset.reportIds || '').split(',').filter(Boolean);
+    const reviewKind = String(data.get('reviewKind') || '');
+    const decision = String(data.get('decision') || '');
+    const reasonCode = String(data.get('reasonCode') || '');
+    const attested = data.get('attested') === 'on';
+    const noIssueReasons = new Set(['canonical_content_current','report_not_reproducible','target_superseded']);
+    const correctionReasons = new Set(['medical_correction_required','reference_update_required','rights_or_provenance_review_required','ambiguous_scope_requires_revision','other_correction_required']);
+    if (!reportIds.length || !state.grants.includes(reviewKind) || !['no_canonical_issue','correction_required'].includes(decision) || !reasonCode || !attested) {
+      announce('Choose a granted reviewer gate, final outcome, matching reason and inspection attestation.');
+      return;
+    }
+    if (decision === 'no_canonical_issue' && !noIssueReasons.has(reasonCode)) {
+      announce('Choose a no-canonical-issue reason for that outcome.');
+      return;
+    }
+    if (decision === 'correction_required' && !correctionReasons.has(reasonCode)) {
+      announce('Choose a correction-required reason for that outcome.');
+      return;
+    }
+    (async () => {
+      state.submitting = 'learner-report-triage';
+      setFormBusy(learnerReportForm, true);
+      try {
+        const receipt = await review.triageLearnerReports({ reportIds, reviewKind, decision, reasonCode, attested });
+        announce((decision === 'correction_required' ? 'Correction required' : 'No canonical issue') + ' recorded for ' + receipt.decisionCount + ' learner report' + (receipt.decisionCount === 1 ? '' : 's') + '. No content was edited or published.');
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'triage_learner_reports');
+        state.submitting = null;
+        setFormBusy(learnerReportForm, false);
+        announce('Learner report triage was not recorded: ' + (error.code || error.message || 'content_issue_triage_write_failed') + '.');
+      }
+    })();
+    return;
+  }
+
   const batchForm = event.target.closest('.references-batch-review-form');
   if (batchForm) {
     event.preventDefault();
