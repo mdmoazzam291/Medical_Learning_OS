@@ -2,12 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const [sql, api, adapter, ui, serve] = await Promise.all([
+const [sql, api, adapter, ui, serve, experiment] = await Promise.all([
   readFile(new URL('../supabase/migrations/20260928145039_m02c_review_workflow_measurement.sql', import.meta.url),'utf8'),
   readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url),'utf8'),
   readFile(new URL('../src/adapters/cloud-review.js', import.meta.url),'utf8'),
   readFile(new URL('../web/review.js', import.meta.url),'utf8'),
-  readFile(new URL('../scripts/serve.js', import.meta.url),'utf8')
+  readFile(new URL('../scripts/serve.js', import.meta.url),'utf8'),
+  readFile(new URL('../src/domain/review-workflow-experiment.js', import.meta.url),'utf8')
 ]);
 
 test('review workflow measurement is append-only, service-only and non-authoritative', () => {
@@ -44,8 +45,9 @@ test('review API derives reviewer from JWT and accepts only bounded timing inten
 test('browser measures only explicit pilot arms after a real review receipt', () => {
   assert.match(ui,/referencesExperimentArm: 'all'/);
   assert.match(ui,/M02C REVIEW-WORKFLOW PILOT/);
-  assert.match(ui,/CO claim-first/);
-  assert.match(ui,/ASA standard/);
+  assert.match(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.match(experiment,/label: 'CO claim-first'/);
+  assert.match(experiment,/label: 'ASA standard'/);
   assert.match(ui,/const workflowMeasurement = noteVersionId \? null : reviewMeasurementForQuestion/);
   const reviewWrite=ui.indexOf('await review.record({');
   const metricWrite=ui.indexOf('await review.recordMeasurement({');
