@@ -96,3 +96,22 @@ test('source-policy assist prefills evidence but never selects or submits a righ
   assert.doesNotMatch(source, /rightsStatus\.value\s*=/);
   assert.doesNotMatch(source, /requestSubmit\(/);
 });
+
+
+test('reviewer UI renders exact visual target before a gate decision', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function mediaReviewPanel\(item\)/);
+  assert.match(source, /MEDIA-BOUND REVIEW/);
+  assert.match(source, /Inspect the exact visual target/);
+  assert.match(source, /packet\.targetSha256/);
+  assert.match(source, /JSON\.stringify\(packet\.target/);
+  assert.match(source, /mediaReviewPanel\(item\)/);
+  assert.match(source, /referrerpolicy="no-referrer"/);
+});
+
+test('reviewer visual surface accepts only https signed media delivery', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function safeReviewMediaUrl\(value\)/);
+  assert.match(source, /parsed\.protocol === 'https:'/);
+  assert.match(source, /Media unavailable/);
+});
