@@ -43,17 +43,16 @@ test('review API derives reviewer from JWT and accepts only bounded timing inten
   assert.doesNotMatch(api,/reviewerId\s*=\s*input\./);
 });
 
-test('browser measures only explicit pilot arms after a real review receipt', () => {
+test('browser uses only the v2 atomic References pilot and leaves v1 evidence historical', () => {
   assert.match(ui,/referencesExperimentArm: 'all'/);
-  assert.match(ui,/M02C REVIEW-WORKFLOW PILOT/);
-  assert.match(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.match(ui,/M02C REVIEW-WORKFLOW PILOT V2/);
+  assert.match(ui,/REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2/);
   assert.match(experiment,/label: 'CO claim-first'/);
   assert.match(experiment,/label: 'ASA standard'/);
-  assert.match(ui,/const workflowMeasurement = noteVersionId \? null : reviewMeasurementForQuestion/);
-  const reviewWrite=ui.indexOf('await review.record({');
-  const metricWrite=ui.indexOf('await review.recordMeasurement({');
-  assert.ok(reviewWrite >= 0 && metricWrite > reviewWrite);
-  assert.match(ui,/record_review_workflow_measurement/);
+  assert.doesNotMatch(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.doesNotMatch(ui,/reviewMeasurementForQuestion/);
+  assert.doesNotMatch(ui,/review\.recordMeasurement\(/);
+  assert.match(ui,/recordReferencesBatch/);
   assert.match(ui,/never used for reviewer scoring or publication authority/);
 });
 
