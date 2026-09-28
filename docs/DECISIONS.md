@@ -1077,7 +1077,7 @@ The latest user instruction asks for notes and concepts in the quantity needed f
 See `CONNECTED_LEARNING_PILOT.md`. Research activation, item comparability and the remaining authenticated Study Now acceptance gate remain separate.
 
 
-## ADR-071 — Human review attestation may batch receipts, never judgments (accepted, 2026-09-29)
+## ADR-072 — Human review attestation may batch receipts, never judgments (accepted, 2026-09-29)
 
 Per-target immutable review evidence is necessary, but forcing a human to repeat identical navigation and submission mechanics for every gate/item creates avoidable operational burden. The optimization must remove interface overhead without converting AI preflight into medical authority.
 
@@ -1094,7 +1094,7 @@ Decision:
 This permits **human judgment compression** while prohibiting **human authority substitution**.
 
 
-## ADR-071 — Review judgment is required; handwritten input is not (accepted, 2026-09-29)
+## ADR-073 — Review judgment is required; handwritten input is not (accepted, 2026-09-29)
 
 Production medical review was becoming an operational bottleneck because the interface coupled reviewer judgment to repetitive text entry and one-target-at-a-time submission.
 
