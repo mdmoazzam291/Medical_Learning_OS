@@ -365,3 +365,15 @@ The packet contains:
 Medical, References and Rights packets deliberately differ because each gate inspects different evidence. Reviewers must inspect the media packet before approving. AI/source preflight remains non-authoritative and cannot substitute for this human decision.
 
 The detailed media-target RPC is service-backend-only; learner and ordinary authenticated roles cannot call it directly.
+
+
+## Human-attested review compression
+
+The review system may reduce repetitive browser mechanics without reducing the number or integrity of review judgments.
+
+Two service-only paths now exist:
+
+- `record_full_question_review_bundle`: one explicit human attestation for an exact, previously unreviewed question can record Medical, References and Rights approvals atomically. Each gate keeps its own note, gate-specific fingerprint and immutable review event. The reviewer must currently hold all three grants, source-rights prerequisites must already pass, and the function has no publication authority.
+- `record_content_review_batch_with_measurement`: M02c References workflow v2 submits exactly seven item-level decisions and notes in one atomic transaction after one session-level attestation. It reuses `record_content_review` for every target and records one timing receipt only after all seven reviews succeed.
+
+Neither path permits AI/source preflight to choose review decisions. Prefilled notes are editable evidence aids only. If any target should be rejected, the reviewer must select rejection for that target (batch path) or use the existing individual reject control (full-question path).
