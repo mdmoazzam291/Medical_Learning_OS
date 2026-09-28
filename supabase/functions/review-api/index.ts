@@ -87,12 +87,12 @@ function uuidValue(value: unknown, code: string) {
   return value;
 }
 
-async function jsonBody(req: Request) {
+async function jsonBody(req: Request, maxBytes = 8192) {
   const length = Number(req.headers.get("content-length") || 0);
-  if (length > 8192) fail(413, "body_too_large");
+  if (length > maxBytes) fail(413, "body_too_large");
   if (!/^application\/json(?:\s*;|$)/i.test(req.headers.get("content-type") || "")) fail(415, "json_required");
   const text = await req.text();
-  if (new TextEncoder().encode(text).byteLength > 8192) fail(413, "body_too_large");
+  if (new TextEncoder().encode(text).byteLength > maxBytes) fail(413, "body_too_large");
   try { return object(JSON.parse(text || "{}")); }
   catch { fail(400, "invalid_json"); }
 }
@@ -523,6 +523,104 @@ Deno.serve(async (req: Request) => {
       });
       if (error) mapReviewMeasurementWriteError(error);
       if (!data?.measurementId || data?.reviewId !== reviewId) fail(500, "review_measurement_write_failed");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "GET" && path === "/reference-review-batch/summary") {
+      if ([...url.searchParams.keys()].some((key) => key !== "experimentId")) fail(400, "query_not_supported");
+      const experimentId = identifier(url.searchParams.get("experimentId"));
+      await requireGrant("references");
+      const { data, error } = await admin.rpc("content_review_workflow_batch_measurement_summary", {
+        p_experiment_id: experimentId
+      });
+      if (error) fail(500, "review_batch_summary_unavailable");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/reference-review-batch") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 32768);
+      exactFields(input, [
+        "questionVersionIds",
+        "decisions",
+        "notes",
+        "experimentId",
+        "workflowMode",
+        "clientSessionId",
+        "foregroundActiveMs",
+        "elapsedWallMs",
+        "queueSize",
+        "attestationVersion",
+        "attested"
+      ]);
+      await requireGrant("references");
+      if (!Array.isArray(input.questionVersionIds) || input.questionVersionIds.length !== 7 ||
+          !Array.isArray(input.decisions) || input.decisions.length !== 7 ||
+          !Array.isArray(input.notes) || input.notes.length !== 7) {
+        fail(400, "review_batch_size_invalid");
+      }
+      const questionVersionIds = input.questionVersionIds.map((value: unknown) => identifier(value));
+      const decisions = input.decisions.map((value: unknown) => {
+        const decision = String(value || "");
+        if (!["approved", "rejected"].includes(decision)) fail(400, "invalid_review_decision");
+        return decision;
+      });
+      const notes = input.notes.map((value: unknown) => {
+        if (typeof value !== "string" || value.trim().length < 1 || value.trim().length > 4000) {
+          fail(400, "invalid_review_notes");
+        }
+        return value.trim();
+      });
+      const experimentId = identifier(input.experimentId);
+      const workflowMode = String(input.workflowMode || "");
+      if (!["claim_first", "standard"].includes(workflowMode)) fail(400, "review_batch_workflow_invalid");
+      const clientSessionId = uuidValue(input.clientSessionId, "invalid_client_session_id");
+      const foregroundActiveMs = boundedInteger(
+        input.foregroundActiveMs, 0, 14400000, "review_batch_timing_invalid"
+      );
+      const elapsedWallMs = boundedInteger(
+        input.elapsedWallMs, foregroundActiveMs, 21600000, "review_batch_timing_invalid"
+      );
+      const queueSize = boundedInteger(input.queueSize, 1, 5000, "review_batch_timing_invalid");
+      if (input.attestationVersion !== "references-batch-attestation-v1" || input.attested !== true) {
+        fail(400, "review_batch_attestation_required");
+      }
+
+      const { data, error } = await admin.rpc("record_content_review_batch_with_measurement", {
+        p_question_version_ids: questionVersionIds,
+        p_decisions: decisions,
+        p_notes: notes,
+        p_reviewer: reviewerId,
+        p_experiment_id: experimentId,
+        p_workflow_mode: workflowMode,
+        p_client_session_id: clientSessionId,
+        p_foreground_active_ms: foregroundActiveMs,
+        p_elapsed_wall_ms: elapsedWallMs,
+        p_queue_size: queueSize,
+        p_attestation_version: String(input.attestationVersion),
+        p_attested: true
+      });
+      if (error) {
+        const message = String(error?.message || "");
+        if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+        if (message.includes("review_batch_targets_changed") || error?.code === "23505") {
+          fail(409, "review_batch_targets_changed");
+        }
+        if (message.includes("question_not_in_review") || message.includes("question_review_rejected")) {
+          fail(409, "review_batch_target_unavailable");
+        }
+        const code = message.match(/(?:review_batch|invalid_review|unknown_question)[a-z_]*/)?.[0];
+        if (code) fail(400, code);
+        fail(500, "review_batch_write_failed");
+      }
+      if (data?.contractId !== "content-review-batch-receipt-v1" ||
+          data?.experimentId !== experimentId ||
+          data?.workflowMode !== workflowMode ||
+          data?.decisionCount !== 7 ||
+          !Array.isArray(data?.reviews) ||
+          data.reviews.length !== 7) {
+        fail(500, "review_batch_write_failed");
+      }
       return response(req, 200, data);
     }
 
