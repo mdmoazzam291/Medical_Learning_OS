@@ -145,6 +145,8 @@ test('rights question cards wait for source resolution without hiding restricted
 
 test('References source focus narrows questions and notes without recording a shared decision', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  const server = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
+  assert.match(server, /'src\/domain\/references-source-focus\.js'/);
   assert.match(source, /function referencesSourcePanel\(\)/);
   assert.match(source, /SOURCE-FOCUSED REFERENCES/);
   assert.match(source, /filterReferencesBySource\(experimentItems, state\.referencesSourceId\)/);

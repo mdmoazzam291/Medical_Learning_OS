@@ -31,7 +31,7 @@ test('correction preserves intake history while substituting a distinct, unrevie
 });
 
 test('migration only retires the exact unreviewed candidate and audits its digest', async () => {
-  const sql = await readFile(new URL('../supabase/migrations/20260929000000_m02b_retire_duplicate_candidate.sql', import.meta.url), 'utf8');
+  const sql = await readFile(new URL('../supabase/migrations/20260928203738_m02b_retire_duplicate_candidate.sql', import.meta.url), 'utf8');
   for (const token of ['content_candidate_retirement_events', 'content_review_current_status_guard',
     'for update of c', 'question_not_in_review', 'correction_target_changed_or_reviewed',
     'infectious:rabies:washing-before-referral@1', 'v_old::text', 'v_new::text']) assert.ok(sql.includes(token));
