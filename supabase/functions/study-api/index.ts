@@ -602,25 +602,40 @@ Deno.serve(async (req: Request) => {
     };
     const getExamMediaMetadata = async (questionVersionIds: string[]) => {
       if (!questionVersionIds.length) return [];
-      const { data: links, error: linkError } = await trustedRead("exam_media_links", async () =>
-        admin.from("content_question_media_links")
-          .select("question_version_id,media_asset_version_id,role")
-          .in("question_version_id", questionVersionIds)
-          .eq("role", "prompt")
-      );
-      if (linkError) fail(500, "exam_media_read_failed");
-      const assetIds = [...new Set((links ?? []).map((row: any) => String(row.media_asset_version_id)))];
+      const chunks = <T,>(values: T[], size = 50) =>
+        Array.from({ length: Math.ceil(values.length / size) }, (_, index) =>
+          values.slice(index * size, (index + 1) * size)
+        );
+
+      const links: any[] = [];
+      for (const ids of chunks(questionVersionIds)) {
+        const { data, error } = await trustedRead("exam_media_links", async () =>
+          admin.from("content_question_media_links")
+            .select("question_version_id,media_asset_version_id,role")
+            .in("question_version_id", ids)
+            .eq("role", "prompt")
+        );
+        if (error) fail(500, "exam_media_read_failed");
+        links.push(...(data ?? []));
+      }
+
+      const assetIds = [...new Set(links.map((row: any) => String(row.media_asset_version_id)))];
       if (!assetIds.length) return [];
-      const { data: assets, error: assetError } = await trustedRead("exam_media_assets", async () =>
-        admin.from("content_media_assets")
-          .select("media_asset_version_id,modality")
-          .in("media_asset_version_id", assetIds)
-      );
-      if (assetError) fail(500, "exam_media_read_failed");
+      const assets: any[] = [];
+      for (const ids of chunks(assetIds)) {
+        const { data, error } = await trustedRead("exam_media_assets", async () =>
+          admin.from("content_media_assets")
+            .select("media_asset_version_id,modality")
+            .in("media_asset_version_id", ids)
+        );
+        if (error) fail(500, "exam_media_read_failed");
+        assets.push(...(data ?? []));
+      }
+
       const modalityByAsset = new Map(
-        (assets ?? []).map((row: any) => [String(row.media_asset_version_id), String(row.modality)])
+        assets.map((row: any) => [String(row.media_asset_version_id), String(row.modality)])
       );
-      return (links ?? []).flatMap((row: any) => {
+      return links.flatMap((row: any) => {
         const modality = modalityByAsset.get(String(row.media_asset_version_id));
         return modality ? [{
           questionVersionId: String(row.question_version_id),
