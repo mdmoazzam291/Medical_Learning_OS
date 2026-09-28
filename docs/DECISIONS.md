@@ -1008,3 +1008,21 @@ Decision:
 - do not persist shared human claim approvals until the measured workflow shows a useful effort reduction without an unacceptable correction signal.
 
 This converts ADR-065/066 from architectural intuition into a measurable go/no-go experiment while preserving human review authority.
+
+
+## ADR-068 — Historical exam reconstructions are evidence objects, not learner questions (accepted, 2026-09-28)
+
+Historical recalled PYQ evidence should not be forced into a current learner-facing question version merely because the first Exam DNA ledger was question-version keyed. Doing so can smear a current guideline/source version backward onto an older examination and create false provenance.
+
+Decision:
+- verify the exam occurrence itself from an official exam authority before attaching any recalled evidence;
+- represent a non-licensed historical recall as a nonverbatim reconstructed-item evidence object, not as copied question stem/options and not as a production QBank item;
+- link the reconstructed item directly to the canonical medical concepts it demonstrably tested;
+- preserve recall-source URLs and source-lineage status separately from medical-truth verification;
+- treat multiple websites repeating the same recall as `single_recall` unless genuinely independent recall lineage is established; source count alone never upgrades corroboration;
+- keep historical reconstructed-item events append-only, retractable and service-only;
+- retain the existing question-version evidence path for lawful licensed exact items and other cases where an exact canonical question version is genuinely the evidence target;
+- let Exam DNA aggregate both evidence families descriptively while keeping predictive inference disabled and surfacing sparse/lineage uncertainty;
+- verify historical medical plausibility against authoritative guidance applicable to the exam era without turning that guidance into proof that the recalled item itself existed.
+
+This preserves the distinction between **what an exam appears to have tested**, **what current medical guidance says**, and **what learner-facing content should teach now**.
