@@ -53,7 +53,12 @@ try {
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(origin + '/web/review.html');
     await page.getByRole('heading', { name: 'Inspect shared evidence before individual decisions' }).waitFor();
+    await page.getByRole('heading', { name: 'Inspect a source once, then its linked targets' }).waitFor();
+    assert.match(await page.locator('.references-source-panel').innerText(), /1 unique source versions/);
     assert.equal(await page.locator('.review-decision-form').count(), 7);
+    await page.locator('[data-action="references-source-focus"][data-source-id="' + pilot.sourceSnapshot.sourceId + '"]').click();
+    assert.equal(await page.locator('.review-decision-form').count(), 7);
+    assert.equal(writes, 0);
     await page.getByText('3 / 7 decisions', { exact: true }).waitFor();
     await page.getByText('2 / 7 decisions', { exact: true }).waitFor();
     assert.match(await page.locator('.review-measurement-panel').innerText(), /Descriptive only · not causal/);
