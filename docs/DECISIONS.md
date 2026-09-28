@@ -906,3 +906,19 @@ Decision:
 - defer visual/multimodal provider qualification until the provider input contract can carry media explicitly.
 
 This prevents a provider from appearing safe because it performs well on a tiny homogeneous text set.
+
+
+## ADR-061 — Visual performance enters the canonical evidence stream before visual inference (accepted, 2026-09-28)
+
+M10b must not create a parallel multimodal mastery store.
+
+Decision:
+- represent a completed visual task as versioned observed evidence bound to the exact media, question and concept versions;
+- distinguish detection, localization, description, interpretation and discrimination because they expose different perceptual failures;
+- preserve the learner's observable response, latency and help use separately from trusted evaluation;
+- allow localization overlap metrics only for localization tasks;
+- project incorrect/partial/unanswered visual interactions into descriptive Mistake observations without assigning a causal error phenotype from one event;
+- expose visual evidence to Study Now as a non-authoritative signal while inferred mastery remains owned by the Preparation Digital Twin after validation;
+- persist through the existing canonical learner-event architecture rather than introducing a multimodal evidence database.
+
+This keeps the multimodal loop aligned with the system rule: interaction → evidence → validated inference → policy, never interaction → invented mastery.
