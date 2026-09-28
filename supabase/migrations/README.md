@@ -46,3 +46,11 @@ The dedicated live project recorded the same changes under deployment-time versi
 
 The two follow-up SQL bodies were recovered from `supabase_migrations.schema_migrations`. Repository filenames intentionally remain after the intake foundation so a fresh lexical migration replay cannot reference trigger helpers before they exist.
 
+## M10b visual interaction persistence — 2026-09-28
+
+The live project and repository now share these exact forward-only migrations:
+
+- `20260928112019_m10b_visual_interaction_ledger.sql` — service-only append-only visual interaction evidence, idempotent write RPC, canonical replay integration, and learner-privacy scope v2.
+- `20260928112441_m10b_visual_interaction_fk_indexes.sql` — covering indexes for the new media and session-owner foreign keys after the Supabase performance advisor identified them.
+
+The migration body for `20260928112019` was recovered directly from `supabase_migrations.schema_migrations` after deployment so the repository copy matches the live applied SQL.

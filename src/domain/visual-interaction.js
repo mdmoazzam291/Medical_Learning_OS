@@ -71,8 +71,12 @@ export function validateVisualInteractionEvent(input) {
   exact(input.evaluation, ['outcome','targetConceptId','localizationIoU','matchedAnnotationVersionId'], 'visual evaluation');
   if (!outcomes.has(input.evaluation.outcome)) fail('Invalid visual outcome');
   text(input.evaluation.targetConceptId,'targetConceptId');
+  if (input.evaluation.targetConceptId !== input.conceptId) fail('Visual target concept mismatch');
   if (input.evaluation.localizationIoU !== null) normalized(input.evaluation.localizationIoU,'localizationIoU');
   if (input.evaluation.matchedAnnotationVersionId !== null) text(input.evaluation.matchedAnnotationVersionId,'matchedAnnotationVersionId');
+  if (input.evaluation.localizationIoU !== null && input.evaluation.matchedAnnotationVersionId === null) {
+    fail('Localization IoU requires matched annotation');
+  }
 
   if (input.taskType === 'localization' && input.response.geometry === null) fail('Localization requires learner geometry');
   if (input.taskType !== 'localization' && input.evaluation.localizationIoU !== null) fail('IoU is localization-only');
