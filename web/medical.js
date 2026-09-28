@@ -66,6 +66,20 @@ function questionMedia(media) {
   return '<div class="question-media-list" aria-label="Question media">' + items + '</div>';
 }
 
+function visualDetectionDescriptor(question) {
+  const descriptor = question?.visualInteraction;
+  if (descriptor?.schemaVersion !== 1 ||
+      descriptor?.taskType !== 'detection' ||
+      typeof descriptor?.mediaAssetVersionId !== 'string') {
+    return null;
+  }
+  if (!Array.isArray(question?.media) ||
+      !question.media.some(item => item?.mediaAssetVersionId === descriptor.mediaAssetVersionId)) {
+    return null;
+  }
+  return descriptor;
+}
+
 function safeSourceLink(source) {
   if (!source?.url) return escape(source?.title || source?.sourceId || 'Source');
   try {
@@ -154,6 +168,7 @@ function studyView() {
   }
 
   const q = session.question;
+  const visualDetection = visualDetectionDescriptor(q);
   const receipt = state.receipt || session.receipt || null;
   const selected = receipt?.selectedOptionId || state.selectedOptionId;
   const answered = Boolean(receipt);
@@ -206,11 +221,18 @@ function studyView() {
         '</h2><p>' + escape(receipt.explanation || '') + '</p></div>'
       )
     : '';
+  const visualEvidence = answered && receipt?.visualDetection
+    ? '<div class="visual-evidence-status"><strong>Visual recognition evidence saved.</strong><span>Image-specific evidence is stored separately from your scored question attempt.</span></div>'
+    : '';
   const feedback = answered
-    ? '<div class="explanation" role="status">' + answerExplanation + '<div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    ? '<div class="explanation" role="status">' + answerExplanation + '<div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + visualEvidence + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
+  const taskLabel = visualDetection ? 'IMAGE RECOGNITION · SERVER SCORED' : 'MEDICAL QBANK';
+  const taskNote = visualDetection
+    ? '<p class="visual-task-note">Recognition task. Your option is scored on the server; image evidence is recorded only after the canonical attempt is accepted.</p>'
+    : '';
 
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">' + taskLabel + '</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study">' + taskNote + '<form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
 }
 
 function render() {
@@ -323,15 +345,32 @@ async function answerCurrent() {
   state.busy = true;
   render();
   try {
-    const receipt = await cloud.answer(session.sessionId, {
-      requestId,
-      position: session.position,
-      optionId
-    });
+    const visualDetection = visualDetectionDescriptor(session.question);
+    let receipt;
+    if (visualDetection) {
+      const result = await cloud.visualDetection(session.sessionId, {
+        requestId,
+        position: session.position,
+        optionId,
+        mediaAssetVersionId: visualDetection.mediaAssetVersionId,
+        helpUsed: false,
+        interventionRef: null
+      });
+      receipt = result.attemptReceipt;
+      if (!receipt?.event?.eventId || !result?.visualReceipt?.eventId) {
+        throw new Error('visual_detection_receipt_invalid');
+      }
+    } else {
+      receipt = await cloud.answer(session.sessionId, {
+        requestId,
+        position: session.position,
+        optionId
+      });
+    }
     state = { ...state, busy: false, receipt, memoryJudgment: null, error: null };
     state.progress = await cloud.progress();
   } catch (error) {
-    reportUnexpected(error, 'record_answer');
+    reportUnexpected(error, visualDetectionDescriptor(session?.question) ? 'record_visual_detection' : 'record_answer');
     state = { ...state, busy: false, error: error.code || error.message || 'answer_write_failed' };
     announce('Answer was not confirmed: ' + state.error + '. Your selection is preserved; retry uses the same idempotency key.');
   }

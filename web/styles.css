@@ -73,3 +73,8 @@
 .autopsy-candidate p{margin:5px 0;font-size:.8rem}
 @media(max-width:900px){.exam-layout{grid-template-columns:1fr}.exam-palette{position:static}.exam-palette-grid{grid-template-columns:repeat(9,1fr)}.exam-topbar{grid-template-columns:1fr auto}.exam-topbar>button{grid-column:1/-1;justify-self:stretch}.exam-readiness-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.exam-page{padding:20px 14px 34px}.exam-topbar{grid-template-columns:1fr auto;top:0;padding-top:10px}.exam-timer strong{font-size:1.45rem}.exam-palette-grid{grid-template-columns:repeat(6,1fr);gap:6px}.exam-palette-button{min-height:40px;padding:6px}.exam-question legend{font-size:1.35rem}.exam-navigation{display:grid;grid-template-columns:1fr 1fr}.exam-navigation .muted{grid-column:1/-1;grid-row:1;text-align:left}.exam-question-actions{display:grid;grid-template-columns:1fr 1fr}.autopsy-candidate{align-items:flex-start;flex-direction:column}.autopsy-candidate .action-link{width:100%}}
+
+/* M10b visual detection learner affordance */
+.visual-task-note{margin:0 0 18px;padding:12px 14px;border-left:3px solid var(--line);background:var(--soft);color:var(--muted);font-size:.8rem;line-height:1.5}
+.visual-evidence-status{display:grid;gap:4px;margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}
+.visual-evidence-status span{color:var(--muted);font-size:.78rem;line-height:1.45}

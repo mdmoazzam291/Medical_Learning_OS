@@ -138,6 +138,19 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     answer(id, { requestId, position, optionId }) {
       return request(`/sessions/${encodeURIComponent(id)}/answer`, { method: 'POST', body: { requestId, position, optionId } });
     },
+    visualDetection(id, {
+      requestId,
+      position,
+      optionId,
+      mediaAssetVersionId,
+      helpUsed = false,
+      interventionRef = null
+    }) {
+      return request(`/sessions/${encodeURIComponent(id)}/visual-detection`, {
+        method: 'POST',
+        body: { requestId, position, optionId, mediaAssetVersionId, helpUsed, interventionRef }
+      });
+    },
     next(id, position) { return request(`/sessions/${encodeURIComponent(id)}/next`, { method: 'POST', body: { position } }); },
     cancel(id) { return request(`/sessions/${encodeURIComponent(id)}/cancel`, { method: 'POST', body: {} }); },
     bookmark(questionVersionId, bookmarked) {
