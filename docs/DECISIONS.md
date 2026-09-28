@@ -1092,3 +1092,25 @@ Decision:
 - measured experiments must not use the full three-gate shortcut inside their References arms because that would contaminate the workflow comparison.
 
 This permits **human judgment compression** while prohibiting **human authority substitution**.
+
+
+## ADR-071 — Review judgment is required; handwritten input is not (accepted, 2026-09-29)
+
+Production medical review was becoming an operational bottleneck because the interface coupled reviewer judgment to repetitive text entry and one-target-at-a-time submission.
+
+Decision:
+- preserve Medical, References and Rights as independent production review claims;
+- remove free-text entry as a requirement for ordinary question and canonical-note decisions;
+- use server-generated structured audit notes with explicit decision/reason codes;
+- allow one-click per-target approve/reject, select-many batches, and master approve/reject for the current gate;
+- require master actions to carry an explicit human inspection attestation and exact-count confirmation;
+- keep every target's immutable review event and gate-specific target fingerprint even when submission is batched;
+- make batch writes atomic so target drift or one invalid target cannot leave a partially approved set;
+- never grant review actions publication authority;
+- preserve a tightly scoped all-three-gates shortcut only for one exact, previously unreviewed question with complete review-assist evidence, current source rights and all three reviewer grants;
+- do not introduce concept review while concepts remain structural IDs/labels/tags rather than versioned medical claims;
+- keep AI review assist proposal-only in production until a separately versioned qualification policy passes prospective validation;
+- a future AI reviewer must use the same exact-target/fingerprint/evidence boundaries and cannot self-review content it authored.
+
+Rationale:
+the safety value comes from independent evidence-backed judgment and immutable target binding, not from typing a paragraph into every form. This reduces reviewer burden without collapsing the review authority model and creates a clean migration path toward AI-first, human-on-exception review.
