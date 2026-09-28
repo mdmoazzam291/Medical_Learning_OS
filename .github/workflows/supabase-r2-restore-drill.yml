@@ -6,9 +6,6 @@ on:
     # Monthly full recoverability proof. Weekly backups remain separate.
     # 06:00 IST on the first day of each month.
     - cron: '30 0 1 * *'
-  push:
-    branches: ["ops/m14-latest-backup-restore"]
-
 permissions:
   contents: read
 
