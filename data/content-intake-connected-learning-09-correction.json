@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "concepts": [],
+  "sources": [
+    {
+      "sourceId": "who:rabies-vaccinations:accessed-2026-09-29",
+      "title": "WHO: Rabies vaccinations and immunization",
+      "url": "https://www.who.int/teams/control-of-neglected-tropical-diseases/rabies/vaccinations-and-immunization",
+      "version": "accessed-2026-09-29",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Citation-only factual grounding is proposed for original question prose. No WHO passage, image or table is reproduced. Independent source Rights review remains required."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "infectious:rabies:water-only-without-soap",
+      "questionVersionId": "infectious:rabies:water-only-without-soap@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Distinct resource-limited application candidate replacing the near-duplicate referral item, not a validated equivalent or transfer item",
+      "stem": "A patient presents immediately after a potentially rabies-exposing dog bite at a remote clinic. Neither soap nor an antiviral wound-cleansing agent is available. While urgent post-exposure prophylaxis is arranged, what should be done to the wound now?",
+      "options": [
+        { "optionId": "wait-for-soap", "text": "Leave it untouched until soap becomes available" },
+        { "optionId": "wash-with-water", "text": "Wash the wound thoroughly and extensively with the available water" },
+        { "optionId": "dry-dressing", "text": "Cover it dry without cleansing to preserve the wound surface" },
+        { "optionId": "suture-first", "text": "Close the wound immediately before any cleansing" }
+      ],
+      "answerOptionId": "wash-with-water",
+      "explanation": "Do not defer local cleansing when soap or an antiviral agent is unavailable: wash thoroughly and extensively with water. Arrange urgent assessment for indicated post-exposure prophylaxis; water-only cleansing is not a substitute for it.",
+      "conceptLinks": [
+        { "conceptId": "infectious:rabies:pep-wound-washing", "role": "primary" }
+      ],
+      "sourceIds": ["who:rabies-vaccinations:accessed-2026-09-29"],
+      "provenance": {
+        "kind": "ai_generated", "exam": null, "year": null,
+        "evidence": "Original AI-generated resource-limited scenario based on WHO Rabies vaccinations and immunization, wound management section, accessed 2026-09-29. Not a recalled or licensed PYQ. It does not claim human review, equivalent-item status or transfer validity."
+      },
+      "status": "in_review", "reviews": [], "publishedAt": null
+    }
+  ]
+}

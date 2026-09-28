@@ -1,4 +1,5 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
+import { referencesSourceFocus, filterReferencesBySource } from '/src/domain/references-source-focus.js';
 import { referencesPanel } from '/web/references-panel.js';
 import { REFERENCES_WORKFLOW_EXPERIMENT_V1, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
@@ -21,6 +22,7 @@ let state = {
   pipelineStatus: null,
   reviewAssist: null,
   referencesWorkspace: null,
+  referencesSourceId: null,
   referencesError: null,
   referencesExperimentArm: 'all',
   referencesMeasurementSummary: null,
@@ -378,6 +380,26 @@ function rightsSourceBacklogPanel() {
   return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">SOURCE-FIRST RIGHTS</span><h2>Resolve unique sources before repeated question review</h2></div><span class="badge">${escape(unresolved.length)} unresolved source${unresolved.length === 1 ? '' : 's'}</span></div><p>${escape(impactedQuestions.size)} pending question${impactedQuestions.size === 1 ? '' : 's'} depend on these sources. Resolve each source once; question-level Rights & provenance approval still remains separate.</p><div class="source-list">${unresolved.map(entry => sourceCard(entry.source, { allowResolve: true, impactCount: entry.questionIds.size })).join('')}</div></section>`;
 }
 
+function referencesSourcePanel() {
+  if (state.selectedKind !== 'references' || state.loading || state.error ||
+      state.referencesExperimentArm !== 'all') return '';
+  const groups = referencesSourceFocus(state.items);
+  if (!groups.length) return '';
+  const selected = groups.find(group => group.source.sourceId === state.referencesSourceId);
+  const option = (sourceId, label, count) =>
+    '<button type="button" class="' + (state.referencesSourceId === sourceId ? 'primary' : 'secondary') +
+    '" data-action="references-source-focus" data-source-id="' + escape(sourceId || '') + '">' +
+    escape(label) + ' · ' + escape(count) + '</button>';
+  return '<section class="panel references-source-panel"><div class="section-heading"><div><span class="eyebrow">SOURCE-FOCUSED REFERENCES</span>' +
+    '<h2>Inspect a source once, then its linked targets</h2></div><span class="badge">' +
+    escape(groups.length) + ' unique source versions</span></div>' +
+    '<p>Choose a source to narrow the queue. Its original page and version are shown here; then check each question or note for exact claim support, wording, and scope. Switching sources records no decision.</p>' +
+    '<div class="button-row">' + option('', 'All targets', state.items.length) +
+    groups.map(group => option(group.source.sourceId, group.source.title || group.source.sourceId, group.targetIds.length)).join('') +
+    '</div>' + (selected ? '<div class="source-list">' + sourceCard(selected.source, { allowResolve: false, impactCount: selected.targetIds.length }) + '</div>' : '') +
+    '<p class="muted">Shared inspection is not shared approval. Each target still needs its own authenticated References decision; Medical, Rights, and publication stay separate.</p></section>';
+}
+
 function questionSourcesHaveResolvedRights(item) {
   const sources = Array.isArray(item?.sources) ? item.sources : [];
   return sources.length > 0 && sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
@@ -437,11 +459,14 @@ function authorized() {
   const experimentItems = referencesExperiment
     ? filterReferencesWorkflowItems(state.items, state.referencesExperimentArm)
     : state.items;
+  const focusedItems = state.selectedKind === 'references' && !referencesExperiment
+    ? filterReferencesBySource(experimentItems, state.referencesSourceId)
+    : experimentItems;
   const rightsSourceFirst = state.selectedKind === 'rights' && state.targetType === 'questions';
   const visibleItems = rightsSourceFirst
-    ? experimentItems.filter(questionSourcesHaveResolvedRights)
-    : experimentItems;
-  const blockedByUnknownRights = rightsSourceFirst ? experimentItems.length - visibleItems.length : 0;
+    ? focusedItems.filter(questionSourcesHaveResolvedRights)
+    : focusedItems;
+  const blockedByUnknownRights = rightsSourceFirst ? focusedItems.length - visibleItems.length : 0;
   const body = state.loading
     ? '<section class="panel"><p>Loading authorized review targets…</p></section>'
     : state.error
@@ -457,6 +482,7 @@ function authorized() {
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${rightsSourceBacklogPanel()}
   ${referencesExperimentPanel()}
+  ${referencesSourcePanel()}
   ${state.selectedKind === 'references' && state.targetType === 'questions' && state.referencesExperimentArm !== 'standard' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
   ${body}</main>`;
 }
@@ -519,14 +545,17 @@ async function loadQueue(kind = state.selectedKind) {
       }
     }
     if (generation !== queueGeneration) return;
+    const items = Array.isArray(result?.items) ? result.items : [];
+    const sourceStillPresent = referencesSourceFocus(items).some(group => group.source.sourceId === state.referencesSourceId);
     state = {
       ...state,
+      referencesSourceId: sourceStillPresent ? state.referencesSourceId : null,
       referencesWorkspace,
       referencesError,
       referencesMeasurementSummary,
       referencesMeasurementError,
       loading: false,
-      items: Array.isArray(result?.items) ? result.items : [],
+      items,
       pipelineStatus,
       reviewAssist,
       error: null
@@ -566,12 +595,14 @@ async function bootstrap() {
 root.addEventListener('change', event => {
   if (event.target.id === 'review-kind') {
     state.referencesExperimentArm = 'all';
+    state.referencesSourceId = null;
     reviewTiming = null;
     loadQueue(event.target.value);
   }
   if (event.target.id === 'review-target') {
     state.targetType = event.target.value === 'neural-notes' ? 'neural-notes' : 'questions';
     state.referencesExperimentArm = 'all';
+    state.referencesSourceId = null;
     reviewTiming = null;
     loadQueue(state.selectedKind);
   }
@@ -591,6 +622,14 @@ root.addEventListener('click', event => {
     state.referencesExperimentArm = mode;
     render();
     beginReviewTiming();
+    return;
+  }
+
+  if (target.dataset.action === 'references-source-focus') {
+    const sourceId = target.dataset.sourceId || null;
+    if (sourceId && !referencesSourceFocus(state.items).some(group => group.source.sourceId === sourceId)) return;
+    state.referencesSourceId = sourceId;
+    render();
     return;
   }
 
@@ -712,4 +751,3 @@ root.addEventListener('submit', event => {
 
 render();
 bootstrap();
-

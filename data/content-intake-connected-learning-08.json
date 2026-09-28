@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "concepts": [],
+  "sources": [
+    {
+      "sourceId": "who:rabies-fact-sheet:2026-09-17",
+      "title": "WHO: Rabies",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+      "version": "2026-09-17",
+      "rights": {
+        "status": "unknown",
+        "evidence": "Citation-only factual grounding is proposed for original question and note prose. No source tables, images or expressive passages are reproduced. Independent source Rights review remains required."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "emergency:anaphylaxis:no-rash-first-action",
+      "questionVersionId": "emergency:anaphylaxis:no-rash-first-action@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Targeted alternate-item candidate on an existing canonical concept; not a validated equivalent or transfer item",
+      "stem": "Soon after vaccination, an adult develops sudden wheezing and hypotension without urticaria. Anaphylaxis is suspected. Which immediate medication decision is most appropriate?",
+      "options": [
+        { "optionId": "wait-rash", "text": "Wait for a rash before treating anaphylaxis" },
+        { "optionId": "im-epinephrine", "text": "Give intramuscular epinephrine promptly" },
+        { "optionId": "antihistamine-only", "text": "Use an oral antihistamine as the initial and sole treatment" },
+        { "optionId": "observe-only", "text": "Observe without medication because skin findings are absent" }
+      ],
+      "answerOptionId": "im-epinephrine",
+      "explanation": "Anaphylaxis may occur without urticaria. Suspected anaphylaxis with respiratory or cardiovascular involvement requires immediate intramuscular epinephrine; absence of a rash is not a reason to delay treatment.",
+      "conceptLinks": [
+        { "conceptId": "emergency:anaphylaxis:first-line-treatment", "role": "primary" }
+      ],
+      "sourceIds": ["cdc:immunization-adverse-reactions:2024-07-25"],
+      "provenance": {
+        "kind": "ai_generated", "exam": null, "year": null,
+        "evidence": "AI-generated original alternate-question candidate, not a recalled or licensed PYQ. CDC narrative guidance was checked on 2026-09-28. No human approval, item equivalence, novelty or transfer validity is asserted."
+      },
+      "status": "in_review", "reviews": [], "publishedAt": null
+    },
+    {
+      "questionId": "infectious:rabies:washing-before-referral",
+      "questionVersionId": "infectious:rabies:washing-before-referral@1",
+      "version": 1,
+      "supersedes": null,
+      "authorId": "mlos-ai-drafter",
+      "changeReason": "Targeted alternate-item candidate on an existing concept, with a secondary PEP connection",
+      "stem": "An unvaccinated adult has a transdermal dog bite. While urgent referral for rabies prophylaxis is arranged, which local first-aid measure should begin immediately?",
+      "options": [
+        { "optionId": "wait", "text": "Leave the wound unwashed until referral" },
+        { "optionId": "brief-rinse", "text": "Rinse for a few seconds only" },
+        { "optionId": "wash", "text": "Wash thoroughly with soap and water for at least 15 minutes" },
+        { "optionId": "dry-cover", "text": "Apply a dry covering without cleansing" }
+      ],
+      "answerOptionId": "wash",
+      "explanation": "Start thorough soap-and-water washing immediately for at least 15 minutes. Washing does not replace vaccine or indicated wound infiltration with rabies immunoglobulin or monoclonal antibodies for category III exposure.",
+      "conceptLinks": [
+        { "conceptId": "infectious:rabies:pep-wound-washing", "role": "primary" },
+        { "conceptId": "infectious:rabies:category-iii-rig", "role": "secondary" }
+      ],
+      "sourceIds": ["who:rabies-fact-sheet:2026-09-17"],
+      "provenance": {
+        "kind": "ai_generated", "exam": null, "year": null,
+        "evidence": "AI-generated original alternate-question candidate, not a recalled or licensed PYQ. WHO guidance dated 2026-09-17 was checked on 2026-09-28. Secondary concept linkage is context, not separate evidence of assessed knowledge. No human review or transfer validation is asserted."
+      },
+      "status": "in_review", "reviews": [], "publishedAt": null
+    }
+  ]
+}

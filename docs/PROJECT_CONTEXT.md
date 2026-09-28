@@ -2,6 +2,10 @@
 
 Last reconciled: 2026-09-28 (Asia/Kolkata).
 
+## Connected content direction — 2026-09-29
+
+The user requests as much or as little canonical concept/note content as app testing requires: notes may support one or several questions, with relevant connections across the 19-subject curriculum. This permits a targeted connected-content pilot rather than expanding simulator inventory in another 25-question batch. Preserve one canonical identity and meaningful subject views; do not force every concept into all 19 subjects. Add regression coverage to the existing CI, without generating artificial learner outcomes or bypassing human production review. Latest retrieved chat summaries were incomplete; current repository milestones and read-only live readiness were used to reconcile the next step.
+
 ## Standing user instruction
 Take reference/context from the ChatGPT project named **“medical learning os”** when deciding or implementing the next step. Work only in Medical_Learning_OS. The older NEETPG2027 repository is excluded unless explicitly authorized.
 

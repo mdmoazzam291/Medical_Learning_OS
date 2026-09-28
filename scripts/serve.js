@@ -23,6 +23,7 @@ const allowed = new Set([
   'web/review.js',
   'web/references-panel.js',
   'src/domain/references-workspace.js',
+  'src/domain/references-source-focus.js',
   'src/domain/review-workflow-experiment.js',
   'src/domain/source-grounded-verification.js',
   'src/domain/canonical-integrity.js',
@@ -70,4 +71,3 @@ const host = process.env.MLOS_HOST || '127.0.0.1';
 server.listen(Number(process.env.PORT || 3000), host, () => {
   console.log(`Medical Learning OS: http://${host}:${server.address().port}`);
 });
-

@@ -1061,3 +1061,17 @@ Decision:
 - no arbitrary population threshold is frozen before the platform has enough reviewed alternate-item content to support a defensible protocol design.
 
 This preserves the separation between **content readiness**, **research design**, **learner scheduling**, and **inference authority**.
+
+## ADR-071 — Gap-sized connected content, not inventory growth (accepted, 2026-09-29)
+
+The latest user instruction asks for notes and concepts in the quantity needed for app connections and continuous testing. With 180 simulator items already available, the next gap is reuse of existing canonical concepts, not another breadth batch.
+
+- Add two alternate-question candidates and two note candidates using existing concepts. Reuse the published anaphylaxis note without rewriting it.
+- Preserve primary assessment versus secondary/context roles. A secondary link never manufactures evidence of knowledge or a valid alternate pair.
+- Keep subject views unrestricted in cardinality, but require meaningful clinical mapping; a synthetic 19-tag regression test is not 19-subject medical coverage.
+- Keep source, question and note review/publication independent. New WHO source rights remain unresolved.
+- Add dependency-free authoring checks to existing CI; do not buy monitoring or invent learner attempts to make readiness appear green.
+- This targeted pilot follows the new quantity-as-needed instruction, not the earlier 25-question minimum for autonomous simulator inventory batches. That inventory policy remains unchanged for its original scope.
+- Canonical notes keep the existing single-concept storage contract. Cross-concept relationships use existing question concept roles; no speculative graph store or many-concept note migration is required here.
+
+See `CONNECTED_LEARNING_PILOT.md`. Research activation, item comparability and the remaining authenticated Study Now acceptance gate remain separate.
