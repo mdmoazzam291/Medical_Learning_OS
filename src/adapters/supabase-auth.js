@@ -24,6 +24,16 @@ function cleanPassword(password) {
   return password;
 }
 
+function cleanRedirectUrl(value) {
+  let redirect;
+  try { redirect = new URL(String(value)); } catch { throw new AuthError(400, 'invalid_redirect_url'); }
+  const localhost = ['127.0.0.1', 'localhost'].includes(redirect.hostname);
+  if (redirect.protocol !== 'https:' && !(localhost && redirect.protocol === 'http:')) {
+    throw new AuthError(400, 'invalid_redirect_url');
+  }
+  return redirect;
+}
+
 function normalizedUser(value) {
   if (!value || typeof value !== 'object' || typeof value.id !== 'string' || !value.id) return null;
   return {
@@ -104,6 +114,14 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
   }
 
   return {
+    oauthAuthorizeUrl(provider, { redirectTo } = {}) {
+      if (provider !== 'google') throw new AuthError(400, 'unsupported_oauth_provider');
+      const redirect = cleanRedirectUrl(redirectTo);
+      const url = new URL(base + '/auth/v1/authorize');
+      url.searchParams.set('provider', provider);
+      url.searchParams.set('redirect_to', redirect.href);
+      return url.href;
+    },
     async consumeImplicitRedirect(urlLike) {
       const params = implicitParams(urlLike);
       if (!params) return { handled: false, session: read() };
@@ -128,10 +146,7 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
     async signUp(email, password, { emailRedirectTo } = {}) {
       let path = '/auth/v1/signup';
       if (emailRedirectTo !== undefined) {
-        let redirect;
-        try { redirect = new URL(String(emailRedirectTo)); } catch { throw new AuthError(400, 'invalid_redirect_url'); }
-        const localhost = ['127.0.0.1', 'localhost'].includes(redirect.hostname);
-        if (redirect.protocol !== 'https:' && !(localhost && redirect.protocol === 'http:')) throw new AuthError(400, 'invalid_redirect_url');
+        const redirect = cleanRedirectUrl(emailRedirectTo);
         path += `?redirect_to=${encodeURIComponent(redirect.href)}`;
       }
       const data = await api(path, { body: { email: cleanEmail(email), password: cleanPassword(password) } });

@@ -1383,3 +1383,15 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - The existing weekly Supabase→R2 backup now runs this live audit before creating a dump, so privilege drift blocks backup/release evidence instead of becoming silent configuration debt.
 - The audit step installs `postgresql-client` only when `psql` is absent, avoiding runner-image assumptions.
 - Remaining Supabase Auth warning: leaked-password protection is disabled. The connected Supabase tools expose the advisor but not an Auth-config write operation, so that dashboard/control-plane setting remains externally gated.
+
+## Google OAuth learner entry — 2026-09-28
+- Google was added as a Supabase Auth provider by the project owner.
+- Before app wiring, the live Auth schema contained 0 Google identities/users and 3 email identities; provider configuration had therefore not yet been exercised by a learner.
+- The existing custom Auth adapter now generates a provider-scoped hosted Supabase OAuth authorize URL for Google only.
+- OAuth return URLs are restricted to HTTPS, except localhost/127.0.0.1 HTTP during development.
+- No Google client secret, operator credential or provider access token is added to browser storage or application data.
+- Google and email/password both resolve to the same canonical Supabase Auth user UUID. No second account/learner mapping layer was introduced.
+- The account page now exposes `Continue with Google` while preserving email/password as an alternative.
+- The existing callback path remains authoritative: returned Supabase access tokens are checked against `/auth/v1/user` before session persistence, then token-bearing fragments are scrubbed from browser history.
+- Unit/browser coverage verifies provider scoping, redirect validation, no client-secret parameters, and correct hosted authorize URL construction.
+- A temporary branch-only live smoke verifies the hosted Auth service reports Google enabled; the workflow will be removed before merge.
