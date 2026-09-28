@@ -51,12 +51,12 @@ test('client adapter sends no reviewer identity for full bundle', () => {
   assert.match(section, /attestationVersion/);
 });
 
-test('browser requires explicit human attestation and preserves individual reject path', () => {
+test('browser requires explicit human attestation and preserves gate-specific reject path', () => {
   assert.match(ui, /FULL REVIEW BUNDLE/);
   assert.match(ui, /Human decision required/);
   assert.match(ui, /I independently inspected this exact question/);
-  assert.match(ui, /Approve all 3 gates atomically/);
-  assert.match(ui, /If any gate should fail, use the normal individual reject control instead/);
+  assert.match(ui, /Approve all 3 gates/);
+  assert.match(ui, /If any gate should fail, use the gate-specific Reject button instead/);
   assert.match(ui, /review\.recordFullQuestionReview/);
   assert.match(ui, /class="secondary danger-outline"[^>]*>Reject version</);
 });
