@@ -87,3 +87,16 @@ test('detection cannot record an empty learner response', () => {
   value.evaluation = { ...value.evaluation, localizationIoU:null };
   assert.throws(() => validateVisualInteractionEvent(value), /observable response/);
 });
+
+
+test('visual target concept must match the canonical event concept', () => {
+  const value = event();
+  value.evaluation = { ...value.evaluation, targetConceptId:'concept:other' };
+  assert.throws(() => validateVisualInteractionEvent(value), /target concept mismatch/);
+});
+
+test('localization IoU requires the exact matched annotation version', () => {
+  const value = event();
+  value.evaluation = { ...value.evaluation, matchedAnnotationVersionId:null };
+  assert.throws(() => validateVisualInteractionEvent(value), /matched annotation/);
+});
