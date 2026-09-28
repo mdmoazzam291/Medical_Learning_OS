@@ -58,7 +58,8 @@ test('browser requires explicit human attestation and preserves gate-specific re
   assert.match(ui, /Approve all 3 gates/);
   assert.match(ui, /If any gate should fail, use the gate-specific Reject button instead/);
   assert.match(ui, /review\.recordFullQuestionReview/);
-  assert.match(ui, /class="secondary danger-outline"[^>]*>Reject version</);
+  assert.match(ui, /quick-structured-review/);
+  assert.doesNotMatch(ui, /name="medicalNotes"|name="referencesNotes"|name="rightsNotes"/);
 });
 
 test('full review shortcut is hidden inside measured M02c References arms', () => {
