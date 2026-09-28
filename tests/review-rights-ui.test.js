@@ -115,3 +115,30 @@ test('reviewer visual surface accepts only https signed media delivery', async (
   assert.match(source, /parsed\.protocol === 'https:'/);
   assert.match(source, /Media unavailable/);
 });
+
+
+test('rights review compresses repeated source work into a source-first unique backlog', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function rightsSourceBacklogPanel\(\)/);
+  assert.match(source, /SOURCE-FIRST RIGHTS/);
+  assert.match(source, /Resolve unique sources before repeated question review/);
+  assert.match(source, /question-level Rights & provenance approval still remains separate/);
+  assert.match(source, /new Map\(\)/);
+  assert.match(source, /questionIds: new Set\(\)/);
+  assert.match(source, /b\.questionIds\.size - a\.questionIds\.size/);
+  assert.match(source, /impactCount: entry\.questionIds\.size/);
+  assert.match(source, /allowResolve: state\.selectedKind !== 'rights'/);
+  assert.match(source, /rightsSourceBacklogPanel\(\)/);
+});
+
+
+test('rights question cards wait for source resolution without hiding restricted-source rejection targets', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function questionSourcesHaveResolvedRights\(item\)/);
+  assert.match(source, /source\?\.rights\?\.status \|\| 'unknown'/);
+  assert.match(source, /!== 'unknown'/);
+  assert.match(source, /state\.items\.filter\(questionSourcesHaveResolvedRights\)/);
+  assert.match(source, /question decisions? hidden until every referenced source has a recorded rights status/);
+  assert.match(source, /Source resolution does not approve any question/);
+  assert.doesNotMatch(source, /source\?\.rights\?\.status === 'restricted'.*return false/s);
+});

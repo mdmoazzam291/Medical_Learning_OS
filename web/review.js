@@ -177,13 +177,16 @@ function unauthorized() {
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">CONTENT REVIEW</span><h1>No reviewer grant.</h1><p>${escape(state.user?.email || 'Authenticated account')} is signed in, but has no medical, references, or rights review authority.</p></div><span class="badge">M04c</span></div><section class="panel"><h2>Fail closed by default.</h2><p>Reviewer privileges are assigned outside the learner UI. No content is exposed for review until an explicit server-side grant exists.</p></section></main>`;
 }
 
-function sourceCard(source) {
+function sourceCard(source, { allowResolve = true, impactCount = null } = {}) {
   const rights = source?.rights || {};
   const status = rights.status || 'unknown';
-  const canResolve = state.selectedKind === 'rights' && status === 'unknown';
+  const canResolve = allowResolve && state.selectedKind === 'rights' && status === 'unknown';
   const sourceAssist = assistSource(source?.sourceId);
   const draftEvidenceButton = canResolve && sourceAssist?.draftRightsEvidence
     ? `<button class="secondary" type="button" data-action="use-rights-assist-evidence" data-source-id="${escape(source?.sourceId || '')}">Use source-policy draft</button>`
+    : '';
+  const impact = Number.isFinite(Number(impactCount))
+    ? `<span class="badge">${escape(Number(impactCount))} pending question${Number(impactCount) === 1 ? '' : 's'}</span>`
     : '';
   const form = canResolve ? `
     <form class="source-rights-form" data-source-id="${escape(source?.sourceId || '')}">
@@ -192,7 +195,40 @@ function sourceCard(source) {
       ${draftEvidenceButton}
       <button class="secondary" type="submit" ${state.submitting ? 'disabled' : ''}>Resolve source rights</button>
     </form>` : '';
-  return `<article class="source-card"><div><strong>${escape(source?.title || 'Untitled source')}</strong><p class="muted">${escape(source?.sourceId || 'unknown source')} · version ${escape(source?.version || '?')}</p></div><dl><div><dt>Rights</dt><dd>${escape(status)}</dd></div><div><dt>Evidence</dt><dd>${escape(rights.evidence || 'None recorded')}</dd></div></dl><div>${sourceLink(source?.url)}</div>${form}</article>`;
+  return `<article class="source-card"><div class="section-heading"><div><strong>${escape(source?.title || 'Untitled source')}</strong><p class="muted">${escape(source?.sourceId || 'unknown source')} · version ${escape(source?.version || '?')}</p></div>${impact}</div><dl><div><dt>Rights</dt><dd>${escape(status)}</dd></div><div><dt>Evidence</dt><dd>${escape(rights.evidence || 'None recorded')}</dd></div></dl><div>${sourceLink(source?.url)}</div>${form}</article>`;
+}
+
+function rightsSourceBacklogPanel() {
+  if (state.selectedKind !== 'rights' || state.targetType !== 'questions' || state.loading || state.error) return '';
+
+  const bySource = new Map();
+  for (const item of state.items) {
+    const questionVersionId = item?.question?.questionVersionId;
+    for (const source of Array.isArray(item?.sources) ? item.sources : []) {
+      const sourceId = source?.sourceId;
+      if (!sourceId) continue;
+      const current = bySource.get(sourceId) || { source, questionIds: new Set() };
+      if (questionVersionId) current.questionIds.add(questionVersionId);
+      bySource.set(sourceId, current);
+    }
+  }
+
+  const unresolved = [...bySource.values()]
+    .filter(entry => (entry.source?.rights?.status || 'unknown') === 'unknown')
+    .sort((a, b) => b.questionIds.size - a.questionIds.size ||
+      String(a.source?.sourceId || '').localeCompare(String(b.source?.sourceId || '')));
+
+  if (!unresolved.length) {
+    return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">SOURCE-FIRST RIGHTS</span><h2>Source rights resolved</h2></div><span class="badge">0 unresolved sources</span></div><p class="muted">Proceed with question-level provenance and rights decisions. Source resolution never approves a question gate by itself.</p></section>`;
+  }
+
+  const impactedQuestions = new Set(unresolved.flatMap(entry => [...entry.questionIds]));
+  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">SOURCE-FIRST RIGHTS</span><h2>Resolve unique sources before repeated question review</h2></div><span class="badge">${escape(unresolved.length)} unresolved source${unresolved.length === 1 ? '' : 's'}</span></div><p>${escape(impactedQuestions.size)} pending question${impactedQuestions.size === 1 ? '' : 's'} depend on these sources. Resolve each source once; question-level Rights & provenance approval still remains separate.</p><div class="source-list">${unresolved.map(entry => sourceCard(entry.source, { allowResolve: true, impactCount: entry.questionIds.size })).join('')}</div></section>`;
+}
+
+function questionSourcesHaveResolvedRights(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 && sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
 }
 
 function reviewItem(item, index) {
@@ -209,7 +245,7 @@ function reviewItem(item, index) {
     ${mediaReviewPanel(item)}\n    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
     <div class="review-metadata"><div><span>Primary concept</span><strong>${escape(primary?.conceptId || 'Not linked')}</strong></div><div><span>Provenance</span><strong>${escape(provenance.kind || 'unknown')}</strong></div><div><span>Exam/year</span><strong>${escape(provenance.exam || 'N/A')} ${escape(provenance.year ?? '')}</strong></div></div>
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
-    <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
+    <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     ${reviewAssistPanel(q.questionVersionId)}
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
@@ -231,7 +267,7 @@ function noteReviewItem(item, index) {
     <section class="review-section"><h3>Canonical note body</h3><pre class="vault-markdown">${escape(note.bodyMarkdown || '')}</pre></section>
     <div class="review-metadata"><div><span>Concept</span><strong>${escape(note.conceptId || 'Unknown')}</strong></div><div><span>Version</span><strong>${escape(note.version || '?')}</strong></div><div><span>Fingerprint</span><strong>${escape((note.contentSha256 || '').slice(0, 16))}…</strong></div></div>
     <section class="review-section"><h3>Provenance</h3><p><strong>${escape(provenance.kind || 'unknown')}</strong></p><p>${escape(provenance.evidence || 'No provenance evidence recorded.')}</p></section>
-    <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
+    <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-note-version-id="${escape(note.noteVersionId || '')}">
       <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
@@ -242,17 +278,25 @@ function noteReviewItem(item, index) {
 
 function authorized() {
   const kinds = state.grants;
+  const rightsSourceFirst = state.selectedKind === 'rights' && state.targetType === 'questions';
+  const visibleItems = rightsSourceFirst
+    ? state.items.filter(questionSourcesHaveResolvedRights)
+    : state.items;
+  const blockedByUnknownRights = rightsSourceFirst ? state.items.length - visibleItems.length : 0;
   const body = state.loading
     ? '<section class="panel"><p>Loading authorized review targets…</p></section>'
     : state.error
       ? `<section class="panel"><h2>Review queue unavailable</h2><p>${escape(state.error)}</p><button class="secondary" data-action="reload">Retry</button></section>`
-      : state.items.length
-        ? `<div class="review-list">${state.items.map(state.targetType === 'neural-notes' ? noteReviewItem : reviewItem).join('')}</div>`
-        : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
+      : visibleItems.length
+        ? `${blockedByUnknownRights ? `<section class="panel"><p><strong>${escape(blockedByUnknownRights)}</strong> question decision${blockedByUnknownRights === 1 ? '' : 's'} hidden until every referenced source has a recorded rights status.</p></section>` : ''}<div class="review-list">${visibleItems.map(state.targetType === 'neural-notes' ? noteReviewItem : reviewItem).join('')}</div>`
+        : state.items.length && rightsSourceFirst
+          ? `<section class="panel empty"><h2>Resolve source rights first.</h2><p>${escape(blockedByUnknownRights)} question decision${blockedByUnknownRights === 1 ? '' : 's'} are intentionally hidden until their referenced sources have a recorded rights status. Source resolution does not approve any question.</p></section>`
+          : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
 
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
   ${pipelinePanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
+  ${rightsSourceBacklogPanel()}
   ${body}</main>`;
 }
 
