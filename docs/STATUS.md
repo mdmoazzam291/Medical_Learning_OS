@@ -1447,3 +1447,16 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Browser roles cannot execute the projection; `service_role` can. No new table, RLS policy or learner-facing authority was added.
 - Supabase security advisors show no new warning from M11a. The existing leaked-password-protection warning remains the only actionable Auth warning.
 - M11a is DONE. The next research step is a preregistered retention-probe/analysis protocol or naturally accumulated delayed evidence, not synthetic backfilling.
+
+
+## M11b0 retention-probe readiness gate — 2026-09-29
+- Live migration `20260928193141_m11b_retention_probe_readiness.sql` adds service-only `study_retention_probe_readiness_v1()`.
+- The readiness projection distinguishes question identity from question version. Two versions of the same question never count as an alternate item.
+- It audits published primary concepts, distinct published questions, structurally possible alternate-item pairs, and in-review alternates that target an already-published primary concept.
+- Current live catalog: **6 published question versions, 6 distinct published question identities, 6 published primary concepts, 0 concepts with a published alternate, 0 published alternate-item pairs, and 0 in-review alternate candidates on those published concepts**.
+- Therefore a real alternate-item retention probe is structurally blocked. The system explicitly returns `canActivateAlternateItemProbe=false`.
+- The blocker is content structure, not missing scheduler code. No Study Now change or same-item early resurfacing was introduced.
+- Any future alternate probe item must pass the existing Medical, References and Rights review gates before publication. The retention protocol/horizons must then be preregistered before the first assignment.
+- Browser roles cannot execute the readiness projection; `service_role` can. The function is read-only and creates no learner evidence.
+- Supabase security advisors show no new warning from this change. The pre-existing leaked-password-protection warning remains unchanged.
+- M11b is now IN PROGRESS. M11b0 readiness is DONE; protocol activation remains correctly gated by reviewed alternate-item content.
