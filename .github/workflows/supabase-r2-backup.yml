@@ -69,6 +69,12 @@ jobs:
           aws --version
           supabase --version
 
+      - name: Verify live service-only privilege boundaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          psql "$SUPABASE_DB_URL" --no-psqlrc --file supabase/verification/service-boundary-audit.sql
+
       - name: Create Supabase logical dump set
         id: dump
         shell: bash
