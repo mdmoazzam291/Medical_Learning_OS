@@ -372,3 +372,15 @@ test('both session state and explicit media endpoint use the same signed-media r
   assert.match(source, /const mediaPrompt = await learnerMediaPrompt\(q\.questionVersionId\)/);
   assert.match(source, /response\(req, 200, await learnerMediaPrompt\(questionVersionId\)\)/);
 });
+
+
+test('incorrect answer receipt carries deterministic canonical grounded teaching without provider dependency', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /buildCanonicalPostAnswerTeaching/);
+  assert.match(source, /correct: event\.correct/);
+  assert.match(source, /conceptId: primary\.conceptId/);
+  assert.match(source, /explanation: q\.explanation/);
+  assert.match(source, /teachingDecision: postAnswerTeaching\?\.decision \?\? null/);
+  assert.match(source, /teaching: postAnswerTeaching\?\.teaching \?\? null/);
+  assert.doesNotMatch(source, /openai|gemini|anthropic/i);
+});
