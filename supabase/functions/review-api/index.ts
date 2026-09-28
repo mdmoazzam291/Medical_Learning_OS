@@ -624,6 +624,92 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, data);
     }
 
+    if (req.method === "POST" && path === "/structured-review-batch") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 32768);
+      exactFields(input, [
+        "targetType",
+        "targetIds",
+        "reviewKind",
+        "decision",
+        "reasonCode",
+        "attestationVersion",
+        "attested"
+      ]);
+      const targetType = String(input.targetType || "");
+      if (!["question_version", "neural_note_version"].includes(targetType)) {
+        fail(400, "structured_review_target_type_invalid");
+      }
+      if (!Array.isArray(input.targetIds) || input.targetIds.length < 1 || input.targetIds.length > 500) {
+        fail(400, "structured_review_batch_size_invalid");
+      }
+      const targetIds = input.targetIds.map((value: unknown) => {
+        const id = String(value || "");
+        if (targetType === "neural_note_version") return uuidValue(id, "structured_review_target_invalid");
+        return identifier(id);
+      });
+      const kind = reviewKind(input.reviewKind);
+      const decision = String(input.decision || "");
+      if (!["approved", "rejected"].includes(decision)) fail(400, "invalid_review_decision");
+      const reasonCode = String(input.reasonCode || "");
+      const allowedReasons = new Set([
+        "human_reviewed_no_issue",
+        "needs_medical_correction",
+        "reference_support_insufficient",
+        "rights_or_provenance_problem",
+        "duplicate_or_scope_problem",
+        "other_review_problem"
+      ]);
+      if (!allowedReasons.has(reasonCode)) fail(400, "structured_review_reason_invalid");
+      if (decision === "approved" && reasonCode !== "human_reviewed_no_issue") {
+        fail(400, "structured_review_reason_decision_mismatch");
+      }
+      if (decision === "rejected" && reasonCode === "human_reviewed_no_issue") {
+        fail(400, "structured_review_reason_decision_mismatch");
+      }
+      if (input.attestationVersion !== "structured-human-review-v1" || input.attested !== true) {
+        fail(400, "structured_review_attestation_required");
+      }
+      await requireGrant(kind);
+
+      const { data, error } = await admin.rpc("record_structured_review_batch", {
+        p_target_type: targetType,
+        p_target_ids: targetIds,
+        p_review_kind: kind,
+        p_reviewer: reviewerId,
+        p_decision: decision,
+        p_reason_code: reasonCode,
+        p_attestation_version: String(input.attestationVersion),
+        p_attested: true
+      });
+      if (error) {
+        const message = String(error?.message || "");
+        if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+        if (message.includes("rights_not_resolved")) fail(409, "rights_not_resolved");
+        if (message.includes("question_not_in_review") ||
+            message.includes("neural_note_not_in_review") ||
+            message.includes("question_review_rejected") ||
+            message.includes("neural_note_review_rejected") ||
+            error?.code === "23505") {
+          fail(409, "structured_review_target_unavailable");
+        }
+        const code = message.match(/(?:structured_review|invalid_review|unknown_question|neural_note)[a-z_]*/)?.[0];
+        if (code) fail(400, code);
+        fail(500, "structured_review_write_failed");
+      }
+      if (data?.contractId !== "structured-review-batch-receipt-v1" ||
+          data?.targetType !== targetType ||
+          data?.reviewKind !== kind ||
+          data?.decision !== decision ||
+          data?.decisionCount !== targetIds.length ||
+          data?.publicationAuthority !== false ||
+          !Array.isArray(data?.reviews) ||
+          data.reviews.length !== targetIds.length) {
+        fail(500, "structured_review_write_failed");
+      }
+      return response(req, 200, data);
+    }
+
     if (req.method === "POST" && path === "/full-question-review") {
       if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
