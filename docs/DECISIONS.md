@@ -872,3 +872,20 @@ Decision:
 - broaden evaluation coverage across specialties, modalities and teaching actions before production provider delivery.
 
 This prevents a fluent, well-cited but medically wrong explanation from passing merely because its JSON shape and source IDs are valid.
+
+
+## ADR-060 — Provider evaluation cannot promote itself to production (accepted, 2026-09-28)
+
+A model/provider evaluation runner is useful only if it cannot become an accidental deployment authority.
+
+Decision:
+- execute semantic teaching cases through the same provider-neutral M09a boundary used by future product calls;
+- run M09b deterministic checks before any human semantic review;
+- isolate provider failures per case and preview canonical fallback instead of aborting the suite;
+- do not permit human pass records for a case that failed deterministic acceptance;
+- bind every human semantic review to the exact evaluation-set case and provider-run reference;
+- compute bootstrap verdict conjunctively, never by averaging medical failures against good cases;
+- keep `productionQualified=false` even if every bootstrap case passes;
+- add production qualification only in a separately versioned policy after broader specialty/modality coverage and explicit acceptance criteria are established.
+
+This makes provider testing useful without letting the test harness become a hidden model router or deployment switch.

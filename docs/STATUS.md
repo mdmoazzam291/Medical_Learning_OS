@@ -1109,3 +1109,26 @@ Verification for this slice is repository diff review because there is no domain
 - The bootstrap set explicitly has `productionQualificationAuthority=false`. Passing it alone can never authorize a production provider.
 - Direct execution verified schema integrity, checklist generation, all-pass review validation, rejection of inconsistent overall verdicts and exact 6/6 coverage against the live published catalog.
 - No provider has been connected or qualified by this work.
+
+
+## M09c non-authoritative provider evaluation runner — 2026-09-28
+- Added `src/domain/teaching-provider-evaluation-runner.js`.
+- The runner consumes the curated semantic teaching evaluation set plus any replaceable `IntelligenceProvider` that supports `learning.teaching.render`.
+- Each evaluation case becomes a grounded evaluation-only task with the case's reviewed canonical explanation as deterministic fallback and the observed wrong option preserved in task metadata.
+- Every case executes independently. A provider exception does not abort the suite; that case records `provider_error`, previews canonical fallback, and later cases continue.
+- Structurally/grounding-invalid provider output becomes `blocked_before_human_review`; it cannot be laundered into a human semantic pass.
+- Only deterministic passes become `awaiting_human_review` and receive the five-dimension semantic checklist.
+- Finalization accepts only validated human semantic reviews whose `providerRunRef` matches the exact evaluated case.
+- Bootstrap verdict is conjunctive:
+  - any provider/deterministic block or human semantic failure → `fail`;
+  - missing required human reviews → `pending`;
+  - all cases deterministic-pass + all human-pass → `pass`.
+- Regardless of bootstrap verdict, `productionQualificationAuthority=false`, `productionQualified=false`, and qualification scope remains `bootstrap_only`.
+- Direct execution verified:
+  - valid fake provider: 6/6 deterministic pass, all awaiting human review;
+  - structurally unsafe provider: 1 deterministic block, canonical fallback for that case;
+  - throwing provider: 1 provider error while later cases continue;
+  - three missing reviews → pending;
+  - one human semantic failure → bootstrap fail;
+  - all six human passes → bootstrap pass but still no production qualification.
+- No provider network call, credential, model SDK, production routing or run-cost persistence was introduced.

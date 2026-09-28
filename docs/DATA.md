@@ -375,3 +375,31 @@ A semantic review record carries one pass/fail verdict for each of:
 - verbosity.
 
 Overall pass is conjunctive: every dimension must pass. The bootstrap evaluation set itself cannot qualify production use.
+
+
+## Semantic teaching provider evaluation run — M09c
+
+`semantic-teaching-provider-evaluation-run-v1` is a pure, non-persistent evaluation artifact.
+
+Per case it contains:
+- case/question identity;
+- exact evaluation task ID;
+- `providerRunRef`;
+- provider result envelope when execution returned one;
+- deterministic grounded-teaching evaluation;
+- delivery preview (`provider` or `canonical_fallback`);
+- five-dimension human checklist;
+- whether human semantic review is permitted/required;
+- normalized execution error when the provider throws.
+
+Execution states:
+- `awaiting_human_review`: deterministic checks passed;
+- `blocked_before_human_review`: returned output failed deterministic acceptance;
+- `provider_error`: provider execution threw/failed before a usable result.
+
+`semantic-teaching-provider-evaluation-summary-v1` combines the run with explicit human reviews. Its `bootstrapVerdict` is `pending | pass | fail`, but it always carries:
+- `productionQualificationAuthority=false`;
+- `productionQualified=false`;
+- `qualificationScope=bootstrap_only`.
+
+These artifacts are operational evaluation evidence, not learner evidence, medical truth, mastery state or publication authority.
