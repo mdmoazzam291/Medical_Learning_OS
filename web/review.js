@@ -1,6 +1,6 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesPanel } from '/web/references-panel.js';
-import { referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
+import { REFERENCES_WORKFLOW_EXPERIMENT_V1, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -23,6 +23,8 @@ let state = {
   referencesWorkspace: null,
   referencesError: null,
   referencesExperimentArm: 'all',
+  referencesMeasurementSummary: null,
+  referencesMeasurementError: null,
   loading: false,
   submitting: null,
   error: null
@@ -74,19 +76,79 @@ function reviewTimingSnapshot() {
   };
 }
 
+function formatDurationMs(value) {
+  const ms = Number(value);
+  if (!Number.isFinite(ms) || ms < 0) return '—';
+  const seconds = Math.round(ms / 1000);
+  if (seconds < 60) return seconds + 's';
+  const minutes = Math.floor(seconds / 60);
+  return minutes + 'm ' + String(seconds % 60).padStart(2, '0') + 's';
+}
+
+function referencesWorkflowSummary(workflowMode) {
+  const workflows = state.referencesMeasurementSummary?.workflows;
+  return Array.isArray(workflows)
+    ? workflows.find(item => item?.workflowMode === workflowMode) || null
+    : null;
+}
+
+function referencesWorkflowCard(config) {
+  const summary = referencesWorkflowSummary(config.workflowMode);
+  const decisions = Number(summary?.decisions || 0);
+  const expected = Number(config.expectedQuestionCount || 0);
+  const rejected = Number(summary?.rejected || 0);
+  const rejectionRate = Number(summary?.rejectionRate);
+  const rejectionText = decisions && Number.isFinite(rejectionRate)
+    ? Math.round(rejectionRate * 100) + '% (' + rejected + ')'
+    : rejected + '';
+  return '<article class="source-card review-pilot-arm" data-workflow-mode="' + escape(config.workflowMode) + '">' +
+    '<div class="section-heading"><div><h3>' + escape(config.label) + '</h3><p class="muted">' +
+    escape(config.sourceId) + '</p></div><span class="badge">' + escape(decisions) + ' / ' +
+    escape(expected) + ' decisions</span></div>' +
+    '<div class="review-metadata">' +
+      '<div><span>Median foreground-active</span><strong>' + escape(formatDurationMs(summary?.medianForegroundActiveMs)) + '</strong></div>' +
+      '<div><span>Median elapsed wall</span><strong>' + escape(formatDurationMs(summary?.medianElapsedWallMs)) + '</strong></div>' +
+      '<div><span>Rejection proxy</span><strong>' + escape(rejectionText || '0') + '</strong></div>' +
+      '<div><span>Measured decisions</span><strong>' + escape(decisions) + '</strong></div>' +
+    '</div></article>';
+}
+
 function referencesExperimentPanel() {
   if (state.selectedKind !== 'references' || state.targetType !== 'questions' || state.loading || state.error) return '';
-  const claimCount = filterReferencesWorkflowItems(state.items, 'claim_first').length;
-  const standardCount = filterReferencesWorkflowItems(state.items, 'standard').length;
+  const experiment = REFERENCES_WORKFLOW_EXPERIMENT_V1;
+  const claimCount = filterReferencesWorkflowItems(state.items, experiment.treatment.workflowMode).length;
+  const standardCount = filterReferencesWorkflowItems(state.items, experiment.comparator.workflowMode).length;
   const button = (mode, label, count) =>
     '<button class="' + (state.referencesExperimentArm === mode ? 'primary' : 'secondary') +
     '" type="button" data-action="references-experiment-arm" data-mode="' + mode + '">' +
-    escape(label) + ' · ' + escape(count) + '</button>';
-  return '<section class="panel review-measurement-panel"><div class="section-heading"><div><span class="eyebrow">M02C REVIEW-WORKFLOW PILOT</span><h2>Matched 7-question operational comparison</h2></div><span class="badge">Descriptive, not causal</span></div><p>Use one pilot arm at a time. Timing is recorded only after a real References decision succeeds and is never used for reviewer scoring or publication authority.</p><div class="button-row">' +
-    button('all','All backlog',state.items.length) +
-    button('claim_first','CO claim-first',claimCount) +
-    button('standard','ASA standard',standardCount) +
-    '</div><p class="muted">Foreground-active time is a lower bound; elapsed wall time is an upper bound when source reading happens in another tab. Rejection rate is a correction-needed proxy, not proof of review quality.</p></section>';
+    escape(label) + ' · ' + escape(count) + ' pending</button>';
+
+  const treatment = referencesWorkflowSummary(experiment.treatment.workflowMode);
+  const comparator = referencesWorkflowSummary(experiment.comparator.workflowMode);
+  const complete =
+    Number(treatment?.decisions || 0) >= experiment.treatment.expectedQuestionCount &&
+    Number(comparator?.decisions || 0) >= experiment.comparator.expectedQuestionCount;
+  const summaryState = state.referencesMeasurementError
+    ? '<p class="muted"><strong>Measurement summary unavailable.</strong> Review remains usable and no prior summary is reused.</p>'
+    : '<div class="source-list">' +
+        referencesWorkflowCard(experiment.treatment) +
+        referencesWorkflowCard(experiment.comparator) +
+      '</div>' +
+      (complete
+        ? '<p><strong>Both arms are complete.</strong> Compare timing bounds and correction/rejection signals together before deciding whether persistent M02c claim/passage infrastructure is justified. No winner is inferred automatically.</p>'
+        : '<p class="muted">Pilot results remain incomplete. Do not interpret partial timing as a workflow verdict.</p>');
+
+  return '<section class="panel review-measurement-panel">' +
+    '<div class="section-heading"><div><span class="eyebrow">M02C REVIEW-WORKFLOW PILOT</span>' +
+    '<h2>Matched 7-question operational comparison</h2></div><span class="badge">Descriptive only · not causal</span></div>' +
+    '<p>Use one pilot arm at a time. Timing is recorded only after a real References decision succeeds and is never used for reviewer scoring or publication authority.</p>' +
+    '<div class="button-row">' +
+      button('all','All backlog',state.items.length) +
+      button(experiment.treatment.workflowMode,experiment.treatment.label,claimCount) +
+      button(experiment.comparator.workflowMode,experiment.comparator.label,standardCount) +
+    '</div>' + summaryState +
+    '<p class="muted">Foreground-active time is a lower bound; elapsed wall time is an upper bound when source reading happens in another tab. Rejection rate is a correction-needed proxy, not proof of review quality.</p>' +
+    '</section>';
 }
 
 function reviewMeasurementForQuestion(questionVersionId) {
@@ -407,7 +469,7 @@ let queueGeneration = 0;
 async function loadQueue(kind = state.selectedKind) {
   const generation = ++queueGeneration;
   if (!kind) return;
-  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null };
+  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesMeasurementSummary: null, referencesMeasurementError: null };
   render();
   try {
     const queuePromise = state.targetType === 'neural-notes'
@@ -439,11 +501,30 @@ async function loadQueue(kind = state.selectedKind) {
         reportUnexpected(error, 'load_references_workspace');
       }
     }
+    let referencesMeasurementSummary = null;
+    let referencesMeasurementError = null;
+    if (kind === 'references' && state.targetType === 'questions') {
+      try {
+        const summary = await review.measurementSummary(REFERENCES_WORKFLOW_EXPERIMENT_V1.experimentId);
+        if (summary?.contractId !== 'content-review-workflow-measurement-summary-v1' ||
+            summary?.experimentId !== REFERENCES_WORKFLOW_EXPERIMENT_V1.experimentId ||
+            summary?.causal !== false ||
+            !Array.isArray(summary?.workflows)) {
+          throw new Error('review_measurement_summary_invalid');
+        }
+        referencesMeasurementSummary = summary;
+      } catch (error) {
+        referencesMeasurementError = 'review_measurement_summary_unavailable';
+        reportUnexpected(error, 'load_review_measurement_summary');
+      }
+    }
     if (generation !== queueGeneration) return;
     state = {
       ...state,
       referencesWorkspace,
       referencesError,
+      referencesMeasurementSummary,
+      referencesMeasurementError,
       loading: false,
       items: Array.isArray(result?.items) ? result.items : [],
       pipelineStatus,
@@ -473,7 +554,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesMeasurementSummary: null, referencesMeasurementError: null, loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
