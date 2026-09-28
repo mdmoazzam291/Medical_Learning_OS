@@ -15,7 +15,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | DONE |
 | M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | IN PROGRESS |
 | M10 | Multimodal and clinical learning | Licensed images, annotations, finding-first exercises, later voice/video encounters | IN PROGRESS |
-| M11 | Research and quality validation | Retention endpoints, intervention experiments, data-quality monitoring and outcome review | PLANNED |
+| M11 | Research and quality validation | Retention endpoints, intervention experiments, data-quality monitoring and outcome review | IN PROGRESS |
 | M12 | Community and educator platform | Moderation, verified contributions, import/API contracts and quality-controlled marketplace | PLANNED |
 | M13 | Institutions and sustainable business | Privacy-scoped faculty views, entitlements, unit economics and institutional pilots | PLANNED |
 | M14 | Operations and scale | Deployment, recovery drills, observability, security review and capacity evidence | IN PROGRESS |
@@ -78,6 +78,14 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 - M08b — DONE (minimum evidence baseline): stable exam occurrence identities and immutable/retractable historical evidence are live. The baseline now contains one INI-CET 2023 reconstructed recall and one NEET-PG 2024 reconstructed recall, spanning two exams, two years and two verified exam occurrences. Both remain conservatively `single_recall` because independent upstream recall lineage is not established. This is sufficient to prove genuine multi-exam/multi-year ingestion and unblock downstream work; bulk historical ingestion is no longer a milestone gate and resumes only when a specific Exam DNA analysis, validation experiment or learner-facing policy requires more breadth.
 - M08c — DONE: Exam DNA v2 descriptively unifies active question-version PYQ evidence with historical reconstructed-item evidence, separates licensed exact/corroborated recall/single recall classes, exposes historical-item breadth and source-lineage uncertainty, and keeps predictive inference explicitly disabled.
 - M08d — DONE: locked-section runtime, append-only run ledger, immutable completion receipts, production/test assembly separation, explicit receipt-free abandonment, descriptive GT Autopsy v1 and the dedicated Exam Mode shell are implemented. Internal-test capacity is 180/180; hosted API acceptance passed on a separate synthetic QA identity. Responsive browser acceptance also passes at 390×844, 820×1180 and 1440×1000, covering readiness separation, start, 36-question palette, server autosave, mark/unmark review, navigation, reload restoration, completed-run GT Autopsy resume, cancellation-without-score and horizontal-overflow checks. With the minimum genuine historical evidence baseline now spanning INI-CET 2023 and NEET-PG 2024, M08 is DONE.
+
+## M11 slices
+- M11a — DONE: service-only `study-delayed-retrieval-observations-v1` now links every exact question attempt to its first later same-item retrieval, exact elapsed delay, optional memory rating, originating Study Now recommendation, and schedule-policy decisions. It separately exposes first later different-question/same-concept attempts as transfer candidates with intervening same-item exposure count. Delay coverage at ≥1/7/30/90/180 days is descriptive data availability only; mastery, forgetting-rate and causal inference remain disabled.
+- M11b — PLANNED: preregister a retention-probe protocol and analysis windows only after enough reviewed content exists to create probes without recycling the same item; do not alter Study Now merely to manufacture research data.
+- M11c — PLANNED: define validated transfer-item novelty/comparability metadata and a transfer endpoint before treating same-concept different-item attempts as transfer evidence.
+- M11d — PLANNED: activate intervention/scheduler experiments only after minimum eligible population, power/precision rationale, guardrails and outcome analysis are preregistered.
+
+M11 is now IN PROGRESS because the measurement foundation is live. The current beta evidence correctly reports insufficient true delayed coverage; that insufficiency blocks M07c/M05d promotion rather than being hidden.
 
 ## Canonical learning-intelligence architecture
 
