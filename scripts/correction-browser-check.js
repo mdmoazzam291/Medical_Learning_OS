@@ -16,6 +16,7 @@ const noteVersionId = '6ac9305b-2ce1-4fdb-9705-fa22c8eefa12';
 const questionVersionId = 'emergency:anaphylaxis:first-line-drug@1';
 const correctionId = '8525e69f-68ed-400a-bfcb-e47dc2691dc2';
 let correction = null;
+const correctionBodies = [];
 const reportBodies = [];
 
 await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
@@ -86,6 +87,7 @@ await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
   }
   if (url.endsWith('/functions/v1/study-api/vault/corrections')) {
     const body = JSON.parse(route.request().postData() || '{}');
+    correctionBodies.push(body);
     correction = body.bodyMarkdown;
     return route.fulfill({
       status: 200,
@@ -159,6 +161,9 @@ await page.getByLabel('My correction').nth(1).fill(correctionText);
 await page.getByRole('button', { name: 'Save private correction' }).nth(1).click();
 await page.getByRole('alert').filter({ hasText: 'Private correction saved. Canonical content was not changed.' }).waitFor();
 
+assert.equal(correctionBodies.length, 1);
+assert.equal(correctionBodies[0].targetType, 'question_version');
+assert.equal(correctionBodies[0].targetId, questionVersionId);
 await page.getByText('MY CORRECTION · PRIVATE').waitFor();
 assert.match(await page.locator('.personal-correction').textContent(), /Learner-only/);
 assert.match(await page.locator('.vault-detail').textContent(), /Canonical reviewed content: intramuscular epinephrine is first-line treatment/);
