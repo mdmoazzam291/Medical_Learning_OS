@@ -991,3 +991,20 @@ This preserves the governing invariant: **automation assembles evidence; governe
 ## ADR-066 — Claim-first inspection precedes shared decision persistence
 
 The References workspace may group identical canonical claim/evidence bindings, but a grouping is not a human approval and cannot approve dependent questions. The seven-question pilot demonstrates source reuse, not repeated claim reuse. Match packets to current queue concept/source versions; withhold mismatches and discard failed loads. Preserve per-question scrutiny of wording, scope, answer and explanation. Use the existing immutable human review records for question decisions. Do not add a parallel approval store before measured review-time/correction-rate evidence satisfies ADR-065.
+
+## ADR-067 — Review workflow timing is experimental process evidence, not reviewer or publication authority (accepted, 2026-09-28)
+
+M02c cannot justify persistent claim/passage infrastructure from source-reuse counts alone. The next decision needs observed human review effort and correction signals.
+
+Decision:
+- record workflow timing only after an authenticated human review receipt already exists;
+- derive reviewer/question/gate/target identity from the immutable review event, never from browser-supplied reviewer identity;
+- keep timing receipts append-only and service-only;
+- measure both foreground-active time and elapsed wall time because source inspection may occur in another tab; treat them as lower/upper operational bounds rather than exact labor time;
+- activate the first measurement only through an explicit reviewer-selected matched pilot: seven CO questions with claim-first References inspection versus seven ASA fasting questions using standard References review;
+- classify the comparison as descriptive and non-randomized, not causal;
+- use rejection rate only as a correction-needed proxy, not a reviewer-quality score;
+- never use timing or workflow measurements to approve/reject content, rank reviewers, infer medical competence, alter reviewer grants or change publication eligibility;
+- do not persist shared human claim approvals until the measured workflow shows a useful effort reduction without an unacceptable correction signal.
+
+This converts ADR-065/066 from architectural intuition into a measurable go/no-go experiment while preserving human review authority.
