@@ -50,9 +50,9 @@ try {
     await page.getByRole('heading', { name: 'Inspect shared evidence before individual decisions' }).waitFor();
     await page.getByRole('heading', { name: 'Inspect a source once, then its linked targets' }).waitFor();
     assert.match(await page.locator('.references-source-panel').innerText(), /1 unique source versions/);
-    assert.equal(await page.locator('.review-decision-form').count(), 7);
+    assert.equal(await page.locator('.structured-review-controls').count(), 7);
     await page.locator('[data-action="references-source-focus"][data-source-id="' + pilot.sourceSnapshot.sourceId + '"]').click();
-    assert.equal(await page.locator('.review-decision-form').count(), 7);
+    assert.equal(await page.locator('.structured-review-controls').count(), 7);
     assert.equal(writes, 0);
     await page.getByText('3 / 7 decisions', { exact: true }).waitFor();
     await page.getByText('2 / 7 decisions', { exact: true }).waitFor();
@@ -65,13 +65,13 @@ try {
     await page.getByRole('heading', { name: 'Inspect shared evidence before individual decisions' }).waitFor();
     await page.locator('#review-kind').selectOption('rights');
     await page.getByRole('heading', { name: 'Resolve unique sources before repeated question review' }).waitFor();
-    assert.equal(await page.locator('.review-decision-form').count(), 0);
+    assert.equal(await page.locator('.structured-review-controls').count(), 0);
     await page.locator('#review-kind').selectOption('references');
     await page.getByRole('heading', { name: 'Inspect shared evidence before individual decisions' }).waitFor();
     await page.route('**/data/evaluations/source-grounding-cdc-co-v1.json', route => route.fulfill({ status: 503, body: 'unavailable' }));
     await page.reload();
     await page.getByRole('heading', { name: 'Claim evidence unavailable' }).waitFor();
-    assert.equal(await page.locator('.review-decision-form').count(), 7);
+    assert.equal(await page.locator('.structured-review-controls').count(), 7);
     assert.equal(writes, 0);
     assert.deepEqual(errors, []);
     await context.close();
