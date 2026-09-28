@@ -48,6 +48,20 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
     pipelineStatus() { return request('/pipeline-status'); },
     queue(reviewKind) { return request(`/queue?kind=${encodeURIComponent(reviewKind)}`); },
     noteQueue(reviewKind) { return request(`/note-queue?kind=${encodeURIComponent(reviewKind)}`); },
+    learnerReports() { return request('/learner-reports'); },
+    triageLearnerReports({
+      reportIds,
+      reviewKind,
+      decision,
+      reasonCode,
+      attestationVersion = 'learner-content-issue-triage-attestation-v1',
+      attested
+    }) {
+      return request('/learner-reports/triage', {
+        method: 'POST',
+        body: { reportIds, reviewKind, decision, reasonCode, attestationVersion, attested }
+      });
+    },
     resolveRights({ sourceId, rightsStatus, evidence }) {
       return request('/source-rights', {
         method: 'POST',
