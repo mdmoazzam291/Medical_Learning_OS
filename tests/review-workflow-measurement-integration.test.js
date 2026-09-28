@@ -81,7 +81,7 @@ test('browser displays descriptive pilot progress without choosing a winner', ()
   assert.match(ui,/Rejection proxy/);
   assert.match(ui,/No winner is inferred automatically/);
   assert.match(ui,/Do not interpret partial timing as a workflow verdict/);
-  assert.doesNotMatch(ui,/winner is|best workflow|reviewer score:/i);
+  assert.doesNotMatch(ui,/winner:\s*(claim_first|standard|CO|ASA)|best workflow:|reviewer score:/i);
 });
 
 test('measurement summary failure is non-blocking and never reuses stale results', () => {
