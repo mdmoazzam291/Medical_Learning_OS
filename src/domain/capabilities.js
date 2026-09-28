@@ -21,6 +21,13 @@ const definitions = [
     offlineSupport: 'possible'
   },
   {
+    id: 'learning.teaching.render',
+    version: 1,
+    risk: 'medium',
+    humanApproval: 'not_required',
+    offlineSupport: 'possible'
+  },
+  {
     id: 'assessment.evaluate',
     version: 1,
     risk: 'medium',
