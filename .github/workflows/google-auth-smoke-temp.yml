@@ -1,0 +1,34 @@
+name: Temporary Google Auth provider smoke
+
+on:
+  push:
+    branches: ["feat/m04-google-oauth"]
+
+permissions:
+  contents: read
+
+jobs:
+  google-auth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify hosted Supabase Google provider
+        shell: bash
+        run: |
+          set -euo pipefail
+          project_url="$(sed -n "s/.*projectUrl: '\([^']*\)'.*/\1/p" web/cloud-config.js)"
+          publishable_key="$(sed -n "s/.*publishableKey: '\([^']*\)'.*/\1/p" web/cloud-config.js)"
+          test -n "$project_url"
+          test -n "$publishable_key"
+          payload="$(curl --fail --silent --show-error             -H "apikey: $publishable_key"             "$project_url/auth/v1/settings")"
+          node -e '
+            const data=JSON.parse(process.argv[1]);
+            if (data?.external?.google !== true) {
+              console.error("Hosted Google Auth provider is not enabled.");
+              process.exit(1);
+            }
+            console.log("Hosted Google Auth provider enabled.");
+          ' "$payload"
