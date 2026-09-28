@@ -1238,3 +1238,16 @@ Verification for this slice is repository diff review because there is no domain
 - `review-api` v10 deployed successfully; deployed artifact confirms target RPC, current-hash RPC, signed media delivery and queue attachment.
 - `web/review.js` exact-head syntax verification passed.
 - This closes the reviewer-surface blocker. It does **not** create or impersonate human approval; the first visual question still requires an authorized human reviewer to inspect and decide Medical, References and Rights before publication.
+
+## M10b canonical visual interaction profile — 2026-09-28
+- Added immutable service-only `content_visual_interaction_profiles` and `content_register_visual_interaction_v1`.
+- A profile can be registered only while the exact question version remains `in_review` and only against an exact prompt-linked media version.
+- Registered `visual:pathology:clear-cell-rcc@1` + `media:pathology:clear-cell-rcc-grade1@1` as schema-v1 `detection`.
+- `content_media_prompt` now returns the explicit canonical `visualInteraction` descriptor consumed by study-api v35 and the dormant learner UI.
+- `content_media_review_target` now includes the same descriptor in Medical, References and Rights targets, so task-semantic changes invalidate prior reviews.
+- Live proof: learner prompt descriptor and all three review descriptors resolve to the same detection/media identity.
+- Existing AI-test review hashes became stale after this semantic addition, as intended; no human review existed, so no human approval was invalidated. Internal AI-test eligibility therefore fails closed until separately re-reviewed.
+- Profile table is RLS-enabled, anon/authenticated inaccessible, service-role readable; registration RPC is service-only.
+- UPDATE mutation was rejected by the existing immutable-media guard.
+- Supabase advisor found no new unindexed foreign key for this table; RLS-without-policy is intentional because it is service-only.
+- Human review remains the next authority gate.
