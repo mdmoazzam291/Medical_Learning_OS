@@ -782,3 +782,21 @@ V1 must not estimate mastery, fatigue, confidence calibration, preventable lost 
 A cancelled run has no GT Autopsy because it has no completion/scoring receipt. Future partial-run analytics, if useful, must be a differently named contract rather than silently treating abandonment as a completed GT.
 
 GT Autopsy is a read projection over canonical exam-run state/events/content. It does not own learner state. Future Digital Twin updates must consume explicitly defined exam-evidence events rather than treating an analytics report as evidence itself.
+
+
+## ADR-055 — Exam Mode is a server-controlled shell, not a second exam engine (accepted, 2026-09-28)
+
+The browser must not duplicate section-transition, timing, scoring or test-content authorization logic.
+
+Exam Mode therefore:
+- renders only the current section returned by the trusted exam API;
+- allows navigation among questions inside that current section;
+- has no early-next-section or reopen-closed-section command;
+- derives the visible countdown from a server timestamp plus the server-scheduled section deadline, while the server remains authoritative;
+- autosaves answers and review flags through revisioned, idempotent mutations;
+- treats revision conflicts or expired sections by refreshing server state rather than forcing a client transition;
+- uses the same signed blind-first-look media projection as the QBank;
+- calls the separate test-readiness/test-start routes only for the internal engineering lane, which still requires server-side authorization;
+- shows GT Autopsy only after a completed run and shows no score/autopsy after cancellation.
+
+This keeps one exam runtime/state machine across production and engineering validation. Browser code is replaceable presentation/orchestration, not exam truth.

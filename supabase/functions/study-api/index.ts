@@ -769,6 +769,7 @@ Deno.serve(async (req: Request) => {
         startedAt: state.startedAt,
         scheduledEndAt: state.scheduledEndAt,
         completedAt: state.completedAt,
+        serverNow: at,
         caveats: state.caveats,
         assembly: state.assembly ?? null,
         termination: state.termination ?? null,
@@ -1190,6 +1191,25 @@ Deno.serve(async (req: Request) => {
     if (url.search) fail(400, "query_not_supported");
 
     if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
+
+    if (req.method === "GET" && path === "/exam-simulator/test-readiness") {
+      if (!internalExamTester) fail(403, "internal_exam_test_forbidden");
+      const rawRuleSetId = new URL(req.url).searchParams.get("ruleSetId");
+      if (!rawRuleSetId) fail(400, "exam_rule_set_required");
+      const ruleSetId = identifier(rawRuleSetId);
+      const { data, error } = await admin.rpc("exam_mock_test_readiness", {
+        p_rule_set_id: ruleSetId
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_rule_set_not_available")) fail(404, "exam_rule_set_not_available");
+        fail(500, "exam_mock_test_readiness_failed");
+      }
+      return response(req, 200, {
+        ...data,
+        generatedAt: new Date().toISOString()
+      });
+    }
 
     if (req.method === "POST" && path === "/exam-simulator/test-runs") {
       if (url.search) fail(400, "query_not_supported");

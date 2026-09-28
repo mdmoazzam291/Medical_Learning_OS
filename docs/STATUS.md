@@ -994,3 +994,18 @@ Verification for this slice is repository diff review because there is no domain
 - Added `examRunAutopsy(runId)` to the cloud adapter.
 - Direct pure-projection verification passed result/section reconciliation, visual metrics, concept aggregation, answer-change score impact, descriptive candidate ordering, receipt mismatch rejection and cancelled-run rejection.
 - Live Edge Function deployment remains the final step for this slice after merge.
+
+
+## M08d GT Autopsy deployed + Exam Mode shell — 2026-09-28
+- Supabase `study-api` v30 is ACTIVE with the merged `gt-autopsy-v1` route and pure projection.
+- Deployed-source verification confirmed completed-run gating, internal-test access recheck, receipt reconciliation, chunked media metadata lookup and explicit disabling of mastery/preventable-marks/fatigue/confidence inference.
+- Added dedicated `/web/exam.html` + `/web/exam.js` Exam Mode source rather than embedding simulator mechanics into the ordinary QBank page.
+- Exam Mode is a controller/view over the trusted server state machine: production/test readiness, start/resume/read, answer autosave, mark-for-review, cancellation and GT Autopsy all go through authenticated cloud APIs.
+- Current-section navigation uses a 36-question-style palette generated from the server-returned section; there is no client action for early section advance or reopening a closed section.
+- Countdown is synchronized from `serverNow` + the server-scheduled section end; expiry triggers a server refresh rather than client-side advancement.
+- Exact answer/review/cancel writes remain request-idempotent and revisioned.
+- The learner can clear an answer, toggle review state and move freely only inside the current section.
+- Prompt images reuse the signed blind-first-look media projection and do not expose diagnosis, annotations or rights metadata.
+- Completed runs hand off to descriptive GT Autopsy; cancelled runs explicitly receive no completion score/autopsy.
+- Internal engineering readiness is visible only when the server-authorized test-readiness route succeeds; a 403 hides that lane from ordinary learners.
+- Exact-head static safety checks passed. Hosted browser deployment/viewport verification remains pending merge/deploy.

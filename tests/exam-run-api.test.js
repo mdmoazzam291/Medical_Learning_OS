@@ -161,3 +161,21 @@ test('GT Autopsy does not expose answer keys or enable unsupported inference', (
   assert.doesNotMatch(block, /fatigue/);
   assert.doesNotMatch(block, /confidence/);
 });
+
+
+test('internal test readiness is separately gated and never widens production readiness', () => {
+  const testReadiness = source.indexOf('path === "/exam-simulator/test-readiness"');
+  const testStart = source.indexOf('path === "/exam-simulator/test-runs"', testReadiness);
+  assert.ok(testReadiness >= 0 && testStart > testReadiness);
+  const block = source.slice(testReadiness, testStart);
+  assert.match(block, /if \(!internalExamTester\) fail\(403, "internal_exam_test_forbidden"\)/);
+  assert.match(block, /admin\.rpc\("exam_mock_test_readiness"/);
+  assert.doesNotMatch(block, /exam_mock_readiness"/);
+});
+
+test('exam run view carries trusted serverNow for countdown synchronization', () => {
+  const view = source.indexOf('const examRunView = async');
+  const end = source.indexOf('const sessionState = async', view);
+  const block = source.slice(view, end);
+  assert.match(block, /serverNow: at/);
+});
