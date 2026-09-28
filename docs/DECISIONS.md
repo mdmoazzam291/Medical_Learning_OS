@@ -800,3 +800,23 @@ Exam Mode therefore:
 - shows GT Autopsy only after a completed run and shows no score/autopsy after cancellation.
 
 This keeps one exam runtime/state machine across production and engineering validation. Browser code is replaceable presentation/orchestration, not exam truth.
+
+
+## ADR-056 — Intelligence providers execute bounded tasks; learning policy remains outside the provider (accepted, 2026-09-28)
+
+M09 begins with the smallest provider boundary that protects replacement cost without turning the Learning Core into an AI framework.
+
+Decision:
+- identify work by semantic Medical Learning OS capability, not vendor/model API names;
+- `learning.teaching.render` means a teaching action has already been chosen by trusted learning policy and needs bounded rendering/execution;
+- bind each request to a versioned instruction set and output contract;
+- pass only explicit structured input and explicit grounding references needed for the task;
+- never treat provider conversation/thread memory as canonical learner state;
+- require structured provider-attributed results with normalized usage/cost and error fields;
+- for required-grounding tasks, returned citations must be drawn only from the grounding references supplied to that task;
+- keep Study Now/Adaptive Teaching policy, medical truth, learner evidence, inferred Digital Twin state and publication authority outside the provider;
+- do not add a model router, prompt database, run ledger, vendor SDK, agent runtime or fallback orchestration until an active product task and evaluation contract require them.
+
+The v1 citation rule proves **reference containment**, not claim-level factual completeness. A provider citing an allowed source does not prove that every medical claim is supported. Grounded teaching therefore needs a separately validated output/claim contract and evaluation set before learner-facing provider execution is enabled.
+
+Provider failure must remain fail-soft: deterministic study, scoring, revision, canonical explanations and other non-AI learning paths must continue without provider availability.
