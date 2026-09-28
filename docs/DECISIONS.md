@@ -1026,3 +1026,21 @@ Decision:
 - verify historical medical plausibility against authoritative guidance applicable to the exam era without turning that guidance into proof that the recalled item itself existed.
 
 This preserves the distinction between **what an exam appears to have tested**, **what current medical guidance says**, and **what learner-facing content should teach now**.
+
+
+## ADR-069 — Delayed retrieval is observed before forgetting is inferred (accepted, 2026-09-29)
+
+Memory, Study Now, scheduling and the Preparation Digital Twin cannot be validated from immediate correctness alone. The system needs a canonical way to connect an exposure to what happened later without prematurely converting sparse beta history into a forgetting model.
+
+Decision:
+- derive delayed-outcome observations from the existing immutable attempt, memory-rating, recommendation and schedule-decision evidence rather than creating a competing learner-history ledger;
+- for each origin attempt, treat the **first later retrieval of the same exact question version** as the next same-item outcome, because later outcomes after another same-item exposure are already affected by that intervening exposure;
+- preserve exact elapsed time instead of discretizing observations into a single retention label;
+- report coverage at 1/7/30/90/180-day thresholds only as data availability, not as mastery or proof of retention;
+- treat a later different-question attempt on the same canonical concept only as a transfer **candidate**, and preserve the number of intervening same-item retrievals;
+- do not call a transfer candidate validated transfer until future item metadata establishes novelty/comparability and a preregistered protocol defines acceptable contamination;
+- keep the projection service-only, read-only, rebuildable and explicitly non-causal;
+- do not estimate half-life, forgetting probability, mastery or intervention effect until sufficient delayed evidence and validation rules exist;
+- let missing delayed coverage remain visible and block model promotion rather than filling the gap with synthetic labels.
+
+This creates the measurement bridge needed for M05d scheduler validation, M07c Digital Twin inference, M09 intervention evaluation and M11 research without granting any of them premature authority.
