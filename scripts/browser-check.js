@@ -127,6 +127,32 @@ try {
     if (url.includes('/auth/v1/user')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ id: '22222222-2222-2222-2222-222222222222', email: 'confirmed@example.com', email_confirmed_at: '2026-09-26T00:00:00Z' }) });
     if (url.includes('/functions/v1/study-api/progress')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ attempts: 0, correct: 0, accuracy: null, concepts: [] }) });
     if (url.includes('/functions/v1/study-api/questions')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ questions: [] }) });
+    if (url.includes('/functions/v1/study-api/revision/due')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ dueCount: 1, unseenCount: 0, nextDueAt: null, policy: { id: 'bootstrap-binary-v1' }, items: [] }) });
+    if (url.includes('/functions/v1/study-api/exam-simulator/readiness')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ruleSetId: 'neet-pg:2026@1', eligibleUniqueQuestions: 0, requiredUniqueQuestions: 180, shortage: 180, ready: false }) });
+    if (url.includes('/functions/v1/study-api/study-now/start')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+      plan: { generatedAt: '2026-09-28T17:40:00.000Z', availableMinutes: 10, strategy: 'resume-existing', provisional: true, resumedExisting: true },
+      session: {
+        sessionId: 'resume-session',
+        position: 0,
+        total: 1,
+        closed: false,
+        question: {
+          questionVersionId: 'demo:resume@1',
+          conceptId: 'demo:resume',
+          stem: 'Which saved response should be shown when resuming?',
+          options: [{ optionId: 'saved', text: 'The previously recorded response' }, { optionId: 'fresh', text: 'A fabricated new response' }]
+        },
+        receipt: {
+          selectedOptionId: 'saved',
+          answerOptionId: 'saved',
+          explanation: 'This answer was recorded before the session was resumed.',
+          event: { correct: true },
+          sources: []
+        },
+        memoryJudgment: null,
+        recommendationContext: null
+      }
+    }) });
     if (url.includes('/functions/v1/review-api/me')) return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ reviewerId: '11111111-1111-1111-1111-111111111111', reviewKinds: ['medical'] }) });
     if (url.includes('/functions/v1/review-api/queue?kind=medical')) {
       const items = reviewRecorded ? [] : [{
@@ -193,6 +219,19 @@ try {
   await accountPage.getByRole('button', { name: 'Verify session refresh', exact: true }).waitFor();
   await accountPage.getByRole('alert').filter({ hasText: 'Session refresh verified in this browser.' }).waitFor();
   assert.equal(refreshCalls, 1);
+
+  // Study Now may intentionally resume an unfinished server session. If that
+  // session already has an answer receipt, make the resume explicit instead
+  // of presenting the saved marked option as though it were a new question.
+  await accountPage.goto(origin + '/web/medical.html');
+  await accountPage.getByRole('heading', { name: 'Only reviewed, published versions enter this loop.' }).waitFor();
+  await accountPage.getByRole('button', { name: '10 min' }).click();
+  await accountPage.getByRole('alert').filter({ hasText: 'Resumed your unfinished Study Now session. This question was already answered earlier' }).waitFor();
+  assert.equal(await accountPage.getByRole('radio', { name: 'The previously recorded response' }).isChecked(), true);
+  assert.equal(await accountPage.getByRole('radio', { name: 'The previously recorded response' }).isDisabled(), true);
+  await accountPage.goto(origin + '/web/account.html');
+  await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
+
   await accountPage.getByRole('link', { name: 'Open review workspace' }).waitFor();
   await accountPage.getByRole('link', { name: 'Open review workspace' }).click();
   await accountPage.getByRole('heading', { name: 'Review one immutable version at a time.' }).waitFor();
