@@ -1029,3 +1029,25 @@ Verification for this slice is repository diff review because there is no domain
 - Rollback residue check: 0 `exam_runs`, 0 `exam_run_events`, 0 `exam_run_receipts` for the synthetic proof run.
 - This proves the core full-length state machine + persistence path without waiting 210 wall-clock minutes and without contaminating either existing learner account.
 - The remaining hosted acceptance gate is a deliberately separate internal QA Auth identity so the live browser can execute the same 180-question path end-to-end.
+
+
+## M08d isolated hosted QA smoke + query-routing fix — 2026-09-28
+- Created one **separate synthetic Supabase Auth QA identity** with server-controlled `app_metadata.medical_learning_os_internal_tester=true` and `medical_learning_os_test_identity=true`; neither existing learner account was repurposed.
+- Hosted QA immediately exposed a real routing defect: a global `url.search` rejection sat before legitimate query-bearing routes, causing production readiness, internal-test readiness and Exam DNA query parameters to fail with `query_not_supported`.
+- PR #95 fixed query validation at the route level. Supabase `study-api` version 32 is ACTIVE with the fix.
+- Function-edge logs after the fix verify the isolated QA identity exercised the real hosted API:
+  - `GET /exam-simulator/readiness?ruleSetId=...` → 200;
+  - `GET /exam-simulator/test-readiness?ruleSetId=...` → 200;
+  - `POST /exam-simulator/test-runs` → 200;
+  - answer mutation → 200;
+  - review mutation → 200;
+  - autopsy before completion → 409 as required;
+  - cancellation → 200;
+  - cancelled-run readback → 200;
+  - autopsy after cancellation → 409 as required.
+- The QA identity currently owns only isolated simulator smoke evidence: 3 cancelled test runs from repeated smoke attempts, 3 answer events, 3 review events, 3 cancellation events, and **0 completion receipts**.
+- The retries occurred because the temporary remote runner later stalled while trying to fetch Render assets; the simulator API path had already completed successfully each time.
+- The temporary QA bootstrap Edge Function is now disabled: version 3 requires JWT and returns HTTP 410 only.
+- The temporary database `http` extension and private `mlos_internal_http` schema used for the bootstrap were removed after the test.
+- Render previously deployed the dedicated Exam Mode commit `c65bbf3...` successfully and marked it live. Subsequent main commits after that point were docs/API-query changes, not Exam Mode browser-code changes.
+- M08d backend/runtime/hosted-API acceptance is now complete. Remaining browser-specific gate: visually exercise the live Exam Mode at phone/tablet/desktop widths and complete a human-driven browser interaction pass; this environment has no general webpage-rendering browser capable of that verification.
