@@ -93,3 +93,10 @@
 .review-media-target summary{cursor:pointer;font-weight:700}
 .review-media-target pre{max-height:360px;overflow:auto;white-space:pre-wrap;word-break:break-word;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--soft);font-size:.72rem;line-height:1.5}
 @media(max-width:650px){.review-media-grid{grid-template-columns:1fr}.review-media-figure img{max-height:420px}}
+
+
+.reference-digest { overflow-wrap: anywhere; }
+
+.references-workspace { min-width: 0; overflow-wrap: anywhere; }
+.references-workspace .section-heading { flex-wrap: wrap; }
+.references-workspace pre { white-space: pre-wrap; }

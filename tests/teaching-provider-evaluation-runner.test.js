@@ -239,7 +239,8 @@ test('blocked deterministic case cannot be laundered into a human pass', async (
   assert.throws(()=>finalizeSemanticTeachingProviderEvaluation({
     evaluationSet,
     run,
-    reviews:[reviewFor(run.cases[0],'pass')]
+    // Use a structurally valid digest so this reaches the blocked-case gate.
+    reviews:[{...reviewFor(run.cases[0],'pass'), reviewTargetDigest:run.cases[1].reviewTargetDigest}]
   }),/Blocked provider case/);
 });
 
@@ -377,3 +378,4 @@ test('v2 evaluation run rejects legacy unbound v1 human review', async () => {
     reviews:[review]
   }),/Target-bound semantic review is required/);
 });
+

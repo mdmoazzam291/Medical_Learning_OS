@@ -19,6 +19,11 @@ const allowed = new Set([
   'web/vault.js',
   'web/review.html',
   'web/review.js',
+  'web/references-panel.js',
+  'src/domain/references-workspace.js',
+  'src/domain/source-grounded-verification.js',
+  'src/domain/canonical-integrity.js',
+  'data/evaluations/source-grounding-cdc-co-v1.json',
   'web/cloud-config.js',
   'web/monitoring.js',
   'web/sentry-bootstrap.js',
@@ -62,3 +67,4 @@ const host = process.env.MLOS_HOST || '127.0.0.1';
 server.listen(Number(process.env.PORT || 3000), host, () => {
   console.log(`Medical Learning OS: http://${host}:${server.address().port}`);
 });
+

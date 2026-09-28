@@ -18,8 +18,8 @@ test('exam run API resolves learner identity from auth and keeps trusted RPCs se
 test('exam start gates capacity before creating a run and restores seeded order', () => {
   const readiness = source.indexOf('admin.rpc("exam_mock_readiness"');
   const assembly = source.indexOf('admin.rpc("exam_assemble_mock"');
-  const ordering = source.indexOf('seededQuestionOrder(');
-  const create = source.indexOf('admin.rpc("exam_create_run"');
+  const ordering = source.indexOf('seededQuestionOrder(', assembly);
+  const create = source.indexOf('admin.rpc("exam_create_run"', ordering);
   assert.ok(readiness >= 0 && assembly > readiness && ordering > assembly && create > ordering);
   assert.match(source, /error: "exam_mock_not_ready"/);
   assert.match(source, /examBlueprintFidelity/);
@@ -187,7 +187,8 @@ test('query-bearing exam routes are not blocked by a global search guard', () =>
   const examDna = source.indexOf('path === "/exam-dna"');
   assert.ok(testReadiness > 0 && productionReadiness > testReadiness && examDna > productionReadiness);
 
-  const beforeTestReadiness = source.slice(Math.max(0, testReadiness - 500), testReadiness);
+  const previousRouteEnd = source.lastIndexOf("\n    }", testReadiness);
+  const beforeTestReadiness = source.slice(previousRouteEnd + 6, testReadiness);
   assert.doesNotMatch(beforeTestReadiness, /if \(url\.search\) fail\(400, "query_not_supported"\);\s*$/m);
 
   const progress = source.indexOf('path === "/progress"');
@@ -218,3 +219,4 @@ test('readiness and exam DNA retain route-specific allowed query parameters', ()
   );
   assert.match(examDna, /searchParams\.get\("examId"\)/);
 });
+
