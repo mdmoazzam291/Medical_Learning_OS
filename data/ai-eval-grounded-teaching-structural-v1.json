@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "evaluationScope": "structural_only",
+  "medicalCorrectnessAssessed": false,
+  "cases": [
+    {
+      "schemaVersion": 1,
+      "caseId": "grounded-teaching:nonclinical:canonical-identity:v1",
+      "allowedGrounding": [
+        {
+          "type": "content-source",
+          "id": "demo:project-doctrine:v1",
+          "version": "1"
+        }
+      ],
+      "expectedActionType": "micro_correction",
+      "requiredCitationRefs": [
+        {
+          "type": "content-source",
+          "id": "demo:project-doctrine:v1",
+          "version": "1"
+        }
+      ],
+      "maxTeachingWords": 40,
+      "uncertaintyExpectation": "any",
+      "learnerPromptPolicy": "allowed",
+      "metadata": {
+        "fixtureKind": "nonclinical_software_contract",
+        "purpose": "Validate output structure, citation containment, verbosity and fallback mechanics only."
+      }
+    }
+  ]
+}
