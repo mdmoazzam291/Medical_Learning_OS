@@ -279,3 +279,30 @@ Outputs:
 - up to five non-causal `review-and-retest` candidates.
 
 The projection returns explicit false flags for mastery inference, preventable-marks inference, fatigue inference and confidence calibration. Wall-clock answer timestamps are not represented as active question time.
+
+
+## Intelligence task/result contracts — M09a
+
+M09a adds **runtime contracts only**. It does not create database tables or learner-evidence events.
+
+`IntelligenceTask@1` contains:
+- stable task ID and semantic capability;
+- versioned instruction-set identity;
+- canonical structured input;
+- explicit grounding references and `required | optional | none` grounding mode;
+- versioned output-contract identity;
+- optional latency and estimated-cost ceilings;
+- canonical request timestamp and metadata.
+
+`IntelligenceResult@1` contains:
+- matching task ID;
+- exact provider / implementation / version attribution;
+- normalized `succeeded | rejected | failed` state;
+- structured output or normalized error;
+- citation references restricted to the task's supplied grounding set;
+- input/output usage units and estimated cost;
+- trusted adapter timestamps and canonical metadata.
+
+These envelopes are not learner state, medical truth, mastery estimates, learning evidence or content-publication records. If a later M09 run ledger is added, it must remain operational/audit data and any learning-relevant outcome must enter the canonical learning-event architecture through an explicit versioned event contract.
+
+Provider conversation/session identifiers are deliberately absent from the cross-provider contract. Any adapter-internal transient state must not become the durable source of learner memory.
