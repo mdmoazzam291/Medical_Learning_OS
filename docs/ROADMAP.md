@@ -13,7 +13,7 @@ Status: DONE means implemented and checked; NEXT means the next bounded task; PL
 | M06 | NeuralVault | Canonical concept notes, personal annotations, search, export and update-safe links | DONE |
 | M07 | Digital Twin and diagnostics | Evidence-backed learner projections, Mistake Fingerprint, uncertainty and actionable analytics | IN PROGRESS |
 | M08 | Exam adapters and simulation | Versioned exam rules, Exam DNA/PYQ provenance, mocks and GT Autopsy | IN PROGRESS |
-| M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | PLANNED |
+| M09 | AI and adaptive teaching | Provider adapters, grounded explanations, evaluation set, cost limits and review gates | IN PROGRESS |
 | M10 | Multimodal and clinical learning | Licensed images, annotations, finding-first exercises, later voice/video encounters | IN PROGRESS |
 | M11 | Research and quality validation | Retention endpoints, intervention experiments, data-quality monitoring and outcome review | PLANNED |
 | M12 | Community and educator platform | Moderation, verified contributions, import/API contracts and quality-controlled marketplace | PLANNED |
@@ -135,7 +135,7 @@ All database evolution is **forward-only from the repository's existing timestam
 - Canonical integrity primitive — DONE: deterministic JCS/RFC-8785 canonicalization plus SHA-256 digest envelopes with explicit profile/algorithm metadata. Historical hashes are not rewritten.
 - Semantic capability vocabulary — DONE: a small static vendor-neutral registry defines current semantic capabilities without runtime discovery, marketplace infrastructure or provider names.
 - Action contracts — DONE: pure v1 ActionEnvelope/ActionReceipt validators establish actor/capability/reference/digest/policy/audit seams without changing existing APIs or granting execution authority.
-- M09 intelligence-provider boundary — PLANNED: introduce the smallest provider interface only when AI/adaptive teaching actually needs a replaceable model implementation.
+- M09 intelligence-provider boundary — DONE: `IntelligenceTask@1` / `IntelligenceResult@1` plus a structural `IntelligenceProvider` adapter provide the smallest replaceable execution boundary. Tasks use semantic capabilities, versioned instructions/output contracts, explicit grounding and cost/latency ceilings; results are structured, provider-attributed and citation-bounded. No vendor SDK, router, persistence or provider-owned learner memory is introduced.
 - Tool/agent communication/runtime providers — LATER: introduce only when an active feature needs them; MCP/A2A remain adapters rather than internal architecture.
 - Signature/credential/proof/ledger providers — LATER / OPTIONAL: no implementation until a concrete trust/credential/interoperability requirement exists.
 - Blockchain, ZK and PQC infrastructure — REJECT NOW: preserve crypto agility and proof-readiness through canonical IDs/digests/version metadata rather than deploying speculative infrastructure.
@@ -158,6 +158,11 @@ All database evolution is **forward-only from the repository's existing timestam
 - Stop autonomous inventory expansion once internal-test readiness meets the verified rule-set requirement, except for replacement of rejected/invalid items.
 
 
+
+## M09 slices
+- M09a — DONE: provider-neutral intelligence execution boundary with `learning.teaching.render@1`, versioned structured task/result contracts, explicit grounding/citation containment, usage/cost metadata and structural adapter verification. Policy selection and canonical learner/medical state remain outside the provider.
+- M09b — NEXT: define the first grounded teaching-output contract, deterministic canonical fallback and evaluation cases for medical grounding, misconception correction, verbosity and unsupported-claim behavior. Do not connect a production provider until this contract can fail closed.
+- M09c — LATER: add one or more real provider adapters, model/cost routing and a run/cost ledger only when M09b evaluation evidence and a learner-facing use justify them. Provider selection must remain replaceable and fail-soft.
 
 ## M10 slices
 - M10a — IN PROGRESS: provider-independent Phase-1 MediaAsset/annotation/question-link contract plus hosted immutable persistence, normalized media-rights state, media-bound review fingerprints and authenticated learner-safe media API are live. Exact-byte private storage and signed learner delivery are implemented with five CC0 radiology/pathology assets. First sourced multimodal pilot is linked and media-bound AI-test review is verified. Remaining M10a production gate is human-reviewed/published image content plus authenticated learner rendering of such published content; internal engineering path is proven.
