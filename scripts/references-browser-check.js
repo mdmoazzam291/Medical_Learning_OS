@@ -18,25 +18,20 @@ try {
     }, sources: [{ sourceId: pilot.sourceSnapshot.sourceId, version: pilot.sourceSnapshot.registeredVersion,
       url: pilot.sourceSnapshot.url, rights: { status: 'unknown' } }] }));
     const measurementSummary = {
-      contractId: 'content-review-workflow-measurement-summary-v1',
-      experimentId: 'm02c-references-workflow-v1',
-      decisionCount: 5,
+      contractId: 'content-review-workflow-batch-measurement-summary-v1',
+      experimentId: 'm02c-references-workflow-v2',
       workflows: [
         {
-          workflowMode: 'claim_first', decisions: 3, approved: 2, rejected: 1,
-          rejectionRate: 1 / 3, totalForegroundActiveMs: 180000,
-          medianForegroundActiveMs: 60000, totalElapsedWallMs: 240000,
-          medianElapsedWallMs: 80000
+          workflowMode: 'claim_first', batches: 1, decisions: 3, approved: 2, rejected: 1,
+          rejectionRate: 1 / 3, foregroundActiveMs: 60000, elapsedWallMs: 80000
         },
         {
-          workflowMode: 'standard', decisions: 2, approved: 2, rejected: 0,
-          rejectionRate: 0, totalForegroundActiveMs: 160000,
-          medianForegroundActiveMs: 80000, totalElapsedWallMs: 200000,
-          medianElapsedWallMs: 100000
+          workflowMode: 'standard', batches: 1, decisions: 2, approved: 2, rejected: 0,
+          rejectionRate: 0, foregroundActiveMs: 80000, elapsedWallMs: 100000
         }
       ],
       causal: false,
-      interpretation: 'descriptive operational measurement; matched clusters are not randomized'
+      interpretation: 'descriptive two-session human-review comparison'
     };
     let writes = 0;
     await context.route('**/functions/v1/review-api/**', async route => {
@@ -44,7 +39,7 @@ try {
       const path = new URL(route.request().url()).pathname;
       const body = path.endsWith('/me') ? { reviewKinds: ['references', 'rights'] }
         : path.endsWith('/queue') ? { items }
-        : path.endsWith('/review-measurements/summary') ? measurementSummary
+        : path.endsWith('/reference-review-batch/summary') ? measurementSummary
         : {};
       await route.fulfill({ json: body });
     });
