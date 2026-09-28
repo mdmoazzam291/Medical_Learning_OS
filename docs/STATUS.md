@@ -1095,3 +1095,17 @@ Verification for this slice is repository diff review because there is no domain
 - Correct answers keep the existing reviewed feedback path and do not enter the remediation block.
 - Direct cross-contract execution verified that the Edge Function producer output is accepted by the M09b domain validator. It also verified correct-answer silence, fail-soft no-source behavior, refusal to truncate overlong explanations and source-version deduplication.
 - No live AI provider is used. This learner flow therefore works identically when all AI providers are absent.
+
+
+## M09c semantic teaching bootstrap evaluation set — 2026-09-28
+- Added `data/evaluations/grounded-teaching-semantic-bootstrap-v1.json`.
+- The bootstrap set contains 6 cases and exactly covers all 6 currently human-reviewed/published question versions in the live catalog at verification time.
+- Cases are derived only from reviewed canonical explanations and their exact canonical source IDs/versions.
+- Every case contains an observed wrong option, reviewed canonical explanation, positive facts that must be preserved, explicit incorrect/dangerous claims that must not appear, allowed grounding, and a 120-word micro-remediation ceiling.
+- Added `src/domain/teaching-semantic-evaluation.js` with strict evaluation-set, checklist and human-review record contracts.
+- Five dimensions are mandatory: medical correctness, error correction, grounding, unsupported claims and verbosity.
+- Medical correctness, error correction and unsupported-claim review are explicitly `human_required`; grounding is `contract_plus_human`. Automated structure/citation checks cannot substitute for semantic medical review.
+- An overall pass is valid only if **every** required dimension passes; one failed dimension forces overall failure.
+- The bootstrap set explicitly has `productionQualificationAuthority=false`. Passing it alone can never authorize a production provider.
+- Direct execution verified schema integrity, checklist generation, all-pass review validation, rejection of inconsistent overall verdicts and exact 6/6 coverage against the live published catalog.
+- No provider has been connected or qualified by this work.
