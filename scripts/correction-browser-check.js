@@ -167,7 +167,7 @@ assert.equal(correctionBodies[0].targetId, questionVersionId);
 await page.getByText('MY CORRECTION · PRIVATE').waitFor();
 assert.match(await page.locator('.personal-correction').textContent(), /Learner-only/);
 assert.match(await page.locator('.vault-detail').textContent(), /Canonical reviewed content: intramuscular epinephrine is first-line treatment/);
-assert.equal(await page.locator('.personal-correction textarea').inputValue(), correctionText);
+assert.equal(await page.locator('.personal-correction textarea[name="bodyMarkdown"]').inputValue(), correctionText);
 
 const reportForm = page.locator('form[data-form="content-report"]').filter({ has: page.locator('input[name="shareCorrection"]') });
 await reportForm.getByLabel('Why might the shared content need review?').selectOption('incorrect');
