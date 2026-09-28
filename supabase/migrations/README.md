@@ -60,3 +60,9 @@ The migration body for `20260928112019` was recovered directly from `supabase_mi
 - `20260928120011_m10b_canonical_visual_interaction_profile.sql` adds immutable service-only visual task metadata, emits the descriptor through learner media prompts, and binds it into all media-aware review fingerprints.
 - The first profile is the in-review clear-cell RCC pathology item classified as `detection`.
 - Task metadata must be declared before review/publish; later semantic reclassification requires a new version rather than mutation.
+
+## M02c review workflow measurement — 2026-09-28
+
+- `20260928145039_m02c_review_workflow_measurement.sql` adds append-only, service-only workflow measurement receipts linked one-to-one with immutable question review receipts.
+- Metrics are explicitly non-authoritative and descriptive. They cannot alter review, verification, publication or reviewer grants.
+- A service-only summary RPC reports counts, rejection proxy and total/median foreground/wall timing by workflow mode for a named experiment.

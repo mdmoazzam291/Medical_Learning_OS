@@ -431,3 +431,31 @@ Do not create a giant textbook corpus, vector database, claim graph or autonomou
 Persist and scale the layer only when measured use shows that:
 
 `source/claim reuse + better triage > added ingestion/storage/review complexity`.
+
+## First measured workflow comparison
+
+The first M02c review-effort experiment is operationally matched rather than randomized:
+
+| Arm | Source cluster | Questions | References workflow |
+| --- | --- | ---: | --- |
+| Treatment | CDC carbon-monoxide clinical guidance | 7 | Claim-first shared inspection, then individual immutable question decisions |
+| Comparator | ASA preoperative fasting guideline | 7 | Existing standard individual References review |
+
+Both clusters are currently untouched by production References review at experiment registration.
+
+Captured only after a successful review receipt:
+- foreground-active milliseconds;
+- elapsed wall milliseconds;
+- queue size at decision;
+- immutable review target SHA-256;
+- decision, via the existing review event;
+- canonical source IDs, derived server-side.
+
+Interpretation constraints:
+- the clusters differ clinically, so the comparison is descriptive and cannot establish causality;
+- foreground-active time can undercount source reading in another tab;
+- wall time can overcount pauses;
+- rejection rate is a correction-needed proxy, not a direct accuracy measure;
+- no timing datum affects approval, reviewer permissions or publication.
+
+Decision rule for later M02c persistence should consider total/median review effort and correction signals together. Source reuse alone is insufficient.

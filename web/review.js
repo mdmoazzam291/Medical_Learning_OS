@@ -1,5 +1,6 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesPanel } from '/web/references-panel.js';
+import { referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -21,10 +22,95 @@ let state = {
   reviewAssist: null,
   referencesWorkspace: null,
   referencesError: null,
+  referencesExperimentArm: 'all',
   loading: false,
   submitting: null,
   error: null
 };
+
+let reviewTiming = null;
+
+function reviewPageIsActive() {
+  return document.visibilityState === 'visible' && document.hasFocus();
+}
+
+function syncReviewTiming() {
+  if (!reviewTiming) return;
+  const now = performance.now();
+  const active = reviewPageIsActive();
+  if (reviewTiming.foregroundStartedAt !== null && !active) {
+    reviewTiming.foregroundActiveMs += Math.max(0, now - reviewTiming.foregroundStartedAt);
+    reviewTiming.foregroundStartedAt = null;
+  } else if (reviewTiming.foregroundStartedAt === null && active) {
+    reviewTiming.foregroundStartedAt = now;
+  }
+}
+
+function beginReviewTiming() {
+  reviewTiming = null;
+  if (state.selectedKind !== 'references' ||
+      state.targetType !== 'questions' ||
+      !['claim_first', 'standard'].includes(state.referencesExperimentArm) ||
+      !globalThis.crypto?.randomUUID) {
+    return;
+  }
+  reviewTiming = {
+    clientSessionId: crypto.randomUUID(),
+    wallStartedAt: Date.now(),
+    foregroundActiveMs: 0,
+    foregroundStartedAt: reviewPageIsActive() ? performance.now() : null
+  };
+}
+
+function reviewTimingSnapshot() {
+  if (!reviewTiming) return null;
+  syncReviewTiming();
+  const foregroundActiveMs = Math.max(0, Math.round(reviewTiming.foregroundActiveMs));
+  const elapsedWallMs = Math.max(foregroundActiveMs, Date.now() - reviewTiming.wallStartedAt);
+  return {
+    clientSessionId: reviewTiming.clientSessionId,
+    foregroundActiveMs,
+    elapsedWallMs
+  };
+}
+
+function referencesExperimentPanel() {
+  if (state.selectedKind !== 'references' || state.targetType !== 'questions' || state.loading || state.error) return '';
+  const claimCount = filterReferencesWorkflowItems(state.items, 'claim_first').length;
+  const standardCount = filterReferencesWorkflowItems(state.items, 'standard').length;
+  const button = (mode, label, count) =>
+    '<button class="' + (state.referencesExperimentArm === mode ? 'primary' : 'secondary') +
+    '" type="button" data-action="references-experiment-arm" data-mode="' + mode + '">' +
+    escape(label) + ' · ' + escape(count) + '</button>';
+  return '<section class="panel review-measurement-panel"><div class="section-heading"><div><span class="eyebrow">M02C REVIEW-WORKFLOW PILOT</span><h2>Matched 7-question operational comparison</h2></div><span class="badge">Descriptive, not causal</span></div><p>Use one pilot arm at a time. Timing is recorded only after a real References decision succeeds and is never used for reviewer scoring or publication authority.</p><div class="button-row">' +
+    button('all','All backlog',state.items.length) +
+    button('claim_first','CO claim-first',claimCount) +
+    button('standard','ASA standard',standardCount) +
+    '</div><p class="muted">Foreground-active time is a lower bound; elapsed wall time is an upper bound when source reading happens in another tab. Rejection rate is a correction-needed proxy, not proof of review quality.</p></section>';
+}
+
+function reviewMeasurementForQuestion(questionVersionId) {
+  if (state.selectedKind !== 'references' ||
+      state.targetType !== 'questions' ||
+      !['claim_first', 'standard'].includes(state.referencesExperimentArm)) {
+    return null;
+  }
+  const item = state.items.find(candidate => candidate?.question?.questionVersionId === questionVersionId);
+  const arm = referencesWorkflowArm(item);
+  if (!arm || arm.workflowMode !== state.referencesExperimentArm) return null;
+  const timing = reviewTimingSnapshot();
+  if (!timing) return null;
+  return {
+    ...timing,
+    experimentId: arm.experimentId,
+    workflowMode: arm.workflowMode,
+    queueSize: filterReferencesWorkflowItems(state.items, arm.workflowMode).length
+  };
+}
+
+document.addEventListener('visibilitychange', syncReviewTiming);
+window.addEventListener('focus', syncReviewTiming);
+window.addEventListener('blur', syncReviewTiming);
 
 function announce(message) {
   notice.textContent = message;
@@ -282,11 +368,18 @@ function noteReviewItem(item, index) {
 
 function authorized() {
   const kinds = state.grants;
+  const referencesExperiment =
+    state.selectedKind === 'references' &&
+    state.targetType === 'questions' &&
+    ['claim_first', 'standard'].includes(state.referencesExperimentArm);
+  const experimentItems = referencesExperiment
+    ? filterReferencesWorkflowItems(state.items, state.referencesExperimentArm)
+    : state.items;
   const rightsSourceFirst = state.selectedKind === 'rights' && state.targetType === 'questions';
   const visibleItems = rightsSourceFirst
-    ? state.items.filter(questionSourcesHaveResolvedRights)
-    : state.items;
-  const blockedByUnknownRights = rightsSourceFirst ? state.items.length - visibleItems.length : 0;
+    ? experimentItems.filter(questionSourcesHaveResolvedRights)
+    : experimentItems;
+  const blockedByUnknownRights = rightsSourceFirst ? experimentItems.length - visibleItems.length : 0;
   const body = state.loading
     ? '<section class="panel"><p>Loading authorized review targets…</p></section>'
     : state.error
@@ -301,7 +394,8 @@ function authorized() {
   ${pipelinePanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${rightsSourceBacklogPanel()}
-  ${state.selectedKind === 'references' && state.targetType === 'questions' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
+  ${referencesExperimentPanel()}
+  ${state.selectedKind === 'references' && state.targetType === 'questions' && state.referencesExperimentArm !== 'standard' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
   ${body}</main>`;
 }
 
@@ -362,6 +456,7 @@ async function loadQueue(kind = state.selectedKind) {
     state = { ...state, loading: false, items: [], error: error.code || error.message || 'review_queue_unavailable' };
   }
   render();
+  beginReviewTiming();
 }
 
 async function bootstrap() {
@@ -378,7 +473,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
@@ -388,9 +483,15 @@ async function bootstrap() {
 }
 
 root.addEventListener('change', event => {
-  if (event.target.id === 'review-kind') loadQueue(event.target.value);
+  if (event.target.id === 'review-kind') {
+    state.referencesExperimentArm = 'all';
+    reviewTiming = null;
+    loadQueue(event.target.value);
+  }
   if (event.target.id === 'review-target') {
     state.targetType = event.target.value === 'neural-notes' ? 'neural-notes' : 'questions';
+    state.referencesExperimentArm = 'all';
+    reviewTiming = null;
     loadQueue(state.selectedKind);
   }
 });
@@ -400,6 +501,15 @@ root.addEventListener('click', event => {
   if (!target) return;
   if (target.dataset.action === 'reload') {
     loadQueue();
+    return;
+  }
+
+  if (target.dataset.action === 'references-experiment-arm') {
+    const mode = target.dataset.mode;
+    if (!['all', 'claim_first', 'standard'].includes(mode)) return;
+    state.referencesExperimentArm = mode;
+    render();
+    beginReviewTiming();
     return;
   }
 
@@ -478,6 +588,7 @@ root.addEventListener('submit', event => {
   const noteVersionId = form.dataset.noteVersionId;
   const targetId = noteVersionId || questionVersionId;
   if (!notes || !targetId) { announce('Review notes are required.'); return; }
+  const workflowMeasurement = noteVersionId ? null : reviewMeasurementForQuestion(questionVersionId);
 
   (async () => {
     state.submitting = targetId;
@@ -496,6 +607,16 @@ root.addEventListener('submit', event => {
             decision,
             notes
           });
+      if (workflowMeasurement) {
+        try {
+          await review.recordMeasurement({
+            reviewId: receipt.reviewId,
+            ...workflowMeasurement
+          });
+        } catch (measurementError) {
+          reportUnexpected(measurementError, 'record_review_workflow_measurement');
+        }
+      }
       announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${targetId} for ${gateLabel(state.selectedKind)}. Review receipt ${receipt.reviewId} recorded.`);
       state.submitting = null;
       await loadQueue(state.selectedKind);
