@@ -139,3 +139,22 @@ test('medical overview links to dedicated Exam Mode without embedding exam state
   assert.doesNotMatch(source, /setExamRunAnswer/);
   assert.doesNotMatch(source, /setExamRunReview/);
 });
+
+
+test('incorrect-answer UI prefers validated canonical teaching receipt and keeps legacy fallback', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /function canonicalTeachingFeedback\(receipt\)/);
+  assert.match(source, /post-answer-canonical-v1/);
+  assert.match(source, /grounded-teaching-output/);
+  assert.match(source, /sourceMode !== 'canonical_fallback'/);
+  assert.match(source, /REVIEWED TEACHING/);
+  assert.match(source, /Quick retrieval/);
+  assert.match(source, /canonicalTeaching \|\|/);
+  assert.match(source, /receipt\.explanation/);
+});
+
+test('correct answers do not enter the canonical remediation block', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /receipt\?\.event\?\.correct !== false/);
+  assert.match(source, /receipt\.event\?\.correct \? 'Correct\.'/);
+});

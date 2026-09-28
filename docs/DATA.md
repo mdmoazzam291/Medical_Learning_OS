@@ -335,3 +335,16 @@ Required task input:
 `grounded-teaching-delivery-v1` is also rebuildable. It exposes either validated provider teaching or canonical fallback plus a fallback reason. Neither evaluation nor delivery is learner evidence, mastery state or publication authority.
 
 Initial verbosity caps are engineering defaults encoded in the version-1 validator, not evidence-backed personalization parameters. Any future change that can alter learner-facing acceptance behavior requires a new contract/evaluation version.
+
+
+## Post-answer teaching receipt
+
+New answer receipts may include:
+- `teachingDecision`: `post-answer-canonical-v1@1`, trigger `incorrect_answer`, action `concise_explanation`;
+- `teaching`: a canonical-fallback `grounded-teaching-output@1`.
+
+These fields are immutable receipt context attached to the scored attempt. They are not mastery, mistake-cause inference or provider memory.
+
+For current canonical teaching, the single `explanation` claim uses the exact reviewed question explanation and references the question's canonical source IDs/versions. Existing historical receipts without these fields remain valid and the learner UI falls back to the legacy `explanation` field.
+
+This receipt structure preserves intervention observability so later evaluation can link an observed post-answer teaching action to later retrieval/transfer without rewriting the original attempt.

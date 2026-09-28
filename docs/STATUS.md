@@ -1081,3 +1081,17 @@ Verification for this slice is repository diff review because there is no domain
 - While executing M09b, a pre-existing canonical-integrity defect was discovered: the array-index regex contained a literal double backslash, causing normal arrays with indices beyond `0` to fail canonical JSON validation. The regex is corrected and a dense multi-index array regression test is added.
 - No live AI provider, model SDK, model router, prompt database, AI persistence table, or recurring AI cost is introduced.
 - Claim-level citation containment still does **not** prove semantic medical correctness. A curated semantic medical teaching evaluation set remains required before a learner-facing provider is connected.
+
+
+## M09b learner-facing canonical teaching fallback — 2026-09-28
+- Added a deterministic post-answer teaching producer at `supabase/functions/study-api/_shared/post-answer-teaching.js`.
+- Incorrect answers now map to the bounded action `concise_explanation`; correct answers create no extra remediation block.
+- The producer reuses the exact reviewed/published question explanation without rewriting or truncating medical content.
+- Current published explanations are comfortably within the v1 concise limit (6 published questions; maximum 41 words, average 31.7 words at verification time).
+- Source metadata from the exact question version is converted into claim-level `content-source` references and attached to `grounded-teaching-output@1`.
+- If no canonical source identity is available or the reviewed explanation would exceed the v1 verbosity contract, the producer returns no structured teaching block rather than fabricating or truncating content.
+- The immutable answer receipt now records both `teachingDecision` and `teaching`; this preserves which intervention was actually shown for later intervention→outcome analysis without creating a new learner-state store.
+- The medical learner UI renders the structured canonical block for incorrect answers, including one short retrieval prompt, while old receipts and any non-conforming payload fall back to the existing reviewed explanation.
+- Correct answers keep the existing reviewed feedback path and do not enter the remediation block.
+- Direct cross-contract execution verified that the Edge Function producer output is accepted by the M09b domain validator. It also verified correct-answer silence, fail-soft no-source behavior, refusal to truncate overlong explanations and source-version deduplication.
+- No live AI provider is used. This learner flow therefore works identically when all AI providers are absent.

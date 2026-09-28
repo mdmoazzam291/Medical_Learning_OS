@@ -77,6 +77,36 @@ function safeSourceLink(source) {
   }
 }
 
+function canonicalTeachingFeedback(receipt) {
+  const teaching = receipt?.teaching;
+  const decision = receipt?.teachingDecision;
+  if (receipt?.event?.correct !== false ||
+      decision?.policyId !== 'post-answer-canonical-v1' ||
+      decision?.teachingAction !== 'concise_explanation' ||
+      teaching?.contractId !== 'grounded-teaching-output' ||
+      teaching?.contractVersion !== '1' ||
+      teaching?.renderStatus !== 'ready' ||
+      teaching?.sourceMode !== 'canonical_fallback' ||
+      teaching?.teachingAction !== 'concise_explanation' ||
+      !Array.isArray(teaching?.claims) ||
+      !teaching.claims.length) {
+    return null;
+  }
+
+  const claimText = teaching.claims
+    .filter(claim => claim?.role === 'explanation' && typeof claim?.text === 'string')
+    .map(claim => '<p>' + escape(claim.text) + '</p>')
+    .join('');
+  if (!claimText) return null;
+
+  const nextPrompt = typeof teaching.nextPrompt === 'string' && teaching.nextPrompt.trim()
+    ? '<div class="memory-rating"><strong>Quick retrieval</strong><p>' + escape(teaching.nextPrompt) + '</p></div>'
+    : '';
+
+  return '<div class="grounded-teaching"><span class="eyebrow">REVIEWED TEACHING</span><h2>Incorrect. ' +
+    escape(teaching.headline || 'Review the reasoning.') + '</h2>' + claimText + nextPrompt + '</div>';
+}
+
 function signedOut() {
   return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">MEDICAL QBANK</span><h1>Sign in to study reviewed medical content.</h1><p>The medical QBank uses your authenticated learner identity and server-side scoring.</p></div><span class="badge">M04c</span></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open cloud account →</a></section></main>';
 }
@@ -169,8 +199,15 @@ function studyView() {
   const vaultLink = vaultParams
     ? '<a class="text-button" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review this concept in NeuralVault →' : 'Open concept in NeuralVault →') + '</a>'
     : '';
+  const canonicalTeaching = answered ? canonicalTeachingFeedback(receipt) : null;
+  const answerExplanation = answered
+    ? canonicalTeaching || (
+        '<div><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') +
+        '</h2><p>' + escape(receipt.explanation || '') + '</p></div>'
+      )
+    : '';
   const feedback = answered
-    ? '<div class="explanation" role="status"><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>' + escape(receipt.explanation || '') + '</p><div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    ? '<div class="explanation" role="status">' + answerExplanation + '<div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
 
   return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">MEDICAL QBANK</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study"><form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
