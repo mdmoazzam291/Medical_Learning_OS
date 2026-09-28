@@ -108,3 +108,27 @@ test('simulator question view attaches learner-safe signed media projection', ()
   assert.doesNotMatch(block, /diagnosisEvidence/);
   assert.doesNotMatch(block, /annotationVersionIds/);
 });
+
+
+test('exam cancellation is revisioned, idempotent and receipt-free', () => {
+  const route = source.indexOf('const examRunCancelMatch');
+  assert.ok(route >= 0);
+  const tail = source.slice(route);
+  assert.match(tail, /exactFields\(input, \["requestId", "expectedRevision", "reason"\]\)/);
+  assert.match(tail, /"user_abandoned", "operator_cancelled"/);
+  assert.match(tail, /priorEvent\.event_type === "run\.cancelled"/);
+  assert.match(tail, /p_event_type: "run\.cancelled"/);
+  assert.match(tail, /p_completion_receipt: null/);
+  assert.match(tail, /requireExamRunAccess\(row\)/);
+  assert.match(source, /termination: state\.termination \?\? null/);
+});
+
+test('cancellation checks terminal state before writing and cannot score a cancelled run', () => {
+  const route = source.indexOf('const examRunCancelMatch');
+  const readiness = source.indexOf('path === "/exam-simulator/readiness"', route);
+  const block = source.slice(route, readiness);
+  assert.match(block, /row = await syncExamClock\(row, now\)/);
+  assert.match(block, /row\.status === "completed"/);
+  assert.match(block, /row\.status === "cancelled"/);
+  assert.doesNotMatch(block, /buildExamCompletionReceipt/);
+});
