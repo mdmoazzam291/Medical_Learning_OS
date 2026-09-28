@@ -323,6 +323,36 @@ function reviewAssistPanel(questionVersionId) {
   </section>`;
 }
 
+function fullQuestionReviewBundlePanel(question, rightsReady) {
+  const questionVersionId = question?.questionVersionId;
+  const reviews = Array.isArray(question?.reviews) ? question.reviews : [];
+  const assist = assistQuestion(questionVersionId);
+  const allGrants = ['medical', 'references', 'rights'].every(kind => state.grants.includes(kind));
+  const inMeasuredReferencesArm =
+    state.selectedKind === 'references' &&
+    ['claim_first', 'standard'].includes(state.referencesExperimentArm);
+  if (!questionVersionId || reviews.length || !allGrants || !rightsReady || inMeasuredReferencesArm) return '';
+  const drafts = {
+    medical: assist?.medical?.draftNote,
+    references: assist?.references?.draftNote,
+    rights: assist?.rights?.draftNote
+  };
+  if (!drafts.medical || !drafts.references || !drafts.rights) return '';
+
+  return `<section class="review-section full-review-bundle">
+    <div class="section-heading"><div><span class="eyebrow">FULL REVIEW BUNDLE</span><h3>One attestation · three immutable gate receipts</h3></div><span class="badge">Human decision required</span></div>
+    <p>Use this only after independently checking the clinical answer, source support, and rights/provenance for this exact version. It atomically records three <strong>approved</strong> gate receipts. If any gate should fail, use the normal individual reject control instead.</p>
+    <form class="full-question-review-form" data-question-version-id="${escape(questionVersionId)}">
+      <label>Medical review note<textarea name="medicalNotes" minlength="1" maxlength="4000" required>${escape(drafts.medical)}</textarea></label>
+      <label>References review note<textarea name="referencesNotes" minlength="1" maxlength="4000" required>${escape(drafts.references)}</textarea></label>
+      <label>Rights review note<textarea name="rightsNotes" minlength="1" maxlength="4000" required>${escape(drafts.rights)}</textarea></label>
+      <label class="review-attestation"><input type="checkbox" name="attested" required> I independently inspected this exact question and its cited evidence for all three gates. These draft notes reflect my own decision after review.</label>
+      <div class="review-actions"><button class="primary" type="submit" ${state.submitting ? 'disabled' : ''}>Approve all 3 gates atomically</button></div>
+      <p class="muted">This does not publish content. A separate server-only publication transition is still required after verified state is reached.</p>
+    </form>
+  </section>`;
+}
+
 function signedOut() {
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">CONTENT REVIEW</span><h1>Sign in before reviewing.</h1><p>The review workspace uses your existing Supabase account session. Reviewer identity and privileges are resolved server-side.</p></div><span class="badge">M04c</span></div><section class="panel"><h2>No review session</h2><p>Sign in on the Cloud account page, then return here. Learner accounts do not become reviewers automatically.</p><a class="primary action-link" href="/web/account.html">Open cloud account</a></section></main>`;
 }
@@ -421,6 +451,7 @@ function reviewItem(item, index) {
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     ${reviewAssistPanel(q.questionVersionId)}
+    ${fullQuestionReviewBundlePanel(q, rightsReady)}
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     <form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
       <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
@@ -668,6 +699,44 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const fullReviewForm = event.target.closest('.full-question-review-form');
+  if (fullReviewForm) {
+    event.preventDefault();
+    const data = new FormData(fullReviewForm);
+    const questionVersionId = fullReviewForm.dataset.questionVersionId;
+    const medicalNotes = String(data.get('medicalNotes') || '').trim();
+    const referencesNotes = String(data.get('referencesNotes') || '').trim();
+    const rightsNotes = String(data.get('rightsNotes') || '').trim();
+    const attested = data.get('attested') === 'on';
+    if (!questionVersionId || !medicalNotes || !referencesNotes || !rightsNotes || !attested) {
+      announce('All three review notes and the independent-review attestation are required.');
+      return;
+    }
+
+    (async () => {
+      state.submitting = questionVersionId;
+      setFormBusy(fullReviewForm, true);
+      try {
+        const receipt = await review.recordFullQuestionReview({
+          questionVersionId,
+          medicalNotes,
+          referencesNotes,
+          rightsNotes,
+          attested
+        });
+        announce(`Approved all three review gates for ${questionVersionId}. ${receipt.reviewCount} immutable receipts were recorded; publication remains separate.`);
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'record_full_question_review');
+        state.submitting = null;
+        setFormBusy(fullReviewForm, false);
+        announce(`Full review was not recorded: ${error.code || error.message || 'review_write_failed'}. Your notes have been preserved.`);
+      }
+    })();
+    return;
+  }
+
   const rightsForm = event.target.closest('.source-rights-form');
   if (rightsForm) {
     event.preventDefault();
