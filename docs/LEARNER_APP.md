@@ -24,3 +24,11 @@ Run `npm start`, then open `http://127.0.0.1:3000`. The development server binds
 
 ## Production path (M04)
 Add the authorized application API and persistent server ledger, reviewer identity enforcement, server-side eligibility/scoring, real reviewed content and account isolation. Keep the local demo namespace separate during any migration. Then connect the same study interaction to published question versions and test the medical flow end to end. Scheduling and NeuralVault follow that working persisted loop.
+
+## Authenticated visual detection handoff
+
+The medical learner UI has a dormant M10b path for server-scored visual detection. The browser never treats “has an image” as sufficient evidence of task type. It switches from the ordinary answer endpoint only when the session question contains a server-supplied `visualInteraction` descriptor with `schemaVersion=1`, `taskType=detection`, and an exact `mediaAssetVersionId` present in the delivered prompt.
+
+The browser submits only the selected option plus request/session position, exact media identity, help-use state and optional intervention reference. Correctness, target concept, outcome, event identity and timing remain server-owned. The returned ordinary question attempt remains the scored retrieval record; the visual receipt is an additional observation and does not become a mastery score.
+
+Until a reviewed/published visual item has that canonical descriptor, this code path is inert and ordinary medical study behavior is unchanged.
