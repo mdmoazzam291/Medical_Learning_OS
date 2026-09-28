@@ -1044,3 +1044,20 @@ Decision:
 - let missing delayed coverage remain visible and block model promotion rather than filling the gap with synthetic labels.
 
 This creates the measurement bridge needed for M05d scheduler validation, M07c Digital Twin inference, M09 intervention evaluation and M11 research without granting any of them premature authority.
+
+
+## ADR-070 — Retention probes require distinct reviewed items before activation (accepted, 2026-09-29)
+
+A retention study becomes misleading if the platform creates its own outcome merely by resurfacing the original item early or by treating a revised version of one question as a novel probe.
+
+Decision:
+- structural retention-probe readiness is computed from the reviewed canonical catalog before any probe protocol can activate;
+- a valid alternate-item opportunity requires at least two **distinct question identities** sharing the same primary canonical concept; multiple versions of one question do not count;
+- an in-review alternate is visible as pending capacity but cannot enter learner research until the normal Medical, References and Rights gates are complete and the item is published;
+- same-item delayed retrieval remains valid descriptive retention evidence through M11a, but M11b may not pull the original item forward merely to manufacture a research observation;
+- shared primary-concept identity is necessary but not sufficient for transfer or equivalent-probe validity; novelty, comparability and contamination rules require a later preregistered protocol;
+- protocol horizons, assignment logic, outcome metrics and stop criteria must be fixed before the first protocol-governed probe assignment rather than chosen after outcomes are visible;
+- readiness reporting is service-only and has no scheduling, publication, mastery or experiment-start authority;
+- no arbitrary population threshold is frozen before the platform has enough reviewed alternate-item content to support a defensible protocol design.
+
+This preserves the separation between **content readiness**, **research design**, **learner scheduling**, and **inference authority**.
