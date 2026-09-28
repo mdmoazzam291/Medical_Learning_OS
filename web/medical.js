@@ -207,12 +207,16 @@ function studyView() {
     ? '<div class="memory-rating"><strong>Why Study Now sent this: ' + escape(recommendationCopy[recommendationReason].label) + '</strong><p class="muted">' + escape(recommendationCopy[recommendationReason].detail) + '</p></div>'
     : '';
   const vaultParams = primaryConceptId ? new URLSearchParams({ concept: primaryConceptId }) : null;
+  if (vaultParams && answered) {
+    vaultParams.set('correctionTargetType', 'question_version');
+    vaultParams.set('correctionTargetId', q.questionVersionId);
+  }
   if (vaultParams && answered && recommendationReason) {
     vaultParams.set('from', 'study-now');
     vaultParams.set('reason', recommendationReason);
   }
   const vaultLink = vaultParams
-    ? '<a class="text-button" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review this concept in NeuralVault →' : 'Open concept in NeuralVault →') + '</a>'
+    ? '<a class="text-button" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review concept / add private correction →' : 'Open concept / add private correction →') + '</a>'
     : '';
   const canonicalTeaching = answered ? canonicalTeachingFeedback(receipt) : null;
   const answerExplanation = answered
