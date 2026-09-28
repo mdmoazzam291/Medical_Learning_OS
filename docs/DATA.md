@@ -403,3 +403,20 @@ Execution states:
 - `qualificationScope=bootstrap_only`.
 
 These artifacts are operational evaluation evidence, not learner evidence, medical truth, mastery state or publication authority.
+
+
+## Semantic teaching evaluation set v2
+
+`schemaVersion=2` extends semantic teaching evaluation cases with:
+- `representation`: `factual_recall | clinical_vignette | management_decision | discrimination`;
+- `learnerError.observedBelief`: required for misconception repair, otherwise nullable;
+- `gold.canonicalClaims[]`: role + text pairs used to build the deterministic fallback;
+- `gold.nextPrompt`.
+
+Action-specific requirements:
+- `concise_explanation` → at least one `explanation` claim;
+- `contrastive_explanation` → at least one `discriminator` claim;
+- `misconception_repair` → both `correction` and `discriminator` claims plus observed belief;
+- `prerequisite_remediation` → at least one `prerequisite` claim.
+
+The v2 set is development evaluation data only. It does not change question review state, source-rights authority, content publication state, learner evidence, Digital Twin state or provider production qualification.
