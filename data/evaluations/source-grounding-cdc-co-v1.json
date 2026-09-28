@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "pilotId": "m02c-cdc-co-source-grounding-v1",
+  "createdDate": "2026-09-28",
+  "purpose": "First real M02c grounding experiment on one existing seven-question source cluster. Non-authoritative and publication-disabled.",
+  "sourceSnapshot": {
+    "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+    "title": "CDC Clinical Guidance for Carbon Monoxide Poisoning",
+    "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+    "registeredVersion": "2024-07-08",
+    "observedPageVersion": "2024-07-08",
+    "observedAt": "2026-09-28",
+    "authorityClass": "current_guideline",
+    "rightsModeProposal": "public_domain",
+    "rightsBasisUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "sourceVersionBinding": "pass",
+    "note": "The live CDC page visibly identifies July 8, 2024, matching the registered catalog version. CDC agency-material policy says most CDC website information is public domain but lists exceptions; production Rights review remains authoritative."
+  },
+  "questions": [
+    {
+      "questionVersionId": "toxicology:co:common-symptoms@1",
+      "primaryConceptId": "toxicology:co:common-symptoms",
+      "expectedRiskLane": "focused",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:common-symptoms",
+          "conceptId": "toxicology:co:common-symptoms",
+          "claimType": "foundational_fact",
+          "statement": "Common carbon-monoxide poisoning symptoms include headache, dizziness, weakness, nausea or vomiting, chest pain, and altered mental status.",
+          "context": {},
+          "riskClass": "low",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "How to Recognize CO Poisoning",
+                "paragraph": 1
+              },
+              "support": "supports",
+              "passageDigest": "25447bd57d8c786b9de0218bde9630e4cd7ae3fdd0e1c7be4f3f555cf15a9f41",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:confirm-cohb@1",
+      "primaryConceptId": "toxicology:co:confirm-cohb",
+      "expectedRiskLane": "focused",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:confirm-cohb",
+          "conceptId": "toxicology:co:confirm-cohb",
+          "claimType": "investigation",
+          "statement": "Measuring carboxyhemoglobin is central to confirming suspected carbon-monoxide poisoning.",
+          "context": {},
+          "riskClass": "low",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Confirmation of Diagnosis",
+                "paragraph": 1
+              },
+              "support": "supports",
+              "passageDigest": "2f1d9b1a5a211984ebbf856d2807fb4caa3e6641712e7ecf55687e3c5d6162c8",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:cohb-support-thresholds@1",
+      "primaryConceptId": "toxicology:co:cohb-support-thresholds",
+      "expectedRiskLane": "focused",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:cohb-support-thresholds",
+          "conceptId": "toxicology:co:cohb-support-thresholds",
+          "claimType": "diagnostic_criterion",
+          "statement": "A carboxyhemoglobin level around 2% in nonsmokers and above 9% in smokers strongly supports carbon-monoxide poisoning.",
+          "context": {},
+          "riskClass": "moderate",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Diagnosis",
+                "paragraph": 4
+              },
+              "support": "supports",
+              "passageDigest": "43236380a2cbdd5f0f1488c15c60966c675a0e79b59707d61e64137f406106ce",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:oxygen-100-percent@1",
+      "primaryConceptId": "toxicology:co:oxygen-100-percent",
+      "expectedRiskLane": "focused",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:oxygen-100-percent",
+          "conceptId": "toxicology:co:oxygen-100-percent",
+          "claimType": "treatment_recommendation",
+          "statement": "CDC guidance recommends 100% oxygen until the patient is symptom-free, usually for about 4–5 hours, with serial neurologic assessment.",
+          "context": {},
+          "riskClass": "moderate",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Management",
+                "paragraph": 1
+              },
+              "support": "supports",
+              "passageDigest": "027d571a42f0c585276f2d20b0a60f3136944aa48a567eed3231d4080c255458",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:hbo-indications@1",
+      "primaryConceptId": "toxicology:co:hbo-indications",
+      "expectedRiskLane": "expert",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:hbo-indications",
+          "conceptId": "toxicology:co:hbo-indications",
+          "claimType": "treatment_recommendation",
+          "statement": "Hyperbaric oxygen should be considered with substantial COHb elevation or major cardiac, acid-base, consciousness, neurologic, or neuropsychiatric abnormalities.",
+          "context": {},
+          "riskClass": "high",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Management",
+                "paragraph": 2
+              },
+              "support": "supports",
+              "passageDigest": "22fad6846e78577fc85f94768b7b0db4a9a1e6b8d202314693c1a0b94985ffdf",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:pregnancy-hbo@1",
+      "primaryConceptId": "toxicology:co:pregnancy-hbo",
+      "expectedRiskLane": "expert",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:pregnancy-hbo",
+          "conceptId": "toxicology:co:pregnancy-hbo",
+          "claimType": "treatment_recommendation",
+          "statement": "CDC guidance describes hyperbaric oxygen as the treatment of choice for pregnant women with carbon-monoxide poisoning, including less severe poisoning.",
+          "context": {},
+          "riskClass": "high",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Management",
+                "paragraph": 3
+              },
+              "support": "supports",
+              "passageDigest": "e46d6ed5f1307af84f4659aa5218993e72447b39fad956aee6b92582673f1c2a",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionVersionId": "toxicology:co:pulse-oximeter-limitation@1",
+      "primaryConceptId": "toxicology:co:pulse-oximeter-limitation",
+      "expectedRiskLane": "focused",
+      "claims": [
+        {
+          "schemaVersion": 1,
+          "claimId": "claim:toxicology:co:pulse-oximeter-limitation",
+          "conceptId": "toxicology:co:pulse-oximeter-limitation",
+          "claimType": "investigation",
+          "statement": "Conventional two-wavelength pulse oximetry is inaccurate when significant carboxyhemoglobin is present.",
+          "context": {},
+          "riskClass": "low",
+          "evidence": [
+            {
+              "sourceId": "cdc:co:clinical-guidance:2024-07-08",
+              "sourceVersion": "2024-07-08",
+              "authorityClass": "current_guideline",
+              "rightsMode": "public_domain",
+              "locator": {
+                "heading": "Confirmation of Diagnosis",
+                "paragraph": 4
+              },
+              "support": "supports",
+              "passageDigest": "a0139339fa839ae1c52f27c7b6d6f2b9ea648574a951eaf4126742048979d784",
+              "note": "Exact supporting CDC paragraph inspected on 2026-09-28."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deterministicChecks": [
+    {
+      "checkId": "source-version-binding",
+      "status": "pass",
+      "detail": "Registered source version 2024-07-08 matches the date visibly published on the inspected CDC page."
+    },
+    {
+      "checkId": "source-url-binding",
+      "status": "pass",
+      "detail": "All seven existing question versions reference the same registered CDC source URL inspected for this pilot."
+    }
+  ],
+  "expectedMetrics": {
+    "questionCount": 7,
+    "uniqueSourceCount": 1,
+    "exactClaimEvidenceBindings": 7,
+    "sourceReuseFactor": 7,
+    "directSupportCoverage": 1,
+    "expectedFocusedPackets": 5,
+    "expectedExpertPackets": 2,
+    "expectedRoutinePackets": 0,
+    "productionPublicationAuthority": false,
+    "measuredReviewerTimeReduction": null,
+    "persistenceDecision": "defer_until_reviewer_time_and_correction_rate_are_measured"
+  }
+}
