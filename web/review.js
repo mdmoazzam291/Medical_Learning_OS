@@ -479,7 +479,13 @@ function defaultRejectReason() {
   return 'rights_or_provenance_problem';
 }
 
-function currentReviewItems() {
+function itemRightsResolved(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 &&
+    sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
+}
+
+function currentReviewItems(decision = null) {
   const referencesExperiment =
     state.selectedKind === 'references' &&
     state.targetType === 'questions' &&
@@ -490,8 +496,30 @@ function currentReviewItems() {
   const focusedItems = state.selectedKind === 'references' && !referencesExperiment
     ? filterReferencesBySource(experimentItems, state.referencesSourceId)
     : experimentItems;
-  if (state.selectedKind === 'rights') return focusedItems.filter(itemRightsReady);
-  return focusedItems;
+  if (state.selectedKind !== 'rights') return focusedItems;
+  const resolved = focusedItems.filter(itemRightsResolved);
+  return decision === 'approved' ? resolved.filter(itemRightsReady) : resolved;
+}
+
+function superApprovalEligible(item) {
+  if (state.targetType !== 'questions') return false;
+  if (Array.isArray(item?.mediaReview?.media) && item.mediaReview.media.length) return false;
+  if (state.selectedKind === 'rights' && !itemRightsReady(item)) return false;
+  const questionVersionId = item?.question?.questionVersionId;
+  const assist = assistQuestion(questionVersionId);
+  if (!assist) return false;
+  if (state.selectedKind === 'medical') {
+    return assist?.medical?.result === 'supported' && assist?.medical?.uncertainty === 'low';
+  }
+  if (state.selectedKind === 'references') {
+    return assist?.references?.result === 'direct_support';
+  }
+  return ['citation_only_recommended','citation_only_supported','public_domain_recommended','public_domain_supported']
+    .includes(assist?.rights?.result);
+}
+
+function superApprovalItems() {
+  return currentReviewItems('approved').filter(superApprovalEligible);
 }
 
 function structuredReviewControls(item) {
@@ -518,23 +546,26 @@ function masterReviewPanel() {
   if (state.loading || state.error ||
       (state.selectedKind === 'references' &&
        ['claim_first', 'standard'].includes(state.referencesExperimentArm))) return '';
-  const items = currentReviewItems();
-  const ids = items.map(reviewTargetIdentity).filter(Boolean);
-  if (!ids.length) return '';
-  const selected = state.selectedTargetIds.filter(id => ids.includes(id));
+  const reviewableItems = currentReviewItems('rejected');
+  const reviewableIds = reviewableItems.map(reviewTargetIdentity).filter(Boolean);
+  if (!reviewableIds.length) return '';
+  const approvableIds = new Set(currentReviewItems('approved').map(reviewTargetIdentity).filter(Boolean));
+  const superApproveIds = superApprovalItems().map(reviewTargetIdentity).filter(Boolean);
+  const selected = state.selectedTargetIds.filter(id => reviewableIds.includes(id));
+  const selectedAllApprovable = selected.length > 0 && selected.every(id => approvableIds.has(id));
   return `<section class="panel master-review-panel">
     <div class="section-heading"><div><span class="eyebrow">MASTER REVIEW</span>
-      <h2>Bulk decision controls</h2></div><span class="badge">${escape(ids.length)} eligible · ${escape(selected.length)} selected</span></div>
+      <h2>Bulk decision controls</h2></div><span class="badge">${escape(reviewableIds.length)} reviewable · ${escape(selected.length)} selected</span></div>
     <p>Bulk actions affect only the current <strong>${escape(gateLabel(state.selectedKind))}</strong> gate and never publish content. Every target still receives its own immutable review receipt.</p>
     <div class="button-row">
-      <button class="secondary" type="button" data-action="select-all-review">Select all eligible</button>
+      <button class="secondary" type="button" data-action="select-all-review">Select all reviewable</button>
       <button class="secondary" type="button" data-action="clear-review-selection">Clear selection</button>
-      <button class="primary" type="button" data-action="master-review-selected" data-decision="approved" ${selected.length ? '' : 'disabled'}>Approve selected</button>
+      <button class="primary" type="button" data-action="master-review-selected" data-decision="approved" ${selectedAllApprovable ? '' : 'disabled'}>Approve selected</button>
       <button class="secondary danger-outline" type="button" data-action="master-review-selected" data-decision="rejected" ${selected.length ? '' : 'disabled'}>Reject selected</button>
     </div>
     <div class="button-row">
-      <button class="primary" type="button" data-action="master-review-all" data-decision="approved">Super approve all eligible</button>
-      <button class="secondary danger-outline" type="button" data-action="master-review-all" data-decision="rejected">Super reject all eligible</button>
+      <button class="primary" type="button" data-action="master-review-all" data-decision="approved" ${superApproveIds.length ? '' : 'disabled'}>Super approve ${escape(superApproveIds.length)} preflight-clean</button>
+      <button class="secondary danger-outline" type="button" data-action="master-review-all" data-decision="rejected">Super reject all ${escape(reviewableIds.length)} reviewable</button>
     </div>
     <label class="review-attestation"><input id="master-review-attested" type="checkbox"> I inspected the targets I am about to decide and accept one gate-level decision per exact target.</label>
     <p class="muted">For heterogeneous or large queues, select a reviewed subset instead of using the super action. The batch is atomic: if any target changed or became ineligible, nothing is partially committed.</p>
@@ -812,7 +843,7 @@ root.addEventListener('click', event => {
   }
 
   if (target.dataset.action === 'select-all-review') {
-    state.selectedTargetIds = currentReviewItems().map(reviewTargetIdentity).filter(Boolean);
+    state.selectedTargetIds = currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean);
     render();
     return;
   }
@@ -832,8 +863,16 @@ root.addEventListener('click', event => {
 
   if (target.dataset.action === 'master-review-selected') {
     const decision = target.dataset.decision;
-    const eligibleIds = new Set(currentReviewItems().map(reviewTargetIdentity).filter(Boolean));
-    const selected = state.selectedTargetIds.filter(id => eligibleIds.has(id));
+    const eligibleItems = currentReviewItems(decision);
+    const eligibleIds = new Set(eligibleItems.map(reviewTargetIdentity).filter(Boolean));
+    const selectedReviewable = state.selectedTargetIds.filter(id =>
+      currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean).includes(id)
+    );
+    if (decision === 'approved' && selectedReviewable.some(id => !eligibleIds.has(id))) {
+      announce('At least one selected target is not approvable for this gate. Resolve its blocking condition or deselect it.');
+      return;
+    }
+    const selected = selectedReviewable.filter(id => eligibleIds.has(id));
     submitStructuredReview(selected, decision, {
       requireMasterAttestation: true,
       label: 'master-selected-review'
@@ -843,7 +882,9 @@ root.addEventListener('click', event => {
 
   if (target.dataset.action === 'master-review-all') {
     const decision = target.dataset.decision;
-    const ids = currentReviewItems().map(reviewTargetIdentity).filter(Boolean);
+    const ids = decision === 'approved'
+      ? superApprovalItems().map(reviewTargetIdentity).filter(Boolean)
+      : currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean);
     submitStructuredReview(ids, decision, {
       requireMasterAttestation: true,
       label: 'master-all-review'
