@@ -262,3 +262,26 @@ The projection verifies receipt consistency before returning analytics. It may d
 It is **not** a learner-state authority. Root-cause, mastery, fatigue, confidence and preventable-mark inference are disabled in v1. Its compressed remediation candidates are inputs that a later Study Now policy may evaluate, not recommendations with causal authority.
 
 Cancelled runs cannot be autopsied as completed exams. Internal-test runs retain `testingOnly` / `productionEquivalent=false` in the autopsy assembly metadata, and the current tester grant is rechecked before access.
+
+
+## Exam Mode browser boundary
+
+The dedicated Exam Mode page is intentionally thin:
+
+```text
+browser exam shell
+  ↓ authenticated intent
+study-api
+  ↓
+trusted locked-section runtime + immutable exam ledger
+  ↓
+completion receipt
+  ↓
+GT Autopsy read projection
+```
+
+The browser owns only ephemeral presentation state such as which question in the current open section is visible. It does not own section timing, section transition, correctness, scoring, run authorization or completion.
+
+The displayed countdown uses `serverNow` and the server-scheduled section deadline. It is a display aid; every mutation first passes the server clock/state boundary.
+
+Production and internal-test lanes share the same browser runner and runtime. Eligibility/authorization remains separate server-side, preventing the engineering lane from becoming a parallel simulator implementation.
