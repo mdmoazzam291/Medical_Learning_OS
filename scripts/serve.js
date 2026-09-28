@@ -21,6 +21,7 @@ const allowed = new Set([
   'web/review.js',
   'web/references-panel.js',
   'src/domain/references-workspace.js',
+  'src/domain/review-workflow-experiment.js',
   'src/domain/source-grounded-verification.js',
   'src/domain/canonical-integrity.js',
   'data/evaluations/source-grounding-cdc-co-v1.json',
