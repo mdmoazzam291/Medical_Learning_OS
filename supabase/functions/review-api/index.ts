@@ -184,6 +184,87 @@ Deno.serve(async (req: Request) => {
       return grants;
     };
 
+    const signedReviewMedia = async (questionVersionId: string, kind: string) => {
+      const [
+        { data: target, error: targetError },
+        { data: targetSha256, error: hashError }
+      ] = await Promise.all([
+        admin.rpc("content_media_review_target", {
+          p_question_version_id: questionVersionId,
+          p_review_kind: kind
+        }),
+        admin.rpc("current_review_target_sha256", {
+          p_question_version_id: questionVersionId,
+          p_review_kind: kind
+        })
+      ]);
+      if (targetError || hashError) fail(500, "review_media_target_unavailable");
+
+      const reviewTarget = Array.isArray(target) ? target : [];
+      if (!reviewTarget.length) return null;
+
+      const ids = [...new Set(
+        reviewTarget
+          .map((item: any) => String(item?.link?.mediaAssetVersionId ?? ""))
+          .filter(Boolean)
+      )];
+      if (!ids.length) fail(500, "review_media_target_invalid");
+
+      const { data: assets, error: assetError } = await trustedRead(
+        "review_media_assets",
+        async () =>
+          admin.from("content_media_assets")
+            .select("media_asset_version_id,delivery_ref,modality,mime_type,width,height")
+            .in("media_asset_version_id", ids)
+      );
+      if (assetError) fail(500, "review_media_delivery_unavailable");
+      const byId = new Map(
+        (assets ?? []).map((asset: any) => [String(asset.media_asset_version_id), asset])
+      );
+
+      const media = [];
+      for (const targetItem of reviewTarget) {
+        const mediaAssetVersionId = String(targetItem?.link?.mediaAssetVersionId ?? "");
+        const asset: any = byId.get(mediaAssetVersionId);
+        if (!asset) fail(500, "review_media_delivery_unavailable");
+
+        const rawRef = String(asset.delivery_ref ?? "");
+        let deliveryRef = rawRef;
+        if (!rawRef.startsWith("https://")) {
+          const prefix = "storage://mlos-media/";
+          if (!rawRef.startsWith(prefix)) fail(500, "review_media_delivery_ref_invalid");
+          const objectPath = rawRef.slice(prefix.length);
+          if (!objectPath || objectPath.startsWith("/") || objectPath.includes("..")) {
+            fail(500, "review_media_delivery_ref_invalid");
+          }
+          const { data: signed, error: signedError } = await admin.storage
+            .from("mlos-media")
+            .createSignedUrl(objectPath, 900);
+          if (signedError || !signed?.signedUrl) fail(500, "review_media_delivery_unavailable");
+          deliveryRef = signed.signedUrl;
+        }
+
+        media.push({
+          mediaAssetVersionId,
+          role: String(targetItem?.link?.role ?? ""),
+          displayOrder: Number(targetItem?.link?.displayOrder ?? 0),
+          modality: String(asset.modality ?? ""),
+          mimeType: String(asset.mime_type ?? ""),
+          width: asset.width === null ? null : Number(asset.width),
+          height: asset.height === null ? null : Number(asset.height),
+          deliveryRef
+        });
+      }
+
+      return {
+        contractId: "content-media-review-surface-v1",
+        reviewKind: kind,
+        targetSha256: String(targetSha256 ?? ""),
+        media,
+        target: reviewTarget
+      };
+    };
+
     const url = new URL(req.url);
     const path = routePath(url);
 
@@ -222,12 +303,19 @@ Deno.serve(async (req: Request) => {
       const body = catalog.body as any;
       const sources = Array.isArray(body?.sources) ? body.sources : [];
       const questions = Array.isArray(body?.questions) ? body.questions : [];
-      const queue = questions
-        .filter((q: any) => q?.status === "in_review" && typeof q?.questionVersionId === "string" && !reviewed.has(q.questionVersionId))
-        .map((q: any) => ({
-          question: q,
-          sources: sources.filter((source: any) => Array.isArray(q.sourceIds) && q.sourceIds.includes(source?.sourceId))
-        }));
+      const pending = questions
+        .filter((q: any) =>
+          q?.status === "in_review" &&
+          typeof q?.questionVersionId === "string" &&
+          !reviewed.has(q.questionVersionId)
+        );
+      const queue = await Promise.all(pending.map(async (q: any) => ({
+        question: q,
+        sources: sources.filter(
+          (source: any) => Array.isArray(q.sourceIds) && q.sourceIds.includes(source?.sourceId)
+        ),
+        mediaReview: await signedReviewMedia(q.questionVersionId, kind)
+      })));
 
       return response(req, 200, { reviewKind: kind, items: queue });
     }
