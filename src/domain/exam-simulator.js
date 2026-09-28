@@ -4,6 +4,7 @@ import {
   advanceExamRunClock,
   setExamAnswer,
   setExamReview,
+  cancelExamRun,
   examRunProgress,
   scoreLockedSectionExamRun
 } from '../../supabase/functions/study-api/_shared/exam-runtime.js';
@@ -48,6 +49,7 @@ export {
   advanceExamRunClock,
   setExamAnswer,
   setExamReview,
+  cancelExamRun,
   examRunProgress
 };
 

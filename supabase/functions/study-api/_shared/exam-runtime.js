@@ -189,6 +189,31 @@ export function setExamReview(input, { questionVersionId, markedForReview, at })
   return freeze(run);
 }
 
+export function cancelExamRun(input, { at, reason }) {
+  canonicalInstant(at, 'at');
+  if (!['user_abandoned', 'operator_cancelled'].includes(reason)) {
+    fail('Invalid exam cancellation reason');
+  }
+
+  const run = structuredClone(advanceExamRunClock(input, at));
+  if (run.status === 'completed') throw new Error('exam_run_completed');
+  if (run.status === 'cancelled') throw new Error('exam_run_cancelled');
+  if (run.status !== 'in_progress' || run.currentSectionIndex === null) {
+    throw new Error('exam_run_not_open');
+  }
+
+  const current = run.sections[run.currentSectionIndex];
+  if (current && current.closedAt === null) current.closedAt = at;
+  run.status = 'cancelled';
+  run.currentSectionIndex = null;
+  run.termination = {
+    kind: 'cancelled',
+    reason,
+    at
+  };
+  return freeze(run);
+}
+
 export function examRunProgress(input, at) {
   const run = advanceExamRunClock(input, at);
   const totalQuestions = run.sections.reduce((sum, section) => sum + section.questionVersionIds.length, 0);

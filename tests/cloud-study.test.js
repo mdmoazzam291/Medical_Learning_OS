@@ -452,3 +452,31 @@ test('cloud media prompt requests exact question version without learner or answ
   assert.equal(result.questionVersionId, 'radiology:demo@1');
   assert.deepEqual(result.media, []);
 });
+
+
+test('cloud exam cancellation sends revisioned terminal intent without learner or score data', async () => {
+  let seen = null;
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen = { url, method: options.method || 'GET', body: JSON.parse(options.body) };
+      return Response.json({ contractId: 'exam-run-view-v1', status: 'cancelled', receipt: null });
+    }
+  });
+
+  await cloud.cancelExamRun('run-1', {
+    requestId: 'cancel-1',
+    expectedRevision: 7
+  });
+
+  assert.match(seen.url, /exam-simulator\/runs\/run-1\/cancel$/);
+  assert.equal(seen.method, 'POST');
+  assert.deepEqual(seen.body, {
+    requestId: 'cancel-1',
+    expectedRevision: 7
+  });
+  assert.equal(Object.hasOwn(seen.body, 'learnerId'), false);
+  assert.equal(Object.hasOwn(seen.body, 'score'), false);
+  assert.equal(Object.hasOwn(seen.body, 'correct'), false);
+});

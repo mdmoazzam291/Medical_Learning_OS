@@ -6,6 +6,7 @@ import {
   advanceExamRunClock,
   setExamAnswer,
   setExamReview,
+  cancelExamRun,
   examRunProgress,
   scoreLockedSectionExamRun,
   seededQuestionOrder
@@ -715,6 +716,7 @@ Deno.serve(async (req: Request) => {
         completedAt: state.completedAt,
         caveats: state.caveats,
         assembly: state.assembly ?? null,
+        termination: state.termination ?? null,
         resumedExisting,
         progress,
         currentSection: currentSection ? {
@@ -1515,6 +1517,106 @@ Deno.serve(async (req: Request) => {
         if (message.includes("exam_request_key_collision")) fail(409, "exam_request_key_collision");
         if (message.includes("exam_run_not_open")) fail(409, "exam_run_completed");
         fail(500, "exam_run_write_failed");
+      }
+
+      row = {
+        ...row,
+        state_revision: Number(data?.revision ?? expectedRevision + 1),
+        status: String(data?.status ?? nextState.status),
+        state: data?.state ?? nextState,
+        updated_at: now
+      };
+      return response(req, 200, await examRunView(row, now, false));
+    }
+
+    const examRunCancelMatch = path.match(/^\/exam-simulator\/runs\/([a-zA-Z0-9-]+)\/cancel$/);
+    if (req.method === "POST" && examRunCancelMatch) {
+      if (url.search) fail(400, "query_not_supported");
+      const runId = identifier(examRunCancelMatch[1]);
+      const input = await jsonBody(req);
+      exactFields(input, ["requestId", "expectedRevision"]);
+      const requestId = identifier(input.requestId);
+      const expectedRevision = integer(input.expectedRevision, 0, 1000000);
+      const reason = "user_abandoned";
+      const now = new Date().toISOString();
+
+      const priorEvent = await getExamRunEvent(runId, requestId);
+      if (priorEvent) {
+        const sameIntent = priorEvent.event_type === "run.cancelled" &&
+          priorEvent.event?.reason === reason;
+        if (!sameIntent) fail(409, "exam_request_key_collision");
+        const current = await getExamRun(runId);
+        requireExamRunAccess(current);
+        return response(req, 200, {
+          ...(await examRunView(current, now, true)),
+          idempotent: true
+        });
+      }
+
+      let row = await getExamRun(runId);
+      requireExamRunAccess(row);
+      row = await syncExamClock(row, now);
+      if (row.status === "completed") {
+        return response(req, 409, {
+          error: "exam_run_completed",
+          run: await examRunView(row, now, true)
+        });
+      }
+      if (row.status === "cancelled") {
+        return response(req, 409, {
+          error: "exam_run_cancelled",
+          run: await examRunView(row, now, true)
+        });
+      }
+      if (Number(row.state_revision) !== expectedRevision) {
+        return response(req, 409, {
+          error: "exam_revision_conflict",
+          run: await examRunView(row, now, true)
+        });
+      }
+
+      let nextState: any;
+      try {
+        nextState = cancelExamRun(row.state, { at: now, reason });
+      } catch (transitionError) {
+        const code = transitionError instanceof Error ? transitionError.message : "exam_transition_rejected";
+        if (["exam_run_completed", "exam_run_cancelled", "exam_run_not_open"].includes(code)) {
+          return response(req, 409, {
+            error: code,
+            run: await examRunView(row, now, true)
+          });
+        }
+        throw transitionError;
+      }
+
+      const event = {
+        reason,
+        fromSectionIndex: row.state.currentSectionIndex,
+        serverRecordedAt: now
+      };
+      const { data, error } = await admin.rpc("exam_apply_transition", {
+        p_learner: learnerId,
+        p_run: runId,
+        p_request_key: requestId,
+        p_expected_revision: expectedRevision,
+        p_event_type: "run.cancelled",
+        p_event: event,
+        p_next_state: nextState,
+        p_occurred_at: now,
+        p_completion_receipt: null
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("exam_revision_conflict")) {
+          const fresh = await getExamRun(runId);
+          return response(req, 409, {
+            error: "exam_revision_conflict",
+            run: await examRunView(fresh, now, true)
+          });
+        }
+        if (message.includes("exam_request_key_collision")) fail(409, "exam_request_key_collision");
+        if (message.includes("exam_run_not_open")) fail(409, "exam_run_cancelled");
+        fail(500, "exam_run_cancel_failed");
       }
 
       row = {

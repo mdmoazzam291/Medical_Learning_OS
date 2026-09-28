@@ -234,3 +234,15 @@ Multimodal content reuses the existing canonical-content and learner-evidence ar
 Media and annotations remain **content/interaction evidence**, not learner-state stores. Their future attempts must feed the same canonical learning-event boundary and Mistake Intelligence rather than create a separate mastery model.
 
 M10a deliberately does not implement DICOM, CT/MRI stacks, whole-slide pathology, video, media storage, production medical review or simulator rendering. Those follow after the Phase-1 asset contract is verified.
+
+
+## Exam-run terminal-state boundary
+
+The simulator has two terminal meanings that must remain distinct:
+
+- `completed`: the locked schedule reached exam completion and the trusted server created an immutable scoring/completion receipt.
+- `cancelled`: the run was intentionally terminated before completion; existing responses remain historical evidence inside the exam-run ledger, but no score/completion receipt exists.
+
+Learner-facing cancellation is recorded as `user_abandoned`. A browser cannot self-assert operator cancellation. Internal-test runs continue to require the current server-verified tester grant for cancellation as well as read/answer/review.
+
+GT Autopsy and future analytics must never treat a cancelled run as equivalent to a completed mock or silently score unanswered remainder as though the learner sat the whole examination.
