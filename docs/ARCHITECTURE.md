@@ -354,3 +354,28 @@ A ready output consists of typed medical teaching claims with claim-level refere
 Canonical fallback is carried inside the task as already-reviewed teaching content using the same output schema and the same grounding boundary. Provider outage therefore degrades personalization/wording rather than blocking learning.
 
 The evaluator proves structural integrity, provenance containment and bounded behavior. It does **not** establish medical semantic truth merely because a citation is present. Provider/model qualification needs a curated medical evaluation set before production use.
+
+
+## Canonical post-answer teaching path
+
+The first learner-facing implementation of the M09 teaching contract does not require AI:
+
+```text
+server-scored incorrect answer
+        ↓
+post-answer-canonical-v1 policy
+        ↓
+reviewed question explanation + exact source IDs
+        ↓
+grounded-teaching-output@1
+        ↓
+immutable answer receipt
+        ↓
+learner micro-remediation
+```
+
+A single wrong answer is not treated as evidence of a specific misconception. Until Mistake Intelligence has stronger evidence, the deterministic action is only `concise_explanation`.
+
+Correct answers do not automatically trigger remediation. Incorrect answers use the exact reviewed canonical explanation; the producer may decline to form the structured block if grounding identity is unavailable or the existing content breaches the contract, in which case the legacy reviewed explanation path remains available.
+
+The browser consumes only the structured canonical fallback currently. Future provider output must pass the same M09b evaluator before the learner UI is allowed to render it.
