@@ -60,6 +60,7 @@ M04 is complete: all three slices and the authenticated medical learner flow pas
 - M06a — DONE: canonical concept-linked note storage, learner-scoped personal annotation CRUD, export and responsive hosted NeuralVault workspace are live; real hosted create → edit → refresh → delete → refresh lifecycle has passed end to end.
 - M06b — DONE: the first real canonical NeuralVault note passed Medical/References/Rights review with matching immutable fingerprints and was separately published server-side; learner publication/search boundaries are live.
 - M06c — DONE: learner-safe concept/note search, update-aware annotation anchor states, exact QBank concept deep links and post-retrieval Study Now → NeuralVault contextual handoff are live and tested. The next real due-item handoff observation is tracked under M05c, not as an M06 blocker.
+- M06d — IN PROGRESS: learner-private correction overlays now extend the existing NeuralVault annotation layer. Corrections bind exact canonical-note/question versions and never replace canonical content. A separate immutable possible-error report can share correction text only by explicit learner opt-in and has no canonical/learner-model authority. Database foundation is live; authenticated API/UI/hosted acceptance is the remaining gate for DONE.
 
 
 ## M07 slices
