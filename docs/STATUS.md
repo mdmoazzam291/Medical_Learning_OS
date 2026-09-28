@@ -1159,3 +1159,16 @@ Verification for this slice is repository diff review because there is no domain
 - Added executable tests for immutability, all five task types, bounded geometry, empty-response rejection, correct-answer silence in Mistake observations and non-authoritative Study Now signaling.
 - No database schema, learner UI, media review state or production content was changed by this slice.
 - Next M10b gate: persist the event through the canonical learner-event ledger, then exercise one authenticated image interaction end to end before adding visual-error recurrence logic.
+
+## M09c target-bound human semantic review — 2026-09-28
+- Closed an integrity gap in the semantic provider gate: a human review can no longer be attached only to a movable `providerRunRef`.
+- New evaluation runs use `semantic-teaching-provider-evaluation-run-v2`.
+- Every deterministic-pass case receives a canonical JCS/RFC-8785 + SHA-256 `reviewTargetDigest` over the exact evaluation case, task/provider attribution, provider teaching output and citation references.
+- Semantic review schema v2 carries that digest; finalization requires an exact profile + digest match.
+- A stale/substituted target or legacy unbound v1 review is rejected for a v2 run.
+- Provider-error and deterministic-blocked cases receive no review target and cannot be laundered into human approval.
+- Existing production authority remains unchanged: `productionQualificationAuthority=false` and `productionQualified=false`.
+- Exact-head in-memory verification passed against both real fixtures: 6/6 bootstrap and 12/12 breadth cases received valid target digests; stale and legacy unbound reviews were rejected.
+- GitHub Actions remains unavailable for this repository in the observed runs: both jobs fail before step 1 with zero executed steps. This is recorded separately from the exact-head domain verification.
+- No model SDK, provider credential, learner-facing AI route, database migration or recurring AI cost is introduced.
+- Next M09c gate remains genuine human semantic review of real provider outputs before any separately governed provider-activation policy can exist.

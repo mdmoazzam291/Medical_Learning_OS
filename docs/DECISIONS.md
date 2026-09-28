@@ -922,3 +922,18 @@ Decision:
 - persist through the existing canonical learner-event architecture rather than introducing a multimodal evidence database.
 
 This keeps the multimodal loop aligned with the system rule: interaction → evidence → validated inference → policy, never interaction → invented mastery.
+
+## ADR-061 — Human semantic review is bound to the exact provider output (accepted, 2026-09-28)
+
+A reviewer must never approve a movable label such as a provider run ID while the actual teaching output can change underneath it.
+
+Decision:
+- new M09c provider-evaluation runs are contract v2;
+- every deterministic-pass case computes a canonical JCS/RFC-8785 + SHA-256 digest over the exact evaluation case, provider attribution, provider output and citation set;
+- schema-v2 human semantic reviews must carry that exact digest;
+- finalization rejects stale, substituted or legacy unbound reviews for v2 runs;
+- blocked/provider-error cases receive no human-review target;
+- historical v1 review contracts remain parseable, but they cannot satisfy a v2 target-bound run;
+- this integrity mechanism does not grant production qualification or replace human medical judgment.
+
+This reuses the existing canonical-integrity primitive and makes the future review trail auditable without adding a signing service, blockchain, model vendor or new infrastructure.
