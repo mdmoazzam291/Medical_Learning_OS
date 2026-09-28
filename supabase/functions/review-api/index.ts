@@ -74,6 +74,19 @@ function identifier(value: unknown) {
   return value;
 }
 
+function boundedInteger(value: unknown, min: number, max: number, code: string) {
+  if (!Number.isSafeInteger(value) || Number(value) < min || Number(value) > max) fail(400, code);
+  return Number(value);
+}
+
+function uuidValue(value: unknown, code: string) {
+  if (typeof value !== "string" ||
+      !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)) {
+    fail(400, code);
+  }
+  return value;
+}
+
 async function jsonBody(req: Request) {
   const length = Number(req.headers.get("content-length") || 0);
   if (length > 8192) fail(413, "body_too_large");
@@ -122,6 +135,15 @@ function mapNeuralNoteReviewWriteError(error: any): never {
   if (message.includes("review_target_sources_missing")) fail(409, "review_target_invalid");
   if (message.includes("rights_not_resolved")) fail(409, "rights_not_resolved");
   fail(500, "review_write_failed");
+}
+
+function mapReviewMeasurementWriteError(error: any): never {
+  const message = String(error?.message || "");
+  if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
+  if (message.includes("review_measurement_review_unknown")) fail(404, "review_measurement_review_unknown");
+  if (message.includes("conflicting_review_measurement_retry")) fail(409, "conflicting_review_measurement_retry");
+  if (message.includes("review_measurement_")) fail(400, message.match(/review_measurement_[a-z_]+/)?.[0] || "review_measurement_invalid");
+  fail(500, "review_measurement_write_failed");
 }
 
 function mapReviewWriteError(error: any): never {
@@ -446,6 +468,62 @@ Deno.serve(async (req: Request) => {
         reviewedAt: receipt.reviewed_at,
         noteStatus: receipt.note_status
       });
+    }
+
+    if (req.method === "GET" && path === "/review-measurements/summary") {
+      if ([...url.searchParams.keys()].some((key) => key !== "experimentId")) fail(400, "query_not_supported");
+      const experimentId = identifier(url.searchParams.get("experimentId"));
+      const grants = await getGrants();
+      if (!grants.length) fail(403, "reviewer_not_authorized");
+      const { data, error } = await admin.rpc("content_review_workflow_measurement_summary", {
+        p_experiment_id: experimentId
+      });
+      if (error) fail(500, "review_measurement_summary_unavailable");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/review-measurements") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, [
+        "reviewId",
+        "workflowMode",
+        "experimentId",
+        "clientSessionId",
+        "foregroundActiveMs",
+        "elapsedWallMs",
+        "queueSize"
+      ]);
+      const reviewId = uuidValue(input.reviewId, "invalid_review_id");
+      const clientSessionId = uuidValue(input.clientSessionId, "invalid_client_session_id");
+      const workflowMode = String(input.workflowMode || "");
+      if (!["standard","claim_first","source_first"].includes(workflowMode)) {
+        fail(400, "review_measurement_mode_invalid");
+      }
+      const experimentId = identifier(input.experimentId);
+      const foregroundActiveMs = boundedInteger(
+        input.foregroundActiveMs, 0, 14400000, "review_measurement_timing_invalid"
+      );
+      const elapsedWallMs = boundedInteger(
+        input.elapsedWallMs, foregroundActiveMs, 21600000, "review_measurement_timing_invalid"
+      );
+      const queueSize = boundedInteger(
+        input.queueSize, 1, 5000, "review_measurement_queue_size_invalid"
+      );
+
+      const { data, error } = await admin.rpc("record_content_review_workflow_measurement", {
+        p_review_id: reviewId,
+        p_reviewer: reviewerId,
+        p_workflow_mode: workflowMode,
+        p_experiment_id: experimentId,
+        p_client_session_id: clientSessionId,
+        p_foreground_active_ms: foregroundActiveMs,
+        p_elapsed_wall_ms: elapsedWallMs,
+        p_queue_size: queueSize
+      });
+      if (error) mapReviewMeasurementWriteError(error);
+      if (!data?.measurementId || data?.reviewId !== reviewId) fail(500, "review_measurement_write_failed");
+      return response(req, 200, data);
     }
 
     if (req.method === "POST" && path === "/reviews") {
