@@ -169,6 +169,7 @@ assert.match(await page.locator('.personal-correction').textContent(), /Learner-
 assert.match(await page.locator('.vault-detail').textContent(), /Canonical reviewed content: intramuscular epinephrine is first-line treatment/);
 assert.equal(await page.locator('.personal-correction textarea[name="bodyMarkdown"]').inputValue(), correctionText);
 
+await page.locator('.personal-correction details').getByText('Think the shared content is actually wrong?').click();
 const reportForm = page.locator('form[data-form="content-report"]').filter({ has: page.locator('input[name="shareCorrection"]') });
 await reportForm.getByLabel('Why might the shared content need review?').selectOption('incorrect');
 await reportForm.getByLabel('Optional details').fill('Please recheck the shared wording.');
@@ -180,6 +181,7 @@ assert.equal(reportBodies[0].shareCorrection, false);
 assert.equal(reportBodies[0].correctionAnnotationId, null);
 assert.equal(Object.hasOwn(reportBodies[0], 'bodyMarkdown'), false);
 
+await page.locator('.personal-correction details').getByText('Think the shared content is actually wrong?').click();
 const shareForm = page.locator('form[data-form="content-report"]').filter({ has: page.locator('input[name="shareCorrection"]') });
 await shareForm.getByLabel('Why might the shared content need review?').selectOption('outdated');
 await shareForm.getByLabel('Include my private correction text in this report.').check();
