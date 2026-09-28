@@ -480,3 +480,28 @@ test('cloud exam cancellation sends revisioned terminal intent without learner o
   assert.equal(Object.hasOwn(seen.body, 'score'), false);
   assert.equal(Object.hasOwn(seen.body, 'correct'), false);
 });
+
+
+test('cloud GT Autopsy reads one exact run without learner or scoring inputs', async () => {
+  let seen = null;
+  const client = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen = { url, method: options.method || 'GET', body: options.body };
+      return Response.json({
+        contractId:'gt-autopsy-v1',
+        runId:'run-1',
+        inferenceAuthority:false,
+        masteryInferenceEnabled:false
+      });
+    }
+  });
+
+  const result = await client.examRunAutopsy('run-1');
+  assert.match(seen.url, /exam-simulator\/runs\/run-1\/autopsy$/);
+  assert.equal(seen.method, 'GET');
+  assert.equal(seen.body, undefined);
+  assert.equal(result.inferenceAuthority, false);
+  assert.equal(result.masteryInferenceEnabled, false);
+});
