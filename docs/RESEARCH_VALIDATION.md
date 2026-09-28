@@ -72,3 +72,21 @@ Its job is to make future validation possible without rewriting history.
 The current live beta history contains repeated retrievals, but none yet reaches even one full day after the immediately preceding exposure for the most active learner. That is useful evidence of **insufficient delayed-outcome coverage**, not a failure to be hidden.
 
 The next research step should be a preregistered retention-probe protocol or naturally accumulated delayed follow-up, not a hand-designed forgetting model trained on near-immediate retries.
+
+
+## M11b1: preregistered alternate-item feasibility protocol
+
+Production now has its first reviewed and published alternate-item pair on the anaphylaxis first-line-treatment concept.
+
+Before any protocol-governed assignment, `retention-probe-feasibility-v1` fixes:
+
+- a 7-day target and 6–8 day completion window;
+- distinct-question, same-primary-concept pair identity;
+- no prior target attempt;
+- contamination exclusions;
+- one-probe-per-learner-per-7-days and 20-assignment operational caps;
+- explicit learner opt-in requirement;
+- descriptive-only outcomes and no causal/mastery inference;
+- immediate pause on content-safety, identity/pair-binding or opt-out violations.
+
+This protocol does not activate scheduling. Pair novelty/comparability validation (M11c), an opt-in path and a separate activation decision remain required.
