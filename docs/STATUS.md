@@ -1291,6 +1291,7 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 ## Source-first Rights review compression — 2026-09-28
 
 - The authenticated reviewer workspace now deduplicates unresolved source-rights work before question-level Rights & provenance decisions.
+- Live catalog measurement before merge: 174 in-review questions currently create 174 question→source links but only 37 unique unresolved sources, averaging 4.70 pending question links per source. The source-first workflow therefore removes the repeated source-resolution surface without weakening per-question review.
 - On the Rights gate for question targets, unresolved sources are grouped by canonical `sourceId`, sorted by the number of pending questions they affect, and shown once with impact count.
 - Repeated source-rights forms are removed from individual question cards while the source is unresolved.
 - Question-level rights cards remain intentionally hidden until every referenced source has a recorded rights status; this prevents 174 blocked question cards from overwhelming the reviewer.
