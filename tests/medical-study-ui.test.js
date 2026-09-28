@@ -75,7 +75,7 @@ test('medical study loop deep-links exact concept identity into NeuralVault', as
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /new URLSearchParams\(\{ concept: primaryConceptId \}\)/);
   assert.match(source, /\/web\/vault\.html\?/);
-  assert.match(source, /Open concept in NeuralVault/);
+  assert.match(source, /Open concept \/ add private correction/);
 });
 
 
@@ -95,7 +95,7 @@ test('answered Study Now item carries recommendation reason into NeuralVault han
   assert.match(source, /'new-learning'/);
   assert.match(source, /vaultParams\.set\('from', 'study-now'\)/);
   assert.match(source, /vaultParams\.set\('reason', recommendationReason\)/);
-  assert.match(source, /Review this concept in NeuralVault/);
+  assert.match(source, /Review concept \/ add private correction/);
 });
 
 

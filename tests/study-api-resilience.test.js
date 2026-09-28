@@ -386,3 +386,42 @@ test('incorrect answer receipt carries deterministic canonical grounded teaching
   assert.doesNotMatch(source, /openai|gemini|anthropic/i);
 });
 
+
+
+test('learner corrections stay learner-scoped and never gain canonical or learner-model authority', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/vault\/corrections"/);
+  assert.match(source, /neural_create_personal_correction/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /annotation_kind,correction_target_type,correction_target_id,correction_target_sha256/);
+  assert.match(source, /targetState/);
+  assert.match(source, /"question-retired"/);
+  assert.match(source, /"canonical-updated"/);
+  assert.doesNotMatch(source, /p_learner:\s*input\./);
+});
+
+test('learner content reports require explicit correction sharing and cannot affect learning state', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/content-reports"/);
+  assert.match(source, /typeof input\.shareCorrection !== "boolean"/);
+  assert.match(source, /p_share_correction: input\.shareCorrection/);
+  assert.match(source, /p_correction_annotation_id: correctionAnnotationId/);
+  assert.match(source, /data\?\.canonicalAuthority !== false/);
+  assert.match(source, /data\?\.learnerModelAuthority !== false/);
+  const start = source.indexOf('path === "/content-reports"');
+  const end = source.indexOf('vaultAnnotationMatch', start);
+  const route = source.slice(start, end);
+  assert.doesNotMatch(route, /study_rebuild_revision_state|study_record_memory_judgment|study_start_recommendation_session/);
+});
+
+
+test('learner export includes private corrections and submitted content issue reports', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /getVaultAnnotations/);
+  assert.match(source, /getContentIssueReports/);
+  assert.match(source, /learner_content_issue_reports/);
+  assert.match(source, /contentIssueReports/);
+  assert.match(source, /suggestedCorrection/);
+  assert.match(source, /canonicalAuthority: false/);
+  assert.match(source, /learnerModelAuthority: false/);
+});

@@ -1114,3 +1114,23 @@ Decision:
 
 Rationale:
 the safety value comes from independent evidence-backed judgment and immutable target binding, not from typing a paragraph into every form. This reduces reviewer burden without collapsing the review authority model and creates a clean migration path toward AI-first, human-on-exception review.
+
+
+## ADR-074 — Learner corrections are private overlays, not forks of canonical medicine (accepted, 2026-09-29)
+
+Learners may encounter content they believe is incorrect, outdated, ambiguous or personally easier to express another way. Allowing direct edits to shared medical content would destroy provenance and create learner-specific forks of canonical truth.
+
+Decision:
+- extend the existing NeuralVault learner annotation layer with a distinct `correction` kind rather than creating another private-note subsystem;
+- bind every private correction to one exact published canonical-note version or question version plus a stored target SHA-256;
+- keep canonical content visible beside the private correction; never silently substitute learner text for reviewed medical content;
+- permit only one correction per learner × exact target, with the existing optimistic revision/update/delete semantics;
+- expose target drift explicitly when a canonical note changes, a question version retires or a target becomes unavailable;
+- do not create concept-edit authority while canonical concepts remain structural identity/label/tag anchors rather than versioned medical assertions;
+- create a separate immutable learner content-issue report when the learner wants the shared system to investigate a possible error;
+- keep private correction text out of shared reports by default and copy it only after explicit learner opt-in;
+- content reports have no canonical, publication, learner-model, Study Now or scheduler authority;
+- repeated reports are triage signals, not votes on medical truth;
+- future AI may cluster, prioritize and source-check reports, but canonical correction still passes the normal source/review/version lifecycle.
+
+This gives learners immediate local control while turning genuine disagreement into a safe content-quality feedback loop.

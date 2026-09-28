@@ -567,3 +567,40 @@ test('cloud visual detection sends only learner response intent and media identi
     assert.equal(Object.hasOwn(seen.body, forbidden), false);
   }
 });
+
+
+test('cloud private correction and report payloads never send learner identity or share private text implicitly', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({ url, method: options.method || 'GET', body: options.body ? JSON.parse(options.body) : null });
+      return Response.json({ ok: true, canonicalAuthority: false, learnerModelAuthority: false });
+    }
+  });
+
+  await cloud.createVaultCorrection({
+    conceptId: 'emergency:anaphylaxis:first-line-treatment',
+    targetType: 'question_version',
+    targetId: 'emergency:anaphylaxis:first-line-drug@1',
+    bodyMarkdown: 'My private correction'
+  });
+  await cloud.reportContentIssue({
+    conceptId: 'emergency:anaphylaxis:first-line-treatment',
+    targetType: 'question_version',
+    targetId: 'emergency:anaphylaxis:first-line-drug@1',
+    reportKind: 'incorrect',
+    details: null,
+    correctionAnnotationId: null,
+    shareCorrection: false
+  });
+
+  assert.match(seen[0].url, /study-api\/vault\/corrections$/);
+  assert.match(seen[1].url, /study-api\/content-reports$/);
+  assert.equal(Object.hasOwn(seen[0].body, 'learnerId'), false);
+  assert.equal(Object.hasOwn(seen[1].body, 'learnerId'), false);
+  assert.equal(seen[1].body.shareCorrection, false);
+  assert.equal(seen[1].body.correctionAnnotationId, null);
+  assert.equal(Object.hasOwn(seen[1].body, 'bodyMarkdown'), false);
+});

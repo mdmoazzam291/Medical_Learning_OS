@@ -1,5 +1,6 @@
 export const NEURAL_NOTE_SCHEMA_VERSION = 1;
 export const MAX_PERSONAL_NOTE_BYTES = 20000;
+export const PERSONAL_CORRECTION_TARGET_TYPES = Object.freeze(['canonical_note', 'question_version']);
 
 const encoder = new TextEncoder();
 
@@ -44,6 +45,44 @@ export function createPersonalAnnotation({
     bodyMarkdown,
     anchorNoteVersionId,
     revision
+  });
+}
+
+export function createPersonalCorrection({
+  annotationId,
+  conceptId,
+  bodyMarkdown,
+  targetType,
+  targetId,
+  targetSha256,
+  revision = 1
+}) {
+  requiredText(annotationId, 'annotationId');
+  validateConceptId(conceptId);
+  validatePersonalNoteBody(bodyMarkdown);
+  if (!PERSONAL_CORRECTION_TARGET_TYPES.includes(targetType)) {
+    throw new TypeError('Invalid correction targetType');
+  }
+  requiredText(targetId, 'targetId');
+  if (!/^[a-zA-Z0-9:_@.\-]{1,180}$/.test(targetId)) {
+    throw new TypeError('Invalid correction targetId');
+  }
+  if (typeof targetSha256 !== 'string' || !/^[0-9a-f]{64}$/.test(targetSha256)) {
+    throw new TypeError('Invalid correction targetSha256');
+  }
+  if (!Number.isSafeInteger(revision) || revision < 1) throw new TypeError('Invalid revision');
+
+  return Object.freeze({
+    schemaVersion: NEURAL_NOTE_SCHEMA_VERSION,
+    annotationKind: 'correction',
+    annotationId,
+    conceptId,
+    bodyMarkdown,
+    targetType,
+    targetId,
+    targetSha256,
+    revision,
+    canonicalAuthority: false
   });
 }
 

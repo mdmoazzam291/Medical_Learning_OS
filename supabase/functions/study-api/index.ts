@@ -409,13 +409,37 @@ Deno.serve(async (req: Request) => {
     const getVaultAnnotations = async () => {
       const { data, error } = await trustedRead("vault_annotations", async () =>
         admin.from("neural_personal_annotations")
-          .select("id,concept_id,body_markdown,anchor_note_version_id,revision,created_at,updated_at")
+          .select("id,concept_id,body_markdown,anchor_note_version_id,annotation_kind,correction_target_type,correction_target_id,correction_target_sha256,revision,created_at,updated_at")
           .eq("learner_id", learnerId)
           .order("updated_at", { ascending: false })
           .order("id", { ascending: true })
       );
       if (error) fail(500, "study_read_failed");
       return data ?? [];
+    };
+    const getContentIssueReports = async () => {
+      const { data, error } = await trustedRead("content_issue_reports", async () =>
+        admin.from("learner_content_issue_reports")
+          .select("id,concept_id,target_type,target_id,target_sha256,report_kind,details,suggested_correction,created_at,contract_id")
+          .eq("learner_id", learnerId)
+          .order("created_at", { ascending: true })
+          .order("id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return (data ?? []).map((row: any) => ({
+        reportId: row.id,
+        contractId: row.contract_id,
+        conceptId: row.concept_id,
+        targetType: row.target_type,
+        targetId: row.target_id,
+        targetSha256: row.target_sha256,
+        reportKind: row.report_kind,
+        details: row.details,
+        suggestedCorrection: row.suggested_correction,
+        createdAt: row.created_at,
+        canonicalAuthority: false,
+        learnerModelAuthority: false
+      }));
     };
     const getMemoryJudgments = async () => {
       const { data, error } = await trustedRead("memory_judgments", async () =>
@@ -1146,9 +1170,13 @@ Deno.serve(async (req: Request) => {
         (canonicalRows ?? []).map((row: any) => [String(row.concept_id), row])
       );
       const annotationCounts = new Map<string, number>();
+      const correctionCounts = new Map<string, number>();
       for (const row of annotations) {
         const conceptId = String(row.concept_id);
         annotationCounts.set(conceptId, (annotationCounts.get(conceptId) ?? 0) + 1);
+        if (row.annotation_kind === "correction") {
+          correctionCounts.set(conceptId, (correctionCounts.get(conceptId) ?? 0) + 1);
+        }
       }
 
       const concepts = Array.isArray(catalog.body?.concepts)
@@ -1165,7 +1193,8 @@ Deno.serve(async (req: Request) => {
                 title: canonical.title,
                 publishedAt: canonical.published_at
               } : null,
-              annotationCount: annotationCounts.get(String(concept.conceptId)) ?? 0
+              annotationCount: annotationCounts.get(String(concept.conceptId)) ?? 0,
+              correctionCount: correctionCounts.get(String(concept.conceptId)) ?? 0
             };
           })
         : [];
@@ -1184,10 +1213,12 @@ Deno.serve(async (req: Request) => {
       try { conceptId = identifier(decodeURIComponent(vaultConceptMatch[1])); }
       catch { fail(400, "invalid_identifier"); }
       const [
+        catalog,
         { data: concept, error: conceptError },
         { data: canonical, error: canonicalError },
         { data: annotations, error: annotationError }
       ] = await Promise.all([
+        getCatalog(),
         admin.rpc("neural_catalog_concept", { p_concept_id: conceptId }),
         trustedRead("vault_canonical_note", async () =>
           admin.from("neural_canonical_note_versions")
@@ -1196,7 +1227,7 @@ Deno.serve(async (req: Request) => {
         ),
         trustedRead("vault_concept_annotations", async () =>
           admin.from("neural_personal_annotations")
-            .select("id,concept_id,body_markdown,anchor_note_version_id,revision,created_at,updated_at")
+            .select("id,concept_id,body_markdown,anchor_note_version_id,annotation_kind,correction_target_type,correction_target_id,correction_target_sha256,revision,created_at,updated_at")
             .eq("learner_id", learnerId).eq("concept_id", conceptId)
             .order("updated_at", { ascending: false })
             .order("id", { ascending: true })
@@ -1204,6 +1235,7 @@ Deno.serve(async (req: Request) => {
       ]);
       if (conceptError || canonicalError || annotationError) fail(500, "vault_read_failed");
       if (!concept) fail(404, "vault_concept_not_found");
+      const catalogQuestions = Array.isArray(catalog.body?.questions) ? catalog.body.questions : [];
       return response(req, 200, {
         concept,
         canonicalNote: canonical ? {
@@ -1216,22 +1248,56 @@ Deno.serve(async (req: Request) => {
           contentSha256: canonical.content_sha256,
           publishedAt: canonical.published_at
         } : null,
-        annotations: (annotations ?? []).map((row: any) => ({
-          annotationId: row.id,
-          conceptId: row.concept_id,
-          bodyMarkdown: row.body_markdown,
-          anchorNoteVersionId: row.anchor_note_version_id,
-          anchorState: row.anchor_note_version_id
-            ? canonical
-              ? row.anchor_note_version_id === canonical.id
+        annotations: (annotations ?? []).map((row: any) => {
+          const annotationKind = row.annotation_kind === "correction" ? "correction" : "note";
+          const targetType = annotationKind === "correction" ? row.correction_target_type : null;
+          const targetId = annotationKind === "correction" ? row.correction_target_id : null;
+          let targetState = null;
+          let targetLabel = null;
+          if (annotationKind === "correction" && targetType === "canonical_note") {
+            targetLabel = canonical?.id === targetId ? canonical?.title ?? null : "Earlier canonical note version";
+            targetState = canonical
+              ? canonical.id === targetId && canonical.content_sha256 === row.correction_target_sha256
                 ? "current"
                 : "canonical-updated"
-              : "anchor-unavailable"
-            : "unanchored",
-          revision: row.revision,
-          createdAt: row.created_at,
-          updatedAt: row.updated_at
-        }))
+              : "target-unavailable";
+          }
+          if (annotationKind === "correction" && targetType === "question_version") {
+            const targetQuestion = catalogQuestions.find(
+              (question: any) => question?.questionVersionId === targetId
+            );
+            targetLabel = targetQuestion?.stem ?? "Earlier question version";
+            targetState = !targetQuestion
+              ? "target-unavailable"
+              : targetQuestion.status === "published"
+                ? "current"
+                : targetQuestion.status === "retired"
+                  ? "question-retired"
+                  : "target-unavailable";
+          }
+          return {
+            annotationId: row.id,
+            annotationKind,
+            conceptId: row.concept_id,
+            bodyMarkdown: row.body_markdown,
+            anchorNoteVersionId: row.anchor_note_version_id,
+            anchorState: row.anchor_note_version_id
+              ? canonical
+                ? row.anchor_note_version_id === canonical.id
+                  ? "current"
+                  : "canonical-updated"
+                : "anchor-unavailable"
+              : "unanchored",
+            targetType,
+            targetId,
+            targetSha256: annotationKind === "correction" ? row.correction_target_sha256 : null,
+            targetState,
+            targetLabel,
+            revision: row.revision,
+            createdAt: row.created_at,
+            updatedAt: row.updated_at
+          };
+        })
       });
     }
 
@@ -2067,7 +2133,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions, vaultAnnotations] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions, vaultAnnotations, contentIssueReports] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
@@ -2077,7 +2143,8 @@ Deno.serve(async (req: Request) => {
         getRecommendationEvents(),
         getMemoryJudgments(),
         getScheduleDecisionEvents(),
-        getVaultAnnotations()
+        getVaultAnnotations(),
+        getContentIssueReports()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -2091,7 +2158,8 @@ Deno.serve(async (req: Request) => {
         memoryJudgments,
         scheduleDecisions,
         neuralVault: {
-          annotations: vaultAnnotations
+          annotations: vaultAnnotations,
+          contentIssueReports
         }
       });
     }
@@ -2116,6 +2184,104 @@ Deno.serve(async (req: Request) => {
       });
       if (error) fail(500, "vault_write_failed");
       if (data?.error) fail(data.error === "neural_concept_unknown" ? 404 : 409, data.error);
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/vault/corrections") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 24576);
+      exactFields(input, ["conceptId", "targetType", "targetId", "bodyMarkdown"]);
+      const conceptId = identifier(input.conceptId);
+      const targetType = String(input.targetType || "");
+      if (!["canonical_note", "question_version"].includes(targetType)) {
+        fail(400, "neural_correction_target_invalid");
+      }
+      const targetId = identifier(input.targetId);
+      if (typeof input.bodyMarkdown !== "string" ||
+          !input.bodyMarkdown.trim() ||
+          new TextEncoder().encode(input.bodyMarkdown).byteLength > 20000) {
+        fail(400, "invalid_note_body");
+      }
+      const { data, error } = await admin.rpc("neural_create_personal_correction", {
+        p_learner: learnerId,
+        p_concept_id: conceptId,
+        p_target_type: targetType,
+        p_target_id: targetId,
+        p_body_markdown: input.bodyMarkdown
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("neural_correction_target_unavailable")) {
+          fail(409, "neural_correction_target_unavailable");
+        }
+        if (message.includes("neural_correction_target_invalid") ||
+            message.includes("neural_correction_invalid")) {
+          fail(400, "neural_correction_invalid");
+        }
+        fail(500, "vault_write_failed");
+      }
+      if (data?.error) {
+        fail(data.error === "neural_correction_already_exists" ? 409 : 400, data.error);
+      }
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/content-reports") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 24576);
+      exactFields(
+        input,
+        ["conceptId", "targetType", "targetId", "reportKind", "shareCorrection"],
+        ["details", "correctionAnnotationId"]
+      );
+      const conceptId = identifier(input.conceptId);
+      const targetType = String(input.targetType || "");
+      if (!["canonical_note", "question_version"].includes(targetType)) {
+        fail(400, "learner_content_report_invalid");
+      }
+      const targetId = identifier(input.targetId);
+      const reportKind = String(input.reportKind || "");
+      if (!["incorrect", "outdated", "ambiguous", "missing_context", "other"].includes(reportKind)) {
+        fail(400, "learner_content_report_invalid");
+      }
+      if (typeof input.shareCorrection !== "boolean") fail(400, "learner_content_report_invalid");
+      const details =
+        input.details === undefined || input.details === null || String(input.details).trim() === ""
+          ? null
+          : String(input.details).trim();
+      if (details !== null && details.length > 4000) fail(400, "learner_content_report_invalid");
+      const correctionAnnotationId =
+        input.correctionAnnotationId === undefined || input.correctionAnnotationId === null
+          ? null
+          : identifier(input.correctionAnnotationId);
+
+      const { data, error } = await admin.rpc("neural_report_content_issue", {
+        p_learner: learnerId,
+        p_concept_id: conceptId,
+        p_target_type: targetType,
+        p_target_id: targetId,
+        p_report_kind: reportKind,
+        p_details: details,
+        p_correction_annotation_id: correctionAnnotationId,
+        p_share_correction: input.shareCorrection
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("neural_correction_target_unavailable")) {
+          fail(409, "content_report_target_unavailable");
+        }
+        if (message.includes("learner_content_report_")) {
+          const code = message.match(/learner_content_report_[a-z_]+/)?.[0] || "learner_content_report_invalid";
+          fail(400, code);
+        }
+        fail(500, "content_report_write_failed");
+      }
+      if (data?.error) {
+        fail(data.error === "learner_content_report_already_submitted" ? 409 : 400, data.error);
+      }
+      if (data?.canonicalAuthority !== false || data?.learnerModelAuthority !== false) {
+        fail(500, "content_report_write_failed");
+      }
       return response(req, 200, data);
     }
 

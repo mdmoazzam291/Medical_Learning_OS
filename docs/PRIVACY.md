@@ -13,7 +13,7 @@ Append-only history is not a justification for retaining personal learner eviden
 
 ## Current contract
 
-The registered privacy scope is `learner-privacy-scope-v1`. It covers every current public table with a `learner_id` column.
+The registered privacy scope is `learner-privacy-scope-v3`. It covers every current public table with a `learner_id` column, including learner content-issue reports introduced by the private-correction feedback loop.
 
 Use the service-only functions:
 
@@ -59,7 +59,7 @@ Normal UPDATE/DELETE is blocked for:
 
 The privacy transaction opens a transaction-local DELETE-only exception. It closes that exception before writing the erasure receipt. UPDATE is never allowed through this exception.
 
-Mutable learner state such as sessions, revision projections, bookmarks and personal annotations remains governed by its existing domain mutation rules.
+Mutable learner state such as sessions, revision projections, bookmarks and personal annotations remains governed by its existing domain mutation rules. Learner content-issue reports are append-only during normal operation but permit DELETE only inside the same transaction-scoped privacy erasure exception.
 
 ## Receipt minimization
 
