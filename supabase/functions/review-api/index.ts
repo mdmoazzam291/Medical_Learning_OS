@@ -304,6 +304,240 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, data);
     }
 
+    if (req.method === "GET" && path === "/learner-reports") {
+      if (url.search) fail(400, "query_not_supported");
+      const grants = await getGrants();
+      if (!grants.length) fail(403, "reviewer_not_authorized");
+
+      const [
+        { data: reports, error: reportError },
+        { data: triageEvents, error: triageError },
+        { data: catalog, error: catalogError }
+      ] = await Promise.all([
+        trustedRead("learner_content_issue_reports", async () =>
+          admin.from("learner_content_issue_reports")
+            .select("id,learner_id,concept_id,target_type,target_id,target_sha256,report_kind,details,suggested_correction,created_at,contract_id")
+            .order("created_at", { ascending: true })
+            .order("id", { ascending: true })
+        ),
+        trustedRead("learner_content_issue_triage_events", async () =>
+          admin.from("learner_content_issue_triage_events")
+            .select("report_id")
+            .order("triaged_at", { ascending: true })
+            .order("triage_event_id", { ascending: true })
+        ),
+        trustedRead("learner_report_catalog", async () =>
+          admin.from("study_catalog").select("body,version").eq("id", 1).single()
+        )
+      ]);
+
+      if (reportError) fail(500, "learner_report_queue_unavailable");
+      if (triageError) fail(500, "learner_report_triage_evidence_unavailable");
+      if (catalogError || !catalog) fail(500, "review_catalog_unavailable");
+
+      const triaged = new Set((triageEvents ?? []).map((row: any) => String(row.report_id)));
+      const openReports = (reports ?? []).filter((row: any) =>
+        !triaged.has(String(row.id)) &&
+        String(row.learner_id) !== reviewerId
+      );
+
+      const noteTargetIds = [...new Set(
+        openReports
+          .filter((row: any) => row.target_type === "canonical_note")
+          .map((row: any) => String(row.target_id))
+      )];
+
+      let noteRows: any[] = [];
+      if (noteTargetIds.length) {
+        const { data, error } = await trustedRead("learner_report_note_targets", async () =>
+          admin.from("neural_canonical_note_versions")
+            .select("id,concept_id,version,title,body_markdown,source_ids,content_sha256,status,published_at")
+            .in("id", noteTargetIds)
+        );
+        if (error) fail(500, "learner_report_target_unavailable");
+        noteRows = data ?? [];
+      }
+
+      const body = catalog.body as any;
+      const questions = Array.isArray(body?.questions) ? body.questions : [];
+      const sources = Array.isArray(body?.sources) ? body.sources : [];
+      const notesById = new Map(noteRows.map((row: any) => [String(row.id), row]));
+      const groups = new Map<string, any>();
+
+      for (const row of openReports) {
+        const key = [row.target_type, row.target_id, row.target_sha256].join("|");
+        let group = groups.get(key);
+        if (!group) {
+          let targetState = "unavailable";
+          let target: any = null;
+          let targetSources: any[] = [];
+
+          if (row.target_type === "question_version") {
+            const question = questions.find((item: any) => item?.questionVersionId === row.target_id) ?? null;
+            if (question) {
+              targetState = question.status === "published" ? "current" : "superseded";
+              targetSources = sources.filter(
+                (source: any) => Array.isArray(question.sourceIds) && question.sourceIds.includes(source?.sourceId)
+              );
+            }
+            target = { question };
+          } else {
+            const note = notesById.get(String(row.target_id)) ?? null;
+            if (note) {
+              targetState = note.status === "published" ? "current" : "superseded";
+              targetSources = sources.filter(
+                (source: any) => Array.isArray(note.source_ids) && note.source_ids.includes(source?.sourceId)
+              );
+            }
+            target = note ? {
+              note: {
+                noteVersionId: note.id,
+                conceptId: note.concept_id,
+                version: note.version,
+                title: note.title,
+                bodyMarkdown: note.body_markdown,
+                sourceIds: note.source_ids,
+                contentSha256: note.content_sha256,
+                status: note.status,
+                publishedAt: note.published_at
+              }
+            } : { note: null };
+          }
+
+          group = {
+            targetType: row.target_type,
+            targetId: row.target_id,
+            targetSha256: row.target_sha256,
+            conceptId: row.concept_id,
+            targetState,
+            target,
+            sources: targetSources,
+            reports: []
+          };
+          groups.set(key, group);
+        }
+
+        group.reports.push({
+          reportId: row.id,
+          reportKind: row.report_kind,
+          details: row.details,
+          suggestedCorrection: row.suggested_correction,
+          createdAt: row.created_at
+        });
+      }
+
+      const grouped = [...groups.values()]
+        .map((group: any) => ({
+          ...group,
+          reportCount: group.reports.length,
+          oldestReportAt: group.reports[0]?.createdAt ?? null
+        }))
+        .sort((a: any, b: any) =>
+          b.reportCount - a.reportCount ||
+          String(a.oldestReportAt || "").localeCompare(String(b.oldestReportAt || "")) ||
+          String(a.targetId).localeCompare(String(b.targetId))
+        );
+
+      return response(req, 200, {
+        contractId: "learner-content-issue-triage-queue-v1",
+        catalogVersion: catalog.version,
+        reportCount: grouped.reduce((sum: number, group: any) => sum + group.reportCount, 0),
+        groupCount: grouped.length,
+        groups: grouped,
+        learnerIdentityExposed: false,
+        canonicalMutationAuthority: false
+      });
+    }
+
+    if (req.method === "POST" && path === "/learner-reports/triage") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 32768);
+      exactFields(input, [
+        "reportIds",
+        "reviewKind",
+        "decision",
+        "reasonCode",
+        "attestationVersion",
+        "attested"
+      ]);
+      if (!Array.isArray(input.reportIds) ||
+          input.reportIds.length < 1 ||
+          input.reportIds.length > 100) {
+        fail(400, "content_issue_triage_batch_size_invalid");
+      }
+      const reportIds = input.reportIds.map((value: unknown) =>
+        uuidValue(value, "content_issue_triage_report_invalid")
+      );
+      if (new Set(reportIds).size !== reportIds.length) {
+        fail(400, "content_issue_triage_duplicate_report");
+      }
+      const kind = reviewKind(input.reviewKind);
+      const decision = String(input.decision || "");
+      if (!["no_canonical_issue", "correction_required"].includes(decision)) {
+        fail(400, "content_issue_triage_decision_invalid");
+      }
+      const reasonCode = String(input.reasonCode || "");
+      const noIssueReasons = new Set([
+        "canonical_content_current",
+        "report_not_reproducible",
+        "target_superseded"
+      ]);
+      const correctionReasons = new Set([
+        "medical_correction_required",
+        "reference_update_required",
+        "rights_or_provenance_review_required",
+        "ambiguous_scope_requires_revision",
+        "other_correction_required"
+      ]);
+      if (decision === "no_canonical_issue" && !noIssueReasons.has(reasonCode)) {
+        fail(400, "content_issue_triage_reason_mismatch");
+      }
+      if (decision === "correction_required" && !correctionReasons.has(reasonCode)) {
+        fail(400, "content_issue_triage_reason_mismatch");
+      }
+      if (input.attestationVersion !== "learner-content-issue-triage-attestation-v1" ||
+          input.attested !== true) {
+        fail(400, "content_issue_triage_attestation_required");
+      }
+      await requireGrant(kind);
+
+      const { data, error } = await admin.rpc("triage_learner_content_issue_reports", {
+        p_report_ids: reportIds,
+        p_reviewer: reviewerId,
+        p_review_kind: kind,
+        p_decision: decision,
+        p_reason_code: reasonCode,
+        p_attestation_version: String(input.attestationVersion),
+        p_attested: true
+      });
+
+      if (error) {
+        const message = String(error?.message || "");
+        if (message.includes("reviewer_not_authorized") ||
+            message.includes("content_issue_triage_self_review_blocked")) {
+          fail(403, message.includes("self_review") ? "content_issue_triage_self_review_blocked" : "reviewer_not_authorized");
+        }
+        if (message.includes("content_issue_triage_already_recorded") || error?.code === "23505") {
+          fail(409, "content_issue_triage_already_recorded");
+        }
+        const code = message.match(/content_issue_triage_[a-z_]+/)?.[0];
+        if (code) fail(400, code);
+        fail(500, "content_issue_triage_write_failed");
+      }
+
+      if (data?.contractId !== "learner-content-issue-triage-receipt-v1" ||
+          data?.decisionCount !== reportIds.length ||
+          data?.canonicalMutation !== false ||
+          data?.publicationAuthority !== false ||
+          data?.learnerModelAuthority !== false ||
+          !Array.isArray(data?.triageEvents) ||
+          data.triageEvents.length !== reportIds.length) {
+        fail(500, "content_issue_triage_write_failed");
+      }
+
+      return response(req, 200, data);
+    }
+
     if (req.method === "GET" && path === "/queue") {
       if ([...url.searchParams.keys()].some((key) => key !== "kind")) fail(400, "query_not_supported");
       const kind = reviewKind(url.searchParams.get("kind"));

@@ -221,3 +221,47 @@ test('structured zero-typing batch sends no reviewer identity or free-text notes
   assert.deepEqual(body.targetIds, ['demo:q1@1', 'demo:q2@1']);
   assert.equal(body.attested, true);
 });
+
+
+test('review adapter reads and triages learner reports without browser reviewer identity', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({
+        contractId: url.endsWith('/learner-reports')
+          ? 'learner-content-issue-triage-queue-v1'
+          : 'learner-content-issue-triage-receipt-v1',
+        groups: [],
+        decisionCount: 2,
+        canonicalMutation: false,
+        publicationAuthority: false,
+        learnerModelAuthority: false,
+        triageEvents: [{}, {}]
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    }
+  });
+
+  await review.learnerReports();
+  await review.triageLearnerReports({
+    reportIds: [
+      '11111111-1111-4111-8111-111111111111',
+      '22222222-2222-4222-8222-222222222222'
+    ],
+    reviewKind: 'medical',
+    decision: 'correction_required',
+    reasonCode: 'medical_correction_required',
+    attested: true
+  });
+
+  assert.match(calls[0].url, /\/learner-reports$/);
+  assert.match(calls[1].url, /\/learner-reports\/triage$/);
+  const body = JSON.parse(calls[1].init.body);
+  assert.equal('reviewerId' in body, false);
+  assert.deepEqual(Object.keys(body).sort(), [
+    'attestationVersion','attested','decision','reasonCode','reportIds','reviewKind'
+  ]);
+});

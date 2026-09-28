@@ -156,3 +156,23 @@ test('References source focus narrows questions and notes without recording a sh
   assert.match(source, /data-action="references-source-focus"/);
   assert.doesNotMatch(source, /references-source-focus[\s\S]{0,300}review\.record\(/);
 });
+
+
+test('reviewer UI triages learner reports without exposing learner identity or editing canonical content', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /LEARNER REPORT TRIAGE/);
+  assert.match(source, /Learner identity is intentionally not exposed/);
+  assert.match(source, /Report count is a prioritization signal only, never a vote on medical truth/);
+  assert.match(source, /review\.learnerReports\(\)/);
+  assert.match(source, /review\.triageLearnerReports/);
+  assert.match(source, /Correction required/);
+  assert.match(source, /creates no edit and no publication/);
+  assert.doesNotMatch(source, /learnerId\s*:/);
+});
+
+test('learner report inbox failure is nonblocking for the normal review queue', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /review\.learnerReports\(\)[\s\S]*\.catch/);
+  assert.match(source, /Report inbox temporarily unavailable/);
+  assert.match(source, /Normal content review remains available/);
+});

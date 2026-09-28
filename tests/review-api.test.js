@@ -128,3 +128,41 @@ test('review-api structured review batches are JWT-derived, bounded and note-fre
   assert.doesNotMatch(route, /notes/);
   assert.match(route, /publicationAuthority !== false/);
 });
+
+
+test('review-api exposes learner report triage without learner identity', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/learner-reports"/);
+  assert.match(source, /learner_content_issue_reports/);
+  assert.match(source, /learner_content_issue_triage_events/);
+  assert.match(source, /String\(row\.learner_id\) !== reviewerId/);
+  assert.match(source, /learnerIdentityExposed: false/);
+  assert.match(source, /canonicalMutationAuthority: false/);
+
+  const start = source.indexOf('path === "/learner-reports"');
+  const end = source.indexOf('path === "/learner-reports/triage"', start);
+  const route = source.slice(start, end);
+  assert.doesNotMatch(route, /learnerId:/);
+  assert.doesNotMatch(route, /learner_id:/);
+});
+
+test('review-api triage mutation derives reviewer identity from JWT and is non-authoritative', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  const start = source.indexOf('path === "/learner-reports/triage"');
+  const end = source.indexOf('path === "/queue"', start);
+  const route = source.slice(start, end);
+  assert.match(route, /triage_learner_content_issue_reports/);
+  assert.match(route, /p_reviewer: reviewerId/);
+  assert.doesNotMatch(route, /p_reviewer:\s*input/);
+  assert.match(route, /await requireGrant\(kind\)/);
+  assert.match(route, /canonicalMutation !== false/);
+  assert.match(route, /publicationAuthority !== false/);
+  assert.match(route, /learnerModelAuthority !== false/);
+});
+
+test('learner report inbox groups exact target snapshot rather than popularity-deciding truth', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /\[row\.target_type, row\.target_id, row\.target_sha256\]\.join/);
+  assert.match(source, /reportCount: group\.reports\.length/);
+  assert.match(source, /targetState = question\.status === "published" \? "current" : "superseded"/);
+});

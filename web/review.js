@@ -21,6 +21,8 @@ let state = {
   items: [],
   pipelineStatus: null,
   reviewAssist: null,
+  learnerReportGroups: [],
+  learnerReportError: null,
   referencesWorkspace: null,
   referencesSourceId: null,
   referencesError: null,
@@ -618,6 +620,138 @@ function noteReviewItem(item, index) {
   </article>`;
 }
 
+
+function learnerReportReasonLabel(code) {
+  return {
+    canonical_content_current: 'Canonical content remains current',
+    report_not_reproducible: 'Reported issue not reproducible after review',
+    target_superseded: 'Target version has already been superseded',
+    medical_correction_required: 'Medical correction required',
+    reference_update_required: 'Reference or source update required',
+    rights_or_provenance_review_required: 'Rights / provenance review required',
+    ambiguous_scope_requires_revision: 'Ambiguous scope requires a new version',
+    other_correction_required: 'Other correction required'
+  }[code] || code;
+}
+
+function learnerReportTarget(group) {
+  if (group?.targetType === 'question_version') {
+    const q = group?.target?.question;
+    if (!q) return '<p class="muted">Original question version is no longer available in the current catalog.</p>';
+    const options = Array.isArray(q.options)
+      ? '<ol class="option-review-list">' + q.options.map(option =>
+          '<li><strong>' + escape(option.optionId || '') + '</strong> ' + escape(option.text || '') + '</li>'
+        ).join('') + '</ol>'
+      : '';
+    return '<div class="review-section"><span class="eyebrow">REPORTED QUESTION VERSION</span><h3>' +
+      escape(q.stem || group.targetId) + '</h3>' + options +
+      '<p><strong>Answer:</strong> ' + escape(q.answerOptionId || '—') + '</p>' +
+      '<p><strong>Explanation:</strong> ' + escape(q.explanation || '—') + '</p></div>';
+  }
+
+  const note = group?.target?.note;
+  if (!note) return '<p class="muted">Original canonical note version is no longer available.</p>';
+  return '<div class="review-section"><span class="eyebrow">REPORTED CANONICAL NOTE VERSION</span><h3>' +
+    escape(note.title || group.targetId) + '</h3><pre class="vault-markdown">' +
+    escape(note.bodyMarkdown || '') + '</pre></div>';
+}
+
+function learnerReportGroupCard(group) {
+  const reports = Array.isArray(group?.reports) ? group.reports : [];
+  const reportKinds = [...new Set(reports.map(report => report.reportKind).filter(Boolean))];
+  const details = reports.map(report => {
+    const shared = report.suggestedCorrection
+      ? '<div class="review-section"><strong>Learner-shared correction suggestion</strong><p>' +
+          escape(report.suggestedCorrection) +
+        '</p><p class="muted">Shared explicitly for review. It is evidence, not medical authority.</p></div>'
+      : '';
+    return '<article class="source-card"><div class="section-heading"><div><strong>' +
+      escape(report.reportKind || 'report') + '</strong><p class="muted">' +
+      escape(report.createdAt || '') + '</p></div></div><p>' +
+      escape(report.details || 'No additional details supplied.') + '</p>' + shared + '</article>';
+  }).join('');
+
+  const sources = Array.isArray(group?.sources) && group.sources.length
+    ? '<div class="source-list">' + group.sources.map(source =>
+        sourceCard(source, { allowResolve: false })
+      ).join('') + '</div>'
+    : '<p class="muted">No source package is attached to this target.</p>';
+
+  const gateOptions = state.grants.map(kind =>
+    '<option value="' + escape(kind) + '">' + escape(gateLabel(kind)) + '</option>'
+  ).join('');
+
+  const noIssueReasons = [
+    'canonical_content_current',
+    'report_not_reproducible',
+    'target_superseded'
+  ];
+  const correctionReasons = [
+    'medical_correction_required',
+    'reference_update_required',
+    'rights_or_provenance_review_required',
+    'ambiguous_scope_requires_revision',
+    'other_correction_required'
+  ];
+
+  const reasonOptions =
+    '<optgroup label="No canonical issue">' +
+      noIssueReasons.map(code =>
+        '<option value="' + code + '">' + escape(learnerReportReasonLabel(code)) + '</option>'
+      ).join('') +
+    '</optgroup><optgroup label="Correction required">' +
+      correctionReasons.map(code =>
+        '<option value="' + code + '">' + escape(learnerReportReasonLabel(code)) + '</option>'
+      ).join('') +
+    '</optgroup>';
+
+  const reportCount = Number(group.reportCount || reports.length);
+  return '<article class="panel learner-report-group">' +
+    '<div class="section-heading"><div><span class="eyebrow">LEARNER-REPORTED CONTENT ISSUE</span><h2>' +
+      escape(group.targetId || 'Unknown target') +
+    '</h2><p class="muted">' + escape(group.targetType || '') + ' · ' +
+      escape(group.targetState || 'unavailable') + ' · SHA ' +
+      escape(String(group.targetSha256 || '').slice(0, 12)) + '…</p></div><span class="badge">' +
+      escape(reportCount) + ' report' + (reportCount === 1 ? '' : 's') +
+    '</span></div>' +
+    '<p>Signals: ' + escape(reportKinds.join(' · ') || 'unspecified') +
+      '. Learner identity is intentionally not exposed to this workspace.</p>' +
+    learnerReportTarget(group) +
+    '<h3>Source package</h3>' + sources +
+    '<h3>Submitted report evidence</h3><div class="source-list">' + details + '</div>' +
+    '<form class="learner-report-triage-form" data-report-ids="' +
+      escape(reports.map(report => report.reportId).join(',')) + '">' +
+      '<label>Reviewer gate<select name="reviewKind" required>' + gateOptions + '</select></label>' +
+      '<label>Final triage outcome<select name="decision" required>' +
+        '<option value="">Choose after inspection…</option>' +
+        '<option value="no_canonical_issue">No canonical issue</option>' +
+        '<option value="correction_required">Correction required</option>' +
+      '</select></label>' +
+      '<label>Reason<select name="reasonCode" required><option value="">Choose reason…</option>' +
+        reasonOptions + '</select></label>' +
+      '<label class="review-attestation"><input type="checkbox" name="attested" required> I inspected the exact target/version and submitted report evidence. This triage decision is my own reviewer judgment.</label>' +
+      '<button class="primary" type="submit" ' + (state.submitting ? 'disabled' : '') + '>Record triage decision</button>' +
+      '<p class="muted">Triage closes these reports only. “Correction required” creates no edit and no publication. A corrected item must enter a new normal canonical version and pass the usual review gates.</p>' +
+    '</form></article>';
+}
+
+function learnerReportPanel() {
+  if (state.learnerReportError) {
+    return '<section class="panel"><div class="section-heading"><div><span class="eyebrow">LEARNER REPORT TRIAGE</span><h2>Report inbox temporarily unavailable.</h2></div><span class="badge">Nonblocking</span></div><p class="muted">Normal content review remains available. No stale report data is shown.</p></section>';
+  }
+
+  const groups = Array.isArray(state.learnerReportGroups) ? state.learnerReportGroups : [];
+  if (!groups.length) {
+    return '<section class="panel"><div class="section-heading"><div><span class="eyebrow">LEARNER REPORT TRIAGE</span><h2>No open learner-reported content issues.</h2></div><span class="badge">0 open</span></div><p class="muted">Learner corrections remain private unless the learner explicitly submits a possible-error report.</p></section>';
+  }
+
+  const reportCount = groups.reduce((sum, group) => sum + Number(group.reportCount || 0), 0);
+  return '<section class="panel"><div class="section-heading"><div><span class="eyebrow">LEARNER REPORT TRIAGE</span><h2>Inspect exact reported versions before routing corrections</h2></div><span class="badge">' +
+    escape(reportCount) + ' open report' + (reportCount === 1 ? '' : 's') +
+    '</span></div><p>Repeated reports against the same exact target snapshot are grouped to reduce duplicate inspection. Report count is a prioritization signal only, never a vote on medical truth.</p></section>' +
+    groups.map(learnerReportGroupCard).join('');
+}
+
 function authorized() {
   const kinds = state.grants;
   const referencesExperiment =
@@ -647,6 +781,7 @@ function authorized() {
 
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
   ${pipelinePanel()}
+  ${learnerReportPanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${rightsSourceBacklogPanel()}
   ${referencesExperimentPanel()}
@@ -680,10 +815,17 @@ async function loadQueue(kind = state.selectedKind) {
           .then(response => response.ok ? response.json() : null)
           .catch(() => state.reviewAssist)
       : Promise.resolve(state.reviewAssist);
-    const [result, pipelineStatus, reviewAssist] = await Promise.all([
+    const learnerReportsPromise = review.learnerReports()
+      .then(result => ({ result, error: null }))
+      .catch(error => {
+        reportUnexpected(error, 'load_learner_report_triage');
+        return { result: null, error: error.code || error.message || 'learner_report_queue_unavailable' };
+      });
+    const [result, pipelineStatus, reviewAssist, learnerReportsState] = await Promise.all([
       queuePromise,
       pipelinePromise,
-      assistPromise
+      assistPromise,
+      learnerReportsPromise
     ]);
     let referencesWorkspace = null;
     let referencesError = null;
@@ -730,6 +872,10 @@ async function loadQueue(kind = state.selectedKind) {
       items,
       pipelineStatus,
       reviewAssist,
+      learnerReportGroups: Array.isArray(learnerReportsState.result?.groups)
+        ? learnerReportsState.result.groups
+        : [],
+      learnerReportError: learnerReportsState.error,
       error: null
     };
   } catch (error) {
@@ -755,7 +901,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, learnerReportGroups: [], learnerReportError: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
@@ -928,6 +1074,47 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const learnerReportForm = event.target.closest('.learner-report-triage-form');
+  if (learnerReportForm) {
+    event.preventDefault();
+    const data = new FormData(learnerReportForm);
+    const reportIds = String(learnerReportForm.dataset.reportIds || '').split(',').filter(Boolean);
+    const reviewKind = String(data.get('reviewKind') || '');
+    const decision = String(data.get('decision') || '');
+    const reasonCode = String(data.get('reasonCode') || '');
+    const attested = data.get('attested') === 'on';
+    const noIssueReasons = new Set(['canonical_content_current','report_not_reproducible','target_superseded']);
+    const correctionReasons = new Set(['medical_correction_required','reference_update_required','rights_or_provenance_review_required','ambiguous_scope_requires_revision','other_correction_required']);
+    if (!reportIds.length || !state.grants.includes(reviewKind) || !['no_canonical_issue','correction_required'].includes(decision) || !reasonCode || !attested) {
+      announce('Choose a granted reviewer gate, final outcome, matching reason and inspection attestation.');
+      return;
+    }
+    if (decision === 'no_canonical_issue' && !noIssueReasons.has(reasonCode)) {
+      announce('Choose a no-canonical-issue reason for that outcome.');
+      return;
+    }
+    if (decision === 'correction_required' && !correctionReasons.has(reasonCode)) {
+      announce('Choose a correction-required reason for that outcome.');
+      return;
+    }
+    (async () => {
+      state.submitting = 'learner-report-triage';
+      setFormBusy(learnerReportForm, true);
+      try {
+        const receipt = await review.triageLearnerReports({ reportIds, reviewKind, decision, reasonCode, attested });
+        announce((decision === 'correction_required' ? 'Correction required' : 'No canonical issue') + ' recorded for ' + receipt.decisionCount + ' learner report' + (receipt.decisionCount === 1 ? '' : 's') + '. No content was edited or published.');
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'triage_learner_reports');
+        state.submitting = null;
+        setFormBusy(learnerReportForm, false);
+        announce('Learner report triage was not recorded: ' + (error.code || error.message || 'content_issue_triage_write_failed') + '.');
+      }
+    })();
+    return;
+  }
+
   const batchForm = event.target.closest('.references-batch-review-form');
   if (batchForm) {
     event.preventDefault();
