@@ -1299,3 +1299,4 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Source resolution still does **not** approve a question gate, verify content or publish anything. The existing authenticated question-level rights decision remains mandatory.
 - This is UI/workflow compression only: no new database table, no new privileged API, no change to review fingerprints and no change to publication authority.
 - Focused syntax/contract checks passed for unique-source aggregation, impact sorting, source-resolution gating and preservation of manual `review.resolveRights(...)` submission.
+- PR #115 Foundation checks again failed before executing any workflow steps: both `check` and `browser` jobs returned empty step lists. This remains a runner-infrastructure failure, not a green CI result and not a demonstrated code-test failure.
