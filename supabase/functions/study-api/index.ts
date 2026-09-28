@@ -321,10 +321,26 @@ Deno.serve(async (req: Request) => {
         if (signedError || !signed?.signedUrl) fail(500, "media_delivery_failed");
         media.push({ ...item, deliveryRef: signed.signedUrl });
       }
+      const rawVisualInteraction = data?.visualInteraction;
+      const visualInteraction =
+        rawVisualInteraction?.schemaVersion === 1 &&
+        rawVisualInteraction?.taskType === "detection" &&
+        typeof rawVisualInteraction?.mediaAssetVersionId === "string" &&
+        media.some(
+          (item: any) =>
+            item?.mediaAssetVersionId === rawVisualInteraction.mediaAssetVersionId
+        )
+          ? {
+              schemaVersion: 1,
+              taskType: "detection",
+              mediaAssetVersionId: rawVisualInteraction.mediaAssetVersionId
+            }
+          : null;
       return {
         contractId: "content-media-prompt-v1",
         questionVersionId,
-        media
+        media,
+        visualInteraction
       };
     };
     const internalVisualQuestionReady = async (questionVersionId: string) => {
@@ -898,7 +914,8 @@ Deno.serve(async (req: Request) => {
         ...result,
         question: {
           ...learnerQuestion(q),
-          media: mediaPrompt.media
+          media: mediaPrompt.media,
+          visualInteraction: mediaPrompt.visualInteraction
         },
         receipt: attempt?.receipt ?? null,
         memoryJudgment,
