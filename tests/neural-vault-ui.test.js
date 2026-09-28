@@ -65,3 +65,30 @@ test('NeuralVault renders only allowlisted Study Now arrival context for the exa
   assert.match(source, /This handoff is context only/);
   assert.match(source, /does not change your score, note content, mastery state, or revision schedule/);
 });
+
+
+test('NeuralVault renders learner-private corrections beside canonical content rather than replacing it', () => {
+  assert.match(source, /MY CORRECTION · PRIVATE/);
+  assert.match(source, /Private overlay\. Canonical stays canonical/);
+  assert.match(source, /Canonical content remains visible and unchanged/);
+  assert.match(source, /createVaultCorrection/);
+  assert.match(source, /Save private correction/);
+  assert.match(source, /canonical-updated/);
+  assert.match(source, /question-retired/);
+  assert.match(source, /target-unavailable/);
+});
+
+test('NeuralVault reports possible canonical errors without implicitly sharing private correction text', () => {
+  assert.match(source, /Report possible canonical error/);
+  assert.match(source, /Include my private correction text in this report/);
+  assert.match(source, /shareCorrection/);
+  assert.match(source, /correctionAnnotationId: shareCorrection \? correctionAnnotationId : null/);
+  assert.match(source, /canonical content, your score, mastery, or another learner/);
+});
+
+test('QBank deep-link correction target is allowlisted and concept-bound', () => {
+  assert.match(source, /allowedCorrectionTargetTypes = new Set\(\['canonical_note', 'question_version'\]\)/);
+  assert.match(source, /deepLink\.conceptId === state\.selectedConceptId/);
+  assert.match(source, /correctionTargetType/);
+  assert.match(source, /correctionTargetId/);
+});
