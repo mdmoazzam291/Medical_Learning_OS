@@ -526,3 +526,44 @@ test('cloud internal exam readiness and start use separate test-only routes', as
   assert.deepEqual(seen[1].body, { ruleSetId:'neet-pg:2026@1' });
   assert.equal(Object.hasOwn(seen[1].body, 'learnerId'), false);
 });
+
+
+test('cloud visual detection sends only learner response intent and media identity', async () => {
+  let seen = null;
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen = { url, method: options.method || 'GET', body: JSON.parse(options.body) };
+      return Response.json({
+        contractId:'server-scored-visual-detection-v1',
+        serverScored:true,
+        attemptReceipt:{ event:{ eventId:'attempt-1' } },
+        visualReceipt:{ eventId:'visual-1' }
+      });
+    }
+  });
+
+  await cloud.visualDetection('session-1', {
+    requestId:'request-1',
+    position:0,
+    optionId:'ccrcc',
+    mediaAssetVersionId:'media:pathology:clear-cell-rcc-grade1@1',
+    helpUsed:false,
+    interventionRef:null
+  });
+
+  assert.match(seen.url, /study-api\/sessions\/session-1\/visual-detection$/);
+  assert.equal(seen.method, 'POST');
+  assert.deepEqual(seen.body, {
+    requestId:'request-1',
+    position:0,
+    optionId:'ccrcc',
+    mediaAssetVersionId:'media:pathology:clear-cell-rcc-grade1@1',
+    helpUsed:false,
+    interventionRef:null
+  });
+  for (const forbidden of ['learnerId','correct','outcome','targetConceptId','answerOptionId']) {
+    assert.equal(Object.hasOwn(seen.body, forbidden), false);
+  }
+});
