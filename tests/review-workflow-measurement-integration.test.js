@@ -68,3 +68,26 @@ test('client adapter does not send reviewer identity in measurement payload', ()
 test('preview server exposes the new experiment module explicitly', () => {
   assert.match(serve,/src\/domain\/review-workflow-experiment\.js/);
 });
+
+
+test('browser displays descriptive pilot progress without choosing a winner', () => {
+  assert.match(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.match(ui,/review\.measurementSummary\(REFERENCES_WORKFLOW_EXPERIMENT_V1\.experimentId\)/);
+  assert.match(ui,/content-review-workflow-measurement-summary-v1/);
+  assert.match(ui,/summary\?\.causal !== false/);
+  assert.match(ui,/Descriptive only · not causal/);
+  assert.match(ui,/Median foreground-active/);
+  assert.match(ui,/Median elapsed wall/);
+  assert.match(ui,/Rejection proxy/);
+  assert.match(ui,/No winner is inferred automatically/);
+  assert.match(ui,/Do not interpret partial timing as a workflow verdict/);
+  assert.doesNotMatch(ui,/winner is|best workflow|reviewer score:/i);
+});
+
+test('measurement summary failure is non-blocking and never reuses stale results', () => {
+  assert.match(ui,/referencesMeasurementSummary: null/);
+  assert.match(ui,/referencesMeasurementError: null/);
+  assert.match(ui,/review_measurement_summary_unavailable/);
+  assert.match(ui,/Measurement summary unavailable/);
+  assert.match(ui,/Review remains usable and no prior summary is reused/);
+});
