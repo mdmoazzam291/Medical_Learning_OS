@@ -158,3 +158,40 @@ test('correct answers do not enter the canonical remediation block', async () =>
   assert.match(source, /receipt\?\.event\?\.correct !== false/);
   assert.match(source, /receipt\.event\?\.correct \? 'Correct\.'/);
 });
+
+
+test('medical learner uses visual route only for explicit server detection descriptor', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /function visualDetectionDescriptor\(question\)/);
+  assert.match(source, /descriptor\?\.taskType !== 'detection'/);
+  assert.match(source, /question\.media\.some\(item => item\?\.mediaAssetVersionId === descriptor\.mediaAssetVersionId\)/);
+  assert.match(source, /cloud\.visualDetection\(session\.sessionId/);
+  assert.match(source, /mediaAssetVersionId: visualDetection\.mediaAssetVersionId/);
+  assert.match(source, /helpUsed: false/);
+  assert.match(source, /receipt = result\.attemptReceipt/);
+  assert.match(source, /visual_detection_receipt_invalid/);
+});
+
+test('medical visual UI never computes correctness or invents target concept', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  const start = source.indexOf('async function answerCurrent()');
+  const end = source.indexOf('async function recordMemoryRating', start);
+  const answerFlow = source.slice(start, end);
+  assert.doesNotMatch(answerFlow, /answerOptionId\s*===/);
+  assert.doesNotMatch(answerFlow, /correct\s*:/);
+  assert.doesNotMatch(answerFlow, /targetConceptId\s*:/);
+  assert.match(answerFlow, /cloud\.answer/);
+  assert.match(answerFlow, /cloud\.visualDetection/);
+});
+
+test('visual detection affordance remains evidence language rather than mastery language', async () => {
+  const [source, css] = await Promise.all([
+    readFile(new URL('../web/medical.js', import.meta.url), 'utf8'),
+    readFile(new URL('../web/styles.css', import.meta.url), 'utf8')
+  ]);
+  assert.match(source, /IMAGE RECOGNITION · SERVER SCORED/);
+  assert.match(source, /Visual recognition evidence saved/);
+  assert.match(source, /stored separately from your scored question attempt/);
+  assert.match(css, /\.visual-task-note/);
+  assert.match(css, /\.visual-evidence-status/);
+});
