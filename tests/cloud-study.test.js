@@ -505,3 +505,24 @@ test('cloud GT Autopsy reads one exact run without learner or scoring inputs', a
   assert.equal(result.inferenceAuthority, false);
   assert.equal(result.masteryInferenceEnabled, false);
 });
+
+
+test('cloud internal exam readiness and start use separate test-only routes', async () => {
+  const seen = [];
+  const client = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({ url, method: options.method || 'GET', body: options.body ? JSON.parse(options.body) : null });
+      return Response.json({ ready:true, contractId:'exam-mock-test-readiness-v1' });
+    }
+  });
+  await client.examSimulatorTestReadiness('neet-pg:2026@1');
+  await client.startTestExamRun('neet-pg:2026@1');
+  assert.match(seen[0].url, /exam-simulator\/test-readiness\?ruleSetId=neet-pg%3A2026%401$/);
+  assert.equal(seen[0].method, 'GET');
+  assert.match(seen[1].url, /exam-simulator\/test-runs$/);
+  assert.equal(seen[1].method, 'POST');
+  assert.deepEqual(seen[1].body, { ruleSetId:'neet-pg:2026@1' });
+  assert.equal(Object.hasOwn(seen[1].body, 'learnerId'), false);
+});
