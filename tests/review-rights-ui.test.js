@@ -11,7 +11,7 @@ test('reviewer UI requires source-rights resolution before rights approval', asy
   assert.match(source, /licensed/);
   assert.match(source, /restricted/);
   assert.match(source, /Resolve source rights/);
-  assert.match(source, /citation-only factual grounding before approving the rights gate/);
+  assert.match(source, /Resolve source rights before approval/);
   assert.match(source, /!rightsReady/);
   assert.match(source, /review\.resolveRights/);
   assert.doesNotMatch(source, /reviewerId\s*:/);
