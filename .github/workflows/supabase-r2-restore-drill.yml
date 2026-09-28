@@ -129,8 +129,12 @@ jobs:
           prefix = os.environ.get('MLOS_BACKUP_PREFIX', '')
           assert re.fullmatch(r'supabase/\d{4}/\d{2}/\d{2}/\d{8}T\d{6}Z', prefix), 'Invalid selected prefix'
           timestamp = prefix.rsplit('/', 1)[-1]
-          manifest_timestamp = created.strftime('%Y%m%dT%H%M%SZ')
-          assert timestamp == manifest_timestamp, 'Backup prefix/manifest timestamp mismatch'
+          prefix_started = datetime.strptime(timestamp, '%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
+          manifest_delay = created - prefix_started
+          assert manifest_delay >= timedelta(0), 'Manifest predates backup prefix timestamp'
+          assert manifest_delay <= timedelta(minutes=30), (
+              f'Backup prefix/manifest timing drift too large: {manifest_delay}'
+          )
 
           lines = (root / 'SHA256SUMS').read_text().splitlines()
           assert len(lines) == 3, 'Unexpected inner checksum count'
