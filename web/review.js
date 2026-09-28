@@ -56,6 +56,36 @@ function sourceLink(url) {
   }
 }
 
+function safeReviewMediaUrl(value) {
+  try {
+    const parsed = new URL(String(value ?? ''));
+    return parsed.protocol === 'https:' ? parsed.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function mediaReviewPanel(item) {
+  const packet = item?.mediaReview;
+  if (!packet || !Array.isArray(packet.media) || !packet.media.length) return '';
+
+  const figures = packet.media.map((media, index) => {
+    const url = safeReviewMediaUrl(media?.deliveryRef);
+    const modality = escape(media?.modality || 'medical');
+    const role = escape(media?.role || 'linked');
+    const dimensions = media?.width && media?.height
+      ? escape(String(media.width) + ' × ' + String(media.height))
+      : 'unknown dimensions';
+    const assetId = escape(media?.mediaAssetVersionId || 'unknown media');
+    if (!url) {
+      return '<div class="review-media-unavailable"><strong>Media unavailable</strong><span>' + assetId + '</span></div>';
+    }
+    return '<figure class="review-media-figure"><img src="' + escape(url) + '" alt="Review ' + modality + ' image ' + (index + 1) + '" loading="eager" decoding="async" referrerpolicy="no-referrer"><figcaption><strong>' + modality + '</strong><span>' + role + ' · ' + dimensions + '</span><small>' + assetId + '</small></figcaption></figure>';
+  }).join('');
+
+  const targetJson = escape(JSON.stringify(packet.target ?? [], null, 2));
+  return '<section class="review-section review-media-section"><div class="section-heading"><div><span class="eyebrow">MEDIA-BOUND REVIEW</span><h3>Inspect the exact visual target</h3></div><span class="badge">' + escape(gateLabel(packet.reviewKind || state.selectedKind)) + '</span></div><div class="review-media-grid">' + figures + '</div><div class="review-target-fingerprint"><span>Current target SHA-256</span><code>' + escape(packet.targetSha256 || 'unavailable') + '</code></div><details class="review-media-target"><summary>Exact gate-bound media metadata</summary><pre>' + targetJson + '</pre></details><p class="muted">Your decision is bound to this current media-aware target. Inspect the image and gate-specific metadata before approving.</p></section>';
+}
 function gateLabel(kind) {
   return ({ medical: 'Medical accuracy', references: 'References', rights: 'Rights & provenance' })[kind] || kind;
 }
@@ -176,7 +206,7 @@ function reviewItem(item, index) {
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">TARGET ${index + 1}</span><h2>${escape(q.questionVersionId || 'Unknown version')}</h2></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
     <section class="review-section"><h3>Question</h3><p class="review-stem">${escape(q.stem || '')}</p><ol class="review-options">${options.map(option => `<li class="${option?.optionId === q.answerOptionId ? 'review-answer' : ''}"><span>${escape(option?.optionId || '')}</span>${escape(option?.text || '')}${option?.optionId === q.answerOptionId ? '<strong>Key</strong>' : ''}</li>`).join('')}</ol></section>
-    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
+    ${mediaReviewPanel(item)}\n    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
     <div class="review-metadata"><div><span>Primary concept</span><strong>${escape(primary?.conceptId || 'Not linked')}</strong></div><div><span>Provenance</span><strong>${escape(provenance.kind || 'unknown')}</strong></div><div><span>Exam/year</span><strong>${escape(provenance.exam || 'N/A')} ${escape(provenance.year ?? '')}</strong></div></div>
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(sourceCard).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
