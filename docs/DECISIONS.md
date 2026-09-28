@@ -986,3 +986,8 @@ Decision:
 - defer persistent claim/passage/packet tables until a controlled batch shows that evidence reuse and triage materially reduce review work enough to justify the additional data model.
 
 This preserves the governing invariant: **automation assembles evidence; governed reviewers decide production medical content**.
+
+
+## ADR-066 — Claim-first inspection precedes shared decision persistence
+
+The References workspace may group identical canonical claim/evidence bindings, but a grouping is not a human approval and cannot approve dependent questions. The seven-question pilot demonstrates source reuse, not repeated claim reuse. Match packets to current queue concept/source versions; withhold mismatches and discard failed loads. Preserve per-question scrutiny of wording, scope, answer and explanation. Use the existing immutable human review records for question decisions. Do not add a parallel approval store before measured review-time/correction-rate evidence satisfies ADR-065.

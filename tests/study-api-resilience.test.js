@@ -349,10 +349,11 @@ test('media prompt API exposes only published-question media through the trusted
 test('session state binds learner-safe media prompt to the exact published question', async () => {
   const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
   const sessionQuestion = source.indexOf('const q = publishedQuestions(body).find');
-  const mediaRpc = source.indexOf('admin.rpc("content_media_prompt"', sessionQuestion);
+  const mediaRpc = source.indexOf('await learnerMediaPrompt(q.questionVersionId)', sessionQuestion);
   assert.ok(sessionQuestion >= 0 && mediaRpc > sessionQuestion);
-  assert.match(source.slice(sessionQuestion, mediaRpc + 700), /p_question_version_id: q\.questionVersionId/);
-  assert.match(source.slice(sessionQuestion, mediaRpc + 900), /media: Array\.isArray\(mediaPrompt\?\.media\) \? mediaPrompt\.media : \[\]/);
+  assert.match(source, /const sourceMedia = Array\.isArray\(data\?\.media\) \? data\.media : \[\]/);
+  assert.match(source.slice(sessionQuestion, mediaRpc + 700), /learnerMediaPrompt\(q\.questionVersionId\)/);
+  assert.match(source.slice(sessionQuestion, mediaRpc + 900), /media: mediaPrompt\.media/);
 });
 
 
@@ -384,3 +385,4 @@ test('incorrect answer receipt carries deterministic canonical grounded teaching
   assert.match(source, /teaching: postAnswerTeaching\?\.teaching \?\? null/);
   assert.doesNotMatch(source, /openai|gemini|anthropic/i);
 });
+

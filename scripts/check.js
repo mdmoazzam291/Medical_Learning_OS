@@ -15,4 +15,23 @@ const medicalSeed = validateCatalog(JSON.parse(readFileSync('data/medical-seed-a
 if (selectPublishedQuestions(medicalSeed).length) throw new Error('Medical review seed must remain unpublished');
 if (medicalSeed.questions.length !== 1 || medicalSeed.questions[0].status !== 'in_review') throw new Error('Medical review seed must contain one in-review question');
 if (medicalSeed.questions[0].provenance.kind !== 'ai_generated') throw new Error('Medical review seed provenance must remain AI-generated');
-\nconst decisionText = readFileSync('docs/DECISIONS.md', 'utf8');\nconst adrIds = [...decisionText.matchAll(/^## ADR-(\\d+)\\s+—/gm)].map(match => match[1]);\nconst adrCounts = new Map();\nfor (const id of adrIds) adrCounts.set(id, (adrCounts.get(id) ?? 0) + 1);\nconst legacyDuplicateAdrIds = new Set(['028', '052', '058']);\nconst unexpectedDuplicateAdrIds = [...adrCounts.entries()]\n  .filter(([id, count]) => count > 1 && !legacyDuplicateAdrIds.has(id))\n  .map(([id]) => id);\nif (unexpectedDuplicateAdrIds.length) {\n  throw new Error('Duplicate ADR IDs are not allowed: ' + unexpectedDuplicateAdrIds.join(', '));\n}\nfor (const id of legacyDuplicateAdrIds) {\n  if ((adrCounts.get(id) ?? 0) !== 2) {\n    throw new Error('Legacy ADR duplicate exception changed unexpectedly: ' + id);\n  }\n}\n\nconsole.log('Syntax, draft catalog, and decision-ledger checks passed');
+
+const decisionText = readFileSync('docs/DECISIONS.md', 'utf8');
+const adrIds = [...decisionText.matchAll(/^## ADR-(\d+)\s+—/gm)].map(match => match[1]);
+const adrCounts = new Map();
+for (const id of adrIds) adrCounts.set(id, (adrCounts.get(id) ?? 0) + 1);
+const legacyDuplicateAdrIds = new Set(['028', '052', '058']);
+const unexpectedDuplicateAdrIds = [...adrCounts.entries()]
+  .filter(([id, count]) => count > 1 && !legacyDuplicateAdrIds.has(id))
+  .map(([id]) => id);
+if (unexpectedDuplicateAdrIds.length) {
+  throw new Error('Duplicate ADR IDs are not allowed: ' + unexpectedDuplicateAdrIds.join(', '));
+}
+for (const id of legacyDuplicateAdrIds) {
+  if ((adrCounts.get(id) ?? 0) !== 2) {
+    throw new Error('Legacy ADR duplicate exception changed unexpectedly: ' + id);
+  }
+}
+
+console.log('Syntax, draft catalog, and decision-ledger checks passed');
+

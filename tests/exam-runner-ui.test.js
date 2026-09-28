@@ -53,7 +53,7 @@ test('Exam Mode preserves blind-first-look media safety', () => {
 test('Exam Mode distinguishes internal engineering content from production', () => {
   assert.match(source, /INTERNAL ENGINEERING TEST/);
   assert.match(source, /Engineering lane only/);
-  assert.match(source, /productionEquivalent/);
+  assert.match(source, /run\??\.assembly\?\.testingOnly === true/);
   assert.match(source, /internal_exam_test_forbidden/);
   assert.match(source, /examSimulatorTestReadiness/);
 });
@@ -83,3 +83,4 @@ test('Exam Mode has a dedicated responsive shell', () => {
   assert.match(css, /@media\(max-width:900px\).*\.exam-layout\{grid-template-columns:1fr\}/s);
   assert.match(css, /@media\(max-width:650px\).*\.exam-palette-grid\{grid-template-columns:repeat\(6,1fr\)/s);
 });
+

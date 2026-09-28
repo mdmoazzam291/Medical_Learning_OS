@@ -91,7 +91,9 @@ test('review assist covers all 25 questions in infectious prevention pilot 02', 
 
 test('pilot 02 source assist covers five CDC sources with conservative editable rights drafts', () => {
   const packet = assist();
-  const cdcSources = packet.sourceEvidence.filter(source => source.sourceId.startsWith('cdc:'));
+  const pilot02 = JSON.parse(readFileSync(new URL('../data/content-intake-pilot-infectious-prevention-02.json', import.meta.url), 'utf8'));
+  const sourceIds = new Set(pilot02.sources.map(source => source.sourceId));
+  const cdcSources = packet.sourceEvidence.filter(source => sourceIds.has(source.sourceId));
   assert.equal(cdcSources.length, 5);
   for (const source of cdcSources) {
     assert.match(source.sourceUrl, /^https:\/\/www\.cdc\.gov\//);
@@ -185,3 +187,4 @@ test('review assist covers all 49 final breadth pilot 07 questions', () => {
     assert.equal('reviewerId' in item, false);
   }
 });
+

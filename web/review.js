@@ -1,3 +1,5 @@
+import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
+import { referencesPanel } from '/web/references-panel.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -17,6 +19,8 @@ let state = {
   items: [],
   pipelineStatus: null,
   reviewAssist: null,
+  referencesWorkspace: null,
+  referencesError: null,
   loading: false,
   submitting: null,
   error: null
@@ -297,6 +301,7 @@ function authorized() {
   ${pipelinePanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${rightsSourceBacklogPanel()}
+  ${state.selectedKind === 'references' && state.targetType === 'questions' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
   ${body}</main>`;
 }
 
@@ -304,9 +309,11 @@ function render() {
   root.innerHTML = !state.user ? signedOut() : state.grants.length ? authorized() : unauthorized();
 }
 
+let queueGeneration = 0;
 async function loadQueue(kind = state.selectedKind) {
+  const generation = ++queueGeneration;
   if (!kind) return;
-  state = { ...state, selectedKind: kind, loading: true, error: null, items: [] };
+  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null };
   render();
   try {
     const queuePromise = state.targetType === 'neural-notes'
@@ -326,8 +333,23 @@ async function loadQueue(kind = state.selectedKind) {
       pipelinePromise,
       assistPromise
     ]);
+    let referencesWorkspace = null;
+    let referencesError = null;
+    if (kind === 'references' && state.targetType === 'questions') {
+      try {
+        const response = await fetch('/data/evaluations/source-grounding-cdc-co-v1.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('grounding_pilot_unavailable');
+        referencesWorkspace = await buildReferencesWorkspace(await response.json(), Array.isArray(result?.items) ? result.items : []);
+      } catch (error) {
+        referencesError = 'grounding_pilot_unavailable';
+        reportUnexpected(error, 'load_references_workspace');
+      }
+    }
+    if (generation !== queueGeneration) return;
     state = {
       ...state,
+      referencesWorkspace,
+      referencesError,
       loading: false,
       items: Array.isArray(result?.items) ? result.items : [],
       pipelineStatus,
@@ -335,6 +357,7 @@ async function loadQueue(kind = state.selectedKind) {
       error: null
     };
   } catch (error) {
+    if (generation !== queueGeneration) return;
     reportUnexpected(error, 'load_queue');
     state = { ...state, loading: false, items: [], error: error.code || error.message || 'review_queue_unavailable' };
   }
@@ -487,3 +510,4 @@ root.addEventListener('submit', event => {
 
 render();
 bootstrap();
+

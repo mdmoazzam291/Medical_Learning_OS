@@ -138,7 +138,8 @@ test('rights question cards wait for source resolution without hiding restricted
   assert.match(source, /source\?\.rights\?\.status \|\| 'unknown'/);
   assert.match(source, /!== 'unknown'/);
   assert.match(source, /state\.items\.filter\(questionSourcesHaveResolvedRights\)/);
-  assert.match(source, /question decisions? hidden until every referenced source has a recorded rights status/);
+  assert.match(source, /hidden until every referenced source has a recorded rights status/);
   assert.match(source, /Source resolution does not approve any question/);
   assert.doesNotMatch(source, /source\?\.rights\?\.status === 'restricted'.*return false/s);
 });
+

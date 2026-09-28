@@ -1,5 +1,14 @@
 name: Foundation checks
-on: [push, pull_request, workflow_dispatch]
+# Validate PRs once; validate main again after merge. Feature-branch pushes
+# are covered by pull_request, avoiding a duplicate pair of runner jobs.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: foundation-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -35,9 +44,12 @@ jobs:
             sleep 1
           done
           PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/browser-check.js
+      - name: Verify claim-first References workspace
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/references-browser-check.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: responsive-preview
           path: ${{ runner.temp }}/mlos-screenshots
           if-no-files-found: ignore
+
