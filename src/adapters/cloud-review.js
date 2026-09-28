@@ -105,6 +105,39 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
     measurementSummary(experimentId) {
       return request('/review-measurements/summary?experimentId=' + encodeURIComponent(experimentId));
     },
+    recordReferencesBatch({
+      questionVersionIds,
+      decisions,
+      notes,
+      experimentId,
+      workflowMode,
+      clientSessionId,
+      foregroundActiveMs,
+      elapsedWallMs,
+      queueSize,
+      attestationVersion = 'references-batch-attestation-v1',
+      attested
+    }) {
+      return request('/reference-review-batch', {
+        method: 'POST',
+        body: {
+          questionVersionIds,
+          decisions,
+          notes,
+          experimentId,
+          workflowMode,
+          clientSessionId,
+          foregroundActiveMs,
+          elapsedWallMs,
+          queueSize,
+          attestationVersion,
+          attested
+        }
+      });
+    },
+    batchMeasurementSummary(experimentId) {
+      return request('/reference-review-batch/summary?experimentId=' + encodeURIComponent(experimentId));
+    },
     recordNote({ noteVersionId, reviewKind, decision, notes }) {
       return request('/note-reviews', {
         method: 'POST',
