@@ -417,6 +417,30 @@ Deno.serve(async (req: Request) => {
       if (error) fail(500, "study_read_failed");
       return data ?? [];
     };
+    const getContentIssueReports = async () => {
+      const { data, error } = await trustedRead("content_issue_reports", async () =>
+        admin.from("learner_content_issue_reports")
+          .select("id,concept_id,target_type,target_id,target_sha256,report_kind,details,suggested_correction,created_at,contract_id")
+          .eq("learner_id", learnerId)
+          .order("created_at", { ascending: true })
+          .order("id", { ascending: true })
+      );
+      if (error) fail(500, "study_read_failed");
+      return (data ?? []).map((row: any) => ({
+        reportId: row.id,
+        contractId: row.contract_id,
+        conceptId: row.concept_id,
+        targetType: row.target_type,
+        targetId: row.target_id,
+        targetSha256: row.target_sha256,
+        reportKind: row.report_kind,
+        details: row.details,
+        suggestedCorrection: row.suggested_correction,
+        createdAt: row.created_at,
+        canonicalAuthority: false,
+        learnerModelAuthority: false
+      }));
+    };
     const getMemoryJudgments = async () => {
       const { data, error } = await trustedRead("memory_judgments", async () =>
         admin.from("study_memory_judgments")
@@ -2109,7 +2133,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/export") {
-      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions, vaultAnnotations] = await Promise.all([
+      const [{ data: sessions, error: sessionError }, events, bookmarks, recommendations, memoryJudgments, scheduleDecisions, vaultAnnotations, contentIssueReports] = await Promise.all([
         trustedRead("export_sessions", async () =>
           admin.from("study_sessions").select("id,position,closed,question_version_ids,created_at")
             .eq("learner_id", learnerId).order("created_at", { ascending: true }).order("id", { ascending: true })
@@ -2119,7 +2143,8 @@ Deno.serve(async (req: Request) => {
         getRecommendationEvents(),
         getMemoryJudgments(),
         getScheduleDecisionEvents(),
-        getVaultAnnotations()
+        getVaultAnnotations(),
+        getContentIssueReports()
       ]);
       if (sessionError) fail(500, "study_read_failed");
       return response(req, 200, {
@@ -2133,7 +2158,8 @@ Deno.serve(async (req: Request) => {
         memoryJudgments,
         scheduleDecisions,
         neuralVault: {
-          annotations: vaultAnnotations
+          annotations: vaultAnnotations,
+          contentIssueReports
         }
       });
     }
