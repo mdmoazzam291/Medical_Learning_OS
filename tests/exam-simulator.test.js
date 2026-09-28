@@ -6,6 +6,7 @@ import {
   advanceExamRunClock,
   setExamAnswer,
   setExamReview,
+  cancelExamRun,
   requestEarlySectionAdvance,
   examRunProgress,
   scoreCompletedExamRun
@@ -91,6 +92,41 @@ test('exam completes exactly at the pinned total duration', () => {
   assert.equal(run.completedAt, at(210 * 60));
   assert.throws(
     () => setExamAnswer(run, { questionVersionId: ids[179], optionId: 'A', at: at(210 * 60 + 1) }),
+    /exam_run_completed/
+  );
+});
+
+test('explicit abandonment terminates the run without scoring and preserves prior answers', () => {
+  let run = fresh();
+  run = setExamAnswer(run, { questionVersionId: ids[0], optionId: 'A', at: at(10) });
+  run = cancelExamRun(run, { at: at(20), reason: 'user_abandoned' });
+  assert.equal(run.status, 'cancelled');
+  assert.equal(run.currentSectionIndex, null);
+  assert.equal(run.completedAt, null);
+  assert.deepEqual(run.termination, {
+    kind: 'cancelled',
+    reason: 'user_abandoned',
+    at: at(20)
+  });
+  assert.equal(run.sections[0].closedAt, at(20));
+  assert.equal(run.responses[ids[0]].optionId, 'A');
+  assert.throws(
+    () => setExamAnswer(run, { questionVersionId: ids[1], optionId: 'B', at: at(21) }),
+    /exam_run_completed/
+  );
+  const key = Object.fromEntries(ids.map(id => [id, 'A']));
+  assert.throws(() => scoreCompletedExamRun({ run, ruleSet, answerKey: key }), /not_completed/);
+});
+
+test('cancellation cannot replace natural completion and validates terminal reason', () => {
+  const run = fresh();
+  assert.throws(
+    () => cancelExamRun(run, { at: at(10), reason: 'unknown' }),
+    /cancellation reason/
+  );
+  const completed = advanceExamRunClock(run, at(210 * 60));
+  assert.throws(
+    () => cancelExamRun(completed, { at: at(210 * 60), reason: 'operator_cancelled' }),
     /exam_run_completed/
   );
 });
