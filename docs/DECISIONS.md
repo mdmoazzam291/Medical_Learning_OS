@@ -763,3 +763,22 @@ Decision:
 Natural timer completion wins over abandonment. Once the server clock has completed the exam, the client cannot retroactively convert it into a cancellation.
 
 This preserves the distinction between **attempt evidence** and **exam completion evidence**, which GT Autopsy and later analytics must respect.
+
+
+## ADR-054 — GT Autopsy v1 is descriptive before it is inferential (accepted, 2026-09-28)
+
+The first GT Autopsy must use evidence the simulator actually records today rather than pretending the platform already observes active attention, confidence, calibrated item difficulty, fatigue or error causality.
+
+V1 therefore:
+- exists only for a genuinely `completed` run with an immutable scoring receipt;
+- fails closed if recomputed final response totals disagree with the trusted receipt;
+- reports result totals, section performance, canonical primary-concept observations and visual-question outcomes;
+- reconstructs answer-change behavior from immutable `answer.set` events and reports exact score impact under the pinned scoring scheme;
+- returns at most five descriptive remediation candidates based on observed incorrect/unanswered questions;
+- labels those candidates as non-causal and non-inferential.
+
+V1 must not estimate mastery, fatigue, confidence calibration, preventable lost marks or root causes. Those require new telemetry and/or validated models.
+
+A cancelled run has no GT Autopsy because it has no completion/scoring receipt. Future partial-run analytics, if useful, must be a differently named contract rather than silently treating abandonment as a completed GT.
+
+GT Autopsy is a read projection over canonical exam-run state/events/content. It does not own learner state. Future Digital Twin updates must consume explicitly defined exam-evidence events rather than treating an analytics report as evidence itself.
