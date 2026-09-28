@@ -967,3 +967,22 @@ Decision:
 - keep one v1 interaction profile per question version; richer multi-step visual tasks require a later versioned contract rather than overloading this field.
 
 This makes visual-task semantics part of reviewed content, not UI behavior or analytics inference.
+
+
+## ADR-065 — Source-grounded verification is demand-driven and non-authoritative (accepted, 2026-09-28)
+
+A scalable content operation must reduce repeated source hunting without allowing an AI, parser or source packet to become medical publication authority.
+
+Decision:
+- reuse the existing canonical source identities, content intake, authenticated Medical/References/Rights review and trusted publication gate rather than creating a second content system;
+- treat textbooks, guidelines, regulators, official exam authorities and PYQ evidence as versioned evidence sources attached to canonical medical concepts, never as independent knowledge trees;
+- create atomic **claim candidates** only when a question/concept requires them instead of pre-extracting entire textbooks;
+- bind every source-support assessment to the exact source version, structured locator and content digest;
+- keep historical exam-answer evidence separate from current medical recommendations;
+- use deterministic source-authority rules and routine/focused/expert routing only to prioritize human review effort;
+- every source-grounded verification packet remains explicitly non-authoritative, requires the existing production human review gates and has no publication capability;
+- reuse `content.source.inspect` and `content.review.propose` provider-neutral capabilities rather than adding a model-specific content engine;
+- recognize `citation_only` as a resolved rights posture distinct from a license to reproduce source content;
+- defer persistent claim/passage/packet tables until a controlled batch shows that evidence reuse and triage materially reduce review work enough to justify the additional data model.
+
+This preserves the governing invariant: **automation assembles evidence; governed reviewers decide production medical content**.

@@ -1,6 +1,6 @@
 # Current status
 
-Updated: 2026-09-26 (Asia/Kolkata)
+Updated: 2026-09-28 (Asia/Kolkata).
 
 ## Completed
 - M00–M02: repository governance, validated learning events, canonical content/versioning and publication gates.
@@ -1251,3 +1251,24 @@ Verification for this slice is repository diff review because there is no domain
 - UPDATE mutation was rejected by the existing immutable-media guard.
 - Supabase advisor found no new unindexed foreign key for this table; RLS-without-policy is intentional because it is service-only.
 - Human review remains the next authority gate.
+
+
+## M02c source-grounded verification v1 — 2026-09-28
+
+- Added `src/domain/source-grounded-verification.js` as a pure non-authoritative source/claim review-assistance contract.
+- Atomic claim candidates are bound to exact source ID, source version, structured locator and SHA-256 passage/content digest.
+- Source evidence distinguishes support / partial support / contradiction / not-found / ambiguity, authority class, and rights mode.
+- Deterministic authority rules require current authoritative evidence for management/dose/contraindication/screening/prevention, regulator evidence for regulatory status, official exam authority for exam rules, and PYQ evidence for historical exam answers.
+- Review routing is `routine` / `focused` / `expert`; every packet still sets `productionHumanReviewRequired=true` and `publicationAuthority=false`.
+- The existing provider-neutral `content.source.inspect` and `content.review.propose` capabilities are reused; no new model provider or content agent was introduced.
+- The pure content-domain source-rights enum now accepts `citation_only`, aligning it with the already-live rights-review system and existing controlled pilots.
+- Added focused regression tests for immutable claim evidence, routine/focused/expert routing, current-authority requirements, high-risk escalation, deterministic-failure escalation, target-digest drift, malformed evidence and historical-vs-current claim separation.
+- Added `docs/SOURCE_GROUNDED_VERIFICATION.md` with the exact textbook/source ingestion workflow, PYQ handoff, rights posture, planned adjunct schema, planned internal API and validation metrics.
+- ADR-065 records that source-grounded automation assembles evidence but never becomes production medical authority.
+- The live Medical Learning OS Supabase project was inspected read-only. No M02c tables exist and no DDL/migration was applied in this slice. Persistence remains deliberately gated until a controlled grounding batch demonstrates review-time benefit.
+- Focused executable contract checks passed for routine routing, citation-only focused routing, contradiction escalation, authority escalation, duplicate-evidence rejection and citation-only catalog publication compatibility.
+- PR #113 Foundation checks were triggered, but both GitHub Actions jobs failed before executing any step (empty step lists), matching the repository's current runner-infrastructure failure pattern. This is not recorded as a code-test failure or a green CI run.
+
+### Next M02c gate
+
+Run a controlled source-grounding experiment on a small real question/PYQ set using registered sources. Measure manual source-search time, reviewer correction rate, claim/evidence reuse, rights-review time and packet routing. Only if the layer demonstrably reduces review burden without worsening corrections should M02c gain persistent passage/claim/packet tables or an internal ingestion API.

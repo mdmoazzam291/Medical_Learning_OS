@@ -50,7 +50,7 @@ function source(value) {
     if (!['https:', 'http:'].includes(parsed.protocol)) fail('Invalid source protocol');
   }
   shape(value.rights, ['status', 'evidence']);
-  if (!['unknown', 'owned', 'licensed', 'public_domain'].includes(value.rights.status)) {
+  if (!['unknown', 'owned', 'licensed', 'public_domain', 'citation_only'].includes(value.rights.status)) {
     fail('Invalid rights status');
   }
   text(value.rights.evidence, 'rights evidence');

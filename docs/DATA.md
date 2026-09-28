@@ -420,3 +420,19 @@ Action-specific requirements:
 - `prerequisite_remediation` → at least one `prerequisite` claim.
 
 The v2 set is development evaluation data only. It does not change question review state, source-rights authority, content publication state, learner evidence, Digital Twin state or provider production qualification.
+
+
+## Planned M02c source-grounding data
+
+No new source-grounding tables are live yet.
+
+The v1 domain contract distinguishes four objects:
+
+1. **canonical source/version** — already owned by the content/source system;
+2. **located source evidence** — source/version + structured locator + exact digest + rights/authority metadata;
+3. **atomic claim candidate** — a non-authoritative medical assertion proposed for verification;
+4. **verification packet** — an immutable candidate review receipt bound to the exact grounded target.
+
+If measured review throughput justifies persistence, the planned adjunct tables are `content_source_ingestions`, `content_source_passages`, `content_claim_candidates`, `content_claim_evidence` and `content_verification_packets`. These must not duplicate canonical source identity or production review authority.
+
+Historical PYQ answer evidence remains in the M08 exam-occurrence/Exam DNA domain; current medical claims remain separate. See [SOURCE_GROUNDED_VERIFICATION.md](SOURCE_GROUNDED_VERIFICATION.md).

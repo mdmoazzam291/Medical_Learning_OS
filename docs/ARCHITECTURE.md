@@ -433,3 +433,30 @@ Schema-v2 cases carry:
 The provider runner converts these cases into the same `GroundedTeachingTask@1` used by the product and never introduces an evaluation-only teaching runtime. Deterministic pass remains only the entrance ticket to human semantic review.
 
 Internal AI-test content may broaden development coverage, but it cannot silently become production provider qualification gold. Human semantic review and later production-grade qualification remain independent gates.
+
+
+## M02c source-grounded verification boundary
+
+Source-grounded verification is a **review-assistance boundary**, not a new truth store.
+
+```text
+canonical source/version
+      ↓
+exact located evidence
+      ↓
+atomic claim candidate
+      ↓
+deterministic + semantic support assessment
+      ↓
+non-authoritative verification packet
+      ↓
+existing Medical / References / Rights review
+      ↓
+existing trusted publication
+```
+
+The pure domain contract lives in `src/domain/source-grounded-verification.js`. It binds evidence to source/version/locator/digest, enforces claim-dependent authority requirements, and routes work to routine/focused/expert review. It cannot approve or publish.
+
+M02c reuses the existing provider-neutral `content.source.inspect` and `content.review.propose` capabilities. No model provider is canonical medical memory.
+
+Persistent passage/claim/packet storage is intentionally deferred. See [SOURCE_GROUNDED_VERIFICATION.md](SOURCE_GROUNDED_VERIFICATION.md).
