@@ -1485,3 +1485,13 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - The old v1 measurement history remains intact. V2 changes submission mechanics, not the treatment/comparator source identities or review authority.
 - Both new mutation functions are service-only; reviewer identity remains derived from authenticated JWT at the review API. Browser payloads never contain reviewer UUID.
 - Actual production review remains human authority. These changes reduce navigation/submission overhead; they do not let AI/source preflight become a reviewer.
+
+
+## Learner correction + reviewer triage live parity — 2026-09-29
+- PR #131 (`feat: add learner-private correction overlays`) is merged. Its Foundation checks passed both the full check/test/demo job and the focused responsive browser correction flow.
+- Live Supabase migration history includes `m06d_personal_correction_overlay`, privacy scope v3 and `m02d_learner_report_triage`.
+- `study-api` was redeployed from current main as **v38** with its existing `verify_jwt=false` configuration preserved because request authentication is enforced inside the function. The deployed `index.ts` is byte-for-byte identical to current main.
+- `review-api` is live as **v14** and its deployed `index.ts` is byte-for-byte identical to current main. Learner-report triage routes/evidence are present there.
+- Privacy scope v3 remains complete and explicitly covers `learner_content_issue_reports`; normal report evidence is append-only while privacy erasure retains its narrow transaction-scoped delete exception.
+- No learner report exists yet in live production, so no human triage decision has been fabricated. M02d remains IN PROGRESS until one real learner report → authorized human triage lifecycle is observed.
+- M06d likewise remains IN PROGRESS until one real authenticated hosted learner performs private correction → refresh persistence and optional report submission while canonical content remains unchanged.
