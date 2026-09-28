@@ -130,3 +130,12 @@ test('medical image layout remains responsive and bounded', async () => {
   assert.match(css, /max-height:560px/);
   assert.match(css, /@media\(max-width:650px\).*\.question-media img\{max-height:420px\}/s);
 });
+
+
+test('medical overview links to dedicated Exam Mode without embedding exam state machine', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /href="\/web\/exam\.html"/);
+  assert.match(source, /Open Exam Mode/);
+  assert.doesNotMatch(source, /setExamRunAnswer/);
+  assert.doesNotMatch(source, /setExamRunReview/);
+});
