@@ -175,10 +175,17 @@ try {
   });
   await accountPage.goto(origin + '/web/account.html');
   await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
+  const googleHref = await accountPage.getByRole('link', { name: 'Continue with Google' }).getAttribute('href');
+  const googleUrl = new URL(googleHref);
+  assert.equal(googleUrl.origin, 'https://iyapppmeieqhflnzslao.supabase.co');
+  assert.equal(googleUrl.pathname, '/auth/v1/authorize');
+  assert.equal(googleUrl.searchParams.get('provider'), 'google');
+  assert.equal(googleUrl.searchParams.get('redirect_to'), origin + '/web/account.html');
+  assert.equal(googleUrl.searchParams.has('client_secret'), false);
   const signIn = accountPage.locator('#signin-form');
   await signIn.getByLabel('Email').fill('learner@example.com');
   await signIn.getByLabel('Password').fill('strong-password');
-  await signIn.getByRole('button', { name: 'Sign in' }).click();
+  await signIn.getByRole('button', { name: 'Sign in with email' }).click();
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
   assert.match(await accountPage.locator('.metrics').textContent(), /0Server attempts/);
   assert.match(await accountPage.locator('.metrics').textContent(), /0Published questions/);
@@ -216,7 +223,7 @@ try {
   await accountPage.getByRole('heading', { name: 'Connect your learner identity.' }).waitFor();
   await accountContext.close();
   assert.deepEqual(errors, []);
-  console.log('Concurrent submit, corrupt data protection, private-file boundary, account/cloud session boundary, authenticated reviewer workflow and no browser errors passed');
+  console.log('Concurrent submit, corrupt data protection, private-file boundary, Google/email account boundary, authenticated reviewer workflow and no browser errors passed');
 } catch (error) {
   if (activePage && !activePage.isClosed()) {
     console.error(await activePage.locator('body').innerText());
