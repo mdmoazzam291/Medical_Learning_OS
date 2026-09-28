@@ -11,6 +11,10 @@ const evaluationSet = JSON.parse(await readFile(
   new URL('../data/evaluations/grounded-teaching-semantic-bootstrap-v1.json', import.meta.url),
   'utf8'
 ));
+const breadthSet = JSON.parse(await readFile(
+  new URL('../data/evaluations/grounded-teaching-semantic-breadth-v2.json', import.meta.url),
+  'utf8'
+));
 
 test('semantic teaching bootstrap set is immutable, human-reviewed and non-authoritative for production', () => {
   const value = validateSemanticTeachingEvaluationSet(evaluationSet);
@@ -120,4 +124,79 @@ test('cases require both positive facts and explicit dangerous/incorrect claims 
   const noForbidden=structuredClone(evaluationSet);
   noForbidden.cases[0].gold.forbiddenClaims=[];
   assert.throws(()=>validateSemanticTeachingEvaluationSet(noForbidden),/forbidden claim/);
+});
+
+
+test('semantic teaching breadth v2 expands specialties, actions and task representations without production authority', () => {
+  const value=validateSemanticTeachingEvaluationSet(breadthSet);
+  assert.equal(value.schemaVersion,2);
+  assert.equal(value.cases.length,12);
+  assert.equal(value.productionQualificationAuthority,false);
+  assert.equal(value.reviewMode,'human_semantic_review_required');
+  assert.deepEqual(
+    new Set(value.cases.map(item=>item.teachingAction)),
+    new Set([
+      'concise_explanation',
+      'contrastive_explanation',
+      'misconception_repair',
+      'prerequisite_remediation'
+    ])
+  );
+  assert.deepEqual(
+    new Set(value.cases.map(item=>item.representation)),
+    new Set([
+      'factual_recall',
+      'clinical_vignette',
+      'management_decision',
+      'discrimination'
+    ])
+  );
+  assert.equal(new Set(value.cases.map(item=>item.questionVersionId)).size,12);
+  assert.ok(value.notes.some(note=>/development-only|development/i.test(note)));
+});
+
+test('breadth v2 enforces action-specific canonical teaching structure', () => {
+  const value=validateSemanticTeachingEvaluationSet(breadthSet);
+  const contrastive=value.cases.find(item=>item.teachingAction==='contrastive_explanation');
+  const misconception=value.cases.find(item=>item.teachingAction==='misconception_repair');
+  const prerequisite=value.cases.find(item=>item.teachingAction==='prerequisite_remediation');
+
+  assert.ok(contrastive.gold.canonicalClaims.some(claim=>claim.role==='discriminator'));
+  assert.ok(misconception.gold.canonicalClaims.some(claim=>claim.role==='correction'));
+  assert.ok(misconception.gold.canonicalClaims.some(claim=>claim.role==='discriminator'));
+  assert.ok(misconception.learnerError.observedBelief);
+  assert.ok(prerequisite.gold.canonicalClaims.some(claim=>claim.role==='prerequisite'));
+
+  const badContrastive=structuredClone(breadthSet);
+  const item=badContrastive.cases.find(caseItem=>caseItem.teachingAction==='contrastive_explanation');
+  item.gold.canonicalClaims=item.gold.canonicalClaims.filter(claim=>claim.role!=='discriminator');
+  assert.throws(()=>validateSemanticTeachingEvaluationSet(badContrastive),/discriminator/);
+
+  const badMisconception=structuredClone(breadthSet);
+  badMisconception.cases.find(caseItem=>caseItem.teachingAction==='misconception_repair').learnerError.observedBelief=null;
+  assert.throws(()=>validateSemanticTeachingEvaluationSet(badMisconception),/observed belief/);
+
+  const badPrerequisite=structuredClone(breadthSet);
+  const prereq=badPrerequisite.cases.find(caseItem=>caseItem.teachingAction==='prerequisite_remediation');
+  prereq.gold.canonicalClaims=prereq.gold.canonicalClaims.filter(claim=>claim.role!=='prerequisite');
+  assert.throws(()=>validateSemanticTeachingEvaluationSet(badPrerequisite),/prerequisite claim/);
+});
+
+test('breadth v2 checklist carries action and representation into human semantic review', () => {
+  const caseId='gt-breadth:septic-shock-norepinephrine@1';
+  const checklist=semanticTeachingChecklist(breadthSet,caseId);
+  assert.equal(checklist.teachingAction,'misconception_repair');
+  assert.equal(checklist.representation,'management_decision');
+  assert.match(checklist.dimensions.find(item=>item.id==='errorCorrection').prompt,/misconception_repair/);
+  assert.equal(checklist.maxWords,160);
+});
+
+test('breadth v2 remains explicitly human semantic review and rejects authority escalation', () => {
+  const modified=structuredClone(breadthSet);
+  modified.productionQualificationAuthority=true;
+  assert.throws(()=>validateSemanticTeachingEvaluationSet(modified),/cannot qualify production provider/);
+
+  const automated=structuredClone(breadthSet);
+  automated.cases[0].rubric.medicalCorrectness='keyword_match';
+  assert.throws(()=>validateSemanticTeachingEvaluationSet(automated),/cannot be automated away/);
 });

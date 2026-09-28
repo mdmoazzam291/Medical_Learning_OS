@@ -12,6 +12,10 @@ const evaluationSet = JSON.parse(await readFile(
   new URL('../data/evaluations/grounded-teaching-semantic-bootstrap-v1.json', import.meta.url),
   'utf8'
 ));
+const breadthSet = JSON.parse(await readFile(
+  new URL('../data/evaluations/grounded-teaching-semantic-breadth-v2.json', import.meta.url),
+  'utf8'
+));
 
 const descriptor = {
   providerId:'sandbox-provider',
@@ -248,4 +252,98 @@ test('provider lacking semantic teaching capability is rejected before evaluatio
     execute:async()=>{ throw new Error('must_not_execute'); }
   });
   await assert.rejects(()=>runSemanticTeachingProviderEvaluation(runArgs(provider)),/does not support learning\.teaching\.render/);
+});
+
+
+test('breadth v2 evaluation tasks preserve action, representation and misconception evidence', () => {
+  const misconception=breadthSet.cases.find(item=>item.teachingAction==='misconception_repair');
+  const task=buildSemanticTeachingEvaluationTask(breadthSet,misconception.caseId,{
+    evaluationRunId:'provider-eval:breadth:task:1',
+    requestedAt:'2026-09-28T09:00:00.000Z'
+  });
+  assert.equal(task.input.teachingAction,'misconception_repair');
+  assert.equal(task.input.misconception.observedBelief,misconception.learnerError.observedBelief);
+  assert.equal(task.metadata.representation,misconception.representation);
+  assert.equal(task.metadata.productionDeliveryAllowed,false);
+  assert.ok(task.input.canonicalFallback.claims.some(claim=>claim.role==='correction'));
+  assert.ok(task.input.canonicalFallback.claims.some(claim=>claim.role==='discriminator'));
+  assert.equal(task.input.canonicalFallback.misconceptionCorrection.learnerBelief,misconception.learnerError.observedBelief);
+});
+
+test('breadth v2 fake provider can traverse all four teaching actions while remaining non-authoritative', async () => {
+  const run=await runSemanticTeachingProviderEvaluation({
+    provider:goodProvider(),
+    evaluationSet:breadthSet,
+    evaluationRunId:'provider-eval:breadth:1',
+    requestedAt:'2026-09-28T09:00:00.000Z'
+  });
+  assert.equal(run.cases.length,12);
+  assert.equal(run.summary.deterministicPassCount,12);
+  assert.equal(run.summary.deterministicBlockCount,0);
+  assert.equal(run.summary.providerErrorCount,0);
+  assert.equal(run.summary.awaitingHumanReviewCount,12);
+  assert.equal(run.productionQualificationAuthority,false);
+  assert.equal(run.productionQualified,false);
+  assert.ok(run.cases.every(item=>item.executionStatus==='awaiting_human_review'));
+});
+
+test('breadth v2 action-specific invalid output is blocked before human review', async () => {
+  const provider=createIntelligenceProvider({
+    descriptor,
+    execute:async task=>{
+      const output={...task.input.canonicalFallback,sourceMode:'provider'};
+      if(task.input.teachingAction==='contrastive_explanation'){
+        output.claims=output.claims.filter(claim=>claim.role!=='discriminator');
+      }
+      return providerResult(task,{output});
+    }
+  });
+  const run=await runSemanticTeachingProviderEvaluation({
+    provider,
+    evaluationSet:breadthSet,
+    evaluationRunId:'provider-eval:breadth:block:1',
+    requestedAt:'2026-09-28T09:00:00.000Z'
+  });
+  const contrastiveCases=breadthSet.cases.filter(item=>item.teachingAction==='contrastive_explanation').length;
+  assert.equal(run.summary.deterministicBlockCount,contrastiveCases);
+  assert.ok(run.cases
+    .filter(item=>breadthSet.cases.find(candidate=>candidate.caseId===item.caseId)?.teachingAction==='contrastive_explanation')
+    .every(item=>item.executionStatus==='blocked_before_human_review' && item.humanReviewRequired===false));
+});
+
+test('breadth v2 all-pass human reviews still cannot produce production qualification', async () => {
+  const run=await runSemanticTeachingProviderEvaluation({
+    provider:goodProvider(),
+    evaluationSet:breadthSet,
+    evaluationRunId:'provider-eval:breadth:final:1',
+    requestedAt:'2026-09-28T09:00:00.000Z'
+  });
+  const reviews=run.cases.map(runCase=>({
+    schemaVersion:1,
+    evaluationSetId:breadthSet.evaluationSetId,
+    evaluationSetVersion:breadthSet.version,
+    caseId:runCase.caseId,
+    providerRunRef:runCase.providerRunRef,
+    reviewerId:'reviewer:synthetic-test',
+    reviewedAt:'2026-09-28T09:10:00.000Z',
+    dimensions:[
+      'medicalCorrectness',
+      'errorCorrection',
+      'grounding',
+      'unsupportedClaims',
+      'verbosity'
+    ].map(id=>({id,verdict:'pass',notes:'Synthetic contract review pass.'})),
+    overallVerdict:'pass',
+    notes:'Synthetic breadth-runner contract test only.'
+  }));
+  const summary=finalizeSemanticTeachingProviderEvaluation({
+    evaluationSet:breadthSet,
+    run,
+    reviews
+  });
+  assert.equal(summary.bootstrapVerdict,'pass');
+  assert.equal(summary.summary.humanPassCount,12);
+  assert.equal(summary.productionQualificationAuthority,false);
+  assert.equal(summary.productionQualified,false);
+  assert.equal(summary.qualificationScope,'bootstrap_only');
 });

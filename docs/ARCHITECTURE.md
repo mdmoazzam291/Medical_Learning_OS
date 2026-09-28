@@ -410,3 +410,26 @@ The evaluation runner never writes learner evidence and never changes provider p
 Human semantic review is attached to an exact `providerRunRef`, preventing a review from being replayed against a different provider output/case. Finalization is conjunctive and still emits `productionQualified=false` because the bootstrap set is intentionally too narrow for production authorization.
 
 The runner is pure/rebuildable evaluation infrastructure. A future persisted provider-run ledger should be added only when real provider executions and material cost/audit needs exist.
+
+
+## Semantic teaching evaluation breadth
+
+Provider qualification must test the kinds of teaching the product actually intends to deliver, not only generic concise explanations.
+
+The semantic evaluation layer therefore keeps:
+- schema v1 for the original human-reviewed six-case bootstrap;
+- schema v2 for broader development evaluation across all four M09b teaching actions and multiple textual task representations.
+
+Schema-v2 cases carry:
+- exact concept/question identity;
+- selected teaching action;
+- task representation;
+- observed wrong option and, for misconception repair, an explicit observed learner belief;
+- source references;
+- canonical action-specific claim roles;
+- required facts, forbidden claims and a bounded next prompt;
+- human-semantic-review rubric.
+
+The provider runner converts these cases into the same `GroundedTeachingTask@1` used by the product and never introduces an evaluation-only teaching runtime. Deterministic pass remains only the entrance ticket to human semantic review.
+
+Internal AI-test content may broaden development coverage, but it cannot silently become production provider qualification gold. Human semantic review and later production-grade qualification remain independent gates.

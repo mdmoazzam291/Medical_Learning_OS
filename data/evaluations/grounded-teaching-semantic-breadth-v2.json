@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 2,
+  "evaluationSetId": "grounded-teaching-semantic-breadth",
+  "version": "2",
+  "basis": "source-grounded-ai-test-reviewed-development-candidates",
+  "reviewMode": "human_semantic_review_required",
+  "productionQualificationAuthority": false,
+  "notes": [
+    "This breadth set extends the six-case human-reviewed bootstrap with 12 source-grounded internal-test candidates across multiple specialties and task representations.",
+    "The 12 new candidates have AI-test Medical/References/Rights evidence, not human production review; their gold content remains development-only until explicit human semantic review.",
+    "All four grounded-teaching actions are represented: concise explanation, contrastive explanation, misconception repair and prerequisite remediation.",
+    "Representations include factual recall, clinical vignette, management decision and discrimination.",
+    "Automated structure, citation containment and verbosity checks cannot establish medical correctness.",
+    "Passing this set cannot qualify a provider for production and cannot publish any underlying content.",
+    "Visual/multimodal provider qualification remains separate until a media-bearing teaching task contract exists."
+  ],
+  "cases": [
+    {
+      "caseId": "gt-breadth:anesthesia-clear-liquids@1",
+      "questionVersionId": "anesthesia:fasting:clear-liquids-2h@1",
+      "conceptId": "anesthesia:fasting:clear-liquids-2h",
+      "teachingAction": "concise_explanation",
+      "representation": "factual_recall",
+      "learnerError": {
+        "selectedOptionId": "6h",
+        "selectedOptionText": "6 hours",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "asa:preop-fasting:2017",
+          "version": "2017 core guideline accessed 2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "For an otherwise healthy patient undergoing elective anesthesia or sedation, ASA guidance permits clear liquids until 2 hours before the procedure.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "Clear liquids generally require a 2-hour fasting interval before elective anesthesia or sedation in otherwise healthy patients."
+          }
+        ],
+        "requiredFacts": [
+          "Clear liquids generally require at least a 2-hour fasting interval before elective anesthesia or sedation in otherwise healthy patients."
+        ],
+        "forbiddenClaims": [
+          "Clear liquids require a 6-hour fasting interval in the same setting."
+        ],
+        "nextPrompt": "What is the clear-liquid fasting interval before elective anesthesia?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-breadth:acs-radial-vs-femoral@1",
+      "questionVersionId": "cardiology:acs:radial-pci@1",
+      "conceptId": "cardiology:acs:radial-pci",
+      "teachingAction": "contrastive_explanation",
+      "representation": "management_decision",
+      "learnerError": {
+        "selectedOptionId": "femoral",
+        "selectedOptionText": "Femoral access",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "aha:acs-guideline:2025-accessed-2026-09-28",
+          "version": "2025-guideline-accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "For ACS patients undergoing PCI, radial access is preferred over femoral access when feasible because it reduces bleeding and vascular complications and is associated with lower mortality.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "For ACS PCI, radial access is preferred when feasible."
+          },
+          {
+            "role": "discriminator",
+            "text": "The key contrast is radial rather than femoral access because radial access reduces bleeding and vascular complications and is associated with lower mortality."
+          }
+        ],
+        "requiredFacts": [
+          "Radial access is preferred over femoral access for ACS PCI when feasible."
+        ],
+        "forbiddenClaims": [
+          "Femoral access is preferred over radial access for routine ACS PCI when radial access is feasible."
+        ],
+        "nextPrompt": "For ACS PCI, which access route is preferred when feasible, and why?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:septic-shock-norepinephrine@1",
+      "questionVersionId": "critical-care:septic-shock:first-line-vasopressor@1",
+      "conceptId": "critical-care:septic-shock:norepinephrine-first-line",
+      "teachingAction": "misconception_repair",
+      "representation": "management_decision",
+      "learnerError": {
+        "selectedOptionId": "dopamine",
+        "selectedOptionText": "Dopamine",
+        "observedBelief": "Dopamine is the first-line vasopressor for most adults with septic shock."
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "sccm:adult-sepsis-guidelines:accessed-2026-09-28",
+          "version": "accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "Current Surviving Sepsis Campaign adult guidance recommends norepinephrine as the first-line vasopressor for most adults with septic shock.",
+        "canonicalClaims": [
+          {
+            "role": "correction",
+            "text": "Norepinephrine, not dopamine, is the recommended first-line vasopressor for most adults with septic shock."
+          },
+          {
+            "role": "discriminator",
+            "text": "When choosing the initial vasopressor in septic shock, identify norepinephrine as first-line rather than another vasopressor option."
+          }
+        ],
+        "requiredFacts": [
+          "Norepinephrine is the recommended first-line vasopressor for most adults with septic shock."
+        ],
+        "forbiddenClaims": [
+          "Dopamine is the first-line vasopressor for most adults with septic shock."
+        ],
+        "nextPrompt": "Which vasopressor should you choose first for most adults with septic shock?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:guttate-after-strep@1",
+      "questionVersionId": "derm:psoriasis:guttate-strep@1",
+      "conceptId": "derm:psoriasis:guttate-strep",
+      "teachingAction": "concise_explanation",
+      "representation": "clinical_vignette",
+      "learnerError": {
+        "selectedOptionId": "inverse",
+        "selectedOptionText": "Inverse psoriasis",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "niams:psoriasis:2023-10",
+          "version": "last-reviewed-2023-10"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "Guttate psoriasis often appears in children or young adults and may follow a streptococcal upper-respiratory infection.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "A young patient with numerous small psoriatic lesions after recent streptococcal upper-respiratory infection fits guttate psoriasis."
+          }
+        ],
+        "requiredFacts": [
+          "Guttate psoriasis may follow streptococcal upper-respiratory infection in children or young adults."
+        ],
+        "forbiddenClaims": [
+          "A recent streptococcal upper-respiratory infection specifically points to inverse psoriasis."
+        ],
+        "nextPrompt": "Which psoriasis subtype is classically associated with a recent streptococcal infection?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-breadth:ais-thrombolysis-window@1",
+      "questionVersionId": "neurology:ais:thrombolysis-4-5h@1",
+      "conceptId": "neurology:ais:thrombolysis-4-5h",
+      "teachingAction": "concise_explanation",
+      "representation": "clinical_vignette",
+      "learnerError": {
+        "selectedOptionId": "no-thrombolysis",
+        "selectedOptionText": "IV thrombolysis is never used within 4.5 hours",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "aha:ais-guideline:2026-accessed-2026-09-28",
+          "version": "2026-guideline-accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "For an otherwise eligible selected acute ischemic stroke patient within 4.5 hours, IV thrombolysis remains a treatment option, with alteplase or tenecteplase used in appropriate patients.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "Eligible selected acute ischemic stroke patients presenting within 4.5 hours may receive IV thrombolysis with alteplase or tenecteplase as appropriate."
+          }
+        ],
+        "requiredFacts": [
+          "IV thrombolysis remains an option for appropriately selected eligible acute ischemic stroke patients within 4.5 hours."
+        ],
+        "forbiddenClaims": [
+          "IV thrombolysis is never used within 4.5 hours of acute ischemic stroke onset."
+        ],
+        "nextPrompt": "What reperfusion treatment remains available to an eligible selected patient within 4.5 hours?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-breadth:pph-txa-window@1",
+      "questionVersionId": "obgyn:pph:txa-within-3h@1",
+      "conceptId": "obgyn:pph:txa-within-3h",
+      "teachingAction": "misconception_repair",
+      "representation": "management_decision",
+      "learnerError": {
+        "selectedOptionId": "after3",
+        "selectedOptionText": "Only after 3 hours have elapsed",
+        "observedBelief": "Tranexamic acid for postpartum haemorrhage should be started only after 3 hours have elapsed."
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "who:pph:txa:2017",
+          "version": "2017 recommendation accessed 2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "WHO recommends IV tranexamic acid for clinically diagnosed postpartum haemorrhage as early as possible and within 3 hours of birth, in addition to standard care.",
+        "canonicalClaims": [
+          {
+            "role": "correction",
+            "text": "Tranexamic acid for postpartum haemorrhage should be started as early as possible and within 3 hours of birth."
+          },
+          {
+            "role": "discriminator",
+            "text": "Do not wait until after 3 hours; the recommendation is early treatment within the 3-hour window."
+          }
+        ],
+        "requiredFacts": [
+          "IV tranexamic acid should be started as early as possible and within 3 hours of birth for clinically diagnosed postpartum haemorrhage."
+        ],
+        "forbiddenClaims": [
+          "Tranexamic acid should be started only after 3 hours have elapsed."
+        ],
+        "nextPrompt": "What is the timing window for IV tranexamic acid in postpartum haemorrhage?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:acute-angle-closure@1",
+      "questionVersionId": "ophthal:glaucoma:angle-closure-emergency@1",
+      "conceptId": "ophthal:glaucoma:angle-closure-emergency",
+      "teachingAction": "contrastive_explanation",
+      "representation": "clinical_vignette",
+      "learnerError": {
+        "selectedOptionId": "open",
+        "selectedOptionText": "Early open-angle glaucoma",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nei:glaucoma:accessed-2026-09-28",
+          "version": "accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "Sudden intense eye pain with nausea, red eye and blurred vision is characteristic of acute angle-closure glaucoma and requires emergency treatment.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "Sudden severe eye pain, nausea, redness and blurred vision should trigger recognition of acute angle-closure glaucoma."
+          },
+          {
+            "role": "discriminator",
+            "text": "The sudden painful red-eye syndrome is the emergency angle-closure pattern, not early open-angle glaucoma."
+          }
+        ],
+        "requiredFacts": [
+          "Acute angle-closure glaucoma can present with sudden severe eye pain, nausea, red eye and blurred vision and requires emergency treatment."
+        ],
+        "forbiddenClaims": [
+          "Early open-angle glaucoma is the diagnosis for this sudden painful red-eye emergency pattern."
+        ],
+        "nextPrompt": "Which glaucoma presentation is an ocular emergency with sudden pain, nausea and blurred vision?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:mild-depression-psychotherapy@1",
+      "questionVersionId": "psychiatry:depression:mild-psychotherapy-first@1",
+      "conceptId": "psychiatry:depression:mild-psychotherapy-first",
+      "teachingAction": "concise_explanation",
+      "representation": "management_decision",
+      "learnerError": {
+        "selectedOptionId": "ect-first",
+        "selectedOptionText": "ECT is routinely the first intervention",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "nimh:depression:2026",
+          "version": "accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "NIMH notes that psychotherapy is often tried first for milder depression, with medication added if psychotherapy alone does not produce a good response.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "For milder depression, psychotherapy is often tried first, with medication added if psychotherapy alone is insufficient."
+          }
+        ],
+        "requiredFacts": [
+          "Psychotherapy is often tried first for milder depression, with medication added if needed."
+        ],
+        "forbiddenClaims": [
+          "ECT is routinely the first intervention for milder depression."
+        ],
+        "nextPrompt": "What is commonly tried first for a milder form of depression?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 120
+      }
+    },
+    {
+      "caseId": "gt-breadth:asthma-track1-steps1-2@1",
+      "questionVersionId": "respiratory:asthma:gina-steps1-2-treatment@1",
+      "conceptId": "respiratory:asthma:gina-steps1-2-air-only",
+      "teachingAction": "misconception_repair",
+      "representation": "management_decision",
+      "learnerError": {
+        "selectedOptionId": "saba-only",
+        "selectedOptionText": "SABA-only therapy",
+        "observedBelief": "SABA-only therapy is the usual GINA Track 1 treatment at Steps 1–2 for adults and adolescents."
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "gina:strategy-report:2026-accessed-2026-09-28",
+          "version": "2026-report-accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "At GINA 2026 Track 1 Steps 1–2 for adults and adolescents, the usual treatment is as-needed low-dose ICS-formoterol without scheduled maintenance dosing.",
+        "canonicalClaims": [
+          {
+            "role": "correction",
+            "text": "GINA Track 1 Steps 1–2 use as-needed low-dose ICS-formoterol, not SABA-only therapy."
+          },
+          {
+            "role": "discriminator",
+            "text": "The Track 1 reliever contains both inhaled corticosteroid and formoterol, distinguishing it from a SABA-only regimen."
+          }
+        ],
+        "requiredFacts": [
+          "GINA Track 1 Steps 1–2 use as-needed low-dose ICS-formoterol for adults and adolescents."
+        ],
+        "forbiddenClaims": [
+          "SABA-only therapy is the usual GINA Track 1 treatment at Steps 1–2."
+        ],
+        "nextPrompt": "What is the reliever treatment at GINA Track 1 Steps 1–2?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:copd-post-bd-ratio@1",
+      "questionVersionId": "respiratory:copd:spirometric-diagnostic-criterion@1",
+      "conceptId": "respiratory:copd:post-bd-fev1-fvc-below-0-7",
+      "teachingAction": "prerequisite_remediation",
+      "representation": "discrimination",
+      "learnerError": {
+        "selectedOptionId": "peak-flow-only",
+        "selectedOptionText": "Reduced peak expiratory flow alone",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "gold:copd-report:2026-accessed-2026-09-28",
+          "version": "2026-report-accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "GOLD uses a post-bronchodilator FEV1/FVC ratio below 0.7 as the spirometric criterion for persistent airflow obstruction compatible with COPD.",
+        "canonicalClaims": [
+          {
+            "role": "prerequisite",
+            "text": "Before labeling persistent airflow obstruction as COPD, confirm the post-bronchodilator FEV1/FVC criterion: below 0.7."
+          },
+          {
+            "role": "explanation",
+            "text": "Reduced peak expiratory flow alone does not replace the post-bronchodilator FEV1/FVC diagnostic criterion."
+          }
+        ],
+        "requiredFacts": [
+          "A post-bronchodilator FEV1/FVC below 0.7 is the GOLD spirometric criterion for persistent airflow obstruction compatible with COPD."
+        ],
+        "forbiddenClaims": [
+          "Reduced peak expiratory flow alone is the required spirometric diagnostic criterion for COPD."
+        ],
+        "nextPrompt": "Which post-bronchodilator spirometric ratio is required for persistent airflow obstruction compatible with COPD?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 180
+      }
+    },
+    {
+      "caseId": "gt-breadth:bls-compression-depth@1",
+      "questionVersionId": "resuscitation:adult-bls:compression-depth@1",
+      "conceptId": "resuscitation:adult-bls:compression-depth-5-6cm",
+      "teachingAction": "contrastive_explanation",
+      "representation": "factual_recall",
+      "learnerError": {
+        "selectedOptionId": "7-8cm",
+        "selectedOptionText": "7–8 cm",
+        "observedBelief": null
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "aha:adult-bls:2025-accessed-2026-09-28",
+          "version": "2025-guideline-accessed-2026-09-28"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "For an average adult in cardiac arrest, AHA guidance recommends compressing at least 5 cm while avoiding excessive depth greater than 6 cm.",
+        "canonicalClaims": [
+          {
+            "role": "explanation",
+            "text": "Adult chest compressions should reach at least 5 cm in depth."
+          },
+          {
+            "role": "discriminator",
+            "text": "The target is not unlimited depth: avoid compressions deeper than 6 cm, so 7–8 cm is excessive."
+          }
+        ],
+        "requiredFacts": [
+          "Adult chest-compression depth should be at least 5 cm while avoiding depth greater than 6 cm."
+        ],
+        "forbiddenClaims": [
+          "A depth of 7–8 cm is the recommended adult chest-compression target."
+        ],
+        "nextPrompt": "What adult compression-depth range should you aim for?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    },
+    {
+      "caseId": "gt-breadth:co-pulse-ox-limitation@1",
+      "questionVersionId": "toxicology:co:pulse-oximeter-limitation@1",
+      "conceptId": "toxicology:co:pulse-oximeter-limitation",
+      "teachingAction": "misconception_repair",
+      "representation": "discrimination",
+      "learnerError": {
+        "selectedOptionId": "none",
+        "selectedOptionText": "It directly measures carboxyhemoglobin accurately",
+        "observedBelief": "Standard two-wavelength pulse oximetry directly measures carboxyhemoglobin accurately in carbon-monoxide poisoning."
+      },
+      "grounding": [
+        {
+          "type": "content-source",
+          "id": "cdc:co:clinical-guidance:2024-07-08",
+          "version": "2024-07-08"
+        }
+      ],
+      "gold": {
+        "canonicalExplanation": "Conventional two-wavelength pulse oximetry is not accurate when significant carboxyhemoglobin is present and may appear falsely reassuring.",
+        "canonicalClaims": [
+          {
+            "role": "correction",
+            "text": "Standard two-wavelength pulse oximetry does not accurately measure oxygenation when significant carboxyhemoglobin is present."
+          },
+          {
+            "role": "discriminator",
+            "text": "A reassuring conventional pulse-oximeter reading does not exclude carbon-monoxide poisoning because carboxyhemoglobin can make the reading misleading."
+          }
+        ],
+        "requiredFacts": [
+          "Conventional pulse oximetry can be misleading when significant carboxyhemoglobin is present."
+        ],
+        "forbiddenClaims": [
+          "Standard two-wavelength pulse oximetry directly measures carboxyhemoglobin accurately."
+        ],
+        "nextPrompt": "Why can a normal-looking pulse-oximeter reading be misleading in carbon-monoxide poisoning?"
+      },
+      "rubric": {
+        "medicalCorrectness": "human_required",
+        "errorCorrection": "human_required",
+        "grounding": "contract_plus_human",
+        "unsupportedClaims": "human_required",
+        "maxWords": 160
+      }
+    }
+  ]
+}
