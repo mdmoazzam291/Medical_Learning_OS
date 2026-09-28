@@ -113,9 +113,10 @@ test('multi-batch assist remains explicitly non-authoritative', () => {
     'pilot:acute-medicine:20260928:03',
     'pilot:india-national-programs:20260928:05',
     'pilot:multimodal-breadth:20260928:06',
-    'pilot:final-breadth:20260928:07'
+    'pilot:final-breadth:20260928:07',
+    'connected-learning-08'
   ]);
-  assert.equal(packet.scope.questionCount, 154);
+  assert.equal(packet.scope.questionCount, 155);
   assert.equal(packet.authority, 'none');
   assert.equal(packet.policy.mayApproveReviewGate, false);
   assert.equal(packet.policy.mayVerifyContent, false);

@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const [sql, api, adapter, ui, serve, experiment] = await Promise.all([
+const [sql, batchSql, api, adapter, ui, serve, experiment] = await Promise.all([
   readFile(new URL('../supabase/migrations/20260928145039_m02c_review_workflow_measurement.sql', import.meta.url),'utf8'),
+  readFile(new URL('../supabase/migrations/20260928205212_m02c_atomic_batch_human_review.sql', import.meta.url),'utf8'),
   readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url),'utf8'),
   readFile(new URL('../src/adapters/cloud-review.js', import.meta.url),'utf8'),
   readFile(new URL('../web/review.js', import.meta.url),'utf8'),
@@ -42,18 +43,17 @@ test('review API derives reviewer from JWT and accepts only bounded timing inten
   assert.doesNotMatch(api,/reviewerId\s*=\s*input\./);
 });
 
-test('browser measures only explicit pilot arms after a real review receipt', () => {
+test('browser uses only the v2 atomic References pilot and leaves v1 evidence historical', () => {
   assert.match(ui,/referencesExperimentArm: 'all'/);
-  assert.match(ui,/M02C REVIEW-WORKFLOW PILOT/);
-  assert.match(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.match(ui,/M02C REVIEW-WORKFLOW PILOT V2/);
+  assert.match(ui,/REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2/);
   assert.match(experiment,/label: 'CO claim-first'/);
   assert.match(experiment,/label: 'ASA standard'/);
-  assert.match(ui,/const workflowMeasurement = noteVersionId \? null : reviewMeasurementForQuestion/);
-  const reviewWrite=ui.indexOf('await review.record({');
-  const metricWrite=ui.indexOf('await review.recordMeasurement({');
-  assert.ok(reviewWrite >= 0 && metricWrite > reviewWrite);
-  assert.match(ui,/record_review_workflow_measurement/);
-  assert.match(ui,/never used for reviewer scoring or publication authority/);
+  assert.doesNotMatch(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
+  assert.doesNotMatch(ui,/reviewMeasurementForQuestion/);
+  assert.doesNotMatch(ui,/review\.recordMeasurement\(/);
+  assert.match(ui,/recordReferencesBatch/);
+  assert.match(ui,/This records review evidence only\. It cannot publish content or approve Medical\/Rights gates/);
 });
 
 test('client adapter does not send reviewer identity in measurement payload', () => {
@@ -72,24 +72,39 @@ test('preview server exposes the new experiment module explicitly', () => {
 });
 
 
-test('browser displays descriptive pilot progress without choosing a winner', () => {
-  assert.match(ui,/REFERENCES_WORKFLOW_EXPERIMENT_V1/);
-  assert.match(ui,/review\.measurementSummary\(REFERENCES_WORKFLOW_EXPERIMENT_V1\.experimentId\)/);
-  assert.match(ui,/content-review-workflow-measurement-summary-v1/);
+test('browser displays descriptive batch-pilot progress without choosing a winner', () => {
+  assert.match(ui,/REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2/);
+  assert.match(ui,/review\.batchMeasurementSummary\(REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2\.experimentId\)/);
+  assert.match(ui,/content-review-workflow-batch-measurement-summary-v1/);
   assert.match(ui,/summary\?\.causal !== false/);
   assert.match(ui,/Descriptive only · not causal/);
-  assert.match(ui,/Median foreground-active/);
-  assert.match(ui,/Median elapsed wall/);
+  assert.match(ui,/Batch foreground-active/);
+  assert.match(ui,/Batch elapsed wall/);
   assert.match(ui,/Rejection proxy/);
   assert.match(ui,/No winner is inferred automatically/);
   assert.match(ui,/Do not interpret partial timing as a workflow verdict/);
   assert.doesNotMatch(ui,/winner:\s*(claim_first|standard|CO|ASA)|best workflow:|reviewer score:/i);
 });
 
-test('measurement summary failure is non-blocking and never reuses stale results', () => {
-  assert.match(ui,/referencesMeasurementSummary: null/);
-  assert.match(ui,/referencesMeasurementError: null/);
-  assert.match(ui,/review_measurement_summary_unavailable/);
-  assert.match(ui,/Measurement summary unavailable/);
+test('batch measurement summary failure is non-blocking and never reuses stale results', () => {
+  assert.match(ui,/referencesBatchMeasurementSummary: null/);
+  assert.match(ui,/referencesBatchMeasurementError: null/);
+  assert.match(ui,/review_batch_measurement_summary_unavailable/);
+  assert.match(ui,/Batch measurement summary unavailable/);
   assert.match(ui,/Review remains usable and no prior summary is reused/);
+});
+
+test('v2 batch pilot is atomic, attested and still writes seven independent review receipts', () => {
+  assert.match(batchSql,/record_content_review_batch_with_measurement/);
+  assert.match(batchSql,/cardinality\(p_question_version_ids\) <> 7/);
+  assert.match(batchSql,/record_content_review\(/);
+  assert.match(batchSql,/review_batch_attestation_required/);
+  assert.match(batchSql,/references-batch-attestation-v1/);
+  assert.match(batchSql,/'decisionCount',7/);
+  assert.doesNotMatch(batchSql,/publish_verified_content\(/);
+  assert.match(api,/path === "\/reference-review-batch"/);
+  assert.match(api,/p_reviewer: reviewerId/);
+  assert.match(adapter,/recordReferencesBatch\(\{/);
+  assert.match(ui,/Submit 7 References decisions atomically/);
+  assert.match(ui,/No automatic approval/);
 });

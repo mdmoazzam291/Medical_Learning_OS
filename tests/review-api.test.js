@@ -113,3 +113,18 @@ test('media review surface returns gate hash and exact target rather than a brow
   assert.match(source, /target: reviewTarget/);
   assert.match(source, /mediaAssetVersionId/);
 });
+
+
+test('review-api structured review batches are JWT-derived, bounded and note-free', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/structured-review-batch"/);
+  assert.match(source, /record_structured_review_batch/);
+  assert.match(source, /p_reviewer: reviewerId/);
+  assert.match(source, /targetIds\.length < 1 \|\| input\.targetIds\.length > 500/);
+  const start = source.indexOf('path === "/structured-review-batch"');
+  const end = source.indexOf('path === "/full-question-review"', start);
+  const route = source.slice(start, end);
+  assert.doesNotMatch(route, /reviewerId\s*=\s*input|p_reviewer:\s*input/);
+  assert.doesNotMatch(route, /notes/);
+  assert.match(route, /publicationAuthority !== false/);
+});

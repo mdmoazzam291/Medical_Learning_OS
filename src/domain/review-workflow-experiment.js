@@ -1,3 +1,24 @@
+export const REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2 = Object.freeze({
+  schemaVersion: 2,
+  experimentId: 'm02c-references-workflow-v2',
+  reviewKind: 'references',
+  causal: false,
+  submissionMode: 'atomic_batch',
+  attestationVersion: 'references-batch-attestation-v1',
+  treatment: Object.freeze({
+    workflowMode: 'claim_first',
+    sourceId: 'cdc:co:clinical-guidance:2024-07-08',
+    expectedQuestionCount: 7,
+    label: 'CO claim-first'
+  }),
+  comparator: Object.freeze({
+    workflowMode: 'standard',
+    sourceId: 'asa:preop-fasting:2017',
+    expectedQuestionCount: 7,
+    label: 'ASA standard'
+  })
+});
+
 export const REFERENCES_WORKFLOW_EXPERIMENT_V1 = Object.freeze({
   schemaVersion: 1,
   experimentId: 'm02c-references-workflow-v1',

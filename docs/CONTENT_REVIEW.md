@@ -201,7 +201,18 @@ Behavior:
 - reviewer identity is never sent by browser code,
 - the workspace contains no publication control.
 
-The UI deliberately avoids bulk approval. Review throughput is secondary to trustworthy medical/reference/rights evidence.
+The UI now separates **judgment** from **typing**. Normal question and NeuralVault review can be approved or rejected without entering free text. The server generates a structured audit note from the exact target, gate, decision and reason code.
+
+Bulk controls are permitted only as a review-compression mechanism:
+- each exact target still receives its own immutable gate receipt;
+- bulk review is atomic and bounded;
+- the authenticated reviewer identity is always derived server-side;
+- approval advances only the selected gate;
+- bulk review never publishes content;
+- a master action requires an explicit inspection attestation plus exact-count confirmation;
+- the measured M02c References pilot remains isolated from general master actions so its workflow evidence is not contaminated.
+
+The preferred workflow is **select reviewed targets → one gate-level decision → separate immutable receipts**, not blind approval of an uninspected backlog.
 
 
 ## First genuine medical review package
@@ -365,3 +376,72 @@ The packet contains:
 Medical, References and Rights packets deliberately differ because each gate inspects different evidence. Reviewers must inspect the media packet before approving. AI/source preflight remains non-authoritative and cannot substitute for this human decision.
 
 The detailed media-target RPC is service-backend-only; learner and ordinary authenticated roles cannot call it directly.
+
+
+## Human-attested review compression
+
+The review system may reduce repetitive browser mechanics without reducing the number or integrity of review judgments.
+
+Two service-only paths now exist:
+
+- `record_full_question_review_bundle`: one explicit human attestation for an exact, previously unreviewed question can record Medical, References and Rights approvals atomically. Each gate keeps its own note, gate-specific fingerprint and immutable review event. The reviewer must currently hold all three grants, source-rights prerequisites must already pass, and the function has no publication authority.
+- `record_content_review_batch_with_measurement`: M02c References workflow v2 submits exactly seven item-level decisions and notes in one atomic transaction after one session-level attestation. It reuses `record_content_review` for every target and records one timing receipt only after all seven reviews succeed.
+
+Neither path permits AI/source preflight to choose review decisions. Prefilled notes are editable evidence aids only. If any target should be rejected, the reviewer must select rejection for that target (batch path) or use the existing individual reject control (full-question path).
+
+
+## Review necessity and automation boundary
+
+Not every object deserves the same review burden.
+
+### No human review required by default
+- schema/shape validation;
+- identifier uniqueness;
+- version sequencing;
+- hash/digest consistency;
+- source existence;
+- exact-duplicate checks;
+- deterministic permission/security checks;
+- purely structural concept anchors such as current `conceptId`, label, aliases and subject tags.
+
+The present concept model is a structural taxonomy anchor, not a versioned medical-claim object. Adding a separate concept-approval ledger now would duplicate authority without improving safety. If concepts later gain versioned definitions, prerequisite claims, competency assertions or clinically meaningful graph edges, those semantic claims should receive their own review target type.
+
+### Human review remains required today
+For production learner-facing medical content:
+- Medical: keyed answer, explanation, scope, safety and clinical correctness;
+- References: the cited source directly supports the material claim;
+- Rights/provenance: permitted factual use, provenance accuracy and source-rights evidence.
+
+Human review is especially important for treatment decisions, doses, thresholds, guideline-sensitive recommendations, images and any content where a false approval could teach unsafe medicine.
+
+### Review may be compressed
+Human review does **not** require handwritten notes. Zero-typing structured decisions, source-first inspection, selection batches and full-question bundles are acceptable when the exact target fingerprint and immutable per-gate receipts are preserved.
+
+Publication remains a separate revalidation boundary.
+
+## Future AI-agent review authority
+
+AI may already assist with source gathering, claim extraction, draft notes, duplicate detection and review proposals. It must not silently become production authority.
+
+A future reviewer agent should emit a versioned proposal containing:
+- exact target ID and target SHA-256;
+- review gate;
+- proposed approve/reject/abstain decision;
+- claim → source evidence bindings;
+- source/version/freshness metadata;
+- model/provider/tool/prompt-contract versions;
+- uncertainty and explicit abstention reasons;
+- authoring-agent identity so self-review can be blocked;
+- cost/latency metadata where useful.
+
+Promotion path:
+1. **proposal-only** against human decisions;
+2. **shadow evaluation** on unseen reviewed targets;
+3. measure false-approval rate, calibration, abstention quality and subgroup/source-domain failures;
+4. require conservative confidence bounds and explicit safety guardrails;
+5. allow auto-decision only for a versioned low-risk policy scope;
+6. continue sampled human audits and automatic rollback to proposal-only on drift.
+
+Even a qualified AI review receipt should not directly publish content. Publication must recheck current target hashes, source-rights evidence, authority-policy version and all required gate receipts.
+
+This creates a clean future transition from human-every-item review toward **AI-first, human-on-exception** without rewriting the canonical review ledger.

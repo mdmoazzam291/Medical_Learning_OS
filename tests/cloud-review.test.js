@@ -183,3 +183,41 @@ test('review adapter reads pipeline status without any mutation payload', async 
   assert.equal(calls[0].init.method, 'GET');
   assert.equal(calls[0].init.body, undefined);
 });
+
+
+test('structured zero-typing batch sends no reviewer identity or free-text notes', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({
+        contractId: 'structured-review-batch-receipt-v1',
+        targetType: 'question_version',
+        reviewKind: 'medical',
+        decision: 'approved',
+        decisionCount: 2,
+        publicationAuthority: false,
+        reviews: [{}, {}]
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    }
+  });
+
+  await review.recordStructuredBatch({
+    targetType: 'question_version',
+    targetIds: ['demo:q1@1', 'demo:q2@1'],
+    reviewKind: 'medical',
+    decision: 'approved',
+    reasonCode: 'human_reviewed_no_issue',
+    attested: true
+  });
+
+  assert.match(calls[0].url, /\/structured-review-batch$/);
+  const body = JSON.parse(calls[0].init.body);
+  assert.equal('reviewerId' in body, false);
+  assert.equal('notes' in body, false);
+  assert.deepEqual(body.targetIds, ['demo:q1@1', 'demo:q2@1']);
+  assert.equal(body.attested, true);
+});

@@ -60,6 +60,48 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
         body: { questionVersionId, reviewKind, decision, notes }
       });
     },
+    recordFullQuestionReview({
+      questionVersionId,
+      medicalNotes,
+      referencesNotes,
+      rightsNotes,
+      attestationVersion = 'full-question-review-attestation-v1',
+      attested
+    }) {
+      return request('/full-question-review', {
+        method: 'POST',
+        body: {
+          questionVersionId,
+          medicalNotes,
+          referencesNotes,
+          rightsNotes,
+          attestationVersion,
+          attested
+        }
+      });
+    },
+    recordStructuredBatch({
+      targetType,
+      targetIds,
+      reviewKind,
+      decision,
+      reasonCode,
+      attestationVersion = 'structured-human-review-v1',
+      attested
+    }) {
+      return request('/structured-review-batch', {
+        method: 'POST',
+        body: {
+          targetType,
+          targetIds,
+          reviewKind,
+          decision,
+          reasonCode,
+          attestationVersion,
+          attested
+        }
+      });
+    },
     recordMeasurement({
       reviewId,
       workflowMode,
@@ -84,6 +126,39 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
     },
     measurementSummary(experimentId) {
       return request('/review-measurements/summary?experimentId=' + encodeURIComponent(experimentId));
+    },
+    recordReferencesBatch({
+      questionVersionIds,
+      decisions,
+      notes,
+      experimentId,
+      workflowMode,
+      clientSessionId,
+      foregroundActiveMs,
+      elapsedWallMs,
+      queueSize,
+      attestationVersion = 'references-batch-attestation-v1',
+      attested
+    }) {
+      return request('/reference-review-batch', {
+        method: 'POST',
+        body: {
+          questionVersionIds,
+          decisions,
+          notes,
+          experimentId,
+          workflowMode,
+          clientSessionId,
+          foregroundActiveMs,
+          elapsedWallMs,
+          queueSize,
+          attestationVersion,
+          attested
+        }
+      });
+    },
+    batchMeasurementSummary(experimentId) {
+      return request('/reference-review-batch/summary?experimentId=' + encodeURIComponent(experimentId));
     },
     recordNote({ noteVersionId, reviewKind, decision, notes }) {
       return request('/note-reviews', {

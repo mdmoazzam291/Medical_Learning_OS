@@ -82,7 +82,7 @@ test('review assist covers every final-breadth question but remains non-authorit
     assert.equal('reviewerId' in item, false);
   }
   assert.ok(assist.scope.batchKeys.includes('pilot:final-breadth:20260928:07'));
-  assert.equal(assist.scope.questionCount, 154);
+  assert.equal(assist.scope.questionCount, 155);
   assert.equal(assist.authority, 'none');
   assert.equal(assist.policy.mayApproveReviewGate, false);
   assert.equal(assist.policy.mayPublishContent, false);

@@ -1,7 +1,7 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesSourceFocus, filterReferencesBySource } from '/src/domain/references-source-focus.js';
 import { referencesPanel } from '/web/references-panel.js';
-import { REFERENCES_WORKFLOW_EXPERIMENT_V1, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
+import { REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -25,8 +25,9 @@ let state = {
   referencesSourceId: null,
   referencesError: null,
   referencesExperimentArm: 'all',
-  referencesMeasurementSummary: null,
-  referencesMeasurementError: null,
+  referencesBatchMeasurementSummary: null,
+  referencesBatchMeasurementError: null,
+  selectedTargetIds: [],
   loading: false,
   submitting: null,
   error: null
@@ -88,7 +89,7 @@ function formatDurationMs(value) {
 }
 
 function referencesWorkflowSummary(workflowMode) {
-  const workflows = state.referencesMeasurementSummary?.workflows;
+  const workflows = state.referencesBatchMeasurementSummary?.workflows;
   return Array.isArray(workflows)
     ? workflows.find(item => item?.workflowMode === workflowMode) || null
     : null;
@@ -108,8 +109,8 @@ function referencesWorkflowCard(config) {
     escape(config.sourceId) + '</p></div><span class="badge">' + escape(decisions) + ' / ' +
     escape(expected) + ' decisions</span></div>' +
     '<div class="review-metadata">' +
-      '<div><span>Median foreground-active</span><strong>' + escape(formatDurationMs(summary?.medianForegroundActiveMs)) + '</strong></div>' +
-      '<div><span>Median elapsed wall</span><strong>' + escape(formatDurationMs(summary?.medianElapsedWallMs)) + '</strong></div>' +
+      '<div><span>Batch foreground-active</span><strong>' + escape(formatDurationMs(summary?.foregroundActiveMs)) + '</strong></div>' +
+      '<div><span>Batch elapsed wall</span><strong>' + escape(formatDurationMs(summary?.elapsedWallMs)) + '</strong></div>' +
       '<div><span>Rejection proxy</span><strong>' + escape(rejectionText || '0') + '</strong></div>' +
       '<div><span>Measured decisions</span><strong>' + escape(decisions) + '</strong></div>' +
     '</div></article>';
@@ -117,7 +118,7 @@ function referencesWorkflowCard(config) {
 
 function referencesExperimentPanel() {
   if (state.selectedKind !== 'references' || state.targetType !== 'questions' || state.loading || state.error) return '';
-  const experiment = REFERENCES_WORKFLOW_EXPERIMENT_V1;
+  const experiment = REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2;
   const claimCount = filterReferencesWorkflowItems(state.items, experiment.treatment.workflowMode).length;
   const standardCount = filterReferencesWorkflowItems(state.items, experiment.comparator.workflowMode).length;
   const button = (mode, label, count) =>
@@ -130,8 +131,8 @@ function referencesExperimentPanel() {
   const complete =
     Number(treatment?.decisions || 0) >= experiment.treatment.expectedQuestionCount &&
     Number(comparator?.decisions || 0) >= experiment.comparator.expectedQuestionCount;
-  const summaryState = state.referencesMeasurementError
-    ? '<p class="muted"><strong>Measurement summary unavailable.</strong> Review remains usable and no prior summary is reused.</p>'
+  const summaryState = state.referencesBatchMeasurementError
+    ? '<p class="muted"><strong>Batch measurement summary unavailable.</strong> Review remains usable and no prior summary is reused.</p>'
     : '<div class="source-list">' +
         referencesWorkflowCard(experiment.treatment) +
         referencesWorkflowCard(experiment.comparator) +
@@ -141,36 +142,61 @@ function referencesExperimentPanel() {
         : '<p class="muted">Pilot results remain incomplete. Do not interpret partial timing as a workflow verdict.</p>');
 
   return '<section class="panel review-measurement-panel">' +
-    '<div class="section-heading"><div><span class="eyebrow">M02C REVIEW-WORKFLOW PILOT</span>' +
-    '<h2>Matched 7-question operational comparison</h2></div><span class="badge">Descriptive only · not causal</span></div>' +
-    '<p>Use one pilot arm at a time. Timing is recorded only after a real References decision succeeds and is never used for reviewer scoring or publication authority.</p>' +
+    '<div class="section-heading"><div><span class="eyebrow">M02C REVIEW-WORKFLOW PILOT V2</span>' +
+    '<h2>Two-session atomic comparison</h2></div><span class="badge">Descriptive only · not causal</span></div>' +
+    '<p>Inspect one seven-question arm at a time. Each item keeps its own approve/reject choice and immutable review receipt; one final human attestation submits the whole arm atomically and records one timing session.</p>' +
     '<div class="button-row">' +
       button('all','All backlog',state.items.length) +
       button(experiment.treatment.workflowMode,experiment.treatment.label,claimCount) +
       button(experiment.comparator.workflowMode,experiment.comparator.label,standardCount) +
     '</div>' + summaryState +
-    '<p class="muted">Foreground-active time is a lower bound; elapsed wall time is an upper bound when source reading happens in another tab. Rejection rate is a correction-needed proxy, not proof of review quality.</p>' +
+    '<p class="muted">Foreground-active time is a lower bound; elapsed wall time is an upper bound when source reading happens in another tab. Batch submission removes repetitive form overhead only. Rejection rate remains a correction-needed proxy, not proof of review quality.</p>' +
     '</section>';
 }
 
-function reviewMeasurementForQuestion(questionVersionId) {
+function referencesBatchReviewPanel(items) {
   if (state.selectedKind !== 'references' ||
       state.targetType !== 'questions' ||
-      !['claim_first', 'standard'].includes(state.referencesExperimentArm)) {
-    return null;
+      !['claim_first', 'standard'].includes(state.referencesExperimentArm) ||
+      state.loading ||
+      state.error) return '';
+
+  const experiment = REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2;
+  const config = state.referencesExperimentArm === experiment.treatment.workflowMode
+    ? experiment.treatment
+    : experiment.comparator;
+  const armItems = filterReferencesWorkflowItems(items, state.referencesExperimentArm);
+  if (armItems.length !== config.expectedQuestionCount) {
+    return '<section class="panel"><h2>Batch arm unavailable.</h2><p class="muted">This arm no longer has exactly ' +
+      escape(config.expectedQuestionCount) +
+      ' pending targets. Reload the queue; no partial batch can be submitted.</p></section>';
   }
-  const item = state.items.find(candidate => candidate?.question?.questionVersionId === questionVersionId);
-  const arm = referencesWorkflowArm(item);
-  if (!arm || arm.workflowMode !== state.referencesExperimentArm) return null;
-  const timing = reviewTimingSnapshot();
-  if (!timing) return null;
-  return {
-    ...timing,
-    experimentId: arm.experimentId,
-    workflowMode: arm.workflowMode,
-    queueSize: filterReferencesWorkflowItems(state.items, arm.workflowMode).length
-  };
+
+  const rows = armItems.map(item => {
+    const q = item?.question || {};
+    const questionVersionId = q.questionVersionId || '';
+    const draft = assistQuestion(questionVersionId)?.references?.draftNote || '';
+    return '<fieldset class="batch-review-row" data-question-version-id="' + escape(questionVersionId) + '">' +
+      '<legend>' + escape(questionVersionId) + '</legend>' +
+      '<p>' + escape(q.stem || '') + '</p>' +
+      '<label>Decision<select name="decision" required><option value="">Choose after review…</option>' +
+        '<option value="approved">Approve References</option><option value="rejected">Reject References</option></select></label>' +
+      '<label>References notes<textarea name="notes" minlength="1" maxlength="4000" required>' +
+        escape(draft) + '</textarea></label>' +
+      '</fieldset>';
+  }).join('');
+
+  return '<section class="panel review-batch-panel"><div class="section-heading"><div><span class="eyebrow">ATOMIC HUMAN REVIEW</span>' +
+    '<h2>' + escape(config.label) + ' · 7 decisions, 1 submission</h2></div><span class="badge">No automatic approval</span></div>' +
+    '<p>Inspect the source and all seven exact targets above. Choose each item independently. The database writes all seven immutable References receipts or none.</p>' +
+    '<form class="references-batch-review-form" data-workflow-mode="' + escape(config.workflowMode) + '">' +
+      rows +
+      '<label class="review-attestation"><input type="checkbox" name="attested" required> I independently inspected this source and all seven exact targets, and each selected decision and note reflects my own References judgment.</label>' +
+      '<div class="review-actions"><button class="primary" type="submit" ' + (state.submitting ? 'disabled' : '') + '>Submit 7 References decisions atomically</button></div>' +
+      '<p class="muted">This records review evidence only. It cannot publish content or approve Medical/Rights gates.</p>' +
+    '</form></section>';
 }
+
 
 document.addEventListener('visibilitychange', syncReviewTiming);
 window.addEventListener('focus', syncReviewTiming);
@@ -310,9 +336,7 @@ function reviewAssistPanel(questionVersionId) {
         .map(source => `<div>${sourceLink(source.rightsBasisUrl)}</div>`)
         .join('')
     : '';
-  const draftButton = gate.draftNote
-    ? `<button class="secondary" type="button" data-action="use-review-assist-note" data-question-version-id="${escape(questionVersionId)}">Use as draft note</button>`
-    : '';
+  const draftButton = '';
 
   return `<section class="review-section review-assist">
     <div class="section-heading"><div><span class="eyebrow">REVIEW ASSIST</span><h3>AI/source preflight</h3></div><span class="badge">Non-authoritative</span></div>
@@ -320,6 +344,38 @@ function reviewAssistPanel(questionVersionId) {
     ${rightsLinks}
     ${draftButton}
     <p class="muted">Generated ${escape(packet.generatedDate || 'unknown date')}. Draft text is editable and cannot approve, verify or publish content. Independently inspect the question and cited source before deciding this gate.</p>
+  </section>`;
+}
+
+function fullQuestionReviewBundlePanel(question, rightsReady) {
+  const questionVersionId = question?.questionVersionId;
+  const reviews = Array.isArray(question?.reviews) ? question.reviews : [];
+  const assist = assistQuestion(questionVersionId);
+  const allGrants = ['medical', 'references', 'rights'].every(kind => state.grants.includes(kind));
+  const inMeasuredReferencesArm =
+    state.selectedKind === 'references' &&
+    ['claim_first', 'standard'].includes(state.referencesExperimentArm);
+  if (!questionVersionId || reviews.length || !allGrants || !rightsReady || inMeasuredReferencesArm) return '';
+  const drafts = {
+    medical: assist?.medical?.draftNote,
+    references: assist?.references?.draftNote,
+    rights: assist?.rights?.draftNote
+  };
+  if (!drafts.medical || !drafts.references || !drafts.rights) return '';
+
+  return `<section class="review-section full-review-bundle">
+    <div class="section-heading"><div><span class="eyebrow">FULL REVIEW BUNDLE</span><h3>One click · three immutable gate receipts</h3></div><span class="badge">Human decision required</span></div>
+    <p>Use this only after independently checking the clinical answer, source support, and rights/provenance for this exact version. No text entry is required. If any gate should fail, use the gate-specific Reject button instead.</p>
+    <details><summary>Read the three preflight summaries</summary>
+      <p><strong>Medical:</strong> ${escape(assist?.medical?.summary || '')}</p>
+      <p><strong>References:</strong> ${escape(assist?.references?.summary || '')}</p>
+      <p><strong>Rights:</strong> ${escape(assist?.rights?.summary || '')}</p>
+    </details>
+    <form class="full-question-review-form" data-question-version-id="${escape(questionVersionId)}">
+      <label class="review-attestation"><input type="checkbox" name="attested" required> I independently inspected this exact question and its cited evidence for all three gates.</label>
+      <div class="review-actions"><button class="primary" type="submit" ${state.submitting ? 'disabled' : ''}>Approve all 3 gates</button></div>
+      <p class="muted">The stored gate notes come from the review-assist packet and remain bound to the exact fingerprints. This does not publish content.</p>
+    </form>
   </section>`;
 }
 
@@ -400,6 +456,122 @@ function referencesSourcePanel() {
     '<p class="muted">Shared inspection is not shared approval. Each target still needs its own authenticated References decision; Medical, Rights, and publication stay separate.</p></section>';
 }
 
+function reviewTargetIdentity(item) {
+  if (state.targetType === 'neural-notes') {
+    return item?.note?.noteVersionId || item?.note?.id || null;
+  }
+  return item?.question?.questionVersionId || null;
+}
+
+function reviewTargetType() {
+  return state.targetType === 'neural-notes' ? 'neural_note_version' : 'question_version';
+}
+
+function itemRightsReady(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 &&
+    sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+}
+
+function defaultRejectReason() {
+  if (state.selectedKind === 'medical') return 'needs_medical_correction';
+  if (state.selectedKind === 'references') return 'reference_support_insufficient';
+  return 'rights_or_provenance_problem';
+}
+
+function itemRightsResolved(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 &&
+    sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
+}
+
+function currentReviewItems(decision = null) {
+  const referencesExperiment =
+    state.selectedKind === 'references' &&
+    state.targetType === 'questions' &&
+    ['claim_first', 'standard'].includes(state.referencesExperimentArm);
+  const experimentItems = referencesExperiment
+    ? filterReferencesWorkflowItems(state.items, state.referencesExperimentArm)
+    : state.items;
+  const focusedItems = state.selectedKind === 'references' && !referencesExperiment
+    ? filterReferencesBySource(experimentItems, state.referencesSourceId)
+    : experimentItems;
+  if (state.selectedKind !== 'rights') return focusedItems;
+  const resolved = focusedItems.filter(itemRightsResolved);
+  return decision === 'approved' ? resolved.filter(itemRightsReady) : resolved;
+}
+
+function superApprovalEligible(item) {
+  if (state.targetType !== 'questions') return false;
+  if (Array.isArray(item?.mediaReview?.media) && item.mediaReview.media.length) return false;
+  if (state.selectedKind === 'rights' && !itemRightsReady(item)) return false;
+  const questionVersionId = item?.question?.questionVersionId;
+  const assist = assistQuestion(questionVersionId);
+  if (!assist) return false;
+  if (state.selectedKind === 'medical') {
+    return assist?.medical?.result === 'supported' && assist?.medical?.uncertainty === 'low';
+  }
+  if (state.selectedKind === 'references') {
+    return assist?.references?.result === 'direct_support';
+  }
+  return ['citation_only_recommended','citation_only_supported','public_domain_recommended','public_domain_supported']
+    .includes(assist?.rights?.result);
+}
+
+function superApprovalItems() {
+  return currentReviewItems('approved').filter(superApprovalEligible);
+}
+
+function structuredReviewControls(item) {
+  if (state.selectedKind === 'references' &&
+      ['claim_first', 'standard'].includes(state.referencesExperimentArm)) return '';
+  const targetId = reviewTargetIdentity(item);
+  if (!targetId) return '';
+  const rightsReady = state.selectedKind !== 'rights' || itemRightsReady(item);
+  const checked = state.selectedTargetIds.includes(targetId) ? 'checked' : '';
+  return `<section class="review-section structured-review-controls">
+    <div class="section-heading"><div><span class="eyebrow">ZERO-TYPING REVIEW</span><h3>Decision</h3></div>
+      <label><input type="checkbox" class="review-select" data-target-id="${escape(targetId)}" ${checked}> Select</label>
+    </div>
+    <div class="review-actions">
+      <button class="secondary danger-outline" type="button" data-action="quick-structured-review" data-target-id="${escape(targetId)}" data-decision="rejected" ${state.submitting ? 'disabled' : ''}>Reject</button>
+      <button class="primary" type="button" data-action="quick-structured-review" data-target-id="${escape(targetId)}" data-decision="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve</button>
+    </div>
+    ${!rightsReady ? '<p class="muted">Resolve source rights before approval. Rejection remains available.</p>' : ''}
+    <p class="muted">No text entry required. Clicking a decision confirms you inspected this exact target for the selected gate; the server generates the audit note.</p>
+  </section>`;
+}
+
+function masterReviewPanel() {
+  if (state.loading || state.error ||
+      (state.selectedKind === 'references' &&
+       ['claim_first', 'standard'].includes(state.referencesExperimentArm))) return '';
+  const reviewableItems = currentReviewItems('rejected');
+  const reviewableIds = reviewableItems.map(reviewTargetIdentity).filter(Boolean);
+  if (!reviewableIds.length) return '';
+  const approvableIds = new Set(currentReviewItems('approved').map(reviewTargetIdentity).filter(Boolean));
+  const superApproveIds = superApprovalItems().map(reviewTargetIdentity).filter(Boolean);
+  const selected = state.selectedTargetIds.filter(id => reviewableIds.includes(id));
+  const selectedAllApprovable = selected.length > 0 && selected.every(id => approvableIds.has(id));
+  return `<section class="panel master-review-panel">
+    <div class="section-heading"><div><span class="eyebrow">MASTER REVIEW</span>
+      <h2>Bulk decision controls</h2></div><span class="badge">${escape(reviewableIds.length)} reviewable · ${escape(selected.length)} selected</span></div>
+    <p>Bulk actions affect only the current <strong>${escape(gateLabel(state.selectedKind))}</strong> gate and never publish content. Every target still receives its own immutable review receipt.</p>
+    <div class="button-row">
+      <button class="secondary" type="button" data-action="select-all-review">Select all reviewable</button>
+      <button class="secondary" type="button" data-action="clear-review-selection">Clear selection</button>
+      <button class="primary" type="button" data-action="master-review-selected" data-decision="approved" ${selectedAllApprovable ? '' : 'disabled'}>Approve selected</button>
+      <button class="secondary danger-outline" type="button" data-action="master-review-selected" data-decision="rejected" ${selected.length ? '' : 'disabled'}>Reject selected</button>
+    </div>
+    <div class="button-row">
+      <button class="primary" type="button" data-action="master-review-all" data-decision="approved" ${superApproveIds.length ? '' : 'disabled'}>Super approve ${escape(superApproveIds.length)} preflight-clean</button>
+      <button class="secondary danger-outline" type="button" data-action="master-review-all" data-decision="rejected">Super reject all ${escape(reviewableIds.length)} reviewable</button>
+    </div>
+    <label class="review-attestation"><input id="master-review-attested" type="checkbox"> I inspected the targets I am about to decide and accept one gate-level decision per exact target.</label>
+    <p class="muted">For heterogeneous or large queues, select a reviewed subset instead of using the super action. The batch is atomic: if any target changed or became ineligible, nothing is partially committed.</p>
+  </section>`;
+}
+
 function questionSourcesHaveResolvedRights(item) {
   const sources = Array.isArray(item?.sources) ? item.sources : [];
   return sources.length > 0 && sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
@@ -411,29 +583,28 @@ function reviewItem(item, index) {
   const options = Array.isArray(q.options) ? q.options : [];
   const primary = Array.isArray(q.conceptLinks) ? q.conceptLinks.find(link => link?.role === 'primary') : null;
   const provenance = q.provenance || {};
-  const rightsReady = state.selectedKind !== 'rights' || sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+  const rightsReady = state.selectedKind !== 'rights' || itemRightsReady(item);
 
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">TARGET ${index + 1}</span><h2>${escape(q.questionVersionId || 'Unknown version')}</h2></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
     <section class="review-section"><h3>Question</h3><p class="review-stem">${escape(q.stem || '')}</p><ol class="review-options">${options.map(option => `<li class="${option?.optionId === q.answerOptionId ? 'review-answer' : ''}"><span>${escape(option?.optionId || '')}</span>${escape(option?.text || '')}${option?.optionId === q.answerOptionId ? '<strong>Key</strong>' : ''}</li>`).join('')}</ol></section>
-    ${mediaReviewPanel(item)}\n    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
+    ${mediaReviewPanel(item)}
+    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
     <div class="review-metadata"><div><span>Primary concept</span><strong>${escape(primary?.conceptId || 'Not linked')}</strong></div><div><span>Provenance</span><strong>${escape(provenance.kind || 'unknown')}</strong></div><div><span>Exam/year</span><strong>${escape(provenance.exam || 'N/A')} ${escape(provenance.year ?? '')}</strong></div></div>
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     ${reviewAssistPanel(q.questionVersionId)}
+    ${fullQuestionReviewBundlePanel(q, rightsReady)}
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
-    <form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
-      <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
-    </form>
+    ${state.selectedKind === 'references' && ['claim_first', 'standard'].includes(state.referencesExperimentArm)
+      ? '<p class="muted">Decision controls for this measured arm are consolidated in the atomic batch form below.</p>'
+      : structuredReviewControls(item)}
   </article>`;
 }
 
 function noteReviewItem(item, index) {
   const note = item?.note || {};
   const sources = Array.isArray(item?.sources) ? item.sources : [];
-  const rightsReady = state.selectedKind !== 'rights' ||
-    sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
   const provenance = note?.provenance || {};
 
   return `<article class="review-card">
@@ -443,10 +614,7 @@ function noteReviewItem(item, index) {
     <section class="review-section"><h3>Provenance</h3><p><strong>${escape(provenance.kind || 'unknown')}</strong></p><p>${escape(provenance.evidence || 'No provenance evidence recorded.')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
-    <form class="review-decision-form" data-note-version-id="${escape(note.noteVersionId || '')}">
-      <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
-    </form>
+    ${structuredReviewControls(item)}
   </article>`;
 }
 
@@ -484,7 +652,9 @@ function authorized() {
   ${referencesExperimentPanel()}
   ${referencesSourcePanel()}
   ${state.selectedKind === 'references' && state.targetType === 'questions' && state.referencesExperimentArm !== 'standard' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
-  ${body}</main>`;
+  ${masterReviewPanel()}
+  ${body}
+  ${referencesBatchReviewPanel(state.items)}</main>`;
 }
 
 function render() {
@@ -495,7 +665,7 @@ let queueGeneration = 0;
 async function loadQueue(kind = state.selectedKind) {
   const generation = ++queueGeneration;
   if (!kind) return;
-  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesMeasurementSummary: null, referencesMeasurementError: null };
+  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [] };
   render();
   try {
     const queuePromise = state.targetType === 'neural-notes'
@@ -529,19 +699,21 @@ async function loadQueue(kind = state.selectedKind) {
     }
     let referencesMeasurementSummary = null;
     let referencesMeasurementError = null;
+    let referencesBatchMeasurementSummary = null;
+    let referencesBatchMeasurementError = null;
     if (kind === 'references' && state.targetType === 'questions') {
       try {
-        const summary = await review.measurementSummary(REFERENCES_WORKFLOW_EXPERIMENT_V1.experimentId);
-        if (summary?.contractId !== 'content-review-workflow-measurement-summary-v1' ||
-            summary?.experimentId !== REFERENCES_WORKFLOW_EXPERIMENT_V1.experimentId ||
+        const summary = await review.batchMeasurementSummary(REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2.experimentId);
+        if (summary?.contractId !== 'content-review-workflow-batch-measurement-summary-v1' ||
+            summary?.experimentId !== REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2.experimentId ||
             summary?.causal !== false ||
             !Array.isArray(summary?.workflows)) {
-          throw new Error('review_measurement_summary_invalid');
+          throw new Error('review_batch_measurement_summary_invalid');
         }
-        referencesMeasurementSummary = summary;
+        referencesBatchMeasurementSummary = summary;
       } catch (error) {
-        referencesMeasurementError = 'review_measurement_summary_unavailable';
-        reportUnexpected(error, 'load_review_measurement_summary');
+        referencesBatchMeasurementError = 'review_batch_measurement_summary_unavailable';
+        reportUnexpected(error, 'load_review_batch_measurement_summary');
       }
     }
     if (generation !== queueGeneration) return;
@@ -552,8 +724,8 @@ async function loadQueue(kind = state.selectedKind) {
       referencesSourceId: sourceStillPresent ? state.referencesSourceId : null,
       referencesWorkspace,
       referencesError,
-      referencesMeasurementSummary,
-      referencesMeasurementError,
+      referencesBatchMeasurementSummary,
+      referencesBatchMeasurementError,
       loading: false,
       items,
       pipelineStatus,
@@ -583,7 +755,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesMeasurementSummary: null, referencesMeasurementError: null, loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
@@ -593,6 +765,17 @@ async function bootstrap() {
 }
 
 root.addEventListener('change', event => {
+  const reviewSelect = event.target.closest?.('.review-select');
+  if (reviewSelect) {
+    const targetId = reviewSelect.dataset.targetId;
+    if (!targetId) return;
+    const selected = new Set(state.selectedTargetIds);
+    if (reviewSelect.checked) selected.add(targetId);
+    else selected.delete(targetId);
+    state.selectedTargetIds = [...selected];
+    render();
+    return;
+  }
   if (event.target.id === 'review-kind') {
     state.referencesExperimentArm = 'all';
     state.referencesSourceId = null;
@@ -608,11 +791,104 @@ root.addEventListener('change', event => {
   }
 });
 
+async function submitStructuredReview(targetIds, decision, { requireMasterAttestation = false, label = 'review' } = {}) {
+  const ids = [...new Set((Array.isArray(targetIds) ? targetIds : []).filter(Boolean))];
+  if (!ids.length) {
+    announce('No review targets are selected.');
+    return;
+  }
+  if (!['approved', 'rejected'].includes(decision)) return;
+  if (requireMasterAttestation) {
+    const attested = root.querySelector('#master-review-attested')?.checked === true;
+    if (!attested) {
+      announce('Confirm the master-review inspection attestation first.');
+      return;
+    }
+    const verb = decision === 'approved' ? 'approve' : 'reject';
+    if (!globalThis.confirm(`${verb.toUpperCase()} ${ids.length} target${ids.length === 1 ? '' : 's'} for the current ${gateLabel(state.selectedKind)} gate? This creates immutable review receipts and cannot be undone.`)) {
+      return;
+    }
+  }
+
+  const reasonCode = decision === 'approved' ? 'human_reviewed_no_issue' : defaultRejectReason();
+  state.submitting = label;
+  render();
+  try {
+    const receipt = await review.recordStructuredBatch({
+      targetType: reviewTargetType(),
+      targetIds: ids,
+      reviewKind: state.selectedKind,
+      decision,
+      reasonCode,
+      attested: true
+    });
+    announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${receipt.decisionCount} target${receipt.decisionCount === 1 ? '' : 's'} for ${gateLabel(state.selectedKind)}. Separate immutable receipts were recorded; nothing was published.`);
+    state.selectedTargetIds = [];
+    state.submitting = null;
+    await loadQueue(state.selectedKind);
+  } catch (error) {
+    reportUnexpected(error, 'record_structured_review');
+    state.submitting = null;
+    render();
+    announce(`Review was not recorded: ${error.code || error.message || 'structured_review_write_failed'}. The batch is atomic, so no partial decision was committed.`);
+  }
+}
+
 root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   if (target.dataset.action === 'reload') {
     loadQueue();
+    return;
+  }
+
+  if (target.dataset.action === 'select-all-review') {
+    state.selectedTargetIds = currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean);
+    render();
+    return;
+  }
+
+  if (target.dataset.action === 'clear-review-selection') {
+    state.selectedTargetIds = [];
+    render();
+    return;
+  }
+
+  if (target.dataset.action === 'quick-structured-review') {
+    const targetId = target.dataset.targetId;
+    const decision = target.dataset.decision;
+    submitStructuredReview([targetId], decision, { label: targetId || 'quick-review' });
+    return;
+  }
+
+  if (target.dataset.action === 'master-review-selected') {
+    const decision = target.dataset.decision;
+    const eligibleItems = currentReviewItems(decision);
+    const eligibleIds = new Set(eligibleItems.map(reviewTargetIdentity).filter(Boolean));
+    const selectedReviewable = state.selectedTargetIds.filter(id =>
+      currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean).includes(id)
+    );
+    if (decision === 'approved' && selectedReviewable.some(id => !eligibleIds.has(id))) {
+      announce('At least one selected target is not approvable for this gate. Resolve its blocking condition or deselect it.');
+      return;
+    }
+    const selected = selectedReviewable.filter(id => eligibleIds.has(id));
+    submitStructuredReview(selected, decision, {
+      requireMasterAttestation: true,
+      label: 'master-selected-review'
+    });
+    return;
+  }
+
+  if (target.dataset.action === 'master-review-all') {
+    const decision = target.dataset.decision;
+    const ids = decision === 'approved'
+      ? superApprovalItems().map(reviewTargetIdentity).filter(Boolean)
+      : currentReviewItems('rejected').map(reviewTargetIdentity).filter(Boolean);
+    submitStructuredReview(ids, decision, {
+      requireMasterAttestation: true,
+      label: 'master-all-review'
+    });
     return;
   }
 
@@ -633,22 +909,6 @@ root.addEventListener('click', event => {
     return;
   }
 
-  if (target.dataset.action === 'use-review-assist-note') {
-    const questionVersionId = target.dataset.questionVersionId;
-    const gate = assistQuestion(questionVersionId)?.[state.selectedKind];
-    const form = [...root.querySelectorAll('.review-decision-form')]
-      .find(candidate => candidate.dataset.questionVersionId === questionVersionId);
-    const textarea = form?.querySelector('textarea[name="notes"]');
-    if (!textarea || !gate?.draftNote) return;
-    if (textarea.value.trim()) {
-      announce('Review notes already contain text. Clear them before applying the preflight draft.');
-      return;
-    }
-    textarea.value = gate.draftNote;
-    textarea.focus();
-    announce('Preflight draft copied into review notes. Edit it after your independent review, then submit your own decision.');
-    return;
-  }
 
   if (target.dataset.action === 'use-rights-assist-evidence') {
     const sourceId = target.dataset.sourceId;
@@ -668,6 +928,105 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const batchForm = event.target.closest('.references-batch-review-form');
+  if (batchForm) {
+    event.preventDefault();
+    const rows = [...batchForm.querySelectorAll('.batch-review-row')];
+    const timing = reviewTimingSnapshot();
+    if (rows.length !== 7 || !timing) {
+      announce('This References batch is not ready. Reload the selected pilot arm.');
+      return;
+    }
+    const questionVersionIds = [];
+    const decisions = [];
+    const notes = [];
+    for (const row of rows) {
+      const questionVersionId = row.dataset.questionVersionId;
+      const decision = row.querySelector('select[name="decision"]')?.value || '';
+      const note = row.querySelector('textarea[name="notes"]')?.value.trim() || '';
+      if (!questionVersionId || !['approved', 'rejected'].includes(decision) || !note) {
+        announce('Choose approve/reject and keep a review note for all seven targets before submitting.');
+        return;
+      }
+      questionVersionIds.push(questionVersionId);
+      decisions.push(decision);
+      notes.push(note);
+    }
+    const attested = batchForm.querySelector('input[name="attested"]')?.checked === true;
+    if (!attested) {
+      announce('The independent-review attestation is required.');
+      return;
+    }
+
+    (async () => {
+      state.submitting = 'references-batch-' + batchForm.dataset.workflowMode;
+      setFormBusy(batchForm, true);
+      try {
+        const receipt = await review.recordReferencesBatch({
+          questionVersionIds,
+          decisions,
+          notes,
+          experimentId: REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2.experimentId,
+          workflowMode: batchForm.dataset.workflowMode,
+          clientSessionId: timing.clientSessionId,
+          foregroundActiveMs: timing.foregroundActiveMs,
+          elapsedWallMs: timing.elapsedWallMs,
+          queueSize: rows.length,
+          attested
+        });
+        announce(`Recorded ${receipt.decisionCount} independent References decisions atomically for ${receipt.workflowMode}. No publication occurred.`);
+        reviewTiming = null;
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'record_reference_review_batch');
+        state.submitting = null;
+        setFormBusy(batchForm, false);
+        announce(`References batch was not recorded: ${error.code || error.message || 'review_batch_write_failed'}. All selected decisions and notes remain on screen.`);
+      }
+    })();
+    return;
+  }
+
+  const fullReviewForm = event.target.closest('.full-question-review-form');
+  if (fullReviewForm) {
+    event.preventDefault();
+    const data = new FormData(fullReviewForm);
+    const questionVersionId = fullReviewForm.dataset.questionVersionId;
+    const assist = assistQuestion(questionVersionId);
+    const medicalNotes = assist?.medical?.draftNote || '';
+    const referencesNotes = assist?.references?.draftNote || '';
+    const rightsNotes = assist?.rights?.draftNote || '';
+    const attested = data.get('attested') === 'on';
+    if (!questionVersionId || !medicalNotes || !referencesNotes || !rightsNotes || !attested) {
+      announce('The three-gate review packet and independent-review attestation are required.');
+      return;
+    }
+
+    (async () => {
+      state.submitting = questionVersionId;
+      setFormBusy(fullReviewForm, true);
+      try {
+        const receipt = await review.recordFullQuestionReview({
+          questionVersionId,
+          medicalNotes,
+          referencesNotes,
+          rightsNotes,
+          attested
+        });
+        announce(`Approved all three review gates for ${questionVersionId}. ${receipt.reviewCount} immutable receipts were recorded; publication remains separate.`);
+        state.submitting = null;
+        await loadQueue(state.selectedKind);
+      } catch (error) {
+        reportUnexpected(error, 'record_full_question_review');
+        state.submitting = null;
+        setFormBusy(fullReviewForm, false);
+        announce(`Full review was not recorded: ${error.code || error.message || 'review_write_failed'}.`);
+      }
+    })();
+    return;
+  }
+
   const rightsForm = event.target.closest('.source-rights-form');
   if (rightsForm) {
     event.preventDefault();
@@ -695,58 +1054,8 @@ root.addEventListener('submit', event => {
     return;
   }
 
-  const form = event.target.closest('.review-decision-form');
-  if (!form) return;
-  event.preventDefault();
-  const submitter = event.submitter;
-  const decision = submitter?.value;
-  if (!['approved', 'rejected'].includes(decision)) return;
+  // Normal question/note decisions use the structured zero-typing click path above.
 
-  const data = new FormData(form);
-  const notes = String(data.get('notes') || '').trim();
-  const questionVersionId = form.dataset.questionVersionId;
-  const noteVersionId = form.dataset.noteVersionId;
-  const targetId = noteVersionId || questionVersionId;
-  if (!notes || !targetId) { announce('Review notes are required.'); return; }
-  const workflowMeasurement = noteVersionId ? null : reviewMeasurementForQuestion(questionVersionId);
-
-  (async () => {
-    state.submitting = targetId;
-    setFormBusy(form, true);
-    try {
-      const receipt = noteVersionId
-        ? await review.recordNote({
-            noteVersionId,
-            reviewKind: state.selectedKind,
-            decision,
-            notes
-          })
-        : await review.record({
-            questionVersionId,
-            reviewKind: state.selectedKind,
-            decision,
-            notes
-          });
-      if (workflowMeasurement) {
-        try {
-          await review.recordMeasurement({
-            reviewId: receipt.reviewId,
-            ...workflowMeasurement
-          });
-        } catch (measurementError) {
-          reportUnexpected(measurementError, 'record_review_workflow_measurement');
-        }
-      }
-      announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${targetId} for ${gateLabel(state.selectedKind)}. Review receipt ${receipt.reviewId} recorded.`);
-      state.submitting = null;
-      await loadQueue(state.selectedKind);
-    } catch (error) {
-      reportUnexpected(error, 'record_review');
-      state.submitting = null;
-      setFormBusy(form, false);
-      announce(`Review was not recorded: ${error.code || error.message || 'review_write_failed'}. Your review notes have been preserved; retry when the connection is stable.`);
-    }
-  })();
 });
 
 render();

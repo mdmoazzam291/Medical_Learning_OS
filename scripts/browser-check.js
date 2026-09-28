@@ -184,16 +184,27 @@ try {
       }];
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ reviewKind: 'medical', items }) });
     }
-    if (url.includes('/functions/v1/review-api/reviews')) {
+    if (url.includes('/functions/v1/review-api/structured-review-batch')) {
       reviewBody = JSON.parse(route.request().postData() || '{}');
       reviewRecorded = true;
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
-        reviewId: 'review-1',
-        questionVersionId: 'demo:review@1',
-        reviewKind: 'medical',
+        contractId: 'structured-review-batch-receipt-v1',
+        targetType: reviewBody.targetType,
+        reviewKind: reviewBody.reviewKind,
         decision: reviewBody.decision,
-        targetSha256: 'a'.repeat(64),
-        reviewedAt: '2026-09-26T12:00:00.000Z'
+        reasonCode: reviewBody.reasonCode,
+        decisionCount: 1,
+        publicationAuthority: false,
+        reviews: [{
+          targetType: reviewBody.targetType,
+          targetId: reviewBody.targetIds?.[0],
+          reviewId: 'review-1',
+          reviewKind: reviewBody.reviewKind,
+          decision: reviewBody.decision,
+          reasonCode: reviewBody.reasonCode,
+          targetSha256: 'a'.repeat(64),
+          reviewedAt: '2026-09-26T12:00:00.000Z'
+        }]
       }) });
     }
     if (url.includes('/auth/v1/logout')) return route.fulfill({ status: 204, body: '' });
@@ -238,12 +249,22 @@ try {
   await accountPage.getByRole('heading', { name: 'demo:review@1' }).waitFor();
   assert.match(await accountPage.locator('.review-stem').textContent(), /Which review behavior is safest/);
   assert.match(await accountPage.locator('.review-answer').textContent(), /Derive reviewer identity on the server/);
-  await accountPage.getByLabel('Review notes').fill('Synthetic browser review: answer and explanation checked.');
-  await accountPage.getByRole('button', { name: 'Approve this gate' }).click();
-  await accountPage.getByRole('alert').filter({ hasText: 'Approved demo:review@1' }).waitFor();
+  assert.equal(await accountPage.getByLabel('Review notes').count(), 0);
+  await accountPage.getByRole('button', { name: 'Approve', exact: true }).click();
+  await accountPage.getByRole('alert').filter({ hasText: 'Approved 1 target for Medical accuracy' }).waitFor();
   await accountPage.getByRole('heading', { name: 'No pending targets for this gate.' }).waitFor();
-  assert.deepEqual(Object.keys(reviewBody).sort(), ['decision', 'notes', 'questionVersionId', 'reviewKind']);
+  assert.deepEqual(Object.keys(reviewBody).sort(), [
+    'attestationVersion', 'attested', 'decision', 'reasonCode', 'reviewKind', 'targetIds', 'targetType'
+  ]);
+  assert.equal(reviewBody.targetType, 'question_version');
+  assert.deepEqual(reviewBody.targetIds, ['demo:review@1']);
+  assert.equal(reviewBody.reviewKind, 'medical');
+  assert.equal(reviewBody.decision, 'approved');
+  assert.equal(reviewBody.reasonCode, 'human_reviewed_no_issue');
+  assert.equal(reviewBody.attestationVersion, 'structured-human-review-v1');
+  assert.equal(reviewBody.attested, true);
   assert.equal('reviewerId' in reviewBody, false);
+  assert.equal('notes' in reviewBody, false);
   await accountPage.getByRole('link', { name: 'Cloud account' }).click();
   await accountPage.getByRole('heading', { name: 'Your learner identity is connected.' }).waitFor();
   await accountPage.reload();

@@ -10,9 +10,10 @@
       "pilot:acute-medicine:20260928:03",
       "pilot:india-national-programs:20260928:05",
       "pilot:multimodal-breadth:20260928:06",
-      "pilot:final-breadth:20260928:07"
+      "pilot:final-breadth:20260928:07",
+      "connected-learning-08"
     ],
-    "questionCount": 154
+    "questionCount": 155
   },
   "policy": {
     "mayApproveReviewGate": false,
@@ -4146,6 +4147,28 @@
           "niams:psoriasis:2023-10"
         ],
         "draftNote": "This recommendation is for the authorized internal-test lane only and does not create production publication authority."
+      }
+    },
+    {
+      "questionVersionId": "emergency:anaphylaxis:no-rash-first-action@1",
+      "medical": {
+        "result": "supported",
+        "summary": "The clinical scenario is consistent with anaphylaxis despite absent urticaria; respiratory and cardiovascular involvement make prompt intramuscular epinephrine the correct immediate treatment.",
+        "uncertainty": "low",
+        "draftNote": "Clinical review: sudden wheeze plus hypotension after vaccination is compatible with anaphylaxis even without urticaria. Immediate intramuscular epinephrine is the correct first-line treatment; waiting for a rash, antihistamine-only treatment, or observation would inappropriately delay definitive therapy."
+      },
+      "references": {
+        "result": "direct_support",
+        "summary": "CDC Preventing and Managing Adverse Reactions (2024-07-25) explicitly states that urticaria may be absent and that immediate IM epinephrine is the treatment of choice for respiratory or cardiovascular anaphylaxis.",
+        "sourceIds": [
+          "cdc:immunization-adverse-reactions:2024-07-25"
+        ],
+        "draftNote": "References review: the cited CDC guidance directly supports both material claims in this item: urticaria is not present in every case of anaphylaxis, and respiratory/cardiovascular symptoms require immediate intramuscular epinephrine. The stem, keyed answer, and explanation remain within that source scope."
+      },
+      "rights": {
+        "result": "citation_only_supported",
+        "summary": "The existing current source-rights event permits citation-only factual grounding. The question and explanation are original wording and do not reproduce CDC tables or third-party source expression.",
+        "draftNote": "Rights review: the current source-rights record for the cited CDC page supports citation-only factual grounding. This question, options, and explanation use original wording and do not reproduce CDC or third-party tables, images, or protected expressive text."
       }
     }
   ]

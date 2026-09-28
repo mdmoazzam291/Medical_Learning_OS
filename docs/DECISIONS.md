@@ -1075,3 +1075,42 @@ The latest user instruction asks for notes and concepts in the quantity needed f
 - Canonical notes keep the existing single-concept storage contract. Cross-concept relationships use existing question concept roles; no speculative graph store or many-concept note migration is required here.
 
 See `CONNECTED_LEARNING_PILOT.md`. Research activation, item comparability and the remaining authenticated Study Now acceptance gate remain separate.
+
+
+## ADR-072 — Human review attestation may batch receipts, never judgments (accepted, 2026-09-29)
+
+Per-target immutable review evidence is necessary, but forcing a human to repeat identical navigation and submission mechanics for every gate/item creates avoidable operational burden. The optimization must remove interface overhead without converting AI preflight into medical authority.
+
+Decision:
+- an authenticated reviewer may submit multiple judgments in one atomic transaction only when each exact target and each item-level decision/note are explicitly visible in that human session;
+- a full-question bundle may fan one explicit reviewer attestation into separate Medical, References and Rights receipts only when the reviewer currently holds all three grants, the question has no prior review event, source-rights prerequisites are satisfied and each gate retains its own note and independently computed target hash;
+- a References batch may submit seven item-level decisions/notes together, but it cannot supply or infer those decisions automatically;
+- batch failure, stale targets or authorization drift must roll back the whole batch rather than leave partial approvals;
+- human identity is always derived from the authenticated server-side session, never supplied by browser payload;
+- review-assist/source packets may prefill editable evidence notes but cannot choose a decision, assert human inspection or publish content;
+- batch/full-review shortcuts never include publication authority;
+- measured experiments must not use the full three-gate shortcut inside their References arms because that would contaminate the workflow comparison.
+
+This permits **human judgment compression** while prohibiting **human authority substitution**.
+
+
+## ADR-073 — Review judgment is required; handwritten input is not (accepted, 2026-09-29)
+
+Production medical review was becoming an operational bottleneck because the interface coupled reviewer judgment to repetitive text entry and one-target-at-a-time submission.
+
+Decision:
+- preserve Medical, References and Rights as independent production review claims;
+- remove free-text entry as a requirement for ordinary question and canonical-note decisions;
+- use server-generated structured audit notes with explicit decision/reason codes;
+- allow one-click per-target approve/reject, select-many batches, and master approve/reject for the current gate;
+- require master actions to carry an explicit human inspection attestation and exact-count confirmation;
+- keep every target's immutable review event and gate-specific target fingerprint even when submission is batched;
+- make batch writes atomic so target drift or one invalid target cannot leave a partially approved set;
+- never grant review actions publication authority;
+- preserve a tightly scoped all-three-gates shortcut only for one exact, previously unreviewed question with complete review-assist evidence, current source rights and all three reviewer grants;
+- do not introduce concept review while concepts remain structural IDs/labels/tags rather than versioned medical claims;
+- keep AI review assist proposal-only in production until a separately versioned qualification policy passes prospective validation;
+- a future AI reviewer must use the same exact-target/fingerprint/evidence boundaries and cannot self-review content it authored.
+
+Rationale:
+the safety value comes from independent evidence-backed judgment and immutable target binding, not from typing a paragraph into every form. This reduces reviewer burden without collapsing the review authority model and creates a clean migration path toward AI-first, human-on-exception review.
