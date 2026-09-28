@@ -744,3 +744,22 @@ Decision:
 - Reuse the same locked-section state machine, immutable run ledger, scoring path and safe media projection so the engineering test exercises real simulator mechanics without creating a second simulator implementation.
 
 This is a test-access boundary, not a content publication shortcut. AI-test review remains structurally separate from human Medical/References/Rights review and cannot make learner-facing production content eligible.
+
+
+## ADR-053 — Exam abandonment is a receipt-free terminal state (accepted, 2026-09-28)
+
+A learner who intentionally exits an in-progress mock must not be represented as having completed a scored exam.
+
+Decision:
+- keep the persisted terminal status `cancelled` already supported by the exam ledger;
+- represent learner-initiated exit with structured termination reason `user_abandoned`;
+- close the currently open section at the trusted server timestamp and retain answers/review flags already recorded;
+- set no completion timestamp and create no completion/scoring receipt;
+- prohibit subsequent answer/review writes to the cancelled run;
+- keep request-id idempotency and optimistic revision checks identical to other exam mutations;
+- re-check internal-test authorization before allowing a testing-only run to be cancelled;
+- do not let browser clients claim `operator_cancelled`; that reason is reserved for a future trusted operator boundary.
+
+Natural timer completion wins over abandonment. Once the server clock has completed the exam, the client cannot retroactively convert it into a cancellation.
+
+This preserves the distinction between **attempt evidence** and **exam completion evidence**, which GT Autopsy and later analytics must respect.
