@@ -12,6 +12,7 @@ import {
   seededQuestionOrder
 } from "./_shared/exam-runtime.js";
 import { buildGtAutopsyV1 } from "./_shared/gt-autopsy.js";
+import { buildCanonicalPostAnswerTeaching } from "./_shared/post-answer-teaching.js";
 
 type Json = Record<string, unknown>;
 
@@ -2278,13 +2279,21 @@ Deno.serve(async (req: Request) => {
         .map((source: any) => ({
           sourceId: source.sourceId, title: source.title, url: source.url ?? null, version: source.version
         }));
+      const postAnswerTeaching = buildCanonicalPostAnswerTeaching({
+        correct: event.correct,
+        conceptId: primary.conceptId,
+        explanation: q.explanation,
+        sources
+      });
       const receipt = {
         event,
         selectedOptionId: optionId,
         answerOptionId: q.answerOptionId,
         explanation: q.explanation,
         sources,
-        catalogVersion: catalog.version
+        catalogVersion: catalog.version,
+        teachingDecision: postAnswerTeaching?.decision ?? null,
+        teaching: postAnswerTeaching?.teaching ?? null
       };
       const { data, error } = await admin.rpc("study_record_attempt", {
         p_learner: learnerId,
