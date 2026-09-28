@@ -1188,9 +1188,10 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    if (url.search) fail(400, "query_not_supported");
-
-    if (req.method === "GET" && path === "/progress") return response(req, 200, summarize(await getEvents()));
+    if (req.method === "GET" && path === "/progress") {
+      if (url.search) fail(400, "query_not_supported");
+      return response(req, 200, summarize(await getEvents()));
+    }
 
     if (req.method === "GET" && path === "/exam-simulator/test-readiness") {
       if (!internalExamTester) fail(403, "internal_exam_test_forbidden");
@@ -1788,6 +1789,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (req.method === "GET" && path === "/diagnostics/mistakes") {
+      if (url.search) fail(400, "query_not_supported");
       const [{ data, error }, catalog] = await Promise.all([
         admin.rpc("study_mistake_evidence", { p_learner: learnerId }),
         getCatalog()

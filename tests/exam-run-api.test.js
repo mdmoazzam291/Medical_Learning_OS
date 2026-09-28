@@ -179,3 +179,42 @@ test('exam run view carries trusted serverNow for countdown synchronization', ()
   const block = source.slice(view, end);
   assert.match(block, /serverNow: at/);
 });
+
+
+test('query-bearing exam routes are not blocked by a global search guard', () => {
+  const testReadiness = source.indexOf('path === "/exam-simulator/test-readiness"');
+  const productionReadiness = source.indexOf('path === "/exam-simulator/readiness"');
+  const examDna = source.indexOf('path === "/exam-dna"');
+  assert.ok(testReadiness > 0 && productionReadiness > testReadiness && examDna > productionReadiness);
+
+  const beforeTestReadiness = source.slice(Math.max(0, testReadiness - 500), testReadiness);
+  assert.doesNotMatch(beforeTestReadiness, /if \(url\.search\) fail\(400, "query_not_supported"\);\s*$/m);
+
+  const progress = source.indexOf('path === "/progress"');
+  const progressBlock = source.slice(progress, testReadiness);
+  assert.match(progressBlock, /if \(url\.search\) fail\(400, "query_not_supported"\)/);
+
+  const mistakes = source.indexOf('path === "/diagnostics/mistakes"');
+  const mistakesBlock = source.slice(mistakes, mistakes + 400);
+  assert.match(mistakesBlock, /if \(url\.search\) fail\(400, "query_not_supported"\)/);
+});
+
+test('readiness and exam DNA retain route-specific allowed query parameters', () => {
+  const testReadiness = source.slice(
+    source.indexOf('path === "/exam-simulator/test-readiness"'),
+    source.indexOf('path === "/exam-simulator/test-runs"')
+  );
+  assert.match(testReadiness, /searchParams\.get\("ruleSetId"\)/);
+
+  const productionReadiness = source.slice(
+    source.indexOf('path === "/exam-simulator/readiness"'),
+    source.indexOf('path === "/exam-dna"')
+  );
+  assert.match(productionReadiness, /searchParams\.get\("ruleSetId"\)/);
+
+  const examDna = source.slice(
+    source.indexOf('path === "/exam-dna"'),
+    source.indexOf('path === "/diagnostics/mistakes"')
+  );
+  assert.match(examDna, /searchParams\.get\("examId"\)/);
+});
