@@ -769,6 +769,7 @@ Deno.serve(async (req: Request) => {
         startedAt: state.startedAt,
         scheduledEndAt: state.scheduledEndAt,
         completedAt: state.completedAt,
+        serverNow: at,
         caveats: state.caveats,
         assembly: state.assembly ?? null,
         termination: state.termination ?? null,
