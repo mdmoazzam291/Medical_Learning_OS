@@ -1,7 +1,7 @@
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesSourceFocus, filterReferencesBySource } from '/src/domain/references-source-focus.js';
 import { referencesPanel } from '/web/references-panel.js';
-import { REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2, referencesWorkflowArm, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
+import { REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2, filterReferencesWorkflowItems } from '/src/domain/review-workflow-experiment.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -197,24 +197,6 @@ function referencesBatchReviewPanel(items) {
     '</form></section>';
 }
 
-function reviewMeasurementForQuestion(questionVersionId) {
-  if (state.selectedKind !== 'references' ||
-      state.targetType !== 'questions' ||
-      !['claim_first', 'standard'].includes(state.referencesExperimentArm)) {
-    return null;
-  }
-  const item = state.items.find(candidate => candidate?.question?.questionVersionId === questionVersionId);
-  const arm = referencesWorkflowArm(item);
-  if (!arm || arm.workflowMode !== state.referencesExperimentArm) return null;
-  const timing = reviewTimingSnapshot();
-  if (!timing) return null;
-  return {
-    ...timing,
-    experimentId: arm.experimentId,
-    workflowMode: arm.workflowMode,
-    queueSize: filterReferencesWorkflowItems(state.items, arm.workflowMode).length
-  };
-}
 
 document.addEventListener('visibilitychange', syncReviewTiming);
 window.addEventListener('focus', syncReviewTiming);
