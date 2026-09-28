@@ -58,6 +58,15 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     examSimulatorReadiness(ruleSetId) {
       return request(`/exam-simulator/readiness?ruleSetId=${encodeURIComponent(ruleSetId)}`);
     },
+    examSimulatorTestReadiness(ruleSetId) {
+      return request(`/exam-simulator/test-readiness?ruleSetId=${encodeURIComponent(ruleSetId)}`);
+    },
+    startTestExamRun(ruleSetId) {
+      return request('/exam-simulator/test-runs', {
+        method: 'POST',
+        body: { ruleSetId }
+      });
+    },
     startExamRun(ruleSetId) {
       return request('/exam-simulator/runs', {
         method: 'POST',
