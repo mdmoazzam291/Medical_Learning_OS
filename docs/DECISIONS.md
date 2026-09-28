@@ -1134,3 +1134,27 @@ Decision:
 - future AI may cluster, prioritize and source-check reports, but canonical correction still passes the normal source/review/version lifecycle.
 
 This gives learners immediate local control while turning genuine disagreement into a safe content-quality feedback loop.
+
+
+## ADR-075 — Learner reports are triage signals, not votes on medical truth (accepted, 2026-09-29)
+
+Learner-private corrections can protect an individual's workflow immediately, but a submitted possible-error report must enter the shared system without becoming a new authority path.
+
+Decision:
+- route learner-submitted possible-error reports into the existing authenticated content-review workspace rather than creating a separate moderation product;
+- group open reports only when they bind the same exact target type, target ID and target SHA-256;
+- use repeated report count as a prioritization signal only;
+- never expose learner identity to the reviewer browser;
+- block a reviewer from triaging their own learner report at the database boundary;
+- require an active Medical, References or Rights reviewer grant plus an explicit inspection attestation;
+- allow only two final triage outcomes: `no_canonical_issue` or `correction_required`;
+- store one immutable triage receipt per learner report;
+- a `correction_required` outcome does not edit, retire, verify or publish any content and does not affect learner state;
+- actual shared-content correction must occur by creating a new normal canonical/question version and sending that version through the existing review/publication lifecycle;
+- privacy erasure of the learner report cascades its triage evidence inside the existing transaction-scoped erasure exception.
+
+This preserves the quality flywheel:
+
+learner detects possible issue → exact-version report → grouped reviewer inspection → durable triage evidence → new canonical version if warranted → normal review gates → improved shared content.
+
+Popularity may prioritize attention; it never establishes correctness.
