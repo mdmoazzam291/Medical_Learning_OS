@@ -52,7 +52,39 @@ function providerDescriptor(provider) {
   return descriptor;
 }
 
-function fallbackForCase(item) {
+function fallbackForCase(item, schemaVersion) {
+  if (schemaVersion === 1) {
+    return {
+      schemaVersion: 1,
+      contractId: 'grounded-teaching-output',
+      contractVersion: '1',
+      renderStatus: 'ready',
+      teachingAction: item.teachingAction,
+      conceptId: item.conceptId,
+      headline: 'Review the canonical rule.',
+      claims: [
+        {
+          claimId: 'canonical-explanation',
+          role: 'explanation',
+          text: item.gold.canonicalExplanation,
+          citationRefs: item.grounding
+        }
+      ],
+      misconceptionCorrection: null,
+      nextPrompt: 'State the rule in your own words.',
+      abstentionReason: null
+    };
+  }
+
+  const claims = item.gold.canonicalClaims.map((claim, index) => ({
+    claimId: `gold-${index + 1}`,
+    role: claim.role,
+    text: claim.text,
+    citationRefs: item.grounding
+  }));
+  const correction = claims.find(claim => claim.role === 'correction') ?? null;
+  const discriminator = claims.find(claim => claim.role === 'discriminator') ?? null;
+
   return {
     schemaVersion: 1,
     contractId: 'grounded-teaching-output',
@@ -60,17 +92,16 @@ function fallbackForCase(item) {
     renderStatus: 'ready',
     teachingAction: item.teachingAction,
     conceptId: item.conceptId,
-    headline: 'Review the canonical rule.',
-    claims: [
-      {
-        claimId: 'canonical-explanation',
-        role: 'explanation',
-        text: item.gold.canonicalExplanation,
-        citationRefs: item.grounding
-      }
-    ],
-    misconceptionCorrection: null,
-    nextPrompt: 'State the rule in your own words.',
+    headline: 'Repair the exact error.',
+    claims,
+    misconceptionCorrection: item.teachingAction === 'misconception_repair'
+      ? {
+          learnerBelief: item.learnerError.observedBelief,
+          correctionClaimId: correction.claimId,
+          discriminatorClaimId: discriminator.claimId
+        }
+      : null,
+    nextPrompt: item.gold.nextPrompt,
     abstentionReason: null
   };
 }
@@ -97,8 +128,10 @@ export function buildSemanticTeachingEvaluationTask(setValue, caseId, {
       teachingAction: item.teachingAction,
       conceptId: item.conceptId,
       learnerEvidenceRef: `semantic-eval:${item.caseId}:${item.learnerError.selectedOptionId}`,
-      misconception: null,
-      canonicalFallback: fallbackForCase(item)
+      misconception: set.schemaVersion === 2 && item.teachingAction === 'misconception_repair'
+        ? { observedBelief: item.learnerError.observedBelief }
+        : null,
+      canonicalFallback: fallbackForCase(item, set.schemaVersion)
     },
     grounding: item.grounding,
     groundingMode: 'required',
@@ -118,6 +151,7 @@ export function buildSemanticTeachingEvaluationTask(setValue, caseId, {
       caseId: item.caseId,
       questionVersionId: item.questionVersionId,
       observedError: item.learnerError,
+      representation: set.schemaVersion === 2 ? item.representation : 'factual_recall',
       productionDeliveryAllowed: false
     }
   });
