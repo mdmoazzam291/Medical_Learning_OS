@@ -1172,3 +1172,9 @@ Verification for this slice is repository diff review because there is no domain
 - GitHub Actions remains unavailable for this repository in the observed runs: both jobs fail before step 1 with zero executed steps. This is recorded separately from the exact-head domain verification.
 - No model SDK, provider credential, learner-facing AI route, database migration or recurring AI cost is introduced.
 - Next M09c gate remains genuine human semantic review of real provider outputs before any separately governed provider-activation policy can exist.
+
+## Decision-ledger uniqueness guard — 2026-09-28
+- Resolved the newly introduced ADR collision by assigning the M09c review-binding decision to ADR-062; M10b retains ADR-061.
+- Added a repository check that rejects any new duplicate ADR number.
+- Historical duplicate IDs 028, 052 and 058 are explicitly grandfathered rather than silently renumbered, because changing historical identifiers can break existing references.
+- The check also fails if one of those legacy exceptions changes unexpectedly, making future cleanup deliberate rather than accidental.
