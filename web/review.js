@@ -29,6 +29,7 @@ let state = {
   referencesMeasurementError: null,
   referencesBatchMeasurementSummary: null,
   referencesBatchMeasurementError: null,
+  selectedTargetIds: [],
   loading: false,
   submitting: null,
   error: null
@@ -385,15 +386,17 @@ function fullQuestionReviewBundlePanel(question, rightsReady) {
   if (!drafts.medical || !drafts.references || !drafts.rights) return '';
 
   return `<section class="review-section full-review-bundle">
-    <div class="section-heading"><div><span class="eyebrow">FULL REVIEW BUNDLE</span><h3>One attestation · three immutable gate receipts</h3></div><span class="badge">Human decision required</span></div>
-    <p>Use this only after independently checking the clinical answer, source support, and rights/provenance for this exact version. It atomically records three <strong>approved</strong> gate receipts. If any gate should fail, use the normal individual reject control instead.</p>
+    <div class="section-heading"><div><span class="eyebrow">FULL REVIEW BUNDLE</span><h3>One click · three immutable gate receipts</h3></div><span class="badge">Human decision required</span></div>
+    <p>Use this only after independently checking the clinical answer, source support, and rights/provenance for this exact version. No text entry is required. If any gate should fail, use the gate-specific Reject button instead.</p>
+    <details><summary>Read the three preflight summaries</summary>
+      <p><strong>Medical:</strong> ${escape(assist?.medical?.summary || '')}</p>
+      <p><strong>References:</strong> ${escape(assist?.references?.summary || '')}</p>
+      <p><strong>Rights:</strong> ${escape(assist?.rights?.summary || '')}</p>
+    </details>
     <form class="full-question-review-form" data-question-version-id="${escape(questionVersionId)}">
-      <label>Medical review note<textarea name="medicalNotes" minlength="1" maxlength="4000" required>${escape(drafts.medical)}</textarea></label>
-      <label>References review note<textarea name="referencesNotes" minlength="1" maxlength="4000" required>${escape(drafts.references)}</textarea></label>
-      <label>Rights review note<textarea name="rightsNotes" minlength="1" maxlength="4000" required>${escape(drafts.rights)}</textarea></label>
-      <label class="review-attestation"><input type="checkbox" name="attested" required> I independently inspected this exact question and its cited evidence for all three gates. These draft notes reflect my own decision after review.</label>
-      <div class="review-actions"><button class="primary" type="submit" ${state.submitting ? 'disabled' : ''}>Approve all 3 gates atomically</button></div>
-      <p class="muted">This does not publish content. A separate server-only publication transition is still required after verified state is reached.</p>
+      <label class="review-attestation"><input type="checkbox" name="attested" required> I independently inspected this exact question and its cited evidence for all three gates.</label>
+      <div class="review-actions"><button class="primary" type="submit" ${state.submitting ? 'disabled' : ''}>Approve all 3 gates</button></div>
+      <p class="muted">The stored gate notes come from the review-assist packet and remain bound to the exact fingerprints. This does not publish content.</p>
     </form>
   </section>`;
 }
@@ -475,6 +478,91 @@ function referencesSourcePanel() {
     '<p class="muted">Shared inspection is not shared approval. Each target still needs its own authenticated References decision; Medical, Rights, and publication stay separate.</p></section>';
 }
 
+function reviewTargetIdentity(item) {
+  if (state.targetType === 'neural-notes') {
+    return item?.note?.noteVersionId || item?.note?.id || null;
+  }
+  return item?.question?.questionVersionId || null;
+}
+
+function reviewTargetType() {
+  return state.targetType === 'neural-notes' ? 'neural_note_version' : 'question_version';
+}
+
+function itemRightsReady(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 &&
+    sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+}
+
+function defaultRejectReason() {
+  if (state.selectedKind === 'medical') return 'needs_medical_correction';
+  if (state.selectedKind === 'references') return 'reference_support_insufficient';
+  return 'rights_or_provenance_problem';
+}
+
+function currentReviewItems() {
+  const referencesExperiment =
+    state.selectedKind === 'references' &&
+    state.targetType === 'questions' &&
+    ['claim_first', 'standard'].includes(state.referencesExperimentArm);
+  const experimentItems = referencesExperiment
+    ? filterReferencesWorkflowItems(state.items, state.referencesExperimentArm)
+    : state.items;
+  const focusedItems = state.selectedKind === 'references' && !referencesExperiment
+    ? filterReferencesBySource(experimentItems, state.referencesSourceId)
+    : experimentItems;
+  if (state.selectedKind === 'rights') return focusedItems.filter(itemRightsReady);
+  return focusedItems;
+}
+
+function structuredReviewControls(item) {
+  if (state.selectedKind === 'references' &&
+      ['claim_first', 'standard'].includes(state.referencesExperimentArm)) return '';
+  const targetId = reviewTargetIdentity(item);
+  if (!targetId) return '';
+  const rightsReady = state.selectedKind !== 'rights' || itemRightsReady(item);
+  const checked = state.selectedTargetIds.includes(targetId) ? 'checked' : '';
+  return `<section class="review-section structured-review-controls">
+    <div class="section-heading"><div><span class="eyebrow">ZERO-TYPING REVIEW</span><h3>Decision</h3></div>
+      <label><input type="checkbox" class="review-select" data-target-id="${escape(targetId)}" ${checked}> Select</label>
+    </div>
+    <div class="review-actions">
+      <button class="secondary danger-outline" type="button" data-action="quick-structured-review" data-target-id="${escape(targetId)}" data-decision="rejected" ${state.submitting ? 'disabled' : ''}>Reject</button>
+      <button class="primary" type="button" data-action="quick-structured-review" data-target-id="${escape(targetId)}" data-decision="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve</button>
+    </div>
+    ${!rightsReady ? '<p class="muted">Resolve source rights before approval. Rejection remains available.</p>' : ''}
+    <p class="muted">No text entry required. Clicking a decision confirms you inspected this exact target for the selected gate; the server generates the audit note.</p>
+  </section>`;
+}
+
+function masterReviewPanel() {
+  if (state.loading || state.error ||
+      (state.selectedKind === 'references' &&
+       ['claim_first', 'standard'].includes(state.referencesExperimentArm))) return '';
+  const items = currentReviewItems();
+  const ids = items.map(reviewTargetIdentity).filter(Boolean);
+  if (!ids.length) return '';
+  const selected = state.selectedTargetIds.filter(id => ids.includes(id));
+  return `<section class="panel master-review-panel">
+    <div class="section-heading"><div><span class="eyebrow">MASTER REVIEW</span>
+      <h2>Bulk decision controls</h2></div><span class="badge">${escape(ids.length)} eligible · ${escape(selected.length)} selected</span></div>
+    <p>Bulk actions affect only the current <strong>${escape(gateLabel(state.selectedKind))}</strong> gate and never publish content. Every target still receives its own immutable review receipt.</p>
+    <div class="button-row">
+      <button class="secondary" type="button" data-action="select-all-review">Select all eligible</button>
+      <button class="secondary" type="button" data-action="clear-review-selection">Clear selection</button>
+      <button class="primary" type="button" data-action="master-review-selected" data-decision="approved" ${selected.length ? '' : 'disabled'}>Approve selected</button>
+      <button class="secondary danger-outline" type="button" data-action="master-review-selected" data-decision="rejected" ${selected.length ? '' : 'disabled'}>Reject selected</button>
+    </div>
+    <div class="button-row">
+      <button class="primary" type="button" data-action="master-review-all" data-decision="approved">Super approve all eligible</button>
+      <button class="secondary danger-outline" type="button" data-action="master-review-all" data-decision="rejected">Super reject all eligible</button>
+    </div>
+    <label class="review-attestation"><input id="master-review-attested" type="checkbox"> I inspected the targets I am about to decide and accept one gate-level decision per exact target.</label>
+    <p class="muted">For heterogeneous or large queues, select a reviewed subset instead of using the super action. The batch is atomic: if any target changed or became ineligible, nothing is partially committed.</p>
+  </section>`;
+}
+
 function questionSourcesHaveResolvedRights(item) {
   const sources = Array.isArray(item?.sources) ? item.sources : [];
   return sources.length > 0 && sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
@@ -486,12 +574,13 @@ function reviewItem(item, index) {
   const options = Array.isArray(q.options) ? q.options : [];
   const primary = Array.isArray(q.conceptLinks) ? q.conceptLinks.find(link => link?.role === 'primary') : null;
   const provenance = q.provenance || {};
-  const rightsReady = state.selectedKind !== 'rights' || sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
+  const rightsReady = state.selectedKind !== 'rights' || itemRightsReady(item);
 
   return `<article class="review-card">
     <div class="review-card-heading"><div><span class="eyebrow">TARGET ${index + 1}</span><h2>${escape(q.questionVersionId || 'Unknown version')}</h2></div><span class="badge">${escape(gateLabel(state.selectedKind))}</span></div>
     <section class="review-section"><h3>Question</h3><p class="review-stem">${escape(q.stem || '')}</p><ol class="review-options">${options.map(option => `<li class="${option?.optionId === q.answerOptionId ? 'review-answer' : ''}"><span>${escape(option?.optionId || '')}</span>${escape(option?.text || '')}${option?.optionId === q.answerOptionId ? '<strong>Key</strong>' : ''}</li>`).join('')}</ol></section>
-    ${mediaReviewPanel(item)}\n    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
+    ${mediaReviewPanel(item)}
+    <section class="review-section"><h3>Explanation</h3><p>${escape(q.explanation || '')}</p></section>
     <div class="review-metadata"><div><span>Primary concept</span><strong>${escape(primary?.conceptId || 'Not linked')}</strong></div><div><span>Provenance</span><strong>${escape(provenance.kind || 'unknown')}</strong></div><div><span>Exam/year</span><strong>${escape(provenance.exam || 'N/A')} ${escape(provenance.year ?? '')}</strong></div></div>
     <section class="review-section"><h3>Provenance evidence</h3><p>${escape(provenance.evidence || '')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
@@ -500,18 +589,13 @@ function reviewItem(item, index) {
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
     ${state.selectedKind === 'references' && ['claim_first', 'standard'].includes(state.referencesExperimentArm)
       ? '<p class="muted">Decision controls for this measured arm are consolidated in the atomic batch form below.</p>'
-      : `<form class="review-decision-form" data-question-version-id="${escape(q.questionVersionId || '')}">
-      <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
-    </form>`}
+      : structuredReviewControls(item)}
   </article>`;
 }
 
 function noteReviewItem(item, index) {
   const note = item?.note || {};
   const sources = Array.isArray(item?.sources) ? item.sources : [];
-  const rightsReady = state.selectedKind !== 'rights' ||
-    sources.every(source => ['owned', 'licensed', 'public_domain', 'citation_only'].includes(source?.rights?.status));
   const provenance = note?.provenance || {};
 
   return `<article class="review-card">
@@ -521,10 +605,7 @@ function noteReviewItem(item, index) {
     <section class="review-section"><h3>Provenance</h3><p><strong>${escape(provenance.kind || 'unknown')}</strong></p><p>${escape(provenance.evidence || 'No provenance evidence recorded.')}</p></section>
     <section class="review-section"><div class="section-heading"><h3>Referenced sources</h3><span class="badge">${sources.length}</span></div><div class="source-list">${sources.length ? sources.map(source => sourceCard(source, { allowResolve: state.selectedKind !== 'rights' })).join('') : '<p class="muted">No source package resolved.</p>'}</div></section>
     <section class="review-checklist"><h3>${escape(gateLabel(state.selectedKind))} check</h3>${checklist(state.selectedKind)}</section>
-    <form class="review-decision-form" data-note-version-id="${escape(note.noteVersionId || '')}">
-      <label>Review notes<textarea name="notes" minlength="1" maxlength="4000" required placeholder="Record the evidence for this decision. Avoid learner or patient information."></textarea></label>
-      <div class="review-actions"><button class="secondary danger-outline" type="submit" name="decision" value="rejected" ${state.submitting ? 'disabled' : ''}>Reject version</button><button class="primary" type="submit" name="decision" value="approved" ${state.submitting || !rightsReady ? 'disabled' : ''}>Approve this gate</button></div>${!rightsReady ? '<p class="muted">Resolve every referenced source to owned, licensed, public domain, or citation-only factual grounding before approving the rights gate.</p>' : ''}
-    </form>
+    ${structuredReviewControls(item)}
   </article>`;
 }
 
@@ -562,6 +643,7 @@ function authorized() {
   ${referencesExperimentPanel()}
   ${referencesSourcePanel()}
   ${state.selectedKind === 'references' && state.targetType === 'questions' && state.referencesExperimentArm !== 'standard' && !state.loading && !state.error ? referencesPanel(state.referencesWorkspace, state.referencesError) : ''}
+  ${masterReviewPanel()}
   ${body}
   ${referencesBatchReviewPanel(state.items)}</main>`;
 }
@@ -574,7 +656,7 @@ let queueGeneration = 0;
 async function loadQueue(kind = state.selectedKind) {
   const generation = ++queueGeneration;
   if (!kind) return;
-  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesMeasurementSummary: null, referencesMeasurementError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null };
+  state = { ...state, selectedKind: kind, loading: true, error: null, items: [], referencesWorkspace: null, referencesError: null, referencesMeasurementSummary: null, referencesMeasurementError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [] };
   render();
   try {
     const queuePromise = state.targetType === 'neural-notes'
@@ -666,7 +748,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesMeasurementSummary: null, referencesMeasurementError: null, loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesMeasurementSummary: null, referencesMeasurementError: null, referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
