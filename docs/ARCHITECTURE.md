@@ -285,3 +285,38 @@ The browser owns only ephemeral presentation state such as which question in the
 The displayed countdown uses `serverNow` and the server-scheduled section deadline. It is a display aid; every mutation first passes the server clock/state boundary.
 
 Production and internal-test lanes share the same browser runner and runtime. Eligibility/authorization remains separate server-side, preventing the engineering lane from becoming a parallel simulator implementation.
+
+
+## M09 intelligence-provider boundary
+
+AI execution sits outside the Learning Core's policy and state ownership:
+
+```text
+Digital Twin / Memory / Mistake evidence
+                ↓
+        Study Now / Teaching Policy
+          chooses WHAT to do
+                ↓
+        IntelligenceTask@1
+ semantic capability + explicit input
+ versioned instruction/output contract
+ grounding refs + cost/latency ceilings
+                ↓
+      replaceable IntelligenceProvider
+                ↓
+        IntelligenceResult@1
+ structured output + citation refs
+ provider attribution + usage/errors
+                ↓
+ output validation / evaluation
+                ↓
+         learner presentation
+```
+
+The provider is an execution adapter, not a policy authority. It cannot write canonical learner evidence, update Digital Twin state, choose its own durable learning goal, publish medical content or create a second learner-memory store.
+
+`learning.teaching.render@1` is intentionally narrow: an upstream deterministic or separately governed policy has already selected the teaching/remediation action. The provider may render the bounded response; it does not decide that the learner should receive that intervention.
+
+Grounding is explicit. When a task declares `groundingMode=required`, a successful result must cite at least one supplied reference and may not cite anything outside the supplied set. This is a transport/provenance invariant, not yet proof that individual medical claims are fully supported.
+
+No live provider is selected by M09a. Deterministic core behavior therefore remains unchanged if every AI provider is absent.
