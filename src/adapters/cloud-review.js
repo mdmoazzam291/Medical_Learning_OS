@@ -80,6 +80,28 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
         }
       });
     },
+    recordStructuredBatch({
+      targetType,
+      targetIds,
+      reviewKind,
+      decision,
+      reasonCode,
+      attestationVersion = 'structured-human-review-v1',
+      attested
+    }) {
+      return request('/structured-review-batch', {
+        method: 'POST',
+        body: {
+          targetType,
+          targetIds,
+          reviewKind,
+          decision,
+          reasonCode,
+          attestationVersion,
+          attested
+        }
+      });
+    },
     recordMeasurement({
       reviewId,
       workflowMode,
