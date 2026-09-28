@@ -467,16 +467,14 @@ test('cloud exam cancellation sends revisioned terminal intent without learner o
 
   await cloud.cancelExamRun('run-1', {
     requestId: 'cancel-1',
-    expectedRevision: 7,
-    reason: 'user_abandoned'
+    expectedRevision: 7
   });
 
   assert.match(seen.url, /exam-simulator\/runs\/run-1\/cancel$/);
   assert.equal(seen.method, 'POST');
   assert.deepEqual(seen.body, {
     requestId: 'cancel-1',
-    expectedRevision: 7,
-    reason: 'user_abandoned'
+    expectedRevision: 7
   });
   assert.equal(Object.hasOwn(seen.body, 'learnerId'), false);
   assert.equal(Object.hasOwn(seen.body, 'score'), false);
