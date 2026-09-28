@@ -356,9 +356,7 @@ function reviewAssistPanel(questionVersionId) {
         .map(source => `<div>${sourceLink(source.rightsBasisUrl)}</div>`)
         .join('')
     : '';
-  const draftButton = gate.draftNote
-    ? `<button class="secondary" type="button" data-action="use-review-assist-note" data-question-version-id="${escape(questionVersionId)}">Use as draft note</button>`
-    : '';
+  const draftButton = '';
 
   return `<section class="review-section review-assist">
     <div class="section-heading"><div><span class="eyebrow">REVIEW ASSIST</span><h3>AI/source preflight</h3></div><span class="badge">Non-authoritative</span></div>
@@ -758,6 +756,17 @@ async function bootstrap() {
 }
 
 root.addEventListener('change', event => {
+  const reviewSelect = event.target.closest?.('.review-select');
+  if (reviewSelect) {
+    const targetId = reviewSelect.dataset.targetId;
+    if (!targetId) return;
+    const selected = new Set(state.selectedTargetIds);
+    if (reviewSelect.checked) selected.add(targetId);
+    else selected.delete(targetId);
+    state.selectedTargetIds = [...selected];
+    render();
+    return;
+  }
   if (event.target.id === 'review-kind') {
     state.referencesExperimentArm = 'all';
     state.referencesSourceId = null;
@@ -773,11 +782,94 @@ root.addEventListener('change', event => {
   }
 });
 
+async function submitStructuredReview(targetIds, decision, { requireMasterAttestation = false, label = 'review' } = {}) {
+  const ids = [...new Set((Array.isArray(targetIds) ? targetIds : []).filter(Boolean))];
+  if (!ids.length) {
+    announce('No review targets are selected.');
+    return;
+  }
+  if (!['approved', 'rejected'].includes(decision)) return;
+  if (requireMasterAttestation) {
+    const attested = root.querySelector('#master-review-attested')?.checked === true;
+    if (!attested) {
+      announce('Confirm the master-review inspection attestation first.');
+      return;
+    }
+    const verb = decision === 'approved' ? 'approve' : 'reject';
+    if (!globalThis.confirm(`${verb.toUpperCase()} ${ids.length} target${ids.length === 1 ? '' : 's'} for the current ${gateLabel(state.selectedKind)} gate? This creates immutable review receipts and cannot be undone.`)) {
+      return;
+    }
+  }
+
+  const reasonCode = decision === 'approved' ? 'human_reviewed_no_issue' : defaultRejectReason();
+  state.submitting = label;
+  render();
+  try {
+    const receipt = await review.recordStructuredBatch({
+      targetType: reviewTargetType(),
+      targetIds: ids,
+      reviewKind: state.selectedKind,
+      decision,
+      reasonCode,
+      attested: true
+    });
+    announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${receipt.decisionCount} target${receipt.decisionCount === 1 ? '' : 's'} for ${gateLabel(state.selectedKind)}. Separate immutable receipts were recorded; nothing was published.`);
+    state.selectedTargetIds = [];
+    state.submitting = null;
+    await loadQueue(state.selectedKind);
+  } catch (error) {
+    reportUnexpected(error, 'record_structured_review');
+    state.submitting = null;
+    render();
+    announce(`Review was not recorded: ${error.code || error.message || 'structured_review_write_failed'}. The batch is atomic, so no partial decision was committed.`);
+  }
+}
+
 root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   if (target.dataset.action === 'reload') {
     loadQueue();
+    return;
+  }
+
+  if (target.dataset.action === 'select-all-review') {
+    state.selectedTargetIds = currentReviewItems().map(reviewTargetIdentity).filter(Boolean);
+    render();
+    return;
+  }
+
+  if (target.dataset.action === 'clear-review-selection') {
+    state.selectedTargetIds = [];
+    render();
+    return;
+  }
+
+  if (target.dataset.action === 'quick-structured-review') {
+    const targetId = target.dataset.targetId;
+    const decision = target.dataset.decision;
+    submitStructuredReview([targetId], decision, { label: targetId || 'quick-review' });
+    return;
+  }
+
+  if (target.dataset.action === 'master-review-selected') {
+    const decision = target.dataset.decision;
+    const eligibleIds = new Set(currentReviewItems().map(reviewTargetIdentity).filter(Boolean));
+    const selected = state.selectedTargetIds.filter(id => eligibleIds.has(id));
+    submitStructuredReview(selected, decision, {
+      requireMasterAttestation: true,
+      label: 'master-selected-review'
+    });
+    return;
+  }
+
+  if (target.dataset.action === 'master-review-all') {
+    const decision = target.dataset.decision;
+    const ids = currentReviewItems().map(reviewTargetIdentity).filter(Boolean);
+    submitStructuredReview(ids, decision, {
+      requireMasterAttestation: true,
+      label: 'master-all-review'
+    });
     return;
   }
 
@@ -798,22 +890,6 @@ root.addEventListener('click', event => {
     return;
   }
 
-  if (target.dataset.action === 'use-review-assist-note') {
-    const questionVersionId = target.dataset.questionVersionId;
-    const gate = assistQuestion(questionVersionId)?.[state.selectedKind];
-    const form = [...root.querySelectorAll('.review-decision-form')]
-      .find(candidate => candidate.dataset.questionVersionId === questionVersionId);
-    const textarea = form?.querySelector('textarea[name="notes"]');
-    if (!textarea || !gate?.draftNote) return;
-    if (textarea.value.trim()) {
-      announce('Review notes already contain text. Clear them before applying the preflight draft.');
-      return;
-    }
-    textarea.value = gate.draftNote;
-    textarea.focus();
-    announce('Preflight draft copied into review notes. Edit it after your independent review, then submit your own decision.');
-    return;
-  }
 
   if (target.dataset.action === 'use-rights-assist-evidence') {
     const sourceId = target.dataset.sourceId;
@@ -898,12 +974,13 @@ root.addEventListener('submit', event => {
     event.preventDefault();
     const data = new FormData(fullReviewForm);
     const questionVersionId = fullReviewForm.dataset.questionVersionId;
-    const medicalNotes = String(data.get('medicalNotes') || '').trim();
-    const referencesNotes = String(data.get('referencesNotes') || '').trim();
-    const rightsNotes = String(data.get('rightsNotes') || '').trim();
+    const assist = assistQuestion(questionVersionId);
+    const medicalNotes = assist?.medical?.draftNote || '';
+    const referencesNotes = assist?.references?.draftNote || '';
+    const rightsNotes = assist?.rights?.draftNote || '';
     const attested = data.get('attested') === 'on';
     if (!questionVersionId || !medicalNotes || !referencesNotes || !rightsNotes || !attested) {
-      announce('All three review notes and the independent-review attestation are required.');
+      announce('The three-gate review packet and independent-review attestation are required.');
       return;
     }
 
@@ -925,7 +1002,7 @@ root.addEventListener('submit', event => {
         reportUnexpected(error, 'record_full_question_review');
         state.submitting = null;
         setFormBusy(fullReviewForm, false);
-        announce(`Full review was not recorded: ${error.code || error.message || 'review_write_failed'}. Your notes have been preserved.`);
+        announce(`Full review was not recorded: ${error.code || error.message || 'review_write_failed'}.`);
       }
     })();
     return;
@@ -958,58 +1035,8 @@ root.addEventListener('submit', event => {
     return;
   }
 
-  const form = event.target.closest('.review-decision-form');
-  if (!form) return;
-  event.preventDefault();
-  const submitter = event.submitter;
-  const decision = submitter?.value;
-  if (!['approved', 'rejected'].includes(decision)) return;
+  // Normal question/note decisions use the structured zero-typing click path above.
 
-  const data = new FormData(form);
-  const notes = String(data.get('notes') || '').trim();
-  const questionVersionId = form.dataset.questionVersionId;
-  const noteVersionId = form.dataset.noteVersionId;
-  const targetId = noteVersionId || questionVersionId;
-  if (!notes || !targetId) { announce('Review notes are required.'); return; }
-  const workflowMeasurement = noteVersionId ? null : reviewMeasurementForQuestion(questionVersionId);
-
-  (async () => {
-    state.submitting = targetId;
-    setFormBusy(form, true);
-    try {
-      const receipt = noteVersionId
-        ? await review.recordNote({
-            noteVersionId,
-            reviewKind: state.selectedKind,
-            decision,
-            notes
-          })
-        : await review.record({
-            questionVersionId,
-            reviewKind: state.selectedKind,
-            decision,
-            notes
-          });
-      if (workflowMeasurement) {
-        try {
-          await review.recordMeasurement({
-            reviewId: receipt.reviewId,
-            ...workflowMeasurement
-          });
-        } catch (measurementError) {
-          reportUnexpected(measurementError, 'record_review_workflow_measurement');
-        }
-      }
-      announce(`${decision === 'approved' ? 'Approved' : 'Rejected'} ${targetId} for ${gateLabel(state.selectedKind)}. Review receipt ${receipt.reviewId} recorded.`);
-      state.submitting = null;
-      await loadQueue(state.selectedKind);
-    } catch (error) {
-      reportUnexpected(error, 'record_review');
-      state.submitting = null;
-      setFormBusy(form, false);
-      announce(`Review was not recorded: ${error.code || error.message || 'review_write_failed'}. Your review notes have been preserved; retry when the connection is stable.`);
-    }
-  })();
 });
 
 render();
