@@ -16,7 +16,8 @@ test('NeuralVault page is authenticated and concept-centered', () => {
 test('canonical content and personal annotations are rendered as separate layers', () => {
   assert.match(source, /CANONICAL NOTE/);
   assert.match(source, /PERSONAL ANNOTATIONS/);
-  assert.match(source, /Your layer stays yours/);
+  assert.match(source, /Private overlay\. Canonical stays canonical/);
+  assert.match(source, /Your general notes stay yours/);
   assert.match(source, /canonical-updated|anchorNoteVersionId/);
 });
 
