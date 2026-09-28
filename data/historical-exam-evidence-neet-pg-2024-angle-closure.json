@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "historicalItemId": "neet-pg:2024:recall:acute-angle-closure@1",
+  "evidenceEventId": "206959d0-be1f-4dd5-9641-cc928f307a96",
+  "examOccurrence": {
+    "examOccurrenceId": "neet-pg:2024",
+    "examId": "neet-pg",
+    "session": "2024",
+    "label": "NEET-PG 2024",
+    "officialAuthority": "National Board of Examinations in Medical Sciences (NBEMS)",
+    "officialOccurrenceSource": "https://natboard.edu.in/viewNotice.php?NBE=NVBabElEQnVCQmJCckZ3TldzU05Kdz09",
+    "examDate": "2024-08-11",
+    "occurrenceNote": "Official NBEMS revised schedule states NEET-PG 2024 was conducted on 11 August 2024 in two shifts. This manifest does not claim an exact shift for the recalled item."
+  },
+  "reconstruction": {
+    "wordingMode": "nonverbatim_summary_only",
+    "officialItemWordingStored": false,
+    "summary": "A recalled ophthalmology item described acute eye pain and visual difficulty after time in a dark environment and tested recognition plus emergency pressure-lowering management of acute angle-closure glaucoma.",
+    "conceptIds": [
+      "ophthal:glaucoma:angle-closure-emergency",
+      "ophthal:glaucoma:treatment-modalities"
+    ]
+  },
+  "evidence": {
+    "basis": "single_recall",
+    "sourceLineageStatus": "unknown",
+    "recallSources": [
+      {
+        "publisher": "Oncourse AI",
+        "url": "https://www.getoncourse.ai/questions/indian-medical-pg/previous-year-papers/neet-pg/2024/ophthalmology/",
+        "accessedAt": "2026-09-29"
+      },
+      {
+        "publisher": "Scribd recall compilation",
+        "url": "https://www.scribd.com/document/1025546421/NEET-PG-2024-Ophthal-Session-2",
+        "accessedAt": "2026-09-29"
+      },
+      {
+        "publisher": "Adda247 recall paper",
+        "url": "https://www.adda247.com/jobs/wp-content/uploads/sites/2/2024/08/04012631/NEET-PG-Question-Paper-2024-Shift-1-converted.pdf",
+        "accessedAt": "2026-09-29"
+      }
+    ],
+    "medicalVerificationSources": [
+      {
+        "authority": "American Academy of Ophthalmology",
+        "title": "Primary Angle-Closure Disease Preferred Practice Pattern",
+        "url": "https://www.aaojournal.org/article/S0161-6420%2820%2931023-X/abstract",
+        "version": "2020"
+      }
+    ],
+    "limitations": [
+      "Public recall sources may share upstream recall lineage.",
+      "The evidence is therefore classified as single_recall, not corroborated_recall.",
+      "Exact recalled wording, options, image and answer key are not stored.",
+      "Exact shift attribution is not claimed.",
+      "Historical evidence is descriptive and does not imply future exam probability."
+    ]
+  },
+  "stoppingRule": {
+    "baselinePurpose": "Unblock the next Medical Learning OS implementation steps with genuine multi-exam, multi-year historical evidence.",
+    "baselineReached": true,
+    "currentHistoricalItems": 2,
+    "currentExamOccurrencesWithHistoricalEvidence": 2,
+    "examsRepresented": [
+      "ini-cet",
+      "neet-pg"
+    ],
+    "yearsRepresented": [
+      2023,
+      2024
+    ],
+    "furtherBulkIngestionRequiredNow": false,
+    "resumeWhen": "A downstream Exam DNA analysis, validation experiment, or learner-facing exam-priority policy requires additional historical breadth."
+  }
+}
