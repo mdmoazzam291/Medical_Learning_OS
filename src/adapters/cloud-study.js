@@ -111,6 +111,34 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
         body: { conceptId, bodyMarkdown, anchorNoteVersionId }
       });
     },
+    createVaultCorrection({ conceptId, targetType, targetId, bodyMarkdown }) {
+      return request('/vault/corrections', {
+        method: 'POST',
+        body: { conceptId, targetType, targetId, bodyMarkdown }
+      });
+    },
+    reportContentIssue({
+      conceptId,
+      targetType,
+      targetId,
+      reportKind,
+      details = null,
+      correctionAnnotationId = null,
+      shareCorrection = false
+    }) {
+      return request('/content-reports', {
+        method: 'POST',
+        body: {
+          conceptId,
+          targetType,
+          targetId,
+          reportKind,
+          details,
+          correctionAnnotationId,
+          shareCorrection
+        }
+      });
+    },
     updateVaultAnnotation(annotationId, expectedRevision, bodyMarkdown) {
       return request(`/vault/annotations/${encodeURIComponent(annotationId)}`, {
         method: 'PATCH',
