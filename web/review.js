@@ -21,6 +21,8 @@ let state = {
   items: [],
   pipelineStatus: null,
   reviewAssist: null,
+  learnerReportGroups: [],
+  learnerReportError: null,
   referencesWorkspace: null,
   referencesSourceId: null,
   referencesError: null,
@@ -647,6 +649,7 @@ function authorized() {
 
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
   ${pipelinePanel()}
+  ${learnerReportPanel()}
   <section class="panel reviewer-boundary"><div><h2>Review authority</h2><p>Approval here advances only this review gate. Three approvals produce <strong>verified</strong>, not published. Publication is a separate server-only transition.</p></div><div><label>Review target<select id="review-target"><option value="questions" ${state.targetType === 'questions' ? 'selected' : ''}>Questions</option><option value="neural-notes" ${state.targetType === 'neural-notes' ? 'selected' : ''}>NeuralVault canonical notes</option></select></label><label>Review gate<select id="review-kind">${kinds.map(kind => `<option value="${escape(kind)}" ${kind === state.selectedKind ? 'selected' : ''}>${escape(gateLabel(kind))}</option>`).join('')}</select></label></div></section>
   ${rightsSourceBacklogPanel()}
   ${referencesExperimentPanel()}
@@ -680,10 +683,17 @@ async function loadQueue(kind = state.selectedKind) {
           .then(response => response.ok ? response.json() : null)
           .catch(() => state.reviewAssist)
       : Promise.resolve(state.reviewAssist);
-    const [result, pipelineStatus, reviewAssist] = await Promise.all([
+    const learnerReportsPromise = review.learnerReports()
+      .then(result => ({ result, error: null }))
+      .catch(error => {
+        reportUnexpected(error, 'load_learner_report_triage');
+        return { result: null, error: error.code || error.message || 'learner_report_queue_unavailable' };
+      });
+    const [result, pipelineStatus, reviewAssist, learnerReportsState] = await Promise.all([
       queuePromise,
       pipelinePromise,
-      assistPromise
+      assistPromise,
+      learnerReportsPromise
     ]);
     let referencesWorkspace = null;
     let referencesError = null;
@@ -730,6 +740,10 @@ async function loadQueue(kind = state.selectedKind) {
       items,
       pipelineStatus,
       reviewAssist,
+      learnerReportGroups: Array.isArray(learnerReportsState.result?.groups)
+        ? learnerReportsState.result.groups
+        : [],
+      learnerReportError: learnerReportsState.error,
       error: null
     };
   } catch (error) {
@@ -755,7 +769,7 @@ async function bootstrap() {
   } catch (error) {
     if (error.status === 401) {
       auth.clear();
-      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
+      state = { user: null, grants: [], selectedKind: null, targetType: 'questions', items: [], pipelineStatus: null, reviewAssist: null, learnerReportGroups: [], learnerReportError: null, referencesWorkspace: null, referencesError: null, referencesExperimentArm: 'all', referencesBatchMeasurementSummary: null, referencesBatchMeasurementError: null, selectedTargetIds: [], loading: false, submitting: null, error: null };
     } else {
       reportUnexpected(error, 'load_reviewer_identity');
       state = { ...state, loading: false, error: error.code || error.message || 'review_authz_unavailable' };
