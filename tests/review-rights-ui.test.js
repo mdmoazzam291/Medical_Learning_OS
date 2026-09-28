@@ -137,9 +137,19 @@ test('rights question cards wait for source resolution without hiding restricted
   assert.match(source, /function questionSourcesHaveResolvedRights\(item\)/);
   assert.match(source, /source\?\.rights\?\.status \|\| 'unknown'/);
   assert.match(source, /!== 'unknown'/);
-  assert.match(source, /experimentItems\.filter\(questionSourcesHaveResolvedRights\)/);
+  assert.match(source, /focusedItems\.filter\(questionSourcesHaveResolvedRights\)/);
   assert.match(source, /hidden until every referenced source has a recorded rights status/);
   assert.match(source, /Source resolution does not approve any question/);
   assert.doesNotMatch(source, /source\?\.rights\?\.status === 'restricted'.*return false/s);
 });
 
+test('References source focus narrows questions and notes without recording a shared decision', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function referencesSourcePanel\(\)/);
+  assert.match(source, /SOURCE-FOCUSED REFERENCES/);
+  assert.match(source, /filterReferencesBySource\(experimentItems, state\.referencesSourceId\)/);
+  assert.match(source, /state\.referencesExperimentArm !== 'all'/);
+  assert.match(source, /Shared inspection is not shared approval/);
+  assert.match(source, /data-action="references-source-focus"/);
+  assert.doesNotMatch(source, /references-source-focus[\s\S]{0,300}review\.record\(/);
+});
