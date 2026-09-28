@@ -130,3 +130,15 @@ test('rights review compresses repeated source work into a source-first unique b
   assert.match(source, /allowResolve: state\.selectedKind !== 'rights'/);
   assert.match(source, /rightsSourceBacklogPanel\(\)/);
 });
+
+
+test('rights question cards wait for source resolution without hiding restricted-source rejection targets', async () => {
+  const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
+  assert.match(source, /function questionSourcesHaveResolvedRights\(item\)/);
+  assert.match(source, /source\?\.rights\?\.status \|\| 'unknown'/);
+  assert.match(source, /!== 'unknown'/);
+  assert.match(source, /state\.items\.filter\(questionSourcesHaveResolvedRights\)/);
+  assert.match(source, /question decisions? hidden until every referenced source has a recorded rights status/);
+  assert.match(source, /Source resolution does not approve any question/);
+  assert.doesNotMatch(source, /source\?\.rights\?\.status === 'restricted'.*return false/s);
+});
