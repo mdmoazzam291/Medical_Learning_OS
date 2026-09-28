@@ -251,9 +251,9 @@ try {
 
     await page.goto(origin + '/web/exam.html');
     await page.getByRole('heading', { name:'Rule-faithful, locked-section simulation.' }).waitFor();
+    await page.getByRole('heading', { name:'6 / 180 questions ready' }).waitFor();
+    await page.getByRole('heading', { name:'180 / 180 questions ready' }).waitFor();
     await noHorizontalOverflow(page, name + ' home');
-    assert.match(await page.locator('body').innerText(), /6 \/ 180 questions ready/);
-    assert.match(await page.locator('body').innerText(), /180 \/ 180 questions ready/);
 
     page.once('dialog', dialog => dialog.accept());
     await page.getByRole('button', { name:/Start internal test mock/ }).click();
