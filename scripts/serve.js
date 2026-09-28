@@ -15,6 +15,8 @@ const allowed = new Set([
   'web/account.js',
   'web/medical.html',
   'web/medical.js',
+  'web/exam.html',
+  'web/exam.js',
   'web/vault.html',
   'web/vault.js',
   'web/review.html',

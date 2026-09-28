@@ -319,6 +319,7 @@ async function bootstrap() {
       state.loading = false;
       setRun(current);
       render();
+      if (current.status === 'completed') await loadAutopsy();
       return;
     }
     await loadReadiness();

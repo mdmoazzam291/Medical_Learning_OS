@@ -84,3 +84,8 @@ test('Exam Mode has a dedicated responsive shell', () => {
   assert.match(css, /@media\(max-width:650px\).*\.exam-palette-grid\{grid-template-columns:repeat\(6,1fr\)/s);
 });
 
+
+
+test('completed run resume actively loads GT Autopsy instead of hanging on loading state', () => {
+  assert.match(source, /if \(current\.status === 'completed'\) await loadAutopsy\(\)/);
+});
