@@ -148,3 +148,53 @@ test('signup confirmation redirect rejects insecure non-local HTTP origins', asy
     error => error instanceof AuthError && error.code === 'invalid_redirect_url'
   );
 });
+
+
+test('Google OAuth authorize URL is provider-scoped and binds a safe return URL', () => {
+  const auth = createSupabaseAuth({
+    projectUrl,
+    publishableKey,
+    storage: memoryStorage(),
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  const href = auth.oauthAuthorizeUrl('google', {
+    redirectTo: 'https://preview.example.com/web/account.html'
+  });
+  const url = new URL(href);
+  assert.equal(url.origin, projectUrl);
+  assert.equal(url.pathname, '/auth/v1/authorize');
+  assert.equal(url.searchParams.get('provider'), 'google');
+  assert.equal(url.searchParams.get('redirect_to'), 'https://preview.example.com/web/account.html');
+  assert.equal(url.searchParams.has('client_secret'), false);
+  assert.equal(url.searchParams.has('access_token'), false);
+});
+
+test('Google OAuth allows localhost return but rejects insecure remote redirect', () => {
+  const auth = createSupabaseAuth({
+    projectUrl,
+    publishableKey,
+    storage: memoryStorage(),
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  assert.match(
+    auth.oauthAuthorizeUrl('google', { redirectTo: 'http://127.0.0.1:3000/web/account.html' }),
+    /provider=google/
+  );
+  assert.throws(
+    () => auth.oauthAuthorizeUrl('google', { redirectTo: 'http://preview.example.com/web/account.html' }),
+    error => error instanceof AuthError && error.code === 'invalid_redirect_url'
+  );
+});
+
+test('OAuth adapter rejects unapproved providers instead of becoming an open provider launcher', () => {
+  const auth = createSupabaseAuth({
+    projectUrl,
+    publishableKey,
+    storage: memoryStorage(),
+    fetchFn: async () => { throw new Error('network should not be reached'); }
+  });
+  assert.throws(
+    () => auth.oauthAuthorizeUrl('github', { redirectTo: 'https://preview.example.com/web/account.html' }),
+    error => error instanceof AuthError && error.code === 'unsupported_oauth_provider'
+  );
+});
