@@ -923,7 +923,7 @@ Decision:
 
 This keeps the multimodal loop aligned with the system rule: interaction → evidence → validated inference → policy, never interaction → invented mastery.
 
-## ADR-061 — Human semantic review is bound to the exact provider output (accepted, 2026-09-28)
+## ADR-062 — Human semantic review is bound to the exact provider output (accepted, 2026-09-28)
 
 A reviewer must never approve a movable label such as a provider run ID while the actual teaching output can change underneath it.
 
