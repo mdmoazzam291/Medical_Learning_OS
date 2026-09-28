@@ -226,6 +226,11 @@ function rightsSourceBacklogPanel() {
   return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">SOURCE-FIRST RIGHTS</span><h2>Resolve unique sources before repeated question review</h2></div><span class="badge">${escape(unresolved.length)} unresolved source${unresolved.length === 1 ? '' : 's'}</span></div><p>${escape(impactedQuestions.size)} pending question${impactedQuestions.size === 1 ? '' : 's'} depend on these sources. Resolve each source once; question-level Rights & provenance approval still remains separate.</p><div class="source-list">${unresolved.map(entry => sourceCard(entry.source, { allowResolve: true, impactCount: entry.questionIds.size })).join('')}</div></section>`;
 }
 
+function questionSourcesHaveResolvedRights(item) {
+  const sources = Array.isArray(item?.sources) ? item.sources : [];
+  return sources.length > 0 && sources.every(source => (source?.rights?.status || 'unknown') !== 'unknown');
+}
+
 function reviewItem(item, index) {
   const q = item?.question || {};
   const sources = Array.isArray(item?.sources) ? item.sources : [];
@@ -273,13 +278,20 @@ function noteReviewItem(item, index) {
 
 function authorized() {
   const kinds = state.grants;
+  const rightsSourceFirst = state.selectedKind === 'rights' && state.targetType === 'questions';
+  const visibleItems = rightsSourceFirst
+    ? state.items.filter(questionSourcesHaveResolvedRights)
+    : state.items;
+  const blockedByUnknownRights = rightsSourceFirst ? state.items.length - visibleItems.length : 0;
   const body = state.loading
     ? '<section class="panel"><p>Loading authorized review targets…</p></section>'
     : state.error
       ? `<section class="panel"><h2>Review queue unavailable</h2><p>${escape(state.error)}</p><button class="secondary" data-action="reload">Retry</button></section>`
-      : state.items.length
-        ? `<div class="review-list">${state.items.map(state.targetType === 'neural-notes' ? noteReviewItem : reviewItem).join('')}</div>`
-        : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
+      : visibleItems.length
+        ? `${blockedByUnknownRights ? `<section class="panel"><p><strong>${escape(blockedByUnknownRights)}</strong> question decision${blockedByUnknownRights === 1 ? '' : 's'} hidden until every referenced source has a recorded rights status.</p></section>` : ''}<div class="review-list">${visibleItems.map(state.targetType === 'neural-notes' ? noteReviewItem : reviewItem).join('')}</div>`
+        : state.items.length && rightsSourceFirst
+          ? `<section class="panel empty"><h2>Resolve source rights first.</h2><p>${escape(blockedByUnknownRights)} question decision${blockedByUnknownRights === 1 ? '' : 's'} are intentionally hidden until their referenced sources have a recorded rights status. Source resolution does not approve any question.</p></section>`
+          : '<section class="panel empty"><h2>No pending targets for this gate.</h2><p>Nothing is auto-approved. New content appears here only after it enters the in-review state.</p></section>';
 
   return `<main id="main" class="review-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED CONTENT REVIEW</span><h1>Review one immutable version at a time.</h1><p>${escape(state.user?.email || 'Authenticated reviewer')} · decisions are timestamped and bound to the exact content/source target.</p></div><span class="badge">M04c</span></div>
   ${pipelinePanel()}
