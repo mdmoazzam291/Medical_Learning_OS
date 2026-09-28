@@ -1,5 +1,14 @@
 name: Foundation checks
-on: [push, pull_request, workflow_dispatch]
+# Validate PRs once; validate main again after merge. Feature-branch pushes
+# are covered by pull_request, avoiding a duplicate pair of runner jobs.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: foundation-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
