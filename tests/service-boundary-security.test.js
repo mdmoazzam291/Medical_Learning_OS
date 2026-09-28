@@ -33,5 +33,6 @@ test('weekly backup fails closed on privilege drift before creating dumps', () =
   const auditStep=workflow.indexOf('Verify live service-only privilege boundaries');
   const dumpStep=workflow.indexOf('Create Supabase logical dump set');
   assert.ok(auditStep >= 0 && dumpStep > auditStep);
+  assert.match(workflow,/postgresql-client/);
   assert.match(workflow,/psql "\$SUPABASE_DB_URL" --no-psqlrc --file supabase\/verification\/service-boundary-audit\.sql/);
 });
