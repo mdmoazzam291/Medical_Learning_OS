@@ -14,7 +14,7 @@ The release standard is evidence, not configuration presence. A backup workflow 
 | Recoverability | Run 36449290932 automatically selected latest backup `supabase/2026/09/27/20260927T004033Z`, verified freshness/source/checksums, restored into disposable Supabase and matched four core RLS-protected study tables exactly | proven foundation | monthly latest-backup drill must remain green |
 | Study API transport | Deployed unauthenticated/CORS smoke has passed; multiple hosted feature-specific smokes exist | partial | consolidate current critical route health into release evidence |
 | Browser preview monitoring | Sentry browser ingestion and application-side scrubbing were verified; localhost/CI loader contamination was corrected | proven foundation | add operational alert verification, then edge-runtime monitoring |
-| Database security | Current Supabase advisor has no high-severity database finding. Service-only RLS/no-policy tables remain intentional where client grants are revoked | partial | resolve Auth leaked-password-protection warning and periodically prove grants/RLS boundaries |
+| Database security | Live privilege audit proves 25 RLS/no-policy tables have no anon/authenticated DML grants; 68 SECURITY DEFINER functions exist and 0 public functions are browser-executable. Weekly backup now fails closed on privilege drift | proven foundation | resolve Auth leaked-password-protection warning and continue weekly boundary proof |
 | Database performance | Advisor currently reports informational unindexed foreign keys and unused indexes | observe | index only measured hot paths; do not add indexes merely to silence informational lints |
 | Deployment health | Render preview has been used for real Auth/browser verification | partial | re-audit current service/deploy/latency once an explicit Render workspace is selected |
 | Capacity | Functional full-exam and browser acceptance exist | unproven scale | establish bounded concurrency/load targets before production beta |
@@ -33,6 +33,19 @@ The release standard is evidence, not configuration presence. A backup workflow 
 ## Cost discipline
 
 The full disposable restore is intentionally monthly because it consumes substantially more GitHub Actions time than the weekly backup. Weekly backup verification remains lightweight. Increase restore frequency only when production risk or recovery-point objectives justify the additional compute.
+
+## Service-boundary invariant
+
+The production browser does not call Postgres RPC functions directly. Trusted mutations/read projections pass through authenticated Edge Functions using server-only privileges. Therefore the current database contract is intentionally strict:
+
+- any `public` table with RLS enabled but zero policies must expose no SELECT/INSERT/UPDATE/DELETE privilege to `anon` or `authenticated`;
+- no function in the `public` schema may be executable by `anon` or `authenticated`;
+- `SECURITY DEFINER` functions remain backend-only;
+- the weekly backup workflow runs `supabase/verification/service-boundary-audit.sql` before creating a dump and fails closed if either boundary drifts.
+
+Live proof on 2026-09-28: 25 service-only RLS tables, 68 `SECURITY DEFINER` functions, 0 browser-executable public functions.
+
+A small drift was found during this audit: `block_content_review_measurement_mutation()`, a trigger-only guard, still inherited default browser EXECUTE. Direct use was not part of the application path, but the grant violated the intended boundary and was revoked in migration `20260928164037_m14_revoke_trigger_function_browser_execute.sql`.
 
 ## Security notes
 
