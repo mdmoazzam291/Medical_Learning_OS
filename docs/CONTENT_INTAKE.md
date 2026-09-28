@@ -25,6 +25,8 @@ Accepted candidate questions must be:
 
 Recalled/licensed PYQ claims are excluded. Those belong in the immutable exam-occurrence/PYQ evidence subsystem.
 
+Historical recall evidence is not forced into `study_catalog` merely to satisfy Exam DNA. A recalled historical item may instead be stored as an immutable, nonverbatim reconstructed-item evidence event linked directly to existing canonical concepts and a verified exam occurrence. This keeps current learner questions and historical exam evidence temporally separate. Exact licensed items remain a distinct evidence class and require their lawful exact-item/question-version path.
+
 ## Batch contract
 
 A manifest has exactly four top-level fields:
