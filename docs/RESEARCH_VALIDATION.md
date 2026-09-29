@@ -90,3 +90,24 @@ Before any protocol-governed assignment, `retention-probe-feasibility-v1` fixes:
 - immediate pause on content-safety, identity/pair-binding or opt-out violations.
 
 This protocol does not activate scheduling. Pair novelty/comparability validation (M11c), an opt-in path and a separate activation decision remain required.
+
+
+## M11c: validated pair metadata and descriptive transfer
+
+Same-concept different-item attempts are no longer eligible to become validated transfer evidence merely because their concept IDs match.
+
+The M11c contract binds an exact published question-version pair to:
+
+- both current Medical target SHA-256 values;
+- surface novelty;
+- primary-construct alignment;
+- reasoning alignment;
+- difficulty comparability;
+- cue-overlap risk;
+- a human validation decision.
+
+Transfer validity and retention-probe comparability are intentionally separate. A pair can be sufficiently novel and aligned to support descriptive transfer evidence while still having uncertain or materially different difficulty and therefore remain unsuitable for the preregistered retention probe.
+
+`study_validated_transfer_observations_v1()` only consumes current hash-bound validated pairs. It reports prior target exposure and intervening same-concept attempts explicitly. “Clean observed transfer” means neither was observed on-platform; it does not prove absence of outside-platform exposure.
+
+This endpoint remains service-only, read-only, non-causal and non-authoritative for mastery, forgetting, Study Now or scheduling. Production currently has zero persisted pair validations, so no existing transfer candidate has been promoted by this infrastructure change.
