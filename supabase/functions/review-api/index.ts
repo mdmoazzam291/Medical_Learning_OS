@@ -336,11 +336,13 @@ Deno.serve(async (req: Request) => {
       const [
         { data: readiness, error: readinessError },
         { data: activationReadiness, error: activationReadinessError },
+        { data: feasibilityReport, error: feasibilityReportError },
         { data: catalog, error: catalogError },
         { data: validations, error: validationsError }
       ] = await Promise.all([
         admin.rpc("study_retention_probe_readiness_v1"),
         admin.rpc("study_retention_probe_activation_readiness_v1"),
+        admin.rpc("study_retention_probe_feasibility_report_v1"),
         trustedRead("transfer_pair_catalog", async () =>
           admin.from("study_catalog").select("body").eq("id", 1).single()
         ),
@@ -353,6 +355,7 @@ Deno.serve(async (req: Request) => {
 
       if (readinessError) fail(500, "transfer_pair_readiness_unavailable");
       if (activationReadinessError) fail(500, "retention_probe_activation_readiness_unavailable");
+      if (feasibilityReportError) fail(500, "retention_probe_feasibility_report_unavailable");
       if (catalogError || !catalog) fail(500, "review_catalog_unavailable");
       if (validationsError) fail(500, "transfer_pair_validation_history_unavailable");
 
@@ -489,6 +492,7 @@ Deno.serve(async (req: Request) => {
           pendingHumanPairReviews,
           activationReadiness: activation,
           schedulerReadiness,
+          feasibilityReport,
           nextAction,
           activationControlAvailable:
             authorizationState?.canAuthorize === true || authorizationState?.canRevoke === true,
