@@ -1158,3 +1158,21 @@ This preserves the quality flywheel:
 learner detects possible issue → exact-version report → grouped reviewer inspection → durable triage evidence → new canonical version if warranted → normal review gates → improved shared content.
 
 Popularity may prioritize attention; it never establishes correctness.
+
+
+## ADR-076 — Transfer validity is exact-pair evidence, not a concept-ID shortcut (accepted, 2026-09-29)
+
+A different question on the same canonical concept is useful as a transfer candidate, but concept identity alone cannot establish novelty, comparable reasoning demand or suitability as a delayed retention probe.
+
+Decision:
+- persist transfer-pair judgments as immutable evidence bound to two distinct exact question versions and both current Medical target SHA-256 values;
+- stale the practical validity of a pair automatically if either medical target hash changes rather than carrying the judgment to revised content;
+- require same primary construct plus at least moderate surface novelty, non-material reasoning divergence and no high cue-overlap risk before a human `validated` decision can produce descriptive transfer-valid metadata;
+- keep **transfer evidence validity** separate from the stricter **retention-probe comparability** decision, which additionally requires difficulty to be comparable or only boundedly different;
+- bootstrap pair-validation authority from a human who currently holds all three Medical, References and Rights reviewer grants, while forbidding author self-validation; introduce a dedicated research-validator role only if real workflow pressure later justifies it;
+- derive validated transfer observations from the existing attempt ledger; do not create another learner-history store;
+- call an observed transfer “clean” only when the target had no prior platform attempt and no same-concept platform attempt intervened; preserve outside-platform exposure as unresolved uncertainty;
+- keep pair validation, transfer observations and readiness service-only and non-authoritative for Study Now, scheduling, mastery, forgetting or causal claims;
+- do not persist a synthetic pair decision merely to turn readiness green.
+
+This makes M11c a research-validity seam rather than another mastery engine and lets future item revisions fail closed.

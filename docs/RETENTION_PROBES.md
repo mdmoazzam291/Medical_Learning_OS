@@ -7,7 +7,8 @@ Retention probes exist to measure whether learning survives delay and generalize
 M11b now has two completed foundations:
 
 - **M11b0 structural readiness** — `study_retention_probe_readiness_v1()`;
-- **M11b1 protocol preregistration** — immutable `retention-probe-feasibility-v1` plus `study_retention_probe_activation_readiness_v1()`.
+- **M11b1 protocol preregistration** — immutable `retention-probe-feasibility-v1` plus `study_retention_probe_activation_readiness_v1()`;
+- **M11c pair-validity substrate** — immutable exact-version pair validation plus service-only validated-transfer observations.
 
 There is still **no probe scheduler** and no activation authority.
 
@@ -94,6 +95,36 @@ with:
 
 The alternate passed normal Medical, References and Rights review before separate publication.
 
+## M11c pair validity
+
+M11c adds a separate validity layer before a same-concept alternate can count as validated transfer evidence or as a retention-probe comparator.
+
+`study_transfer_pair_validations` stores one immutable decision for an exact pair of question versions and binds both sides to their current Medical review-target SHA-256. If either exact medical target changes, the validation becomes stale automatically rather than silently transferring to new content.
+
+The validation contract records:
+
+- surface novelty;
+- primary-construct alignment;
+- reasoning alignment;
+- difficulty comparability;
+- cue-overlap risk;
+- whether the pair is valid for descriptive transfer evidence;
+- separately, whether it is comparable enough for the stricter retention-probe use.
+
+A `validated` transfer pair must target the same primary construct, have at least moderate surface novelty, avoid materially different reasoning, and avoid high cue-overlap risk. Retention-probe comparability additionally requires difficulty to be judged comparable or only boundedly different.
+
+The bootstrap validator must hold current Medical, References and Rights reviewer grants and cannot validate a question they authored. This reuses existing human authority without inventing a permanent research-role system before one is needed.
+
+`study_validated_transfer_observations_v1(learner)` remains read-only and descriptive. A follow-up is marked clean only when the target item had no prior learner attempt and no same-concept question occurred between origin and target. Outside-platform exposure can still be unobserved.
+
+Current live pair-validation state:
+
+- total pair validations: **0**;
+- validated transfer pairs: **0**;
+- validated retention-probe-comparable pairs: **0**.
+
+No human pair judgment has been fabricated.
+
 ## Activation state
 
 `study_retention_probe_activation_readiness_v1()` currently returns:
@@ -124,6 +155,6 @@ This is intentional. Preregistration removes ambiguity; it does not grant permis
 
 ## Next transition
 
-The next research step is **M11c**: define and validate pair-level novelty/comparability metadata for published alternate items.
+The next research step is one **authorized human M11c pair validation** of the published anaphylaxis alternate pair.
 
-Only after M11c and an explicit learner opt-in path exist should a separately authorized activation slice be considered.
+Even if that validation makes pair metadata available, probe activation must remain false until an explicit learner opt-in path exists and a separate activation decision is authorized.
