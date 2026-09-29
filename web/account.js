@@ -10,7 +10,7 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
-let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, isAdmin: false, isAdmin: false, reviewKinds: [], error: null };
+let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, isAdmin: false, reviewKinds: [], error: null };
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function reportUnexpected(error, operation) {
