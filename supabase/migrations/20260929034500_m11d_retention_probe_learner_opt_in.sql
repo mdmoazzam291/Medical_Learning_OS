@@ -21,26 +21,11 @@ revoke all on table public.study_retention_probe_consent_events
 grant select, insert on table public.study_retention_probe_consent_events
   to service_role;
 
-create or replace function public.block_retention_probe_consent_mutation()
-returns trigger
-language plpgsql
-set search_path=''
-as $function$
-begin
-  raise exception using
-    errcode='55000',
-    message='retention_probe_consent_is_append_only';
-end;
-$function$;
-
-revoke all on function public.block_retention_probe_consent_mutation()
-  from public, anon, authenticated, service_role;
-
 drop trigger if exists study_retention_probe_consent_events_append_only
   on public.study_retention_probe_consent_events;
 create trigger study_retention_probe_consent_events_append_only
 before update or delete on public.study_retention_probe_consent_events
-for each row execute function public.block_retention_probe_consent_mutation();
+for each row execute function public.prevent_learner_evidence_mutation();
 
 create or replace function public.study_retention_probe_learner_consent_v1(
   p_learner uuid
