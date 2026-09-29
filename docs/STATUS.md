@@ -1615,3 +1615,14 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Added `study_learning_event_stream_v2()` with research assignment, server-served and response-binding families while retaining zero mastery/forgetting inference authority.
 - Privacy scope advances to v6 with served + response evidence covered by preview, erasure and residue verification.
 - Learner delivery route, render acknowledgement and automatic execution remain disabled.
+
+
+## 2026-09-29 — M11g descriptive feasibility analysis
+- Added service-only `study_retention_probe_feasibility_report_v1()`.
+- The report keeps assignment, server-served, response and clean-response counts separate and exposes funnel rates only when denominators exist.
+- The preregistered primary outcome is reported as descriptive clean accuracy only; the current zero-evidence baseline returns `null`, not 0% or another fabricated estimate.
+- Secondary outputs include response timing, optional memory-rating summaries, observed contamination rate/reasons, expired unserved assignments and expired served-without-response counts.
+- Transport failure remains `null` / unavailable because nonresponse alone cannot distinguish technical failure from non-view or learner choice.
+- Pair-level results retain exact validation SHA, concept, origin version and target version.
+- Admin now receives the report in the canonical research gate under **FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY**.
+- No causal inference, hypothesis testing, mastery fitting, forgetting fitting, activation authority or learner-facing analytics are introduced.
