@@ -23,8 +23,9 @@ test('admin shows authorization only after canonical prerequisites', () => {
   assert.match(admin, /awaiting-current-learner-opt-in/);
   assert.match(admin, /retention-probe-activation-authorization/);
   assert.match(admin, /activation-authorization-form/);
-  assert.match(admin, /bounded-probe-scheduler-not-implemented/);
-  assert.match(admin, /Probe scheduling remains disabled/);
+  assert.match(admin, /retention-probe-scheduler-kernel-ready/);
+  assert.match(admin, /SCHEDULER KERNEL READY · AUTOMATION OFF/);
+  assert.match(admin, /There is no cron trigger, no Admin “run scheduler” button and no learner delivery surface yet/);
   assert.match(admin, /activation-revoke-form/);
 });
 
