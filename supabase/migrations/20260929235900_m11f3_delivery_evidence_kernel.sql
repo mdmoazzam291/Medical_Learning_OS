@@ -11,7 +11,12 @@ create table if not exists public.study_retention_probe_served_events (
   activation_event_id uuid not null references public.study_retention_probe_activation_events(id) on delete restrict,
   pair_validation_id uuid not null references public.study_transfer_pair_validations(id) on delete restrict,
   target_question_version_id text not null,
-  target_medical_sha256 text not null check (target_medical_sha256 ~ '^[0-9a-f]{64}
+  target_medical_sha256 text not null check (target_medical_sha256 ~ '^[0-9a-f]{64}$'),
+  catalog_version bigint not null check (catalog_version >= 1),
+  learner_question jsonb not null check (jsonb_typeof(learner_question)='object'),
+  learner_question_sha256 text not null check (learner_question_sha256 ~ '^[0-9a-f]{64}$'),
+  request_key text not null check (request_key ~ '^[a-zA-Z0-9:_@.\\-]{1,160}$'),
+  served_at timestamptz not null,
   served_sha256 text not null check (served_sha256 ~ '^[0-9a-f]{64}$'),
   recorded_at timestamptz not null default now(),
   unique (assignment_id),
