@@ -55,6 +55,38 @@ try {
     }
     if (url.includes('/auth/v1/logout')) return route.fulfill({ status: 204, body: '' });
 
+    if (url.includes('/functions/v1/study-api/retention-probe/consent')) {
+      if (route.request().method() === 'POST') {
+        const body = JSON.parse(route.request().postData() || '{}');
+        return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+          contractId: 'retention-probe-learner-consent-receipt-v1',
+          decision: body.decision,
+          optedIn: body.decision === 'opt_in',
+          activationAuthority: false,
+          probeSchedulingEnabled: false,
+          masteryInferenceAuthority: false
+        }) });
+      }
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        contractId: 'retention-probe-learner-consent-v1',
+        protocol: {
+          protocolId: 'retention-probe-feasibility-v1',
+          protocolVersion: 1,
+          protocolSha256: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+          targetDays: 7,
+          windowStartDays: 6,
+          windowEndDays: 8,
+          maxProbeAssignmentsPerLearnerPer7Days: 1,
+          maxTotalAssignments: 20,
+          mayDisplaceDueOrMistakeRepairWork: false
+        },
+        decision: 'not_decided',
+        optedIn: false,
+        activationAuthority: false,
+        probeSchedulingEnabled: false,
+        masteryInferenceAuthority: false
+      }) });
+    }
     if (url.includes('/functions/v1/study-api/progress')) {
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ attempts: 4, correct: 3, accuracy: 0.75, concepts: [] }) });
     }
@@ -172,6 +204,7 @@ try {
   await form.getByLabel('Password').fill('strong-password');
   await form.getByRole('button', { name: 'Sign in with email' }).click();
   await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+  await page.getByRole('button', { name: 'Opt in to retention feasibility' }).waitFor();
   await page.getByRole('link', { name: 'Open Admin Console' }).waitFor();
 
   await page.goto(origin);
