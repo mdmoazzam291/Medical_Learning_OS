@@ -1509,3 +1509,14 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - No causal claim, hypothesis-testing claim, mastery/forgetting inference or model fitting is authorized.
 - Activation remains **false**. Current blockers are validated alternate-pair novelty/comparability metadata, learner opt-in path, and separate activation authorization.
 - Supabase security advisor added only the expected service-only RLS/no-policy INFO for the new protocol table; leaked-password protection remains the single actionable Auth WARN.
+
+
+## 2026-09-29 — M11c retention pair metadata gate
+
+- Added immutable `study_retention_probe_pair_assessments` bound to exact origin/alternate question versions.
+- Added a human-authority constraint: only `human_research_reviewer` assessments may use `validated_for_feasibility`.
+- Seeded the published anaphylaxis alternate pair as `ai_research_assist` / `needs_human_validation` with high construct match, moderate surface novelty/overlap and unknown empirical difficulty comparability.
+- Added `study_retention_probe_pair_readiness_v1()`, which rechecks that both exact question versions remain published, distinct and primary-concept aligned before any validation can count.
+- Updated `study_retention_probe_activation_readiness_v1()` to consume the pair-metadata gate.
+- Probe scheduling remains disabled. Remaining blockers: human pair validation, learner opt-in, separate activation authorization.
+- Next implementation slice: M11c1 authenticated zero-typing human pair review capture.
