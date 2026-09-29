@@ -303,3 +303,65 @@ test('refreshUser enriches an existing session with current linked providers', a
   assert.equal(user.id, 'u1');
   assert.deepEqual(user.providers, ['email', 'google']);
 });
+
+
+test('password recovery request is email-scoped, uses a safe redirect, and sends no password', async () => {
+  const calls = [];
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage: memoryStorage(),
+    fetchFn: async (url, options) => {
+      calls.push({ url, options });
+      return Response.json({});
+    }
+  });
+
+  const result = await auth.sendPasswordRecovery('LEARNER@example.com', {
+    redirectTo: 'https://preview.example.com/web/account.html'
+  });
+
+  assert.deepEqual(result, { requested: true });
+  assert.equal(calls.length, 1);
+  assert.match(calls[0].url, /\/auth\/v1\/recover\?redirect_to=https%3A%2F%2Fpreview\.example\.com%2Fweb%2Faccount\.html$/);
+  assert.deepEqual(JSON.parse(calls[0].options.body), { email: 'learner@example.com' });
+  assert.doesNotMatch(calls[0].options.body, /password/i);
+});
+
+test('password recovery rejects insecure remote redirect before network use', async () => {
+  let calls = 0;
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage: memoryStorage(),
+    fetchFn: async () => { calls += 1; return Response.json({}); }
+  });
+  await assert.rejects(
+    auth.sendPasswordRecovery('learner@example.com', {
+      redirectTo: 'http://preview.example.com/web/account.html'
+    }),
+    error => error instanceof AuthError && error.code === 'invalid_redirect_url'
+  );
+  assert.equal(calls, 0);
+});
+
+test('implicit recovery callback reports recovery type while preserving the same authenticated user', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      assert.match(url, /\/auth\/v1\/user$/);
+      assert.equal(options.headers.Authorization, 'Bearer recovery-access');
+      return Response.json({
+        id: 'same-user',
+        email: 'learner@example.com',
+        email_confirmed_at: '2026-09-29T00:00:00Z',
+        app_metadata: { providers: ['email', 'google'] }
+      });
+    }
+  });
+
+  const result = await auth.consumeImplicitRedirect(
+    'https://preview.example.com/web/account.html#access_token=recovery-access&refresh_token=recovery-refresh&expires_in=3600&type=recovery'
+  );
+  assert.equal(result.handled, true);
+  assert.equal(result.type, 'recovery');
+  assert.equal(result.session.user.id, 'same-user');
+  assert.deepEqual(result.session.user.providers, ['email', 'google']);
+});
