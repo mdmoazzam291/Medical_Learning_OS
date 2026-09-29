@@ -39,3 +39,16 @@ test('admin UI promotes human pair validation without fabricating human judgment
   assert.match(admin, /This creates an immutable authorization record only\. It does not schedule a probe/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });
+
+
+test('admin receives and labels the M11g report as descriptive feasibility evidence', () => {
+  assert.match(api, /study_retention_probe_feasibility_report_v1/);
+  assert.match(api, /retention_probe_feasibility_report_unavailable/);
+  assert.match(api, /feasibilityReport/);
+  assert.match(admin, /FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY/);
+  assert.match(admin, /Clean accuracy:/);
+  assert.match(admin, /not estimable yet/);
+  assert.match(admin, /No causal inference/);
+  assert.match(admin, /No hypothesis testing/);
+  assert.match(admin, /No mastery\/forgetting fitting/);
+});
