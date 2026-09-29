@@ -185,3 +185,24 @@ System-level activation readiness may now report `learnerOptInPathAvailable=true
 2. that learner's current opt-in state;
 3. separate activation authorization;
 4. later bounded scheduling logic.
+
+
+## M11f1 activation authorization
+
+Activation authorization is a separate governance event from:
+- content publication;
+- transfer-pair validation;
+- learner consent;
+- probe scheduling.
+
+An `authorize` event is accepted only when all of the following are true:
+1. the caller is the singleton content admin;
+2. `retention-probe-feasibility-v1` is still the current preregistered protocol and the exact protocol SHA-256 matches;
+3. the selected pair-validation receipt is current, human-authored, still bound to the exact published question versions and marked retention-probe comparable;
+4. at least one learner is currently opted in to that exact protocol;
+5. requested assignment caps do not exceed the preregistered limits;
+6. the authorization window is future-dated and no longer than 56 days.
+
+Authorization evidence is append-only. Revocation is a new immutable event, not a mutation. Revocation must remain available even if the pair later becomes stale or learners withdraw.
+
+**M11f1 still does not schedule a single probe.** A later bounded scheduler must separately consume only an active authorization and re-check learner consent at assignment time.
