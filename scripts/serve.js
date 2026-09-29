@@ -1,6 +1,7 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { handleAdminMcpHttp, protectedResourceMetadata } from '../src/server/admin-mcp.js';
 
 const root = new URL('../', import.meta.url);
 const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', json: 'application/json' };
@@ -42,11 +43,30 @@ const allowed = new Set([
 
 const server = createServer(async (req, res) => {
   try {
+    const pathname = new URL(req.url, 'http://localhost').pathname;
+
+    if (pathname === '/.well-known/oauth-protected-resource') {
+      if (!['GET', 'HEAD'].includes(req.method)) {
+        res.writeHead(405, { Allow: 'GET, HEAD' });
+        return res.end();
+      }
+      const payload = JSON.stringify(protectedResourceMetadata());
+      res.writeHead(200, {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Cache-Control': 'no-store',
+        'X-Content-Type-Options': 'nosniff'
+      });
+      return res.end(req.method === 'HEAD' ? undefined : payload);
+    }
+
+    if (pathname === '/mcp') {
+      return handleAdminMcpHttp(req, res);
+    }
+
     if (!['GET', 'HEAD'].includes(req.method)) {
       res.writeHead(405, { Allow: 'GET, HEAD' });
       return res.end();
     }
-    const pathname = new URL(req.url, 'http://localhost').pathname;
     const path = pathname === '/' ? 'web/index.html' : pathname.slice(1);
     if (!allowed.has(path)) {
       res.writeHead(404);
