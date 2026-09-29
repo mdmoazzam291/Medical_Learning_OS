@@ -1,3 +1,27 @@
+# Beta learner application
+
+## Current beta surface
+The M03 three-question local demo has completed its architectural purpose and is **retired from the app entry path**. Opening Medical Learning OS now presents the authenticated beta product rather than a software walkthrough.
+
+Learner navigation is intentionally compact:
+
+- **Home** — Preparation Command Center + Study Now entry;
+- **Study** — reviewed medical QBank, revision and Study Now;
+- **Exams** — exam runtime/readiness;
+- **Vault** — NeuralVault concept workspace;
+- **Account** — identity/session controls.
+
+A sixth **Admin** destination is rendered only when the server confirms the authenticated identity is the singleton beta content admin. Learner accounts never receive content-approval controls.
+
+The beta home follows the product rule that complexity stays under the floorboards: due work, unseen reviewed material, recorded attempts and exam-content readiness feed a small number of actions instead of exposing internal engines as menus. Study Now remains the dominant learning action.
+
+The historical local demo modules may remain in the repository for regression/reference value, but they are not in the development server's public allowlist and are not imported by the root application.
+
+## Content authority boundary
+Content governance is separate from the learner product. Learners may study, annotate and report suspected issues. Medical, References, Rights and research pair-validation decisions are available only through the authenticated Admin Console and are enforced server-side. No admin email, password, user metadata or browser flag grants authority.
+
+---
+
 # M03 learner application
 
 ## Scope and screen contract
