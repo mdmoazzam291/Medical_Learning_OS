@@ -107,13 +107,43 @@ function researchGatePanel() {
     '</div>';
 
   let action;
+  const authorizationReadiness = gate.activationReadiness?.activationAuthorizationReadiness || {};
+  const authorizationState = authorizationReadiness?.readiness || {};
+  const protocol = gate.activationReadiness?.protocol || {};
+  const protocolAssignment = protocol?.protocol?.assignment || {};
+  const currentAuthorization = authorizationReadiness?.currentAuthorization || null;
+
   if (next.kind === 'human-transfer-pair-validation') {
     action = '<div class="section-heading"><div><span class="eyebrow">ACTION REQUIRED · BLOCKING</span><h2>Human pair validation is the next research gate.</h2></div><span class="badge">1st priority</span></div>' +
       '<p>' + escape(next.pendingCount || 0) + ' published alternate pair review is waiting for the content admin. This judgment must come from direct human inspection of both exact versions.</p>' +
       '<p><a class="primary action-link" href="#m11c-pair-1">Review the blocking pair ↓</a></p>';
-  } else if (next.kind === 'separate-activation-authorization-not-implemented') {
-    action = '<div class="section-heading"><div><span class="eyebrow">NEXT GATE · NOT YET AVAILABLE</span><h2>Separate activation authorization remains intentionally absent.</h2></div><span class="badge">Fail closed</span></div>' +
-      '<p>The pair-validity gate is no longer the blocker. Activation still requires its own governed authorization layer. No activate button is exposed here.</p>';
+  } else if (next.kind === 'awaiting-current-learner-opt-in') {
+    action = '<div class="section-heading"><div><span class="eyebrow">BLOCKED BY PARTICIPATION</span><h2>At least one learner must currently opt in before authorization.</h2></div><span class="badge">0 participants</span></div>' +
+      '<p>The consent feature exists, but authorization is intentionally impossible with no active participant. Learners opt in from Account; no admin may opt them in.</p>';
+  } else if (next.kind === 'retention-probe-activation-authorization') {
+    const pairValidationId = String(authorizationReadiness?.recommendedPairValidationId || '');
+    const protocolSha256 = String(protocol?.protocolSha256 || '');
+    const maxTotal = Number(protocolAssignment?.maxTotalAssignments || 20);
+    const maxPerLearner = Number(protocolAssignment?.maxProbeAssignmentsPerLearnerPer7Days || 1);
+    action = '<div class="section-heading"><div><span class="eyebrow">ACTION REQUIRED · GOVERNANCE</span><h2>Issue a bounded feasibility authorization.</h2></div><span class="badge">Admin attestation</span></div>' +
+      '<p>This creates an immutable authorization record only. It does not schedule a probe.</p>' +
+      '<form class="activation-authorization-form" data-pair-validation-id="' + escape(pairValidationId) + '" data-protocol-sha256="' + escape(protocolSha256) + '" data-max-per-learner="' + escape(maxPerLearner) + '">' +
+        '<label>Total assignment cap<input name="maxTotalAssignments" type="number" min="1" max="' + escape(maxTotal) + '" value="1" required></label>' +
+        '<label>Authorization valid until<input name="authorizationValidUntil" type="datetime-local" required></label>' +
+        '<label>Rationale<textarea name="rationale" minlength="20" maxlength="4000" required placeholder="Why is this bounded feasibility authorization justified now?"></textarea></label>' +
+        '<label class="review-attestation"><input type="checkbox" name="attested" required> I authorize only this exact protocol + validated pair within the stated cap. I understand scheduling remains disabled.</label>' +
+        '<button class="primary" type="submit" ' + (state.submitting ? 'disabled' : '') + '>Record bounded authorization</button>' +
+      '</form>';
+  } else if (next.kind === 'bounded-probe-scheduler-not-implemented') {
+    action = '<div class="section-heading"><div><span class="eyebrow">AUTHORIZATION RECORDED · SCHEDULER OFF</span><h2>Bounded probe scheduling is the next engineering gate.</h2></div><span class="badge">No assignments</span></div>' +
+      '<p>An authorization record exists, but no scheduler can consume it yet.</p>' +
+      (authorizationState?.canRevoke === true && currentAuthorization
+        ? '<form class="activation-revoke-form" data-pair-validation-id="' + escape(currentAuthorization.pairValidationId || '') + '" data-protocol-sha256="' + escape(protocol?.protocolSha256 || '') + '">' +
+            '<label>Revocation rationale<textarea name="rationale" minlength="20" maxlength="4000" required></textarea></label>' +
+            '<label class="review-attestation"><input type="checkbox" name="attested" required> Revoke this feasibility authorization immediately.</label>' +
+            '<button class="secondary" type="submit" ' + (state.submitting ? 'disabled' : '') + '>Revoke authorization</button>' +
+          '</form>'
+        : '');
   } else {
     action = '<div class="section-heading"><div><span class="eyebrow">RESEARCH GATE</span><h2>No executable research action is available.</h2></div><span class="badge">Fail closed</span></div>';
   }
@@ -193,6 +223,51 @@ root.addEventListener('click', event => {
 });
 
 root.addEventListener('submit', event => {
+  const authorizationForm = event.target.closest('.activation-authorization-form, .activation-revoke-form');
+  if (authorizationForm) {
+    event.preventDefault();
+    if (state.submitting) return;
+    const data = new FormData(authorizationForm);
+    const authorize = authorizationForm.classList.contains('activation-authorization-form');
+    let authorizationValidUntil = null;
+    if (authorize) {
+      const raw = String(data.get('authorizationValidUntil') || '');
+      const parsed = new Date(raw);
+      if (!raw || Number.isNaN(parsed.getTime())) {
+        announce('Choose a valid authorization end time.');
+        return;
+      }
+      authorizationValidUntil = parsed.toISOString();
+    }
+    state.submitting = true;
+    render();
+    (async () => {
+      try {
+        await review.retentionProbeAuthorization({
+          decision: authorize ? 'authorize' : 'revoke',
+          pairValidationId: authorizationForm.dataset.pairValidationId,
+          protocolSha256: authorizationForm.dataset.protocolSha256,
+          maxTotalAssignments: authorize ? Number(data.get('maxTotalAssignments')) : null,
+          maxAssignmentsPerLearnerPer7Days: authorize ? Number(authorizationForm.dataset.maxPerLearner || 1) : null,
+          authorizationValidUntil,
+          rationale: data.get('rationale'),
+          attested: data.get('attested') === 'on'
+        });
+        state.submitting = false;
+        await loadAdmin();
+        announce(authorize
+          ? 'Bounded activation authorization recorded. Probe scheduling remains disabled.'
+          : 'Activation authorization revoked. Probe scheduling remains disabled.');
+      } catch (error) {
+        reportUnexpected(error, authorize ? 'authorize_retention_probe' : 'revoke_retention_probe_authorization');
+        state.submitting = false;
+        render();
+        announce('Authorization event was not recorded: ' + (error.code || error.message || 'authorization_failed') + '.');
+      }
+    })();
+    return;
+  }
+
   const form = event.target.closest('.transfer-pair-form');
   if (!form) return;
   event.preventDefault();
