@@ -169,6 +169,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
       });
     },
     studyNowOutcomes() { return request('/study-now/outcomes'); },
+    studyNowIntegrity() { return request('/study-now/integrity'); },
     memoryJudgment(attemptId, rating) {
       return request('/memory-judgments', { method: 'POST', body: { attemptId, rating } });
     },

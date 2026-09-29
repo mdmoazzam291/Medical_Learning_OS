@@ -25,6 +25,7 @@ let state = {
   selectedOptionId: null,
   receipt: null,
   memoryJudgment: null,
+  studyNowIntegrity: null,
   error: null
 };
 
@@ -163,7 +164,15 @@ function studyView() {
   const session = state.session;
   if (!session) return overview();
   if (session.closed) {
-    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">MEDICAL SESSION COMPLETE</span><h1>Your server evidence is saved.</h1><p>The attempt ledger is attached to your authenticated learner account.</p><button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
+    const integrity = state.studyNowIntegrity?.latestRecommendation;
+    const sameStudyNowSession = integrity?.sessionId === session.sessionId;
+    const integrityCopy = sameStudyNowSession
+      ? integrity.evidenceChainComplete
+        ? '<div class="memory-rating"><strong>Study Now loop verified.</strong><p class="muted">Recommended items, persisted answers and authoritative reschedule evidence are linked for this session.' +
+          (integrity.hostedM05cGateSatisfied ? ' Hosted browser answer evidence is also present.' : '') + '</p></div>'
+        : '<div class="memory-rating"><strong>Study evidence saved; integrity reconciliation is incomplete.</strong><p class="muted">' + escape((integrity.blockers || []).join(' · ')) + '</p></div>'
+      : '';
+    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">MEDICAL SESSION COMPLETE</span><h1>Your server evidence is saved.</h1><p>The attempt ledger is attached to your authenticated learner account.</p>' + integrityCopy + '<button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
   }
   if (!session.question) {
     return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel"><h1>Question unavailable.</h1><p>' + escape(session.blocked || 'question_unavailable') + '</p></section></main>';
@@ -247,7 +256,7 @@ function render() {
 }
 
 async function loadOverview() {
-  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null };
+  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null, studyNowIntegrity: null };
   render();
   try {
     const session = await auth.getSession();
@@ -421,7 +430,15 @@ async function nextQuestion() {
       memoryJudgment: next.memoryJudgment || null,
       error: null
     };
-    if (next.closed) state.progress = await cloud.progress();
+    if (next.closed) {
+      state.progress = await cloud.progress();
+      try {
+        state.studyNowIntegrity = await cloud.studyNowIntegrity();
+      } catch (error) {
+        reportUnexpected(error, 'load_study_now_integrity');
+        state.studyNowIntegrity = null;
+      }
+    }
   } catch (error) {
     reportUnexpected(error, 'advance_session');
     state = { ...state, busy: false, error: error.code || error.message || 'study_advance_failed' };

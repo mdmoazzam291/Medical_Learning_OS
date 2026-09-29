@@ -652,3 +652,23 @@ test('cloud retention consent uses authenticated learner context and explicit at
   });
   assert.equal(Object.hasOwn(seen[1].body, 'learnerId'), false);
 });
+
+
+test('cloud Study Now integrity uses authenticated learner context only', async () => {
+  let seenUrl = '';
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url) => {
+      seenUrl = url;
+      return Response.json({
+        contractId: 'study-now-completion-integrity-v1',
+        hostedBrowserGateSatisfied: false,
+        latestRecommendation: null
+      });
+    }
+  });
+  const result = await cloud.studyNowIntegrity();
+  assert.match(seenUrl, /study-api\/study-now\/integrity$/);
+  assert.equal(result.hostedBrowserGateSatisfied, false);
+});
