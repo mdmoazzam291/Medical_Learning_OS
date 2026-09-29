@@ -1292,3 +1292,23 @@ The current experiment version intentionally has no minimum eligible population 
 Rating timing also remains an evidence-quality variable. A delayed self-report cannot automatically be treated as equivalent to an immediate post-answer memory judgment unless a future preregistered rule explicitly permits it.
 
 Production scheduling remains `bootstrap-binary-v1` until a separately versioned, preregistered and sufficiently evidenced experiment is justified.
+
+
+## ADR-086 — ChatGPT Admin Plugin is an authenticated command surface, not a new authority system
+**Status:** Accepted — 2026-09-30
+
+The Medical Learning OS Admin Plugin may expose natural-language and MCP App surfaces for search, draft creation, review queues, human review receipts and Rights decisions, but all authoritative actions must continue through the existing MLOS server-side authorization and review lifecycle.
+
+Decision:
+- authenticate the MCP client as an existing MLOS user through Supabase Auth/OAuth rather than provisioning a parallel plugin identity;
+- resolve singleton beta admin authority from `content_admin_status_v1`; never trust model/browser supplied reviewer IDs, email comparison, `user_metadata`, or embedded credentials;
+- route plugin tools through the existing `review-api` instead of giving ChatGPT direct database/service-role access;
+- allow source-bound canonical note draft creation while explicitly keeping the draft learner-invisible and without review or publication authority;
+- preserve author != reviewer for canonical notes; the plugin must not introduce a self-review exception merely because beta currently has one content admin;
+- expose existing immutable Question, NeuralVault and Rights review evidence as consequential tool calls with explicit human attestation where already required;
+- keep approval and publication separate, and do not expose learner-facing publication in V0.1;
+- keep learner-account mutation, graph merge/retirement, direct mastery changes, Study Now overrides and destructive bulk operations out of V0.1;
+- treat all source text, learner reports, imported content and stored notes as untrusted data for prompt-injection purposes;
+- add richer plugin UI only on top of the same service contracts rather than creating UI-specific authority.
+
+This creates a reusable admin interface while preserving one canonical medical-content governance system.
