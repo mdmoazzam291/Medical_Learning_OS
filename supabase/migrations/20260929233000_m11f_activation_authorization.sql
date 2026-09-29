@@ -119,7 +119,7 @@ declare
   v_protocol public.study_retention_probe_protocols%rowtype;
   v_opt_in_count integer := 0;
   v_current_pair_count integer := 0;
-  v_active_authorization record;
+  v_active_authorization public.study_retention_probe_activation_events%rowtype;
 begin
   select *
   into v_protocol
@@ -242,7 +242,7 @@ create or replace function public.record_retention_probe_activation_authorizatio
 returns jsonb
 language plpgsql
 security definer
-set search_path='public, extensions, pg_temp'
+set search_path = public, extensions, pg_temp
 as $function$
 declare
   v_protocol public.study_retention_probe_protocols%rowtype;
@@ -310,18 +310,6 @@ begin
   where c.id=1 and q->>'questionVersionId'=v_pair.question_b_version_id
   limit 1;
 
-  if v_pair.decision<>'validated'
-     or not v_pair.transfer_evidence_valid
-     or not v_pair.retention_probe_comparable
-     or v_a is null
-     or v_b is null
-     or v_a->>'status'<>'published'
-     or v_b->>'status'<>'published'
-     or public.current_review_target_sha256(v_pair.question_a_version_id,'medical')<>v_pair.question_a_medical_sha256
-     or public.current_review_target_sha256(v_pair.question_b_version_id,'medical')<>v_pair.question_b_medical_sha256 then
-    raise exception using errcode='55000', message='current_retention_comparable_pair_required';
-  end if;
-
   select coalesce(
     (public.study_retention_probe_current_opt_in_population_v1()
       ->>'activeOptedInLearners')::integer,
@@ -338,6 +326,18 @@ begin
   limit 1;
 
   if p_decision='authorize' then
+    if v_pair.decision<>'validated'
+       or not v_pair.transfer_evidence_valid
+       or not v_pair.retention_probe_comparable
+       or v_a is null
+       or v_b is null
+       or v_a->>'status'<>'published'
+       or v_b->>'status'<>'published'
+       or public.current_review_target_sha256(v_pair.question_a_version_id,'medical')<>v_pair.question_a_medical_sha256
+       or public.current_review_target_sha256(v_pair.question_b_version_id,'medical')<>v_pair.question_b_medical_sha256 then
+      raise exception using errcode='55000', message='current_retention_comparable_pair_required';
+    end if;
+
     if v_opt_in_count < 1 then
       raise exception using errcode='55000', message='current_opted_in_learner_required';
     end if;
@@ -498,10 +498,10 @@ begin
     0
   );
   v_current_authorization := v_authorization->'currentAuthorization';
-  v_has_active_authorization :=
-    v_current_authorization is not null
-    and v_current_authorization->>'decision'='authorize'
-    and (v_current_authorization->>'authorizationValidUntil')::timestamptz > pg_catalog.now();
+  v_has_active_authorization := coalesce(
+    (v_authorization->'readiness'->>'canRevoke')::boolean,
+    false
+  );
 
   return pg_catalog.jsonb_build_object(
     'contractId','study-retention-probe-activation-readiness-v1',
