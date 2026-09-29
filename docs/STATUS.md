@@ -1557,3 +1557,12 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Auth session normalization retains provider names only, not OAuth identity payloads or tokens.
 - Google-first accounts can add password sign-in while authenticated without creating or migrating learner data.
 - Password-only accounts are told that later Google sign-in with the same verified email auto-links to the same learner ID.
+
+
+## 2026-09-29 — Same-account password recovery
+- Added password recovery request from the signed-out Account surface.
+- Recovery response is intentionally generic to avoid account enumeration.
+- Recovery callback type is preserved by the auth adapter.
+- A verified recovery session can set a new password through the existing authenticated user update path.
+- Password recovery keeps the same Supabase user ID and therefore the same learner history.
+- No separate learner record or merge workflow is introduced.
