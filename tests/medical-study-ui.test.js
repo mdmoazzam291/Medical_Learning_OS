@@ -204,3 +204,13 @@ test('preview server exposes Exam Mode assets for browser acceptance', async () 
   assert.match(source, /'web\/exam\.html'/);
   assert.match(source, /'web\/exam\.js'/);
 });
+
+
+test('completed Study Now session verifies recommendation to authoritative reschedule chain without making mastery claims', async () => {
+  const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
+  assert.match(source, /cloud\.studyNowIntegrity\(\)/);
+  assert.match(source, /Study Now loop verified/);
+  assert.match(source, /authoritative reschedule evidence/);
+  assert.match(source, /Hosted browser answer evidence is also present/);
+  assert.doesNotMatch(source, /Study Now loop verified[\s\S]{0,300}mastery/i);
+});
