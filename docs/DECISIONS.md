@@ -1312,3 +1312,21 @@ Decision:
 - add richer plugin UI only on top of the same service contracts rather than creating UI-specific authority.
 
 This creates a reusable admin interface while preserving one canonical medical-content governance system.
+
+
+## ADR-087 — Admin plugin OAuth uses first-party consent and minimum scope
+**Status:** Accepted — 2026-09-30
+
+The MLOS Admin Plugin authenticates through the same Supabase learner/admin identity rather than introducing a plugin-specific account or long-lived API token.
+
+Decision:
+- use Supabase OAuth 2.1 authorization-code flow with PKCE and a first-party MLOS consent page at `/oauth/consent`;
+- preserve a pending authorization request across sign-in only in same-tab `sessionStorage`, expire it after ten minutes, and permit return only to the exact same-origin consent path;
+- display the requesting client and requested scopes before an explicit Allow/Deny decision;
+- request only the `email` OAuth scope for the current admin MCP because server authorization depends on the authenticated Supabase user ID and no OIDC ID token is required;
+- validate any OAuth client redirect returned by Supabase before browser navigation;
+- keep OAuth authentication distinct from MLOS authorization: possession of a valid OAuth token never grants content-admin, reviewer, publication, learner-control or Digital Twin authority;
+- continue resolving those permissions from server/database policy on every relevant request;
+- never expose a Supabase service-role key, OAuth client secret, or reviewer identity as model-controlled input.
+
+Project-level enablement of the Supabase OAuth 2.1 server and Authorization Path remains deployment configuration, not application-domain authority.
