@@ -176,6 +176,7 @@ try {
 
   await page.goto(origin);
   await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+  await page.waitForFunction(() => /2\s*Due reviews/.test(document.querySelector('.metrics')?.innerText || ''));
   assert.match(await page.locator('.metrics').innerText(), /2\s*Due reviews/);
   await page.getByRole('link', { name: 'Admin' }).waitFor();
 
