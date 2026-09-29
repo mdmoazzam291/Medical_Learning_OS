@@ -1574,3 +1574,10 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Readiness automatically advances from the canonical backend state after a genuine immutable pair-validation event.
 - Separate activation authorization is displayed as a later gate but no activation endpoint, button or scheduler authority exists.
 - This slice does not fabricate human review, activate probes, alter Study Now or create mastery/forgetting inference.
+
+
+## 2026-09-29 — M11c human review packet
+- The blocking transfer-pair admin surface now includes a compact evidence packet for each exact question version.
+- Packet fields are descriptive only: source title/version, source rights status, provenance kind, change reason and existing Medical/References/Rights decisions.
+- The packet intentionally does not preselect novelty, construct alignment, reasoning alignment, difficulty comparability, cue-overlap risk or retention-probe comparability.
+- Human attestation remains required for the immutable pair decision; activation authority remains absent.

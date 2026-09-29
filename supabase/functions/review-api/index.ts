@@ -358,9 +358,40 @@ Deno.serve(async (req: Request) => {
 
       const body = catalog.body as any;
       const questions = Array.isArray(body?.questions) ? body.questions : [];
+      const sources = Array.isArray(body?.sources) ? body.sources : [];
+      const sourceById = new Map(
+        sources.map((source: any) => [String(source?.sourceId ?? ""), source])
+      );
       const byVersion = new Map(
         questions.map((question: any) => [String(question?.questionVersionId ?? ""), question])
       );
+      const reviewPacket = (question: any) => {
+        const sourceIds = Array.isArray(question?.sourceIds)
+          ? question.sourceIds.map((value: unknown) => String(value))
+          : [];
+        return {
+          sourceIds,
+          sources: sourceIds.map((sourceId: string) => {
+            const source = sourceById.get(sourceId) as any;
+            return {
+              sourceId,
+              title: String(source?.title ?? ""),
+              version: String(source?.version ?? ""),
+              url: String(source?.url ?? ""),
+              rightsStatus: String(source?.rights?.status ?? "")
+            };
+          }),
+          provenance: question?.provenance ?? null,
+          changeReason: String(question?.changeReason ?? ""),
+          publishedAt: String(question?.publishedAt ?? ""),
+          reviewSummary: Array.isArray(question?.reviews)
+            ? question.reviews.map((review: any) => ({
+                kind: String(review?.kind ?? ""),
+                decision: String(review?.decision ?? "")
+              }))
+            : []
+        };
+      };
       const validationByPair = new Map<string, any>();
       for (const row of validations ?? []) {
         const ids = [String(row.question_a_version_id), String(row.question_b_version_id)].sort();
@@ -389,7 +420,8 @@ Deno.serve(async (req: Request) => {
                 stem: String(a.stem ?? ""),
                 options: Array.isArray(a.options) ? a.options : [],
                 answerOptionId: String(a.answerOptionId ?? ""),
-                explanation: String(a.explanation ?? "")
+                explanation: String(a.explanation ?? ""),
+                reviewPacket: reviewPacket(a)
               },
               questionB: {
                 questionId: String(b.questionId ?? ""),
@@ -397,7 +429,8 @@ Deno.serve(async (req: Request) => {
                 stem: String(b.stem ?? ""),
                 options: Array.isArray(b.options) ? b.options : [],
                 answerOptionId: String(b.answerOptionId ?? ""),
-                explanation: String(b.explanation ?? "")
+                explanation: String(b.explanation ?? ""),
+                reviewPacket: reviewPacket(b)
               },
               validation: existing
             });

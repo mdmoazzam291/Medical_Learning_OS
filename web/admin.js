@@ -36,7 +36,26 @@ function questionCard(label, q) {
   const options = Array.isArray(q?.options)
     ? q.options.map(option => '<li>' + (option?.optionId === q?.answerOptionId ? '<strong>✓ ' : '') + escape(option?.text || '') + (option?.optionId === q?.answerOptionId ? '</strong>' : '') + '</li>').join('')
     : '';
-  return '<article class="source-card"><span class="eyebrow">' + escape(label) + '</span><h3>' + escape(q?.questionVersionId || '') + '</h3><p>' + escape(q?.stem || '') + '</p><ol>' + options + '</ol><p class="muted">' + escape(q?.explanation || '') + '</p></article>';
+  const packet = q?.reviewPacket || {};
+  const sources = Array.isArray(packet.sources)
+    ? packet.sources.map(source =>
+        '<li><strong>' + escape(source?.title || source?.sourceId || 'Source') + '</strong>' +
+        (source?.version ? ' · ' + escape(source.version) : '') +
+        (source?.rightsStatus ? ' · rights: ' + escape(source.rightsStatus) : '') + '</li>'
+      ).join('')
+    : '';
+  const reviews = Array.isArray(packet.reviewSummary)
+    ? packet.reviewSummary.map(review =>
+        '<span class="badge">' + escape(review?.kind || 'review') + ': ' + escape(review?.decision || 'unknown') + '</span>'
+      ).join(' ')
+    : '';
+  const provenance = packet?.provenance?.kind
+    ? '<p class="muted">Provenance: ' + escape(packet.provenance.kind) + (packet.changeReason ? ' · ' + escape(packet.changeReason) : '') + '</p>'
+    : '';
+  const reviewPacket = '<div class="review-packet"><span class="eyebrow">HUMAN REVIEW PACKET</span>' +
+    (sources ? '<ul>' + sources + '</ul>' : '<p class="muted">No source metadata attached.</p>') +
+    (reviews ? '<p>' + reviews + '</p>' : '') + provenance + '</div>';
+  return '<article class="source-card"><span class="eyebrow">' + escape(label) + '</span><h3>' + escape(q?.questionVersionId || '') + '</h3><p>' + escape(q?.stem || '') + '</p><ol>' + options + '</ol><p class="muted">' + escape(q?.explanation || '') + '</p>' + reviewPacket + '</article>';
 }
 
 function pairPanel(pair, index) {
