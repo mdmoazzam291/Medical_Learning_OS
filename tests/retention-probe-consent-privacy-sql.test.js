@@ -22,5 +22,5 @@ test('trusted privacy erasure deletes and verifies retention consent evidence', 
   assert.match(sql, /delete from public\.study_retention_probe_consent_events where learner_id=p_learner/);
   assert.match(sql, /jsonb_build_object\('study_retention_probe_consent_events',v_count\)/);
   assert.match(sql, /select 1 from public\.study_retention_probe_consent_events where learner_id=p_learner/);
-  assert.match(sql, /set_config\('mlos\.privacy_erasure','learner-erasure-v1',true\)/);
+  assert.match(sql, /set_config\(\s*'mlos\.privacy_erasure',\s*'learner-erasure-v1',\s*true\s*\)/);
 });
