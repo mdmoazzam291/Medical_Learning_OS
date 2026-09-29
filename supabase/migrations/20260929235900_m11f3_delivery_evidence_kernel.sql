@@ -125,6 +125,19 @@ begin
       raise exception using errcode='40900', message='retention_probe_delivery_request_key_collision';
     end if;
 
+    v_readiness := public.study_retention_probe_delivery_readiness_v1(
+      p_assignment,
+      p_learner,
+      v_now
+    );
+
+    if coalesce((v_readiness->>'deliverable')::boolean,false) is not true then
+      raise exception using
+        errcode='55000',
+        message='retention_probe_delivery_replay_not_ready',
+        detail=v_readiness::text;
+    end if;
+
     return pg_catalog.jsonb_build_object(
       'contractId','retention-probe-server-served-receipt-v1',
       'servedEventId',v_existing.served_event_id,
@@ -319,6 +332,8 @@ declare
   v_responded_at timestamptz;
   v_duration bigint;
   v_correct boolean;
+  v_latest_consent public.study_retention_probe_consent_events%rowtype;
+  v_latest_activation public.study_retention_probe_activation_events%rowtype;
   v_contamination jsonb := '[]'::jsonb;
   v_clean boolean;
   v_body jsonb;
@@ -412,6 +427,36 @@ begin
 
   if v_responded_at > v_assignment.window_close_at then
     v_contamination:=v_contamination||'["response-after-preregistered-window"]'::jsonb;
+  end if;
+
+  select e.*
+  into v_latest_consent
+  from public.study_retention_probe_consent_events e
+  where e.learner_id=p_learner
+    and e.protocol_id=v_assignment.protocol_id
+    and e.protocol_sha256=v_assignment.protocol_sha256
+    and e.recorded_at<=v_responded_at
+  order by e.recorded_at desc,e.id desc
+  limit 1;
+
+  if v_latest_consent.id is null or v_latest_consent.decision<>'opt_in' then
+    v_contamination:=v_contamination||'["consent-not-active-at-response"]'::jsonb;
+  end if;
+
+  select e.*
+  into v_latest_activation
+  from public.study_retention_probe_activation_events e
+  where e.protocol_id=v_assignment.protocol_id
+    and e.protocol_sha256=v_assignment.protocol_sha256
+    and e.recorded_at<=v_responded_at
+  order by e.recorded_at desc,e.id desc
+  limit 1;
+
+  if v_latest_activation.id is null
+     or v_latest_activation.id<>v_assignment.activation_event_id
+     or v_latest_activation.decision<>'authorize'
+     or v_latest_activation.authorization_valid_until<v_responded_at then
+    v_contamination:=v_contamination||'["authorization-not-active-at-response"]'::jsonb;
   end if;
 
   if exists (
