@@ -68,11 +68,25 @@ Protected-resource discovery:
 GET /.well-known/oauth-protected-resource
 ```
 
-MCP endpoint:
+Both MCP surfaces use the same existing MLOS identity and server-side admin authorization.
+
+MCP endpoints:
 
 ```text
-POST /mcp
+POST /mcp-readonly   # read-only personal-plan-compatible surface when available
+POST /mcp            # full future write-capable surface
 ```
+
+### Current ChatGPT plan reality — 2026-09-30
+
+OpenAI's developer documentation now supports personal plugin creation in developer mode, but its Help Center still limits **full custom MCP write/modify actions** to Business/Enterprise/Edu beta and says developer-mode availability can depend on account/workspace policy. Therefore:
+
+- **Plus must not be assumed to have full write-capable MCP today.**
+- `/mcp-readonly` exposes only status/search/queues and is the first endpoint to try on the current Plus account.
+- `/mcp` is implemented now so the architecture is ready when the account/plan supports custom MCP writes.
+- Until then, authoritative writes continue through the existing MLOS Admin web workflow or another explicitly supported execution surface.
+
+This is a product-access constraint, not an MLOS backend limitation.
 
 The MCP layer forwards the authenticated user token plus the browser-safe Supabase publishable key to the existing `review-api`. The review API then resolves `content_admin_status_v1` and gate grants from trusted server/database state.
 
