@@ -84,3 +84,13 @@ test('password recovery returns to the same learner identity instead of creating
   assert.match(account, /Supabase user ID and all Medical Learning OS history stay unchanged/);
   assert.doesNotMatch(account, /create.*recovery.*account/i);
 });
+
+
+test('admin research gate prioritizes human M11c review and exposes no activation control', () => {
+  assert.match(admin, /RESEARCH GATE/);
+  assert.match(admin, /Human pair validation is the next research gate/);
+  assert.match(admin, /Review the blocking pair/);
+  assert.match(admin, /Separate activation authorization remains intentionally absent/);
+  assert.match(admin, /Activation authority: none/);
+  assert.doesNotMatch(admin, />Activate probes</i);
+});

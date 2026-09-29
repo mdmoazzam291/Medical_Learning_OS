@@ -1566,3 +1566,11 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - A verified recovery session can set a new password through the existing authenticated user update path.
 - Password recovery keeps the same Supabase user ID and therefore the same learner history.
 - No separate learner record or merge workflow is introduced.
+
+
+## 2026-09-29 — M11e admin research gate
+- Admin transfer-pair queue now includes the canonical `study_retention_probe_activation_readiness_v1()` result.
+- The admin UI promotes the currently blocking human pair validation instead of presenting all research work as equivalent.
+- Readiness automatically advances from the canonical backend state after a genuine immutable pair-validation event.
+- Separate activation authorization is displayed as a later gate but no activation endpoint, button or scheduler authority exists.
+- This slice does not fabricate human review, activate probes, alter Study Now or create mastery/forgetting inference.

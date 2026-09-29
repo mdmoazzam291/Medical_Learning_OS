@@ -152,9 +152,36 @@ try {
     if (url.includes('/functions/v1/review-api/transfer-pairs') && route.request().method() === 'GET') {
       if (!isAdmin) return route.fulfill({ status: 403, contentType: 'application/json', body: JSON.stringify({ error: 'content_admin_required' }) });
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
-        contractId: 'admin-transfer-pair-queue-v1',
+        contractId: 'admin-transfer-pair-queue-v2',
         activationAuthority: false,
         probeSchedulingEnabled: false,
+        researchGate: {
+          contractId: 'admin-retention-research-gate-v1',
+          pendingHumanPairReviews: 1,
+          activationControlAvailable: false,
+          activationAuthority: false,
+          probeSchedulingEnabled: false,
+          nextAction: {
+            kind: 'human-transfer-pair-validation',
+            priority: 'blocking',
+            pendingCount: 1
+          },
+          activationReadiness: {
+            readiness: {
+              hasPublishedAlternateItemPair: true,
+              protocolPreregistered: true,
+              validatedPairMetadataAvailable: false,
+              learnerOptInPathAvailable: true,
+              canActivate: false,
+              blockingReasons: [
+                'validated-alternate-pair-metadata-not-yet-available',
+                'separate-activation-authorization-required'
+              ]
+            },
+            activationAuthority: false,
+            probeSchedulingEnabled: false
+          }
+        },
         pairs: [{
           primaryConceptId: 'emergency:anaphylaxis:first-line-treatment',
           questionA: {
@@ -226,6 +253,8 @@ try {
 
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();
+  await page.getByRole('heading', { name: 'Human pair validation is the next research gate.' }).waitFor();
+  assert.equal(await page.getByRole('button', { name: /activate/i }).count(), 0);
   await page.getByRole('heading', { name: 'emergency:anaphylaxis:first-line-treatment' }).waitFor();
   const pairForm = page.locator('.transfer-pair-form');
   await pairForm.getByLabel('Decision').selectOption('validated');
