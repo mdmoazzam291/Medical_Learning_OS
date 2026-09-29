@@ -174,6 +174,41 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
     batchMeasurementSummary(experimentId) {
       return request('/reference-review-batch/summary?experimentId=' + encodeURIComponent(experimentId));
     },
+    transferPairs() {
+      return request('/transfer-pairs');
+    },
+    validateTransferPair({
+      questionVersionA,
+      questionVersionB,
+      decision,
+      surfaceNovelty,
+      constructAlignment,
+      reasoningAlignment,
+      difficultyComparability,
+      cueOverlapRisk,
+      retentionProbeComparable,
+      notes,
+      attestationVersion = 'transfer-pair-human-validation-v1',
+      attested
+    }) {
+      return request('/transfer-pairs/validate', {
+        method: 'POST',
+        body: {
+          questionVersionA,
+          questionVersionB,
+          decision,
+          surfaceNovelty,
+          constructAlignment,
+          reasoningAlignment,
+          difficultyComparability,
+          cueOverlapRisk,
+          retentionProbeComparable,
+          notes,
+          attestationVersion,
+          attested
+        }
+      });
+    },
     recordNote({ noteVersionId, reviewKind, decision, notes }) {
       return request('/note-reviews', {
         method: 'POST',
