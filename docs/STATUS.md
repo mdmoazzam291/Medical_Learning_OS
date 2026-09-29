@@ -1603,3 +1603,15 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Added delivery-readiness recheck for consent, current authorization, pair/content freshness, timing window, target exposure, contamination and workload priority immediately before any future learner exposure.
 - Automatic execution remains disabled and there is still no learner delivery surface.
 - Privacy scope advances to v5 and includes scheduled probe assignments in preview, erasure and residue verification.
+
+
+## 2026-09-29 — M11f3 delivery-evidence kernel
+- Added append-only learner-scoped `study_retention_probe_served_events` and `study_retention_probe_response_bindings`.
+- Assignment, server-served delivery and answered-response evidence are now distinct states.
+- Server-served receipts bind the exact learner-safe question payload, payload SHA-256, catalog version and current medical-content SHA-256.
+- Idempotent replays return the exact originally served payload instead of reconstructing from a possibly changed catalog.
+- “Server served” explicitly does **not** claim learner render, learner view or cognitive exposure.
+- Response binding requires the exact target question and a server-timestamped answer after serve; out-of-window or intervening same-concept activity is preserved as contamination metadata rather than erased.
+- Added `study_learning_event_stream_v2()` with research assignment, server-served and response-binding families while retaining zero mastery/forgetting inference authority.
+- Privacy scope advances to v6 with served + response evidence covered by preview, erasure and residue verification.
+- Learner delivery route, render acknowledgement and automatic execution remain disabled.
