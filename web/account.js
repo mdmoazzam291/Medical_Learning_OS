@@ -10,7 +10,7 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
-let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, isAdmin: false, reviewKinds: [], error: null };
+let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null };
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function reportUnexpected(error, operation) {
@@ -21,7 +21,7 @@ function reportUnexpected(error, operation) {
 function signedOut() {
   const redirectTo = new URL('/web/account.html', window.location.origin).href;
   const googleUrl = auth.oauthAuthorizeUrl('google', { redirectTo });
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Sign in to Medical Learning OS.</h1><p>Your authenticated identity connects Study Now, reviewed medical questions, exams and NeuralVault across sessions.</p></div><span class="badge">BETA</span></div><section class="panel"><span class="eyebrow">ONE EMAIL · ONE LEARNER ACCOUNT</span><h2>Use Google or a password. Your learner history stays attached to the same verified email.</h2><p>If Google and email/password use the same verified email address, Supabase links them to one user instead of creating a second learner profile.</p></section><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form></section><section class="panel"><h2>Create learner account</h2><p>New email? Create it with a password. Already used Google with this email? Continue with Google first, then add password sign-in from Account. This avoids creating or guessing a second account.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel"><span class="eyebrow">SECURITY</span><h2>Admin authority is never carried by learner-facing credentials or browser metadata.</h2><p>Content approval is checked server-side against the single beta content-admin account. Learner accounts can study, annotate and report issues, but cannot approve or publish content.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Sign in to Medical Learning OS.</h1><p>Your authenticated identity connects Study Now, reviewed medical questions, exams and NeuralVault across sessions.</p></div><span class="badge">BETA</span></div><section class="panel"><span class="eyebrow">ONE EMAIL · ONE LEARNER ACCOUNT</span><h2>Use Google or a password. Your learner history stays attached to the same verified email.</h2><p>If Google and email/password use the same verified email address, Supabase links them to one user instead of creating a second learner profile.</p></section><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form><p class="auth-divider"><span>forgot password?</span></p><form id="recovery-request-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><button class="text-button" type="submit">Send password reset link</button></form></section><section class="panel"><h2>Create learner account</h2><p>New email? Create it with a password. Already used Google with this email? Continue with Google first, then add password sign-in from Account. This avoids creating or guessing a second account.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel"><span class="eyebrow">SECURITY</span><h2>Admin authority is never carried by learner-facing credentials or browser metadata.</h2><p>Content approval is checked server-side against the single beta content-admin account. Learner accounts can study, annotate and report issues, but cannot approve or publish content.</p></section></main>`;
 }
 
 function retentionPilotPanel() {
@@ -43,6 +43,11 @@ function retentionPilotPanel() {
   }
 
   return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Help test whether learning survives delay.</h2></div><span class="badge">OPTIONAL</span></div><p>If you opt in, the preregistered feasibility protocol may later offer a different published question around day ${targetDays} (accepted window: day ${windowStart}–${windowEnd}) after eligible learning evidence.</p><p>Limits: at most ${maxWeekly} probe assignment per learner in any 7 days and at most ${maxTotal} assignments across this feasibility protocol. Probe work may not displace due revision or mistake-repair work.</p><p class="muted">This is an infrastructure feasibility pilot, not a mastery score or treatment-effect study. Opting in does not activate a probe by itself, and you may withdraw from future assignments.</p><form id="retention-optin-form"><label class="review-attestation"><input type="checkbox" name="attested" required> I choose to opt in to this optional retention-feasibility pilot under the protocol described above.</label><button class="secondary" type="submit" ${state.retentionSaving ? 'disabled' : ''}>${state.retentionSaving ? 'Saving…' : 'Opt in to retention feasibility'}</button></form></section>`;
+}
+
+function recoveryPasswordPanel() {
+  if (!state.recoveryMode) return '';
+  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">PASSWORD RECOVERY</span><h2>Choose a new password for this learner account.</h2></div><span class="badge">RECOVERY SESSION</span></div><p>This changes the password sign-in method only. Your Supabase user ID and all Medical Learning OS history stay unchanged.</p><form id="recovery-password-form"><label>New password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><label>Confirm password<input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="primary" type="submit">Set new password</button></form></section>`;
 }
 
 function signInMethodsPanel() {
@@ -106,12 +111,12 @@ async function loadCloud({ forceRefresh = false } = {}) {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
     reportUnexpected(error, 'refresh_session');
-    state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, isAdmin: false, reviewKinds: [], error: null };
+    state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null };
     render();
     announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
     return;
   }
-  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, isAdmin: false, reviewKinds: [], error: null }; render(); return; }
+  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null }; render(); return; }
   state = { ...state, user: session.user, loading: true, error: null }; render();
   try {
     let enrichedUser = auth.currentUser() || session.user;
@@ -171,7 +176,7 @@ root.addEventListener('click', event => {
     })();
   }
   if (target.dataset.action === 'signout') {
-    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, isAdmin: false, reviewKinds: [], error: null }; announce('Signed out.'); render(); })();
+    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null }; announce('Signed out.'); render(); })();
   }
 });
 
@@ -183,6 +188,18 @@ root.addEventListener('submit', event => {
     (async () => {
       try { await auth.signIn(data.get('email'), data.get('password')); state.user = auth.currentUser(); await loadCloud(); announce('Signed in to your cloud learner account.'); }
       catch (error) { reportUnexpected(error, 'sign_in'); announce(`Sign in failed: ${error.code || error.message || 'authentication_failed'}.`); }
+    })();
+  }
+  if (form.id === 'recovery-request-form') {
+    (async () => {
+      try {
+        const redirectTo = new URL('/web/account.html', window.location.origin).href;
+        await auth.sendPasswordRecovery(data.get('email'), { redirectTo });
+        announce('If an account can receive password recovery for that email, a reset link has been sent.');
+      } catch (error) {
+        reportUnexpected(error, 'password_recovery_request');
+        announce(`Password recovery request failed: ${error.code || error.message || 'recovery_request_failed'}.`);
+      }
     })();
   }
   if (form.id === 'retention-optin-form') {
@@ -208,6 +225,25 @@ root.addEventListener('submit', event => {
         announce(`Opt-in was not recorded: ${error.code || error.message || 'retention_probe_consent_failed'}.`);
       }
       render();
+    })();
+  }
+  if (form.id === 'recovery-password-form') {
+    (async () => {
+      const password = String(data.get('password') || '');
+      const confirmPassword = String(data.get('confirmPassword') || '');
+      if (password !== confirmPassword) {
+        announce('Passwords do not match.');
+        return;
+      }
+      try {
+        const user = await auth.setPassword(password);
+        state = { ...state, user, recoveryMode: false };
+        render();
+        announce('Password updated. Google and email/password still open this same learner account.');
+      } catch (error) {
+        reportUnexpected(error, 'complete_password_recovery');
+        announce(`Password was not updated: ${error.code || error.message || 'password_update_failed'}.`);
+      }
     })();
   }
   if (form.id === 'add-password-form') {
@@ -251,7 +287,10 @@ async function bootstrap() {
     if (callback.handled) {
       history.replaceState(null, '', window.location.pathname + window.location.search);
       state.user = auth.currentUser();
-      announce('Signed in. Your cloud learner session is connected.');
+      state.recoveryMode = callback.type === 'recovery';
+      announce(callback.type === 'recovery'
+        ? 'Recovery link verified. Choose a new password below.'
+        : 'Signed in. Your cloud learner session is connected.');
     }
   } catch (error) {
     reportUnexpected(error, 'confirmation_callback');
