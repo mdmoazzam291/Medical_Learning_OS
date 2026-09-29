@@ -10,7 +10,7 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
-let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, reviewKinds: [], error: null };
+let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, isAdmin: false, isAdmin: false, reviewKinds: [], error: null };
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function reportUnexpected(error, operation) {
@@ -21,16 +21,21 @@ function reportUnexpected(error, operation) {
 function signedOut() {
   const redirectTo = new URL('/web/account.html', window.location.origin).href;
   const googleUrl = auth.oauthAuthorizeUrl('google', { redirectTo });
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Connect your learner identity.</h1><p>Supabase Auth owns account identity. Email/password and Google sign-in resolve to the same canonical learner UUID.</p></div><span class="badge">M04b</span></div><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form></section><section class="panel"><h2>Create account</h2><p>Google can create the learner identity on first sign-in. Email/password account creation can require confirmation; production SMTP remains deferred until a sending domain exists.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel"><span class="eyebrow">SECURITY BOUNDARY</span><h2>No Google secret or operator credential in the browser.</h2><p>The browser receives only the public Supabase OAuth endpoint and its own learner session. Google client secrets, answer keys and trusted scoring stay behind their provider/server boundaries.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Sign in to Medical Learning OS.</h1><p>Your authenticated identity connects Study Now, reviewed medical questions, exams and NeuralVault across sessions.</p></div><span class="badge">BETA</span></div><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form></section><section class="panel"><h2>Create learner account</h2><p>Google can create the learner identity on first sign-in. Email/password creation may require email confirmation.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel"><span class="eyebrow">SECURITY</span><h2>Admin authority is never carried by learner-facing credentials or browser metadata.</h2><p>Content approval is checked server-side against the single beta content-admin account. Learner accounts can study, annotate and report issues, but cannot approve or publish content.</p></section></main>`;
 }
 
 function signedIn() {
   const p = state.progress;
   const count = state.questions?.length ?? 0;
-  const body = state.loading ? '<p>Checking the authenticated study service…</p>' : state.error ? `<p>Cloud check failed: <strong>${escape(state.error)}</strong></p>` : `<div class="metrics"><div><strong>${p?.attempts ?? 0}</strong><span>Server attempts</span></div><div><strong>${p?.correct ?? 0}</strong><span>Correct</span></div><div><strong>${count}</strong><span>Published questions</span></div></div>`;
-  const medicalAction = count ? '<p><a class="primary action-link" href="/web/medical.html">Open medical QBank →</a> <a class="secondary action-link" href="/web/vault.html">Open NeuralVault →</a></p>' : '<p><a class="secondary action-link" href="/web/vault.html">Open NeuralVault →</a></p>';
-  const reviewer = state.reviewKinds.length ? `<section class="panel reviewer-access"><div><span class="eyebrow">REVIEWER ACCESS</span><h2>Authenticated content review is available.</h2><p>Granted gates: ${state.reviewKinds.map(escape).join(', ')}. Review decisions are version-bound and cannot publish content directly.</p></div><a class="secondary action-link" href="/web/review.html">Open review workspace</a></section>` : '';
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to local demo</a><div class="page-heading"><div><span class="eyebrow">CLOUD ACCOUNT</span><h1>Your learner identity is connected.</h1><p>${escape(state.user?.email || 'Authenticated learner')} · Supabase Auth</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Cloud study record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing session…' : 'Verify session refresh'}</button></div>${body}${medicalAction}<p class="muted">Cloud evidence is separate from the three-question local demo. Only published, reviewed medical question versions can enter the authenticated medical QBank.</p></section>${reviewer}<section class="panel"><span class="eyebrow">CONTENT GATE</span><h2>Reviewed medical content follows the publication gate.</h2><p>Published question versions use the authenticated, server-scored study path. Draft and in-review content remain excluded.</p></section></main>`;
+  const body = state.loading
+    ? '<p>Loading your learning account…</p>'
+    : state.error
+      ? `<p>Account data unavailable: <strong>${escape(state.error)}</strong></p>`
+      : `<div class="metrics"><div><strong>${p?.attempts ?? 0}</strong><span>Recorded attempts</span></div><div><strong>${p?.correct ?? 0}</strong><span>Correct</span></div><div><strong>${count}</strong><span>Published questions</span></div></div>`;
+  const admin = state.isAdmin
+    ? `<section class="panel reviewer-access"><div><span class="eyebrow">ADMIN</span><h2>Content Admin Console</h2><p>This account is the beta content authority for Medical, References and Rights review. Learners do not receive these controls.</p></div><a class="secondary action-link" href="/web/admin.html">Open Admin Console →</a></section>`
+    : '';
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Your Medical Learning OS account.</h1><p>${escape(state.user?.email || 'Authenticated learner')}</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Learning record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh session'}</button></div>${body}<p><a class="primary action-link" href="/">Home →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a> <a class="secondary action-link" href="/web/vault.html">NeuralVault →</a></p><p class="muted">Only published, reviewed question versions enter the learner path.</p></section>${admin}<section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Learner and admin responsibilities are separate.</h2><p>Learners may report suspected errors. Only the server-authorized content admin can approve Medical, References, Rights, or research pair-validation evidence.</p></section></main>`;
 }
 
 function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
@@ -38,10 +43,14 @@ function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
 async function loadReviewerAccess() {
   try {
     const me = await review.me();
-    state = { ...state, reviewKinds: Array.isArray(me?.reviewKinds) ? me.reviewKinds : [] };
+    state = {
+      ...state,
+      isAdmin: me?.isAdmin === true,
+      reviewKinds: me?.isAdmin === true && Array.isArray(me?.reviewKinds) ? me.reviewKinds : []
+    };
   } catch (error) {
-    state = { ...state, reviewKinds: [] };
-    if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'load_reviewer_access');
+    state = { ...state, isAdmin: false, reviewKinds: [] };
+    if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'load_admin_access');
   }
 }
 
@@ -51,12 +60,12 @@ async function loadCloud({ forceRefresh = false } = {}) {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
     reportUnexpected(error, 'refresh_session');
-    state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null };
+    state = { user: null, loading: false, progress: null, questions: null, isAdmin: false, reviewKinds: [], error: null };
     render();
     announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
     return;
   }
-  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null }; render(); return; }
+  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, isAdmin: false, reviewKinds: [], error: null }; render(); return; }
   state = { ...state, user: session.user, loading: true, error: null }; render();
   try {
     const [progress, result] = await Promise.all([cloud.progress(), cloud.questions('all')]);
@@ -76,7 +85,7 @@ root.addEventListener('click', event => {
   event.preventDefault();
   if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'signout') {
-    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, reviewKinds: [], error: null }; announce('Signed out. Local demo data was not changed.'); render(); })();
+    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, isAdmin: false, reviewKinds: [], error: null }; announce('Signed out.'); render(); })();
   }
 });
 
