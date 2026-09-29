@@ -18,7 +18,7 @@ test('admin MCP publishes OAuth protected-resource metadata without secrets', ()
   const metadata = protectedResourceMetadata();
   assert.equal(metadata.resource, 'https://medical-learning-os-preview.onrender.com');
   assert.deepEqual(metadata.authorization_servers, ['https://iyapppmeieqhflnzslao.supabase.co/auth/v1']);
-  assert.deepEqual(metadata.scopes_supported, ['openid', 'email', 'profile']);
+  assert.deepEqual(metadata.scopes_supported, ['email']);
   assert.doesNotMatch(JSON.stringify(metadata), /service_role|secret/i);
 });
 
@@ -183,4 +183,12 @@ test('read-only MCP mode rejects authoritative tool calls even for admin', async
     }
   }, 'user-jwt', { fetchFn, readOnlyMode: true });
   assert.equal(result.body.error.code, -32602);
+});
+
+
+test('admin MCP requests only the minimum OAuth email scope', () => {
+  assert.deepEqual(protectedResourceMetadata().scopes_supported, ['email']);
+  for (const tool of ADMIN_MCP_TOOLS) {
+    assert.deepEqual(tool.securitySchemes, [{ type: 'oauth2', scopes: ['email'] }]);
+  }
 });
