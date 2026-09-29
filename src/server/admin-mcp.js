@@ -38,7 +38,7 @@ const authoritativeWrite = Object.freeze({
 
 const REVIEW_KIND_SCHEMA = { type: 'string', enum: ['medical', 'references', 'rights'] };
 
-export const ADMIN_MCP_TOOLS = Object.freeze([
+const ADMIN_MCP_TOOL_DEFINITIONS = Object.freeze([
   {
     name: 'mlos_admin_home',
     title: 'MLOS Admin Home',
@@ -232,6 +232,21 @@ export const ADMIN_MCP_TOOLS = Object.freeze([
     annotations: authoritativeWrite
   }
 ]);
+
+const OAUTH_SECURITY_SCHEMES = Object.freeze([
+  Object.freeze({ type: 'oauth2', scopes: ['openid', 'email', 'profile'] })
+]);
+
+export const ADMIN_MCP_TOOLS = Object.freeze(
+  ADMIN_MCP_TOOL_DEFINITIONS.map(tool => Object.freeze({
+    ...tool,
+    securitySchemes: OAUTH_SECURITY_SCHEMES,
+    _meta: Object.freeze({
+      ...(tool._meta || {}),
+      securitySchemes: OAUTH_SECURITY_SCHEMES
+    })
+  }))
+);
 
 function textResult(payload, extra = {}) {
   return {
@@ -496,7 +511,16 @@ export async function dispatchAdminMcpRpc(rpc, token, { fetchFn = fetch, readOnl
           contents: [{
             uri: ADMIN_MCP_UI_URI,
             mimeType: 'text/html;profile=mcp-app',
-            text: adminWidgetHtml()
+            text: adminWidgetHtml(),
+            _meta: {
+              ui: {
+                prefersBorder: true,
+                csp: {
+                  connectDomains: [],
+                  resourceDomains: []
+                }
+              }
+            }
           }]
         }
       }
