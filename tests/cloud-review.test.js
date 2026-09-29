@@ -265,3 +265,44 @@ test('review adapter reads and triages learner reports without browser reviewer 
     'attestationVersion','attested','decision','reasonCode','reportIds','reviewKind'
   ]);
 });
+
+
+test('admin pair validation never sends validator identity from the browser', async () => {
+  const calls = [];
+  const review = createCloudReview({
+    projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co',
+    publishableKey: 'sb_publishable_test',
+    auth: fakeAuth(),
+    fetchFn: async (url, init) => {
+      calls.push({ url, init });
+      return new Response(JSON.stringify({
+        contractId: 'admin-transfer-pair-validation-receipt-v1',
+        receipt: { transfer_evidence_valid: true, retention_probe_comparable: false }
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    }
+  });
+
+  await review.transferPairs();
+  await review.validateTransferPair({
+    questionVersionA: 'demo:a@1',
+    questionVersionB: 'demo:b@1',
+    decision: 'validated',
+    surfaceNovelty: 'moderate',
+    constructAlignment: 'same_primary_construct',
+    reasoningAlignment: 'bounded_difference',
+    difficultyComparability: 'unknown',
+    cueOverlapRisk: 'moderate',
+    retentionProbeComparable: false,
+    notes: 'Human reviewed the exact pair and found bounded novelty with unknown difficulty comparability.',
+    attested: true
+  });
+
+  assert.match(calls[0].url, /\/transfer-pairs$/);
+  assert.equal(calls[0].init.method, 'GET');
+  assert.match(calls[1].url, /\/transfer-pairs\/validate$/);
+  const body = JSON.parse(calls[1].init.body);
+  assert.equal('validatorId' in body, false);
+  assert.equal('reviewerId' in body, false);
+  assert.equal(body.attestationVersion, 'transfer-pair-human-validation-v1');
+  assert.equal(body.attested, true);
+});

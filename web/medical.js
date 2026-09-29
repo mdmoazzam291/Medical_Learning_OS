@@ -8,6 +8,8 @@ const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
+const requestedStudyNowValue = Number(new URLSearchParams(location.search).get('studyNow'));
+let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;
 
 let state = {
   user: auth.currentUser(),
@@ -458,6 +460,14 @@ async function bootstrap() {
     return;
   }
   await loadOverview();
+  if (requestedStudyNowMinutes && state.user && !state.session) {
+    const minutes = requestedStudyNowMinutes;
+    requestedStudyNowMinutes = null;
+    const nextUrl = new URL(location.href);
+    nextUrl.searchParams.delete('studyNow');
+    history.replaceState(null, '', nextUrl.pathname + nextUrl.search + nextUrl.hash);
+    await startStudyNow(minutes);
+  }
 }
 
 render();

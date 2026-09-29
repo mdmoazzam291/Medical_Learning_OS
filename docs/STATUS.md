@@ -1524,3 +1524,16 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Retention-probe activation remains **false**. Current blockers are validated pair metadata, learner opt-in, and separate activation authorization. Study Now, FSRS authority, mastery/forgetting inference and causal claims remain disabled.
 - Post-migration security advisor shows only the expected service-only RLS/no-policy INFO for the new table plus the pre-existing leaked-password-protection WARN. No new security WARN was introduced.
 - The SQL passed a live rollback compile before promotion. Repository tests/CI are added in the M11c PR; the first persistent pair decision remains a separate human-review step.
+
+
+## 2026-09-29 — Beta product UI + singleton content admin
+
+- Retired the M03 local demo from the root application surface; root now opens the authenticated beta Preparation Command Center.
+- Beta learner navigation is Home / Study / Exams / Vault / Account. Admin appears only after server-side admin confirmation.
+- Added a singleton `content_admin_account` governance layer. Live preflight found exactly one active reviewer and that account already holds all three Medical / References / Rights grants, so no authority migration is required.
+- Review API now resolves admin authority server-side before returning review grants or queues.
+- Added Admin Console for content governance and M11c transfer/retention pair validation.
+- Learners retain issue-reporting and personal correction paths but receive no approval controls.
+- Removed demo modules from the served public allowlist.
+- Study Now home links can deep-link into 10/20/30/60-minute authenticated sessions.
+- No retention probe is activated by this change; learner opt-in and separate activation authorization remain required.
