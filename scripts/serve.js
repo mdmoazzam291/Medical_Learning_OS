@@ -14,6 +14,8 @@ const allowed = new Set([
   'web/favicon.svg',
   'web/account.html',
   'web/account.js',
+  'web/oauth-consent.html',
+  'web/oauth-consent.js',
   'web/medical.html',
   'web/medical.js',
   'web/exam.html',
@@ -69,7 +71,11 @@ const server = createServer(async (req, res) => {
       res.writeHead(405, { Allow: 'GET, HEAD' });
       return res.end();
     }
-    const path = pathname === '/' ? 'web/index.html' : pathname.slice(1);
+    const path = pathname === '/'
+      ? 'web/index.html'
+      : pathname === '/oauth/consent'
+        ? 'web/oauth-consent.html'
+        : pathname.slice(1);
     if (!allowed.has(path)) {
       res.writeHead(404);
       return res.end('Not found');
