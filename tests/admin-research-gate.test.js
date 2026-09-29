@@ -15,7 +15,7 @@ test('admin transfer-pair queue is backed by canonical activation readiness', ()
   assert.match(api, /human-transfer-pair-validation/);
   assert.match(api, /awaiting-current-learner-opt-in/);
   assert.match(api, /retention-probe-activation-authorization/);
-  assert.match(api, /bounded-probe-scheduler-not-implemented/);
+  assert.match(api, /retention-probe-scheduler-kernel-ready/);
 });
 
 test('research gate keeps scheduling fail closed while authorization is separately governed', () => {
@@ -34,7 +34,8 @@ test('admin UI promotes human pair validation without fabricating human judgment
   assert.match(admin, /Review the blocking pair/);
   assert.match(admin, /At least one learner must currently opt in before authorization/);
   assert.match(admin, /Issue a bounded feasibility authorization/);
-  assert.match(admin, /Bounded probe scheduling is the next engineering gate/);
+  assert.match(admin, /SCHEDULER KERNEL READY · AUTOMATION OFF/);
+  assert.match(admin, /Eligibility can be computed atomically, but nothing is delivered automatically/);
   assert.match(admin, /This creates an immutable authorization record only\. It does not schedule a probe/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });
