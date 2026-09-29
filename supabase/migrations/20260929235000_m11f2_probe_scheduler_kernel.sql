@@ -315,14 +315,14 @@ security invoker
 set search_path=''
 as $function$
 declare
-  v_activation jsonb;
+  v_authorization jsonb;
   v_candidate_count integer := 0;
   v_assignment_count integer := 0;
   v_active_authorization boolean := false;
 begin
-  v_activation := public.study_retention_probe_activation_readiness_v1();
+  v_authorization := public.study_retention_probe_activation_authorization_readiness_v1();
   v_active_authorization := coalesce(
-    (v_activation->>'activationAuthority')::boolean,
+    (v_authorization->'readiness'->>'canRevoke')::boolean,
     false
   );
 
@@ -339,6 +339,7 @@ begin
     'contractId','study-retention-probe-scheduler-readiness-v1',
     'evaluatedAt',p_now,
     'activeAuthorization',v_active_authorization,
+    'authorizationReadiness',v_authorization,
     'eligibleCandidateCount',v_candidate_count,
     'assignmentCount',v_assignment_count,
     'schedulerKernelAvailable',true,
@@ -675,4 +676,127 @@ $function$;
 revoke all on function public.study_retention_probe_delivery_readiness_v1(uuid,uuid,timestamptz)
   from public, anon, authenticated;
 grant execute on function public.study_retention_probe_delivery_readiness_v1(uuid,uuid,timestamptz)
+  to service_role;
+
+
+create or replace function public.study_retention_probe_activation_readiness_v1()
+returns jsonb
+language plpgsql
+stable
+security invoker
+set search_path=''
+as $function$
+declare
+  v_content jsonb;
+  v_protocol jsonb;
+  v_pairs jsonb;
+  v_authorization jsonb;
+  v_scheduler jsonb;
+  v_has_pair boolean;
+  v_has_protocol boolean;
+  v_has_validated_pair boolean;
+  v_active_opt_in_count integer;
+  v_has_active_authorization boolean;
+  v_scheduler_kernel boolean;
+  v_automatic_execution boolean;
+  v_learner_delivery boolean;
+begin
+  v_content := public.study_retention_probe_readiness_v1();
+  v_protocol := public.study_retention_probe_protocol_v1();
+  v_pairs := public.study_transfer_pair_validation_readiness_v1();
+  v_authorization := public.study_retention_probe_activation_authorization_readiness_v1();
+  v_scheduler := public.study_retention_probe_scheduler_readiness_v1(pg_catalog.now());
+
+  v_has_pair := coalesce(
+    (v_content->'readiness'->>'hasAnyPublishedAlternateItemPair')::boolean,
+    false
+  );
+  v_has_protocol := v_protocol is not null;
+  v_has_validated_pair := coalesce(
+    (v_pairs->'readiness'->>'validatedRetentionProbePairMetadataAvailable')::boolean,
+    false
+  );
+  v_active_opt_in_count := coalesce(
+    (v_authorization->>'activeOptedInLearners')::integer,
+    0
+  );
+  v_has_active_authorization := coalesce(
+    (v_authorization->'readiness'->>'canRevoke')::boolean,
+    false
+  );
+  v_scheduler_kernel := coalesce(
+    (v_scheduler->>'schedulerKernelAvailable')::boolean,
+    false
+  );
+  v_automatic_execution := coalesce(
+    (v_scheduler->>'automaticExecutionEnabled')::boolean,
+    false
+  );
+  v_learner_delivery := coalesce(
+    (v_scheduler->>'learnerDeliveryEnabled')::boolean,
+    false
+  );
+
+  return pg_catalog.jsonb_build_object(
+    'contractId','study-retention-probe-activation-readiness-v1',
+    'contentReadiness',v_content,
+    'protocol',v_protocol,
+    'pairValidationReadiness',v_pairs,
+    'activationAuthorizationReadiness',v_authorization,
+    'schedulerReadiness',v_scheduler,
+    'readiness',pg_catalog.jsonb_build_object(
+      'hasPublishedAlternateItemPair',v_has_pair,
+      'protocolPreregistered',v_has_protocol,
+      'validatedPairMetadataAvailable',v_has_validated_pair,
+      'learnerOptInPathAvailable',true,
+      'activeOptedInLearners',v_active_opt_in_count,
+      'activationAuthorizationAvailable',v_has_active_authorization,
+      'schedulerKernelAvailable',v_scheduler_kernel,
+      'automaticSchedulerExecutionEnabled',v_automatic_execution,
+      'learnerDeliveryEnabled',v_learner_delivery,
+      'canActivate',false,
+      'blockingReasons',
+        (case when not v_has_pair
+          then '["no-published-alternate-item-pair"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_has_protocol
+          then '["retention-probe-protocol-not-preregistered"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_has_validated_pair
+          then '["validated-alternate-pair-metadata-not-yet-available"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when v_active_opt_in_count < 1
+          then '["at-least-one-currently-opted-in-learner-required"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_has_active_authorization
+          then '["separate-activation-authorization-required"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_scheduler_kernel
+          then '["retention-probe-scheduler-kernel-unavailable"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_automatic_execution
+          then '["automatic-scheduler-execution-not-enabled"]'::jsonb
+          else '[]'::jsonb end)
+        ||
+        (case when not v_learner_delivery
+          then '["learner-delivery-not-implemented"]'::jsonb
+          else '[]'::jsonb end)
+    ),
+    'activationAuthority',v_has_active_authorization,
+    'probeSchedulingEnabled',false,
+    'studyNowAuthority',false,
+    'masteryInferenceAuthority',false
+  );
+end;
+$function$;
+
+revoke all on function public.study_retention_probe_activation_readiness_v1()
+  from public, anon, authenticated;
+grant execute on function public.study_retention_probe_activation_readiness_v1()
   to service_role;
