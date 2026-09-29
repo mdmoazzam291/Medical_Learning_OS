@@ -40,7 +40,8 @@ test('study-api revision projection is non-authoritative for attempt writes', as
   assert.match(source, /revision_projection_failed/);
   assert.match(source, /revision_projection_deferred/);
   assert.match(source, /if \(revisionError\) \{/);
-  assert.match(source, /return response\(req, 200, data\?\.receipt \?\? receipt\)/);
+  assert.match(source, /const storedReceipt = data\?\.receipt \?\? receipt/);
+  assert.match(source, /return response\(req, 200, storedReceipt\)/);
   assert.doesNotMatch(source, /if \(revisionError\) fail\(/);
 });
 
