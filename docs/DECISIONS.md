@@ -1246,3 +1246,17 @@ The system therefore records separate immutable states for assignment, exact ser
 Contaminated or late responses are preserved with explicit analysis flags instead of being deleted. This supports auditability and prevents outcome-cleaning logic from rewriting observed learner behavior.
 
 Research evidence may enter canonical learning-event stream v2, but it remains descriptive and has no mastery/forgetting inference authority until separately validated.
+
+
+## ADR-083 — Retention feasibility reporting remains descriptive until measurement supports stronger claims
+**Status:** Accepted — 2026-09-29
+
+The first retention-probe analysis surface reports operational feasibility and observed outcomes only.
+
+Assignment, server serve, response and clean-analysis eligibility remain separate denominators. Rates are returned only when their denominator exists; an empty pilot produces null estimates rather than false zeros.
+
+The platform will not infer transport failure from nonresponse. Until a trustworthy render/delivery acknowledgement exists, server serve does not prove learner view and absence of a response is observationally ambiguous.
+
+The report must remain explicit by validated item pair and concept, retain contamination counts, and state its limitations. It has no causal-inference, hypothesis-testing, mastery, forgetting, Study Now or activation authority.
+
+Stronger statistical claims require a separately preregistered analysis plan with sufficient eligible observations and a measurement model that supports the claim being made.

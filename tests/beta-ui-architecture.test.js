@@ -96,3 +96,13 @@ test('admin research gate prioritizes human M11c review and keeps scheduling sep
   assert.match(admin, /There is no cron trigger, no Admin “run scheduler” button and no learner delivery surface yet/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });
+
+
+test('admin feasibility analytics stay descriptive and separate from learner UX', () => {
+  assert.match(admin, /FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY/);
+  assert.match(admin, /No causal inference/);
+  assert.match(admin, /No hypothesis testing/);
+  assert.match(admin, /No mastery\/forgetting fitting/);
+  assert.doesNotMatch(account, /FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY/);
+  assert.doesNotMatch(app, /FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY/);
+});
