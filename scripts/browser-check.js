@@ -193,7 +193,23 @@ try {
               { optionId: 'steroid', text: 'Hydrocortisone' }
             ],
             answerOptionId: 'epinephrine',
-            explanation: 'Immediate intramuscular epinephrine is first-line.'
+            explanation: 'Immediate intramuscular epinephrine is first-line.',
+            reviewPacket: {
+              sourceIds: ['cdc:immunization-adverse-reactions:2024-07-25'],
+              sources: [{
+                sourceId: 'cdc:immunization-adverse-reactions:2024-07-25',
+                title: 'CDC: Preventing and Managing Adverse Reactions',
+                version: '2024-07-25',
+                rightsStatus: 'citation_only'
+              }],
+              provenance: { kind: 'ai_generated' },
+              changeReason: 'Initial source-grounded medical seed',
+              reviewSummary: [
+                { kind: 'medical', decision: 'approved' },
+                { kind: 'references', decision: 'approved' },
+                { kind: 'rights', decision: 'approved' }
+              ]
+            },
           },
           questionB: {
             questionId: 'emergency:anaphylaxis:no-rash-first-action',
@@ -204,7 +220,23 @@ try {
               { optionId: 'epinephrine', text: 'Give intramuscular epinephrine' }
             ],
             answerOptionId: 'epinephrine',
-            explanation: 'Skin findings are not required before treating anaphylaxis.'
+            explanation: 'Skin findings are not required before treating anaphylaxis.',
+            reviewPacket: {
+              sourceIds: ['cdc:immunization-adverse-reactions:2024-07-25'],
+              sources: [{
+                sourceId: 'cdc:immunization-adverse-reactions:2024-07-25',
+                title: 'CDC: Preventing and Managing Adverse Reactions',
+                version: '2024-07-25',
+                rightsStatus: 'citation_only'
+              }],
+              provenance: { kind: 'ai_generated' },
+              changeReason: 'Targeted alternate-item candidate',
+              reviewSummary: [
+                { kind: 'medical', decision: 'approved' },
+                { kind: 'references', decision: 'approved' },
+                { kind: 'rights', decision: 'approved' }
+              ]
+            },
           },
           validation: null
         }]
@@ -256,6 +288,8 @@ try {
   await page.getByRole('heading', { name: 'Human pair validation is the next research gate.' }).waitFor();
   assert.equal(await page.getByRole('button', { name: /activate/i }).count(), 0);
   await page.getByRole('heading', { name: 'emergency:anaphylaxis:first-line-treatment' }).waitFor();
+  assert.equal(await page.getByText('HUMAN REVIEW PACKET', { exact: true }).count(), 2);
+  assert.match(await page.locator('.transfer-pair-form').locator('..').innerText(), /CDC: Preventing and Managing Adverse Reactions/);
   const pairForm = page.locator('.transfer-pair-form');
   await pairForm.getByLabel('Decision').selectOption('validated');
   await pairForm.getByLabel('Surface novelty').selectOption('moderate');
