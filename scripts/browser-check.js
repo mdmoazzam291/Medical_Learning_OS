@@ -141,6 +141,58 @@ try {
         }
       }) });
     }
+    if (url.includes('/functions/v1/study-api/sessions/beta-study-now/answer')) {
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        event: {
+          schemaVersion: 1,
+          type: 'question.answered',
+          eventId: '22222222-2222-4222-8222-222222222222',
+          questionVersionId: 'published:one@1',
+          conceptId: 'published:one',
+          correct: true,
+          durationMs: 42000
+        },
+        selectedOptionId: 'a',
+        answerOptionId: 'a',
+        explanation: 'Reviewed explanation.',
+        sources: []
+      }) });
+    }
+    if (url.includes('/functions/v1/study-api/sessions/beta-study-now/next')) {
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        sessionId: 'beta-study-now',
+        position: 1,
+        total: 1,
+        closed: true,
+        question: null,
+        receipt: null,
+        memoryJudgment: null,
+        recommendationContext: null
+      }) });
+    }
+    if (url.includes('/functions/v1/study-api/study-now/integrity')) {
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        contractId: 'study-now-completion-integrity-v1',
+        recommendationCount: 1,
+        completeEvidenceChainCount: 1,
+        hostedBrowserGateSatisfied: true,
+        openRecommendationSessionCount: 0,
+        memoryRatingRequiredForCompletion: false,
+        latestRecommendation: {
+          recommendationId: '33333333-3333-4333-8333-333333333333',
+          sessionId: 'beta-study-now',
+          sessionClosed: true,
+          selectedCount: 1,
+          attemptedCount: 1,
+          authoritativeScheduleCount: 1,
+          memoryRatingCount: 0,
+          hostedBrowserAnswerCount: 1,
+          evidenceChainComplete: true,
+          hostedM05cGateSatisfied: true,
+          blockers: []
+        }
+      }) });
+    }
 
     if (url.includes('/functions/v1/review-api/me')) {
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
@@ -303,6 +355,11 @@ try {
   await page.getByText('Question 1 of 1', { exact: false }).waitFor();
   assert.equal(studyNowCalls, 1);
   assert.equal(new URL(page.url()).searchParams.has('studyNow'), false);
+  await page.locator('input[name="answer"][value="a"]').check();
+  await page.getByRole('button', { name: 'Check answer' }).click();
+  await page.getByRole('button', { name: 'Finish session →' }).click();
+  await page.getByText('Study Now loop verified.', { exact: true }).waitFor();
+  assert.match(await page.locator('.completion').innerText(), /Hosted browser answer evidence is also present/);
 
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();
