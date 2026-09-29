@@ -162,12 +162,16 @@ begin
       detail=v_readiness::text;
   end if;
 
-  select v.*, c.version
-  into v_pair, v_catalog_version
+  select *
+  into v_pair
   from public.study_transfer_pair_validations v
-  cross join public.study_catalog c
   where v.id=v_assignment.pair_validation_id
-    and c.id=1
+  limit 1;
+
+  select c.version
+  into v_catalog_version
+  from public.study_catalog c
+  where c.id=1
   limit 1;
 
   if v_pair.id is null or v_catalog_version is null then
