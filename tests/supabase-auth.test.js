@@ -198,3 +198,108 @@ test('OAuth adapter rejects unapproved providers instead of becoming an open pro
     error => error instanceof AuthError && error.code === 'unsupported_oauth_provider'
   );
 });
+
+
+test('normalized auth user preserves linked sign-in providers without storing provider secrets', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async url => {
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access',
+          refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: {
+            id: 'u1',
+            email: 'learner@example.com',
+            email_confirmed_at: '2026-01-01T00:00:00Z',
+            app_metadata: { provider: 'email', providers: ['email', 'google'] },
+            identities: [
+              { id: 'identity-email', provider: 'email', identity_data: { email: 'learner@example.com' } },
+              { id: 'identity-google', provider: 'google', identity_data: { email: 'learner@example.com', provider_token: 'must-not-persist' } }
+            ]
+          }
+        });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+
+  await auth.signIn('learner@example.com', 'strong-password');
+  assert.deepEqual(auth.currentUser().providers, ['email', 'google']);
+  const persisted = storage.dump()[0][1];
+  assert.doesNotMatch(persisted, /identity-email|identity-google|provider_token|must-not-persist/);
+});
+
+test('Google-created user can add password sign-in to the same authenticated user', async () => {
+  const storage = memoryStorage();
+  const calls = [];
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      calls.push({ url, options });
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access',
+          refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: {
+            id: 'same-user',
+            email: 'same@example.com',
+            app_metadata: { provider: 'google', providers: ['google'] }
+          }
+        });
+      }
+      if (url.endsWith('/auth/v1/user') && options.method === 'PUT') {
+        assert.equal(options.headers.Authorization, 'Bearer access');
+        assert.deepEqual(JSON.parse(options.body), { password: 'new-strong-password' });
+        return Response.json({
+          id: 'same-user',
+          email: 'same@example.com',
+          email_confirmed_at: '2026-01-01T00:00:00Z',
+          app_metadata: { provider: 'google', providers: ['google', 'email'] }
+        });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+
+  await auth.signIn('same@example.com', 'temporary-password');
+  const beforeId = auth.currentUser().id;
+  const user = await auth.setPassword('new-strong-password');
+  assert.equal(user.id, beforeId);
+  assert.deepEqual(user.providers, ['email', 'google']);
+  assert.doesNotMatch(storage.dump()[0][1], /new-strong-password/);
+});
+
+test('refreshUser enriches an existing session with current linked providers', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access',
+          refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'u1', email: 'same@example.com' }
+        });
+      }
+      if (url.endsWith('/auth/v1/user') && options.method === 'GET') {
+        return Response.json({
+          id: 'u1',
+          email: 'same@example.com',
+          app_metadata: { providers: ['google', 'email'] }
+        });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+
+  await auth.signIn('same@example.com', 'strong-password');
+  assert.deepEqual(auth.currentUser().providers, []);
+  const user = await auth.refreshUser();
+  assert.equal(user.id, 'u1');
+  assert.deepEqual(user.providers, ['email', 'google']);
+});

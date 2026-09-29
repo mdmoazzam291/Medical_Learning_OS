@@ -56,3 +56,9 @@ The medical learner UI has a dormant M10b path for server-scored visual detectio
 The browser submits only the selected option plus request/session position, exact media identity, help-use state and optional intervention reference. Correctness, target concept, outcome, event identity and timing remain server-owned. The returned ordinary question attempt remains the scored retrieval record; the visual receipt is an additional observation and does not become a mastery score.
 
 Until a reviewed/published visual item has that canonical descriptor, this code path is inert and ordinary medical study behavior is unchanged.
+
+
+## Unified sign-in identity
+Medical Learning OS treats the Supabase Auth user ID as the learner identity. A verified email may have both Google and email/password sign-in methods attached to that one identity.
+
+The Account surface shows linked methods. If a learner first creates the account with Google, they can add a password while authenticated. If they first create it with email/password, later Google sign-in using the same verified email is handled by Supabase automatic identity linking. The application does not create a second learner profile or copy historical learning evidence between identities.

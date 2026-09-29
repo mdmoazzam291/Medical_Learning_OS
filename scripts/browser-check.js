@@ -14,7 +14,11 @@ function sessionPayload(email = 'admin@example.com') {
     user: {
       id: '11111111-1111-1111-1111-111111111111',
       email,
-      email_confirmed_at: '2026-09-25T00:00:00Z'
+      email_confirmed_at: '2026-09-25T00:00:00Z',
+      app_metadata: {
+        provider: email === 'admin@example.com' ? 'google' : 'email',
+        providers: email === 'admin@example.com' ? ['google', 'email'] : ['email']
+      }
     }
   };
 }
@@ -204,6 +208,7 @@ try {
   await form.getByLabel('Password').fill('strong-password');
   await form.getByRole('button', { name: 'Sign in with email' }).click();
   await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+  await page.getByRole('heading', { name: 'One learner account, two ways in.' }).waitFor();
   await page.getByRole('button', { name: 'Opt in to retention feasibility' }).waitFor();
   await page.getByRole('link', { name: 'Open Admin Console' }).waitFor();
 
@@ -249,6 +254,7 @@ try {
   await learnerForm.getByLabel('Password').fill('strong-password');
   await learnerForm.getByRole('button', { name: 'Sign in with email' }).click();
   await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+  await page.getByRole('heading', { name: 'Email + password is connected.' }).waitFor();
   assert.equal(await page.getByRole('link', { name: 'Open Admin Console' }).count(), 0);
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Admin access only.' }).waitFor();

@@ -61,3 +61,14 @@ test('learner account exposes explicit optional retention opt-in without activat
   assert.match(account, /decision: 'withdraw'/);
   assert.doesNotMatch(account, /learnerId\s*:/);
 });
+
+
+test('account treats Google and password as methods on one verified-email learner identity', () => {
+  assert.match(account, /ONE EMAIL · ONE LEARNER ACCOUNT/);
+  assert.match(account, /same verified email/);
+  assert.match(account, /One learner account, two ways in/);
+  assert.match(account, /Add password sign-in to this Google account/);
+  assert.match(account, /auth\.setPassword/);
+  assert.match(account, /No learner data needs to be copied or merged/);
+  assert.doesNotMatch(account, /merge learner accounts|copy learner history/i);
+});
