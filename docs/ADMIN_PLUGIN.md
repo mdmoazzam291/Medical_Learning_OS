@@ -1,6 +1,6 @@
 # Medical Learning OS Admin Plugin Extension
 
-**Status:** V0.1 foundation implemented on feature branch  
+**Status:** V0.1 backend merged; OAuth consent activation implemented  
 **Audience:** MLOS content admin / reviewers  
 **Primary goal:** reduce admin friction without creating a second source of medical truth or a second authorization path.
 
@@ -44,7 +44,7 @@ The plugin must never bypass the existing Medical, References, Rights, provenanc
 
 ### Authentication
 
-Use Supabase Auth as the OAuth 2.1 / OIDC authorization server for the MCP client.
+Use Supabase Auth as the OAuth 2.1 authorization server for the MCP client. The admin plugin requests only the `email` scope; it does not require the `openid` scope or an ID token.
 
 ```text
 ChatGPT
@@ -90,6 +90,43 @@ This is a product-access constraint, not an MLOS backend limitation.
 
 The MCP layer forwards the authenticated user token plus the browser-safe Supabase publishable key to the existing `review-api`. The review API then resolves `content_admin_status_v1` and gate grants from trusted server/database state.
 
+### OAuth consent surface
+
+MLOS owns a first-party authorization page:
+
+```text
+GET /oauth/consent?authorization_id=<Supabase authorization ID>
+```
+
+Flow:
+
+```text
+ChatGPT / MCP client
+  -> Supabase /oauth/authorize
+  -> MLOS /oauth/consent
+  -> existing MLOS sign-in if required
+  -> show client + requested scope
+  -> explicit Allow / Deny
+  -> Supabase issues authorization code
+  -> client exchanges code using PKCE
+```
+
+The consent page preserves the pending authorization request in `sessionStorage` for at most 10 minutes while the user signs in. It accepts only a same-origin return path and validates the server-returned client callback before redirecting.
+
+### One-time Supabase dashboard activation still required
+
+The repository cannot toggle project-level Auth settings. In Supabase Dashboard:
+
+1. **Authentication → URL Configuration**
+   - Site URL: `https://medical-learning-os-preview.onrender.com`
+2. **Authentication → OAuth Server**
+   - Enable **OAuth 2.1 Server**
+   - Authorization Path: `/oauth/consent`
+3. Keep the standard `email` scope available.
+4. Dynamic client registration can then be used by MCP-compatible clients.
+
+No new paid service is required for this OAuth layer.
+
 ### V0.1 implementation footprint
 
 No new database table is required.
@@ -97,10 +134,16 @@ No new database table is required.
 New/changed surfaces:
 
 - `src/server/admin-mcp.js`
+- `src/adapters/supabase-auth.js`
 - `scripts/serve.js`
+- `web/oauth-consent.html`
+- `web/oauth-consent.js`
+- `web/account.js`
 - `supabase/functions/review-api/index.ts`
 - `tests/admin-mcp.test.js`
 - `tests/review-api.test.js`
+- `tests/supabase-auth.test.js`
+- `tests/oauth-consent-ui.test.js`
 - this specification
 - ADR-086
 

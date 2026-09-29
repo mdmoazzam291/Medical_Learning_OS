@@ -12,6 +12,24 @@ const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
 let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null };
 
+const OAUTH_RETURN_KEY = 'mlos-oauth-consent-return-v1';
+const OAUTH_RETURN_MAX_AGE_MS = 10 * 60 * 1000;
+
+function resumePendingOAuthConsent() {
+  let pending = null;
+  try { pending = JSON.parse(sessionStorage.getItem(OAUTH_RETURN_KEY) || 'null'); } catch {}
+  sessionStorage.removeItem(OAUTH_RETURN_KEY);
+  if (!pending || typeof pending.path !== 'string' || !Number.isFinite(Number(pending.createdAt))) return false;
+  if (Date.now() - Number(pending.createdAt) > OAUTH_RETURN_MAX_AGE_MS) return false;
+  let target;
+  try { target = new URL(pending.path, window.location.origin); } catch { return false; }
+  if (target.origin !== window.location.origin || target.pathname !== '/oauth/consent') return false;
+  const id = target.searchParams.get('authorization_id');
+  if (!/^[A-Za-z0-9_-]{1,200}$/.test(String(id || ''))) return false;
+  location.replace(target.pathname + '?authorization_id=' + encodeURIComponent(id));
+  return true;
+}
+
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
@@ -186,7 +204,7 @@ root.addEventListener('submit', event => {
   const data = new FormData(form);
   if (form.id === 'signin-form') {
     (async () => {
-      try { await auth.signIn(data.get('email'), data.get('password')); state.user = auth.currentUser(); await loadCloud(); announce('Signed in to your cloud learner account.'); }
+      try { await auth.signIn(data.get('email'), data.get('password')); state.user = auth.currentUser(); if (resumePendingOAuthConsent()) return; await loadCloud(); announce('Signed in to your cloud learner account.'); }
       catch (error) { reportUnexpected(error, 'sign_in'); announce(`Sign in failed: ${error.code || error.message || 'authentication_failed'}.`); }
     })();
   }
@@ -274,7 +292,7 @@ root.addEventListener('submit', event => {
         const emailRedirectTo = new URL('/web/account.html', window.location.origin).href;
         const result = await auth.signUp(data.get('email'), data.get('password'), { emailRedirectTo });
         state.user = auth.currentUser();
-        if (result.session) { await loadCloud(); announce('Account created and signed in.'); }
+        if (result.session) { if (resumePendingOAuthConsent()) return; await loadCloud(); announce('Account created and signed in.'); }
         else announce('If this is a new email, check your inbox to confirm it. If you previously used Google with this email, sign in with Google instead and add password sign-in from Account.');
       } catch (error) { reportUnexpected(error, 'sign_up'); announce(`Account creation failed: ${error.code || error.message || 'authentication_failed'}.`); }
     })();
@@ -297,6 +315,7 @@ async function bootstrap() {
     if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
     announce(`Email confirmation failed: ${error.code || error.message || 'authentication_failed'}.`);
   }
+  if (state.user && !state.recoveryMode && resumePendingOAuthConsent()) return;
   if (state.user) await loadCloud();
   else render();
 }

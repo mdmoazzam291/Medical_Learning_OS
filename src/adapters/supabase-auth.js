@@ -81,6 +81,22 @@ function implicitParams(urlLike) {
   return hasAuthSignal ? params : null;
 }
 
+function cleanAuthorizationId(value) {
+  const id = String(value || '').trim();
+  if (!/^[A-Za-z0-9_-]{1,200}$/.test(id)) throw new AuthError(400, 'invalid_oauth_authorization_id');
+  return id;
+}
+
+function cleanOAuthClientRedirect(value) {
+  let redirect;
+  try { redirect = new URL(String(value || '')); } catch { throw new AuthError(502, 'invalid_oauth_redirect_url'); }
+  const localhost = ['127.0.0.1', 'localhost'].includes(redirect.hostname);
+  if (redirect.protocol !== 'https:' && !(localhost && redirect.protocol === 'http:')) {
+    throw new AuthError(502, 'invalid_oauth_redirect_url');
+  }
+  return redirect.href;
+}
+
 export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn = fetch, now = Date.now }) {
   const base = cleanBase(projectUrl);
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
@@ -176,6 +192,46 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
       session.user = normalized;
       write(session);
       return { handled: true, session, type: params.get('type') || null };
+    },
+    async oauthAuthorizationDetails(authorizationId) {
+      const session = await authenticatedSession();
+      const id = cleanAuthorizationId(authorizationId);
+      const data = await api(`/auth/v1/oauth/authorizations/${encodeURIComponent(id)}`, {
+        method: 'GET',
+        accessToken: session.accessToken
+      });
+      if (!data || typeof data !== 'object') throw new AuthError(502, 'invalid_oauth_authorization_response');
+      if (typeof data.redirect_url === 'string' && !('authorization_id' in data)) {
+        return { redirectUrl: cleanOAuthClientRedirect(data.redirect_url) };
+      }
+      if (String(data.authorization_id || '') !== id) throw new AuthError(502, 'oauth_authorization_mismatch');
+      return {
+        authorizationId: id,
+        redirectUri: typeof data.redirect_uri === 'string' ? data.redirect_uri : null,
+        scope: typeof data.scope === 'string' ? data.scope : '',
+        client: data.client && typeof data.client === 'object' ? {
+          id: typeof data.client.id === 'string' ? data.client.id : null,
+          name: typeof data.client.name === 'string' ? data.client.name : null,
+          uri: typeof data.client.uri === 'string' ? data.client.uri : null,
+          logoUri: typeof data.client.logo_uri === 'string' ? data.client.logo_uri : null
+        } : null,
+        user: data.user && typeof data.user === 'object' ? {
+          id: typeof data.user.id === 'string' ? data.user.id : null,
+          email: typeof data.user.email === 'string' ? data.user.email : null
+        } : null
+      };
+    },
+    async oauthAuthorizationDecision(authorizationId, action) {
+      const session = await authenticatedSession();
+      const id = cleanAuthorizationId(authorizationId);
+      if (!['approve', 'deny'].includes(action)) throw new AuthError(400, 'invalid_oauth_authorization_action');
+      const data = await api(`/auth/v1/oauth/authorizations/${encodeURIComponent(id)}/consent`, {
+        method: 'POST',
+        accessToken: session.accessToken,
+        body: { action }
+      });
+      if (!data || typeof data.redirect_url !== 'string') throw new AuthError(502, 'invalid_oauth_consent_response');
+      return { redirectUrl: cleanOAuthClientRedirect(data.redirect_url) };
     },
     async sendPasswordRecovery(email, { redirectTo } = {}) {
       let path = '/auth/v1/recover';

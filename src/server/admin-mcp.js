@@ -234,7 +234,7 @@ const ADMIN_MCP_TOOL_DEFINITIONS = Object.freeze([
 ]);
 
 const OAUTH_SECURITY_SCHEMES = Object.freeze([
-  Object.freeze({ type: 'oauth2', scopes: ['openid', 'email', 'profile'] })
+  Object.freeze({ type: 'oauth2', scopes: ['email'] })
 ]);
 
 export const ADMIN_MCP_TOOLS = Object.freeze(
@@ -427,7 +427,7 @@ export function protectedResourceMetadata() {
   return {
     resource: publicUrl(),
     authorization_servers: [projectUrl() + '/auth/v1'],
-    scopes_supported: ['openid', 'email', 'profile'],
+    scopes_supported: ['email'],
     resource_documentation: publicUrl() + '/web/admin.html'
   };
 }
@@ -556,7 +556,7 @@ function bearerToken(req) {
 }
 
 function challengeHeader() {
-  return 'Bearer resource_metadata="' + publicUrl() + '/.well-known/oauth-protected-resource", scope="openid email profile"';
+  return 'Bearer resource_metadata="' + publicUrl() + '/.well-known/oauth-protected-resource", scope="email"';
 }
 
 export async function handleAdminMcpHttp(req, res, options = {}) {
