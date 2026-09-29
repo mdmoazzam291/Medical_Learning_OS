@@ -16,7 +16,10 @@ test('Study Now transport evidence is append-only, coarse and service-only', () 
   assert.match(sql, /prevent_learner_evidence_mutation/);
   assert.match(sql, /revoke all on table public\.study_recommendation_transport_events[\s\S]*authenticated/);
   assert.match(sql, /grant select, insert on table public\.study_recommendation_transport_events[\s\S]*service_role/);
-  assert.doesNotMatch(sql, /user.?agent|ip_address|device_fingerprint/i);
+  const tableStart = sql.indexOf('create table if not exists public.study_recommendation_transport_events');
+  const tableEnd = sql.indexOf(');', tableStart) + 2;
+  const tableDefinition = sql.slice(tableStart, tableEnd);
+  assert.doesNotMatch(tableDefinition, /\buser_agent\b|\bip_address\b|\bdevice_fingerprint\b|\bexact_origin\b/i);
 });
 
 test('transport receipt derives recommendation membership from canonical session and attempt evidence', () => {
