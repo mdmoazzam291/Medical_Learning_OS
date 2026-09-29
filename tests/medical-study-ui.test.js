@@ -18,10 +18,12 @@ test('medical learner page uses authenticated cloud study and server scoring', a
   assert.doesNotMatch(source, /learnerId\s*:/);
 });
 
-test('cloud account exposes medical QBank only when published questions exist', async () => {
+test('cloud account routes authenticated learners into the beta Study surface without demo gating', async () => {
   const source = await readFile(new URL('../web/account.js', import.meta.url), 'utf8');
-  assert.match(source, /const medicalAction = count \?/);
   assert.match(source, /\/web\/medical\.html/);
+  assert.match(source, /Only published, reviewed question versions enter the learner path/);
+  assert.doesNotMatch(source, /const medicalAction = count \?/);
+  assert.doesNotMatch(source, /local demo/i);
 });
 
 
