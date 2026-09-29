@@ -86,11 +86,13 @@ test('password recovery returns to the same learner identity instead of creating
 });
 
 
-test('admin research gate prioritizes human M11c review and exposes no activation control', () => {
+test('admin research gate prioritizes human M11c review and keeps scheduling separate', () => {
   assert.match(admin, /RESEARCH GATE/);
   assert.match(admin, /Human pair validation is the next research gate/);
   assert.match(admin, /Review the blocking pair/);
-  assert.match(admin, /Separate activation authorization remains intentionally absent/);
-  assert.match(admin, /Activation authority: none/);
+  assert.match(admin, /At least one learner must currently opt in before authorization/);
+  assert.match(admin, /Issue a bounded feasibility authorization/);
+  assert.match(admin, /Bounded probe scheduling is the next engineering gate/);
+  assert.match(admin, /Probe scheduling remains disabled/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });

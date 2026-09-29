@@ -209,6 +209,32 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
         }
       });
     },
+    retentionProbeAuthorization({
+      decision,
+      pairValidationId,
+      protocolSha256,
+      maxTotalAssignments,
+      maxAssignmentsPerLearnerPer7Days,
+      authorizationValidUntil,
+      rationale,
+      attestationVersion = 'retention-probe-activation-authorization-v1',
+      attested
+    }) {
+      return request('/retention-probe/authorization', {
+        method: 'POST',
+        body: {
+          decision,
+          pairValidationId,
+          protocolSha256,
+          maxTotalAssignments,
+          maxAssignmentsPerLearnerPer7Days,
+          authorizationValidUntil,
+          rationale,
+          attestationVersion,
+          attested
+        }
+      });
+    },
     recordNote({ noteVersionId, reviewKind, decision, notes }) {
       return request('/note-reviews', {
         method: 'POST',

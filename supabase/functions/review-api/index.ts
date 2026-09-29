@@ -445,23 +445,38 @@ Deno.serve(async (req: Request) => {
         ? activationState.blockingReasons.map((value: unknown) => String(value))
         : [];
       const validatedPairMetadataAvailable = activationState?.validatedPairMetadataAvailable === true;
-      const nextAction = !validatedPairMetadataAvailable && pendingHumanPairReviews > 0
+      const authorizationReadiness = activation?.activationAuthorizationReadiness ?? {};
+      const authorizationState = authorizationReadiness?.readiness ?? {};
+      const activeOptedInLearners = Number(authorizationReadiness?.activeOptedInLearners ?? 0);
+      const nextAction = authorizationState?.canRevoke === true
         ? {
-            kind: "human-transfer-pair-validation",
-            priority: "blocking",
-            pendingCount: pendingHumanPairReviews
+            kind: "bounded-probe-scheduler-not-implemented",
+            priority: "blocked",
+            pendingCount: 1
           }
-        : blockingReasons.includes("separate-activation-authorization-required")
+        : !validatedPairMetadataAvailable && pendingHumanPairReviews > 0
           ? {
-              kind: "separate-activation-authorization-not-implemented",
-              priority: "blocked",
-              pendingCount: 1
+              kind: "human-transfer-pair-validation",
+              priority: "blocking",
+              pendingCount: pendingHumanPairReviews
             }
-          : {
-              kind: "none",
-              priority: "none",
-              pendingCount: 0
-            };
+          : activeOptedInLearners < 1
+            ? {
+                kind: "awaiting-current-learner-opt-in",
+                priority: "blocking",
+                pendingCount: 1
+              }
+            : authorizationState?.canAuthorize === true
+              ? {
+                  kind: "retention-probe-activation-authorization",
+                  priority: "blocking",
+                  pendingCount: 1
+                }
+              : {
+                  kind: "none",
+                  priority: "none",
+                  pendingCount: 0
+                };
 
       return response(req, 200, {
         contractId: "admin-transfer-pair-queue-v2",
@@ -471,8 +486,9 @@ Deno.serve(async (req: Request) => {
           pendingHumanPairReviews,
           activationReadiness: activation,
           nextAction,
-          activationControlAvailable: false,
-          activationAuthority: false,
+          activationControlAvailable:
+            authorizationState?.canAuthorize === true || authorizationState?.canRevoke === true,
+          activationAuthority: activation?.activationAuthority === true,
           probeSchedulingEnabled: false
         },
         activationAuthority: false,
@@ -558,6 +574,107 @@ Deno.serve(async (req: Request) => {
         activationAuthority: false,
         probeSchedulingEnabled: false
       });
+    }
+
+    if (req.method === "POST" && path === "/retention-probe/authorization") {
+      if (url.search) fail(400, "query_not_supported");
+      await requireAdmin();
+      const input = await jsonBody(req, 12288);
+      exactFields(input, [
+        "decision",
+        "pairValidationId",
+        "protocolSha256",
+        "maxTotalAssignments",
+        "maxAssignmentsPerLearnerPer7Days",
+        "authorizationValidUntil",
+        "rationale",
+        "attestationVersion",
+        "attested"
+      ]);
+
+      const decision = String(input.decision ?? "");
+      if (!["authorize", "revoke"].includes(decision)) {
+        fail(400, "invalid_retention_probe_activation_decision");
+      }
+      const pairValidationId = uuidValue(input.pairValidationId, "invalid_pair_validation_id");
+      const protocolSha256 = String(input.protocolSha256 ?? "");
+      if (!/^[0-9a-f]{64}$/.test(protocolSha256)) fail(400, "invalid_protocol_sha256");
+      const rationale = typeof input.rationale === "string" ? input.rationale.trim() : "";
+      if (rationale.length < 20 || rationale.length > 4000) {
+        fail(400, "invalid_retention_probe_activation_rationale");
+      }
+      if (input.attestationVersion !== "retention-probe-activation-authorization-v1" ||
+          input.attested !== true) {
+        fail(400, "retention_probe_activation_attestation_required");
+      }
+
+      let maxTotalAssignments: number | null = null;
+      let maxPerLearner: number | null = null;
+      let authorizationValidUntil: string | null = null;
+
+      if (decision === "authorize") {
+        maxTotalAssignments = boundedInteger(
+          input.maxTotalAssignments, 1, 20, "retention_probe_assignment_cap_invalid"
+        );
+        maxPerLearner = boundedInteger(
+          input.maxAssignmentsPerLearnerPer7Days, 1, 1, "retention_probe_per_learner_cap_invalid"
+        );
+        if (typeof input.authorizationValidUntil !== "string" ||
+            !Number.isFinite(Date.parse(input.authorizationValidUntil))) {
+          fail(400, "retention_probe_authorization_window_invalid");
+        }
+        authorizationValidUntil = new Date(input.authorizationValidUntil).toISOString();
+      } else {
+        if (input.maxTotalAssignments !== null ||
+            input.maxAssignmentsPerLearnerPer7Days !== null ||
+            input.authorizationValidUntil !== null) {
+          fail(400, "retention_probe_revoke_scope_invalid");
+        }
+      }
+
+      const { data, error } = await admin.rpc(
+        "record_retention_probe_activation_authorization_v1",
+        {
+          p_authorizer: reviewerId,
+          p_decision: decision,
+          p_pair_validation_id: pairValidationId,
+          p_protocol_sha256: protocolSha256,
+          p_max_total_assignments: maxTotalAssignments,
+          p_max_assignments_per_learner_per_7_days: maxPerLearner,
+          p_authorization_valid_until: authorizationValidUntil,
+          p_rationale: rationale,
+          p_attestation_version: String(input.attestationVersion)
+        }
+      );
+
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("content_admin_required")) fail(403, "content_admin_required");
+        if (message.includes("current_retention_comparable_pair_required")) {
+          fail(409, "current_retention_comparable_pair_required");
+        }
+        if (message.includes("current_opted_in_learner_required")) {
+          fail(409, "current_opted_in_learner_required");
+        }
+        if (message.includes("retention_probe_already_authorized")) {
+          fail(409, "retention_probe_already_authorized");
+        }
+        if (message.includes("no_active_retention_probe_authorization")) {
+          fail(409, "no_active_retention_probe_authorization");
+        }
+        if (message.includes("retention_probe_protocol_changed")) {
+          fail(409, "retention_probe_protocol_changed");
+        }
+        if (message.includes("retention_probe_authorization_pair_changed")) {
+          fail(409, "retention_probe_authorization_pair_changed");
+        }
+        if (message.includes("retention_probe_") || message.includes("invalid_retention_probe_")) {
+          fail(400, message.match(/(?:invalid_)?retention_probe[a-z_]*/)?.[0] || "retention_probe_activation_failed");
+        }
+        fail(500, "retention_probe_activation_write_failed");
+      }
+
+      return response(req, 200, data);
     }
 
     if (req.method === "GET" && path === "/learner-reports") {

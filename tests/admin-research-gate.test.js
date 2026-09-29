@@ -13,15 +13,18 @@ test('admin transfer-pair queue is backed by canonical activation readiness', ()
   assert.match(api, /admin-retention-research-gate-v1/);
   assert.match(api, /pendingHumanPairReviews/);
   assert.match(api, /human-transfer-pair-validation/);
-  assert.match(api, /separate-activation-authorization-not-implemented/);
+  assert.match(api, /awaiting-current-learner-opt-in/);
+  assert.match(api, /retention-probe-activation-authorization/);
+  assert.match(api, /bounded-probe-scheduler-not-implemented/);
 });
 
-test('research gate remains fail closed and exposes no activation endpoint', () => {
-  assert.match(api, /activationControlAvailable:\s*false/);
-  assert.match(api, /activationAuthority:\s*false/);
+test('research gate keeps scheduling fail closed while authorization is separately governed', () => {
+  assert.match(api, /path === "\/retention-probe\/authorization"/);
+  assert.match(api, /await requireAdmin\(\)/);
+  assert.match(api, /p_authorizer: reviewerId/);
   assert.match(api, /probeSchedulingEnabled:\s*false/);
-  assert.doesNotMatch(api, /path === "\/retention-probes\/activate"/);
-  assert.doesNotMatch(api, /path === "\/research\/activate"/);
+  assert.doesNotMatch(api, /path === "\/retention-probe\/schedule"/);
+  assert.doesNotMatch(api, /path === "\/retention-probe\/assign"/);
 });
 
 test('admin UI promotes human pair validation without fabricating human judgment', () => {
@@ -29,7 +32,9 @@ test('admin UI promotes human pair validation without fabricating human judgment
   assert.match(admin, /Human pair validation is the next research gate/);
   assert.match(admin, /direct human inspection of both exact versions/);
   assert.match(admin, /Review the blocking pair/);
-  assert.match(admin, /Separate activation authorization remains intentionally absent/);
-  assert.match(admin, /No activate button is exposed here/);
+  assert.match(admin, /At least one learner must currently opt in before authorization/);
+  assert.match(admin, /Issue a bounded feasibility authorization/);
+  assert.match(admin, /Bounded probe scheduling is the next engineering gate/);
+  assert.match(admin, /This creates an immutable authorization record only\. It does not schedule a probe/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });

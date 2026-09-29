@@ -1214,3 +1214,13 @@ Study attempts, revision state, NeuralVault, exam evidence, research consent and
 **Status:** Accepted — 2026-09-29
 
 Password recovery returns through Supabase Auth to the existing user session and updates only the password credential on that user. Recovery must never create a new Medical Learning OS learner profile, copy learner evidence, or rebind historical records. Recovery requests use a generic response so the UI does not reveal whether an email exists.
+
+
+## ADR-080 — Retention-probe activation requires separate, revocable authorization
+**Status:** Accepted — 2026-09-29
+
+Pair validity, learner consent and experiment activation are distinct authorities.
+
+A retention-feasibility probe may not become schedulable merely because an eligible pair exists or because a learner opted in. A singleton-admin authorization event must separately bind the exact preregistered protocol and exact current human pair-validation receipt. Authorization requires at least one current opt-in, remains bounded by the protocol caps, expires within 56 days, and is append-only/revocable.
+
+The authorization record itself has no scheduling, Study Now, mastery or forgetting-model authority. A later scheduler must fail closed and re-check current consent and authorization before every assignment.
