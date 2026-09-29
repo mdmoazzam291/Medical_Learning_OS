@@ -203,6 +203,7 @@ try {
 
   await page.goto(origin + '/web/account.html');
   await page.getByRole('heading', { name: 'Sign in to Medical Learning OS.' }).waitFor();
+  await page.getByRole('button', { name: 'Send password reset link' }).waitFor();
   const form = page.locator('#signin-form');
   await form.getByLabel('Email').fill('admin@example.com');
   await form.getByLabel('Password').fill('strong-password');

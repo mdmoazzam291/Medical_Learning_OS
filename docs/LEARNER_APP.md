@@ -62,3 +62,7 @@ Until a reviewed/published visual item has that canonical descriptor, this code 
 Medical Learning OS treats the Supabase Auth user ID as the learner identity. A verified email may have both Google and email/password sign-in methods attached to that one identity.
 
 The Account surface shows linked methods. If a learner first creates the account with Google, they can add a password while authenticated. If they first create it with email/password, later Google sign-in using the same verified email is handled by Supabase automatic identity linking. The application does not create a second learner profile or copy historical learning evidence between identities.
+
+
+### Password recovery
+Learners using password authentication can request a recovery link from Account. The recovery link returns to the same Account surface, establishes Supabase's recovery session, and allows a new password to be set on the existing user. Google linkage, learner history and all user-ID-bound learning evidence remain unchanged.

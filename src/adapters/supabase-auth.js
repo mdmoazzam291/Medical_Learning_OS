@@ -175,7 +175,16 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
       const normalized = await fetchCurrentUser(session);
       session.user = normalized;
       write(session);
-      return { handled: true, session };
+      return { handled: true, session, type: params.get('type') || null };
+    },
+    async sendPasswordRecovery(email, { redirectTo } = {}) {
+      let path = '/auth/v1/recover';
+      if (redirectTo !== undefined) {
+        const redirect = cleanRedirectUrl(redirectTo);
+        path += `?redirect_to=${encodeURIComponent(redirect.href)}`;
+      }
+      await api(path, { body: { email: cleanEmail(email) } });
+      return { requested: true };
     },
     async signUp(email, password, { emailRedirectTo } = {}) {
       let path = '/auth/v1/signup';
