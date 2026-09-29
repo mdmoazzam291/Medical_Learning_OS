@@ -72,3 +72,15 @@ test('account treats Google and password as methods on one verified-email learne
   assert.match(account, /No learner data needs to be copied or merged/);
   assert.doesNotMatch(account, /merge learner accounts|copy learner history/i);
 });
+
+
+test('password recovery returns to the same learner identity instead of creating an account', () => {
+  assert.match(account, /recovery-request-form/);
+  assert.match(account, /Send password reset link/);
+  assert.match(account, /PASSWORD RECOVERY/);
+  assert.match(account, /recovery-password-form/);
+  assert.match(account, /callback\.type === 'recovery'/);
+  assert.match(account, /auth\.setPassword/);
+  assert.match(account, /Supabase user ID and all Medical Learning OS history stay unchanged/);
+  assert.doesNotMatch(account, /create.*recovery.*account/i);
+});
