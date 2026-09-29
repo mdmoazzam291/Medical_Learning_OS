@@ -158,3 +158,30 @@ This is intentional. Preregistration removes ambiguity; it does not grant permis
 The next research step is one **authorized human M11c pair validation** of the published anaphylaxis alternate pair.
 
 Even if that validation makes pair metadata available, probe activation must remain false until an explicit learner opt-in path exists and a separate activation decision is authorized.
+
+
+## M11d learner opt-in path
+
+The beta now has an explicit learner-controlled opt-in/withdrawal path for the preregistered retention-feasibility protocol.
+
+Consent evidence is:
+- append-only;
+- learner-scoped from the authenticated server identity;
+- bound to the exact preregistered protocol SHA-256;
+- idempotent when the learner repeats the same current decision;
+- reversible for future assignments through a new `withdraw` event.
+
+The learner-facing Account screen states the protocol horizon and burden caps before opt-in:
+- target around day 7;
+- acceptable day 6–8 window;
+- at most one probe assignment per learner per 7 days;
+- at most 20 assignments in the feasibility protocol;
+- due revision and mistake-repair work may not be displaced.
+
+**No learner is enrolled automatically.** Creating the opt-in path does not schedule a probe, activate the protocol, change Study Now, or alter mastery/forgetting inference.
+
+System-level activation readiness may now report `learnerOptInPathAvailable=true`, but actual assignment would still require:
+1. a current human-validated retention-comparable pair;
+2. that learner's current opt-in state;
+3. separate activation authorization;
+4. later bounded scheduling logic.
