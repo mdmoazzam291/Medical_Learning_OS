@@ -349,7 +349,7 @@ async function callTool(name, args, token, fetchFn) {
         method: 'POST',
         body: {
           ...input,
-          attestationVersion: 'structured-review-batch-attestation-v1',
+          attestationVersion: 'structured-human-review-v1',
           attested: input.attested === true
         },
         fetchFn
