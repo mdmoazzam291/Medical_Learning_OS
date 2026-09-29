@@ -180,6 +180,27 @@ try {
             },
             activationAuthority: false,
             probeSchedulingEnabled: false
+          },
+          feasibilityReport: {
+            contractId: 'study-retention-probe-feasibility-report-v1',
+            funnel: {
+              assignmentCount: 0,
+              serverServedCount: 0,
+              responseCount: 0,
+              cleanResponseCount: 0
+            },
+            primaryOutcome: {
+              definition: 'alternate_item_correct_within_6_to_8_day_window',
+              cleanResponseCount: 0,
+              cleanCorrectCount: 0,
+              cleanAccuracy: null,
+              descriptiveOnly: true
+            },
+            limitations: [
+              'descriptive-feasibility-only',
+              'no-causal-inference',
+              'no-hypothesis-testing'
+            ]
           }
         },
         pairs: [{
@@ -286,6 +307,9 @@ try {
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();
   await page.getByRole('heading', { name: 'Human pair validation is the next research gate.' }).waitFor();
+  await page.getByText('FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY', { exact: true }).waitFor();
+  assert.match(await page.locator('#research-gate').innerText(), /Clean accuracy: not estimable yet/);
+  assert.match(await page.locator('#research-gate').innerText(), /No causal inference/);
   assert.equal(await page.getByRole('button', { name: /activate/i }).count(), 0);
   await page.getByRole('heading', { name: 'emergency:anaphylaxis:first-line-treatment' }).waitFor();
   assert.equal(await page.getByText('HUMAN REVIEW PACKET', { exact: true }).count(), 2);
