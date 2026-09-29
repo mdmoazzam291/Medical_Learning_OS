@@ -176,6 +176,22 @@ function enforceOrigin(req: Request) {
   return corsHeaders(req);
 }
 
+function studyNowTransportKind(req: Request) {
+  const origin = req.headers.get("origin");
+  const fetchMode = req.headers.get("sec-fetch-mode");
+  if (!origin || !allowedOrigins.has(origin) || fetchMode !== "cors") {
+    return "authenticated-api";
+  }
+  try {
+    const host = new URL(origin).hostname;
+    return host === "localhost" || host === "127.0.0.1"
+      ? "local-browser-cors"
+      : "hosted-browser-cors";
+  } catch {
+    return "authenticated-api";
+  }
+}
+
 function response(req: Request, status: number, payload: unknown) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -488,6 +504,31 @@ Deno.serve(async (req: Request) => {
           policyId,
           role,
           code: data?.error || error?.code || "schedule_decision_failed"
+        }));
+        return null;
+      }
+      return data;
+    };
+    const recordRecommendationTransport = async ({
+      sessionId,
+      attemptId
+    }: {
+      sessionId: string;
+      attemptId: string;
+    }) => {
+      const { data, error } = await admin.rpc(
+        "study_record_recommendation_transport_event_v1",
+        {
+          p_learner: learnerId,
+          p_session: sessionId,
+          p_attempt: attemptId,
+          p_transport_kind: studyNowTransportKind(req)
+        }
+      );
+      if (error) {
+        console.warn(JSON.stringify({
+          event: "study_now_transport_evidence_deferred",
+          code: error.code || "study_now_transport_evidence_failed"
         }));
         return null;
       }
@@ -2107,6 +2148,15 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    if (req.method === "GET" && path === "/study-now/integrity") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("study_now_completion_integrity_v1", {
+        p_learner: learnerId
+      });
+      if (error || !data) fail(500, "study_now_integrity_unavailable");
+      return response(req, 200, data);
+    }
+
     if (req.method === "POST" && path === "/study-now/start") {
       const input = await jsonBody(req);
       exactFields(input, ["availableMinutes"], ["maxItems"]);
@@ -2614,6 +2664,7 @@ Deno.serve(async (req: Request) => {
       }
 
       const receipt = attemptData?.receipt ?? proposedReceipt;
+      const newlyRecordedAttempt = receipt?.event?.eventId === attemptEvent.eventId;
       const storedVisual = receipt?.visualDetection;
       if (!storedVisual ||
           storedVisual.schemaVersion !== 1 ||
@@ -2690,6 +2741,13 @@ Deno.serve(async (req: Request) => {
               : "schedule_decision_failed"
           }));
         }
+      }
+
+      if (newlyRecordedAttempt) {
+        await recordRecommendationTransport({
+          sessionId,
+          attemptId: String(receipt.event.eventId)
+        });
       }
 
       return response(req, 200, {
@@ -2794,6 +2852,8 @@ Deno.serve(async (req: Request) => {
       });
       if (error) fail(500, "study_write_failed");
       if (data?.error) fail(data.error === "session_not_found" ? 404 : 409, data.error);
+      const storedReceipt = data?.receipt ?? receipt;
+      const newlyRecordedAttempt = storedReceipt?.event?.eventId === event.eventId;
 
       const { error: revisionError } = await admin.rpc("study_rebuild_revision_state", {
         p_learner: learnerId,
@@ -2838,7 +2898,14 @@ Deno.serve(async (req: Request) => {
         }
       }
 
-      return response(req, 200, data?.receipt ?? receipt);
+      if (newlyRecordedAttempt) {
+        await recordRecommendationTransport({
+          sessionId,
+          attemptId: String(storedReceipt.event.eventId)
+        });
+      }
+
+      return response(req, 200, storedReceipt);
     }
 
     fail(404, "route_not_found");
