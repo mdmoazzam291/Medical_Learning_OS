@@ -1626,3 +1626,17 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Pair-level results retain exact validation SHA, concept, origin version and target version.
 - Admin now receives the report in the canonical research gate under **FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY**.
 - No causal inference, hypothesis testing, mastery fitting, forgetting fitting, activation authority or learner-facing analytics are introduced.
+
+
+## 2026-09-30 — M05c Study Now completion-integrity gate
+- Live preflight found 3 learner accounts, 7 published questions, 10 attempts, 7 revision rows, 2 Study Now recommendations and 2 real memory ratings.
+- One historical Study Now recommendation already has a complete server evidence chain: selected item attempted, session closed and authoritative schedule-decision evidence present. It predates browser-transport instrumentation, so it is not retroactively labeled a hosted-browser proof.
+- A second live recommendation is currently open at 4/6 answered; all four answered items already have authoritative schedule-decision evidence. Two selected items remain unanswered.
+- Added append-only `study_recommendation_transport_events`, recorded only for newly persisted attempts in Study Now recommendation sessions.
+- Transport class is derived inside `study-api` from allowed Origin + `Sec-Fetch-Mode`; stored values are only `hosted-browser-cors`, `local-browser-cors` or `authenticated-api`. No user-agent, IP address, exact origin or device fingerprint is persisted.
+- Idempotent answer retries cannot manufacture a browser proof because transport evidence is written only when the returned attempt event ID matches the newly proposed server event ID.
+- Added service-only `study_now_completion_integrity_v1(learner)`. M05c hosted completion requires session closed + every selected item attempted + an authoritative schedule decision for every selected attempt + at least one newly persisted hosted-browser answer.
+- Memory rating is explicitly optional for M05c completion and remains separate evidence for M05d.
+- Learner UI reads the authenticated integrity projection after session close and can display whether the Study Now loop is fully linked.
+- Privacy scope advances to v7 and includes Study Now transport evidence in inventory, preview, deletion and residue verification.
+- Live-schema BEGIN/ROLLBACK verification reports privacy scope complete with zero unmapped learner tables. No production transport evidence has been fabricated.
