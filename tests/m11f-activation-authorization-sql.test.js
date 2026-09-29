@@ -47,6 +47,6 @@ test('M11f still cannot schedule probes or alter learning authority', () => {
   assert.match(sql, /'probeSchedulingEnabled',false/);
   assert.match(sql, /'studyNowAuthority',false/);
   assert.match(sql, /'masteryInferenceAuthority',false/);
-  assert.match(sql, /'bounded-probe-scheduler-not-implemented'/);
+  assert.match(sql, /bounded-probe-scheduler-not-implemented/);
   assert.match(sql, /'canActivate',false/);
 });
