@@ -1272,3 +1272,23 @@ For newly persisted Study Now answers, the server classifies transport from alre
 Idempotent retries never upgrade old attempts into hosted-browser evidence: a transport event is recorded only when the accepted attempt event ID is the same server event ID proposed for that request.
 
 This transport receipt is acceptance/operations evidence only. It has no mastery, memory, scheduling-policy or learner-model authority.
+
+
+## ADR-085 — Memory Engine promotion is evidence-gated, not intuition-gated
+**Status:** Accepted — 2026-09-30
+
+FSRS may remain available as a deterministic shadow scheduler, but sparse explicit ratings or attractive simulated due dates are not sufficient to promote it into production scheduling.
+
+The platform must keep separate:
+- explicit memory-rating coverage;
+- rating timing quality;
+- fully-rated learner-question histories;
+- paired authoritative-vs-shadow schedule decisions;
+- observed delayed same-item retrieval coverage;
+- experiment preregistration state.
+
+The current experiment version intentionally has no minimum eligible population and its metric contract remains draft. The system therefore must not infer a threshold from the observed sample, arm the experiment, or change production due dates.
+
+Rating timing also remains an evidence-quality variable. A delayed self-report cannot automatically be treated as equivalent to an immediate post-answer memory judgment unless a future preregistered rule explicitly permits it.
+
+Production scheduling remains `bootstrap-binary-v1` until a separately versioned, preregistered and sufficiently evidenced experiment is justified.

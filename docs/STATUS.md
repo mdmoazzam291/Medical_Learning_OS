@@ -1640,3 +1640,13 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Learner UI reads the authenticated integrity projection after session close and can display whether the Study Now loop is fully linked.
 - Privacy scope advances to v7 and includes Study Now transport evidence in inventory, preview, deletion and residue verification.
 - Live-schema BEGIN/ROLLBACK verification reports privacy scope complete with zero unmapped learner tables. No production transport evidence has been fabricated.
+
+
+## 2026-09-30 — M05d Memory Engine evidence-readiness
+- Added service-only `study_memory_engine_evidence_readiness_v1()`; it is read-only and has no scheduler, experiment-arm, production-promotion or mastery-inference authority.
+- Live evidence snapshot: 3 learners, 10 attempts, 2 explicit memory ratings, 20% rating coverage, 1 rated learner-question history, 0 fully-rated learner-question histories, 3 same-item follow-ups, 0 same-item follow-ups at or beyond 1/7/30/90/180 days.
+- There are 9 authoritative bootstrap schedule decisions but 0 paired authoritative + FSRS-shadow decisions, so no learner is currently eligible under the draft paired-scheduler experiment contract.
+- `scheduler-bootstrap-vs-fsrs-v1@1` remains draft, with `minimumEligibleLearners=null`, metric contract status `draft`, `canArm=false` and assignments disabled.
+- Rating timing is exposed descriptively (mean/median/max lag) but no eligibility cutoff is invented. A timing rule must be preregistered before ratings are used for an experiment claim.
+- The canonical blockers explicitly include missing preregistered population/metric thresholds, no fully-rated history, no paired shadow decisions and no ≥1-day/≥7-day delayed retrieval.
+- Next evidence action is prospective collection, not FSRS promotion. Numeric thresholds are intentionally not invented from the current tiny sample.
