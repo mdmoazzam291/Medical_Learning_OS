@@ -167,3 +167,30 @@ test('learner report inbox groups exact target snapshot rather than popularity-d
   assert.match(source, /reportCount: group\.reports\.length/);
   assert.match(source, /targetState = question\.status === "published" \? "current" : "superseded"/);
 });
+
+
+test('review-api exposes admin search only through singleton admin authority', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  const start = source.indexOf('path === "/admin-search"');
+  const end = source.indexOf('path === "/note-drafts"', start);
+  const route = source.slice(start, end);
+  assert.match(route, /await requireAdmin\(\)/);
+  assert.match(route, /content-admin-search-v1/);
+  assert.match(route, /study_catalog/);
+  assert.doesNotMatch(route, /service_role|secretKey/);
+});
+
+test('review-api note draft creation derives author identity from authenticated admin', async () => {
+  const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
+  const start = source.indexOf('path === "/note-drafts"');
+  const end = source.indexOf('path === "/pipeline-status"', start);
+  const route = source.slice(start, end);
+  assert.match(route, /await requireAdmin\(\)/);
+  assert.match(route, /neural_create_canonical_note_draft/);
+  assert.match(route, /p_author:\s*reviewerId/);
+  assert.doesNotMatch(route, /authorId/);
+  assert.match(route, /learnerVisible:\s*false/);
+  assert.match(route, /publicationAuthority:\s*false/);
+  assert.match(route, /reviewAuthority:\s*false/);
+  assert.match(route, /independentReviewRequired:\s*true/);
+});
