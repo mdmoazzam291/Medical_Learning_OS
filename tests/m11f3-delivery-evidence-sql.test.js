@@ -31,10 +31,11 @@ test('served receipt never claims rendering or viewing', () => {
   assert.match(sql, /'serverServedMeansLearnerSeen',false/);
 });
 
-test('served write rechecks delivery readiness at server time', () => {
+test('served write and idempotent replay both recheck delivery readiness at server time', () => {
   assert.match(sql, /clock_timestamp\(\)/);
   assert.match(sql, /study_retention_probe_delivery_readiness_v1/);
   assert.match(sql, /retention_probe_delivery_not_ready/);
+  assert.match(sql, /retention_probe_delivery_replay_not_ready/);
   assert.doesNotMatch(sql, /p_served_at|p_now timestamptz/);
 });
 
@@ -43,6 +44,8 @@ test('response binding requires exact target and preserves contaminated outcomes
   assert.match(sql, /retention_probe_response_precedes_server_delivery/);
   assert.match(sql, /response-after-preregistered-window/);
   assert.match(sql, /same-concept-attempt-between-serve-and-response/);
+  assert.match(sql, /consent-not-active-at-response/);
+  assert.match(sql, /authorization-not-active-at-response/);
   assert.match(sql, /clean_for_primary_analysis/);
   assert.match(sql, /contamination_reasons/);
 });
