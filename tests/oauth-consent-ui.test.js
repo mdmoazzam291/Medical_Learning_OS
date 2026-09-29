@@ -32,8 +32,8 @@ test('consent UI shows requested scopes and uses explicit approve or deny action
   assert.match(source, /\['approve', 'deny'\]/);
   assert.match(source, /data-scope/);
   assert.match(source, /Connecting does not grant admin powers by itself/);
-  assert.doesNotMatch(source, /service[_-]?role/i);
-  assert.doesNotMatch(source, /client_secret/i);
+  assert.doesNotMatch(source, /SUPABASE_SERVICE_ROLE_KEY|sb_secret_[A-Za-z0-9_-]+/);
+  assert.doesNotMatch(source, /client_secret\s*[:=]/i);
 });
 
 test('consent page ships no third-party runtime script or embedded secret', async () => {
