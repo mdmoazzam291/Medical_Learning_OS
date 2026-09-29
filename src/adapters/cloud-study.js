@@ -46,6 +46,18 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
       return request(`/media?questionVersionId=${encodeURIComponent(questionVersionId)}`);
     },
     progress() { return request('/progress'); },
+    retentionProbeConsent() { return request('/retention-probe/consent'); },
+    setRetentionProbeConsent({
+      decision,
+      protocolSha256,
+      attestationVersion = 'retention-probe-learner-consent-v1',
+      attested
+    }) {
+      return request('/retention-probe/consent', {
+        method: 'POST',
+        body: { decision, protocolSha256, attestationVersion, attested }
+      });
+    },
     due(limit = 20) { return request(`/revision/due?limit=${encodeURIComponent(limit)}`); },
     fsrsShadow() { return request('/revision/fsrs-shadow'); },
     policyEvaluation() { return request('/revision/policy-evaluation'); },

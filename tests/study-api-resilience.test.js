@@ -425,3 +425,21 @@ test('learner export includes private corrections and submitted content issue re
   assert.match(source, /canonicalAuthority: false/);
   assert.match(source, /learnerModelAuthority: false/);
 });
+
+
+test('retention pilot opt-in is authenticated, protocol-bound and never accepts learner identity from the browser', async () => {
+  const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.match(source, /path === "\/retention-probe\/consent"/);
+  assert.match(source, /study_retention_probe_learner_consent_v1/);
+  assert.match(source, /record_retention_probe_learner_consent_v1/);
+  assert.match(source, /p_learner: learnerId/);
+  assert.match(source, /exactFields\(input, \["decision", "protocolSha256", "attestationVersion", "attested"\]\)/);
+  assert.match(source, /retention-probe-learner-consent-v1/);
+  assert.match(source, /input\.attested !== true/);
+  const start = source.indexOf('path === "/retention-probe/consent"');
+  const next = source.indexOf('path === "/questions"', start);
+  const route = source.slice(start, next);
+  assert.doesNotMatch(route, /p_learner:\s*input\./);
+  assert.doesNotMatch(route, /learnerId\s*:\s*input/);
+  assert.doesNotMatch(route, /study_start_recommendation_session|study_rebuild_revision_state|mastery/);
+});

@@ -1537,3 +1537,14 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Removed demo modules from the served public allowlist.
 - Study Now home links can deep-link into 10/20/30/60-minute authenticated sessions.
 - No retention probe is activated by this change; learner opt-in and separate activation authorization remain required.
+
+
+## 2026-09-29 — M11d retention-feasibility learner opt-in path
+
+- Added append-only `study_retention_probe_consent_events`.
+- Consent is bound to the exact preregistered protocol ID + SHA-256 and comes only from the JWT-derived learner identity through `study-api`.
+- Added explicit opt-in and withdrawal UI to Account with the 7-day horizon and burden caps visible before opt-in.
+- Repeating the same current decision is idempotent; withdrawal is a new immutable event.
+- Browser roles cannot read/write the consent ledger or execute consent RPCs directly.
+- System activation readiness now recognizes that an opt-in path exists, but `canActivate=false` and `probeSchedulingEnabled=false` remain hard-coded.
+- No learner has been auto-enrolled by this implementation.

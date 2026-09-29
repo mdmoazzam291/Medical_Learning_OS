@@ -604,3 +604,51 @@ test('cloud private correction and report payloads never send learner identity o
   assert.equal(seen[1].body.correctionAnnotationId, null);
   assert.equal(Object.hasOwn(seen[1].body, 'bodyMarkdown'), false);
 });
+
+
+test('cloud retention consent uses authenticated learner context and explicit attestation only', async () => {
+  const seen = [];
+  const cloud = createCloudStudy({
+    projectUrl, publishableKey,
+    auth: { getSession: async () => ({ accessToken: 'jwt' }) },
+    fetchFn: async (url, options = {}) => {
+      seen.push({
+        url,
+        method: options.method || 'GET',
+        body: options.body ? JSON.parse(options.body) : null
+      });
+      if ((options.method || 'GET') === 'GET') {
+        return Response.json({
+          contractId: 'retention-probe-learner-consent-v1',
+          optedIn: false,
+          protocol: { protocolSha256: 'a'.repeat(64) }
+        });
+      }
+      return Response.json({
+        contractId: 'retention-probe-learner-consent-receipt-v1',
+        optedIn: true,
+        probeSchedulingEnabled: false,
+        activationAuthority: false
+      });
+    }
+  });
+
+  await cloud.retentionProbeConsent();
+  await cloud.setRetentionProbeConsent({
+    decision: 'opt_in',
+    protocolSha256: 'a'.repeat(64),
+    attested: true
+  });
+
+  assert.match(seen[0].url, /study-api\/retention-probe\/consent$/);
+  assert.equal(seen[0].method, 'GET');
+  assert.match(seen[1].url, /study-api\/retention-probe\/consent$/);
+  assert.equal(seen[1].method, 'POST');
+  assert.deepEqual(seen[1].body, {
+    decision: 'opt_in',
+    protocolSha256: 'a'.repeat(64),
+    attestationVersion: 'retention-probe-learner-consent-v1',
+    attested: true
+  });
+  assert.equal(Object.hasOwn(seen[1].body, 'learnerId'), false);
+});
