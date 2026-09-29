@@ -1192,3 +1192,19 @@ This makes M11c a research-validity seam rather than another mastery engine and 
 
 ### Why
 The demo-first shell now adds friction and misrepresents the actual product. A singleton beta admin reduces governance complexity while preserving immutable human evidence and strict learner/admin separation. The model can later expand to multi-reviewer institutional workflows without changing learner-facing semantics.
+
+
+## ADR-078 — One verified email maps to one learner identity across password and Google
+**Status:** Accepted — 2026-09-29
+
+### Decision
+- Supabase Auth user ID remains the canonical learner identity.
+- Email/password and Google are authentication methods, not separate Medical Learning OS learner accounts.
+- Rely on Supabase automatic identity linking when a Google identity and an existing verified auth user share the same email.
+- Do not implement an application-level account-merging table or copy learner evidence between user IDs.
+- Preserve only the linked provider names needed for Account UX; do not persist OAuth identity payloads or provider tokens in browser storage.
+- A Google-created authenticated user may add password authentication with the Supabase authenticated-user password update flow. The user ID must remain unchanged.
+- Unverified same-email identities are not force-merged by application code; Supabase's verified-email safety rules remain authoritative.
+
+### Consequence
+Study attempts, revision state, NeuralVault, exam evidence, research consent and admin authorization continue to bind to one Supabase user ID regardless of which linked sign-in method starts the session.
