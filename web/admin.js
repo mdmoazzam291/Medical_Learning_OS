@@ -14,6 +14,7 @@ let state = {
   isAdmin: false,
   reviewKinds: [],
   pairs: [],
+  researchGate: null,
   loading: false,
   submitting: false,
   error: null
@@ -41,12 +42,12 @@ function questionCard(label, q) {
 function pairPanel(pair, index) {
   const existing = pair?.validation;
   if (existing) {
-    return '<section class="panel"><div class="section-heading"><div><span class="eyebrow">M11C PAIR ' + (index + 1) + '</span><h2>' + escape(pair.primaryConceptId) + '</h2></div><span class="badge">Already ' + escape(existing.decision) + '</span></div>' +
+    return '<section class="panel" id="m11c-pair-' + (index + 1) + '"><div class="section-heading"><div><span class="eyebrow">M11C PAIR ' + (index + 1) + '</span><h2>' + escape(pair.primaryConceptId) + '</h2></div><span class="badge">Already ' + escape(existing.decision) + '</span></div>' +
       '<div class="two-column">' + questionCard('QUESTION A', pair.questionA) + questionCard('QUESTION B', pair.questionB) + '</div>' +
       '<p class="muted">This pair already has immutable validation evidence. Revised question versions require a new validation.</p></section>';
   }
 
-  return '<section class="panel"><div class="section-heading"><div><span class="eyebrow">M11C HUMAN PAIR REVIEW</span><h2>' + escape(pair.primaryConceptId) + '</h2></div><span class="badge">Admin only</span></div>' +
+  return '<section class="panel" id="m11c-pair-' + (index + 1) + '"><div class="section-heading"><div><span class="eyebrow">M11C HUMAN PAIR REVIEW</span><h2>' + escape(pair.primaryConceptId) + '</h2></div><span class="badge">Admin only</span></div>' +
     '<div class="two-column">' + questionCard('QUESTION A', pair.questionA) + questionCard('QUESTION B', pair.questionB) + '</div>' +
     '<form class="transfer-pair-form" data-a="' + escape(pair.questionA.questionVersionId) + '" data-b="' + escape(pair.questionB.questionVersionId) + '">' +
       '<div class="two-column">' +
@@ -65,6 +66,47 @@ function pairPanel(pair, index) {
     '</form></section>';
 }
 
+function gateStatus(label, ok) {
+  return '<div><strong>' + (ok ? '✓' : '○') + '</strong><span>' + escape(label) + '</span></div>';
+}
+
+function researchGatePanel() {
+  const gate = state.researchGate;
+  if (!gate) {
+    return '<section class="panel"><span class="eyebrow">RESEARCH GATE</span><h2>Readiness unavailable.</h2><p class="muted">No activation control is exposed when canonical readiness cannot be loaded.</p></section>';
+  }
+
+  const readiness = gate.activationReadiness?.readiness || {};
+  const next = gate.nextAction || {};
+  const blockers = Array.isArray(readiness.blockingReasons) ? readiness.blockingReasons : [];
+  const metrics =
+    '<div class="metrics">' +
+      gateStatus('Published alternate pair', readiness.hasPublishedAlternateItemPair === true) +
+      gateStatus('Protocol preregistered', readiness.protocolPreregistered === true) +
+      gateStatus('Human-validated comparable pair', readiness.validatedPairMetadataAvailable === true) +
+      gateStatus('Learner opt-in path', readiness.learnerOptInPathAvailable === true) +
+    '</div>';
+
+  let action;
+  if (next.kind === 'human-transfer-pair-validation') {
+    action = '<div class="section-heading"><div><span class="eyebrow">ACTION REQUIRED · BLOCKING</span><h2>Human pair validation is the next research gate.</h2></div><span class="badge">1st priority</span></div>' +
+      '<p>' + escape(next.pendingCount || 0) + ' published alternate pair review is waiting for the content admin. This judgment must come from direct human inspection of both exact versions.</p>' +
+      '<p><a class="primary action-link" href="#m11c-pair-1">Review the blocking pair ↓</a></p>';
+  } else if (next.kind === 'separate-activation-authorization-not-implemented') {
+    action = '<div class="section-heading"><div><span class="eyebrow">NEXT GATE · NOT YET AVAILABLE</span><h2>Separate activation authorization remains intentionally absent.</h2></div><span class="badge">Fail closed</span></div>' +
+      '<p>The pair-validity gate is no longer the blocker. Activation still requires its own governed authorization layer. No activate button is exposed here.</p>';
+  } else {
+    action = '<div class="section-heading"><div><span class="eyebrow">RESEARCH GATE</span><h2>No executable research action is available.</h2></div><span class="badge">Fail closed</span></div>';
+  }
+
+  const blockerText = blockers.length
+    ? '<p class="muted">Canonical blockers: ' + blockers.map(escape).join(' · ') + '</p>'
+    : '<p class="muted">Canonical readiness reports no listed blockers, but activation remains disabled unless a separately governed authorization exists.</p>';
+
+  return '<section class="panel" id="research-gate">' + action + metrics + blockerText +
+    '<p class="muted">Activation authority: none · probe scheduling: disabled · Study Now authority: unchanged.</p></section>';
+}
+
 function signedOut() {
   return '<main id="main" class="account-page"><a class="text-button" href="/">← App</a><div class="page-heading"><div><span class="eyebrow">ADMIN CONSOLE</span><h1>Sign in with the content-admin account.</h1><p>Admin authority is verified on the server. Learner accounts cannot open review queues or approve content.</p></div></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open sign in →</a></section></main>';
 }
@@ -80,7 +122,7 @@ function adminHome() {
   const loading = state.loading ? '<section class="panel"><p>Loading admin evidence…</p></section>' : '';
   const error = state.error ? '<section class="panel"><h2>Admin data unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
 
-  return '<div class="shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">ADMIN</span><nav aria-label="Admin navigation"><a href="/web/admin.html" aria-current="page">Admin Home<span>↗</span></a><a href="/web/review.html">Content Review<span>↗</span></a><a href="/web/account.html">Account<span>↗</span></a></nav><div class="sidebar-note"><span class="status-dot">Server authorized</span><p>Human authority.<br>Immutable receipts.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Admin</span><a class="text-button" href="/">Learner app</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1>Review authority stays out of the learner product.</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">BETA ADMIN</span></div><div class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Medical + References + Rights</h2><p>Open the version-bound review workspace for question, note, source-rights and learner-report triage.</p><a class="primary action-link" href="/web/review.html">Open content review →</a></section><section class="panel"><span class="eyebrow">RESEARCH VALIDATION</span><h2>M11c pair validity</h2><p>Validate whether published alternate items provide legitimate transfer evidence and, separately, whether they are comparable enough for the retention feasibility protocol.</p></section></div>' + loading + error + (!state.loading && !state.error ? pairPanels : '') + '</main><footer>Medical Learning OS · admin-only beta surface</footer></div></div>';
+  return '<div class="shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">ADMIN</span><nav aria-label="Admin navigation"><a href="/web/admin.html" aria-current="page">Admin Home<span>↗</span></a><a href="/web/review.html">Content Review<span>↗</span></a><a href="/web/account.html">Account<span>↗</span></a></nav><div class="sidebar-note"><span class="status-dot">Server authorized</span><p>Human authority.<br>Immutable receipts.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Admin</span><a class="text-button" href="/">Learner app</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1>Review authority stays out of the learner product.</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">BETA ADMIN</span></div>' + (!state.loading && !state.error ? researchGatePanel() : '') + '<div class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Medical + References + Rights</h2><p>Open the version-bound review workspace for question, note, source-rights and learner-report triage.</p><a class="primary action-link" href="/web/review.html">Open content review →</a></section><section class="panel"><span class="eyebrow">RESEARCH VALIDATION</span><h2>M11c pair validity</h2><p>Validate whether published alternate items provide legitimate transfer evidence and, separately, whether they are comparable enough for the retention feasibility protocol.</p></section></div>' + loading + error + (!state.loading && !state.error ? pairPanels : '') + '</main><footer>Medical Learning OS · admin-only beta surface</footer></div></div>';
 }
 
 function render() {
@@ -96,13 +138,13 @@ async function loadAdmin() {
   try {
     const session = await auth.getSession();
     if (!session?.user) {
-      state = { ...state, user: null, loading: false, isAdmin: false, reviewKinds: [], pairs: [] };
+      state = { ...state, user: null, loading: false, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null };
       render();
       return;
     }
     const me = await review.me();
     if (me?.isAdmin !== true) {
-      state = { ...state, user: auth.currentUser() || session.user, loading: false, isAdmin: false, reviewKinds: [], pairs: [] };
+      state = { ...state, user: auth.currentUser() || session.user, loading: false, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null };
       render();
       return;
     }
@@ -114,6 +156,7 @@ async function loadAdmin() {
       isAdmin: true,
       reviewKinds: Array.isArray(me.reviewKinds) ? me.reviewKinds : [],
       pairs: Array.isArray(result?.pairs) ? result.pairs : [],
+      researchGate: result?.researchGate || null,
       error: null
     };
   } catch (error) {
