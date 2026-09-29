@@ -1260,3 +1260,15 @@ The platform will not infer transport failure from nonresponse. Until a trustwor
 The report must remain explicit by validated item pair and concept, retain contamination counts, and state its limitations. It has no causal-inference, hypothesis-testing, mastery, forgetting, Study Now or activation authority.
 
 Stronger statistical claims require a separately preregistered analysis plan with sufficient eligible observations and a measurement model that supports the claim being made.
+
+
+## ADR-084 — Hosted Study Now acceptance uses coarse server-derived transport evidence
+**Status:** Accepted — 2026-09-30
+
+A hosted-browser acceptance gate must not be satisfied by a client-supplied `browser=true` flag or by retroactively relabeling backend QA evidence.
+
+For newly persisted Study Now answers, the server classifies transport from already-enforced allowed Origin plus standard browser CORS fetch metadata. Only the coarse class is stored. User-agent strings, IP addresses, device fingerprints and exact origins are not retained.
+
+Idempotent retries never upgrade old attempts into hosted-browser evidence: a transport event is recorded only when the accepted attempt event ID is the same server event ID proposed for that request.
+
+This transport receipt is acceptance/operations evidence only. It has no mastery, memory, scheduling-policy or learner-model authority.
