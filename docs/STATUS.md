@@ -1592,3 +1592,14 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Assignment caps cannot exceed the preregistered protocol, and authorization validity cannot exceed 56 days.
 - Revocation remains possible even if later eligibility deteriorates.
 - Probe scheduling, Study Now authority and mastery/forgetting inference remain disabled.
+
+
+## 2026-09-29 — M11f2 dormant probe scheduler kernel
+- Added immutable learner-scoped `study_retention_probe_assignments`.
+- Added service-only candidate selection and one-at-a-time scheduler tick functions; no cron or browser/Admin execution route exists.
+- Candidate origin attempts must occur after both learner opt-in and activation authorization, keeping the feasibility pilot prospective rather than retrospectively enrolling old learning.
+- Scheduler enforces the preregistered day 6–8 window, no prior target attempt, no intervening same-concept attempt, protocol/authorization caps, max one probe per learner per rolling 7 days and the 56-day feasibility horizon.
+- Probe work is blocked while any overdue revision, unresolved latest-incorrect item or open Study Now session exists.
+- Added delivery-readiness recheck for consent, current authorization, pair/content freshness, timing window, target exposure, contamination and workload priority immediately before any future learner exposure.
+- Automatic execution remains disabled and there is still no learner delivery surface.
+- Privacy scope advances to v5 and includes scheduled probe assignments in preview, erasure and residue verification.

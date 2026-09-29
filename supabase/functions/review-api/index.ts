@@ -447,12 +447,15 @@ Deno.serve(async (req: Request) => {
       const validatedPairMetadataAvailable = activationState?.validatedPairMetadataAvailable === true;
       const authorizationReadiness = activation?.activationAuthorizationReadiness ?? {};
       const authorizationState = authorizationReadiness?.readiness ?? {};
+      const schedulerReadiness = activation?.schedulerReadiness ?? {};
       const activeOptedInLearners = Number(authorizationReadiness?.activeOptedInLearners ?? 0);
       const nextAction = authorizationState?.canRevoke === true
         ? {
-            kind: "bounded-probe-scheduler-not-implemented",
+            kind: "retention-probe-scheduler-kernel-ready",
             priority: "blocked",
-            pendingCount: 1
+            pendingCount: Number(schedulerReadiness?.eligibleCandidateCount ?? 0),
+            automaticExecutionEnabled: schedulerReadiness?.automaticExecutionEnabled === true,
+            learnerDeliveryEnabled: schedulerReadiness?.learnerDeliveryEnabled === true
           }
         : !validatedPairMetadataAvailable && pendingHumanPairReviews > 0
           ? {
@@ -485,6 +488,7 @@ Deno.serve(async (req: Request) => {
           contractId: "admin-retention-research-gate-v1",
           pendingHumanPairReviews,
           activationReadiness: activation,
+          schedulerReadiness,
           nextAction,
           activationControlAvailable:
             authorizationState?.canAuthorize === true || authorizationState?.canRevoke === true,
