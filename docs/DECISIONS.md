@@ -1208,3 +1208,9 @@ The demo-first shell now adds friction and misrepresents the actual product. A s
 
 ### Consequence
 Study attempts, revision state, NeuralVault, exam evidence, research consent and admin authorization continue to bind to one Supabase user ID regardless of which linked sign-in method starts the session.
+
+
+## ADR-079 — Password recovery modifies an authentication method, never learner identity
+**Status:** Accepted — 2026-09-29
+
+Password recovery returns through Supabase Auth to the existing user session and updates only the password credential on that user. Recovery must never create a new Medical Learning OS learner profile, copy learner evidence, or rebind historical records. Recovery requests use a generic response so the UI does not reveal whether an email exists.
