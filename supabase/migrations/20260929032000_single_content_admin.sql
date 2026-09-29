@@ -21,9 +21,10 @@ with candidates as (
   having count(distinct review_kind) = 3
 ),
 singleton_candidate as (
-  select min(reviewer_id) as reviewer_id
+  select reviewer_id
   from candidates
-  having count(*) = 1
+  where (select count(*) from candidates) = 1
+  limit 1
 )
 insert into public.content_admin_account (
   singleton,
