@@ -1176,3 +1176,19 @@ Decision:
 - do not persist a synthetic pair decision merely to turn readiness green.
 
 This makes M11c a research-validity seam rather than another mastery engine and lets future item revisions fail closed.
+
+
+## ADR-077 — Beta UI is the product; content authority is singleton admin-only
+**Status:** Accepted — 2026-09-29
+
+### Decision
+- Retire the M03 local demo from the application entry path. The root URL is the authenticated beta Preparation Command Center.
+- Learner top-level navigation is Home, Study, Exams, Vault and Account. Internal engines remain contextual rather than becoming navigation clutter.
+- Use one server-authorized `content_admin_account` during beta. The current sole reviewer holding Medical + References + Rights grants is bootstrapped only when that reviewer is unambiguous.
+- Existing reviewer-grant machinery remains the fine-grained gate substrate, but grants have review effect only for the singleton content admin during beta.
+- Learners can report content issues but cannot approve Medical, References, Rights, publication, or M11c pair-validity evidence.
+- Admin authority is resolved from trusted server/database state. Never authorize from email string comparison, browser flags, `user_metadata`, client-side role claims, or embedded credentials.
+- The Admin Console may combine content governance and bounded research validation, but neither approval nor pair validation grants Study Now, mastery-inference, or retention-probe activation authority.
+
+### Why
+The demo-first shell now adds friction and misrepresents the actual product. A singleton beta admin reduces governance complexity while preserving immutable human evidence and strict learner/admin separation. The model can later expand to multi-reviewer institutional workflows without changing learner-facing semantics.
