@@ -10,6 +10,10 @@ const indexMigration = await readFile(
   new URL('../supabase/migrations/20260929030109_m11c_transfer_pair_validator_index.sql', import.meta.url),
   'utf8'
 );
+const readinessMigration = await readFile(
+  new URL('../supabase/migrations/20260929030652_m11c_refresh_structural_readiness.sql', import.meta.url),
+  'utf8'
+);
 
 test('M11c stores immutable exact-version pair validation evidence', () => {
   assert.match(migration, /create table if not exists public\.study_transfer_pair_validations/);
@@ -99,4 +103,13 @@ test('M11c tables and RPCs are unavailable to browser roles', () => {
 test('validator foreign key has a covering index', () => {
   assert.match(indexMigration, /study_transfer_pair_validations_validator/);
   assert.match(indexMigration, /\(validator_id, validated_at desc\)/);
+});
+
+
+test('structural readiness no longer reports the superseded protocol blocker', () => {
+  assert.match(readinessMigration, /'scope', 'content-structure-readiness'/);
+  assert.doesNotMatch(readinessMigration, /retention-probe-protocol-not-yet-preregistered/);
+  assert.match(readinessMigration, /pair-validity-is-evaluated-separately-by-m11c/);
+  assert.match(readinessMigration, /activation-is-evaluated-separately-by-study-retention-probe-activation-readiness-v1/);
+  assert.match(readinessMigration, /revoke all on function public\.study_retention_probe_readiness_v1\(\)[\s\S]*?from public, anon, authenticated/);
 });
