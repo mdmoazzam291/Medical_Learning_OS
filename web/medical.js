@@ -388,13 +388,24 @@ async function answerCurrent() {
       });
     }
     state = { ...state, busy: false, receipt, memoryJudgment: null, error: null };
-    state.progress = await cloud.progress();
+    await refreshProgressAfterWrite('Answer saved.');
   } catch (error) {
     reportUnexpected(error, visualDetectionDescriptor(session?.question) ? 'record_visual_detection' : 'record_answer');
     state = { ...state, busy: false, error: error.code || error.message || 'answer_write_failed' };
     announce('Answer was not confirmed: ' + state.error + '. Your selection is preserved; retry uses the same idempotency key.');
   }
   render();
+}
+
+async function refreshProgressAfterWrite(confirmation) {
+  try {
+    state.progress = await cloud.progress();
+  } catch (error) {
+    reportUnexpected(error, 'refresh_progress_after_write');
+    // The canonical write was already acknowledged. A projection read cannot
+    // turn that receipt into a failed answer or session transition.
+    announce(confirmation + ' Progress totals are temporarily unavailable.');
+  }
 }
 
 async function recordMemoryRating(rating) {
@@ -431,7 +442,7 @@ async function nextQuestion() {
       error: null
     };
     if (next.closed) {
-      state.progress = await cloud.progress();
+      await refreshProgressAfterWrite('Session complete.');
       try {
         state.studyNowIntegrity = await cloud.studyNowIntegrity();
       } catch (error) {

@@ -1330,3 +1330,10 @@ Decision:
 - never expose a Supabase service-role key, OAuth client secret, or reviewer identity as model-controlled input.
 
 Project-level enablement of the Supabase OAuth 2.1 server and Authorization Path remains deployment configuration, not application-domain authority.
+
+
+## ADR-088 — acknowledged study writes outrank projection refresh failures
+
+An accepted answer receipt or server-returned session cursor is canonical confirmation. A later progress projection read is observational and cannot invalidate that write or trigger a write-failure message.
+
+The learner controller isolates progress refresh after answer/closure, preserves the accepted receipt/cursor, and continues completion-integrity reconciliation even when progress is unavailable. Actual answer/advance failures keep existing safe retry semantics. This adds no evidence, scheduler authority, inferred mastery, or database state.
