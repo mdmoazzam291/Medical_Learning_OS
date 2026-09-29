@@ -192,18 +192,38 @@ Deno.serve(async (req: Request) => {
       return result;
     };
 
-    const getGrants = async () => {
-      const { data, error } = await trustedRead("reviewer_grants", async () =>
-        admin.rpc("get_active_reviewer_grants", { p_reviewer: reviewerId })
-      );
-      if (error) fail(500, "review_authz_unavailable");
-      return (data ?? []).map((row: any) => String(row.review_kind));
+    let adminAccessPromise: Promise<{ isAdmin: boolean; reviewKinds: string[] }> | null = null;
+    const getAdminAccess = async () => {
+      if (!adminAccessPromise) {
+        adminAccessPromise = (async () => {
+          const { data, error } = await trustedRead("content_admin_status", async () =>
+            admin.rpc("content_admin_status_v1", { p_user: reviewerId })
+          );
+          if (error) fail(500, "review_authz_unavailable");
+          const payload = data && typeof data === "object" ? data as any : {};
+          return {
+            isAdmin: payload.isAdmin === true,
+            reviewKinds: Array.isArray(payload.reviewKinds)
+              ? payload.reviewKinds.map((value: unknown) => String(value))
+              : []
+          };
+        })();
+      }
+      return adminAccessPromise;
+    };
+
+    const getGrants = async () => (await getAdminAccess()).reviewKinds;
+
+    const requireAdmin = async () => {
+      const access = await getAdminAccess();
+      if (!access.isAdmin) fail(403, "content_admin_required");
+      return access;
     };
 
     const requireGrant = async (kind: string) => {
-      const grants = await getGrants();
-      if (!grants.includes(kind)) fail(403, "reviewer_not_authorized");
-      return grants;
+      const access = await requireAdmin();
+      if (!access.reviewKinds.includes(kind)) fail(403, "reviewer_not_authorized");
+      return access.reviewKinds;
     };
 
     const signedReviewMedia = async (questionVersionId: string, kind: string) => {
@@ -292,7 +312,12 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/me") {
       if (url.search) fail(400, "query_not_supported");
-      return response(req, 200, { reviewerId, reviewKinds: await getGrants() });
+      const access = await getAdminAccess();
+      return response(req, 200, {
+        reviewerId,
+        isAdmin: access.isAdmin,
+        reviewKinds: access.isAdmin ? access.reviewKinds : []
+      });
     }
 
     if (req.method === "GET" && path === "/pipeline-status") {
@@ -302,6 +327,167 @@ Deno.serve(async (req: Request) => {
       const { data, error } = await admin.rpc("content_intake_pipeline_status");
       if (error) fail(500, "content_pipeline_status_unavailable");
       return response(req, 200, data);
+    }
+
+    if (req.method === "GET" && path === "/transfer-pairs") {
+      if (url.search) fail(400, "query_not_supported");
+      await requireAdmin();
+
+      const [
+        { data: readiness, error: readinessError },
+        { data: catalog, error: catalogError },
+        { data: validations, error: validationsError }
+      ] = await Promise.all([
+        admin.rpc("study_retention_probe_readiness_v1"),
+        trustedRead("transfer_pair_catalog", async () =>
+          admin.from("study_catalog").select("body").eq("id", 1).single()
+        ),
+        trustedRead("transfer_pair_validations", async () =>
+          admin.from("study_transfer_pair_validations")
+            .select("id,primary_concept_id,question_a_version_id,question_b_version_id,decision,surface_novelty,construct_alignment,reasoning_alignment,difficulty_comparability,cue_overlap_risk,transfer_evidence_valid,retention_probe_comparable,validation_sha256,validated_at")
+            .order("validated_at", { ascending: true })
+        )
+      ]);
+
+      if (readinessError) fail(500, "transfer_pair_readiness_unavailable");
+      if (catalogError || !catalog) fail(500, "review_catalog_unavailable");
+      if (validationsError) fail(500, "transfer_pair_validation_history_unavailable");
+
+      const body = catalog.body as any;
+      const questions = Array.isArray(body?.questions) ? body.questions : [];
+      const byVersion = new Map(
+        questions.map((question: any) => [String(question?.questionVersionId ?? ""), question])
+      );
+      const validationByPair = new Map<string, any>();
+      for (const row of validations ?? []) {
+        const ids = [String(row.question_a_version_id), String(row.question_b_version_id)].sort();
+        validationByPair.set(ids.join("|"), row);
+      }
+
+      const candidates: any[] = [];
+      const concepts = Array.isArray((readiness as any)?.concepts) ? (readiness as any).concepts : [];
+      for (const concept of concepts) {
+        const published = Array.isArray(concept?.publishedItems) ? concept.publishedItems : [];
+        for (let i = 0; i < published.length; i += 1) {
+          for (let j = i + 1; j < published.length; j += 1) {
+            const aVersion = String(published[i]?.questionVersionId ?? "");
+            const bVersion = String(published[j]?.questionVersionId ?? "");
+            if (!aVersion || !bVersion) continue;
+            const ids = [aVersion, bVersion].sort();
+            const a = byVersion.get(ids[0]) as any;
+            const b = byVersion.get(ids[1]) as any;
+            if (!a || !b || a?.questionId === b?.questionId) continue;
+            const existing = validationByPair.get(ids.join("|")) ?? null;
+            candidates.push({
+              primaryConceptId: String(concept?.conceptId ?? ""),
+              questionA: {
+                questionId: String(a.questionId ?? ""),
+                questionVersionId: String(a.questionVersionId ?? ""),
+                stem: String(a.stem ?? ""),
+                options: Array.isArray(a.options) ? a.options : [],
+                answerOptionId: String(a.answerOptionId ?? ""),
+                explanation: String(a.explanation ?? "")
+              },
+              questionB: {
+                questionId: String(b.questionId ?? ""),
+                questionVersionId: String(b.questionVersionId ?? ""),
+                stem: String(b.stem ?? ""),
+                options: Array.isArray(b.options) ? b.options : [],
+                answerOptionId: String(b.answerOptionId ?? ""),
+                explanation: String(b.explanation ?? "")
+              },
+              validation: existing
+            });
+          }
+        }
+      }
+
+      return response(req, 200, {
+        contractId: "admin-transfer-pair-queue-v1",
+        pairs: candidates,
+        activationAuthority: false,
+        probeSchedulingEnabled: false
+      });
+    }
+
+    if (req.method === "POST" && path === "/transfer-pairs/validate") {
+      await requireAdmin();
+      const body = await jsonBody(req, 12288);
+      exactFields(body, [
+        "questionVersionA",
+        "questionVersionB",
+        "decision",
+        "surfaceNovelty",
+        "constructAlignment",
+        "reasoningAlignment",
+        "difficultyComparability",
+        "cueOverlapRisk",
+        "retentionProbeComparable",
+        "notes",
+        "attestationVersion",
+        "attested"
+      ]);
+
+      const questionVersionA = identifier(body.questionVersionA);
+      const questionVersionB = identifier(body.questionVersionB);
+      const decision = String(body.decision ?? "");
+      const surfaceNovelty = String(body.surfaceNovelty ?? "");
+      const constructAlignment = String(body.constructAlignment ?? "");
+      const reasoningAlignment = String(body.reasoningAlignment ?? "");
+      const difficultyComparability = String(body.difficultyComparability ?? "");
+      const cueOverlapRisk = String(body.cueOverlapRisk ?? "");
+      const notes = typeof body.notes === "string" ? body.notes.trim() : "";
+      const retentionProbeComparable = body.retentionProbeComparable;
+      const attestationVersion = String(body.attestationVersion ?? "");
+
+      if (questionVersionA === questionVersionB) fail(400, "distinct_question_versions_required");
+      if (!["validated", "rejected"].includes(decision)) fail(400, "invalid_transfer_pair_decision");
+      if (!["low", "moderate", "high"].includes(surfaceNovelty)) fail(400, "invalid_surface_novelty");
+      if (!["same_primary_construct", "related_construct", "mismatch"].includes(constructAlignment)) fail(400, "invalid_construct_alignment");
+      if (!["comparable", "bounded_difference", "materially_different"].includes(reasoningAlignment)) fail(400, "invalid_reasoning_alignment");
+      if (!["comparable", "bounded_difference", "unknown", "materially_different"].includes(difficultyComparability)) fail(400, "invalid_difficulty_comparability");
+      if (!["low", "moderate", "high"].includes(cueOverlapRisk)) fail(400, "invalid_cue_overlap_risk");
+      if (typeof retentionProbeComparable !== "boolean") fail(400, "invalid_retention_probe_comparable");
+      if (notes.length < 20 || notes.length > 4000) fail(400, "invalid_transfer_pair_notes");
+      if (attestationVersion !== "transfer-pair-human-validation-v1" || body.attested !== true) {
+        fail(400, "transfer_pair_attestation_required");
+      }
+
+      const { data, error } = await admin.rpc("record_transfer_pair_validation_v1", {
+        p_question_version_1: questionVersionA,
+        p_question_version_2: questionVersionB,
+        p_validator: reviewerId,
+        p_decision: decision,
+        p_surface_novelty: surfaceNovelty,
+        p_construct_alignment: constructAlignment,
+        p_reasoning_alignment: reasoningAlignment,
+        p_difficulty_comparability: difficultyComparability,
+        p_cue_overlap_risk: cueOverlapRisk,
+        p_retention_probe_comparable: retentionProbeComparable,
+        p_notes: notes
+      });
+
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("content_admin_required") || message.includes("transfer_pair_validator_not_authorized")) {
+          fail(403, "content_admin_required");
+        }
+        if (error.code === "23505") fail(409, "transfer_pair_already_validated");
+        if (message.includes("unknown_transfer_pair_question_version")) fail(404, "transfer_pair_question_not_found");
+        if (message.includes("transfer_pair_requires_published_questions")) fail(409, "transfer_pair_not_published");
+        if (message.includes("validated_pair_fails_transfer_semantic_gate") || message.includes("retention_comparability_gate_failed")) {
+          fail(409, "transfer_pair_validation_gate_failed");
+        }
+        fail(400, "transfer_pair_validation_failed");
+      }
+
+      const receipt = Array.isArray(data) ? data[0] : data;
+      return response(req, 200, {
+        contractId: "admin-transfer-pair-validation-receipt-v1",
+        receipt,
+        activationAuthority: false,
+        probeSchedulingEnabled: false
+      });
     }
 
     if (req.method === "GET" && path === "/learner-reports") {
