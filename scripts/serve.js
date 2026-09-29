@@ -59,8 +59,10 @@ const server = createServer(async (req, res) => {
       return res.end(req.method === 'HEAD' ? undefined : payload);
     }
 
-    if (pathname === '/mcp') {
-      return handleAdminMcpHttp(req, res);
+    if (pathname === '/mcp' || pathname === '/mcp-readonly') {
+      return handleAdminMcpHttp(req, res, {
+        readOnlyMode: pathname === '/mcp-readonly'
+      });
     }
 
     if (!['GET', 'HEAD'].includes(req.method)) {
