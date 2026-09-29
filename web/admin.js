@@ -154,7 +154,23 @@ function researchGatePanel() {
     ? '<p class="muted">Canonical blockers: ' + blockers.map(escape).join(' · ') + '</p>'
     : '<p class="muted">Canonical readiness reports no listed blockers, but activation remains disabled unless a separately governed authorization exists.</p>';
 
-  return '<section class="panel" id="research-gate">' + action + metrics + blockerText +
+  const report = gate.feasibilityReport || {};
+  const funnel = report.funnel || {};
+  const primary = report.primaryOutcome || {};
+  const feasibility = report.contractId
+    ? '<div class="review-packet"><span class="eyebrow">FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY</span>' +
+        '<div class="metrics">' +
+          gateStatus('Assigned ' + Number(funnel.assignmentCount || 0), Number(funnel.assignmentCount || 0) > 0) +
+          gateStatus('Server served ' + Number(funnel.serverServedCount || 0), Number(funnel.serverServedCount || 0) > 0) +
+          gateStatus('Responses ' + Number(funnel.responseCount || 0), Number(funnel.responseCount || 0) > 0) +
+          gateStatus('Clean responses ' + Number(funnel.cleanResponseCount || 0), Number(funnel.cleanResponseCount || 0) > 0) +
+        '</div>' +
+        '<p class="muted">Clean accuracy: ' + (typeof primary.cleanAccuracy === 'number' ? escape((primary.cleanAccuracy * 100).toFixed(1) + '%') : 'not estimable yet') +
+        ' · No causal inference · No hypothesis testing · No mastery/forgetting fitting.</p>' +
+      '</div>'
+    : '';
+
+  return '<section class="panel" id="research-gate">' + action + metrics + blockerText + feasibility +
     '<p class="muted">Activation authority: none · probe scheduling: disabled · Study Now authority: unchanged.</p></section>';
 }
 
