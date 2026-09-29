@@ -134,9 +134,11 @@ function researchGatePanel() {
         '<label class="review-attestation"><input type="checkbox" name="attested" required> I authorize only this exact protocol + validated pair within the stated cap. I understand scheduling remains disabled.</label>' +
         '<button class="primary" type="submit" ' + (state.submitting ? 'disabled' : '') + '>Record bounded authorization</button>' +
       '</form>';
-  } else if (next.kind === 'bounded-probe-scheduler-not-implemented') {
-    action = '<div class="section-heading"><div><span class="eyebrow">AUTHORIZATION RECORDED · SCHEDULER OFF</span><h2>Bounded probe scheduling is the next engineering gate.</h2></div><span class="badge">No assignments</span></div>' +
-      '<p>An authorization record exists, but no scheduler can consume it yet.</p>' +
+  } else if (next.kind === 'retention-probe-scheduler-kernel-ready') {
+    const eligible = Number(gate.schedulerReadiness?.eligibleCandidateCount ?? next.pendingCount ?? 0);
+    action = '<div class="section-heading"><div><span class="eyebrow">SCHEDULER KERNEL READY · AUTOMATION OFF</span><h2>Eligibility can be computed atomically, but nothing is delivered automatically.</h2></div><span class="badge">' + escape(eligible) + ' eligible now</span></div>' +
+      '<p>The kernel re-checks consent, exact pair/content validity, authorization, the day 6–8 window, prior target exposure, same-concept contamination, overdue/mistake-repair work and open study sessions before creating any assignment.</p>' +
+      '<p class="muted">There is no cron trigger, no Admin “run scheduler” button and no learner delivery surface yet.</p>' +
       (authorizationState?.canRevoke === true && currentAuthorization
         ? '<form class="activation-revoke-form" data-pair-validation-id="' + escape(currentAuthorization.pairValidationId || '') + '" data-protocol-sha256="' + escape(protocol?.protocolSha256 || '') + '">' +
             '<label>Revocation rationale<textarea name="rationale" minlength="20" maxlength="4000" required></textarea></label>' +
