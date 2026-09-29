@@ -206,3 +206,27 @@ An `authorize` event is accepted only when all of the following are true:
 Authorization evidence is append-only. Revocation is a new immutable event, not a mutation. Revocation must remain available even if the pair later becomes stale or learners withdraw.
 
 **M11f1 still does not schedule a single probe.** A later bounded scheduler must separately consume only an active authorization and re-check learner consent at assignment time.
+
+
+## M11f2 dormant scheduler kernel
+
+M11f2 defines the mechanics of a bounded assignment without turning them on automatically.
+
+A candidate exists only when:
+1. an active, unexpired M11f1 authorization exists;
+2. the exact human-validated retention-comparable pair is still current and both versions remain published;
+3. the learner's current consent is `opt_in`;
+4. that consent predates the origin attempt;
+5. the activation authorization predates the origin attempt;
+6. the origin attempt falls into a day 6–8 delivery window at evaluation time;
+7. the target alternate has never been attempted;
+8. no observed same-concept attempt occurred after the origin;
+9. no overdue revision, unresolved latest-incorrect item or open study session should take priority;
+10. protocol-wide, authorization-wide and rolling per-learner assignment caps remain available;
+11. the 56-day feasibility horizon has not expired.
+
+The kernel can be invoked only through a service-role RPC. **No cron, browser route, Admin run button or learner delivery path is enabled.**
+
+A future delivery surface must call `study_retention_probe_delivery_readiness_v1()` immediately before showing the target item. Any withdrawal, authorization revocation/expiry, stale pair/content, out-of-window timing, target exposure, same-concept contamination or higher-priority due/mistake work makes the assignment non-deliverable.
+
+An assignment is scheduling evidence, not proof that the learner saw or answered the item. Delivery/exposure and response evidence must remain separate later events.
