@@ -7,7 +7,7 @@ test('review-api derives reviewer identity server-side and never trusts browser 
 
   assert.match(source, /auth\.getUser\(token\)/);
   assert.match(source, /const reviewerId = authData\.user\.id/);
-  assert.match(source, /get_active_reviewer_grants/);
+  assert.match(source, /content_admin_status_v1/);
   assert.match(source, /record_content_review/);
   assert.match(source, /reviewer_not_authorized/);
 
@@ -50,10 +50,11 @@ test('review-api resolves source rights only through server-derived reviewer ide
 });
 
 
-test('review-api reads only active reviewer grants through the database policy', async () => {
+test('review-api resolves singleton admin authority through the database policy', async () => {
   const source = await readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url), 'utf8');
 
-  assert.match(source, /admin\.rpc\("get_active_reviewer_grants", \{ p_reviewer: reviewerId \}\)/);
+  assert.match(source, /admin\.rpc\("content_admin_status_v1", \{ p_user: reviewerId \}\)/);
+  assert.match(source, /if \(!access\.isAdmin\) fail\(403, "content_admin_required"\)/);
   assert.doesNotMatch(source, /admin\.from\("content_reviewer_grants"\).*select\("review_kind"\)/s);
 });
 
