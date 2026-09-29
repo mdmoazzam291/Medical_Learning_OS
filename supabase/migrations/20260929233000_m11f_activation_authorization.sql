@@ -119,6 +119,7 @@ declare
   v_protocol public.study_retention_probe_protocols%rowtype;
   v_opt_in_count integer := 0;
   v_current_pair_count integer := 0;
+  v_current_pair_ids jsonb := '[]'::jsonb;
   v_active_authorization public.study_retention_probe_activation_events%rowtype;
 begin
   select *
@@ -135,8 +136,10 @@ begin
   )
   into v_opt_in_count;
 
-  select count(*)::integer
-  into v_current_pair_count
+  select
+    count(*)::integer,
+    coalesce(pg_catalog.jsonb_agg(v.id order by v.validated_at, v.id), '[]'::jsonb)
+  into v_current_pair_count, v_current_pair_ids
   from public.study_transfer_pair_validations v
   join lateral (
     select q
@@ -173,6 +176,11 @@ begin
     'contractId','study-retention-probe-activation-authorization-readiness-v1',
     'protocolAvailable',v_protocol.protocol_id is not null,
     'currentRetentionComparablePairs',v_current_pair_count,
+    'eligiblePairValidationIds',v_current_pair_ids,
+    'recommendedPairValidationId',case
+      when v_current_pair_count=1 then v_current_pair_ids->>0
+      else null
+    end,
     'activeOptedInLearners',v_opt_in_count,
     'currentAuthorization',case
       when v_active_authorization.id is null then null
