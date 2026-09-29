@@ -34,12 +34,31 @@ function cleanRedirectUrl(value) {
   return redirect;
 }
 
+function normalizedProviders(value) {
+  const providers = new Set();
+  if (Array.isArray(value?.identities)) {
+    for (const identity of value.identities) {
+      if (typeof identity?.provider === 'string' && identity.provider) providers.add(identity.provider);
+    }
+  }
+  if (Array.isArray(value?.app_metadata?.providers)) {
+    for (const provider of value.app_metadata.providers) {
+      if (typeof provider === 'string' && provider) providers.add(provider);
+    }
+  }
+  if (typeof value?.app_metadata?.provider === 'string' && value.app_metadata.provider) {
+    providers.add(value.app_metadata.provider);
+  }
+  return [...providers].sort();
+}
+
 function normalizedUser(value) {
   if (!value || typeof value !== 'object' || typeof value.id !== 'string' || !value.id) return null;
   return {
     id: value.id,
     email: value.email || null,
-    emailConfirmedAt: value.email_confirmed_at || null
+    emailConfirmedAt: value.email_confirmed_at || null,
+    providers: normalizedProviders(value)
   };
 }
 
@@ -113,6 +132,23 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
     }
   }
 
+  async function authenticatedSession() {
+    let session = read();
+    if (!session) throw new AuthError(401, 'not_authenticated');
+    if (session.expiresAt * 1000 <= now() + 60_000) {
+      session = await refresh(session.refreshToken);
+    }
+    if (!session?.accessToken) throw new AuthError(401, 'not_authenticated');
+    return session;
+  }
+
+  async function fetchCurrentUser(session) {
+    const data = await api('/auth/v1/user', { method: 'GET', accessToken: session.accessToken });
+    const user = normalizedUser(data?.user ?? data);
+    if (!user) throw new AuthError(401, 'invalid_authenticated_user');
+    return user;
+  }
+
   return {
     oauthAuthorizeUrl(provider, { redirectTo } = {}) {
       if (provider !== 'google') throw new AuthError(400, 'unsupported_oauth_provider');
@@ -136,9 +172,7 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
         expires_in: params.get('expires_in')
       });
       if (!session) throw new AuthError(400, 'invalid_auth_callback');
-      const user = await api('/auth/v1/user', { method: 'GET', accessToken: session.accessToken });
-      const normalized = normalizedUser(user);
-      if (!normalized) throw new AuthError(401, 'invalid_authenticated_user');
+      const normalized = await fetchCurrentUser(session);
       session.user = normalized;
       write(session);
       return { handled: true, session };
@@ -167,6 +201,25 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
       const expiresSoon = session.expiresAt * 1000 <= now() + 60_000;
       if (forceRefresh || expiresSoon) return refresh(session.refreshToken);
       return session;
+    },
+    async refreshUser() {
+      const session = await authenticatedSession();
+      const user = await fetchCurrentUser(session);
+      session.user = user;
+      write(session);
+      return user;
+    },
+    async setPassword(password) {
+      const session = await authenticatedSession();
+      const data = await api('/auth/v1/user', {
+        method: 'PUT',
+        accessToken: session.accessToken,
+        body: { password: cleanPassword(password) }
+      });
+      const user = normalizedUser(data?.user ?? data) || await fetchCurrentUser(session);
+      session.user = user;
+      write(session);
+      return user;
     },
     async signOut() {
       const session = read();
