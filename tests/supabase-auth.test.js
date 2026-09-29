@@ -365,3 +365,116 @@ test('implicit recovery callback reports recovery type while preserving the same
   assert.equal(result.session.user.id, 'same-user');
   assert.deepEqual(result.session.user.providers, ['email', 'google']);
 });
+
+
+test('OAuth authorization details use the authenticated Supabase session and normalize consent data', async () => {
+  const storage = memoryStorage();
+  const calls = [];
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      calls.push({ url, options });
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access',
+          refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      if (url.endsWith('/auth/v1/oauth/authorizations/auth_request_1')) {
+        assert.equal(options.method, 'GET');
+        assert.equal(options.headers.Authorization, 'Bearer access');
+        return Response.json({
+          authorization_id: 'auth_request_1',
+          redirect_uri: 'https://chatgpt.com/callback',
+          scope: 'email',
+          client: { id: 'client-1', name: 'ChatGPT', uri: 'https://chatgpt.com' },
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+  await auth.signIn('admin@example.com', 'strong-password');
+  const details = await auth.oauthAuthorizationDetails('auth_request_1');
+  assert.equal(details.authorizationId, 'auth_request_1');
+  assert.equal(details.client.name, 'ChatGPT');
+  assert.equal(details.scope, 'email');
+  assert.equal(details.user.email, 'admin@example.com');
+  assert.equal(calls.length, 2);
+});
+
+test('OAuth consent sends only approve or deny and returns validated HTTPS redirect', async () => {
+  const storage = memoryStorage();
+  const calls = [];
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url, options) => {
+      calls.push({ url, options });
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access',
+          refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      if (url.endsWith('/auth/v1/oauth/authorizations/auth_request_2/consent')) {
+        assert.equal(options.method, 'POST');
+        assert.equal(options.headers.Authorization, 'Bearer access');
+        assert.deepEqual(JSON.parse(options.body), { action: 'approve' });
+        return Response.json({ redirect_url: 'https://chatgpt.com/callback?code=one&state=two' });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+  await auth.signIn('admin@example.com', 'strong-password');
+  const result = await auth.oauthAuthorizationDecision('auth_request_2', 'approve');
+  assert.equal(result.redirectUrl, 'https://chatgpt.com/callback?code=one&state=two');
+  await assert.rejects(auth.oauthAuthorizationDecision('auth_request_2', 'publish'), error => error.code === 'invalid_oauth_authorization_action');
+  assert.equal(calls.length, 2);
+});
+
+test('OAuth consent rejects malformed authorization IDs before network use', async () => {
+  const storage = memoryStorage();
+  let calls = 0;
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async url => {
+      calls += 1;
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access', refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      throw new Error('unexpected request');
+    }
+  });
+  await auth.signIn('admin@example.com', 'strong-password');
+  await assert.rejects(auth.oauthAuthorizationDetails('../escape'), error => error.code === 'invalid_oauth_authorization_id');
+  assert.equal(calls, 1);
+});
+
+test('previous OAuth consent response may redirect without asking twice, but only to safe client URL', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async (url) => {
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access', refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      return Response.json({ redirect_url: 'https://chatgpt.com/callback?code=already-approved' });
+    }
+  });
+  await auth.signIn('admin@example.com', 'strong-password');
+  assert.deepEqual(await auth.oauthAuthorizationDetails('auth_request_3'), {
+    redirectUrl: 'https://chatgpt.com/callback?code=already-approved'
+  });
+});
