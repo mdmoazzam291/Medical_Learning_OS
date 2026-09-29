@@ -478,3 +478,26 @@ test('previous OAuth consent response may redirect without asking twice, but onl
     redirectUrl: 'https://chatgpt.com/callback?code=already-approved'
   });
 });
+
+
+test('OAuth authorization redirect rejects non-HTTPS remote callbacks', async () => {
+  const storage = memoryStorage();
+  const auth = createSupabaseAuth({
+    projectUrl, publishableKey, storage,
+    fetchFn: async url => {
+      if (url.includes('grant_type=password')) {
+        return Response.json({
+          access_token: 'access', refresh_token: 'refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: { id: 'admin-user', email: 'admin@example.com' }
+        });
+      }
+      return Response.json({ redirect_url: 'http://attacker.example/callback' });
+    }
+  });
+  await auth.signIn('admin@example.com', 'strong-password');
+  await assert.rejects(
+    auth.oauthAuthorizationDetails('auth_request_4'),
+    error => error.code === 'invalid_oauth_redirect_url'
+  );
+});
