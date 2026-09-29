@@ -4,6 +4,14 @@ const DEFAULT_PUBLIC_URL = 'https://medical-learning-os-preview.onrender.com';
 
 export const ADMIN_MCP_UI_URI = 'ui://medical-learning-os/admin-control-v1.html';
 
+const READ_ONLY_TOOL_NAMES = new Set([
+  'mlos_admin_home',
+  'mlos_admin_search',
+  'mlos_question_review_queue',
+  'mlos_note_review_queue',
+  'mlos_learner_issue_queue'
+]);
+
 const projectUrl = () => String(process.env.MLOS_SUPABASE_URL || DEFAULT_PROJECT_URL).replace(/\/$/, '');
 const publishableKey = () => String(process.env.MLOS_SUPABASE_PUBLISHABLE_KEY || DEFAULT_PUBLISHABLE_KEY);
 const publicUrl = () => String(process.env.MLOS_PUBLIC_URL || DEFAULT_PUBLIC_URL).replace(/\/$/, '');
@@ -233,8 +241,17 @@ function textResult(payload, extra = {}) {
   };
 }
 
-function toolByName(name) {
-  return ADMIN_MCP_TOOLS.find(tool => tool.name === name) || null;
+function toolByName(name, { readOnlyMode = false } = {}) {
+  const tool = ADMIN_MCP_TOOLS.find(item => item.name === name) || null;
+  if (!tool) return null;
+  if (readOnlyMode && !READ_ONLY_TOOL_NAMES.has(name)) return null;
+  return tool;
+}
+
+function advertisedTools(readOnlyMode) {
+  return readOnlyMode
+    ? ADMIN_MCP_TOOLS.filter(tool => READ_ONLY_TOOL_NAMES.has(tool.name))
+    : ADMIN_MCP_TOOLS;
 }
 
 function cleanArgs(value) {
@@ -396,11 +413,11 @@ export function protectedResourceMetadata() {
     resource: publicUrl(),
     authorization_servers: [projectUrl() + '/auth/v1'],
     scopes_supported: ['openid', 'email', 'profile'],
-    resource_documentation: publicUrl() + '/admin-plugin'
+    resource_documentation: publicUrl() + '/web/admin.html'
   };
 }
 
-export async function dispatchAdminMcpRpc(rpc, token, { fetchFn = fetch } = {}) {
+export async function dispatchAdminMcpRpc(rpc, token, { fetchFn = fetch, readOnlyMode = false } = {}) {
   if (!rpc || rpc.jsonrpc !== '2.0' || (!('id' in rpc) && !String(rpc.method || '').startsWith('notifications/'))) {
     return { status: 400, body: { jsonrpc: '2.0', id: rpc?.id ?? null, error: { code: -32600, message: 'Invalid Request' } } };
   }
@@ -425,11 +442,11 @@ export async function dispatchAdminMcpRpc(rpc, token, { fetchFn = fetch } = {}) 
     };
   }
   if (rpc.method === 'tools/list') {
-    return { status: 200, body: { jsonrpc: '2.0', id: rpc.id, result: { tools: ADMIN_MCP_TOOLS } } };
+    return { status: 200, body: { jsonrpc: '2.0', id: rpc.id, result: { tools: advertisedTools(readOnlyMode) } } };
   }
   if (rpc.method === 'tools/call') {
     const name = String(rpc.params?.name || '');
-    if (!toolByName(name)) {
+    if (!toolByName(name, { readOnlyMode })) {
       return { status: 200, body: { jsonrpc: '2.0', id: rpc.id, error: { code: -32602, message: 'Unknown tool' } } };
     }
     try {
@@ -519,6 +536,7 @@ function challengeHeader() {
 }
 
 export async function handleAdminMcpHttp(req, res, options = {}) {
+  const readOnlyMode = options.readOnlyMode === true;
   if (req.method === 'OPTIONS') {
     res.writeHead(204, { Allow: 'POST, OPTIONS', 'Cache-Control': 'no-store' });
     return res.end();
@@ -540,7 +558,7 @@ export async function handleAdminMcpHttp(req, res, options = {}) {
 
   try {
     const rpc = await readBody(req);
-    const result = await dispatchAdminMcpRpc(rpc, token, options);
+    const result = await dispatchAdminMcpRpc(rpc, token, { ...options, readOnlyMode });
     if (result.body === null) {
       res.writeHead(result.status, { 'Cache-Control': 'no-store' });
       return res.end();
