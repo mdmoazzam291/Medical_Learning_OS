@@ -101,8 +101,8 @@ response_timing as (
   select
     percentile_cont(0.5) within group (order by response_duration_ms)
       filter (where response_duration_ms is not null) as median_response_ms,
-    avg(response_duration_ms)::double precision
-      filter (where response_duration_ms is not null) as mean_response_ms
+    (avg(response_duration_ms)
+      filter (where response_duration_ms is not null))::double precision as mean_response_ms
   from responses
 ),
 memory_summary as (
