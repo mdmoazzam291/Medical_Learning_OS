@@ -92,7 +92,7 @@ test('admin research gate prioritizes human M11c review and keeps scheduling sep
   assert.match(admin, /Review the blocking pair/);
   assert.match(admin, /At least one learner must currently opt in before authorization/);
   assert.match(admin, /Issue a bounded feasibility authorization/);
-  assert.match(admin, /Bounded probe scheduling is the next engineering gate/);
-  assert.match(admin, /Probe scheduling remains disabled/);
+  assert.match(admin, /SCHEDULER KERNEL READY · AUTOMATION OFF/);
+  assert.match(admin, /There is no cron trigger, no Admin “run scheduler” button and no learner delivery surface yet/);
   assert.doesNotMatch(admin, />Activate probes</i);
 });
