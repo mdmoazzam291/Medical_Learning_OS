@@ -143,3 +143,44 @@ test('admin home tool is linked to the plugin UI resource', async () => {
   assert.equal(result.body.result._meta.ui.resourceUri, ADMIN_MCP_UI_URI);
   assert.equal(result.body.result.structuredContent.isAdmin, true);
 });
+
+
+test('read-only MCP mode advertises no write tools', async () => {
+  const fetchFn = async () => jsonResponse({
+    reviewerId: 'admin-id',
+    isAdmin: true,
+    reviewKinds: ['medical', 'references', 'rights']
+  });
+  const result = await dispatchAdminMcpRpc({
+    jsonrpc: '2.0',
+    id: 9,
+    method: 'tools/list'
+  }, 'user-jwt', { fetchFn, readOnlyMode: true });
+  const names = result.body.result.tools.map(tool => tool.name);
+  assert.deepEqual(names.sort(), [
+    'mlos_admin_home',
+    'mlos_admin_search',
+    'mlos_learner_issue_queue',
+    'mlos_note_review_queue',
+    'mlos_question_review_queue'
+  ].sort());
+  assert.equal(result.body.result.tools.every(tool => tool.annotations.readOnlyHint === true), true);
+});
+
+test('read-only MCP mode rejects authoritative tool calls even for admin', async () => {
+  const fetchFn = async () => jsonResponse({
+    reviewerId: 'admin-id',
+    isAdmin: true,
+    reviewKinds: ['medical', 'references', 'rights']
+  });
+  const result = await dispatchAdminMcpRpc({
+    jsonrpc: '2.0',
+    id: 10,
+    method: 'tools/call',
+    params: {
+      name: 'mlos_resolve_source_rights',
+      arguments: { sourceId: 'source:one', rightsStatus: 'citation_only', evidence: 'x' }
+    }
+  }, 'user-jwt', { fetchFn, readOnlyMode: true });
+  assert.equal(result.body.error.code, -32602);
+});
