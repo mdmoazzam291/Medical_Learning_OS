@@ -254,3 +254,50 @@ Canonical learning-event stream v2 adds:
 These are replayable evidence only. They grant no mastery, forgetting, Study Now or causal-inference authority.
 
 No learner route invokes this kernel yet. No automatic delivery is enabled.
+
+
+## M11g descriptive feasibility report
+
+`study_retention_probe_feasibility_report_v1()` is the preregistered pilot's operational analysis projection. It is deliberately descriptive.
+
+The funnel is kept explicit:
+1. assignment created;
+2. exact payload server-served;
+3. response bound to a canonical question attempt;
+4. response remains clean for the preregistered primary analysis.
+
+The primary descriptive outcome is:
+- alternate-item correctness within the day 6–8 window among observations still marked clean.
+
+Zero clean responses produce `cleanAccuracy=null`. The system must not render a zero denominator as 0% performance.
+
+Secondary descriptive outputs include:
+- assignment-to-serve rate;
+- served-to-response rate;
+- median and mean response time where available;
+- optional memory-rating count/distribution;
+- observed contamination rate and reason counts;
+- expired assignments that were never served;
+- expired served events with no bound response.
+
+### Transport-failure boundary
+
+The protocol names probe transport failure as a secondary feasibility concern, but the current evidence model cannot identify it validly. A server-served receipt does not prove the learner rendered or saw the probe, and an absent response does not distinguish a network/UI failure from non-view or learner choice.
+
+Therefore M11g reports:
+- `transportFailureRate=null`;
+- `transportFailureMeasurementAvailable=false`.
+
+A later route may add explicit render/delivery acknowledgement if that signal can be measured reliably. Until then, nonresponse must not be relabeled as transport failure.
+
+### Interpretation boundary
+
+M11g performs:
+- no causal inference;
+- no hypothesis testing;
+- no item-equivalence estimation;
+- no intervention-efficacy claim;
+- no mastery fitting;
+- no forgetting-rate fitting.
+
+Results remain explicit by validated pair and concept so heterogeneity is visible rather than hidden inside a pooled score.
