@@ -137,6 +137,16 @@ function mapNeuralNoteReviewWriteError(error: any): never {
   fail(500, "review_write_failed");
 }
 
+function mapNeuralNoteDraftWriteError(error: any): never {
+  const message = String(error?.message || "");
+  if (message.includes("content_admin_required")) fail(403, "content_admin_required");
+  if (message.includes("neural_concept_unknown")) fail(404, "neural_concept_not_found");
+  if (message.includes("neural_source_unknown")) fail(404, "neural_source_not_found");
+  if (message.includes("neural_note_author_unknown")) fail(409, "neural_note_author_unknown");
+  if (message.includes("neural_note_invalid")) fail(400, "neural_note_invalid");
+  fail(500, "neural_note_draft_write_failed");
+}
+
 function mapReviewMeasurementWriteError(error: any): never {
   const message = String(error?.message || "");
   if (message.includes("reviewer_not_authorized")) fail(403, "reviewer_not_authorized");
@@ -317,6 +327,144 @@ Deno.serve(async (req: Request) => {
         reviewerId,
         isAdmin: access.isAdmin,
         reviewKinds: access.isAdmin ? access.reviewKinds : []
+      });
+    }
+
+
+    if (req.method === "GET" && path === "/admin-search") {
+      const allowed = new Set(["q", "type"]);
+      if ([...url.searchParams.keys()].some((key) => !allowed.has(key))) fail(400, "query_not_supported");
+      await requireAdmin();
+
+      const query = String(url.searchParams.get("q") || "").trim();
+      const type = String(url.searchParams.get("type") || "all");
+      if (query.length < 2 || query.length > 120) fail(400, "admin_search_query_invalid");
+      if (!["all", "concept", "source", "question"].includes(type)) fail(400, "admin_search_type_invalid");
+
+      const { data: catalog, error } = await trustedRead("admin_search_catalog", async () =>
+        admin.from("study_catalog").select("body,version").eq("id", 1).single()
+      );
+      if (error || !catalog) fail(500, "admin_search_unavailable");
+
+      const body = catalog.body as any;
+      const needle = query.toLowerCase();
+      const contains = (value: unknown) => String(value ?? "").toLowerCase().includes(needle);
+      const limit = <T>(items: T[]) => items.slice(0, 25);
+
+      const concepts = (type === "all" || type === "concept")
+        ? limit((Array.isArray(body?.concepts) ? body.concepts : [])
+            .filter((item: any) =>
+              contains(item?.conceptId) ||
+              contains(item?.label) ||
+              (Array.isArray(item?.aliases) && item.aliases.some(contains)) ||
+              (Array.isArray(item?.subjectTags) && item.subjectTags.some(contains))
+            )
+            .map((item: any) => ({
+              conceptId: item?.conceptId ?? null,
+              label: item?.label ?? null,
+              aliases: Array.isArray(item?.aliases) ? item.aliases : [],
+              subjectTags: Array.isArray(item?.subjectTags) ? item.subjectTags : []
+            })))
+        : [];
+
+      const sources = (type === "all" || type === "source")
+        ? limit((Array.isArray(body?.sources) ? body.sources : [])
+            .filter((item: any) =>
+              contains(item?.sourceId) || contains(item?.title) || contains(item?.version)
+            )
+            .map((item: any) => ({
+              sourceId: item?.sourceId ?? null,
+              title: item?.title ?? null,
+              version: item?.version ?? null,
+              rightsStatus: item?.rights?.status ?? "unknown"
+            })))
+        : [];
+
+      const questions = (type === "all" || type === "question")
+        ? limit((Array.isArray(body?.questions) ? body.questions : [])
+            .filter((item: any) =>
+              contains(item?.questionId) ||
+              contains(item?.questionVersionId) ||
+              contains(item?.stem) ||
+              (Array.isArray(item?.conceptLinks) &&
+                item.conceptLinks.some((link: any) => contains(link?.conceptId)))
+            )
+            .map((item: any) => ({
+              questionId: item?.questionId ?? null,
+              questionVersionId: item?.questionVersionId ?? null,
+              stem: item?.stem ?? null,
+              status: item?.status ?? null,
+              sourceIds: Array.isArray(item?.sourceIds) ? item.sourceIds : [],
+              conceptLinks: Array.isArray(item?.conceptLinks) ? item.conceptLinks : []
+            })))
+        : [];
+
+      return response(req, 200, {
+        contractId: "content-admin-search-v1",
+        catalogVersion: catalog.version,
+        query,
+        type,
+        concepts,
+        sources,
+        questions
+      });
+    }
+
+    if (req.method === "POST" && path === "/note-drafts") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 131072);
+      exactFields(input, ["conceptId", "title", "bodyMarkdown", "sourceIds", "provenance"]);
+      await requireAdmin();
+
+      const conceptId = identifier(input.conceptId);
+      if (typeof input.title !== "string" || input.title.trim().length < 1 || input.title.trim().length > 300) {
+        fail(400, "neural_note_title_invalid");
+      }
+      if (typeof input.bodyMarkdown !== "string" ||
+          input.bodyMarkdown.trim().length < 1 ||
+          input.bodyMarkdown.length > 100000) {
+        fail(400, "neural_note_body_invalid");
+      }
+      if (!Array.isArray(input.sourceIds) || input.sourceIds.length < 1 || input.sourceIds.length > 100) {
+        fail(400, "neural_note_sources_invalid");
+      }
+      const sourceIds = input.sourceIds.map(identifier);
+      if (new Set(sourceIds).size !== sourceIds.length) fail(400, "neural_note_sources_duplicate");
+
+      const provenance = object(input.provenance);
+      exactFields(provenance, ["kind", "evidence"]);
+      if (!["ai_generated_original", "human_authored_original", "licensed_adaptation"].includes(String(provenance.kind))) {
+        fail(400, "neural_note_provenance_invalid");
+      }
+      if (typeof provenance.evidence !== "string" ||
+          provenance.evidence.trim().length < 1 ||
+          provenance.evidence.trim().length > 2000) {
+        fail(400, "neural_note_provenance_invalid");
+      }
+
+      const { data, error } = await admin.rpc("neural_create_canonical_note_draft", {
+        p_concept_id: conceptId,
+        p_title: input.title.trim(),
+        p_body_markdown: input.bodyMarkdown,
+        p_source_ids: sourceIds,
+        p_provenance: {
+          kind: String(provenance.kind),
+          evidence: provenance.evidence.trim()
+        },
+        p_author: reviewerId
+      });
+      if (error) mapNeuralNoteDraftWriteError(error);
+      if (!data || typeof data !== "object" || !(data as any).noteVersionId || (data as any).status !== "draft") {
+        fail(500, "neural_note_draft_write_failed");
+      }
+
+      return response(req, 200, {
+        contractId: "content-admin-note-draft-receipt-v1",
+        ...(data as Record<string, unknown>),
+        learnerVisible: false,
+        publicationAuthority: false,
+        reviewAuthority: false,
+        independentReviewRequired: true
       });
     }
 
