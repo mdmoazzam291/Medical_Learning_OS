@@ -122,8 +122,46 @@ This is intentional. Preregistration removes ambiguity; it does not grant permis
 - The existing M11a projection remains the outcome-linkage layer. M11b must not create another learner-history authority.
 - Study Now, mastery inference, FSRS authority and Digital Twin inference remain unchanged.
 
+## M11c pair-level novelty/comparability metadata
+
+M11c now defines an immutable, version-bound pair-assessment ledger. Each assessment binds:
+
+- canonical concept;
+- origin question + exact version;
+- alternate question + exact version;
+- rubric version;
+- assessor authority;
+- decision;
+- structured novelty/comparability evidence;
+- canonical SHA-256 digest.
+
+The first anaphylaxis pair has an **AI research-assist assessment only**:
+
+- construct match: high;
+- surface novelty: moderate;
+- surface overlap: moderate;
+- difficulty comparability: unknown;
+- contamination risk: moderate;
+- decision: `needs_human_validation`.
+
+This is deliberately not treated as psychometric equivalence. A database constraint allows `validated_for_feasibility` only when the assessor is a `human_research_reviewer`.
+
+The pair metadata gate also checks that both exact question versions are still published, remain distinct question identities, and still share the intended primary concept. A later question revision therefore cannot silently inherit an old validation.
+
+## Current activation state after M11c
+
+M11c removes the schema ambiguity but **does not activate probing**.
+
+Current remaining blockers:
+
+1. authenticated human research validation of at least one current published pair;
+2. explicit learner opt-in path;
+3. separate activation authorization.
+
+There is still no probe scheduler and no general inference authority.
+
 ## Next transition
 
-The next research step is **M11c**: define and validate pair-level novelty/comparability metadata for published alternate items.
+The next implementation step should be **M11c1 human pair-review capture**: expose the structured pair rubric through the existing authenticated review workflow so a human reviewer can validate/reject a pair without SQL or manual JSON entry.
 
-Only after M11c and an explicit learner opt-in path exist should a separately authorized activation slice be considered.
+Only after a human-validated pair and an explicit learner opt-in path exist should a separately authorized activation slice be considered.
