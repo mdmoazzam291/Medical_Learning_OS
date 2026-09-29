@@ -1548,3 +1548,12 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Browser roles cannot read/write the consent ledger or execute consent RPCs directly.
 - System activation readiness now recognizes that an opt-in path exists, but `canActivate=false` and `probeSchedulingEnabled=false` remain hard-coded.
 - No learner has been auto-enrolled by this implementation.
+
+
+## 2026-09-29 — Unified verified-email authentication
+- Confirmed live Auth has zero duplicate-email user groups.
+- Confirmed an existing account already carries both email and Google identities under one Supabase user, validating Supabase automatic same-email linking in the live project.
+- Account UI now explains that Google and email/password are sign-in methods on one learner account.
+- Auth session normalization retains provider names only, not OAuth identity payloads or tokens.
+- Google-first accounts can add password sign-in while authenticated without creating or migrating learner data.
+- Password-only accounts are told that later Google sign-in with the same verified email auto-links to the same learner ID.
