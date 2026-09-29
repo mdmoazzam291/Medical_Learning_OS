@@ -48,3 +48,16 @@ test('Study Now deep links are consumed once and scrubbed from the URL', () => {
   assert.match(medical, /searchParams\.delete\('studyNow'\)/);
   assert.match(medical, /await startStudyNow\(minutes\)/);
 });
+
+
+test('learner account exposes explicit optional retention opt-in without activation authority', () => {
+  assert.match(account, /OPTIONAL LEARNING-MEASUREMENT PILOT/);
+  assert.match(account, /retention-optin-form/);
+  assert.match(account, /Opt in to retention feasibility/);
+  assert.match(account, /Withdraw from future retention probes/);
+  assert.match(account, /Opt-in does not activate scheduling/);
+  assert.match(account, /cloud\.setRetentionProbeConsent/);
+  assert.match(account, /decision: 'opt_in'/);
+  assert.match(account, /decision: 'withdraw'/);
+  assert.doesNotMatch(account, /learnerId\s*:/);
+});
