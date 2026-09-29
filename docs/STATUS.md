@@ -1581,3 +1581,14 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Packet fields are descriptive only: source title/version, source rights status, provenance kind, change reason and existing Medical/References/Rights decisions.
 - The packet intentionally does not preselect novelty, construct alignment, reasoning alignment, difficulty comparability, cue-overlap risk or retention-probe comparability.
 - Human attestation remains required for the immutable pair decision; activation authority remains absent.
+
+
+## 2026-09-29 — M11f1 activation-authorization governance
+- Added append-only authorize/revoke evidence for retention-feasibility activation governance.
+- Authorization is bound to the exact preregistered protocol SHA-256 and exact immutable pair-validation SHA-256.
+- Only the singleton content admin may authorize or revoke; reviewer identity is derived server-side.
+- Authorization refuses unless the pair is still published/current and human-validated as retention-probe comparable.
+- At least one learner must currently be opted in before authorization can be issued.
+- Assignment caps cannot exceed the preregistered protocol, and authorization validity cannot exceed 56 days.
+- Revocation remains possible even if later eligibility deteriorates.
+- Probe scheduling, Study Now authority and mastery/forgetting inference remain disabled.
