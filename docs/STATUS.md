@@ -1515,6 +1515,7 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Resumed from merged PR #135 / M11b1 rather than restarting the earlier content-review pilot. The next bounded research task was M11c.
 - Live migration `20260929030036_m11c_transfer_pair_validation` adds immutable, service-only exact-version pair validation plus current Medical-target SHA binding, stale-validation detection and `study_validated_transfer_observations_v1(learner)`.
 - Live migration `20260929030109_m11c_transfer_pair_validator_index` adds the covering validator foreign-key index identified by the post-migration performance advisor.
+- Live migration `20260929030652_m11c_refresh_structural_readiness` removes the obsolete nested `protocol-not-preregistered` blocker from the content-only readiness projection; protocol and activation state now live only in their dedicated layers.
 - Pair validation records surface novelty, primary-construct alignment, reasoning alignment, difficulty comparability and cue-overlap risk. Generic descriptive transfer validity and stricter retention-probe comparability remain separate decisions.
 - Bootstrap validation authority requires one human who currently holds Medical, References and Rights reviewer grants; authors cannot validate their own pair. No dedicated research-role system was added.
 - A clean validated-transfer observation additionally requires no prior target-item attempt and no intervening same-concept attempt. Outside-platform exposure remains potentially unobserved.
