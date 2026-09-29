@@ -1224,3 +1224,13 @@ Pair validity, learner consent and experiment activation are distinct authoritie
 A retention-feasibility probe may not become schedulable merely because an eligible pair exists or because a learner opted in. A singleton-admin authorization event must separately bind the exact preregistered protocol and exact current human pair-validation receipt. Authorization requires at least one current opt-in, remains bounded by the protocol caps, expires within 56 days, and is append-only/revocable.
 
 The authorization record itself has no scheduling, Study Now, mastery or forgetting-model authority. A later scheduler must fail closed and re-check current consent and authorization before every assignment.
+
+
+## ADR-081 — Retention scheduling is prospective, subordinate and revalidated at delivery
+**Status:** Accepted — 2026-09-29
+
+The retention-feasibility scheduler may use only origin attempts that occur after both explicit learner opt-in and an active Admin authorization. Historical attempts are not retrospectively converted into research origins.
+
+Probe work is subordinate to ordinary learning. An assignment is blocked when overdue revision, unresolved latest-incorrect work or an open Study Now session exists.
+
+Scheduler creation does not equal learner exposure. The assignment ledger is immutable scheduling evidence only. A later learner-delivery path must re-check consent, authorization, pair/content freshness, protocol timing, contamination and workload priority immediately before exposure. Automatic execution remains a separate capability and is not enabled by the existence of the scheduler kernel.
