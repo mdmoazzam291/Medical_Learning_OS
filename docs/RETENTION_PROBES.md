@@ -230,3 +230,27 @@ The kernel can be invoked only through a service-role RPC. **No cron, browser ro
 A future delivery surface must call `study_retention_probe_delivery_readiness_v1()` immediately before showing the target item. Any withdrawal, authorization revocation/expiry, stale pair/content, out-of-window timing, target exposure, same-concept contamination or higher-priority due/mistake work makes the assignment non-deliverable.
 
 An assignment is scheduling evidence, not proof that the learner saw or answered the item. Delivery/exposure and response evidence must remain separate later events.
+
+
+## M11f3 delivery-evidence kernel
+
+M11f3 separates three facts that must never be collapsed:
+
+1. **Assigned** — the scheduler selected a bounded probe candidate.
+2. **Server served** — the backend returned one exact learner-safe target-question payload.
+3. **Answered / response bound** — a later canonical `question.answered` attempt was linked to that served probe.
+
+A server-served receipt stores the exact target medical-review SHA-256, catalog version, learner-safe question payload and payload SHA-256. Idempotent delivery retries therefore replay the original payload rather than silently substituting a later catalog revision.
+
+**Server served is not treated as learner seen.** M11f3 records `learnerRenderedConfirmed=false` and `learnerViewedConfirmed=false`. A future learner UI may add render acknowledgement, but that must remain a distinct observational signal.
+
+The response-binding layer links an ordinary server-scored study attempt to the exact served event. It rejects mismatched targets and impossible pre-serve responses. If a response occurs after the preregistered window or after another same-concept attempt between serve and answer, the response is retained but marked `cleanForPrimaryAnalysis=false` with explicit contamination reasons.
+
+Canonical learning-event stream v2 adds:
+- `research.retention_probe_assigned`
+- `research.retention_probe_server_served`
+- `research.retention_probe_response_bound`
+
+These are replayable evidence only. They grant no mastery, forgetting, Study Now or causal-inference authority.
+
+No learner route invokes this kernel yet. No automatic delivery is enabled.
