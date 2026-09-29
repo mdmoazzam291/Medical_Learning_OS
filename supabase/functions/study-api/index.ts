@@ -950,6 +950,56 @@ Deno.serve(async (req: Request) => {
     const url = new URL(req.url);
     const path = routePath(url);
 
+    if (req.method === "GET" && path === "/retention-probe/consent") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("study_retention_probe_learner_consent_v1", {
+        p_learner: learnerId
+      });
+      if (error || !data) fail(500, "retention_probe_consent_unavailable");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/retention-probe/consent") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 4096);
+      exactFields(input, ["decision", "protocolSha256", "attestationVersion", "attested"]);
+
+      const decision = String(input.decision ?? "");
+      const protocolSha256 = String(input.protocolSha256 ?? "");
+      const attestationVersion = String(input.attestationVersion ?? "");
+      if (!["opt_in", "withdraw"].includes(decision)) {
+        fail(400, "invalid_retention_probe_consent_decision");
+      }
+      if (!/^[0-9a-f]{64}$/.test(protocolSha256)) {
+        fail(400, "invalid_retention_probe_protocol_hash");
+      }
+      if (attestationVersion !== "retention-probe-learner-consent-v1" || input.attested !== true) {
+        fail(400, "retention_probe_consent_attestation_required");
+      }
+
+      const { data, error } = await admin.rpc("record_retention_probe_learner_consent_v1", {
+        p_learner: learnerId,
+        p_decision: decision,
+        p_protocol_sha256: protocolSha256,
+        p_attestation_version: attestationVersion
+      });
+      if (error || !data) {
+        const message = String(error?.message || "");
+        if (message.includes("retention_probe_protocol_changed")) {
+          fail(409, "retention_probe_protocol_changed");
+        }
+        if (message.includes("retention_probe_protocol_unavailable")) {
+          fail(409, "retention_probe_protocol_unavailable");
+        }
+        if (message.includes("invalid_retention_probe_consent")) {
+          fail(400, "invalid_retention_probe_consent");
+        }
+        fail(500, "retention_probe_consent_write_failed");
+      }
+
+      return response(req, 200, data);
+    }
+
     if (req.method === "GET" && path === "/questions") {
       const filter = url.searchParams.get("filter") || "all";
       if ([...url.searchParams.keys()].some((key) => key !== "filter")) fail(400, "query_not_supported");
