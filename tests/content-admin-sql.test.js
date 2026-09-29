@@ -18,7 +18,7 @@ test('beta content authority is a singleton server-side account', () => {
 
 test('bootstrap requires exactly one existing reviewer with all three gates', () => {
   assert.match(sql, /having count\(distinct review_kind\) = 3/);
-  assert.match(sql, /having count\(\*\) = 1/);
+  assert.match(sql, /where \(select count\(\*\) from candidates\) = 1/);
   assert.match(sql, /on conflict \(singleton\) do nothing/);
 });
 
