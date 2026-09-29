@@ -1234,3 +1234,15 @@ The retention-feasibility scheduler may use only origin attempts that occur afte
 Probe work is subordinate to ordinary learning. An assignment is blocked when overdue revision, unresolved latest-incorrect work or an open Study Now session exists.
 
 Scheduler creation does not equal learner exposure. The assignment ledger is immutable scheduling evidence only. A later learner-delivery path must re-check consent, authorization, pair/content freshness, protocol timing, contamination and workload priority immediately before exposure. Automatic execution remains a separate capability and is not enabled by the existence of the scheduler kernel.
+
+
+## ADR-082 — Assignment, server delivery and learner response are distinct evidence
+**Status:** Accepted — 2026-09-29
+
+Retention-probe scheduling evidence must not be interpreted as exposure, and server delivery must not be interpreted as confirmed learner viewing.
+
+The system therefore records separate immutable states for assignment, exact server-served payload and response binding. The server-served receipt binds the exact learner-safe payload and content hashes so later catalog changes cannot rewrite what was delivered. Response evidence remains the canonical question-attempt event and is linked rather than duplicated as a second answer ledger.
+
+Contaminated or late responses are preserved with explicit analysis flags instead of being deleted. This supports auditability and prevents outcome-cleaning logic from rewriting observed learner behavior.
+
+Research evidence may enter canonical learning-event stream v2, but it remains descriptive and has no mastery/forgetting inference authority until separately validated.
