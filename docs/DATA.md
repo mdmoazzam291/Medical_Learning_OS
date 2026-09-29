@@ -436,3 +436,21 @@ The v1 domain contract distinguishes four objects:
 If measured review throughput justifies persistence, the planned adjunct tables are `content_source_ingestions`, `content_source_passages`, `content_claim_candidates`, `content_claim_evidence` and `content_verification_packets`. These must not duplicate canonical source identity or production review authority.
 
 Historical PYQ answer evidence remains in the M08 exam-occurrence/Exam DNA domain; current medical claims remain separate. See [SOURCE_GROUNDED_VERIFICATION.md](SOURCE_GROUNDED_VERIFICATION.md).
+
+
+## M11c transfer-pair validity
+
+`study_transfer_pair_validations` is immutable research-validity evidence, not learner state.
+
+Each row binds:
+
+- two distinct exact question-version identities sharing one primary canonical concept;
+- the Medical target SHA-256 for each exact version;
+- validator identity and timestamp;
+- novelty, construct alignment, reasoning alignment, difficulty comparability and cue-overlap risk;
+- separate booleans for descriptive transfer validity and stricter retention-probe comparability;
+- a digest of the validation receipt.
+
+Changing either medical target makes the historical validation stale through hash comparison; it is never silently inherited by a revised question.
+
+`study_validated_transfer_observations_v1(learner)` is a derived service-only projection over immutable learner attempts plus current validated pair metadata. It does not write events or derived mastery. A clean observed transfer requires zero prior attempts on the target item and zero intervening same-concept attempts between the origin and target. Unobserved external exposure remains a limitation.
