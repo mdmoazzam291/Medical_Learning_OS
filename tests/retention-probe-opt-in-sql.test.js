@@ -13,7 +13,7 @@ test('M11d stores retention pilot decisions as append-only protocol-bound learne
   assert.match(sql, /protocol_sha256 text not null/);
   assert.match(sql, /decision text not null check \(decision in \('opt_in','withdraw'\)\)/);
   assert.match(sql, /study_retention_probe_consent_events_append_only/);
-  assert.match(sql, /retention_probe_consent_is_append_only/);
+  assert.match(sql, /execute function public\.prevent_learner_evidence_mutation\(\)/);
 });
 
 test('browser roles cannot read or write consent evidence directly', () => {
