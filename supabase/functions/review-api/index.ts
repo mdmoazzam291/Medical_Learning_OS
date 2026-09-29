@@ -448,28 +448,28 @@ Deno.serve(async (req: Request) => {
       const authorizationReadiness = activation?.activationAuthorizationReadiness ?? {};
       const authorizationState = authorizationReadiness?.readiness ?? {};
       const activeOptedInLearners = Number(authorizationReadiness?.activeOptedInLearners ?? 0);
-      const nextAction = !validatedPairMetadataAvailable && pendingHumanPairReviews > 0
+      const nextAction = authorizationState?.canRevoke === true
         ? {
-            kind: "human-transfer-pair-validation",
-            priority: "blocking",
-            pendingCount: pendingHumanPairReviews
+            kind: "bounded-probe-scheduler-not-implemented",
+            priority: "blocked",
+            pendingCount: 1
           }
-        : activeOptedInLearners < 1
+        : !validatedPairMetadataAvailable && pendingHumanPairReviews > 0
           ? {
-              kind: "awaiting-current-learner-opt-in",
+              kind: "human-transfer-pair-validation",
               priority: "blocking",
-              pendingCount: 1
+              pendingCount: pendingHumanPairReviews
             }
-          : authorizationState?.canAuthorize === true
+          : activeOptedInLearners < 1
             ? {
-                kind: "retention-probe-activation-authorization",
+                kind: "awaiting-current-learner-opt-in",
                 priority: "blocking",
                 pendingCount: 1
               }
-            : authorizationState?.canRevoke === true
+            : authorizationState?.canAuthorize === true
               ? {
-                  kind: "bounded-probe-scheduler-not-implemented",
-                  priority: "blocked",
+                  kind: "retention-probe-activation-authorization",
+                  priority: "blocking",
                   pendingCount: 1
                 }
               : {
