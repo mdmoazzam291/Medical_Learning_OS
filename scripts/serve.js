@@ -23,6 +23,8 @@ const allowed = new Set([
   'web/vault.html',
   'web/vault.js',
   'web/vault-drafts.js',
+  'web/retention.html',
+  'web/retention.js',
   'web/review.html',
   'web/review.js',
   'web/admin.html',
@@ -40,6 +42,7 @@ const allowed = new Set([
   'data/content-review-assist.json',
   'src/adapters/supabase-auth.js',
   'src/adapters/cloud-study.js',
+  'src/adapters/cloud-retention-probe.js',
   'src/adapters/cloud-review.js',
   'src/adapters/error-monitoring.js'
 ]);

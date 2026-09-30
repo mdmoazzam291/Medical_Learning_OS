@@ -60,6 +60,8 @@ jobs:
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/learner-report-triage-browser-check.js
       - name: Verify Exam Mode responsive interactions
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/exam-browser-check.js
+      - name: Verify optional retention delivery interactions
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/retention-browser-check.js
       - name: Verify claim-first References workspace
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/references-browser-check.js
       - uses: actions/upload-artifact@v4
