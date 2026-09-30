@@ -1,38 +1,26 @@
-# Preview deployment
+# Hosted learner release
 
-## Goal
+## Current deployment
 
-Create a public development preview for the learner-account surface without claiming production readiness. The preview exists to complete the M04b real Auth callback and authenticated-study verification.
+Medical Learning OS runs on the existing free Render service `medical-learning-os-preview` in Singapore at https://medical-learning-os-preview.onrender.com. The repository remains private. `render.yaml` configures the Node process, `npm start`, root health check, `MLOS_HOST=0.0.0.0`, and automatic deployment after repository checks pass.
 
-## Render blueprint
+The browser receives only the public Supabase project URL and publishable key. Privileged credentials stay inside the hosted Edge Function. The dedicated Supabase project is `iyapppmeieqhflnzslao`; the separate older project is outside this repository's scope.
 
-`render.yaml` defines one free Node web service in Singapore:
+## Coordinated frontend/API release
 
-- service: `medical-learning-os-preview`
-- start command: `npm start`
-- health check: `/`
-- host bind: `MLOS_HOST=0.0.0.0`
-- auto-deploy: only after repository checks pass
-- no application secrets are required by the preview web process
+The Aperture session summary shipped from merged PR #153 on 2026-09-30 with `study-api` v41. The prerequisite confirmation/resume fix is merged as #152. The frontend, adapter and all six Edge bundle files were compared against merged source; hosted authenticated summary read and reload persistence passed.
 
-The browser still receives only the public Supabase project URL and publishable key. Supabase privileged credentials remain inside the hosted Edge Function.
+1. Review the bounded change and successful repository/PR checks.
+2. Merge prerequisites, retarget stacked PRs, and verify the resulting merge tree.
+3. Deploy the Edge Function with its relative dependencies, preserving the established authentication configuration. `study-api` currently uses `verify_jwt=false` at the gateway and validates each bearer token via server-side `auth.getUser()` before route handling.
+4. Allow the existing Render automatic deployment to finish. Compare served public JavaScript with merged source; confirm the root or requested learner page loads.
+5. Verify unauthenticated access is rejected and inspect the intended owned-session read using an existing authenticated account. Verify reload without submitting new learner answers or ratings.
+6. Record deployed versions, byte parity, checks and limitations in `docs/STATUS.md`.
 
-## Current blocker
+A frontend arriving before its matching summary endpoint retains confirmed closure and offers a read-only retry; it cannot invent session results. A failed revision read leaves results available and timing explicitly unavailable.
 
-The repository is private. The connected Render workspace currently cannot fetch this GitHub repository, so the service cannot be created from ChatGPT yet.
+## Operational boundaries
 
-Do not make the repository public to bypass this. Connect Render's GitHub integration to the private `Medical_Learning_OS` repository instead.
+Reuse the established Render service and free plan; no new service, database or billing change is needed for this release. Manual Render API operations require an explicitly user-confirmed workspace. If that context is unavailable, verify the existing automatic release via hosted output and state the missing dashboard/log inspection rather than guessing a workspace.
 
-After Render can fetch the repository:
-
-1. Sync/create the service from `render.yaml`.
-2. Record the generated `*.onrender.com` URL.
-3. Add exactly `https://<render-host>/web/account.html` to Supabase Auth allowed redirect URLs.
-4. Add `https://<render-host>` to the `study-api` allowed origins configuration and redeploy the Edge Function.
-5. Use one pre-authorized Supabase organization-team email for a controlled built-in-mailer confirmation test.
-6. Verify confirmed sign-in, token refresh, logout, and authenticated `progress/questions` calls.
-7. Repeat with a second test account before claiming learner isolation.
-
-## Boundaries
-
-This preview is not the production learner application. Custom SMTP remains blocked until an owned sending domain exists. Medical content remains closed until M04c review gates pass.
+Deployment does not confer medical-review approval, publication authority, mastery inference or FSRS production scheduling authority. Auth and content-review boundaries remain in the existing service contracts.
