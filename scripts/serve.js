@@ -29,6 +29,7 @@ const allowed = new Set([
   'web/review.js',
   'web/admin.html',
   'web/admin.js',
+  'web/admin-pair-preflight.js',
   'web/references-panel.js',
   'src/domain/references-workspace.js',
   'src/domain/references-source-focus.js',
