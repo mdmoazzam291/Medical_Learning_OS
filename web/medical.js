@@ -44,8 +44,18 @@ let state = {
 
 function announce(message) {
   notice.textContent = message;
+  notice.insertAdjacentHTML?.('beforeend', '<button class="notice-dismiss" type="button" data-dismiss-notice aria-label="Dismiss message">Dismiss</button>');
   notice.hidden = false;
 }
+
+notice.addEventListener?.('click', event => {
+  if (!event.target.closest('[data-dismiss-notice]')) return;
+  notice.hidden = true;
+  notice.textContent = '';
+  const destination = root.querySelector?.('.completion .primary, #answer-feedback-title, #study-entry-title');
+  if (destination && !destination.matches('a[href], button, [tabindex]')) destination.setAttribute('tabindex', '-1');
+  destination?.focus({ preventScroll: true });
+});
 
 function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
@@ -158,9 +168,9 @@ function overview() {
   const durationPicker = hasWork && !state.loading
     ? '<fieldset class="duration-picker"><legend>How much uninterrupted time do you have?</legend><div class="duration-options">' + [10, 20, 30, 60].map(minutes => '<button type="button" data-action="duration" data-minutes="' + minutes + '" aria-pressed="' + (studyMinutes === minutes) + '" ' + (state.busy ? 'disabled' : '') + '>' + minutes + ' min</button>').join('') + '</div></fieldset>' : '';
   const action = state.loading ? '<p role="status">Reading your saved progress and review schedule…</p>'
-    : hasWork ? '<button class="primary" type="button" data-action="study-now" data-minutes="' + studyMinutes + '" ' + (state.busy ? 'disabled' : '') + '>Open ' + studyMinutes + ' min session →</button><p class="muted">Continue unfinished work if available; otherwise start a recommended session. Future reviews stay on their schedule.</p>'
-      : '<a class="primary action-link" href="#question-browser">Browse reviewed questions →</a>';
-  const failure = state.error ? '<section class="panel study-entry-error" role="status"><h2>Study could not open.</h2><p>Your saved answers are unchanged. Try again when you are ready.</p><button class="secondary" type="button" data-action="reload" ' + (state.busy ? 'disabled' : '') + '>Reload Study</button></section>' : '';
+    : !state.questionsAvailable ? '<button class="primary" type="button" data-action="reload">Reload Study →</button>' : hasWork ? '<button class="primary" type="button" data-action="study-now" data-minutes="' + studyMinutes + '" ' + (state.busy ? 'disabled' : '') + '>Open ' + studyMinutes + ' min session →</button><p class="muted">Continue unfinished work if available; otherwise start a recommended session. Future reviews stay on their schedule.</p>'
+      : '<a class="primary action-link" href="#question-browser" data-action="browse-questions">Browse reviewed questions →</a>';
+  const failure = state.error ? '<section class="panel study-entry-error" role="status"><h2>Study could not open.</h2><p>Your saved answers are unchanged. Try again when you are ready.</p>' + (state.questionsAvailable ? '<button class="secondary" type="button" data-action="reload" ' + (state.busy ? 'disabled' : '') + '>Reload Study</button>' : '') + '</section>' : '';
   const list = state.questions.map((q, index) =>
     '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">REVIEWED QUESTION</span><h3>' + escape(q.stem) + '</h3></div></article>'
   ).join('');
@@ -179,7 +189,7 @@ function completionSummary() {
   }
   const concepts = s.concepts.filter(c => c.incorrectCount > 0);
   const repairs = concepts.length
-    ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a class="concept-revisit" href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '"><span>' + escape(c.label) + '</span><span aria-hidden="true">→</span></a></li>').join('') + '</ul>'
+    ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a class="concept-revisit" href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '&returnSession=' + encodeURIComponent(s.sessionId) + '"><span>' + escape(c.label) + '</span><span aria-hidden="true">→</span></a></li>').join('') + '</ul>'
     : '<p>No incorrect answers in this session. Delayed retrieval is still needed to test retention.</p>';
   const r = s.revision;
   const schedule = !r.available
@@ -213,7 +223,7 @@ function studyView() {
           (integrity.hostedM05cGateSatisfied ? ' Hosted browser answer evidence is also present.' : '') + '</p></div>'
         : '<div class="memory-rating"><strong>Study evidence saved; integrity reconciliation is incomplete.</strong><p class="muted">' + escape((integrity.blockers || []).join(' · ')) + '</p></div>'
       : '';
-    const completionLabel = state.sessionSummary?.completedAllSelected === false ? 'MEDICAL SESSION CLOSED' : 'MEDICAL SESSION COMPLETE';
+    const completionLabel = state.sessionSummary?.completedAllSelected === true ? 'MEDICAL SESSION COMPLETE' : 'MEDICAL SESSION CLOSED';
     return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">' + completionLabel + '</span><h1>Your session is saved.</h1>' + completionSummary() + integrityCopy + '<button class="text-button results-back" data-action="reload">Browse medical QBank →</button></section></main>';
   }
   if (!session.question) {
@@ -600,6 +610,12 @@ root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
+  if (target.dataset.action === 'browse-questions') {
+    const browser = root.querySelector('.question-browser-list');
+    if (browser) browser.open = true;
+    root.querySelector('#question-browser')?.scrollIntoView({ block: 'start' });
+    root.querySelector('#question-browser-title')?.focus({ preventScroll: true });
+  }
   if (target.dataset.action === 'duration') {
     const minutes = Number(target.dataset.minutes);
     if (state.busy || ![10, 20, 30, 60].includes(minutes)) return;
