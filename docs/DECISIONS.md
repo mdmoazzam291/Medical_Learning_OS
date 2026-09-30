@@ -1337,3 +1337,11 @@ Project-level enablement of the Supabase OAuth 2.1 server and Authorization Path
 An accepted answer receipt or server-returned session cursor is canonical confirmation. A later progress projection read is observational and cannot invalidate that write or trigger a write-failure message.
 
 The learner controller isolates progress refresh after answer/closure, preserves the accepted receipt/cursor, and continues completion-integrity reconciliation even when progress is unavailable. Actual answer/advance failures keep existing safe retry semantics. This adds no evidence, scheduler authority, inferred mastery, or database state.
+
+
+## ADR-089 — session summaries project owned evidence and current schedules
+**Status:** Accepted — 2026-09-30
+
+Aperture reads one authenticated learner's saved session through `study-session-summary-v1`. The server derives counts and canonical concept groups from that session's attempts, validates question/position membership, and reads current review dates only for its answered items. Ownership is checked before returning any summary; another learner's session returns 404.
+
+The projection adds no ledger, scheduling writes, schema, clinical answer keys, mastery inference or scheduler authority. Incorrect answers identify concepts to revisit in NeuralVault without declaring persistent misconceptions. Review dates describe the current schedule, not the historical schedule at closure. A failed schedule read preserves session results with timing explicitly unavailable. Reload restores the owned summary from its session URL; an unavailable or unowned summary cannot fabricate confirmed closure.

@@ -141,6 +141,14 @@ try {
         }
       }) });
     }
+    if (url.includes('/functions/v1/study-api/sessions/beta-study-now/summary')) {
+      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
+        contractId: 'study-session-summary-v1', sessionId: 'beta-study-now', closed: true,
+        selectedCount: 1, answeredCount: 1, correctCount: 1, incorrectCount: 0,
+        unansweredCount: 0, completedAllSelected: true, concepts: [],
+        revision: { available: true, scheduledCount: 1, missingCount: 0, dueNowCount: 0, nextDueAt: '2026-10-02T03:00:00Z' }
+      }) });
+    }
     if (url.includes('/functions/v1/study-api/sessions/beta-study-now/answer')) {
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
         event: {
@@ -360,6 +368,17 @@ try {
   await page.getByRole('button', { name: 'Finish session →' }).click();
   await page.getByText('Study Now loop verified.', { exact: true }).waitFor();
   assert.match(await page.locator('.completion').innerText(), /Hosted browser answer evidence is also present/);
+  await page.getByRole('heading', { name: 'This session', exact: true }).waitFor();
+  assert.match(await page.locator('.session-results').innerText(), /1 \/ 1/);
+  assert.match(await page.locator('.session-results').innerText(), /Next review:/);
+  for (const [width, height] of [[390, 844], [820, 1180], [1440, 1000]]) {
+    await page.setViewportSize({ width, height });
+    await page.reload();
+    await page.getByRole('heading', { name: 'This session', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('summary'), 'beta-study-now');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'summary overflow at ' + width);
+    assert.match(await page.locator('.session-results').innerText(), /1 \/ 1/);
+  }
 
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();

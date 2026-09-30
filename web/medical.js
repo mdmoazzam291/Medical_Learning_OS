@@ -10,6 +10,7 @@ const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const requestedStudyNowValue = Number(new URLSearchParams(location.search).get('studyNow'));
 let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;
+const requestedSummaryId = new URLSearchParams(location.search).get('summary');
 
 let state = {
   user: auth.currentUser(),
@@ -26,6 +27,9 @@ let state = {
   receipt: null,
   memoryJudgment: null,
   studyNowIntegrity: null,
+  sessionSummary: null,
+  summaryLoading: false,
+  summaryError: null,
   error: null
 };
 
@@ -160,9 +164,36 @@ function overview() {
   return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Only reviewed, published versions enter this loop.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · scoring and attempt persistence stay server-side.</p></div><span class="badge">M05</span></div>' + status + revisionPanel + examPanel + '</main>';
 }
 
+function completionSummary() {
+  if (state.summaryLoading) return '<p role="status">Loading your session results…</p>';
+  const s = state.sessionSummary;
+  if (!s || s.sessionId !== state.session?.sessionId) {
+    return '<p>Your session is saved. Results are temporarily unavailable.</p><button class="secondary" type="button" data-action="retry-summary">Retry session results</button>';
+  }
+  const concepts = s.concepts.filter(c => c.incorrectCount > 0);
+  const repairs = concepts.length
+    ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '">' + escape(c.label) + '</a></li>').join('') + '</ul>'
+    : '<p>No incorrect answers in this session. Delayed retrieval is still needed to test retention.</p>';
+  const r = s.revision;
+  const schedule = !r.available
+    ? '<p>Revision timing is temporarily unavailable. Your answers remain saved.</p>'
+    : r.dueNowCount
+      ? '<p>' + r.dueNowCount + ' session item' + (r.dueNowCount === 1 ? ' is' : 's are') + ' due for review now.</p>'
+      : r.nextDueAt
+        ? '<p>Next review: ' + escape(new Date(r.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })) + '.</p>'
+        : '<p>No review time is available for these session items yet.</p>';
+  return '<div class="session-results"><h2>This session</h2><div class="metrics"><div><strong>' + s.answeredCount + ' / ' + s.selectedCount + '</strong><span>Answered</span></div><div><strong>' + s.correctCount + '</strong><span>Correct</span></div><div><strong>' + s.incorrectCount + '</strong><span>Incorrect</span></div></div>' +
+    (s.unansweredCount ? '<p>' + s.unansweredCount + ' selected question' + (s.unansweredCount === 1 ? ' was' : 's were') + ' left unanswered.</p>' : '') + repairs +
+    '<h2>Your next revision</h2>' + schedule + (r.available && r.missingCount ? '<p>Some answered items do not yet have a review time.</p>' : '') +
+    '<p class="muted">Session accuracy is observed performance, not mastery. Review times reflect the current schedule for these items.</p><a class="secondary action-link" href="/">Return to Study Now →</a></div>';
+}
+
 function studyView() {
   const session = state.session;
   if (!session) return overview();
+  if (session.summaryPending || session.summaryUnavailable) {
+    return '<main id="main" class="account-page"><section class="panel"><h1>Session results</h1>' + (session.summaryPending ? '<p role="status">Loading saved session…</p>' : '<p>Session results are unavailable. Completion has not been confirmed here.</p><button class="secondary" data-action="retry-summary">Retry session results</button>') + '<a class="text-button" href="/web/medical.html">Back to medical QBank →</a></section></main>';
+  }
   if (session.closed) {
     const integrity = state.studyNowIntegrity?.latestRecommendation;
     const sameStudyNowSession = integrity?.sessionId === session.sessionId;
@@ -172,7 +203,8 @@ function studyView() {
           (integrity.hostedM05cGateSatisfied ? ' Hosted browser answer evidence is also present.' : '') + '</p></div>'
         : '<div class="memory-rating"><strong>Study evidence saved; integrity reconciliation is incomplete.</strong><p class="muted">' + escape((integrity.blockers || []).join(' · ')) + '</p></div>'
       : '';
-    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">MEDICAL SESSION COMPLETE</span><h1>Your server evidence is saved.</h1><p>The attempt ledger is attached to your authenticated learner account.</p>' + integrityCopy + '<button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
+    const completionLabel = state.sessionSummary?.completedAllSelected === false ? 'MEDICAL SESSION CLOSED' : 'MEDICAL SESSION COMPLETE';
+    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">' + completionLabel + '</span><h1>Your session is saved.</h1>' + completionSummary() + integrityCopy + '<button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
   }
   if (!session.question) {
     return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel"><h1>Question unavailable.</h1><p>' + escape(session.blocked || 'question_unavailable') + '</p></section></main>';
@@ -256,6 +288,11 @@ function render() {
 }
 
 async function loadOverview() {
+  if (new URLSearchParams(location.search).has('summary')) {
+    const url = new URL(location.href);
+    url.searchParams.delete('summary');
+    history.replaceState(null, '', url.pathname + url.search + url.hash);
+  }
   state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null, studyNowIntegrity: null };
   render();
   try {
@@ -298,6 +335,30 @@ async function loadOverview() {
     reportUnexpected(error, 'load_overview');
     state = { ...state, loading: false, error: error.code || error.message || 'medical_qbank_unavailable' };
   }
+  render();
+}
+
+async function loadSessionSummary(sessionId, restore = false) {
+  state = { ...state, summaryLoading: true, summaryError: null, sessionSummary: null };
+  if (restore) state.session = { sessionId, summaryPending: true };
+  render();
+  try {
+    const summary = await cloud.sessionSummary(sessionId);
+    if (summary?.contractId !== 'study-session-summary-v1' || summary.sessionId !== sessionId) throw new Error('session_summary_invalid');
+    if (restore && !summary.closed) {
+      state.session = await cloud.session(sessionId);
+      state.receipt = state.session.receipt || null;
+      state.memoryJudgment = state.session.memoryJudgment || null;
+    } else if (restore) {
+      state.session = { sessionId, closed: true, total: summary.selectedCount };
+    }
+    if (state.session?.sessionId === sessionId) state.sessionSummary = summary;
+  } catch (error) {
+    reportUnexpected(error, 'load_session_summary');
+    state.summaryError = error.code || error.message || 'session_summary_unavailable';
+    if (restore) state.session = { sessionId, summaryUnavailable: true };
+  }
+  state.summaryLoading = false;
   render();
 }
 
@@ -445,6 +506,10 @@ async function nextQuestion() {
     notice.textContent = '';
     notice.hidden = true;
     if (next.closed) {
+      const summaryUrl = new URL(location.href);
+      summaryUrl.searchParams.set('summary', next.sessionId);
+      history.replaceState(null, '', summaryUrl.pathname + summaryUrl.search + summaryUrl.hash);
+      await loadSessionSummary(next.sessionId);
       await refreshProgressAfterWrite('Session complete.');
       try {
         state.studyNowIntegrity = await cloud.studyNowIntegrity();
@@ -482,6 +547,7 @@ root.addEventListener('click', event => {
   if (target.dataset.action === 'study-now') startStudyNow(Number(target.dataset.minutes));
   if (target.dataset.action === 'memory-rating') recordMemoryRating(Number(target.dataset.rating));
   if (target.dataset.action === 'next') nextQuestion();
+  if (target.dataset.action === 'retry-summary') loadSessionSummary(state.session.sessionId, !state.session.closed);
   if (target.dataset.action === 'reload') loadOverview();
 });
 
@@ -491,6 +557,13 @@ async function bootstrap() {
     return;
   }
   await loadOverview();
+  if (requestedSummaryId && /^[a-zA-Z0-9-]{1,160}$/.test(requestedSummaryId) && state.user) {
+    const summaryUrl = new URL(location.href);
+    summaryUrl.searchParams.set('summary', requestedSummaryId);
+    history.replaceState(null, '', summaryUrl.pathname + summaryUrl.search + summaryUrl.hash);
+    await loadSessionSummary(requestedSummaryId, true);
+    return;
+  }
   if (requestedStudyNowMinutes && state.user && !state.session) {
     const minutes = requestedStudyNowMinutes;
     requestedStudyNowMinutes = null;

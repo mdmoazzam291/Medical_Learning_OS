@@ -176,6 +176,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     exportData() { return request('/export'); },
     start({ limit = 15, filter = 'all' } = {}) { return request('/sessions', { method: 'POST', body: { limit, filter } }); },
     session(id) { return request(`/sessions/${encodeURIComponent(id)}`); },
+    sessionSummary(id) { return request(`/sessions/${encodeURIComponent(id)}/summary`); },
     answer(id, { requestId, position, optionId }) {
       return request(`/sessions/${encodeURIComponent(id)}/answer`, { method: 'POST', body: { requestId, position, optionId } });
     },
