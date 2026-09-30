@@ -441,6 +441,9 @@ async function nextQuestion() {
       memoryJudgment: next.memoryJudgment || null,
       error: null
     };
+    // Resume/write notices describe the previous cursor, not the new item.
+    notice.textContent = '';
+    notice.hidden = true;
     if (next.closed) {
       await refreshProgressAfterWrite('Session complete.');
       try {

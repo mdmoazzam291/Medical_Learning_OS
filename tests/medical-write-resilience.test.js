@@ -122,3 +122,16 @@ test('actual advance failure preserves answered slot for a safe retry', async ()
   assert.equal(h.state().busy, false);
   assert.match(h.notice.textContent, /Session did not advance.*Retry is safe/);
 });
+
+test('confirmed advance clears the answered-earlier notice before showing an unanswered item', async () => {
+  const h = harness({ next: async () => ({ ...session, position: 1, total: 2, receipt: null }) });
+  runInContext('state.receipt = testReceipt;', h.context);
+  h.notice.textContent = 'This question was already answered earlier.';
+  h.notice.hidden = false;
+  await runInContext('nextQuestion()', h.context);
+  assert.equal(h.state().session.position, 1);
+  assert.equal(h.state().receipt, null);
+  assert.match(h.root.innerHTML, /Question 2 of 2/);
+  assert.equal(h.notice.textContent, '');
+  assert.equal(h.notice.hidden, true);
+});
