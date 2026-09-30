@@ -7,6 +7,7 @@ const api = await readFile(new URL('../supabase/functions/retention-probe-api/in
 const adapter = await readFile(new URL('../src/adapters/cloud-retention-probe.js', import.meta.url), 'utf8');
 const page = await readFile(new URL('../web/retention-origin.js', import.meta.url), 'utf8');
 const retentionHtml = await readFile(new URL('../web/retention.html', import.meta.url), 'utf8');
+const server = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
 
 test('origin readiness is prospective, target-unseen, and preserves ordinary learning priority', () => {
   assert.match(migration, /study_retention_probe_origin_readiness_v1/);
@@ -61,4 +62,10 @@ test('browser adapter and setup UI require an explicit click and hand off to ord
   assert.doesNotMatch(page, /beta-blocker-first-action/);
   assert.doesNotMatch(page, /answerOptionId/);
   assert.match(retentionHtml, /\/web\/retention-origin\.html/);
+});
+
+test('preview server explicitly exposes the origin setup HTML and module, and no broader path surface', () => {
+  assert.match(server, /'web\/retention-origin\.html'/);
+  assert.match(server, /'web\/retention-origin\.js'/);
+  assert.match(server, /if \(!allowed\.has\(path\)\)/);
 });
