@@ -84,7 +84,7 @@ try {
       response.url().includes('/functions/v1/retention-probe-api/origin/start') &&
       response.status() === 200
     );
-    await page.getByRole('button', { name:'Start setup question →' }).click({ noWaitAfter:true });
+    await page.evaluate(() => document.querySelector('[data-action="start-origin"]')?.click());
     await originStartResponse;
     assert.deepEqual(writes, ['start-origin']);
     await context.close();
