@@ -78,3 +78,10 @@ The Account surface shows linked methods. If a learner first creates the account
 
 ### Password recovery
 Learners using password authentication can request a recovery link from Account. The recovery link returns to the same Account surface, establishes Supabase's recovery session, and allows a new password to be set on the existing user. Google linkage, learner history and all user-ID-bound learning evidence remain unchanged.
+
+
+### Vault reading and personal workspace
+
+The selected canonical concept is the single page heading. Reviewed knowledge appears before My notes and My corrections, with focusable section navigation and version details available on demand. The concept browser defaults collapsed below 801px and remains explicitly expandable; wider layouts use the existing adjacent index. Selecting another concept moves focus to its heading and preserves its concept URL for reload. Home, Study/session return and Account remain direct links.
+
+General notes retain create/edit/delete and optimistic revision checks. Canonical-note correction composition is optional; an exact question-version handoff exposes the targeted private composer. Correction reports still require an explicit opt-in to share private text. Concept selection, search, section navigation, disclosure and reload create no learning or note writes. A missing canonical note is shown honestly; personal notes remain usable independently. No API or content authority changes.

@@ -40,6 +40,7 @@ let state = {
   entryContext: initialEntryContext,
   correctionTarget: initialCorrectionTarget,
   detail: null,
+  conceptBrowserOpen: window.matchMedia('(min-width: 801px)').matches,
   searchQuery: '',
   searchResults: null,
   busy: false,
@@ -69,15 +70,15 @@ function signedOut() {
 
 function conceptButton(concept) {
   const selected = concept.conceptId === state.selectedConceptId;
-  return '<button type="button" class="vault-concept-button' + (selected ? ' selected' : '') + '" data-action="select-concept" data-concept-id="' + escape(concept.conceptId) + '"><strong>' + escape(concept.label) + '</strong><span>' + escape((concept.subjectTags || []).join(' · ') || 'Canonical concept') + '</span><small>' + concept.annotationCount + ' personal item' + (concept.annotationCount === 1 ? '' : 's') + (concept.correctionCount ? ' · ' + concept.correctionCount + ' correction' + (concept.correctionCount === 1 ? '' : 's') : '') + (concept.canonicalNote ? ' · canonical note published' : '') + '</small></button>';
+  return '<button type="button" class="vault-concept-button' + (selected ? ' selected' : '') + '" aria-pressed="' + selected + '" data-action="select-concept" data-concept-id="' + escape(concept.conceptId) + '"><strong>' + escape(concept.label) + '</strong><span>' + escape((concept.subjectTags || []).join(' · ') || 'Canonical concept') + '</span><small>' + concept.annotationCount + ' personal item' + (concept.annotationCount === 1 ? '' : 's') + (concept.correctionCount ? ' · ' + concept.correctionCount + ' correction' + (concept.correctionCount === 1 ? '' : 's') : '') + (concept.canonicalNote ? ' · canonical note published' : '') + '</small></button>';
 }
 
 function canonicalSection(detail) {
   const note = detail?.canonicalNote;
   if (!note) {
-    return '<section class="panel"><span class="eyebrow">CANONICAL NOTE</span><h2>No reviewed canonical note is published yet.</h2><p>The concept identity is live, but NeuralVault will not manufacture medical prose just to fill this space. Your personal notes remain available independently.</p></section>';
+    return '<section id="reviewed-note" class="panel vault-reading" aria-labelledby="reviewed-note-title"><span class="eyebrow">CANONICAL NOTE</span><h2 id="reviewed-note-title" tabindex="-1">No reviewed canonical note is published yet.</h2><p>Your personal notes are available below. Reviewed content will appear here when it is published.</p></section>';
   }
-  return '<section class="panel"><span class="eyebrow">CANONICAL NOTE · VERSION ' + note.version + '</span><h2>' + escape(note.title) + '</h2><pre class="vault-markdown">' + escape(note.bodyMarkdown) + '</pre><p class="muted">Source-backed canonical content · immutable version ' + escape(note.contentSha256.slice(0, 12)) + '…</p></section>';
+  return '<section id="reviewed-note" class="panel vault-reading" aria-labelledby="reviewed-note-title"><span class="eyebrow">CANONICAL NOTE · VERSION ' + note.version + '</span><h2 id="reviewed-note-title" tabindex="-1">' + escape(note.title) + '</h2><pre class="vault-markdown">' + escape(note.bodyMarkdown) + '</pre><details class="vault-provenance"><summary>Published version details</summary><p class="muted">Immutable version ' + escape(note.contentSha256.slice(0, 12)) + '…</p></details></section>';
 }
 
 function annotationCard(annotation) {
@@ -87,7 +88,7 @@ function annotationCard(annotation) {
     'anchor-unavailable': 'Anchored canonical version is unavailable',
     unanchored: 'Concept-linked · unanchored'
   }[annotation.anchorState] || 'Concept-linked';
-  return '<article class="vault-note"><span class="eyebrow">PERSONAL NOTE</span><form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '"><label>Your note<textarea name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label><div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + escape(anchorLabel) + '</span></div><div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save changes</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete</button></div></form></article>';
+  return '<article class="vault-note"><span class="eyebrow">PERSONAL NOTE</span><form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '"><label>Your note<textarea aria-label="Your note" name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label><div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + escape(anchorLabel) + '</span></div><div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save changes</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete</button></div></form></article>';
 }
 
 function correctionStateLabel(annotation) {
@@ -123,7 +124,7 @@ function correctionCard(annotation) {
     '<div class="section-heading"><div><span class="eyebrow">MY CORRECTION · PRIVATE</span><h3>' + escape(annotation.targetLabel || annotation.targetId || 'Correction') + '</h3></div><span class="badge">Learner-only</span></div>' +
     '<p class="muted">' + escape(correctionStateLabel(annotation)) + '. Canonical content remains visible and unchanged.</p>' +
     '<form data-form="update-note" data-annotation-id="' + escape(annotation.annotationId) + '" data-revision="' + annotation.revision + '">' +
-      '<label>My corrected wording / interpretation<textarea name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label>' +
+      '<label>My corrected wording / interpretation<textarea aria-label="My corrected wording / interpretation" name="bodyMarkdown" maxlength="20000" required>' + escape(annotation.bodyMarkdown) + '</textarea></label>' +
       '<div class="vault-note-meta"><span>Revision ' + annotation.revision + '</span><span>' + escape(annotation.targetType || '') + '</span></div>' +
       '<div class="vault-actions"><button class="secondary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save my correction</button><button class="danger-outline" type="button" data-action="delete-note" data-annotation-id="' + escape(annotation.annotationId) + '" ' + (state.busy ? 'disabled' : '') + '>Delete my correction</button></div>' +
     '</form>' +
@@ -170,8 +171,8 @@ function correctionComposer(detail, corrections) {
       annotation.targetType === target.targetType && annotation.targetId === target.targetId
     );
     if (existing) return '';
-    return '<section class="panel personal-correction-composer">' +
-      '<div class="section-heading"><div><span class="eyebrow">PRIVATE CORRECTION OVERLAY</span><h2>' + escape(target.label) + '</h2></div><span class="badge">Only you</span></div>' +
+    return '<details class="personal-correction-composer"' + (target.targetType === 'question_version' ? ' open' : '') + '><summary>Add a private correction · ' + escape(target.label) + '</summary><div class="vault-composer-body">' +
+      '<div class="section-heading"><div><span class="eyebrow">PRIVATE CORRECTION OVERLAY</span><h3>' + escape(target.label) + '</h3></div><span class="badge">Only you</span></div>' +
       '<p>Use this when you want your own corrected wording or interpretation without changing the reviewed canonical content for anyone else.</p>' +
       '<form data-form="create-correction" data-target-type="' + escape(target.targetType) + '" data-target-id="' + escape(target.targetId) + '">' +
         '<label>My correction<textarea name="bodyMarkdown" maxlength="20000" required placeholder="Write the version you want to keep for yourself…"></textarea></label>' +
@@ -181,7 +182,7 @@ function correctionComposer(detail, corrections) {
         reportForm({ targetType: target.targetType, targetId: target.targetId }) +
       '</details>' +
       '<p class="muted">Your correction is an overlay, not a replacement. Canonical content remains visible so a personal typo cannot silently become your new source of truth.</p>' +
-    '</section>';
+    '</div></details>';
   }).join('');
 }
 
@@ -194,12 +195,12 @@ function entryContextPanel() {
     'new-learning': ['New learning', 'You arrived from Study Now after an unseen published item. Use the canonical note to connect the question to the underlying concept.']
   }[entry.reason];
   if (!copy) return '';
-  return '<section class="panel"><span class="eyebrow">STUDY NOW HANDOFF</span><h2>' + escape(copy[0]) + '</h2><p>' + escape(copy[1]) + '</p><p class="muted">This handoff is context only. It does not change your score, note content, mastery state, or revision schedule.</p></section>';
+  return '<details class="vault-entry-context"><summary><span class="eyebrow">STUDY NOW HANDOFF</span> · ' + escape(copy[0]) + '</summary><p>' + escape(copy[1]) + '</p><p class="muted">This handoff is context only. It does not change your score, note content, mastery state, or revision schedule.</p></details>';
 }
 
 function detailPanel() {
   const detail = state.detail;
-  if (!detail) return '<section class="panel empty"><p>Select a concept to open its NeuralVault workspace.</p></section>';
+  if (!detail) return '<section class="panel empty"><h1>Your concept workspace</h1><p>Select a concept to open its NeuralVault workspace.</p></section>';
   const concept = detail.concept;
   const allAnnotations = detail.annotations || [];
   const notes = allAnnotations.filter(annotation => annotation.annotationKind !== 'correction');
@@ -213,12 +214,12 @@ function detailPanel() {
     : '<p class="muted">No private corrections for this concept yet.</p>';
 
   return '<div>' +
+    '<section class="vault-concept-heading"><span class="eyebrow">CANONICAL CONCEPT</span><h1 id="concept-title" tabindex="-1">' + escape(concept.label) + '</h1>' + ((concept.aliases || []).length ? '<p>' + escape(concept.aliases.join(' · ')) + '</p>' : '') + '<div class="vault-tags">' + (concept.subjectTags || []).map(tag => '<span class="badge">' + escape(tag) + '</span>').join('') + '</div></section>' +
     entryContextPanel() +
-    '<section class="panel"><span class="eyebrow">CANONICAL CONCEPT</span><h1>' + escape(concept.label) + '</h1><p>' + escape((concept.aliases || []).join(' · ') || concept.conceptId) + '</p><div class="vault-tags">' + (concept.subjectTags || []).map(tag => '<span class="badge">' + escape(tag) + '</span>').join('') + '</div></section>' +
+    '<nav class="vault-section-nav" aria-label="This concept"><a href="#reviewed-note" data-section-title="reviewed-note-title">Reviewed note</a><a href="#my-notes" data-section-title="my-notes-title">My notes (' + notes.length + ')</a><a href="#my-corrections" data-section-title="my-corrections-title">My corrections (' + corrections.length + ')</a></nav>' +
     canonicalSection(detail) +
-    correctionComposer(detail, corrections) +
-    '<section class="panel"><span class="eyebrow">MY CORRECTIONS</span><h2>Private overlay. Canonical stays canonical.</h2><p>Corrections are learner-scoped and do not affect other learners, content publication, mastery, Study Now, or revision scheduling.</p><div class="vault-note-list">' + correctionList + '</div></section>' +
-    '<section class="panel"><span class="eyebrow">PERSONAL ANNOTATIONS</span><h2>Your general notes stay yours.</h2><p>Edits use revision checks, so an older tab cannot silently overwrite a newer note.</p><div class="vault-note-list">' + noteList + '</div><form id="create-note-form" class="vault-editor"><label>Add a personal note<textarea name="bodyMarkdown" maxlength="20000" placeholder="Write a concise recall cue or connection…" required></textarea></label><input type="hidden" name="anchorNoteVersionId" value="' + escape(anchor || '') + '"><button class="primary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save note</button></form></section>' +
+    '<section id="my-notes" class="panel"><span class="eyebrow">PERSONAL ANNOTATIONS</span><h2 id="my-notes-title" tabindex="-1">My notes</h2><p>Your general notes stay yours. Edits use revision checks so an older tab cannot overwrite a newer note.</p><div class="vault-note-list">' + noteList + '</div><form id="create-note-form" class="vault-editor"><label>Add a personal note<textarea name="bodyMarkdown" maxlength="20000" placeholder="Write a concise recall cue or connection…" required></textarea></label><input type="hidden" name="anchorNoteVersionId" value="' + escape(anchor || '') + '"><button class="primary" type="submit" ' + (state.busy ? 'disabled' : '') + '>Save note</button></form></section>' +
+    '<section id="my-corrections" class="panel"><span class="eyebrow">MY CORRECTIONS</span><h2 id="my-corrections-title" tabindex="-1">My corrections</h2><p>Private overlay. Canonical stays canonical. Your corrections are visible only to you.</p><div class="vault-note-list">' + correctionList + '</div>' + correctionComposer(detail, corrections) + '</section>' +
   '</div>';
 }
 
@@ -228,14 +229,17 @@ function signedIn() {
     ? visibleConcepts.map(conceptButton).join('')
     : '<p class="muted">' + (state.searchResults ? 'No NeuralVault matches.' : 'No canonical concepts are available yet.') + '</p>';
   const error = state.error ? '<section class="panel"><p>NeuralVault load failed: <strong>' + escape(state.error) + '</strong></p></section>' : '';
-  return '<main id="main" class="vault-page">' + (returnSessionId ? '<div class="study-return"><a class="secondary action-link" href="/web/medical.html?resume=' + encodeURIComponent(returnSessionId) + '">← Return to study</a><span>Reopen the current saved position in your session.</span></div>' : '') + '<a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">NEURALVAULT</span><h1>One concept. Canonical knowledge. Your annotations.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · catalog v' + escape(state.catalogVersion ?? '—') + '</p></div><span class="badge">M06c</span></div>' + error + '<div class="vault-layout"><aside class="vault-index panel"><div class="section-heading"><h2>Concepts</h2><span class="muted">' + visibleConcepts.length + '</span></div><form id="vault-search-form"><label>Search NeuralVault<input name="q" type="search" minlength="2" maxlength="120" value="' + escape(state.searchQuery) + '" placeholder="Concept, alias, note, or your annotation"></label><div class="button-row"><button class="secondary" type="submit">Search</button>' + (state.searchResults ? '<button class="text-button" type="button" data-action="clear-search">Clear</button>' : '') + '</div></form><div class="vault-concept-list">' + list + '</div></aside><section class="vault-detail">' + (state.loading ? '<section class="panel"><p>Loading concept…</p></section>' : detailPanel()) + '</section></div></main>';
+  return '<main id="main" class="vault-page">' +
+    '<div class="vault-topbar"><a class="text-button" href="/">← Home</a><div>' + (returnSessionId ? '<a class="secondary action-link" href="/web/medical.html?resume=' + encodeURIComponent(returnSessionId) + '">← Return to study</a>' : '<a class="text-button" href="/web/medical.html">Study</a>') + '<a class="text-button" href="/web/account.html">Account</a></div></div>' +
+    '<div class="vault-workspace-label"><span class="eyebrow">NEURALVAULT</span><p>Reviewed knowledge and your personal workspace.</p></div>' + error +
+    '<div class="vault-layout"><aside class="vault-index panel" aria-label="Concept browser"><details id="vault-concept-browser"' + (state.conceptBrowserOpen ? ' open' : '') + '><summary>Browse concepts <span class="muted">(' + visibleConcepts.length + ')</span></summary><form id="vault-search-form"><label>Search NeuralVault<input name="q" type="search" minlength="2" maxlength="120" value="' + escape(state.searchQuery) + '" placeholder="Concept, alias, note, or your annotation"></label><div class="button-row"><button class="secondary" type="submit">Search</button>' + (state.searchResults ? '<button class="text-button" type="button" data-action="clear-search">Clear</button>' : '') + '</div></form><div class="vault-concept-list">' + list + '</div></details></aside><section class="vault-detail" aria-label="Concept workspace" aria-busy="' + state.loading + '">' + (state.loading ? '<section class="panel"><p>Loading concept…</p></section>' : detailPanel()) + '</section></div></main>';
 }
 
 function render() {
   root.innerHTML = state.user ? signedIn() : signedOut();
 }
 
-async function loadDetail(conceptId) {
+async function loadDetail(conceptId, focusConcept = false) {
   state = { ...state, loading: true, selectedConceptId: conceptId, error: null };
   render();
   try {
@@ -249,6 +253,7 @@ async function loadDetail(conceptId) {
     state = { ...state, loading: false, detail: null, error: error.code || error.message || 'vault_unavailable' };
   }
   render();
+  if (focusConcept) root.querySelector('#concept-title')?.focus();
 }
 
 async function reloadVault(preferredConceptId = state.selectedConceptId) {
@@ -293,13 +298,26 @@ async function reloadVault(preferredConceptId = state.selectedConceptId) {
   }
 }
 
+root.addEventListener('toggle', event => {
+  if (event.target.id === 'vault-concept-browser') state.conceptBrowserOpen = event.target.open;
+}, true);
+
 root.addEventListener('click', event => {
+  const sectionLink = event.target.closest('[data-section-title]');
+  if (sectionLink) {
+    event.preventDefault();
+    document.querySelector(sectionLink.getAttribute('href'))?.scrollIntoView({ block: 'start' });
+    document.getElementById(sectionLink.dataset.sectionTitle)?.focus({ preventScroll: true });
+    history.replaceState(null, '', location.pathname + location.search + sectionLink.getAttribute('href'));
+    return;
+  }
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
 
   if (target.dataset.action === 'select-concept') {
-    loadDetail(target.dataset.conceptId);
+    if (!window.matchMedia('(min-width: 801px)').matches) state.conceptBrowserOpen = false;
+    loadDetail(target.dataset.conceptId, true);
   }
 
   if (target.dataset.action === 'clear-search') {
