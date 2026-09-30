@@ -22,7 +22,7 @@ function harness(cloud) {
   const context = createContext({
     document: { querySelector: selector => selector === '#medical-app' ? root : notice },
     createSupabaseAuth: () => ({ currentUser: () => ({ email: 'synthetic@example.invalid' }) }),
-    createCloudStudy: () => ({ sessionSummary: async id => ({ contractId: 'study-session-summary-v1', sessionId: id, closed: true, selectedCount: 1, answeredCount: 1, correctCount: 1, incorrectCount: 0, concepts: [], revision: { available: false } }), ...cloud }),
+    createCloudStudy: () => ({ sessionSummary: async id => ({ contractId: 'study-session-summary-v1', sessionId: id, closed: true, selectedCount: 1, answeredCount: 1, correctCount: 1, incorrectCount: 0, completedAllSelected: true, concepts: [], revision: { available: false } }), ...cloud }),
     cloudConfig: {}, localStorage: {}, URL, URLSearchParams,
     location: { search: '', href: 'https://example.invalid/web/medical.html' }, history: { replaceState() {} },
     errorMonitor: { capture: (error, metadata) => monitored.push({ error, metadata }) }
@@ -87,6 +87,7 @@ test('unavailable completion projections cannot undo server-confirmed closure or
   const h = harness({
     next: async () => ({ ...session, closed: true, question: null }),
     progress: projectionFailure,
+    sessionSummary: projectionFailure,
     studyNowIntegrity: projectionFailure
   });
   runInContext('state.receipt = testReceipt;', h.context);
@@ -94,9 +95,10 @@ test('unavailable completion projections cannot undo server-confirmed closure or
   assert.equal(h.state().session.closed, true);
   assert.equal(h.state().error, null);
   assert.equal(h.state().studyNowIntegrity, null);
-  assert.match(h.root.innerHTML, /MEDICAL SESSION COMPLETE/);
+  assert.match(h.root.innerHTML, /MEDICAL SESSION CLOSED/);
+  assert.doesNotMatch(h.root.innerHTML, /MEDICAL SESSION COMPLETE/);
   assert.doesNotMatch(h.root.innerHTML, /Study Now loop verified/);
-  assert.equal(h.monitored.length, 2);
+  assert.equal(h.monitored.length, 3);
 });
 
 test('actual answer-write failure preserves selection and retains the idempotent retry message', async () => {

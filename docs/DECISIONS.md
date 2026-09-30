@@ -1377,3 +1377,13 @@ Personal annotations and private corrections remain separate from canonical text
 Study offers one recommended-session action after a 10/20/30/60-minute selection. Selection shares Home's optional browser duration preference and creates no session. The action says “Open” because the existing server first resumes eligible unfinished work; only the returned recommendation plan can distinguish a new recommended session from a resumed session. Ordinary QBank opening receives a neutral label because its response has no new/resumed flag. Question browsing remains a separate read-only disclosure; QBank opening remains secondary.
 
 A successfully opened session retains its bounded identifier in the internal resume URL. Reload authenticates and reads the owner-checked session directly, without an overview dependency, another Start call, answer, rating or advance. The URL carries no position or saved-answer authority. Closure still reconciles to the existing summary. There is no new browser-stored session/evidence snapshot or backend discovery endpoint. Failed starts require explicit retry; a busy ordinary start is guarded against duplicate invocation. Progress outages display unknown totals and do not block successfully loaded questions; question-read outages cannot masquerade as an empty published catalog.
+
+
+## ADR-094 — Integrated UX keeps detours reversible and read failures local
+**Status:** Accepted — 2026-09-30
+
+Both answered-question and completed-session concept links carry the existing bounded session return. Vault does not decide whether that session is open or closed; the authenticated Study GET decides, and a closed session returns to its saved results. The completion label requires the summary's explicit completedAllSelected flag; acknowledged closure alone cannot claim that every selected item was answered.
+
+Home loads independent projections with settled outcomes. A failed progress read cannot suppress available recommendations or catalog counts; a failed schedule remains unknown and cannot reuse a stale schedule during retry. Server-confirmed admin status remains independent and cannot derive from client metadata. Study shows a working reload action when the question browser is absent, and its ordinary Browse action moves keyboard focus into the read-only question browser. Persistent Study messages have an explicit dismiss control with focus returned to the relevant result/action.
+
+Vault detail reads use a request sequence so a response for an older selection cannot change the current concept, URL or annotation context. These are frontend presentation/navigation rules, not new evidence, scheduling, content authority or storage.

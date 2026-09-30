@@ -25,7 +25,7 @@ try {
 let state = {
   user: auth.currentUser(),
   progress: null,
-  questions: [],
+  questions: null,
   revision: null,
   exam: null,
   isAdmin: false,
@@ -82,7 +82,7 @@ function home() {
     : '<a class="primary action-link study-start" data-study-start href="' + (hasWork ? '/web/medical.html?studyNow=' + studyMinutes : '/web/medical.html') + '">' + (hasWork ? 'Start ' + studyMinutes + ' min →' : 'Open Study →') + '</a>';
   const error = state.error ? '<section class="panel" role="status"><h2>Some study information is unavailable.</h2><p>Your saved answers are unaffected. Try loading this page again.</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
   const exam = state.exam;
-  return '<div class="shell home-shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">WORKSPACE</span><nav aria-label="Main navigation">' + nav() + '</nav><div class="sidebar-note"><span class="status-dot">Your learning workspace</span><p>One next step.<br>Keep your knowledge connected.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Home</span><a href="/web/account.html" aria-label="Open your account">Account</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">YOUR LEARNING WORKSPACE</span><h1>What should you study next?</h1><p>A clear next step, at your pace.</p></div></div><section class="hero study-next" id="study-next" aria-labelledby="study-next-title"><div><span class="eyebrow">STUDY NOW</span><h2 id="study-next-title">' + escape(heading) + '</h2><p>' + escape(reason) + '</p>' + durations + action + '<small>Study Now resumes unfinished work when available. Future reviews stay on their schedule.</small></div><aside class="session-card"><span class="eyebrow">YOUR REVIEW SCHEDULE</span><div class="schedule-count">' + (due ?? '—') + '<span>due now</span></div><p>' + (state.loading ? 'Checking your schedule…' : !revision ? 'Schedule unavailable. Try again later.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) : 'No future review is currently scheduled.') + '</p></aside></section>' + error + '<section class="panel learning-snapshot" aria-label="Learning snapshot"><div class="metrics"><div><strong>' + (due ?? '—') + '</strong><span>Due reviews</span></div><div><strong>' + (state.progress ? (p.attempts ?? 0) : '—') + '</strong><span>Saved attempts</span></div><div><strong>' + (state.progress ? state.questions.length : '—') + '</strong><span>Reviewed questions</span></div></div></section><div class="two-column"><section class="panel"><span class="eyebrow">NEURALVAULT</span><h2>Connect the concepts.</h2><p>Revisit a concept and keep your private notes alongside reviewed knowledge.</p><a class="secondary action-link" href="/web/vault.html">Open Vault →</a></section><section class="panel"><span class="eyebrow">EXAMS</span><h2>Practice the exam flow.</h2><p>' + (exam ? exam.ready ? 'Your reviewed question pool is ready for a full mock.' : 'Check available practice and full-mock readiness in Exams.' : 'Open Exams to check available practice.') + '</p><a class="secondary action-link" href="/web/exam.html">Open Exams →</a></section></div><p class="muted">Saved attempts describe your practice. They are not a mastery score.</p></main><footer>Medical Learning OS</footer></div></div>';
+  return '<div class="shell home-shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">WORKSPACE</span><nav aria-label="Main navigation">' + nav() + '</nav><div class="sidebar-note"><span class="status-dot">Your learning workspace</span><p>One next step.<br>Keep your knowledge connected.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Home</span><a href="/web/account.html" aria-label="Open your account">Account</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">YOUR LEARNING WORKSPACE</span><h1>What should you study next?</h1><p>A clear next step, at your pace.</p></div></div><section class="hero study-next" id="study-next" aria-labelledby="study-next-title"><div><span class="eyebrow">STUDY NOW</span><h2 id="study-next-title">' + escape(heading) + '</h2><p>' + escape(reason) + '</p>' + durations + action + '<small>Study Now resumes unfinished work when available. Future reviews stay on their schedule.</small></div><aside class="session-card"><span class="eyebrow">YOUR REVIEW SCHEDULE</span><div class="schedule-count">' + (due ?? '—') + '<span>due now</span></div><p>' + (state.loading ? 'Checking your schedule…' : !revision ? 'Schedule unavailable. Try again later.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) : 'No future review is currently scheduled.') + '</p></aside></section>' + error + '<section class="panel learning-snapshot" aria-label="Learning snapshot"><div class="metrics"><div><strong>' + (due ?? '—') + '</strong><span>Due reviews</span></div><div><strong>' + (state.progress ? (p.attempts ?? 0) : '—') + '</strong><span>Saved attempts</span></div><div><strong>' + (state.questions?.length ?? '—') + '</strong><span>Reviewed questions</span></div></div></section><div class="two-column"><section class="panel"><span class="eyebrow">NEURALVAULT</span><h2>Connect the concepts.</h2><p>Revisit a concept and keep your private notes alongside reviewed knowledge.</p><a class="secondary action-link" href="/web/vault.html">Open Vault →</a></section><section class="panel"><span class="eyebrow">EXAMS</span><h2>Practice the exam flow.</h2><p>' + (exam ? exam.ready ? 'Your reviewed question pool is ready for a full mock.' : 'Check available practice and full-mock readiness in Exams.' : 'Open Exams to check available practice.') + '</p><a class="secondary action-link" href="/web/exam.html">Open Exams →</a></section></div><p class="muted">Saved attempts describe your practice. They are not a mastery score.</p></main><footer>Medical Learning OS</footer></div></div>';
 }
 
 function render() {
@@ -96,27 +96,25 @@ async function loadHome() {
     render();
     return;
   }
-  state = { ...state, user: auth.currentUser() || session.user, loading: true, error: null };
+  state = { ...state, user: auth.currentUser() || session.user, loading: true, progress: null, questions: null, revision: null, exam: null, isAdmin: false, error: null };
   render();
   try {
-    const [progress, questions] = await Promise.all([cloud.progress(), cloud.questions('all')]);
-    let revision = null;
-    let exam = null;
-    try { revision = await cloud.due(15); } catch (error) { reportUnexpected(error, 'load_revision'); }
-    try { exam = await cloud.examSimulatorReadiness('neet-pg:2026@1'); } catch (error) { reportUnexpected(error, 'load_exam'); }
-    let isAdmin = false;
-    try { isAdmin = (await review.me())?.isAdmin === true; } catch (error) {
-      if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'load_admin_status');
-    }
+    const reads = await Promise.allSettled([cloud.progress(), cloud.questions('all'), cloud.due(15), cloud.examSimulatorReadiness('neet-pg:2026@1'), review.me()]);
+    const operations = ['load_progress', 'load_questions', 'load_revision', 'load_exam', 'load_admin_status'];
+    reads.forEach((result, index) => {
+      if (result.status === 'rejected') reportUnexpected(result.reason, operations[index]);
+    });
+    const [progress, questions, revision, exam, admin] = reads.map(result => result.status === 'fulfilled' ? result.value : null);
+    const isAdmin = admin?.isAdmin === true;
     state = {
       ...state,
       loading: false,
       progress,
-      questions: Array.isArray(questions?.questions) ? questions.questions : [],
+      questions: Array.isArray(questions?.questions) ? questions.questions : null,
       revision,
       exam,
       isAdmin,
-      error: null
+      error: reads.slice(0, 4).some(result => result.status === 'rejected') ? 'home_projection_unavailable' : null
     };
   } catch (error) {
     reportUnexpected(error, 'load_home');

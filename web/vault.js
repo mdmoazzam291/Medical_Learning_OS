@@ -239,16 +239,21 @@ function render() {
   root.innerHTML = state.user ? signedIn() : signedOut();
 }
 
+let detailRequest = 0;
+
 async function loadDetail(conceptId, focusConcept = false) {
+  const request = ++detailRequest;
   state = { ...state, loading: true, selectedConceptId: conceptId, error: null };
   render();
   try {
     const detail = await cloud.vaultConcept(conceptId);
+    if (request !== detailRequest) return;
     state = { ...state, loading: false, detail, error: null };
     const url = new URL(location.href);
     url.searchParams.set('concept', conceptId);
     history.replaceState(null, '', url.pathname + url.search);
   } catch (error) {
+    if (request !== detailRequest) return;
     reportUnexpected(error, 'load_concept');
     state = { ...state, loading: false, detail: null, error: error.code || error.message || 'vault_unavailable' };
   }
