@@ -13,17 +13,25 @@ let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue)
 const requestedResumeId = new URLSearchParams(location.search).get('resume');
 const requestedSummaryId = new URLSearchParams(location.search).get('summary');
 
+let studyMinutes = 20;
+try {
+  const savedMinutes = Number(localStorage.getItem('mlos-study-duration-v1'));
+  if ([10, 20, 30, 60].includes(savedMinutes)) studyMinutes = savedMinutes;
+} catch { /* A preference outage never blocks study. */ }
+
 let state = {
   user: auth.currentUser(),
   loading: false,
   busy: false,
   questions: [],
+  questionsAvailable: false,
   progress: null,
   revision: null,
   revisionError: null,
   examReadiness: null,
   examReadinessError: null,
   session: null,
+  sessionEntry: null,
   selectedOptionId: null,
   receipt: null,
   memoryJudgment: null,
@@ -134,35 +142,33 @@ function signedOut() {
 }
 
 function overview() {
-  const p = state.progress || {};
+  const p = state.progress;
   const revision = state.revision;
   const nextDue = revision?.nextDueAt
     ? new Date(revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })
     : null;
-  const studyNowControls = revision && (revision.dueCount || revision.unseenCount)
-    ? '<div class="study-now-controls"><strong>Study Now</strong><p>How much uninterrupted time do you have?</p><div class="button-row">' + [10, 20, 30, 60].map(minutes => '<button class="' + (minutes === 20 ? 'primary' : 'secondary') + '" data-action="study-now" data-minutes="' + minutes + '">' + minutes + ' min</button>').join('') + '</div></div>'
-    : '';
-  const revisionPanel = state.revisionError
-    ? '<section class="panel"><span class="eyebrow">REVISION</span><h2>Schedule temporarily unavailable.</h2><p>The medical QBank still works. Revision state will rebuild from immutable attempts when the service is available.</p></section>'
-    : revision
-      ? '<section class="panel"><span class="eyebrow">YOUR NEXT SESSION</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for review.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '') + '</p>' + studyNowControls + '<p class="muted">Review due items, repair mistakes and learn new concepts. Scheduling state is not a mastery score.</p></section>'
-      : '';
-  const exam = state.examReadiness;
-  const examPanel = state.examReadinessError
-    ? '<section class="panel"><span class="eyebrow">NEET-PG FULL MOCK</span><h2>Readiness temporarily unavailable.</h2><p>The QBank and Study Now remain available.</p></section>'
-    : exam
-      ? '<section class="panel"><span class="eyebrow">NEET-PG FULL MOCK · RULESET ' + escape(exam.ruleSetId) + '</span><h2>' + exam.eligibleUniqueQuestions + ' / ' + exam.requiredUniqueQuestions + ' unique reviewed questions ready</h2><p>' + (exam.ready ? 'The content-capacity gate has passed.' : exam.shortage + ' more distinct published questions are required before a full mock can start.') + '</p><p class="muted">Timing and navigation use the verified published scheme. Current content assembly is an unstratified reviewed pool and does not claim exam-blueprint fidelity.</p><a class="secondary action-link" href="/web/exam.html">Open Exam Mode →</a></section>'
-      : '';
+  const hasWork = Boolean(revision && (revision.dueCount || revision.unseenCount));
+  const heading = state.busy ? 'Opening your session…' : state.loading ? 'Finding your next step…'
+    : !state.questionsAvailable ? 'Study temporarily unavailable.' : !revision ? 'Schedule temporarily unavailable.'
+      : revision.dueCount ? revision.dueCount + ' due now'
+        : revision.unseenCount ? 'Build on something new.' : 'Your scheduled reviews are up to date.';
+  const description = !state.questionsAvailable ? 'Reviewed questions could not be loaded. Reload Study to try again.' : !revision ? 'The medical QBank still works. Browse reviewed questions while your revision schedule is unavailable.'
+    : (revision.dueCount ? 'Review due items, repair mistakes and learn new concepts.' : nextDue ? 'Next scheduled review: ' + nextDue + '.' : 'No scheduled review yet.') +
+      (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '');
+  const durationPicker = hasWork && !state.loading
+    ? '<fieldset class="duration-picker"><legend>How much uninterrupted time do you have?</legend><div class="duration-options">' + [10, 20, 30, 60].map(minutes => '<button type="button" data-action="duration" data-minutes="' + minutes + '" aria-pressed="' + (studyMinutes === minutes) + '" ' + (state.busy ? 'disabled' : '') + '>' + minutes + ' min</button>').join('') + '</div></fieldset>' : '';
+  const action = state.loading ? '<p role="status">Reading your saved progress and review schedule…</p>'
+    : hasWork ? '<button class="primary" type="button" data-action="study-now" data-minutes="' + studyMinutes + '" ' + (state.busy ? 'disabled' : '') + '>Open ' + studyMinutes + ' min session →</button><p class="muted">Continue unfinished work if available; otherwise start a recommended session. Future reviews stay on their schedule.</p>'
+      : '<a class="primary action-link" href="#question-browser">Browse reviewed questions →</a>';
+  const failure = state.error ? '<section class="panel study-entry-error" role="status"><h2>Study could not open.</h2><p>Your saved answers are unchanged. Try again when you are ready.</p><button class="secondary" type="button" data-action="reload" ' + (state.busy ? 'disabled' : '') + '>Reload Study</button></section>' : '';
   const list = state.questions.map((q, index) =>
-    '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">PUBLISHED MEDICAL</span><h2>' + escape(q.stem) + '</h2><small>' + escape(q.questionVersionId) + '</small></div></article>'
+    '<article><span class="number">' + String(index + 1).padStart(2, '0') + '</span><div><span class="eyebrow">REVIEWED QUESTION</span><h3>' + escape(q.stem) + '</h3></div></article>'
   ).join('');
-  const status = state.loading
-    ? '<section class="panel"><p>Loading published medical content…</p></section>'
-    : state.error
-      ? '<section class="panel"><h2>Medical QBank unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
-      : '<section class="panel"><div class="metrics"><div><strong>' + (p.attempts ?? 0) + '</strong><span>Saved attempts</span></div><div><strong>' + (p.correct ?? 0) + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Published questions</span></div></div></section><section class="panel"><div class="section-heading"><div><span class="eyebrow">REVIEWED CONTENT ONLY</span><h2>Medical QBank</h2></div><button class="primary" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Start / resume session →</button></div><div class="question-list">' + (list || '<div class="empty"><h2>No published medical questions.</h2><p>Draft and in-review content are excluded.</p></div>') + '</div></section>';
-
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Your study workspace.</h1><p>Reviewed questions, saved progress and your next revision.</p></div></div>' + revisionPanel + status + examPanel + '</main>';
+  const exam = state.examReadiness;
+  const examPanel = '<aside class="panel study-exam-link"><span class="eyebrow">EXAMS</span><h2>Practice the exam flow.</h2><p>' + (exam ? exam.eligibleUniqueQuestions + ' / ' + exam.requiredUniqueQuestions + ' unique reviewed questions ready.' : 'Exam readiness is temporarily unavailable.') + '</p><a class="text-button" href="/web/exam.html">Open Exam Mode →</a><details><summary>Full-mock content readiness</summary><p>' + (exam ? exam.ready ? 'The content-capacity gate has passed.' : exam.shortage + ' more distinct published questions are required before a full mock can start.' : 'The QBank and Study Now remain available.') + '</p><p class="muted">The reviewed pool does not claim exam-blueprint fidelity.</p></details></aside>';
+  const content = state.loading || !state.questionsAvailable ? '' : '<div class="metrics study-snapshot"><div><strong>' + (p?.attempts ?? '—') + '</strong><span>Saved attempts</span></div><div><strong>' + (p?.correct ?? '—') + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Reviewed questions</span></div></div>' + (!p ? '<p class="muted">Progress totals are temporarily unavailable. Your saved answers are unchanged.</p>' : '') +
+    '<div class="study-library-layout"><section id="question-browser" class="panel"><span class="eyebrow">QUESTION BROWSER</span><h2 tabindex="-1" id="question-browser-title">Reviewed QBank</h2><p>Browse without starting a session. Open a QBank session to work through up to 15 reviewed questions; an unfinished session continues first.</p><button class="secondary" type="button" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Open QBank session →</button><details class="question-browser-list"' + (!hasWork ? ' open' : '') + '><summary>Browse ' + state.questions.length + ' reviewed question' + (state.questions.length === 1 ? '' : 's') + '</summary><div class="question-list">' + (list || '<div class="empty"><h3>No published medical questions.</h3><p>Draft and in-review content are excluded.</p></div>') + '</div></details></section>' + examPanel + '</div>';
+  return '<main id="main" class="account-page study-entry-page"><div class="study-entry-topbar"><a class="text-button" href="/">← Home</a><div><a class="text-button" href="/web/vault.html">Vault</a><a class="text-button" href="/web/account.html">Account</a></div></div><div class="page-heading"><div><span class="eyebrow">STUDY</span><h1>Your study workspace.</h1><p>One session at a time, with your answers saved as you go.</p></div></div><section class="panel study-entry-card" aria-labelledby="study-entry-title" aria-busy="' + (state.loading || state.busy) + '"><span class="eyebrow">YOUR NEXT SESSION</span><h2 id="study-entry-title">' + escape(heading) + '</h2>' + (!state.loading && !state.busy ? '<p>' + escape(description) + '</p>' : '') + durationPicker + action + '<small>Scheduling state is not a mastery score.</small></section>' + failure + content + '</main>';
 }
 
 function completionSummary() {
@@ -279,12 +285,13 @@ function studyView() {
   const feedback = answered
     ? '<section class="answer-feedback" aria-labelledby="answer-feedback-title"><div class="answer-outcome ' + (receipt.event?.correct ? 'answer-correct' : 'answer-incorrect') + '"><span class="eyebrow">ANSWER SAVED</span><h2 id="answer-feedback-title" tabindex="-1">' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>Your answer is recorded. Continue when you are ready.</p></div><div class="explanation">' + answerExplanation + '<details class="answer-sources"><summary>Sources' + (Array.isArray(receipt.sources) && receipt.sources.length ? ' (' + receipt.sources.length + ')' : '') + '</summary><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></details>' + visualEvidence + '</div><div class="feedback-context">' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<div class="study-continue"><button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button><small>Recall rating is optional.</small></div></section>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
+  const entryLabel = { new: 'New recommended session', resumed: 'Continuing saved session', saved: 'Saved session', opened: 'Session opened' }[state.sessionEntry] || 'Study session';
   const taskLabel = visualDetection ? 'IMAGE RECOGNITION · SERVER SCORED' : 'MEDICAL QBANK';
   const taskNote = visualDetection
     ? '<p class="visual-task-note">Recognition task. Your option is scored on the server; image evidence is recorded only after the canonical attempt is accepted.</p>'
     : '';
 
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Pause to cloud account</a><div class="section-heading"><div><span class="eyebrow">' + taskLabel + '</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study">' + taskNote + '<form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
+  return '<main id="main" class="account-page"><div class="study-entry-topbar"><a class="text-button" href="/web/medical.html">← Study overview</a><a class="text-button" href="/web/account.html">Account</a></div><p class="session-entry-context">' + escape(entryLabel) + ' · Saved answers stay with this session.</p><div class="section-heading"><div><span class="eyebrow">' + taskLabel + '</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study">' + taskNote + '<form id="medical-answer-form">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
 }
 
 function render() {
@@ -299,7 +306,7 @@ async function loadOverview() {
     url.searchParams.delete('resume');
     history.replaceState(null, '', url.pathname + url.search + url.hash);
   }
-  state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null, studyNowIntegrity: null };
+  state = { ...state, loading: true, error: null, session: null, sessionEntry: null, selectedOptionId: null, receipt: null, memoryJudgment: null, studyNowIntegrity: null };
   render();
   try {
     const session = await auth.getSession();
@@ -308,7 +315,11 @@ async function loadOverview() {
       render();
       return;
     }
-    const [questions, progress] = await Promise.all([cloud.questions('all'), cloud.progress()]);
+    const [questionRead, progressRead] = await Promise.allSettled([cloud.questions('all'), cloud.progress()]);
+    if (questionRead.status === 'rejected') throw questionRead.reason;
+    const questions = questionRead.value;
+    const progress = progressRead.status === 'fulfilled' ? progressRead.value : null;
+    if (progressRead.status === 'rejected') reportUnexpected(progressRead.reason, 'load_progress');
     let revision = null;
     let revisionError = null;
     try {
@@ -330,6 +341,7 @@ async function loadOverview() {
       user: auth.currentUser() || session.user,
       loading: false,
       questions: Array.isArray(questions?.questions) ? questions.questions : [],
+      questionsAvailable: true,
       progress,
       revision,
       revisionError,
@@ -339,7 +351,7 @@ async function loadOverview() {
     };
   } catch (error) {
     reportUnexpected(error, 'load_overview');
-    state = { ...state, loading: false, error: error.code || error.message || 'medical_qbank_unavailable' };
+    state = { ...state, loading: false, questions: [], questionsAvailable: false, progress: null, revision: null, error: error.code || error.message || 'medical_qbank_unavailable' };
   }
   render();
 }
@@ -374,7 +386,7 @@ async function loadResumedSession(sessionId) {
   try {
     const session = await cloud.session(sessionId);
     if (session?.sessionId !== sessionId) throw new Error('session_resume_invalid');
-    state = { ...state, session, receipt: session.receipt || null, selectedOptionId: session.receipt?.selectedOptionId || null, memoryJudgment: session.memoryJudgment || null };
+    state = { ...state, session, sessionEntry: 'saved', receipt: session.receipt || null, selectedOptionId: session.receipt?.selectedOptionId || null, memoryJudgment: session.memoryJudgment || null };
     if (session.closed) {
       const url = new URL(location.href);
       url.searchParams.delete('resume');
@@ -389,9 +401,19 @@ async function loadResumedSession(sessionId) {
   render();
 }
 
+function retainSessionRoute(session) {
+  if (!session?.sessionId || !/^[a-zA-Z0-9-]{1,160}$/.test(session.sessionId)) return;
+  const url = new URL(location.href);
+  url.searchParams.delete('studyNow');
+  url.searchParams.delete('summary');
+  url.searchParams.set('resume', session.sessionId);
+  history.replaceState(null, '', url.pathname + url.search);
+}
+
 async function startStudyNow(availableMinutes) {
   if (state.busy) return;
   state.busy = true;
+  state.error = null;
   render();
   try {
     const result = await cloud.studyNow(availableMinutes, 50);
@@ -405,11 +427,13 @@ async function startStudyNow(availableMinutes) {
       ...state,
       busy: false,
       session: result.session,
+      sessionEntry: result.plan?.resumedExisting === true ? 'resumed' : result.plan?.resumedExisting === false ? 'new' : 'opened',
       selectedOptionId: result.session.receipt?.selectedOptionId || null,
       receipt: result.session.receipt || null,
       memoryJudgment: result.session.memoryJudgment || null,
       error: null
     };
+    retainSessionRoute(result.session);
     if (result.plan?.resumedExisting === true) {
       announce(result.session.receipt
         ? 'Resumed your unfinished Study Now session. This question was already answered earlier; review the saved feedback, then finish or continue.'
@@ -424,7 +448,9 @@ async function startStudyNow(availableMinutes) {
 }
 
 async function startSession() {
+  if (state.busy) return;
   state.busy = true;
+  state.error = null;
   render();
   try {
     const session = await cloud.start({ limit: 15, filter: 'all' });
@@ -432,11 +458,13 @@ async function startSession() {
       ...state,
       busy: false,
       session,
+      sessionEntry: 'opened',
       selectedOptionId: session.receipt?.selectedOptionId || null,
       receipt: session.receipt || null,
       memoryJudgment: session.memoryJudgment || null,
       error: null
     };
+    retainSessionRoute(session);
   } catch (error) {
     reportUnexpected(error, 'start_session');
     state = { ...state, busy: false, error: error.code || error.message || 'study_start_failed' };
@@ -572,6 +600,13 @@ root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
+  if (target.dataset.action === 'duration') {
+    const minutes = Number(target.dataset.minutes);
+    if (state.busy || ![10, 20, 30, 60].includes(minutes)) return;
+    studyMinutes = minutes;
+    try { localStorage.setItem('mlos-study-duration-v1', String(minutes)); } catch { /* Optional preference. */ }
+    render();
+  }
   if (target.dataset.action === 'start') startSession();
   if (target.dataset.action === 'study-now') startStudyNow(Number(target.dataset.minutes));
   if (target.dataset.action === 'memory-rating') recordMemoryRating(Number(target.dataset.rating));
@@ -586,7 +621,14 @@ async function bootstrap() {
     render();
     return;
   }
-  await loadOverview();
+  const hasRestore = /^[a-zA-Z0-9-]{1,160}$/.test(requestedSummaryId || '') || /^[a-zA-Z0-9-]{1,160}$/.test(requestedResumeId || '');
+  if (hasRestore) {
+    try {
+      const authenticated = await auth.getSession();
+      state.user = authenticated?.user || null;
+    } catch (error) { reportUnexpected(error, 'restore_auth'); state.user = null; }
+    if (!state.user) { render(); return; }
+  } else await loadOverview();
   if (requestedSummaryId && /^[a-zA-Z0-9-]{1,160}$/.test(requestedSummaryId) && state.user) {
     const summaryUrl = new URL(location.href);
     summaryUrl.searchParams.set('summary', requestedSummaryId);
