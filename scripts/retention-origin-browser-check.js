@@ -73,6 +73,12 @@ try {
       return route.fulfill({ status:404, contentType:'application/json', body:JSON.stringify({ error:'unexpected_route', path }) });
     });
 
+    await page.route('**/web/medical.html?source=retention-origin', route => route.fulfill({
+      status:200,
+      contentType:'text/html',
+      body:'<!doctype html><html><body><main><h1>Study handoff fixture</h1></main></body></html>'
+    }));
+
     await page.goto(origin + '/web/retention-origin.html');
     await page.getByRole('heading', { name:'A pilot setup question is available.' }).waitFor();
     assert.equal(writes.length, 0, name + ' opening setup must not create a session');
@@ -81,6 +87,7 @@ try {
 
     await page.getByRole('button', { name:'Start setup question →' }).click();
     await page.waitForURL('**/web/medical.html?source=retention-origin');
+    await page.getByRole('heading', { name:'Study handoff fixture' }).waitFor();
     assert.deepEqual(writes, ['start-origin']);
     await context.close();
   }
