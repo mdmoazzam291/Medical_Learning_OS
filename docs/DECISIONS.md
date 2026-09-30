@@ -1353,3 +1353,11 @@ The projection adds no ledger, scheduling writes, schema, clinical answer keys, 
 Home presents one dominant Study Now start action after an explicit 10/20/30/60-minute selection. The duration is an optional browser preference (`mlos-study-duration-v1`), not learner evidence or scheduler state. Choosing time, returning from results and reloading must not create a study session. Existing server policy still decides recommendations and resumes eligible unfinished work.
 
 The completion screen separates session evidence from current revision timing, uses canonical concept links as revisit actions, and makes a read-only return to Home's Study Now section the primary next step. It does not imply that a mixed Study Now session is a due-only review or pull future items early. Schedule outages remain unknown rather than zero or a claim that the learner is up to date. Mobile layouts stack the next-step card; desktop/tablet may place it alongside results. Navigation and authenticated publication/scoring boundaries remain consistent.
+
+
+## ADR-091 — Study/Vault handoff restores the authenticated session, not a client snapshot
+**Status:** Accepted — 2026-09-30
+
+The linked-concept detour is reversible through a bounded session identifier and a fixed internal Study route. Vault's return context is navigational input, not proof of ownership or saved learning evidence. Study reads the current session through the existing owner-checked authenticated GET; it restores the server cursor and receipts rather than trusting URL-supplied position, correctness or completion. Returning and reloading cannot answer or advance the session. A session closed elsewhere opens results; failed reads show no stale evidence.
+
+Post-answer feedback distinguishes the accepted saved result, selected/correct options, reasoning, sources, recommendation context and optional recall self-report. Sources remain accessible with native disclosure; recall is optional and is never preselected or submitted by navigation. Canonical teaching eligibility and all scoring/scheduling authority remain unchanged. Client disclosure/focus state creates no learner evidence.

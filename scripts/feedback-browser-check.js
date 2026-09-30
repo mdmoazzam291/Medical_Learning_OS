@@ -1,0 +1,85 @@
+import assert from 'node:assert/strict';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
+const origin = process.env.APP_URL || 'http://127.0.0.1:3000';
+const browser = await chromium.launch({ headless: true });
+const errors = [];
+const conceptId = 'interface:fixture';
+const sessionId = 'feedback-session';
+const question = { questionVersionId: 'interface:fixture@1', conceptId, stem: 'Synthetic interface question: choose the first option.', options: [{ optionId: 'a', text: 'First option' }, { optionId: 'b', text: 'Second option' }] };
+const receipt = { event: { eventId: 'fixture-attempt', correct: false, conceptId }, selectedOptionId: 'b', answerOptionId: 'a', explanation: 'This interface fixture asks for the first option. Compare the selected answer with the requested choice.', sources: [{ title: 'Example source', url: 'https://example.com' }] };
+try {
+  for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
+    const context = await browser.newContext({ viewport: { width, height } });
+    let answered = false;
+    let closed = false;
+    const writes = [];
+    const page = await context.newPage();
+    page.on('pageerror', error => errors.push(error.message));
+    await context.addInitScript(() => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'jwt-test', refreshToken: 'refresh-test', expiresAt: 2100000000, user: { id: '11111111-1111-4111-8111-111111111111', email: 'fixture@example.invalid', emailConfirmedAt: '2026-09-29T00:00:00Z' } })));
+    await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
+      const path = new URL(route.request().url()).pathname.split('/functions/v1/study-api')[1];
+      const method = route.request().method();
+      if (method !== 'GET') writes.push(path);
+      const fulfill = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+      const session = () => ({ sessionId, position: 0, total: 1, closed, question: closed ? null : question, receipt: closed ? null : answered ? receipt : null, memoryJudgment: null, recommendationContext: { reason: 'due-revision' } });
+      if (path === '/progress') return fulfill({ attempts: answered ? 1 : 0, correct: 0 });
+      if (path === '/questions') return fulfill({ questions: [question] });
+      if (path === '/revision/due') return fulfill({ dueCount: 1, unseenCount: 0, items: [] });
+      if (path?.startsWith('/exam-simulator/readiness')) return fulfill({ eligibleUniqueQuestions: 1, requiredUniqueQuestions: 180, shortage: 179, ready: false });
+      if (path === '/study-now/start') return fulfill({ plan: {}, session: session() });
+      if (path === '/sessions/' + sessionId + '/answer') { answered = true; return fulfill(receipt); }
+      if (path === '/sessions/' + sessionId) return fulfill(session());
+      if (path === '/sessions/' + sessionId + '/summary') return fulfill({ contractId: 'study-session-summary-v1', sessionId, closed: true, selectedCount: 1, answeredCount: 1, correctCount: 0, incorrectCount: 1, unansweredCount: 0, completedAllSelected: true, concepts: [{ conceptId, label: 'Interface fixture concept', incorrectCount: 1 }], revision: { available: false } });
+      if (path === '/vault/concepts') return fulfill({ catalogVersion: 1, concepts: [{ conceptId, label: 'Interface fixture concept', aliases: [], subjectTags: ['interface fixture'], annotationCount: 0 }] });
+      if (path === '/vault/concepts/' + encodeURIComponent(conceptId)) return fulfill({ concept: { conceptId, label: 'Interface fixture concept', aliases: [], subjectTags: ['interface fixture'] }, canonicalNote: null, annotations: [] });
+      return fulfill({ error: 'not_found' }, 404);
+    });
+    await page.goto(origin + '/web/medical.html?studyNow=20');
+    await page.getByText('Question 1 of 1', { exact: false }).waitFor();
+    assert.equal(await page.locator('.answer-feedback').count(), 0, 'feedback must not precede accepted answer');
+    await page.locator('input[name="answer"][value="b"]').check();
+    await page.getByRole('button', { name: 'Check answer' }).click();
+    await page.getByRole('heading', { name: 'Incorrect. Review the reasoning.' }).waitFor();
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'answer-feedback-title');
+    assert.match(await page.locator('.chosen-incorrect').innerText(), /Your answer/);
+    assert.match(await page.locator('.option.correct').innerText(), /Correct answer/);
+    assert.equal(await page.getByRole('button', { name: 'Again', exact: true }).isVisible(), false);
+    await page.locator('.answer-sources summary').click();
+    await page.getByRole('link', { name: 'Example source' }).waitFor();
+    await page.locator('.recall-disclosure summary').click();
+    await page.getByRole('button', { name: 'Again', exact: true }).waitFor();
+    await page.locator('.recall-disclosure summary').click();
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' feedback overflow');
+    await page.evaluate(() => window.scrollTo(0, 0));
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/ux-feedback-' + name + '.png', fullPage: true, animations: 'disabled' });
+    const handoff = page.getByRole('link', { name: 'Review concept / add private correction' });
+    assert.equal(new URL(await handoff.getAttribute('href'), origin).searchParams.get('returnSession'), sessionId);
+    await handoff.click();
+    await page.getByRole('heading', { name: 'Interface fixture concept', exact: true }).waitFor();
+    await page.reload();
+    await page.getByRole('link', { name: 'Return to study' }).waitFor();
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' Vault overflow');
+    await page.getByRole('link', { name: 'Return to study' }).click();
+    await page.getByRole('heading', { name: 'Incorrect. Review the reasoning.' }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('resume'), sessionId);
+    await page.reload();
+    await page.getByRole('heading', { name: 'Incorrect. Review the reasoning.' }).waitFor();
+    assert.deepEqual(writes, ['/study-now/start', '/sessions/' + sessionId + '/answer'], 'handoff, reload and disclosure must not write evidence or advance');
+    closed = true; // Synthetic second-device fixture; no product write.
+    await page.reload();
+    await page.getByRole('heading', { name: 'This session', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.has('resume'), false);
+    assert.equal(new URL(page.url()).searchParams.get('summary'), sessionId);
+    await page.goto(origin + '/web/medical.html?resume=foreign-session');
+    await page.getByRole('button', { name: 'Retry saved session' }).waitFor();
+    assert.equal(await page.locator('.answer-feedback').count(), 0);
+    assert.equal(await page.getByRole('button', { name: 'Check answer' }).count(), 0);
+    await page.goto(origin + '/web/vault.html?concept=' + encodeURIComponent(conceptId) + '&returnSession=https://example.com');
+    await page.getByRole('heading', { name: 'Interface fixture concept', exact: true }).waitFor();
+    assert.equal(await page.getByRole('link', { name: 'Return to study' }).count(), 0, 'return cannot become an arbitrary URL');
+    assert.deepEqual(writes, ['/study-now/start', '/sessions/' + sessionId + '/answer']);
+    await context.close();
+  }
+  assert.deepEqual(errors, []);
+  console.log('Responsive feedback, read-only Vault return, saved cursor/reload, closed-session reconciliation and failed ownership passed');
+} finally { await browser.close(); }

@@ -157,3 +157,34 @@ test('summary outage cannot undo acknowledged closure and offers a read-only ret
   assert.match(h.root.innerHTML, /Retry session results/);
   assert.doesNotMatch(h.notice.textContent, /did not advance/);
 });
+
+test('Vault return restores the server cursor and receipt without answer/advance writes', async () => {
+  let reads = 0;
+  const saved = { ...session, position: 2, total: 4, receipt, memoryJudgment: { ratingLabel: 'Good' } };
+  const h = harness({ session: async id => { reads++; assert.equal(id, session.sessionId); return saved; }, answer: () => assert.fail('return must not answer'), next: () => assert.fail('return must not advance') });
+  await runInContext('loadResumedSession(testSession.sessionId)', h.context);
+  assert.equal(reads, 1);
+  assert.equal(h.state().session.position, 2);
+  assert.equal(h.state().receipt.event.eventId, receipt.event.eventId);
+  assert.equal(h.state().memoryJudgment.ratingLabel, 'Good');
+  assert.match(h.root.innerHTML, /Question 3 of 4/);
+});
+
+test('unowned or failed resume cannot display stale evidence or manufacture closure', async () => {
+  const h = harness({ session: async () => { throw Object.assign(new Error('not found'), { status: 404 }); } });
+  runInContext('state.receipt = testReceipt;', h.context);
+  await runInContext('loadResumedSession(testSession.sessionId)', h.context);
+  assert.equal(h.state().session.resumeUnavailable, true);
+  assert.equal(h.state().session.closed, undefined);
+  assert.equal(h.state().receipt, null);
+  assert.match(h.root.innerHTML, /Retry saved session/);
+  assert.doesNotMatch(h.root.innerHTML, /Synthetic test question|MEDICAL SESSION COMPLETE/);
+});
+
+test('returning after another device closes the session shows summary, even during a summary outage', async () => {
+  const h = harness({ session: async () => ({ ...session, closed: true, question: null }), sessionSummary: projectionFailure });
+  await runInContext('loadResumedSession(testSession.sessionId)', h.context);
+  assert.equal(h.state().session.closed, true);
+  assert.match(h.root.innerHTML, /Retry session results/);
+  assert.doesNotMatch(h.root.innerHTML, /Synthetic test question|Check answer/);
+});

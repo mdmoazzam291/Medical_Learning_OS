@@ -136,3 +136,26 @@
 #medical-app .results-back{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline}
 @media(max-width:1050px){.home-shell .study-next{grid-template-columns:1fr}.home-shell .session-card{display:block}.schedule-count{font-size:2.4rem}.home-shell .session-card{padding:18px}.home-shell .session-card p{margin-top:12px}}
 @media(max-width:760px){#medical-app .session-results{grid-template-columns:1fr;gap:20px}#medical-app .completion{padding:24px;margin-top:20px}#medical-app .next-revision{padding:20px}.home-shell .study-start{width:100%}.duration-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.duration-options button{min-width:0;padding:12px 8px}#medical-app .results-note{font-size:.75rem}}
+
+
+/* Aperture answer feedback and contextual return. */
+#medical-app .answer-feedback{margin-top:28px}
+#medical-app label.option{display:flex}
+#medical-app .answer-outcome{padding:18px 20px;border:1px solid var(--line);border-left:4px solid #769544;border-radius:10px;margin-bottom:18px;background:var(--surface)}
+#medical-app .answer-outcome.answer-incorrect{border-left-color:var(--danger)}
+#medical-app .answer-outcome h2{font-size:1.35rem;margin:10px 0}
+#medical-app .answer-outcome p{font-size:.85rem;margin:6px 0 0}
+#medical-app .chosen-incorrect{border-color:var(--danger)}
+#medical-app .answer-sources{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}
+#medical-app .answer-sources summary,#medical-app .study-reason summary,#medical-app .recall-disclosure summary{cursor:pointer;min-height:44px;display:list-item;line-height:1.5;padding:10px 0;font-size:.88rem;font-weight:600}
+#medical-app .feedback-context{display:grid;gap:12px;margin:20px 0}
+#medical-app .concept-handoff{justify-self:start;text-align:center}
+#medical-app .study-reason{border-bottom:1px solid var(--line)}
+#medical-app .recall-disclosure{border:1px solid var(--line);background:var(--surface);padding:8px 18px;border-radius:10px}
+#medical-app .recall-disclosure>strong{display:block;margin-top:10px;font-size:.9rem}
+#medical-app .study-continue{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px}
+#medical-app .study-continue .primary{margin-top:0}
+.study-return{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 20px;margin:0 0 22px;border:1px solid var(--line);border-radius:10px;background:var(--hero)}
+.study-return span{font-size:.85rem;color:var(--muted);line-height:1.5}
+.study-return .action-link{flex-shrink:0}
+@media(max-width:650px){#medical-app .study-continue{flex-direction:column;align-items:stretch;gap:8px}#medical-app .study-continue small{text-align:center}#medical-app .concept-handoff{width:100%}.study-return{align-items:stretch;flex-direction:column;gap:10px;padding:16px}}
