@@ -9,7 +9,7 @@ const serve = await readFile(new URL('../scripts/serve.js', import.meta.url), 'u
 test('M11c preflight is pinned to the exact current anaphylaxis pair', () => {
   assert.match(preflight, /emergency:anaphylaxis:first-line-drug@1/);
   assert.match(preflight, /emergency:anaphylaxis:no-rash-first-action@1/);
-  assert.match(preflight, /same primary concept/);
+  assert.match(preflight, /primary concept emergency:anaphylaxis:first-line-treatment/);
   assert.match(preflight, /Medical, References and Rights review/);
 });
 
