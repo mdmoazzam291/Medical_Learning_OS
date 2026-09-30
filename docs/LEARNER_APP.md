@@ -17,6 +17,12 @@ The beta home follows the product rule that complexity stays under the floorboar
 
 The historical local demo modules may remain in the repository for regression/reference value, but they are not in the development server's public allowlist and are not imported by the root application.
 
+## Aperture next-session interface
+
+Home has one Study Now start link with a 10/20/30/60-minute selection. The selected duration persists only as an optional browser preference; unavailable storage falls back to 20 minutes. Selection and reload are read-only with respect to canonical learner evidence. If the schedule is loading or unavailable, Home does not display a fabricated zero due count. If only future reviews remain, Home offers ordinary Study browsing rather than an immediate scheduled-review start.
+
+Session results place counts and canonical concept revisit links beside a next-revision card. “Plan my next session” returns to Home's Study Now section without automatically submitting an answer or starting a session. The Study overview places revision ahead of the published-question list. Existing server-owned recommendation, resume, scoring, schedule and optional rating behavior remains intact.
+
 ## Content authority boundary
 Content governance is separate from the learner product. Learners may study, annotate and report suspected issues. Medical, References, Rights and research pair-validation decisions are available only through the authenticated Admin Console and are enforced server-side. No admin email, password, user metadata or browser flag grants authority.
 

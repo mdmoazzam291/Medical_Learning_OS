@@ -6,6 +6,12 @@ Last reconciled: 2026-09-28 (Asia/Kolkata).
 
 The user requests as much or as little canonical concept/note content as app testing requires: notes may support one or several questions, with relevant connections across the 19-subject curriculum. This permits a targeted connected-content pilot rather than expanding simulator inventory in another 25-question batch. Preserve one canonical identity and meaningful subject views; do not force every concept into all 19 subjects. Add regression coverage to the existing CI, without generating artificial learner outcomes or bypassing human production review. Latest retrieved chat summaries were incomplete; current repository milestones and read-only live readiness were used to reconcile the next step.
 
+## UX/interface priority — 2026-09-30
+
+The user explicitly requests continued UX/interface work from now on. Subsequent continuations should prioritize the visible learning loop, mobile usability, navigation consistency, feedback clarity and visual hierarchy unless the user redirects. This instruction is a focus preference, not permission to fabricate learner evidence or bypass review/publication boundaries.
+
+Targeted prior-context retrieval identifies the user's 2026-09-29 acceptance of Aperture as the core direction, useful additions from Atlas/Cockpit/Studio, consistent navigation, and support that adapts per topic without permanent learner labels. Other detailed navigation/branding ideas appeared as assistant proposals or file explorations, so they are not silently adopted as fresh user decisions. This slice preserves the existing Home/Study/Exams/Vault/Account destinations and established identity; no claim of a complete design-project audit is made.
+
 ## Standing user instruction
 Take reference/context from the ChatGPT project named **“medical learning os”** when deciding or implementing the next step. Work only in Medical_Learning_OS. The older NEETPG2027 repository is excluded unless explicitly authorized.
 

@@ -139,12 +139,12 @@ function overview() {
     ? new Date(revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })
     : null;
   const studyNowControls = revision && (revision.dueCount || revision.unseenCount)
-    ? '<div class="study-now-controls"><strong>Study Now</strong><p>How much uninterrupted time do you have?</p><div class="button-row">' + [10, 20, 30, 60].map(minutes => '<button class="secondary" data-action="study-now" data-minutes="' + minutes + '">' + minutes + ' min</button>').join('') + '</div></div>'
+    ? '<div class="study-now-controls"><strong>Study Now</strong><p>How much uninterrupted time do you have?</p><div class="button-row">' + [10, 20, 30, 60].map(minutes => '<button class="' + (minutes === 20 ? 'primary' : 'secondary') + '" data-action="study-now" data-minutes="' + minutes + '">' + minutes + ' min</button>').join('') + '</div></div>'
     : '';
   const revisionPanel = state.revisionError
     ? '<section class="panel"><span class="eyebrow">REVISION</span><h2>Schedule temporarily unavailable.</h2><p>The medical QBank still works. Revision state will rebuild from immutable attempts when the service is available.</p></section>'
     : revision
-      ? '<section class="panel"><span class="eyebrow">REVISION & STUDY NOW · PROVISIONAL</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for review.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '') + '</p>' + studyNowControls + '<p class="muted">Scheduling state is not a mastery score. Study Now uses explainable candidate classes, not one opaque ranking number. Revision policy: ' + escape(revision.policy?.id || 'unknown') + '.</p></section>'
+      ? '<section class="panel"><span class="eyebrow">YOUR NEXT SESSION</span><h2>' + revision.dueCount + ' due now</h2><p>' + (revision.dueCount ? 'Due items are ready for review.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) + '.' : 'No scheduled review yet.') + (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '') + '</p>' + studyNowControls + '<p class="muted">Review due items, repair mistakes and learn new concepts. Scheduling state is not a mastery score.</p></section>'
       : '';
   const exam = state.examReadiness;
   const examPanel = state.examReadinessError
@@ -159,9 +159,9 @@ function overview() {
     ? '<section class="panel"><p>Loading published medical content…</p></section>'
     : state.error
       ? '<section class="panel"><h2>Medical QBank unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
-      : '<section class="panel"><div class="metrics"><div><strong>' + (p.attempts ?? 0) + '</strong><span>Server attempts</span></div><div><strong>' + (p.correct ?? 0) + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Published questions</span></div></div></section><section class="panel"><div class="section-heading"><div><span class="eyebrow">REVIEWED CONTENT ONLY</span><h2>Medical QBank</h2></div><button class="primary" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Start / resume session →</button></div><div class="question-list">' + (list || '<div class="empty"><h2>No published medical questions.</h2><p>Draft and in-review content are excluded.</p></div>') + '</div></section>';
+      : '<section class="panel"><div class="metrics"><div><strong>' + (p.attempts ?? 0) + '</strong><span>Saved attempts</span></div><div><strong>' + (p.correct ?? 0) + '</strong><span>Correct</span></div><div><strong>' + state.questions.length + '</strong><span>Published questions</span></div></div></section><section class="panel"><div class="section-heading"><div><span class="eyebrow">REVIEWED CONTENT ONLY</span><h2>Medical QBank</h2></div><button class="primary" data-action="start" ' + (state.questions.length && !state.busy ? '' : 'disabled') + '>Start / resume session →</button></div><div class="question-list">' + (list || '<div class="empty"><h2>No published medical questions.</h2><p>Draft and in-review content are excluded.</p></div>') + '</div></section>';
 
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Only reviewed, published versions enter this loop.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · scoring and attempt persistence stay server-side.</p></div><span class="badge">M05</span></div>' + status + revisionPanel + examPanel + '</main>';
+  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">AUTHENTICATED MEDICAL STUDY</span><h1>Your study workspace.</h1><p>Reviewed questions, saved progress and your next revision.</p></div></div>' + revisionPanel + status + examPanel + '</main>';
 }
 
 function completionSummary() {
@@ -172,7 +172,7 @@ function completionSummary() {
   }
   const concepts = s.concepts.filter(c => c.incorrectCount > 0);
   const repairs = concepts.length
-    ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '">' + escape(c.label) + '</a></li>').join('') + '</ul>'
+    ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a class="concept-revisit" href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '"><span>' + escape(c.label) + '</span><span aria-hidden="true">→</span></a></li>').join('') + '</ul>'
     : '<p>No incorrect answers in this session. Delayed retrieval is still needed to test retention.</p>';
   const r = s.revision;
   const schedule = !r.available
@@ -182,10 +182,10 @@ function completionSummary() {
       : r.nextDueAt
         ? '<p>Next review: ' + escape(new Date(r.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })) + '.</p>'
         : '<p>No review time is available for these session items yet.</p>';
-  return '<div class="session-results"><h2>This session</h2><div class="metrics"><div><strong>' + s.answeredCount + ' / ' + s.selectedCount + '</strong><span>Answered</span></div><div><strong>' + s.correctCount + '</strong><span>Correct</span></div><div><strong>' + s.incorrectCount + '</strong><span>Incorrect</span></div></div>' +
+  return '<div class="session-results"><div class="results-evidence"><h2>This session</h2><div class="metrics"><div><strong>' + s.answeredCount + ' / ' + s.selectedCount + '</strong><span>Answered</span></div><div><strong>' + s.correctCount + '</strong><span>Correct</span></div><div><strong>' + s.incorrectCount + '</strong><span>Incorrect</span></div></div>' +
     (s.unansweredCount ? '<p>' + s.unansweredCount + ' selected question' + (s.unansweredCount === 1 ? ' was' : 's were') + ' left unanswered.</p>' : '') + repairs +
-    '<h2>Your next revision</h2>' + schedule + (r.available && r.missingCount ? '<p>Some answered items do not yet have a review time.</p>' : '') +
-    '<p class="muted">Session accuracy is observed performance, not mastery. Review times reflect the current schedule for these items.</p><a class="secondary action-link" href="/">Return to Study Now →</a></div>';
+    '</div><aside class="next-revision"><span class="eyebrow">YOUR NEXT STEP</span><h2>Your next revision</h2>' + schedule + (r.available && r.missingCount ? '<p>Some answered items do not yet have a review time.</p>' : '') +
+    '<p class="muted">Choose your time and check all due reviews on Home.</p><a class="primary action-link" href="/#study-next">Plan my next session →</a></aside></div><p class="muted results-note">Session accuracy is observed performance, not mastery. Review times reflect the current schedule for these items.</p>';
 }
 
 function studyView() {
@@ -204,7 +204,7 @@ function studyView() {
         : '<div class="memory-rating"><strong>Study evidence saved; integrity reconciliation is incomplete.</strong><p class="muted">' + escape((integrity.blockers || []).join(' · ')) + '</p></div>'
       : '';
     const completionLabel = state.sessionSummary?.completedAllSelected === false ? 'MEDICAL SESSION CLOSED' : 'MEDICAL SESSION COMPLETE';
-    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">' + completionLabel + '</span><h1>Your session is saved.</h1>' + completionSummary() + integrityCopy + '<button class="primary" data-action="reload">Back to medical QBank →</button></section></main>';
+    return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel completion"><span class="eyebrow">' + completionLabel + '</span><h1>Your session is saved.</h1>' + completionSummary() + integrityCopy + '<button class="text-button results-back" data-action="reload">Browse medical QBank →</button></section></main>';
   }
   if (!session.question) {
     return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><section class="panel"><h1>Question unavailable.</h1><p>' + escape(session.blocked || 'question_unavailable') + '</p></section></main>';

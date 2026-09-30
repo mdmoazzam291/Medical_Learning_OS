@@ -57,7 +57,7 @@ test('Study Now UI can offer unseen new learning without calling it mastery', as
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /revision\.dueCount \|\| revision\.unseenCount/);
   assert.match(source, /unseen published question/);
-  assert.match(source, /explainable candidate classes/);
+  assert.match(source, /Review due items, repair mistakes/);
   assert.doesNotMatch(source, /mastery score.*Study Now score/i);
 });
 
