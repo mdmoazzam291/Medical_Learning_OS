@@ -16,6 +16,12 @@ const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
 
+let studyMinutes = 20;
+try {
+  const savedMinutes = Number(localStorage.getItem('mlos-study-duration-v1'));
+  if ([10, 20, 30, 60].includes(savedMinutes)) studyMinutes = savedMinutes;
+} catch { /* A preference-storage outage never blocks learning. */ }
+
 let state = {
   user: auth.currentUser(),
   progress: null,
@@ -57,16 +63,26 @@ function nav() {
 
 function home() {
   const p = state.progress || {};
-  const due = state.revision?.dueCount ?? 0;
-  const unseen = state.revision?.unseenCount ?? 0;
-  const published = state.questions.length;
-  const ready = state.exam?.eligibleUniqueQuestions ?? 0;
-  const required = state.exam?.requiredUniqueQuestions ?? 180;
-  const nextDue = state.revision?.nextDueAt ? new Date(state.revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' }) : null;
-  const loading = state.loading ? '<section class="panel"><p>Loading your learner state…</p></section>' : '';
-  const error = state.error ? '<section class="panel"><h2>Some beta data is unavailable.</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
-
-  return '<div class="shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">WORKSPACE</span><nav aria-label="Main navigation">' + nav() + '</nav><div class="sidebar-note"><span class="status-dot">Authenticated beta</span><p>Less navigation.<br>More useful retrieval.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Home</span><span>' + escape(state.user?.email || '') + '</span></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">PREPARATION COMMAND CENTER</span><h1>What should you study next?</h1><p>Your beta home now prioritizes action instead of demo navigation.</p></div><span class="badge">BETA</span></div><section class="hero"><div><span class="eyebrow">STUDY NOW</span><h2>' + (due ? due + ' due review' + (due === 1 ? '' : 's') + ' are waiting.' : unseen ? 'New reviewed material is available.' : 'Continue your medical learning loop.') + '</h2><p>Choose the uninterrupted time you have. Study Now uses the current deterministic policy and does not claim a precise mastery score.</p><div class="button-row"><a class="primary action-link" href="/web/medical.html?studyNow=20">Start 20 min →</a><a class="secondary action-link" href="/web/medical.html?studyNow=10">10 min</a><a class="secondary action-link" href="/web/medical.html?studyNow=30">30 min</a><a class="secondary action-link" href="/web/medical.html?studyNow=60">60 min</a></div><small>Due work is not pulled early merely to fill time.</small></div><div class="session-card"><span class="eyebrow">CURRENT SIGNALS</span><ol><li><span>01</span> ' + due + ' due now</li><li><span>02</span> ' + unseen + ' unseen reviewed questions</li><li><span>03</span> ' + (p.attempts ?? 0) + ' recorded attempts</li></ol><p>' + (nextDue ? 'Next scheduled review: ' + escape(nextDue) : 'No future review currently scheduled.') + '</p></div></section>' + loading + error + '<section class="panel"><div class="metrics"><div><strong>' + due + '</strong><span>Due reviews</span></div><div><strong>' + published + '</strong><span>Published questions</span></div><div><strong>' + ready + '<small> / ' + required + '</small></strong><span>Full-mock content gate</span></div></div></section><div class="two-column"><section class="panel"><span class="eyebrow">STUDY</span><h2>Reviewed medical QBank</h2><p>Server-scored questions, explanations, revision and Study Now in one learning path.</p><a class="secondary action-link" href="/web/medical.html">Open Study →</a></section><section class="panel"><span class="eyebrow">NEURALVAULT</span><h2>Your connected concept workspace</h2><p>Keep private notes and corrections attached to canonical concepts instead of creating disconnected notebooks.</p><a class="secondary action-link" href="/web/vault.html">Open Vault →</a></section></div></main><footer>Medical Learning OS · authenticated beta</footer></div></div>';
+  const revision = state.revision;
+  const due = revision?.dueCount;
+  const unseen = revision?.unseenCount;
+  const nextDue = revision?.nextDueAt ? new Date(revision.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' }) : null;
+  const hasWork = Boolean(due || unseen);
+  const heading = state.loading ? 'Finding your next step…'
+    : !revision ? 'Check your next step in Study.'
+      : due ? due + ' review' + (due === 1 ? ' is' : 's are') + ' ready.'
+        : unseen ? 'Build on something new.' : 'Your scheduled reviews are up to date.';
+  const reason = state.loading ? 'Reading your saved progress and review schedule.'
+    : !revision ? 'Your revision schedule is temporarily unavailable. You can still open the reviewed QBank.'
+      : due ? 'Return to what is due, then work through the next recommended questions.'
+        : unseen ? 'Reviewed questions are available for your next study session.'
+          : nextDue ? 'Your next scheduled review is ' + nextDue + '. You can browse the QBank in the meantime.' : 'Browse reviewed questions or revisit a concept in your Vault.';
+  const durations = hasWork && !state.loading ? '<fieldset class="duration-picker"><legend>How much time do you have?</legend><div class="duration-options">' + [10, 20, 30, 60].map(minutes => '<button type="button" data-action="duration" data-minutes="' + minutes + '" aria-pressed="' + (studyMinutes === minutes) + '">' + minutes + ' min</button>').join('') + '</div></fieldset>' : '';
+  const action = state.loading ? '<p role="status">Loading your learner state…</p>'
+    : '<a class="primary action-link study-start" data-study-start href="' + (hasWork ? '/web/medical.html?studyNow=' + studyMinutes : '/web/medical.html') + '">' + (hasWork ? 'Start ' + studyMinutes + ' min →' : 'Open Study →') + '</a>';
+  const error = state.error ? '<section class="panel" role="status"><h2>Some study information is unavailable.</h2><p>Your saved answers are unaffected. Try loading this page again.</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
+  const exam = state.exam;
+  return '<div class="shell home-shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">WORKSPACE</span><nav aria-label="Main navigation">' + nav() + '</nav><div class="sidebar-note"><span class="status-dot">Your learning workspace</span><p>One next step.<br>Keep your knowledge connected.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Home</span><a href="/web/account.html" aria-label="Open your account">Account</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">YOUR LEARNING WORKSPACE</span><h1>What should you study next?</h1><p>A clear next step, at your pace.</p></div></div><section class="hero study-next" id="study-next" aria-labelledby="study-next-title"><div><span class="eyebrow">STUDY NOW</span><h2 id="study-next-title">' + escape(heading) + '</h2><p>' + escape(reason) + '</p>' + durations + action + '<small>Study Now resumes unfinished work when available. Future reviews stay on their schedule.</small></div><aside class="session-card"><span class="eyebrow">YOUR REVIEW SCHEDULE</span><div class="schedule-count">' + (due ?? '—') + '<span>due now</span></div><p>' + (state.loading ? 'Checking your schedule…' : !revision ? 'Schedule unavailable. Try again later.' : nextDue ? 'Next scheduled review: ' + escape(nextDue) : 'No future review is currently scheduled.') + '</p></aside></section>' + error + '<section class="panel learning-snapshot" aria-label="Learning snapshot"><div class="metrics"><div><strong>' + (due ?? '—') + '</strong><span>Due reviews</span></div><div><strong>' + (state.progress ? (p.attempts ?? 0) : '—') + '</strong><span>Saved attempts</span></div><div><strong>' + (state.progress ? state.questions.length : '—') + '</strong><span>Reviewed questions</span></div></div></section><div class="two-column"><section class="panel"><span class="eyebrow">NEURALVAULT</span><h2>Connect the concepts.</h2><p>Revisit a concept and keep your private notes alongside reviewed knowledge.</p><a class="secondary action-link" href="/web/vault.html">Open Vault →</a></section><section class="panel"><span class="eyebrow">EXAMS</span><h2>Practice the exam flow.</h2><p>' + (exam ? exam.ready ? 'Your reviewed question pool is ready for a full mock.' : 'Check available practice and full-mock readiness in Exams.' : 'Open Exams to check available practice.') + '</p><a class="secondary action-link" href="/web/exam.html">Open Exams →</a></section></div><p class="muted">Saved attempts describe your practice. They are not a mastery score.</p></main><footer>Medical Learning OS</footer></div></div>';
 }
 
 function render() {
@@ -113,6 +129,18 @@ app.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
+  if (target.dataset.action === 'duration') {
+    const minutes = Number(target.dataset.minutes);
+    if (![10, 20, 30, 60].includes(minutes)) return;
+    studyMinutes = minutes;
+    try { localStorage.setItem('mlos-study-duration-v1', String(minutes)); } catch { /* Optional UI preference. */ }
+    app.querySelectorAll('[data-action="duration"]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.minutes) === minutes)));
+    const start = app.querySelector('[data-study-start]');
+    if (start) {
+      start.href = '/web/medical.html?studyNow=' + minutes;
+      start.textContent = 'Start ' + minutes + ' min →';
+    }
+  }
   if (target.dataset.action === 'reload') loadHome();
 });
 

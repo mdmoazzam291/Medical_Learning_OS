@@ -105,3 +105,34 @@
 .oauth-google{display:inline-flex;justify-content:center;width:100%;box-sizing:border-box}
 .auth-divider{display:flex;align-items:center;gap:10px;margin:16px 0;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
 .auth-divider::before,.auth-divider::after{content:"";height:1px;background:var(--line);flex:1}
+
+
+/* Aperture: one next action, evidence beside the next revision. */
+.home-shell .page-heading{margin-top:22px}
+.home-shell .study-next{scroll-margin-top:24px;grid-template-columns:minmax(0,1.6fr) minmax(220px,.8fr);align-items:center}
+.home-shell .study-next h2{max-width:560px;font-size:clamp(1.8rem,3vw,2.7rem)}
+.home-shell .study-next p{max-width:560px}
+.duration-picker{border:0;padding:0;margin:24px 0 6px;min-width:0}
+.duration-picker legend{font-size:.85rem;font-weight:600;margin-bottom:12px}
+.duration-options{display:flex;gap:8px;flex-wrap:wrap}
+.duration-options button{min-width:70px;padding:11px 15px;background:var(--surface);font-size:.85rem}
+.duration-options button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.home-shell .study-start{min-width:220px;margin-top:18px}
+.schedule-count{font-size:3.2rem;line-height:1.2;font-variant-numeric:tabular-nums;margin-top:20px}
+.schedule-count span{display:block;font-size:.85rem;color:var(--muted);margin-top:6px}
+.home-shell .learning-snapshot .metrics{margin-top:0}
+#medical-app .completion{max-width:1080px;margin:35px auto 0;padding:36px}
+#medical-app .session-results{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr);gap:32px;margin-top:28px;align-items:start}
+#medical-app .session-results h2{margin-top:0}
+#medical-app .results-evidence{min-width:0}
+#medical-app .results-evidence .metrics{margin:24px 0 30px}
+#medical-app .results-evidence ul{list-style:none;padding:0;margin:16px 0}
+#medical-app .concept-revisit{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:54px;padding:14px 0;text-decoration:none;border-top:1px solid var(--line);line-height:1.5}
+#medical-app .concept-revisit:hover{text-decoration:underline}
+#medical-app .next-revision{padding:24px;background:var(--hero);border:1px solid var(--line);border-radius:12px}
+#medical-app .next-revision h2{margin-top:14px}
+#medical-app .next-revision .action-link{width:100%;text-align:center}
+#medical-app .results-note{border-top:1px solid var(--line);padding-top:22px;margin-top:28px}
+#medical-app .results-back{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline}
+@media(max-width:1050px){.home-shell .study-next{grid-template-columns:1fr}.home-shell .session-card{display:block}.schedule-count{font-size:2.4rem}.home-shell .session-card{padding:18px}.home-shell .session-card p{margin-top:12px}}
+@media(max-width:760px){#medical-app .session-results{grid-template-columns:1fr;gap:20px}#medical-app .completion{padding:24px;margin-top:20px}#medical-app .next-revision{padding:20px}.home-shell .study-start{width:100%}.duration-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.duration-options button{min-width:0;padding:12px 8px}#medical-app .results-note{font-size:.75rem}}

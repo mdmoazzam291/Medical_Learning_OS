@@ -47,6 +47,7 @@ try {
   let isAdmin = true;
   let validationBody = null;
   let studyNowCalls = 0;
+  let revisionMode = 'ready';
 
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
     const url = route.request().url();
@@ -100,6 +101,8 @@ try {
       ] }) });
     }
     if (url.includes('/functions/v1/study-api/revision/due')) {
+      if (revisionMode === 'unavailable') return route.fulfill({ status: 503, contentType: 'application/json', body: JSON.stringify({error: 'revision_unavailable'}) });
+      if (revisionMode === 'empty') return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ dueCount: 0, unseenCount: 0, nextDueAt: '2026-10-02T03:00:00Z' }) });
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({
         dueCount: 2,
         unseenCount: 1,
@@ -359,6 +362,33 @@ try {
   assert.match(await page.locator('.metrics').innerText(), /2\s*Due reviews/);
   await page.getByRole('link', { name: 'Admin' }).waitFor();
 
+  for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
+    await page.setViewportSize({ width, height });
+    await page.getByRole('button', { name: '10 min', exact: true }).click();
+    assert.equal(await page.getByRole('button', { name: '10 min', exact: true }).getAttribute('aria-pressed'), 'true');
+    assert.equal(await page.getByRole('link', { name: 'Start 10 min' }).getAttribute('href'), '/web/medical.html?studyNow=10');
+    await page.reload();
+    await page.getByRole('link', { name: 'Start 10 min' }).waitFor();
+    assert.equal(await page.getByRole('button', { name: '10 min', exact: true }).getAttribute('aria-pressed'), 'true');
+    assert.equal(studyNowCalls, 0, 'duration selection/reload must not create a session');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' home overflow');
+    await page.getByRole('button', { name: '20 min', exact: true }).click();
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/ux-home-' + name + '.png', fullPage: true, animations: 'disabled' });
+  }
+  revisionMode = 'unavailable';
+  await page.reload();
+  await page.getByRole('link', { name: 'Open Study', exact: false }).waitFor();
+  assert.match(await page.locator('.study-next').innerText(), /schedule is temporarily unavailable/);
+  assert.doesNotMatch(await page.locator('.study-next').innerText(), /up to date|No future review/);
+  assert.equal(await page.getByRole('link', { name: /Start \d+ min/ }).count(), 0);
+  revisionMode = 'empty';
+  await page.reload();
+  await page.getByRole('heading', { name: 'Your scheduled reviews are up to date.' }).waitFor();
+  assert.equal(await page.getByRole('button', { name: '20 min', exact: true }).count(), 0);
+  assert.equal(studyNowCalls, 0, 'empty/upcoming-only schedule must not create a session');
+  revisionMode = 'ready';
+  await page.reload();
+  await page.getByRole('link', { name: 'Start 20 min' }).waitFor();
   await page.getByRole('link', { name: 'Start 20 min' }).click();
   await page.getByText('Question 1 of 1', { exact: false }).waitFor();
   assert.equal(studyNowCalls, 1);
@@ -378,7 +408,14 @@ try {
     assert.equal(new URL(page.url()).searchParams.get('summary'), 'beta-study-now');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'summary overflow at ' + width);
     assert.match(await page.locator('.session-results').innerText(), /1 \/ 1/);
+    assert.equal(await page.getByRole('link', { name: 'Plan my next session' }).getAttribute('href'), '/#study-next');
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/ux-summary-' + width + '.png', fullPage: true, animations: 'disabled' });
   }
+
+  await page.getByRole('link', { name: 'Plan my next session' }).click();
+  await page.getByRole('link', { name: 'Start 20 min' }).waitFor();
+  assert.equal(new URL(page.url()).hash, '#study-next');
+  assert.equal(studyNowCalls, 1, 'planning next session is read-only');
 
   await page.goto(origin + '/web/admin.html');
   await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();

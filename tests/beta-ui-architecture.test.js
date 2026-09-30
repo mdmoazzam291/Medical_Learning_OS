@@ -12,7 +12,7 @@ const [app, account, admin, serve, medical] = await Promise.all([
 
 test('root is the authenticated beta product, not the local demo', () => {
   assert.doesNotMatch(app, /demo-study|local-store|Demo QBank|LOCAL PREVIEW|Start demo/);
-  assert.match(app, /PREPARATION COMMAND CENTER/);
+  assert.match(app, /YOUR LEARNING WORKSPACE/);
   assert.match(app, /STUDY NOW/);
   assert.match(app, /\/web\/medical\.html/);
   assert.match(app, /\/web\/exam\.html/);
