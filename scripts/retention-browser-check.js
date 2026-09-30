@@ -23,6 +23,17 @@ const question = {
   ]
 };
 
+async function seedAuth(context) {
+  await context.addInitScript(() => {
+    localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({
+      accessToken:'retention-browser-jwt',
+      refreshToken:'retention-browser-refresh',
+      expiresAt:Math.floor(Date.now()/1000)+3600,
+      user:{ id:'44444444-4444-4444-8444-444444444444', email:'retention-fixture@example.invalid', emailConfirmedAt:'2026-09-30T00:00:00Z' }
+    }));
+  });
+}
+
 async function noOverflow(page,label) {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, label + ' horizontal overflow');
 }
@@ -31,14 +42,7 @@ const pageErrors = [];
 try {
   for (const [name,width,height] of widths) {
     const context = await browser.newContext({ viewport:{ width,height } });
-    await context.addInitScript(() => {
-      localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({
-        accessToken:'retention-browser-jwt',
-        refreshToken:'retention-browser-refresh',
-        expiresAt:Math.floor(Date.now()/1000)+3600,
-        user:{ id:'44444444-4444-4444-8444-444444444444', email:'retention-fixture@example.invalid', emailConfirmedAt:'2026-09-30T00:00:00Z' }
-      }));
-    });
+    await seedAuth(context);
     const page = await context.newPage();
     page.on('pageerror', error => pageErrors.push(name + ': ' + error.message));
 
@@ -162,8 +166,72 @@ try {
     await context.close();
   }
 
+  // A served event can exist even if the browser/network failed before the dedicated
+  // one-question session link completed. Reload must resume that same served event,
+  // link a session, then record render evidence. It must not manufacture another serve.
+  {
+    const context = await browser.newContext({ viewport:{ width:390,height:844 } });
+    await seedAuth(context);
+    const page = await context.newPage();
+    page.on('pageerror', error => pageErrors.push('recovery: ' + error.message));
+    const writes = [];
+    let linked = false;
+    let rendered = false;
+
+    await page.route('**/functions/v1/retention-probe-api/**', async route => {
+      const request = route.request();
+      const url = new URL(request.url());
+      const path = url.pathname.split('/functions/v1/retention-probe-api')[1];
+      const json = payload => route.fulfill({ status:200, contentType:'application/json', body:JSON.stringify(payload) });
+
+      if (request.method() === 'GET' && path === '/inbox') {
+        return json({
+          contractId:'retention-probe-learner-inbox-v1', state:'in_progress', assignmentId,
+          servedEventId, sessionId:linked ? sessionId : null,
+          learnerQuestion:question, learnerQuestionSha256:questionHash,
+          servedAt:'2026-09-30T08:00:00Z', browserRenderedConfirmed:rendered,
+          learnerViewedConfirmed:false, automaticExecutionEnabled:false,
+          studyNowAuthority:false, masteryInferenceAuthority:false
+        });
+      }
+      if (request.method() === 'POST' && path === '/start') {
+        writes.push('resume');
+        const body = request.postDataJSON();
+        assert.equal(body.assignmentId, assignmentId);
+        assert.equal(body.requestId, `retention-resume:${servedEventId}`);
+        linked = true;
+        return json({
+          contractId:'retention-probe-learner-inbox-v1', state:'in_progress', assignmentId,
+          servedEventId, sessionId, learnerQuestion:question, learnerQuestionSha256:questionHash,
+          servedAt:'2026-09-30T08:00:00Z', browserRenderedConfirmed:false,
+          learnerViewedConfirmed:false, resumedExisting:true,
+          automaticExecutionEnabled:false, studyNowAuthority:false, masteryInferenceAuthority:false
+        });
+      }
+      if (request.method() === 'POST' && path === '/render') {
+        writes.push('render');
+        rendered = true;
+        return json({
+          contractId:'retention-probe-browser-render-receipt-v1', servedEventId, assignmentId, sessionId,
+          learnerQuestionSha256:questionHash, renderedAt:'2026-09-30T08:00:02Z',
+          browserRenderedConfirmed:true, learnerViewedConfirmed:false, idempotentReplay:false
+        });
+      }
+      return route.fulfill({ status:500, contentType:'application/json', body:JSON.stringify({ error:'unexpected_recovery_route', path }) });
+    });
+
+    await page.goto(origin + '/web/retention.html');
+    await page.getByText(question.stem, { exact:true }).waitFor();
+    await page.getByText('Browser render recorded. This does not claim that you viewed or remembered the question.').waitFor();
+    assert.deepEqual(writes, ['resume','render']);
+    assert.equal(await page.getByRole('radio', { name:/Alpha/ }).isEnabled(), true);
+    assert.doesNotMatch(await page.locator('body').innerText(), /Correct answer:/);
+    await noOverflow(page, 'recovery question');
+    await context.close();
+  }
+
   assert.deepEqual(pageErrors, []);
-  console.log('Retention probe learner-controlled start, render evidence, canonical answer handoff and responsive UX checks passed');
+  console.log('Retention probe explicit start, partial-start recovery, render evidence, canonical answer handoff and responsive UX checks passed');
 } finally {
   await browser.close();
 }
