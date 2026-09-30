@@ -1650,3 +1650,23 @@ Run a controlled source-grounding experiment on a small real question/PYQ set us
 - Rating timing is exposed descriptively (mean/median/max lag) but no eligibility cutoff is invented. A timing rule must be preregistered before ratings are used for an experiment claim.
 - The canonical blockers explicitly include missing preregistered population/metric thresholds, no fully-rated history, no paired shadow decisions and no ≥1-day/≥7-day delayed retrieval.
 - Next evidence action is prospective collection, not FSRS promotion. Numeric thresholds are intentionally not invented from the current tiny sample.
+
+
+## 2026-09-30 — confirmed study writes survive projection outages
+- Continued the latest Task 1 checkpoint (M05c/M05d); PRs #148/#149 are already merged. Current repository also includes the separate Admin Plugin PRs #150/#151.
+- Found and fixed a learner continuity defect: after `cloud.answer` acknowledged a canonical receipt, a failed `cloud.progress` read incorrectly reported that the answer was not confirmed. After `cloud.next` acknowledged closure, the same projection failure incorrectly reported that the session did not advance and skipped integrity reconciliation.
+- Progress refresh after these writes now has its own failure boundary. Confirmed receipts/cursors remain authoritative, optional memory ratings and Next remain available, and completion integrity is still requested when progress is unavailable. Actual write failures retain the existing idempotent retry behavior.
+- Added five executable UI-controller regression tests with synthetic in-memory adapter responses. They check accepted-answer recovery, optional rating continuity, completion/integrity reconciliation, unavailable projections, and genuine answer/advance failures. These tests write no learner data and do not manufacture browser or retention evidence.
+- Verification: all 795 tests pass with loopback networking enabled for the existing HTTP test; `npm run check` and `git diff --check` pass. The initial restricted run hit `listen EPERM` in the existing HTTP test. No layout changes were made. Authenticated phone/tablet/desktop persistence acceptance is still unverified.
+- Hosted browser reached the real Account sign-in page and is not authenticated in this session. No answer, recall rating, human-review approval or production evidence was submitted. The previous 4/6 recommendation checkpoint has not been independently refreshed.
+- Next: authenticated hosted acceptance on an explicitly designated QA learner; keep automated transport testing separate from genuine learner recall/retention evidence. M05c remains open until its hosted completion gate is verified; M05d stays evidence-gated and FSRS shadow-only.
+
+- Hosted authentication follow-up: secure Google sign-in reached passkey verification, then Google returned “Something went wrong” with Bluetooth/device-proximity guidance. No authenticated MLOS state or learner writes were observed. PR #152 is open and GitHub Foundation checks passed; it remains unmerged.
+
+
+## 2026-09-30 — hosted resume and stale-notice correction
+- Secure email/password sign-in succeeded in the hosted browser. Account UI showed 7 recorded attempts, 6 correct and 7 published questions. Study Now resumed the existing six-item session at the saved answered fourth item; an acknowledged Next transition opened unanswered Question 5.
+- Completion check still shows Question 5 of 6 with a selected but unsubmitted option. The session has not finished. Automatic approval review rejected the attempted submission because the prior handoff reserved Questions 5–6 for the user. No new answer or memory rating was persisted by this continuation.
+- Fixed a stale resume notice that said the new unanswered question had been answered earlier: acknowledged advancement now clears notices associated with the previous cursor. Genuine transition failures keep their retry message, and completion projection failures can still display their own notice.
+- Verification: six controller regressions and the full 796-test suite pass; npm run check and git diff --check pass. Hosted observation proves resume/advance persistence, not completion or revision integrity. The new notice fix is not yet deployed or verified across device sizes.
+- PR #152 remains open/unmerged. Next: user submits the last two answers and finishes; then verify hosted completion integrity without inventing recall ratings or delayed-retention evidence.
