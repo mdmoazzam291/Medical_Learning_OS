@@ -2,12 +2,26 @@ import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
+import { createVaultDrafts } from '/web/vault-drafts.js';
 
 const root = document.querySelector('#vault-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
+const drafts = createVaultDrafts({ root, onChange: count => {
+  const status = root.querySelector('[data-vault-draft-count]');
+  if (status) {
+    status.hidden = count === 0;
+    const message = count + ' unsaved draft' + (count === 1 ? '' : 's') + ' in this page. Return to the concept to save. Reloading or leaving can lose unsaved work.';
+    if (status.textContent !== message) status.textContent = message;
+  }
+} });
+window.addEventListener('beforeunload', event => {
+  if (!drafts.hasDrafts()) return;
+  event.preventDefault();
+  event.returnValue = '';
+});
 const initialParams = new URLSearchParams(location.search);
 const returnSessionParam = initialParams.get('returnSession');
 const returnSessionId = /^[a-zA-Z0-9-]{1,160}$/.test(returnSessionParam || '') ? returnSessionParam : null;
@@ -49,6 +63,16 @@ let state = {
 
 function announce(message) {
   notice.textContent = message;
+  const dismiss = document.createElement('button');
+  dismiss.type = 'button';
+  dismiss.className = 'notice-dismiss';
+  dismiss.textContent = 'Dismiss';
+  dismiss.setAttribute('aria-label', 'Dismiss message');
+  dismiss.addEventListener('click', () => {
+    notice.hidden = true;
+    root.querySelector('#concept-title')?.focus({ preventScroll: true });
+  });
+  notice.append(dismiss);
   notice.hidden = false;
 }
 
@@ -228,15 +252,16 @@ function signedIn() {
   const list = visibleConcepts.length
     ? visibleConcepts.map(conceptButton).join('')
     : '<p class="muted">' + (state.searchResults ? 'No NeuralVault matches.' : 'No canonical concepts are available yet.') + '</p>';
-  const error = state.error ? '<section class="panel"><p>NeuralVault load failed: <strong>' + escape(state.error) + '</strong></p></section>' : '';
+  const error = state.error ? '<section class="panel" role="status"><p>The last action could not finish. Your unsaved drafts remain in this page. Try the action again.</p></section>' : '';
   return '<main id="main" class="vault-page">' +
     '<div class="vault-topbar"><a class="text-button" href="/">← Home</a><div>' + (returnSessionId ? '<a class="secondary action-link" href="/web/medical.html?resume=' + encodeURIComponent(returnSessionId) + '">← Return to study</a>' : '<a class="text-button" href="/web/medical.html">Study</a>') + '<a class="text-button" href="/web/account.html">Account</a></div></div>' +
-    '<div class="vault-workspace-label"><span class="eyebrow">NEURALVAULT</span><p>Reviewed knowledge and your personal workspace.</p></div>' + error +
+    '<div class="vault-workspace-label"><span class="eyebrow">NEURALVAULT</span><p>Reviewed knowledge and your personal workspace.</p><p data-vault-draft-count role="status" hidden></p></div>' + error +
     '<div class="vault-layout"><aside class="vault-index panel" aria-label="Concept browser"><details id="vault-concept-browser"' + (state.conceptBrowserOpen ? ' open' : '') + '><summary>Browse concepts <span class="muted">(' + visibleConcepts.length + ')</span></summary><form id="vault-search-form"><label>Search NeuralVault<input name="q" type="search" minlength="2" maxlength="120" value="' + escape(state.searchQuery) + '" placeholder="Concept, alias, note, or your annotation"></label><div class="button-row"><button class="secondary" type="submit">Search</button>' + (state.searchResults ? '<button class="text-button" type="button" data-action="clear-search">Clear</button>' : '') + '</div></form><div class="vault-concept-list">' + list + '</div></details></aside><section class="vault-detail" aria-label="Concept workspace" aria-busy="' + state.loading + '">' + (state.loading ? '<section class="panel"><p>Loading concept…</p></section>' : detailPanel()) + '</section></div></main>';
 }
 
 function render() {
   root.innerHTML = state.user ? signedIn() : signedOut();
+  drafts.restore({ userId: state.user?.id || null, conceptId: state.detail?.concept?.conceptId, busy: state.busy });
 }
 
 let detailRequest = 0;
@@ -321,11 +346,13 @@ root.addEventListener('click', event => {
   event.preventDefault();
 
   if (target.dataset.action === 'select-concept') {
+    if (state.busy) return;
     if (!window.matchMedia('(min-width: 801px)').matches) state.conceptBrowserOpen = false;
     loadDetail(target.dataset.conceptId, true);
   }
 
   if (target.dataset.action === 'clear-search') {
+    if (state.busy) return;
     state = { ...state, searchQuery: '', searchResults: null, error: null };
     render();
   }
@@ -337,6 +364,7 @@ root.addEventListener('click', event => {
       state.busy = true; render();
       try {
         await cloud.deleteVaultAnnotation(annotationId);
+        drafts.clear(target.closest('form'));
         announce('Personal note deleted.');
         state.busy = false;
         await reloadVault(state.selectedConceptId);
@@ -386,6 +414,7 @@ root.addEventListener('submit', event => {
           targetId,
           bodyMarkdown: data.get('bodyMarkdown')
         });
+        drafts.clear(form);
         announce('Private correction saved. Canonical content was not changed.');
         state.busy = false;
         await reloadVault(state.selectedConceptId);
@@ -418,6 +447,7 @@ root.addEventListener('submit', event => {
           correctionAnnotationId: shareCorrection ? correctionAnnotationId : null,
           shareCorrection
         });
+        drafts.clear(form);
         announce(shareCorrection
           ? 'Possible canonical error reported. Your correction text was shared with the report by your choice.'
           : 'Possible canonical error reported. Your private correction was not shared.');
@@ -444,6 +474,7 @@ root.addEventListener('submit', event => {
           bodyMarkdown: data.get('bodyMarkdown'),
           anchorNoteVersionId: data.get('anchorNoteVersionId') || null
         });
+        drafts.clear(form);
         announce('Personal note saved.');
         state.busy = false;
         await reloadVault(state.selectedConceptId);
@@ -466,6 +497,7 @@ root.addEventListener('submit', event => {
           Number(form.dataset.revision),
           data.get('bodyMarkdown')
         );
+        drafts.clear(form);
         announce('Personal note updated.');
         state.busy = false;
         await reloadVault(state.selectedConceptId);

@@ -54,6 +54,8 @@ jobs:
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/correction-browser-check.js
       - name: Verify responsive Vault and personal note persistence
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/vault-browser-check.js
+      - name: Verify unsaved Vault drafts and conflict recovery
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/vault-drafts-browser-check.js
       - name: Verify learner report reviewer triage
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/learner-report-triage-browser-check.js
       - name: Verify Exam Mode responsive interactions

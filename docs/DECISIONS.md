@@ -1387,3 +1387,10 @@ Both answered-question and completed-session concept links carry the existing bo
 Home loads independent projections with settled outcomes. A failed progress read cannot suppress available recommendations or catalog counts; a failed schedule remains unknown and cannot reuse a stale schedule during retry. Server-confirmed admin status remains independent and cannot derive from client metadata. Study shows a working reload action when the question browser is absent, and its ordinary Browse action moves keyboard focus into the read-only question browser. Persistent Study messages have an explicit dismiss control with focus returned to the relevant result/action.
 
 Vault detail reads use a request sequence so a response for an older selection cannot change the current concept, URL or annotation context. These are frontend presentation/navigation rules, not new evidence, scheduling, content authority or storage.
+
+## ADR-095 — Unsaved Vault text belongs to the exact learner and target
+**Status:** Accepted — 2026-09-30
+
+Vault preserves unsaved form fields in page memory, scoped by authenticated learner, canonical concept and exact annotation/correction/report target. Search, redraw and concept switching do not discard text. A failed write keeps the draft; only an acknowledged write clears its own form. An edit retains its original expected revision. If a fresh read changes that revision or note anchor, saving is blocked until explicit discard; the draft stays available to copy. Missing/replaced targets expose a read-only recovery field rather than attaching text to a different version.
+
+The UI labels this as unsaved, not cloud persistence. No localStorage/IndexedDB, background sync, automatic note/report submission or learning event is introduced. Drafts clear on authenticated identity change. A native beforeunload guard offers protection on supported browsers, but browser/process termination and mobile lifecycle behavior can still lose page memory. Explicit Save remains the durable path. Sharing private correction text remains an explicit form choice.
