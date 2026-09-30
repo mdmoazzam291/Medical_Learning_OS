@@ -133,15 +133,14 @@ function responseFor(questionVersionId) {
 function paletteButton(question, index) {
   const response = responseFor(question.questionVersionId);
   const classes = ['exam-palette-button'];
-  if (index === state.questionIndex) classes.push('current');
+  const isCurrent = index === state.questionIndex;
+  if (isCurrent) classes.push('current');
   if (response.optionId !== null) classes.push('answered');
   if (response.markedForReview) classes.push('review');
-  const status = response.markedForReview
-    ? 'marked for review'
-    : response.optionId !== null
-      ? 'answered'
-      : 'unanswered';
-  return '<button type="button" class="' + classes.join(' ') + '" data-action="jump" data-index="' + index + '" aria-label="Question ' + (index + 1) + ', ' + status + '">' + (index + 1) + '</button>';
+  const status = [response.optionId !== null ? 'answered' : 'unanswered'];
+  if (response.markedForReview) status.push('marked for review');
+  const current = isCurrent ? ' aria-current="true"' : '';
+  return '<button type="button" class="' + classes.join(' ') + '" data-action="jump" data-index="' + index + '" aria-label="Question ' + (index + 1) + ', ' + status.join(', ') + '"' + current + '>' + (index + 1) + '</button>';
 }
 
 function runView() {
@@ -163,7 +162,8 @@ function runView() {
   const position = state.questionIndex + 1;
   const total = questions.length;
   const reviewLabel = response.markedForReview ? 'Unmark review' : 'Mark for review';
-  return '<main id="main" class="exam-page exam-active"><div class="exam-topbar"><div><span class="eyebrow">' + mode + '</span><strong>' + escape(section.label || section.sectionId) + '</strong></div><div class="exam-timer"><span>Section time remaining</span><strong id="exam-countdown">--:--</strong><small>Server authoritative</small></div><button class="danger-outline" data-action="abandon" ' + (state.busy ? 'disabled' : '') + '>Abandon mock</button></div><div class="exam-layout"><aside class="exam-palette panel" aria-label="Current section question palette"><div class="section-heading"><div><span class="eyebrow">CURRENT SECTION</span><h2>' + escape(section.label || section.sectionId) + '</h2></div><span class="badge">' + total + ' Q</span></div><div class="exam-palette-grid">' + palette + '</div><div class="exam-legend"><span><i class="answered"></i>Answered</span><span><i class="review"></i>Review</span><span><i></i>Unanswered</span></div><p class="muted">You may move within this section. The next section opens only when the server timer closes this one.</p></aside><section class="panel exam-question"><div class="section-heading"><div><span class="eyebrow">QUESTION ' + position + ' OF ' + total + '</span><small>' + escape(q.questionVersionId) + '</small></div><span class="badge">' + (response.markedForReview ? 'REVIEW' : response.optionId !== null ? 'ANSWERED' : 'UNANSWERED') + '</span></div>' + questionMedia(q.media) + '<fieldset ' + (state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset><div class="exam-question-actions"><button class="secondary" data-action="clear-answer" ' + (response.optionId === null || state.busy ? 'disabled' : '') + '>Clear response</button><button class="secondary" data-action="toggle-review" ' + (state.busy ? 'disabled' : '') + '>' + reviewLabel + '</button></div><div class="exam-navigation"><button class="secondary" data-action="previous" ' + (state.questionIndex === 0 || state.busy ? 'disabled' : '') + '>← Previous</button><span class="muted">Answers autosave immediately. No answer key is shown during the exam.</span><button class="primary" data-action="next-question" ' + (state.questionIndex >= total - 1 || state.busy ? 'disabled' : '') + '>Next →</button></div></section></div></main>';
+  const questionStatus = response.markedForReview ? 'REVIEW' : response.optionId !== null ? 'ANSWERED' : 'UNANSWERED';
+  return '<main id="main" class="exam-page exam-active"><div class="exam-topbar"><div><span class="eyebrow">' + mode + '</span><strong>' + escape(section.label || section.sectionId) + '</strong></div><div class="exam-timer"><span>Section time remaining</span><strong id="exam-countdown" role="timer" aria-live="off" aria-label="Section time remaining">--:--</strong><small>Server authoritative</small></div><button class="danger-outline" data-action="abandon" ' + (state.busy ? 'disabled' : '') + '>Abandon mock</button></div><div class="exam-layout"><aside class="exam-palette panel" aria-label="Current section question palette"><div class="section-heading"><div><span class="eyebrow">CURRENT SECTION</span><h2>' + escape(section.label || section.sectionId) + '</h2></div><span class="badge">' + total + ' Q</span></div><div class="exam-palette-grid" aria-label="Question navigation">' + palette + '</div><div class="exam-legend"><span><i class="answered" aria-hidden="true"></i>Answered</span><span><i class="review" aria-hidden="true"></i>Review</span><span><i aria-hidden="true"></i>Unanswered</span></div><p class="muted">You may move within this section. The next section opens only when the server timer closes this one.</p></aside><section class="panel exam-question" aria-labelledby="exam-question-stem"><div class="section-heading"><div><span class="eyebrow" id="exam-question-position">QUESTION ' + position + ' OF ' + total + '</span><small>' + escape(q.questionVersionId) + '</small></div><span class="badge">' + questionStatus + '</span></div>' + questionMedia(q.media) + '<fieldset aria-describedby="exam-question-position exam-autosave-note" ' + (state.busy ? 'disabled' : '') + '><legend id="exam-question-stem" tabindex="-1">' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset><div class="exam-question-actions"><button class="secondary" data-action="clear-answer" ' + (response.optionId === null || state.busy ? 'disabled' : '') + '>Clear response</button><button class="secondary" data-action="toggle-review" ' + (state.busy ? 'disabled' : '') + '>' + reviewLabel + '</button></div><div class="exam-navigation"><button class="secondary" data-action="previous" ' + (state.questionIndex === 0 || state.busy ? 'disabled' : '') + '>← Previous</button><span class="muted" id="exam-autosave-note">Answers autosave immediately. No answer key is shown during the exam.</span><button class="primary" data-action="next-question" ' + (state.questionIndex >= total - 1 || state.busy ? 'disabled' : '') + '>Next →</button></div></section></div></main>';
 }
 
 function autopsyView(autopsy) {
@@ -202,13 +202,27 @@ function cancelledView() {
   return '<main id="main" class="exam-page"><a class="text-button" href="/web/medical.html">← Medical study</a><section class="panel completion"><span class="eyebrow">MOCK ENDED</span><h1>No completion score was created.</h1><p>' + escape(reason) + '</p><p class="muted">Recorded answers remain in the exam-run ledger, but a cancelled run is not treated as a completed GT and receives no GT Autopsy.</p><button class="primary" data-action="exam-home">Return to Exam Mode →</button></section></main>';
 }
 
-function render() {
+function restoreFocus({ focusQuestion = false, focusAction = null, focusOptionId } = {}) {
+  if (!focusQuestion && !focusAction && focusOptionId === undefined) return;
+  requestAnimationFrame(() => {
+    let target = null;
+    if (focusOptionId !== undefined && focusOptionId !== null) {
+      target = Array.from(root.querySelectorAll('input[name="exam-answer"]')).find(input => input.value === focusOptionId) || null;
+    }
+    if (!target && focusAction) target = root.querySelector('[data-action="' + focusAction + '"]');
+    if (!target && focusQuestion) target = root.querySelector('#exam-question-stem');
+    if (target && !target.disabled) target.focus({ preventScroll:true });
+  });
+}
+
+function render(focus = {}) {
   if (!state.user) root.innerHTML = signedOutView();
   else if (state.run?.status === 'in_progress') root.innerHTML = runView();
   else if (state.run?.status === 'completed') root.innerHTML = completedView();
   else if (state.run?.status === 'cancelled') root.innerHTML = cancelledView();
   else root.innerHTML = homeView();
   scheduleClock();
+  restoreFocus(focus);
 }
 
 function setRun(run) {
@@ -318,7 +332,7 @@ async function bootstrap() {
     if (current?.runId) {
       state.loading = false;
       setRun(current);
-      render();
+      render({ focusQuestion:current.status === 'in_progress' });
       if (current.status === 'completed') await loadAutopsy();
       return;
     }
@@ -348,7 +362,7 @@ async function startRun(testing) {
     state = { ...state, busy:false, error:error.code || error.message || 'exam_start_failed' };
     announce('Exam did not start: ' + state.error + '.');
   }
-  render();
+  render({ focusQuestion:state.run?.status === 'in_progress' });
 }
 
 async function refreshRun() {
@@ -360,12 +374,15 @@ async function refreshRun() {
     const priorSection = state.run?.progress?.currentSectionIndex;
     state.busy = false;
     setRun(run);
-    if (run.progress?.currentSectionIndex !== priorSection) state.questionIndex = 0;
+    const sectionChanged = run.progress?.currentSectionIndex !== priorSection;
+    if (sectionChanged) state.questionIndex = 0;
     if (run.status === 'completed') {
       render();
       await loadAutopsy();
       return;
     }
+    render({ focusQuestion:sectionChanged });
+    return;
   } catch (error) {
     reportUnexpected(error, 'refresh_exam_run');
     state = { ...state, busy:false, error:error.code || error.message || 'exam_refresh_failed' };
@@ -396,7 +413,7 @@ async function setAnswer(optionId) {
     announce('Answer was not confirmed. The server state has been refreshed.');
     return;
   }
-  render();
+  render(optionId === null ? { focusQuestion:true } : { focusOptionId:optionId });
 }
 
 async function toggleReview() {
@@ -422,7 +439,7 @@ async function toggleReview() {
     announce('Review flag was not confirmed. The server state has been refreshed.');
     return;
   }
-  render();
+  render({ focusAction:'toggle-review' });
 }
 
 async function abandonRun() {
@@ -467,18 +484,18 @@ root.addEventListener('click', event => {
   if (action === 'toggle-review') toggleReview();
   if (action === 'previous') {
     state.questionIndex = Math.max(0, state.questionIndex - 1);
-    render();
+    render({ focusQuestion:true });
   }
   if (action === 'next-question') {
     const total = state.run?.currentSection?.questions?.length ?? 0;
     state.questionIndex = Math.min(Math.max(0, total - 1), state.questionIndex + 1);
-    render();
+    render({ focusQuestion:true });
   }
   if (action === 'jump') {
     const index = Number(target.dataset.index);
     if (Number.isInteger(index) && index >= 0 && index < (state.run?.currentSection?.questions?.length ?? 0)) {
       state.questionIndex = index;
-      render();
+      render({ focusQuestion:true });
     }
   }
   if (action === 'abandon') abandonRun();
