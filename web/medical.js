@@ -10,6 +10,7 @@ const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const requestedStudyNowValue = Number(new URLSearchParams(location.search).get('studyNow'));
 let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;
+const requestedResumeId = new URLSearchParams(location.search).get('resume');
 const requestedSummaryId = new URLSearchParams(location.search).get('summary');
 
 let state = {
@@ -124,7 +125,7 @@ function canonicalTeachingFeedback(receipt) {
     ? '<div class="memory-rating"><strong>Quick retrieval</strong><p>' + escape(teaching.nextPrompt) + '</p></div>'
     : '';
 
-  return '<div class="grounded-teaching"><span class="eyebrow">REVIEWED TEACHING</span><h2>Incorrect. ' +
+  return '<div class="grounded-teaching"><span class="eyebrow">REVIEWED TEACHING</span><h2>' +
     escape(teaching.headline || 'Review the reasoning.') + '</h2>' + claimText + nextPrompt + '</div>';
 }
 
@@ -191,6 +192,9 @@ function completionSummary() {
 function studyView() {
   const session = state.session;
   if (!session) return overview();
+  if (session.resumePending || session.resumeUnavailable) {
+    return '<main id="main" class="account-page"><section class="panel"><h1>Return to study</h1>' + (session.resumePending ? '<p role="status">Opening your saved session…</p>' : '<p>Your session could not be opened. Your saved answers are unchanged.</p><button class="secondary" data-action="retry-resume">Retry saved session</button>') + '<a class="text-button" href="/web/medical.html">Open Study →</a></section></main>';
+  }
   if (session.summaryPending || session.summaryUnavailable) {
     return '<main id="main" class="account-page"><section class="panel"><h1>Session results</h1>' + (session.summaryPending ? '<p role="status">Loading saved session…</p>' : '<p>Session results are unavailable. Completion has not been confirmed here.</p><button class="secondary" data-action="retry-summary">Retry session results</button>') + '<a class="text-button" href="/web/medical.html">Back to medical QBank →</a></section></main>';
   }
@@ -220,13 +224,14 @@ function studyView() {
     let cls = 'option';
     if (answered && option.optionId === receipt.answerOptionId) cls += ' correct';
     const chosen = option.optionId === selected;
-    return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + String.fromCharCode(65 + index) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>Correct answer</b>' : '') + '</label>';
+    if (answered && chosen && receipt.event?.correct === false) cls += ' chosen-incorrect';
+    return '<label class="' + cls + '"><input type="radio" name="answer" value="' + escape(option.optionId) + '" ' + (chosen ? 'checked' : '') + ' ' + (answered || state.busy ? 'disabled' : '') + '><span class="option-letter">' + String.fromCharCode(65 + index) + '</span><span>' + escape(option.text) + '</span>' + (answered && option.optionId === receipt.answerOptionId ? '<b>' + (chosen ? 'Your answer · Correct answer' : 'Correct answer') + '</b>' : answered && chosen ? '<b>Your answer</b>' : '') + '</label>';
   }).join('');
 
   const memoryPrompt = answered
     ? memoryJudgment
       ? '<div class="memory-rating"><strong>Memory signal saved: ' + escape(memoryJudgment.ratingLabel) + '</strong><p class="muted">Self-reported recall evidence · optional · separate from correctness.</p></div>'
-      : '<div class="memory-rating"><strong>How did recall feel before seeing the answer?</strong><p class="muted">Optional memory signal. It does not change your score or block Next.</p><div class="button-row">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(([rating, label]) => '<button class="secondary" type="button" data-action="memory-rating" data-rating="' + rating + '" ' + (state.busy ? 'disabled' : '') + '>' + label + '</button>').join('') + '</div></div>'
+      : '<details class="memory-rating recall-disclosure"><summary>Optional recall rating</summary><strong>How did recall feel before seeing the answer?</strong><p class="muted">Optional memory signal. It does not change your score or block Next.</p><div class="button-row">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(([rating, label]) => '<button class="secondary" type="button" data-action="memory-rating" data-rating="' + rating + '" ' + (state.busy ? 'disabled' : '') + '>' + label + '</button>').join('') + '</div></details>'
     : '';
 
   const primaryConceptId = q.conceptId || q.conceptLinks?.find(link => link?.role === 'primary')?.conceptId || null;
@@ -247,10 +252,11 @@ function studyView() {
   };
   const recommendationReason = recommendationCopy[recommendationContext?.reason] ? recommendationContext.reason : null;
   const recommendationBanner = answered && recommendationReason
-    ? '<div class="memory-rating"><strong>Why Study Now sent this: ' + escape(recommendationCopy[recommendationReason].label) + '</strong><p class="muted">' + escape(recommendationCopy[recommendationReason].detail) + '</p></div>'
+    ? '<details class="study-reason"><summary>Why Study Now sent this: ' + escape(recommendationCopy[recommendationReason].label) + '</summary><p class="muted">' + escape(recommendationCopy[recommendationReason].detail) + '</p></details>'
     : '';
   const vaultParams = primaryConceptId ? new URLSearchParams({ concept: primaryConceptId }) : null;
   if (vaultParams && answered) {
+    vaultParams.set('returnSession', session.sessionId);
     vaultParams.set('correctionTargetType', 'question_version');
     vaultParams.set('correctionTargetId', q.questionVersionId);
   }
@@ -259,20 +265,19 @@ function studyView() {
     vaultParams.set('reason', recommendationReason);
   }
   const vaultLink = vaultParams
-    ? '<a class="text-button" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review concept / add private correction →' : 'Open concept / add private correction →') + '</a>'
+    ? '<a class="secondary action-link concept-handoff" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review concept / add private correction →' : 'Open concept / add private correction →') + '</a>'
     : '';
   const canonicalTeaching = answered ? canonicalTeachingFeedback(receipt) : null;
   const answerExplanation = answered
     ? canonicalTeaching || (
-        '<div><h2>' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') +
-        '</h2><p>' + escape(receipt.explanation || '') + '</p></div>'
+        '<div><h2>Reasoning</h2><p>' + escape(receipt.explanation || '') + '</p></div>'
       )
     : '';
   const visualEvidence = answered && receipt?.visualDetection
     ? '<div class="visual-evidence-status"><strong>Visual recognition evidence saved.</strong><span>Image-specific evidence is stored separately from your scored question attempt.</span></div>'
     : '';
   const feedback = answered
-    ? '<div class="explanation" role="status">' + answerExplanation + '<div><strong>Sources</strong><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></div>' + visualEvidence + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button>'
+    ? '<section class="answer-feedback" aria-labelledby="answer-feedback-title"><div class="answer-outcome ' + (receipt.event?.correct ? 'answer-correct' : 'answer-incorrect') + '"><span class="eyebrow">ANSWER SAVED</span><h2 id="answer-feedback-title" tabindex="-1">' + (receipt.event?.correct ? 'Correct.' : 'Incorrect. Review the reasoning.') + '</h2><p>Your answer is recorded. Continue when you are ready.</p></div><div class="explanation">' + answerExplanation + '<details class="answer-sources"><summary>Sources' + (Array.isArray(receipt.sources) && receipt.sources.length ? ' (' + receipt.sources.length + ')' : '') + '</summary><p>' + (Array.isArray(receipt.sources) && receipt.sources.length ? receipt.sources.map(safeSourceLink).join(' · ') : 'No source links returned.') + '</p></details>' + visualEvidence + '</div><div class="feedback-context">' + recommendationBanner + vaultLink + '</div>' + memoryPrompt + '<div class="study-continue"><button class="primary" type="button" data-action="next" ' + (state.busy ? 'disabled' : '') + '>' + (session.position + 1 >= session.total ? 'Finish session →' : 'Next question →') + '</button><small>Recall rating is optional.</small></div></section>'
     : '<button class="primary" type="submit" ' + (!selected || state.busy ? 'disabled' : '') + '>Check answer →</button>';
   const taskLabel = visualDetection ? 'IMAGE RECOGNITION · SERVER SCORED' : 'MEDICAL QBANK';
   const taskNote = visualDetection
@@ -288,9 +293,10 @@ function render() {
 }
 
 async function loadOverview() {
-  if (new URLSearchParams(location.search).has('summary')) {
+  if (new URLSearchParams(location.search).has('summary') || new URLSearchParams(location.search).has('resume')) {
     const url = new URL(location.href);
     url.searchParams.delete('summary');
+    url.searchParams.delete('resume');
     history.replaceState(null, '', url.pathname + url.search + url.hash);
   }
   state = { ...state, loading: true, error: null, session: null, selectedOptionId: null, receipt: null, memoryJudgment: null, studyNowIntegrity: null };
@@ -359,6 +365,27 @@ async function loadSessionSummary(sessionId, restore = false) {
     if (restore) state.session = { sessionId, summaryUnavailable: true };
   }
   state.summaryLoading = false;
+  render();
+}
+
+async function loadResumedSession(sessionId) {
+  state = { ...state, session: { sessionId, resumePending: true }, receipt: null, selectedOptionId: null, memoryJudgment: null, error: null };
+  render();
+  try {
+    const session = await cloud.session(sessionId);
+    if (session?.sessionId !== sessionId) throw new Error('session_resume_invalid');
+    state = { ...state, session, receipt: session.receipt || null, selectedOptionId: session.receipt?.selectedOptionId || null, memoryJudgment: session.memoryJudgment || null };
+    if (session.closed) {
+      const url = new URL(location.href);
+      url.searchParams.delete('resume');
+      url.searchParams.set('summary', sessionId);
+      history.replaceState(null, '', url.pathname + url.search + url.hash);
+      await loadSessionSummary(sessionId);
+    }
+  } catch (error) {
+    reportUnexpected(error, 'load_resumed_session');
+    state = { ...state, session: { sessionId, resumeUnavailable: true }, receipt: null, selectedOptionId: null };
+  }
   render();
 }
 
@@ -456,6 +483,7 @@ async function answerCurrent() {
     announce('Answer was not confirmed: ' + state.error + '. Your selection is preserved; retry uses the same idempotency key.');
   }
   render();
+  if (state.receipt) document.querySelector('#answer-feedback-title')?.focus?.();
 }
 
 async function refreshProgressAfterWrite(confirmation) {
@@ -507,6 +535,7 @@ async function nextQuestion() {
     notice.hidden = true;
     if (next.closed) {
       const summaryUrl = new URL(location.href);
+      summaryUrl.searchParams.delete('resume');
       summaryUrl.searchParams.set('summary', next.sessionId);
       history.replaceState(null, '', summaryUrl.pathname + summaryUrl.search + summaryUrl.hash);
       await loadSessionSummary(next.sessionId);
@@ -547,6 +576,7 @@ root.addEventListener('click', event => {
   if (target.dataset.action === 'study-now') startStudyNow(Number(target.dataset.minutes));
   if (target.dataset.action === 'memory-rating') recordMemoryRating(Number(target.dataset.rating));
   if (target.dataset.action === 'next') nextQuestion();
+  if (target.dataset.action === 'retry-resume') loadResumedSession(state.session.sessionId);
   if (target.dataset.action === 'retry-summary') loadSessionSummary(state.session.sessionId, !state.session.closed);
   if (target.dataset.action === 'reload') loadOverview();
 });
@@ -562,6 +592,13 @@ async function bootstrap() {
     summaryUrl.searchParams.set('summary', requestedSummaryId);
     history.replaceState(null, '', summaryUrl.pathname + summaryUrl.search + summaryUrl.hash);
     await loadSessionSummary(requestedSummaryId, true);
+    return;
+  }
+  if (requestedResumeId && /^[a-zA-Z0-9-]{1,160}$/.test(requestedResumeId) && state.user) {
+    const url = new URL(location.href);
+    url.searchParams.set('resume', requestedResumeId);
+    history.replaceState(null, '', url.pathname + url.search + url.hash);
+    await loadResumedSession(requestedResumeId);
     return;
   }
   if (requestedStudyNowMinutes && state.user && !state.session) {

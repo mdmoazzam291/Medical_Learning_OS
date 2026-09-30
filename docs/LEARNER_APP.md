@@ -23,6 +23,12 @@ Home has one Study Now start link with a 10/20/30/60-minute selection. The selec
 
 Session results place counts and canonical concept revisit links beside a next-revision card. “Plan my next session” returns to Home's Study Now section without automatically submitting an answer or starting a session. The Study overview places revision ahead of the published-question list. Existing server-owned recommendation, resume, scoring, schedule and optional rating behavior remains intact.
 
+## Saved-answer feedback and Vault return
+
+After an accepted answer, Study shows a distinct saved result, explicit selected/correct option labels, visible reasoning, and native disclosure controls for sources, recommendation context and the optional recall rating. The result heading receives focus after answer acknowledgement; the learner can continue without rating or opening a note.
+
+An answered question's concept link carries only a bounded `returnSession` identifier alongside its existing canonical concept/correction context. Vault renders an internal “Return to study” link. Study's `resume` URL reads the owned session through the existing authenticated GET API and restores its current server cursor, receipt and optional rating. It never trusts a cursor, answer or receipt from the URL, never starts/answers/advances automatically, and reconciles already-closed sessions to their summary. An unavailable or unowned session shows a retry state with no stale question or answer content. An arbitrary return URL is not supported.
+
 ## Content authority boundary
 Content governance is separate from the learner product. Learners may study, annotate and report suspected issues. Medical, References, Rights and research pair-validation decisions are available only through the authenticated Admin Console and are enforced server-side. No admin email, password, user metadata or browser flag grants authority.
 
