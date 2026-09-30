@@ -46,3 +46,10 @@ Native iOS Safari and real authenticated hosted acceptance of the new UI remain 
 ## Hosted acceptance update
 
 The existing browser session expired before authenticated acceptance could complete. The summary showed unavailable, then QBank and Account showed signed-out state. No learner evidence was created. Secure sign-in is required to observe the existing saved results and Vault return. Native iOS Safari remains unverified. A separate Vault unsaved-draft follow-up is tracked in STATUS.md and does not change these release facts.
+
+
+## Final acceptance — 2026-09-30
+
+Secure sign-in succeeded. The actual hosted Home loaded the learner's data; an existing completed session showed 6/6 answered, 4 correct and 2 incorrect. The results → anaphylaxis Vault concept → Return to study → same results path and subsequent reload passed with no learning or note writes. This supersedes the earlier expired-session blocker above.
+
+Vault draft-protection follow-up #160 is also merged and deployed at f033f51fa2a6c52d735db852777cd4e1241893b2. All 806 tests and the full main browser suite pass (run 36688037103), including three-width synthetic failed-save, conflict and removed-target draft recovery. Live vault.js, vault-drafts.js and styles.css match Git bytes. Native iOS Safari and browser-termination draft durability remain unclaimed. See ADR-095 for draft boundaries and STATUS.md for the next task.
