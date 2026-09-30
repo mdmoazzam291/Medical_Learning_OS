@@ -82,16 +82,21 @@ test('retention Edge API derives learner identity from verified Auth and exposes
 });
 
 
-test('learner transport starts only on explicit action and records render separately', () => {
+test('learner transport starts only on explicit action, recovers a served session, and records render separately', () => {
   assert.match(adapter, /functions\/v1\/retention-probe-api/);
   assert.match(adapter, /inbox\(\) \{ return request\('\/inbox'\); \}/);
   assert.match(adapter, /start\(\{ assignmentId, requestId \}\)/);
   assert.match(adapter, /rendered\(\{ servedEventId, learnerQuestionSha256 \}\)/);
   assert.match(adapter, /answer\(\{ servedEventId, requestId, optionId \}\)/);
   assert.match(ui, /data-action="start"/);
+  assert.match(ui, /async function recoverServedSession\(inbox\)/);
+  assert.match(ui, /requestId:`retention-resume:\$\{inbox\.servedEventId\}`/);
+  assert.match(ui, /inbox = await recoverServedSession\(inbox\)/);
   assert.match(ui, /requestAnimationFrame\(\(\) => acknowledgeRender\(\)\)/);
   assert.match(ui, /Browser render recorded\. This does not claim that you viewed or remembered the question/);
-  assert.doesNotMatch(ui, /loadInbox\(\)[\s\S]{0,80}startProbe\(\)/);
+  const bootstrapTail = ui.slice(ui.lastIndexOf('\nrender();')).trim();
+  assert.equal(bootstrapTail, 'render();\nloadInbox();');
+  assert.doesNotMatch(bootstrapTail, /startProbe\(\)/);
   assert.match(server, /'web\/retention\.html'/);
   assert.match(server, /'src\/adapters\/cloud-retention-probe\.js'/);
 });
