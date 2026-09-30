@@ -22,6 +22,7 @@ const allowed = new Set([
   'web/exam.js',
   'web/vault.html',
   'web/vault.js',
+  'web/vault-drafts.js',
   'web/review.html',
   'web/review.js',
   'web/admin.html',

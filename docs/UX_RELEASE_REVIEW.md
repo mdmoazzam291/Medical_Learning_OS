@@ -1,6 +1,6 @@
 # Aperture UX integration review — 2026-09-30
 
-The pending interface stack has been reviewed as one learner journey. Six integration findings are fixed, and responsive synthetic acceptance passes. The changes are not merged or deployed.
+The interface stack has been reviewed as one learner journey. Six integration findings are fixed, and responsive synthetic acceptance passes. PRs #155–#159 are now merged and deployed at commit 77a97c20bf2c4bb6619f36493c5fc607b0b2aa06. The complete merged tree matches the tested feature tree; main Foundation run 36686530859 passes both jobs. Exact live parity of app.js, medical.js, vault.js and styles.css was verified on 2026-09-30.
 
 ## Reviewed scope
 
@@ -8,11 +8,11 @@ Baseline main: `c7a0f85370b0657be6254015205e2923931f9a23`. The stack changes fro
 
 | Dependency order | Change | Review state |
 | --- | --- | --- |
-| [#155](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/155) | Home and results-to-revision hierarchy | Open; CI passed |
-| [#156](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/156) | Saved feedback and owned-session Vault return | Open; CI passed |
-| [#157](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/157) | Vault reading and personal workspace | Open; CI passed |
-| [#158](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/158) | Study entry and GET-only session reload | Open; CI passed |
-| Integration follow-up | Findings below and integrated journey regression | Prepared on fix/aperture-ux-integration |
+| [#155](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/155) | Home and results-to-revision hierarchy | Merged; CI passed |
+| [#156](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/156) | Saved feedback and owned-session Vault return | Merged; CI passed |
+| [#157](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/157) | Vault reading and personal workspace | Merged; CI passed |
+| [#158](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/158) | Study entry and GET-only session reload | Merged; CI passed |
+| Integration follow-up | Findings below and integrated journey regression | Merged as #159 |
 
 ## Findings resolved
 
@@ -41,3 +41,8 @@ Screenshots use nonclinical synthetic fixtures. They are interface acceptance ev
 4. Observe sign-in, Home/Study/Vault navigation and a previously saved owned session/results through the authenticated hosted UI without submitting fabricated answers, ratings, notes or review evidence. Real learner use remains separate.
 
 Native iOS Safari and real authenticated hosted acceptance of the new UI remain unverified. Chromium viewport checks do not stand in for those observations. FSRS remains shadow-only, and no retention/clinical release gate is promoted by this UX review.
+
+
+## Hosted acceptance update
+
+The existing browser session expired before authenticated acceptance could complete. The summary showed unavailable, then QBank and Account showed signed-out state. No learner evidence was created. Secure sign-in is required to observe the existing saved results and Vault return. Native iOS Safari remains unverified. A separate Vault unsaved-draft follow-up is tracked in STATUS.md and does not change these release facts.
