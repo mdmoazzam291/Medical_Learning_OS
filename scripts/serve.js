@@ -25,6 +25,8 @@ const allowed = new Set([
   'web/vault-drafts.js',
   'web/retention.html',
   'web/retention.js',
+  'web/retention-origin.html',
+  'web/retention-origin.js',
   'web/review.html',
   'web/review.js',
   'web/admin.html',

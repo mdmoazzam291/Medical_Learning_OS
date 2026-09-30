@@ -111,6 +111,8 @@ function mapRpcError(error: any): never {
     "retention_probe_session_identity_required",
     "retention_probe_render_identity_required",
     "retention_probe_answer_identity_required",
+    "retention_probe_origin_learner_required",
+    "retention_probe_origin_session_identity_required",
     "invalid_retention_probe_session_request_key",
     "invalid_retention_probe_render_request_key",
     "invalid_retention_probe_answer_request_key",
@@ -129,6 +131,8 @@ function mapRpcError(error: any): never {
     "retention_probe_delivery_replay_not_ready",
     "retention_probe_already_answered",
     "ordinary_study_session_takes_priority",
+    "retention_probe_origin_not_ready",
+    "retention_probe_origin_session_collision",
     "retention_probe_session_not_open",
     "retention_probe_browser_render_required",
     "retention_probe_served_question_changed",
@@ -172,6 +176,28 @@ Deno.serve(async (req: Request) => {
       if (url.search) fail(400, "query_not_supported");
       const { data, error } = await admin.rpc("study_retention_probe_learner_inbox_v1", {
         p_learner: learnerId
+      });
+      if (error) mapRpcError(error);
+      return response(req, 200, data);
+    }
+
+    if (req.method === "GET" && path === "/origin") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("study_retention_probe_origin_readiness_v1", {
+        p_learner: learnerId
+      });
+      if (error) mapRpcError(error);
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/origin/start") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      exactFields(input, ["sessionId"]);
+      const sessionId = uuidValue(input.sessionId, "invalid_session_id");
+      const { data, error } = await admin.rpc("study_open_retention_probe_origin_session_v1", {
+        p_learner: learnerId,
+        p_session: sessionId
       });
       if (error) mapRpcError(error);
       return response(req, 200, data);

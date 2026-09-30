@@ -42,6 +42,10 @@ export function createCloudRetentionProbe({ projectUrl, publishableKey, auth, fe
 
   return {
     inbox() { return request('/inbox'); },
+    origin() { return request('/origin'); },
+    startOrigin({ sessionId }) {
+      return request('/origin/start', { method: 'POST', body: { sessionId } });
+    },
     start({ assignmentId, requestId }) {
       return request('/start', { method: 'POST', body: { assignmentId, requestId } });
     },
