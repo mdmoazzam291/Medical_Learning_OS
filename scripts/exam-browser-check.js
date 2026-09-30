@@ -133,6 +133,14 @@ async function noHorizontalOverflow(page, label) {
   );
 }
 
+async function activeElementDescriptor(page) {
+  return page.evaluate(() => ({
+    id: document.activeElement?.id || null,
+    action: document.activeElement?.dataset?.action || null,
+    value: document.activeElement?.getAttribute?.('value') || null
+  }));
+}
+
 const errors = [];
 try {
   for (const [name, width, height] of widths) {
@@ -260,29 +268,41 @@ try {
     await page.getByText('INTERNAL ENGINEERING TEST', { exact:true }).waitFor();
     await page.getByText('QUESTION 1 OF 36', { exact:true }).waitFor();
     assert.equal(await page.locator('.exam-palette-button').count(), 36);
+    assert.equal(await page.getByRole('button', { name:'Question 1, unanswered' }).getAttribute('aria-current'), 'true');
+    assert.equal(await page.locator('#exam-countdown').getAttribute('role'), 'timer');
+    assert.equal(await page.locator('#exam-countdown').getAttribute('aria-live'), 'off');
+    assert.equal(await page.locator('#exam-question-stem').getAttribute('tabindex'), '-1');
+    assert.equal((await activeElementDescriptor(page)).id, 'exam-question-stem');
     await noHorizontalOverflow(page, name + ' active');
 
     await page.getByRole('radio').nth(1).check();
-    await page.getByRole('button', { name:'Mark for review' }).waitFor();
+    await page.getByRole('button', { name:'Question 1, answered' }).waitFor();
     assert.equal(await page.getByRole('radio').nth(1).isChecked(), true);
+    assert.equal((await activeElementDescriptor(page)).value, 'b');
     await page.getByRole('button', { name:'Mark for review' }).click();
     await page.getByRole('button', { name:'Unmark review' }).waitFor();
-    await page.getByRole('button', { name:'Question 1, marked for review' }).waitFor();
+    await page.getByRole('button', { name:'Question 1, answered, marked for review' }).waitFor();
+    assert.equal((await activeElementDescriptor(page)).action, 'toggle-review');
     assert.deepEqual(mutations.slice(0, 2), ['answer','review']);
     assert.doesNotMatch(await page.locator('body').innerText(), /Correct answer/i);
 
     await page.getByRole('button', { name:'Next →' }).click();
     await page.getByText('QUESTION 2 OF 36', { exact:true }).waitFor();
+    assert.equal((await activeElementDescriptor(page)).id, 'exam-question-stem');
+    assert.equal(await page.getByRole('button', { name:'Question 2, unanswered' }).getAttribute('aria-current'), 'true');
     await page.getByRole('button', { name:'Question 36, unanswered' }).click();
     await page.getByText('QUESTION 36 OF 36', { exact:true }).waitFor();
+    assert.equal((await activeElementDescriptor(page)).id, 'exam-question-stem');
     assert.equal(await page.getByRole('button', { name:'Next →' }).isDisabled(), true);
     await page.getByRole('button', { name:'← Previous' }).click();
     await page.getByText('QUESTION 35 OF 36', { exact:true }).waitFor();
+    assert.equal((await activeElementDescriptor(page)).id, 'exam-question-stem');
 
     await page.reload();
     await page.getByText('QUESTION 1 OF 36', { exact:true }).waitFor();
     assert.equal(await page.getByRole('radio').nth(1).isChecked(), true);
     await page.getByRole('button', { name:'Unmark review' }).waitFor();
+    assert.equal((await activeElementDescriptor(page)).id, 'exam-question-stem');
     assert.doesNotMatch(await page.locator('body').innerText(), /Correct answer/i);
 
     run = completedRun(run);
@@ -318,7 +338,7 @@ try {
   }
 
   assert.deepEqual(errors, []);
-  console.log('Exam Mode phone/tablet/desktop interaction, persistence, autopsy resume and cancellation checks passed');
+  console.log('Exam Mode phone/tablet/desktop interaction, persistence, focus continuity, autopsy resume and cancellation checks passed');
 } finally {
   await browser.close();
 }
