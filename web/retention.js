@@ -120,6 +120,14 @@ async function acknowledgeRender() {
   render();
 }
 
+async function recoverServedSession(inbox) {
+  if (inbox?.state !== 'in_progress' || inbox.sessionId || !inbox.assignmentId || !inbox.servedEventId) return inbox;
+  return probe.start({
+    assignmentId:inbox.assignmentId,
+    requestId:`retention-resume:${inbox.servedEventId}`
+  });
+}
+
 async function loadInbox() {
   state = { ...state, loading:true, error:null, result:null };
   render();
@@ -130,7 +138,8 @@ async function loadInbox() {
       render();
       return;
     }
-    const inbox = await probe.inbox();
+    let inbox = await probe.inbox();
+    inbox = await recoverServedSession(inbox);
     state = {
       ...state,
       user:auth.currentUser() || session.user,
