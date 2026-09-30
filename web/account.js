@@ -10,7 +10,8 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
-let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null };
+const emptyProjectionErrors = () => ({ progress: null, questions: null, retention: null });
+let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
 
 const OAUTH_RETURN_KEY = 'mlos-oauth-consent-return-v1';
 const OAUTH_RETURN_MAX_AGE_MS = 10 * 60 * 1000;
@@ -35,6 +36,13 @@ function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
   if (!status || status >= 500) errorMonitor.capture(error, { component: 'account', operation, code: error?.code || null, status: status || null });
 }
+function projectionError(result) {
+  if (result?.status !== 'rejected') return null;
+  return result.reason?.code || result.reason?.message || 'projection_unavailable';
+}
+function signedOutState() {
+  return { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
+}
 
 function signedOut() {
   const redirectTo = new URL('/web/account.html', window.location.origin).href;
@@ -44,8 +52,8 @@ function signedOut() {
 
 function retentionPilotPanel() {
   const consent = state.retentionConsent;
-  if (!consent) {
-    return '<section class="panel"><span class="eyebrow">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted">Consent status is unavailable right now. No probe can be scheduled from this screen.</p></section>';
+  if (!consent || state.projectionErrors.retention) {
+    return '<section class="panel"><span class="eyebrow">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted">Consent status is unavailable right now. No probe can be scheduled from this screen.</p><button class="text-button" data-action="refresh">Retry account data</button></section>';
   }
 
   const protocol = consent.protocol || {};
@@ -95,16 +103,15 @@ function signInMethodsPanel() {
 
 function signedIn() {
   const p = state.progress;
-  const count = state.questions?.length ?? 0;
+  const count = Array.isArray(state.questions) ? state.questions.length : null;
+  const degraded = Object.values(state.projectionErrors).some(Boolean);
   const body = state.loading
     ? '<p>Loading your learning account…</p>'
-    : state.error
-      ? `<p>Account data unavailable: <strong>${escape(state.error)}</strong></p>`
-      : `<div class="metrics"><div><strong>${p?.attempts ?? 0}</strong><span>Recorded attempts</span></div><div><strong>${p?.correct ?? 0}</strong><span>Correct</span></div><div><strong>${count}</strong><span>Published questions</span></div></div>`;
+    : `<div class="metrics"><div><strong>${p ? (p.attempts ?? 0) : '—'}</strong><span>Recorded attempts</span></div><div><strong>${p ? (p.correct ?? 0) : '—'}</strong><span>Correct</span></div><div><strong>${count ?? '—'}</strong><span>Published questions</span></div></div>${degraded ? '<p class="muted">Some account data could not be refreshed. Available learning data remains visible; refresh to retry the unavailable projection.</p>' : ''}`;
   const admin = state.isAdmin
     ? `<section class="panel reviewer-access"><div><span class="eyebrow">ADMIN</span><h2>Content Admin Console</h2><p>This account is the beta content authority for Medical, References and Rights review. Learners do not receive these controls.</p></div><a class="secondary action-link" href="/web/admin.html">Open Admin Console →</a></section>`
     : '';
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Your Medical Learning OS account.</h1><p>${escape(state.user?.email || 'Authenticated learner')}</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Learning record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh session'}</button></div>${body}<p><a class="primary action-link" href="/">Home →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a> <a class="secondary action-link" href="/web/vault.html">NeuralVault →</a></p><p class="muted">Only published, reviewed question versions enter the learner path.</p></section>${recoveryPasswordPanel()}${signInMethodsPanel()}${retentionPilotPanel()}${admin}<section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Learner and admin responsibilities are separate.</h2><p>Learners may report suspected errors. Only the server-authorized content admin can approve Medical, References, Rights, or research pair-validation evidence.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Your Medical Learning OS account.</h1><p>${escape(state.user?.email || 'Authenticated learner')}</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Learning record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh session'}</button></div>${body}<p><a class="primary action-link" href="/">Home →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a> <a class="secondary action-link" href="/web/exam.html">Exams →</a> <a class="secondary action-link" href="/web/vault.html">NeuralVault →</a></p><p class="muted">Only published, reviewed question versions enter the learner path.</p></section>${recoveryPasswordPanel()}${signInMethodsPanel()}${retentionPilotPanel()}${admin}<section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Learner and admin responsibilities are separate.</h2><p>Learners may report suspected errors. Only the server-authorized content admin can approve Medical, References, Rights, or research pair-validation evidence.</p></section></main>`;
 }
 
 function render() { root.innerHTML = state.user ? signedIn() : signedOut(); }
@@ -129,40 +136,50 @@ async function loadCloud({ forceRefresh = false } = {}) {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
     reportUnexpected(error, 'refresh_session');
-    state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null };
+    state = signedOutState();
     render();
     announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
     return;
   }
-  if (!session?.user) { state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null }; render(); return; }
-  state = { ...state, user: session.user, loading: true, error: null }; render();
-  try {
-    let enrichedUser = auth.currentUser() || session.user;
-    if (!Array.isArray(enrichedUser?.providers) || enrichedUser.providers.length === 0) {
-      try { enrichedUser = await auth.refreshUser(); }
-      catch (error) {
-        if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'refresh_identity_methods');
-      }
+  if (!session?.user) { state = signedOutState(); render(); return; }
+  state = { ...state, user: session.user, loading: true, projectionErrors: emptyProjectionErrors() }; render();
+
+  let enrichedUser = auth.currentUser() || session.user;
+  if (!Array.isArray(enrichedUser?.providers) || enrichedUser.providers.length === 0) {
+    try { enrichedUser = await auth.refreshUser(); }
+    catch (error) {
+      if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'refresh_identity_methods');
     }
-    const [progress, result, retentionConsent] = await Promise.all([
-      cloud.progress(),
-      cloud.questions('all'),
-      cloud.retentionProbeConsent()
-    ]);
-    state = {
-      ...state,
-      user: enrichedUser || auth.currentUser() || session.user,
-      loading: false,
-      progress,
-      questions: result.questions || [],
-      retentionConsent,
-      error: null
-    };
-    await loadReviewerAccess();
-    if (forceRefresh) announce('Session refresh verified in this browser. Cloud data reloaded.');
-  } catch (error) {
-    reportUnexpected(error, 'load_cloud');
-    state = { ...state, loading: false, error: error.code || error.message || 'cloud_unavailable' };
+  }
+
+  const [progressResult, questionsResult, retentionResult] = await Promise.allSettled([
+    cloud.progress(),
+    cloud.questions('all'),
+    cloud.retentionProbeConsent()
+  ]);
+  const projectionErrors = {
+    progress: projectionError(progressResult),
+    questions: projectionError(questionsResult),
+    retention: projectionError(retentionResult)
+  };
+  if (progressResult.status === 'rejected') reportUnexpected(progressResult.reason, 'load_progress');
+  if (questionsResult.status === 'rejected') reportUnexpected(questionsResult.reason, 'load_questions');
+  if (retentionResult.status === 'rejected') reportUnexpected(retentionResult.reason, 'load_retention_consent');
+
+  state = {
+    ...state,
+    user: enrichedUser || auth.currentUser() || session.user,
+    loading: false,
+    progress: progressResult.status === 'fulfilled' ? progressResult.value : state.progress,
+    questions: questionsResult.status === 'fulfilled' ? (questionsResult.value.questions || []) : state.questions,
+    retentionConsent: retentionResult.status === 'fulfilled' ? retentionResult.value : state.retentionConsent,
+    projectionErrors
+  };
+  await loadReviewerAccess();
+  if (forceRefresh) {
+    announce(Object.values(projectionErrors).some(Boolean)
+      ? 'Session refresh verified. Available cloud data reloaded; one or more account projections remain temporarily unavailable.'
+      : 'Session refresh verified in this browser. Cloud data reloaded.');
   }
   render();
 }
@@ -174,7 +191,7 @@ root.addEventListener('click', event => {
   if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'withdraw-retention') {
     (async () => {
-      if (!state.retentionConsent?.protocol?.protocolSha256 || state.retentionSaving) return;
+      if (!state.retentionConsent?.protocol?.protocolSha256 || state.retentionSaving || state.projectionErrors.retention) return;
       state = { ...state, retentionSaving: true };
       render();
       try {
@@ -183,7 +200,7 @@ root.addEventListener('click', event => {
           protocolSha256: state.retentionConsent.protocol.protocolSha256,
           attested: true
         });
-        state = { ...state, retentionSaving: false, retentionConsent: await cloud.retentionProbeConsent() };
+        state = { ...state, retentionSaving: false, retentionConsent: await cloud.retentionProbeConsent(), projectionErrors: { ...state.projectionErrors, retention: null } };
         announce('Withdrawn. Future retention-probe assignments remain disabled for this learner unless you opt in again.');
       } catch (error) {
         reportUnexpected(error, 'withdraw_retention_probe');
@@ -194,7 +211,7 @@ root.addEventListener('click', event => {
     })();
   }
   if (target.dataset.action === 'signout') {
-    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], error: null }; announce('Signed out.'); render(); })();
+    (async () => { try { await auth.signOut(); } catch (error) { reportUnexpected(error, 'sign_out'); } state = signedOutState(); announce('Signed out.'); render(); })();
   }
 });
 
@@ -222,7 +239,7 @@ root.addEventListener('submit', event => {
   }
   if (form.id === 'retention-optin-form') {
     (async () => {
-      if (!state.retentionConsent?.protocol?.protocolSha256 || state.retentionSaving) return;
+      if (!state.retentionConsent?.protocol?.protocolSha256 || state.retentionSaving || state.projectionErrors.retention) return;
       if (data.get('attested') !== 'on') {
         announce('Explicit opt-in confirmation is required.');
         return;
@@ -235,7 +252,7 @@ root.addEventListener('submit', event => {
           protocolSha256: state.retentionConsent.protocol.protocolSha256,
           attested: true
         });
-        state = { ...state, retentionSaving: false, retentionConsent: await cloud.retentionProbeConsent() };
+        state = { ...state, retentionSaving: false, retentionConsent: await cloud.retentionProbeConsent(), projectionErrors: { ...state.projectionErrors, retention: null } };
         announce('Opt-in recorded. No probe has been scheduled or activated.');
       } catch (error) {
         reportUnexpected(error, 'opt_in_retention_probe');
