@@ -1361,3 +1361,11 @@ The completion screen separates session evidence from current revision timing, u
 The linked-concept detour is reversible through a bounded session identifier and a fixed internal Study route. Vault's return context is navigational input, not proof of ownership or saved learning evidence. Study reads the current session through the existing owner-checked authenticated GET; it restores the server cursor and receipts rather than trusting URL-supplied position, correctness or completion. Returning and reloading cannot answer or advance the session. A session closed elsewhere opens results; failed reads show no stale evidence.
 
 Post-answer feedback distinguishes the accepted saved result, selected/correct options, reasoning, sources, recommendation context and optional recall self-report. Sources remain accessible with native disclosure; recall is optional and is never preselected or submitted by navigation. Canonical teaching eligibility and all scoring/scheduling authority remain unchanged. Client disclosure/focus state creates no learner evidence.
+
+
+## ADR-092 — Vault reads reviewed knowledge before optional personal work
+**Status:** Accepted — 2026-09-30
+
+Vault centers the selected canonical concept and published note. The concept browser defaults closed on narrow screens and open on wider screens; the learner can toggle it without a write. Selecting another concept closes the narrow-screen browser and focuses the selected heading. One concept heading and read-only section links lead to Reviewed note, My notes and My corrections. Section navigation moves keyboard focus and preserves the bounded session return.
+
+Personal annotations and private corrections remain separate from canonical text, with existing revision checks and explicit report-sharing consent intact. Published-version metadata and correction composition use native disclosure. An exact question-version correction handoff opens that target's composer, while an ordinary canonical-note correction remains optional. No disclosure, search, section navigation or session-return control creates learner evidence or scheduler state. Canonical and personal text remain escaped plain text; this slice introduces no Markdown HTML renderer or new clinical content.

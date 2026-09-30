@@ -157,8 +157,9 @@ assert.match(await page.locator('.vault-detail').textContent(), /Canonical revie
 assert.match(await page.locator('.vault-detail').textContent(), /PRIVATE CORRECTION OVERLAY/);
 
 const correctionText = 'My private wording: give IM epinephrine immediately.';
-await page.getByLabel('My correction').nth(1).fill(correctionText);
-await page.getByRole('button', { name: 'Save private correction' }).nth(1).click();
+const questionCorrection = page.locator('form[data-form="create-correction"][data-target-type="question_version"]');
+await questionCorrection.getByLabel('My correction', { exact: true }).fill(correctionText);
+await questionCorrection.getByRole('button', { name: 'Save private correction' }).click();
 await page.getByRole('alert').filter({ hasText: 'Private correction saved. Canonical content was not changed.' }).waitFor();
 
 assert.equal(correctionBodies.length, 1);
