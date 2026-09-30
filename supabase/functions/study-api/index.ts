@@ -14,6 +14,7 @@ import {
 import { buildGtAutopsyV1 } from "./_shared/gt-autopsy.js";
 import { buildCanonicalPostAnswerTeaching } from "./_shared/post-answer-teaching.js";
 import { buildServerScoredVisualDetectionEvent } from "./_shared/visual-detection.js";
+import { buildSessionSummary } from "./_shared/session-summary.js";
 
 type Json = Record<string, unknown>;
 
@@ -2483,6 +2484,38 @@ Deno.serve(async (req: Request) => {
       }
 
       return response(req, 200, data);
+    }
+
+    const summaryMatch = path.match(/^\/sessions\/([a-zA-Z0-9-]+)\/summary$/);
+    if (req.method === "GET" && summaryMatch) {
+      const sessionId = identifier(summaryMatch[1]);
+      const { data: session, error: sessionError } = await trustedRead("summary_session", async () =>
+        admin.from("study_sessions").select("id,closed,question_version_ids")
+          .eq("id", sessionId).eq("learner_id", learnerId).maybeSingle()
+      );
+      if (sessionError) fail(500, "study_read_failed");
+      if (!session) fail(404, "session_not_found");
+      const [{ data: attempts, error: attemptError }, { body }] = await Promise.all([
+        trustedRead("summary_attempts", async () =>
+          admin.from("study_attempts").select("position,event")
+            .eq("session_id", sessionId).eq("learner_id", learnerId)
+            .order("position", { ascending: true }).limit(50)
+        ),
+        getCatalog()
+      ]);
+      if (attemptError) fail(500, "study_read_failed");
+      let revisions = null;
+      if (session.question_version_ids.length) {
+        try {
+          const { data, error } = await trustedRead("summary_revision", async () =>
+            admin.from("study_revision_state").select("question_version_id,due_at")
+              .eq("learner_id", learnerId).in("question_version_id", session.question_version_ids).limit(50)
+          );
+          if (!error) revisions = data ?? [];
+        } catch { /* Missing schedule is not zero scheduled reviews. */ }
+      } else revisions = [];
+      return response(req, 200, buildSessionSummary({ session, attempts: attempts ?? [], revisions,
+        concepts: body.concepts, generatedAt: new Date().toISOString() }));
     }
 
     const sessionMatch = path.match(/^\/sessions\/([a-zA-Z0-9-]+)$/);

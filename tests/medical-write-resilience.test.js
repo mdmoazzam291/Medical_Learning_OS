@@ -22,9 +22,9 @@ function harness(cloud) {
   const context = createContext({
     document: { querySelector: selector => selector === '#medical-app' ? root : notice },
     createSupabaseAuth: () => ({ currentUser: () => ({ email: 'synthetic@example.invalid' }) }),
-    createCloudStudy: () => cloud,
+    createCloudStudy: () => ({ sessionSummary: async id => ({ contractId: 'study-session-summary-v1', sessionId: id, closed: true, selectedCount: 1, answeredCount: 1, correctCount: 1, incorrectCount: 0, concepts: [], revision: { available: false } }), ...cloud }),
     cloudConfig: {}, localStorage: {}, URL, URLSearchParams,
-    location: { search: '' },
+    location: { search: '', href: 'https://example.invalid/web/medical.html' }, history: { replaceState() {} },
     errorMonitor: { capture: (error, metadata) => monitored.push({ error, metadata }) }
   });
   runInContext(source, context);
@@ -134,4 +134,26 @@ test('confirmed advance clears the answered-earlier notice before showing an una
   assert.match(h.root.innerHTML, /Question 2 of 2/);
   assert.equal(h.notice.textContent, '');
   assert.equal(h.notice.hidden, true);
+});
+
+test('failed summary restore does not claim a session finished or expose question content', async () => {
+  const h = harness({ sessionSummary: async () => { throw Object.assign(new Error('not found'), { status: 404 }); } });
+  await runInContext("loadSessionSummary('other-session', true)", h.context);
+  assert.equal(h.state().session.closed, undefined);
+  assert.match(h.root.innerHTML, /Completion has not been confirmed here/);
+  assert.doesNotMatch(h.root.innerHTML, /MEDICAL SESSION COMPLETE|Synthetic test question/);
+});
+
+test('summary outage cannot undo acknowledged closure and offers a read-only retry', async () => {
+  const h = harness({
+    next: async () => ({ ...session, closed: true, question: null }),
+    sessionSummary: async () => { throw Object.assign(new Error('summary unavailable'), { status: 503 }); },
+    progress: async () => ({ attempts: 3 }), studyNowIntegrity: async () => null
+  });
+  runInContext('state.receipt = testReceipt;', h.context);
+  await runInContext('nextQuestion()', h.context);
+  assert.equal(h.state().session.closed, true);
+  assert.equal(h.state().error, null);
+  assert.match(h.root.innerHTML, /Retry session results/);
+  assert.doesNotMatch(h.notice.textContent, /did not advance/);
 });
