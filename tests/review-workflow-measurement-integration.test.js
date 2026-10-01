@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
-const [sql, batchSql, api, adapter, ui, serve, experiment] = await Promise.all([
+const [sql, batchSql, api, adapter, ui, experiment] = await Promise.all([
   readFile(new URL('../supabase/migrations/20260928145039_m02c_review_workflow_measurement.sql', import.meta.url),'utf8'),
   readFile(new URL('../supabase/migrations/20260928205212_m02c_atomic_batch_human_review.sql', import.meta.url),'utf8'),
   readFile(new URL('../supabase/functions/review-api/index.ts', import.meta.url),'utf8'),
   readFile(new URL('../src/adapters/cloud-review.js', import.meta.url),'utf8'),
   readFile(new URL('../web/review.js', import.meta.url),'utf8'),
-  readFile(new URL('../scripts/serve.js', import.meta.url),'utf8'),
   readFile(new URL('../src/domain/review-workflow-experiment.js', import.meta.url),'utf8')
 ]);
 
@@ -67,10 +67,9 @@ test('client adapter does not send reviewer identity in measurement payload', ()
   assert.match(section,/clientSessionId/);
 });
 
-test('preview server exposes the new experiment module explicitly', () => {
-  assert.match(serve,/src\/domain\/review-workflow-experiment\.js/);
+test('production public surface exposes the review experiment module explicitly', () => {
+  assert.equal(publicFileSet.has('src/domain/review-workflow-experiment.js'), true);
 });
-
 
 test('browser displays descriptive batch-pilot progress without choosing a winner', () => {
   assert.match(ui,/REFERENCES_WORKFLOW_BATCH_EXPERIMENT_V2/);
