@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const migration = await readFile(new URL('../supabase/migrations/20260930164500_m11f5_learner_origin_handoff.sql', import.meta.url), 'utf8');
 const api = await readFile(new URL('../supabase/functions/retention-probe-api/index.ts', import.meta.url), 'utf8');
@@ -64,8 +65,8 @@ test('browser adapter and setup UI require an explicit click and hand off to ord
   assert.match(retentionHtml, /\/web\/retention-origin\.html/);
 });
 
-test('preview server explicitly exposes the origin setup HTML and module, and no broader path surface', () => {
-  assert.match(server, /'web\/retention-origin\.html'/);
-  assert.match(server, /'web\/retention-origin\.js'/);
-  assert.match(server, /if \(!allowed\.has\(path\)\)/);
+test('preview server exposes only the allowlisted origin setup HTML and module', () => {
+  assert.equal(publicFileSet.has('web/retention-origin.html'), true);
+  assert.equal(publicFileSet.has('web/retention-origin.js'), true);
+  assert.match(server, /if \(!publicFileSet\.has\(path\)\)/);
 });
