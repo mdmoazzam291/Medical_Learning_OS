@@ -2,55 +2,10 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { handleAdminMcpHttp, protectedResourceMetadata } from '../src/server/admin-mcp.js';
+import { publicFileSet } from './public-surface.js';
 
 const root = new URL('../', import.meta.url);
 const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', json: 'application/json' };
-
-// Explicit public surface: no catalogs, docs, dotfiles, credentials or arbitrary paths.
-const allowed = new Set([
-  'web/index.html',
-  'web/app.js',
-  'web/styles.css',
-  'web/favicon.svg',
-  'web/account.html',
-  'web/account.js',
-  'web/account-landing.css',
-  'web/account-landing.js',
-  'web/oauth-consent.html',
-  'web/oauth-consent.js',
-  'web/medical.html',
-  'web/medical.js',
-  'web/exam.html',
-  'web/exam.js',
-  'web/vault.html',
-  'web/vault.js',
-  'web/vault-drafts.js',
-  'web/retention.html',
-  'web/retention.js',
-  'web/retention-origin.html',
-  'web/retention-origin.js',
-  'web/review.html',
-  'web/review.js',
-  'web/admin.html',
-  'web/admin.js',
-  'web/admin-pair-preflight.js',
-  'web/references-panel.js',
-  'src/domain/references-workspace.js',
-  'src/domain/references-source-focus.js',
-  'src/domain/review-workflow-experiment.js',
-  'src/domain/source-grounded-verification.js',
-  'src/domain/canonical-integrity.js',
-  'data/evaluations/source-grounding-cdc-co-v1.json',
-  'web/cloud-config.js',
-  'web/monitoring.js',
-  'web/sentry-bootstrap.js',
-  'data/content-review-assist.json',
-  'src/adapters/supabase-auth.js',
-  'src/adapters/cloud-study.js',
-  'src/adapters/cloud-retention-probe.js',
-  'src/adapters/cloud-review.js',
-  'src/adapters/error-monitoring.js'
-]);
 
 const server = createServer(async (req, res) => {
   try {
@@ -85,7 +40,7 @@ const server = createServer(async (req, res) => {
       : pathname === '/oauth/consent'
         ? 'web/oauth-consent.html'
         : pathname.slice(1);
-    if (!allowed.has(path)) {
+    if (!publicFileSet.has(path)) {
       res.writeHead(404);
       return res.end('Not found');
     }

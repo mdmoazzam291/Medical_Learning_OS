@@ -10,6 +10,7 @@
     "test": "node --test",
     "check": "node scripts/check.js",
     "demo": "node examples/study-session.js",
+    "build:pages": "node scripts/build-pages.js",
     "start": "node scripts/serve.js",
     "start:api": "node scripts/api.js"
   }

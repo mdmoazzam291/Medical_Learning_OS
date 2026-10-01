@@ -1,15 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const read = path => readFile(new URL('../' + path, import.meta.url), 'utf8');
 
 test('server exposes the configured OAuth consent path from the explicit public allow-list', async () => {
   const source = await read('scripts/serve.js');
-  assert.match(source, /'web\/oauth-consent\.html'/);
-  assert.match(source, /'web\/oauth-consent\.js'/);
+  assert.equal(publicFileSet.has('web/oauth-consent.html'), true);
+  assert.equal(publicFileSet.has('web/oauth-consent.js'), true);
   assert.match(source, /pathname === '\/oauth\/consent'/);
   assert.match(source, /\? 'web\/oauth-consent\.html'/);
+  assert.match(source, /publicFileSet\.has\(path\)/);
 });
 
 test('consent UI preserves only a short-lived same-origin authorization return across sign-in', async () => {
