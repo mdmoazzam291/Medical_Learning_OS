@@ -41,6 +41,8 @@ It does not copy repository documentation, Supabase functions/migrations, operat
 
 `tests/cloudflare-pages-build.test.js` enumerates the generated artifact and fails closed if the public bundle widens unexpectedly.
 
+The repository pins Node 24 with `.node-version`. This is required because the application declares Node >=24 while the Cloudflare Pages build image may otherwise select its own default runtime.
+
 ## Cloudflare Pages Git integration
 
 Create one Pages project connected to `mdmoazzam291/Medical_Learning_OS`.
@@ -75,7 +77,7 @@ Pages is not production-proven merely because this repository can build `dist-pa
 
 Before changing any learner-facing canonical URL:
 
-1. Cloudflare Pages build from `main` must succeed.
+1. Cloudflare Pages build from `main` must succeed using Node 24.
 2. Open the generated `*.pages.dev` URL.
 3. Verify root, account, Study/QBank, Exam, Vault, retention and review pages load.
 4. Verify Google/email auth callback flow against an allow-listed Pages return URL without creating a second learner identity.
