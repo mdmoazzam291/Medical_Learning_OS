@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 test('reviewer UI requires source-rights resolution before rights approval', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
@@ -17,7 +18,6 @@ test('reviewer UI requires source-rights resolution before rights approval', asy
   assert.doesNotMatch(source, /reviewerId\s*:/);
 });
 
-
 test('reviewer UI can switch between question and NeuralVault canonical note targets', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /review-target/);
@@ -29,7 +29,6 @@ test('reviewer UI can switch between question and NeuralVault canonical note tar
   assert.match(source, /structuredReviewControls/);
 });
 
-
 test('NeuralVault reviewer card shows provenance before gate decision', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /const provenance = note\?\.provenance/);
@@ -37,7 +36,6 @@ test('NeuralVault reviewer card shows provenance before gate decision', async ()
   assert.match(source, /provenance\.kind/);
   assert.match(source, /provenance\.evidence/);
 });
-
 
 test('reviewer UI shows descriptive pipeline backlog without granting intake authority', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
@@ -59,7 +57,6 @@ test('pipeline status failure does not block the review queue', async () => {
   assert.match(source, /Promise\.all\(\[\s*queuePromise,\s*pipelinePromise,\s*assistPromise/s);
 });
 
-
 test('reviewer UI presents AI/source preflight without granting approval authority', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /content-review-assist\.json/);
@@ -76,7 +73,6 @@ test('review assist failure is nonblocking for authenticated review queues', asy
   assert.match(source, /\.catch\(\(\) => state\.reviewAssist\)/);
   assert.match(source, /Promise\.all\(\[\s*queuePromise,\s*pipelinePromise,\s*assistPromise/s);
 });
-
 
 test('normal question and note review is zero-typing while AI/source preflight stays non-authoritative', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
@@ -98,7 +94,6 @@ test('source-policy assist prefills evidence but never selects or submits a righ
   assert.doesNotMatch(source, /requestSubmit\(/);
 });
 
-
 test('reviewer UI renders exact visual target before a gate decision', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /function mediaReviewPanel\(item\)/);
@@ -117,7 +112,6 @@ test('reviewer visual surface accepts only https signed media delivery', async (
   assert.match(source, /Media unavailable/);
 });
 
-
 test('rights review compresses repeated source work into a source-first unique backlog', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /function rightsSourceBacklogPanel\(\)/);
@@ -132,7 +126,6 @@ test('rights review compresses repeated source work into a source-first unique b
   assert.match(source, /rightsSourceBacklogPanel\(\)/);
 });
 
-
 test('rights question cards wait for source resolution without hiding restricted-source rejection targets', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
   assert.match(source, /function questionSourcesHaveResolvedRights\(item\)/);
@@ -146,8 +139,7 @@ test('rights question cards wait for source resolution without hiding restricted
 
 test('References source focus narrows questions and notes without recording a shared decision', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
-  const server = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
-  assert.match(server, /'src\/domain\/references-source-focus\.js'/);
+  assert.equal(publicFileSet.has('src/domain/references-source-focus.js'), true);
   assert.match(source, /function referencesSourcePanel\(\)/);
   assert.match(source, /SOURCE-FOCUSED REFERENCES/);
   assert.match(source, /filterReferencesBySource\(experimentItems, state\.referencesSourceId\)/);
@@ -156,7 +148,6 @@ test('References source focus narrows questions and notes without recording a sh
   assert.match(source, /data-action="references-source-focus"/);
   assert.doesNotMatch(source, /references-source-focus[\s\S]{0,300}review\.record\(/);
 });
-
 
 test('reviewer UI triages learner reports without exposing learner identity or editing canonical content', async () => {
   const source = await readFile(new URL('../web/review.js', import.meta.url), 'utf8');
