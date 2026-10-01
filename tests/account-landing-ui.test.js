@@ -2,11 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const [html, landing, styles, account] = await Promise.all([
+const [html, landing, styles, account, serve] = await Promise.all([
   readFile(new URL('../web/account.html', import.meta.url), 'utf8'),
   readFile(new URL('../web/account-landing.js', import.meta.url), 'utf8'),
   readFile(new URL('../web/account-landing.css', import.meta.url), 'utf8'),
-  readFile(new URL('../web/account.js', import.meta.url), 'utf8')
+  readFile(new URL('../web/account.js', import.meta.url), 'utf8'),
+  readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8')
 ]);
 
 test('account page loads the command-center signed-out presentation without replacing auth runtime', () => {
@@ -15,6 +16,13 @@ test('account page loads the command-center signed-out presentation without repl
   assert.match(html, /\/web\/account-landing\.js/);
   assert.match(landing, /data-account-landing-enhanced/);
   assert.match(landing, /MutationObserver/);
+});
+
+test('production server explicitly exposes every account landing asset', () => {
+  assert.match(serve, /'web\/account\.html'/);
+  assert.match(serve, /'web\/account\.js'/);
+  assert.match(serve, /'web\/account-landing\.css'/);
+  assert.match(serve, /'web\/account-landing\.js'/);
 });
 
 test('signed-out landing communicates the canonical learner product', () => {
