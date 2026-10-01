@@ -121,7 +121,7 @@ function signedOutMarkup(googleUrl) {
             <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@youruniversity.edu" required></label>
             <label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" placeholder="Enter your password" required></label>
             <div class="account-auth-meta"><label class="account-checkbox"><input type="checkbox" checked disabled> Keep me signed in</label><a href="#password-recovery" data-open-recovery>Forgot password?</a></div>
-            <button class="account-signin-button" type="submit" aria-label="Sign in with email">Sign in</button>
+            <button class="account-signin-button" type="submit">Sign in with email</button>
           </form>
 
           <details id="password-recovery" class="account-inline-details">
