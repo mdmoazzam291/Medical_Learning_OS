@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const [html, landing, styles, account, serve] = await Promise.all([
   readFile(new URL('../web/account.html', import.meta.url), 'utf8'),
@@ -18,11 +19,17 @@ test('account page loads the command-center signed-out presentation without repl
   assert.match(landing, /MutationObserver/);
 });
 
-test('production server explicitly exposes every account landing asset', () => {
-  assert.match(serve, /'web\/account\.html'/);
-  assert.match(serve, /'web\/account\.js'/);
-  assert.match(serve, /'web\/account-landing\.css'/);
-  assert.match(serve, /'web\/account-landing\.js'/);
+test('production public-surface contract exposes every account landing asset', () => {
+  for (const path of [
+    'web/account.html',
+    'web/account.js',
+    'web/account-landing.css',
+    'web/account-landing.js'
+  ]) {
+    assert.equal(publicFileSet.has(path), true, `${path} must remain public`);
+  }
+  assert.match(serve, /import \{ publicFileSet \} from '\.\/public-surface\.js';/);
+  assert.match(serve, /publicFileSet\.has\(path\)/);
 });
 
 test('signed-out landing communicates the canonical learner product', () => {
