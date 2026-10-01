@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const [app, account, admin, serve, medical] = await Promise.all([
   readFile(new URL('../web/app.js', import.meta.url), 'utf8'),
@@ -37,10 +38,11 @@ test('admin console owns content and M11c pair validation UI', () => {
 });
 
 test('legacy demo runtime is not publicly served', () => {
-  assert.match(serve, /web\/admin\.html/);
-  assert.match(serve, /web\/admin\.js/);
-  assert.doesNotMatch(serve, /src\/domain\/demo-study\.js/);
-  assert.doesNotMatch(serve, /src\/adapters\/local-store\.js/);
+  assert.equal(publicFileSet.has('web/admin.html'), true);
+  assert.equal(publicFileSet.has('web/admin.js'), true);
+  assert.equal(publicFileSet.has('src/domain/demo-study.js'), false);
+  assert.equal(publicFileSet.has('src/adapters/local-store.js'), false);
+  assert.match(serve, /publicFileSet\.has\(path\)/);
 });
 
 test('Study Now deep links are consumed once and scrubbed from the URL', () => {
