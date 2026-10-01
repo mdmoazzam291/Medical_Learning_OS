@@ -4,15 +4,21 @@
 
 Preferred zero-cost Cloudflare delivery path for Medical Learning OS.
 
-The Cloudflare account already contains a Git-connected Worker named `medical-learning-os`. Cloudflare Workers Static Assets now provides free and unlimited static asset requests, so a second Pages project is not required for the learner frontend.
+Important: the existing Git-connected Cloudflare Worker named `medical-learning-os` is the Supabase heartbeat Worker. It must remain rooted at `ops/cloudflare-heartbeat` and keep its cron trigger. Do not repurpose it for learner static delivery.
+
+The learner frontend uses a separate Worker application named `medical-learning-os-web`. Cloudflare Workers Static Assets can serve matching static requests without invoking Worker code, while the Worker script remains available only for genuinely dynamic fallback routes.
 
 ## Architecture
 
 ```text
-learner
-  |
-  v
+heartbeat worker
 medical-learning-os.<account>.workers.dev
+  root: ops/cloudflare-heartbeat
+  cron: 17 0,8,16 * * *
+  purpose: Supabase keep-alive only
+
+learner web worker
+medical-learning-os-web.<account>.workers.dev
   |
   +-- matching static asset --> Cloudflare Static Assets
   |                              (does not invoke Worker code)
@@ -29,43 +35,46 @@ Supabase Auth, PostgreSQL, Edge Functions, learner evidence, publication authori
 
 `npm run build:pages` produces the reviewed `dist-pages` bundle from the explicit public allowlist.
 
-`wrangler.jsonc` must keep:
+Root `wrangler.jsonc` must keep:
 
-- `name: medical-learning-os` to match the existing Git-connected Cloudflare Worker;
+- `name: medical-learning-os-web`, distinct from the heartbeat Worker;
 - `assets.directory: ./dist-pages`;
-- `assets.run_worker_first: false`, so matching static requests do not consume Worker invocations;
+- `assets.run_worker_first: false`, so matching static requests bypass Worker execution;
 - the existing Render origin as a temporary fallback for non-static dynamic routes.
 
-## Cloudflare dashboard build settings
+`ops/cloudflare-heartbeat/wrangler.jsonc` remains the separate heartbeat configuration with:
 
-Open:
+- `name: medical-learning-os`;
+- `main: worker.js`;
+- cron `17 0,8,16 * * *`.
 
-`Workers & Pages > medical-learning-os > Settings > Builds`
+Regression tests fail if these two Worker names collide.
 
-Use:
+## Cloudflare dashboard setup
 
-- Git repository: `mdmoazzam291/Medical_Learning_OS`
+Leave the existing `medical-learning-os` heartbeat application unchanged.
+
+Create a second Workers application connected to `mdmoazzam291/Medical_Learning_OS` with:
+
+- application/Worker name: `medical-learning-os-web`
 - production branch: `main`
-- root directory: repository root
+- root directory: repository root / blank
 - build command: `npm run build:pages`
 - deploy command: `npx wrangler deploy`
 
+Do not reuse the heartbeat root directory `/ops/cloudflare-heartbeat` for the learner web application.
+
 No Supabase service-role key, database password, R2 secret, Resend credential or other private runtime secret is required for the static bundle.
-
-## Why this replaces a separate Pages project
-
-Cloudflare currently recommends Workers as its primary application platform. Worker Static Assets can serve matching static requests for free and without the Workers request quota, while the Worker script remains available only for routes that genuinely need dynamic behavior.
-
-This keeps one Git-connected Cloudflare application and avoids duplicating deployment configuration across Pages and Workers.
 
 ## Release gate
 
-Before treating the Worker URL as the canonical learner URL:
+Before treating the learner Worker URL as canonical:
 
-1. The Cloudflare build must run `npm run build:pages` successfully.
-2. Root, account, Study/QBank, Exam, NeuralVault and retention static routes must load from the Worker URL.
-3. Static requests must not depend on Render availability.
-4. Google/email auth callbacks must be allow-listed for the Worker origin and preserve the same Supabase learner UUID.
-5. Study API authenticated reads/writes must continue to reach Supabase directly.
-6. `/mcp`, `/mcp-readonly` and `/.well-known/oauth-protected-resource` must continue to work through the dynamic fallback until separately migrated.
-7. Existing Render remains rollback/fallback until the above checks pass.
+1. Existing heartbeat Worker remains deployed and its cron configuration is unchanged.
+2. `medical-learning-os-web` builds `dist-pages` successfully from repository root.
+3. Root, account, Study/QBank, Exam, NeuralVault and retention static routes load from the learner Worker URL.
+4. Static requests do not depend on Render availability.
+5. Google/email auth callbacks are allow-listed for the learner Worker origin and preserve the same Supabase learner UUID.
+6. Study API authenticated reads/writes continue to reach Supabase directly.
+7. `/mcp`, `/mcp-readonly` and `/.well-known/oauth-protected-resource` continue to work through the dynamic fallback until separately migrated.
+8. Existing Render remains rollback/fallback until the above checks pass.
