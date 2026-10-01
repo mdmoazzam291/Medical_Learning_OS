@@ -6,7 +6,7 @@ services:
     region: singapore
     buildCommand: npm install --ignore-scripts --no-audit --no-fund
     startCommand: npm start
-    healthCheckPath: /
+    healthCheckPath: /healthz
     autoDeployTrigger: checksPass
     envVars:
       - key: MLOS_HOST
