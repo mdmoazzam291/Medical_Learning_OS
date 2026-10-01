@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const preflight = await readFile(new URL('../web/admin-pair-preflight.js', import.meta.url), 'utf8');
 const adminHtml = await readFile(new URL('../web/admin.html', import.meta.url), 'utf8');
-const serve = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
 
-test('M11c preflight is pinned to the exact current anaphylaxis pair', () => {
+ test('M11c preflight is pinned to the exact current anaphylaxis pair', () => {
   assert.match(preflight, /emergency:anaphylaxis:first-line-drug@1/);
   assert.match(preflight, /emergency:anaphylaxis:no-rash-first-action@1/);
   assert.match(preflight, /primary concept emergency:anaphylaxis:first-line-treatment/);
@@ -33,7 +33,7 @@ test('preflight cannot fill, select, attest or submit the human validation form'
   assert.match(preflight, /Nothing below is prefilled, selected or submitted/);
 });
 
-test('admin loads the preflight asset and the explicit public server surface allows it', () => {
+test('admin loads the preflight asset and the shared public surface allows it', () => {
   assert.match(adminHtml, /<script type="module" src="\/web\/admin-pair-preflight\.js"><\/script>/);
-  assert.match(serve, /'web\/admin-pair-preflight\.js'/);
+  assert.equal(publicFileSet.has('web/admin-pair-preflight.js'), true);
 });
