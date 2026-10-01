@@ -50,6 +50,8 @@ jobs:
       - name: Diagnose Node tests U-Z
         continue-on-error: true
         run: node --test tests/[u-z]*.test.js
+      - name: Verify full Node suite serially
+        run: node --test --test-concurrency=1
       - run: npm test
       - run: npm run demo
   browser:
