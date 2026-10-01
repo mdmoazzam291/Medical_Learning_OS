@@ -2,13 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const wrangler = JSON.parse(
-  (await readFile(new URL('../wrangler.jsonc', import.meta.url), 'utf8'))
+const parseJsonc = async relativePath => JSON.parse(
+  (await readFile(new URL(relativePath, import.meta.url), 'utf8'))
     .replace(/^\s*\/\/.*$/gm, '')
 );
 
-test('Git-connected Worker name matches the existing Cloudflare application', () => {
-  assert.equal(wrangler.name, 'medical-learning-os');
+const wrangler = await parseJsonc('../wrangler.jsonc');
+const heartbeatWrangler = await parseJsonc('../ops/cloudflare-heartbeat/wrangler.jsonc');
+
+test('learner web Worker has a distinct Cloudflare application name', () => {
+  assert.equal(wrangler.name, 'medical-learning-os-web');
+  assert.equal(heartbeatWrangler.name, 'medical-learning-os');
+  assert.notEqual(wrangler.name, heartbeatWrangler.name);
+});
+
+test('heartbeat cron remains isolated from learner static delivery', () => {
+  assert.deepEqual(heartbeatWrangler.triggers?.crons, ['17 0,8,16 * * *']);
+  assert.equal(wrangler.triggers, undefined);
 });
 
 test('Worker serves the reviewed static bundle before invoking dynamic code', () => {
