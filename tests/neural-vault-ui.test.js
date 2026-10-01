@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 const html = await readFile(new URL('../web/vault.html', import.meta.url), 'utf8');
 const source = await readFile(new URL('../web/vault.js', import.meta.url), 'utf8');
@@ -34,7 +35,6 @@ test('personal note text is escaped before HTML rendering', () => {
   assert.match(source, /escape\(note\.bodyMarkdown\)/);
 });
 
-
 test('NeuralVault UI supports authenticated search and update-aware anchor messaging', () => {
   assert.match(source, /vault-search-form/);
   assert.match(source, /cloud\.vaultSearch\(query\)/);
@@ -43,20 +43,16 @@ test('NeuralVault UI supports authenticated search and update-aware anchor messa
   assert.match(source, /Anchored canonical version is unavailable/);
 });
 
-
 test('NeuralVault startup honors exact concept deep links', () => {
   assert.match(source, /const initialParams = new URLSearchParams\(location\.search\)/);
   assert.match(source, /const initialConceptId = initialParams\.get\('concept'\)/);
   assert.match(source, /reloadVault\(initialConceptId\)/);
 });
 
-
-test('production static server exposes NeuralVault HTML and module assets', async () => {
-  const serverSource = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
-  assert.match(serverSource, /'web\/vault\.html'/);
-  assert.match(serverSource, /'web\/vault\.js'/);
+test('production public surface exposes NeuralVault HTML and module assets', () => {
+  assert.equal(publicFileSet.has('web/vault.html'), true);
+  assert.equal(publicFileSet.has('web/vault.js'), true);
 });
-
 
 test('NeuralVault renders only allowlisted Study Now arrival context for the exact concept', () => {
   assert.match(source, /allowedEntryReasons = new Set\(\['mistake-repair', 'due-revision', 'new-learning'\]\)/);
@@ -66,7 +62,6 @@ test('NeuralVault renders only allowlisted Study Now arrival context for the exa
   assert.match(source, /This handoff is context only/);
   assert.match(source, /does not change your score, note content, mastery state, or revision schedule/);
 });
-
 
 test('NeuralVault renders learner-private corrections beside canonical content rather than replacing it', () => {
   assert.match(source, /MY CORRECTION · PRIVATE/);
