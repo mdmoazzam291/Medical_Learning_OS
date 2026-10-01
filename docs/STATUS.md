@@ -9,7 +9,7 @@ Updated: 2026-09-28 (Asia/Kolkata).
 - IndexedDB transactions atomically save session and event ledger; stable submission IDs prevent duplicates; failed/corrupt storage never silently resets data.
 - Project context reference rule preserved; M03 reconciliation and storage boundary documented.
 - M04a implemented: separate learner-scoped local API, hashed/expiring operator credentials, SQLite event/session persistence, server scoring, eligible version selection, immutable receipts, safe retries, bookmarks, progress and export.
-- M04b is substantially verified: real email-confirmed Auth, cross-device continuity, current-session logout, live token refresh, trusted study API reads, RLS isolation and browser Sentry capture have passed. The remaining live gate is two-distinct-real-account isolation.
+- M04b is DONE: real email-confirmed Auth, cross-device continuity, current-session logout, live token refresh, trusted study API reads, RLS isolation, browser Sentry capture and two-distinct-real-account hosted learner isolation are documented as verified.
 
 ## Verification
 - Original M03 foundation/browser verification passed phone (390px), tablet (820px) and desktop (1440px) Chromium flows.
@@ -18,7 +18,7 @@ Updated: 2026-09-28 (Asia/Kolkata).
 - A real email-confirmed cloud learner flow is verified. Native iOS Safari remains a later compatibility check.
 
 ## Current task
-Keep the remaining two-real-account M04b isolation gate explicit until a second confirmable learner account is available. Meanwhile harden the trusted study path and prepare M04c authenticated review/content publication work. Production Resend SMTP remains deferred until an owned sending domain exists.
+M04c authenticated review/content publication work is the next bounded content milestone. Production Resend SMTP remains deferred until an owned sending domain exists.
 
 ## M04b account integration
 - Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
