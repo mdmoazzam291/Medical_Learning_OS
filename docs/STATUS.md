@@ -20,6 +20,13 @@ Updated: 2026-09-28 (Asia/Kolkata).
 ## Current task
 M14 production-readiness hardening is the active bounded infrastructure slice. This branch adds a production health endpoint, hosted-server security headers, graceful shutdown/timeouts, and CI verification. It does not deploy or claim production readiness by itself. Remaining M14 gates include live Render service-health audit, Auth leaked-password hardening, consolidated runtime/alert evidence, production-shaped capacity/load evidence, and a release decision after the content/review gates are confirmed.
 
+## Next M14 step — production configuration boundary
+- Production origin must be treated as an explicit Supabase Auth/CORS allow-list entry, not inferred from the preview origin.
+- The Edge Function currently has the preview origin hard-coded alongside configured origins. Before production, the production web origin must be supplied through the deployed `MLOS_ALLOWED_ORIGINS` secret/configuration and the preview origin should remain only if preview access is intentionally retained.
+- Supabase Auth Site URL and redirect allow-list must include the final HTTPS production origin before email/Google authentication is exposed there.
+- No secret, service-role key, Resend key, Sentry auth token or AI-provider credential may be added to client code.
+- This configuration work must be completed in the deployment/control plane, then verified with live unauthenticated, authenticated, CORS and OAuth callback checks.
+
 ## M14 production-readiness branch — 2026-10-02
 - Branch: `prod/m14-production-readiness`.
 - Added `/healthz` and `/readyz` JSON health endpoints to the Node hosted server.
