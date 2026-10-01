@@ -32,6 +32,24 @@ jobs:
         run: node --test tests/oauth-consent-ui.test.js
       - name: Verify Sentry hosting tests
         run: node --test tests/sentry-wiring.test.js
+      - name: Diagnose Node tests A-D
+        continue-on-error: true
+        run: node --test tests/[a-d]*.test.js
+      - name: Diagnose Node tests E-H
+        continue-on-error: true
+        run: node --test tests/[e-h]*.test.js
+      - name: Diagnose Node tests I-L
+        continue-on-error: true
+        run: node --test tests/[i-l]*.test.js
+      - name: Diagnose Node tests M-P
+        continue-on-error: true
+        run: node --test tests/[m-p]*.test.js
+      - name: Diagnose Node tests Q-T
+        continue-on-error: true
+        run: node --test tests/[q-t]*.test.js
+      - name: Diagnose Node tests U-Z
+        continue-on-error: true
+        run: node --test tests/[u-z]*.test.js
       - run: npm test
       - run: npm run demo
   browser:
