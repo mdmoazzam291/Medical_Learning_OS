@@ -54,3 +54,19 @@ jobs:
             "$STUDY_API_URL/progress")"
           test "$code" = "200"
           grep -qi '^access-control-allow-origin: https://medical-learning-os-preview.onrender.com' "$headers"
+
+      - name: Cloudflare learner origin passes all browser API preflights
+        shell: bash
+        run: |
+          set -euo pipefail
+          origin='https://medical-learning-os-web.medicalos.workers.dev'
+          for api in study-api review-api retention-probe-api; do
+            headers="$RUNNER_TEMP/$api-cloudflare.headers"
+            code="$(curl --silent --show-error --max-time 30 --output /dev/null --dump-header "$headers" --write-out '%{http_code}' \
+              -X OPTIONS -H "Origin: $origin" \
+              -H 'Access-Control-Request-Method: GET' \
+              -H 'Access-Control-Request-Headers: apikey,authorization' \
+              "${STUDY_API_URL%/study-api}/$api/progress")"
+            test "$code" = "200"
+            tr -d '\r' < "$headers" | grep -Fxi "access-control-allow-origin: $origin"
+          done
