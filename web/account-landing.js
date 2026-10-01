@@ -128,7 +128,7 @@ function signedOutMarkup(googleUrl) {
             <summary role="button">Send password reset link</summary>
             <form id="recovery-request-form" class="account-auth-form account-compact-form">
               <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@youruniversity.edu" required></label>
-              <button class="secondary" type="submit">Send password reset link</button>
+              <button class="secondary" type="submit" aria-label="Email me a password reset link">Send password reset link</button>
             </form>
           </details>
 
