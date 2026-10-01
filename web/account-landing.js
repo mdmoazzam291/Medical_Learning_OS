@@ -111,7 +111,7 @@ function signedOutMarkup(googleUrl) {
 
         <aside class="account-auth-card" aria-labelledby="signin-title">
           <p class="account-kicker">WELCOME BACK</p>
-          <h2 id="signin-title">Sign in to<br>Medical Learning OS</h2>
+          <h2 id="signin-title">Sign in to<br>Medical Learning OS.</h2>
           <p class="account-auth-intro">Your authenticated identity connects Study Now, QBank, Exams, NeuralVault and Progress across all your sessions and devices.</p>
 
           <a class="account-google oauth-google" href="${googleUrl}"><span class="google-g">G</span> Continue with Google</a>
@@ -120,12 +120,12 @@ function signedOutMarkup(googleUrl) {
           <form id="signin-form" class="account-auth-form">
             <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@youruniversity.edu" required></label>
             <label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" placeholder="Enter your password" required></label>
-            <div class="account-auth-meta"><label class="account-checkbox"><input type="checkbox" checked disabled> Keep me signed in</label><a href="#password-recovery">Forgot password?</a></div>
-            <button class="account-signin-button" type="submit">Sign in</button>
+            <div class="account-auth-meta"><label class="account-checkbox"><input type="checkbox" checked disabled> Keep me signed in</label><a href="#password-recovery" data-open-recovery>Forgot password?</a></div>
+            <button class="account-signin-button" type="submit" aria-label="Sign in with email">Sign in</button>
           </form>
 
           <details id="password-recovery" class="account-inline-details">
-            <summary>Forgot your password?</summary>
+            <summary>Send password reset link</summary>
             <form id="recovery-request-form" class="account-auth-form account-compact-form">
               <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@youruniversity.edu" required></label>
               <button class="secondary" type="submit">Send password reset link</button>
@@ -156,6 +156,16 @@ function signedOutMarkup(googleUrl) {
     </main>`;
 }
 
+function bindSignedOutInteractions() {
+  const recovery = root?.querySelector('#password-recovery');
+  const recoveryLink = root?.querySelector('[data-open-recovery]');
+  recoveryLink?.addEventListener('click', () => {
+    if (!recovery) return;
+    recovery.open = true;
+    queueMicrotask(() => recovery.querySelector('input[name="email"]')?.focus());
+  });
+}
+
 function enhanceSignedOutPage() {
   if (!root) return;
   const signInForm = root.querySelector('#signin-form');
@@ -166,6 +176,7 @@ function enhanceSignedOutPage() {
     const googleUrl = getGoogleUrl();
     root.innerHTML = signedOutMarkup(googleUrl);
     document.body.classList.add('account-landing-active');
+    bindSignedOutInteractions();
     return;
   }
 
