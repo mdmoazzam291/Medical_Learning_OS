@@ -81,6 +81,10 @@ try {
     assert.equal(writes[1].body.expectedRevision, 1);
     await page.getByRole('button', { name: 'Delete', exact: true }).click();
     await page.getByRole('alert').filter({ hasText: 'Personal note deleted.' }).waitFor();
+    // The delete alert is announced before reloadVault() finishes. Wait for the
+    // post-delete concept reload to render the empty note composer before starting
+    // another interaction, otherwise the search can race the asynchronous reload.
+    await page.getByLabel('Add a personal note').waitFor();
     if (width <= 800) await page.locator('#vault-concept-browser > summary').click();
     await page.getByLabel('Search NeuralVault').fill('empty');
     await page.getByRole('button', { name: 'Search', exact: true }).click();
