@@ -12,8 +12,7 @@ const securityHeaders = `/*
   Content-Security-Policy: default-src 'self'; script-src 'self' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self'; img-src 'self'; connect-src 'self' https://iyapppmeieqhflnzslao.supabase.co https://o4512152153751552.ingest.us.sentry.io; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'
 `;
 
-const redirects = `/oauth/consent /web/oauth-consent.html 200
-`;
+const redirects = `/oauth/consent /web/oauth-consent.html 200\n`;
 
 async function copyPublicFile(relativePath, outputDirectory) {
   const source = resolve(repoRoot, relativePath);
@@ -26,7 +25,7 @@ async function copyPublicFile(relativePath, outputDirectory) {
 
 export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTPUT || defaultOutput } = {}) {
   const output = resolve(outputDirectory);
-  if (output === repoRoot || !output.startsWith(`${repoRoot}/`) && !process.env.MLOS_PAGES_OUTPUT) {
+  if (output === repoRoot || repoRoot.startsWith(`${output}/`)) {
     throw new Error('Refusing unsafe Pages output path');
   }
 
