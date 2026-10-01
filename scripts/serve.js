@@ -14,6 +14,8 @@ const allowed = new Set([
   'web/favicon.svg',
   'web/account.html',
   'web/account.js',
+  'web/account-landing.css',
+  'web/account-landing.js',
   'web/oauth-consent.html',
   'web/oauth-consent.js',
   'web/medical.html',
