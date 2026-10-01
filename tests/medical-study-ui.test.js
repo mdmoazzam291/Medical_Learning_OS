@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { publicFileSet } from '../scripts/public-surface.js';
 
 test('medical learner page uses authenticated cloud study and server scoring', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -26,13 +27,11 @@ test('cloud account routes authenticated learners into the beta Study surface wi
   assert.doesNotMatch(source, /local demo/i);
 });
 
-
 test('medical option labels have explicit visual separation from option text', async () => {
   const css = await readFile(new URL('../web/styles.css', import.meta.url), 'utf8');
   assert.match(css, /#medical-app \.option-letter/);
   assert.match(css, /margin-right:\.35rem/);
 });
-
 
 test('medical overview reads revision due state without making it mastery', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -41,7 +40,6 @@ test('medical overview reads revision due state without making it mastery', asyn
   assert.match(source, /Scheduling state is not a mastery score/);
   assert.match(source, /The medical QBank still works/);
 });
-
 
 test('medical revision panel exposes time-budget Study Now for due or unseen candidates', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -52,7 +50,6 @@ test('medical revision panel exposes time-budget Study Now for due or unseen can
   assert.match(source, /Future reviews were not pulled early/);
 });
 
-
 test('Study Now UI can offer unseen new learning without calling it mastery', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /revision\.dueCount \|\| revision\.unseenCount/);
@@ -60,7 +57,6 @@ test('Study Now UI can offer unseen new learning without calling it mastery', as
   assert.match(source, /Review due items, repair mistakes/);
   assert.doesNotMatch(source, /mastery score.*Study Now score/i);
 });
-
 
 test('post-answer memory rating is optional, four-grade and separate from score', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -72,7 +68,6 @@ test('post-answer memory rating is optional, four-grade and separate from score'
   assert.match(source, /data-action="next"/);
 });
 
-
 test('medical study loop deep-links exact concept identity into NeuralVault', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /new URLSearchParams\(\{ concept: primaryConceptId \}\)/);
@@ -80,14 +75,12 @@ test('medical study loop deep-links exact concept identity into NeuralVault', as
   assert.match(source, /Open concept \/ add private correction/);
 });
 
-
 test('medical NeuralVault link tolerates old learner payloads via primary conceptLinks fallback', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /q\.conceptId \|\| q\.conceptLinks\?\.find/);
   assert.match(source, /role === 'primary'/);
   assert.match(source, /new URLSearchParams\(\{ concept: primaryConceptId \}\)/);
 });
-
 
 test('answered Study Now item carries recommendation reason into NeuralVault handoff', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -100,7 +93,6 @@ test('answered Study Now item carries recommendation reason into NeuralVault han
   assert.match(source, /Review concept \/ add private correction/);
 });
 
-
 test('medical overview shows full-mock capacity without overstating blueprint fidelity', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /cloud\.examSimulatorReadiness\('neet-pg:2026@1'\)/);
@@ -110,7 +102,6 @@ test('medical overview shows full-mock capacity without overstating blueprint fi
   assert.match(source, /The QBank and Study Now remain available/);
   assert.doesNotMatch(source, /Start full mock/);
 });
-
 
 test('medical study view renders blind-first-look media without diagnosis or annotation metadata', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -133,7 +124,6 @@ test('medical image layout remains responsive and bounded', async () => {
   assert.match(css, /@media\(max-width:650px\).*\.question-media img\{max-height:420px\}/s);
 });
 
-
 test('medical overview links to dedicated Exam Mode without embedding exam state machine', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /href="\/web\/exam\.html"/);
@@ -141,7 +131,6 @@ test('medical overview links to dedicated Exam Mode without embedding exam state
   assert.doesNotMatch(source, /setExamRunAnswer/);
   assert.doesNotMatch(source, /setExamRunReview/);
 });
-
 
 test('incorrect-answer UI prefers validated canonical teaching receipt and keeps legacy fallback', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -160,7 +149,6 @@ test('correct answers do not enter the canonical remediation block', async () =>
   assert.match(source, /receipt\?\.event\?\.correct !== false/);
   assert.match(source, /receipt\.event\?\.correct \? 'Correct\.'/);
 });
-
 
 test('medical learner uses visual route only for explicit server detection descriptor', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
@@ -198,13 +186,10 @@ test('visual detection affordance remains evidence language rather than mastery 
   assert.match(css, /\.visual-evidence-status/);
 });
 
-
-test('preview server exposes Exam Mode assets for browser acceptance', async () => {
-  const source = await readFile(new URL('../scripts/serve.js', import.meta.url), 'utf8');
-  assert.match(source, /'web\/exam\.html'/);
-  assert.match(source, /'web\/exam\.js'/);
+test('production public surface exposes Exam Mode assets for browser acceptance', () => {
+  assert.equal(publicFileSet.has('web/exam.html'), true);
+  assert.equal(publicFileSet.has('web/exam.js'), true);
 });
-
 
 test('completed Study Now session verifies recommendation to authoritative reschedule chain without making mastery claims', async () => {
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
