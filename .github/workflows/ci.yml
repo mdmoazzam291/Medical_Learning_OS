@@ -22,6 +22,16 @@ jobs:
           node-version: '24'
       - run: npm run check
       - run: npm run build:pages
+      - name: Verify Pages bundle tests
+        run: node --test tests/cloudflare-pages-build.test.js
+      - name: Verify account landing public-surface tests
+        run: node --test tests/account-landing-ui.test.js
+      - name: Verify beta public-surface tests
+        run: node --test tests/beta-ui-architecture.test.js
+      - name: Verify OAuth public-surface tests
+        run: node --test tests/oauth-consent-ui.test.js
+      - name: Verify Sentry hosting tests
+        run: node --test tests/sentry-wiring.test.js
       - run: npm test
       - run: npm run demo
   browser:
