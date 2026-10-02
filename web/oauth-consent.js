@@ -6,7 +6,7 @@ const RETURN_KEY = 'mlos-oauth-consent-return-v1';
 const MAX_RETURN_AGE_MS = 10 * 60 * 1000;
 const root = document.querySelector('#oauth-app');
 const notice = document.querySelector('#notice');
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 
 let state = { authorizationId: null, details: null, loading: true, error: null, deciding: false };
 

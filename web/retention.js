@@ -5,7 +5,7 @@ import { errorMonitor } from '/web/monitoring.js';
 
 const root = document.querySelector('#retention-app');
 const notice = document.querySelector('#notice');
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const probe = createCloudRetentionProbe({ ...cloudConfig, auth });
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
 

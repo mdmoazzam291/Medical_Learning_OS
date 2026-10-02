@@ -351,6 +351,9 @@ try {
   await form.getByLabel('Email').fill('admin@example.com');
   await form.getByLabel('Password').fill('strong-password');
   await form.getByRole('button', { name: 'Sign in with email' }).click();
+  await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+  assert.equal(new URL(page.url()).pathname, '/');
+  await page.goto(origin + '/web/account.html');
   await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
   await page.getByRole('heading', { name: 'One learner account, two ways in.' }).waitFor();
   await page.getByRole('button', { name: 'Opt in to retention feasibility' }).waitFor();
@@ -454,6 +457,9 @@ try {
   await learnerForm.getByLabel('Email').fill('learner@example.com');
   await learnerForm.getByLabel('Password').fill('strong-password');
   await learnerForm.getByRole('button', { name: 'Sign in with email' }).click();
+  await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+  assert.equal(new URL(page.url()).pathname, '/');
+  await page.goto(origin + '/web/account.html');
   await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
   await page.getByRole('heading', { name: 'Email + password is connected.' }).waitFor();
   assert.equal(await page.getByRole('link', { name: 'Open Admin Console' }).count(), 0);

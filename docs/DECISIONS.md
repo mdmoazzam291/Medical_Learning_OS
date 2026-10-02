@@ -1394,3 +1394,12 @@ Vault detail reads use a request sequence so a response for an older selection c
 Vault preserves unsaved form fields in page memory, scoped by authenticated learner, canonical concept and exact annotation/correction/report target. Search, redraw and concept switching do not discard text. A failed write keeps the draft; only an acknowledged write clears its own form. An edit retains its original expected revision. If a fresh read changes that revision or note anchor, saving is blocked until explicit discard; the draft stays available to copy. Missing/replaced targets expose a read-only recovery field rather than attaching text to a different version.
 
 The UI labels this as unsaved, not cloud persistence. No localStorage/IndexedDB, background sync, automatic note/report submission or learning event is introduced. Drafts clear on authenticated identity change. A native beforeunload guard offers protection on supported browsers, but browser/process termination and mobile lifecycle behavior can still lose page memory. Explicit Save remains the durable path. Sharing private correction text remains an explicit form choice.
+
+## ADR-096 — Recoverable authentication failures do not erase the saved login
+**Status:** Accepted — 2026-10-03
+
+Successful ordinary sign-in lands on Home, independently of optional Account projections. Trusted pending OAuth consent takes precedence; password recovery remains on Account. Explicit authenticated Account navigation does not redirect.
+
+The auth adapter distinguishes permanently rejected/revoked credentials from transport, rate-limit, server and malformed-response failures. Temporary failures preserve stored credentials but still reject the operation: retaining a refresh token does not authorize use of expired credentials. Home clears stale learner/admin presentation and owns its Retry error boundary. Browser storage access is lazy and guarded; unavailable persistence must never produce a falsely successful sign-in or a silent page-memory auth fallback.
+
+No learner-ledger, RLS, provider configuration, research or publication authority changes follow from these presentation/session-recovery rules.

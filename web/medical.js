@@ -6,7 +6,7 @@ import { errorMonitor } from '/web/monitoring.js';
 const root = document.querySelector('#medical-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const requestedStudyNowValue = Number(new URLSearchParams(location.search).get('studyNow'));
 let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;

@@ -14,6 +14,44 @@ function memoryStorage() {
 const projectUrl = 'https://example-ref.supabase.co';
 const publishableKey = 'sb_publishable_test';
 
+for (const failure of ['network', 429, 503, 'malformed']) {
+  test(`refresh preserves persisted session after ${failure} and allows retry`, async () => {
+    const storage = memoryStorage();
+    let failing = true;
+    storage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'old', refreshToken: 'refresh', expiresAt: 1, user: { id: 'u1' } }));
+    const auth = createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn: async () => {
+      if (failing) {
+        if (failure === 'network') throw new TypeError('Failed to fetch');
+        if (failure === 'malformed') return Response.json({});
+        return Response.json({ error: 'temporarily_unavailable' }, { status: failure });
+      }
+      return Response.json({ access_token: 'new', refresh_token: 'rotated', expires_at: 2100000000, user: { id: 'u1' } });
+    } });
+    await assert.rejects(auth.getSession());
+    assert.equal(JSON.parse(storage.getItem('mlos-supabase-auth-v1')).refreshToken, 'refresh');
+    failing = false;
+    assert.equal((await auth.getSession()).accessToken, 'new');
+  });
+}
+
+for (const code of ['refresh_token_not_found', 'refresh_token_already_used']) {
+  test(`refresh clears permanently invalid ${code}`, async () => {
+    const storage = memoryStorage();
+    storage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'old', refreshToken: 'refresh', expiresAt: 1, user: { id: 'u1' } }));
+    const auth = createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn: async () => Response.json({ error_code: code }, { status: 400 }) });
+    await assert.rejects(auth.getSession(), error => error.code === code);
+    assert.equal(auth.currentUser(), null);
+  });
+}
+
+test('unavailable storage fails sign-in explicitly without inventing a session', async () => {
+  const storage = { getItem() { throw new Error('blocked'); }, setItem() { throw new Error('blocked'); }, removeItem() { throw new Error('blocked'); } };
+  const auth = createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn: async () => Response.json({ access_token: 'new', refresh_token: 'refresh', user: { id: 'u1' } }) });
+  assert.equal(await auth.getSession(), null);
+  await assert.rejects(auth.signIn('qa@example.com', 'synthetic-password'), error => error.code === 'auth_storage_unavailable');
+  assert.equal(auth.currentUser(), null);
+});
+
 test('sign in stores only normalized session and refreshes near expiry', async () => {
   const storage = memoryStorage();
   const calls = [];

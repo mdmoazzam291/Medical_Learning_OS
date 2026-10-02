@@ -45,6 +45,8 @@ jobs:
             sleep 1
           done
           PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/browser-check.js
+      - name: Verify login landing and auth failure recovery
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/auth-recovery-browser-check.js
       - name: Verify feedback and saved-session Vault return
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/feedback-browser-check.js
       - name: Verify Study entry and saved-session reload
