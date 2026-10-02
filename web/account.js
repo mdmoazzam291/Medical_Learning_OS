@@ -7,7 +7,7 @@ import { errorMonitor } from '/web/monitoring.js';
 const root = document.querySelector('#account-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
 const emptyProjectionErrors = () => ({ progress: null, questions: null, retention: null });
@@ -19,9 +19,9 @@ const OAUTH_RETURN_MAX_AGE_MS = 10 * 60 * 1000;
 function resumePendingOAuthConsent() {
   let pending = null;
   try { pending = JSON.parse(sessionStorage.getItem(OAUTH_RETURN_KEY) || 'null'); } catch {}
-  sessionStorage.removeItem(OAUTH_RETURN_KEY);
+  try { sessionStorage.removeItem(OAUTH_RETURN_KEY); } catch { return false; }
   if (!pending || typeof pending.path !== 'string' || !Number.isFinite(Number(pending.createdAt))) return false;
-  if (Date.now() - Number(pending.createdAt) > OAUTH_RETURN_MAX_AGE_MS) return false;
+  if (Date.now() - Number(pending.createdAt) > OAUTH_RETURN_MAX_AGE_MS || Number(pending.createdAt) > Date.now()) return false;
   let target;
   try { target = new URL(pending.path, window.location.origin); } catch { return false; }
   if (target.origin !== window.location.origin || target.pathname !== '/oauth/consent') return false;
@@ -32,6 +32,10 @@ function resumePendingOAuthConsent() {
 }
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
+function finishSignIn() {
+  if (resumePendingOAuthConsent()) return;
+  location.replace('/');
+}
 function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
   if (!status || status >= 500) errorMonitor.capture(error, { component: 'account', operation, code: error?.code || null, status: status || null });
@@ -138,7 +142,9 @@ async function loadCloud({ forceRefresh = false } = {}) {
     reportUnexpected(error, 'refresh_session');
     state = signedOutState();
     render();
-    announce(`Session refresh failed: ${error.code || error.message || 'authentication_failed'}. Please sign in again.`);
+    announce(auth.currentUser()
+      ? 'The connection failed. Your saved login is kept; retry when the connection is available.'
+      : 'This session is no longer available. Sign in again.');
     return;
   }
   if (!session?.user) { state = signedOutState(); render(); return; }
@@ -221,8 +227,17 @@ root.addEventListener('submit', event => {
   const data = new FormData(form);
   if (form.id === 'signin-form') {
     (async () => {
-      try { await auth.signIn(data.get('email'), data.get('password')); state.user = auth.currentUser(); if (resumePendingOAuthConsent()) return; await loadCloud(); announce('Signed in to your cloud learner account.'); }
-      catch (error) { reportUnexpected(error, 'sign_in'); announce(`Sign in failed: ${error.code || error.message || 'authentication_failed'}.`); }
+      const submit = form.querySelector('button[type="submit"]');
+      if (submit.disabled) return;
+      submit.disabled = true;
+      submit.textContent = 'Signing in…';
+      try { await auth.signIn(data.get('email'), data.get('password')); finishSignIn(); }
+      catch (error) {
+        reportUnexpected(error, 'sign_in');
+        announce(error.code === 'auth_storage_unavailable' ? 'Browser storage is unavailable. Enable site storage and retry sign-in.' : `Sign in failed: ${error.code || error.message || 'authentication_failed'}.`);
+        submit.disabled = false;
+        submit.textContent = 'Sign in with email';
+      }
     })();
   }
   if (form.id === 'recovery-request-form') {
@@ -309,7 +324,7 @@ root.addEventListener('submit', event => {
         const emailRedirectTo = new URL('/web/account.html', window.location.origin).href;
         const result = await auth.signUp(data.get('email'), data.get('password'), { emailRedirectTo });
         state.user = auth.currentUser();
-        if (result.session) { if (resumePendingOAuthConsent()) return; await loadCloud(); announce('Account created and signed in.'); }
+        if (result.session) finishSignIn();
         else announce('If this is a new email, check your inbox to confirm it. If you previously used Google with this email, sign in with Google instead and add password sign-in from Account.');
       } catch (error) { reportUnexpected(error, 'sign_up'); announce(`Account creation failed: ${error.code || error.message || 'authentication_failed'}.`); }
     })();
@@ -323,6 +338,7 @@ async function bootstrap() {
       history.replaceState(null, '', window.location.pathname + window.location.search);
       state.user = auth.currentUser();
       state.recoveryMode = callback.type === 'recovery';
+      if (!state.recoveryMode) { finishSignIn(); return; }
       announce(callback.type === 'recovery'
         ? 'Recovery link verified. Choose a new password below.'
         : 'Signed in. Your cloud learner session is connected.');

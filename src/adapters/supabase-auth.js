@@ -97,7 +97,16 @@ function cleanOAuthClientRedirect(value) {
   return redirect.href;
 }
 
-export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchFn = fetch, now = Date.now }) {
+function browserSessionStorage() {
+  // Resolve the accessor inside each operation: privacy settings can make it throw.
+  return {
+    getItem: key => globalThis.localStorage.getItem(key),
+    setItem: (key, value) => globalThis.localStorage.setItem(key, value),
+    removeItem: key => globalThis.localStorage.removeItem(key)
+  };
+}
+
+export function createSupabaseAuth({ projectUrl, publishableKey, storage = browserSessionStorage(), fetchFn = fetch, now = Date.now }) {
   const base = cleanBase(projectUrl);
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' || typeof storage.removeItem !== 'function') throw new Error('invalid_storage');
@@ -111,8 +120,10 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
     }
   };
   const write = session => {
-    if (session) storage.setItem(SESSION_KEY, JSON.stringify(session));
-    else storage.removeItem(SESSION_KEY);
+    try {
+      if (session) storage.setItem(SESSION_KEY, JSON.stringify(session));
+      else storage.removeItem(SESSION_KEY);
+    } catch { throw new AuthError(0, 'auth_storage_unavailable'); }
     return session;
   };
 
@@ -140,10 +151,11 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage, fetchF
     try {
       const data = await api('/auth/v1/token?grant_type=refresh_token', { body: { refresh_token: refreshToken } });
       const session = normalizeSession(data);
-      if (!session) throw new AuthError(401, 'invalid_refresh_response');
+      if (!session) throw new AuthError(502, 'invalid_refresh_response');
       return write(session);
     } catch (error) {
-      write(null);
+      const permanentCodes = ['refresh_token_not_found', 'refresh_token_already_used', 'session_not_found', 'session_expired', 'invalid_credentials', 'user_banned', 'user_not_found'];
+      if (error instanceof AuthError && (error.status === 401 || error.status === 403 || permanentCodes.includes(error.code))) write(null);
       throw error;
     }
   }

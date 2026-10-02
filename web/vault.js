@@ -7,7 +7,7 @@ import { createVaultDrafts } from '/web/vault-drafts.js';
 const root = document.querySelector('#vault-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const drafts = createVaultDrafts({ root, onChange: count => {
   const status = root.querySelector('[data-vault-draft-count]');

@@ -12,7 +12,7 @@ import { errorMonitor } from '/web/monitoring.js';
 const app = document.querySelector('#app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
 
@@ -86,19 +86,24 @@ function home() {
 }
 
 function render() {
-  app.innerHTML = state.user ? home() : signedOut();
+  const recovery = auth.currentUser()
+    ? 'Your saved login is kept. Retry when the connection is available.'
+    : 'This session is no longer available. Sign in again or retry.';
+  app.innerHTML = state.user ? home() : signedOut() + (state.error ? '<section class="panel" role="status"><h2>Your workspace could not be loaded.</h2><p>' + recovery + '</p><button class="secondary" data-action="reload">Retry</button></section>' : '');
 }
 
 async function loadHome() {
-  const session = await auth.getSession();
-  if (!session?.user) {
-    state = { ...state, user: null, loading: false };
-    render();
-    return;
-  }
-  state = { ...state, user: auth.currentUser() || session.user, loading: true, progress: null, questions: null, revision: null, exam: null, isAdmin: false, error: null };
-  render();
+  if (state.loading) return;
+  state = { ...state, user: null, loading: true, progress: null, questions: null, revision: null, exam: null, isAdmin: false, error: null };
   try {
+    const session = await auth.getSession();
+    if (!session?.user) {
+      state = { ...state, user: null, loading: false };
+      render();
+      return;
+    }
+    state = { ...state, user: auth.currentUser() || session.user, loading: true, progress: null, questions: null, revision: null, exam: null, isAdmin: false, error: null };
+    render();
     const reads = await Promise.allSettled([cloud.progress(), cloud.questions('all'), cloud.due(15), cloud.examSimulatorReadiness('neet-pg:2026@1'), review.me()]);
     const operations = ['load_progress', 'load_questions', 'load_revision', 'load_exam', 'load_admin_status'];
     reads.forEach((result, index) => {
@@ -118,7 +123,7 @@ async function loadHome() {
     };
   } catch (error) {
     reportUnexpected(error, 'load_home');
-    state = { ...state, loading: false, error: error.code || error.message || 'beta_home_unavailable' };
+    state = { ...state, user: null, progress: null, questions: null, revision: null, exam: null, isAdmin: false, loading: false, error: error.code || error.message || 'beta_home_unavailable' };
   }
   render();
 }
@@ -142,10 +147,4 @@ app.addEventListener('click', event => {
   if (target.dataset.action === 'reload') loadHome();
 });
 
-render();
-loadHome().catch(error => {
-  reportUnexpected(error, 'bootstrap');
-  state = { ...state, loading: false, error: error.code || error.message || 'beta_home_unavailable' };
-  render();
-  announce('The beta workspace could not be loaded.');
-});
+if (!['access_token', 'refresh_token', 'error', 'error_code', 'error_description'].some(key => authFragment.has(key))) loadHome();

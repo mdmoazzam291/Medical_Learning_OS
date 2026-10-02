@@ -7,7 +7,7 @@ const RULE_SET_ID = 'neet-pg:2026@1';
 const root = document.querySelector('#exam-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 
 let timerId = null;

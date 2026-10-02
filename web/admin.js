@@ -6,7 +6,7 @@ import { errorMonitor } from '/web/monitoring.js';
 const root = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const auth = createSupabaseAuth({ ...cloudConfig, storage: localStorage });
+const auth = createSupabaseAuth({ ...cloudConfig });
 const review = createCloudReview({ ...cloudConfig, auth });
 
 let state = {

@@ -1,5 +1,15 @@
 # Current status
 
+## 2026-10-03 — login/Home and authentication recovery fixes
+- Reconciled with main at 8c48542 rather than delivering the older audit checkout. Preserved newer Account projection isolation, landing presentation, retention delivery and Cloudflare hosting changes. The original dirty checkout remains separate and untouched.
+- Successful password sign-in, signed-in signup and non-recovery implicit callbacks now land on Home; bounded same-origin pending OAuth consent still takes precedence. Password recovery and deliberate authenticated Account visits stay on Account. Sign-in prevents duplicate submissions and restores its button after failure.
+- Transient network, rate-limit, server and malformed refresh-response failures retain persisted credentials but reject the attempted operation. Revoked/missing tokens and 401/403 refresh rejection still clear the session. No expired-token offline authorization is introduced.
+- Home catches refresh failures inside the same recovery boundary as projection failures, clears stale learner/admin presentation and offers a working Retry. Initial auth resolution no longer renders cached authenticated content before session checking.
+- All browser auth entrypoints use lazy guarded storage access. Denied localStorage no longer aborts module startup; sign-in cannot claim success without persisted credentials and explains unavailable browser storage. Optional sessionStorage failure cannot derail ordinary Home landing.
+- Verification: 873 automated tests passed, syntax/catalog/integrity checks passed, Cloudflare static bundle built (45 public files), all 13 browser suites passed including new phone/tablet/desktop auth recovery coverage. The shipped beta-entry suite now asserts Home before deliberately visiting Account.
+- Native iOS Safari and fresh real-account hosted acceptance remain separate release checks. No production learning writes, human-review decisions, DB migration or provider-setting changes were made. Release status must be recorded after CI/deployment verification.
+- Next: release this bounded fix after CI, verify served-source parity on the existing hosted origin(s), and complete native-device acceptance.
+
 Updated: 2026-09-28 (Asia/Kolkata).
 
 ## Completed
