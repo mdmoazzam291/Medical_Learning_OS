@@ -25,6 +25,8 @@ export const publicFiles = Object.freeze([
   'web/admin.html',
   'web/admin.js',
   'web/admin-pair-preflight.js',
+  'web/owner-console.css',
+  'web/owner-console.js',
   'web/references-panel.js',
   'src/domain/references-workspace.js',
   'src/domain/references-source-focus.js',
@@ -40,6 +42,7 @@ export const publicFiles = Object.freeze([
   'src/adapters/cloud-study.js',
   'src/adapters/cloud-retention-probe.js',
   'src/adapters/cloud-review.js',
+  'src/adapters/cloud-owner.js',
   'src/adapters/error-monitoring.js'
 ]);
 
