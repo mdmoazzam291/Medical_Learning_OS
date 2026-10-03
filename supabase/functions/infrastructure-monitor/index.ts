@@ -19,6 +19,16 @@ type ProviderResult = {
   observedAt: string;
   metrics: Record<string, unknown>;
 };
+type DeliveryIntent = {
+  idempotencyKey: string;
+  alertId: string;
+  provider: string;
+  notificationKind: "opened" | "repeat" | "escalation" | "recovery";
+  severity: "warning" | "critical";
+  providerStatus: "healthy" | "degraded" | "unavailable";
+  payload?: Record<string, unknown>;
+  deliveryState?: "pending" | "failed" | "sent";
+};
 
 function json(status: number, payload: unknown) {
   return new Response(JSON.stringify(payload), {
@@ -189,6 +199,55 @@ async function sentryProbe(admin: any): Promise<ProviderResult> {
   }
 }
 
+async function resolveAlertRecipient(admin: any) {
+  const { data: owner, error: ownerError } = await admin
+    .from("content_admin_account")
+    .select("admin_user_id")
+    .eq("singleton", true)
+    .single();
+  if (ownerError || !owner?.admin_user_id) throw new Error("alert_owner_unavailable");
+
+  const { data, error } = await admin.auth.admin.getUserById(owner.admin_user_id);
+  const email = data?.user?.email;
+  if (error || typeof email !== "string" || !email.includes("@")) {
+    throw new Error("alert_owner_email_unavailable");
+  }
+  return email;
+}
+
+async function sendAlertNotification(admin: any, intent: DeliveryIntent) {
+  const apiKey = Deno.env.get("RESEND_API_KEY") || await readSecret(admin, "mlos_resend_api_key");
+  const from = Deno.env.get("MLOS_ALERT_FROM") ?? "";
+  if (!apiKey || !from) throw new Error("alert_delivery_not_configured");
+  const to = await resolveAlertRecipient(admin);
+  const provider = String(intent.provider || "provider").slice(0, 40);
+  const severity = intent.severity === "critical" ? "CRITICAL" : "WARNING";
+  const kind = String(intent.notificationKind || "update").slice(0, 20);
+  const status = String(intent.providerStatus || "unknown").slice(0, 20);
+  const subject = `[Medical Learning OS] ${severity}: ${provider} ${kind}`;
+  const text = [
+    "Medical Learning OS infrastructure alert",
+    `Provider: ${provider}`,
+    `Event: ${kind}`,
+    `Severity: ${severity.toLowerCase()}`,
+    `Observed status: ${status}`,
+    "This message contains operational health metadata only."
+  ].join("\n");
+
+  const { response, body } = await fetchJson("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${apiKey}`,
+      "content-type": "application/json",
+      "Idempotency-Key": intent.idempotencyKey
+    },
+    body: JSON.stringify({ from, to: [to], subject, text })
+  }, 8000);
+
+  if (!response.ok) throw new Error(`resend_alert_http_${response.status}`);
+  return typeof body?.id === "string" ? body.id : null;
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method !== "POST") return json(405, { error: "method_not_allowed" });
   if (!supabaseUrl || !secretKey) return json(500, { error: "server_configuration_error" });
@@ -208,6 +267,7 @@ Deno.serve(async (req: Request) => {
   ]);
 
   const receipts = [];
+  const deliveryIntents: DeliveryIntent[] = [];
   for (const result of probes) {
     const { data, error } = await admin.rpc("owner_monitor_record_provider_v1", {
       p_provider: result.provider,
@@ -217,12 +277,46 @@ Deno.serve(async (req: Request) => {
       p_metrics: result.metrics
     });
     receipts.push(error ? { provider: result.provider, error: "record_failed" } : data);
+    if (!error && data?.deliveryIntent?.idempotencyKey) {
+      deliveryIntents.push(data.deliveryIntent as DeliveryIntent);
+    }
+  }
+
+  const deliveries = [];
+  for (const intent of deliveryIntents) {
+    try {
+      const providerMessageId = await sendAlertNotification(admin, intent);
+      const { data, error } = await admin.rpc("owner_monitor_record_notification_delivery_v1", {
+        p_idempotency_key: intent.idempotencyKey,
+        p_outcome: "sent",
+        p_provider_message_id: providerMessageId,
+        p_error_code: null
+      });
+      deliveries.push(error
+        ? { idempotencyKey: intent.idempotencyKey, error: "delivery_evidence_record_failed" }
+        : data);
+    } catch (error) {
+      const deliveryErrorCode = "delivery_failed";
+      const { data, error: recordError } = await admin.rpc("owner_monitor_record_notification_delivery_v1", {
+        p_idempotency_key: intent.idempotencyKey,
+        p_outcome: "failed",
+        p_provider_message_id: null,
+        p_error_code: deliveryErrorCode
+      });
+      deliveries.push({
+        idempotencyKey: intent.idempotencyKey,
+        error: deliveryErrorCode,
+        detail: String((error as Error)?.message || "alert_send_failed").slice(0, 120),
+        evidence: recordError ? "record_failed" : data
+      });
+    }
   }
 
   return json(200, {
-    contractId: "owner-infrastructure-monitor-v1",
+    contractId: "owner-infrastructure-monitor-v2",
     observedAt: new Date().toISOString(),
     providers: probes,
-    receipts
+    receipts,
+    deliveries
   });
 });
