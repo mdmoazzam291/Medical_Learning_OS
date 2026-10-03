@@ -27,6 +27,7 @@ export const publicFiles = Object.freeze([
   'web/admin-pair-preflight.js',
   'web/owner-console.css',
   'web/owner-console.js',
+  'web/owner-v3-console.js',
   'web/references-panel.js',
   'src/domain/references-workspace.js',
   'src/domain/references-source-focus.js',
