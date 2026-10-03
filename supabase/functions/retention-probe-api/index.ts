@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 
 type Json = Record<string, unknown>;
 
@@ -170,8 +171,21 @@ Deno.serve(async (req: Request) => {
       auth: { persistSession: false, autoRefreshToken: false }
     });
 
+    const runtimeAccess = await checkRuntimeAccess(admin, token, learnerId);
+    if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
+    if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
+
     const url = new URL(req.url);
     const path = routePath(url);
+
+    if (path === "/origin" || path === "/origin/start") {
+      const { data: featureAllowed, error: featureError } = await admin.rpc("learner_feature_allowed_v1", {
+        p_user: learnerId,
+        p_feature: "retention_origin_handoff"
+      });
+      if (featureError) fail(500, "feature_entitlement_unavailable");
+      if (featureAllowed !== true) fail(403, "feature_not_enabled");
+    }
 
     if (req.method === "GET" && path === "/inbox") {
       if (url.search) fail(400, "query_not_supported");

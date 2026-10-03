@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 
 type Json = Record<string, unknown>;
 
@@ -192,6 +193,10 @@ Deno.serve(async (req: Request) => {
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
+
+    const runtimeAccess = await checkRuntimeAccess(admin, token, reviewerId);
+    if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
+    if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
 
     const trustedRead = async (operation: string, read: () => Promise<any>) => {
       let result = await read();

@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { Rating, createEmptyCard, fsrs } from "npm:ts-fsrs@5.4.2";
 import {
   createLockedSectionRuntimeRun,
@@ -290,6 +291,10 @@ Deno.serve(async (req: Request) => {
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
+
+    const runtimeAccess = await checkRuntimeAccess(admin, token, learnerId);
+    if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
+    if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
     const requireExamRunAccess = (row: any) => {
       if (row?.state?.assembly?.testingOnly === true && !internalExamTester) {
         fail(403, "internal_exam_test_forbidden");
@@ -992,6 +997,13 @@ Deno.serve(async (req: Request) => {
 
     const url = new URL(req.url);
     const path = routePath(url);
+
+    if (req.method === "GET" && path === "/features") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("learner_feature_entitlements_v1", { p_user: learnerId });
+      if (error || !data) fail(500, "feature_entitlements_unavailable");
+      return response(req, 200, data);
+    }
 
     if (req.method === "GET" && path === "/retention-probe/consent") {
       if (url.search) fail(400, "query_not_supported");

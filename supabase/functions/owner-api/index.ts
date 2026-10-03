@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -182,6 +183,10 @@ Deno.serve(async (req: Request) => {
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
+
+    const runtimeAccess = await checkRuntimeAccess(admin, token, authData.user.id);
+    if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
+    if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
     const { data: access, error: accessError } = await admin.rpc("content_admin_status_v1", {
       p_user: authData.user.id
     });
@@ -250,6 +255,50 @@ Deno.serve(async (req: Request) => {
       const { data, error } = await admin.rpc("owner_admin_learner_detail_v1", { p_learner: learnerId });
       if (error) fail(500, "owner_learner_detail_unavailable");
       if (!data) fail(404, "owner_learner_not_found");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "GET" && path === "/feature-flags") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("owner_feature_flags_v1");
+      if (error) fail(500, "owner_feature_flags_unavailable");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/feature-flags") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      const allowedFields = new Set(["featureKey","audience","reason","confirmation","requestId"]);
+      if (Object.keys(input).some((key) => !allowedFields.has(key))) fail(400, "invalid_fields");
+      const featureKey = String(input.featureKey || "");
+      if (!/^[a-z][a-z0-9_]{2,63}$/.test(featureKey)) fail(400, "owner_feature_key_invalid");
+      const audience = String(input.audience || "");
+      if (!["all","beta","off"].includes(audience)) fail(400, "owner_feature_audience_invalid");
+      const reason = reasonValue(input.reason);
+      const requestId = uuidValue(input.requestId, "owner_request_id_invalid");
+      if (String(input.confirmation || "") !== "SET FEATURE AUDIENCE") fail(400, "owner_action_confirmation_required");
+      const { data, error } = await admin.rpc("owner_admin_set_feature_flag_v1", {
+        p_actor: authData.user.id,
+        p_feature: featureKey,
+        p_audience: audience,
+        p_reason: reason,
+        p_request_id: requestId
+      });
+      if (error) {
+        const message = String(error.message || "");
+        if (message.includes("owner_feature_not_found")) fail(404, "owner_feature_not_found");
+        if (message.includes("owner_feature_audience_invalid")) fail(400, "owner_feature_audience_invalid");
+        if (message.includes("owner_action_reason_invalid")) fail(400, "owner_action_reason_invalid");
+        if (message.includes("content_admin_required")) fail(403, "content_admin_required");
+        fail(500, "owner_feature_flag_write_failed");
+      }
+      return response(req, 200, data);
+    }
+
+    if (req.method === "GET" && path === "/infrastructure-alerts") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("owner_infrastructure_alerts_v1");
+      if (error) fail(500, "owner_infrastructure_alerts_unavailable");
       return response(req, 200, data);
     }
 
