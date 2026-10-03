@@ -3,6 +3,7 @@
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 
 ## Start here
+- [AI uploads, exclusive question homes and connected Notes/Graph contract](docs/CONTENT_LIBRARY_CONTRACT.md)
 - [Current status and next task](docs/STATUS.md)
 - [Project context and continuity](docs/PROJECT_CONTEXT.md)
 - [Content lifecycle](docs/CONTENT_WORKFLOW.md)

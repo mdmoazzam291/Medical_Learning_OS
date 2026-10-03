@@ -1,5 +1,11 @@
 # Implementation roadmap
 
+## 2026-10-04 user-directed canonical library extension
+- M02e — IMPLEMENTED; real-content acceptance pending: exclusive PYQ-first homes; repeated exam-year occurrences; non-PYQ platform priority Marrow → PrepLadder → DAMS; deduplicated repository/admin imports; one atomic authorized Review & publish action. Contract: `CONTENT_LIBRARY_CONTRACT.md`.
+- M06e — IMPLEMENTED; real-content acceptance pending: Notes/Graph views over one canonical concept library; subject/system/organ/domain/task facets; exact/secondary/confusing question links; private learner observed-state overlays without mastery claims.
+- M02f — LATER, DO NOT IMPLEMENT NOW: separate administrator/learner private-import sections, question-only graph, no canonical concept connections, owner isolation/export/erasure and no shared publication.
+- Content reset — SEPARATE DESTRUCTIVE GATE: inventory/export and exact archive/purge scope first; current canonical content and historical attempts remain intact in M02e/M06e.
+
 Status: DONE means implemented and checked; NEXT means the next bounded task; PLANNED means not implemented. IDs remain stable as sub-tasks are added.
 
 | ID | Parent category and ownership | Deliverable / exit condition | Status |

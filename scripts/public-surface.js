@@ -1,4 +1,11 @@
 export const publicFiles = Object.freeze([
+  'web/library.html',
+  'web/library.js',
+  'web/library.css',
+  'web/content-import.html',
+  'web/content-import.js',
+  'web/content-library-client.js',
+  'src/domain/content-library.js',
   'web/index.html',
   'web/app.js',
   'web/styles.css',
