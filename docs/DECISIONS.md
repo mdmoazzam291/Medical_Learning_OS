@@ -1403,3 +1403,14 @@ Successful ordinary sign-in lands on Home, independently of optional Account pro
 The auth adapter distinguishes permanently rejected/revoked credentials from transport, rate-limit, server and malformed-response failures. Temporary failures preserve stored credentials but still reject the operation: retaining a refresh token does not authorize use of expired credentials. Home clears stale learner/admin presentation and owns its Retry error boundary. Browser storage access is lazy and guarded; unavailable persistence must never produce a falsely successful sign-in or a silent page-memory auth fallback.
 
 No learner-ledger, RLS, provider configuration, research or publication authority changes follow from these presentation/session-recovery rules.
+
+## ADR-097 — Canonical content imports use exclusive homes and one accountable admin review
+**Status:** Accepted — 2026-10-04
+
+One canonical question retains source occurrences and learner history. Approved PYQ provenance always suppresses platform display homes; repeated exams/years/sessions remain occurrences. Other platform homes follow the owner's Marrow > PrepLadder > DAMS preference, then alphabetical unranked IDs. Exact equivalence ignores option order/IDs but preserves clinically meaningful text; conflicting answers/IDs fail. Near-similarity remains human judgment.
+
+Shared concept identity supports the 19 subjects and independent system/organ/domain/task facets. Notes connect to questions through explicit typed links. The current published question exclusively owns its primary concept. Imported additional clinical relationships bind that exact version and do not survive a different revision by guesswork. Notes/Graph consume one authenticated prompt-only projection; observed attempt colors/counts make no mastery claim.
+
+Repository and manual imports stage immutable schema-v1 drafts. The singleton administrator inspects the exact digest and submits one attested Medical/References/Rights action; the SQL transaction publishes eligible content or rolls everything back. Source permissions remain separately fingerprint-verified. Reaffirming an unchanged permission does not create a second rights event. Externally authored/AI notes retain provenance; the admin is their accountable curator. Existing native author self-review restrictions remain intact. Automated acceptance creates no real medical approval.
+
+Private import is deferred. Existing content/history is retained pending a separate export/reset manifest. Connected repository intake is supported; unrelated AI chats have no automatic write authority. Starting filtered Study respects the existing unfinished-session priority and exposes that resume choice to the learner.

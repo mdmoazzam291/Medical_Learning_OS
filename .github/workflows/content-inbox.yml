@@ -1,0 +1,28 @@
+name: Shared content inbox
+on:
+  push:
+    branches: [main]
+    paths: ['content/inbox/**', 'scripts/stage-content-inbox.js', '.github/workflows/content-inbox.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: shared-content-inbox
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate all manifests before database access
+        run: node scripts/stage-content-inbox.js
+      - name: Install PostgreSQL client
+        run: sudo apt-get update -qq && sudo apt-get install -y postgresql-client
+      - name: Stage immutable drafts for human review
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: node scripts/stage-content-inbox.js --stage

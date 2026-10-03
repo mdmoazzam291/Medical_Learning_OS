@@ -1,0 +1,50 @@
+import assert from 'node:assert/strict';
+import { createServer } from 'node:http';
+import { mkdtemp,readFile,rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { buildPages } from './build-pages.js';
+import { publicFileSet } from './public-surface.js';
+const { chromium }=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
+const output=await mkdtemp(join(tmpdir(),'mlos-library-browser-'));await buildPages({outputDirectory:output});
+const headers=Object.fromEntries((await readFile(join(output,'_headers'),'utf8')).split('\n').filter(l=>/^\s+[^:]+:/.test(l)).map(l=>{const i=l.indexOf(':');return[l.slice(0,i).trim(),l.slice(i+1).trim()];}));
+const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{...headers,'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
+const facets={subjects:['medicine'],systems:['respiratory'],organs:['lung'],domains:[],tasks:['diagnosis']};
+const q=(id,home,observed,role='primary')=>({questionId:id,questionVersionId:id+'@1',stem:'Synthetic '+id+' question',options:[{optionId:'a',text:'Alpha'},{optionId:'b',text:'Beta'}],conceptLinks:[{conceptId:'c1',role}],classification:facets,origins:home.kind==='pyq'?[{kind:'pyq',examId:'neet-pg',year:2024,session:'main',evidence:'Synthetic'},{kind:'pyq',examId:'neet-pg',year:2025,session:'main',evidence:'Synthetic'}]:[],home,observed});
+const library={contractId:'canonical-content-library-v1',concepts:[{conceptId:'c1',label:'Synthetic concept',classification:facets,aliases:[]}],notes:[{noteVersionId:'n1',conceptId:'c1',title:'Synthetic connected note',bodyMarkdown:'Test content only. <script>window.injected=true</script>'}],questions:[q('pyq',{kind:'pyq',exams:['neet-pg'],platforms:[]},{attempts:3,wrong:2,latestCorrect:false,state:'incorrect',repeatedWrong:true}),q('platform',{kind:'platform',platforms:['marrow'],exams:[]},{attempts:0,wrong:0,latestCorrect:null,state:'unattempted',repeatedWrong:false},'distractor')],links:[],masteryInference:false};
+const manifest={schemaVersion:1,importId:'synthetic-browser',concepts:[],sources:[{sourceId:'s1',title:'Synthetic source',version:'1',url:null,evidence:'Test only'}],questions:[],notes:[{noteId:'n1',conceptId:'c1',title:'Synthetic note',bodyMarkdown:'Test only',sourceIds:['s1'],provenance:{kind:'ai_generated_original',evidence:'Test only'}}],noteQuestionLinks:[{noteId:'n1',questionId:'pyq',relation:'explains',section:''}]};
+const browser=await chromium.launch({headless:true});const errors=[];
+try{
+ for(const [name,width,height] of [['phone',390,844],['tablet',820,1180],['desktop',1440,1000]]){
+  const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
+  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let outage=false;
+  await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{const request=route.request(),path=new URL(request.url()).pathname;const reply=(body,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(body)});
+   if(request.method()!=='GET')writes.push({path,body:request.postDataJSON()});
+   if(path.endsWith('/content-library-api/library'))return reply(outage?{error:'library_unavailable'}:library,outage?503:200);
+   if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
+   if(path.endsWith('/content-library-api/study'))return reply({sessionId:'unfinished-session',resumedExisting:true});
+   if(path.endsWith('/content-library-api/imports'))return reply({contractId:'content-library-inbox-v1',imports:[{import_id:'synthetic-browser',digest:'a'.repeat(64),status:'draft'}]});
+   if(path.endsWith('/content-library-api/imports/synthetic-browser'))return reply({import_id:'synthetic-browser',manifest,digest:'a'.repeat(64),status:'draft',sources:[{...manifest.sources[0],rights:{status:'unknown'}}],duplicateTargets:[]});
+   if(path.endsWith('/content-library-api/imports/synthetic-browser/publish'))return reply({contractId:'content-library-publication-v1',status:'published',newQuestions:0,existingQuestionsLinked:0,newNotes:1});
+   throw new Error('Unexpected request '+request.method()+' '+path);
+  });
+  await page.goto(origin+'/web/library.html?concept=c1');await page.getByRole('heading',{name:'Synthetic connected note',exact:true}).waitFor();
+  assert.equal(await page.locator('[data-question-card]').count(),2);await page.getByRole('tab',{name:'Graph',exact:true}).click();await page.getByRole('img',{name:'Connected question graph'}).waitFor();
+  assert.equal(await page.locator('.graph-node.incorrect').count(),1);assert.equal(await page.locator('.graph-node.unattempted').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2\/3 wrong/);
+  await page.getByLabel('Platform').selectOption('marrow');assert.equal(await page.locator('[data-question-card]').count(),1);assert.equal(await page.locator('[data-question-card="pyq"]').count(),0);
+  await page.getByLabel('Platform').selectOption('');await page.getByLabel('Exam').selectOption('neet-pg');assert.equal(await page.locator('[data-question-card]').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2024.*2025/);
+  assert.equal(await page.evaluate(()=>window.injected===true),false);assert.equal(writes.length,0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'library-graph-'+name+'.png'),fullPage:true});
+  await page.reload();await page.getByRole('tab',{name:'Graph',exact:true}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),1);
+  outage=true;await page.reload();await page.getByRole('button',{name:'Retry library'}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),0);outage=false;await page.getByRole('button',{name:'Retry library'}).click();await page.locator('[data-question-card]').waitFor();
+  await page.getByRole('button',{name:/Study these questions/}).click();await page.getByRole('link',{name:'Continue unfinished session'}).waitFor();assert.equal(writes.length,1);assert.deepEqual(writes[0].body,{questionVersionIds:['pyq@1']});assert.equal(await page.locator('[data-question-card]').count(),1);writes.length=0;
+  await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'synthetic-browser'}).click();await page.getByRole('button',{name:'Review & publish',exact:true}).waitFor();
+  await page.getByLabel('Reuse permission',{exact:true}).selectOption('owned');await page.getByLabel('Permission evidence').fill('Synthetic fixture ownership');await page.getByLabel('Review notes').fill('Synthetic test inspection of all three gates.');
+  await page.getByLabel(/I inspected the exact/).check();await page.getByRole('button',{name:'Review & publish',exact:true}).click();await page.getByText(/Published:.*1 note/).waitFor();
+  assert.equal(writes.length,1);assert.equal(writes[0].body.attested,true);assert.equal('reviewerId' in writes[0].body,false);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'library-admin-'+name+'.png'),fullPage:true});
+  await context.close();
+ }
+ assert.deepEqual(errors,[]);console.log('Built library Notes/Graph, exclusive homes, related questions, escaping, recovery, URL persistence and one admin publication action passed at phone/tablet/desktop. Synthetic fixtures only.');
+}finally{await browser.close();await new Promise(r=>server.close(r));await rm(output,{recursive:true,force:true});}
