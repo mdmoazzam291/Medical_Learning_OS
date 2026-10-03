@@ -49,8 +49,8 @@ Interfaces: API contracts from Task 2; pure projections from Task 1; inbox manif
 - [x] Run browser suite at 390/820/1440px and existing affected suites; expected GREEN; commit.
 
 ## Task 4: Verify and release
-- [ ] Run `npm test`, `npm run check`, `npm run build:pages`, `git diff --check`; expected all pass.
-- [ ] Perform independent whole-branch review and fix Important/Critical findings with RED/GREEN tests.
-- [ ] Apply additive migration/deploy API, verify advisors and live origin/auth boundaries without creating learner/clinical evidence.
-- [ ] Publish focused PR, wait for Foundation CI, release and verify served-byte parity.
-- [ ] Update STATUS/DECISIONS with actual evidence and limits. Never mark private import, content reset or genuine medical review complete.
+- [x] Run `npm test`, `npm run check`, `npm run build:pages`, `git diff --check`; expected all pass.
+- [x] Perform independent whole-branch review and fix Important/Critical findings with RED/GREEN tests.
+- [x] Apply additive migration/deploy API, verify advisors and live origin/auth boundaries without creating learner/clinical evidence.
+- [x] Publish focused PR, wait for Foundation CI, release and verify served-byte parity.
+- [x] Update STATUS/DECISIONS with actual evidence and limits. Never mark private import, content reset or genuine medical review complete.
