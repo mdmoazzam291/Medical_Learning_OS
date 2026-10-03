@@ -28,7 +28,24 @@ Updated: 2026-09-28 (Asia/Kolkata).
 - A real email-confirmed cloud learner flow is verified. Native iOS Safari remains a later compatibility check.
 
 ## Current task
-M04c authenticated review/content publication work is the next bounded content milestone. Production Resend SMTP remains deferred until an owned sending domain exists.
+M14 production-readiness hardening is the active bounded infrastructure slice. This branch adds a production health endpoint, hosted-server security headers, graceful shutdown/timeouts, and CI verification. It does not deploy or claim production readiness by itself. Remaining M14 gates include live Render service-health audit, Auth leaked-password hardening, consolidated runtime/alert evidence, production-shaped capacity/load evidence, and a release decision after the content/review gates are confirmed.
+
+## Next M14 step — production configuration boundary
+- Production origin must be treated as an explicit Supabase Auth/CORS allow-list entry, not inferred from the preview origin.
+- The Edge Function currently has the preview origin hard-coded alongside configured origins. Before production, the production web origin must be supplied through the deployed `MLOS_ALLOWED_ORIGINS` secret/configuration and the preview origin should remain only if preview access is intentionally retained.
+- Supabase Auth Site URL and redirect allow-list must include the final HTTPS production origin before email/Google authentication is exposed there.
+- No secret, service-role key, Resend key, Sentry auth token or AI-provider credential may be added to client code.
+- This configuration work must be completed in the deployment/control plane, then verified with live unauthenticated, authenticated, CORS and OAuth callback checks.
+
+## M14 production-readiness branch — 2026-10-02
+- Branch: `prod/m14-production-readiness`.
+- Added `/healthz` and `/readyz` JSON health endpoints to the Node hosted server.
+- Added baseline response hardening: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, and restrictive `Permissions-Policy`, while retaining the existing CSP.
+- Added request/header/keep-alive timeouts and graceful SIGINT/SIGTERM shutdown handling.
+- Render preview health checking now uses `/healthz`.
+- Added a dependency-free hosted server health/security regression test and wired it into CI.
+- Verification status: implementation committed to the production-readiness branch; GitHub CI is the next executable verification. No production deployment was performed.
+- Limitation: Render control-plane service configuration is not changed by this branch. Production remains unreleased until M14 gates and release checks are explicitly satisfied.
 
 ## M04b account integration
 - Supabase Auth user UUID is the canonical cloud learner ID. No duplicate account-to-learner mapping table is introduced.
