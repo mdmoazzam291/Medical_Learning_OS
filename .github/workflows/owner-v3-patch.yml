@@ -6,6 +6,7 @@ on:
       - feat/owner-operations-v3
     paths:
       - scripts/patch-owner-v3.mjs
+      - scripts/patch-owner-v3-alert-anchor.mjs
       - .github/workflows/owner-v3-patch.yml
 
 permissions:
@@ -21,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Repair V3 patch anchor
+        run: node scripts/patch-owner-v3-alert-anchor.mjs
       - name: Apply deterministic V3 patches
         id: apply
         continue-on-error: true
