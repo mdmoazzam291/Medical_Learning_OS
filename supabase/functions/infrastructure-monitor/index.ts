@@ -70,7 +70,7 @@ async function renderProbe(): Promise<ProviderResult> {
   const observedAt = new Date().toISOString();
   const started = Date.now();
   try {
-    const { response, body } = await fetchJson(renderHealthUrl, {}, 9000);
+    const { response, body } = await fetchJson(renderHealthUrl, {}, 30000);
     return {
       provider: "render",
       status: response.ok && body?.status === "ok" ? "healthy" : "degraded",
