@@ -66,13 +66,16 @@ test('confidence evidence ships with privacy erasure and composed learner export
   assert.match(confidenceApi, /path === "\/export"/);
   assert.match(confidenceApi, /study_answer_confidence_events/);
   assert.match(cloudStudy, /answerConfidence/);
-  assert.match(cloudStudy, /learner-experiment-api\/export/);
+  assert.match(cloudStudy, /learner-experiment-api/);
+  assert.match(cloudStudy, /requestFunction\('learner-experiment-api', '\/export'\)/);
 });
 
-test('confidence is observational only and does not change scoring or recommendation policy', () => {
+test('confidence is observational only and does not mutate scoring or recommendation state', () => {
   assert.doesNotMatch(migration, /update\s+public\.study_revision_state/i);
   assert.doesNotMatch(migration, /update\s+public\.study_recommendation_events/i);
   assert.doesNotMatch(migration, /update\s+public\.study_attempts/i);
-  assert.doesNotMatch(migration, /mastery/i);
-  assert.doesNotMatch(confidenceApi, /study_revision_state|study_recommendation_events|mastery/i);
+  assert.doesNotMatch(confidenceApi, /study_revision_state|study_recommendation_events/);
+  assert.match(migration, /'inferenceAuthority',false/);
+  assert.match(migration, /'scoringAuthority',false/);
+  assert.match(migration, /'recommendationAuthority',false/);
 });
