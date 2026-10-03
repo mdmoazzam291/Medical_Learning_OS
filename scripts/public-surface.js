@@ -11,6 +11,7 @@ export const publicFiles = Object.freeze([
   'web/oauth-consent.js',
   'web/medical.html',
   'web/medical.js',
+  'web/answer-confidence-beta.js',
   'web/exam.html',
   'web/exam.js',
   'web/vault.html',
