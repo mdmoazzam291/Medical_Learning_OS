@@ -24,9 +24,17 @@ try {
     const session = id => ({ sessionId: id, position: 0, total: 1, closed, question: closed ? null : question, receipt: closed ? null : savedReceipt, memoryJudgment: null });
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const request = route.request();
-      const path = new URL(request.url()).pathname.split('/functions/v1/study-api')[1];
+      const pathname = new URL(request.url()).pathname;
+      const path = pathname.split('/functions/v1/study-api')[1];
+      const experimentPath = pathname.split('/functions/v1/learner-experiment-api')[1];
       const method = request.method();
       const fulfill = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+      if (experimentPath !== undefined) {
+        if (method === 'GET' && experimentPath === '/status') {
+          return fulfill({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
+        }
+        return fulfill({ error: 'not_found' }, 404);
+      }
       if (method === 'GET') reads.push(path); else writes.push({ path, body: request.postDataJSON() });
       if (path === '/questions') return fulfill(questionsUnavailable ? { error: 'questions_unavailable' } : { questions: [question] }, questionsUnavailable ? 503 : 200);
       if (path === '/progress') return fulfill(progressUnavailable ? { error: 'progress_unavailable' } : { attempts: 2, correct: 1 }, progressUnavailable ? 503 : 200);
