@@ -76,6 +76,22 @@ The dashboard required sign-in and reported a verification error after one reloa
 
 The current repository has the existing Version URL model (`preview_urls: true`). Cloudflare now also supports a separate Worker Previews model. Its [branch documentation](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/) states that switching models is irreversible. Do not switch models, widen API CORS to arbitrary preview origins, disable checks or change production deployment commands as a guessed fix. Repair the observed error, rerun a branch build, and verify its check/preview URL without promoting that branch to production. Authenticated preview acceptance requires its own deliberately allowed origin.
 
+### Development without Cloudflare dashboard login — 2026-10-04
+
+The user authorized continuing without Cloudflare sign-in. Keep the production Worker and heartbeat integration; use GitHub Foundation checks and browser verification for branch acceptance while the provider-specific preview investigation remains open.
+
+The Foundation `check` job preserves the allowlisted `dist-pages` output as the `learner-static-preview` artifact for seven days after successful build/unit checks. Download it from the workflow run's Artifacts section, extract it into a dedicated directory and serve that directory locally, for example:
+
+```sh
+python3 -m http.server 8080 --bind 127.0.0.1 --directory ./learner-static-preview
+```
+
+Open `http://127.0.0.1:8080/`. This is a local static inspection bundle, not a hosted Cloudflare branch URL or an authenticated-production acceptance result. It contains only the existing public-surface files, with no private server/operations source or provider credentials. The dynamic MCP fallback is unavailable there. Python's basic static server does not apply Cloudflare `_headers` or `_redirects`; use the CI/browser checks for header-aware verification. A green `check` job alone is insufficient: the separate `browser` job must also pass.
+
+The browser job runs confidence-capture checks against a freshly built bundle with its security headers on phone, tablet and desktop. External API responses are synthetic test fixtures; no real learner evidence is created. The existing `responsive-preview` artifact includes confidence screenshots alongside other UX screenshots.
+
+GitHub reinspection at `28ab19d1c10bf0c1aecdb65335f6e66c21fd85ba` confirmed both production Workers and Foundation jobs succeeded. The docs-only PR #194 head still failed the learner branch build (`8505568f-15ef-4c6a-be8f-00beccec86b5`), with zero annotations and no error text. This isolates the remaining investigation to the non-production provider path without claiming its root cause.
+
 Before treating the learner Worker URL as canonical:
 
 1. Existing heartbeat Worker remains deployed and its cron configuration is unchanged.

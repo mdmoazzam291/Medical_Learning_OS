@@ -15,6 +15,7 @@ const values = Object.freeze([
 let enabled = false;
 let pending = null;
 let statusLoaded = false;
+let draft = null;
 
 async function request(path, { method = 'GET', body, retry = true } = {}) {
   const session = await auth.getSession();
@@ -52,7 +53,7 @@ function promptMarkup() {
   return `<fieldset class="answer-confidence-beta" data-confidence-beta>
     <legend>Before checking: how confident are you?</legend>
     <p class="muted">Experimental calibration signal. It never changes your score, revision timing or Study Now recommendation.</p>
-    <div class="button-row">${values.map(([value, label]) => `<label class="confidence-choice"><input type="radio" name="answer-confidence" value="${value}" data-confidence="${value}"><span>${label}</span></label>`).join('')}</div>
+    <div class="button-row">${values.map(([value, label]) => `<label class="confidence-choice"><input type="radio" name="answer-confidence" value="${value}" data-confidence="${value}" ${draft?.confidence === value ? 'checked' : ''}><span>${label}</span></label>`).join('')}</div>
     <p class="muted" data-confidence-message></p>
   </fieldset>`;
 }
@@ -63,7 +64,10 @@ function ensurePrompt() {
   if (!form || form.querySelector('.answer-feedback') || form.querySelector('[data-confidence-beta]')) return;
   const submit = form.querySelector('button[type="submit"]');
   if (!submit) return;
+  if (draft?.attemptKey !== form.dataset.attemptKey) draft = null;
+  const answerBusy = form.querySelector('fieldset')?.disabled === true;
   submit.insertAdjacentHTML('beforebegin', promptMarkup());
+  form.querySelector('[data-confidence-beta]').disabled = answerBusy;
 }
 
 function showSavedStatus(text, kind = 'muted') {
@@ -104,6 +108,13 @@ function observeSurface() {
   ensurePrompt();
   persistPending();
 }
+
+root?.addEventListener('change', event => {
+  if (event.target?.name !== 'answer-confidence') return;
+  const form = event.target.closest('#medical-answer-form');
+  if (!form?.dataset.attemptKey || !values.some(([value]) => value === event.target.value)) return;
+  draft = { attemptKey: form.dataset.attemptKey, confidence: event.target.value };
+});
 
 root?.addEventListener('submit', event => {
   if (!enabled || event.target?.id !== 'medical-answer-form' || event.target.querySelector('.answer-feedback')) return;
