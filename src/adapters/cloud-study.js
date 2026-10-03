@@ -16,10 +16,10 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!auth || typeof auth.getSession !== 'function') throw new Error('invalid_auth');
 
-  async function request(path, { method = 'GET', body, retry = true } = {}) {
+  async function requestFunction(functionName, path, { method = 'GET', body, retry = true } = {}) {
     const session = await auth.getSession();
     if (!session?.accessToken) throw new CloudStudyError(401, 'not_authenticated');
-    const response = await fetchFn(`${base}/functions/v1/study-api${path}`, {
+    const response = await fetchFn(`${base}/functions/v1/${functionName}${path}`, {
       method,
       headers: {
         apikey: publishableKey,
@@ -31,7 +31,7 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     if (response.status === 401 && retry) {
       const refreshed = await auth.getSession({ forceRefresh: true });
       if (refreshed?.accessToken && refreshed.accessToken !== session.accessToken) {
-        return request(path, { method, body, retry: false });
+        return requestFunction(functionName, path, { method, body, retry: false });
       }
     }
     let payload = null;
@@ -39,6 +39,8 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     if (!response.ok) throw new CloudStudyError(response.status, payload?.error || 'cloud_request_failed');
     return payload;
   }
+
+  const request = (path, options = {}) => requestFunction('study-api', path, options);
 
   return {
     questions(filter = 'all') { return request(`/questions?filter=${encodeURIComponent(filter)}`); },
@@ -173,7 +175,22 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
     memoryJudgment(attemptId, rating) {
       return request('/memory-judgments', { method: 'POST', body: { attemptId, rating } });
     },
-    exportData() { return request('/export'); },
+    answerConfidence(sessionId, confidence) {
+      return requestFunction('learner-experiment-api', '/confidence', {
+        method: 'POST',
+        body: { sessionId, confidence }
+      });
+    },
+    async exportData() {
+      const [core, experimental] = await Promise.all([
+        request('/export'),
+        requestFunction('learner-experiment-api', '/export')
+      ]);
+      return {
+        ...core,
+        answerConfidence: Array.isArray(experimental?.answerConfidence) ? experimental.answerConfidence : []
+      };
+    },
     start({ limit = 15, filter = 'all' } = {}) { return request('/sessions', { method: 'POST', body: { limit, filter } }); },
     session(id) { return request(`/sessions/${encodeURIComponent(id)}`); },
     sessionSummary(id) { return request(`/sessions/${encodeURIComponent(id)}/summary`); },
