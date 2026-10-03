@@ -1,0 +1,44 @@
+name: Patch Render monitor cold-start budget
+
+on:
+  push:
+    branches:
+      - fix/render-cold-start-monitor-v2
+    paths:
+      - .github/workflows/patch-render-monitor-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/render-cold-start-monitor-v2
+      - name: Increase Render-only health probe budget
+        shell: python
+        run: |
+          from pathlib import Path
+          changes = [
+              (Path('supabase/functions/infrastructure-monitor/index.ts'), 'fetchJson(renderHealthUrl, {}, 9000)', 'fetchJson(renderHealthUrl, {}, 30000)'),
+              (Path('tests/owner-operations-v3.test.js'), r'fetchJson\(renderHealthUrl, \{\}, 9000\)', r'fetchJson\(renderHealthUrl, \{\}, 30000\)'),
+          ]
+          for path, old, new in changes:
+              text = path.read_text()
+              if text.count(old) != 1:
+                  raise SystemExit(f'expected one anchor in {path}, found {text.count(old)}')
+              path.write_text(text.replace(old, new, 1))
+      - name: Run focused V3 regression test
+        run: node --test tests/owner-operations-v3.test.js
+      - name: Check patch cleanliness
+        run: git diff --check
+      - name: Commit source and test change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add supabase/functions/infrastructure-monitor/index.ts tests/owner-operations-v3.test.js
+          git commit -m "Fix Render cold-start monitor budget"
+          git push origin HEAD:fix/render-cold-start-monitor-v2
