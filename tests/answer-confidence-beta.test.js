@@ -36,7 +36,7 @@ test('confidence is separate immutable self-report evidence bound to the accepte
   assert.match(migration, /confidence\.recorded/);
   for (const code of ['guess', 'unsure', 'fairly_sure', 'certain']) assert.match(migration, new RegExp(code));
   assert.match(migration, /before update or delete on public\.study_answer_confidence_events/);
-  assert.match(migration, /unique\s*\(attempt_id\)/i);
+  assert.match(migration, /attempt_id uuid not null unique|unique\s*\(attempt_id\)/i);
 });
 
 test('confidence writes are server gated and cannot grant themselves beta access', () => {
