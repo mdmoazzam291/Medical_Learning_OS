@@ -65,6 +65,16 @@ Do not attach learner content merely because it may help debugging. Prefer stabl
 
 ## Alerting policy
 
+### Resend runtime configuration and acceptance
+
+The application uses `mlos_resend_api_key` in Supabase Vault (or `RESEND_API_KEY` in the Edge Function environment). Alert sending also requires `MLOS_ALERT_FROM` with a verified owned sending domain. The recipient is the singleton content admin's Auth email; it is not a learner mailing list.
+
+Live check on 2026-10-03: the dedicated sending-only credential is stored server-side, but `GET /usage` returns `401 restricted_api_key`. Resend's [Account Usage API announcement](https://www.resend.com/changelog/account-usage-api) says any key works; the live permission response takes precedence. Do not expand the runtime credential to full account-management access merely to hide this configuration gap. Usage telemetry remains unconnected until an approved credential with usage access is provided.
+
+The monitor represents HTTP 401/403 as `configured / credential_permission_required`, not a provider outage. Successful usage reads must contain valid nonnegative integer usage and numeric-or-null limits for both daily and monthly windows. Missing/malformed quota data cannot produce synthetic zero usage or a healthy state. A null quota is uncapped; zero allowance is exhausted. Genuine HTTP/service failures remain unavailable.
+
+At the current acceptance checkpoint, Resend has no sending domain and there are no real notification delivery receipts. Connector account access and a saved key do not prove application read telemetry or email delivery. After DNS verification, configure the sender, exercise a controlled owner alert and recovery using the existing debouncing policy, and independently verify the provider delivery status. No learner/medical content may enter the alert payload.
+
 Alert on failures that can corrupt or block learning evidence:
 
 - persisted answer write failure above an agreed threshold
