@@ -16,22 +16,24 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!auth || typeof auth.getSession !== 'function') throw new Error('invalid_auth');
 
-  async function request(path, { retry = true } = {}) {
+  async function request(path, { method = 'GET', body, retry = true } = {}) {
     const session = await auth.getSession();
     if (!session?.accessToken) throw new CloudOwnerError(401, 'not_authenticated');
 
     const response = await fetchFn(`${base}/functions/v1/owner-api${path}`, {
-      method: 'GET',
+      method,
       headers: {
         apikey: publishableKey,
-        Authorization: `Bearer ${session.accessToken}`
-      }
+        Authorization: `Bearer ${session.accessToken}`,
+        ...(body === undefined ? {} : { 'Content-Type': 'application/json' })
+      },
+      body: body === undefined ? undefined : JSON.stringify(body)
     });
 
     if (response.status === 401 && retry) {
       const refreshed = await auth.getSession({ forceRefresh: true });
       if (refreshed?.accessToken && refreshed.accessToken !== session.accessToken) {
-        return request(path, { retry: false });
+        return request(path, { method, body, retry: false });
       }
     }
 
@@ -45,6 +47,12 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     dashboard() { return request('/dashboard'); },
     searchLearners(query) {
       return request('/learners?q=' + encodeURIComponent(String(query || '').trim()));
+    },
+    learnerDetail(learnerId) {
+      return request('/learner?id=' + encodeURIComponent(String(learnerId || '').trim()));
+    },
+    learnerAction(input) {
+      return request('/learner-actions', { method: 'POST', body: input });
     }
   };
 }
