@@ -15,9 +15,11 @@ A concept-centered medical learning system: study → answer → understand mist
 - [AI contributor instructions](AGENTS.md)
 
 ## Current implementation
+
+The connected [Notes/Graph library](https://medical-learning-os-web.medicalos.workers.dev/web/library.html) and [Admin import inbox](https://medical-learning-os-web.medicalos.workers.dev/web/content-import.html) now extend the existing app. Read the [upload contract](docs/CONTENT_LIBRARY_CONTRACT.md) before adding any content. Connected repository uploads stage drafts; one authorized **Review & publish** action makes them live. Private imports and the separate old-content reset remain deferred.
 Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. A responsive local web preview adds learner settings, dark mode, a live personal countdown, and a persisted nonclinical study demo with bookmarks, incorrect queue and JSON export. See [learner app contract](docs/LEARNER_APP.md).
 
-M04a added the trusted local study API foundation. M04b now adds the Supabase Auth/cloud-account path and a deployed authenticated `study-api` Edge Function while keeping the M03 local demo isolated. A real email-confirmed learner flow is still the completion gate; reviewed medical content, production deployment, scheduling and AI remain later milestones.
+The hosted app uses Supabase Auth and authenticated APIs with server scoring, scheduling and publication gates. Cloudflare hosts the learner surface, while the local nonclinical demo stays isolated. Existing Study, Exams, Vault and Account flows remain available. See [current status](docs/STATUS.md) for verified releases and pending real-content acceptance.
 
 ## Run locally
 Requires Node.js 24 or later. No dependency installation or API keys required.
