@@ -81,6 +81,7 @@ test('infrastructure monitor uses encrypted scheduler auth and persistent alert 
 test('monitor probes Cloudflare, Render, R2, Supabase, Resend and Sentry honestly', () => {
   assert.match(monitor, /__edge-health/);
   assert.match(monitor, /onrender\.com\/healthz/);
+  assert.match(monitor, /fetchJson\(renderHealthUrl, \{\}, 9000\)/);
   assert.match(monitor, /supabase-r2-backup\.yml/);
   assert.match(monitor, /r2-storage-audit\.yml/);
   assert.match(monitor, /supabase-r2-restore-drill\.yml/);
