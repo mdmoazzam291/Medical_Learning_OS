@@ -144,14 +144,24 @@ async function resendProbe(admin: any): Promise<ProviderResult> {
   }
   try {
     const { response, body } = await fetchJson("https://api.resend.com/usage", { headers: { authorization: `Bearer ${apiKey}` } }, 7000);
+    if (response.status === 401 || response.status === 403) {
+      return { provider: "resend", status: "configured", source: "credential_permission_required", observedAt, metrics: { readTelemetryConnected: false, httpStatus: response.status, endpoint: "GET /usage" } };
+    }
     if (!response.ok) return { provider: "resend", status: "unavailable", source: "resend_usage_api", observedAt, metrics: { httpStatus: response.status } };
-    const dailyUsed = Number(body?.emails?.daily?.used ?? 0);
-    const dailyLimit = Number(body?.emails?.daily?.limit ?? 0);
-    const monthlyUsed = Number(body?.emails?.monthly?.used ?? 0);
-    const monthlyLimit = Number(body?.emails?.monthly?.limit ?? 0);
-    const dailyRatio = dailyLimit > 0 ? dailyUsed / dailyLimit : 0;
-    const monthlyRatio = monthlyLimit > 0 ? monthlyUsed / monthlyLimit : 0;
-    const nearLimit = dailyRatio >= 0.9 || monthlyRatio >= 0.9;
+    const daily = body?.emails?.daily;
+    const monthly = body?.emails?.monthly;
+    const validQuota = (quota: any) => quota && Number.isSafeInteger(quota.used) && quota.used >= 0 &&
+      (quota.limit === null || (Number.isSafeInteger(quota.limit) && quota.limit >= 0));
+    if (!validQuota(daily) || !validQuota(monthly)) {
+      return { provider: "resend", status: "unavailable", source: "resend_usage_api", observedAt, metrics: { readTelemetryConnected: true, httpStatus: response.status, error: "usage_response_invalid" } };
+    }
+    const dailyUsed = daily.used;
+    const dailyLimit = daily.limit;
+    const monthlyUsed = monthly.used;
+    const monthlyLimit = monthly.limit;
+    const dailyRatio = dailyLimit === null ? null : dailyLimit === 0 ? 1 : dailyUsed / dailyLimit;
+    const monthlyRatio = monthlyLimit === null ? null : monthlyLimit === 0 ? 1 : monthlyUsed / monthlyLimit;
+    const nearLimit = (dailyRatio !== null && dailyRatio >= 0.9) || (monthlyRatio !== null && monthlyRatio >= 0.9);
     return {
       provider: "resend",
       status: nearLimit ? "degraded" : "healthy",

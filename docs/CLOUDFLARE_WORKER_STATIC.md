@@ -68,6 +68,14 @@ No Supabase service-role key, database password, R2 secret, Resend credential or
 
 ## Release gate
 
+### Branch-preview investigation checkpoint — 2026-10-03
+
+Release PR #192 merged at `c14d0dd8a10e0e5c5640c1b6f5316712a550b39d`. Both production Worker Builds checks passed. The PR head `056643d98f3d3dec7f6a48e79bcba8941d5767c6` passed Foundation checks/browser verification but failed `Workers Builds: medical-learning-os-web`, build ID `e2cd7fa2-7f55-4948-aba3-d9e6b5e753d7`. The GitHub check provides no error text or annotations. Repository static build passes; this does not establish the private Cloudflare failure cause.
+
+The dashboard required sign-in and reported a verification error after one reload; no dashboard settings were changed. Resume by inspecting that exact failed build's first error and the learner Worker's Settings → Builds configuration. Compare root, build command, non-production command, Wrangler version and build-token permissions with the passing production run. Keep the heartbeat root/cron isolated.
+
+The current repository has the existing Version URL model (`preview_urls: true`). Cloudflare now also supports a separate Worker Previews model. Its [branch documentation](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/) states that switching models is irreversible. Do not switch models, widen API CORS to arbitrary preview origins, disable checks or change production deployment commands as a guessed fix. Repair the observed error, rerun a branch build, and verify its check/preview URL without promoting that branch to production. Authenticated preview acceptance requires its own deliberately allowed origin.
+
 Before treating the learner Worker URL as canonical:
 
 1. Existing heartbeat Worker remains deployed and its cron configuration is unchanged.
