@@ -40,4 +40,4 @@ Interfaces: evaluateShortening(protocol, records) -> descriptive report with exp
 - [x] Implement reproducible measurement and pilot selection/preregistration.
 - [x] Run npm test, npm run check, npm run build:pages and responsive browser checks.
 - [x] Save pilot protocol/status to Drive; verify backend deployment and distinguish missing clinical inputs from shipped functionality.
-- [ ] Push reviewed frontend branch and run GitHub CI/production build — explicit destination/publication approval received; release checks pending.
+- [x] Publish reviewed frontend branch and verify GitHub CI/production build — owner authorization received, PR #201 merged; PR/main check/browser and both Cloudflare main production builds passed. Clinical pilot remains input-dependent.

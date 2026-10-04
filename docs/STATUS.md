@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-04 — question intelligence published and production verified
+- Owner explicitly authorized this repository destination/publication. PR #201 merged as 116e5c5d4c0d8dac886af1c3f712642b342f062d. PR Foundation run 37210051012 and main run 37210300517 passed both check/browser jobs, including all 966 tests, isolated PostgreSQL and responsive suites. Both Cloudflare main production Worker Builds passed (web 5f72c549-dab0-48b5-bfc6-e8c50f0d5afb; heartbeat b8599908-1214-45cb-b935-936b9e55deae).
+- Frontend publication supersedes the earlier authorization block. Backend content-library-api v2 and study-api v47 remain verified. Direct served-byte inspection returns HTTP 403 from this environment, so production publication is evidenced by the successful provider build/deploy checks; served-byte parity is not claimed. The pre-existing Cloudflare branch-preview failure remains distinct from the successful main production builds.
+- Post-publication live catalog remains v407: 0 questions/concepts/sources/attempts/sessions; 3 accounts preserved. Q2 has a prepared 12-question respiratory pilot awaiting new supplied originals. Q3 has a delayed full-case/transfer evaluator awaiting real unseen families/participants/outcomes. No erased content restored, human approval fabricated or efficacy claimed.
+- Pilot and release receipt: Drive governance QUESTION_SHORTENING_PILOT.md and Q123_IMPLEMENTATION_RECEIPT.md, with registry/index release metadata. Next content dependency remains actual complete newly supplied material and accountable administrator inspection.
+
 ## 2026-10-04 — frontend publication explicitly authorized
 - Owner confirmed pushing the reviewed branch to mdmoazzam291/Medical_Learning_OS and publishing the frontend after CI passes. This supersedes the earlier automatic-review block. Local 966/966 tests, syntax/catalog/decision checks and 58-file build pass again on the release tree.
 - Backend migrations/API deployment and empty catalog preservation are already verified. GitHub CI and production frontend build are the remaining release checks; their final receipt is linked from the pilot governance record.
