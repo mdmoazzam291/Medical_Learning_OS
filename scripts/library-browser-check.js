@@ -18,13 +18,14 @@ const browser=await chromium.launch({headless:true});const errors=[];
 try{
  for(const [name,width,height] of [['phone',390,844],['tablet',820,1180],['desktop',1440,1000]]){
   const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
-  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let outage=false;
+  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let outage=false,releaseSlowDraft;
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{const request=route.request(),path=new URL(request.url()).pathname;const reply=(body,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(body)});
    if(request.method()!=='GET')writes.push({path,body:request.postDataJSON()});
    if(path.endsWith('/content-library-api/library'))return reply(outage?{error:'library_unavailable'}:library,outage?503:200);
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/content-library-api/study'))return reply({sessionId:'unfinished-session',resumedExisting:true});
-   if(path.endsWith('/content-library-api/imports'))return reply({contractId:'content-library-inbox-v1',imports:[{import_id:'synthetic-browser',digest:'a'.repeat(64),status:'draft'}]});
+   if(path.endsWith('/content-library-api/imports'))return reply({contractId:'content-library-inbox-v1',imports:[{import_id:'slow-draft',status:'draft'},{import_id:'synthetic-browser',digest:'a'.repeat(64),status:'draft'}]});
+   if(path.endsWith('/content-library-api/imports/slow-draft')){await new Promise(resolve=>{releaseSlowDraft=resolve;});return reply({import_id:'slow-draft',manifest,digest:'b'.repeat(64),status:'draft',sources:[],duplicateTargets:[]});}
    if(path.endsWith('/content-library-api/imports/synthetic-browser'))return reply({import_id:'synthetic-browser',manifest,digest:'a'.repeat(64),status:'draft',sources:[{...manifest.sources[0],rights:{status:'unknown'}}],duplicateTargets:[]});
    if(path.endsWith('/content-library-api/imports/synthetic-browser/publish'))return reply({contractId:'content-library-publication-v1',status:'published',newQuestions:0,existingQuestionsLinked:0,newNotes:1});
    throw new Error('Unexpected request '+request.method()+' '+path);
@@ -45,8 +46,10 @@ try{
   await page.reload();await page.getByRole('tab',{name:'Graph',exact:true}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),1);
   outage=true;await page.reload();await page.getByRole('button',{name:'Retry library'}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),0);outage=false;await page.getByRole('button',{name:'Retry library'}).click();await page.locator('[data-question-card]').waitFor();
   await page.getByRole('button',{name:/Study these questions/}).click();await page.getByRole('link',{name:'Continue unfinished session'}).waitFor();assert.equal(writes.length,1);assert.deepEqual(writes[0].body,{questionVersionIds:['pyq@1']});assert.equal(await page.locator('[data-question-card]').count(),1);writes.length=0;
-  await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'synthetic-browser'}).click();await page.getByRole('button',{name:'Review & publish',exact:true}).waitFor();
-  await page.getByLabel('Reuse permission',{exact:true}).selectOption('owned');await page.getByLabel('Permission evidence').fill('Synthetic fixture ownership');await page.getByLabel('Review notes').fill('Synthetic test inspection of all three gates.');
+  await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'slow-draft',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#import-detail').textContent==='Loading exact draft…');await page.getByRole('button',{name:'synthetic-browser'}).click();await page.getByRole('button',{name:'Review & publish',exact:true}).waitFor();
+  const slowResponse=page.waitForResponse(r=>r.url().endsWith('/imports/slow-draft'));releaseSlowDraft();await slowResponse;await page.getByRole('heading',{name:'synthetic-browser',exact:true}).waitFor();
+  await page.getByLabel('Reuse permission',{exact:true}).selectOption('owned');
+  page.once('dialog',dialog=>dialog.dismiss());await page.getByRole('button',{name:'slow-draft',exact:true}).click();assert.equal(await page.getByLabel('Reuse permission',{exact:true}).inputValue(),'owned');await page.getByLabel('Permission evidence').fill('Synthetic fixture ownership');await page.getByLabel('Review notes').fill('Synthetic test inspection of all three gates.');
   await page.getByLabel(/I inspected the exact/).check();await page.getByRole('button',{name:'Review & publish',exact:true}).click();await page.getByText(/Published:.*1 note/).waitFor();
   assert.equal(writes.length,1);assert.equal(writes[0].body.attested,true);assert.equal('reviewerId' in writes[0].body,false);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'library-admin-'+name+'.png'),fullPage:true});

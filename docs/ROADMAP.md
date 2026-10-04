@@ -4,8 +4,8 @@
 - M02e — IMPLEMENTED; real-content acceptance pending: exclusive PYQ-first homes; repeated exam-year occurrences; non-PYQ platform priority Marrow → PrepLadder → DAMS; deduplicated repository/admin imports; one atomic authorized Review & publish action. Contract: `CONTENT_LIBRARY_CONTRACT.md`.
 - M06e — IMPLEMENTED; real-content acceptance pending: Notes/Graph views over one canonical concept library; subject/system/organ/domain/task facets; exact/secondary/confusing question links; private learner observed-state overlays without mastery claims.
 - M02f — LATER, DO NOT IMPLEMENT NOW: separate administrator/learner private-import sections, question-only graph, no canonical concept connections, owner isolation/export/erasure and no shared publication.
-- Content reset — LIVE DATABASE/MEDIA DONE: owner authorized permanent deletion including dependent history; catalog v407 empty, accounts/admin preserved. Bounded pre-reset R2-copy erasure is prepared, not executed; GitHub publication blocked by automatic approval review. Repository engineering fixtures are not reimportable content.
-- M02g — IMPLEMENTED LOCALLY, RELEASE BLOCKED: shared Notes/Graph keyword and prompt-text search, unique-question frequency descending, custom upload pattern tags through classification.tasks. Public-review-informed source priority remains Marrow → PrepLadder → DAMS; other platforms unranked.
+- Content reset — COMPLETE: owner authorized permanent deletion including dependent history; catalog v407 empty, accounts/admin preserved. PR #198 released; 6 targeted pre-reset R2 objects erased, none remaining; fresh clean backup verified. Repository engineering fixtures are not reimportable content.
+- M02g — RELEASED (PR #198): shared Notes/Graph keyword and prompt-text search, unique-question frequency descending, custom upload pattern tags through classification.tasks. Public-review-informed source priority remains Marrow → PrepLadder → DAMS; other platforms unranked.
 
 Status: DONE means implemented and checked; NEXT means the next bounded task; PLANNED means not implemented. IDs remain stable as sub-tasks are added.
 
