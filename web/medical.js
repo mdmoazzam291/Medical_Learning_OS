@@ -192,7 +192,9 @@ function completionSummary() {
     ? '<h2>Concepts to revisit</h2><p>These concepts had an incorrect answer in this session.</p><ul>' + concepts.map(c => '<li><a class="concept-revisit" href="/web/vault.html?concept=' + encodeURIComponent(c.conceptId) + '&returnSession=' + encodeURIComponent(s.sessionId) + '"><span>' + escape(c.label) + '</span><span aria-hidden="true">→</span></a></li>').join('') + '</ul>'
     : '<p>No incorrect answers in this session. Delayed retrieval is still needed to test retention.</p>';
   const r = s.revision;
-  const schedule = !r.available
+  const schedule = s.representations?.['concise-practice'] && !s.representations.original
+    ? '<p>Concise practice is saved separately. Full original questions determine review timing.</p>'
+    : !r.available
     ? '<p>Revision timing is temporarily unavailable. Your answers remain saved.</p>'
     : r.dueNowCount
       ? '<p>' + r.dueNowCount + ' session item' + (r.dueNowCount === 1 ? ' is' : 's are') + ' due for review now.</p>'
@@ -200,9 +202,10 @@ function completionSummary() {
         ? '<p>Next review: ' + escape(new Date(r.nextDueAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })) + '.</p>'
         : '<p>No review time is available for these session items yet.</p>';
   return '<div class="session-results"><div class="results-evidence"><h2>This session</h2><div class="metrics"><div><strong>' + s.answeredCount + ' / ' + s.selectedCount + '</strong><span>Answered</span></div><div><strong>' + s.correctCount + '</strong><span>Correct</span></div><div><strong>' + s.incorrectCount + '</strong><span>Incorrect</span></div></div>' +
+    (s.representations?.['concise-practice'] ? '<p>' + s.representations['concise-practice'] + ' concise practice answer(s); ' + s.representations.original + ' full original answer(s).</p>' : '') +
     (s.unansweredCount ? '<p>' + s.unansweredCount + ' selected question' + (s.unansweredCount === 1 ? ' was' : 's were') + ' left unanswered.</p>' : '') + repairs +
     '</div><aside class="next-revision"><span class="eyebrow">YOUR NEXT STEP</span><h2>Your next revision</h2>' + schedule + (r.available && r.missingCount ? '<p>Some answered items do not yet have a review time.</p>' : '') +
-    '<p class="muted">Choose your time and check all due reviews on Home.</p><a class="primary action-link" href="/#study-next">Plan my next session →</a></aside></div><p class="muted results-note">Session accuracy is observed performance, not mastery. Review times reflect the current schedule for these items.</p>';
+    '<p class="muted">Choose your time and check all due reviews on Home.</p><a class="primary action-link" href="/#study-next">Plan my next session →</a></aside></div><p class="muted results-note">Session accuracy is observed performance, not mastery. Review times reflect full original questions.</p>';
 }
 
 function studyView() {
@@ -284,6 +287,7 @@ function studyView() {
     ? '<a class="secondary action-link concept-handoff" href="/web/vault.html?' + vaultParams.toString() + '">' + (recommendationReason ? 'Review concept / add private correction →' : 'Open concept / add private correction →') + '</a>'
     : '';
   const canonicalTeaching = answered ? canonicalTeachingFeedback(receipt) : null;
+  const cueCopy = answered ? (receipt?.revisionCues || session.revisionCues || []).map(c => '<details><summary>Revision cue · not full-question evidence</summary><p>' + escape(c.stem) + '</p></details>').join('') : '';
   const answerExplanation = answered
     ? canonicalTeaching || (
         '<div><h2>Reasoning</h2><p>' + escape(receipt.explanation || '') + '</p></div>'
@@ -301,7 +305,7 @@ function studyView() {
     ? '<p class="visual-task-note">Recognition task. Your option is scored on the server; image evidence is recorded only after the canonical attempt is accepted.</p>'
     : '';
 
-  return '<main id="main" class="account-page"><div class="study-entry-topbar"><a class="text-button" href="/web/medical.html">← Study overview</a><a class="text-button" href="/web/library.html">Notes / Graph</a><a class="text-button" href="/web/account.html">Account</a></div><p class="session-entry-context">' + escape(entryLabel) + ' · Saved answers stay with this session.</p><div class="section-heading"><div><span class="eyebrow">' + taskLabel + '</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study">' + taskNote + '<form id="medical-answer-form" data-attempt-key="' + escape(session.sessionId + ':' + session.position + ':' + q.questionVersionId) + '">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
+  return '<main id="main" class="account-page"><div class="study-entry-topbar"><a class="text-button" href="/web/medical.html">← Study overview</a><a class="text-button" href="/web/library.html">Notes / Graph</a><a class="text-button" href="/web/account.html">Account</a></div><p class="session-entry-context">' + escape(entryLabel) + ' · Saved answers stay with this session.</p><div class="section-heading"><div><span class="eyebrow">' + taskLabel + '</span><p>Question ' + (session.position + 1) + ' of ' + session.total + '</p></div><span class="badge">SERVER SCORED</span></div><section class="panel study">' + taskNote + '<p class="eyebrow">' + (q.representation === 'concise-practice' ? 'CONCISE PRACTICE · ADAPTED FROM ORIGINAL' : 'ORIGINAL QUESTION') + '</p><form id="medical-answer-form" data-attempt-key="' + escape(session.sessionId + ':' + session.position + ':' + q.questionVersionId) + '">' + questionMedia(q.media) + '<fieldset ' + (answered || state.busy ? 'disabled' : '') + '><legend>' + escape(q.stem) + '</legend><div class="options">' + options + '</div></fieldset>' + feedback + cueCopy + '</form><p class="muted">Answer keys and explanations are revealed only after the server records the attempt.</p></section></main>';
 }
 
 function render() {

@@ -24,6 +24,10 @@ jobs:
       - run: npm run build:pages
       - run: npm test
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
+      - name: Verify question intelligence against isolated PostgreSQL
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-pg" --no-audit --no-fund @electric-sql/pglite@0.3.14
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/question-intelligence-db-check.js
       - run: npm run demo
       - name: Preserve allowlisted static preview bundle
         uses: actions/upload-artifact@v4

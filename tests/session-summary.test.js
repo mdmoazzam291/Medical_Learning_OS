@@ -51,3 +51,12 @@ test('summary API is bounded and derives identity exclusively from authenticated
   assert.match(route, /limit\(50\)/);
   assert.doesNotMatch(route, /insert\(|update\(|rpc\(/);
 });
+test('concise activity cannot inherit an original-question review schedule', () => {
+  const attempts = base.attempts.map(row => ({ ...row, presentation: { representation: 'concise-practice' } }));
+  const s = buildSessionSummary({ ...base, attempts });
+  assert.deepEqual(s.representations, { original: 0, 'concise-practice': 2 });
+  assert.equal(s.revision.scheduledCount, 0);
+  assert.equal(s.revision.missingCount, 0);
+  assert.equal(s.revision.nextDueAt, null);
+  assert.equal(s.revision.scope, 'current-schedule-for-original-session-items');
+});

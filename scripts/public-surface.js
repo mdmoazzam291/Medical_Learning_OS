@@ -6,6 +6,7 @@ export const publicFiles = Object.freeze([
   'web/content-import.js',
   'web/content-library-client.js',
   'src/domain/content-library.js',
+  'src/domain/question-intelligence.js',
   'web/index.html',
   'web/app.js',
   'web/styles.css',

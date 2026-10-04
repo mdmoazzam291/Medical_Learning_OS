@@ -1,0 +1,9 @@
+# Question intelligence integration
+
+Implements the owner-approved Question Intelligence Contract v1.0 (Drive file 1jr7z0XlFuM3lTib8Y9MxiHNrelZYsjt-). Preserve existing v1 imports, original catalog identity, exclusive PYQ/platform homes and publication authority. A v2 import adds optional per-question `intelligence`: primary task, qualifiers, presentation, response format, reasoning operations and version-bound derivatives. Classification.tasks stays the keyword registry; a crosswalk maps legacy aliases into orthogonal axes.
+
+Concise derivatives retain exact options/key, source version, protected literal facts and documented removals. All critical semantic checks require evidence and administrator inspection; machine checks cannot prove clinical equivalence. Drafts remain invisible. Revision cues are post-answer only. Scored concise sessions bind an immutable prompt snapshot and representation to the ordinary session/attempt ledger. Full-question scheduling evidence excludes concise attempts. Simulators keep using unchanged original catalog questions.
+
+Notes/Graph gain qualifier/media/response filters and optional labelled concise practice, without additional question counts or source occurrences. Original remains available. Source-version changes invalidate derivative delivery. Unsupported media-bearing/multiple-correct imports remain blocked rather than flattened into current SBA importer.
+
+Pilot: no clinical originals exist after reset. Prepare selection and preregistration, never restore deleted seeds. A 12-item respiratory quality pilot is distinct from a powered efficacy study. At equal study time, compare counterbalanced concept blocks using unseen full questions at 7 and 14 days; reject sibling exposure, prior target attempts and intervening target exposure. Report denominators, missingness and uncertainty, not proven mastery. No enrollment, scheduler or outcome fabrication.
