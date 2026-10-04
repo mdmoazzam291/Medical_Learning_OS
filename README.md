@@ -16,6 +16,8 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Current implementation
 
+Start the post-reset library with the [first replacement batch plan](docs/FIRST_REPLACEMENT_BATCH.md): 12 distinct questions around 3 connected concepts, using supplied content and the existing one-action admin review.
+
 The connected [Notes/Graph library](https://medical-learning-os-web.medicalos.workers.dev/web/library.html) and [Admin import inbox](https://medical-learning-os-web.medicalos.workers.dev/web/content-import.html) now extend the existing app. Read the [upload contract](docs/CONTENT_LIBRARY_CONTRACT.md) before adding any content. Connected repository uploads stage drafts; one authorized **Review & publish** action makes them live. Private imports and the separate old-content reset remain deferred.
 Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. A responsive local web preview adds learner settings, dark mode, a live personal countdown, and a persisted nonclinical study demo with bookmarks, incorrect queue and JSON export. See [learner app contract](docs/LEARNER_APP.md).
 

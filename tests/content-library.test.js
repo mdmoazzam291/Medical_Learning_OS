@@ -84,3 +84,20 @@ test('approved legacy PYQ provenance overrides later platform metadata without i
 test('reviewed duplicate metadata preserves additional confusing concept connections',()=>{const a=input();a.catalog.concepts.push({conceptId:'c2',label:'Other concept',subjectTags:['medicine']});a.questionMetadata[0].concept_links_version_id='q1@1';a.questionMetadata[0].concept_links=[{conceptId:'c1',role:'primary'},{conceptId:'c2',role:'distractor'}];const result=domain.filterLibrary(domain.projectLibrary(a),{concept:'c2'});assert.equal(result.questions.find(q=>q.questionId==='q1').connection,'confusing');});
 test('current published version alone owns the primary concept; old metadata cannot revive it',()=>{const a=input();a.catalog.questions[0].conceptLinks=[{conceptId:'c2',role:'primary'}];a.questionMetadata[0].concept_links=[{conceptId:'c1',role:'primary'}];a.questionMetadata[0].concept_links_version_id='q1@1';const q=domain.projectLibrary(a).questions[0];assert.deepEqual(q.conceptLinks,[{conceptId:'c2',role:'primary'}]);});
 test('additive medical links from an earlier question version do not attach to its revision',()=>{const a=input();a.catalog.questions[0].questionVersionId='q1@2';a.questionMetadata[0].concept_links=[{conceptId:'c2',role:'distractor'}];a.questionMetadata[0].concept_links_version_id='q1@1';assert.equal(domain.projectLibrary(a).questions[0].conceptLinks.some(l=>l.conceptId==='c2'),false);});
+
+test('keyword patterns match aliases without reading answer keys or explanations',()=>{
+  assert.equal(typeof domain.questionKeywords,'function');
+  assert.deepEqual(domain.questionKeywords({stem:'What is the next best step? Which definitive treatment?',classification:{tasks:[]},explanation:'make diagnosis'}),['definitive-treatment','next-best-step']);
+  assert.deepEqual(domain.questionKeywords({stem:'Most likely diagnosis?',classification:{tasks:['custom-pattern','diagnosis']}}),['custom-pattern','diagnosis']);
+});
+test('keyword counts deduplicate identities and sort by decreasing count with alphabetical ties',()=>{
+  assert.equal(typeof domain.keywordCounts,'function');
+  const rows=[q('a',{stem:'Next best step?'}),q('a',{stem:'Next best step?'}),q('b',{stem:'Make diagnosis. Next best step?'}),q('c',{stem:'Definitive treatment?'})];
+  assert.deepEqual(domain.keywordCounts({questions:rows}),[{id:'next-best-step',count:2},{id:'definitive-treatment',count:1},{id:'diagnosis',count:1}]);
+});
+test('keyword and free text combine with exclusive platform filters without answer leakage',()=>{
+  const a=domain.projectLibrary(input()); a.questions[0].stem='Most likely diagnosis of synthetic alpha?';a.questions[1].stem='Next best step for synthetic beta?';
+  assert.deepEqual(domain.filterLibrary(a,{keyword:'diagnosis',search:'SYNTHETIC ALPHA',exam:'neet-pg'}).questions.map(q=>q.questionId),['q1']);
+  assert.equal(domain.filterLibrary(a,{search:'Do not reveal'}).questions.length,0);
+  assert.equal(domain.filterLibrary(a,{keyword:'next-best-step',platform:'marrow'}).questions.length,1);
+});

@@ -88,17 +88,38 @@ export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],ques
   const noteIds=new Set(publishedNotes.map(n=>n.noteVersionId));const questionIds=new Set(questions.map(q=>q.questionId));
   return {contractId:'canonical-content-library-v1',concepts,questions,notes:publishedNotes,links:links.filter(l=>noteIds.has(l.note_version_id)&&questionIds.has(l.question_id)),masteryInference:false};
 }
+// Pattern tags describe the prompt, never the answer or explanation.
+const keywordPatterns = [
+  ['diagnosis', /\b(?:make (?:a |the )?diagnosis|(?:most likely |probable |clinical |working )?diagnosis|diagnose)\b/i],
+  ['next-best-step', /\b(?:next best step|next (?:most appropriate )?step|best next step)\b/i],
+  ['definitive-treatment', /\b(?:definitive treatment|definitive management)\b/i],
+  ['initial-treatment', /\b(?:initial treatment|initial management|first[- ]line treatment)\b/i],
+  ['investigation-of-choice', /\b(?:investigation of choice|test of choice|best investigation)\b/i],
+  ['gold-standard', /\bgold[- ]standard\b/i],
+  ['drug-of-choice', /\bdrug of choice\b/i],
+  ['most-common', /\bmost common\b/i],
+  ['mechanism', /\b(?:mechanism of action|pathogenesis|mechanism)\b/i],
+  ['except', /\b(?:except|not true|incorrect statement)\b/i]
+];
+export function questionKeywords(question) {
+  return unique([...(question.classification?.tasks || []),...keywordPatterns.filter(([,pattern])=>pattern.test(question.stem||'')).map(([key])=>key)]).sort();
+}
+export function keywordCounts(library) {
+  const counts=new Map(),seen=new Set();
+  for(const question of library.questions){if(seen.has(question.questionId))continue;seen.add(question.questionId);for(const key of questionKeywords(question))counts.set(key,(counts.get(key)||0)+1);}
+  return [...counts].map(([id,count])=>({id,count})).sort((a,b)=>b.count-a.count||a.id.localeCompare(b.id));
+}
 export function filterLibrary(library, filters={}) {
   const selectedNoteIds=new Set(library.notes.filter(n=>n.conceptId===filters.concept).map(n=>n.noteVersionId));
   const noteConnections=new Map((library.links||[]).filter(l=>selectedNoteIds.has(l.note_version_id)).map(l=>[l.question_id,l.relation]));
   const categories={subject:'subjects',system:'systems',organ:'organs',domain:'domains',task:'tasks'};
   const matches=c=>Object.entries(categories).every(([key,facet])=>!filters[key]||c[facet]?.includes(filters[key]));
-  const questions=library.questions.filter(q=>matches(q.classification)&&(!filters.exam||q.home.exams.includes(filters.exam))&&(!filters.platform||q.home.platforms.includes(filters.platform))&&(!filters.home||q.home.kind===filters.home)&&(!filters.concept||q.conceptLinks.some(l=>l.conceptId===filters.concept)||noteConnections.has(q.questionId))).map(q=>{
+  const questions=library.questions.filter(q=>matches(q.classification)&&(!filters.keyword||questionKeywords(q).includes(filters.keyword))&&(!filters.search||normalize([q.stem,...q.options.map(o=>o.text),...q.conceptLinks.map(l=>library.concepts.find(c=>c.conceptId===l.conceptId)?.label||'')].join(' ')).includes(normalize(filters.search)))&&(!filters.exam||q.home.exams.includes(filters.exam))&&(!filters.platform||q.home.platforms.includes(filters.platform))&&(!filters.home||q.home.kind===filters.home)&&(!filters.concept||q.conceptLinks.some(l=>l.conceptId===filters.concept)||noteConnections.has(q.questionId))).map(q=>{
     const roles=q.conceptLinks.filter(l=>l.conceptId===filters.concept).map(l=>l.role);
     return {...q,connection:roles.includes('primary')?'assesses':roles.includes('distractor')||noteConnections.get(q.questionId)==='contrasts'?'confusing':roles.includes('prerequisite')||noteConnections.get(q.questionId)==='prerequisite'?'prerequisite':'related'};
   });
   const ids=new Set(questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)));
-  const concepts=library.concepts.filter(c=>(!filters.concept||c.conceptId===filters.concept)&&matches(c.classification)&&(!filters.exam&&!filters.platform&&!filters.home||ids.has(c.conceptId)));
+  const concepts=library.concepts.filter(c=>(!filters.concept||c.conceptId===filters.concept)&&matches(c.classification)&&(!filters.exam&&!filters.platform&&!filters.home&&!filters.keyword&&!filters.search||ids.has(c.conceptId)));
   const conceptIds=new Set(concepts.map(c=>c.conceptId));
   return {...library,questions,concepts,notes:library.notes.filter(n=>conceptIds.has(n.conceptId))};
 }
