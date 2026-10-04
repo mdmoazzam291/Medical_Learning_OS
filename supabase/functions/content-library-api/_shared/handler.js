@@ -1,9 +1,10 @@
+import { selectConcise } from '../../../../src/domain/question-intelligence.js';
 import { validateImport, projectLibrary, questionSignature } from '../../../../src/domain/content-library.js';
 
 class LibraryError extends Error { constructor(status,code){super(code);this.status=status;} }
 const fail=(status,code)=>{throw new LibraryError(status,code);};
 const fields=(value,keys)=>{if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).sort().join('|')!==[...keys].sort().join('|')) fail(400,'invalid_fields');};
-const knownErrors=new Set(['import_payload_conflict','stale_import_digest','answer_conflict','question_identity_conflict','concept_identity_conflict','source_identity_conflict','duplicate_target_not_published','duplicate_concept_conflict','publication_rights_unresolved','rights_not_resolved','publication_review_evidence_invalid','source_unknown','concept_unknown','linked_question_unknown','rights_source_invalid','note_link_invalid','source_evidence_required','rights_decision_conflict']);
+const knownErrors=new Set(['import_payload_conflict','stale_import_digest','answer_conflict','question_identity_conflict','concept_identity_conflict','source_identity_conflict','duplicate_target_not_published','duplicate_concept_conflict','publication_rights_unresolved','rights_not_resolved','publication_review_evidence_invalid','source_unknown','concept_unknown','linked_question_unknown','rights_source_invalid','note_link_invalid','source_evidence_required','rights_decision_conflict','stale_source_version','intelligence_version_conflict','compression_gate_failed']);
 export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins}) {
   return async req=>{
     const origin=req.headers.get('origin');
@@ -32,14 +33,23 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         return reply(200,projectLibrary(snapshot));
       }
       if(req.method==='POST'&&path==='/study'){
-        const input=await body(32768);fields(input,['questionVersionIds']);
+        const input=await body(32768);fields(input,['questionVersionIds',...(Object.hasOwn(input,'variants')?['variants']:[])]);
         const ids=input.questionVersionIds;
         if(!Array.isArray(ids)||!ids.length||ids.length>50||new Set(ids).size!==ids.length||ids.some(x=>typeof x!=='string'))fail(400,'question_selection_invalid');
         const snapshot=await checked(admin.rpc('content_library_snapshot_v1',{p_learner:user.id}));
         const available=new Set(snapshot.catalog.questions.filter(q=>q.status==='published').map(q=>q.questionVersionId));
         if(ids.some(id=>!available.has(id)))fail(400,'question_selection_invalid');
+        const variants=input.variants;
+        if(variants!==undefined){
+          if(!variants||typeof variants!=='object'||Array.isArray(variants)||Object.keys(variants).some(k=>!ids.includes(k)))fail(400,'question_selection_invalid');
+          for(const [version,variantId] of Object.entries(variants)){
+            const q=snapshot.catalog.questions.find(q=>q.questionVersionId===version);
+            const m=snapshot.questionMetadata?.find(m=>m.question_id===q.questionId)?.intelligence;
+            try{selectConcise(q,m,variantId);}catch{fail(400,'variant_unavailable');}
+          }
+        }
         const proposedId=crypto.randomUUID();
-        const result=await checked(admin.rpc('study_start_session',{p_learner:user.id,p_id:proposedId,p_ids:ids,p_started:new Date().toISOString()}));
+        const result=await checked(admin.rpc(variants===undefined?'study_start_session':'study_start_library_session_v2',{p_learner:user.id,p_id:proposedId,p_ids:ids,p_started:new Date().toISOString(),...(variants===undefined?{}:{p_variants:variants})}));
         if(result?.error||!result?.id)fail(409,'study_session_unavailable');
         return reply(200,{sessionId:result.id,resumedExisting:result.id!==proposedId});
       }

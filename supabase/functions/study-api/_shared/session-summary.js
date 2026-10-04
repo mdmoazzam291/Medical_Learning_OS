@@ -5,6 +5,7 @@ export function buildSessionSummary({ session, attempts, revisions, concepts = [
   const seen = new Set();
   const groups = new Map();
   let correctCount = 0;
+  const representations = { original: 0, 'concise-practice': 0 };
   const labels = new Map(concepts.map(c => [c.conceptId, c.label]));
   for (const row of attempts) {
     const e = row.event;
@@ -13,13 +14,16 @@ export function buildSessionSummary({ session, attempts, revisions, concepts = [
       throw new Error('invalid_session_summary');
     }
     seen.add(row.position);
+    const representation = row.presentation?.representation || 'original';
+    if (!Object.hasOwn(representations, representation)) throw new Error('invalid_session_summary');
+    representations[representation]++;
     if (e.correct) correctCount++;
     const group = groups.get(e.conceptId) || { conceptId: e.conceptId, label: labels.get(e.conceptId) || 'Connected concept', answeredCount: 0, incorrectCount: 0 };
     group.answeredCount++;
     if (!e.correct) group.incorrectCount++;
     groups.set(e.conceptId, group);
   }
-  const answeredIds = new Set(attempts.map(row => row.event.questionVersionId));
+  const answeredIds = new Set(attempts.filter(row => !row.presentation || row.presentation.representation === 'original').map(row => row.event.questionVersionId));
   const schedule = revisions === null ? null : revisions.filter(row => answeredIds.has(row.question_version_id));
   const dates = (schedule || []).map(row => row.due_at).filter(at => typeof at === 'string' && Number.isFinite(Date.parse(at))).sort((a, b) => Date.parse(a) - Date.parse(b));
   return {
@@ -28,10 +32,10 @@ export function buildSessionSummary({ session, attempts, revisions, concepts = [
     unansweredCount: ids.length - seen.size, correctCount, incorrectCount: seen.size - correctCount,
     accuracy: seen.size ? correctCount / seen.size : null,
     completedAllSelected: session.closed && seen.size === ids.length,
-    concepts: [...groups.values()],
+    concepts: [...groups.values()], representations,
     revision: {
-      available: revisions !== null, scope: 'current-schedule-for-this-session-items',
-      scheduledCount: dates.length, missingCount: revisions === null ? null : seen.size - dates.length,
+      available: revisions !== null, scope: 'current-schedule-for-original-session-items',
+      scheduledCount: dates.length, missingCount: revisions === null ? null : answeredIds.size - dates.length,
       dueNowCount: revisions === null ? null : dates.filter(at => Date.parse(at) <= Date.parse(generatedAt)).length,
       nextDueAt: dates[0] || null
     },

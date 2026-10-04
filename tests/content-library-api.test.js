@@ -28,3 +28,13 @@ test('learner response excludes unpublished answer-bearing objects and is never 
 test('filtered study accepts only distinct published versions and derives learner identity',async()=>{const f=fixture({study:true});for(const ids of [[],['hidden@1'],['published@1','published@1']]){assert.equal((await f.handler(req('/study','POST',{questionVersionIds:ids}))).status,400);}assert.equal(f.writes(),0);const r=await f.handler(req('/study','POST',{questionVersionIds:['published@1']}));assert.equal(r.status,200);assert.deepEqual(await r.json(),{sessionId:'saved-session',resumedExisting:true});assert.equal(f.writes(),1);});
 
 test('encoded valid import IDs reach the exact publication gate; malformed escapes fail',async()=>{const f=fixture();const body={digest:'a'.repeat(64),rightsDecisions:[],reviewNotes:'Inspected',attested:true};assert.equal((await f.handler(req('/imports/review%3A2026%40v1/publish','POST',body))).status,200);assert.equal(f.writes(),1);assert.equal((await f.handler(req('/imports/%ZZ/publish','POST',body))).status,400);assert.equal(f.writes(),1);});
+
+test('concise study selection resolves the reviewed variant and never accepts caller supplied prompt/key',async()=>{
+  const q={questionId:'synthetic-new',questionVersionId:'synthetic-new@1',status:'published',stem:'Original synthetic prompt',options:[{optionId:'a',text:'Alpha'},{optionId:'b',text:'Beta'}],conceptLinks:[]};
+  const intelligence={sourceQuestionVersionId:q.questionVersionId,derivatives:[{variantId:'short',version:1,representation:'concise-practice',sourceQuestionVersionId:q.questionVersionId,stem:'Concise synthetic prompt',options:q.options}]};let writes=0;
+  const admin={rpc:async(name,args)=>{if(name==='content_library_snapshot_v1')return {data:{catalog:{concepts:[],questions:[q]},questionMetadata:[{question_id:q.questionId,intelligence}]}};if(name==='study_start_library_session_v2'){writes++;assert.equal(args.p_variants[q.questionVersionId],'short');return {data:{id:args.p_id}};}throw new Error(name);}};
+  const handler=module.createLibraryHandler({admin,getUser:async()=>({id:'actual-user'}),runtimeAccess:async()=>({allowed:true}),allowedOrigins:[origin]});
+  for(const variants of [{'synthetic-new@1':'unknown'},{'hidden@1':'short'}])assert.equal((await handler(req('/study','POST',{questionVersionIds:[q.questionVersionId],variants}))).status,400);
+  assert.equal((await handler(req('/study','POST',{questionVersionIds:[q.questionVersionId],variants:{[q.questionVersionId]:'short'},stem:'forged'}))).status,400);
+  const response=await handler(req('/study','POST',{questionVersionIds:[q.questionVersionId],variants:{[q.questionVersionId]:'short'}}));assert.equal(response.status,200);assert.equal(writes,1);
+});

@@ -1,3 +1,4 @@
+import { validateIntelligence, learnerIntelligence, taskAxes } from './question-intelligence.js';
 export const SUBJECTS = Object.freeze(['anatomy','physiology','biochemistry','pathology','pharmacology','microbiology','forensic-medicine','community-medicine','medicine','surgery','obstetrics-gynaecology','pediatrics','ent','ophthalmology','orthopaedics','dermatology','psychiatry','anaesthesia','radiology']);
 const facets = ['subjects','systems','organs','domains','tasks'];
 const normalize = value => String(value).trim().toLowerCase().replace(/\s+/g,' ');
@@ -31,7 +32,7 @@ export function questionHome(origins=[]) {
 }
 export function validateImport(m) {
   shape(m,['schemaVersion','importId','concepts','sources','questions','notes','noteQuestionLinks']);
-  if(m.schemaVersion!==1) fail('schema_version_invalid'); id(m.importId);
+  if(![1,2].includes(m.schemaVersion)) fail('schema_version_invalid'); id(m.importId);
   for(const [key,maximum] of [['concepts',200],['sources',200],['questions',100],['notes',100],['noteQuestionLinks',500]]) {
     if(!Array.isArray(m[key])||m[key].length>maximum) fail('batch_size_invalid');
   }
@@ -41,7 +42,7 @@ export function validateImport(m) {
   for(const s of m.sources) { shape(s,['sourceId','title','url','version','evidence']); id(s.sourceId); text(s.title,500); text(s.version,300); text(s.evidence,4000); if(s.url!==null){text(s.url,2000);if(new URL(s.url).protocol!=='https:') fail('source_url_invalid');} }
   const signatures=new Map();
   for(const q of m.questions) {
-    shape(q,['questionId','stem','options','answerOptionId','explanation','conceptLinks','sourceIds','origins','classification']);
+    shape(q,['questionId','stem','options','answerOptionId','explanation','conceptLinks','sourceIds','origins','classification',...(m.schemaVersion===2&&Object.hasOwn(q,'intelligence')?['intelligence']:[])]);
     id(q.questionId); text(q.stem); text(q.explanation); id(q.answerOptionId); classification(q.classification);
     if(!Array.isArray(q.options)||q.options.length<2||q.options.length>10) fail('options_invalid');
     q.options.forEach(o=>{shape(o,['optionId','text']);id(o.optionId);text(o.text,20000);}); distinct(q.options,'optionId');
@@ -57,6 +58,7 @@ export function validateImport(m) {
       else if(o.kind==='platform'){shape(o,['kind','platformId','edition','evidence']);if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(o.platformId)) fail('platform_invalid');text(o.edition,200);}
       else fail('origin_invalid'); text(o.evidence,4000);
     }
+    if(q.intelligence){validateIntelligence(q,q.intelligence);if(q.intelligence.presentation.some(x=>['image','ecg-tracing','histology','audio','video','sequential-case'].includes(x)))fail('media_import_requires_asset_contract');}
     const signature=questionSignature(q),answer=questionAnswer(q);
     if(signatures.has(signature)&&signatures.get(signature)!==answer) fail('answer_conflict'); signatures.set(signature,answer);
   }
@@ -80,7 +82,7 @@ export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],ques
     const conceptLinks=[...new Map([...q.conceptLinks,...(meta.concept_links_version_id===q.questionVersionId?(meta.concept_links||[]).filter(l=>l.role!=='primary'):[])].map(l=>[l.conceptId+'|'+l.role,l])).values()];
     const classification=structuredClone(meta.classification||emptyFacets());
     if(!classification.subjects.length) classification.subjects=unique(conceptLinks.flatMap(l=>catalog.concepts.find(c=>c.conceptId===l.conceptId)?.subjectTags||[]));
-    return {questionId:q.questionId,questionVersionId:q.questionVersionId,stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
+    return {questionId:q.questionId,questionVersionId:q.questionVersionId,stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
   });
   const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,bodyMarkdown:n.body_markdown}));
   const visibleIds=new Set([...questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)),...publishedNotes.map(n=>n.conceptId)]);
@@ -114,12 +116,12 @@ export function filterLibrary(library, filters={}) {
   const noteConnections=new Map((library.links||[]).filter(l=>selectedNoteIds.has(l.note_version_id)).map(l=>[l.question_id,l.relation]));
   const categories={subject:'subjects',system:'systems',organ:'organs',domain:'domains',task:'tasks'};
   const matches=c=>Object.entries(categories).every(([key,facet])=>!filters[key]||c[facet]?.includes(filters[key]));
-  const questions=library.questions.filter(q=>matches(q.classification)&&(!filters.keyword||questionKeywords(q).includes(filters.keyword))&&(!filters.search||normalize([q.stem,...q.options.map(o=>o.text),...q.conceptLinks.map(l=>library.concepts.find(c=>c.conceptId===l.conceptId)?.label||'')].join(' ')).includes(normalize(filters.search)))&&(!filters.exam||q.home.exams.includes(filters.exam))&&(!filters.platform||q.home.platforms.includes(filters.platform))&&(!filters.home||q.home.kind===filters.home)&&(!filters.concept||q.conceptLinks.some(l=>l.conceptId===filters.concept)||noteConnections.has(q.questionId))).map(q=>{
+  const questions=library.questions.filter(q=>(!filters.qualifier||taskAxes(q).qualifiers.includes(filters.qualifier))&&(!filters.medium||taskAxes(q).presentation.includes(filters.medium))&&(!filters.response||taskAxes(q).responseFormat===filters.response)&&matches(q.classification)&&(!filters.keyword||questionKeywords(q).includes(filters.keyword))&&(!filters.search||normalize([q.stem,...q.options.map(o=>o.text),...q.conceptLinks.map(l=>library.concepts.find(c=>c.conceptId===l.conceptId)?.label||'')].join(' ')).includes(normalize(filters.search)))&&(!filters.exam||q.home.exams.includes(filters.exam))&&(!filters.platform||q.home.platforms.includes(filters.platform))&&(!filters.home||q.home.kind===filters.home)&&(!filters.concept||q.conceptLinks.some(l=>l.conceptId===filters.concept)||noteConnections.has(q.questionId))).map(q=>{
     const roles=q.conceptLinks.filter(l=>l.conceptId===filters.concept).map(l=>l.role);
     return {...q,connection:roles.includes('primary')?'assesses':roles.includes('distractor')||noteConnections.get(q.questionId)==='contrasts'?'confusing':roles.includes('prerequisite')||noteConnections.get(q.questionId)==='prerequisite'?'prerequisite':'related'};
   });
   const ids=new Set(questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)));
-  const concepts=library.concepts.filter(c=>(!filters.concept||c.conceptId===filters.concept)&&matches(c.classification)&&(!filters.exam&&!filters.platform&&!filters.home&&!filters.keyword&&!filters.search||ids.has(c.conceptId)));
+  const concepts=library.concepts.filter(c=>(!filters.concept||c.conceptId===filters.concept)&&matches(c.classification)&&(!filters.exam&&!filters.platform&&!filters.home&&!filters.keyword&&!filters.search&&!filters.qualifier&&!filters.medium&&!filters.response||ids.has(c.conceptId)));
   const conceptIds=new Set(concepts.map(c=>c.conceptId));
   return {...library,questions,concepts,notes:library.notes.filter(n=>conceptIds.has(n.conceptId))};
 }

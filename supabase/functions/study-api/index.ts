@@ -396,11 +396,11 @@ Deno.serve(async (req: Request) => {
     };
     const getEvents = async () => {
       const { data, error } = await trustedRead("attempts", async () =>
-        admin.from("study_attempts").select("event,recorded_at,id")
+        admin.from("study_attempts").select("event,recorded_at,id,presentation")
           .eq("learner_id", learnerId).order("recorded_at", { ascending: true }).order("id", { ascending: true })
       );
       if (error) fail(500, "study_read_failed");
-      return (data ?? []).map((row: any) => row.event);
+      return (data ?? []).filter((row: any) => !row.presentation || row.presentation.representation === "original").map((row: any) => row.event);
     };
     const getBookmarks = async () => {
       const { data, error } = await trustedRead("bookmarks", async () =>
@@ -908,7 +908,7 @@ Deno.serve(async (req: Request) => {
 
     const sessionState = async (sessionId: string) => {
       const { data: session, error } = await trustedRead("session_state", async () =>
-        admin.from("study_sessions").select("id,position,closed,question_version_ids")
+        admin.from("study_sessions").select("id,position,closed,question_version_ids,question_presentations")
           .eq("id", sessionId).eq("learner_id", learnerId).maybeSingle()
       );
       if (error) fail(500, "study_read_failed");
@@ -981,15 +981,24 @@ Deno.serve(async (req: Request) => {
       }
       const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
       if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
+      let revisionCues: any[] = [];
+      if (attempt?.id) {
+        const {data: metadata, error: metadataError} = await admin.from("content_library_question_metadata").select("intelligence").eq("question_id", q.questionId).maybeSingle();
+        if (metadataError) fail(500, "study_read_failed");
+        if (metadata?.intelligence?.sourceQuestionVersionId === q.questionVersionId) revisionCues = (metadata.intelligence.derivatives || []).filter((d: any) => d.representation === "revision-cue" && d.sourceQuestionVersionId === q.questionVersionId).map((d: any) => ({variantId:d.variantId,version:d.version,stem:d.stem}));
+      }
       const mediaPrompt = await learnerMediaPrompt(q.questionVersionId);
+      const presentation = session.question_presentations?.[q.questionVersionId];
       return {
         ...result,
         question: {
           ...learnerQuestion(q),
+          ...(presentation ? {stem:presentation.stem, options:presentation.options, representation:presentation.representation, variantId:presentation.variantId, variantVersion:presentation.variantVersion, sourceQuestionId:q.questionId, sourceQuestionVersionId:q.questionVersionId} : {representation:"original"}),
           media: mediaPrompt.media,
           visualInteraction: mediaPrompt.visualInteraction
         },
         receipt: attempt?.receipt ?? null,
+        revisionCues,
         memoryJudgment,
         recommendationContext
       };
@@ -2445,7 +2454,7 @@ Deno.serve(async (req: Request) => {
         const [{ data: attemptRows, error: attemptError }, { data: evidence, error: evidenceError }, revisionRows] =
           await Promise.all([
             trustedRead("shadow_attempt_history", async () =>
-              admin.from("study_attempts").select("id,event,recorded_at")
+              admin.from("study_original_attempt_evidence_v1").select("id,event,recorded_at")
                 .eq("learner_id", learnerId)
                 .order("recorded_at", { ascending: true })
                 .order("id", { ascending: true })
@@ -2510,7 +2519,7 @@ Deno.serve(async (req: Request) => {
       if (!session) fail(404, "session_not_found");
       const [{ data: attempts, error: attemptError }, { body }] = await Promise.all([
         trustedRead("summary_attempts", async () =>
-          admin.from("study_attempts").select("position,event")
+          admin.from("study_attempts").select("position,event,presentation")
             .eq("session_id", sessionId).eq("learner_id", learnerId)
             .order("position", { ascending: true }).limit(50)
         ),

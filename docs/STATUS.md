@@ -1,5 +1,23 @@
 # Current status
 
+## 2026-10-04 — frontend publication explicitly authorized
+- Owner confirmed pushing the reviewed branch to mdmoazzam291/Medical_Learning_OS and publishing the frontend after CI passes. This supersedes the earlier automatic-review block. Local 966/966 tests, syntax/catalog/decision checks and 58-file build pass again on the release tree.
+- Backend migrations/API deployment and empty catalog preservation are already verified. GitHub CI and production frontend build are the remaining release checks; their final receipt is linked from the pilot governance record.
+
+## 2026-10-04 — question-intelligence backend release; frontend publication blocked
+- Both forward migrations applied to medical_learning_os (iyapppmeieqhflnzslao); content-library-api v2 and study-api v47 active. Three representation columns and the original-only evidence view exist. Browser roles have no grants on the new view or variant/validation RPCs.
+- Live catalog remains v407 with 0 questions/concepts/sources/attempts/sessions and 3 preserved accounts. No actual clinical import, human approval, enrollment or learning outcome was generated.
+- Final local verification: 966/966 Node tests, syntax/catalog/decision checks, 58-file build, complete isolated PostgreSQL rehearsal and responsive Library/Study checks passed. Independent final review reports no release blockers. GitHub CI/production frontend build cannot run until the reviewed branch is pushed.
+- Automatic approval review rejected the GitHub push to mdmoazzam291/Medical_Learning_OS, stating implementation authorization did not explicitly authorize private-repository disclosure to that destination. The commit is ready locally; no indirect publication was attempted. Frontend deployment remains pending explicit push/publication approval.
+
+## 2026-10-04 — question intelligence and shortening pilot implementation
+- Optional schema-v2 intelligence separates task, qualifiers, presentation, response format and reasoning operations. Exact originals remain canonical. Independently identified concise practice and after-answer cues require source-version binding, preserved options/key and eight compression gates. Existing derivatives/axes are immutable; reviewed new IDs may be appended. Media imports await their asset contract.
+- Existing administrator/Medical/References/Rights publication remains mandatory. Prompts exclude keys/private review evidence. Server-frozen sessions and receipts retain representation. Original-only concept/mistake/FSRS/schedule/transfer/probe-origin readers prevent concise evidence inflation; every exposure/contamination scan still includes all representations. Session results label concise activity and use original-only schedules.
+- Q2 prepares the accepted 12-question asthma/COPD/pneumonia quality pilot. Drive and live reset catalog have no newly supplied originals: 0 clinical questions selected, shortened, imported or published; 0 fabricated human approvals. Erased material stays excluded.
+- Q3 supplies a reproducible day-7/day-14, equal-time unseen full-case/transfer evaluator. It audits retries, exposure, hints, delay and time mismatch. Empty rates stay null. Descriptive differences establish no efficacy/noninferiority/mastery. No enrollment or actual outcomes occurred. Protocol: QUESTION_SHORTENING_PILOT.md.
+- Verification: Node tests, syntax/catalog/decision checks and 58-file build passed; final counts follow in release receipt. Isolated PostgreSQL compiled all 15 evidence replacements and exercised gates, stale source, frozen prompts, original-only scheduling/concept counts and labelled replay. Phone/tablet/desktop Library filters/selection and saved concise-answer/cue reload passed. Independent review found no release blockers. Hosted publication remains pending until recorded below.
+- Next dependency: complete new originals and distinct unseen endpoint families, followed by actual administrator review.
+
 ## 2026-10-04 — import review safety and current-status reconciliation
 - First slice of the owner-selected interface implementation order: guard draft selection with a monotonic request generation. Late successful or failed reads cannot replace the newer draft or its exact publication target.
 - Edited permission evidence, review notes and attestation are protected by a discard confirmation on draft changes and a navigation warning; successful publication clears the dirty state. Existing atomic publication and permission boundaries are preserved.
