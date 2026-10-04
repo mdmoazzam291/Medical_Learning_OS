@@ -1,6 +1,6 @@
 # Question shortening pilot — 4 October 2026
 
-Status: backend deployed and implementation locally verified; frontend publication explicitly authorized, pending CI/production release. Clinical pilot awaiting supplied originals. Drive originals/inbox/index and the live shared catalog were empty at task start. No erased seed or old backup is eligible for reuse. No question has been rewritten, imported or published by this pilot.
+Status: backend and frontend published through PR #201; PR/main checks and both Cloudflare production builds passed. Clinical pilot awaiting supplied originals. Drive originals/inbox/index and the live shared catalog were empty at task start. No erased seed or old backup is eligible for reuse. No question has been rewritten, imported or published by this pilot.
 
 ## Q2: first input selection
 
