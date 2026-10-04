@@ -1,5 +1,12 @@
 # Current status
 
+## 2026-10-04 — import review safety and current-status reconciliation
+- First slice of the owner-selected interface implementation order: guard draft selection with a monotonic request generation. Late successful or failed reads cannot replace the newer draft or its exact publication target.
+- Edited permission evidence, review notes and attestation are protected by a discard confirmation on draft changes and a navigation warning; successful publication clears the dirty state. Existing atomic publication and permission boundaries are preserved.
+- README and current roadmap now reflect released keyword search and completed reset/R2 erasure. Earlier status entries remain dated historical records, superseded by the release entry.
+- Verification: 946 Node tests passed (3 new actual-page asynchronous regressions), syntax/catalog/decision checks and 57-file static build passed. Responsive browser coverage includes delayed draft responses and cancelled dirty switches; local execution unavailable because Chromium is absent and its download fails. CI browser verification remains required before merge.
+- Next slices: shared navigation/empty states; stable Library search/filter controls and safe note rendering; readable admin previews; bounded graph/catalog projections; genuine supplied-content import-to-study acceptance. No clinical content staged or published by this change.
+
 ## 2026-10-04 — Q1 release and Q3 replacement batch completed
 - Owner explicitly authorized publishing to mdmoazzam291/Medical_Learning_OS and the prepared backup-erasure workflow. PR #198 merged as 4097a7f1c0083dcefdfc4a9f6cc03b94e4d26009. Foundation PR and post-merge check/browser jobs passed; both Cloudflare production Worker Builds passed.
 - Authorized old-content backup erasure run 37181598886 succeeded: 6 pre-reset R2 archive/checksum objects erased, 0 targeted objects remaining. Fresh clean backup run 37181598896 succeeded, including service-boundary audit, logical dumps, archive/checksum upload and size/integrity verification. Pre-reset restore selections are blocked.
