@@ -23,6 +23,7 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - run: npm run demo
       - name: Preserve allowlisted static preview bundle
         uses: actions/upload-artifact@v4

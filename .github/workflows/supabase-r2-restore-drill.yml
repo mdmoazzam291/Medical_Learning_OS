@@ -58,10 +58,10 @@ jobs:
           pattern = re.compile(r'^supabase/\d{4}/\d{2}/\d{2}/\d{8}T\d{6}Z/backup\.tar\.gz$')
           candidates = [
               item for item in objects
-              if pattern.fullmatch(str(item.get('Key') or ''))
+              if pattern.fullmatch(str(item.get('Key') or '')) and str(item.get('Key') or '').split('/')[-2] > '20261003T231839Z'
           ]
           if not candidates:
-              raise SystemExit('No canonical Supabase backup archive found in R2')
+              raise SystemExit('No post-reset canonical Supabase backup archive found in R2')
           latest = max(candidates, key=lambda item: str(item.get('LastModified') or ''))
           print(latest['Key'][:-len('/backup.tar.gz')])
           PY

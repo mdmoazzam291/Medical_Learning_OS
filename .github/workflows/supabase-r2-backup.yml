@@ -1,6 +1,9 @@
 name: Supabase logical backup to R2
 
 on:
+  push:
+    branches: [main]
+    paths: ['ops/content-reset/purge_backups.py']
   workflow_dispatch:
   schedule:
     # Sunday 03:47 IST = Saturday 22:17 UTC.
