@@ -1,5 +1,22 @@
 # Current status
 
+## 2026-10-08 — independent review fixes verified
+- Independent whole-branch review found eight Important defects. Regression tests watched RED→GREEN for historical-key conflicts, corpus-wide keys, differing explanations, version-2 intelligence, scoped existing-note dependency exclusions, uncertain-upload reconciliation, provenance-only source additions and fixture-journal evidence. All are fixed in one pass.
+- Final full suite: 1069/1069 pass. Syntax/catalog/decision checks and the 58-file build pass. Three deferred minors: declared executable metadata rejection, fuller bounded PNG header integrity and complete pinned portable schema definitions. Current runtime validation remains authoritative; no media publication or executable evaluation occurs.
+- Branch remains local and isolated. No clinical import, production ports, watcher, merge, push or deployment performed.
+
+## 2026-10-08 — archive-first delivery and index orchestration
+- Exact original release and generated handoff preservation, byte-readback receipts, draft-stage semantic reconciliation, partial progress and append-only concurrent index behavior are implemented through injected ports. Synthetic end-to-end acceptance preserves original bytes and history.
+- 1060/1060 Node tests and syntax/catalog/decision checks pass. No production ports are installed, no actual material ingested, no watcher/publish/merge/deploy operation performed. Local branch awaits final independent review and integration choice.
+
+## 2026-10-08 — correction/media proposals verified locally
+- Immutable correction/provenance proposals bind exact predecessor versions/hashes and list fresh-review gates. Media packages verify measured format/dimensions/hash evidence and exact bindings; privacy, rights and prompt leakage are independent gates.
+- 1036/1036 Node tests and syntax/catalog/decision checks pass. Live correction/provenance/media routes remain disabled; no storage or publication claim.
+
+## 2026-10-08 — local material release converter
+- Isolated feature branch implements strict release validation, canonical mapping, deterministic import chunks and sealed local handoffs. Synthetic converter acceptance and repository syntax/catalog/decision checks pass. Full suite: 1017 passing test cases.
+- Correction/media routes and incomplete records stay outside ordinary text imports. No clinical upload, live import, Drive monitoring, merge or deployment occurred.
+
 ## 2026-10-04 — question intelligence published and production verified
 - Owner explicitly authorized this repository destination/publication. PR #201 merged as 116e5c5d4c0d8dac886af1c3f712642b342f062d. PR Foundation run 37210051012 and main run 37210300517 passed both check/browser jobs, including all 966 tests, isolated PostgreSQL and responsive suites. Both Cloudflare main production Worker Builds passed (web 5f72c549-dab0-48b5-bfc6-e8c50f0d5afb; heartbeat b8599908-1214-45cb-b935-936b9e55deae).
 - Frontend publication supersedes the earlier authorization block. Backend content-library-api v2 and study-api v47 remain verified. Direct served-byte inspection returns HTTP 403 from this environment, so production publication is evidenced by the successful provider build/deploy checks; served-byte parity is not claimed. The pre-existing Cloudflare branch-preview failure remains distinct from the successful main production builds.

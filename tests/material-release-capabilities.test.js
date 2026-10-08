@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {deliveryCapabilities,mergeRoutedPackages} from '../src/domain/material-release/capabilities.js';
+import {packMapped} from '../src/domain/material-release/packing.js';
+import {mapRelease} from '../src/domain/material-release/mapping.js';
+import {buildCorrectionProposals} from '../src/domain/material-release/corrections.js';
+import {runConverter} from '../scripts/convert-material-release.js';
+import {makeRelease,targetFor,makeQuestion,refreshRelease,writeFixtureRelease} from './helpers/material-release.js';
+test('unavailable_route_cannot_be_enabled_by_upload',()=>{assert.deepEqual(deliveryCapabilities({mediaStage:true,publication:true}),{textDraftStage:true,correctionStage:false,provenanceUpdate:false,mediaStage:false,publication:false});});
+test('mixed_release_counts_and_states and corpus_and_history_unchanged',()=>{const r=makeRelease(),t=targetFor(r);r.records.questions[0].app.explanation+=' Updated';r.records.questions.push(makeQuestion('test-new'));r.manifest.eligibility.includedIds.push('test-new');refreshRelease(r);const before=JSON.stringify({r,t}),mapped=mapRelease(r,{target:t}),base=packMapped(mapped),h=mergeRoutedPackages(base,{corrections:buildCorrectionProposals(r,mapped,t),media:null});assert.equal(h.chunks.length,1);assert.equal(h.state,'delivery_blocked');assert.ok(h.files.some(f=>f.path==='proposals/corrections.jsonl'));assert.equal(JSON.stringify({r,t}),before);});
+test('mismatched_binding_cannot_be_reviewed',()=>{const h=packMapped(mapRelease(makeRelease()));assert.throws(()=>mergeRoutedPackages(h,{corrections:[],media:{status:'reviewed'}}),/invalid_media_package/);assert.equal(h.state,'compatibility_pending');});
+test('converter generates blocked missing-media diagnostic and retains original classification',async t=>{const r=makeRelease();r.records.questions[0].app.classification.tasks=['image'];refreshRelease(r);const root=await mkdtemp(join(tmpdir(),'mlos-routes-'));t.after(()=>rm(root,{recursive:true,force:true}));await writeFixtureRelease(join(root,'release'),r);const h=await runConverter({releaseDir:join(root,'release')});assert.ok(h.diagnostics.some(d=>d.code==='missing_media_asset'));assert.equal(h.state,'delivery_blocked');assert.deepEqual(r.records.questions[0].app.classification.tasks,['image']);});

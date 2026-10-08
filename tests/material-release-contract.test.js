@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateRelease,renderQuestionMarkdown,renderConceptMarkdown} from '../src/domain/material-release/contract.js';
+import {makeRelease} from './helpers/material-release.js';
+test('valid_synthetic_release',()=>{const r=makeRelease();assert.equal(validateRelease(r).records.questions[0].app.answerOptionId,'first');assert.equal(renderQuestionMarkdown(r.records.questions[0],[]),r.markdown['questions/test-q-v1.md']);assert.equal(renderConceptMarkdown(r.records.concepts[0]),r.markdown['content/test-concept-v1.md']);});
+test('unsupported_schema',()=>{const r=makeRelease();r.manifest.releaseSchemaVersion=2;assert.throws(()=>validateRelease(r),/release_schema_unsupported/);});
+test('markdown_disagreement',()=>{const r=makeRelease();r.markdown['questions/test-q-v1.md']=r.markdown['questions/test-q-v1.md'].replace('Answer: first','Answer: second');assert.throws(()=>validateRelease(r),/markdown_mismatch/);});
+test('duplicate record and cross-entity identities are rejected',()=>{const r=makeRelease();r.records.questions.push(structuredClone(r.records.questions[0]));assert.throws(()=>validateRelease(r),/duplicate_record_id/);});
+test('missing references and declared counts are rejected',()=>{const r=makeRelease();r.records.questions[0].app.sourceIds=['missing'];assert.throws(()=>validateRelease(r),/source_unknown/);const c=makeRelease();c.manifest.counts.questions=99;assert.throws(()=>validateRelease(c),/record_count_mismatch/);});
+test('partial delta cannot masquerade as a complete release',()=>{const r=makeRelease();r.manifest.baseReleaseId='missing-base';assert.throws(()=>validateRelease(r),/release_base_reconstruction_required/);});

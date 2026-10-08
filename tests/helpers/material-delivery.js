@@ -1,0 +1,11 @@
+import {mkdtemp,readFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {makeRelease,writeFixtureRelease} from './material-release.js';
+import {runConverter} from '../../scripts/convert-material-release.js';
+import {digestBytes,stableJson} from '../../src/domain/material-release/packing.js';
+export const clock=()=> '2026-10-08T00:00:00.000Z';
+export async function deliveryFixture(t,release=makeRelease()){const root=await mkdtemp(join(tmpdir(),'mlos-delivery-'));t.after(()=>rm(root,{recursive:true,force:true}));const releaseDirectory=join(root,'release'),localDirectory=join(root,'handoff');await writeFixtureRelease(releaseDirectory,release);const handoff=await runConverter({releaseDir:releaseDirectory,outDir:localDirectory});return {root,handoff,args:{releaseDirectory,localDirectory,parentId:'test-parent',clock}};}
+export function fakeArchive(){const files=new Map();let uploads=0;const port={fixture:true,find:async({path})=>[...files.values()].filter(f=>f.path===path).map(f=>({id:f.id,parentIds:['test-parent'],url:'https://example.invalid/'+f.id})),upload:async({path,localPath})=>{const id='test-file-'+(++uploads);files.set(id,{id,path,bytes:await readFile(localPath)});return {id,parentIds:['test-parent'],url:'https://example.invalid/'+id};},metadata:async id=>({id,parentIds:['test-parent'],bytes:files.get(id).bytes.length,url:'https://example.invalid/'+id}),readBytes:async id=>files.get(id).bytes};const journal={fixture:true,entries:[],append:async function(receipt){this.entries.push(structuredClone(receipt));return {id:'test-receipt-'+this.entries.length,url:'https://example.invalid/receipt/'+this.entries.length,sha256:digestBytes(stableJson(receipt))};}};return {port,journal,files,get uploads(){return uploads;}};}
+
+export function fakeStage(){const imports=new Map();let stages=0;const port={fixture:true,readImport:async id=>imports.get(id)??null,stage:async manifest=>{stages++;const digest='a'.repeat(64),detail={import_id:manifest.importId,manifest:structuredClone(manifest),digest,status:'staged',receipt:null};imports.set(manifest.importId,detail);return {contractId:'content-library-stage-v1',importId:manifest.importId,digest,status:'staged',publicationAuthority:false};}};return {port,imports,get stages(){return stages;}};}
