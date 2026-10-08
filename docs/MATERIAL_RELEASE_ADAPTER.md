@@ -1,5 +1,11 @@
 # Material release adapter
 
+## Integration status — 8 October 2026
+
+PR #204 merged as `827b1a02325e31315716da53424f7996c542affa` on 8 October. Main Foundation run 37758541923 passed check/browser jobs; both Cloudflare production builds passed (web 6e080af5-f659-4536-a449-dad972bb3c70; heartbeat f959cf38-217e-4ca2-acee-3f0680c7bd40). The converter, exact-version correction/media proposals and archive-first orchestration are integrated repository code. External ArchivePort/TextStagePort/ReceiptJournal/IndexPort implementations, real archive/staging readback and clinical review/publication remain separate pending operations; no Drive watcher or real material ingestion is implied. [Release](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/204); [CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/37758541923).
+
+Current content input: final polished PYQs; fixed respiratory intake cancelled. The catalog is empty after the permanent reset. Conversion validation is separate from genuine clinical/rights review and target ingestion.
+
 The local converter reads a complete portable `mlos-material-release@1` package. Use `docs/material-release-schema-v1.json` plus the current content-library validator for the exact format; legacy/ad hoc JSONL requires an explicit migration. Each row keeps its original archive evidence and a separate exact app payload. Original questions are not shortened or clinically rewritten by conversion.
 
 ```sh
