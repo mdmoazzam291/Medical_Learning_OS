@@ -1,4 +1,8 @@
-# Medical Learning OS
+# PARSE
+
+**The Medical Learning OS**
+
+**Brand note:** PARSE is the owner-selected future-facing product name. Current deployed URLs, repository identifiers and runtime labels are unchanged until a separately verified rollout. See [brand identity contract](docs/BRAND.md).
 
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 
