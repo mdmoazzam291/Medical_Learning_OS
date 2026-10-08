@@ -1,6 +1,16 @@
 # Medical Learning OS — context register
 
-Last reconciled: 2026-09-28 (Asia/Kolkata).
+Last reconciled: 2026-10-08 (Asia/Kolkata).
+
+## Current post-reset intake and release — 2026-10-08
+
+The owner cancelled the fixed 12-question respiratory intake on 8 October 2026. The next input is final polished PYQs, with no fixed question count, three-note target or respiratory-only scope. The existing provenance, PYQ-first deduplication, rights and genuine administrator review gates remain active. The shortening evaluator is optional experiment infrastructure; ordinary PYQ intake does not require unseen holdouts or research enrollment.
+
+The permanent 4 October reset erased the old rabies/CO/anaphylaxis content, exam-occurrence evidence, 180-item internal-test inventory, five media assets and dependent learner/review history. These are historical demonstrations, not live approval queues or material to restore. Engineering/evaluation fixtures and Git history remain excluded from clinical reimport. A read-only check at 2026-10-08T11:08:20.963954Z confirms catalog v407 with zero questions, concepts, sources, notes, media, attempts, sessions and imports, and zero transfer-pair validations/probe assignments.
+
+PR #204 merged as `827b1a02325e31315716da53424f7996c542affa` on 8 October. Main Foundation run 37758541923 passed check/browser jobs; both Cloudflare production builds passed (web 6e080af5-f659-4536-a449-dad972bb3c70; heartbeat f959cf38-217e-4ca2-acee-3f0680c7bd40). The converter, exact-version correction/media proposals and archive-first orchestration are integrated repository code. External ArchivePort/TextStagePort/ReceiptJournal/IndexPort implementations, real archive/staging readback and clinical review/publication remain separate pending operations; no Drive watcher or real material ingestion is implied. [Release](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/204); [CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/37758541923).
+
+This dated section supersedes prior pilot counts and pending-branch statements below; prior records remain historical context.
 
 ## Connected content direction — 2026-09-29
 

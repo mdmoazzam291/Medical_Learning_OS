@@ -16,7 +16,9 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Current implementation
 
-Start the post-reset library with the [first replacement batch plan](docs/FIRST_REPLACEMENT_BATCH.md): 12 distinct questions around 3 connected concepts, using supplied content and the existing one-action admin review.
+The next post-reset input is the owner's **final polished PYQs**, with no fixed batch count or respiratory-only scope. Follow the [current PYQ intake plan](docs/FIRST_REPLACEMENT_BATCH.md), preserve supplied originals/polishing lineage and use the existing accountable admin review. The former fixed respiratory batch is cancelled; the erased pilots remain excluded from reimport.
+
+The [material release adapter](docs/MATERIAL_RELEASE_ADAPTER.md) is integrated through [PR #204](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/204). Main CI and both Cloudflare production builds passed. Actual Drive/archive and app staging integrations remain pending verified external ports and real supplied-material acceptance.
 
 The connected [Notes/Graph library](https://medical-learning-os-web.medicalos.workers.dev/web/library.html) and [Admin import inbox](https://medical-learning-os-web.medicalos.workers.dev/web/content-import.html) now extend the existing app. Read the [upload contract](docs/CONTENT_LIBRARY_CONTRACT.md) before adding any content. Connected repository uploads stage drafts; one authorized **Review & publish** action makes them live. Private imports remain deferred. The authorized old-content and dependent-history reset is complete; the library awaits new supplied content.
 Repository foundation, validated question-attempt events, replayable accuracy summaries, and a canonical concept/source/question catalog with versioning and publication review gates. A responsive local web preview adds learner settings, dark mode, a live personal countdown, and a persisted nonclinical study demo with bookmarks, incorrect queue and JSON export. See [learner app contract](docs/LEARNER_APP.md).
