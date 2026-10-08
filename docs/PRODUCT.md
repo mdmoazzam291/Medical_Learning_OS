@@ -1,5 +1,9 @@
 # Product scope
 
+**Product brand:** **PARSE**  
+**Descriptor:** **The Medical Learning OS**  
+**Status:** Selected for future UI implementation; current deployed identity is not yet migrated. See [BRAND.md](BRAND.md).
+
 ## Goal
 Help medical learners choose their next useful study action and retain knowledge across exams and clinical training. Initial audience: MBBS students and interns preparing for NEET-PG/INI-CET.
 

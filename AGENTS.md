@@ -1,5 +1,8 @@
 # Project instructions
 
+## Brand identity
+Public-facing future product brand: **PARSE**, descriptor **The Medical Learning OS**. Follow `docs/BRAND.md`. Do not rename existing GitHub, database, URLs, auth callbacks, stable IDs, service identifiers, event contracts, or historic references solely for branding. Brand rollout requires separate review and verification.
+
 ## Scope
 Work only in Medical_Learning_OS. Do not access, copy, merge, or modify the separate NEETPG2027 project without explicit user authorization. NEET-PG is an exam adapter in this product.
 

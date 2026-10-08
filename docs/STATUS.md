@@ -1,5 +1,10 @@
 # Current status
 
+## 2026-10-08 — PARSE brand identity documented for future implementation
+- Owner selected **PARSE** with descriptor **The Medical Learning OS**. Added `docs/BRAND.md` and ADR-100; linked the brand contract from repository guidance and product docs.
+- Scope is documentation only: no live UI, metadata, domain, repository, authentication, medical content, source-rights, learner model, learner evidence, schema or API change. Trademark and domain availability are not yet verified. Rollout is future work behind a separately reviewed change.
+
+
 ## 2026-10-04 — question intelligence published and production verified
 - Owner explicitly authorized this repository destination/publication. PR #201 merged as 116e5c5d4c0d8dac886af1c3f712642b342f062d. PR Foundation run 37210051012 and main run 37210300517 passed both check/browser jobs, including all 966 tests, isolated PostgreSQL and responsive suites. Both Cloudflare main production Worker Builds passed (web 5f72c549-dab0-48b5-bfc6-e8c50f0d5afb; heartbeat b8599908-1214-45cb-b935-936b9e55deae).
 - Frontend publication supersedes the earlier authorization block. Backend content-library-api v2 and study-api v47 remain verified. Direct served-byte inspection returns HTTP 403 from this environment, so production publication is evidenced by the successful provider build/deploy checks; served-byte parity is not claimed. The pre-existing Cloudflare branch-preview failure remains distinct from the successful main production builds.

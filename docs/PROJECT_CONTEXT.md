@@ -1,5 +1,9 @@
 # Medical Learning OS — context register
 
+## PARSE brand selection — 2026-10-08
+
+The owner selected **PARSE** as the primary user-facing product brand with the descriptor **The Medical Learning OS**. This is a future implementation decision, **not** a live UI deployment or an infrastructure/repository rename. Use PARSE in future learner-facing branding plans; preserve technical identities, old URLs, content and learner history. The canonical rollout contract is [BRAND.md](BRAND.md).
+
 Last reconciled: 2026-09-28 (Asia/Kolkata).
 
 ## Connected content direction — 2026-09-29
