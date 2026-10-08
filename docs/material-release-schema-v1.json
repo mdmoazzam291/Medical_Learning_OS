@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mlos-material-release@1",
+  "title": "MLOS portable release v1",
+  "type": "object",
+  "required": [
+    "manifest",
+    "records",
+    "markdown",
+    "assetsManifest"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "manifest": {
+      "$ref": "#/$defs/manifest"
+    },
+    "records": {
+      "type": "object",
+      "required": [
+        "concepts",
+        "sources",
+        "questions",
+        "notes",
+        "occurrences",
+        "relations"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "concepts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/record"
+          }
+        },
+        "occurrences": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "markdown": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "assetsManifest": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "recordId",
+        "recordVersion",
+        "contentFile",
+        "app",
+        "archive"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9:_@.\\-]{1,160}$"
+        },
+        "recordVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentFile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "app": {
+          "type": "object",
+          "description": "Exact current app record shape validated by src/domain/content-library.js; media routed separately."
+        },
+        "archive": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "required": [
+        "releaseId",
+        "releaseSchemaVersion",
+        "createdAt",
+        "priorReleaseId",
+        "ruleVersion",
+        "files",
+        "counts",
+        "eligibility"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "releaseId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9:_@.\\-]{1,160}$"
+        },
+        "releaseSchemaVersion": {
+          "const": 1
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "priorReleaseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ruleVersion": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "sha256",
+              "bytes",
+              "kind"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "enum": [
+                  "dataset",
+                  "markdown",
+                  "metadata",
+                  "asset"
+                ]
+              }
+            }
+          }
+        },
+        "counts": {
+          "type": "object",
+          "required": [
+            "concepts",
+            "sources",
+            "questions",
+            "notes",
+            "occurrences",
+            "relations"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "concepts": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sources": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "questions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "notes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "occurrences": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "relations": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "eligibility": {
+          "type": "object",
+          "required": [
+            "intendedUse",
+            "includedIds",
+            "excluded"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "intendedUse": {
+              "enum": [
+                "private_study",
+                "app_publication"
+              ]
+            },
+            "includedIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "excluded": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "recordId",
+                  "reason"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "recordId": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

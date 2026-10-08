@@ -1432,3 +1432,21 @@ Original prompt/options/key and canonical identity remain authoritative. Indepen
 Server-frozen prompts and attempt/receipt context identify every representation. Cues appear only after a persisted answer. V2 replay retains all labelled representations; scored/rated scheduling, concept, mistake, transfer and probe-origin evidence uses originals. Activity may include concise practice with explicit totals and original-only review timing. Exposure checks always include concise and original attempts. No automatic mastery/policy promotion follows.
 
 The empty post-reset inventory prevents real clinical Q2 selection. The accepted 12-question respiratory batch is a quality pilot plan awaiting new uploads. Q3 requires distinct unseen full-case/transfer families, equal time and preregistered allocation/exclusions/analysis before enrollment. Ten minutes and a five-point loss margin are provisional experiment choices. The descriptive evaluator cannot establish learning benefit/noninferiority; enrollment denominators, power and clustered uncertainty remain necessary.
+
+
+## ADR-100 — Portable material release conversion stays offline
+**Status:** Accepted — 2026-10-08
+
+Strict versioned portable releases retain canonical Markdown, structured records, occurrences and immutable source files. The converter verifies declared bytes and paths, preserves question facts and emits deterministically bounded schema-v1/v2 draft import chunks. Corrections and media stay separate; unresolved gates never grant readiness. Local target snapshots do not establish live compatibility. Output is exclusive and sealed COMPLETE-last; interrupted destinations require reconciliation. Runtime ingestion, genuine medical/rights review and publication remain separate authorized operations.
+
+
+## ADR-101 — Corrections and media require exact-version proposals
+**Status:** Accepted — 2026-10-08
+
+Local proposals keep canonical IDs and exact base content digests, preserve historical attempts and identify affected derivatives for new review. Asset/annotation predecessors and measured bytes remain explicit. Human privacy/rights and question-binding evidence are independent from asset structure/review. Opaque local references preserve bytes without inventing a runtime storage route. Text staging is a known contract only; correction, provenance mutation, media staging and publication remain unavailable until separately verified integration work.
+
+
+## ADR-102 — Archive-first delivery needs observed companion receipts
+**Status:** Accepted — 2026-10-08
+
+Every original release and generated handoff file must be verified from saved bytes before delivery. Exact hashes/parents and actual saved companion references gate portable readiness. Retry reconciles uncertain writes, and partial receipts preserve verified successes. Text draft staging uses the current API acknowledgement plus semantic manifest readback; PostgreSQL jsonb and local byte digests remain distinct. Repository preparation is pending until observed target evidence exists. Publication is never invoked. Concurrent indexes append against an explicit version contract and preserve distinct portable/compatible/staged/published pointers; plain Drive re-read is not an atomic precondition. All ports remain caller supplied, with fixture evidence excluded from live operations.
