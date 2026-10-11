@@ -30,15 +30,18 @@ try {
     const writes = []; let admin = true;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
-      const reply = body => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) });
+      const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
       if (req.method() !== 'GET') writes.push(path);
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
+      if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
       if (path.endsWith('/content-library-api/library')) return reply(library);
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
       if (path.endsWith('/study-api/progress')) return reply({ attempts: 0, correct: 0, accuracy: null, concepts: [] });
       if (path.endsWith('/study-api/revision/due')) return reply({ dueCount: 0, unseenCount: 1, items: [] });
       if (path.endsWith('/study-api/exam-simulator/readiness')) return reply({ ready: false, eligibleUniqueQuestions: 1, requiredUniqueQuestions: 180, shortage: 179 });
+      if (path.endsWith('/study-api/exam-simulator/runs/current')) return reply({ contractId: 'exam-run-view-v1', run: null });
+      if (path.endsWith('/study-api/exam-simulator/test-readiness')) return reply({ error: 'internal_exam_test_forbidden' }, 403);
       if (path.endsWith('/study-api/retention-probe/consent')) return reply({ consent: null, protocol: null, activation: { active: false } });
       if (path.endsWith('/study-api/activity')) return reply({ items: [{ questionVersionId: 'fixture-q@1', correct: false, representation: 'concise-practice', recordedAt: '2026-10-01T00:00:00Z' }], nextOffset: null });
       if (path.endsWith('/study-api/exam-simulator/history')) return reply({ runs: [{ runId: 'owned-run', examId: 'synthetic', status: 'completed', startedAt: '2026-10-01T00:00:00Z' }, { runId: 'cancelled-run', status: 'cancelled' }], nextOffset: null });
@@ -82,6 +85,8 @@ try {
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await page.getByRole('heading', { name: 'Your study workspace.', exact: true }).waitFor();
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).waitFor();
+    await mainNav.getByRole('link', { name: 'Exams', exact: true }).click();
+    await page.getByRole('heading', { name: 'Rule-faithful, locked-section simulation.', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Home', exact: true }).click();
     await page.getByRole('heading', { name: 'What should you study next?', exact: true }).waitFor();
     await page.getByRole('button', { name: '5 min', exact: true }).click();
