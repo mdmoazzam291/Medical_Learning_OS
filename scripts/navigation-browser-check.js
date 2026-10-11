@@ -121,6 +121,7 @@ try {
     await page.getByRole('link', { name: 'Open GT Autopsy', exact: true }).waitFor();
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
+    await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#mlos-local-nav [data-pin="account:data"]').click();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
