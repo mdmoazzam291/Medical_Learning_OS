@@ -73,6 +73,7 @@ try {
     assert.equal(await page.getByLabel('Search all published content', { exact: true }).inputValue(), 'Preserved search');
     await page.getByLabel('Search all published content', { exact: true }).fill('');
     await page.keyboard.press('Escape');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
     await page.reload(); await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
@@ -89,6 +90,12 @@ try {
     await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Admin', exact: true }).waitFor();
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
+    await page.getByRole('button', { name: 'Admin', exact: true }).click();
+    await page.getByRole('dialog', { name: 'Navigation submenu' }).getByRole('button', { name: 'Pin Admin', exact: true }).click();
+    await page.keyboard.press('Escape');
+    await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
+    await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('button', { name: 'Admin', exact: true }).waitFor();
+    await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     admin = false; await page.reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     assert.equal(await page.getByRole('button', { name: 'Admin', exact: true }).count(), 0);
     await page.goto(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
@@ -109,8 +116,12 @@ try {
     await page.getByRole('link', { name: 'Open GT Autopsy', exact: true }).waitFor();
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
+    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    await page.locator('#mlos-local-nav [data-pin="account:data"]').click();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
+    assert.equal(await page.evaluate(() => document.body.dataset.rail), 'expanded');
+    assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'My Data', exact: true }).count(), 1);
     await page.reload(); await page.getByLabel('Appearance', { exact: true }).waitFor();
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);

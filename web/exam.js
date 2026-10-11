@@ -334,8 +334,6 @@ async function bootstrap() {
     if (current?.runId) {
       if (requestedRunId) {
         requestedRunId = null;
-        const url = new URL(location.href); url.searchParams.delete('run');
-        history.replaceState(null, '', url.pathname + url.search + url.hash);
       }
       state.loading = false;
       setRun(current);
@@ -508,6 +506,11 @@ root.addEventListener('click', event => {
   if (action === 'abandon') abandonRun();
   if (action === 'load-autopsy') loadAutopsy();
   if (action === 'exam-home') {
+    requestedRunId = null;
+    if (new URLSearchParams(location.search).has('run')) {
+      const url = new URL(location.href); url.searchParams.delete('run');
+      history.replaceState(null, '', url.pathname + url.search + url.hash);
+    }
     state = { ...state, run:null, autopsy:null, autopsyError:null, questionIndex:0, error:null };
     loadReadiness().then(render);
   }

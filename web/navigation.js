@@ -1,8 +1,14 @@
-import { navigationFor, routeIdentity, preferenceStore, changePreference } from '/src/domain/app-navigation.js';
+import { navigationFor, routeIdentity, preferenceStore } from '/src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '/web/navigation-view.js';
+import { mutatePreference } from '/web/navigation-preferences.js';
+import { resolvePinnedAccess } from '/web/navigation-access.js';
+import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
+import { createCloudReview } from '/src/adapters/cloud-review.js';
+import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
 let prefs = store.read(), identity = routeIdentity(location.pathname, location.search), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
 let searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
+let accessRead = 0;
 const shell = document.createElement('div');
 shell.id = 'mlos-navigation';
 document.body.prepend(shell);
@@ -22,7 +28,7 @@ function render(focusSelector) {
   if (focusSelector) shell.querySelector(focusSelector)?.focus();
   else if (hadSearchFocus) shell.querySelector('#mlos-global-search').focus();
 }
-function save(action) { prefs = store.write(changePreference(prefs, action)); applyAppearance(); }
+function save(action) { prefs = mutatePreference(store, action, next => { prefs = next; applyAppearance(); window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: next } })); }); }
 function closeFlyout(restoreFocus = false) {
   shell.querySelector('#mlos-flyout').hidden = true;
   shell.querySelectorAll('[data-flyout]').forEach(button => button.setAttribute('aria-expanded', 'false'));
@@ -43,7 +49,7 @@ shell.addEventListener('click', event => {
     return;
   }
   if (button.hasAttribute('data-rail')) { save({ type: 'expanded', open: !prefs.expanded }); render('[data-rail]'); }
-  if (button.hasAttribute('data-theme')) { save({ type: 'theme' }); render('[data-theme]'); window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })); }
+  if (button.hasAttribute('data-theme')) { save({ type: 'theme' }); render('[data-theme]'); }
   if (button.dataset.pin) {
     event.preventDefault();
     const flyoutKey = opener?.dataset.flyout;
@@ -78,7 +84,11 @@ shell.addEventListener('submit', event => {
     event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
-window.addEventListener('mlos:access', event => { isAdmin = event.detail?.isAdmin === true; render(); });
+window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); });
 window.addEventListener('mlos:route', () => { identity = routeIdentity(location.pathname, location.search); closeFlyout(); render(); });
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 render();
+if (prefs.pins.includes('account:admin') && !isAdmin) {
+  const reading = ++accessRead, auth = createSupabaseAuth(cloudConfig), review = createCloudReview({ ...cloudConfig, auth });
+  resolvePinnedAccess(prefs, () => review.me()).then(granted => { if (reading === accessRead) { isAdmin = granted; render(); } });
+}

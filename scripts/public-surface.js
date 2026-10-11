@@ -4,6 +4,8 @@ export const publicFiles = Object.freeze([
   'web/navigation-view.js',
   'web/navigation.js',
   'web/navigation.css',
+  'web/navigation-preferences.js',
+  'web/navigation-access.js',
   'src/domain/library-workspaces.js',
   'web/library-workspace-view.js',
   'web/library-enhancements.js',
