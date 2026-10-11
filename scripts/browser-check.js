@@ -363,7 +363,7 @@ try {
   await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
   await page.waitForFunction(() => /2\s*Due reviews/.test(document.querySelector('.metrics')?.innerText || ''));
   assert.match(await page.locator('.metrics').innerText(), /2\s*Due reviews/);
-  await page.getByRole('link', { name: 'Admin' }).waitFor();
+  assert.equal(await page.getByRole('navigation', { name: 'Main navigation', exact: true }).getByRole('link', { name: 'Admin', exact: true }).count(), 0);
 
   for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
     await page.setViewportSize({ width, height });

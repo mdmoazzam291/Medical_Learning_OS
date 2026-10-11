@@ -9,6 +9,8 @@ const notice = document.querySelector('#notice');
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
+let requestedRunId = new URLSearchParams(location.search).get('run');
+if (!/^[a-zA-Z0-9-]{1,100}$/.test(requestedRunId || '')) requestedRunId = null;
 
 let timerId = null;
 let clockSyncing = false;
@@ -328,8 +330,13 @@ async function bootstrap() {
       return;
     }
     state.user = auth.currentUser() || session.user;
-    const current = await cloud.resumeExamRun();
+    const current = requestedRunId ? await cloud.examRun(requestedRunId) : await cloud.resumeExamRun();
     if (current?.runId) {
+      if (requestedRunId) {
+        requestedRunId = null;
+        const url = new URL(location.href); url.searchParams.delete('run');
+        history.replaceState(null, '', url.pathname + url.search + url.hash);
+      }
       state.loading = false;
       setRun(current);
       render({ focusQuestion:current.status === 'in_progress' });

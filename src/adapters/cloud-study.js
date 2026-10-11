@@ -48,6 +48,8 @@ export function createCloudStudy({ projectUrl, publishableKey, auth, fetchFn = f
       return request(`/media?questionVersionId=${encodeURIComponent(questionVersionId)}`);
     },
     progress() { return request('/progress'); },
+    recentActivity(offset = 0) { return request(`/activity?offset=${encodeURIComponent(offset)}`); },
+    examHistory(offset = 0) { return request(`/exam-simulator/history?offset=${encodeURIComponent(offset)}`); },
     retentionProbeConsent() { return request('/retention-probe/consent'); },
     setRetentionProbeConsent({
       decision,

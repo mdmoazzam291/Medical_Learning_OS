@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-12 — approved navigation implementation, responsive release checks pending
+
+- The feature branch implements the shared single-row five-master header, global search, dedicated theme control, collapsible icon rail, independent nested submenus, Subject Index inside Subjects & Topics and device-persisted pinned shortcuts. The approved light/dark lavender palettes apply to the real app.
+- Library now includes Questions, the 19-subject/four-module explorer, nine source-tagged reference indexes, Atlas/media categories, exact-note comparison, explicit prerequisite links, device saved filter views/bookmarks and source-bound recall/case/image/skills workspaces. Existing server-scored Study, confidence, revision, private Vault notes/drafts and genuine review/publication remain authoritative. Unsupported sequential/3D/audiovisual content is clearly labelled; no medical material is manufactured or restored.
+- Added authenticated, bounded learner-owned recent-activity and exam-history reads, exact saved-run entry, revision/mistake/progress/Exam DNA views, existing learner export, device preferences and personal exam planning. Study duration choices now include 5/15/120 minutes while retaining existing choices supported by the 5–120 minute server contract.
+- Local verification: 1097/1097 Node tests, syntax/catalog/decision checks and 69-file allowlisted build pass. Actual phone/tablet/desktop built-bundle navigation checks are added to CI alongside all existing responsive flow suites. Local Chromium is unavailable; browser/reviewer/provider evidence will be recorded before release completion.
+- No clinical import, erased-content restoration, human approval, learner outcome, main merge or production deployment has been performed by this feature branch yet.
+
 ## 2026-10-08 — respiratory cancellation, erased-pilot and adapter-release reconciliation
 
 - The owner cancelled the fixed 12-question respiratory intake on 8 October 2026. The next input is final polished PYQs, with no fixed question count, three-note target or respiratory-only scope. The existing provenance, PYQ-first deduplication, rights and genuine administrator review gates remain active. The shortening evaluator is optional experiment infrastructure; ordinary PYQ intake does not require unseen holdouts or research enrollment.
