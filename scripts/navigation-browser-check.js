@@ -68,10 +68,10 @@ try {
     await page.locator('#mlos-local-nav [data-pin="library:subjects"]').click();
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).waitFor();
     await page.keyboard.press('Control+k');
-    await page.getByLabel('Search all published content', { exact: true }).fill('Preserved search');
+    await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Preserved search');
     await page.getByRole('button', { name: 'Switch to dark appearance', exact: true }).click();
-    assert.equal(await page.getByLabel('Search all published content', { exact: true }).inputValue(), 'Preserved search');
-    await page.getByLabel('Search all published content', { exact: true }).fill('');
+    assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Preserved search');
+    await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('');
     await page.keyboard.press('Escape');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
