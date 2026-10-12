@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 const nav = await import('../src/domain/app-navigation.js').catch(() => null);
 const requireNav = () => { assert.ok(nav, 'shared navigation model is implemented'); return nav; };
 
-test('five masters retain the approved order and every section has a real local destination', () => {
+test('five learner destinations plus a permission-gated Admin master keep their approved order', () => {
   const { MASTERS, navigationFor } = requireNav();
-  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account']);
+  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account', 'Admin']);
+  assert.equal(MASTERS.at(-1).adminOnly, true);
   for (const master of MASTERS) for (const row of navigationFor(master.id, { isAdmin: true })) {
     assert.ok(row.href.startsWith('/') && !row.href.startsWith('//'), row.id);
     assert.ok(row.icon && row.label, row.id);
@@ -38,7 +39,9 @@ test('opening a second submenu retains the first and pins survive master changes
 test('role filtering never trusts query strings or stored admin preferences', () => {
   const { navigationFor, pinnedSections } = requireNav();
   assert.ok(!navigationFor('account').some(x => x.id === 'admin'));
-  assert.ok(navigationFor('account', { isAdmin: true }).some(x => x.id === 'admin'));
+  assert.ok(!navigationFor('account', { isAdmin: true }).some(x => x.id === 'admin'));
+  assert.deepEqual(navigationFor('admin'), []);
+  assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(x => x.id), ['overview', 'import', 'review', 'references']);
   assert.deepEqual(pinnedSections({ pins: ['account:admin', 'library:notes'] }, false).map(x => x.id), ['notes']);
 });
 
@@ -62,7 +65,10 @@ test('blocked browser storage retains preferences in memory without claiming dev
 test('route identity places private notes in Library and authenticated tools under Account', () => {
   const { routeIdentity } = requireNav();
   assert.deepEqual(routeIdentity('/web/vault.html', ''), { master: 'library', section: 'mynotes' });
-  assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'account', section: 'admin' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'admin', section: 'overview' });
+  assert.deepEqual(routeIdentity('/web/content-import', ''), { master: 'admin', section: 'import' });
+  assert.deepEqual(routeIdentity('/web/review', ''), { master: 'admin', section: 'review' });
+  assert.deepEqual(routeIdentity('/web/review', '?workspace=references'), { master: 'admin', section: 'references' });
   assert.deepEqual(routeIdentity('/web/library.html', '?master=study&view=recall'), { master: 'study', section: 'recall' });
   assert.deepEqual(routeIdentity('/web/library.html', '?view=graph&subject=medicine'), { master: 'library', section: 'graph' });
 });

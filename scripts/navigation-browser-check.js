@@ -52,8 +52,14 @@ try {
       if (req.method() !== 'GET') writes.push(path);
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
+      // Owner dashboard APIs are independent of the navigation integration under test.
+      if (path.includes('/owner-api/')) return reply({});
+      if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
+      // The review shell may read distinct gate queues; navigation checks never approve content.
+      if (path.includes('/review-api/')) return reply({ items: [], questions: [], notes: [], queue: [], sources: [], reviews: [], pending: [], reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
       if (path.endsWith('/content-library-api/library')) return libraryUnavailable ? reply({ error: 'fixture_library_unavailable' }, 503) : reply(selectionLibrary);
+      if (path.endsWith('/content-library-api/imports')) return reply({ imports: [] });
       if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
       if (path.endsWith('/study-api/media')) return reply({ media: [] });
@@ -72,7 +78,8 @@ try {
     await page.goto(origin + '/web/library.html?view=subjects');
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true });
-    assert.deepEqual(await mainNav.getByRole('link').evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams', 'Account']);
+    await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
+    assert.deepEqual(await mainNav.getByRole('link').evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams', 'Account', 'Admin']);
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
     assert.equal(await page.locator('[data-subject]').count(), 19);
     assert.equal(new URL(page.url()).pathname, '/web/library');
@@ -119,29 +126,40 @@ try {
     assert.match(await page.locator('[data-study-start]').getAttribute('href'), /studyNow=5$/);
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
-    await page.getByRole('button', { name: 'Admin', exact: true }).waitFor();
+    await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
     await page.waitForFunction(() => location.hash === '#research');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Research Participation');
     await page.goBack();
     await page.waitForFunction(() => location.hash === '');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
-    assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
-    await page.getByRole('button', { name: 'Admin', exact: true }).click();
-    await page.getByRole('dialog', { name: 'Navigation submenu' }).getByRole('button', { name: 'Pin Admin', exact: true }).click();
-    await page.keyboard.press('Escape');
+    await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
+    await page.getByRole('heading', { name: 'Review authority stays out of the learner product.', exact: true }).waitFor();
+    assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    for (const [href, title] of [['/web/admin.html', 'Admin Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review']]) {
+      assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
+    }
+    await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
+    await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/content-import.html');
+    await activate(page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]'));
+    await page.waitForURL('**/web/review?workspace=references');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/review.html?workspace=references');
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
-    await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('button', { name: 'Admin', exact: true }).waitFor();
+    await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     admin = false; await page.reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
-    assert.equal(await page.getByRole('button', { name: 'Admin', exact: true }).count(), 0);
+    await page.waitForFunction(() => document.querySelector('#mlos-navigation') && !document.querySelector('[data-master="admin"]'));
+    assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
     await page.goto(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
     await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).waitFor();
     await page.getByRole('tab', { name: 'Questions', exact: true }).click();
     await page.getByRole('tab', { name: 'Graph', exact: true }).click();
     await page.goBack();
     await page.waitForFunction(() => new URLSearchParams(location.search).get('view') === 'questions' && document.querySelector('[data-view=questions]')?.getAttribute('aria-selected') === 'true');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Questions');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/library.html?view=questions');
     await page.goBack();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.goForward();
@@ -159,7 +177,7 @@ try {
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
     await page.goto(origin + '/web/library.html?view=recall');
     await page.getByLabel('Your recall', { exact: true }).fill('Unsaved self-review');
-    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Unsaved self-review');
     await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
@@ -170,7 +188,7 @@ try {
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
     await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
-    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#mlos-local-nav [data-pin="account:data"]').click();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');

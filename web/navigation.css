@@ -5,6 +5,8 @@
 .mlos-app[data-rail="expanded"]{padding-left:220px}
 .mlos-app main{width:100%;min-width:0}
 .mlos-app .home-shell{display:block}.mlos-app .home-shell>.sidebar,.mlos-app .home-shell>.workspace>header{display:none}
+/* Admin uses the shared master/sidebar instead of stacking a second legacy admin sidebar. */
+.mlos-app #admin-app .shell{display:block;min-height:auto}.mlos-app #admin-app .shell>.sidebar,.mlos-app #admin-app .shell>.workspace>header{display:none}.mlos-app #admin-app .shell>.workspace{min-width:0}
 .mlos-app .library-page>nav{display:none}
 .mlos-app .primary{color:var(--bg)}.mlos-app .hero{background:var(--hero)}
 .mlos-app .hero p,.mlos-app .hero small,.mlos-app .hero .eyebrow{color:var(--ink)}
@@ -44,4 +46,6 @@
 @media(max-width:1280px){.mlos-header{gap:12px;padding:0 14px}.mlos-brand-full{font-size:14px}.mlos-header nav a{padding:10px 9px}.mlos-search{max-width:280px}}
 @media(max-width:1050px){.mlos-brand-full{display:none}.mlos-brand-short{display:block}.mlos-header{gap:14px}.mlos-search{max-width:44px;flex:0 0 44px}.mlos-search input[type="search"]{display:none}.mlos-search button{position:static;min-height:44px}.mlos-search-open .mlos-search{position:absolute;top:76px;left:74px;right:14px;max-width:none;background:var(--surface);border-radius:24px;box-shadow:0 5px 20px #0002}.mlos-search-open .mlos-search input[type="search"]{display:block}.mlos-search-open .mlos-search button{position:absolute}}
 @media(max-width:700px){.mlos-header{padding:0 8px;gap:5px;height:60px;min-height:60px}.mlos-brand{gap:5px;font-size:12px}.mlos-brand-mark{width:26px;height:30px;font-size:23px}.mlos-header nav{gap:1px;flex:1;justify-content:center}.mlos-header nav a{padding:9px;min-width:35px;min-height:40px}.mlos-header nav a span{display:none}.mlos-header .mlos-icon{width:18px;height:18px}.mlos-theme{min-width:36px;min-height:40px;padding:8px}.mlos-search{margin:0;flex:0 0 34px}.mlos-search button{min-width:34px;padding:8px}.mlos-app{padding-top:60px}.mlos-panel{top:60px}.mlos-app[data-rail="expanded"]{padding-left:64px}.mlos-app[data-rail="expanded"] .mlos-panel{width:min(280px,calc(100vw - 40px));box-shadow:10px 0 40px #0003}.mlos-flyout{top:70px;max-height:calc(100dvh - 84px)}.mlos-app main{padding:20px 14px 30px}.mlos-app .hero,.mlos-app .panel{padding:20px}.mlos-app .metrics{grid-template-columns:1fr;gap:15px}.mlos-app .metrics>div{padding:0;border:0}.mlos-app .two-column{grid-template-columns:1fr}.mlos-search-open .mlos-search{top:64px;left:70px;right:8px}}
+/* Keep six authorized header destinations on one row even on narrow phones. */
+@media(max-width:440px){.mlos-brand-short{display:none}.mlos-header{gap:3px}.mlos-header nav a{min-width:29px;padding:7px 4px}}
 @media(prefers-reduced-motion:reduce){.mlos-app{transition:none}}

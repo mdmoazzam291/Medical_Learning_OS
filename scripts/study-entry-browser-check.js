@@ -29,6 +29,8 @@ try {
       const experimentPath = pathname.split('/functions/v1/learner-experiment-api')[1];
       const method = request.method();
       const fulfill = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+      // Header role discovery is a separate read and must not pollute study-session evidence.
+      if (pathname === '/functions/v1/review-api/me') return fulfill({ isAdmin: false, reviewKinds: [] });
       if (experimentPath !== undefined) {
         if (method === 'GET' && experimentPath === '/status') {
           return fulfill({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
