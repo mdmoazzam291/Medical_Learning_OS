@@ -157,9 +157,17 @@ try {
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/content-import.html');
     await activate(page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]'));
     await page.waitForURL('**/web/review?workspace=references');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/review.html?workspace=references');
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
