@@ -107,7 +107,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
-  if (/\/(admin|review|content-import)\.html$/.test(pathname)) return { master: 'admin', section: pathname.endsWith('/admin.html') ? 'overview' : pathname.endsWith('/content-import.html') ? 'import' : 'review' };
+  if (/\/(admin|review|content-import)\.html$/.test(pathname)) return { master: 'admin', section: pathname.endsWith('/admin.html') ? 'overview' : pathname.endsWith('/content-import.html') ? 'import' : p.get('workspace') === 'references' ? 'references' : 'review' };
   if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
   return { master: 'home', section: 'today' };
 }
