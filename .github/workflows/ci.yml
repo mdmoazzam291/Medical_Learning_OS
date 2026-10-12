@@ -46,12 +46,12 @@ jobs:
           node-version: '24'
       - name: Install isolated WebKit verification tools
         run: |
-          npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.56.1
+          npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.62.1
           node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
       - name: Verify iPad portrait, landscape and split-screen navigation with touch
         run: |
           mkdir -p "$RUNNER_TEMP/mlos-webkit-screenshots"
-          BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/navigation-browser-check.js
+          DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/navigation-browser-check.js
       - name: Verify Reference Review entry and authorized gate selection in WebKit
         run: |
           npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &
@@ -59,7 +59,7 @@ jobs:
             if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then break; fi
             sleep 1
           done
-          BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/references-browser-check.js
+          DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/references-browser-check.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
