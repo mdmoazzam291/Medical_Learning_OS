@@ -49,6 +49,7 @@ async function fixture(viewport, options = {}) {
     const request = route.request();
     const path = new URL(request.url()).pathname;
     const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+    if (path.endsWith('/review-api/me')) return reply({ isAdmin: false, reviewKinds: [] });
     if (path.endsWith('/learner-experiment-api/status')) return reply({
       contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture',
       enabled: state.enabled !== false, authority: 'server_entitlement'
