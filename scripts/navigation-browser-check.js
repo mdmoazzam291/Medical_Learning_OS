@@ -145,11 +145,13 @@ try {
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
     await page.getByRole('heading', { name: 'Review authority stays out of the learner product.', exact: true }).waitFor();
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#admin-actions').waitFor();
     assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
+    assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
