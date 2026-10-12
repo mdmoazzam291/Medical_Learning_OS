@@ -108,3 +108,11 @@ test('Admin deep links mark only the exact destination current, not the group la
   });
   assert.match(root, /href="\/web\/admin.html" aria-current="page"/);
 });
+
+test('standalone Study Practice remains selected on its landing page despite its deep-link href', () => {
+  const collapsed = markup({
+    master: 'study', section: 'practice', prefs: { expanded: false },
+    currentHref: '/web/medical.html'
+  });
+  assert.match(collapsed, /href="\/web\/medical.html#question-browser" aria-label="Practice"[^>]*aria-current="page"/);
+});
