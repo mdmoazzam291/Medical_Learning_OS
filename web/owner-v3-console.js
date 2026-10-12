@@ -5,7 +5,6 @@ import { errorMonitor } from '/web/monitoring.js';
 const app = document.querySelector('#admin-app');
 const auth = createSupabaseAuth({ ...cloudConfig });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-let mounted = false;
 
 async function request(path, { method = 'GET', body } = {}) {
   const session = await auth.getSession();
@@ -62,11 +61,13 @@ function alertsMarkup(payload) {
 // These are independent Admin destinations. A problem with one owner API
 // must not hide the other destination or turn unknown status into "No alerts".
 async function mount() {
-  if (mounted || !app?.querySelector('#owner-console')) return;
+  if (!app?.querySelector('#owner-console')) return;
   const ai = app.querySelector('#owner-ai');
   const infra = app.querySelector('#owner-infrastructure');
-  if (!ai || !infra) return;
-  mounted = true; // Prevent mutation-triggered duplicate requests and panels.
+  if (!ai || !infra || app.querySelector('#owner-features') ||
+    app.querySelector('#owner-infrastructure-alerts')) return;
+  // A stable DOM guard prevents duplicate loads, but a later admin re-render
+  // replaces these nodes, so new panels must be allowed to mount again.
 
   const featureSection = document.createElement('section');
   featureSection.id = 'owner-features';
