@@ -1,3 +1,4 @@
+import { reviewEntryKind } from '/src/domain/app-navigation.js';
 import { buildReferencesWorkspace } from '/src/domain/references-workspace.js';
 import { referencesSourceFocus, filterReferencesBySource } from '/src/domain/references-source-focus.js';
 import { referencesPanel } from '/web/references-panel.js';
@@ -895,8 +896,9 @@ async function bootstrap() {
   try {
     const me = await review.me();
     const grants = Array.isArray(me?.reviewKinds) ? me.reviewKinds.filter(kind => ['medical', 'references', 'rights'].includes(kind)) : [];
-    state = { ...state, loading: false, grants, selectedKind: grants[0] || null, error: null };
-    if (grants.length) await loadQueue(grants[0]);
+    const selectedKind = reviewEntryKind(location.search, grants);
+    state = { ...state, loading: false, grants, selectedKind, error: null };
+    if (selectedKind) await loadQueue(selectedKind);
     else render();
   } catch (error) {
     if (error.status === 401) {

@@ -36,6 +36,37 @@ jobs:
           path: dist-pages/
           if-no-files-found: error
           retention-days: 7
+  webkit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated WebKit verification tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
+      - name: Verify iPad portrait, landscape and split-screen navigation with touch
+        run: |
+          mkdir -p "$RUNNER_TEMP/mlos-webkit-screenshots"
+          DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/navigation-browser-check.js
+      - name: Verify Reference Review entry and authorized gate selection in WebKit
+        run: |
+          npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 1
+          done
+          DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/references-browser-check.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: webkit-ipad-preview
+          path: ${{ runner.temp }}/mlos-webkit-screenshots
+          if-no-files-found: ignore
+          retention-days: 7
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 10

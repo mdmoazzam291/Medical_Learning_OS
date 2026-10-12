@@ -5,7 +5,16 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
-const { chromium } = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
+import { MASTERS, navigationFor } from '../src/domain/app-navigation.js';
+const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
+const engine = process.env.BROWSER_ENGINE || 'chromium';
+assert.ok(['chromium', 'webkit'].includes(engine));
+const flatten = rows => rows.flatMap(row => [row, ...flatten(row.children)]);
+const destinations = MASTERS.flatMap(master => flatten(navigationFor(master.id, { isAdmin: true })));
+for (const row of destinations) {
+  const target = new URL(row.href, 'http://localhost');
+  assert.ok(publicFileSet.has(target.pathname === '/' ? 'web/index.html' : target.pathname.slice(1)), row.href);
+}
 const directory = await mkdtemp(join(tmpdir(), 'mlos-navigation-browser-'));
 await buildPages({ outputDirectory: directory });
 const headers = Object.fromEntries((await readFile(join(directory, '_headers'), 'utf8')).split('\n').filter(l => /^\s+[^:]+:/.test(l)).map(l => { const i = l.indexOf(':'); return [l.slice(0, i).trim(), l.slice(i + 1).trim()]; }));
@@ -21,10 +30,13 @@ const user = { id: '11111111-1111-4111-8111-111111111111', email: 'fixture@examp
 const classification = { subjects: ['medicine'], systems: ['respiratory'], organs: ['lung'], domains: [], tasks: ['diagnosis'] };
 const question = { questionId: 'fixture-q', questionVersionId: 'fixture-q@1', stem: 'Synthetic question for UI verification only', options: [{ optionId: 'a', text: 'Alpha' }, { optionId: 'b', text: 'Beta' }], conceptLinks: [{ conceptId: 'fixture-c', role: 'primary' }], classification, origins: [], home: { kind: 'original', exams: [], platforms: [] }, observed: { attempts: 0, wrong: 0, state: 'unattempted', repeatedWrong: false }, intelligence: { presentation: ['clinical-vignette'], qualifiers: [], responseFormat: 'single-best-answer' } };
 const library = { concepts: [{ conceptId: 'fixture-c', label: 'Synthetic concept', aliases: [], classification }], questions: [question], notes: [{ noteVersionId: 'fixture-n@1', conceptId: 'fixture-c', title: 'Synthetic source note', bodyMarkdown: 'UI verification only. No real clinical content.' }], links: [] };
-const browser = await chromium.launch({ headless: true }), errors = [];
+const browser = await engines[engine].launch({ headless: true }), errors = [];
 try {
-  for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
-    const context = await browser.newContext({ viewport: { width, height } });
+  const layouts = engine === 'webkit' ? [['ipad-portrait', 820, 1180], ['ipad-landscape', 1180, 820], ['ipad-split', 620, 1024]] : [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]];
+  for (const [name, width, height] of layouts) {
+    const touch = engine === 'webkit' || width < 1050;
+    const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: engine === 'webkit', deviceScaleFactor: engine === 'webkit' ? 2 : 1 });
+    const activate = locator => touch ? locator.tap() : locator.click();
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
     const writes = []; let admin = true, selectionLibrary = library, selectedIds = null;
@@ -59,12 +71,15 @@ try {
     assert.equal(await page.locator('[data-subject]').count(), 19);
     const rowPositions = await mainNav.getByRole('link').evaluateAll(links => links.map(l => Math.round(l.getBoundingClientRect().top)));
     assert.equal(new Set(rowPositions).size, 1);
-    await page.getByRole('button', { name: 'Subjects & Topics', exact: true }).click();
+    await page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }).click();
     await page.getByRole('dialog', { name: 'Navigation submenu' }).waitFor();
     await page.keyboard.press('Escape'); assert.equal(await page.locator('#mlos-flyout').isVisible(), false);
     await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     assert.equal(await page.locator('#mlos-local-nav').evaluate(node => getComputedStyle(node).display), 'grid');
     assert.equal(await page.locator('#mlos-local-nav > .mlos-nav-row').first().locator('a span').evaluate(node => getComputedStyle(node).display !== 'none'), true);
+    if (touch) await page.touchscreen.tap(width - 12, 170); else await page.mouse.click(width - 12, 170);
+    assert.equal(await page.evaluate(() => document.body.dataset.rail), width < 700 ? 'collapsed' : 'expanded');
+    if (width < 700) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await page.locator('#mlos-local-nav > details[data-group="library:subjects"] > summary').click();
     await page.locator('#mlos-local-nav details[data-group="library:subjects:index"] > summary').click();
     await page.locator('#mlos-local-nav > details[data-group="library:references"] > summary').click();
@@ -86,6 +101,7 @@ try {
     await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await page.getByRole('heading', { name: 'Your study workspace.', exact: true }).waitFor();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Practice');
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).waitFor();
     await mainNav.getByRole('link', { name: 'Exams', exact: true }).click();
     await page.getByRole('heading', { name: 'Rule-faithful, locked-section simulation.', exact: true }).waitFor();
@@ -96,6 +112,12 @@ try {
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Admin', exact: true }).waitFor();
+    await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
+    await page.waitForFunction(() => location.hash === '#research');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Research Participation');
+    await page.goBack();
+    await page.waitForFunction(() => location.hash === '');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
     await page.getByRole('button', { name: 'Admin', exact: true }).click();
     await page.getByRole('dialog', { name: 'Navigation submenu' }).getByRole('button', { name: 'Pin Admin', exact: true }).click();
@@ -109,6 +131,15 @@ try {
     await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).waitFor();
     await page.getByRole('tab', { name: 'Questions', exact: true }).click();
     await page.getByRole('tab', { name: 'Graph', exact: true }).click();
+    await page.goBack();
+    await page.waitForFunction(() => new URLSearchParams(location.search).get('view') === 'questions' && document.querySelector('[data-view=questions]')?.getAttribute('aria-selected') === 'true');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Questions');
+    await page.goBack();
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    await page.goForward();
+    await page.getByRole('heading', { name: 'Questions', exact: true, level: 1 }).waitFor();
+    await page.goForward();
+    await page.getByRole('heading', { name: 'Knowledge Graph', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
     await page.goto(origin + '/web/library.html?view=recall');
@@ -134,6 +165,60 @@ try {
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(writes.length, 0, 'navigation and self-review must not create learning or publication writes');
+    await page.goto(origin + '/web/library.html?view=media&category=radiology');
+    await page.getByRole('heading', { name: 'Media Library', exact: true }).waitFor();
+    await page.locator('#mlos-local-nav a[href="/web/library.html?view=notes"]').click();
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('category'), null);
+    assert.equal(await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).count(), 1);
+    await page.goto(origin + '/web/library.html?view=references&reference=labs-diagnostics&subject=medicine&count=5');
+    await page.getByRole('heading', { name: 'Reference Tools', exact: true }).waitFor();
+    await activate(page.getByRole('tab', { name: 'Notes', exact: true }));
+    assert.equal(new URL(page.url()).searchParams.get('reference'), null);
+    assert.equal(await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).count(), 1);
+    assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
+    assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '5');
+    await page.goBack();
+    await page.getByRole('heading', { name: 'Reference Tools', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('reference'), 'labs-diagnostics');
+    await page.goForward();
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    if (width < 1050) {
+      await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
+      await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
+      if (touch) await page.touchscreen.tap(width - 12, 170); else await page.mouse.click(width - 12, 170);
+      assert.equal(await page.locator('#mlos-navigation').evaluate(node => node.classList.contains('mlos-search-open')), false);
+      await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
+      assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Unsubmitted draft');
+      await page.keyboard.press('Escape');
+    }
+    if (name === layouts[0][0]) {
+      if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+      // Follow every generated module, reference and media leaf from the real menu catalog.
+      const leaves = destinations.filter(row => !row.children.length && /[?&](module|reference|category)=/.test(row.href));
+      assert.equal(leaves.length, 96);
+      for (const row of leaves) {
+        await page.goto(origin + row.href);
+        const title = new URL(row.href, origin).searchParams.get('view');
+        await page.getByRole('heading', { name: { subjects: 'Subjects & Topics', references: 'Reference Tools', media: 'Media Library' }[title], exact: true }).waitFor();
+        assert.equal(await page.locator('#mlos-local-nav a[aria-current]').filter({ hasText: row.label }).count() >= 1, true, row.href);
+        const url = new URL(page.url());
+        if (url.searchParams.has('module')) assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), url.searchParams.get('subject'));
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, row.href);
+      }
+      await page.goto(origin + '/web/library.html?view=subjects');
+      await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
+      if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+      await activate(page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }));
+      const flyout = page.getByRole('dialog', { name: 'Navigation submenu' });
+      const group = flyout.locator('details[data-group="library:subjects:index"]');
+      if (!await group.evaluate(node => node.open)) await activate(group.locator(':scope > summary'));
+      await activate(flyout.locator('details[data-group="library:subjects:index:anatomy"] > summary'));
+      await activate(flyout.getByRole('link', { name: 'Gross & regional anatomy', exact: true }));
+      await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
+      assert.equal(new URL(page.url()).searchParams.get('subject'), 'anatomy');
+      assert.equal(new URL(page.url()).searchParams.get('module'), 'gross-regional-anatomy');
+    }
     const otherClassification = { ...classification, systems: ['cardiovascular'] };
     selectionLibrary = {
       ...library,
@@ -205,5 +290,5 @@ try {
     await context.close();
   }
   assert.deepEqual(errors, []);
-  console.log('Shared navigation, nested independent menus, pins, appearance, workspaces and persistence passed at phone/tablet/desktop widths.');
+  console.log('Navigation actions, 96 nested leaves, touch dismissal, history, pins and persistence passed in ' + engine + '.');
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); await rm(directory, { recursive: true, force: true }); }

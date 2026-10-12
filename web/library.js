@@ -1,18 +1,14 @@
 import { SUBJECTS } from '/src/domain/content-library.js';
 import { setupLibraryWorkspaces } from '/web/library-enhancements.js';
-import { LIBRARY_VIEWS, selectWorkspace, studySelection, libraryContextUrl, workspaceKeywordCounts } from '/src/domain/library-workspaces.js';
+import { FILTER_KEYS, libraryRouteState, selectWorkspace, studySelection, libraryContextUrl, workspaceKeywordCounts } from '/src/domain/library-workspaces.js';
 import { escape as e, request } from '/web/content-library-client.js';
 const root=document.querySelector('#library-app');
-const building = new URLSearchParams(location.search).get('build') === '1';
-const requestedCount = Number(new URLSearchParams(location.search).get('count'));
-let sessionCount = [1,5,10,15,20,30,50].includes(requestedCount) ? requestedCount : 50;
-const keys=['qualifier','medium','response','subject','system','organ','domain','task','exam','platform','concept','keyword','search'];
-let library=null, busy=false, view=LIBRARY_VIEWS.includes(new URLSearchParams(location.search).get('view'))?new URLSearchParams(location.search).get('view'):'notes';
-let filters=Object.fromEntries(keys.map(k=>[k,new URLSearchParams(location.search).get(k)||'']));
-let options=Object.fromEntries(['module','reference','category','collection','observed','sort'].map(k=>[k,(/^[a-z0-9-]{0,100}$/.test(new URLSearchParams(location.search).get(k)||'')?new URLSearchParams(location.search).get(k):'')||'']));
+let { building, sessionCount, view, filters, options } = libraryRouteState(location.search);
+const keys = FILTER_KEYS;
+let library=null, busy=false;
 const facetKeys={subject:'subjects',system:'systems',organ:'organs',domain:'domains',task:'tasks'};
 const label=s=>s.replace(/-/g,' ').replace(/^./,c=>c.toUpperCase());
-function remember(){const p=new URLSearchParams();keys.forEach(k=>{if(filters[k])p.set(k,filters[k]);});p.set('view',view);p.set('count',String(sessionCount));Object.entries(options).forEach(([k,v])=>{if(v)p.set(k,v);});if(building){p.set('build','1');p.set('master','study');}else if(['recall','cases','images','skills'].includes(view))p.set('master','study');history.replaceState(null,'',location.pathname+'?'+p);window.dispatchEvent(new CustomEvent('mlos:route'));}
+function remember(push=false){const p=new URLSearchParams();keys.forEach(k=>{if(filters[k])p.set(k,filters[k]);});p.set('view',view);p.set('count',String(sessionCount));Object.entries(options).forEach(([k,v])=>{if(v)p.set(k,v);});if(building){p.set('build','1');p.set('master','study');}else if(['recall','cases','images','skills'].includes(view))p.set('master','study');const href=location.pathname+'?'+p;if(push && href!==location.pathname+location.search)history.pushState(null,'',href);else history.replaceState(null,'',href);window.dispatchEvent(new CustomEvent('mlos:route'));}
 function select(key,values){return '<label>'+label(key)+'<select aria-label="'+label(key)+'" data-filter="'+key+'"><option value="">All</option>'+values.map(v=>'<option value="'+e(v.id??v)+'" '+(filters[key]===(v.id??v)?'selected':'')+'>'+e(v.label??label(v))+'</option>').join('')+'</select></label>';}
 function graph(data){
   const concepts=data.concepts.slice(0,30),notes=data.notes.slice(0,30),questions=data.questions.slice(0,50);
@@ -36,7 +32,7 @@ root.addEventListener('change',event=>{if(event.target.hasAttribute('data-sessio
 root.addEventListener('click',async event=>{
   const t=event.target.closest('button,[data-graph-question],[data-graph-note],[data-graph-concept]');if(!t)return;
   if(t.hasAttribute('data-retry'))return load();
-  if(t.dataset.view){view=t.dataset.view;remember();render();return root.querySelector('[data-view="'+view+'"]').focus();}
+  if(t.dataset.view){const changed=view!==t.dataset.view;if(changed&&!['notes','questions','graph'].includes(view))options={...options,module:'',reference:'',category:''};view=t.dataset.view;remember(changed);render();return root.querySelector('[data-view="'+view+'"]').focus();}
   if(t.hasAttribute('data-clear')){options=Object.fromEntries(Object.keys(options).map(k=>[k,'']));filters=Object.fromEntries(keys.map(k=>[k,'']));remember();return render();}
   if(t.dataset.graphConcept){filters.concept=t.dataset.graphConcept;remember();return render();}
   if(t.dataset.graphNote){const card=[...root.querySelectorAll('[data-note-card]')].find(c=>c.dataset.noteCard===t.dataset.graphNote);card?.focus();card?.scrollIntoView({block:'center'});return;}
@@ -45,4 +41,5 @@ root.addEventListener('click',async event=>{
 });
 root.addEventListener('keydown',event=>{if((event.target.dataset.graphQuestion||event.target.dataset.graphNote||event.target.dataset.graphConcept)&&['Enter',' '].includes(event.key)){event.preventDefault();event.target.click();}});
 const enhancements=setupLibraryWorkspaces({root,state:()=>({library,view,filters,options,busy}),change(update){if(update.view)view=update.view;if(update.filters)filters={...filters,...update.filters};if(update.options)options={...options,...update.options};},render,remember});
+window.addEventListener('popstate',()=>{({building,sessionCount,view,filters,options}=libraryRouteState(location.search));if(library)render();window.dispatchEvent(new CustomEvent('mlos:route'));});
 load();

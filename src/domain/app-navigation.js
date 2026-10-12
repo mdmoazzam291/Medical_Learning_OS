@@ -74,16 +74,31 @@ export function canSwitchLibraryView(pathname, search, targetPathname, targetSea
   const current = new URLSearchParams(search), target = new URLSearchParams(targetSearch);
   return pathname === '/web/library.html' && targetPathname === pathname
     && (current.get('build') === '1') === (target.get('build') === '1')
+    && ['notes', 'questions', 'graph'].includes(current.get('view') || 'notes')
     && ['notes', 'questions', 'graph'].includes(target.get('view'));
 }
-export function routeIdentity(pathname, search = '') {
+export function reviewEntryKind(search, grants) {
+  const allowed = Array.isArray(grants) ? grants.filter(kind => ['medical', 'references', 'rights'].includes(kind)) : [];
+  const requested = new URLSearchParams(search).get('workspace');
+  return allowed.includes(requested) ? requested : allowed[0] || null;
+}
+export function navigationHrefMatches(href, currentHref) {
+  if (!currentHref) return false;
+  const target = new URL(href, 'https://navigation.invalid'), current = new URL(currentHref, 'https://navigation.invalid');
+  if (target.pathname !== current.pathname || target.hash !== current.hash) return false;
+  const keys = target.pathname.endsWith('/library.html')
+    ? ['view', 'build', ...(target.searchParams.get('view') === 'subjects' ? ['subject', 'module'] : target.searchParams.get('view') === 'media' ? ['category'] : target.searchParams.get('view') === 'references' ? ['reference'] : [])]
+    : ['master', 'section', 'workspace'];
+  return keys.every(key => (target.searchParams.get(key) || '') === (current.searchParams.get(key) || ''));
+}
+export function routeIdentity(pathname, search = '', hash = '') {
   const p = new URLSearchParams(search);
   if (pathname.endsWith('/workspace.html')) { const master = MASTERS.some(x => x.id === p.get('master')) ? p.get('master') : 'home'; const section = (SECTIONS[master] || []).some(x => x.id === p.get('section')) ? p.get('section') : SECTIONS[master][0].id; return { master, section }; }
   if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'notes'; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'notes' }; }
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
-  if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'build' };
+  if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
   if (/\/(admin|review|content-import)\.html$/.test(pathname)) return { master: 'account', section: 'admin' };
-  if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: 'overview' };
+  if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
   return { master: 'home', section: 'today' };
 }

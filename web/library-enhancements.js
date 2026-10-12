@@ -58,7 +58,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
       else location.assign(href);
     } catch (error) { pending = false; render(); root.querySelector('#library-status').textContent = error.message; }
   }
-  const update = value => { change(value); remember(); render(); };
+  const update = value => { const previousView = state().view; change(value); remember(Boolean(value.view && value.view !== previousView)); render(); };
   root.addEventListener('change', event => {
     if (event.target.dataset.workspaceOption) update({ options: { [event.target.dataset.workspaceOption]: event.target.value } });
     if (event.target.hasAttribute('data-compare')) { compare[Number(event.target.dataset.compare)] = event.target.value; render(); }

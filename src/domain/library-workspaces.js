@@ -1,6 +1,16 @@
 import { filterLibrary, keywordCounts } from './content-library.js';
 export const FILTER_KEYS = Object.freeze(['qualifier', 'medium', 'response', 'subject', 'system', 'organ', 'domain', 'task', 'exam', 'platform', 'concept', 'keyword', 'search']);
 export const LIBRARY_VIEWS = Object.freeze(['subjects', 'notes', 'questions', 'graph', 'atlas', 'media', 'references', 'compare', 'foundation', 'savedviews', 'recall', 'cases', 'images', 'skills']);
+export function libraryRouteState(search) {
+  const p = new URLSearchParams(search), count = Number(p.get('count'));
+  return {
+    building: p.get('build') === '1',
+    sessionCount: [1, 5, 10, 15, 20, 30, 50].includes(count) ? count : 50,
+    view: LIBRARY_VIEWS.includes(p.get('view')) ? p.get('view') : 'notes',
+    filters: Object.fromEntries(FILTER_KEYS.map(key => [key, (p.get(key) || '').slice(0, 300)])),
+    options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort'].map(key => [key, /^[a-z0-9-]{0,100}$/.test(p.get(key) || '') ? p.get(key) || '' : '']))
+  };
+}
 const normal = text => String(text || '').normalize('NFKC').toLowerCase();
 const tagged = (classification, tag) => !tag || [...(classification?.domains || []), ...(classification?.tasks || [])].includes(tag);
 const imageKinds = new Set(['image', 'ecg-tracing', 'histology', 'audio', 'video']);
