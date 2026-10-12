@@ -59,6 +59,7 @@ try {
       if (path.includes('/review-api/')) return reply({ items: [], questions: [], notes: [], queue: [], sources: [], reviews: [], pending: [], reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
       if (path.endsWith('/content-library-api/library')) return libraryUnavailable ? reply({ error: 'fixture_library_unavailable' }, 503) : reply(selectionLibrary);
+      if (path.endsWith('/content-library-api/imports')) return reply({ imports: [] });
       if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
       if (path.endsWith('/study-api/media')) return reply({ media: [] });
