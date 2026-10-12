@@ -21,6 +21,8 @@ test('incomplete owner telemetry never masquerades as an all-clear', () => {
   const measuredZero = buildAdminActionInbox({ content: { openLearnerReports: 0, unresolvedRights: 0, pendingReview: { medical: 0 } } }, { alerts: [] });
   assert.equal(measuredZero.actions.length, 0);
   assert.deepEqual(measuredZero.missing, []);
+  const missingQueues = buildAdminActionInbox({ content: { openLearnerReports: 0, unresolvedRights: 0, pendingReview: {} } }, { alerts: [] });
+  assert.deepEqual(missingQueues.missing, ['human-review queues']);
 });
 
 test('malformed count values and unknown alert statuses cannot invent issues', () => {
