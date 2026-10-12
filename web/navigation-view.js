@@ -30,26 +30,55 @@ const paths = {
 };
 export const icon = name => '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="mlos-icon" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (paths[name] || paths.book) + '</svg>';
 const pin = (key, label, prefs) => '<button type="button" class="mlos-pin" data-pin="' + escapeText(key) + '" aria-label="' + (prefs.pins.includes(key) ? 'Unpin ' : 'Pin ') + escapeText(label) + '" aria-pressed="' + prefs.pins.includes(key) + '">' + icon('pin') + '</button>';
-export function childrenMarkup(rows, prefix, prefs, currentHref = '') {
+// A group and its first child can intentionally have the same destination.
+// Render that URL once, and attach the group's pin to the child row instead.
+export function childrenMarkup(rows, prefix, prefs, currentHref = '', pinOnChild = null) {
   const current = row => navigationHrefMatches(row.href, currentHref) ? ' aria-current="page"' : '';
-  return rows.map(row => row.children.length
-    ? '<details data-group="' + escapeText(prefix + ':' + row.id) + '"' + (prefs.groups.includes(prefix + ':' + row.id) ? ' open' : '') + '><summary>' + escapeText(row.label) + '</summary><div class="mlos-children"><a href="' + escapeText(row.href) + '"' + current(row) + '>Overview</a>' + childrenMarkup(row.children, prefix + ':' + row.id, prefs, currentHref) + '</div></details>'
-    : '<a href="' + escapeText(row.href) + '"' + current(row) + '>' + escapeText(row.label) + '</a>').join('');
+  return rows.map(row => {
+    if (row.children.length) {
+      return '<details data-group="' + escapeText(prefix + ':' + row.id) + '"' +
+        (prefs.groups.includes(prefix + ':' + row.id) ? ' open' : '') +
+        '><summary>' + escapeText(row.label) + '</summary><div class="mlos-children"><a href="' +
+        escapeText(row.href) + '"' + current(row) + '>Overview</a>' +
+        childrenMarkup(row.children, prefix + ':' + row.id, prefs, currentHref) +
+        '</div></details>';
+    }
+    const link = '<a href="' + escapeText(row.href) + '"' + current(row) + '>' + escapeText(row.label) + '</a>';
+    return pinOnChild?.id === row.id
+      ? '<div class="mlos-nav-row mlos-child-pin-row">' + link +
+        pin(pinOnChild.key, pinOnChild.label, prefs) + '</div>'
+      : link;
+  }).join('');
 }
 function sectionMarkup(row, master, section, prefs, currentHref) {
-  const key = master + ':' + row.id, current = row.id === section ? ' aria-current="page"' : '';
+  const key = master + ':' + row.id;
+  // Section identity highlights the rail/disclosure; only an exact URL may
+  // claim aria-current="page". Deep links must highlight their true leaf.
+  const current = navigationHrefMatches(row.href, currentHref) ? ' aria-current="page"' : '';
+  const active = row.id === section;
   if (!prefs.expanded) return row.children.length
-    ? '<button class="mlos-rail-item" data-flyout="' + key + '" data-active="' + (row.id === section) + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
+    ? '<button class="mlos-rail-item" data-flyout="' + key + '" data-active="' + active + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
     : '<a class="mlos-rail-item" href="' + escapeText(row.href) + '" aria-label="' + escapeText(row.label) + '" title="' + escapeText(row.label) + '"' + current + '>' + icon(row.icon) + '</a>';
   const label = icon(row.icon) + '<span>' + escapeText(row.label) + '</span>';
-  const redundantAdminOpen = master === 'admin' && row.children.some(child => child.href === row.href);
-  const openRow = redundantAdminOpen ? '' : '<div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>Open ' + escapeText(row.label) + '</a>' + pin(key, row.label, prefs) + '</div>';
+  const redundantChild = master === 'admin' ? row.children.find(child => child.href === row.href && !child.children.length) : null;
+  const openRow = redundantChild ? '' : '<div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>Open ' + escapeText(row.label) + '</a>' + pin(key, row.label, prefs) + '</div>';
   return row.children.length
-    ? '<details data-group="' + key + '"' + (prefs.groups.includes(key) ? ' open' : '') + '><summary>' + label + '</summary><div class="mlos-children">' + openRow + childrenMarkup(row.children, key, prefs, currentHref) + '</div></details>'
+    ? '<details data-group="' + key + '"' + (prefs.groups.includes(key) ? ' open' : '') +
+      ' data-active="' + active + '"><summary>' + label + '</summary><div class="mlos-children">' +
+      openRow + childrenMarkup(row.children, key, prefs, currentHref,
+        redundantChild ? { id: redundantChild.id, key, label: row.label } : null) + '</div></details>'
     : '<div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>' + label + '</a>' + pin(key, row.label, prefs) + '</div>';
 }
 export function flyoutMarkup(row, master, prefs, currentHref = '') {
-  return '<div class="mlos-flyout-heading"><a href="' + escapeText(row.href) + '">' + escapeText(row.label) + '</a>' + pin(master + ':' + row.id, row.label, prefs) + '<button data-close-flyout aria-label="Close submenu">' + icon('close') + '</button></div><div class="mlos-children">' + childrenMarkup(row.children, master + ':' + row.id, prefs, currentHref) + '</div>';
+  const redundantChild = master === 'admin' && row.children.some(child => child.href === row.href);
+  const heading = redundantChild
+    ? '<strong class="mlos-flyout-title">' + escapeText(row.label) + '</strong>'
+    : '<a href="' + escapeText(row.href) + '">' + escapeText(row.label) + '</a>';
+  return '<div class="mlos-flyout-heading">' + heading +
+    pin(master + ':' + row.id, row.label, prefs) +
+    '<button data-close-flyout aria-label="Close submenu">' + icon('close') +
+    '</button></div><div class="mlos-children">' +
+    childrenMarkup(row.children, master + ':' + row.id, prefs, currentHref) + '</div>';
 }
 export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, currentHref = '' } = {}) {
   const prefs = validatePreferences({ ...input, version: 1 }), rows = navigationFor(master, { isAdmin });
