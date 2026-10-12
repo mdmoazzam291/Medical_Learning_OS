@@ -42,7 +42,32 @@ const SECTIONS = {
   library: libraryRows,
   exams: [item('simulator', 'Simulator', 'exam', '/web/exam.html'), item('dna', 'Exam DNA / PYQs', 'graph', workspace('exams', 'dna')), item('past', 'Past Runs', 'clock', workspace('exams', 'past')), item('autopsy', 'GT Autopsy', 'repair', workspace('exams', 'autopsy')), item('rules', 'Exam Plan & Rules', 'settings', workspace('exams', 'rules'))],
   account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research')],
-  admin: [item('overview', 'Admin Overview', 'settings', '/web/admin.html'), item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]
+  admin: [
+    item('overview', 'Overview', 'home', '/web/admin.html', [
+      item('actions', 'Action Inbox', 'repair', '/web/admin.html#admin-actions'),
+      item('snapshot', 'Platform Snapshot', 'graph', '/web/admin.html#owner-overview')
+    ]),
+    item('content', 'Content & Quality', 'book', '/web/content-import.html', [
+      item('intake', 'Content Intake', 'book', '/web/content-import.html'),
+      item('review', 'Review Workspace', 'edit', '/web/review.html'),
+      item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references'),
+      item('rights', 'Source Rights', 'reference', '/web/review.html?workspace=rights')
+    ]),
+    item('learners', 'Learners & Access', 'user', '/web/admin.html#owner-users', [
+      item('accounts', 'Learner Accounts', 'user', '/web/admin.html#owner-users'),
+      item('authority', 'Reviewer Authority', 'settings', '/web/admin.html#owner-review-authority')
+    ]),
+    item('research', 'Learning & Research', 'graph', '/web/admin.html#research-gate', [
+      item('learning', 'Observed Learning', 'graph', '/web/admin.html#owner-learning'),
+      item('readiness', 'Research Readiness', 'cases', '/web/admin.html#research-gate'),
+      item('ai', 'AI Usage Evidence', 'settings', '/web/admin.html#owner-ai')
+    ]),
+    item('operations', 'System Operations', 'settings', '/web/admin.html#owner-infrastructure', [
+      item('health', 'Provider Health', 'settings', '/web/admin.html#owner-infrastructure'),
+      item('alerts', 'Infrastructure Alerts', 'repair', '/web/admin.html#owner-infrastructure-alerts'),
+      item('features', 'Feature Gates', 'settings', '/web/admin.html#owner-features')
+    ])
+  ]
 };
 export function navigationFor(master, { isAdmin = false } = {}) {
   if (master === 'admin' && isAdmin !== true) return [];
@@ -108,9 +133,11 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
-  if (pathname.endsWith('/admin.html')) return { master: 'admin', section: 'overview' };
-  if (pathname.endsWith('/content-import.html')) return { master: 'admin', section: 'import' };
-  if (pathname.endsWith('/review.html')) return { master: 'admin', section: p.get('workspace') === 'references' ? 'references' : 'review' };
+  if (pathname.endsWith('/admin.html')) {
+    const ownerAnchors = { '#owner-users': 'learners', '#owner-review-authority': 'learners', '#owner-learning': 'research', '#research-gate': 'research', '#owner-ai': 'research', '#owner-infrastructure': 'operations', '#owner-infrastructure-alerts': 'operations', '#owner-features': 'operations' };
+    return { master: 'admin', section: ownerAnchors[hash] || 'overview' };
+  }
+  if (pathname.endsWith('/content-import.html') || pathname.endsWith('/review.html')) return { master: 'admin', section: 'content' };
   if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
   return { master: 'home', section: 'today' };
 }
