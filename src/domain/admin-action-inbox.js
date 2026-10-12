@@ -48,7 +48,7 @@ export function buildAdminActionInbox(dashboard, { alerts = null } = {}) {
     ...(observedAlerts ? [] : ['infrastructure alerts']),
     ...(openReports === null ? ['learner reports'] : []),
     ...(unresolvedRights === null ? ['source rights'] : []),
-    ...(pending ? [] : ['human-review queues'])
+    ...(reviewKinds.some(([kind]) => validCount(pending?.[kind]) !== null) ? [] : ['human-review queues'])
   ];
   return { actions, missing, asOf: dashboard?.generatedAt || null };
 }
