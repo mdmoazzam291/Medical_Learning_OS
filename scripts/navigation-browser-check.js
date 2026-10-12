@@ -71,7 +71,7 @@ try {
     assert.equal(await page.locator('[data-subject]').count(), 19);
     const rowPositions = await mainNav.getByRole('link').evaluateAll(links => links.map(l => Math.round(l.getBoundingClientRect().top)));
     assert.equal(new Set(rowPositions).size, 1);
-    await page.getByRole('button', { name: 'Subjects & Topics', exact: true }).click();
+    await page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }).click();
     await page.getByRole('dialog', { name: 'Navigation submenu' }).waitFor();
     await page.keyboard.press('Escape'); assert.equal(await page.locator('#mlos-flyout').isVisible(), false);
     await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
@@ -209,7 +209,7 @@ try {
       await page.goto(origin + '/web/library.html?view=subjects');
       await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
       if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
-      await activate(page.getByRole('button', { name: 'Subjects & Topics', exact: true }));
+      await activate(page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }));
       const flyout = page.getByRole('dialog', { name: 'Navigation submenu' });
       const group = flyout.locator('details[data-group="library:subjects:index"]');
       if (!await group.evaluate(node => node.open)) await activate(group.locator(':scope > summary'));
