@@ -45,7 +45,7 @@ try {
     const activate = locator => touch ? locator.tap() : locator.click();
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
-    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false;
+    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
@@ -60,7 +60,7 @@ try {
         learnerAdministration: { auditEvents: 0 }, reviewAuthority: { temporary: true, grants: [] },
         ai: { telemetryAvailable: false }, infrastructure: { database: 'healthy', publicTableCount: 0, cloudflare: { status: 'healthy' } }
       });
-      if (path.endsWith('/owner-api/infrastructure-alerts')) return reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
+      if (path.endsWith('/owner-api/infrastructure-alerts')) return alertsUnavailable ? reply({ error: 'synthetic_alerts_outage' }, 503) : reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
       if (path.endsWith('/owner-api/content-integrity')) return reply({
         contractId: 'owner-catalog-integrity-v1', catalogVersion: 407,
         scanComplete: true, evidenceScope: 'structural_only', clinicalAccuracyVerified: false,
@@ -74,7 +74,7 @@ try {
         unmatchedHistoricalSightings: 0, sources: [], scope: 'owner_submitted_evidence_only',
         automatedWebChecks: false, medicalUpdateVerified: false, clinicalApprovalGranted: false
       });
-      if (path.endsWith('/owner-api/feature-flags')) return reply({ flags: [] });
+      if (path.endsWith('/owner-api/feature-flags')) return flagsUnavailable ? reply({ error: 'synthetic_flags_outage' }, 503) : reply({ flags: [] });
       if (path.includes('/owner-api/')) return reply({});
       if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
       // The review shell may read distinct gate queues; navigation checks never approve content.
@@ -171,6 +171,29 @@ try {
     await activate(page.locator('[data-owner-source-watch-run]'));
     await page.getByText('No canonical sources are present.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-source-sighting-form').count(), 0, 'no observation can be manufactured without a canonical source');
+
+    if (name === layouts[0][0]) {
+      // Both Admin links remain real destinations when either provider call
+      // fails; never show "zero alerts" in place of a failed read.
+      flagsUnavailable = true;
+      await page.reload();
+      await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
+      await page.locator('#owner-features-state').getByText('Feature gates unavailable.', { exact: false }).waitFor();
+      assert.equal(await page.locator('#owner-features').count(), 1);
+      assert.match(await page.locator('#owner-infrastructure-alerts').innerText(), /Synthetic edge/);
+      assert.equal(await page.locator('#owner-features [data-owner-v3-feature-form]').count(), 0, 'no feature mutation form on failed feature read');
+      flagsUnavailable = false; alertsUnavailable = true;
+      await page.reload();
+      await page.locator('#owner-alerts-state').getByText('Infrastructure alerts unavailable.', { exact: false }).waitFor();
+      assert.equal(await page.locator('#owner-infrastructure-alerts').count(), 1);
+      assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
+      assert.doesNotMatch(await page.locator('#owner-alerts-state').innerText(), /No open infrastructure alerts/);
+      alertsUnavailable = false;
+      await page.reload();
+      await page.locator('#owner-infrastructure-alerts').getByText('Synthetic edge', { exact: true }).waitFor();
+      assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
+    }
+
 
     // Outside-panel touch intentionally collapses the rail on a phone.
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
