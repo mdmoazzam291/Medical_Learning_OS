@@ -161,7 +161,10 @@ try {
     await activate(page.locator('[data-owner-integrity-run]'));
     await page.getByText('No canonical catalog content exists to assess yet.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-integrity-results').getByText('Findings', { exact: true }).count(), 1);
-
+    // Outside-panel touch intentionally collapses the rail on a phone.
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
