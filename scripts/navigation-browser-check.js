@@ -38,6 +38,7 @@ try {
       if (path.endsWith('/content-library-api/library')) return reply(selectionLibrary);
       if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
+      if (path.endsWith('/study-api/media')) return reply({ media: [] });
       if (path.endsWith('/study-api/progress')) return reply({ attempts: 0, correct: 0, accuracy: null, concepts: [] });
       if (path.endsWith('/study-api/revision/due')) return reply({ dueCount: 0, unseenCount: 1, items: [] });
       if (path.endsWith('/study-api/exam-simulator/readiness')) return reply({ ready: false, eligibleUniqueQuestions: 1, requiredUniqueQuestions: 180, shortage: 179 });
@@ -133,6 +134,35 @@ try {
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(writes.length, 0, 'navigation and self-review must not create learning or publication writes');
+    const otherClassification = { ...classification, systems: ['cardiovascular'] };
+    selectionLibrary = {
+      ...library,
+      concepts: [...library.concepts, { conceptId: 'fixture-c2', label: 'Second synthetic concept', aliases: [], classification: otherClassification }],
+      notes: [...library.notes, { noteVersionId: 'fixture-n2@1', conceptId: 'fixture-c2', title: 'Second synthetic note', bodyMarkdown: 'Second isolated source body.' }],
+      questions: [{ ...question, intelligence: { ...question.intelligence, presentation: ['image'] } }, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@1', classification: otherClassification, conceptLinks: [{ conceptId: 'fixture-c2', role: 'primary' }], intelligence: { ...question.intelligence, presentation: ['image'] } }]
+    };
+    await page.goto(origin + '/web/library.html?view=recall');
+    await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to first source');
+    await page.getByRole('button', { name: 'Next card', exact: true }).click();
+    await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to second source');
+    await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c');
+    assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to first source');
+    await page.getByRole('button', { name: 'Reveal source note', exact: true }).click();
+    await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c2');
+    assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to second source');
+    assert.equal(await page.getByRole('button', { name: 'Reveal source note', exact: true }).isVisible(), true);
+    assert.equal(await page.getByText('Second isolated source body.', { exact: true }).count(), 0);
+    await page.goto(origin + '/web/library.html?view=images&system=respiratory');
+    await page.getByRole('button', { name: 'Open original media', exact: true }).click();
+    await page.getByRole('heading', { name: 'Original media', exact: true }).waitFor();
+    await page.getByLabel('System', { exact: true }).selectOption('cardiovascular');
+    assert.equal(await page.getByRole('heading', { name: 'Original media', exact: true }).count(), 0);
+    await page.evaluate(() => localStorage.setItem('mlos-library-device-v1', JSON.stringify({ version: 1, bookmarks: [], views: Array.from({ length: 30 }, (_, i) => ({ id: 'limit-' + i, name: 'Saved fixture ' + i, view: 'notes', filters: {} })) })));
+    await page.goto(origin + '/web/library.html?view=notes');
+    page.once('dialog', dialog => dialog.accept('Overflow fixture'));
+    await page.getByRole('button', { name: 'Save current view', exact: true }).click();
+    await page.getByText('You have 30 saved views. Delete one before saving another.', { exact: true }).waitFor();
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-library-device-v1')).views.length), 30);
     selectionLibrary = { ...library, questions: [question, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@3' }, { ...question, questionId: 'fixture-q3', questionVersionId: 'fixture-q3@2' }] };
     await page.goto(origin + '/web/library.html?view=questions&master=study&build=1');
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
@@ -140,6 +170,9 @@ try {
     await page.locator('#mlos-local-nav [data-pin="study:build"]').click();
     await page.goto(origin + '/web/library.html?view=notes');
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
+    assert.equal(await page.locator('[data-filter="keyword"] option[value="diagnosis"]').count(), 0);
+    await page.getByLabel('Collection', { exact: true }).selectOption('');
     await page.locator('#mlos-local-nav [data-pin="library:notes"]').click();
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Build Session', exact: true }).click();
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
@@ -150,6 +183,15 @@ try {
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Build Session', exact: true }).click();
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     await page.getByLabel('Question count', { exact: true }).selectOption('1');
+    await page.reload(); await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
+    await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
+    await page.getByLabel('System', { exact: true }).selectOption('respiratory');
+    await page.getByRole('link', { name: 'Synthetic concept (primary)', exact: true }).first().click();
+    await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
+    assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
+    assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
     await page.getByRole('tab', { name: 'Graph', exact: true }).click();
     assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
     assert.equal(new URL(page.url()).searchParams.get('build'), '1');
