@@ -3,3 +3,8 @@ export async function resolvePinnedAccess(prefs, readAccess) {
   try { return (await readAccess())?.isAdmin === true; }
   catch { return false; }
 }
+
+export async function resolveAdminAccess(readAccess) {
+  try { return (await readAccess())?.isAdmin === true; }
+  catch { return false; }
+}
