@@ -77,3 +77,7 @@ test('keyword frequencies respect workspace collection and observed filters', ()
   assert.deepEqual(domain.workspaceKeywordCounts(tagged, { collection: 'pyq' }), []);
   assert.deepEqual(domain.workspaceKeywordCounts(tagged, { observed: 'incorrect' }), []);
 });
+test('restored recall drafts keep a stable field label independent of their text', () => {
+  const html = workspaceMarkup('recall', library, { recallDraft: 'Restored draft text' });
+  assert.match(html, /<textarea[^>]*aria-label="Your recall"/);
+});

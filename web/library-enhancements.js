@@ -16,7 +16,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
   const titles = { subjects: 'Subjects & Topics', notes: 'Concept Notes', questions: 'Questions', graph: 'Knowledge Graph', atlas: 'Atlas', media: 'Media Library', references: 'Reference Tools', compare: 'Compare Concepts', foundation: 'Prerequisite Paths', savedviews: 'Saved Views', recall: 'Recall & Flashcards', cases: 'Clinical Cases', images: 'Image Drills', skills: 'Skills & Viva' };
   const current = () => { const s = state(); return selectWorkspace(s.library, { view: s.view, filters: s.filters, ...s.options }); };
   function select(key, choices) {
-    return '<label>' + key[0].toUpperCase() + key.slice(1) + '<select data-workspace-option="' + key + '"><option value="">All</option>' + choices.map(([value, label]) => '<option value="' + value + '"' + (state().options[key] === value ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label>';
+    return '<label>' + key[0].toUpperCase() + key.slice(1) + '<select aria-label="' + key[0].toUpperCase() + key.slice(1) + '" data-workspace-option="' + key + '"><option value="">All</option>' + choices.map(([value, label]) => '<option value="' + value + '"' + (state().options[key] === value ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label>';
   }
   function bookmark(kind, id) {
     const key = kind + ':' + id;
