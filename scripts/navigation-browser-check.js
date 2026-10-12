@@ -52,6 +52,13 @@ try {
       if (req.method() !== 'GET') writes.push(path);
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
+      if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [], researchGate: null });
+      if (path.endsWith('/owner-api/dashboard')) return reply({ contractId: 'owner-admin-dashboard-v1', owner: { singleton: true, email: user.email }, users: { recent: [] }, reviewAuthority: { grants: [], temporary: true } });
+      if (path.endsWith('/owner-api/feature-flags')) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+        return reply({ flags: [{ featureKey: 'synthetic_navigation_gate', audience: 'off', description: 'Isolated navigation fixture. Never submitted.' }] });
+      }
+      if (path.endsWith('/owner-api/infrastructure-alerts')) return reply({ alerts: [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
       if (path.endsWith('/content-library-api/library')) return libraryUnavailable ? reply({ error: 'fixture_library_unavailable' }, 503) : reply(selectionLibrary);
       if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
@@ -132,6 +139,39 @@ try {
     await page.keyboard.press('Escape');
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('button', { name: 'Admin', exact: true }).waitFor();
+    await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
+    assert.equal(await page.locator('[data-flyout="account:admin"]').count(), 1, 'Account never duplicates a pinned Admin');
+    await page.goto(origin + '/web/admin.html#owner-users');
+    await page.locator('#owner-users').waitFor();
+    await page.locator('#owner-features').getByRole('heading', { name: 'Controlled beta exposure', exact: true }).waitFor();
+    assert.equal(await page.locator('aside').count(), 1, 'Admin uses only the shared sidebar');
+    assert.equal(await page.locator('header').count(), 1, 'Admin uses only the shared header');
+    assert.equal(await page.locator('#owner-features').count(), 1);
+    assert.equal(await page.locator('#owner-infrastructure-alerts').count(), 1);
+    await page.waitForFunction(() => {
+      const target = document.getElementById('owner-users').getBoundingClientRect();
+      return target.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && target.top < innerHeight;
+    });
+    await activate(page.getByRole('button', { name: 'Admin', exact: true }));
+    const adminMenu = page.getByRole('dialog', { name: 'Navigation submenu' });
+    assert.equal(await adminMenu.getByRole('link', { name: 'Users', exact: true }).getAttribute('aria-current'), 'page');
+    await activate(adminMenu.getByRole('link', { name: 'Feature Gates', exact: true }));
+    await page.waitForFunction(() => location.hash === '#owner-features');
+    await page.waitForFunction(() => {
+      const rect = document.getElementById('owner-features').getBoundingClientRect();
+      return rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
+    });
+    await page.goBack(); await page.waitForFunction(() => location.hash === '#owner-users');
+    await page.keyboard.press('Escape');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Admin has no horizontal overflow');
+    assert.deepEqual(writes, [], 'Admin navigation never mutates owner or research state');
+    await page.goto(origin + '/web/admin.html#owner-infrastructure');
+    await page.locator('[data-owner-v3-feature-form]').waitFor();
+    await page.waitForFunction(() => {
+      const rect = document.getElementById('owner-infrastructure').getBoundingClientRect();
+      return rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
+    });
+    assert.equal(await page.locator('#owner-features').count(), 1);
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     admin = false; await page.reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     assert.equal(await page.getByRole('button', { name: 'Admin', exact: true }).count(), 0);

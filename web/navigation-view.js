@@ -37,9 +37,10 @@ export function childrenMarkup(rows, prefix, prefs, currentHref = '') {
     : '<a href="' + escapeText(row.href) + '"' + current(row) + '>' + escapeText(row.label) + '</a>').join('');
 }
 function sectionMarkup(row, master, section, prefs, currentHref) {
-  const key = master + ':' + row.id, current = row.id === section ? ' aria-current="page"' : '';
+  const key = master + ':' + row.id;
+  const current = row.id === section ? ' aria-current="' + (row.children.length && currentHref && !navigationHrefMatches(row.href, currentHref) ? 'location' : 'page') + '"' : '';
   if (!prefs.expanded) return row.children.length
-    ? '<button class="mlos-rail-item" data-flyout="' + key + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
+    ? '<button class="mlos-rail-item" data-flyout="' + key + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '"' + (current ? ' aria-current="location"' : '') + '>' + icon(row.icon) + '</button>'
     : '<a class="mlos-rail-item" href="' + escapeText(row.href) + '" aria-label="' + escapeText(row.label) + '" title="' + escapeText(row.label) + '"' + current + '>' + icon(row.icon) + '</a>';
   const label = icon(row.icon) + '<span>' + escapeText(row.label) + '</span>';
   return row.children.length
@@ -51,6 +52,6 @@ export function flyoutMarkup(row, master, prefs, currentHref = '') {
 }
 export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, currentHref = '' } = {}) {
   const prefs = validatePreferences({ ...input, version: 1 }), rows = navigationFor(master, { isAdmin });
-  const pinned = pinnedSections(prefs, isAdmin);
+  const pinned = pinnedSections(prefs, isAdmin).filter(row => row.key !== 'account:admin' || master !== 'account');
   return '<header class="mlos-header"><a class="mlos-brand" href="/" aria-label="Medical Learning OS Home"><span class="mlos-brand-mark">m.</span><span class="mlos-brand-full">Medical Learning OS</span><span class="mlos-brand-short">MLOS</span></a><nav aria-label="Main navigation">' + MASTERS.map(m => '<a href="' + escapeText(m.href) + '" data-master="' + m.id + '" aria-label="' + m.label + '"' + (master === m.id ? ' aria-current="page"' : '') + '>' + icon(m.icon) + '<span>' + m.label + '</span></a>').join('') + '</nav><form class="mlos-search" action="/web/library.html" role="search"><input type="hidden" name="view" value="questions"><label class="mlos-sr-only" for="mlos-global-search">Search all published content</label><input id="mlos-global-search" type="search" name="search" placeholder="Search concepts, questions…" maxlength="300"><button type="submit" aria-label="Search all published content">' + icon('search') + '</button></form><button type="button" class="mlos-theme" data-theme aria-label="Switch to ' + (prefs.theme === 'light' ? 'dark' : 'light') + ' appearance" aria-pressed="' + (prefs.theme === 'dark') + '">' + icon(prefs.theme === 'light' ? 'moon' : 'sun') + '</button></header><aside class="mlos-panel" id="mlos-panel"><div class="mlos-panel-toolbar"><button data-rail aria-label="' + (prefs.expanded ? 'Collapse' : 'Expand') + ' navigation" aria-expanded="' + prefs.expanded + '" aria-controls="mlos-local-nav">' + icon('panel') + '</button><span>' + escapeText(MASTERS.find(m => m.id === master)?.label || 'Home') + '</span></div>' + (pinned.length ? '<nav aria-label="Pinned shortcuts"><span class="mlos-caption">Pinned</span>' + pinned.map(row => sectionMarkup(row, row.master, row.master === master ? section : '', prefs, currentHref)).join('') + '</nav>' : '') + '<nav id="mlos-local-nav" aria-label="Section navigation">' + rows.map(row => sectionMarkup(row, master, section, prefs, currentHref)).join('') + '</nav></aside><div id="mlos-flyout" class="mlos-flyout" role="dialog" aria-label="Navigation submenu" hidden></div>';
 }

@@ -165,15 +165,6 @@ function dashboardMarkup(data) {
   </section>`;
 }
 
-function installOwnerNavigation() {
-  const nav = app?.querySelector('.sidebar nav');
-  if (!nav || nav.querySelector('[data-owner-nav]')) return;
-  for (const [href, label] of [['#owner-overview','Owner Overview'],['#owner-users','Users'],['#owner-learning','Analytics'],['#owner-content','Content'],['#owner-ai','AI Usage'],['#owner-infrastructure','Infrastructure']]) {
-    const anchor = document.createElement('a');
-    anchor.href = href; anchor.dataset.ownerNav = 'true'; anchor.innerHTML = `${escape(label)}<span>↓</span>`; nav.append(anchor);
-  }
-}
-
 function ownerHeading() {
   const heading = app?.querySelector('.workspace main#main > .page-heading');
   if (!heading) return;
@@ -189,7 +180,8 @@ function mountDashboard(data) {
   const heading = main.querySelector(':scope > .page-heading');
   if (!heading) return;
   const wrapper = document.createElement('div'); wrapper.innerHTML = dashboardMarkup(data); heading.insertAdjacentElement('afterend', wrapper.firstElementChild);
-  ownerHeading(); installOwnerNavigation();
+  ownerHeading();
+  globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
 }
 
 async function enhance() {

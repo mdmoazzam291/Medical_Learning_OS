@@ -30,7 +30,7 @@
 .mlos-panel nav{display:grid;overflow-x:visible;gap:4px}.mlos-panel nav+nav{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
 .mlos-caption{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 12px}
 .mlos-panel a,.mlos-rail-item{white-space:normal;min-width:0;display:flex;align-items:center;justify-content:flex-start;gap:9px;text-decoration:none;min-height:44px;padding:9px 10px;font-size:12px;color:var(--ink);border-radius:8px;border:0;background:transparent}
-.mlos-panel a[aria-current],.mlos-rail-item[aria-expanded="true"]{background:var(--soft);color:var(--accent)}
+.mlos-panel a[aria-current],.mlos-flyout .mlos-children a[aria-current],.mlos-rail-item[aria-current],.mlos-rail-item[aria-expanded="true"]{background:var(--soft);color:var(--accent)}
 .mlos-panel .mlos-rail-item{min-width:44px;justify-content:center;padding:11px;margin:0 auto}
 .mlos-nav-row{display:flex;align-items:center;gap:0}.mlos-nav-row>a{flex:1;min-width:0}.mlos-panel nav a span{display:inline;opacity:1}
 .mlos-pin{min-width:28px;min-height:36px;padding:7px 3px;background:transparent;border:0;color:var(--muted);flex-shrink:0}.mlos-pin .mlos-icon{width:16px;height:16px}.mlos-pin[aria-pressed="true"]{color:var(--accent);background:var(--soft)}

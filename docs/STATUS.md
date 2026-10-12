@@ -1,5 +1,15 @@
 # Current status
 
+## 2026-10-12 — Admin sidebar navigation audit
+
+Removed the legacy Admin sidebar/header and owner-menu injection; existing owner destinations now live once under the shared Account → Admin menu. An Admin pin no longer duplicates the local Account menu. Direct Admin tool routes verify server access without requiring a pin. Active child destinations have one current-page marker; asynchronously mounted owner sections restore explicit fragment navigation without overwriting workspace inputs.
+
+Corrected pending authorization, expired/revoked session handling and verified-admin projection failure states. Feature Gates/alerts mount once per owner root, remount after Admin rendering, ignore stale-root responses and expose a duplicate-free retry on loading failure. Research Gate retains its destination when readiness is unavailable. No access grants, clinical/research writes or backend changes were made.
+
+Verification: initial 1,152 unit/regression tests, syntax/decision checks and the 71-file Pages build passed locally. Independent review found an initial access-verification outage misclassified as learner denial; its RED→GREEN regression and retry repair are included. An additional RED→GREEN regression covers fragment restoration after Feature Gates layout changes. Chromium/WebKit responsive Admin sidebar checks were added to the existing browser suite; execution is pending CI because this host has no runnable Chromium installation. Final verification and release are pending.
+
+Next: verify the Admin browser scenarios and review findings before release. Admin remains an authorized Account child, not a sixth master.
+
 ## 2026-10-12 — Library navigation during unavailable content
 
 - Live signed-out verification reproduced a silent Graph menu action from Notes: the shell canceled normal navigation while the unloaded Library ignored its view-change event. The same defect affected loading and failed content requests.

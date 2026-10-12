@@ -1,4 +1,4 @@
-import { navigationFor, routeIdentity, preferenceStore, canSwitchLibraryView, canonicalPagePath } from '/src/domain/app-navigation.js';
+import { ADMIN_SECTIONS, navigationFor, routeIdentity, preferenceStore, canSwitchLibraryView, canonicalPagePath } from '/src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '/web/navigation-view.js';
 import { mutatePreference } from '/web/navigation-preferences.js';
 import { resolvePinnedAccess } from '/web/navigation-access.js';
@@ -9,6 +9,16 @@ const store = preferenceStore();
 let prefs = store.read(), identity = routeIdentity(location.pathname, location.search, location.hash), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
 let searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
 let accessRead = 0;
+let lastAdminTarget = null, lastAdminHash = '';
+function restoreAdminTarget(event) {
+  if (!isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html') { lastAdminTarget = null; lastAdminHash = ''; return; }
+  const id = location.hash.slice(1);
+  if (!ADMIN_SECTIONS.some(section => section.href.endsWith('#' + id))) { lastAdminTarget = null; lastAdminHash = ''; return; }
+  const target = document.getElementById(id);
+  if (!target?.closest('#admin-app') || (target === lastAdminTarget && location.hash === lastAdminHash && event?.detail?.layoutChanged !== true)) return;
+  target.scrollIntoView({ block: 'start' });
+  lastAdminTarget = target; lastAdminHash = location.hash;
+}
 const shell = document.createElement('div');
 shell.id = 'mlos-navigation';
 document.body.prepend(shell);
@@ -91,16 +101,18 @@ shell.addEventListener('submit', event => {
     event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
-window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); });
+window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); restoreAdminTarget(); });
+window.addEventListener('mlos:admin-ready', restoreAdminTarget);
 function syncRoute() {
   identity = routeIdentity(location.pathname, location.search, location.hash);
   searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
-  closeFlyout(); render(undefined, false);
+  closeFlyout(); render(undefined, false); restoreAdminTarget();
 }
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 render();
-if (prefs.pins.includes('account:admin') && !isAdmin) {
+restoreAdminTarget();
+if ((prefs.pins.includes('account:admin') || identity.section === 'admin') && !isAdmin) {
   const reading = ++accessRead, auth = createSupabaseAuth(cloudConfig), review = createCloudReview({ ...cloudConfig, auth });
-  resolvePinnedAccess(prefs, () => review.me()).then(granted => { if (reading === accessRead) { isAdmin = granted; render(); } });
+  resolvePinnedAccess(prefs, () => review.me(), { adminRoute: identity.section === 'admin' }).then(granted => { if (reading === accessRead) { isAdmin = granted; render(); } });
 }

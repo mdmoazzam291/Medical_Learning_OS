@@ -92,7 +92,7 @@ function gateStatus(label, ok) {
 function researchGatePanel() {
   const gate = state.researchGate;
   if (!gate) {
-    return '<section class="panel"><span class="eyebrow">RESEARCH GATE</span><h2>Readiness unavailable.</h2><p class="muted">No activation control is exposed when canonical readiness cannot be loaded.</p></section>';
+    return '<section class="panel" id="research-gate"><span class="eyebrow">RESEARCH GATE</span><h2>Readiness unavailable.</h2><p class="muted">No activation control is exposed when canonical readiness cannot be loaded.</p></section>';
   }
 
   const readiness = gate.activationReadiness?.readiness || {};
@@ -189,20 +189,21 @@ function adminHome() {
   const loading = state.loading ? '<section class="panel"><p>Loading admin evidence…</p></section>' : '';
   const error = state.error ? '<section class="panel"><h2>Admin data unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
 
-  return '<div class="shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">m.</span><span>Medical<span>Learning OS</span></span></a><span class="nav-caption">ADMIN</span><nav aria-label="Admin navigation"><a href="/web/admin.html" aria-current="page">Admin Home<span>↗</span></a><a href="/web/content-import.html">Import &amp; review<span>↗</span></a><a href="/web/review.html">Content Review<span>↗</span></a><a href="/web/account.html">Account<span>↗</span></a></nav><div class="sidebar-note"><span class="status-dot">Server authorized</span><p>Human authority.<br>Immutable receipts.</p></div></aside><div class="workspace"><header><span>MEDICAL LEARNING OS <span class="header-divider">/</span> Admin</span><a class="text-button" href="/">Learner app</a></header><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1>Review authority stays out of the learner product.</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">BETA ADMIN</span></div>' + (!state.loading && !state.error ? researchGatePanel() : '') + '<div class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Medical + References + Rights</h2><p>Open the version-bound review workspace for question, note, source-rights and learner-report triage.</p><a class="primary action-link" href="/web/review.html">Open content review →</a></section><section class="panel"><span class="eyebrow">RESEARCH VALIDATION</span><h2>M11c pair validity</h2><p>Validate whether published alternate items provide legitimate transfer evidence and, separately, whether they are comparable enough for the retention feasibility protocol.</p></section></div>' + loading + error + (!state.loading && !state.error ? pairPanels : '') + '</main><footer>Medical Learning OS · admin-only beta surface</footer></div></div>';
+  return '<div class="shell admin-page-shell"><div class="workspace"><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1>Review authority stays out of the learner product.</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">BETA ADMIN</span></div>' + (!state.loading && !state.error ? researchGatePanel() : '') + '<div class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Medical + References + Rights</h2><p>Open the version-bound review workspace for question, note, source-rights and learner-report triage.</p><a class="primary action-link" href="/web/review.html">Open content review →</a></section><section class="panel"><span class="eyebrow">RESEARCH VALIDATION</span><h2>M11c pair validity</h2><p>Validate whether published alternate items provide legitimate transfer evidence and, separately, whether they are comparable enough for the retention feasibility protocol.</p></section></div>' + loading + error + (!state.loading && !state.error ? pairPanels : '') + '</main><footer>Medical Learning OS · admin-only beta surface</footer></div></div>';
 }
 
 function render() {
   globalThis.mlosNavigationAdmin = Boolean(state.user && state.isAdmin === true);
   globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } }));
   if (!state.user) root.innerHTML = signedOut();
-  else if (!state.loading && !state.isAdmin) root.innerHTML = restricted();
+  else if (!state.isAdmin) root.innerHTML = state.loading ? '<main id="main" class="account-page"><h1>Verifying Admin access…</h1><p>Owner controls remain unavailable until the server confirms access.</p></main>' : state.accessUnavailable ? '<main id="main" class="account-page"><h1>Admin access unavailable</h1><p>Server access verification could not be completed. Owner controls remain unavailable.</p><button class="secondary" data-action="reload">Retry</button></main>' : restricted();
   else root.innerHTML = adminHome();
+  globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
 }
 
 async function loadAdmin() {
   if (!state.user) { render(); return; }
-  state = { ...state, loading: true, error: null };
+  state = { ...state, loading: true, error: null, accessUnavailable: false };
   render();
   try {
     const session = await auth.getSession();
@@ -217,6 +218,8 @@ async function loadAdmin() {
       render();
       return;
     }
+    state = { ...state, isAdmin: true, reviewKinds: Array.isArray(me.reviewKinds) ? me.reviewKinds : [] };
+    render();
     const result = await review.transferPairs();
     state = {
       ...state,
@@ -230,7 +233,7 @@ async function loadAdmin() {
     };
   } catch (error) {
     reportUnexpected(error, 'load_admin');
-    state = { ...state, loading: false, error: error.code || error.message || 'admin_console_unavailable' };
+    state = { ...state, loading: false, error: error.code || error.message || 'admin_console_unavailable', accessUnavailable: !state.isAdmin && ![401, 403].includes(Number(error?.status)), ...([401, 403].includes(Number(error?.status)) ? { isAdmin: false, reviewKinds: [], pairs: [], researchGate: null } : {}), ...(Number(error?.status) === 401 ? { user: null } : {}) };
   }
   render();
 }

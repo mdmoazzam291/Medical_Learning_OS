@@ -1,5 +1,5 @@
-export async function resolvePinnedAccess(prefs, readAccess) {
-  if (!prefs.pins?.includes('account:admin')) return false;
+export async function resolvePinnedAccess(prefs, readAccess, { adminRoute = false } = {}) {
+  if (!prefs.pins?.includes('account:admin') && !adminRoute) return false;
   try { return (await readAccess())?.isAdmin === true; }
   catch { return false; }
 }

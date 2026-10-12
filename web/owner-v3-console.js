@@ -5,7 +5,7 @@ import { errorMonitor } from '/web/monitoring.js';
 const app = document.querySelector('#admin-app');
 const auth = createSupabaseAuth({ ...cloudConfig });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-let mounted = false;
+let mountedRoot = null, mountingRoot = null;
 
 async function request(path, { method = 'GET', body } = {}) {
   const session = await auth.getSession();
@@ -60,43 +60,53 @@ function alertsMarkup(payload) {
 }
 
 async function mount() {
-  if (mounted || !app?.querySelector('#owner-console')) return;
+  const container = app?.querySelector('#owner-console');
+  if (!container || container === mountedRoot || container === mountingRoot) return;
+  const ai = container.querySelector('#owner-ai'), infra = container.querySelector('#owner-infrastructure');
+  if (!ai || !infra) return;
+  mountingRoot = container;
+  let featureSection = container.querySelector('#owner-features');
+  if (!featureSection) {
+    featureSection = document.createElement('section');
+    featureSection.id = 'owner-features'; featureSection.className = 'panel';
+    ai.before(featureSection);
+  }
+  let alertBlock = container.querySelector('#owner-infrastructure-alerts');
+  if (!alertBlock) {
+    alertBlock = document.createElement('div');
+    alertBlock.id = 'owner-infrastructure-alerts'; alertBlock.className = 'owner-status-block';
+    infra.append(alertBlock);
+  }
+  featureSection.innerHTML = '<h2>Feature Gates</h2><p>Loading server-enforced feature gates…</p>';
+  alertBlock.innerHTML = '<strong>Infrastructure alerts</strong><p>Loading alerts…</p>';
+  globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
   try {
     const [features, alerts] = await Promise.all([
       request('/feature-flags'),
       request('/infrastructure-alerts')
     ]);
-    const ai = app.querySelector('#owner-ai');
-    const infra = app.querySelector('#owner-infrastructure');
-    if (!ai || !infra) return;
-
-    const featureSection = document.createElement('section');
-    featureSection.id = 'owner-features';
-    featureSection.className = 'panel';
+    if (app.querySelector('#owner-console') !== container) return;
     featureSection.innerHTML = `<div class="section-heading"><div><span class="eyebrow">FEATURE ENTITLEMENTS</span><h2>Controlled beta exposure</h2><p>Server-enforced audiences: all learners, active beta learners only, or off. Beta access never grants content-review authority.</p></div><span class="badge">SERVER GATED</span></div>${flagsMarkup(features)}`;
-    ai.before(featureSection);
-
-    const alertBlock = document.createElement('div');
-    alertBlock.className = 'owner-status-block';
-    alertBlock.id = 'owner-infrastructure-alerts';
     alertBlock.innerHTML = `<strong>Open infrastructure alerts</strong>${alertsMarkup(alerts)}`;
-    infra.append(alertBlock);
-
-    const nav = app.querySelector('.sidebar nav');
-    if (nav && !nav.querySelector('a[href="#owner-features"]')) {
-      const anchor = document.createElement('a');
-      anchor.href = '#owner-features';
-      anchor.dataset.ownerNav = 'true';
-      anchor.innerHTML = 'Feature Gates<span>↓</span>';
-      nav.append(anchor);
-    }
-    mounted = true;
+    mountedRoot = container;
   } catch (error) {
+    if (app.querySelector('#owner-console') === container) {
+      featureSection.innerHTML = '<h2>Feature gates unavailable</h2><p>Server feature controls could not be loaded. No audience changes are available.</p><button type="button" data-owner-v3-retry>Retry feature gates</button>';
+      alertBlock.innerHTML = '<strong>Infrastructure alerts unavailable</strong><p>Alert state could not be loaded.</p>';
+      mountedRoot = container;
+    }
     if (![401, 403].includes(Number(error?.status || 0))) {
       errorMonitor.capture(error, { component: 'owner-v3-console', operation: 'mount', code: error?.code || null });
     }
+  } finally {
+    if (app.querySelector('#owner-console') === container) globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready', { detail: { layoutChanged: true } }));
+    if (mountingRoot === container) mountingRoot = null;
   }
 }
+
+app?.addEventListener('click', event => {
+  if (event.target.closest('[data-owner-v3-retry]')) { mountedRoot = null; mount(); }
+});
 
 app?.addEventListener('submit', event => {
   const form = event.target.closest('[data-owner-v3-feature-form]');

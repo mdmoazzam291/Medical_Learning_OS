@@ -9,6 +9,13 @@ export const REFERENCES = Object.freeze([
   ['classifications-staging', 'Classifications & staging'], ['organisms-microbiology', 'Organisms & microbiology'],
   ['skills-procedures', 'Skills & procedures'], ['population-health', 'Population health'], ['ethics-forensic', 'Ethics & forensic references']
 ].map(([id, label]) => ({ id, label })));
+export const ADMIN_SECTIONS = Object.freeze([
+  ['owner-overview', 'Owner Overview', 'home'], ['owner-users', 'Users', 'user'],
+  ['owner-learning', 'Learning Analytics', 'graph'], ['owner-content', 'Content Overview', 'book'],
+  ['owner-review-authority', 'Review Authority', 'reference'], ['owner-features', 'Feature Gates', 'settings'],
+  ['owner-ai', 'AI Usage', 'graph'], ['owner-infrastructure', 'Infrastructure', 'settings'],
+  ['research-gate', 'Research Gate', 'cases']
+].map(([id, label, icon]) => item(id, label, icon, '/web/admin.html#' + id)));
 export const MEDIA_TYPES = Object.freeze([
   ['radiology', 'Radiology'], ['histology', 'Histology'], ['clinical-photos', 'Clinical photographs'],
   ['ecg-traces', 'ECG & tracings'], ['anatomy', 'Anatomy'], ['graphs-charts', 'Graphs & charts'],
@@ -40,7 +47,7 @@ const SECTIONS = {
   study: [item('build', 'Build Session', 'settings', '/web/library.html?view=questions&master=study&build=1'), item('practice', 'Practice', 'play', '/web/medical.html#question-browser'), item('revision', 'Revision', 'clock', workspace('study', 'revision')), item('mistakes', 'Mistake Repair', 'repair', workspace('study', 'mistakes')), ...[['recall', 'Recall & Flashcards', 'book'], ['cases', 'Clinical Cases', 'cases'], ['images', 'Image Drills', 'image'], ['skills', 'Skills & Viva', 'skills']].map(([id, label, icon]) => item(id, label, icon, library(id, '&master=study')))],
   library: libraryRows,
   exams: [item('simulator', 'Simulator', 'exam', '/web/exam.html'), item('dna', 'Exam DNA / PYQs', 'graph', workspace('exams', 'dna')), item('past', 'Past Runs', 'clock', workspace('exams', 'past')), item('autopsy', 'GT Autopsy', 'repair', workspace('exams', 'autopsy')), item('rules', 'Exam Plan & Rules', 'settings', workspace('exams', 'rules'))],
-  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research'), { ...item('admin', 'Admin', 'settings', '/web/admin.html', [item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]), adminOnly: true }]
+  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research'), { ...item('admin', 'Admin', 'settings', '/web/admin.html', [...ADMIN_SECTIONS, item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]), adminOnly: true }]
 };
 export function navigationFor(master, { isAdmin = false } = {}) {
   return (SECTIONS[master] || SECTIONS.home).filter(row => !row.adminOnly || isAdmin === true);
