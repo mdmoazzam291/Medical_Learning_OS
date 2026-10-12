@@ -1,5 +1,11 @@
 # Decision log
 
+## ADR-111 — Provisional PARSE UI rebrand with separate public-release gate
+**Status:** Accepted for feature-branch implementation — 2026-10-13
+
+The owner requested implementation of the PARSE rebranding proposal. Implement only visible browser identity, shared brand mark, learner/account/admin/OAuth labels and provisional favicon using the existing two approved palettes. Preserve all technical identifiers, deep links, Supabase Auth, event names, privileges, data contracts, clinical content and publication gates. The earlier branding/documentation PR #203 is separate and stale. Because the official trademark clearance remains incomplete and similar medical/software marks exist, code can be reviewed in a feature branch but must **not** be merged/deployed publicly solely under this instruction. Formal public brand clearance and explicit release authorization remain required. See `docs/BRAND.md` and `docs/PARSE_BRAND_CLEARANCE.md`.
+
+
 ## ADR-110 — Checkpoint and resume are standing agent instructions
 **Status:** Accepted — 2026-10-13
 
