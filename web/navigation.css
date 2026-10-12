@@ -49,3 +49,10 @@
 /* Keep six authorized header destinations on one row even on narrow phones. */
 @media(max-width:440px){.mlos-brand-short{display:none}.mlos-header{gap:3px}.mlos-header nav a{min-width:29px;padding:7px 4px}}
 @media(prefers-reduced-motion:reduce){.mlos-app{transition:none}}
+
+/* Admin groups show one canonical destination, with its shortcut pin beside it.
+   Active group styling is distinct from exact-page aria-current on a leaf. */
+.mlos-panel details[data-active="true"]>summary{background:var(--soft);color:var(--accent)}
+.mlos-child-pin-row{min-width:0}
+.mlos-child-pin-row>a{flex:1;min-width:0}
+.mlos-flyout-heading>.mlos-flyout-title{flex:1;display:block;padding:8px;font-weight:650;color:var(--ink)}
