@@ -36,5 +36,7 @@ test('admin tools appear only with verified access', () => {
   assert.match(granted, /Review Workspace/);
   assert.match(granted, /Reference Review/);
   assert.ok(!markup({ master: 'account', prefs: { expanded: true }, isAdmin: true }).includes('Content Intake'));
-  assert.match(granted, /href="\/web\/review.html" aria-current="page"/);
+  assert.match(granted, /data-group="admin:content" open/);
+  assert.match(granted, /Source Rights/);
+  assert.match(granted, /href="\\/web\\/review.html"/);
 });
