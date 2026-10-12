@@ -130,3 +130,12 @@ test('explicit Admin clicks restore the current section or Overview after manual
   click('https://example.invalid/web/admin.html');
   assert.equal(rootScrolls, 1);
 });
+test('Admin Overview body shortcuts preserve the workspace with in-place history', () => {
+  const h = open(); let prevented = false;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { h.location.hash = new URL(href, h.location.origin).hash; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const anchor = { href: 'https://example.invalid/web/admin.html#owner-content' };
+  h.docHandlers.click({ target: { closest: key => key === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true); assert.equal(h.location.hash, '#owner-content');
+});

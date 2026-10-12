@@ -50,6 +50,8 @@ export const publicFiles = Object.freeze([
   'web/review.js',
   'web/admin.html',
   'web/admin.js',
+  'web/admin-workspace-view.js',
+  'web/admin-workspaces.js',
   'web/admin-pair-preflight.js',
   'web/owner-console.css',
   'web/owner-console.js',

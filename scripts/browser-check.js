@@ -420,8 +420,8 @@ try {
   assert.equal(new URL(page.url()).hash, '#study-next');
   assert.equal(studyNowCalls, 1, 'planning next session is read-only');
 
-  await page.goto(origin + '/web/admin.html');
-  await page.getByRole('heading', { name: 'Review authority stays out of the learner product.' }).waitFor();
+  await page.goto(origin + '/web/admin.html#research-gate');
+  await page.getByRole('heading', { name: 'Research Readiness', exact: true }).waitFor();
   await page.getByRole('heading', { name: 'Human pair validation is the next research gate.' }).waitFor();
   await page.getByText('FEASIBILITY EVIDENCE · DESCRIPTIVE ONLY', { exact: true }).waitFor();
   assert.match(await page.locator('#research-gate').innerText(), /Clean accuracy: not estimable yet/);

@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
 import { MASTERS, navigationFor } from '../src/domain/app-navigation.js';
+import { ADMIN_VIEWS } from '../web/admin-workspace-view.js';
 const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
 const engine = process.env.BROWSER_ENGINE || 'chromium';
 assert.ok(['chromium', 'webkit'].includes(engine));
@@ -45,7 +46,7 @@ try {
     const activate = locator => touch ? locator.tap() : locator.click();
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
-    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false;
+    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false, projectionDelayed = false, dashboardUnavailable = false, dashboardReads = 0;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
@@ -53,13 +54,13 @@ try {
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return accessStatus === 200 ? reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] }) : reply({ error: 'synthetic_access_failure' }, accessStatus);
       // Owner dashboard APIs are independent of the navigation integration under test.
-      if (path.endsWith('/owner-api/dashboard')) return reply({
+      if (path.endsWith('/owner-api/dashboard')) { dashboardReads++; return dashboardUnavailable ? reply({ error: 'synthetic_dashboard_failure' }, 503) : reply({
         contractId: 'owner-admin-dashboard-v1', owner: { singleton: true, email: 'fixture@example.invalid' },
         generatedAt: '2026-10-12T00:00:00Z', users: { total: 0, recent: [] }, learning: {},
         content: { catalogVersion: 407, questions: 0, sources: 0, concepts: 0, openLearnerReports: 2, unresolvedRights: 1, pendingReview: { medical: 1 } },
         learnerAdministration: { auditEvents: 0 }, reviewAuthority: { temporary: true, grants: [] },
         ai: { telemetryAvailable: false }, infrastructure: { database: 'healthy', publicTableCount: 0, cloudflare: { status: 'healthy' } }
-      });
+      }); }
       if (path.endsWith('/owner-api/infrastructure-alerts')) return alertsUnavailable ? reply({ error: 'synthetic_alerts_outage' }, 503) : reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
       if (path.endsWith('/owner-api/content-integrity')) return reply({
         contractId: 'owner-catalog-integrity-v1', catalogVersion: 407,
@@ -79,7 +80,10 @@ try {
         return flagsUnavailable ? reply({ error: 'synthetic_flags_outage' }, 503) : reply({ flags: largeFlags ? [{ featureKey: 'synthetic_navigation_gate', audience: 'off', description: 'Navigation fixture only; never submitted.' }] : [] });
       }
       if (path.includes('/owner-api/')) return reply({});
-      if (path.endsWith('/review-api/transfer-pairs')) return projectionUnavailable ? reply({ error: 'synthetic_projection_failure' }, 503) : reply({ pairs: [] });
+      if (path.endsWith('/review-api/transfer-pairs')) {
+        if (projectionDelayed) await new Promise(resolve => setTimeout(resolve, 1000));
+        return projectionUnavailable ? reply({ error: 'synthetic_projection_failure' }, 503) : reply({ pairs: [] });
+      }
       // The review shell may read distinct gate queues; navigation checks never approve content.
       if (path.includes('/review-api/')) return reply({ items: [], questions: [], notes: [], queue: [], sources: [], reviews: [], pending: [], reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
@@ -159,19 +163,26 @@ try {
     await page.waitForFunction(() => location.hash === '');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
-    await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
+    await page.locator('#owner-home').waitFor();
+    assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['overview']);
+    assert.match(await page.locator('#owner-home').innerText(), /Urgent actions/);
+    assert.equal(await page.locator('#owner-home form').count(), 0);
     assert.equal(await page.locator('aside').count(), 1, 'only one shared Admin sidebar');
     assert.equal(await page.locator('header').count(), 1, 'only one shared Admin header');
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
+    await page.goto(origin + '/web/admin.html#admin-actions');
     await page.locator('#admin-actions').waitFor();
     assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
+    await page.goto(origin + '/web/admin.html#owner-integrity');
     await page.locator('#owner-integrity').waitFor();
     await activate(page.locator('[data-owner-integrity-run]'));
     await page.getByText('No canonical catalog content exists to assess yet.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-integrity-results').getByText('Findings', { exact: true }).count(), 1);
+    await page.goto(origin + '/web/admin.html#owner-source-watch');
     await page.locator('#owner-source-watch').waitFor();
     await activate(page.locator('[data-owner-source-watch-run]'));
     await page.getByText('No canonical sources are present.', { exact: false }).waitFor();
@@ -181,20 +192,20 @@ try {
       // Both Admin links remain real destinations when either provider call
       // fails; never show "zero alerts" in place of a failed read.
       flagsUnavailable = true;
-      await page.reload();
-      await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
+      await page.goto(origin + '/web/admin.html#owner-features');
+      await page.getByRole('heading', { name: 'Feature Gates', exact: true }).waitFor();
       await page.locator('#owner-features-state').getByText('Feature gates unavailable.', { exact: false }).waitFor();
       assert.equal(await page.locator('#owner-features').count(), 1);
       assert.match(await page.locator('#owner-infrastructure-alerts').innerText(), /Synthetic edge/);
       assert.equal(await page.locator('#owner-features [data-owner-v3-feature-form]').count(), 0, 'no feature mutation form on failed feature read');
       flagsUnavailable = false; alertsUnavailable = true;
-      await page.reload();
+      await page.goto(origin + '/web/admin.html#owner-infrastructure-alerts');
       await page.locator('#owner-alerts-state').getByText('Infrastructure alerts unavailable.', { exact: false }).waitFor();
       assert.equal(await page.locator('#owner-infrastructure-alerts').count(), 1);
       assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
       assert.doesNotMatch(await page.locator('#owner-alerts-state').innerText(), /No open infrastructure alerts/);
       alertsUnavailable = false;
-      await page.reload();
+      await page.goto(origin + '/web/admin.html#owner-infrastructure-alerts');
       await page.locator('#owner-infrastructure-alerts').getByText('Synthetic edge', { exact: true }).waitFor();
       assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
     }
@@ -225,7 +236,7 @@ try {
 
     largeFlags = true;
     await page.goto(origin + '/web/admin.html#owner-infrastructure');
-    await page.locator('[data-owner-v3-feature-form]').waitFor();
+    await page.locator('[data-owner-v3-feature-form]').waitFor({ state: 'attached' });
     await page.waitForFunction(() => {
       const rect = document.getElementById('owner-infrastructure').getBoundingClientRect();
       return rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
@@ -234,7 +245,14 @@ try {
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     const operationsGroup = page.locator('#mlos-local-nav details[data-group="admin:operations"]');
     if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
+    projectionDelayed = true;
+    await page.goto(origin + '/web/admin.html#owner-users');
     await page.locator('#owner-learner-query').fill('Unsent navigation draft');
+    await page.waitForFunction(() => document.querySelector('[data-admin-panel="research"]')?.textContent.includes('No published alternate pairs'));
+    assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'background research projection preserves a loaded owner draft');
+    projectionDelayed = false;
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
     await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
     await page.waitForFunction(() => {
       const rect = document.getElementById('owner-features')?.getBoundingClientRect();
@@ -243,15 +261,26 @@ try {
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'same-page Admin navigation preserves owner drafts');
     if (width < 700) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current="page"]').getAttribute('href'), '/web/admin.html#owner-features');
-    await page.locator('#owner-users').scrollIntoViewIfNeeded();
+    await page.locator('#owner-features').scrollIntoViewIfNeeded();
     await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
     await page.waitForFunction(() => document.getElementById('owner-features').getBoundingClientRect().top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && document.getElementById('owner-features').getBoundingClientRect().top < innerHeight);
     await page.goBack();
-    await page.waitForFunction(() => location.hash === '#owner-infrastructure' && document.getElementById('owner-infrastructure').getBoundingClientRect().top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom);
+    await page.waitForFunction(() => location.hash === '#owner-users' && !document.getElementById('owner-users').hidden);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Back retains the owner workspace');
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
     await page.waitForFunction(() => location.hash === '' && scrollY < 100);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview navigation retains owner drafts');
+    await activate(page.locator('#owner-home').getByRole('link', { name: 'Content Snapshot →', exact: true }));
+    await page.getByRole('heading', { name: 'Content Snapshot', exact: true }).waitFor();
+    assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['content']);
+    assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview shortcuts retain mounted tool drafts');
+    for (const view of ADMIN_VIEWS) {
+      await page.goto(origin + '/web/admin.html' + (view.id === 'overview' ? '' : '#' + view.anchor));
+      await page.locator('[data-admin-panel="' + view.id + '"]').waitFor();
+      assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), [view.id], view.label);
+      await page.getByRole('heading', { name: view.label, exact: true }).waitFor();
+    }
+    await page.goto(origin + '/web/admin.html');
     largeFlags = false;
     if (name === layouts[0][0]) {
       accessStatus = 503; await page.reload();
@@ -260,17 +289,28 @@ try {
       accessStatus = 200; projectionUnavailable = true;
       if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
       await activate(page.locator('[data-action="reload"]'));
+      await page.goto(origin + '/web/admin.html#research-gate');
       await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
       await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
       projectionUnavailable = false; await activate(page.locator('[data-action="reload"]'));
-      await page.locator('#owner-console').waitFor();
-      await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor();
+      await page.locator('#owner-console').waitFor({ state: 'attached' });
+      await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor({ state: 'attached' });
       assert.equal(await page.locator('#owner-features').count(), 1);
       accessStatus = 403; await page.reload();
       await page.getByRole('heading', { name: 'Admin access only.', exact: true }).waitFor();
       assert.equal(await page.locator('#owner-console').count(), 0);
       assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
       accessStatus = 200;
+      dashboardUnavailable = true;
+      const beforeOutage = dashboardReads;
+      await page.goto(origin + '/web/admin.html#owner-users');
+      await page.getByRole('heading', { name: 'Owner data unavailable', exact: true }).waitFor();
+      assert.equal(dashboardReads, beforeOutage + 1, 'failed dashboard waits for an explicit Retry');
+      if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+      dashboardUnavailable = false;
+      await activate(page.locator('[data-owner-dashboard-retry]'));
+      await page.locator('#owner-users').waitFor();
+      assert.equal(dashboardReads, beforeOutage + 2, 'explicit Retry performs one owner read');
     }
     await page.goto(origin + '/web/admin.html');
     await page.locator('#owner-console').waitFor();
@@ -302,6 +342,7 @@ try {
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
+    await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     admin = false; await page.reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     await page.waitForFunction(() => document.querySelector('#mlos-navigation') && !document.querySelector('[data-master="admin"]'));
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
@@ -389,6 +430,7 @@ try {
         assert.equal(await page.locator('#mlos-local-nav a[aria-current]').filter({ hasText: row.label }).count() >= 1, true, row.href);
         const url = new URL(page.url());
         if (url.searchParams.has('module')) assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), url.searchParams.get('subject'));
+        await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, row.href);
       }
       await page.goto(origin + '/web/library.html?view=subjects');
