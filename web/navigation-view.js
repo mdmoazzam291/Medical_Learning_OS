@@ -52,10 +52,12 @@ export function childrenMarkup(rows, prefix, prefs, currentHref = '', pinOnChild
 }
 function sectionMarkup(row, master, section, prefs, currentHref) {
   const key = master + ':' + row.id;
-  // Section identity highlights the rail/disclosure; only an exact URL may
-  // claim aria-current="page". Deep links must highlight their true leaf.
-  const current = navigationHrefMatches(row.href, currentHref) ? ' aria-current="page"' : '';
+  // A group landing link is current only for its exact URL. Standalone
+  // section links may use a fragment inside their landing page (e.g. Study
+  // Practice) and must retain the active state of their owning section.
   const active = row.id === section;
+  const current = navigationHrefMatches(row.href, currentHref) ||
+    (!row.children.length && active) ? ' aria-current="page"' : '';
   if (!prefs.expanded) return row.children.length
     ? '<button class="mlos-rail-item" data-flyout="' + key + '" data-active="' + active + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
     : '<a class="mlos-rail-item" href="' + escapeText(row.href) + '" aria-label="' + escapeText(row.label) + '" title="' + escapeText(row.label) + '"' + current + '>' + icon(row.icon) + '</a>';
