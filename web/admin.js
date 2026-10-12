@@ -193,6 +193,8 @@ function adminHome() {
 }
 
 function render() {
+  globalThis.mlosNavigationAdmin = Boolean(state.user && state.isAdmin === true);
+  globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } }));
   if (!state.user) root.innerHTML = signedOut();
   else if (!state.loading && !state.isAdmin) root.innerHTML = restricted();
   else root.innerHTML = adminHome();

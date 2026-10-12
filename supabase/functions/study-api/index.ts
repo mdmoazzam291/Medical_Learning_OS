@@ -16,6 +16,7 @@ import { buildGtAutopsyV1 } from "./_shared/gt-autopsy.js";
 import { buildCanonicalPostAnswerTeaching } from "./_shared/post-answer-teaching.js";
 import { buildServerScoredVisualDetectionEvent } from "./_shared/visual-detection.js";
 import { buildSessionSummary } from "./_shared/session-summary.js";
+import { readLearnerNavigation } from "./_shared/learner-navigation.js";
 
 type Json = Record<string, unknown>;
 
@@ -1413,6 +1414,15 @@ Deno.serve(async (req: Request) => {
           };
         })
       });
+    }
+
+    if (req.method === "GET" && ["/activity", "/exam-simulator/history"].includes(path)) {
+      try {
+        return response(req, 200, await readLearnerNavigation({ admin, learnerId, path, search: url.search, internalExamTester, trustedRead }));
+      } catch (error) {
+        const code = error instanceof Error ? error.message : "navigation_read_failed";
+        fail(["query_not_supported", "offset_invalid"].includes(code) ? 400 : 500, code);
+      }
     }
 
     if (req.method === "GET" && path === "/progress") {

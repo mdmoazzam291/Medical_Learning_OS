@@ -22,7 +22,7 @@ test('root is the authenticated beta product, not the local demo', () => {
 });
 
 test('admin navigation is conditional and learner account has no review controls', () => {
-  assert.match(app, /if \(state\.isAdmin\) items\.push\(\['\/web\/admin\.html', 'Admin'\]\)/);
+  assert.match(app, /mlosNavigationAdmin = state\.user && state\.isAdmin === true/);
   assert.match(account, /state\.isAdmin/);
   assert.match(account, /Open Admin Console/);
   assert.doesNotMatch(account, /Open review workspace/);

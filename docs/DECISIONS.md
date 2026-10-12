@@ -1,5 +1,16 @@
 # Decision log
 
+## ADR-104 — Five master destinations share one persistent navigation shell
+**Status:** Accepted — 2026-10-12
+
+The owner approved the PDF-derived navigation and subsequent refinements, then requested implementation in the main application. One top row contains the brand, Home/Study/Library/Exams/Account, global search and light/dark control. The left section panel starts as an icon rail. Nested disclosures open independently; Subject Index belongs inside Subjects & Topics. Keyboard/tap flyouts and validated pinned section shortcuts retain master ownership. Admin is a server-authorized Account child, never a sixth master.
+
+The approved lavender light and dark palettes apply across the actual app. Shell changes preserve the learner workspace DOM and unsaved note forms. Versioned device preferences exclude auth, answers and private note drafts; blocked storage falls back to page memory. Saved filter views and canonical bookmarks are explicitly device collections.
+
+The 19-subject module matrix, shared references and media categories are navigation taxonomy, not a clinical curriculum or proof of content coverage. Library views share canonical filters. Source-bound recall/comparison/prerequisite views use published notes and explicit relationships; no generated answers, inferred prerequisites or scoring events are created. Sequential cases, unsupported audiovisual formats and 3D models depend on reviewed content and their actual delivery contracts. Original scored practice, confidence, revision, private notes, export, exam locks and human publication gates remain server-owned.
+
+Authenticated recent activity and exam history use bounded owner-scoped read projections. History excludes internal engineering runs without their existing authorization, returns no state/response/key maps and offers GT Autopsy only for completed runs. Exact owned run deep links reuse existing server access checks. Personal target dates are device planning preferences, not official exam dates. The static image policy permits only the application's own Supabase host in addition to self, enabling existing signed-media delivery without permitting arbitrary remote images.
+
 ## ADR-001 — Separate product repository (accepted, 2026-09-25)
 Medical_Learning_OS is independent of NEETPG2027. Existing exam preparation is a use case, not a migration instruction.
 
@@ -1463,3 +1474,6 @@ The permanent 4 October reset erased the old rabies/CO/anaphylaxis content, exam
 PR #204 merged as `827b1a02325e31315716da53424f7996c542affa` on 8 October. Main Foundation run 37758541923 passed check/browser jobs; both Cloudflare production builds passed (web 6e080af5-f659-4536-a449-dad972bb3c70; heartbeat f959cf38-217e-4ca2-acee-3f0680c7bd40). The converter, exact-version correction/media proposals and archive-first orchestration are integrated repository code. External ArchivePort/TextStagePort/ReceiptJournal/IndexPort implementations, real archive/staging readback and clinical review/publication remain separate pending operations; no Drive watcher or real material ingestion is implied. [Release](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/204); [CI](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/37758541923).
 
 ADR-099's representation, evidence and review invariants remain active. Its fixed respiratory selection/count is superseded. ADR-098's erasure/non-restoration boundary remains active. ADR-100–102 describe integrated code and retain their external-port, target-readback and clinical-review boundaries. Historical release verification does not establish a clinical intake or outcome.
+
+### 2026-10-12 — filtered session builder
+The approved Study → Build Session uses the shared published Library query rather than a second question inventory. Question count bounds selected exact original versions to 1–50; available inventory may be smaller. View changes retain Study ownership and selection. Existing unfinished-session recovery remains server-authoritative.

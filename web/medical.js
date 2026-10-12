@@ -9,14 +9,14 @@ const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const requestedStudyNowValue = Number(new URLSearchParams(location.search).get('studyNow'));
-let requestedStudyNowMinutes = [10, 20, 30, 60].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;
+let requestedStudyNowMinutes = [5, 10, 15, 20, 30, 60, 120].includes(requestedStudyNowValue) ? requestedStudyNowValue : null;
 const requestedResumeId = new URLSearchParams(location.search).get('resume');
 const requestedSummaryId = new URLSearchParams(location.search).get('summary');
 
 let studyMinutes = 20;
 try {
   const savedMinutes = Number(localStorage.getItem('mlos-study-duration-v1'));
-  if ([10, 20, 30, 60].includes(savedMinutes)) studyMinutes = savedMinutes;
+  if ([5, 10, 15, 20, 30, 60, 120].includes(savedMinutes)) studyMinutes = savedMinutes;
 } catch { /* A preference outage never blocks study. */ }
 
 let state = {
@@ -166,7 +166,7 @@ function overview() {
     : (revision.dueCount ? 'Review due items, repair mistakes and learn new concepts.' : nextDue ? 'Next scheduled review: ' + nextDue + '.' : 'No scheduled review yet.') +
       (revision.unseenCount ? ' ' + revision.unseenCount + ' unseen published question' + (revision.unseenCount === 1 ? ' is' : 's are') + ' available for new learning.' : '');
   const durationPicker = hasWork && !state.loading
-    ? '<fieldset class="duration-picker"><legend>How much uninterrupted time do you have?</legend><div class="duration-options">' + [10, 20, 30, 60].map(minutes => '<button type="button" data-action="duration" data-minutes="' + minutes + '" aria-pressed="' + (studyMinutes === minutes) + '" ' + (state.busy ? 'disabled' : '') + '>' + minutes + ' min</button>').join('') + '</div></fieldset>' : '';
+    ? '<fieldset class="duration-picker"><legend>How much uninterrupted time do you have?</legend><div class="duration-options">' + [5, 10, 15, 20, 30, 60, 120].map(minutes => '<button type="button" data-action="duration" data-minutes="' + minutes + '" aria-pressed="' + (studyMinutes === minutes) + '" ' + (state.busy ? 'disabled' : '') + '>' + minutes + ' min</button>').join('') + '</div></fieldset>' : '';
   const action = state.loading ? '<p role="status">Reading your saved progress and review schedule…</p>'
     : !state.questionsAvailable ? '<button class="primary" type="button" data-action="reload">Reload Study →</button>' : hasWork ? '<button class="primary" type="button" data-action="study-now" data-minutes="' + studyMinutes + '" ' + (state.busy ? 'disabled' : '') + '>Open ' + studyMinutes + ' min session →</button><p class="muted">Continue unfinished work if available; otherwise start a recommended session. Future reviews stay on their schedule.</p>'
       : '<a class="primary action-link" href="#question-browser" data-action="browse-questions">Browse reviewed questions →</a>';
@@ -622,7 +622,7 @@ root.addEventListener('click', event => {
   }
   if (target.dataset.action === 'duration') {
     const minutes = Number(target.dataset.minutes);
-    if (state.busy || ![10, 20, 30, 60].includes(minutes)) return;
+    if (state.busy || ![5, 10, 15, 20, 30, 60, 120].includes(minutes)) return;
     studyMinutes = minutes;
     try { localStorage.setItem('mlos-study-duration-v1', String(minutes)); } catch { /* Optional preference. */ }
     render();
