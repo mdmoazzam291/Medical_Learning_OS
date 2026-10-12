@@ -137,7 +137,7 @@ try {
     await page.goBack();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.goForward();
-    await page.getByRole('heading', { name: 'Questions', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Questions', exact: true, level: 1 }).waitFor();
     await page.goForward();
     await page.getByRole('heading', { name: 'Knowledge Graph', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
