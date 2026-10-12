@@ -41,7 +41,7 @@ shell.addEventListener('click', event => {
     const anchor = event.target.closest('a');
     if (anchor && canonicalPagePath(location.pathname) === '/web/library.html') {
       const target = new URL(anchor.href, location.origin);
-      if (canSwitchLibraryView(location.pathname, location.search, target.pathname, target.search)) {
+      if (document.querySelector('#library-app [data-view]') && canSwitchLibraryView(location.pathname, location.search, target.pathname, target.search)) {
         event.preventDefault(); window.dispatchEvent(new CustomEvent('mlos:library-view', { detail: { view: target.searchParams.get('view') } })); closeFlyout();
       }
     }

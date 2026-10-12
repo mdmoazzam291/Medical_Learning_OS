@@ -6,12 +6,12 @@ import * as nav from '../src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '../web/navigation-view.js';
 import { mutatePreference } from '../web/navigation-preferences.js';
 const source = (await readFile(new URL('../web/navigation.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
-function open() {
+function open({ ready = true } = {}) {
   const shellHandlers = {}, docHandlers = {}, windowHandlers = {}, classes = new Set();
   const input = { value: '', focus() {} }, flyout = { hidden: true };
   const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : input; }, querySelectorAll: () => [] };
   const body = { dataset: {}, prepend() {}, classList: { add() {} } };
-  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), resolvePinnedAccess: async () => false, innerWidth: 620, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
+  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), resolvePinnedAccess: async () => false, innerWidth: 620, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
   return { body, shell, classes, shellHandlers, docHandlers, input, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
 }
@@ -63,4 +63,13 @@ test('the hosted clean Library path intercepts a shared representation menu acti
   const anchor = { href: 'https://example.invalid/web/library.html?view=graph' };
   h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
   assert.equal(prevented, true); assert.equal(selectedView, 'graph');
+});
+
+test('an unavailable Library keeps normal link navigation instead of swallowing a view action', () => {
+  const h = open({ ready: false }); h.location.pathname = '/web/library';
+  let prevented = false, dispatched = false;
+  h.windowHandlers['mlos:library-view'] = () => { dispatched = true; };
+  const anchor = { href: 'https://example.invalid/web/library.html?view=graph' };
+  h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, false); assert.equal(dispatched, false);
 });
