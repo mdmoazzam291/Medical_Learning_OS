@@ -3,6 +3,9 @@
 ## Scope
 Work only in Medical_Learning_OS. Do not access, copy, merge, or modify the separate NEETPG2027 project without explicit user authorization. NEET-PG is an exam adapter in this product.
 
+## Candidate PARSE brand and legal release gate
+The owner selected **PARSE — The Medical Learning OS**. Shared frontend presentation updates are prepared on a feature branch only. Before adopting the brand in production or publishing final logo assets, follow `docs/BRAND.md` and `docs/PARSE_BRAND_CLEARANCE.md`; Indian classes 9/41/42 clearance is unresolved. Preserve approved Sage Precision and Lavender Precision themes, all URLs, OAuth/Auth, database, events, learner data and review authority. A presentation-only implementation request is not authorization to bypass public brand clearance or production release checks.
+
 ## Automatic checkpoints and resume
 The owner authorizes routine checkpoint commits/pushes of this task's non-sensitive engineering work to its feature branch without asking again or requiring a pasted handoff prompt. This does not authorize production publication, clinical ingestion, destructive changes or unrelated files.
 - At task start, read docs/AI_HANDOFF.md and verify remote main, task branch/head and open PRs. Resume recorded work rather than restarting it; honor active ownership.

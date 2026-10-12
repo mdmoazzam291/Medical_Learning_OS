@@ -1,3 +1,4 @@
+import { PRODUCT_BRAND, BRAND_GLYPH } from './brand.js';
 const root = document.querySelector('#account-app');
 
 const featureCards = [
@@ -33,10 +34,10 @@ function signedOutMarkup(googleUrl) {
 
   return `
     <main id="main" class="account-landing-page" data-account-landing-enhanced="true">
-      <header class="account-landing-nav" aria-label="Medical Learning OS">
-        <a class="account-brand" href="/" aria-label="Medical Learning OS home">
-          <span class="mlos-brand-mark" aria-hidden="true">m.</span>
-          <span>Medical Learning OS</span>
+      <header class="account-landing-nav" aria-label="PARSE">
+        <a class="account-brand" href="/" aria-label="PARSE home">
+          <span class="mlos-brand-mark" aria-hidden="true">${BRAND_GLYPH}</span>
+          <span class="account-brand-lockup"><strong>${PRODUCT_BRAND.name}</strong><small>${PRODUCT_BRAND.descriptor}</small></span>
         </a>
         <nav class="account-nav-links" aria-label="Product">
           <a href="/web/medical.html">Study Now</a>
@@ -57,7 +58,7 @@ function signedOutMarkup(googleUrl) {
           <div class="account-hero-copy">
             <p class="account-kicker">PLAN · PRACTICE · REVISE · TRACK · SUCCEED</p>
             <h1 id="account-hero-title">Your intelligent preparation <span>command center.</span></h1>
-            <p class="account-hero-lede">Medical Learning OS combines adaptive Study Now sessions, a high-yield QBank, realistic Exams, intelligent NeuralVault revision and detailed Progress analytics — all in one integrated system.</p>
+            <p class="account-hero-lede">PARSE connects adaptive Study Now sessions, a high-yield QBank, realistic Exams, intelligent NeuralVault revision and detailed Progress analytics — all in one integrated system.</p>
           </div>
 
           <div class="account-journey" aria-hidden="true">
@@ -68,7 +69,7 @@ function signedOutMarkup(googleUrl) {
             <div class="account-flag"></div>
           </div>
 
-          <section class="account-feature-grid" aria-label="What Medical Learning OS gives you">
+          <section class="account-feature-grid" aria-label="What PARSE gives you">
             ${cards}
           </section>
 
@@ -88,7 +89,7 @@ function signedOutMarkup(googleUrl) {
             <div class="account-laptop-preview" aria-hidden="true">
               <div class="laptop-screen">
                 <aside class="preview-sidebar">
-                  <div class="preview-brand">◒ <span>Medical Learning OS</span></div>
+                  <div class="preview-brand">◒ <span>PARSE</span></div>
                   <strong>⌂ Home</strong><span>▣ Study Now</span><span>▥ QBank</span><span>▤ Exams</span><span>✣ NeuralVault</span><span>↗ Progress</span>
                   <div class="preview-spacer"></div><span>□ Notes</span><span>☆ Bookmarks</span><span>⚙ Settings</span>
                 </aside>
@@ -111,7 +112,7 @@ function signedOutMarkup(googleUrl) {
 
         <aside class="account-auth-card" aria-labelledby="signin-title">
           <p class="account-kicker">WELCOME BACK</p>
-          <h2 id="signin-title">Sign in to<br>Medical Learning OS.</h2>
+          <h2 id="signin-title">Sign in to<br>PARSE.</h2>
           <p class="account-auth-intro">Your authenticated identity connects Study Now, QBank, Exams, NeuralVault and Progress across all your sessions and devices.</p>
 
           <a class="account-google oauth-google" href="${googleUrl}"><span class="google-g">G</span> Continue with Google</a>

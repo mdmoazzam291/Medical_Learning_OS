@@ -1,5 +1,12 @@
 # Current status
 
+## 2026-10-13 — PARSE provisional visual rebranding (feature branch, not released)
+
+Owner requested implementation of the previously proposed **PARSE: The Medical Learning OS** brand. On `feat/parse-preview-brand-20261013` from current main `d80fd99d67afe250faad99375d6895233f6c02f7`, the frontend now has a shared candidate PARSE wordmark and node-path SVG, navigation/landing lockups, favicon, entry-page titles/metadata, presentation labels in account/Home/OAuth/Admin, and an explicit public bundle dependency. Sage Precision and Lavender Precision and their light/dark logic are unchanged. No repo/package rename, login change, database migration, medical content, review authority, API or learner events are touched. See ADR-111 and `docs/BRAND.md`.
+
+Automated contract tests were added; new draft [PR #228](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/228) is open and mergeable. GitHub workflow 38321410601 was pending at checkpoint (no jobs reported yet). Full Node/check/Pages/browser CI and actual multi-device screenshots are **not yet verified**. PR and final CI evidence must be inspected before marking implementation validated. **No production publication/merge is authorized** while PARSE trademark clearance remains open. Historical branding PR #203 remains separate. Next: open implementation PR, fix any CI/regression failures, verify all two palettes × two appearances × phone/tablet/desktop/WebKit, and obtain legal clearance before any live rebrand.
+
+
 ## 2026-10-13 — Standing checkpoint/resume policy without repeated prompts
 
 The owner asked to keep checkpointing and handoff updates somewhere persistent, so switching AI tools does not require a pasted prompt each time. AGENTS.md now requires scoped engineering checkpoints at meaningful milestones and planned waits/pauses/compaction/switches/final responses, with explicit staging, WIP/test-state labeling and remote-save verification. CLAUDE.md and new GEMINI.md directly import the handoff and continuity guide as well as AGENTS.md. AI_HANDOFF.md clears the completed PR #226 task and records the new branch. See ADR-110.

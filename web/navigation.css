@@ -106,3 +106,13 @@
 .mlos-app .option:has(input:checked){border-color:var(--accent)}
 .mlos-app .option.correct{border-color:var(--correct)}
 .mlos-app .explanation{border-left-color:var(--correct)}
+
+/* PARSE candidate-brand lockup; existing Sage/Lavender theme tokens stay authoritative. */
+.mlos-brand-lockup{display:flex;flex-direction:column;align-items:flex-start;gap:0;line-height:1.06;min-width:0}
+.mlos-brand-full{display:block;font-size:16px;font-weight:850;letter-spacing:.095em}
+.mlos-brand-subtitle{display:block;color:var(--muted);font-size:9px;letter-spacing:.017em;white-space:nowrap;font-weight:600;margin-top:4px}
+.mlos-brand-mark svg{display:block;width:25px;height:25px;color:var(--accent)}
+@media(max-width:1280px){.mlos-brand-full{font-size:14px}.mlos-brand-subtitle{font-size:8px}}
+@media(max-width:1050px){.mlos-brand-full{display:block}.mlos-brand-subtitle{display:none}}
+@media(max-width:700px){.mlos-brand-full{font-size:11px}.mlos-brand-mark svg{width:21px;height:21px}}
+@media(max-width:440px){.mlos-brand-lockup{display:none}}

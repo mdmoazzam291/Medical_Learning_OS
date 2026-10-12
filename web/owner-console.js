@@ -342,11 +342,11 @@ function dashboardMarkup(data) {
   const learnerAdmin = data?.learnerAdministration || {};
   const temporary = data?.reviewAuthority?.temporary === true;
 
-  return `<section id="owner-console" class="owner-console" aria-label="MLOS owner console">
+  return `<section id="owner-console" class="owner-console" aria-label="PARSE owner console">
     <section id="owner-home" class="panel" data-admin-panel="overview" hidden>${overviewMarkup(data, latestAlerts)}</section>
     <section id="admin-actions" class="panel" data-admin-panel="actions" hidden>${actionInboxMarkup(data, latestAlerts)}</section>
     <section id="owner-overview" class="panel owner-hero" data-admin-panel="snapshot" hidden>
-      <div class="section-heading"><div><span class="eyebrow">SINGLETON MLOS OWNER</span><h2>Platform control tower</h2><p>Operational visibility and controlled owner actions. Authorization is server-side; every learner mutation is audited.</p></div><span class="badge">OWNER ONLY</span></div>
+      <div class="section-heading"><div><span class="eyebrow">PARSE OWNER</span><h2>Platform control tower</h2><p>Operational visibility and controlled owner actions. Authorization is server-side; every learner mutation is audited.</p></div><span class="badge">OWNER ONLY</span></div>
       <div class="owner-metrics">${metric('Learners', number(users.total), `${number(users.new7d)} new · 7d`)}${metric('Active learners', number(learning.activeLearners7d), 'attempt evidence · 7d')}${metric('Beta learners', number(learnerAdmin.activeBetaLearners), 'active access grants')}${metric('Suspended', number(learnerAdmin.suspendedLearners), 'auth bans active')}${metric('Questions', number(content.questions), `catalog v${number(content.catalogVersion)}`)}${metric('Database', bytes(infra.databaseBytes), `${number(infra.publicTableCount)} public tables`)}</div>
       <p class="muted">Snapshot ${escape(dateTime(data?.generatedAt))} · owner ${escape(data?.owner?.email || 'authenticated singleton')} · ${number(learnerAdmin.auditEvents)} learner-admin audit events</p>
     </section>
@@ -403,7 +403,7 @@ function ownerHeading() {
   const heading = app?.querySelector('.workspace main#main > .page-heading');
   if (!heading) return;
   const eyebrow = heading.querySelector('.eyebrow');
-  if (eyebrow) eyebrow.textContent = 'SINGLE MLOS OWNER';
+  if (eyebrow) eyebrow.textContent = 'PARSE OWNER';
 }
 
 function mountDashboard(data) {

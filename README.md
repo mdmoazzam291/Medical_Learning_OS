@@ -1,4 +1,8 @@
-# Medical Learning OS
+# PARSE
+
+**The Medical Learning OS**
+
+**Brand rollout:** Provisional feature-branch presentation only, pending trademark clearance. Existing production identity and technical repository names remain unchanged. See [brand contract](docs/BRAND.md) and [clearance gate](docs/PARSE_BRAND_CLEARANCE.md).
 
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 
