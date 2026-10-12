@@ -8,7 +8,7 @@ Reproduced and repaired duplicated local Admin pins, pending access exposing own
 
 Verification: latest-main baseline passed 1,166 tests; the repaired full suite passes 1,183 tests, repository checks and the 75-file static build. Independent review found stale authorization reuse and overlapping-load revocation races; both have RED→GREEN regressions and current-load generation guards. Final review reports no Important/Critical findings. Browser cases include duplicate controls, direct/delayed fragments, Back state, access outages/retry/revocation and no-write assertions. The isolated host lacks a runnable Chromium installation; responsive Chromium/WebKit execution is pending the existing CI jobs before release.
 
-Browser evidence: PR #222 run 38233186878 passed repository checks and the full iPad WebKit job. The Chromium phone Retry scenario tried to tap underneath the intentionally expanded drawer; the test now closes that drawer through its visible control before Retry. Updated Chromium verification remains pending. Release evidence is tracked in PR #222. See ADR-106 for the owner's superseding navigation choice.
+Browser evidence: PR #222 runs 38233186878 and 38233713861 passed repository checks and the full iPad WebKit job. The Chromium phone Retry scenario required closing its expanded drawer; the second run then exposed actual clean-URL Admin anchors reloading the workspace. A RED→GREEN test and same-page history repair preserve owner drafts across section links and Back; browser coverage now verifies the unsent draft. Updated Chromium verification remains pending. Release evidence is tracked in PR #222. See ADR-106 for the owner's superseding navigation choice.
 
 ## 2026-10-12 — Library navigation during unavailable content
 

@@ -234,15 +234,24 @@ try {
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     const operationsGroup = page.locator('#mlos-local-nav details[data-group="admin:operations"]');
     if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
+    await page.locator('#owner-learner-query').fill('Unsent navigation draft');
     await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
     await page.waitForFunction(() => {
-      const rect = document.getElementById('owner-features').getBoundingClientRect();
-      return location.hash === '#owner-features' && rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
+      const rect = document.getElementById('owner-features')?.getBoundingClientRect();
+      return location.hash === '#owner-features' && rect && rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
     });
+    assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'same-page Admin navigation preserves owner drafts');
     if (width < 700) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current="page"]').getAttribute('href'), '/web/admin.html#owner-features');
+    await page.locator('#owner-users').scrollIntoViewIfNeeded();
+    await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
+    await page.waitForFunction(() => document.getElementById('owner-features').getBoundingClientRect().top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && document.getElementById('owner-features').getBoundingClientRect().top < innerHeight);
     await page.goBack();
     await page.waitForFunction(() => location.hash === '#owner-infrastructure' && document.getElementById('owner-infrastructure').getBoundingClientRect().top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom);
+    assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Back retains the owner workspace');
+    await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
+    await page.waitForFunction(() => location.hash === '' && scrollY < 100);
+    assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview navigation retains owner drafts');
     largeFlags = false;
     if (name === layouts[0][0]) {
       accessStatus = 503; await page.reload();

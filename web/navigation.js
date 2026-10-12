@@ -12,10 +12,15 @@ let accessRead = 0;
 let lastAdminTarget = null, lastAdminHash = '';
 function restoreAdminTarget(event) {
   if (!isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html') { lastAdminTarget = null; lastAdminHash = ''; return; }
+  if (!location.hash && event?.detail?.explicit === true) {
+    const main = document.getElementById('main');
+    if (main?.closest('#admin-app')) main.scrollIntoView({ block: 'start' });
+    lastAdminTarget = null; lastAdminHash = ''; return;
+  }
   const allowed = location.hash && navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + location.hash);
   if (!allowed) { lastAdminTarget = null; lastAdminHash = ''; return; }
   const target = document.getElementById(location.hash.slice(1));
-  if (!target?.closest('#admin-app') || (target === lastAdminTarget && location.hash === lastAdminHash && event?.detail?.layoutChanged !== true)) return;
+  if (!target?.closest('#admin-app') || (target === lastAdminTarget && location.hash === lastAdminHash && event?.detail?.layoutChanged !== true && event?.detail?.explicit !== true)) return;
   target.scrollIntoView({ block: 'start' });
   lastAdminTarget = target; lastAdminHash = location.hash;
 }
@@ -49,6 +54,18 @@ shell.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) {
     const anchor = event.target.closest('a');
+    if (anchor && isAdmin && canonicalPagePath(location.pathname) === '/web/admin.html' && !event.defaultPrevented && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && (event.button === undefined || event.button === 0)) {
+      const target = new URL(anchor.href, location.origin);
+      const registered = !target.hash || navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + target.hash);
+      if (target.origin === location.origin && canonicalPagePath(target.pathname) === '/web/admin.html' && target.search === location.search && registered) {
+        event.preventDefault();
+        if (location.hash !== target.hash) {
+          history.pushState(null, '', location.pathname + location.search + target.hash);
+          window.dispatchEvent(new CustomEvent('mlos:route', { detail: { explicit: true } }));
+        } else restoreAdminTarget({ detail: { explicit: true } });
+        closeFlyout();
+      }
+    }
     if (anchor && canonicalPagePath(location.pathname) === '/web/library.html') {
       const target = new URL(anchor.href, location.origin);
       if (document.querySelector('#library-app [data-view]') && canSwitchLibraryView(location.pathname, location.search, target.pathname, target.search)) {
@@ -103,10 +120,10 @@ shell.addEventListener('submit', event => {
 });
 window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); restoreAdminTarget(); });
 window.addEventListener('mlos:admin-ready', restoreAdminTarget);
-function syncRoute() {
+function syncRoute(event) {
   identity = routeIdentity(location.pathname, location.search, location.hash);
   searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
-  closeFlyout(); render(undefined, false); restoreAdminTarget();
+  closeFlyout(); render(undefined, false); restoreAdminTarget(event);
 }
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });

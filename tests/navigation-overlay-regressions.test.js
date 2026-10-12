@@ -14,7 +14,7 @@ function open({ ready = true } = {}) {
   const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: 620, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
   context.document.getElementById = id => targets[id] || null;
-  return { body, shell, classes, shellHandlers, docHandlers, input, targets, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
+  return { body, shell, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
 }
 test('a narrow expanded panel can be dismissed by tapping outside it', () => {
   const h = open(); const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
@@ -94,4 +94,39 @@ test('Admin scroll restoration ignores arbitrary fragments outside the sidebar c
   h.targets['owner-learner-query'] = { closest: () => ({}), scrollIntoView: () => { scrolls++; } };
   h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
   h.windowHandlers['mlos:admin-ready']?.(); assert.equal(scrolls, 0);
+});
+test('hosted Admin sidebar anchors update history in place without reloading owner drafts', () => {
+  const h = open(); let prevented = false, entries = 0;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.hash = '#owner-users'; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { entries++; const url = new URL(href, h.location.origin); h.location.pathname = url.pathname; h.location.search = url.search; h.location.hash = url.hash; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const anchor = { href: 'https://example.invalid/web/admin.html#owner-features' };
+  h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(entries, 1);
+  assert.equal(h.location.pathname, '/web/admin');
+  assert.equal(h.location.hash, '#owner-features');
+  assert.match(h.shell.innerHTML, /data-flyout="admin:operations" data-active="true"/);
+});
+test('modified Admin links and unknown fragments retain native navigation', () => {
+  const h = open(); h.location.pathname = '/web/admin'; h.location.search = ''; h.location.origin = 'https://example.invalid';
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  for (const [href, ctrlKey] of [['https://example.invalid/web/admin.html#owner-features', true], ['https://example.invalid/web/admin.html#owner-learner-query', false]]) {
+    let prevented = false; const anchor = { href };
+    h.shellHandlers.click({ ctrlKey, target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+    assert.equal(prevented, false);
+  }
+});
+test('explicit Admin clicks restore the current section or Overview after manual scrolling', () => {
+  const h = open(); let sectionScrolls = 0, rootScrolls = 0;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.hash = '#owner-features'; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { h.location.hash = new URL(href, h.location.origin).hash; } };
+  h.targets['owner-features'] = { closest: () => ({}), scrollIntoView: () => { sectionScrolls++; } };
+  h.targets.main = { closest: () => ({}), scrollIntoView: () => { rootScrolls++; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const click = href => h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? { href } : null }, preventDefault() {} });
+  click('https://example.invalid/web/admin.html#owner-features');
+  assert.equal(sectionScrolls, 2);
+  click('https://example.invalid/web/admin.html');
+  assert.equal(rootScrolls, 1);
 });
