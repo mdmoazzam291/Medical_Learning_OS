@@ -1,5 +1,12 @@
 # Current status
 
+## 2026-10-12 — Production clean-URL navigation follow-up
+
+- Live post-release browser verification reproduced Cloudflare's `.html` → clean URL redirect: Study opened `/web/medical` but the shell selected Home. The same mismatch affected all master/section identities, nested active markers and in-place Library shell actions; the generic workspace could select the wrong body as well.
+- One shared canonical page-path normalizer makes extensionless and HTML page routes equivalent, including trailing slash variants, before menu ownership, nested matching and shared-view checks. The existing published `/oauth/consent` rewrite also retains Account ownership. Queries, fragments, Build Session boundaries and permission gates retain their existing validation.
+- The built-bundle navigation verification server now reproduces Cloudflare's real 308 redirects while retaining the static allowlist. Every generated menu destination is tested for clean/HTML identity equivalence; browser flows exercise all 96 nested leaves, clean-URL master actions, retained Library DOM/filter context, history and iPad touch dismissal in Chromium and WebKit.
+- Verification: five focused tests were RED before the repair. Local 1135 tests, repository checks and the 71-file build pass. Independent review and PR/main CI evidence are recorded in the follow-up PR before completion. Public-site verification requires no learner sign-in or content changes.
+
 ## 2026-10-12 — Navigation actions and iPad WebKit audit
 
 - Reproduced and repaired navigation defects: Practice selected Build Session; Research Participation selected Overview; Reference Review ignored its authorized requested gate; switching from standalone workspaces through shell links or view tabs leaked mode filters; nested module/reference/media links lacked active markers; narrow drawers and compact search lacked outside-tap dismissal; and Library representation changes erased browser Back destinations and did not restore URL state.
