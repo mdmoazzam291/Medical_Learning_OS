@@ -1,6 +1,7 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
+import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-audit.js";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -233,6 +234,47 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (req.method === "GET" && path === "/content-integrity") {
+      if (url.search) fail(400, "query_not_supported");
+      // Service-role reads occur only after server-verified singleton Admin + runtime access.
+      // Never return stems, answer keys, learner data, or raw source documents.
+      const cap = 1000;
+      const bounded = async (table: string, columns: string) => {
+        const { data, error, count } = await admin.from(table).select(columns, { count: "exact" }).range(0, cap - 1);
+        if (error) fail(503, "integrity_read_unavailable");
+        if (!Number.isSafeInteger(count) || count < 0 || count > cap || !Array.isArray(data) || data.length !== count) {
+          fail(503, "integrity_snapshot_incomplete");
+        }
+        return data;
+      };
+      const catalogResult = await admin.from("study_catalog").select("version,body,updated_at").eq("id", 1).single();
+      if (catalogResult.error || !catalogResult.data?.body) fail(503, "integrity_catalog_unavailable");
+      const first = catalogResult.data;
+      // Prevent a heavy catalog blob from exhausting an edge worker. No partial "healthy" report.
+      if (JSON.stringify(first.body).length > 8_000_000) fail(503, "integrity_snapshot_too_large");
+      const [notes, links, questionMetadata, conceptMetadata] = await Promise.all([
+        bounded("neural_canonical_note_versions", "id,concept_id,status,source_ids,supersedes_id"),
+        bounded("content_library_note_question_links", "note_version_id,question_id,relation"),
+        bounded("content_library_question_metadata", "question_id,origins,concept_links_version_id"),
+        bounded("content_library_concept_metadata", "concept_id")
+      ]);
+      const confirmation = await admin.from("study_catalog").select("version,updated_at").eq("id", 1).single();
+      if (confirmation.error || !confirmation.data ||
+        confirmation.data.version !== first.version || confirmation.data.updated_at !== first.updated_at) {
+        fail(409, "integrity_catalog_changed_retry");
+      }
+      let audit;
+      try {
+        audit = auditCanonicalCatalog({
+          catalog: first.body, notes, links, questionMetadata, conceptMetadata,
+          catalogVersion: Number(first.version)
+        });
+      } catch {
+        fail(503, "integrity_snapshot_invalid");
+      }
+      return response(req, 200, { ...audit, observedAt: new Date().toISOString() });
     }
 
     if (req.method === "GET" && path === "/learners") {

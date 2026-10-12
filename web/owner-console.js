@@ -151,6 +151,71 @@ function refreshActionInbox() {
   if (panel && lastDashboard) panel.innerHTML = actionInboxMarkup(lastDashboard, latestAlerts);
 }
 
+const INTEGRITY_LABELS = {
+  canonical_answer_conflict: 'Answer conflict in an exact question family',
+  canonical_duplicate_family: 'Distinct canonical IDs contain the same stem and options',
+  multiple_published_versions: 'More than one published version for a canonical question',
+  missing_question_concept: 'Question refers to an absent concept',
+  missing_question_source: 'Question refers to an absent source',
+  missing_note_concept: 'Note refers to an absent concept',
+  missing_note_source: 'Note refers to an absent source',
+  missing_note_link_target: 'Note link refers to an absent note version',
+  missing_question_link_target: 'Note link refers to an absent question',
+  published_note_without_question: 'Published note has no linked canonical question',
+  stale_question_graph_binding: 'Question graph metadata targets an older version',
+  orphan_question_metadata: 'Question metadata has no canonical question',
+  orphan_concept_metadata: 'Concept metadata has no canonical concept',
+  repeated_pyq_occurrence: 'Same exam, year and session declared repeatedly'
+};
+function integrityMarkup(report) {
+  if (report?.contractId !== 'owner-catalog-integrity-v1' || report?.scanComplete !== true ||
+      report?.evidenceScope !== 'structural_only' || report?.clinicalAccuracyVerified !== false ||
+      report?.rightsVerified !== false || !Array.isArray(report?.findings)) {
+    return '<p class="muted">Incomplete or unexpected integrity contract. No audit findings can be trusted.</p>';
+  }
+  const x = report.totals || {};
+  const rows = report.findings.map(f =>
+    '<tr><td>' + escape(String(f.severity || 'unknown')) + '</td><td><strong>' +
+    escape(INTEGRITY_LABELS[f.code] || String(f.code || 'unknown').replaceAll('_', ' ')) +
+    '</strong><small>' + escape(f.code || '') + '</small></td><td>' +
+    escape(f.entityType || '') + '</td><td><code>' + escape(f.entityId || '') +
+    '</code></td><td>' + escape(Array.isArray(f.relatedIds) ? f.relatedIds.join(', ') : '') +
+    '</td></tr>').join('');
+  return '<p class="muted">Catalog v' + escape(report.catalogVersion) + ' · scanned ' +
+    escape(report.observedAt || 'unknown time') + ' · complete structural scan: yes</p>' +
+    '<div class="owner-metrics">' +
+    metric('Questions', number(x.questions)) + metric('Concepts', number(x.concepts)) +
+    metric('Sources', number(x.sources)) + metric('Notes', number(x.notes)) +
+    metric('Graph edges', number(x.noteQuestionLinks)) + metric('Findings', number(report.findingCount)) +
+    '</div>' + (report.emptyCatalog
+      ? '<p>No canonical catalog content exists to assess yet. This is not proof of future-content quality.</p>'
+      : report.findingCount === 0
+        ? '<p>No structural inconsistencies detected within this snapshot. Medical accuracy, rights and contextual equivalence are not assessed.</p>'
+        : '<p><strong>' + number(report.findingCount) +
+          ' structural findings require investigation.</strong> Review exact IDs before considering repairs; nothing is changed automatically.</p>') +
+    (rows ? '<div class="owner-table-wrap"><table class="owner-table"><thead><tr><th>Severity</th><th>Finding</th><th>Entity</th><th>ID</th><th>Related IDs</th></tr></thead><tbody>' +
+      rows + '</tbody></table></div>' : '') +
+    (report.findingsTruncated ? '<p class="muted">Only the first finding samples are shown. Totals include the complete bounded scan.</p>' : '') +
+    '<p class="muted">Snapshot limitation: catalog version is rechecked, but metadata and note tables are read separately, not in one database transaction. A changing catalog should be re-audited. Clinical correctness, source licensing and semantic duplicates still require independent human review.</p>';
+}
+async function runContentIntegrity() {
+  const output = app?.querySelector('#owner-integrity-results');
+  const button = app?.querySelector('[data-owner-integrity-run]');
+  if (!output || !button || button.disabled) return;
+  button.disabled = true;
+  output.innerHTML = '<p class="muted">Scanning catalog, note links and metadata…</p>';
+  try {
+    output.innerHTML = integrityMarkup(await owner.contentIntegrity());
+  } catch (error) {
+    output.innerHTML = '<p class="muted">Audit unavailable: ' +
+      escape(error?.code || error?.message || 'read_failed') +
+      '. No clean-status claim can be made. Retry after checking the owner API deployment.</p>';
+    if (Number(error?.status || 0) >= 500) errorMonitor.capture(error, { component: 'owner-console', operation: 'content_integrity' });
+  } finally {
+    button.disabled = false;
+  }
+}
+
 function dashboardMarkup(data) {
   const users = data?.users || {};
   const learning = data?.learning || {};
@@ -185,6 +250,11 @@ function dashboardMarkup(data) {
       <div class="section-heading"><div><span class="eyebrow">CONTENT SYSTEM</span><h2>Canonical content + review pipeline</h2><p>Concepts, questions, sources, NeuralVault notes and learner reports remain governed independently from learner access.</p></div><a class="primary action-link" href="/web/review.html">Open Content Review →</a></div>
       <div class="owner-metrics">${metric('Concepts', number(content.concepts))}${metric('Sources', number(content.sources))}${metric('Questions', number(content.questions))}${metric('Review evidence', number(content.reviewEvidence))}${metric('Learner reports', number(content.openLearnerReports), 'open')}${metric('Unresolved rights', number(content.unresolvedRights))}</div>
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
+    </section>
+
+    <section id="owner-integrity" class="panel" aria-label="Catalog integrity audit">
+      <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog-wide integrity</h2><p>Scan canonical question versions, PYQ metadata, sources and linked NeuralVault notes. Diagnostic only, never a publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
+      <div id="owner-integrity-results" role="status" aria-live="polite"><p class="muted">No audit has been run in this session.</p></div>
     </section>
 
     <section id="owner-review-authority" class="panel">
@@ -250,6 +320,7 @@ async function showLearner(learnerId) {
 }
 
 app?.addEventListener('click', event => {
+  if (event.target.closest('[data-owner-integrity-run]')) { runContentIntegrity(); return; }
   const button = event.target.closest('[data-owner-learner-id]');
   if (!button) return;
   showLearner(button.dataset.ownerLearnerId);
@@ -318,4 +389,4 @@ if (app) {
   enhance();
 }
 
-export { recoveryEvidenceMarkup, actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
+export { integrityMarkup, recoveryEvidenceMarkup, actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };

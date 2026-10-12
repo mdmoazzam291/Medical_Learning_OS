@@ -61,6 +61,13 @@ try {
         ai: { telemetryAvailable: false }, infrastructure: { database: 'healthy', publicTableCount: 0, cloudflare: { status: 'healthy' } }
       });
       if (path.endsWith('/owner-api/infrastructure-alerts')) return reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
+      if (path.endsWith('/owner-api/content-integrity')) return reply({
+        contractId: 'owner-catalog-integrity-v1', catalogVersion: 407,
+        scanComplete: true, evidenceScope: 'structural_only', clinicalAccuracyVerified: false,
+        rightsVerified: false, crossTableAtomicSnapshot: false, observedAt: '2026-10-12T00:00:00Z',
+        emptyCatalog: true, findingCount: 0, byCode: {}, findings: [], findingsTruncated: false,
+        totals: { questions: 0, concepts: 0, sources: 0, notes: 0, noteQuestionLinks: 0, questionMetadata: 0, conceptMetadata: 0 }
+      });
       if (path.endsWith('/owner-api/feature-flags')) return reply({ flags: [] });
       if (path.includes('/owner-api/')) return reply({});
       if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
@@ -150,9 +157,17 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
     await page.locator('#admin-actions').waitFor();
     assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
+    await page.locator('#owner-integrity').waitFor();
+    await activate(page.locator('[data-owner-integrity-run]'));
+    await page.getByText('No canonical catalog content exists to assess yet.', { exact: false }).waitFor();
+    assert.equal(await page.locator('#owner-integrity-results').getByText('Findings', { exact: true }).count(), 1);
+    // Outside-panel touch intentionally collapses the rail on a phone.
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
-    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
+    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));

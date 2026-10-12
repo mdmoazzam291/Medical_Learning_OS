@@ -45,6 +45,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
 
   return {
     dashboard() { return request('/dashboard'); },
+    contentIntegrity() { return request('/content-integrity'); },
     searchLearners(query) {
       return request('/learners?q=' + encodeURIComponent(String(query || '').trim()));
     },
