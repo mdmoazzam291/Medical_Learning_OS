@@ -4,14 +4,14 @@ Snapshot: 2026-10-12 (Asia/Kolkata). Verify remote evidence before resuming.
 
 ## Current task
 - Objective: portable continuity between ChatGPT/Codex and Claude, including starter prompt and switching rules.
-- Owner: ChatGPT/Codex preparing the documentation PR. Do not concurrently edit this task branch; transfer only after this active run ends.
+- Owner: ChatGPT/Codex for this run; ownership is released when this run ends. Do not concurrently edit this task branch before transfer.
 - Branch: docs/ai-continuity-20261012; base main commit: 415942e7d8b370e6c49c015d80d32acc78d29634.
 - Current head: resolve from git/GitHub; do not use this base SHA as the task branch's final commit. A file cannot contain its own final commit hash without changing it.
-- PR/release: documentation publication pending; verify GitHub before continuing.
+- PR/release: [PR #226](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/226). This snapshot was prepared before merge; the live PR/CI timeline determines current release state.
 - Changes: AGENTS.md, CLAUDE.md, README.md, PROJECT_CONTEXT.md, STATUS.md, DECISIONS.md; AI_CONTINUITY.md, AI_ENVIRONMENT.md, AI_STARTER_PROMPT.md, this handoff and four docs/workflows/ snapshots.
 - Verification: fresh 2026-10-12 local npm test passed 1,200/1,200; npm run check passed syntax/catalog/decision checks; npm run build:pages produced 77 files; git diff --check and portable-document link/import/ADR checks passed. No fresh authenticated hosted or physical-iPad test was performed for this documentation-only change. GitHub CI remains pending publication.
-- Unfinished work: validate documentation/checks, push focused PR and inspect CI/merge state.
-- Next action for this task: finish that PR; do not restart theme or Admin implementation.
+- Unfinished work at this snapshot: GitHub CI and merge verification for PR #226; all 14 initial published blobs matched locally verified files.
+- Next action: inspect PR #226. If open, finish its verified documentation release; if merged, proceed to genuine supplied polished-material intake when that input is available. Do not restart theme or Admin implementation.
 
 ## Latest product state from repository evidence
 - Sage Precision default; Lavender Precision selectable; independent light/dark appearance. STATUS records PR #224 / merge 9891df556aca22e634e42d87cf05fd21e407124d, passing Node/check/build/browser CI and production build evidence. This handoff does not independently verify hosted authenticated switching.
