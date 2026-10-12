@@ -19,7 +19,13 @@ const directory = await mkdtemp(join(tmpdir(), 'mlos-navigation-browser-'));
 await buildPages({ outputDirectory: directory });
 const headers = Object.fromEntries((await readFile(join(directory, '_headers'), 'utf8')).split('\n').filter(l => /^\s+[^:]+:/.test(l)).map(l => { const i = l.indexOf(':'); return [l.slice(0, i).trim(), l.slice(i + 1).trim()]; }));
 const server = createServer(async (req, res) => {
-  const path = new URL(req.url, 'http://localhost').pathname, file = path === '/' ? 'web/index.html' : path.slice(1);
+  const url = new URL(req.url, 'http://localhost'), path = url.pathname;
+  // Cloudflare static assets redirect HTML page links to canonical clean URLs.
+  if (path.endsWith('.html') && publicFileSet.has(path.slice(1))) {
+    res.writeHead(308, { Location: path.slice(0, -5) + url.search }); return res.end();
+  }
+  const cleanFile = path.replace(/\/$/, '').slice(1) + '.html';
+  const file = path === '/' ? 'web/index.html' : publicFileSet.has(path.slice(1)) ? path.slice(1) : publicFileSet.has(cleanFile) ? cleanFile : path.slice(1);
   if (!publicFileSet.has(file)) { res.writeHead(404); return res.end(); }
   try { res.writeHead(200, { ...headers, 'Content-Type': file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : 'text/javascript' }); res.end(await readFile(join(directory, file))); }
   catch { res.writeHead(404); res.end(); }
@@ -69,6 +75,8 @@ try {
     assert.deepEqual(await mainNav.getByRole('link').evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams', 'Account']);
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
     assert.equal(await page.locator('[data-subject]').count(), 19);
+    assert.equal(new URL(page.url()).pathname, '/web/library');
+    assert.equal(await mainNav.getByRole('link', { name: 'Library', exact: true }).getAttribute('aria-current'), 'page');
     const rowPositions = await mainNav.getByRole('link').evaluateAll(links => links.map(l => Math.round(l.getBoundingClientRect().top)));
     assert.equal(new Set(rowPositions).size, 1);
     await page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }).click();
@@ -140,6 +148,13 @@ try {
     await page.getByRole('heading', { name: 'Questions', exact: true, level: 1 }).waitFor();
     await page.goForward();
     await page.getByRole('heading', { name: 'Knowledge Graph', exact: true }).waitFor();
+    await page.locator('#library-app').evaluate(root => { root.dataset.navigationProbe = 'retained'; });
+    await page.locator('#mlos-local-nav a[href="/web/library.html?view=notes"]').click();
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    assert.equal(await page.locator('#library-app').getAttribute('data-navigation-probe'), 'retained', 'clean-URL shell view changes preserve the workspace');
+    assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
+    assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
+
     assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
     await page.goto(origin + '/web/library.html?view=recall');

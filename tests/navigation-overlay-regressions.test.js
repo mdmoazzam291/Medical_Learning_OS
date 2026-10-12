@@ -55,3 +55,12 @@ test('outside touch dismisses compact search on pointerdown without depending on
   h.docHandlers.pointerdown?.({ target: { closest: () => null }, pointerType: 'touch', composedPath: () => [] });
   assert.equal(h.classes.has('mlos-search-open'), false);
 });
+
+test('the hosted clean Library path intercepts a shared representation menu action', () => {
+  const h = open(); h.location.pathname = '/web/library';
+  let prevented = false, selectedView = null;
+  h.windowHandlers['mlos:library-view'] = event => { selectedView = event.detail.view; };
+  const anchor = { href: 'https://example.invalid/web/library.html?view=graph' };
+  h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true); assert.equal(selectedView, 'graph');
+});

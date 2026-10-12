@@ -70,7 +70,12 @@ export function preferenceStore(storageAccess = () => globalThis.localStorage) {
   try { const storage = storageAccess(); memory = validatePreferences(JSON.parse(storage.getItem('mlos-navigation-v1') || 'null')); storage.setItem('mlos-navigation-v1', JSON.stringify(memory)); persistence = 'device'; } catch { /* Page memory remains usable. */ }
   return { get persistence() { return persistence; }, read: () => structuredClone(memory), write(value) { memory = validatePreferences(value); try { storageAccess().setItem('mlos-navigation-v1', JSON.stringify(memory)); persistence = 'device'; } catch { persistence = 'session'; } return this.read(); } };
 }
+export function canonicalPagePath(pathname) {
+  if (pathname === '/oauth/consent') return '/web/oauth-consent.html';
+  return /^\/web\/[a-z][a-z-]*\/?$/.test(pathname) ? pathname.replace(/\/$/, '') + '.html' : pathname;
+}
 export function canSwitchLibraryView(pathname, search, targetPathname, targetSearch) {
+  pathname = canonicalPagePath(pathname); targetPathname = canonicalPagePath(targetPathname);
   const current = new URLSearchParams(search), target = new URLSearchParams(targetSearch);
   return pathname === '/web/library.html' && targetPathname === pathname
     && (current.get('build') === '1') === (target.get('build') === '1')
@@ -85,13 +90,15 @@ export function reviewEntryKind(search, grants) {
 export function navigationHrefMatches(href, currentHref) {
   if (!currentHref) return false;
   const target = new URL(href, 'https://navigation.invalid'), current = new URL(currentHref, 'https://navigation.invalid');
-  if (target.pathname !== current.pathname || target.hash !== current.hash) return false;
-  const keys = target.pathname.endsWith('/library.html')
+  const targetPath = canonicalPagePath(target.pathname);
+  if (targetPath !== canonicalPagePath(current.pathname) || target.hash !== current.hash) return false;
+  const keys = targetPath.endsWith('/library.html')
     ? ['view', 'build', ...(target.searchParams.get('view') === 'subjects' ? ['subject', 'module'] : target.searchParams.get('view') === 'media' ? ['category'] : target.searchParams.get('view') === 'references' ? ['reference'] : [])]
     : ['master', 'section', 'workspace'];
   return keys.every(key => (target.searchParams.get(key) || '') === (current.searchParams.get(key) || ''));
 }
 export function routeIdentity(pathname, search = '', hash = '') {
+  pathname = canonicalPagePath(pathname);
   const p = new URLSearchParams(search);
   if (pathname.endsWith('/workspace.html')) { const master = MASTERS.some(x => x.id === p.get('master')) ? p.get('master') : 'home'; const section = (SECTIONS[master] || []).some(x => x.id === p.get('section')) ? p.get('section') : SECTIONS[master][0].id; return { master, section }; }
   if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'notes'; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'notes' }; }
