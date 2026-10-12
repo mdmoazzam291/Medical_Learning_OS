@@ -43,9 +43,16 @@ try {
   for (const [name, width, height] of layouts) {
     const touch = engine === 'webkit' || width < 1050;
     const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: engine === 'webkit', deviceScaleFactor: engine === 'webkit' ? 2 : 1 });
-    const activate = locator => touch ? locator.tap() : locator.click();
+    const activate = async locator => {
+      await page.waitForLoadState('networkidle');
+      return touch ? locator.tap() : locator.click();
+    };
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
-    const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
+    const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
+    // Wait for background access reads before abandoning a document. WebKit
+    // reports canceled cross-origin fixture reads as access-control errors.
+    const go = async url => { await page.waitForLoadState('networkidle'); await page.goto(url); };
+    const reload = async () => { await page.waitForLoadState('networkidle'); await page.reload(); };
     const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false, projectionDelayed = false, dashboardUnavailable = false, dashboardReads = 0;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
@@ -104,7 +111,7 @@ try {
       if (path.endsWith('/study-api/exam-dna')) return reply({ concepts: [] });
       throw new Error('Unexpected navigation request ' + req.method() + ' ' + path);
     });
-    await page.goto(origin + '/web/library.html?view=subjects');
+    await go(origin + '/web/library.html?view=subjects');
     const settleAdmin = () => page.waitForFunction(() => {
       const research = document.querySelector('[data-admin-panel="research"]'), features = document.getElementById('owner-features-state'), alerts = document.getElementById('owner-alerts-state');
       return research && !research.textContent.includes('Loading admin evidence') && features && !features.textContent.includes('Loading feature gates') && alerts && !alerts.textContent.includes('Loading infrastructure alerts');
@@ -143,7 +150,7 @@ try {
     await page.keyboard.press('Escape');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
-    await page.reload(); await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
+    await reload(); await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'expanded');
     await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
@@ -179,17 +186,17 @@ try {
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
-    await page.goto(origin + '/web/admin.html#admin-actions');
+    await go(origin + '/web/admin.html#admin-actions');
     await page.locator('#admin-actions').waitFor();
     assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
     await settleAdmin();
-    await page.goto(origin + '/web/admin.html#owner-integrity');
+    await go(origin + '/web/admin.html#owner-integrity');
     await page.locator('#owner-integrity').waitFor();
     await activate(page.locator('[data-owner-integrity-run]'));
     await page.getByText('No canonical catalog content exists to assess yet.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-integrity-results').getByText('Findings', { exact: true }).count(), 1);
     await settleAdmin();
-    await page.goto(origin + '/web/admin.html#owner-source-watch');
+    await go(origin + '/web/admin.html#owner-source-watch');
     await page.locator('#owner-source-watch').waitFor();
     await activate(page.locator('[data-owner-source-watch-run]'));
     await page.getByText('No canonical sources are present.', { exact: false }).waitFor();
@@ -200,20 +207,20 @@ try {
       // Both Admin links remain real destinations when either provider call
       // fails; never show "zero alerts" in place of a failed read.
       flagsUnavailable = true;
-      await page.goto(origin + '/web/admin.html#owner-features');
+      await go(origin + '/web/admin.html#owner-features');
       await page.getByRole('heading', { name: 'Feature Gates', exact: true }).waitFor();
       await page.locator('#owner-features-state').getByText('Feature gates unavailable.', { exact: false }).waitFor();
       assert.equal(await page.locator('#owner-features').count(), 1);
       assert.match(await page.locator('#owner-infrastructure-alerts').innerText(), /Synthetic edge/);
       assert.equal(await page.locator('#owner-features [data-owner-v3-feature-form]').count(), 0, 'no feature mutation form on failed feature read');
       flagsUnavailable = false; alertsUnavailable = true;
-      await page.goto(origin + '/web/admin.html#owner-infrastructure-alerts');
+      await go(origin + '/web/admin.html#owner-infrastructure-alerts');
       await page.locator('#owner-alerts-state').getByText('Infrastructure alerts unavailable.', { exact: false }).waitFor();
       assert.equal(await page.locator('#owner-infrastructure-alerts').count(), 1);
       assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
       assert.doesNotMatch(await page.locator('#owner-alerts-state').innerText(), /No open infrastructure alerts/);
       alertsUnavailable = false;
-      await page.goto(origin + '/web/admin.html#owner-infrastructure-alerts');
+      await go(origin + '/web/admin.html#owner-infrastructure-alerts');
       await page.locator('#owner-infrastructure-alerts').getByText('Synthetic edge', { exact: true }).waitFor();
       assert.match(await page.locator('#owner-features').innerText(), /No feature gates are registered/);
     }
@@ -243,7 +250,7 @@ try {
     await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
 
     largeFlags = true;
-    await page.goto(origin + '/web/admin.html#owner-infrastructure');
+    await go(origin + '/web/admin.html#owner-infrastructure');
     await page.locator('[data-owner-v3-feature-form]').waitFor({ state: 'attached' });
     await page.waitForFunction(() => {
       const rect = document.getElementById('owner-infrastructure').getBoundingClientRect();
@@ -254,7 +261,7 @@ try {
     const operationsGroup = page.locator('#mlos-local-nav details[data-group="admin:operations"]');
     if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
     projectionDelayed = true;
-    await page.goto(origin + '/web/admin.html#owner-users');
+    await go(origin + '/web/admin.html#owner-users');
     await page.locator('#owner-learner-query').fill('Unsent navigation draft');
     await page.waitForFunction(() => document.querySelector('[data-admin-panel="research"]')?.textContent.includes('No published alternate pairs'));
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'background research projection preserves a loaded owner draft');
@@ -283,24 +290,24 @@ try {
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['content']);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview shortcuts retain mounted tool drafts');
     for (const view of ADMIN_VIEWS) {
-      await page.goto(origin + '/web/admin.html' + (view.id === 'overview' ? '' : '#' + view.anchor));
+      await go(origin + '/web/admin.html' + (view.id === 'overview' ? '' : '#' + view.anchor));
       await page.locator('[data-admin-panel="' + view.id + '"]').waitFor();
       assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), [view.id], view.label);
       await page.getByRole('heading', { name: view.label, exact: true }).waitFor();
       await settleAdmin();
     }
-    await page.goto(origin + '/web/admin.html');
+    await go(origin + '/web/admin.html');
     await settleAdmin();
     largeFlags = false;
     if (name === layouts[0][0]) {
-      accessStatus = 503; await page.reload();
+      accessStatus = 503; await reload();
       await page.getByRole('heading', { name: 'Admin access unavailable', exact: true }).waitFor();
       assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
       accessStatus = 200; projectionUnavailable = true;
       if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
       await activate(page.locator('[data-action="reload"]'));
       await settleAdmin();
-      await page.goto(origin + '/web/admin.html#research-gate');
+      await go(origin + '/web/admin.html#research-gate');
       await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
       await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
       projectionUnavailable = false; await activate(page.locator('[data-action="reload"]'));
@@ -308,14 +315,14 @@ try {
       await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor({ state: 'attached' });
       assert.equal(await page.locator('#owner-features').count(), 1);
       await settleAdmin();
-      accessStatus = 403; await page.reload();
+      accessStatus = 403; await reload();
       await page.getByRole('heading', { name: 'Admin access only.', exact: true }).waitFor();
       assert.equal(await page.locator('#owner-console').count(), 0);
       assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
       accessStatus = 200;
       dashboardUnavailable = true;
       const beforeOutage = dashboardReads;
-      await page.goto(origin + '/web/admin.html#owner-users');
+      await go(origin + '/web/admin.html#owner-users');
       await page.getByRole('heading', { name: 'Owner data unavailable', exact: true }).waitFor();
       assert.equal(dashboardReads, beforeOutage + 1, 'failed dashboard waits for an explicit Retry');
       if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
@@ -325,7 +332,7 @@ try {
       await settleAdmin();
       assert.equal(dashboardReads, beforeOutage + 2, 'explicit Retry performs one owner read');
     }
-    await page.goto(origin + '/web/admin.html');
+    await go(origin + '/web/admin.html');
     await page.locator('#owner-console').waitFor();
     await settleAdmin();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
@@ -357,10 +364,10 @@ try {
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
     await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
-    admin = false; await page.reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
+    admin = false; await reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     await page.waitForFunction(() => document.querySelector('#mlos-navigation') && !document.querySelector('[data-master="admin"]'));
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
-    await page.goto(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
+    await go(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
     await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).waitFor();
     await page.getByRole('tab', { name: 'Questions', exact: true }).click();
     await page.getByRole('tab', { name: 'Graph', exact: true }).click();
@@ -382,18 +389,18 @@ try {
 
     assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
-    await page.goto(origin + '/web/library.html?view=recall');
+    await go(origin + '/web/library.html?view=recall');
     await page.getByLabel('Your recall', { exact: true }).fill('Unsaved self-review');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Unsaved self-review');
     await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
-    await page.goto(origin + '/web/workspace.html?master=home&section=recent');
+    await go(origin + '/web/workspace.html?master=home&section=recent');
     await page.getByText('Concise practice', { exact: true }).waitFor();
-    await page.goto(origin + '/web/workspace.html?master=exams&section=autopsy');
+    await go(origin + '/web/workspace.html?master=exams&section=autopsy');
     await page.getByRole('link', { name: 'Open GT Autopsy', exact: true }).waitFor();
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
-    await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
+    await go(origin + '/web/workspace.html?master=account&section=preferences');
     await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#mlos-local-nav [data-pin="account:data"]').click();
@@ -401,17 +408,17 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'expanded');
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'My Data', exact: true }).count(), 1);
-    await page.reload(); await page.getByLabel('Appearance', { exact: true }).waitFor();
+    await reload(); await page.getByLabel('Appearance', { exact: true }).waitFor();
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(writes.length, 0, 'navigation and self-review must not create learning or publication writes');
-    await page.goto(origin + '/web/library.html?view=media&category=radiology');
+    await go(origin + '/web/library.html?view=media&category=radiology');
     await page.getByRole('heading', { name: 'Media Library', exact: true }).waitFor();
     await page.locator('#mlos-local-nav a[href="/web/library.html?view=notes"]').click();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('category'), null);
     assert.equal(await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).count(), 1);
-    await page.goto(origin + '/web/library.html?view=references&reference=labs-diagnostics&subject=medicine&count=5');
+    await go(origin + '/web/library.html?view=references&reference=labs-diagnostics&subject=medicine&count=5');
     await page.getByRole('heading', { name: 'Reference Tools', exact: true }).waitFor();
     await activate(page.getByRole('tab', { name: 'Notes', exact: true }));
     assert.equal(new URL(page.url()).searchParams.get('reference'), null);
@@ -438,7 +445,7 @@ try {
       const leaves = destinations.filter(row => !row.children.length && /[?&](module|reference|category)=/.test(row.href));
       assert.equal(leaves.length, 96);
       for (const row of leaves) {
-        await page.goto(origin + row.href);
+        await go(origin + row.href);
         const title = new URL(row.href, origin).searchParams.get('view');
         await page.getByRole('heading', { name: { subjects: 'Subjects & Topics', references: 'Reference Tools', media: 'Media Library' }[title], exact: true }).waitFor();
         assert.equal(await page.locator('#mlos-local-nav a[aria-current]').filter({ hasText: row.label }).count() >= 1, true, row.href);
@@ -447,7 +454,7 @@ try {
         await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, row.href);
       }
-      await page.goto(origin + '/web/library.html?view=subjects');
+      await go(origin + '/web/library.html?view=subjects');
       await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
       if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
       await activate(page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }));
@@ -461,7 +468,7 @@ try {
       assert.equal(new URL(page.url()).searchParams.get('module'), 'gross-regional-anatomy');
     }
     libraryUnavailable = true;
-    await page.goto(origin + '/web/library.html?view=notes');
+    await go(origin + '/web/library.html?view=notes');
     await page.getByRole('button', { name: 'Retry library', exact: true }).waitFor();
     await page.locator('#mlos-local-nav a[href="/web/library.html?view=graph"]').click();
     await page.waitForURL('**/web/library?view=graph');
@@ -475,7 +482,7 @@ try {
       notes: [...library.notes, { noteVersionId: 'fixture-n2@1', conceptId: 'fixture-c2', title: 'Second synthetic note', bodyMarkdown: 'Second isolated source body.' }],
       questions: [{ ...question, intelligence: { ...question.intelligence, presentation: ['image'] } }, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@1', classification: otherClassification, conceptLinks: [{ conceptId: 'fixture-c2', role: 'primary' }], intelligence: { ...question.intelligence, presentation: ['image'] } }]
     };
-    await page.goto(origin + '/web/library.html?view=recall');
+    await go(origin + '/web/library.html?view=recall');
     if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to first source');
     await page.getByRole('button', { name: 'Next card', exact: true }).click();
@@ -488,23 +495,23 @@ try {
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to second source');
     assert.equal(await page.getByRole('button', { name: 'Reveal source note', exact: true }).isVisible(), true);
     assert.equal(await page.getByText('Second isolated source body.', { exact: true }).count(), 0);
-    await page.goto(origin + '/web/library.html?view=images&system=respiratory');
+    await go(origin + '/web/library.html?view=images&system=respiratory');
     await page.getByRole('button', { name: 'Open original media', exact: true }).click();
     await page.getByRole('heading', { name: 'Original media', exact: true }).waitFor();
     await page.getByLabel('System', { exact: true }).selectOption('cardiovascular');
     assert.equal(await page.getByRole('heading', { name: 'Original media', exact: true }).count(), 0);
     await page.evaluate(() => localStorage.setItem('mlos-library-device-v1', JSON.stringify({ version: 1, bookmarks: [], views: Array.from({ length: 30 }, (_, i) => ({ id: 'limit-' + i, name: 'Saved fixture ' + i, view: 'notes', filters: {} })) })));
-    await page.goto(origin + '/web/library.html?view=notes');
+    await go(origin + '/web/library.html?view=notes');
     page.once('dialog', dialog => dialog.accept('Overflow fixture'));
     await page.getByRole('button', { name: 'Save current view', exact: true }).click();
     await page.getByText('You have 30 saved views. Delete one before saving another.', { exact: true }).waitFor();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-library-device-v1')).views.length), 30);
     selectionLibrary = { ...library, questions: [question, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@3' }, { ...question, questionId: 'fixture-q3', questionVersionId: 'fixture-q3@2' }] };
-    await page.goto(origin + '/web/library.html?view=questions&master=study&build=1');
+    await go(origin + '/web/library.html?view=questions&master=study&build=1');
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#mlos-local-nav [data-pin="study:build"]').click();
-    await page.goto(origin + '/web/library.html?view=notes');
+    await go(origin + '/web/library.html?view=notes');
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
     assert.equal(await page.locator('[data-filter="keyword"] option[value="diagnosis"]').count(), 0);
@@ -519,7 +526,7 @@ try {
     await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Build Session', exact: true }).click();
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     await page.getByLabel('Question count', { exact: true }).selectOption('1');
-    await page.reload(); await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    await reload(); await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
     await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
     await page.getByLabel('System', { exact: true }).selectOption('respiratory');
@@ -536,7 +543,7 @@ try {
     assert.deepEqual(selectedIds, ['fixture-q@1']);
     assert.deepEqual(writes, ['/functions/v1/content-library-api/study'], 'only explicit practice starts a session');
     if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-preferences-' + name + '.png'), fullPage: true });
-    await context.close();
+    await page.waitForLoadState('networkidle'); await context.close();
   }
   assert.deepEqual(errors, []);
   console.log('Navigation actions, 96 nested leaves, touch dismissal, history, pins and persistence passed in ' + engine + '.');
