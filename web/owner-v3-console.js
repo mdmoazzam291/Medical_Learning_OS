@@ -61,7 +61,8 @@ function alertsMarkup(payload) {
 // These are independent Admin destinations. A problem with one owner API
 // must not hide the other destination or turn unknown status into "No alerts".
 async function mount() {
-  if (!app?.querySelector('#owner-console')) return;
+  const container = app?.querySelector('#owner-console');
+  if (!container) return;
   const ai = app.querySelector('#owner-ai');
   const infra = app.querySelector('#owner-infrastructure');
   if (!ai || !infra || app.querySelector('#owner-features') ||
@@ -82,14 +83,13 @@ async function mount() {
   infra.append(alertBlock);
 
   // Hash routes must exist even during an outage.
-  if (location.hash === '#owner-features' || location.hash === '#owner-infrastructure-alerts') {
-    requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' }));
-  }
+  window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
 
   const [features, alerts] = await Promise.allSettled([
     request('/feature-flags'),
     request('/infrastructure-alerts')
   ]);
+  if (app.querySelector('#owner-console') !== container) return;
 
   if (features.status === 'fulfilled' && Array.isArray(features.value?.flags)) {
     featureSection.querySelector('#owner-features-state').innerHTML = flagsMarkup(features.value);
@@ -115,6 +115,7 @@ async function mount() {
   window.dispatchEvent(new CustomEvent('mlos:owner-alerts', {
     detail: { alerts: alerts.status === 'fulfilled' && Array.isArray(alerts.value?.alerts) ? alerts.value.alerts : null }
   }));
+  window.dispatchEvent(new CustomEvent('mlos:admin-ready', { detail: { layoutChanged: true } }));
 }
 
 app?.addEventListener('submit', event => {

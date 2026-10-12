@@ -16,7 +16,7 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Current implementation
 
-The approved five-master navigation is implemented on the current feature branch: one top header, collapsible left section rail, independent nested indexes, persistent pins and light/dark appearance. The [implementation plan](docs/superpowers/plans/2026-10-12-complete-navigation.md) maps all 19 subjects and published-content workspaces; [status](docs/STATUS.md) records responsive release verification and remaining content dependencies.
+The shared navigation uses one top header, collapsible left section rail, independent nested indexes, persistent pins and light/dark appearance. Home, Study, Library, Exams and Account remain learner masters; the owner's latest choice adds a server-authorized Admin master after Account with grouped tools in the left sidebar. [ADR-106](docs/DECISIONS.md) records this superseding choice; [status](docs/STATUS.md) records release verification and remaining content dependencies.
 
 The next post-reset input is the owner's **final polished PYQs**, with no fixed batch count or respiratory-only scope. Follow the [current PYQ intake plan](docs/FIRST_REPLACEMENT_BATCH.md), preserve supplied originals/polishing lineage and use the existing accountable admin review. The former fixed respiratory batch is cancelled; the erased pilots remain excluded from reimport.
 

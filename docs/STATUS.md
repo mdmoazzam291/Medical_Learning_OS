@@ -1,5 +1,15 @@
 # Current status
 
+## 2026-10-12 — Latest master-Admin navigation audit
+
+The owner confirmed the latest top-level Admin master and grouped left sidebar. Work starts from main `f1b0340` (PRs #212–220), preserving all newer content-quality and operations destinations. The older Account-child draft PR #221 is superseded and must not be merged.
+
+Reproduced and repaired duplicated local Admin pins, pending access exposing owner controls, initial access outages misclassified as learner denial, projection outages losing verified Admin navigation, stale authority after 401/403 and the unavailable Research Gate losing its anchor. Fragment navigation now restores catalogue destinations when async sections mount and resize, with fixed-header clearance. Stale owner-operation responses no longer overwrite the current Action Inbox. Independent Feature Gates/alerts failure handling remains intact; no user-access, clinical, research or backend writes were performed.
+
+Verification: latest-main baseline passed 1,166 tests; the repaired full suite passes 1,183 tests, repository checks and the 75-file static build. Independent review found stale authorization reuse and overlapping-load revocation races; both have RED→GREEN regressions and current-load generation guards. Final review reports no Important/Critical findings. Browser cases include duplicate controls, direct/delayed fragments, Back state, access outages/retry/revocation and no-write assertions. The isolated host lacks a runnable Chromium installation; responsive Chromium/WebKit execution is pending the existing CI jobs before release.
+
+Next: complete review/browser release evidence, then verify the released header and authorization boundary. See ADR-106 for the owner's superseding navigation choice.
+
 ## 2026-10-12 — Library navigation during unavailable content
 
 - Live signed-out verification reproduced a silent Graph menu action from Notes: the shell canceled normal navigation while the unloaded Library ignored its view-change event. The same defect affected loading and failed content requests.

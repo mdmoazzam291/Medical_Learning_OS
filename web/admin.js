@@ -9,6 +9,7 @@ const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp
 const auth = createSupabaseAuth({ ...cloudConfig });
 const review = createCloudReview({ ...cloudConfig, auth });
 
+let adminLoad = 0;
 let state = {
   user: auth.currentUser(),
   isAdmin: false,
@@ -92,7 +93,7 @@ function gateStatus(label, ok) {
 function researchGatePanel() {
   const gate = state.researchGate;
   if (!gate) {
-    return '<section class="panel"><span class="eyebrow">RESEARCH GATE</span><h2>Readiness unavailable.</h2><p class="muted">No activation control is exposed when canonical readiness cannot be loaded.</p></section>';
+    return '<section class="panel" id="research-gate"><span class="eyebrow">RESEARCH GATE</span><h2>Readiness unavailable.</h2><p class="muted">No activation control is exposed when canonical readiness cannot be loaded.</p></section>';
   }
 
   const readiness = gate.activationReadiness?.readiness || {};
@@ -196,28 +197,35 @@ function render() {
   globalThis.mlosNavigationAdmin = Boolean(state.user && state.isAdmin === true);
   globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } }));
   if (!state.user) root.innerHTML = signedOut();
-  else if (!state.loading && !state.isAdmin) root.innerHTML = restricted();
+  else if (!state.isAdmin) root.innerHTML = state.loading ? '<main id="main" class="account-page"><h1>Verifying Admin access…</h1><p>Owner controls remain unavailable until the server confirms access.</p></main>' : state.accessUnavailable ? '<main id="main" class="account-page"><h1>Admin access unavailable</h1><p>Server access verification could not be completed. Owner controls remain unavailable.</p><button class="secondary" data-action="reload">Retry</button></main>' : restricted();
   else root.innerHTML = adminHome();
+  globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
 }
 
 async function loadAdmin() {
+  const loading = ++adminLoad;
   if (!state.user) { render(); return; }
-  state = { ...state, loading: true, error: null };
+  state = { ...state, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null, loading: true, error: null, accessUnavailable: false };
   render();
   try {
     const session = await auth.getSession();
+    if (loading !== adminLoad) return;
     if (!session?.user) {
       state = { ...state, user: null, loading: false, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null };
       render();
       return;
     }
     const me = await review.me();
+    if (loading !== adminLoad) return;
     if (me?.isAdmin !== true) {
       state = { ...state, user: auth.currentUser() || session.user, loading: false, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null };
       render();
       return;
     }
+    state = { ...state, isAdmin: true, reviewKinds: Array.isArray(me.reviewKinds) ? me.reviewKinds : [] };
+    render();
     const result = await review.transferPairs();
+    if (loading !== adminLoad) return;
     state = {
       ...state,
       user: auth.currentUser() || session.user,
@@ -229,8 +237,14 @@ async function loadAdmin() {
       error: null
     };
   } catch (error) {
+    if (loading !== adminLoad) return;
     reportUnexpected(error, 'load_admin');
-    state = { ...state, loading: false, error: error.code || error.message || 'admin_console_unavailable' };
+    state = {
+      ...state, loading: false, error: error.code || error.message || 'admin_console_unavailable',
+      accessUnavailable: !state.isAdmin && ![401, 403].includes(Number(error?.status)),
+      ...([401, 403].includes(Number(error?.status)) ? { isAdmin: false, reviewKinds: [], pairs: [], researchGate: null } : {}),
+      ...(Number(error?.status) === 401 ? { user: null } : {})
+    };
   }
   render();
 }

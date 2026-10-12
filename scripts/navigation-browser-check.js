@@ -45,13 +45,13 @@ try {
     const activate = locator => touch ? locator.tap() : locator.click();
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
-    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false;
+    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
       if (req.method() !== 'GET') writes.push(path);
       if (path.endsWith('/auth/v1/user')) return reply(user);
-      if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
+      if (path.endsWith('/review-api/me')) return accessStatus === 200 ? reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] }) : reply({ error: 'synthetic_access_failure' }, accessStatus);
       // Owner dashboard APIs are independent of the navigation integration under test.
       if (path.endsWith('/owner-api/dashboard')) return reply({
         contractId: 'owner-admin-dashboard-v1', owner: { singleton: true, email: 'fixture@example.invalid' },
@@ -74,9 +74,12 @@ try {
         unmatchedHistoricalSightings: 0, sources: [], scope: 'owner_submitted_evidence_only',
         automatedWebChecks: false, medicalUpdateVerified: false, clinicalApprovalGranted: false
       });
-      if (path.endsWith('/owner-api/feature-flags')) return flagsUnavailable ? reply({ error: 'synthetic_flags_outage' }, 503) : reply({ flags: [] });
+      if (path.endsWith('/owner-api/feature-flags')) {
+        if (largeFlags) await new Promise(resolve => setTimeout(resolve, 300));
+        return flagsUnavailable ? reply({ error: 'synthetic_flags_outage' }, 503) : reply({ flags: largeFlags ? [{ featureKey: 'synthetic_navigation_gate', audience: 'off', description: 'Navigation fixture only; never submitted.' }] : [] });
+      }
       if (path.includes('/owner-api/')) return reply({});
-      if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
+      if (path.endsWith('/review-api/transfer-pairs')) return projectionUnavailable ? reply({ error: 'synthetic_projection_failure' }, 503) : reply({ pairs: [] });
       // The review shell may read distinct gate queues; navigation checks never approve content.
       if (path.includes('/review-api/')) return reply({ items: [], questions: [], notes: [], queue: [], sources: [], reviews: [], pending: [], reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
@@ -157,6 +160,8 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
     await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
+    assert.equal(await page.locator('aside').count(), 1, 'only one shared Admin sidebar');
+    assert.equal(await page.locator('header').count(), 1, 'only one shared Admin header');
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
@@ -206,7 +211,8 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').count(), 1);
     assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 1);
     await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
-    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 1, 'Admin group pin is usable');
+    assert.equal(await page.locator('[data-group="admin:content"]').count(), 1, 'a pinned group never duplicates the local Admin group');
+    assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').getAttribute('aria-pressed'), 'true');
     await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
     assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
     await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
@@ -217,6 +223,49 @@ try {
     await activate(adminFlyout.getByRole('button', { name: 'Close submenu' }));
     await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
 
+    largeFlags = true;
+    await page.goto(origin + '/web/admin.html#owner-infrastructure');
+    await page.locator('[data-owner-v3-feature-form]').waitFor();
+    await page.waitForFunction(() => {
+      const rect = document.getElementById('owner-infrastructure').getBoundingClientRect();
+      return rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
+    });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Admin fits the viewport');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    const operationsGroup = page.locator('#mlos-local-nav details[data-group="admin:operations"]');
+    if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
+    await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
+    await page.waitForFunction(() => {
+      const rect = document.getElementById('owner-features').getBoundingClientRect();
+      return location.hash === '#owner-features' && rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
+    });
+    if (width < 700) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current="page"]').getAttribute('href'), '/web/admin.html#owner-features');
+    await page.goBack();
+    await page.waitForFunction(() => location.hash === '#owner-infrastructure' && document.getElementById('owner-infrastructure').getBoundingClientRect().top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom);
+    largeFlags = false;
+    if (name === layouts[0][0]) {
+      accessStatus = 503; await page.reload();
+      await page.getByRole('heading', { name: 'Admin access unavailable', exact: true }).waitFor();
+      assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
+      accessStatus = 200; projectionUnavailable = true;
+      await activate(page.locator('[data-action="reload"]'));
+      await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
+      await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
+      projectionUnavailable = false; await activate(page.locator('[data-action="reload"]'));
+      await page.locator('#owner-console').waitFor();
+      await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor();
+      assert.equal(await page.locator('#owner-features').count(), 1);
+      accessStatus = 403; await page.reload();
+      await page.getByRole('heading', { name: 'Admin access only.', exact: true }).waitFor();
+      assert.equal(await page.locator('#owner-console').count(), 0);
+      assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
+      accessStatus = 200;
+    }
+    await page.goto(origin + '/web/admin.html');
+    await page.locator('#owner-console').waitFor();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    assert.deepEqual(writes, [], 'Admin sidebar actions never change user access or content');
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/admin.html#owner-source-watch', 'Source Change Watch'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }

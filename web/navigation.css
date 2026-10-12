@@ -7,6 +7,7 @@
 .mlos-app .home-shell{display:block}.mlos-app .home-shell>.sidebar,.mlos-app .home-shell>.workspace>header{display:none}
 /* Admin uses the shared master/sidebar instead of stacking a second legacy admin sidebar. */
 .mlos-app #admin-app .shell{display:block;min-height:auto}.mlos-app #admin-app .shell>.workspace{min-width:0}
+.mlos-app #admin-app [id]{scroll-margin-top:90px}
 .mlos-app .library-page>nav{display:none}
 .mlos-app .primary{color:var(--bg)}.mlos-app .hero{background:var(--hero)}
 .mlos-app .hero p,.mlos-app .hero small,.mlos-app .hero .eyebrow{color:var(--ink)}

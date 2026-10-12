@@ -409,8 +409,7 @@ function mountDashboard(data) {
   if (!heading) return;
   const wrapper = document.createElement('div'); wrapper.innerHTML = dashboardMarkup(data); heading.insertAdjacentElement('afterend', wrapper.firstElementChild);
   ownerHeading();
-  const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
-  if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+  window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
 }
 
 async function enhance() {
