@@ -82,6 +82,8 @@ test('Admin sidebar uses five nested groups and preserves genuine destinations',
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-users'), { master: 'admin', section: 'learners' });
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-infrastructure-alerts'), { master: 'admin', section: 'operations' });
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-integrity'), { master: 'admin', section: 'content' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-source-watch'), { master: 'admin', section: 'content' });
+
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-learning'), { master: 'admin', section: 'research' });
   let prefs = validatePreferences(null);
   prefs = changePreference(prefs, { type: 'group', id: 'admin:overview', open: true });
