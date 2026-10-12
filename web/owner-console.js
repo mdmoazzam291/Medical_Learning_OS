@@ -2,6 +2,7 @@ import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudOwner } from '/src/adapters/cloud-owner.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
+import { buildAdminActionInbox } from '/src/domain/admin-action-inbox.js';
 
 const app = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
@@ -10,6 +11,7 @@ const owner = createCloudOwner({ ...cloudConfig, auth });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let loading = false;
 let lastDashboard = null;
+let latestAlerts = null;
 
 function announce(message) {
   if (!notice) return;
@@ -113,6 +115,25 @@ function learnerDetailMarkup(payload) {
   return `<div class="owner-learner-detail" data-learner-id="${escape(learner.id || '')}"><div class="section-heading"><div><span class="eyebrow">LEARNER ADMINISTRATION</span><h3>${escape(learner.email || learner.id || 'Learner')}</h3><p>${escape(learner.id || '')}</p></div><div>${learner.betaActive === true ? '<span class="badge">BETA ACTIVE</span>' : '<span class="badge">STANDARD ACCESS</span>'} ${learner.isSuspended === true ? '<span class="badge">SUSPENDED</span>' : '<span class="badge">AUTH ACTIVE</span>'}</div></div><div class="owner-metrics">${metric('Beta until', learner.betaActive ? dateTime(learner.betaAccessUntil) : 'None')}${metric('Suspended until', learner.isSuspended ? dateTime(learner.bannedUntil) : 'No')}${metric('Last sign-in', dateTime(learner.lastSignInAt))}</div>${actions}<h4>Immutable audit history</h4>${history}</div>`;
 }
 
+function actionInboxMarkup(dashboard, alerts = null) {
+  const state = buildAdminActionInbox(dashboard, { alerts });
+  const rows = state.actions.map(item => '<li class="owner-action-row"><div><strong>' + escape(item.label) +
+    '</strong><p class="muted">' + escape(item.detail) + '</p></div><a class="secondary action-link" href="' +
+    escape(item.href) + '">Inspect' + (item.count === null ? '' : ' (' + number(item.count) + ')') +
+    ' →</a></li>').join('');
+  const evidence = state.missing.length
+    ? '<p class="muted">Not verified by this snapshot: ' + escape(state.missing.join(', ')) + '.</p>'
+    : '<p class="muted">All listed signal families were returned; monitor availability and timestamp separately.</p>';
+  return '<div class="section-heading"><div><span class="eyebrow">ACTION INBOX · READ ONLY</span><h2>What needs attention?</h2><p>Prioritized signals from authoritative owner counts and provider alert records. No action approves or publishes material.</p></div></div>' +
+    (rows ? '<ul class="owner-action-inbox-list">' + rows + '</ul>'
+      : '<p class="muted">No actionable issues were reported in the available evidence. This is not a system-wide all-clear.</p>') +
+    evidence + '<p class="muted">Dashboard evidence: ' + escape(dateTime(state.asOf)) + '. Refresh to check for newer signals.</p>';
+}
+function refreshActionInbox() {
+  const panel = app?.querySelector('#admin-actions');
+  if (panel && lastDashboard) panel.innerHTML = actionInboxMarkup(lastDashboard, latestAlerts);
+}
+
 function dashboardMarkup(data) {
   const users = data?.users || {};
   const learning = data?.learning || {};
@@ -122,7 +143,7 @@ function dashboardMarkup(data) {
   const learnerAdmin = data?.learnerAdministration || {};
   const temporary = data?.reviewAuthority?.temporary === true;
 
-  return `<section id="owner-console" class="owner-console" aria-label="MLOS owner console">
+  return `<section id="owner-console" class="owner-console" aria-label="MLOS owner console">\n    <section id="admin-actions" class="panel">${actionInboxMarkup(data, latestAlerts)}</section>
     <section id="owner-overview" class="panel owner-hero">
       <div class="section-heading"><div><span class="eyebrow">SINGLETON MLOS OWNER</span><h2>Platform control tower</h2><p>Operational visibility and controlled owner actions. Authorization is server-side; every learner mutation is audited.</p></div><span class="badge">OWNER ONLY</span></div>
       <div class="owner-metrics">${metric('Learners', number(users.total), `${number(users.new7d)} new · 7d`)}${metric('Active learners', number(learning.activeLearners7d), 'attempt evidence · 7d')}${metric('Beta learners', number(learnerAdmin.activeBetaLearners), 'active access grants')}${metric('Suspended', number(learnerAdmin.suspendedLearners), 'auth bans active')}${metric('Questions', number(content.questions), `catalog v${number(content.catalogVersion)}`)}${metric('Database', bytes(infra.databaseBytes), `${number(infra.publicTableCount)} public tables`)}</div>
@@ -182,6 +203,8 @@ function mountDashboard(data) {
   if (!heading) return;
   const wrapper = document.createElement('div'); wrapper.innerHTML = dashboardMarkup(data); heading.insertAdjacentElement('afterend', wrapper.firstElementChild);
   ownerHeading();
+  const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+  if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
 }
 
 async function enhance() {
@@ -266,10 +289,15 @@ app?.addEventListener('submit', event => {
   })();
 });
 
+window.addEventListener('mlos:owner-alerts', event => {
+  latestAlerts = Array.isArray(event.detail?.alerts) ? event.detail.alerts : null;
+  refreshActionInbox();
+});
+
 if (app) {
   const observer = new MutationObserver(() => queueMicrotask(enhance));
   observer.observe(app, { childList: true, subtree: true });
   enhance();
 }
 
-export { dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
+export { actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
