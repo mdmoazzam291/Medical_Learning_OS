@@ -178,6 +178,22 @@ try {
     }
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
+    // Admin Content shares its landing URL with Content Intake. Keep one link,
+    // but still allow a shortcut pin and accessible collapsed flyout.
+    assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').count(), 1);
+    assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 1);
+    await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
+    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 1, 'Admin group pin is usable');
+    await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
+    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
+    await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+    await activate(page.locator('#mlos-local-nav [data-flyout="admin:content"]'));
+    const adminFlyout = page.getByRole('dialog', { name: 'Navigation submenu' });
+    assert.equal(await adminFlyout.locator('a[href="/web/content-import.html"]').count(), 1, 'collapsed group has one destination');
+    assert.equal(await adminFlyout.locator('.mlos-flyout-heading a[href="/web/content-import.html"]').count(), 0, 'group heading does not repeat the child route');
+    await activate(adminFlyout.getByRole('button', { name: 'Close submenu' }));
+    await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/admin.html#owner-source-watch', 'Source Change Watch'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
