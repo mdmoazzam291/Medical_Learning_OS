@@ -39,7 +39,7 @@ export function childrenMarkup(rows, prefix, prefs, currentHref = '') {
 function sectionMarkup(row, master, section, prefs, currentHref) {
   const key = master + ':' + row.id, current = row.id === section ? ' aria-current="page"' : '';
   if (!prefs.expanded) return row.children.length
-    ? '<button class="mlos-rail-item" data-flyout="' + key + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
+    ? '<button class="mlos-rail-item" data-flyout="' + key + '" data-active="' + (row.id === section) + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
     : '<a class="mlos-rail-item" href="' + escapeText(row.href) + '" aria-label="' + escapeText(row.label) + '" title="' + escapeText(row.label) + '"' + current + '>' + icon(row.icon) + '</a>';
   const label = icon(row.icon) + '<span>' + escapeText(row.label) + '</span>';
   const redundantAdminOpen = master === 'admin' && row.children.some(child => child.href === row.href);
