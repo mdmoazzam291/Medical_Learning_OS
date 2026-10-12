@@ -38,5 +38,5 @@ test('admin tools appear only with verified access', () => {
   assert.ok(!markup({ master: 'account', prefs: { expanded: true }, isAdmin: true }).includes('Content Intake'));
   assert.match(granted, /data-group="admin:content" open/);
   assert.match(granted, /Source Rights/);
-  assert.match(granted, /href="\\/web\\/review.html"/);
+  assert.ok(granted.includes('href="/web/review.html"'));
 });
