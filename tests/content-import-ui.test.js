@@ -2,11 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import {intakeIntegrityReport} from '../src/domain/intake-integrity-report.js';
 const code=(await readFile(new URL('../web/content-import.js',import.meta.url),'utf8')).replace(/^import .*;\n/gm,'');
 function harness(){
  const nodes=new Map();const node=id=>{if(!nodes.has(id))nodes.set(id,{textContent:'',innerHTML:'',addEventListener(){}});return nodes.get(id);};
  const pending=new Map();let allow=false;
- const context=vm.createContext({document:{querySelector:node},window:{confirm:()=>allow,addEventListener(){}},e:String,validateImport:x=>x,request:path=>path==='/imports'?Promise.resolve({imports:[]}):new Promise((resolve,reject)=>pending.set(path,{resolve,reject}))});
+ const context=vm.createContext({document:{querySelector:node},window:{confirm:()=>allow,addEventListener(){}},e:String,intakeIntegrityReport,validateImport:x=>x,request:path=>path==='/imports'?Promise.resolve({imports:[]}):new Promise((resolve,reject)=>pending.set(path,{resolve,reject}))});
  vm.runInContext(code,context);
  const draft=id=>({import_id:id,status:'draft',manifest:{questions:[],notes:[]},sources:[],duplicateTargets:[]});
  return {context,pending,node,draft,inspect:id=>vm.runInContext(`inspect('${id}')`,context),dirty:()=>vm.runInContext('reviewDirty=true',context),allow:()=>{allow=true;}};
