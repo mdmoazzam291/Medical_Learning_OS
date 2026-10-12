@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 const nav = await import('../src/domain/app-navigation.js').catch(() => null);
 const requireNav = () => { assert.ok(nav, 'shared navigation model is implemented'); return nav; };
 
-test('five masters retain the approved order and every section has a real local destination', () => {
+test('five learner masters and a role-gated admin master retain the approved order and every section has a real local destination', () => {
   const { MASTERS, navigationFor } = requireNav();
-  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account']);
+  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account', 'Admin']);
   for (const master of MASTERS) for (const row of navigationFor(master.id, { isAdmin: true })) {
     assert.ok(row.href.startsWith('/') && !row.href.startsWith('//'), row.id);
     assert.ok(row.icon && row.label, row.id);
@@ -38,8 +38,9 @@ test('opening a second submenu retains the first and pins survive master changes
 test('role filtering never trusts query strings or stored admin preferences', () => {
   const { navigationFor, pinnedSections } = requireNav();
   assert.ok(!navigationFor('account').some(x => x.id === 'admin'));
-  assert.ok(navigationFor('account', { isAdmin: true }).some(x => x.id === 'admin'));
-  assert.deepEqual(pinnedSections({ pins: ['account:admin', 'library:notes'] }, false).map(x => x.id), ['notes']);
+  assert.deepEqual(navigationFor('admin'), []);
+  assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(x => x.label), ['Admin Dashboard', 'Content Intake', 'Review Workspace', 'Reference Review']);
+  assert.deepEqual(pinnedSections({ pins: ['admin:overview', 'library:notes'] }, false).map(x => x.id), ['notes']);
 });
 
 test('malformed preferences discard arbitrary paths, private fields and unknown groups', () => {
@@ -62,7 +63,20 @@ test('blocked browser storage retains preferences in memory without claiming dev
 test('route identity places private notes in Library and authenticated tools under Account', () => {
   const { routeIdentity } = requireNav();
   assert.deepEqual(routeIdentity('/web/vault.html', ''), { master: 'library', section: 'mynotes' });
-  assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'account', section: 'admin' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'admin', section: 'overview' });
   assert.deepEqual(routeIdentity('/web/library.html', '?master=study&view=recall'), { master: 'study', section: 'recall' });
   assert.deepEqual(routeIdentity('/web/library.html', '?view=graph&subject=medicine'), { master: 'library', section: 'graph' });
+});
+
+test('admin top navigation is role gated and account has no duplicate Admin submenu', async () => {
+  const { navigationMarkup } = await import('../web/navigation-view.js');
+  const anonymous = navigationMarkup({ master: 'account', isAdmin: false });
+  const authorized = navigationMarkup({ master: 'admin', isAdmin: true, currentHref: '/web/admin.html' });
+  assert.doesNotMatch(anonymous, /data-master="admin"/);
+  assert.match(authorized, /data-master="account"[\s\S]*data-master="admin"/);
+  assert.match(authorized, /aria-label="Main navigation"[\s\S]*aria-label="Admin"/);
+  assert.match(authorized, /Content Intake/);
+  assert.match(authorized, /Review Workspace/);
+  assert.match(authorized, /Reference Review/);
+  assert.doesNotMatch(navigationMarkup({ master: 'account', isAdmin: true }), /data-flyout="account:admin"/);
 });
