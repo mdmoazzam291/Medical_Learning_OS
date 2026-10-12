@@ -41,7 +41,7 @@ test('role filtering never trusts query strings or stored admin preferences', ()
   assert.ok(!navigationFor('account').some(x => x.id === 'admin'));
   assert.ok(!navigationFor('account', { isAdmin: true }).some(x => x.id === 'admin'));
   assert.deepEqual(navigationFor('admin'), []);
-  assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(x => x.id), ['overview', 'import', 'review', 'references']);
+  assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(x => x.id), ['overview', 'content', 'learners', 'research', 'operations']);
   assert.deepEqual(pinnedSections({ pins: ['account:admin', 'library:notes'] }, false).map(x => x.id), ['notes']);
 });
 
@@ -66,9 +66,25 @@ test('route identity places private notes in Library and authenticated tools und
   const { routeIdentity } = requireNav();
   assert.deepEqual(routeIdentity('/web/vault.html', ''), { master: 'library', section: 'mynotes' });
   assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'admin', section: 'overview' });
-  assert.deepEqual(routeIdentity('/web/content-import', ''), { master: 'admin', section: 'import' });
-  assert.deepEqual(routeIdentity('/web/review', ''), { master: 'admin', section: 'review' });
-  assert.deepEqual(routeIdentity('/web/review', '?workspace=references'), { master: 'admin', section: 'references' });
+  assert.deepEqual(routeIdentity('/web/content-import', ''), { master: 'admin', section: 'content' });
+  assert.deepEqual(routeIdentity('/web/review', ''), { master: 'admin', section: 'content' });
+  assert.deepEqual(routeIdentity('/web/review', '?workspace=references'), { master: 'admin', section: 'content' });
   assert.deepEqual(routeIdentity('/web/library.html', '?master=study&view=recall'), { master: 'study', section: 'recall' });
   assert.deepEqual(routeIdentity('/web/library.html', '?view=graph&subject=medicine'), { master: 'library', section: 'graph' });
+});
+
+test('Admin sidebar uses five nested groups and preserves genuine destinations', () => {
+  const { navigationFor, routeIdentity, changePreference, validatePreferences } = requireNav();
+  const groups = navigationFor('admin', { isAdmin: true });
+  assert.deepEqual(groups.map(x => x.id), ['overview', 'content', 'learners', 'research', 'operations']);
+  assert.deepEqual(groups.find(x => x.id === 'content').children.map(x => x.id), ['intake','review','references','rights']);
+  assert.ok(groups.every(x => x.children.length > 0));
+  assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-users'), { master: 'admin', section: 'learners' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-infrastructure-alerts'), { master: 'admin', section: 'operations' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-learning'), { master: 'admin', section: 'research' });
+  let prefs = validatePreferences(null);
+  prefs = changePreference(prefs, { type: 'group', id: 'admin:overview', open: true });
+  prefs = changePreference(prefs, { type: 'group', id: 'admin:content', open: true });
+  assert.deepEqual(prefs.groups, ['admin:overview', 'admin:content']);
+  assert.deepEqual(navigationFor('admin', { isAdmin: false }), []);
 });
