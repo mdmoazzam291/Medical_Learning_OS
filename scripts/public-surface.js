@@ -1,5 +1,6 @@
 export const publicFiles = Object.freeze([
   'src/domain/app-navigation.js',
+  'src/domain/admin-action-inbox.js',
   'src/domain/subject-index.js',
   'web/navigation-view.js',
   'web/navigation.js',

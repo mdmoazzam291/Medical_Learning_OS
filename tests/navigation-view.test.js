@@ -29,12 +29,21 @@ test('rail controls expose click flyouts and pin shortcuts retain their original
   assert.match(html, /aria-label="Pinned shortcuts"/);
   assert.match(html, /aria-label="Expand navigation"/);
 });
+test('collapsed Admin rail identifies the selected group without disclosing admin tools to learners', () => {
+  const active = markup({ master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: true });
+  assert.match(active, /data-flyout="admin:content" data-active="true"/);
+  assert.match(active, /data-flyout="admin:overview" data-active="false"/);
+  const denied = markup({ master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: false });
+  assert.ok(!denied.includes('data-flyout="admin:content"'));
+});
 test('admin tools appear only with verified access', () => {
   assert.ok(!markup({ master: 'admin', prefs: { expanded: true } }).includes('Content Intake'));
-  const granted = markup({ master: 'admin', section: 'review', prefs: { expanded: true }, isAdmin: true });
+  const granted = markup({ master: 'admin', section: 'content', prefs: { expanded: true, groups: ['admin:content'] }, isAdmin: true });
   assert.match(granted, /Content Intake/);
   assert.match(granted, /Review Workspace/);
   assert.match(granted, /Reference Review/);
   assert.ok(!markup({ master: 'account', prefs: { expanded: true }, isAdmin: true }).includes('Content Intake'));
-  assert.match(granted, /href="\/web\/review.html" aria-current="page"/);
+  assert.match(granted, /data-group="admin:content" open/);
+  assert.match(granted, /Source Rights/);
+  assert.ok(granted.includes('href="/web/review.html"'));
 });

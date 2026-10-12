@@ -81,15 +81,13 @@ async function mount() {
     alertBlock.id = 'owner-infrastructure-alerts';
     alertBlock.innerHTML = `<strong>Open infrastructure alerts</strong>${alertsMarkup(alerts)}`;
     infra.append(alertBlock);
-
-    const nav = app.querySelector('.sidebar nav');
-    if (nav && !nav.querySelector('a[href="#owner-features"]')) {
-      const anchor = document.createElement('a');
-      anchor.href = '#owner-features';
-      anchor.dataset.ownerNav = 'true';
-      anchor.innerHTML = 'Feature Gates<span>↓</span>';
-      nav.append(anchor);
+    window.dispatchEvent(new CustomEvent('mlos:owner-alerts', {
+      detail: { alerts: Array.isArray(alerts?.alerts) ? alerts.alerts : null }
+    }));
+    if (location.hash === '#owner-features' || location.hash === '#owner-infrastructure-alerts') {
+      requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' }));
     }
+
     mounted = true;
   } catch (error) {
     if (![401, 403].includes(Number(error?.status || 0))) {

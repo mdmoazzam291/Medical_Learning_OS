@@ -53,6 +53,15 @@ try {
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       // Owner dashboard APIs are independent of the navigation integration under test.
+      if (path.endsWith('/owner-api/dashboard')) return reply({
+        contractId: 'owner-admin-dashboard-v1', owner: { singleton: true, email: 'fixture@example.invalid' },
+        generatedAt: '2026-10-12T00:00:00Z', users: { total: 0, recent: [] }, learning: {},
+        content: { catalogVersion: 407, questions: 0, sources: 0, concepts: 0, openLearnerReports: 2, unresolvedRights: 1, pendingReview: { medical: 1 } },
+        learnerAdministration: { auditEvents: 0 }, reviewAuthority: { temporary: true, grants: [] },
+        ai: { telemetryAvailable: false }, infrastructure: { database: 'healthy', publicTableCount: 0, cloudflare: { status: 'healthy' } }
+      });
+      if (path.endsWith('/owner-api/infrastructure-alerts')) return reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
+      if (path.endsWith('/owner-api/feature-flags')) return reply({ flags: [] });
       if (path.includes('/owner-api/')) return reply({});
       if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
       // The review shell may read distinct gate queues; navigation checks never approve content.
@@ -134,19 +143,38 @@ try {
     await page.waitForFunction(() => location.hash === '');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
-    await page.getByRole('heading', { name: 'Review authority stays out of the learner product.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
-    for (const [href, title] of [['/web/admin.html', 'Admin Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review']]) {
+    await page.locator('#admin-actions').waitFor();
+    assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
+    await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
+    assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
+    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/content-import.html');
+    await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
+    const contentGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
+    if (!(await contentGroup.evaluate(node => node.open))) await activate(contentGroup.locator(':scope > summary'));
+    assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').getAttribute('aria-current'), 'page');
     await activate(page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]'));
     await page.waitForURL('**/web/review?workspace=references');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/review.html?workspace=references');
+    await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
+      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
+      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    }
+    const reviewGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
+    if (!(await reviewGroup.evaluate(node => node.open))) await activate(reviewGroup.locator(':scope > summary'));
+    assert.equal(await page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]').getAttribute('aria-current'), 'page');
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
