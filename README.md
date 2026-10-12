@@ -3,6 +3,9 @@
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 
 ## Start here
+- [AI-independent development and switching tools](docs/AI_CONTINUITY.md)
+- [Current engineering handoff](docs/AI_HANDOFF.md)
+- [Starter prompt for Claude Code or Codex](docs/AI_STARTER_PROMPT.md)
 - [AI uploads, exclusive question homes and connected Notes/Graph contract](docs/CONTENT_LIBRARY_CONTRACT.md)
 - [Current status and next task](docs/STATUS.md)
 - [Project context and continuity](docs/PROJECT_CONTEXT.md)
@@ -51,7 +54,7 @@ Open `http://127.0.0.1:3000` after `npm start`. Progress stays on that browser a
 - `.github/`: contribution templates and continuous integration.
 
 ## Development workflow
-Read AGENTS.md and docs/STATUS.md first. Implement one roadmap task, verify it, then update status and decisions. Use a feature branch and pull request for subsequent work. Keep provider credentials server-side and out of version control.
+Read AGENTS.md, docs/AI_HANDOFF.md and the latest docs/STATUS.md entries first. ChatGPT/Codex and Claude Code share these repository instructions; CLAUDE.md imports AGENTS.md. Implement one roadmap task, verify it, then update status and decisions. Use a feature branch and pull request for subsequent work. Keep provider credentials server-side and out of version control.
 
 ## Content and license
 Use original, licensed, or permissioned material; record provenance and medical review before publication. No software or content license has been selected. Do not infer an open-source license from repository availability.

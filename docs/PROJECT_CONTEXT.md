@@ -1,6 +1,14 @@
 # Medical Learning OS — context register
 
-Last reconciled: 2026-10-08 (Asia/Kolkata).
+Last reconciled: 2026-10-12 (Asia/Kolkata).
+
+## AI-independent continuity and latest releases — 2026-10-12
+
+The owner approved making development portable between ChatGPT/Codex and Claude (Q1/Q2/Q3). Repository records now own engineering continuity; provider-private conversations are optional supplementary evidence, not a required retrieval dependency. See AI_CONTINUITY.md, AI_HANDOFF.md and ADR-109. Google Drive remains authoritative for material originals/governance/releases; repository workflow snapshots do not replace it. Each provider requires its own authorized service connections.
+
+Current README/STATUS and ADR-106/107/108 supersede earlier navigation and deployment proposals: authorized Admin is a top-level master, tools have isolated workspaces with a summary Overview, and Sage Precision is the default with Lavender Precision selectable independently from light/dark appearance. STATUS records PR #224 release and CI/provider verification; this reconciliation does not independently retest hosted authenticated actions. The next material input remains genuine final polished PYQs through existing review gates.
+
+Older dated milestone sections below are historical and may describe choices or inventories that no longer apply. In particular, the early “Decisions applied now” / “Proposals not treated as accepted configuration” / M03 local-preview statements are milestone history, not a denial of the subsequently implemented hosted stack. For current implementation use code, the latest status and accepted decisions; do not restore erased pilots.
 
 ## Current post-reset intake and release — 2026-10-08
 
@@ -23,7 +31,7 @@ The user explicitly requests continued UX/interface work from now on. Subsequent
 Targeted prior-context retrieval identifies the user's 2026-09-29 acceptance of Aperture as the core direction, useful additions from Atlas/Cockpit/Studio, consistent navigation, and support that adapts per topic without permanent learner labels. Other detailed navigation/branding ideas appeared as assistant proposals or file explorations, so they are not silently adopted as fresh user decisions. This slice preserves the existing Home/Study/Exams/Vault/Account destinations and established identity; no claim of a complete design-project audit is made.
 
 ## Standing user instruction
-Take reference/context from the ChatGPT project named **“medical learning os”** when deciding or implementing the next step. Work only in Medical_Learning_OS. The older NEETPG2027 repository is excluded unless explicitly authorized.
+Use accepted repository decisions and current implementation evidence when deciding or implementing the next step. The ChatGPT project named **“medical learning os”** is supplementary when available; Claude or another AI can resume without it. Unrecorded consequential decisions require owner evidence rather than guesses. Work only in Medical_Learning_OS. The older NEETPG2027 repository is excluded unless explicitly authorized.
 
 ## Sources and limits
 This register combines the current user's instructions, the project's visible conversation excerpts and targeted personal-context retrieval on 2026-09-25. Retrieval returned summaries of prior conversations, not a verified export of the whole ChatGPT project. Project membership and the current contents of any XMind/Drive roadmap were not independently verified. No canonical source file was returned. Do not claim a full project audit or invent file IDs/links.
@@ -51,7 +59,7 @@ No specific frontend, database, hosting, local model or AI provider is selected 
 
 ## Continuity procedure
 1. Read AGENTS.md, this register, STATUS.md and the relevant implementation documents.
-2. Retrieve only relevant Medical Learning OS context when a prior decision is missing; inspect identified canonical files before relying on their old descriptions.
+2. Retrieve relevant owner-provided or accessible Medical Learning OS sources when a prior decision is missing; inspect identified canonical files before relying on old descriptions. Missing private-chat access does not block recorded engineering work.
 3. Distinguish user decisions, assistant proposals, implementation choices and verified code behavior.
 4. Record source topic/date, any unresolved conflict and the resulting bounded decision here or in DECISIONS.md.
 5. Update implementation status after verification. Keep planning documents in Drive authoritative for planning if available; GitHub records actual code and its current implementation state. Do not silently create a competing planning master.

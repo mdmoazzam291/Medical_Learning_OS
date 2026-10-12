@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-12 — Portable ChatGPT/Codex ↔ Claude development continuity
+
+The owner approved Q1/Q2/Q3: implement portable continuity, provide a Claude starter prompt and define alternating-tool rules. AGENTS.md now uses recorded repository decisions rather than mandatory private ChatGPT retrieval. CLAUDE.md imports that shared contract; AI_CONTINUITY.md defines task ownership and transfer. AI_HANDOFF.md, AI_ENVIRONMENT.md and AI_STARTER_PROMPT.md expose the dated current state, setup/capability gaps and resume instructions. The context register now reconciles the latest Admin/palette releases and labels early stack proposals historical. Portable material-intake/faculty guides and their contracts preserve the existing Drive authority and app review gates. See ADR-109.
+
+Documentation-only change: no runtime, credentials, medical content, learner-history or production service writes. Fresh local verification passed 1,200 Node tests, syntax/catalog/decision checks, the 77-file Pages build, git diff --check and portable-document link/import checks. No runtime/UI change requires a new hosted authenticated action. Publication/CI state is tracked in [PR #226](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/226) and the handoff; inspect that live timeline before claiming release. Next: genuine supplied polished-material intake through existing gates after the documentation PR is merged; no fixed respiratory batch or erased pilot reimport.
+
 ## 2026-10-12 — Implement both permanent approved palettes
 
 Sage Precision is now the default, with Lavender Precision selectable under Account → Preferences → Colour palette. Exact saved light tokens and reconstructed gradients come from the approved palette pack version 2. The shared preference store carries palette separately from light/dark appearance across learner and authorized Admin pages; migration preserves existing dark mode, pins and groups. The signed-out Account landing also uses the shared palette. Semantic outcome colours remain separate. See ADR-108.

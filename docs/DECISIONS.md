@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-109 — Repository-owned continuity across development AI providers
+**Status:** Accepted — 2026-10-12
+
+The owner approved portable development, a Claude starter prompt and safe alternating use of ChatGPT/Codex and Claude (Q1/Q2/Q3). Keep AGENTS.md as one shared instruction source, imported by CLAUDE.md. Required engineering decisions, state and handoffs live in the repository; private ChatGPT context is supplementary. Refresh the context register and expose a concise handoff, environment guide and portable material/faculty workflow snapshots. Drive remains the existing material-governance/source/release authority.
+
+Use one active writer per task, preserve transferred WIP on its feature branch, verify remote state before resume, serialize shared-file/migration/deployment work and merge PRs serially. Update handoff/status after work and distinguish implementation, CI, release and hosted verification. Missing account access is a recorded capability gap, not permission to invent evidence or rebuild production. This adds documentation only: no runtime changes, credentials, provider migration, automatic lock, watcher or publication authority. See AI_CONTINUITY.md.
+
 ## ADR-107 — Admin tools display isolated workspaces; Overview stays a summary
 **Status:** Accepted — 2026-10-12
 
