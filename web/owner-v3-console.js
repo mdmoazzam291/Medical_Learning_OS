@@ -82,14 +82,6 @@ async function mount() {
     alertBlock.innerHTML = `<strong>Open infrastructure alerts</strong>${alertsMarkup(alerts)}`;
     infra.append(alertBlock);
 
-    const nav = app.querySelector('.sidebar nav');
-    if (nav && !nav.querySelector('a[href="#owner-features"]')) {
-      const anchor = document.createElement('a');
-      anchor.href = '#owner-features';
-      anchor.dataset.ownerNav = 'true';
-      anchor.innerHTML = 'Feature Gates<span>↓</span>';
-      nav.append(anchor);
-    }
     mounted = true;
   } catch (error) {
     if (![401, 403].includes(Number(error?.status || 0))) {
