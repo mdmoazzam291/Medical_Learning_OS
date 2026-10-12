@@ -147,6 +147,7 @@ try {
     await page.getByRole('button', { name: 'Next card', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to second source');
     await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c');
+    assert.equal(await page.getByLabel('Your recall', { exact: true }).count(), 1, 'Recall after concept filter: ' + JSON.stringify(errors) + ' ' + await page.locator('#library-app').innerText());
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to first source');
     await page.getByRole('button', { name: 'Reveal source note', exact: true }).click();
     await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c2');
