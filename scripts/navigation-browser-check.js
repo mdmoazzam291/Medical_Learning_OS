@@ -177,7 +177,7 @@ try {
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
     await page.goto(origin + '/web/library.html?view=recall');
     await page.getByLabel('Your recall', { exact: true }).fill('Unsaved self-review');
-    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Unsaved self-review');
     await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
@@ -188,7 +188,7 @@ try {
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
     await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
-    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     await page.locator('#mlos-local-nav [data-pin="account:data"]').click();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
