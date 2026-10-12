@@ -148,3 +148,15 @@ test('an unchanged Admin access update does not rebuild open navigation controls
   h.windowHandlers['mlos:access']({ detail: { isAdmin: false } });
   assert.equal(renders, 2);
 });
+test('opening a navigation group persists before a subsequent route redraw', () => {
+  const h = open(); h.location.pathname = '/web/admin'; h.location.search = '';
+  h.context.innerWidth = 1200;
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const rail = { dataset: {}, hasAttribute: key => key === 'data-rail' };
+  h.shellHandlers.click({ target: { closest: () => rail } });
+  const group = { dataset: { group: 'admin:overview' }, open: false };
+  const summary = { closest: () => group };
+  h.shellHandlers.click({ target: { closest: key => key === 'summary' ? summary : null }, preventDefault() {} });
+  h.windowHandlers.hashchange();
+  assert.match(h.shell.innerHTML, /data-group="admin:overview" open/);
+});

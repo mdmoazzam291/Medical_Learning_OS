@@ -65,6 +65,14 @@ function navigateAdminLink(anchor, event) {
 shell.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) {
+    const group = event.target.closest('summary')?.closest('details[data-group]');
+    if (group) {
+      // Persist synchronously: a route redraw can precede the native toggle event.
+      event.preventDefault();
+      group.open = !group.open;
+      save({ type: 'group', id: group.dataset.group, open: group.open });
+      return;
+    }
     const anchor = event.target.closest('a');
     navigateAdminLink(anchor, event);
     if (anchor && canonicalPagePath(location.pathname) === '/web/library.html') {
