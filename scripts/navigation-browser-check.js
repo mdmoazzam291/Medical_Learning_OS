@@ -183,9 +183,9 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').count(), 1);
     assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 1);
     await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
-    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"]').count(), 1, 'Admin group pin is usable');
+    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 1, 'Admin group pin is usable');
     await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
-    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"]').count(), 0, 'unpin removes duplicate shortcut');
+    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
     await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav [data-flyout="admin:content"]'));
     const adminFlyout = page.getByRole('dialog', { name: 'Navigation submenu' });
