@@ -59,41 +59,61 @@ function alertsMarkup(payload) {
   </article>`).join('')}</div>`;
 }
 
+// These are independent Admin destinations. A problem with one owner API
+// must not hide the other destination or turn unknown status into "No alerts".
 async function mount() {
   if (mounted || !app?.querySelector('#owner-console')) return;
-  try {
-    const [features, alerts] = await Promise.all([
-      request('/feature-flags'),
-      request('/infrastructure-alerts')
-    ]);
-    const ai = app.querySelector('#owner-ai');
-    const infra = app.querySelector('#owner-infrastructure');
-    if (!ai || !infra) return;
+  const ai = app.querySelector('#owner-ai');
+  const infra = app.querySelector('#owner-infrastructure');
+  if (!ai || !infra) return;
+  mounted = true; // Prevent mutation-triggered duplicate requests and panels.
 
-    const featureSection = document.createElement('section');
-    featureSection.id = 'owner-features';
-    featureSection.className = 'panel';
-    featureSection.innerHTML = `<div class="section-heading"><div><span class="eyebrow">FEATURE ENTITLEMENTS</span><h2>Controlled beta exposure</h2><p>Server-enforced audiences: all learners, active beta learners only, or off. Beta access never grants content-review authority.</p></div><span class="badge">SERVER GATED</span></div>${flagsMarkup(features)}`;
-    ai.before(featureSection);
+  const featureSection = document.createElement('section');
+  featureSection.id = 'owner-features';
+  featureSection.className = 'panel';
+  featureSection.innerHTML = '<div class="section-heading"><div><span class="eyebrow">FEATURE ENTITLEMENTS</span><h2>Controlled beta exposure</h2><p>Server-enforced audiences: all learners, active beta learners only, or off. Beta access never grants content-review authority.</p></div><span class="badge">SERVER GATED</span></div><div id="owner-features-state" aria-live="polite"><p class="muted">Loading feature gates…</p></div>';
+  ai.before(featureSection);
 
-    const alertBlock = document.createElement('div');
-    alertBlock.className = 'owner-status-block';
-    alertBlock.id = 'owner-infrastructure-alerts';
-    alertBlock.innerHTML = `<strong>Open infrastructure alerts</strong>${alertsMarkup(alerts)}`;
-    infra.append(alertBlock);
-    window.dispatchEvent(new CustomEvent('mlos:owner-alerts', {
-      detail: { alerts: Array.isArray(alerts?.alerts) ? alerts.alerts : null }
-    }));
-    if (location.hash === '#owner-features' || location.hash === '#owner-infrastructure-alerts') {
-      requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' }));
-    }
+  const alertBlock = document.createElement('div');
+  alertBlock.className = 'owner-status-block';
+  alertBlock.id = 'owner-infrastructure-alerts';
+  alertBlock.innerHTML = '<strong>Open infrastructure alerts</strong><div id="owner-alerts-state" aria-live="polite"><p class="muted">Loading infrastructure alerts…</p></div>';
+  infra.append(alertBlock);
 
-    mounted = true;
-  } catch (error) {
+  // Hash routes must exist even during an outage.
+  if (location.hash === '#owner-features' || location.hash === '#owner-infrastructure-alerts') {
+    requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' }));
+  }
+
+  const [features, alerts] = await Promise.allSettled([
+    request('/feature-flags'),
+    request('/infrastructure-alerts')
+  ]);
+
+  if (features.status === 'fulfilled' && Array.isArray(features.value?.flags)) {
+    featureSection.querySelector('#owner-features-state').innerHTML = flagsMarkup(features.value);
+  } else {
+    featureSection.querySelector('#owner-features-state').innerHTML =
+      '<p class="muted" role="status">Feature gates unavailable. Current audiences were not verified; no changes can be applied here. Reload to retry.</p>';
+    const error = features.status === 'rejected' ? features.reason : new Error('owner_feature_flags_invalid_payload');
     if (![401, 403].includes(Number(error?.status || 0))) {
-      errorMonitor.capture(error, { component: 'owner-v3-console', operation: 'mount', code: error?.code || null });
+      errorMonitor.capture(error, { component: 'owner-v3-console', operation: 'load_feature_flags', code: error?.code || null });
     }
   }
+
+  if (alerts.status === 'fulfilled' && Array.isArray(alerts.value?.alerts)) {
+    alertBlock.querySelector('#owner-alerts-state').innerHTML = alertsMarkup(alerts.value);
+  } else {
+    alertBlock.querySelector('#owner-alerts-state').innerHTML =
+      '<p class="muted" role="status">Infrastructure alerts unavailable. This is not evidence of zero open alerts. Reload to retry.</p>';
+    const error = alerts.status === 'rejected' ? alerts.reason : new Error('owner_infrastructure_alerts_invalid_payload');
+    if (![401, 403].includes(Number(error?.status || 0))) {
+      errorMonitor.capture(error, { component: 'owner-v3-console', operation: 'load_infrastructure_alerts', code: error?.code || null });
+    }
+  }
+  window.dispatchEvent(new CustomEvent('mlos:owner-alerts', {
+    detail: { alerts: alerts.status === 'fulfilled' && Array.isArray(alerts.value?.alerts) ? alerts.value.alerts : null }
+  }));
 }
 
 app?.addEventListener('submit', event => {
