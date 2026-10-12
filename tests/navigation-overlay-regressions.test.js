@@ -139,3 +139,12 @@ test('Admin Overview body shortcuts preserve the workspace with in-place history
   h.docHandlers.click({ target: { closest: key => key === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
   assert.equal(prevented, true); assert.equal(h.location.hash, '#owner-content');
 });
+test('an unchanged Admin access update does not rebuild open navigation controls', () => {
+  const h = open(); let renders = 0, html = h.shell.innerHTML;
+  Object.defineProperty(h.shell, 'innerHTML', { get: () => html, set: value => { html = value; renders++; } });
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  assert.equal(renders, 1);
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: false } });
+  assert.equal(renders, 2);
+});

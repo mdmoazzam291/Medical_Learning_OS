@@ -119,7 +119,12 @@ shell.addEventListener('submit', event => {
     event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
-window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); restoreAdminTarget(); });
+window.addEventListener('mlos:access', event => {
+  accessRead += 1;
+  const granted = event.detail?.isAdmin === true;
+  if (granted !== isAdmin) { isAdmin = granted; render(); }
+  restoreAdminTarget();
+});
 window.addEventListener('mlos:admin-ready', restoreAdminTarget);
 function syncRoute(event) {
   identity = routeIdentity(location.pathname, location.search, location.hash);

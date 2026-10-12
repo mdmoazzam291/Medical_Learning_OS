@@ -49,7 +49,7 @@ try {
     const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false, projectionDelayed = false, dashboardUnavailable = false, dashboardReads = 0;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
-      const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
+      const reply = (body, status = 200) => route.fulfill({ status, headers: { 'access-control-allow-origin': origin }, contentType: 'application/json', body: JSON.stringify(body) });
       if (req.method() !== 'GET') writes.push(path);
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return accessStatus === 200 ? reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] }) : reply({ error: 'synthetic_access_failure' }, accessStatus);
@@ -105,6 +105,10 @@ try {
       throw new Error('Unexpected navigation request ' + req.method() + ' ' + path);
     });
     await page.goto(origin + '/web/library.html?view=subjects');
+    const settleAdmin = () => page.waitForFunction(() => {
+      const research = document.querySelector('[data-admin-panel="research"]'), features = document.getElementById('owner-features-state'), alerts = document.getElementById('owner-alerts-state');
+      return research && !research.textContent.includes('Loading admin evidence') && features && !features.textContent.includes('Loading feature gates') && alerts && !alerts.textContent.includes('Loading infrastructure alerts');
+    });
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true });
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
@@ -165,6 +169,7 @@ try {
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
     await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
     await page.locator('#owner-home').waitFor();
+    await settleAdmin();
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['overview']);
     assert.match(await page.locator('#owner-home').innerText(), /Urgent actions/);
     assert.equal(await page.locator('#owner-home form').count(), 0);
@@ -177,16 +182,19 @@ try {
     await page.goto(origin + '/web/admin.html#admin-actions');
     await page.locator('#admin-actions').waitFor();
     assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
+    await settleAdmin();
     await page.goto(origin + '/web/admin.html#owner-integrity');
     await page.locator('#owner-integrity').waitFor();
     await activate(page.locator('[data-owner-integrity-run]'));
     await page.getByText('No canonical catalog content exists to assess yet.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-integrity-results').getByText('Findings', { exact: true }).count(), 1);
+    await settleAdmin();
     await page.goto(origin + '/web/admin.html#owner-source-watch');
     await page.locator('#owner-source-watch').waitFor();
     await activate(page.locator('[data-owner-source-watch-run]'));
     await page.getByText('No canonical sources are present.', { exact: false }).waitFor();
     assert.equal(await page.locator('#owner-source-sighting-form').count(), 0, 'no observation can be manufactured without a canonical source');
+    await settleAdmin();
 
     if (name === layouts[0][0]) {
       // Both Admin links remain real destinations when either provider call
@@ -279,8 +287,10 @@ try {
       await page.locator('[data-admin-panel="' + view.id + '"]').waitFor();
       assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), [view.id], view.label);
       await page.getByRole('heading', { name: view.label, exact: true }).waitFor();
+      await settleAdmin();
     }
     await page.goto(origin + '/web/admin.html');
+    await settleAdmin();
     largeFlags = false;
     if (name === layouts[0][0]) {
       accessStatus = 503; await page.reload();
@@ -289,6 +299,7 @@ try {
       accessStatus = 200; projectionUnavailable = true;
       if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
       await activate(page.locator('[data-action="reload"]'));
+      await settleAdmin();
       await page.goto(origin + '/web/admin.html#research-gate');
       await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
       await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
@@ -296,6 +307,7 @@ try {
       await page.locator('#owner-console').waitFor({ state: 'attached' });
       await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor({ state: 'attached' });
       assert.equal(await page.locator('#owner-features').count(), 1);
+      await settleAdmin();
       accessStatus = 403; await page.reload();
       await page.getByRole('heading', { name: 'Admin access only.', exact: true }).waitFor();
       assert.equal(await page.locator('#owner-console').count(), 0);
@@ -310,10 +322,12 @@ try {
       dashboardUnavailable = false;
       await activate(page.locator('[data-owner-dashboard-retry]'));
       await page.locator('#owner-users').waitFor();
+      await settleAdmin();
       assert.equal(dashboardReads, beforeOutage + 2, 'explicit Retry performs one owner read');
     }
     await page.goto(origin + '/web/admin.html');
     await page.locator('#owner-console').waitFor();
+    await settleAdmin();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     assert.deepEqual(writes, [], 'Admin sidebar actions never change user access or content');
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/admin.html#owner-source-watch', 'Source Change Watch'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
