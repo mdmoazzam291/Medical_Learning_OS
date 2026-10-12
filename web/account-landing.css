@@ -13,3 +13,10 @@ body.account-landing-active{background:var(--bg);color:var(--ink)}.account-landi
 .phone-primary{color:var(--on-primary)}
 
 .continue-card small,.continue-card span:not(.play-orb){color:var(--ink)}
+
+/* PARSE identity in signed-out landing, following the saved palette tokens. */
+.account-brand-lockup{display:flex;flex-direction:column;line-height:1.06;gap:3px;min-width:0}
+.account-brand-lockup strong{font-weight:850;letter-spacing:.09em;font-size:1.1rem}
+.account-brand-lockup small{color:var(--muted);font-size:.63rem;font-weight:650;letter-spacing:.02em}
+.account-landing-nav .mlos-brand-mark svg{width:25px;height:25px;display:block;color:var(--accent)}
+@media(max-width:650px){.account-brand-lockup strong{font-size:1rem}.account-brand-lockup small{font-size:.56rem}}
