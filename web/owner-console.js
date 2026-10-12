@@ -216,6 +216,119 @@ async function runContentIntegrity() {
   }
 }
 
+
+function sourceWatchMarkup(report) {
+  if (report?.contractId !== 'owner-medical-source-watch-v1' ||
+      report?.scope !== 'owner_submitted_evidence_only' ||
+      report?.automatedWebChecks !== false ||
+      report?.medicalUpdateVerified !== false ||
+      report?.clinicalApprovalGranted !== false || !Array.isArray(report.sources)) {
+    return '<p class="muted">Unrecognized source-watch evidence contract. No findings can be trusted.</p>';
+  }
+  const statuses = {
+    possible_retirement: 'Possible source retirement',
+    possible_version_change: 'Possible version change',
+    not_monitored: 'No source sighting recorded'
+  };
+  const impact = (title, ids) => ids?.length
+    ? '<div><strong>' + escape(title) + ' (' + number(ids.length) + ')</strong><small>' + escape(ids.join(', ')) + '</small></div>'
+    : '';
+  const rows = report.sources.map(source => {
+    const a = source.affected || {}, o = source.sighting;
+    return '<article class="owner-status-block"><div class="section-heading"><div><strong>' +
+      escape(source.title || source.sourceId) + '</strong><p class="muted">Source ID ' +
+      escape(source.sourceId) + ' · cited version ' + escape(source.citedVersion) +
+      '</p></div><span class="badge">' + escape(statuses[source.status] || 'Status unavailable') +
+      '</span></div><p class="muted">Directly referenced published and in-review items: ' +
+      number(source.affectedCount) + '</p>' +
+      (o ? '<p>Owner-submitted evidence: ' + escape(o.observedVersion || 'Possible retirement') +
+        ' · recorded ' + escape(dateTime(o.recordedAt)) + '</p><p>' +
+        escape(o.evidenceNote) + '</p><p class="muted">Evidence URL: ' +
+        escape(o.evidenceUrl) + '</p>' : '') +
+      '<div class="owner-source-impact">' +
+      impact('Published question versions', a.publishedQuestionVersions) +
+      impact('In-review question versions', a.inReviewQuestionVersions) +
+      impact('Published note versions', a.publishedNoteVersions) +
+      impact('In-review note versions', a.inReviewNoteVersions) +
+      '</div></article>';
+  }).join('');
+  const options = report.sources.map(src => '<option value="' + escape(src.sourceId) +
+    '">' + escape(src.title || src.sourceId) + ' (' + escape(src.sourceId) + ', cited ' +
+    escape(src.citedVersion) + ')</option>').join('');
+  const form = report.sources.length ? `
+    <form id="owner-source-sighting-form" class="owner-source-form">
+      <h3>Record a possible reference change</h3>
+      <p class="muted">This saves a timestamped owner observation, not independent proof that a medical guideline changed. Use the exact reference and provide externally reviewable evidence.</p>
+      <label>Canonical source<select name="sourceId" required>${options}</select></label>
+      <label>Evidence type<select name="kind" required>
+        <option value="version_seen">Different version observed</option>
+        <option value="source_retired">Possible source retirement</option>
+      </select></label>
+      <label>Observed version (leave empty for possible retirement)<input name="observedVersion" maxlength="300" placeholder="Exact edition, revision identifier or date"></label>
+      <label>Source evidence URL (HTTPS)<input name="evidenceUrl" type="url" pattern="https://.*" maxlength="2000" required placeholder="https://official-source.example/..."></label>
+      <label>Evidence and why this matters<textarea name="evidenceNote" minlength="20" maxlength="2000" required placeholder="Describe the exact revision or retirement evidence."></textarea></label>
+      <button class="secondary" type="submit">Save evidence sighting</button>
+    </form>` : '<p class="muted">No canonical sources are present. New PYQ/content imports must pass the existing review process first.</p>';
+  return '<span data-watch-catalog-version="' + escape(report.catalogVersion) +
+    '" hidden></span><p class="muted">Catalog v' + escape(report.catalogVersion) +
+    ' · source records ' + number(report.sourceCount) +
+    ' · sources with owner sightings ' + number(report.sourcesWithSightings) +
+    ' · with affected content awaiting independent verification ' + number(report.pendingVerification) +
+    '</p><p class="muted">No automatic website checks have run. Neither observed versions nor their effect on medical truth have been independently confirmed. Older sightings for superseded source versions are not active alerts.</p>' +
+    (report.unmatchedHistoricalSightings
+      ? '<p class="muted">Historical sightings excluded by current source identity/version: ' +
+        number(report.unmatchedHistoricalSightings) + '.</p>' : '') + rows + form +
+    '<p class="muted">Use Reference Review for actual medical evaluation. Source-rights decisions and content publication remain separate human gates.</p>';
+}
+async function runSourceWatch() {
+  const output = app?.querySelector('#owner-source-watch-results');
+  const button = app?.querySelector('[data-owner-source-watch-run]');
+  if (!output || !button || button.disabled) return;
+  button.disabled = true;
+  output.innerHTML = '<p class="muted">Reading canonical references and owner evidence…</p>';
+  try { output.innerHTML = sourceWatchMarkup(await owner.sourceWatch()); }
+  catch (error) {
+    output.innerHTML = '<p class="muted">Source-watch evidence unavailable: ' +
+      escape(error?.code || error?.message || 'read_failed') +
+      '. Nothing has been verified automatically.</p>';
+    if (Number(error?.status || 0) >= 500) errorMonitor.capture(error, { component: 'owner-console', operation: 'source_watch_read' });
+  } finally { button.disabled = false; }
+}
+async function submitSourceSighting(form) {
+  const button = form.querySelector('button[type="submit"]');
+  if (button?.disabled) return;
+  const source = app?.querySelector('#owner-source-watch-results');
+  const version = Number(source?.querySelector('[data-watch-catalog-version]')?.dataset.watchCatalogVersion);
+  if (!Number.isSafeInteger(version)) { announce('Load the current source watch first.'); return; }
+  const data = new FormData(form);
+  const kind = String(data.get('kind') || '');
+  const observedVersion = String(data.get('observedVersion') || '').trim();
+  if (kind === 'version_seen' && !observedVersion) {
+    announce('Enter the different version you observed.'); return;
+  }
+  if (kind === 'source_retired' && observedVersion) {
+    announce('Remove the observed version when reporting retirement.'); return;
+  }
+  if (button) button.disabled = true;
+  try {
+    const receipt = await owner.recordSourceSighting({
+      requestId: crypto.randomUUID(), sourceId: String(data.get('sourceId') || ''),
+      kind, observedVersion: kind === 'source_retired' ? null : observedVersion,
+      evidenceUrl: String(data.get('evidenceUrl') || '').trim(),
+      evidenceNote: String(data.get('evidenceNote') || '').trim(),
+      catalogVersion: version
+    });
+    if (receipt.contractId !== 'owner-medical-source-sighting-receipt-v1') {
+      throw Error('unexpected_sighting_receipt');
+    }
+    announce('Source sighting recorded; independent medical review remains required.');
+    await runSourceWatch();
+  } catch (error) {
+    announce('Evidence was not recorded: ' + (error?.code || error?.message || 'source_sighting_failed') + '.');
+    if (Number(error?.status || 0) >= 500) errorMonitor.capture(error, { component: 'owner-console', operation: 'source_watch_write' });
+  } finally { if (button) button.disabled = false; }
+}
+
 function dashboardMarkup(data) {
   const users = data?.users || {};
   const learning = data?.learning || {};
@@ -255,6 +368,11 @@ function dashboardMarkup(data) {
     <section id="owner-integrity" class="panel" aria-label="Catalog integrity audit">
       <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog-wide integrity</h2><p>Scan canonical question versions, PYQ metadata, sources and linked NeuralVault notes. Diagnostic only, never a publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
       <div id="owner-integrity-results" role="status" aria-live="polite"><p class="muted">No audit has been run in this session.</p></div>
+    </section>
+
+    <section id="owner-source-watch" class="panel" aria-label="Medical source change surveillance">
+      <div class="section-heading"><div><span class="eyebrow">MEDICAL SOURCE GOVERNANCE</span><h2>Source change watch</h2><p>Evidence-based version observations linked to exact affected question and note versions. No automated clinical updates.</p></div><button class="secondary" type="button" data-owner-source-watch-run>Load source watch</button></div>
+      <div id="owner-source-watch-results" aria-live="polite"><p class="muted">Source-watch evidence has not been loaded in this session.</p></div>
     </section>
 
     <section id="owner-review-authority" class="panel">
@@ -321,12 +439,15 @@ async function showLearner(learnerId) {
 
 app?.addEventListener('click', event => {
   if (event.target.closest('[data-owner-integrity-run]')) { runContentIntegrity(); return; }
+  if (event.target.closest('[data-owner-source-watch-run]')) { runSourceWatch(); return; }
   const button = event.target.closest('[data-owner-learner-id]');
   if (!button) return;
   showLearner(button.dataset.ownerLearnerId);
 });
 
 app?.addEventListener('submit', event => {
+  const sighting = event.target.closest('#owner-source-sighting-form');
+  if (sighting) { event.preventDefault(); submitSourceSighting(sighting); return; }
   const search = event.target.closest('#owner-learner-search-form');
   if (search) {
     event.preventDefault();
@@ -389,4 +510,4 @@ if (app) {
   enhance();
 }
 
-export { integrityMarkup, recoveryEvidenceMarkup, actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
+export { sourceWatchMarkup, integrityMarkup, recoveryEvidenceMarkup, actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };

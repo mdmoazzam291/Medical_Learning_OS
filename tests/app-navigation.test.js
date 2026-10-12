@@ -77,11 +77,13 @@ test('Admin sidebar uses five nested groups and preserves genuine destinations',
   const { navigationFor, routeIdentity, changePreference, validatePreferences } = requireNav();
   const groups = navigationFor('admin', { isAdmin: true });
   assert.deepEqual(groups.map(x => x.id), ['overview', 'content', 'learners', 'research', 'operations']);
-  assert.deepEqual(groups.find(x => x.id === 'content').children.map(x => x.id), ['intake','integrity','review','references','rights']);
+  assert.deepEqual(groups.find(x => x.id === 'content').children.map(x => x.id), ['intake','integrity','source-watch','review','references','rights']);
   assert.ok(groups.every(x => x.children.length > 0));
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-users'), { master: 'admin', section: 'learners' });
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-infrastructure-alerts'), { master: 'admin', section: 'operations' });
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-integrity'), { master: 'admin', section: 'content' });
+  assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-source-watch'), { master: 'admin', section: 'content' });
+
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-learning'), { master: 'admin', section: 'research' });
   let prefs = validatePreferences(null);
   prefs = changePreference(prefs, { type: 'group', id: 'admin:overview', open: true });
