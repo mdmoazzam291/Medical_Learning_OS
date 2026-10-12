@@ -1,7 +1,7 @@
 import { navigationFor, routeIdentity, preferenceStore, canSwitchLibraryView, canonicalPagePath } from '/src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '/web/navigation-view.js';
 import { mutatePreference } from '/web/navigation-preferences.js';
-import { resolvePinnedAccess } from '/web/navigation-access.js';
+import { resolveAdminAccess } from '/web/navigation-access.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -100,7 +100,14 @@ function syncRoute() {
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 render();
-if (prefs.pins.includes('account:admin') && !isAdmin) {
-  const reading = ++accessRead, auth = createSupabaseAuth(cloudConfig), review = createCloudReview({ ...cloudConfig, auth });
-  resolvePinnedAccess(prefs, () => review.me()).then(granted => { if (reading === accessRead) { isAdmin = granted; render(); } });
+// Discover the header Admin destination for signed-in administrators on every page.
+ // The role must come from the server; a stored pin or URL is never sufficient.
+if (!isAdmin) {
+  const auth = createSupabaseAuth(cloudConfig);
+  if (auth.currentUser()) {
+    const reading = ++accessRead, review = createCloudReview({ ...cloudConfig, auth });
+    resolveAdminAccess(() => review.me()).then(granted => {
+      if (reading === accessRead) { isAdmin = granted; render(); }
+    });
+  }
 }
