@@ -1,17 +1,16 @@
 # Current engineering handoff
 
-Snapshot: 2026-10-12 (Asia/Kolkata). Verify remote evidence before resuming.
+Snapshot: 2026-10-13 (Asia/Kolkata). Verify remote evidence before resuming.
 
 ## Current task
-- Objective: portable continuity between ChatGPT/Codex and Claude, including starter prompt and switching rules.
-- Owner: ChatGPT/Codex for this run; ownership is released when this run ends. Do not concurrently edit this task branch before transfer.
-- Branch: docs/ai-continuity-20261012; base main commit: 415942e7d8b370e6c49c015d80d32acc78d29634.
-- Current head: resolve from git/GitHub; do not use this base SHA as the task branch's final commit. A file cannot contain its own final commit hash without changing it.
-- PR/release: [PR #226](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/226). This snapshot was prepared before merge; the live PR/CI timeline determines current release state.
-- Changes: AGENTS.md, CLAUDE.md, README.md, PROJECT_CONTEXT.md, STATUS.md, DECISIONS.md; AI_CONTINUITY.md, AI_ENVIRONMENT.md, AI_STARTER_PROMPT.md, this handoff and four docs/workflows/ snapshots.
-- Verification: fresh 2026-10-12 local npm test passed 1,200/1,200; npm run check passed syntax/catalog/decision checks; npm run build:pages produced 77 files; git diff --check and portable-document link/import/ADR checks passed. No fresh authenticated hosted or physical-iPad test was performed for this documentation-only change. GitHub CI remains pending publication.
-- Unfinished work at this snapshot: GitHub CI and merge verification for PR #226; all 14 initial published blobs matched locally verified files.
-- Next action: inspect PR #226. If open, finish its verified documentation release; if merged, proceed to genuine supplied polished-material intake when that input is available. Do not restart theme or Admin implementation.
+- Objective: make checkpoint/push and resume standing instructions, so supported coding agents need no repeated handoff prompt.
+- Owner: ChatGPT/Codex for this run; release ownership at run end. Stop outgoing remote jobs before another agent edits the task branch.
+- Branch: docs/automatic-ai-checkpoints-20261013; base main commit: 26590146015ee7bafd7bf1d529259f571dbd7e30. Resolve current task head/PR by this exact branch; the handoff cannot contain its own final hash.
+- Work: AGENTS.md checkpoint policy; direct handoff/continuity imports in CLAUDE.md and GEMINI.md; updated continuity/status/decision records. Documentation only; no runtime hooks or production writes.
+- Previous continuity task: PR #226 is merged as 26590146015ee7bafd7bf1d529259f571dbd7e30; PR Foundation run 38273310852 passed repository, Chromium and WebKit jobs. Do not restart that completed task.
+- Verification: 2026-10-13 local npm run check passed syntax/catalog/decision checks; git diff --check and Claude/Gemini import/checkpoint/ADR checks passed. No runtime changes; fresh browser and full regression results are delegated to the existing PR CI. Verify the live CI/merge state before claiming release.
+- Next action: resolve the documentation PR by branch. If open, finish verified release within existing authorization; if merged, resume the next owner-directed task or genuine supplied polished-material intake when input is available. Do not manufacture content to clear a blocked intake.
+- Snapshot limits: prepared before this branch's release. Live GitHub state supersedes the snapshot; no installed hook, app-switch detector or cross-vendor process cancellation exists.
 
 ## Latest product state from repository evidence
 - Sage Precision default; Lavender Precision selectable; independent light/dark appearance. STATUS records PR #224 / merge 9891df556aca22e634e42d87cf05fd21e407124d, passing Node/check/build/browser CI and production build evidence. This handoff does not independently verify hosted authenticated switching.

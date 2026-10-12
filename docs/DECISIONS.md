@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-110 — Checkpoint and resume are standing agent instructions
+**Status:** Accepted — 2026-10-13
+
+The owner requested persistent “push unfinished work and update its handoff” behavior without pasting instructions on every AI switch. AGENTS.md now authorizes routine, scope-limited feature-branch checkpoints and requires them at meaningful milestones and planned pauses/final responses. CLAUDE.md and GEMINI.md directly import shared instructions, handoff and continuity. Agents explicitly stage task files, preserve WIP/test failures, verify remote persistence and obey one-writer ownership. Existing publication/release gates remain.
+
+This is a repository-loaded cooperative policy. It introduces no runtime hook, background watcher, app-switch detector, credential transfer or crash-save guarantee. Repository-aware coding tools can resume without repeated starter prompts once their workspace/access is configured; ordinary chats need their own persistent project setup. See AI_CONTINUITY.md.
+
 ## ADR-109 — Repository-owned continuity across development AI providers
 **Status:** Accepted — 2026-10-12
 

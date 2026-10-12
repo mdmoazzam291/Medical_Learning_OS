@@ -1,3 +1,5 @@
 @AGENTS.md
+@docs/AI_HANDOFF.md
+@docs/AI_CONTINUITY.md
 
-Read docs/AI_HANDOFF.md and docs/AI_CONTINUITY.md before starting work. Keep shared rules in AGENTS.md rather than duplicating them here.
+Use the shared automatic checkpoint/resume rule. No repeated starter prompt is required once this repository is the active workspace. Verify remote state before resuming.
