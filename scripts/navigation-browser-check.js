@@ -142,6 +142,7 @@ try {
       questions: [{ ...question, intelligence: { ...question.intelligence, presentation: ['image'] } }, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@1', classification: otherClassification, conceptLinks: [{ conceptId: 'fixture-c2', role: 'primary' }], intelligence: { ...question.intelligence, presentation: ['image'] } }]
     };
     await page.goto(origin + '/web/library.html?view=recall');
+    if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to first source');
     await page.getByRole('button', { name: 'Next card', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to second source');
