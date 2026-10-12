@@ -100,7 +100,7 @@ function syncRoute() {
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 render();
-if (prefs.pins.includes('account:admin') && !isAdmin) {
+if (prefs.pins.some(key => key.startsWith('admin:')) && !isAdmin) {
   const reading = ++accessRead, auth = createSupabaseAuth(cloudConfig), review = createCloudReview({ ...cloudConfig, auth });
   resolvePinnedAccess(prefs, () => review.me()).then(granted => { if (reading === accessRead) { isAdmin = granted; render(); } });
 }
