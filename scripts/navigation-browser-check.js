@@ -143,7 +143,7 @@ try {
     await page.waitForFunction(() => location.hash === '');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
-    await page.getByRole('heading', { name: 'Review authority stays out of the learner product.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Operate the learning system without exposing owner controls to learners.', exact: true }).waitFor();
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
