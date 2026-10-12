@@ -59,8 +59,7 @@ const SECTIONS = {
     ]),
     item('research', 'Learning & Research', 'graph', '/web/admin.html#research-gate', [
       item('learning', 'Observed Learning', 'graph', '/web/admin.html#owner-learning'),
-      item('readiness', 'Research Readiness', 'cases', '/web/admin.html#research-gate'),
-      item('ai', 'AI Usage Evidence', 'settings', '/web/admin.html#owner-ai')
+      item('readiness', 'Research Readiness', 'cases', '/web/admin.html#research-gate')
     ]),
     item('operations', 'System Operations', 'settings', '/web/admin.html#owner-infrastructure', [
       item('health', 'Provider Health', 'settings', '/web/admin.html#owner-infrastructure'),
