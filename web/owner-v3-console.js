@@ -73,14 +73,16 @@ async function mount() {
   const featureSection = document.createElement('section');
   featureSection.id = 'owner-features';
   featureSection.className = 'panel';
+  featureSection.dataset.adminPanel = 'features'; featureSection.hidden = true;
   featureSection.innerHTML = '<div class="section-heading"><div><span class="eyebrow">FEATURE ENTITLEMENTS</span><h2>Controlled beta exposure</h2><p>Server-enforced audiences: all learners, active beta learners only, or off. Beta access never grants content-review authority.</p></div><span class="badge">SERVER GATED</span></div><div id="owner-features-state" aria-live="polite"><p class="muted">Loading feature gates…</p></div>';
   ai.before(featureSection);
 
-  const alertBlock = document.createElement('div');
-  alertBlock.className = 'owner-status-block';
+  const alertBlock = document.createElement('section');
+  alertBlock.className = 'panel owner-status-block';
   alertBlock.id = 'owner-infrastructure-alerts';
-  alertBlock.innerHTML = '<strong>Open infrastructure alerts</strong><div id="owner-alerts-state" aria-live="polite"><p class="muted">Loading infrastructure alerts…</p></div>';
-  infra.append(alertBlock);
+  alertBlock.dataset.adminPanel = 'alerts'; alertBlock.hidden = true;
+  alertBlock.innerHTML = '<h2>Open infrastructure alerts</h2><div id="owner-alerts-state" aria-live="polite"><p class="muted">Loading infrastructure alerts…</p></div>';
+  infra.after(alertBlock);
 
   // Hash routes must exist even during an outage.
   window.dispatchEvent(new CustomEvent('mlos:admin-ready'));

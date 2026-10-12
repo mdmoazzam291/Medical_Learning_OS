@@ -50,22 +50,31 @@ function closeFlyout(restoreFocus = false) {
   if (restoreFocus) opener?.focus();
   opener = null;
 }
+function navigateAdminLink(anchor, event) {
+  if (!anchor || !isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html' || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || (event.button !== undefined && event.button !== 0)) return;
+  const target = new URL(anchor.href, location.origin);
+  const registered = !target.hash || navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + target.hash);
+  if (target.origin !== location.origin || canonicalPagePath(target.pathname) !== '/web/admin.html' || target.search !== location.search || !registered) return;
+  event.preventDefault();
+  if (location.hash !== target.hash) {
+    history.pushState(null, '', location.pathname + location.search + target.hash);
+    window.dispatchEvent(new CustomEvent('mlos:route', { detail: { explicit: true } }));
+  } else restoreAdminTarget({ detail: { explicit: true } });
+  closeFlyout();
+}
 shell.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) {
-    const anchor = event.target.closest('a');
-    if (anchor && isAdmin && canonicalPagePath(location.pathname) === '/web/admin.html' && !event.defaultPrevented && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && (event.button === undefined || event.button === 0)) {
-      const target = new URL(anchor.href, location.origin);
-      const registered = !target.hash || navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + target.hash);
-      if (target.origin === location.origin && canonicalPagePath(target.pathname) === '/web/admin.html' && target.search === location.search && registered) {
-        event.preventDefault();
-        if (location.hash !== target.hash) {
-          history.pushState(null, '', location.pathname + location.search + target.hash);
-          window.dispatchEvent(new CustomEvent('mlos:route', { detail: { explicit: true } }));
-        } else restoreAdminTarget({ detail: { explicit: true } });
-        closeFlyout();
-      }
+    const group = event.target.closest('summary')?.closest('details[data-group]');
+    if (group) {
+      // Persist synchronously: a route redraw can precede the native toggle event.
+      event.preventDefault();
+      group.open = !group.open;
+      save({ type: 'group', id: group.dataset.group, open: group.open });
+      return;
     }
+    const anchor = event.target.closest('a');
+    navigateAdminLink(anchor, event);
     if (anchor && canonicalPagePath(location.pathname) === '/web/library.html') {
       const target = new URL(anchor.href, location.origin);
       if (document.querySelector('#library-app [data-view]') && canSwitchLibraryView(location.pathname, location.search, target.pathname, target.search)) {
@@ -107,7 +116,7 @@ function dismissOutside(event) {
   if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render(); }
 }
 document.addEventListener('pointerdown', dismissOutside);
-document.addEventListener('click', dismissOutside);
+document.addEventListener('click', event => { dismissOutside(event); navigateAdminLink(event.target.closest('a'), event); });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') { closeFlyout(true); shell.classList.remove('mlos-search-open'); if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render('[data-rail]'); } }
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus(); }
@@ -118,7 +127,12 @@ shell.addEventListener('submit', event => {
     event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
-window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); restoreAdminTarget(); });
+window.addEventListener('mlos:access', event => {
+  accessRead += 1;
+  const granted = event.detail?.isAdmin === true;
+  if (granted !== isAdmin) { isAdmin = granted; render(); }
+  restoreAdminTarget();
+});
 window.addEventListener('mlos:admin-ready', restoreAdminTarget);
 function syncRoute(event) {
   identity = routeIdentity(location.pathname, location.search, location.hash);

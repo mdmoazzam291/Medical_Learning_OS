@@ -183,14 +183,17 @@ function restricted() {
   return '<main id="main" class="account-page"><a class="text-button" href="/">← App</a><div class="page-heading"><div><span class="eyebrow">ADMIN CONSOLE</span><h1>Admin access only.</h1><p>This authenticated account is a learner account and has no content approval authority.</p></div></div><section class="panel"><a class="secondary action-link" href="/web/account.html">Account →</a></section></main>';
 }
 
-function adminHome() {
+function researchWorkspace() {
   const pairPanels = state.pairs.length
     ? state.pairs.map(pairPanel).join('')
     : '<section class="panel"><h2>No published alternate pairs awaiting display.</h2><p class="muted">M11c validation appears here only when two distinct published question identities share a primary concept.</p></section>';
   const loading = state.loading ? '<section class="panel"><p>Loading admin evidence…</p></section>' : '';
   const error = state.error ? '<section class="panel"><h2>Admin data unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>' : '';
 
-  return '<div class="shell"><div class="workspace"><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1>Review authority stays out of the learner product.</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">BETA ADMIN</span></div>' + (!state.loading && !state.error ? researchGatePanel() : '') + '<div class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Medical + References + Rights</h2><p>Open the version-bound review workspace for question, note, source-rights and learner-report triage.</p><a class="primary action-link" href="/web/review.html">Open content review →</a></section><section class="panel"><span class="eyebrow">RESEARCH VALIDATION</span><h2>M11c pair validity</h2><p>Validate whether published alternate items provide legitimate transfer evidence and, separately, whether they are comparable enough for the retention feasibility protocol.</p></section></div>' + loading + error + (!state.loading && !state.error ? pairPanels : '') + '</main></div></div>';
+  return (!state.loading && !state.error ? researchGatePanel() : '') + loading + error + (!state.loading && !state.error ? pairPanels : '');
+}
+function adminHome() {
+  return '<div class="shell"><div class="workspace"><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1 tabindex="-1">Overview</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">OWNER ONLY</span></div><section id="admin-workspace-status" class="panel" role="status" hidden></section><div data-admin-panel="research" hidden>' + researchWorkspace() + '</div></main></div></div>';
 }
 
 function render() {
@@ -198,7 +201,11 @@ function render() {
   globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } }));
   if (!state.user) root.innerHTML = signedOut();
   else if (!state.isAdmin) root.innerHTML = state.loading ? '<main id="main" class="account-page"><h1>Verifying Admin access…</h1><p>Owner controls remain unavailable until the server confirms access.</p></main>' : state.accessUnavailable ? '<main id="main" class="account-page"><h1>Admin access unavailable</h1><p>Server access verification could not be completed. Owner controls remain unavailable.</p><button class="secondary" data-action="reload">Retry</button></main>' : restricted();
-  else root.innerHTML = adminHome();
+  else {
+    const research = root.querySelector?.('[data-admin-panel="research"]');
+    if (research) research.innerHTML = researchWorkspace();
+    else root.innerHTML = adminHome();
+  }
   globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
 }
 

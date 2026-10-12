@@ -1,5 +1,14 @@
 # Decision log
 
+## ADR-107 — Admin tools display isolated workspaces; Overview stays a summary
+**Status:** Accepted — 2026-10-12
+
+The owner observed that Overview and each Admin sidebar tool displayed the same complete dashboard, then approved separating tool workspaces and adding urgent counts to Overview. The top Admin master and five left-sidebar groups from ADR-106 remain. Each selected tool displays its own panels; Overview contains summary evidence and shortcuts, with separate learner-report, source-rights and critical-alert counts. Missing telemetry is unknown, not zero, and potentially overlapping issue counts are not combined into an invented total.
+
+Existing panels remain mounted but hidden when inactive, preserving in-page drafts and results across section links, shortcuts and Back/Forward. Research projections update only their own workspace. Reload, access revalidation and navigation to separate Intake/Review pages retain their existing lifecycle; no persistent draft storage is implied. Hidden content does not grant authority: server access checks and explicit owner-write confirmations remain unchanged.
+
+Infrastructure Alerts becomes a standalone workspace. Existing Content Snapshot and AI Usage receive sidebar destinations. Owner-data failure exposes one explicit Retry and does not trigger observer-driven retry loops. New roots may load again; detached responses cannot replace the current workspace. These are frontend changes, not clinical publication, research authorization, user-access mutation or backend deployment.
+
 ## ADR-106 — Authorized Admin is a top-level master with a grouped left sidebar
 **Status:** Accepted — 2026-10-12
 

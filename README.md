@@ -18,6 +18,8 @@ A concept-centered medical learning system: study → answer → understand mist
 
 The shared navigation uses one top header, collapsible left section rail, independent nested indexes, persistent pins and light/dark appearance. Home, Study, Library, Exams and Account remain learner masters; the owner's latest choice adds a server-authorized Admin master after Account with grouped tools in the left sidebar. [ADR-106](docs/DECISIONS.md) records this superseding choice; [status](docs/STATUS.md) records release verification and remaining content dependencies.
 
+Admin tool views show their own workspace, while Overview contains summary cards, urgent counts and shortcuts. In-page navigation preserves loaded tool drafts and results; [ADR-107](docs/DECISIONS.md) records the approved workspace separation and its access boundaries.
+
 The next post-reset input is the owner's **final polished PYQs**, with no fixed batch count or respiratory-only scope. Follow the [current PYQ intake plan](docs/FIRST_REPLACEMENT_BATCH.md), preserve supplied originals/polishing lineage and use the existing accountable admin review. The former fixed respiratory batch is cancelled; the erased pilots remain excluded from reimport.
 
 The [material release adapter](docs/MATERIAL_RELEASE_ADAPTER.md) is integrated through [PR #204](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/204). Main CI and both Cloudflare production builds passed. Actual Drive/archive and app staging integrations remain pending verified external ports and real supplied-material acceptance.

@@ -8,13 +8,13 @@ function open({ deferred = false, flagsFail = false } = {}) {
   let current;
   const pending = [], events = [];
   const makeRoot = () => {
-    const children = [], ai = { before: node => children.push(node) }, infra = { append: node => children.push(node) };
+    const children = [], ai = { before: node => children.push(node) }, infra = { after: node => children.push(node) };
     return { children, querySelector(key) { return key === '#owner-ai' ? ai : key === '#owner-infrastructure' ? infra : children.find(node => '#' + node.id === key) || null; } };
   };
   current = makeRoot();
   const app = { querySelector(key) { return key === '#owner-console' ? current : current.querySelector(key); }, addEventListener() {} };
   const context = vm.createContext({
-    document: { querySelector: () => app, getElementById: () => null, createElement: () => { const states = {}; return { innerHTML: '', querySelector(key) { return states[key] ||= { innerHTML: '' }; } }; } },
+    document: { querySelector: () => app, getElementById: () => null, createElement: () => { const states = {}; return { dataset: {}, innerHTML: '', querySelector(key) { return states[key] ||= { innerHTML: '' }; } }; } },
     createSupabaseAuth: () => ({ getSession: async () => ({ accessToken: 'synthetic' }) }), cloudConfig: { projectUrl: 'https://example.invalid', publishableKey: 'synthetic' },
     fetch: url => { const isFlags = url.endsWith('/feature-flags'); const response = label => ({ ok: !(flagsFail && isFlags), status: flagsFail && isFlags ? 503 : 200, json: async () => ({ flags: [{ featureKey: label }], alerts: [{ provider: label, state: 'open' }] }) }); return deferred ? new Promise(resolve => pending.push(label => resolve(response(label)))) : Promise.resolve(response('fixture')); },
     errorMonitor: { capture() {} }, MutationObserver: class { observe() {} }, queueMicrotask, console, location: { hash: '' }, requestAnimationFrame: fn => fn(),

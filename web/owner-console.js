@@ -4,6 +4,7 @@ import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 import { buildAdminActionInbox } from '/src/domain/admin-action-inbox.js';
 import { summarizeRecoveryEvidence } from '/src/domain/operational-recovery.js';
+import { overviewMarkup } from '/web/admin-workspace-view.js';
 
 const app = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
@@ -13,6 +14,7 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&a
 let loading = false;
 let lastDashboard = null;
 let latestAlerts = null;
+let failedMain = null;
 
 function announce(message) {
   if (!notice) return;
@@ -149,6 +151,8 @@ function actionInboxMarkup(dashboard, alerts = null) {
 function refreshActionInbox() {
   const panel = app?.querySelector('#admin-actions');
   if (panel && lastDashboard) panel.innerHTML = actionInboxMarkup(lastDashboard, latestAlerts);
+  const summary = app?.querySelector('#owner-home');
+  if (summary && lastDashboard) summary.innerHTML = overviewMarkup(lastDashboard, latestAlerts);
 }
 
 const INTEGRITY_LABELS = {
@@ -338,14 +342,16 @@ function dashboardMarkup(data) {
   const learnerAdmin = data?.learnerAdministration || {};
   const temporary = data?.reviewAuthority?.temporary === true;
 
-  return `<section id="owner-console" class="owner-console" aria-label="MLOS owner console">\n    <section id="admin-actions" class="panel">${actionInboxMarkup(data, latestAlerts)}</section>
-    <section id="owner-overview" class="panel owner-hero">
+  return `<section id="owner-console" class="owner-console" aria-label="MLOS owner console">
+    <section id="owner-home" class="panel" data-admin-panel="overview" hidden>${overviewMarkup(data, latestAlerts)}</section>
+    <section id="admin-actions" class="panel" data-admin-panel="actions" hidden>${actionInboxMarkup(data, latestAlerts)}</section>
+    <section id="owner-overview" class="panel owner-hero" data-admin-panel="snapshot" hidden>
       <div class="section-heading"><div><span class="eyebrow">SINGLETON MLOS OWNER</span><h2>Platform control tower</h2><p>Operational visibility and controlled owner actions. Authorization is server-side; every learner mutation is audited.</p></div><span class="badge">OWNER ONLY</span></div>
       <div class="owner-metrics">${metric('Learners', number(users.total), `${number(users.new7d)} new · 7d`)}${metric('Active learners', number(learning.activeLearners7d), 'attempt evidence · 7d')}${metric('Beta learners', number(learnerAdmin.activeBetaLearners), 'active access grants')}${metric('Suspended', number(learnerAdmin.suspendedLearners), 'auth bans active')}${metric('Questions', number(content.questions), `catalog v${number(content.catalogVersion)}`)}${metric('Database', bytes(infra.databaseBytes), `${number(infra.publicTableCount)} public tables`)}</div>
       <p class="muted">Snapshot ${escape(dateTime(data?.generatedAt))} · owner ${escape(data?.owner?.email || 'authenticated singleton')} · ${number(learnerAdmin.auditEvents)} learner-admin audit events</p>
     </section>
 
-    <section id="owner-users" class="panel">
+    <section id="owner-users" class="panel" data-admin-panel="users" hidden>
       <div class="section-heading"><div><span class="eyebrow">USERS + ACCESS</span><h2>Controlled learner administration</h2><p>Beta access is application state. Suspension uses Supabase Auth banning. Every write requires a reason, typed confirmation, and immutable audit receipt.</p></div><span class="badge">${number(users.total)} total</span></div>
       <div class="owner-metrics">${metric('New · 7d', number(users.new7d))}${metric('Signed in · 7d', number(users.signedIn7d))}${metric('Beta active', number(learnerAdmin.activeBetaLearners))}${metric('Suspended', number(learnerAdmin.suspendedLearners))}</div>
       <form id="owner-learner-search-form" class="owner-search"><label for="owner-learner-query">Find learner by email or exact user ID</label><div><input id="owner-learner-query" name="q" type="search" minlength="2" maxlength="160" autocomplete="off" placeholder="email or user UUID" required><button class="secondary" type="submit">Search</button></div></form>
@@ -353,38 +359,38 @@ function dashboardMarkup(data) {
       <h3>Recently created</h3>${recentUsers(users.recent)}
     </section>
 
-    <section id="owner-learning" class="panel">
+    <section id="owner-learning" class="panel" data-admin-panel="learning" hidden>
       <div class="section-heading"><div><span class="eyebrow">LEARNING ANALYTICS</span><h2>Evidence, not engagement theatre</h2><p>Raw platform activity counts are shown separately from inferred mastery.</p></div><span class="badge">7-DAY WINDOW</span></div>
       <div class="owner-metrics">${metric('Attempts', number(learning.attempts7d), `${number(learning.attemptsTotal)} lifetime`)}${metric('Sessions', number(learning.sessions7d), `${number(learning.openSessions)} open now`)}${metric('Exam runs', number(learning.examRuns7d), `${number(learning.examRunsTotal)} lifetime`)}${metric('Completed exams', number(learning.examCompletedTotal))}</div>
       <p class="muted">Latest recorded study attempt: ${escape(dateTime(learning.latestAttemptAt))}.</p>
     </section>
 
-    <section id="owner-content" class="panel">
+    <section id="owner-content" class="panel" data-admin-panel="content" hidden>
       <div class="section-heading"><div><span class="eyebrow">CONTENT SYSTEM</span><h2>Canonical content + review pipeline</h2><p>Concepts, questions, sources, NeuralVault notes and learner reports remain governed independently from learner access.</p></div><a class="primary action-link" href="/web/review.html">Open Content Review →</a></div>
       <div class="owner-metrics">${metric('Concepts', number(content.concepts))}${metric('Sources', number(content.sources))}${metric('Questions', number(content.questions))}${metric('Review evidence', number(content.reviewEvidence))}${metric('Learner reports', number(content.openLearnerReports), 'open')}${metric('Unresolved rights', number(content.unresolvedRights))}</div>
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
     </section>
 
-    <section id="owner-integrity" class="panel" aria-label="Catalog integrity audit">
+    <section id="owner-integrity" class="panel" data-admin-panel="integrity" hidden aria-label="Catalog integrity audit">
       <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog-wide integrity</h2><p>Scan canonical question versions, PYQ metadata, sources and linked NeuralVault notes. Diagnostic only, never a publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
       <div id="owner-integrity-results" role="status" aria-live="polite"><p class="muted">No audit has been run in this session.</p></div>
     </section>
 
-    <section id="owner-source-watch" class="panel" aria-label="Medical source change surveillance">
+    <section id="owner-source-watch" class="panel" data-admin-panel="source-watch" hidden aria-label="Medical source change surveillance">
       <div class="section-heading"><div><span class="eyebrow">MEDICAL SOURCE GOVERNANCE</span><h2>Source change watch</h2><p>Evidence-based version observations linked to exact affected question and note versions. No automated clinical updates.</p></div><button class="secondary" type="button" data-owner-source-watch-run>Load source watch</button></div>
       <div id="owner-source-watch-results" aria-live="polite"><p class="muted">Source-watch evidence has not been loaded in this session.</p></div>
     </section>
 
-    <section id="owner-review-authority" class="panel">
+    <section id="owner-review-authority" class="panel" data-admin-panel="authority" hidden>
       <div class="section-heading"><div><span class="eyebrow">HUMAN REVIEW AUTHORITY</span><h2>${temporary ? 'Temporary by design' : 'Authority state'}</h2><p>Owner status is persistent. Medical, References and Rights review permissions remain separate time-bounded grants.</p></div><span class="badge">${temporary ? 'TEMPORARY GRANTS' : 'CHECK POLICY'}</span></div>${reviewGrantRows(data?.reviewAuthority)}
     </section>
 
-    <section id="owner-ai" class="panel">
+    <section id="owner-ai" class="panel" data-admin-panel="ai" hidden>
       <div class="section-heading"><div><span class="eyebrow">AI USAGE</span><h2>${ai.telemetryAvailable === true ? 'Canonical AI telemetry online' : 'Telemetry foundation not wired yet'}</h2><p>${escape(ai.message || '')}</p></div><span class="badge">${ai.telemetryAvailable === true ? 'LIVE' : 'NO FALSE NUMBERS'}</span></div>
       ${ai.telemetryAvailable === true ? '<p>AI run and cost ledgers are available for aggregation.</p>' : `<div class="review-packet"><strong>Required canonical ledgers</strong><p>${escape(Array.isArray(ai.requiredTelemetry) ? ai.requiredTelemetry.join(' + ') : 'ai_runs + ai_cost_ledger')}</p></div>`}
     </section>
 
-    <section id="owner-infrastructure" class="panel">
+    <section id="owner-infrastructure" class="panel" data-admin-panel="health" hidden>
       <div class="section-heading"><div><span class="eyebrow">INFRASTRUCTURE</span><h2>End-to-end operational signals</h2><p>Cloudflare and R2 are live-probed. Resend is sourced from verified account telemetry snapshots. Sentry shows configured SDK state until a read token is connected.</p></div><span class="badge">EVIDENCE ONLY</span></div>${infrastructureRows(infra)}
       ${recoveryEvidenceMarkup(infra)}
       <p class="muted">Catalog freshness checkpoint: ${escape(dateTime(infra.catalogFreshnessAt))}.</p>
@@ -397,9 +403,7 @@ function ownerHeading() {
   const heading = app?.querySelector('.workspace main#main > .page-heading');
   if (!heading) return;
   const eyebrow = heading.querySelector('.eyebrow');
-  const title = heading.querySelector('h1');
   if (eyebrow) eyebrow.textContent = 'SINGLE MLOS OWNER';
-  if (title) title.textContent = 'Operate the learning system without exposing owner controls to learners.';
 }
 
 function mountDashboard(data) {
@@ -415,17 +419,31 @@ function mountDashboard(data) {
 async function enhance() {
   if (loading || app?.querySelector('#owner-console')) return;
   const main = app?.querySelector('.workspace main#main');
-  if (!main) return;
+  if (!main || main === failedMain) return;
   loading = true;
+  app.dataset.ownerState = 'loading';
   try {
     const session = await auth.getSession();
     if (!session?.user) return;
     const dashboard = await owner.dashboard();
-    if (dashboard?.contractId !== 'owner-admin-dashboard-v1' || dashboard?.owner?.singleton !== true) return;
+    if (app.querySelector('.workspace main#main') !== main) return;
+    if (dashboard?.contractId !== 'owner-admin-dashboard-v1' || dashboard?.owner?.singleton !== true) throw Error('owner_dashboard_invalid_payload');
+    app.dataset.ownerState = 'loaded';
+    failedMain = null;
+    latestAlerts = null;
     lastDashboard = dashboard; mountDashboard(dashboard);
   } catch (error) {
+    if (app.querySelector('.workspace main#main') === main) {
+      failedMain = main;
+      app.dataset.ownerState = 'unavailable';
+      window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
+    }
     if (![401,403].includes(Number(error?.status || 0))) errorMonitor.capture(error, { component: 'owner-console', operation: 'load_dashboard', code: error?.code || null });
-  } finally { loading = false; }
+  } finally {
+    loading = false;
+    const currentMain = app.querySelector('.workspace main#main');
+    if (currentMain && currentMain !== main) queueMicrotask(enhance);
+  }
 }
 
 async function showLearner(learnerId) {
@@ -437,6 +455,7 @@ async function showLearner(learnerId) {
 }
 
 app?.addEventListener('click', event => {
+  if (event.target.closest('[data-owner-dashboard-retry]')) { failedMain = null; enhance(); return; }
   if (event.target.closest('[data-owner-integrity-run]')) { runContentIntegrity(); return; }
   if (event.target.closest('[data-owner-source-watch-run]')) { runSourceWatch(); return; }
   const button = event.target.closest('[data-owner-learner-id]');

@@ -68,6 +68,18 @@ test('Research Gate retains its destination when readiness is unavailable', asyn
   const h = await openAdmin();
   assert.equal((h.root.innerHTML.match(/id="research-gate"/g) || []).length, 1);
 });
+test('research controls belong to an initially hidden Research workspace', async () => {
+  const h = await openAdmin();
+  assert.match(h.root.innerHTML, /data-admin-panel="research" hidden/);
+  assert.doesNotMatch(h.root.innerHTML, /class="two-column"><section class="panel"><span class="eyebrow">CONTENT GOVERNANCE/);
+});
+test('a delayed research projection updates its workspace without replacing loaded owner tools', async () => {
+  const h = await openAdmin({ deferredPairs: true }), original = h.root.innerHTML;
+  const research = { innerHTML: '' }; h.root.querySelector = () => research;
+  h.pairRequests[0]({ pairs: [], researchGate: null }); await new Promise(resolve => setImmediate(resolve));
+  assert.equal(h.root.innerHTML, original);
+  assert.match(research.innerHTML, /Readiness unavailable/);
+});
 test('pinned Admin groups do not duplicate local sidebar controls', () => {
   for (const expanded of [false, true]) {
     const html = navigationMarkup({ ...routeIdentity('/web/admin'), isAdmin: true, prefs: { expanded, pins: ['admin:content', 'admin:operations'] } });

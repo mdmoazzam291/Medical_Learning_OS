@@ -130,3 +130,33 @@ test('explicit Admin clicks restore the current section or Overview after manual
   click('https://example.invalid/web/admin.html');
   assert.equal(rootScrolls, 1);
 });
+test('Admin Overview body shortcuts preserve the workspace with in-place history', () => {
+  const h = open(); let prevented = false;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { h.location.hash = new URL(href, h.location.origin).hash; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const anchor = { href: 'https://example.invalid/web/admin.html#owner-content' };
+  h.docHandlers.click({ target: { closest: key => key === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true); assert.equal(h.location.hash, '#owner-content');
+});
+test('an unchanged Admin access update does not rebuild open navigation controls', () => {
+  const h = open(); let renders = 0, html = h.shell.innerHTML;
+  Object.defineProperty(h.shell, 'innerHTML', { get: () => html, set: value => { html = value; renders++; } });
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  assert.equal(renders, 1);
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: false } });
+  assert.equal(renders, 2);
+});
+test('opening a navigation group persists before a subsequent route redraw', () => {
+  const h = open(); h.location.pathname = '/web/admin'; h.location.search = '';
+  h.context.innerWidth = 1200;
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const rail = { dataset: {}, hasAttribute: key => key === 'data-rail' };
+  h.shellHandlers.click({ target: { closest: () => rail } });
+  const group = { dataset: { group: 'admin:overview' }, open: false };
+  const summary = { closest: () => group };
+  h.shellHandlers.click({ target: { closest: key => key === 'summary' ? summary : null }, preventDefault() {} });
+  h.windowHandlers.hashchange();
+  assert.match(h.shell.innerHTML, /data-group="admin:overview" open/);
+});

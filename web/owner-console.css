@@ -18,3 +18,5 @@
 .owner-source-form textarea{min-height:90px;resize:vertical}
 .owner-source-form button{justify-self:start}
 @media(max-width:560px){.owner-source-form{padding:12px}.owner-source-form button{width:100%}}
+.mlos-app #admin-app [hidden]{display:none!important}
+.owner-summary-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:20px}

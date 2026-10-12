@@ -1,5 +1,15 @@
 # Current status
 
+## 2026-10-12 — Isolated Admin tool workspaces and summary Overview
+
+The owner approved Q1/Q2 after observing that all Admin tools showed one long dashboard. Starting from released main `340101d` / PR #222, each selected tool now displays only its own workspace. Overview shows compact summary cards, separate urgent counts and shortcuts; unavailable counts stay unknown. The top Admin master, five sidebar groups, existing palettes, access gates and all existing owner capabilities remain. Content Snapshot and AI Usage are linked, and Infrastructure Alerts has a standalone view.
+
+Inactive tool nodes stay mounted, preserving in-page drafts/results across sidebar links, Overview shortcuts and Back/Forward. A late research projection updates only Research rather than replacing loaded owner tools. Loading/error views are explicit. Independent review reproduced an observer-driven owner-data retry loop; a RED→GREEN integration test and captured-main failure guard now require explicit Retry or a new main root. Counts do not reuse alerts from a prior dashboard root.
+
+Verification: baseline 1,186 tests; latest 1,198 tests pass, along with repository checks and the 77-file static build. Independent review reports no remaining Important findings. Responsive Chromium/WebKit coverage visits all 14 tool views and checks sole-visible-workspace state, Overview without forms, late-response draft retention, shortcuts/history and one-read outage/retry semantics. First PR #223 run 38241773466 exposed unchanged-access sidebar redraws and WebKit canceled fixture requests during the rapid view sweep. A RED→GREEN redraw regression prevents unnecessary replacement; browser fixtures provide CORS headers and wait for settled projections before navigation. Updated browser execution and release evidence remain pending CI. No real owner, clinical, research, access or backend writes were performed.
+
+Next: verify the built browser flows, release the compatible update and confirm the public authorization boundary. Draft retention covers in-page navigation, not reload or leaving for existing Intake/Review documents. See ADR-107.
+
 ## 2026-10-12 — Latest master-Admin navigation audit
 
 The owner confirmed the latest top-level Admin master and grouped left sidebar. Work starts from main `f1b0340` (PRs #212–220), preserving all newer content-quality and operations destinations. The older Account-child draft PR #221 is superseded and must not be merged.
