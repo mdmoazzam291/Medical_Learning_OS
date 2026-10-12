@@ -53,6 +53,15 @@ try {
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       // Owner dashboard APIs are independent of the navigation integration under test.
+      if (path.endsWith('/owner-api/dashboard')) return reply({
+        contractId: 'owner-admin-dashboard-v1', owner: { singleton: true, email: 'fixture@example.invalid' },
+        generatedAt: '2026-10-12T00:00:00Z', users: { total: 0, recent: [] }, learning: {},
+        content: { catalogVersion: 407, questions: 0, sources: 0, concepts: 0, openLearnerReports: 2, unresolvedRights: 1, pendingReview: { medical: 1 } },
+        learnerAdministration: { auditEvents: 0 }, reviewAuthority: { temporary: true, grants: [] },
+        ai: { telemetryAvailable: false }, infrastructure: { database: 'healthy', publicTableCount: 0, cloudflare: { status: 'healthy' } }
+      });
+      if (path.endsWith('/owner-api/infrastructure-alerts')) return reply({ alerts: [{ state: 'open', severity: 'warning', provider: 'Synthetic edge', status: 'test-only issue' }] });
+      if (path.endsWith('/owner-api/feature-flags')) return reply({ flags: [] });
       if (path.includes('/owner-api/')) return reply({});
       if (path.endsWith('/review-api/transfer-pairs')) return reply({ pairs: [] });
       // The review shell may read distinct gate queues; navigation checks never approve content.
@@ -138,7 +147,10 @@ try {
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
-    for (const [href, title] of [['/web/admin.html', 'Admin Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review']]) {
+    await page.locator('#admin-actions').waitFor();
+    assert.match(await page.locator('#admin-actions').innerText(), /Learner-reported content issues/);
+    await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
+    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
