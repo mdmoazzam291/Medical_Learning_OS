@@ -6,10 +6,16 @@ test('ordinary pins never trigger an admin access read', async () => {
   assert.equal(await resolve([{ pins: ['library:subjects'] }, () => { throw new Error('unexpected read'); }]), false);
 });
 test('an admin pin requires a fresh true server grant and cannot trust stored flags', async () => {
-  assert.equal(await resolve([{ pins: ['account:admin'], isAdmin: true }, async () => ({ isAdmin: false })]), false);
-  assert.equal(await resolve([{ pins: ['account:admin'] }, async () => ({ isAdmin: 'true' })]), false);
+  assert.equal(await resolve([{ pins: ['admin:overview'], isAdmin: true }, async () => ({ isAdmin: false })]), false);
+  assert.equal(await resolve([{ pins: ['admin:overview'] }, async () => ({ isAdmin: 'true' })]), false);
   assert.equal(await resolve([{ pins: ['account:admin'] }, async () => ({ isAdmin: true })]), true);
 });
 test('an access outage hides the admin pin without granting browser authority', async () => {
   assert.equal(await resolve([{ pins: ['account:admin'] }, async () => { throw new Error('offline'); }]), false);
+});
+
+test('top-level Admin requires a server-verified grant even without a pin', async () => {
+  assert.equal(await access.resolveAdminAccess(async () => ({ isAdmin: true })), true);
+  assert.equal(await access.resolveAdminAccess(async () => ({ isAdmin: 'true' })), false);
+  assert.equal(await access.resolveAdminAccess(async () => { throw Error('offline'); }), false);
 });
