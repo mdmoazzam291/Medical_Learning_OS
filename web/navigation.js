@@ -30,6 +30,7 @@ document.body.prepend(shell);
 document.body.classList.add('mlos-app');
 function applyAppearance() {
   document.documentElement.dataset.appearance = prefs.theme;
+  document.documentElement.dataset.palette = prefs.palette;
   document.body.dataset.rail = prefs.expanded ? 'expanded' : 'collapsed';
   document.body.dataset.navigationMemory = store.persistence;
 }

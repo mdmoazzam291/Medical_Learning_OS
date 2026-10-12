@@ -1500,3 +1500,13 @@ ADR-099's representation, evidence and review invariants remain active. Its fixe
 
 ### 2026-10-12 — filtered session builder
 The approved Study → Build Session uses the shared published Library query rather than a second question inventory. Question count bounds selected exact original versions to 1–50; available inventory may be smaller. View changes retain Study ownership and selection. Existing unfinished-session recovery remains server-authoritative.
+
+
+## ADR-108 — Permanent Sage and Lavender palettes share one appearance preference
+- Date: 2026-10-12
+- Status: Accepted; owner requested implementation of the two saved palettes.
+- Source: `MLOS_UI_Colour_Palettes.zip`, Library version 2, approved 2026-10-11. This pack supersedes the older lavender CSS comment describing it as comparison-only.
+- Sage Precision is the default (`sage_precision`); Lavender Precision is the only alternative (`lavender_precision`). Preserve their exact saved light colours and reconstructed fades. No older palette candidates are revived.
+- Palette is independent of light/dark appearance. Existing dark preferences stay dark; their missing palette migrates to Sage. Dark colours derive from the selected palette and do not constitute a separate branding choice.
+- Account → Preferences owns the colour-palette selector. The shared navigation preference store persists it across Home, Study, Library, Exams, Account and authorized Admin views; blocked storage retains page memory. Pins and group state are preserved.
+- Answer/health/graph outcomes remain semantic states rather than changing meaning with branding. Account landing branding uses the same palette variables. Canonical/personal notes and clinical content are unchanged.

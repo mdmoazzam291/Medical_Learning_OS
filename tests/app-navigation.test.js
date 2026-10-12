@@ -48,8 +48,22 @@ test('role filtering never trusts query strings or stored admin preferences', ()
 test('malformed preferences discard arbitrary paths, private fields and unknown groups', () => {
   const { validatePreferences } = requireNav();
   const prefs = validatePreferences({ version: 1, expanded: 'yes', theme: 'code', pins: ['javascript:alert(1)', 'library:notes', 'library:notes'], groups: ['__proto__', 'library:subjects'], answer: 'private', token: 'secret' });
-  assert.deepEqual(prefs, { version: 1, expanded: false, theme: 'light', pins: ['library:notes'], groups: ['library:subjects'] });
+  assert.deepEqual(prefs, { version: 1, expanded: false, theme: 'light', palette: 'sage_precision', pins: ['library:notes'], groups: ['library:subjects'] });
   assert.deepEqual(validatePreferences({ version: 999, expanded: true }).expanded, false);
+});
+
+test('approved palette defaults and migration preserve appearance, pins and groups', () => {
+  const { validatePreferences, changePreference, preferenceStore } = requireNav();
+  const old = { version: 1, theme: 'dark', expanded: true, pins: ['library:notes'], groups: ['library:subjects'] };
+  const values = new Map([['mlos-navigation-v1', JSON.stringify(old)]]);
+  const storage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) };
+  const store = preferenceStore(() => storage);
+  assert.deepEqual(store.read(), { ...old, palette: 'sage_precision' });
+  const lavender = changePreference(store.read(), { type: 'palette', value: 'lavender_precision' });
+  store.write(lavender);
+  assert.deepEqual(preferenceStore(() => storage).read(), { ...old, palette: 'lavender_precision' });
+  assert.equal(changePreference(lavender, { type: 'theme' }).palette, 'lavender_precision');
+  assert.equal(validatePreferences({ ...old, palette: 'adaptive-dusk' }).palette, 'sage_precision');
 });
 
 test('blocked browser storage retains preferences in memory without claiming device persistence', () => {
