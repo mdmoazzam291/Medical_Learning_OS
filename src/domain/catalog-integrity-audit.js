@@ -1,4 +1,4 @@
-import { questionSignature, questionAnswer, questionHome } from './content-library.js';
+import { questionSignature, questionAnswer } from './content-library.js';
 
 // Server-side, read-only structural checks. Do not use this to decide clinical
 // accuracy, rights ownership, or whether content should be published.
@@ -18,7 +18,7 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
   const findings = [], byCode = {};
   const record = (code, severity, entityType, entityId, relatedIds = []) => {
     byCode[code] = (byCode[code] || 0) + 1;
-    if (findings.length < MAX_FINDINGS) findings.push({
+    findings.push({
       code, severity, entityType, entityId: String(entityId || ''),
       relatedIds: sortedUnique(relatedIds)
     });
@@ -53,6 +53,7 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
   for (const q of activeQuestions) {
     const id = q?.questionId;
     if (!validId(id)) continue;
+    if (!validId(q.questionVersionId)) record('missing_question_version', 'critical', 'question', id);
     const relations = Array.isArray(q.conceptLinks) ? q.conceptLinks : [];
     const primary = relations.filter(link => link?.role === 'primary');
     if (primary.length !== 1) record('primary_concept_cardinality', 'critical', 'question', id);
@@ -99,8 +100,6 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
       if (seen.has(key)) record('repeated_pyq_occurrence', 'warning', 'question_metadata', id);
       seen.add(key);
     }
-    // A PYQ with platform origin is valid metadata, but may never be displayed in QBank.
-    questionHome(origins);
   }
   const conceptMetaIds = new Set();
   for (const m of conceptMetadata) {
@@ -140,11 +139,12 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
   findings.sort((a, b) => issueOrder[a.severity] - issueOrder[b.severity] ||
     a.code.localeCompare(b.code) || a.entityId.localeCompare(b.entityId));
   const findingCount = Object.values(byCode).reduce((sum, n) => sum + n, 0);
+  const displayedFindings = findings.slice(0, MAX_FINDINGS);
   return {
     contractId: 'owner-catalog-integrity-v1',
     catalogVersion, totals,
     findingCount, byCode: Object.fromEntries(Object.entries(byCode).sort(([a], [b]) => a.localeCompare(b))),
-    findings, findingsTruncated: findingCount > findings.length,
+    findings: displayedFindings, findingsTruncated: findingCount > displayedFindings.length,
     scanComplete: true, evidenceScope: 'structural_only',
     clinicalAccuracyVerified: false, rightsVerified: false,
     emptyCatalog: totals.questions === 0 && totals.concepts === 0 && totals.sources === 0,
