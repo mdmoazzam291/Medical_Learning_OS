@@ -31,7 +31,7 @@ test('rail controls expose click flyouts and pin shortcuts retain their original
 });
 test('admin tools appear only with verified access', () => {
   assert.ok(!markup({ master: 'admin', prefs: { expanded: true } }).includes('Content Intake'));
-  const granted = markup({ master: 'admin', section: 'review', prefs: { expanded: true }, isAdmin: true });
+  const granted = markup({ master: 'admin', section: 'content', prefs: { expanded: true, groups: ['admin:content'] }, isAdmin: true });
   assert.match(granted, /Content Intake/);
   assert.match(granted, /Review Workspace/);
   assert.match(granted, /Reference Review/);
