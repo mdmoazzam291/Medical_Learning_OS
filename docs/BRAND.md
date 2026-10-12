@@ -1,6 +1,9 @@
 # PARSE — provisional brand and rollout contract
 
-**Owner selection:** 2026-10-08 (Asia/Kolkata). **Public launch status:** PROVISIONAL, pending trademark clearance. **Change scope:** documentation/design proposal only. No live UI, auth, domain, database or content changes authorized by this document.
+**Owner selection:** 2026-10-08 (Asia/Kolkata). **Public launch status:** PROVISIONAL, pending trademark clearance.
+
+**Updated 2026-10-13:** Preliminary exact-name screening found existing PARSE biomedical/software marks. The official Indian trademark register requires OTP access and has not been fully checked. The brand is **NOT CLEARED**; treat final artwork, public PARSE rebranding and brand-specific purchases as blocked. See [PARSE trademark screening and acceptance gate](PARSE_BRAND_CLEARANCE.md).
+ **Change scope:** documentation/design proposal only. No live UI, auth, domain, database or content changes authorized by this document.
 
 ## 1. Brand identity (candidate)
 
