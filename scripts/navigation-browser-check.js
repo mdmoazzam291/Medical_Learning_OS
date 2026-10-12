@@ -130,7 +130,7 @@ try {
     await activate(mainNav.getByRole('link', { name: 'Admin', exact: true }));
     await page.getByRole('heading', { name: 'Review authority stays out of the learner product.', exact: true }).waitFor();
     assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).getAttribute('aria-current'), 'page');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), null);
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
     for (const [href, title] of [['/web/admin.html', 'Admin Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
