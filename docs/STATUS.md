@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-13 — Standing checkpoint/resume policy without repeated prompts
+
+The owner asked to keep checkpointing and handoff updates somewhere persistent, so switching AI tools does not require a pasted prompt each time. AGENTS.md now requires scoped engineering checkpoints at meaningful milestones and planned waits/pauses/compaction/switches/final responses, with explicit staging, WIP/test-state labeling and remote-save verification. CLAUDE.md and new GEMINI.md directly import the handoff and continuity guide as well as AGENTS.md. AI_HANDOFF.md clears the completed PR #226 task and records the new branch. See ADR-110.
+
+Documentation only. No installed autosave hook, switch detector, background task, credentials or medical/learner-history writes. Plain chats still require their own persistent project/repository setup; interrupted processes may miss a final save. Fresh local repository checks, diff whitespace checks and Claude/Gemini import/checkpoint/ADR checks passed. Full regression/browser verification and release are tracked by the PR for docs/automatic-ai-checkpoints-20261013 and its live CI timeline. Next: resume the next owner-directed task or genuine supplied polished-material intake when inputs are available.
+
 ## 2026-10-12 — Portable ChatGPT/Codex ↔ Claude development continuity
 
 The owner approved Q1/Q2/Q3: implement portable continuity, provide a Claude starter prompt and define alternating-tool rules. AGENTS.md now uses recorded repository decisions rather than mandatory private ChatGPT retrieval. CLAUDE.md imports that shared contract; AI_CONTINUITY.md defines task ownership and transfer. AI_HANDOFF.md, AI_ENVIRONMENT.md and AI_STARTER_PROMPT.md expose the dated current state, setup/capability gaps and resume instructions. The context register now reconciles the latest Admin/palette releases and labels early stack proposals historical. Portable material-intake/faculty guides and their contracts preserve the existing Drive authority and app review gates. See ADR-109.

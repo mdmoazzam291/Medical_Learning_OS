@@ -5,7 +5,16 @@ Accepted: 2026-10-12 (Asia/Kolkata). Scope: Medical_Learning_OS only.
 ## Ownership and authority
 The repository owns implementation, accepted decisions, verification and engineering handoffs. Google Drive owns source-material originals, material governance and immutable releases. ChatGPT/Claude conversations supply proposals or explicit owner instructions; neither provider's private memory is required to resume recorded work. Missing decisions remain unresolved rather than invented. An explicit current owner instruction supersedes older project records; record the change.
 
-Use AGENTS.md as the shared contributor contract. CLAUDE.md imports it. Repository workflow guides are portable reading material, not automatically installed skills, account connections or running automations. No new infrastructure or model dependency is introduced.
+Use AGENTS.md as the shared contributor contract. CLAUDE.md and GEMINI.md import it and the current handoff/continuity guide. Repository workflow guides are portable reading material, not automatically installed skills, account connections or running automations. No new infrastructure or model dependency is introduced.
+
+## No repeated prompt: standing checkpoint policy
+Accepted by the owner on 2026-10-13. AGENTS.md now directs the acting agent to update and push its task checkpoint at meaningful milestones, before long waits and before planned pauses, context compaction, switches or final responses. Routine feature-branch checkpointing within task scope needs no repeated owner request. Explicit staging, remote verification and accurate WIP/test states are required; production release and material publication authority are unchanged.
+
+Codex/AGENTS-aware agents use AGENTS.md. Claude Code loads CLAUDE.md imports; Gemini CLI loads GEMINI.md imports. The new agent must open the same repository/workspace and fetch current state. The user can then give a short task or say “continue”; they do not need to paste the starter prompt. Verify loaded context once during each tool's initial setup (Claude /context; Gemini /memory show) and reload stale context when switching branches.
+
+This policy is cooperative, not enforced by an installed hook. It cannot capture a killed process's unpushed edits, detect a browser/app switch or cancel another vendor's running task. ChatGPT web Projects, ordinary Claude chats and other tools that do not load repository instruction files need a one-time persistent project instruction/repository connection in their own settings; this repository change does not configure those accounts. File-only knowledge snapshots must be refreshed. Unsupported agents require their own documented instruction entry point. No claim of universal zero-setup autosave is made.
+
+References: [Claude memory/imports](https://code.claude.com/docs/en/memory), [Gemini context/imports](https://geminicli.com/docs/cli/gemini-md/).
 
 ## Starting a task
 1. Read AGENTS.md, README.md, AI_HANDOFF.md, PROJECT_CONTEXT.md and the latest STATUS.md entries, then relevant contracts and decisions.
