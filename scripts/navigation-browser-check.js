@@ -143,10 +143,10 @@ try {
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Content Intake');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/content-import.html');
     await activate(page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]'));
     await page.waitForURL('**/web/review?workspace=references');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Reference Review');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/review.html?workspace=references');
     await mainNav.getByRole('link', { name: 'Study', exact: true }).click();
     await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
     await mainNav.getByRole('link', { name: 'Account', exact: true }).click();
