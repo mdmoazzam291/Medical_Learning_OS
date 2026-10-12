@@ -45,7 +45,7 @@ try {
     const activate = locator => touch ? locator.tap() : locator.click();
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
-    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null;
+    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
@@ -53,7 +53,7 @@ try {
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
-      if (path.endsWith('/content-library-api/library')) return reply(selectionLibrary);
+      if (path.endsWith('/content-library-api/library')) return libraryUnavailable ? reply({ error: 'fixture_library_unavailable' }, 503) : reply(selectionLibrary);
       if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
       if (path.endsWith('/study-api/media')) return reply({ media: [] });
@@ -234,6 +234,14 @@ try {
       assert.equal(new URL(page.url()).searchParams.get('subject'), 'anatomy');
       assert.equal(new URL(page.url()).searchParams.get('module'), 'gross-regional-anatomy');
     }
+    libraryUnavailable = true;
+    await page.goto(origin + '/web/library.html?view=notes');
+    await page.getByRole('button', { name: 'Retry library', exact: true }).waitFor();
+    await page.locator('#mlos-local-nav a[href="/web/library.html?view=graph"]').click();
+    await page.waitForURL('**/web/library?view=graph');
+    await page.getByRole('button', { name: 'Retry library', exact: true }).waitFor();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/library.html?view=graph');
+    libraryUnavailable = false;
     const otherClassification = { ...classification, systems: ['cardiovascular'] };
     selectionLibrary = {
       ...library,

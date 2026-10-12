@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-12 — Library navigation during unavailable content
+
+- Live signed-out verification reproduced a silent Graph menu action from Notes: the shell canceled normal navigation while the unloaded Library ignored its view-change event. The same defect affected loading and failed content requests.
+- Shared-view interception now requires the actual Library view controls to be mounted. Until then, menu links keep their normal clean-URL navigation and continue to expose the existing loading/sign-in/error state. Loaded views still retain their DOM and filter context.
+- One actual-navigation regression was RED before the fix. Built-bundle Chromium and iPad WebKit tests now simulate a failed Library request and verify Notes → Graph reaches the target URL and selected menu while preserving Retry. Local 1136 tests, repository checks and the 71-file build pass; independent review and release CI evidence are recorded in the PR.
+
 ## 2026-10-12 — Production clean-URL navigation follow-up
 
 - Live post-release browser verification reproduced Cloudflare's `.html` → clean URL redirect: Study opened `/web/medical` but the shell selected Home. The same mismatch affected all master/section identities, nested active markers and in-place Library shell actions; the generic workspace could select the wrong body as well.
