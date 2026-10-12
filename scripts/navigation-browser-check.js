@@ -249,6 +249,7 @@ try {
       await page.getByRole('heading', { name: 'Admin access unavailable', exact: true }).waitFor();
       assert.equal(await mainNav.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
       accessStatus = 200; projectionUnavailable = true;
+      if (width < 700 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
       await activate(page.locator('[data-action="reload"]'));
       await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
       await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
