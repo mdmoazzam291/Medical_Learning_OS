@@ -240,7 +240,7 @@ try {
     await page.locator('#mlos-local-nav a[href="/web/library.html?view=graph"]').click();
     await page.waitForURL('**/web/library?view=graph');
     await page.getByRole('button', { name: 'Retry library', exact: true }).waitFor();
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Knowledge Graph');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/library.html?view=graph');
     libraryUnavailable = false;
     const otherClassification = { ...classification, systems: ['cardiovascular'] };
     selectionLibrary = {
