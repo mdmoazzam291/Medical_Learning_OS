@@ -42,8 +42,10 @@ function sectionMarkup(row, master, section, prefs, currentHref) {
     ? '<button class="mlos-rail-item" data-flyout="' + key + '" aria-label="' + escapeText(row.label) + '" aria-expanded="false" aria-controls="mlos-flyout" title="' + escapeText(row.label) + '">' + icon(row.icon) + '</button>'
     : '<a class="mlos-rail-item" href="' + escapeText(row.href) + '" aria-label="' + escapeText(row.label) + '" title="' + escapeText(row.label) + '"' + current + '>' + icon(row.icon) + '</a>';
   const label = icon(row.icon) + '<span>' + escapeText(row.label) + '</span>';
+  const redundantAdminOpen = master === 'admin' && row.children.some(child => child.href === row.href);
+  const openRow = redundantAdminOpen ? '' : '<div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>Open ' + escapeText(row.label) + '</a>' + pin(key, row.label, prefs) + '</div>';
   return row.children.length
-    ? '<details data-group="' + key + '"' + (prefs.groups.includes(key) ? ' open' : '') + '><summary>' + label + '</summary><div class="mlos-children"><div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>Open ' + escapeText(row.label) + '</a>' + pin(key, row.label, prefs) + '</div>' + childrenMarkup(row.children, key, prefs, currentHref) + '</div></details>'
+    ? '<details data-group="' + key + '"' + (prefs.groups.includes(key) ? ' open' : '') + '><summary>' + label + '</summary><div class="mlos-children">' + openRow + childrenMarkup(row.children, key, prefs, currentHref) + '</div></details>'
     : '<div class="mlos-nav-row"><a href="' + escapeText(row.href) + '"' + current + '>' + label + '</a>' + pin(key, row.label, prefs) + '</div>';
 }
 export function flyoutMarkup(row, master, prefs, currentHref = '') {
