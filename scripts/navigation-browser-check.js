@@ -27,7 +27,7 @@ try {
     const context = await browser.newContext({ viewport: { width, height } });
     await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
     const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
-    const writes = []; let admin = true;
+    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
@@ -35,7 +35,8 @@ try {
       if (path.endsWith('/auth/v1/user')) return reply(user);
       if (path.endsWith('/review-api/me')) return reply({ isAdmin: admin, reviewKinds: admin ? ['medical', 'references', 'rights'] : [] });
       if (path.endsWith('/learner-experiment-api/status')) return reply({ contractId: 'answer-confidence-feature-status-v1', featureKey: 'answer_confidence_capture', enabled: false, authority: 'server_entitlement' });
-      if (path.endsWith('/content-library-api/library')) return reply(library);
+      if (path.endsWith('/content-library-api/library')) return reply(selectionLibrary);
+      if (path.endsWith('/content-library-api/study')) { selectedIds = req.postDataJSON().questionVersionIds; return reply({ sessionId: 'owned-selection', resumedExisting: true }); }
       if (path.endsWith('/study-api/questions')) return reply({ questions: [question] });
       if (path.endsWith('/study-api/progress')) return reply({ attempts: 0, correct: 0, accuracy: null, concepts: [] });
       if (path.endsWith('/study-api/revision/due')) return reply({ dueCount: 0, unseenCount: 1, items: [] });
@@ -132,6 +133,30 @@ try {
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(writes.length, 0, 'navigation and self-review must not create learning or publication writes');
+    selectionLibrary = { ...library, questions: [question, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@3' }, { ...question, questionId: 'fixture-q3', questionVersionId: 'fixture-q3@2' }] };
+    await page.goto(origin + '/web/library.html?view=questions&master=study&build=1');
+    await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    await page.locator('#mlos-local-nav [data-pin="study:build"]').click();
+    await page.goto(origin + '/web/library.html?view=notes');
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    await page.locator('#mlos-local-nav [data-pin="library:notes"]').click();
+    await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Build Session', exact: true }).click();
+    await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('build'), '1');
+    await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Concept Notes', exact: true }).click();
+    await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('build'), null);
+    await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'Build Session', exact: true }).click();
+    await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
+    await page.getByLabel('Question count', { exact: true }).selectOption('1');
+    await page.getByRole('tab', { name: 'Graph', exact: true }).click();
+    assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
+    assert.equal(new URL(page.url()).searchParams.get('build'), '1');
+    await page.getByRole('button', { name: 'Study these questions (up to 1)', exact: true }).click();
+    await page.getByRole('link', { name: 'Continue unfinished session', exact: true }).waitFor();
+    assert.deepEqual(selectedIds, ['fixture-q@1']);
+    assert.deepEqual(writes, ['/functions/v1/content-library-api/study'], 'only explicit practice starts a session');
     if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-preferences-' + name + '.png'), fullPage: true });
     await context.close();
   }

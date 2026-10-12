@@ -1,11 +1,12 @@
 # Current status
 
-## 2026-10-12 — approved navigation implementation, responsive release checks pending
+## 2026-10-12 — approved navigation implementation, final release verification
 
 - The feature branch implements the shared single-row five-master header, global search, dedicated theme control, collapsible icon rail, independent nested submenus, Subject Index inside Subjects & Topics and device-persisted pinned shortcuts. The approved light/dark lavender palettes apply to the real app.
 - Library now includes Questions, the 19-subject/four-module explorer, nine source-tagged reference indexes, Atlas/media categories, exact-note comparison, explicit prerequisite links, device saved filter views/bookmarks and source-bound recall/case/image/skills workspaces. Existing server-scored Study, confidence, revision, private Vault notes/drafts and genuine review/publication remain authoritative. Unsupported sequential/3D/audiovisual content is clearly labelled; no medical material is manufactured or restored.
 - Added authenticated, bounded learner-owned recent-activity and exam-history reads, exact saved-run entry, revision/mistake/progress/Exam DNA views, existing learner export, device preferences and personal exam planning. Study duration choices now include 5/15/120 minutes while retaining existing choices supported by the 5–120 minute server contract.
-- Local verification: 1097/1097 Node tests, syntax/catalog/decision checks and 69-file allowlisted build pass. Actual phone/tablet/desktop built-bundle navigation checks are added to CI alongside all existing responsive flow suites. Local Chromium is unavailable; browser/reviewer/provider evidence will be recorded before release completion.
+- PR #206 head `912416a` passed Foundation run 38185440059: check and browser jobs, including all existing study, account, notes/drafts, review, exam and retention suites plus shared navigation at phone/tablet/desktop widths. Independent review fixes for mobile rail layout, exact saved-run reload, preference synchronization and browser fixtures are included.
+- Final continuation completes Build Session through canonical Library filters and a bounded question-count selector; Notes/Questions/Graph retain builder context and server-owned unfinished sessions still take precedence. Local verification: 1107/1107 Node tests, syntax/catalog/decision checks and 71-file allowlisted build pass. The final count-selection browser scenario and provider release checks remain pending.
 - No clinical import, erased-content restoration, human approval, learner outcome, main merge or production deployment has been performed by this feature branch yet.
 
 ## 2026-10-08 — respiratory cancellation, erased-pilot and adapter-release reconciliation

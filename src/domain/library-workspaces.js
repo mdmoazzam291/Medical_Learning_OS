@@ -5,6 +5,10 @@ const normal = text => String(text || '').normalize('NFKC').toLowerCase();
 const tagged = (classification, tag) => !tag || [...(classification?.domains || []), ...(classification?.tasks || [])].includes(tag);
 const imageKinds = new Set(['image', 'ecg-tracing', 'histology', 'audio', 'video']);
 const categories = { 'ecg-traces': ['ecg-tracing'], histology: ['histology'], 'clinical-audio': ['audio'], 'procedure-videos': ['video'] };
+export function studySelection(data, count = 50) {
+  if (!Number.isInteger(count) || count < 1 || count > 50) throw new Error('Choose between 1 and 50 questions.');
+  return data.questions.slice(0, count).map(q => q.questionVersionId);
+}
 export function selectWorkspace(library, options = {}) {
   const filters = { ...(options.filters || {}), ...(options.collection ? { home: options.collection } : {}) };
   const data = filterLibrary(library, filters);

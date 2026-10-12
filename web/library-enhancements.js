@@ -17,7 +17,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
   }
   function decorate() {
     const s = state(), data = current();
-    document.querySelector('#library-title').textContent = titles[s.view];
+    document.querySelector('#library-title').textContent = new URLSearchParams(location.search).get('build') === '1' ? 'Build Session' : titles[s.view];
     root.querySelector('.library-filters').insertAdjacentHTML('beforeend', select('collection', [['pyq', 'PYQs'], ['platform', 'QBank'], ['original', 'Original']]) + select('observed', [['incorrect', 'Latest incorrect'], ['correct', 'Latest correct'], ['unattempted', 'Unattempted'], ['repeated', 'Repeated incorrect']]) + select('sort', [['wrong', 'Most incorrect attempts'], ['alphabetical', 'Alphabetical']]));
     root.querySelector('.library-actions').insertAdjacentHTML('beforeend', '<button data-save-view>Save current view</button>');
     const common = ['notes', 'questions', 'graph'].includes(s.view);

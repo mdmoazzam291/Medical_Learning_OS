@@ -37,7 +37,7 @@ export const MASTERS = Object.freeze([
 ]);
 const SECTIONS = {
   home: [item('today', 'Today', 'home', '/'), item('resume', 'Resume', 'play', '/web/medical.html'), item('progress', 'Progress', 'graph', workspace('home', 'progress')), item('recent', 'Recent Activity', 'clock', workspace('home', 'recent')), item('material', 'Published Material', 'book', library('notes'))],
-  study: [item('build', 'Build Session', 'settings', '/web/medical.html'), item('practice', 'Practice', 'play', '/web/medical.html#question-browser'), item('revision', 'Revision', 'clock', workspace('study', 'revision')), item('mistakes', 'Mistake Repair', 'repair', workspace('study', 'mistakes')), ...[['recall', 'Recall & Flashcards', 'book'], ['cases', 'Clinical Cases', 'cases'], ['images', 'Image Drills', 'image'], ['skills', 'Skills & Viva', 'skills']].map(([id, label, icon]) => item(id, label, icon, library(id, '&master=study')))],
+  study: [item('build', 'Build Session', 'settings', '/web/library.html?view=questions&master=study&build=1'), item('practice', 'Practice', 'play', '/web/medical.html#question-browser'), item('revision', 'Revision', 'clock', workspace('study', 'revision')), item('mistakes', 'Mistake Repair', 'repair', workspace('study', 'mistakes')), ...[['recall', 'Recall & Flashcards', 'book'], ['cases', 'Clinical Cases', 'cases'], ['images', 'Image Drills', 'image'], ['skills', 'Skills & Viva', 'skills']].map(([id, label, icon]) => item(id, label, icon, library(id, '&master=study')))],
   library: libraryRows,
   exams: [item('simulator', 'Simulator', 'exam', '/web/exam.html'), item('dna', 'Exam DNA / PYQs', 'graph', workspace('exams', 'dna')), item('past', 'Past Runs', 'clock', workspace('exams', 'past')), item('autopsy', 'GT Autopsy', 'repair', workspace('exams', 'autopsy')), item('rules', 'Exam Plan & Rules', 'settings', workspace('exams', 'rules'))],
   account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research'), { ...item('admin', 'Admin', 'settings', '/web/admin.html', [item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]), adminOnly: true }]
@@ -70,10 +70,16 @@ export function preferenceStore(storageAccess = () => globalThis.localStorage) {
   try { const storage = storageAccess(); memory = validatePreferences(JSON.parse(storage.getItem('mlos-navigation-v1') || 'null')); storage.setItem('mlos-navigation-v1', JSON.stringify(memory)); persistence = 'device'; } catch { /* Page memory remains usable. */ }
   return { get persistence() { return persistence; }, read: () => structuredClone(memory), write(value) { memory = validatePreferences(value); try { storageAccess().setItem('mlos-navigation-v1', JSON.stringify(memory)); persistence = 'device'; } catch { persistence = 'session'; } return this.read(); } };
 }
+export function canSwitchLibraryView(pathname, search, targetPathname, targetSearch) {
+  const current = new URLSearchParams(search), target = new URLSearchParams(targetSearch);
+  return pathname === '/web/library.html' && targetPathname === pathname
+    && (current.get('build') === '1') === (target.get('build') === '1')
+    && ['notes', 'questions', 'graph'].includes(target.get('view'));
+}
 export function routeIdentity(pathname, search = '') {
   const p = new URLSearchParams(search);
   if (pathname.endsWith('/workspace.html')) { const master = MASTERS.some(x => x.id === p.get('master')) ? p.get('master') : 'home'; const section = (SECTIONS[master] || []).some(x => x.id === p.get('section')) ? p.get('section') : SECTIONS[master][0].id; return { master, section }; }
-  if (pathname.endsWith('/library.html')) { const view = p.get('view') || 'notes'; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'notes' }; }
+  if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'notes'; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'notes' }; }
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'build' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };

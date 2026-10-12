@@ -1,4 +1,4 @@
-import { navigationFor, routeIdentity, preferenceStore } from '/src/domain/app-navigation.js';
+import { navigationFor, routeIdentity, preferenceStore, canSwitchLibraryView } from '/src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '/web/navigation-view.js';
 import { mutatePreference } from '/web/navigation-preferences.js';
 import { resolvePinnedAccess } from '/web/navigation-access.js';
@@ -41,7 +41,7 @@ shell.addEventListener('click', event => {
     const anchor = event.target.closest('a');
     if (anchor && location.pathname === '/web/library.html') {
       const target = new URL(anchor.href, location.origin);
-      if (target.pathname === location.pathname && ['notes', 'questions', 'graph'].includes(target.searchParams.get('view'))) {
+      if (canSwitchLibraryView(location.pathname, location.search, target.pathname, target.search)) {
         event.preventDefault(); window.dispatchEvent(new CustomEvent('mlos:library-view', { detail: { view: target.searchParams.get('view') } })); closeFlyout();
       }
     }
