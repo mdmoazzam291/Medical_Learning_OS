@@ -7,13 +7,14 @@ import { navigationMarkup, flyoutMarkup } from '../web/navigation-view.js';
 import { mutatePreference } from '../web/navigation-preferences.js';
 const source = (await readFile(new URL('../web/navigation.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
 function open({ ready = true } = {}) {
-  const shellHandlers = {}, docHandlers = {}, windowHandlers = {}, classes = new Set();
+  const shellHandlers = {}, docHandlers = {}, windowHandlers = {}, classes = new Set(), targets = {};
   const input = { value: '', focus() {} }, flyout = { hidden: true };
   const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : input; }, querySelectorAll: () => [] };
   const body = { dataset: {}, prepend() {}, classList: { add() {} } };
   const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: 620, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
-  return { body, shell, classes, shellHandlers, docHandlers, input, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
+  context.document.getElementById = id => targets[id] || null;
+  return { body, shell, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
 }
 test('a narrow expanded panel can be dismissed by tapping outside it', () => {
   const h = open(); const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
@@ -72,4 +73,60 @@ test('an unavailable Library keeps normal link navigation instead of swallowing 
   const anchor = { href: 'https://example.invalid/web/library.html?view=graph' };
   h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
   assert.equal(prevented, false); assert.equal(dispatched, false);
+});
+test('Admin sidebar fragments restore asynchronous destinations once per target and layout change', () => {
+  const h = open(); let scrolls = 0;
+  h.location.pathname = '/web/admin'; h.location.hash = '#owner-infrastructure';
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } }); h.windowHandlers.hashchange();
+  h.targets['owner-infrastructure'] = { closest: () => ({}), scrollIntoView: () => { scrolls++; } };
+  h.windowHandlers['mlos:admin-ready']?.(); h.windowHandlers['mlos:admin-ready']?.();
+  assert.equal(scrolls, 1);
+  h.windowHandlers['mlos:admin-ready']({ detail: { layoutChanged: true } });
+  assert.equal(scrolls, 2);
+  h.targets['owner-infrastructure'] = { closest: () => ({}), scrollIntoView: () => { scrolls++; } };
+  h.windowHandlers['mlos:admin-ready'](); assert.equal(scrolls, 3);
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: false } });
+  h.windowHandlers['mlos:admin-ready'](); assert.equal(scrolls, 3);
+});
+test('Admin scroll restoration ignores arbitrary fragments outside the sidebar catalog', () => {
+  const h = open(); let scrolls = 0;
+  h.location.pathname = '/web/admin'; h.location.hash = '#owner-learner-query';
+  h.targets['owner-learner-query'] = { closest: () => ({}), scrollIntoView: () => { scrolls++; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  h.windowHandlers['mlos:admin-ready']?.(); assert.equal(scrolls, 0);
+});
+test('hosted Admin sidebar anchors update history in place without reloading owner drafts', () => {
+  const h = open(); let prevented = false, entries = 0;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.hash = '#owner-users'; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { entries++; const url = new URL(href, h.location.origin); h.location.pathname = url.pathname; h.location.search = url.search; h.location.hash = url.hash; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const anchor = { href: 'https://example.invalid/web/admin.html#owner-features' };
+  h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(entries, 1);
+  assert.equal(h.location.pathname, '/web/admin');
+  assert.equal(h.location.hash, '#owner-features');
+  assert.match(h.shell.innerHTML, /data-flyout="admin:operations" data-active="true"/);
+});
+test('modified Admin links and unknown fragments retain native navigation', () => {
+  const h = open(); h.location.pathname = '/web/admin'; h.location.search = ''; h.location.origin = 'https://example.invalid';
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  for (const [href, ctrlKey] of [['https://example.invalid/web/admin.html#owner-features', true], ['https://example.invalid/web/admin.html#owner-learner-query', false]]) {
+    let prevented = false; const anchor = { href };
+    h.shellHandlers.click({ ctrlKey, target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+    assert.equal(prevented, false);
+  }
+});
+test('explicit Admin clicks restore the current section or Overview after manual scrolling', () => {
+  const h = open(); let sectionScrolls = 0, rootScrolls = 0;
+  h.location.pathname = '/web/admin'; h.location.search = ''; h.location.hash = '#owner-features'; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { h.location.hash = new URL(href, h.location.origin).hash; } };
+  h.targets['owner-features'] = { closest: () => ({}), scrollIntoView: () => { sectionScrolls++; } };
+  h.targets.main = { closest: () => ({}), scrollIntoView: () => { rootScrolls++; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const click = href => h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? { href } : null }, preventDefault() {} });
+  click('https://example.invalid/web/admin.html#owner-features');
+  assert.equal(sectionScrolls, 2);
+  click('https://example.invalid/web/admin.html');
+  assert.equal(rootScrolls, 1);
 });

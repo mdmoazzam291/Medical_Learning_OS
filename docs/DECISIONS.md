@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-106 — Authorized Admin is a top-level master with a grouped left sidebar
+**Status:** Accepted — 2026-10-12
+
+The owner's latest explicit instruction retains the current top Admin master and its left-side grouped tools. This supersedes only ADR-104's Account-child restriction. Home, Study, Library, Exams and Account remain learner masters; Admin appears after Account only with server-confirmed access. Its existing Overview, Content & Quality, Learners & Access, Learning & Research and System Operations groups are preserved, including the recent intake, integrity, source-watch and recovery work.
+
+Admin section pins remain stored and usable from other masters, but are not repeated beside their identical local Admin groups. Authorization outages remain distinct from explicit denial. Shared navigation restores only catalogued Admin fragments after asynchronous sections mount or finish their layout, with fixed-header clearance. Detached owner responses must not update the current Action Inbox. These are frontend repairs, not access grants, backend migrations or content/research actions.
+
 ## ADR-105 — Navigation URL state supports browser history and touch dismissal
 **Status:** Accepted — 2026-10-12
 
