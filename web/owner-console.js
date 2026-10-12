@@ -3,6 +3,7 @@ import { createCloudOwner } from '/src/adapters/cloud-owner.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 import { buildAdminActionInbox } from '/src/domain/admin-action-inbox.js';
+import { summarizeRecoveryEvidence } from '/src/domain/operational-recovery.js';
 
 const app = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
@@ -89,6 +90,22 @@ function infrastructureRows(infra) {
     ${infraCard('Resend', resend, resendDetail)}
     ${infraCard('Sentry', sentry, sentryDetail)}
   </div>`;
+}
+
+function recoveryEvidenceMarkup(infra) {
+  const evidence = summarizeRecoveryEvidence(infra);
+  const rows = evidence.rows.map(item => '<article class="owner-recovery-row"><div><strong>' + escape(item.label) +
+    '</strong><small>' + escape(item.status) + ' · last observed ' + escape(dateTime(item.time)) +
+    ' · run ' + escape(item.runStatus || 'unknown') + ' / ' + escape(item.conclusion || 'not reported') +
+    '</small></div>' + (item.url ? '<a class="secondary action-link" href="' + escape(item.url) +
+    '" target="_blank" rel="noopener noreferrer">Open run ↗</a>' : '') + '</article>').join('');
+  return '<div id="owner-recovery" class="owner-status-block"><strong>Release & recovery evidence</strong>' +
+    '<p class="muted">Latest recorded GitHub workflow outcomes for backup, storage audit and restore drill, not a guarantee of recovery or a fresh restore point.</p>' +
+    '<div class="owner-recovery-evidence">' + rows + '</div>' +
+    (evidence.completeness !== 'timestamps_observed'
+      ? '<p class="muted">One or more workflow timestamps are unavailable. This view cannot confirm backup freshness.</p>'
+      : '<p class="muted">Run timestamps are present for all three workflows; inspect logs and recovery checks before relying on them.</p>') +
+    '</div>';
 }
 
 function learnerSearchResults(learners) {
@@ -181,6 +198,7 @@ function dashboardMarkup(data) {
 
     <section id="owner-infrastructure" class="panel">
       <div class="section-heading"><div><span class="eyebrow">INFRASTRUCTURE</span><h2>End-to-end operational signals</h2><p>Cloudflare and R2 are live-probed. Resend is sourced from verified account telemetry snapshots. Sentry shows configured SDK state until a read token is connected.</p></div><span class="badge">EVIDENCE ONLY</span></div>${infrastructureRows(infra)}
+      ${recoveryEvidenceMarkup(infra)}
       <p class="muted">Catalog freshness checkpoint: ${escape(dateTime(infra.catalogFreshnessAt))}.</p>
     </section>
   </section>`;
@@ -300,4 +318,4 @@ if (app) {
   enhance();
 }
 
-export { actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
+export { recoveryEvidenceMarkup, actionInboxMarkup, dashboardMarkup, recentUsers, reviewGrantRows, infrastructureRows, learnerDetailMarkup, learnerSearchResults };
