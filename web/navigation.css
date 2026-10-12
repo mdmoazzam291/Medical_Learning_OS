@@ -1,6 +1,47 @@
-/* Owner-approved Lavender Precision palette; semantic answer colors remain distinct. */
-:root,:root[data-appearance="light"]{color-scheme:light;--bg:#F7F7F7;--surface:#FFF;--ink:#202020;--muted:#626262;--line:#ECECEC;--soft:#E1DDF8;--forest:#373737;--accent:#493D82;--hero:linear-gradient(180deg,#978BE3 0%,#A297E9 20%,#B3ABEC 55%,#B9B3EE 78%,#CBC4F0 100%);--danger:#a82b30}
-:root[data-appearance="dark"]{color-scheme:dark;--bg:#19181D;--surface:#242229;--ink:#F0EDF6;--muted:#B9B4C4;--line:#3A3544;--soft:#38304D;--forest:#E2DDF2;--accent:#D8CFF6;--hero:linear-gradient(180deg,#433765,#392F57,#302A43);--danger:#ffb4b8}
+/* Permanent approved palettes. Sage is the default; dark values derive from each palette.
+   Exact light tokens/fades from MLOS_UI_Colour_Palettes.zip, version 2. */
+:root,:root[data-palette="sage_precision"] {
+ color-scheme:light;
+ --bg:#FAFAF7;--sidebar:#F5F7F3;--surface:#FFFFFF;--card:#FFFFFF;
+ --ink:#192A22;--muted:#56645B;--line:#E4EAE2;--soft:#DDE8DC;
+ --forest:#244A3A;--on-primary:#FFFFFF;--accent:#244A3A;--brand-accent:#244A3A;--active:#DDE8DC;
+ --hero:linear-gradient(135deg,#E9F1E7 0%,#F1F6ED 60%,#F7FAF4 100%);
+ --mint-fade:linear-gradient(135deg,#EAF3E9 0%,#F3F7F3 65%,#FAFCFA 100%);
+ --blue-fade:linear-gradient(135deg,#DFEFFC 0%,#EEF6FD 65%,#F8FBFE 100%);
+ --peach-fade:linear-gradient(135deg,#FFE8DC 0%,#FFF1EC 65%,#FFFAF7 100%);
+ --lilac-fade:linear-gradient(135deg,#EDE2FA 0%,#F5EFFB 65%,#FBF8FE 100%);
+ --mint-ink:#285840;--blue-ink:#235982;--peach-ink:#854126;--lilac-ink:#62408A;
+ --radius:18px;--shadow:0 6px 20px rgba(36,67,46,.045);
+ --correct:#267346;--incorrect:#B13D43;--due:#855F16;--danger:var(--incorrect);
+}
+:root[data-palette="lavender_precision"] {
+ --bg:#DBD8E9;--sidebar:#FFFFFF;--surface:#FFFFFF;--card:#F7F7F7;
+ --ink:#202020;--muted:#626262;--line:#ECECEC;--soft:#E1DDF8;
+ --forest:#373737;--accent:#493D82;--brand-accent:#9688E6;--active:#9589E8;
+ --hero:linear-gradient(180deg,#978BE3 0%,#A297E9 20%,#B3ABEC 55%,#B9B3EE 78%,#CBC4F0 100%);
+ --mint-fade:linear-gradient(135deg,#F7F7F7 0%,#FFFFFF 100%);
+ --blue-fade:var(--mint-fade);--peach-fade:var(--mint-fade);--lilac-fade:var(--mint-fade);
+ --mint-ink:#493D82;--blue-ink:#493D82;--peach-ink:#493D82;--lilac-ink:#493D82;
+ --radius:22px;--shadow:0 6px 24px rgba(41,35,60,.04);
+}
+:root[data-appearance="dark"] {
+ color-scheme:dark;
+ --bg:#16221C;--sidebar:#1E2C24;--surface:#213128;--card:#213128;
+ --ink:#ECF3EA;--muted:#B4C2B6;--line:#3B4D40;--soft:#334B3A;
+ --forest:#DDE8DC;--on-primary:#192A22;--accent:#DDE8DC;--brand-accent:#DDE8DC;--active:#334B3A;
+ --hero:linear-gradient(135deg,#2A4634 0%,#263D2F 60%,#223429 100%);
+ --mint-fade:linear-gradient(135deg,#2A4031 0%,#213128 100%);
+ --blue-fade:var(--mint-fade);--peach-fade:var(--mint-fade);--lilac-fade:var(--mint-fade);
+ --mint-ink:var(--ink);--blue-ink:var(--ink);--peach-ink:var(--ink);--lilac-ink:var(--ink);
+ --correct:#A6D5AE;--incorrect:#FFB4B8;--due:#E8C681;
+}
+:root[data-palette="lavender_precision"][data-appearance="dark"] {
+ --bg:#19181D;--sidebar:#242229;--surface:#242229;--card:#242229;
+ --ink:#F0EDF6;--muted:#B9B4C4;--line:#3A3544;--soft:#38304D;
+ --forest:#E2DDF2;--on-primary:#202020;--accent:#D8CFF6;--brand-accent:#D8CFF6;--active:#38304D;
+ --hero:linear-gradient(180deg,#433765,#392F57,#302A43);
+ --mint-fade:linear-gradient(135deg,#302A43 0%,#242229 100%);
+}
 .mlos-app{padding-top:72px;padding-left:64px;transition:padding-left .16s;background:var(--bg)}
 .mlos-app[data-rail="expanded"]{padding-left:220px}
 .mlos-app main{width:100%;min-width:0}
@@ -9,7 +50,7 @@
 .mlos-app #admin-app .shell{display:block;min-height:auto}.mlos-app #admin-app .shell>.workspace{min-width:0}
 .mlos-app #admin-app [id]{scroll-margin-top:90px}
 .mlos-app .library-page>nav{display:none}
-.mlos-app .primary{color:var(--bg)}.mlos-app .hero{background:var(--hero)}
+.mlos-app .primary{color:var(--on-primary)}.mlos-app .hero{background:var(--hero)}
 .mlos-app .hero p,.mlos-app .hero small,.mlos-app .hero .eyebrow{color:var(--ink)}
 .mlos-app :focus-visible{outline-color:var(--accent)}
 .mlos-icon{width:21px;height:21px;flex-shrink:0;display:block}
@@ -25,7 +66,7 @@
 .mlos-search input[type="search"]{margin:0;padding:10px 45px 10px 13px;min-height:40px;width:100%;background:var(--bg);border-radius:24px;font-size:13px}
 .mlos-search button{position:absolute;right:3px;min-width:38px;min-height:38px;padding:8px;border:0;background:transparent}
 .mlos-theme{padding:10px;min-width:42px;min-height:42px;border:0;background:transparent;flex-shrink:0}
-.mlos-panel{position:fixed;top:72px;bottom:0;left:0;width:64px;background:var(--surface);border-right:1px solid var(--line);z-index:25;overflow-y:auto;overflow-x:hidden;padding:10px 7px;scrollbar-width:thin}
+.mlos-panel{position:fixed;top:72px;bottom:0;left:0;width:64px;background:var(--sidebar);border-right:1px solid var(--line);z-index:25;overflow-y:auto;overflow-x:hidden;padding:10px 7px;scrollbar-width:thin}
 [data-rail="expanded"] .mlos-panel{width:220px;padding:10px}
 .mlos-panel-toolbar{display:flex;align-items:center;gap:12px;min-height:48px;margin-bottom:12px;font-size:13px;font-weight:650}
 .mlos-panel-toolbar button{padding:12px;min-width:44px;min-height:44px;background:transparent;border:0}
@@ -57,3 +98,11 @@
 .mlos-child-pin-row{min-width:0}
 .mlos-child-pin-row>a{flex:1;min-width:0}
 .mlos-flyout-heading>.mlos-flyout-title{flex:1;display:block;padding:8px;font-weight:650;color:var(--ink)}
+
+/* Shared surfaces and legible semantic states across learner and admin tools. */
+.mlos-app .panel,.mlos-app .session-card{border-radius:var(--radius);box-shadow:var(--shadow);background:var(--card)}
+.mlos-app .hero{border-radius:var(--radius)}
+.mlos-app .option input{accent-color:var(--accent)}
+.mlos-app .option:has(input:checked){border-color:var(--accent)}
+.mlos-app .option.correct{border-color:var(--correct)}
+.mlos-app .explanation{border-left-color:var(--correct)}

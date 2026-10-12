@@ -35,7 +35,7 @@ function signedOutMarkup(googleUrl) {
     <main id="main" class="account-landing-page" data-account-landing-enhanced="true">
       <header class="account-landing-nav" aria-label="Medical Learning OS">
         <a class="account-brand" href="/" aria-label="Medical Learning OS home">
-          <img src="/web/favicon.svg" alt="" width="34" height="34">
+          <span class="mlos-brand-mark" aria-hidden="true">m.</span>
           <span>Medical Learning OS</span>
         </a>
         <nav class="account-nav-links" aria-label="Product">

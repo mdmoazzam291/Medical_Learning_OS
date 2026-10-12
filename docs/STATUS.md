@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-12 — Implement both permanent approved palettes
+
+Sage Precision is now the default, with Lavender Precision selectable under Account → Preferences → Colour palette. Exact saved light tokens and reconstructed gradients come from the approved palette pack version 2. The shared preference store carries palette separately from light/dark appearance across learner and authorized Admin pages; migration preserves existing dark mode, pins and groups. The signed-out Account landing also uses the shared palette. Semantic outcome colours remain separate. See ADR-108.
+
+Verification: 1,200 Node tests pass; syntax/catalog/decision checks and the 77-file Pages build pass. The migration regression first failed for missing palette behavior, then passed. Chromium passed the phone/tablet/desktop navigation suite, including 96 nested leaves, both exact light palettes, Home gradients, six master pages (including authorized Admin), reload persistence and independent dark mode. Independent review identified lavender-preview text contrast and a denied-Admin test gap; both were fixed. Signed-out landing checks reproduced phone header overflow; narrower gaps, a wrapping title and the shared themed brand mark fixed it. Fresh checks of both palettes × both appearances × 390/820/1440px confirm no overflow or brand/button overlap. WebKit remains unverified because required OS libraries cannot be installed in this environment. No clinical, learner-history or backend writes are part of this change.
+
+Release authorization: on 2026-10-12 the owner explicitly approved Q1 (push and release) and Q3 (audit every Admin tool). The earlier automatic-review publication block is superseded by this authorization. The connected GitHub integration owns publication because command-line Git lacks credentials. The expanded responsive audit covers all 14 Admin workspaces and separate Intake/Medical/References/Rights entry points in both palettes and light/dark appearance. Next: complete the audit, require PR Chromium/WebKit CI, merge and verify production deployment.
+
 ## 2026-10-12 — Isolated Admin tool workspaces and summary Overview
 
 The owner approved Q1/Q2 after observing that all Admin tools showed one long dashboard. Starting from released main `340101d` / PR #222, each selected tool now displays only its own workspace. Overview shows compact summary cards, separate urgent counts and shortcuts; unavailable counts stay unknown. The top Admin master, five sidebar groups, existing palettes, access gates and all existing owner capabilities remain. Content Snapshot and AI Usage are linked, and Infrastructure Alerts has a standalone view.

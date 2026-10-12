@@ -16,7 +16,7 @@ A concept-centered medical learning system: study → answer → understand mist
 
 ## Current implementation
 
-The shared navigation uses one top header, collapsible left section rail, independent nested indexes, persistent pins and light/dark appearance. Home, Study, Library, Exams and Account remain learner masters; the owner's latest choice adds a server-authorized Admin master after Account with grouped tools in the left sidebar. [ADR-106](docs/DECISIONS.md) records this superseding choice; [status](docs/STATUS.md) records release verification and remaining content dependencies.
+The shared navigation uses one top header, collapsible left section rail, independent nested indexes, persistent pins, Sage Precision / Lavender Precision palettes and independent light/dark appearance. Home, Study, Library, Exams and Account remain learner masters; the owner's latest choice adds a server-authorized Admin master after Account with grouped tools in the left sidebar. [ADR-106](docs/DECISIONS.md) records this superseding choice; [status](docs/STATUS.md) records release verification and remaining content dependencies.
 
 Admin tool views show their own workspace, while Overview contains summary cards, urgent counts and shortcuts. In-page navigation preserves loaded tool drafts and results; [ADR-107](docs/DECISIONS.md) records the approved workspace separation and its access boundaries.
 

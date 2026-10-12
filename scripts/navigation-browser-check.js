@@ -289,11 +289,25 @@ try {
     await page.getByRole('heading', { name: 'Content Snapshot', exact: true }).waitFor();
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['content']);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview shortcuts retain mounted tool drafts');
-    for (const view of ADMIN_VIEWS) {
-      await go(origin + '/web/admin.html' + (view.id === 'overview' ? '' : '#' + view.anchor));
-      await page.locator('[data-admin-panel="' + view.id + '"]').waitFor();
-      assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), [view.id], view.label);
-      await page.getByRole('heading', { name: view.label, exact: true }).waitFor();
+    // Audit every Admin workspace in both approved palettes and appearances.
+    for (const palette of ['sage_precision', 'lavender_precision']) for (const theme of ['light', 'dark']) {
+      await page.evaluate(({ palette, theme }) => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...JSON.parse(localStorage.getItem('mlos-navigation-v1')), palette, theme } } })), { palette, theme });
+      for (const view of ADMIN_VIEWS) {
+        await page.evaluate(hash => { location.hash = hash; }, view.id === 'overview' ? '' : '#' + view.anchor);
+        await page.locator('[data-admin-panel="' + view.id + '"]').waitFor();
+        assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), [view.id], view.label);
+        await page.getByRole('heading', { name: view.label, exact: true }).waitFor();
+        await settleAdmin();
+        assert.deepEqual(await page.evaluate(() => ({ palette: document.documentElement.dataset.palette, theme: document.documentElement.dataset.appearance, overflow: document.documentElement.scrollWidth > innerWidth })), { palette, theme, overflow: false }, view.label + ' ' + palette + ' ' + theme);
+        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'admin-' + view.id + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+      }
+      // Intake and the three review entry points are separate authorized tools.
+      for (const destination of ['/web/content-import.html', '/web/review.html', '/web/review.html?workspace=references', '/web/review.html?workspace=rights']) {
+        await go(origin + destination);
+        await mainNav.getByRole('link', { name: 'Admin', exact: true }).waitFor();
+        assert.deepEqual(await page.evaluate(() => ({ palette: document.documentElement.dataset.palette, theme: document.documentElement.dataset.appearance, overflow: document.documentElement.scrollWidth > innerWidth })), { palette, theme, overflow: false }, destination);
+      }
+      await go(origin + '/web/admin.html');
       await settleAdmin();
     }
     await go(origin + '/web/admin.html');
@@ -410,6 +424,61 @@ try {
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts' }).getByRole('link', { name: 'My Data', exact: true }).count(), 1);
     await reload(); await page.getByLabel('Appearance', { exact: true }).waitFor();
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
+    admin = true;
+    // Exact approved light palettes, independent dark appearance, and cross-page persistence.
+    for (const [palette, background, ink, primary, firstStop] of [
+      ['sage_precision', 'rgb(250, 250, 247)', 'rgb(25, 42, 34)', '#244A3A', 'rgb(233, 241, 231)'],
+      ['lavender_precision', 'rgb(219, 216, 233)', 'rgb(32, 32, 32)', '#373737', 'rgb(151, 139, 227)']
+    ]) {
+      await page.getByLabel('Colour palette', { exact: true }).selectOption(palette);
+      assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
+      await page.getByLabel('Appearance', { exact: true }).selectOption('light');
+      for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/exam.html', '/web/account.html', '/web/admin.html']) {
+        await go(origin + destination);
+        await page.locator('[data-theme]').waitFor();
+        if (destination === '/web/admin.html') await page.locator('#owner-home').waitFor();
+        const actual = await page.evaluate(() => ({
+          palette: document.documentElement.dataset.palette,
+          bg: getComputedStyle(document.body).backgroundColor,
+          ink: getComputedStyle(document.body).color,
+          primary: getComputedStyle(document.documentElement).getPropertyValue('--forest').trim(),
+          overflow: document.documentElement.scrollWidth > innerWidth
+        }));
+        assert.deepEqual(actual, { palette, bg: background, ink, primary, overflow: false }, destination + ' ' + palette);
+        if (destination === '/') assert.ok((await page.locator('.hero').first().evaluate(node => getComputedStyle(node).backgroundImage)).includes(firstStop));
+      }
+      await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Colour palette', { exact: true }).waitFor();
+      assert.equal(await page.getByLabel('Colour palette', { exact: true }).inputValue(), palette);
+      await reload(); await page.getByLabel('Colour palette', { exact: true }).waitFor();
+      assert.equal(await page.getByLabel('Colour palette', { exact: true }).inputValue(), palette);
+      await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
+      assert.equal(await page.evaluate(() => document.documentElement.dataset.palette), palette);
+    }
+
+    admin = false;
+    // The landing uses different CSS and no learner session: verify it independently.
+    for (const palette of ['sage_precision', 'lavender_precision']) for (const appearance of ['light', 'dark']) {
+      const signedOut = await browser.newContext({ viewport: { width, height }, hasTouch: touch });
+      await signedOut.addInitScript(({ palette, appearance }) => localStorage.setItem('mlos-navigation-v1', JSON.stringify({ version: 1, palette, theme: appearance })), { palette, appearance });
+      const landing = await signedOut.newPage();
+      landing.on('pageerror', error => errors.push(error.message));
+      await landing.goto(origin + '/web/account.html');
+      await landing.locator('body.account-landing-active').waitFor();
+      const actual = await landing.evaluate(() => {
+        const root = getComputedStyle(document.documentElement), body = getComputedStyle(document.body);
+        const expectedBg = root.getPropertyValue('--bg').trim(), expectedInk = root.getPropertyValue('--ink').trim();
+        const swatch = document.createElement('span'); document.body.append(swatch);
+        swatch.style.color = expectedBg; const bg = getComputedStyle(swatch).color;
+        swatch.style.color = expectedInk; const ink = getComputedStyle(swatch).color; swatch.remove();
+        const brand = document.querySelector('.account-brand>span:last-child').getBoundingClientRect(), cta = document.querySelector('.account-create-cta').getBoundingClientRect();
+        return { palette: document.documentElement.dataset.palette, appearance: document.documentElement.dataset.appearance, brandOverlap: brand.right > cta.left, backgroundMatches: body.backgroundColor === bg, inkMatches: body.color === ink,
+          previewInk: getComputedStyle(document.querySelector('.continue-card small')).color === ink,
+          overflow: document.documentElement.scrollWidth > innerWidth };
+      });
+      assert.deepEqual(actual, { palette, appearance, brandOverlap: false, backgroundMatches: true, inkMatches: true, previewInk: true, overflow: false }, palette + ' signed-out ' + appearance);
+      await signedOut.close();
+    }
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(writes.length, 0, 'navigation and self-review must not create learning or publication writes');
     await go(origin + '/web/library.html?view=media&category=radiology');
