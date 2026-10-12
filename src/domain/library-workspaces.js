@@ -1,4 +1,4 @@
-import { filterLibrary } from './content-library.js';
+import { filterLibrary, keywordCounts } from './content-library.js';
 export const FILTER_KEYS = Object.freeze(['qualifier', 'medium', 'response', 'subject', 'system', 'organ', 'domain', 'task', 'exam', 'platform', 'concept', 'keyword', 'search']);
 export const LIBRARY_VIEWS = Object.freeze(['subjects', 'notes', 'questions', 'graph', 'atlas', 'media', 'references', 'compare', 'foundation', 'savedviews', 'recall', 'cases', 'images', 'skills']);
 const normal = text => String(text || '').normalize('NFKC').toLowerCase();
@@ -8,6 +8,16 @@ const categories = { 'ecg-traces': ['ecg-tracing'], histology: ['histology'], 'c
 export function studySelection(data, count = 50) {
   if (!Number.isInteger(count) || count < 1 || count > 50) throw new Error('Choose between 1 and 50 questions.');
   return data.questions.slice(0, count).map(q => q.questionVersionId);
+}
+export function libraryContextUrl(search, overrides = {}) {
+  const input = new URLSearchParams(search), output = new URLSearchParams();
+  const keys = [...FILTER_KEYS, 'view', 'module', 'reference', 'category', 'collection', 'observed', 'sort', 'build', 'count'];
+  for (const key of keys) {
+    const value = Object.hasOwn(overrides, key) ? overrides[key] : input.get(key);
+    if (typeof value === 'string' && value.length <= 300 && value) output.set(key, value);
+  }
+  if (output.get('build') === '1' || ['recall', 'cases', 'images', 'skills'].includes(output.get('view'))) output.set('master', 'study');
+  return '/web/library.html?' + output;
 }
 export function selectWorkspace(library, options = {}) {
   const filters = { ...(options.filters || {}), ...(options.collection ? { home: options.collection } : {}) };
@@ -37,6 +47,9 @@ export function selectWorkspace(library, options = {}) {
   if (options.sort === 'alphabetical') data.questions.sort((a, b) => a.stem.localeCompare(b.stem));
   return data;
 }
+export function workspaceKeywordCounts(library, options = {}) {
+  return keywordCounts(selectWorkspace(library, { ...options, filters: { ...(options.filters || {}), keyword: '' } }));
+}
 export function prerequisiteLinks(library) {
   const known = new Set(library.concepts.map(c => c.conceptId));
   return library.questions.flatMap(q => q.conceptLinks.filter(l => l.role === 'prerequisite' && known.has(l.conceptId)).flatMap(from => q.conceptLinks.filter(l => l.role === 'primary' && known.has(l.conceptId)).map(to => ({ from: from.conceptId, to: to.conceptId, questionVersionId: q.questionVersionId }))));
@@ -45,6 +58,12 @@ export function validateSavedViews(values) {
   if (!Array.isArray(values)) return [];
   const seen = new Set();
   return values.filter(v => v && typeof v.id === 'string' && /^[a-zA-Z0-9-]{1,80}$/.test(v.id) && typeof v.name === 'string' && v.name.trim() && v.name.length <= 80 && LIBRARY_VIEWS.includes(v.view) && !seen.has(v.id) && seen.add(v.id)).slice(0, 30).map(v => ({ id: v.id, name: v.name.trim(), view: v.view, filters: Object.fromEntries(FILTER_KEYS.filter(k => typeof v.filters?.[k] === 'string' && v.filters[k].length <= 300).map(k => [k, v.filters[k]])), options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort'].filter(k => typeof v.options?.[k] === 'string' && /^[a-z0-9-]{0,100}$/.test(v.options[k])).map(k => [k, v.options[k]])) }));
+}
+export function addSavedView(values, view) {
+  const current = validateSavedViews(values), entry = validateSavedViews([view])[0];
+  if (!entry) throw new Error('This view cannot be saved.');
+  if (current.length >= 30) throw new Error('You have 30 saved views. Delete one before saving another.');
+  return validateSavedViews([...current, entry]);
 }
 export function savedViewUrl(view) {
   const valid = validateSavedViews([view])[0];

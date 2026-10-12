@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-12 — Library state regression audit
+
+- Reproduced and fixed eight defects: recall drafts crossing/lost between exact note versions; reveal state leaking to a different filtered card; media surviving exclusion by filters; pending media reopening as endless loading after view exit; concept links losing filters/Build Session/question count; a full 30-view collection falsely reporting a discarded save; and keyword frequencies ignoring workspace collection/observed filters; and unstable labels after restoring textarea drafts.
+- Recall drafts/reveal state now belong to exact note-version IDs in page memory. Media display is invalidated when its question leaves the selection or the media workspace closes; late successes/errors cannot reattach it. Concept links preserve bounded known context and selected count, including across reloads. Saved-view overflow produces a clear limit message without replacing previous views.
+- Regression coverage exercises the actual enhancement module with real library filtering/rendering, plus built-bundle phone/tablet/desktop checks for card identity, source reveal, media clearing, view limits, count reload and concept handoffs. No clinical content, publication approval, scored answer or learner event is generated.
+- Local verification: 1116 Node tests, syntax/catalog/decision checks and the 71-file allowlisted build. Independent review and GitHub browser/release checks are recorded with the bugfix PR before release completion. Backend/API rules remain unchanged.
+- Known provider branch-preview failure remains separate; no dashboard settings or auth protections were changed.
+
 ## 2026-10-12 — approved navigation released (PR #206)
 
 - PR [#206](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/206) merged as `950fd2fd01746d02f9d481ddc38c9d3b4cb65b97`. The live learner app now has the single-row brand/five-master/search/theme header, collapsible icon rail, independent nested menus, Subject Index inside Subjects & Topics, persistent device pins and approved lavender appearance.
