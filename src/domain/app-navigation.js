@@ -33,17 +33,19 @@ export const MASTERS = Object.freeze([
   { id: 'study', label: 'Study', icon: 'book', href: '/web/medical.html' },
   { id: 'library', label: 'Library', icon: 'reference', href: library('subjects') },
   { id: 'exams', label: 'Exams', icon: 'exam', href: '/web/exam.html' },
-  { id: 'account', label: 'Account', icon: 'user', href: '/web/account.html' }
+  { id: 'account', label: 'Account', icon: 'user', href: '/web/account.html' },
+  { id: 'admin', label: 'Admin', icon: 'settings', href: '/web/admin.html', adminOnly: true }
 ]);
 const SECTIONS = {
   home: [item('today', 'Today', 'home', '/'), item('resume', 'Resume', 'play', '/web/medical.html'), item('progress', 'Progress', 'graph', workspace('home', 'progress')), item('recent', 'Recent Activity', 'clock', workspace('home', 'recent')), item('material', 'Published Material', 'book', library('notes'))],
   study: [item('build', 'Build Session', 'settings', '/web/library.html?view=questions&master=study&build=1'), item('practice', 'Practice', 'play', '/web/medical.html#question-browser'), item('revision', 'Revision', 'clock', workspace('study', 'revision')), item('mistakes', 'Mistake Repair', 'repair', workspace('study', 'mistakes')), ...[['recall', 'Recall & Flashcards', 'book'], ['cases', 'Clinical Cases', 'cases'], ['images', 'Image Drills', 'image'], ['skills', 'Skills & Viva', 'skills']].map(([id, label, icon]) => item(id, label, icon, library(id, '&master=study')))],
   library: libraryRows,
   exams: [item('simulator', 'Simulator', 'exam', '/web/exam.html'), item('dna', 'Exam DNA / PYQs', 'graph', workspace('exams', 'dna')), item('past', 'Past Runs', 'clock', workspace('exams', 'past')), item('autopsy', 'GT Autopsy', 'repair', workspace('exams', 'autopsy')), item('rules', 'Exam Plan & Rules', 'settings', workspace('exams', 'rules'))],
-  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research'), { ...item('admin', 'Admin', 'settings', '/web/admin.html', [item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]), adminOnly: true }]
+  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research')],
+  admin: [item('overview', 'Admin Dashboard', 'settings', '/web/admin.html'), item('import', 'Content Intake', 'book', '/web/content-import.html'), item('review', 'Review Workspace', 'edit', '/web/review.html'), item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references')]
 };
 export function navigationFor(master, { isAdmin = false } = {}) {
-  return (SECTIONS[master] || SECTIONS.home).filter(row => !row.adminOnly || isAdmin === true);
+  return master === 'admin' && !isAdmin ? [] : (SECTIONS[master] || SECTIONS.home).filter(row => !row.adminOnly || isAdmin === true);
 }
 const sectionKeys = new Set(Object.entries(SECTIONS).flatMap(([master, rows]) => rows.map(row => master + ':' + row.id)));
 const groupKeys = new Set();
@@ -52,7 +54,7 @@ for (const [master, rows] of Object.entries(SECTIONS)) groups(rows, master);
 export function validatePreferences(value) {
   const p = value && value.version === 1 ? value : {};
   const allowed = (values, keys) => Array.isArray(values) ? [...new Set(values.filter(v => typeof v === 'string' && keys.has(v)))].slice(0, 120) : [];
-  return { version: 1, expanded: p.expanded === true, theme: p.theme === 'dark' ? 'dark' : 'light', pins: allowed(p.pins, sectionKeys), groups: allowed(p.groups, groupKeys) };
+  return { version: 1, expanded: p.expanded === true, theme: p.theme === 'dark' ? 'dark' : 'light', pins: allowed(Array.isArray(p.pins) ? p.pins.map(v => v === 'account:admin' ? 'admin:overview' : v) : p.pins, sectionKeys), groups: allowed(p.groups, groupKeys) };
 }
 export function changePreference(value, action) {
   const p = validatePreferences(value);
@@ -105,7 +107,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
-  if (/\/(admin|review|content-import)\.html$/.test(pathname)) return { master: 'account', section: 'admin' };
+  if (/\/(admin|review|content-import)\.html$/.test(pathname)) return { master: 'admin', section: pathname.endsWith('/admin.html') ? 'overview' : pathname.endsWith('/content-import.html') ? 'import' : 'review' };
   if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
   return { master: 'home', section: 'today' };
 }
