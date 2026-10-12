@@ -28,5 +28,5 @@ test('incomplete owner telemetry never masquerades as an all-clear', () => {
 test('malformed count values and unknown alert statuses cannot invent issues', () => {
   const state = buildAdminActionInbox({ content: { openLearnerReports: '400', unresolvedRights: -1, pendingReview: { medical: Infinity } } }, { alerts: [{ state: 'closed', severity: 'critical' }, null] });
   assert.equal(state.actions.length, 0);
-  assert.deepEqual(state.missing, ['learner reports','source rights']);
+  assert.deepEqual(state.missing, ['learner reports','source rights','human-review queues']);
 });
