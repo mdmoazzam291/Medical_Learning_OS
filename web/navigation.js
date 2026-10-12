@@ -6,7 +6,7 @@ import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
-let prefs = store.read(), identity = routeIdentity(location.pathname, location.search), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
+let prefs = store.read(), identity = routeIdentity(location.pathname, location.search, location.hash), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
 let searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
 let accessRead = 0;
 const shell = document.createElement('div');
@@ -18,11 +18,11 @@ function applyAppearance() {
   document.body.dataset.rail = prefs.expanded ? 'expanded' : 'collapsed';
   document.body.dataset.navigationMemory = store.persistence;
 }
-function render(focusSelector) {
+function render(focusSelector, captureSearch = true) {
   const input = shell.querySelector('#mlos-global-search'), hadSearchFocus = document.activeElement === input;
-  if (input) searchQuery = input.value;
+  if (input && captureSearch) searchQuery = input.value;
   applyAppearance();
-  shell.innerHTML = navigationMarkup({ ...identity, prefs, isAdmin });
+  shell.innerHTML = navigationMarkup({ ...identity, prefs, isAdmin, currentHref: location.pathname + location.search + location.hash });
   shell.querySelector('#mlos-global-search').value = searchQuery;
   opener = null;
   if (focusSelector) shell.querySelector(focusSelector)?.focus();
@@ -66,14 +66,19 @@ shell.addEventListener('click', event => {
     if (!row) return;
     opener = button; button.setAttribute('aria-expanded', 'true');
     const flyout = shell.querySelector('#mlos-flyout');
-    flyout.innerHTML = flyoutMarkup(row, master, prefs); flyout.hidden = false;
+    flyout.innerHTML = flyoutMarkup(row, master, prefs, location.pathname + location.search + location.hash); flyout.hidden = false;
     flyout.querySelector('a,button,summary')?.focus();
   }
 });
 shell.addEventListener('toggle', event => {
   if (event.target.dataset.group) save({ type: 'group', id: event.target.dataset.group, open: event.target.open });
 }, true);
-document.addEventListener('click', event => { if (!event.target.closest('#mlos-navigation')) closeFlyout(); });
+document.addEventListener('click', event => {
+  // The shell may replace its children before this click reaches the document.
+  if (event.composedPath?.().includes(shell) || event.target.closest('#mlos-navigation')) return;
+  closeFlyout(); shell.classList.remove('mlos-search-open');
+  if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render(); }
+});
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') { closeFlyout(true); shell.classList.remove('mlos-search-open'); if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render('[data-rail]'); } }
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus(); }
@@ -85,7 +90,12 @@ shell.addEventListener('submit', event => {
   }
 });
 window.addEventListener('mlos:access', event => { accessRead += 1; isAdmin = event.detail?.isAdmin === true; render(); });
-window.addEventListener('mlos:route', () => { identity = routeIdentity(location.pathname, location.search); closeFlyout(); render(); });
+function syncRoute() {
+  identity = routeIdentity(location.pathname, location.search, location.hash);
+  searchQuery = (new URLSearchParams(location.search).get('search') || '').slice(0, 300);
+  closeFlyout(); render(undefined, false);
+}
+for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 render();
 if (prefs.pins.includes('account:admin') && !isAdmin) {

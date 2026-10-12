@@ -1,9 +1,11 @@
 // Synthetic transport fixture: no production credentials or review writes.
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-const { chromium } = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
+const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
+const engine = process.env.BROWSER_ENGINE || 'chromium';
+assert.ok(['chromium', 'webkit'].includes(engine));
 const pilot = JSON.parse(readFileSync('data/evaluations/source-grounding-cdc-co-v1.json', 'utf8'));
-const browser = await chromium.launch({ headless: true });
+const browser = await engines[engine].launch({ headless: true });
 const origin = process.env.APP_URL || 'http://127.0.0.1:3000';
 try {
   for (const width of [390, 820, 1440]) {
@@ -37,7 +39,7 @@ try {
     await context.route('**/functions/v1/review-api/**', async route => {
       if (route.request().method() !== 'GET') writes++;
       const path = new URL(route.request().url()).pathname;
-      const body = path.endsWith('/me') ? { reviewKinds: ['references', 'rights'] }
+      const body = path.endsWith('/me') ? { reviewKinds: ['medical', 'references', 'rights'] }
         : path.endsWith('/queue') ? { items }
         : path.endsWith('/reference-review-batch/summary') ? measurementSummary
         : {};
@@ -46,7 +48,7 @@ try {
     const page = await context.newPage();
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
-    await page.goto(origin + '/web/review.html');
+    await page.goto(origin + '/web/review.html?workspace=references');
     await page.getByRole('heading', { name: 'Inspect shared evidence before individual decisions' }).waitFor();
     await page.getByRole('heading', { name: 'Inspect a source once, then its linked targets' }).waitFor();
     assert.match(await page.locator('.references-source-panel').innerText(), /1 unique source versions/);

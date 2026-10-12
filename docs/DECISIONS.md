@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-105 — Navigation URL state supports browser history and touch dismissal
+**Status:** Accepted — 2026-10-12
+
+The owner requested iPad/Safari-oriented testing and fixes to navigation and subnavigation actions. Notes/Questions/Graph share filters only when moving between those representations within the same builder ownership. Standalone workspace menu entries use their explicit target URLs, preventing irrelevant category/reference filters from leaking. User view transitions create browser history entries; filter/count edits update the current entry. Back/Forward restores bounded, validated URL state from the cached published library without scoring or publication writes.
+
+Fragments select their own Account section, requested review workspaces remain subordinate to server-provided reviewer grants, and nested active markers match the destination's relevant navigation axes. Outside taps dismiss compact search and narrow overlay drawers; wider persistent panels retain their state. WebKit touch emulation at iPad portrait, landscape and split widths is a dedicated CI gate, with physical-device coverage stated separately.
+
 ## ADR-104 — Five master destinations share one persistent navigation shell
 **Status:** Accepted — 2026-10-12
 
