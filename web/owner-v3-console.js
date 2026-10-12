@@ -81,6 +81,12 @@ async function mount() {
     alertBlock.id = 'owner-infrastructure-alerts';
     alertBlock.innerHTML = `<strong>Open infrastructure alerts</strong>${alertsMarkup(alerts)}`;
     infra.append(alertBlock);
+    window.dispatchEvent(new CustomEvent('mlos:owner-alerts', {
+      detail: { alerts: Array.isArray(alerts?.alerts) ? alerts.alerts : null }
+    }));
+    if (location.hash === '#owner-features' || location.hash === '#owner-infrastructure-alerts') {
+      requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' }));
+    }
 
     mounted = true;
   } catch (error) {
