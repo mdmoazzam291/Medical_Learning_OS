@@ -73,12 +73,14 @@ shell.addEventListener('click', event => {
 shell.addEventListener('toggle', event => {
   if (event.target.dataset.group) save({ type: 'group', id: event.target.dataset.group, open: event.target.open });
 }, true);
-document.addEventListener('click', event => {
+function dismissOutside(event) {
   // The shell may replace its children before this click reaches the document.
   if (event.composedPath?.().includes(shell) || event.target.closest('#mlos-navigation')) return;
   closeFlyout(); shell.classList.remove('mlos-search-open');
   if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render(); }
-});
+}
+document.addEventListener('pointerdown', dismissOutside);
+document.addEventListener('click', dismissOutside);
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') { closeFlyout(true); shell.classList.remove('mlos-search-open'); if (innerWidth < 700 && prefs.expanded) { save({ type: 'expanded', open: false }); render('[data-rail]'); } }
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus(); }

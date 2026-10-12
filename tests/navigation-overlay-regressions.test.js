@@ -47,3 +47,11 @@ test('a shell action remains inside navigation after its original target is deta
   h.docHandlers.click(event);
   assert.equal(h.body.dataset.rail, 'expanded');
 });
+
+test('outside touch dismisses compact search on pointerdown without depending on a compatibility click', () => {
+  const h = open();
+  h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() {} });
+  assert.equal(h.classes.has('mlos-search-open'), true);
+  h.docHandlers.pointerdown?.({ target: { closest: () => null }, pointerType: 'touch', composedPath: () => [] });
+  assert.equal(h.classes.has('mlos-search-open'), false);
+});
