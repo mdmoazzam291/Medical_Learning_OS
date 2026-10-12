@@ -159,7 +159,7 @@ try {
     await page.getByRole('tab', { name: 'Graph', exact: true }).click();
     await page.goBack();
     await page.waitForFunction(() => new URLSearchParams(location.search).get('view') === 'questions' && document.querySelector('[data-view=questions]')?.getAttribute('aria-selected') === 'true');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Questions');
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/library.html?view=questions');
     await page.goBack();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.goForward();
