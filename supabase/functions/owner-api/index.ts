@@ -2,6 +2,7 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-audit.js";
+import { buildSourceWatchReport, validateSourceSighting } from "../../../src/domain/medical-source-surveillance.js";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -275,6 +276,83 @@ Deno.serve(async (req: Request) => {
         fail(503, "integrity_snapshot_invalid");
       }
       return response(req, 200, { ...audit, observedAt: new Date().toISOString() });
+    }
+
+    if ((req.method === "GET" && path === "/source-watch") ||
+        (req.method === "POST" && path === "/source-watch/sightings")) {
+      if (url.search) fail(400, "query_not_supported");
+      const readCatalog = async () => {
+        const { data, error } = await admin.from("study_catalog")
+          .select("version,body,updated_at").eq("id", 1).single();
+        if (error || !data?.body || !Array.isArray(data.body.sources) ||
+          data.body.sources.length > 1000 || JSON.stringify(data.body).length > 8_000_000) {
+          fail(503, "source_watch_catalog_unavailable");
+        }
+        return data;
+      };
+      const catalog = await readCatalog();
+      if (req.method === "GET") {
+        // All source-watch readings are owner-authorized, capped and read-only.
+        const [notesResponse, observationsResponse] = await Promise.all([
+          admin.from("neural_canonical_note_versions")
+            .select("id,status,source_ids", { count: "exact" }).range(0, 999),
+          admin.from("owner_medical_source_observations")
+            .select("id,source_id,cited_version,observed_version,kind,evidence_url,evidence_note,recorded_at", { count: "exact" })
+            .order("recorded_at", { ascending: false }).range(0, 999)
+        ]);
+        for (const result of [notesResponse, observationsResponse]) {
+          if (result.error || !Number.isSafeInteger(result.count) ||
+            result.count > 1000 || !Array.isArray(result.data) ||
+            result.data.length !== result.count) fail(503, "source_watch_snapshot_incomplete");
+        }
+        const after = await admin.from("study_catalog")
+          .select("version,updated_at").eq("id", 1).single();
+        if (after.error || !after.data ||
+          after.data.version !== catalog.version || after.data.updated_at !== catalog.updated_at) {
+          fail(409, "source_watch_catalog_changed_retry");
+        }
+        let projected;
+        try {
+          projected = buildSourceWatchReport({
+            catalog: catalog.body,
+            notes: notesResponse.data, observations: observationsResponse.data,
+            catalogVersion: Number(catalog.version)
+          });
+        } catch {
+          fail(503, "source_watch_projection_unavailable");
+        }
+        return response(req, 200, { ...projected, asOf: new Date().toISOString() });
+      }
+      const input = await jsonBody(req, 10000);
+      if (!Number.isSafeInteger(Number(catalog.version)) ||
+        input.catalogVersion !== Number(catalog.version)) fail(409, "source_watch_stale_catalog");
+      let row;
+      try { row = validateSourceSighting(input, catalog.body.sources); }
+      catch { fail(400, "source_watch_sighting_invalid"); }
+      const prepared = { ...row, recorded_by: authData.user.id };
+      const inserted = await admin.from("owner_medical_source_observations")
+        .insert(prepared).select("id,request_id,recorded_at").single();
+      if (inserted.error) {
+        if (inserted.error.code !== "23505") fail(503, "source_watch_write_unavailable");
+        const old = await admin.from("owner_medical_source_observations")
+          .select("id,request_id,recorded_at,recorded_by,source_id,kind,cited_version,observed_version,evidence_url,evidence_note,catalog_version")
+          .eq("request_id", row.request_id).single();
+        if (old.error || !old.data) fail(409, "source_watch_request_conflict");
+        if (old.data.recorded_by !== authData.user.id ||
+          Object.entries(row).some(([key,value]) => old.data[key] !== value)) {
+          fail(409, "source_watch_request_conflict");
+        }
+        return response(req, 200, {
+          contractId: "owner-medical-source-sighting-receipt-v1",
+          observationId: old.data.id, recordedAt: old.data.recorded_at,
+          reusedExisting: true, clinicalApprovalGranted: false
+        });
+      }
+      return response(req, 200, {
+        contractId: "owner-medical-source-sighting-receipt-v1",
+        observationId: inserted.data.id, recordedAt: inserted.data.recorded_at,
+        reusedExisting: false, clinicalApprovalGranted: false
+      });
     }
 
     if (req.method === "GET" && path === "/learners") {
