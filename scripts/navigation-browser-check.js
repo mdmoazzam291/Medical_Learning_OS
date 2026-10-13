@@ -145,6 +145,19 @@ try {
       assert.equal(await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width), width);
       assert.equal(await page.getByRole('link', { name: 'Master Admin', exact: true }).count(), 0, 'admin master stays out of the closed phone header');
     }
+    if (width <= 700) {
+      for (const phoneWidth of [320, 390]) {
+        await page.setViewportSize({ width: phoneWidth, height });
+        await page.waitForFunction(() => Boolean(document.querySelector('.mlos-mobile-menu')));
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'phone content fits ' + phoneWidth);
+        assert.equal(await page.locator('.mlos-header').evaluate(node => [...node.children].every(child => child.getBoundingClientRect().right <= innerWidth)), true, 'phone header fits ' + phoneWidth);
+        await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+        assert.equal(await mainNav.getByRole('link', { name: 'Home', exact: true }).isVisible(), true);
+        await page.keyboard.press('Escape');
+        assert.equal(await page.locator('.mlos-mobile-menu').evaluate(node => document.activeElement === node), true);
+      }
+      await page.setViewportSize({ width, height });
+    }
     // Approved responsive layout: explicit desktop preference survives rotations.
     const savedLayout = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
     for (const desktopExpanded of [false, true]) {
@@ -677,13 +690,13 @@ try {
     await page.getByLabel('Collection', { exact: true }).selectOption('');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
     await activate(page.locator('#mlos-local-nav [data-pin="library:notes"]'));
-    await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true }).click();
+    await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('build'), '1');
-    await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Concept Notes', exact: true }).click();
+    await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Concept Notes', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('build'), null);
-    await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true }).click();
+    await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
     await page.getByLabel('Question count', { exact: true }).selectOption('1');
