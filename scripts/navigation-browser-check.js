@@ -552,6 +552,35 @@ try {
       await go(origin + '/web/workspace.html?master=account&section=preferences');
       await page.getByLabel('Surface style', { exact: true }).waitFor();
     }
+    // Exercise the fallback cascade in real CSSOM: force the reduced-transparency
+    // media branch, then omit the supports branch as an older renderer would.
+    if (width > 700) {
+      const fallbacks = await page.evaluate(() => {
+        const root = document.documentElement, saved = { ...root.dataset };
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        const glass = [...sheet.cssRules].find(r => r.type === CSSRule.MEDIA_RULE && /min-width:\s*701px/.test(r.conditionText) && r.cssText.includes('--nav-tint'));
+        const supportsIndex = [...glass.cssRules].findIndex(r => r.type === CSSRule.SUPPORTS_RULE);
+        const supportsText = glass.cssRules[supportsIndex].cssText;
+        const reduced = [...glass.cssRules].find(r => r.type === CSSRule.MEDIA_RULE && r.conditionText.includes('prefers-reduced-transparency'));
+        const reducedMedia = reduced.media.mediaText, results = [];
+        const inspect = mode => {
+          for (const palette of ['sage_precision', 'lavender_precision']) for (const theme of ['light', 'dark']) {
+            root.dataset.surfaceStyle = 'glass'; root.dataset.palette = palette; root.dataset.appearance = theme;
+            const swatch = document.createElement('span'); swatch.style.color = getComputedStyle(root).getPropertyValue(theme === 'dark' ? '--sidebar' : '--soft'); document.body.append(swatch);
+            const expected = getComputedStyle(swatch).color; swatch.remove();
+            const header = getComputedStyle(document.querySelector('.mlos-header')), menu = getComputedStyle(document.querySelector('#mlos-workspace-menu'));
+            results.push({ mode, palette, theme, opaque: header.backgroundColor === expected && menu.backgroundColor === expected, unblurred: [header, menu].every(s => (s.backdropFilter || s.webkitBackdropFilter || 'none') === 'none') });
+          }
+        };
+        try {
+          reduced.media.mediaText = 'all'; inspect('reduced-transparency'); reduced.media.mediaText = reducedMedia;
+          glass.deleteRule(supportsIndex);
+          try { inspect('unsupported-glass'); } finally { glass.insertRule(supportsText, supportsIndex); }
+        } finally { reduced.media.mediaText = reducedMedia; Object.assign(root.dataset, saved); }
+        return results;
+      });
+      for (const fallback of fallbacks) { assert.equal(fallback.opaque, true, JSON.stringify(fallback)); assert.equal(fallback.unblurred, true, JSON.stringify(fallback)); }
+    }
     // Every real section/module leaf is reachable through rendered menu links.
     await go(origin + '/web/library.html?view=subjects'); await openTools();
     for (const master of MASTERS) {
