@@ -45,7 +45,7 @@ try {
     const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: engine === 'webkit', deviceScaleFactor: engine === 'webkit' ? 2 : 1 });
     const activate = async locator => {
       await page.waitForLoadState('networkidle');
-      const local = page.locator('#mlos-local-nav a,#mlos-local-nav button,#mlos-local-nav summary,#mlos-workspace-menu .mlos-master-nav a,#mlos-workspace-menu .mlos-master-nav button,.mlos-panel a,.mlos-panel button');
+      const local = page.locator('#mlos-workspace-menu a,#mlos-workspace-menu button,#mlos-workspace-menu summary,.mlos-panel a,.mlos-panel button,.mlos-panel summary');
       if (await locator.and(local).count()) await openTools();
       if (await locator.count()) {
         const groups = await locator.first().evaluate(node => {
