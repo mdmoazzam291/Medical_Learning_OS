@@ -26,7 +26,7 @@ export function libraryContextUrl(search, overrides = {}) {
     const value = Object.hasOwn(overrides, key) ? overrides[key] : input.get(key);
     if (typeof value === 'string' && value.length <= 300 && value) output.set(key, value);
   }
-  if (output.get('build') === '1' || ['recall', 'cases', 'images', 'skills'].includes(output.get('view'))) output.set('master', 'study');
+  if (output.get('build') === '1' || ['recall', 'cases', 'images', 'skills'].includes(output.get('view')) || (output.get('view') === 'subjects' && input.get('master') === 'study')) output.set('master', 'study');
   return '/web/library.html?' + output;
 }
 export function selectWorkspace(library, options = {}) {

@@ -6,7 +6,7 @@ The owner approved the attached navigation preview. Feature branch feat/contextu
 
 Verification at checkpoint: 1,205 Node tests passed; targeted navigation regressions 38/38 passed; syntax/catalog/decision checks and the 77-file Pages build passed. Browser checks updated for the approved labels/account path and portrait width behavior. Local Playwright launch is blocked by a missing Chromium executable; existing GitHub Chromium and iPad WebKit jobs must verify before release. Work is not yet merged or deployed; no learner/content/backend writes.
 
-Next: run remote browser CI, repair observed failures, verify avatar/auth/drawer/rotation flows and record the final PR/release state.
+PR #230 checkpoint 4d06b7d persisted through the GitHub connector after CLI push lacked credentials. First Chromium run 38410930465 reproduced the hidden phone Profile label; independent review also found subject-context loss and stale browser selectors. These are fixed with RED→GREEN context/pin regressions, explicit avatar label styling and browser rotation/keyboard/avatar/signout cases. Latest local suite: 1,208 tests; fresh remote browser acceptance remains pending. Next: verify that CI run and release state before reporting deployment.
 
 ## 2026-10-13 — Standing checkpoint/resume policy without repeated prompts
 

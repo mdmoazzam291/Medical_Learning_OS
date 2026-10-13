@@ -114,6 +114,7 @@
 .mlos-account[open]>summary,.mlos-account>summary[data-active="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
 .mlos-header .mlos-account-menu{position:absolute;top:54px;right:0;display:grid;gap:3px;width:240px;max-width:calc(100vw - 24px);padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 36px #0002;max-height:calc(100dvh - 90px);overflow:auto}
 .mlos-account-menu a,.mlos-account-menu button{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;font-size:13px;font-weight:400;text-decoration:none;color:var(--ink);background:transparent;border:0;border-radius:8px;white-space:normal;text-align:left}
+.mlos-account-menu a span{display:inline;opacity:1}
 .mlos-account-menu a:hover,.mlos-account-menu button:hover{background:var(--soft)}
 .mlos-account-menu>:last-child{border-top:1px solid var(--line);border-radius:0;margin-top:5px}
 .mlos-drawer-scrim{display:none}

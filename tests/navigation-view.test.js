@@ -143,3 +143,9 @@ test('expanded Study navigation prioritizes the four approved destinations and n
   assert.match(local, /More study tools/);
   assert.doesNotMatch(local, /Research Participation|Source Rights|Simulator/);
 });
+
+
+test('cross-workspace pins never repeat an existing local destination', () => {
+  const html = markup({ master: 'library', section: 'notes', prefs: { expanded: true, pins: ['home:material'] } });
+  assert.equal(html.split('href="/web/library.html?view=notes"').length - 1, 1);
+});
