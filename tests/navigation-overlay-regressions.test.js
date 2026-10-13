@@ -228,3 +228,21 @@ test('resize and role revocation dismiss top menus while nested preferences surv
   h.context.innerWidth = 1180; h.windowHandlers.resize();
   assert.equal(h.menu.hidden, true);
 });
+
+test('a surface edit preserves draft search and sets appearance without touching page content', () => {
+  const h = open({ width: 1440 }); h.input.value = 'Private unsent search';
+  let pageTouched = false;
+  h.context.document.querySelector = () => { pageTouched = true; return {}; };
+  h.windowHandlers['mlos:preferences']({ detail: { prefs: { version: 1, palette: 'lavender_precision', theme: 'dark', surfaceStyle: 'glass', groups: ['library:subjects'], pins: ['account:data'] } } });
+  assert.equal(h.context.document.documentElement.dataset.surfaceStyle, 'glass');
+  assert.equal(h.context.document.documentElement.dataset.palette, 'lavender_precision');
+  assert.equal(h.input.value, 'Private unsent search');
+  assert.equal(pageTouched, false);
+});
+
+test('desktop icon search opens its field instead of submitting an invisible input', () => {
+  const h = open({ width: 1440 }); let prevented = false;
+  h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(h.classes.has('mlos-search-open'), true);
+});

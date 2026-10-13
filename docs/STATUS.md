@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-14 — Glass implementation awaiting browser acceptance
+
+Tasks 1–3 of the owner-approved centered-navigation plan are implemented. Preferences separates palette, surface style and light/dark; Standard is the migrated default, Glass follows selected Sage/Lavender, and reading surfaces remain opaque. Tablet/desktop use one centered top/contextual menu; narrow screens use a labeled top launcher; phone flow remains. Account tools and desktop hidden-input search have explicit behavioral regressions. Whole Node suite: 1,222 pass, zero fail; 77-file build and repository checks pass. Local Chromium aborts in the execution environment and WebKit system dependencies are unavailable, so actual rotation/desktop/8-combination browser acceptance is pending the existing CI jobs. No ready/merged/deployed claim. Local code checkpoint d2acf11b705f907a47242bc04aeb8a551588532d; PR #233 remains draft until browser acceptance and whole-branch review.
+
 ## 2026-10-14 — Centered navigation implementation checkpoint
 
 Owner approved direct plan execution and tablet rotation/desktop/persistence testing. Tasks 1/2 are implemented on the PR #233 feature branch: validated independent Standard/Glass preference migration and full catalog-driven contextual top menus with no permanent tablet/desktop sidebar. Phone flow, server Admin gates, canonical routes, pins, independent nested groups and in-page navigation remain. New behavioral tests failed before implementation and passed afterward. Baseline 1,211 tests; latest complete Node suite 1,218 pass, zero failed; 56 targeted menu/access tests pass. Preferences UI, Glass CSS and real Chromium/WebKit acceptance remain pending; no merge/deploy claimed. Runtime checkpoint 8b19d51468e2e3145600b8c91c34803106b2826f.

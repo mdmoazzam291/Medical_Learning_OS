@@ -222,3 +222,34 @@
 .mlos-workspace-menu .mlos-master-item>a .mlos-icon{width:18px;height:18px}
 .mlos-workspace-menu .mlos-master-item>button{min-width:44px;min-height:44px}
 .mlos-workspace-menu .mlos-caption{display:block}
+
+/* Surface style is independent of palette and appearance. Reading surfaces stay opaque. */
+@media(min-width:701px){
+ :root[data-surface-style="glass"]{--nav-tint:var(--soft);--nav-edge:var(--line)}
+ :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:var(--sidebar)}
+ :root[data-surface-style="glass"] .mlos-header-top,
+ :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+ :root[data-surface-style="glass"] .mlos-workspace-menu,
+ :root[data-surface-style="glass"] .mlos-account-menu,
+ :root[data-surface-style="glass"] .mlos-workspace-launcher,
+ :root[data-surface-style="glass"] .mlos-search-open .mlos-search{background:var(--nav-tint);border-color:var(--nav-edge);box-shadow:0 4px 18px #0001}
+ :root[data-surface-style="glass"] .mlos-header-top .mlos-search input[type="search"]{background:var(--nav-tint)}
+ @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root[data-surface-style="glass"]{--nav-tint:color-mix(in srgb,var(--soft) 88%,transparent);--nav-edge:color-mix(in srgb,var(--accent) 22%,transparent)}
+  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:color-mix(in srgb,var(--sidebar) 94%,transparent)}
+  :root[data-surface-style="glass"] .mlos-header-top,
+  :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+  :root[data-surface-style="glass"] .mlos-workspace-menu,
+  :root[data-surface-style="glass"] .mlos-account-menu,
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1)}
+ }
+ @media(prefers-reduced-transparency:reduce){
+  :root[data-surface-style="glass"]{--nav-tint:var(--soft)}
+  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:var(--sidebar)}
+  :root[data-surface-style="glass"] .mlos-header-top,
+  :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+  :root[data-surface-style="glass"] .mlos-workspace-menu,
+  :root[data-surface-style="glass"] .mlos-account-menu,
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:none;-webkit-backdrop-filter:none}
+ }
+}

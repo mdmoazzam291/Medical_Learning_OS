@@ -189,3 +189,10 @@ test('workspace menus preserve every nested route and gate pinned Admin shortcut
   const denied = view.workspaceMenuMarkup({ master: 'admin', isAdmin: false, prefs: { pins: ['admin:content'] } });
   assert.doesNotMatch(denied, /Content Intake|Source Rights/);
 });
+
+test('the avatar retains access to every Account tool on larger screens', () => {
+  const html = markup({ master: 'library', signedIn: true });
+  const account = html.split('class="mlos-account"')[1].split('</details>')[0];
+  assert.match(account, /data-workspace-menu="account"/);
+  assert.match(account, /Account tools/);
+});

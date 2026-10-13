@@ -8,7 +8,7 @@ import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
 const navigationAuth = createSupabaseAuth(cloudConfig);
 let compact = innerWidth <= 1050, phone = innerWidth <= 700, compactHeader = innerWidth < 1000, drawerOpen = false;
-let workspaceOpener = null, workspaceMaster = null;
+let workspaceOpener = null, workspaceMaster = null, workspaceReturnFocus = null;
 let navigationUser = navigationAuth.currentUser();
 const expanded = () => compact ? drawerOpen : prefs.expanded;
 let prefs = store.read(), identity = routeIdentity(location.pathname, location.search, location.hash), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
@@ -36,6 +36,7 @@ document.body.classList.add('mlos-app');
 function applyAppearance() {
   document.documentElement.dataset.appearance = prefs.theme;
   document.documentElement.dataset.palette = prefs.palette;
+  document.documentElement.dataset.surfaceStyle = prefs.surfaceStyle;
   document.body.dataset.rail = phone && expanded() ? 'expanded' : 'collapsed';
   document.body.dataset.drawer = phone && drawerOpen ? 'open' : 'closed';
   document.body.dataset.navigationLayout = phone ? 'phone' : 'top';
@@ -90,13 +91,13 @@ function closeWorkspaceMenu(restoreFocus = false) {
   const menu = shell.querySelector('#mlos-workspace-menu');
   if (menu) menu.hidden = true;
   workspaceOpener?.setAttribute?.('aria-expanded', 'false');
-  if (restoreFocus) workspaceOpener?.focus?.();
+  if (restoreFocus) workspaceReturnFocus?.focus?.();
   workspaceOpener = null; workspaceMaster = null;
 }
 function positionWorkspaceMenu() {
   const menu = shell.querySelector('#mlos-workspace-menu');
   if (!menu || !workspaceOpener || !menu.style) return;
-  const rect = workspaceOpener.getBoundingClientRect?.();
+  const rect = workspaceReturnFocus?.getBoundingClientRect?.();
   if (!rect) return;
   const width = Math.min(380, innerWidth - 24);
   const top = Math.max(60, rect.bottom + 6);
@@ -112,6 +113,7 @@ function openWorkspaceMenu(master, trigger) {
   const menu = shell.querySelector('#mlos-workspace-menu');
   if (!menu) return;
   workspaceOpener = trigger; workspaceMaster = master;
+  workspaceReturnFocus = trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
   menu.innerHTML = workspaceMenuMarkup({ master, section: master === identity.master ? identity.section : '', prefs, isAdmin, compactHeader, currentHref: location.pathname + location.search + location.hash });
   menu.hidden = false; trigger.setAttribute('aria-expanded', 'true'); positionWorkspaceMenu();
   menu.querySelector('a,button,summary')?.focus();
@@ -222,7 +224,7 @@ document.addEventListener('keydown', event => {
 });
 shell.querySelectorAll('form').forEach(form => form.addEventListener('submit', () => closeFlyout()));
 shell.addEventListener('submit', event => {
-  if (event.target.matches('.mlos-search') && compact && !shell.classList.contains('mlos-search-open')) {
+  if (event.target.matches('.mlos-search') && (phone || innerWidth < 1600) && !shell.classList.contains('mlos-search-open')) {
     event.preventDefault(); closeWorkspaceMenu(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });

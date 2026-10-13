@@ -22,3 +22,14 @@ test('a revision view exposes its actual due items and no automatically starting
   const html = render('revision', { dueCount: 1, items: [{ question: { stem: 'Reviewed prompt', questionVersionId: 'q1@1' }, schedule: { dueAt: '2026-10-01T00:00:00Z' } }] });
   assert.match(html, /Reviewed prompt/); assert.match(html, /Open recommended revision/); assert.doesNotMatch(html, /<form/);
 });
+
+test('Preferences exposes independent surface style without obsolete sidebar choices', () => {
+  for (const style of ['standard', 'glass']) {
+    const html = view.preferencesContent({ surfaceStyle: style, palette: 'lavender_precision', theme: 'dark' }, 'device');
+    assert.match(html, /data-preference="surfaceStyle"/);
+    assert.match(html, new RegExp('value="' + style + '" selected'));
+    assert.match(html, /data-preference="palette"/);
+    assert.match(html, /data-preference="theme"/);
+    assert.doesNotMatch(html, /data-preference="expanded"/);
+  }
+});
