@@ -49,7 +49,7 @@ try {
       if (await locator.and(local).count()) await openTools();
       if (await locator.count()) {
         const groups = await locator.first().evaluate(node => {
-          const keys = []; for (let parent = node.parentElement; parent; parent = parent.parentElement) if (parent.matches('details[data-group]') && !parent.open) keys.unshift(parent.dataset.group); return keys;
+          const keys = []; for (let parent = node.matches('summary') ? node.parentElement.parentElement : node.parentElement; parent; parent = parent.parentElement) if (parent.matches('details[data-group]') && !parent.open) keys.unshift(parent.dataset.group); return keys;
         });
         for (const key of groups) await page.locator('details[data-group="' + key + '"] > summary').click();
       }
