@@ -37,6 +37,7 @@ function applyAppearance() {
   document.documentElement.dataset.palette = prefs.palette;
   document.body.dataset.rail = expanded() ? 'expanded' : 'collapsed';
   document.body.dataset.drawer = compact && drawerOpen ? 'open' : 'closed';
+  document.body.dataset.navigationLayout = compact ? 'overlay' : 'inline';
   document.body.dataset.navigationMemory = store.persistence;
 }
 function render(focusSelector, captureSearch = true) {
@@ -185,8 +186,8 @@ document.addEventListener('keydown', event => {
 });
 shell.querySelectorAll('form').forEach(form => form.addEventListener('submit', () => closeFlyout()));
 shell.addEventListener('submit', event => {
-  if (event.target.matches('.mlos-search') && innerWidth < 1050 && !shell.classList.contains('mlos-search-open')) {
-    event.preventDefault(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
+  if (event.target.matches('.mlos-search') && compact && !shell.classList.contains('mlos-search-open')) {
+    event.preventDefault(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
 window.addEventListener('mlos:access', event => {

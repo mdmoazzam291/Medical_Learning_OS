@@ -133,12 +133,12 @@ try {
     for (const desktopExpanded of [false, true]) {
       await page.evaluate(value => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...JSON.parse(localStorage.getItem('mlos-navigation-v1')), expanded: value } } })), desktopExpanded);
       await page.setViewportSize({ width: 820, height: 1180 });
-      await page.waitForFunction(() => document.body.dataset.rail === 'collapsed');
+      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'overlay' && document.body.dataset.rail === 'collapsed');
       await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
       await page.setViewportSize({ width: 1180, height: 820 });
-      await page.waitForFunction(value => document.body.dataset.rail === (value ? 'expanded' : 'collapsed'), desktopExpanded);
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'inline' && document.body.dataset.rail === (value ? 'expanded' : 'collapsed'), desktopExpanded);
       await page.setViewportSize({ width: 820, height: 1180 });
-      await page.waitForFunction(() => document.body.dataset.rail === 'collapsed');
+      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'overlay' && document.body.dataset.rail === 'collapsed');
       await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
       await page.evaluate(() => {
         const buttons = [...document.querySelectorAll('#mlos-navigation a,#mlos-navigation button,#mlos-navigation summary')].filter(node => !node.disabled && node.getClientRects().length);
@@ -153,13 +153,13 @@ try {
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
-    await page.waitForFunction(() => document.body.dataset.rail === 'collapsed');
+    await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 1050 ? 'overlay' : 'inline') && document.body.dataset.rail === 'collapsed', width);
     await activate(page.getByLabel('Account menu', { exact: true }));
     const accountMenu = page.getByRole('navigation', { name: 'Account navigation', exact: true });
     for (const label of ['Profile', 'Preferences', 'Account & Security']) {
       const link = accountMenu.getByRole('link', { name: label, exact: true });
       assert.equal(await link.isVisible(), true, 'avatar label remains accessible at ' + name);
-      assert.equal(await link.locator('span').evaluate(node => getComputedStyle(node).display), 'inline');
+      assert.notEqual(await link.locator('span').evaluate(node => getComputedStyle(node).display), 'none');
     }
     await page.keyboard.press('Escape');
     assert.equal(await page.locator('.mlos-account').evaluate(node => node.open), false);

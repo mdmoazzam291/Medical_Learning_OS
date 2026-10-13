@@ -182,3 +182,10 @@ test('rotating an open portrait drawer restores the saved desktop layout without
   h.windowHandlers.resize?.();
   assert.equal(h.body.dataset.rail, 'collapsed');
 });
+
+test('search opens at the exact compact CSS breakpoint instead of submitting a hidden field', () => {
+  const h = open({ width: 1050 }); let prevented = false;
+  h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(h.classes.has('mlos-search-open'), true);
+});
