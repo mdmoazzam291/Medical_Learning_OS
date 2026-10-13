@@ -1,5 +1,12 @@
 # Current status
 
+## 2026-10-14 — Final centered navigation / Glass option retained
+
+Owner approved the refined centered top navigation + single contextual page menu for tablet/desktop, with the SAME layout rendered without glass in the existing Sage Precision / Lavender Precision and an opt-in second Glass surface style in Settings. ADR-113 / FINAL_NAVIGATION_APPEARANCE.md preserve the actual full route/index catalog, independent light/dark and palettes, server-authorized Admin, device preference migration, narrow-window adaptation and existing phone navigation.
+
+Documentation-only checkpoint on docs/final-navigation-glass-option-20261014. No runtime code, Settings control, merge or deployment in this checkpoint. Readback/content consistency verification applies only to these records; Node/build/browser acceptance is pending implementation. Current main is 926e150277aced9627c4d85b4f787becd5a99783; PR #232 is merged (its older handoff/status is stale), and its PR description reports final check/browser/WebKit success. This task did not independently run that CI or verify production. Unrelated open OAuth/PARSE drafts are unchanged. Next: implement and verify the retained navigation/appearance contract against refreshed main.
+
+
 ## 2026-10-13 — Full-width phone learning navigation
 
 The owner supplied learner and administrator phone screenshots and requested maximum room for learning. Phones up to 700 CSS px now use one compact 56px header with a labeled current-workspace menu, Search, appearance toggle and avatar. Master links move into the same temporary drawer as contextual tools; server-authorized Master Admin has a labeled menu entry. The closed drawer is hidden from layout and accessibility, with zero body side padding. Opening it overlays rather than narrows content; dismissal and route changes restore full width. Phone introductory spacing is tighter. Larger screens retain the existing contextual rail/drawer, all tools, role gates, palettes and saved desktop preference.
