@@ -229,6 +229,8 @@ try {
     await activate(page.locator('#mlos-local-nav > details[data-group="library:references"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:subjects"]').getAttribute('open'), '');
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:references"]').getAttribute('open'), '');
+    if (width > 700) assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => { const r = node.getBoundingClientRect(); return r.top >= 56 && r.bottom <= innerHeight && node.scrollHeight > node.clientHeight; }), true, 'long independent indexes scroll inside the viewport');
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-library-index-' + name + '.png'), fullPage: true });
     await activate(page.locator('#mlos-local-nav [data-pin="library:subjects"]'));
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).count(), 0, 'same-workspace pin does not duplicate its destination');
     await page.keyboard.press('Control+k');
@@ -245,6 +247,7 @@ try {
     if (width > 1050) await closeTools();
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Study', exact: true }));
     await page.getByRole('heading', { name: 'Your study workspace.', exact: true }).waitFor();
+    await openTools();
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Study Now');
     await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).waitFor({ state: 'attached' });
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Exams', exact: true }));
@@ -260,9 +263,11 @@ try {
     if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
     await page.waitForFunction(() => location.hash === '#research');
+    await openTools();
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Research Participation');
     await page.goBack();
     await page.waitForFunction(() => location.hash === '');
+    await openTools();
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Overview');
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }));
     await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
@@ -521,6 +526,7 @@ try {
       const prefsBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
       await reload(); await page.getByLabel('Surface style', { exact: true }).waitFor();
       assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1'))), prefsBefore, 'full saved preference equality');
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
       for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/admin.html']) {
         await go(origin + destination); await page.locator('[data-theme]').waitFor();
         if (destination === '/web/admin.html') await settleAdmin();
@@ -537,6 +543,11 @@ try {
         if (width > 700 && surfaceStyle === 'glass') { assert.notEqual(actual.navColor, 'rgb(255, 255, 255)'); assert.notEqual(actual.blur, 'none'); }
         else assert.equal(actual.blur, 'none');
         if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: true });
+        if (destination.includes('library')) {
+          await openTools();
+          if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+          await closeTools();
+        }
       }
       await go(origin + '/web/workspace.html?master=account&section=preferences');
       await page.getByLabel('Surface style', { exact: true }).waitFor();
