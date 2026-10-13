@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-14 — Glass screenshot refinement; final browser gate pending
+
+Actual iPad portrait screenshots cover all 8 surface/palette/appearance combinations, Preferences, Home/Study/Library/Admin and nested indexes. Run1753 passed those assertions before a final pinned-shortcut test helper timeout; the helper now opens contextual menus before tapping cross-workspace pins. Screenshot QA showed underlying text competing with menu labels, so Glass menu tint is now more opaque (96% light/98% dark), while the header remains more translucent. Actual code/API checkpoint b407c17749d159a26b8cd0d4ff216aedc445f129 (local 2a8259b), tree 0d1e9f32ead5308f44514fbe6d1f3d13ca431947. Final complete Chromium/WebKit acceptance and fresh screenshot review remain pending. PR #233 stays draft. No merge/deployment.
+
 ## 2026-10-14 — Navigation review fixes and real-browser acceptance checkpoint
 
 The fresh whole-branch review identified compact-menu detached anchoring, stale dismissed-menu focus and focus loss across breakpoint redraws. Each was reproduced RED→GREEN; the current-workspace marker was also corrected without navigating. Full Node suite now passes 1,226/1,226; build and repository checks pass. CI confirmed the initial fit failure was a resize synchronization assertion, followed by an ancestor-disclosure helper issue and a hidden-menu text assertion; the browser harness now waits for the correct header and inspects visible menus. Screenshots cover actual Preferences, Glass/Standard menus, both palettes/appearances and long independent indexes. Browser acceptance is still pending; no pass/readiness claimed. Runtime/API checkpoint 5767fbee627f832078116baaa8cbd6f568210c84 (local d2b5d84), identical tree 7b202e0dee7867f844c9da53d95b684a27dfe392. PR #233 remains draft; next: finish Chromium/WebKit acceptance and screenshot QA. No production merge/deploy.
