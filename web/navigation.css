@@ -147,7 +147,7 @@
    and their contextual tools; it never changes the saved desktop preference. */
 .mlos-panel[hidden]{display:none}
 @media(max-width:700px){
- .mlos-app,.mlos-app[data-rail="expanded"]{padding-left:0;padding-top:56px}
+ .mlos-app,.mlos-app[data-rail="expanded"]{padding-left:0;padding-top:56px;transition:none}
  .mlos-header{height:56px;min-height:56px;padding:0 8px;gap:4px}
  .mlos-brand-mark{width:32px;height:32px;font-size:25px}
  .mlos-header .mlos-icon{width:20px;height:20px}

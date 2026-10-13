@@ -46,8 +46,8 @@ try {
     const activate = async locator => {
       await page.waitForLoadState('networkidle');
       // Phone masters and contextual tools are revealed by the one header menu.
-      if (await page.evaluate(() => innerWidth <= 700 && document.body.dataset.drawer !== 'open') &&
-          await locator.count() && await locator.evaluate(node => Boolean(node.closest('.mlos-panel')))) {
+      if (page.viewportSize().width <= 700 && await page.locator('.mlos-panel[hidden]').count() &&
+          await locator.and(page.locator('.mlos-panel a,.mlos-panel button,.mlos-panel summary')).count()) {
         await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
       }
       return touch ? locator.tap() : locator.click();
