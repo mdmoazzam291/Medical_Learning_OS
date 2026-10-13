@@ -1524,3 +1524,12 @@ The approved Study → Build Session uses the shared published Library query rat
 - Palette is independent of light/dark appearance. Existing dark preferences stay dark; their missing palette migrates to Sage. Dark colours derive from the selected palette and do not constitute a separate branding choice.
 - Account → Preferences owns the colour-palette selector. The shared navigation preference store persists it across Home, Study, Library, Exams, Account and authorized Admin views; blocked storage retains page memory. Pins and group state are preserved.
 - Answer/health/graph outcomes remain semantic states rather than changing meaning with branding. Account landing branding uses the same palette variables. Canonical/personal notes and clinical content are unchanged.
+
+
+## ADR-111 — Approved avatar and responsive contextual navigation
+- Date: 2026-10-13
+- Status: Accepted; owner requested implementation of the attached navigation mockup.
+- Home, Study, Library and Exams remain primary workspaces. Account moves to an avatar disclosure; its route IDs, preferences, data, research and sign-in/security pages remain available. Server-authorized Master Admin follows Exams; no stored/browser preference grants authority.
+- Study prioritizes Study Now, Subjects & Topics, Questions and Mistake Review. Remaining existing study tools stay in an independent disclosure. All 19 subjects reference the existing canonical Library with Study context, without a second content inventory. Pins persist; a current-workspace pin never duplicates its own sidebar destination.
+- The header remains 72px (60px on phones), rail 64px and desktop expansion 256px. At viewport widths <=1050px the drawer overlays existing content with a dismissible scrim. Main content is inert while open; header actions remain available. Escape/outside dismissal and rotation restore the saved desktop preference. Fresh desktop defaults expand; explicit older preferences retain their choice.
+- Both permanent palettes and independent appearance remain unchanged. The reference lavender mockup does not replace Sage's existing default. Product labels remain Medical Learning OS; unrelated draft PARSE branding is outside this change.

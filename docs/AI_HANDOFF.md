@@ -3,14 +3,14 @@
 Snapshot: 2026-10-13 (Asia/Kolkata). Verify remote evidence before resuming.
 
 ## Current task
-- Objective: make checkpoint/push and resume standing instructions, so supported coding agents need no repeated handoff prompt.
-- Owner: ChatGPT/Codex for this run; release ownership at run end. Stop outgoing remote jobs before another agent edits the task branch.
-- Branch: docs/automatic-ai-checkpoints-20261013; base main commit: 26590146015ee7bafd7bf1d529259f571dbd7e30. Resolve current task head/PR by this exact branch; the handoff cannot contain its own final hash.
-- Work: AGENTS.md checkpoint policy; direct handoff/continuity imports in CLAUDE.md and GEMINI.md; updated continuity/status/decision records. Documentation only; no runtime hooks or production writes.
-- Previous continuity task: PR #226 is merged as 26590146015ee7bafd7bf1d529259f571dbd7e30; PR Foundation run 38273310852 passed repository, Chromium and WebKit jobs. Do not restart that completed task.
-- Verification: 2026-10-13 local npm run check passed syntax/catalog/decision checks; git diff --check and Claude/Gemini import/checkpoint/ADR checks passed. No runtime changes; fresh browser and full regression results are delegated to the existing PR CI. Verify the live CI/merge state before claiming release.
-- Next action: resolve the documentation PR by branch. If open, finish verified release within existing authorization; if merged, resume the next owner-directed task or genuine supplied polished-material intake when input is available. Do not manufacture content to clear a blocked intake.
-- Snapshot limits: prepared before this branch's release. Live GitHub state supersedes the snapshot; no installed hook, app-switch detector or cross-vendor process cancellation exists.
+- Checked at: 2026-10-13; objective is implementing the owner's attached navigation mockup (avatar Account, top Master Admin, contextual Study sidebar, expanded landscape / portrait overlay).
+- Owner: ChatGPT/Codex active. One writer for feat/contextual-navigation-20261013; base main d80fd99d67afe250faad99375d6895233f6c02f7. Resolve this exact branch for actual head/PR; no self-referential hash.
+- Scope: web/navigation.js, navigation-view.js, navigation.css; src/domain/app-navigation.js; account security anchors; Node/browser navigation regressions; README, decisions, status and plan. Other open draft branding/OAuth PRs are unrelated and untouched.
+- Completed: approved runtime layout/navigation and Node regressions; 1,205 Node tests pass, checks and 77-file static build pass. Fresh desktop defaults expanded; existing explicit preferences preserved. Portrait drawer state is transient. Both palettes preserved.
+- Pending: GitHub Chromium/WebKit browser acceptance, observed-failure repair, final review and release decision. Local Chromium executable is unavailable. No hosted signed-in or physical iPad verification claimed.
+- Authorization: implement and persist this navigation change. Routine feature checkpoints are authorized by AGENTS.md. No clinical publication, branding merge, backend/provider settings, data deletion or unrelated work.
+- Next action: verify the branch head/PR and CI results; finish browser acceptance before claiming release. Update this record with code commit and concrete evidence.
+- Previous checkpoint/continuity PR #227 is merged into current main; do not restart it.
 
 ## Latest product state from repository evidence
 - Sage Precision default; Lavender Precision selectable; independent light/dark appearance. STATUS records PR #224 / merge 9891df556aca22e634e42d87cf05fd21e407124d, passing Node/check/build/browser CI and production build evidence. This handoff does not independently verify hosted authenticated switching.

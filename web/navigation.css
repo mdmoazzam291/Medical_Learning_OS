@@ -43,7 +43,7 @@
  --mint-fade:linear-gradient(135deg,#302A43 0%,#242229 100%);
 }
 .mlos-app{padding-top:72px;padding-left:64px;transition:padding-left .16s;background:var(--bg)}
-.mlos-app[data-rail="expanded"]{padding-left:220px}
+.mlos-app[data-rail="expanded"]{padding-left:256px}
 .mlos-app main{width:100%;min-width:0}
 .mlos-app .home-shell{display:block}.mlos-app .home-shell>.sidebar,.mlos-app .home-shell>.workspace>header{display:none}
 /* Admin uses the shared master/sidebar instead of stacking a second legacy admin sidebar. */
@@ -58,18 +58,18 @@
 .mlos-brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;font-weight:650;font-size:17px;flex-shrink:0}
 .mlos-brand-mark{background:var(--soft);color:var(--accent);border-radius:11px;width:36px;height:36px;display:grid;place-items:center;font:26px Georgia,serif}
 .mlos-brand-short{display:none}
-.mlos-header nav{display:flex;gap:4px;flex:0 0 auto}
-.mlos-header nav a{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;min-height:42px;padding:10px 12px;color:var(--ink);white-space:nowrap}
-.mlos-header nav a[aria-current]{background:var(--soft);color:var(--accent)}
-.mlos-header nav a span{opacity:1}
+.mlos-header>nav{display:flex;gap:4px;flex:0 0 auto}
+.mlos-header>nav a{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;min-height:42px;padding:10px 12px;color:var(--ink);white-space:nowrap}
+.mlos-header>nav a[aria-current]{background:var(--soft);color:var(--accent)}
+.mlos-header>nav a span{opacity:1}
 .mlos-search{display:flex;align-items:center;position:relative;min-width:0;flex:1;max-width:400px;margin-left:auto}
 .mlos-search input[type="search"]{margin:0;padding:10px 45px 10px 13px;min-height:40px;width:100%;background:var(--bg);border-radius:24px;font-size:13px}
 .mlos-search button{position:absolute;right:3px;min-width:38px;min-height:38px;padding:8px;border:0;background:transparent}
 .mlos-theme{padding:10px;min-width:42px;min-height:42px;border:0;background:transparent;flex-shrink:0}
 .mlos-panel{position:fixed;top:72px;bottom:0;left:0;width:64px;background:var(--sidebar);border-right:1px solid var(--line);z-index:25;overflow-y:auto;overflow-x:hidden;padding:10px 7px;scrollbar-width:thin}
-[data-rail="expanded"] .mlos-panel{width:220px;padding:10px}
-.mlos-panel-toolbar{display:flex;align-items:center;gap:12px;min-height:48px;margin-bottom:12px;font-size:13px;font-weight:650}
-.mlos-panel-toolbar button{padding:12px;min-width:44px;min-height:44px;background:transparent;border:0}
+[data-rail="expanded"] .mlos-panel{width:256px;padding:10px}
+.mlos-panel-toolbar{display:flex;align-items:center;gap:12px;min-height:44px;margin-bottom:8px;font-size:13px;font-weight:650}
+.mlos-panel-toolbar button{padding:11px;min-width:44px;min-height:44px;background:transparent;border:0}
 [data-rail="collapsed"] .mlos-panel-toolbar span,[data-rail="collapsed"] .mlos-caption{display:none}
 .mlos-panel nav{display:grid;overflow-x:visible;gap:4px}.mlos-panel nav+nav{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
 .mlos-caption{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 12px}
@@ -85,11 +85,11 @@
 .mlos-flyout{position:fixed;top:82px;left:70px;max-height:calc(100dvh - 96px);width:min(320px,calc(100vw - 82px));overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:0 16px 42px #0002;z-index:40;font-size:13px}
 .mlos-flyout[hidden]{display:none}.mlos-flyout-heading{display:flex;align-items:center;gap:4px;padding-bottom:10px;border-bottom:1px solid var(--line)}.mlos-flyout-heading>a{font-weight:650;flex:1;text-decoration:none;padding:8px}.mlos-flyout-heading>button{padding:6px;min-height:36px;background:transparent;border:0}.mlos-flyout .mlos-children{margin-top:8px}.mlos-flyout .mlos-children a{display:block;text-decoration:none;padding:9px;border-radius:6px;color:var(--ink)}.mlos-flyout summary{padding:10px 4px;cursor:pointer;line-height:1.45}
 .mlos-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:1280px){.mlos-header{gap:12px;padding:0 14px}.mlos-brand-full{font-size:14px}.mlos-header nav a{padding:10px 9px}.mlos-search{max-width:280px}}
+@media(max-width:1280px){.mlos-header{gap:12px;padding:0 14px}.mlos-brand-full{font-size:14px}.mlos-header>nav a{padding:10px 9px}.mlos-search{max-width:280px}}
 @media(max-width:1050px){.mlos-brand-full{display:none}.mlos-brand-short{display:block}.mlos-header{gap:14px}.mlos-search{max-width:44px;flex:0 0 44px}.mlos-search input[type="search"]{display:none}.mlos-search button{position:static;min-height:44px}.mlos-search-open .mlos-search{position:absolute;top:76px;left:74px;right:14px;max-width:none;background:var(--surface);border-radius:24px;box-shadow:0 5px 20px #0002}.mlos-search-open .mlos-search input[type="search"]{display:block}.mlos-search-open .mlos-search button{position:absolute}}
-@media(max-width:700px){.mlos-header{padding:0 8px;gap:5px;height:60px;min-height:60px}.mlos-brand{gap:5px;font-size:12px}.mlos-brand-mark{width:26px;height:30px;font-size:23px}.mlos-header nav{gap:1px;flex:1;justify-content:center}.mlos-header nav a{padding:9px;min-width:35px;min-height:40px}.mlos-header nav a span{display:none}.mlos-header .mlos-icon{width:18px;height:18px}.mlos-theme{min-width:36px;min-height:40px;padding:8px}.mlos-search{margin:0;flex:0 0 34px}.mlos-search button{min-width:34px;padding:8px}.mlos-app{padding-top:60px}.mlos-panel{top:60px}.mlos-app[data-rail="expanded"]{padding-left:64px}.mlos-app[data-rail="expanded"] .mlos-panel{width:min(280px,calc(100vw - 40px));box-shadow:10px 0 40px #0003}.mlos-flyout{top:70px;max-height:calc(100dvh - 84px)}.mlos-app main{padding:20px 14px 30px}.mlos-app .hero,.mlos-app .panel{padding:20px}.mlos-app .metrics{grid-template-columns:1fr;gap:15px}.mlos-app .metrics>div{padding:0;border:0}.mlos-app .two-column{grid-template-columns:1fr}.mlos-search-open .mlos-search{top:64px;left:70px;right:8px}}
+@media(max-width:700px){.mlos-header{padding:0 8px;gap:5px;height:60px;min-height:60px}.mlos-brand{gap:5px;font-size:12px}.mlos-brand-mark{width:26px;height:30px;font-size:23px}.mlos-header>nav{gap:1px;flex:1;justify-content:center}.mlos-header>nav a{padding:9px;min-width:35px;min-height:40px}.mlos-header>nav a span{display:none}.mlos-header .mlos-icon{width:18px;height:18px}.mlos-theme{min-width:36px;min-height:40px;padding:8px}.mlos-search{margin:0;flex:0 0 34px}.mlos-search button{min-width:34px;padding:8px}.mlos-app{padding-top:60px}.mlos-panel{top:60px}.mlos-app[data-rail="expanded"]{padding-left:64px}.mlos-app[data-rail="expanded"] .mlos-panel{width:min(280px,calc(100vw - 40px));box-shadow:10px 0 40px #0003}.mlos-flyout{top:70px;max-height:calc(100dvh - 84px)}.mlos-app main{padding:20px 14px 30px}.mlos-app .hero,.mlos-app .panel{padding:20px}.mlos-app .metrics{grid-template-columns:1fr;gap:15px}.mlos-app .metrics>div{padding:0;border:0}.mlos-app .two-column{grid-template-columns:1fr}.mlos-search-open .mlos-search{top:64px;left:70px;right:8px}}
 /* Keep six authorized header destinations on one row even on narrow phones. */
-@media(max-width:440px){.mlos-brand-short{display:none}.mlos-header{gap:3px}.mlos-header nav a{min-width:29px;padding:7px 4px}}
+@media(max-width:440px){.mlos-brand-short{display:none}.mlos-header{gap:3px}.mlos-header>nav a{min-width:29px;padding:7px 4px}}
 @media(prefers-reduced-motion:reduce){.mlos-app{transition:none}}
 
 /* Admin groups show one canonical destination, with its shortcut pin beside it.
@@ -106,3 +106,35 @@
 .mlos-app .option:has(input:checked){border-color:var(--accent)}
 .mlos-app .option.correct{border-color:var(--correct)}
 .mlos-app .explanation{border-left-color:var(--correct)}
+
+/* Account utilities are outside the master workspace navigation. */
+.mlos-account{position:relative;flex:0 0 44px;align-self:center}
+.mlos-account>summary{list-style:none;cursor:pointer;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--soft);color:var(--accent)}
+.mlos-account>summary::-webkit-details-marker{display:none}
+.mlos-account[open]>summary,.mlos-account>summary[data-active="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
+.mlos-header .mlos-account-menu{position:absolute;top:54px;right:0;display:grid;gap:3px;width:240px;max-width:calc(100vw - 24px);padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 36px #0002;max-height:calc(100dvh - 90px);overflow:auto}
+.mlos-account-menu a,.mlos-account-menu button{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;font-size:13px;font-weight:400;text-decoration:none;color:var(--ink);background:transparent;border:0;border-radius:8px;white-space:normal;text-align:left}
+.mlos-account-menu a:hover,.mlos-account-menu button:hover{background:var(--soft)}
+.mlos-account-menu>:last-child{border-top:1px solid var(--line);border-radius:0;margin-top:5px}
+.mlos-drawer-scrim{display:none}
+.mlos-app main{padding-left:28px;padding-right:28px}
+.mlos-panel-toolbar button{border-radius:8px;flex-shrink:0}
+.mlos-panel-toolbar button:hover{background:var(--soft)}
+@media(max-width:1280px){.mlos-brand-full{display:none}.mlos-brand-short{display:block}.mlos-header{gap:10px}.mlos-header>nav a{padding:10px 8px}}
+@media(max-width:1050px){
+ .mlos-header{gap:8px}.mlos-header>nav a{gap:6px;padding:10px 7px}
+ .mlos-app[data-rail="expanded"]{padding-left:64px}
+ .mlos-app[data-drawer="open"]{overflow:hidden}
+ .mlos-app[data-drawer="open"] .mlos-panel{width:min(280px,calc(100vw - 40px));box-shadow:10px 0 40px #0003}
+ .mlos-app[data-drawer="open"] .mlos-drawer-scrim{display:block;position:fixed;inset:72px 0 0 0;background:#0004;border:0;border-radius:0;padding:0;z-index:24;cursor:default}
+ .mlos-app main{padding-left:24px;padding-right:24px}
+}
+@media(max-width:700px){
+ .mlos-header{gap:2px;padding:0 6px}.mlos-brand-short{display:none}
+ .mlos-header>nav{min-width:0;overflow-x:auto;scrollbar-width:none;justify-content:flex-start}
+ .mlos-header>nav a{min-width:44px;min-height:44px;padding:10px}
+ .mlos-search{flex:0 0 40px;max-width:40px}.mlos-search button,.mlos-theme{min-width:40px;min-height:44px}
+ .mlos-account{flex-basis:40px}.mlos-account>summary{width:40px;height:44px}
+ .mlos-app[data-drawer="open"] .mlos-drawer-scrim{top:60px}
+ .mlos-app main{padding-left:16px;padding-right:16px}
+}
