@@ -47,7 +47,11 @@ try {
       await page.waitForLoadState('networkidle');
       return touch ? locator.tap() : locator.click();
     };
-    await context.addInitScript(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
+    await context.addInitScript(value => {
+      if (sessionStorage.getItem('mlos-navigation-fixture-seeded')) return;
+      localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value }));
+      sessionStorage.setItem('mlos-navigation-fixture-seeded', 'true');
+    }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     // Wait for background access reads before abandoning a document. WebKit
     // reports canceled cross-origin fixture reads as access-control errors.
