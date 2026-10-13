@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-14 — Centered navigation implementation checkpoint
+
+Owner approved direct plan execution and tablet rotation/desktop/persistence testing. Tasks 1/2 are implemented on the PR #233 feature branch: validated independent Standard/Glass preference migration and full catalog-driven contextual top menus with no permanent tablet/desktop sidebar. Phone flow, server Admin gates, canonical routes, pins, independent nested groups and in-page navigation remain. New behavioral tests failed before implementation and passed afterward. Baseline 1,211 tests; latest complete Node suite 1,218 pass, zero failed; 56 targeted menu/access tests pass. Preferences UI, Glass CSS and real Chromium/WebKit acceptance remain pending; no merge/deploy claimed. Runtime checkpoint 8b19d51468e2e3145600b8c91c34803106b2826f.
+
 ## 2026-10-14 — Implementation authorized; concrete plan prepared
 
 The owner answered Q1/Q2/Q3: implement the selected layout, let Glass follow the existing selected palette, and keep reading surfaces opaque. Current main remains 926e150277aced9627c4d85b4f787becd5a99783; design branch head before this update is ac885a6486c6f419d44b70f89caaa107c159515d, draft PR #233. No competing navigation writer was observed in the fetched open-PR inventory.

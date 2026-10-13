@@ -90,12 +90,13 @@ for (const [master, rows] of Object.entries(SECTIONS)) groups(rows, master);
 export function validatePreferences(value) {
   const p = value && value.version === 1 ? value : {};
   const allowed = (values, keys) => Array.isArray(values) ? [...new Set(values.filter(v => typeof v === 'string' && keys.has(v)))].slice(0, 120) : [];
-  return { version: 1, expanded: p.expanded === true, theme: p.theme === 'dark' ? 'dark' : 'light', palette: p.palette === 'lavender_precision' ? 'lavender_precision' : 'sage_precision', pins: allowed(p.pins, sectionKeys), groups: allowed(p.groups, groupKeys) };
+  return { version: 1, expanded: p.expanded === true, theme: p.theme === 'dark' ? 'dark' : 'light', palette: p.palette === 'lavender_precision' ? 'lavender_precision' : 'sage_precision', surfaceStyle: p.surfaceStyle === 'glass' ? 'glass' : 'standard', pins: allowed(p.pins, sectionKeys), groups: allowed(p.groups, groupKeys) };
 }
 export function changePreference(value, action) {
   const p = validatePreferences(value);
   if (action.type === 'theme') p.theme = p.theme === 'light' ? 'dark' : 'light';
   if (action.type === 'palette') p.palette = action.value;
+  if (action.type === 'surfaceStyle') p.surfaceStyle = action.value;
   if (action.type === 'expanded') p.expanded = action.open === true;
   if (action.type === 'pin' && sectionKeys.has(action.id)) p.pins = p.pins.includes(action.id) ? p.pins.filter(x => x !== action.id) : [...p.pins, action.id];
   if (action.type === 'group' && groupKeys.has(action.id)) p.groups = action.open ? [...new Set([...p.groups, action.id])] : p.groups.filter(x => x !== action.id);

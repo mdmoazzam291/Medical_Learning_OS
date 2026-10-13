@@ -3,18 +3,21 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import * as nav from '../src/domain/app-navigation.js';
-import { navigationMarkup, flyoutMarkup } from '../web/navigation-view.js';
+import * as view from '../web/navigation-view.js';
+const { navigationMarkup, flyoutMarkup, workspaceMenuMarkup } = view;
 import { mutatePreference } from '../web/navigation-preferences.js';
 const source = (await readFile(new URL('../web/navigation.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
 function open({ ready = true, width = 620 } = {}) {
   const shellHandlers = {}, docHandlers = {}, windowHandlers = {}, classes = new Set(), targets = {};
   const input = { value: '', focus() {} }, flyout = { hidden: true };
-  const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : input; }, querySelectorAll: () => [] };
+  const menu = { hidden: true, innerHTML: '', style: {}, getBoundingClientRect: () => ({ width: 360, height: 300 }), querySelector: () => null };
+  const triggers = new Map();
+  const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : key === '#mlos-workspace-menu' ? menu : input; }, querySelectorAll: () => [] };
   const body = { dataset: {}, prepend() {}, classList: { add() {} } };
-  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: width, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
+  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, workspaceMenuMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: width, innerHeight: 1000, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
   context.document.getElementById = id => targets[id] || null;
-  return { body, shell, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
+  return { body, shell, menu, triggers, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
 }
 test('a narrow expanded panel can be dismissed by tapping outside it', () => {
   const h = open(); const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
@@ -30,7 +33,7 @@ test('phone to tablet resizing relocates masters and closes the temporary drawer
   h.context.innerWidth = 820; h.windowHandlers.resize();
   assert.equal(h.body.dataset.drawer, 'closed');
   assert.doesNotMatch(h.shell.innerHTML.split('</header>')[0], /mlos-mobile-menu/);
-  assert.match(h.shell.innerHTML.split('</header>')[0], /data-master="study"/);
+  assert.match(h.shell.innerHTML.split('</header>')[0], /data-workspace-menu="library"/);
 });
 test('a compact search overlay closes on an outside tap without submitting a search', () => {
   const h = open(); let prevented = false;
@@ -170,28 +173,22 @@ test('opening a navigation group persists before a subsequent route redraw', () 
 });
 
 
-test('iPad portrait drawer dismisses outside at 820 and 1024 widths', () => {
-  for (const width of [820, 1024]) {
+test('tablet windows use top tools rather than reserving sidebar width', () => {
+  for (const width of [820, 1024, 1180]) {
     const h = open({ width });
-    const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
-    h.shellHandlers.click({ target: { closest: () => button } });
-    assert.equal(h.body.dataset.rail, 'expanded');
-    h.outside();
     assert.equal(h.body.dataset.rail, 'collapsed');
+    assert.equal(h.body.dataset.navigationLayout, 'top');
+    assert.doesNotMatch(h.shell.innerHTML, /<aside/);
   }
 });
-
-test('rotating an open portrait drawer restores the saved desktop layout without persisting dismissal', () => {
+test('rotation keeps legacy expanded preference without reopening a desktop rail', () => {
   const h = open({ width: 820 });
-  const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
-  h.shellHandlers.click({ target: { closest: () => button } });
-  h.outside();
-  h.context.innerWidth = 1180;
-  h.windowHandlers.resize?.();
-  assert.equal(h.body.dataset.rail, 'expanded');
-  h.context.innerWidth = 820;
-  h.windowHandlers.resize?.();
+  h.context.innerWidth = 1180; h.windowHandlers.resize();
   assert.equal(h.body.dataset.rail, 'collapsed');
+  h.context.innerWidth = 390; h.windowHandlers.resize();
+  assert.equal(h.body.dataset.rail, 'collapsed');
+  h.context.innerWidth = 820; h.windowHandlers.resize();
+  assert.equal(h.body.dataset.navigationLayout, 'top');
 });
 
 test('search opens at the exact compact CSS breakpoint instead of submitting a hidden field', () => {
@@ -199,4 +196,35 @@ test('search opens at the exact compact CSS breakpoint instead of submitting a h
   h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() { prevented = true; } });
   assert.equal(prevented, true);
   assert.equal(h.classes.has('mlos-search-open'), true);
+});
+
+test('top workspace menus switch without navigation and close on outside or Escape', () => {
+  const h = open({ width: 1440 });
+  const trigger = master => ({ dataset: { workspaceMenu: master }, hasAttribute: () => false, setAttribute() {}, focus() {}, getBoundingClientRect: () => ({ left: 450, right: 520, bottom: 56 }) });
+  const click = button => h.shellHandlers.click({ target: { closest: () => button } });
+  click(trigger('library'));
+  assert.equal(h.menu.hidden, false);
+  assert.match(h.menu.innerHTML, /Concept Notes/);
+  assert.equal(h.location.pathname, '/web/library.html');
+  click(trigger('study'));
+  assert.match(h.menu.innerHTML, /Mistake Review/);
+  assert.doesNotMatch(h.menu.innerHTML, /Reference Tools/);
+  h.outside(); assert.equal(h.menu.hidden, true);
+  click(trigger('library'));
+  h.docHandlers.keydown({ key: 'Escape' });
+  assert.equal(h.menu.hidden, true);
+});
+test('resize and role revocation dismiss top menus while nested preferences survive', () => {
+  const h = open({ width: 1440 });
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  const button = { dataset: { workspaceMenu: 'admin' }, hasAttribute: () => false, setAttribute() {}, focus() {}, getBoundingClientRect: () => ({ left: 900, bottom: 56 }) };
+  h.shellHandlers.click({ target: { closest: () => button } });
+  assert.match(h.menu.innerHTML, /Content Intake/);
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: false } });
+  assert.equal(h.menu.hidden, true);
+  assert.doesNotMatch(h.shell.innerHTML, /data-workspace-menu="admin"/);
+  const library = { ...button, dataset: { workspaceMenu: 'library' } };
+  h.shellHandlers.click({ target: { closest: () => library } });
+  h.context.innerWidth = 1180; h.windowHandlers.resize();
+  assert.equal(h.menu.hidden, true);
 });
