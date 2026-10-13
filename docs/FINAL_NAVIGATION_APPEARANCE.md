@@ -1,7 +1,7 @@
 # Final tablet and desktop navigation / appearance contract
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
-Status: implemented on PR #233; real browser acceptance in progress.
+Status: implemented on PR #233; Q3 browser acceptance complete.
 Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
@@ -45,4 +45,4 @@ Menus open on tap/click and keyboard, not hover alone. One outer menu open at a 
 
 ## Boundary / next action
 
-Runtime and Preferences controls are implemented on the task branch. New migration/menu/appearance/focus regressions passed after failing first; the whole Node suite passes 1,226 tests. Build and repository checks pass. Complete Chromium/iPad WebKit acceptance and inspect captured screenshots before marking PR #233 ready. No production merge/deployment is authorized by this plan. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
+Runtime and Preferences controls are implemented on the task branch. New migration/menu/appearance/focus regressions passed after failing first; the whole Node suite passes 1,226 tests. Build and repository checks pass. Foundation run 38485686475 passed check, Chromium and iPad WebKit at API 186b4333. Screenshots of both palettes/styles and real menus were inspected. Q3 rotation, reload equality, all eight appearance combinations and opaque fallback cascade pass with synthetic fixtures. Physical-device/OS-setting acceptance is not claimed. PR #233 is prepared for integration review. No production merge/deployment is authorized by this plan. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.

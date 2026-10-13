@@ -230,7 +230,7 @@ try {
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:subjects"]').getAttribute('open'), '');
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:references"]').getAttribute('open'), '');
     if (width > 700) assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => { const r = node.getBoundingClientRect(); return r.top >= 56 && r.bottom <= innerHeight && node.scrollHeight > node.clientHeight; }), true, 'long independent indexes scroll inside the viewport');
-    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-library-index-' + name + '.png'), fullPage: true });
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-library-index-' + name + '.png'), fullPage: false });
     await activate(page.locator('#mlos-local-nav [data-pin="library:subjects"]'));
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).count(), 0, 'same-workspace pin does not duplicate its destination');
     await page.keyboard.press('Control+k');
@@ -545,7 +545,7 @@ try {
         if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: true });
         if (destination.includes('library')) {
           await openTools();
-          if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+          if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: false });
           await closeTools();
         }
       }

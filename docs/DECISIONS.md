@@ -1,7 +1,7 @@
 # Decision log
 
 ## ADR-113 — One centered tablet/desktop layout with opt-in Glass rendering
-**Status:** Accepted and implemented on PR #233 — 2026-10-14; browser acceptance pending.
+**Status:** Accepted and implemented on PR #233 — 2026-10-14; browser acceptance complete.
 
 Owner confirmed implementation and Q2/Q3 on 2026-10-14: Glass follows whichever existing Sage/Lavender palette is selected; learning notes, questions and explanations remain opaque. The concrete implementation plan is `superpowers/plans/2026-10-14-centered-navigation-glass.md`; owner approved direct execution and Q3 responsive/persistence acceptance.
 
@@ -9,7 +9,7 @@ The owner selected "Centered glass navigation — Refined" as the final second G
 
 Settings separates existing palette and light/dark from Standard (default) / Glass (option 2) surface rendering. Standard uses existing opaque palette surfaces with no glass effects. Glass uses tint from the selected permanent palette and no white navigation panels. Lavender Glass follows the selected reference. Persist a validated device-local surface preference without clearing other choices or learning state. Preserve released phone behavior; adapt narrow tablet menus by available width.
 
-The same DOM/route ownership and behavior apply to both surface styles. Preserve independent nested disclosures, all canonical tools, permissions, draft/session data and accessible touch/keyboard dismissal. See [final contract](FINAL_NAVIGATION_APPEARANCE.md). The branch implements the validated surface toggle and shared layout; phone behavior and palette tokens are preserved. Full Node suite after review fixes: 1,226 passing. Chromium/WebKit acceptance remains required before readiness. No production merge/deployment is claimed.
+The same DOM/route ownership and behavior apply to both surface styles. Preserve independent nested disclosures, all canonical tools, permissions, draft/session data and accessible touch/keyboard dismissal. See [final contract](FINAL_NAVIGATION_APPEARANCE.md). The branch implements the validated surface toggle and shared layout; phone behavior and palette tokens are preserved. Full Node suite after review fixes: 1,226 passing. Foundation run38485686475 passed Chromium and iPad WebKit, including Q3 rotation/persistence and all eight appearance combinations. Actual screenshots were inspected; opaque fallback cascade was exercised through CSSOM simulation. No production merge/deployment is claimed.
 
 
 ## ADR-110 — Checkpoint and resume are standing agent instructions
