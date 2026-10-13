@@ -2,6 +2,7 @@
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
 Status: design retained; runtime implementation and Settings control pending.
+Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Implementation-plan review remains pending.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
 ## One layout, two surface styles
@@ -21,7 +22,7 @@ Three independent choices:
 
 Both surface styles use the SAME layout, destinations, ordering and menu behavior. Glass does not become a third color palette or a separate route tree. Lavender + Glass matches the selected glass reference; Sage + Glass derives tint from existing Sage tokens rather than adding a replacement palette. Standard uses existing opaque Sage/Lavender surfaces with no blur, refraction, glossy edge or glass effect. Switching style must not reset palette, light/dark preference, subject selections, pins, expanded groups, private drafts, answers or sessions.
 
-Glass uses tinted translucent top navigation, contextual menus and account/search surfaces; no white navigation-panel backgrounds. Preserve lavender/periwinkle tint for Lavender Glass and readable contrast in both appearances. Keep note/question reading surfaces calm; do not animate gradients behind study text. Use a stable tinted opaque fallback when blur/transparency is unavailable or reduced transparency is requested.
+Glass uses tinted translucent top navigation, contextual menus and account/search surfaces; no white navigation-panel backgrounds. Preserve lavender/periwinkle tint for Lavender Glass and readable contrast in both appearances. Note/question/explanation surfaces remain opaque using the existing palette's card/surface tokens; no blur or backdrop effects on reading content. Do not animate gradients behind study text. Use a stable tinted opaque fallback when blur/transparency is unavailable or reduced transparency is requested.
 
 Persist the surface choice through the existing validated device-preference store, default old/missing/invalid values to Standard, and retain its page-memory fallback when storage is blocked. Do not imply cross-device sync; current navigation preferences are device-local.
 
