@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-13 — Avatar/contextual navigation released through PR #230
+
+PR #230 merged as 5029562943ced13d92fc610e5b4e030f8bfc57b5. Account now lives in the avatar; server-authorized Master Admin remains top-level. Study prioritizes Study Now, canonical Subjects & Topics, Questions and Mistake Review, with existing advanced tools retained. Portrait/split-screen expansion overlays unchanged main width; landscape preference survives rotation. Pins avoid repeated local destinations. Both permanent palettes and appearance persist.
+
+Final feature verification: 1,209 Node tests; repository checks and 77-file static build; Foundation run 38413738559 passed check/browser/WebKit. Both engines followed all 172 contextual leaves and checked touch/outside/Escape dismissal, keyboard traversal, avatar destinations, successful/failed logout and explicit collapsed/expanded rotation. Independent-review defects were fixed; actual CI screenshots inspected. Both Cloudflare main builds passed: web 182a666d-4e43-42ad-874f-e0cab5978e70, heartbeat dbb47f45-2ae9-4941-bfa9-67ff5dd9031c. Live public browser verification confirms the new Account menu and sidebar/header layout; no hosted owner login, real learner evidence or content publication was performed.
+
+A small visual follow-up pins avatar-menu justify-content to flex-start, overriding an inherited rule that spread its icon/label apart. Browser assertion added; its branch CI/release is tracked separately. Known non-production preview failure remains Issue #211; no provider settings changed. The next product input remains genuine polished material through existing admin review.
+
 ## 2026-10-13 — approved navigation mockup implementation checkpoint
 
 The owner approved the attached navigation preview. Feature branch feat/contextual-navigation-20261013 starts from main d80fd99. Account moves into the avatar, Master Admin remains server-gated and top-level, Study prioritizes four learning destinations with canonical subjects, and portrait expansion overlays unchanged main width. Landscape preference is preserved through rotation; existing tools/pins and both palettes remain.
