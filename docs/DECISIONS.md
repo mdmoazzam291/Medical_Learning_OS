@@ -1,15 +1,15 @@
 # Decision log
 
 ## ADR-113 — One centered tablet/desktop layout with opt-in Glass rendering
-**Status:** Accepted owner design — 2026-10-14; implementation pending.
+**Status:** Accepted and implemented on PR #233 — 2026-10-14; browser acceptance pending.
 
-Owner confirmed implementation and Q2/Q3 on 2026-10-14: Glass follows whichever existing Sage/Lavender palette is selected; learning notes, questions and explanations remain opaque. The concrete implementation plan is `superpowers/plans/2026-10-14-centered-navigation-glass.md`; plan review is pending before runtime edits.
+Owner confirmed implementation and Q2/Q3 on 2026-10-14: Glass follows whichever existing Sage/Lavender palette is selected; learning notes, questions and explanations remain opaque. The concrete implementation plan is `superpowers/plans/2026-10-14-centered-navigation-glass.md`; owner approved direct execution and Q3 responsive/persistence acceptance.
 
 The owner selected "Centered glass navigation — Refined" as the final second Glass option controlled from Settings, and requested the same layout without glass for existing Sage Precision and Lavender Precision. Retain one centered top workspace navigation and anchored contextual page menu; no permanent tablet/desktop navigation rail. Preserve all real route/index groups and server-authorized top Master Admin, with Account utilities in the avatar. The mockup's short menu is not permission to remove features.
 
 Settings separates existing palette and light/dark from Standard (default) / Glass (option 2) surface rendering. Standard uses existing opaque palette surfaces with no glass effects. Glass uses tint from the selected permanent palette and no white navigation panels. Lavender Glass follows the selected reference. Persist a validated device-local surface preference without clearing other choices or learning state. Preserve released phone behavior; adapt narrow tablet menus by available width.
 
-The same DOM/route ownership and behavior apply to both surface styles. Preserve independent nested disclosures, all canonical tools, permissions, draft/session data and accessible touch/keyboard dismissal. See [final contract](FINAL_NAVIGATION_APPEARANCE.md). This records the owner decision; no live toggle, runtime implementation, merge or deployment is claimed.
+The same DOM/route ownership and behavior apply to both surface styles. Preserve independent nested disclosures, all canonical tools, permissions, draft/session data and accessible touch/keyboard dismissal. See [final contract](FINAL_NAVIGATION_APPEARANCE.md). The branch implements the validated surface toggle and shared layout; phone behavior and palette tokens are preserved. Full Node suite after review fixes: 1,226 passing. Chromium/WebKit acceptance remains required before readiness. No production merge/deployment is claimed.
 
 
 ## ADR-110 — Checkpoint and resume are standing agent instructions

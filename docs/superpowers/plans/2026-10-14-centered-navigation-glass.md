@@ -46,35 +46,35 @@
 
 **Interfaces:** Keep `validatePreferences(value)`, `changePreference(value, action)` and `preferenceStore(storageAccess)` signatures. Produce `surfaceStyle: 'standard' | 'glass'` in validated v1 preferences; add action `{ type: 'surfaceStyle', value }`. Keep storage key `mlos-navigation-v1` and all old fields.
 
-- [ ] Add tests: absent/invalid style defaults to `standard`; `glass` survives JSON reload; unknown fields are discarded; theme/palette actions retain style; style edits retain valid pins/groups/expanded. Existing pre-style records migrate without dropping data.
-- [ ] Add blocked-storage synchronization test using both navigation/editor stores: group/pin edits followed by Glass/palette/theme edits stay coherent and `persistence === 'session'`.
-- [ ] Run `node --test tests/app-navigation.test.js tests/navigation-preference-sync.test.js`; confirm new assertions fail before implementing.
-- [ ] Implement the field/action allowlist and adjust existing exact-object expectations for the additional validated field.
-- [ ] Rerun those tests; commit only changed domain/sync tests and implementation.
+- [x] Add tests: absent/invalid style defaults to `standard`; `glass` survives JSON reload; unknown fields are discarded; theme/palette actions retain style; style edits retain valid pins/groups/expanded. Existing pre-style records migrate without dropping data.
+- [x] Add blocked-storage synchronization test using both navigation/editor stores: group/pin edits followed by Glass/palette/theme edits stay coherent and `persistence === 'session'`.
+- [x] Run `node --test tests/app-navigation.test.js tests/navigation-preference-sync.test.js`; confirm new assertions fail before implementing.
+- [x] Implement the field/action allowlist and adjust existing exact-object expectations for the additional validated field.
+- [x] Rerun those tests; commit only changed domain/sync tests and implementation.
 
 ### Task 2: Complete top contextual navigation without permanent side width
 
 **Interfaces:** Preserve `navigationMarkup(options)`, `childrenMarkup(...)`, `flyoutMarkup(...)` and `accountMarkup(...)` callers. For widths >700px render each real master link with a separate button `data-workspace-menu="<id>"`, labelled `Open <workspace label> tools`, `aria-expanded`, `aria-controls="mlos-workspace-menu"`. Render a hidden top-anchored contextual container `#mlos-workspace-menu`, using expanded existing sections and pins from the selected menu's master. Keep the phone branch unchanged.
 
-- [ ] Add markup tests that each visible master has its independent link/disclosure, Admin is server-gated, Account stays in avatar, and no permanent sidebar is exposed for larger screens. Compare every unique rendered route against `navigationFor(master, {isAdmin:true})`, including all nested leaves; do not hardcode the mockup's five rows.
-- [ ] Add controller tests for selecting a workspace menu without navigating, switching outer menus, independent group persistence, outside/Escape/route dismissal with focus return, and role revocation removing an open Admin menu.
-- [ ] Add regression tests for Library URL-filter ownership and Admin hash transitions preserving the already-mounted workspace/draft DOM. Retain existing exact route matching and access-error behavior.
-- [ ] Run affected navigation tests and confirm new behavior fails before implementation.
-- [ ] Implement `openWorkspaceMenu(master, trigger)`, `closeWorkspaceMenu(restoreFocus = false)` and `positionWorkspaceMenu()` inside `web/navigation.js`. Reuse real catalog rendering; anchor fixed positioning below the trigger, clamp within 12px viewport gutters, and limit height to the visible viewport. Open only one outer menu; keep nested groups/pins in the existing preference store.
-- [ ] On resize/route/role changes dismiss stale menus; opening account/search closes workspace menus. Do not inert learning content for the nonmodal popover; maintain the existing phone drawer focus behavior. Keep selector focus stable when pin/style mutations redraw the shell.
-- [ ] Implement the larger-screen single header in `navigation-view.js` and larger-screen CSS: zero body left padding, 56px header, equal flexible outer regions for centering, compact labeled masters and separate 44px chevron targets. Start compact fallback at 1000px: labeled current-workspace launcher opens the same canonical masters/tools with no sidebar; verify the threshold in Task 4 and increase it if admin labels do not fit. At <=700px retain the existing phone DOM/behavior.
-- [ ] Rerun affected tests and commit the complete controller/view/layout change.
+- [x] Add markup tests that each visible master has its independent link/disclosure, Admin is server-gated, Account stays in avatar, and no permanent sidebar is exposed for larger screens. Compare every unique rendered route against `navigationFor(master, {isAdmin:true})`, including all nested leaves; do not hardcode the mockup's five rows.
+- [x] Add controller tests for selecting a workspace menu without navigating, switching outer menus, independent group persistence, outside/Escape/route dismissal with focus return, and role revocation removing an open Admin menu.
+- [x] Add regression tests for Library URL-filter ownership and Admin hash transitions preserving the already-mounted workspace/draft DOM. Retain existing exact route matching and access-error behavior.
+- [x] Run affected navigation tests and confirm new behavior fails before implementation.
+- [x] Implement `openWorkspaceMenu(master, trigger)`, `closeWorkspaceMenu(restoreFocus = false)` and `positionWorkspaceMenu()` inside `web/navigation.js`. Reuse real catalog rendering; anchor fixed positioning below the trigger, clamp within 12px viewport gutters, and limit height to the visible viewport. Open only one outer menu; keep nested groups/pins in the existing preference store.
+- [x] On resize/route/role changes dismiss stale menus; opening account/search closes workspace menus. Do not inert learning content for the nonmodal popover; maintain the existing phone drawer focus behavior. Keep selector focus stable when pin/style mutations redraw the shell.
+- [x] Implement the larger-screen single header in `navigation-view.js` and larger-screen CSS: zero body left padding, 56px header, equal flexible outer regions for centering, compact labeled masters and separate 44px chevron targets. Start compact fallback at 1000px: labeled current-workspace launcher opens the same canonical masters/tools with no sidebar; verify the threshold in Task 4 and increase it if admin labels do not fit. At <=700px retain the existing phone DOM/behavior.
+- [x] Rerun affected tests and commit the complete controller/view/layout change.
 
 ### Task 3: Preferences control and navigation-only tinted glass
 
 **Interfaces:** `preferencesContent(prefs, persistence)` gains select `aria-label="Surface style" data-preference="surfaceStyle"`, options `standard` / `glass`, labels Standard / Glass. `applyAppearance()` sets `document.documentElement.dataset.surfaceStyle`. Existing change-event and `mlos:preferences` channel handles the field without inventing a second store.
 
-- [ ] Add rendering tests for both style choices and retained Sage/Lavender + Light/Dark controls. Assert obsolete left-navigation UI does not imply a permanent tablet/desktop sidebar; old `expanded` data remains stored for phone compatibility.
-- [ ] Add controller/sync tests proving style changes preserve palette/theme/groups/pins/search and do not rebuild the page's question/private-note/admin root. Run targeted tests to confirm new assertions fail.
-- [ ] Implement the selector and root attribute; keep existing preference-store page-memory reporting.
-- [ ] Add glass navigation variables from existing tokens: opaque fallback uses palette `--soft` in light mode and `--sidebar` in dark; backdrop-supported glass derives a semiopaque tint from those same values plus accent, with a restrained border/shadow. Scope blur to header, master capsule, contextual/account/search menus only, above 700px. Default Standard has no blur. Respect reduced transparency and reduced motion; no moving gradient behind study text.
-- [ ] Keep reading cards/questions/notes/explanations on existing opaque `--surface`/`--card`; do not change global palette color definitions or clinical semantic colors. Standard and Glass share geometry and routes.
-- [ ] Rerun preference/view/controller tests; commit the complete settings/style change.
+- [x] Add rendering tests for both style choices and retained Sage/Lavender + Light/Dark controls. Assert obsolete left-navigation UI does not imply a permanent tablet/desktop sidebar; old `expanded` data remains stored for phone compatibility.
+- [x] Add controller/sync tests proving style changes preserve palette/theme/groups/pins/search and do not rebuild the page's question/private-note/admin root. Run targeted tests to confirm new assertions fail.
+- [x] Implement the selector and root attribute; keep existing preference-store page-memory reporting.
+- [x] Add glass navigation variables from existing tokens: opaque fallback uses palette `--soft` in light mode and `--sidebar` in dark; backdrop-supported glass derives a semiopaque tint from those same values plus accent, with a restrained border/shadow. Scope blur to header, master capsule, contextual/account/search menus only, above 700px. Default Standard has no blur. Respect reduced transparency and reduced motion; no moving gradient behind study text.
+- [x] Keep reading cards/questions/notes/explanations on existing opaque `--surface`/`--card`; do not change global palette color definitions or clinical semantic colors. Standard and Glass share geometry and routes.
+- [x] Rerun preference/view/controller tests; commit the complete settings/style change.
 
 ### Task 4: Real responsive acceptance, release-ready checkpoint
 
@@ -90,4 +90,4 @@
 
 ## Plan review and execution
 
-Plan self-reviewed against the saved owner spec. Await owner review of this concrete plan and execution-method choice. Direct execution is recommended: tasks share a single navigation shell/controller and preference model, making sequential work economical. No runtime changes have been made while preparing this plan.
+Plan self-reviewed against the saved owner spec. Owner approved direct execution and Q3 acceptance. Tasks 1–3 are complete; Task 4 browser acceptance is in progress. A fresh whole-branch review found three focus lifecycle regressions and one inaccurate current-workspace marker; each was reproduced RED→GREEN. Full Node suite after fixes: 1,226/1,226.

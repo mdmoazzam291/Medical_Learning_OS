@@ -1,8 +1,8 @@
 # Final tablet and desktop navigation / appearance contract
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
-Status: design retained; runtime implementation and Settings control pending.
-Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Implementation-plan review remains pending.
+Status: implemented on PR #233; real browser acceptance in progress.
+Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
 ## One layout, two surface styles
@@ -32,7 +32,7 @@ Preserve released phone behavior from PR #232; this owner decision targets table
 
 Menus open on tap/click and keyboard, not hover alone. One outer menu open at a time; nested disclosures open independently. Support Escape/outside dismissal, focus return, sensible keyboard traversal and scroll within the viewport. Controls aim for at least 44 CSS px touch targets. Resolve menu positioning from the actual trigger and viewport; do not obscure content when closed. Preserve Back/Forward, library filter semantics, admin draft DOM and existing access gates.
 
-## Implementation acceptance (not yet run)
+## Implementation acceptance
 
 - Verify all canonical contextual leaves and admin role/error states.
 - Standard/Glass x Sage/Lavender x Light/Dark with Settings persistence and reload.
@@ -45,4 +45,4 @@ Menus open on tap/click and keyboard, not hover alone. One outer menu open at a 
 
 ## Boundary / next action
 
-This retained design does not claim a live Settings switch, code change, successful tests, merge or deployment. Reconcile current main and task ownership, then implement this contract using the real navigation catalog and preference UI. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
+Runtime and Preferences controls are implemented on the task branch. New migration/menu/appearance/focus regressions passed after failing first; the whole Node suite passes 1,226 tests. Build and repository checks pass. Complete Chromium/iPad WebKit acceptance and inspect captured screenshots before marking PR #233 ready. No production merge/deployment is authorized by this plan. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
