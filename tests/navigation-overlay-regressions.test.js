@@ -21,6 +21,17 @@ test('a narrow expanded panel can be dismissed by tapping outside it', () => {
   h.shellHandlers.click({ target: { closest: () => button } });
   assert.equal(h.body.dataset.rail, 'expanded'); h.outside(); assert.equal(h.body.dataset.rail, 'collapsed');
 });
+test('phone to tablet resizing relocates masters and closes the temporary drawer', () => {
+  const h = open({ width: 390 });
+  assert.match(h.shell.innerHTML.split('</header>')[0], /mlos-mobile-menu/);
+  assert.match(h.shell.innerHTML, /<aside[^>]* hidden/);
+  h.shellHandlers.click({ target: { closest: () => ({ dataset: {}, hasAttribute: name => name === 'data-rail' }) } });
+  assert.equal(h.body.dataset.drawer, 'open');
+  h.context.innerWidth = 820; h.windowHandlers.resize();
+  assert.equal(h.body.dataset.drawer, 'closed');
+  assert.doesNotMatch(h.shell.innerHTML.split('</header>')[0], /mlos-mobile-menu/);
+  assert.match(h.shell.innerHTML.split('</header>')[0], /data-master="study"/);
+});
 test('a compact search overlay closes on an outside tap without submitting a search', () => {
   const h = open(); let prevented = false;
   h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() { prevented = true; } });

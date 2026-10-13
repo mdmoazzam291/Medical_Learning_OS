@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-13 — Full-width phone learning navigation
+
+The owner supplied learner and administrator phone screenshots and requested maximum room for learning. Phones up to 700 CSS px now use one compact 56px header with a labeled current-workspace menu, Search, appearance toggle and avatar. Master links move into the same temporary drawer as contextual tools; server-authorized Master Admin has a labeled menu entry. The closed drawer is hidden from layout and accessibility, with zero body side padding. Opening it overlays rather than narrows content; dismissal and route changes restore full width. Phone introductory spacing is tighter. Larger screens retain the existing contextual rail/drawer, all tools, role gates, palettes and saved desktop preference.
+
+Verification at initial implementation: two new behavioral regressions failed before implementation, then passed; 1,211 Node tests pass. Repository checks/static build and full Chromium/WebKit navigation QA are pending. No backend, auth configuration, clinical content or learner-history changes. Branch: fix/mobile-learning-space-20261013, base ef71cc679e8dfa349096348525d0d1a11172cb5c. Release evidence will follow.
+
 ## 2026-10-13 — Avatar/contextual navigation released through PR #230
 
 PR #230 merged as 5029562943ced13d92fc610e5b4e030f8bfc57b5. Account now lives in the avatar; server-authorized Master Admin remains top-level. Study prioritizes Study Now, canonical Subjects & Topics, Questions and Mistake Review, with existing advanced tools retained. Portrait/split-screen expansion overlays unchanged main width; landscape preference survives rotation. Pins avoid repeated local destinations. Both permanent palettes and appearance persist.

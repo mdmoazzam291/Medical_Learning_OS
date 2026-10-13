@@ -88,7 +88,7 @@
 @media(max-width:1280px){.mlos-header{gap:12px;padding:0 14px}.mlos-brand-full{font-size:14px}.mlos-header>nav a{padding:10px 9px}.mlos-search{max-width:280px}}
 @media(max-width:1050px){.mlos-brand-full{display:none}.mlos-brand-short{display:block}.mlos-header{gap:14px}.mlos-search{max-width:44px;flex:0 0 44px}.mlos-search input[type="search"]{display:none}.mlos-search button{position:static;min-height:44px}.mlos-search-open .mlos-search{position:absolute;top:76px;left:74px;right:14px;max-width:none;background:var(--surface);border-radius:24px;box-shadow:0 5px 20px #0002}.mlos-search-open .mlos-search input[type="search"]{display:block}.mlos-search-open .mlos-search button{position:absolute}}
 @media(max-width:700px){.mlos-header{padding:0 8px;gap:5px;height:60px;min-height:60px}.mlos-brand{gap:5px;font-size:12px}.mlos-brand-mark{width:26px;height:30px;font-size:23px}.mlos-header>nav{gap:1px;flex:1;justify-content:center}.mlos-header>nav a{padding:9px;min-width:35px;min-height:40px}.mlos-header>nav a span{display:none}.mlos-header .mlos-icon{width:18px;height:18px}.mlos-theme{min-width:36px;min-height:40px;padding:8px}.mlos-search{margin:0;flex:0 0 34px}.mlos-search button{min-width:34px;padding:8px}.mlos-app{padding-top:60px}.mlos-panel{top:60px}.mlos-app[data-rail="expanded"]{padding-left:64px}.mlos-app[data-rail="expanded"] .mlos-panel{width:min(280px,calc(100vw - 40px));box-shadow:10px 0 40px #0003}.mlos-flyout{top:70px;max-height:calc(100dvh - 84px)}.mlos-app main{padding:20px 14px 30px}.mlos-app .hero,.mlos-app .panel{padding:20px}.mlos-app .metrics{grid-template-columns:1fr;gap:15px}.mlos-app .metrics>div{padding:0;border:0}.mlos-app .two-column{grid-template-columns:1fr}.mlos-search-open .mlos-search{top:64px;left:70px;right:8px}}
-/* Keep six authorized header destinations on one row even on narrow phones. */
+/* Narrow screens use the on-demand workspace menu below. */
 @media(max-width:440px){.mlos-brand-short{display:none}.mlos-header{gap:3px}.mlos-header>nav a{min-width:29px;padding:7px 4px}}
 @media(prefers-reduced-motion:reduce){.mlos-app{transition:none}}
 
@@ -142,3 +142,33 @@
 
 [data-rail="collapsed"] .mlos-panel-toolbar{justify-content:center}
 .mlos-panel :focus-visible{outline-width:2px;outline-offset:2px}
+
+/* Phones reserve the entire viewport for learning. One menu contains masters
+   and their contextual tools; it never changes the saved desktop preference. */
+.mlos-panel[hidden]{display:none}
+@media(max-width:700px){
+ .mlos-app,.mlos-app[data-rail="expanded"]{padding-left:0;padding-top:56px;transition:none}
+ .mlos-header{height:56px;min-height:56px;padding:0 8px;gap:4px}
+ .mlos-brand-mark{width:32px;height:32px;font-size:25px}
+ .mlos-header .mlos-icon{width:20px;height:20px}
+ .mlos-mobile-menu{display:flex;align-items:center;justify-content:flex-start;gap:7px;min-width:0;min-height:44px;flex:1;padding:8px;border:0;background:transparent;font-size:14px;font-weight:600}
+ .mlos-mobile-menu span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .mlos-search{flex:0 0 44px;max-width:44px}
+ .mlos-search button,.mlos-theme{min-width:44px;min-height:44px;padding:10px}
+ .mlos-account{flex:0 0 44px}.mlos-account>summary{width:44px;height:44px}
+ .mlos-header .mlos-account-menu{top:48px}
+ .mlos-panel{top:56px}.mlos-app[data-drawer="open"] .mlos-drawer-scrim{top:56px}
+ .mlos-panel-toolbar{margin:0 0 4px;padding:0 10px;min-height:32px}
+ .mlos-panel nav[aria-label="Main navigation"]{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0 0 8px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+ .mlos-panel nav[aria-label="Main navigation"] a{min-height:44px;font-size:13px;gap:8px}
+ .mlos-panel nav[aria-label="Main navigation"] a[data-master="admin"]{grid-column:1 / -1}
+ .mlos-panel .mlos-caption{display:block}
+ .mlos-panel nav{margin-top:0}
+ .mlos-search-open .mlos-search{top:60px;left:8px;right:8px;max-width:none}
+ .mlos-app main{padding:16px 16px 30px}
+ .mlos-app .page-heading,.mlos-app .home-shell .page-heading{margin:12px 0 20px}
+ .mlos-app .page-heading h1{font-size:clamp(1.65rem,7vw,2rem);overflow-wrap:anywhere}
+ .mlos-app .hero h2{font-size:1.8rem;max-width:none}
+ .mlos-app .hero{gap:20px;margin-bottom:20px}
+ .mlos-app .hero,.mlos-app .panel{padding:20px}
+}

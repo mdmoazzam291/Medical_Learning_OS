@@ -1533,3 +1533,9 @@ The approved Study → Build Session uses the shared published Library query rat
 - Study prioritizes Study Now, Subjects & Topics, Questions and Mistake Review. Remaining existing study tools stay in an independent disclosure. All 19 subjects reference the existing canonical Library with Study context, without a second content inventory. Pins persist; a current-workspace pin never duplicates its own sidebar destination.
 - The header remains 72px (60px on phones), rail 64px and desktop expansion 256px. At viewport widths <=1050px the drawer overlays existing content with a dismissible scrim. Main content is inert while open; header actions remain available. Escape/outside dismissal and rotation restore the saved desktop preference. Fresh desktop defaults expand; explicit older preferences retain their choice.
 - Both permanent palettes and independent appearance remain unchanged. The reference lavender mockup does not replace Sage's existing default. Product labels remain Medical Learning OS; unrelated draft PARSE branding is outside this change.
+
+
+## ADR-112 — Phone navigation reserves full width for learning
+Date: 2026-10-13. Status: accepted from the owner's phone screenshots and implementation request.
+
+At widths up to 700 CSS px, a permanent contextual rail and icon-only master strip consume too much learner space. Use one labeled header menu that exposes canonical master links and contextual tools together, while Search, appearance and avatar remain available in a 56px header. The closed panel uses the hidden attribute and the body has no left navigation reservation. Admin access adds a labeled gated menu entry rather than another header icon. A temporary overlay and existing dismissal/focus behavior preserve content width. Tablet/desktop layout and independently stored expanded preference remain unchanged. No second mobile or bottom navigation is introduced.

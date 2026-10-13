@@ -7,7 +7,7 @@ import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
 const navigationAuth = createSupabaseAuth(cloudConfig);
-let compact = innerWidth <= 1050, drawerOpen = false;
+let compact = innerWidth <= 1050, phone = innerWidth <= 700, drawerOpen = false;
 let navigationUser = navigationAuth.currentUser();
 const expanded = () => compact ? drawerOpen : prefs.expanded;
 let prefs = store.read(), identity = routeIdentity(location.pathname, location.search, location.hash), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
@@ -45,7 +45,7 @@ function render(focusSelector, captureSearch = true) {
   if (input && captureSearch) searchQuery = input.value;
   applyAppearance();
   navigationUser = navigationAuth.currentUser();
-  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), currentHref: location.pathname + location.search + location.hash });
+  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), phone, currentHref: location.pathname + location.search + location.hash });
   shell.querySelector('#mlos-global-search').value = searchQuery;
   opener = null;
   syncDrawerAccessibility();
@@ -205,9 +205,9 @@ function syncRoute(event) {
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 window.addEventListener('resize', () => {
-  const next = innerWidth <= 1050;
-  if (next === compact) return;
-  compact = next; drawerOpen = false; render();
+  const next = innerWidth <= 1050, nextPhone = innerWidth <= 700;
+  if (next === compact && nextPhone === phone) return;
+  compact = next; phone = nextPhone; drawerOpen = false; render();
 });
 render();
 restoreAdminTarget();
