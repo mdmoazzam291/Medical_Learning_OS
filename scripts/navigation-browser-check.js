@@ -62,6 +62,7 @@ try {
     }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000)), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
         if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
         return;
@@ -180,8 +181,17 @@ try {
       await page.evaluate(value => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...JSON.parse(localStorage.getItem('mlos-navigation-v1')), expanded: value } } })), desktopExpanded);
       await page.setViewportSize({ width: 820, height: 1180 }); await openTools();
       assert.equal(await page.locator('#mlos-workspace-menu').isVisible(), true);
+      await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').click();
+      assert.equal(await page.locator('#mlos-workspace-menu [data-master="library"]').getAttribute('aria-current'), 'page');
+      assert.equal(await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').getAttribute('aria-expanded'), 'true');
+      assert.equal(await page.locator('.mlos-workspace-launcher').getAttribute('aria-expanded'), 'true');
+      assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => node.getBoundingClientRect().left === Math.max(12, Math.min(document.querySelector('.mlos-workspace-launcher').getBoundingClientRect().left, innerWidth - node.getBoundingClientRect().width - 12))), true, 'compact tools stay anchored after switching');
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('.mlos-workspace-launcher').evaluate(node => document.activeElement === node), true);
+      await openTools();
       await page.setViewportSize({ width: 1180, height: 820 });
       await page.waitForFunction(() => document.body.dataset.navigationLayout === 'top' && document.getElementById('mlos-workspace-menu').hidden);
+      assert.equal(await page.locator('.mlos-header [data-workspace-menu="library"]').evaluate(node => document.activeElement === node), true, 'rotation focus reaches the replacement header');
       assert.equal(await page.evaluate(() => getComputedStyle(document.body).paddingLeft), '0px');
       await openTools(); await page.keyboard.press('Escape');
       assert.equal(await page.locator('[data-workspace-menu="library"]').evaluate(node => document.activeElement === node), true);
@@ -189,9 +199,10 @@ try {
     }
     for (const testWidth of [701, 999, 1000, 1180, 1440]) {
       await page.setViewportSize({ width: testWidth, height: 1000 });
-      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'top');
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'top' && Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000), testWidth);
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'header fit ' + testWidth);
-      const headerControls = await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length).map(n => ({ label: n.getAttribute('aria-label') || n.textContent.trim(), left: n.getBoundingClientRect().left, right: n.getBoundingClientRect().right, accountOpen: n.closest('.mlos-account')?.open })));
+      const headerControls = await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length && !(n.closest('.mlos-account-menu') && !n.closest('.mlos-account').open)).map(n => ({ label: n.getAttribute('aria-label') || n.textContent.trim(), left: n.getBoundingClientRect().left, right: n.getBoundingClientRect().right })));
       const overflowingControls = headerControls.filter(n => n.left < 0 || n.right > testWidth);
       if (overflowingControls.length && process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/navigation-fit-' + testWidth + '.png', fullPage: true });
       assert.deepEqual(overflowingControls, [], 'visible controls fit ' + testWidth);

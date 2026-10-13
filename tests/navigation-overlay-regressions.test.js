@@ -246,3 +246,41 @@ test('desktop icon search opens its field instead of submitting an invisible inp
   assert.equal(prevented, true);
   assert.equal(h.classes.has('mlos-search-open'), true);
 });
+
+test('switching compact workspace tools anchors and returns focus to the persistent launcher', () => {
+  const h = open({ width: 820 }); let focused = false, selectedExpanded = false;
+  const launcher = { focus() { focused = true; }, getBoundingClientRect: () => ({ left: 300, bottom: 56 }) };
+  const originalQuery = h.shell.querySelector;
+  h.shell.querySelector = key => key === '.mlos-workspace-launcher' ? launcher : originalQuery(key);
+  const selected = { setAttribute(key, value) { if (key === 'aria-expanded') selectedExpanded = value === 'true'; } };
+  h.menu.querySelector = key => key === '[data-workspace-menu="study"]' ? selected : null;
+  // An inner-menu trigger is replaced when the selected workspace's markup changes.
+  const trigger = { dataset: { workspaceMenu: 'study' }, closest: key => key === '#mlos-workspace-menu' ? h.menu : null, setAttribute() {}, focus() {}, getBoundingClientRect: () => ({ left: 0, bottom: 0 }) };
+  h.shellHandlers.click({ target: { closest: () => trigger } });
+  assert.equal(h.menu.style.left, '300px');
+  assert.equal(selectedExpanded, true);
+  h.docHandlers.keydown({ key: 'Escape' });
+  assert.equal(focused, true);
+});
+
+test('Escape and resize do not refocus a previously dismissed workspace menu', () => {
+  const h = open({ width: 1440 }); let focuses = 0;
+  const trigger = { dataset: { workspaceMenu: 'library' }, setAttribute() {}, focus() { focuses++; }, getBoundingClientRect: () => ({ left: 450, bottom: 56 }) };
+  h.shellHandlers.click({ target: { closest: () => trigger } });
+  h.docHandlers.keydown({ key: 'Escape' });
+  assert.equal(focuses, 1);
+  h.docHandlers.keydown({ key: 'Escape' }); h.windowHandlers.resize();
+  assert.equal(focuses, 1);
+});
+
+test('crossing header breakpoints returns menu focus after the new header is mounted', () => {
+  const h = open({ width: 1180 }); let focused = false;
+  const launcher = { focus() { focused = true; } };
+  const originalQuery = h.shell.querySelector;
+  h.shell.querySelector = key => key === '.mlos-workspace-launcher' ? launcher : originalQuery(key);
+  const trigger = { dataset: { workspaceMenu: 'library' }, setAttribute() {}, focus() {}, getBoundingClientRect: () => ({ left: 450, bottom: 56 }) };
+  h.shellHandlers.click({ target: { closest: () => trigger } });
+  h.context.innerWidth = 820; h.windowHandlers.resize();
+  assert.equal(h.menu.hidden, true);
+  assert.equal(focused, true);
+});

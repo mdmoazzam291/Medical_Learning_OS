@@ -97,13 +97,13 @@ function mastersMarkup(master, isAdmin, disclosures = true) {
     return '<div class="mlos-master-item"' + (master === m.id ? ' data-active="true"' : '') + '>' + link + (disclosures ? '<button type="button" data-workspace-menu="' + m.id + '" aria-label="Open ' + escapeText(m.label) + ' tools" aria-expanded="false" aria-controls="mlos-workspace-menu">' + icon('chevron') + '</button>' : '') + '</div>';
   }).join('') + '</nav>';
 }
-export function workspaceMenuMarkup({ master = 'home', section = '', prefs: input, isAdmin = false, currentHref = '', compactHeader = false } = {}) {
+export function workspaceMenuMarkup({ master = 'home', currentMaster = master, section = '', prefs: input, isAdmin = false, currentHref = '', compactHeader = false } = {}) {
   const prefs = validatePreferences({ ...input, version: 1, expanded: true });
   const rows = navigationFor(master, { isAdmin });
   const pinned = pinnedSections(prefs, isAdmin).filter(row => row.master !== master && !rows.some(local => navigationHrefMatches(row.href, local.href)));
   const label = MASTERS.find(m => m.id === master)?.label || 'Home';
   return '<div class="mlos-workspace-heading"><strong>' + escapeText(label) + ' tools</strong><button type="button" data-close-workspace-menu aria-label="Close workspace tools">' + icon('close') + '</button></div>' +
-    (compactHeader ? mastersMarkup(master, isAdmin) : '') +
+    (compactHeader ? mastersMarkup(currentMaster, isAdmin) : '') +
     (pinned.length ? '<nav aria-label="Pinned shortcuts"><span class="mlos-caption">Pinned</span>' + pinned.map(row => sectionMarkup(row, row.master, '', prefs, currentHref)).join('') + '</nav>' : '') +
     '<nav id="mlos-local-nav" aria-label="Section navigation">' + localMarkup(rows, master, section, prefs, currentHref) + '</nav>';
 }

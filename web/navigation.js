@@ -91,8 +91,9 @@ function closeWorkspaceMenu(restoreFocus = false) {
   const menu = shell.querySelector('#mlos-workspace-menu');
   if (menu) menu.hidden = true;
   workspaceOpener?.setAttribute?.('aria-expanded', 'false');
-  if (restoreFocus) workspaceReturnFocus?.focus?.();
-  workspaceOpener = null; workspaceMaster = null;
+  if (workspaceReturnFocus?.dataset?.workspaceMenu) workspaceReturnFocus.setAttribute?.('aria-expanded', 'false');
+  if (restoreFocus && workspaceOpener) workspaceReturnFocus?.focus?.();
+  workspaceOpener = null; workspaceMaster = null; workspaceReturnFocus = null;
 }
 function positionWorkspaceMenu() {
   const menu = shell.querySelector('#mlos-workspace-menu');
@@ -112,10 +113,13 @@ function openWorkspaceMenu(master, trigger) {
   closeWorkspaceMenu(); closeAccount(); closeFlyout(); shell.classList.remove('mlos-search-open');
   const menu = shell.querySelector('#mlos-workspace-menu');
   if (!menu) return;
-  workspaceOpener = trigger; workspaceMaster = master;
-  workspaceReturnFocus = trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
-  menu.innerHTML = workspaceMenuMarkup({ master, section: master === identity.master ? identity.section : '', prefs, isAdmin, compactHeader, currentHref: location.pathname + location.search + location.hash });
-  menu.hidden = false; trigger.setAttribute('aria-expanded', 'true'); positionWorkspaceMenu();
+  const insideMenu = Boolean(trigger.closest?.('#mlos-workspace-menu'));
+  workspaceMaster = master;
+  workspaceReturnFocus = insideMenu ? shell.querySelector('.mlos-workspace-launcher') : trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
+  menu.innerHTML = workspaceMenuMarkup({ master, currentMaster: identity.master, section: master === identity.master ? identity.section : '', prefs, isAdmin, compactHeader, currentHref: location.pathname + location.search + location.hash });
+  workspaceOpener = insideMenu ? menu.querySelector('[data-workspace-menu="' + master + '"]') : trigger;
+  if (workspaceReturnFocus?.dataset?.workspaceMenu) workspaceReturnFocus.setAttribute?.('aria-expanded', 'true');
+  menu.hidden = false; workspaceOpener?.setAttribute('aria-expanded', 'true'); positionWorkspaceMenu();
   menu.querySelector('a,button,summary')?.focus();
 }
 function navigateAdminLink(anchor, event) {
@@ -244,9 +248,11 @@ for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventLis
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 window.addEventListener('resize', () => {
   const next = innerWidth <= 1050, nextPhone = innerWidth <= 700, nextHeader = innerWidth < 1000;
-  closeWorkspaceMenu(true);
-  if (next === compact && nextPhone === phone && nextHeader === compactHeader) return;
-  compact = next; phone = nextPhone; compactHeader = nextHeader; drawerOpen = false; render();
+  if (next === compact && nextPhone === phone && nextHeader === compactHeader) { closeWorkspaceMenu(true); return; }
+  const returnMaster = workspaceMaster, returnFocus = Boolean(workspaceOpener);
+  closeWorkspaceMenu();
+  compact = next; phone = nextPhone; compactHeader = nextHeader; drawerOpen = false;
+  render(returnFocus ? phone ? '[data-rail]' : returnMaster === 'account' ? '.mlos-account summary' : compactHeader ? '.mlos-workspace-launcher' : '[data-workspace-menu="' + returnMaster + '"]' : undefined);
 });
 render();
 restoreAdminTarget();

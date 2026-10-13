@@ -196,3 +196,10 @@ test('the avatar retains access to every Account tool on larger screens', () => 
   assert.match(account, /data-workspace-menu="account"/);
   assert.match(account, /Account tools/);
 });
+
+test('compact master current marker follows the page when another tools menu is selected', () => {
+  const html = view.workspaceMenuMarkup({ master: 'study', currentMaster: 'library', compactHeader: true, currentHref: '/web/library.html?view=notes' });
+  assert.match(html, /data-master="library"[^>]*aria-current="page"/);
+  assert.doesNotMatch(html, /data-master="study"[^>]*aria-current/);
+  assert.match(html, /Study tools/);
+});
