@@ -148,7 +148,7 @@ try {
       assert.equal(await page.locator('.mlos-brand').evaluate(node => document.activeElement === node), true, 'drawer keyboard wraps within navigation');
       await page.keyboard.press('Escape');
       assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
-      assert.equal(await page.locator('[data-rail]').evaluate(node => document.activeElement === node), true);
+      assert.equal(await page.locator('button[data-rail]').evaluate(node => document.activeElement === node), true);
       assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')).expanded), desktopExpanded);
     }
     await page.setViewportSize({ width, height });

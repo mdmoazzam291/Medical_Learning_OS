@@ -139,3 +139,6 @@
  .mlos-app[data-drawer="open"] .mlos-drawer-scrim{top:60px}
  .mlos-app main{padding-left:16px;padding-right:16px}
 }
+
+[data-rail="collapsed"] .mlos-panel-toolbar{justify-content:center}
+.mlos-panel :focus-visible{outline-width:2px;outline-offset:2px}
