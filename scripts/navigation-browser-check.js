@@ -191,7 +191,10 @@ try {
       await page.setViewportSize({ width: testWidth, height: 1000 });
       await page.waitForFunction(() => document.body.dataset.navigationLayout === 'top');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'header fit ' + testWidth);
-      assert.equal(await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length).every(n => n.getBoundingClientRect().left >= 0 && n.getBoundingClientRect().right <= innerWidth)), true, 'visible controls fit ' + testWidth);
+      const headerControls = await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length).map(n => ({ label: n.getAttribute('aria-label') || n.textContent.trim(), left: n.getBoundingClientRect().left, right: n.getBoundingClientRect().right, accountOpen: n.closest('.mlos-account')?.open })));
+      const overflowingControls = headerControls.filter(n => n.left < 0 || n.right > testWidth);
+      if (overflowingControls.length && process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/navigation-fit-' + testWidth + '.png', fullPage: true });
+      assert.deepEqual(overflowingControls, [], 'visible controls fit ' + testWidth);
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
