@@ -3,6 +3,23 @@ import assert from 'node:assert/strict';
 const view = await import('../web/navigation-view.js').catch(() => null);
 const model = await import('../src/domain/app-navigation.js').catch(() => null);
 const markup = options => { assert.ok(view, 'navigation can render the real shared shell'); return view.navigationMarkup(options); };
+test('phone navigation uses one workspace menu and hides the closed sidebar', () => {
+  const html = markup({ phone: true, master: 'study', prefs: { expanded: false }, isAdmin: true });
+  const header = html.split('</header>')[0];
+  assert.match(header, /class="mlos-mobile-menu"/);
+  assert.match(header, /aria-label="Expand navigation"/);
+  assert.match(header, /<span>Study<\/span>/);
+  assert.doesNotMatch(header, /data-master=/);
+  assert.match(html, /<aside[^>]* hidden/);
+  assert.equal((html.match(/aria-label="Main navigation"/g) || []).length, 1);
+  assert.equal((html.match(/data-rail/g) || []).length, 1);
+  assert.match(html.split('<aside')[1], /data-master="admin"/);
+  assert.doesNotMatch(markup({ phone: true, prefs: {} }), /data-master="admin"/);
+  const opened = markup({ phone: true, master: 'study', prefs: { expanded: true } });
+  assert.doesNotMatch(opened, /<aside[^>]* hidden/);
+  assert.match(opened, /aria-label="Collapse navigation"/);
+  assert.match(opened, /More study tools/);
+});
 test('the header moves Account to the avatar and gates the fifth Master Admin workspace', () => {
   const html = markup({ master: 'library', section: 'subjects', prefs: {} });
   assert.match(html, /aria-label="Main navigation"/);
