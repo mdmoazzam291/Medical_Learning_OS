@@ -163,6 +163,7 @@ try {
     for (const label of ['Profile', 'Preferences', 'Account & Security']) {
       const link = accountMenu.getByRole('link', { name: label, exact: true });
       assert.equal(await link.isVisible(), true, 'avatar label remains accessible at ' + name);
+      assert.equal(await link.evaluate(node => getComputedStyle(node).justifyContent), 'flex-start', 'avatar labels align beside icons');
       assert.notEqual(await link.locator('span').evaluate(node => getComputedStyle(node).display), 'none');
     }
     await page.keyboard.press('Escape');
