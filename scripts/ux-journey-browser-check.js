@@ -67,7 +67,7 @@ try {
     await page.getByRole('link', { name: 'Start 20 min' }).waitFor();
     assert.match(await page.locator('.learning-snapshot').innerText(), /—\s*Saved attempts/);
     assert.match(await page.locator('.learning-snapshot').innerText(), /1\s*Reviewed questions/);
-    assert.equal(await page.getByRole('link', { name: 'Admin', exact: true }).count(), 0);
+    assert.equal(await page.getByRole('link', { name: 'Master Admin', exact: true }).count(), 0);
     await page.getByRole('button', { name: '10 min', exact: true }).click();
     assert.deepEqual(writes, []);
     await screenshot('home');

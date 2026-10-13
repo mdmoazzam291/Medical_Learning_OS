@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-13 — approved navigation mockup implementation checkpoint
+
+The owner approved the attached navigation preview. Feature branch feat/contextual-navigation-20261013 starts from main d80fd99. Account moves into the avatar, Master Admin remains server-gated and top-level, Study prioritizes four learning destinations with canonical subjects, and portrait expansion overlays unchanged main width. Landscape preference is preserved through rotation; existing tools/pins and both palettes remain.
+
+Verification at checkpoint: 1,205 Node tests passed; targeted navigation regressions 38/38 passed; syntax/catalog/decision checks and the 77-file Pages build passed. Browser checks updated for the approved labels/account path and portrait width behavior. Local Playwright launch is blocked by a missing Chromium executable; existing GitHub Chromium and iPad WebKit jobs must verify before release. Work is not yet merged or deployed; no learner/content/backend writes.
+
+PR #230 checkpoint 4d06b7d persisted through the GitHub connector after CLI push lacked credentials. First Chromium run 38410930465 reproduced the hidden phone Profile label; independent review also found subject-context loss and stale browser selectors. These are fixed with RED→GREEN context/pin regressions, explicit avatar label styling and browser rotation/keyboard/avatar/signout cases. Latest local suite: 1,208 tests; fresh remote browser acceptance remains pending. Next: verify that CI run and release state before reporting deployment.
+
 ## 2026-10-13 — Standing checkpoint/resume policy without repeated prompts
 
 The owner asked to keep checkpointing and handoff updates somewhere persistent, so switching AI tools does not require a pasted prompt each time. AGENTS.md now requires scoped engineering checkpoints at meaningful milestones and planned waits/pauses/compaction/switches/final responses, with explicit staging, WIP/test-state labeling and remote-save verification. CLAUDE.md and new GEMINI.md directly import the handoff and continuity guide as well as AGENTS.md. AI_HANDOFF.md clears the completed PR #226 task and records the new branch. See ADR-110.

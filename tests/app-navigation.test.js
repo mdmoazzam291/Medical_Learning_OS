@@ -5,7 +5,7 @@ const requireNav = () => { assert.ok(nav, 'shared navigation model is implemente
 
 test('five learner destinations plus a permission-gated Admin master keep their approved order', () => {
   const { MASTERS, navigationFor } = requireNav();
-  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account', 'Admin']);
+  assert.deepEqual(MASTERS.map(x => x.label), ['Home', 'Study', 'Library', 'Exams', 'Account', 'Master Admin']);
   assert.equal(MASTERS.at(-1).adminOnly, true);
   for (const master of MASTERS) for (const row of navigationFor(master.id, { isAdmin: true })) {
     assert.ok(row.href.startsWith('/') && !row.href.startsWith('//'), row.id);
@@ -104,4 +104,16 @@ test('Admin sidebar uses five nested groups and preserves genuine destinations',
   prefs = changePreference(prefs, { type: 'group', id: 'admin:content', open: true });
   assert.deepEqual(prefs.groups, ['admin:overview', 'admin:content']);
   assert.deepEqual(navigationFor('admin', { isAdmin: false }), []);
+});
+
+
+test('Study subject leaves keep their contextual ownership without a second catalog', () => {
+  const { navigationFor, routeIdentity, SUBJECT_INDEX } = requireNav();
+  const subjects = navigationFor('study').find(row => row.id === 'subjects');
+  assert.ok(subjects);
+  assert.deepEqual(subjects.children.map(row => row.id), SUBJECT_INDEX.map(row => row.id));
+  for (const row of subjects.children.flatMap(row => [row, ...row.children])) {
+    const url = new URL(row.href, 'https://example.invalid');
+    assert.deepEqual(routeIdentity(url.pathname, url.search), { master: 'study', section: 'subjects' });
+  }
 });

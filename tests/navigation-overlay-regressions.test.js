@@ -6,12 +6,12 @@ import * as nav from '../src/domain/app-navigation.js';
 import { navigationMarkup, flyoutMarkup } from '../web/navigation-view.js';
 import { mutatePreference } from '../web/navigation-preferences.js';
 const source = (await readFile(new URL('../web/navigation.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
-function open({ ready = true } = {}) {
+function open({ ready = true, width = 620 } = {}) {
   const shellHandlers = {}, docHandlers = {}, windowHandlers = {}, classes = new Set(), targets = {};
   const input = { value: '', focus() {} }, flyout = { hidden: true };
   const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : input; }, querySelectorAll: () => [] };
   const body = { dataset: {}, prepend() {}, classList: { add() {} } };
-  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: 620, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
+  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: width, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
   context.document.getElementById = id => targets[id] || null;
   return { body, shell, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };
@@ -149,14 +149,43 @@ test('an unchanged Admin access update does not rebuild open navigation controls
   assert.equal(renders, 2);
 });
 test('opening a navigation group persists before a subsequent route redraw', () => {
-  const h = open(); h.location.pathname = '/web/admin'; h.location.search = '';
-  h.context.innerWidth = 1200;
+  const h = open({ width: 1200 }); h.location.pathname = '/web/admin'; h.location.search = '';
   h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
-  const rail = { dataset: {}, hasAttribute: key => key === 'data-rail' };
-  h.shellHandlers.click({ target: { closest: () => rail } });
   const group = { dataset: { group: 'admin:overview' }, open: false };
   const summary = { closest: () => group };
   h.shellHandlers.click({ target: { closest: key => key === 'summary' ? summary : null }, preventDefault() {} });
   h.windowHandlers.hashchange();
   assert.match(h.shell.innerHTML, /data-group="admin:overview" open/);
+});
+
+
+test('iPad portrait drawer dismisses outside at 820 and 1024 widths', () => {
+  for (const width of [820, 1024]) {
+    const h = open({ width });
+    const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
+    h.shellHandlers.click({ target: { closest: () => button } });
+    assert.equal(h.body.dataset.rail, 'expanded');
+    h.outside();
+    assert.equal(h.body.dataset.rail, 'collapsed');
+  }
+});
+
+test('rotating an open portrait drawer restores the saved desktop layout without persisting dismissal', () => {
+  const h = open({ width: 820 });
+  const button = { dataset: {}, hasAttribute: name => name === 'data-rail' };
+  h.shellHandlers.click({ target: { closest: () => button } });
+  h.outside();
+  h.context.innerWidth = 1180;
+  h.windowHandlers.resize?.();
+  assert.equal(h.body.dataset.rail, 'expanded');
+  h.context.innerWidth = 820;
+  h.windowHandlers.resize?.();
+  assert.equal(h.body.dataset.rail, 'collapsed');
+});
+
+test('search opens at the exact compact CSS breakpoint instead of submitting a hidden field', () => {
+  const h = open({ width: 1050 }); let prevented = false;
+  h.shellHandlers.submit({ target: { matches: () => true }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(h.classes.has('mlos-search-open'), true);
 });

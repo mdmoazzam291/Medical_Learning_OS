@@ -3,17 +3,19 @@ import assert from 'node:assert/strict';
 const view = await import('../web/navigation-view.js').catch(() => null);
 const model = await import('../src/domain/app-navigation.js').catch(() => null);
 const markup = options => { assert.ok(view, 'navigation can render the real shared shell'); return view.navigationMarkup(options); };
-test('the header keeps five learner links and adds Admin immediately after Account only with server-backed access', () => {
+test('the header moves Account to the avatar and gates the fifth Master Admin workspace', () => {
   const html = markup({ master: 'library', section: 'subjects', prefs: {} });
   assert.match(html, /aria-label="Main navigation"/);
-  assert.equal((html.split('</nav>')[0].match(/data-master=/g) || []).length, 5);
+  assert.equal((html.split('</nav>')[0].match(/data-master=/g) || []).length, 4);
   assert.match(html, /name="search"/);
   assert.match(html, /aria-label="Switch to dark appearance"/);
   assert.ok(!html.split('</nav>')[0].includes('Admin'));
   const granted = markup({ master: 'admin', section: 'overview', prefs: { expanded: true }, isAdmin: true });
   const nav = granted.split('</nav>')[0];
-  assert.equal((nav.match(/data-master=/g) || []).length, 6);
-  assert.match(nav, /data-master="account"[\s\S]*data-master="admin"/);
+  assert.equal((nav.match(/data-master=/g) || []).length, 5);
+  assert.doesNotMatch(nav, /data-master="account"/);
+  assert.match(nav, /Master Admin/);
+  assert.match(granted, /aria-label="Account menu"/);
   assert.match(nav, /data-master="admin"[^>]*aria-current="page"/);
 });
 test('an expanded panel nests independent subject and reference disclosures in their parents', () => {
@@ -114,5 +116,36 @@ test('standalone Study Practice remains selected on its landing page despite its
     master: 'study', section: 'practice', prefs: { expanded: false },
     currentHref: '/web/medical.html'
   });
-  assert.match(collapsed, /href="\/web\/medical.html#question-browser" aria-label="Practice"[^>]*aria-current="page"/);
+  assert.match(collapsed, /href="\/web\/medical.html#question-browser" aria-label="Study Now"[^>]*aria-current="page"/);
+});
+
+
+test('avatar links use real account destinations and signed-out visitors get Sign in', () => {
+  const html = markup({ master: 'account', signedIn: true });
+  const account = html.split('class="mlos-account"')[1].split('</details>')[0];
+  assert.match(account, /aria-label="Account menu"/);
+  assert.match(account, /href="\/web\/account.html">[\s\S]*Profile/);
+  assert.match(account, /master=account&amp;section=preferences/);
+  assert.match(account, /Account &amp; Security/);
+  assert.match(account, /data-signout/);
+  assert.doesNotMatch(markup({ signedIn: false }), /data-signout/);
+  assert.match(markup({ signedIn: false }), /Sign in/);
+});
+
+test('expanded Study navigation prioritizes the four approved destinations and nests all subjects', () => {
+  const html = markup({ master: 'study', section: 'practice', prefs: { expanded: true, groups: ['study:subjects'] } });
+  const local = html.split('<nav id="mlos-local-nav"')[1].split('</nav>')[0];
+  const labels = ['Study Now', 'Subjects &amp; Topics', 'Questions', 'Mistake Review'];
+  for (const label of labels) assert.ok(local.includes(label), label);
+  assert.ok(labels.every((label, i) => !i || local.indexOf(labels[i - 1]) < local.indexOf(label)));
+  assert.match(local, /data-group="study:subjects" open/);
+  assert.match(local, /Anatomy/);
+  assert.match(local, /More study tools/);
+  assert.doesNotMatch(local, /Research Participation|Source Rights|Simulator/);
+});
+
+
+test('cross-workspace pins never repeat an existing local destination', () => {
+  const html = markup({ master: 'library', section: 'notes', prefs: { expanded: true, pins: ['home:material'] } });
+  assert.equal(html.split('href="/web/library.html?view=notes"').length - 1, 1);
 });
