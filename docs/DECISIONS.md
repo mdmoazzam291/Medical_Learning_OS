@@ -1,5 +1,13 @@
 # Decision log
 
+## ADR-115 — Consumer tiers only; fail-closed grants and test-only payment seam
+**Status:** Owner approved implementation on 2026-10-14; feature branch prepared, release pending verification.
+
+Scope is Free OS, Pro and AI Pro only. Institutional licensing, marketplace and white-label remain frozen. Domain capability definitions and proposed GST-inclusive INR price intervals are versioned independently of gateway provider IDs. Default entitlement projection is Free unless a *separate server-controlled premium release flag* is explicitly enabled and an active, trusted-server grant bound to the authenticated learner satisfies temporal validation. The domain contract is not itself an authenticated grant issuer. Admin authorization, learner content, clinical truth, evidence, mastery and review permissions remain independent of billing.
+
+A display-only subscription comparison uses existing Sage/Lavender token palettes, current Light/Dark/optional Glass navigation styles and no checkout. Premium purchase controls are disabled. Razorpay helper is isolated, non-public and disabled by default; test keys only, exact raw-body HMAC verification and no webhook endpoint or entitlement write. A genuine payment lifecycle, user consent, feature entitlement integration and production charging require separate review and owner go-live authorization. Architecture/acceptance: `docs/CONSUMER_COMMERCIAL_PLAN.md`, `docs/RAZORPAY_SANDBOX_PREPARATION.md`.
+
+
 ## ADR-114 — Tablet orientation parity and perceptible navigation Glass
 **Status:** Accepted, implemented and released — 2026-10-14; PR #235.
 

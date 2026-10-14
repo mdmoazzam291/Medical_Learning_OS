@@ -1,5 +1,9 @@
 # Implementation roadmap
 
+## Consumer commercial workstream — owner scope 2026-10-14
+Order: (1) deterministic Free/Pro/AI Pro entitlement contract and tests; (2) account-linked preview-only pricing UI using existing Sage/Lavender appearance; (3) default-disabled Razorpay test-mode adapter and webhook verification primitives. This does not open checkout or imply live recurring payments. Next gate is independent CI/browser verification; integration with authenticated trusted server persistence only after sufficient published content and owner release approval. **Institutional B2B/tenant/seat/marketplace work deferred.** See [consumer contract](CONSUMER_COMMERCIAL_PLAN.md) and [Razorpay preparation](RAZORPAY_SANDBOX_PREPARATION.md).
+
+
 ## Current-state precedence — 2026-10-08
 
 The owner cancelled the fixed 12-question respiratory intake on 8 October 2026. The next input is final polished PYQs, with no fixed question count, three-note target or respiratory-only scope. The existing provenance, PYQ-first deduplication, rights and genuine administrator review gates remain active. The shortening evaluator is optional experiment infrastructure; ordinary PYQ intake does not require unseen holdouts or research enrollment.
