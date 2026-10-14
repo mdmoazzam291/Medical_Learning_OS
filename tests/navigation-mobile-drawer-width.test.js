@@ -29,8 +29,18 @@ test('narrower drawer is materially different from the old production drawer', (
   assert.doesNotMatch(css, /clamp\(240px,66vw,272px\)/);
 });
 
-test('narrow drawer maintains readable destinations and accessible pin targets', () => {
+test('narrow drawer preserves two-column navigation while hiding phone shortcut pin buttons', async () => {
   assert.match(css, /\.mlos-panel nav\[aria-label="Main navigation"\]\{display:grid;grid-template-columns:1fr 1fr/);
   assert.match(css, /\.mlos-panel \.mlos-nav-row>a\{overflow-wrap:break-word;line-height:1\.4\}/);
-  assert.match(css, /\.mlos-panel \.mlos-pin\{min-height:44px;min-width:40px;display:grid;place-items:center/);
+  assert.match(css, /\.mlos-panel \.mlos-pin\{display:none\}/);
+
+  // Pin controls and saved preferences remain to preserve tablet/desktop pinning
+  // and allow this temporary phone-only visual change to be reversed later.
+  const { navigationMarkup } = await import('../web/navigation-view.js');
+  const mobile = navigationMarkup({ phone: true, master: 'account', prefs: { expanded: true, pins: ['study:today'] } });
+  const desktop = navigationMarkup({ phone: false, master: 'account', prefs: { expanded: true, pins: ['study:today'] } });
+  assert.match(mobile, /data-pin="account:overview"/);
+  assert.match(mobile, /aria-label="Pinned shortcuts"/);
+  assert.match(desktop, /data-pin="account:overview"/);
+  assert.match(desktop, /data-workspace-menu="account"/);
 });
