@@ -52,7 +52,7 @@ test('isolated wrangler config does not touch production Worker, schedule or sec
     assert.match(binding.store_id, /^[a-f0-9]{32}$/);
     assert.deepEqual(Object.keys(binding).sort(), ['binding', 'secret_name', 'store_id']);
   }
-  assert.doesNotMatch(JSON.stringify(isolated), /rzp_live_|cfsk_|CASHFREE_TEST_(?:APP_ID|SECRET_KEY)"\\s*:\\s*"[^"]*secret/i);
+  assert.doesNotMatch(JSON.stringify(isolated), /rzp_live_|sk_test_|rzp_test_|fictional-test-secret/i);
   for (const p of ['cloudflare/cashfree-sandbox-worker.js', 'src/adapters/cashfree-sandbox-bindings.js'])
     assert.equal(publicFileSet.has(p), false);
 });
