@@ -77,7 +77,7 @@ fi
 
 echo 'Requesting exactly one manual scheduled test through localhost.'
 status="$(curl --silent --max-time 45 --output "$response_file" --write-out '%{http_code}' \
-  'http://127.0.0.1:8787/__scheduled?format=json' || true)"
+  'http://127.0.0.1:8787/cdn-cgi/local/scheduled' || true)"
 sleep 2
 # Only recognize fixed allowlisted status labels from the Cloudflare Worker.
 result=''
