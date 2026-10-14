@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mlos-cashfree-sandbox",
+  "main": "cloudflare/cashfree-sandbox-worker.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": { "crons": [] },
+  "observability": { "enabled": false },
+  "vars": {
+    "CASHFREE_SANDBOX_MODE": "sandbox",
+    "CASHFREE_SANDBOX_ENABLED": "false",
+    "CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED": "false",
+    "CASHFREE_SANDBOX_RUN_MODE": "disabled"
+  }
+}
