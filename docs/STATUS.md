@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 19:12 IST — Cashfree sandbox binding names confirmed; CI token gate before IaC sync
+Owner screenshot shows `mlos-cashfree-sandbox` has both Secrets Store bindings mapped name-to-name: `CASHFREE_TEST_APP_ID`, `CASHFREE_TEST_SECRET_KEY`. Runtime vars still indicate sandbox and disabled network. Screenshot contains the public, noncredential store identifier and Cloudflare's suggested `secrets_store_secrets` Wrangler snippet. Branch `fix/cashfree-sandbox-binding-config-sync-20261014` adds matching references to the dedicated `wrangler.cashfree-sandbox.jsonc` file (no key values) and updates focused tests and mobile guide; **not yet merged or deployed**.
+
+**Release blocker:** Cloudflare's existing GitHub build token `mlos-web-builds` has unknown permissions. Wrangler deployment with Secrets Store bindings requires Account Secrets Store Edit; do not redeploy until confirmed. Prefer a separate constrained token for the sandbox Worker rather than expanding the public-web token indiscriminately. Neither Cashfree merchant account validity nor Subscriptions product/API has been checked; all payment/authorization routes remain OFF. The public `wrangler.jsonc` file and website were not changed.
+
+
 ## 2026-10-14 — Cashfree isolated sandbox Worker: Cloudflare build success observed
 User screenshot at approximately 18:38 India time shows Cloudflare Build `#166bcbc2` successful in 28 seconds with initializing, cloning, installing and deploying stages green, branch `main`, project previously configured as `mlos-cashfree-sandbox`, and exact command `npx wrangler deploy -c wrangler.cashfree-sandbox.jsonc`; no build command or build variables. This is screenshot evidence of successful Cloudflare deployment, **not independent Cloudflare API readback**. Before any next operation verify deployed Worker identity in Workers & Pages overview. Existing two Cloudflare Secrets Store account secrets remain separately stored, with Worker-level **bindings pending**. Do not attach to `medical-learning-os-web`. No real Cashfree TEST API request or subscription flow has been executed. Root production Worker, learner plans checkout and premium entitlements remain untouched and disabled. Follow `docs/CASHFREE_SANDBOX_SECRET_SETUP.md`.
 
