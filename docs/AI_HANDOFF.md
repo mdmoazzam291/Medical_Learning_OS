@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Cashfree one-shot runner merged (2026-10-15 IST; latest)
+- PR #254 merged to main as `ee5684d7de41d2efa316fe82569f2760a452099f`; Foundation CI run 38638187189 all three jobs successful (check, Chromium, WebKit).
+- User requested next best necessary step after verifying no Crons in Cloudflare dashboard. Added `scripts/cashfree-probe-once.sh` and `tests/cashfree-one-shot-runner.test.js`, iPad Codespaces/Cloudflare OAuth device-auth procedure in `docs/CASHFREE_READONLY_API_PROBE.md`.
+- Owner must separately create a private GitHub Codespace on main, authenticate to Cloudflare via `wrangler login --device --browser=false`, and deliberately invoke `MLOS_CONFIRM_ONE_CASHFREE_GET=YES_TEST_ONLY bash scripts/cashfree-probe-once.sh`. Device code and account credentials remain owner-only.
+- The one-time remote dev session is ephemeral and attempts one GET-only Cashfree sandbox plan probe through local scheduled simulation. It does not deploy a Worker or create Cron triggers. Runtime disabled config remains unchanged, no public route, checkout or paid grants. Cloudflare's production Secrets Store resolution in remote preview is not established until tried.
+- **No Codespace, OAuth login, Cloudflare remote dev invocation or real Cashfree merchant request has been performed from assistant tools**. No observed provider result. After test, `wrangler logout` and delete Codespace to reduce OAuth residue. Don't export raw Secrets Store data. An inconclusive 404 is not successful authentication.
+
+
 ## Cashfree next milestone: one-shot iPad remote-dev runner (2026-10-15)
 - Owner's Cloudflare screenshot shows `mlos-cashfree-sandbox` has no Cron triggers. Editor Schedule test button disabled. Cashfree Test API keys remain encrypted/bound; checkout and network flags off.
 - Branch `ops/cashfree-one-shot-remote-dev-runner-20261015` adds an operator-run **bash** harness `scripts/cashfree-probe-once.sh`, static fail-closed tests, and iPad+Codespaces setup notes in `docs/CASHFREE_READONLY_API_PROBE.md`. This is a Cloudflare temporary remote development session only, not a Worker deployment. It forces explicit owner confirmation, uses `wrangler dev --remote --test-scheduled` and process-only flag overrides, one local scheduled event and cleanup.
