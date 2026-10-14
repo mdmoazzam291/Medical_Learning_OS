@@ -163,7 +163,8 @@
  .mlos-panel nav[aria-label="Main navigation"] a{min-height:44px;font-size:13px;gap:6px;padding:8px 6px}
  .mlos-panel nav[aria-label="Main navigation"] .mlos-icon{width:18px;height:18px}
  .mlos-panel .mlos-nav-row>a{overflow-wrap:break-word;line-height:1.4}
- .mlos-panel .mlos-pin{min-height:44px;min-width:40px;display:grid;place-items:center;padding:10px}
+ /* Temporary phone-only pin suppression: preserve pin preferences and desktop controls. */
+ .mlos-panel .mlos-pin{display:none}
  .mlos-panel nav[aria-label="Main navigation"] a[data-master="admin"]{grid-column:1 / -1}
  .mlos-panel .mlos-caption{display:block}
  .mlos-panel nav{margin-top:0}

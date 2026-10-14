@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Temporary phone-sidebar pin-button suppression (pending release)
+Owner requested temporarily removing shortcut pin icons from the mobile sidebar to recover label space. Branch `fix/phone-sidebar-hide-pins-20261014` retains the previously approved 216–244px drawer width, 2-column workspace shortcuts and pinned navigation destinations, but hides only `.mlos-panel .mlos-pin` under `max-width:700px`. Existing saved pin preferences and desktop/tablet pin controls remain intact; navigation links expand to the vacated width. CSS-only reversible change, with targeted UI/CSS regression and real-browser drawer assertions at 320/375/390/430px. No auth, content, billing, database or infrastructure change.
+
+**Release state:** branch implementation committed; CI, PR merge, Cloudflare build and on-device visual verification pending. Continue after all check/browser/WebKit jobs pass; verify the learner-facing Worker production build after merge.
+
+
 ## 2026-10-14 — Screenshot-confirmed sidebar width: second, more visible reduction pending
 Owner's real post-release iPhone screenshot (`IMG_6475.jpeg`, 1179px wide) shows the Account drawer ends at approximately x=779px, ~66% of a 390 CSS-px viewport. This confirms the PR #249 CSS reduction **is active** (about 257px rather than the former 280px), but the observed ~8% reduction remains visually too small. The previously generated 320px→240px comparison illustration is not a measurement of the deployed app.
 
