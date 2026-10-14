@@ -1,10 +1,12 @@
 # Current status
 
-## 2026-10-14 - Tablet parity / Glass correction verified and ready for source release
+## 2026-10-14 - Tablet parity / visible navigation Glass deployed
 
-PR #235 verified head 25bd210e11985b66ee18ddcf0290835864075827 passes Foundation 38523244802: check, composited Chromium and native macOS WebKit flows. Local/CI Node suite passes 1,227/1,227; check/77-file build pass. Both tablet orientations retain the same visible top workspaces above 700px with 44px controls. Glass near-solid tint, stacked cluster paint and the header's popup backdrop-root trap are corrected; palettes/preferences, Standard default, opaque reading cards, phones and canonical routes remain.
+PR #235 merged as 0ab1f964a1ccd0245e1d2d5d111e3dbc5394596f through the existing owner-authorized GitHub -> Cloudflare route. Portrait and landscape tablets now share visible top workspaces above 700px and 44px controls. Near-solid Glass tint, stacked cluster paint and the header's popup backdrop-root trap are corrected; palettes/preferences, Standard default, opaque reading cards, phone behavior and canonical routes remain.
 
-Failing-first portrait/alpha regressions are recorded. Ordinary-main Chromium frosting suppresses measured contrast about 93% on tablet/desktop, with actual screenshots inspected. All eight appearances, touch/width/rotation, 172 rendered leaves, persistence, permissions/focus/history/drafts and opaque fallbacks pass. Independent review has no Critical/Important source findings. The native WebKit snapshot control cannot render blur, so its pixel verification is unavailable rather than called a pass; physical iPad/OS setting and hosted real-account switching remain unverified. A faint sharp margin bleed remains a Minor capture observation with source cause unproven. Ready to release under the owner's existing GitHub -> Cloudflare route; no merge/deployment yet. Preview Issue #211 remains separate.
+Feature Foundation 38523244802 passes check/Chromium/native WebKit flows; fresh merged-tree Node suite passes 1,227/1,227, check/77-file build pass. Main Foundation 38524890281 passes check, Chromium and native WebKit. Both production builds succeeded: learner web 460c4cc4-ac39-4506-92d9-45db394f096d, heartbeat c16e6faa-a7e3-45a9-9f56-4915c44e856d. Fresh public inspection confirms new tablet/frost/tint/blur CSS assets and functioning Library contextual menus.
+
+Ordinary-main Chromium frosting suppresses measured contrast about 93% at tablet/desktop. All eight appearances, width/touch/rotation, 172 rendered leaves, persistence, role/focus/history/drafts and opaque fallbacks pass. Native WebKit's independent snapshot control cannot render blur: no WebKit frosting, physical iPad/OS setting or hosted real-account switching claim. Faint capture-margin bleed remains a Minor observation with source cause unproven; no Critical/Important source finding remains. Preview Issue #211 is separate. [Release evidence](releases/2026-10-14-tablet-glass-correction-release.md).
 
 ## 2026-10-14 - Centered navigation and optional Glass released
 
