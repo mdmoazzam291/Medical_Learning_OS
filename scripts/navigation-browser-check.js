@@ -175,13 +175,14 @@ try {
       assert.ok(paint.header.base < .85 && paint.stackedMaximum < .90, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
       assert.notEqual(paint.menu.blur, 'none', 'contextual Glass declares a backdrop blur');
       assert.equal(await page.locator('.mlos-header').evaluate(node => getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none'), 'none', 'header container does not trap popup descendants in a backdrop root');
-      // Verify rendered frosting against a controlled high-frequency backdrop.
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'glass-initial-menu-' + name + '.png'), fullPage: false });
+      // Verify rendered frosting against an ordinary main-content backdrop.
       // A computed blur alone can pass while ancestor/compositing rules suppress it.
       const probeRules = await page.evaluate(() => {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
         const first = sheet.cssRules.length;
-        sheet.insertRule('body::after{content:"";position:fixed;inset:0;z-index:35;pointer-events:none;background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}', first);
-        sheet.insertRule('#mlos-workspace-menu>*{visibility:hidden}', first + 1);
+        sheet.insertRule('main{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}', first);
+        sheet.insertRule('#mlos-workspace-menu>*,main>*{visibility:hidden}', first + 1);
         return first;
       });
       const rect = await page.locator('#mlos-workspace-menu').boundingBox();
@@ -625,7 +626,7 @@ try {
       const prefsBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
       await reload(); await page.getByLabel('Surface style', { exact: true }).waitFor();
       assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1'))), prefsBefore, 'full saved preference equality');
-      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: surfaceStyle !== 'glass' });
       for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/admin.html']) {
         await go(origin + destination); await page.locator('[data-theme]').waitFor();
         if (destination === '/web/admin.html') await settleAdmin();
@@ -642,7 +643,7 @@ try {
         assert.equal(actual.overflow, false); assert.equal(actual.padding, '0px'); assert.equal(actual.readingBlur, true);
         if (width > 700 && surfaceStyle === 'glass') { assert.notEqual(actual.navColor, 'rgb(255, 255, 255)'); assert.notEqual(actual.blur, 'none'); }
         else assert.equal(actual.blur, 'none');
-        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: true });
+        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: surfaceStyle !== 'glass' });
         if (destination.includes('library')) {
           await openTools();
           if (width > 700 && surfaceStyle === 'glass') {
