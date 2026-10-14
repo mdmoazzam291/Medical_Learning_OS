@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Cashfree primary, PhonePe fallback, Razorpay retired: merged
+PR [#240](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/240) merged as `b7b19fc23b992a9daa92a9f6c23da11fc45b6344`. Cashfree fixed-sandbox-only subscription create/fetch and raw-webhook HMAC receipt, explicit disabled payment route and PhonePe design-only alternative are committed on main. Retired Razorpay adapter/test/document deleted from active tree, history retained. Consumer plan UI and Free/Pro/AI Pro entitlements unchanged.
+
+GitHub [Foundation run 38544793361](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38544793361): **check, Chromium browser and WebKit all passed**, including Node tests and Pages build. Main readback confirms new files and absent Razorpay adapter. No merchant credentials, payment-provider transaction, actual recurring mandate, deployment of checkout, webhook persistence, paid grant issuance or institutional billing. Next gate is genuine learner content/readiness plus isolated merchant sandbox lifecycle. See `docs/CONSUMER_PAYMENT_GATEWAY.md`.
+
+
 ## 2026-10-14 — Cashfree primary / PhonePe alternative migration (feature branch)
 Owner directed Cashfree primary, PhonePe as backup, and removal of unused Razorpay sandbox code. Branch `feature/cashfree-primary-phonepe-backup-20261014` adds a disabled Cashfree server-side sandbox Subscriptions adapter (create/fetch and raw-body signature verifier), a provider-neutral default-disabled routing policy, focused tests and `docs/CONSUMER_PAYMENT_GATEWAY.md`. Removed `src/adapters/razorpay-test.js`, `tests/razorpay-test.test.js`, and `docs/RAZORPAY_SANDBOX_PREPARATION.md` from active tree. Prior historical STATUS/ADR references describe the previous state, not an ongoing integration.
 
