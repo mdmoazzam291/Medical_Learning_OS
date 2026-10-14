@@ -177,7 +177,7 @@
 @media(min-width:701px){
  .mlos-app[data-navigation-layout="top"],.mlos-app[data-navigation-layout="top"][data-rail="expanded"]{padding-left:0;padding-top:56px;transition:none}
  .mlos-header-top{height:56px;min-height:56px;padding:0 16px;display:grid;grid-template-columns:minmax(100px,1fr) auto minmax(132px,1fr);gap:12px;align-items:center}
- .mlos-header-top .mlos-brand{justify-self:start;font-size:15px;gap:8px}.mlos-header-top .mlos-brand-short{display:block}
+ .mlos-header-top .mlos-brand{justify-self:start;font-size:15px;gap:8px;min-height:44px}.mlos-header-top .mlos-brand-short{display:block}
  .mlos-header-top .mlos-brand-mark{height:32px;width:32px;font-size:24px}
  .mlos-header-top>.mlos-master-nav{display:flex;gap:2px;padding:2px;border:1px solid var(--line);border-radius:18px;background:var(--sidebar)}
  .mlos-master-item{display:flex;align-items:center;border-radius:14px;min-width:0}
@@ -198,6 +198,18 @@
  .mlos-search-open .mlos-header-top .mlos-search input[type="search"]{display:block}
  .mlos-search-open .mlos-header-top .mlos-search button{position:absolute;right:4px}
  .mlos-app #admin-app [id]{scroll-margin-top:72px}
+}
+/* Keep the same visible workspace row in both tablet orientations.
+   Compress decorative icons/spacing instead of hiding destinations in a launcher. */
+@media(min-width:701px) and (max-width:1050px){
+ .mlos-header-top{grid-template-columns:minmax(44px,1fr) auto minmax(136px,1fr);padding:0 8px;gap:4px}
+ .mlos-header-top .mlos-brand{min-width:44px;min-height:44px;font-size:13px;gap:5px}
+ .mlos-header-top>.mlos-master-nav{gap:0;padding:2px}
+ .mlos-header-top .mlos-master-item>a{font-size:12px;min-width:44px;padding:8px 6px}
+ .mlos-header-top .mlos-master-item>a>.mlos-icon{display:none}
+}
+@media(min-width:701px) and (max-width:767px){
+ .mlos-header-top .mlos-brand-short{display:none}
 }
 @media(min-width:1600px){
  .mlos-header-top .mlos-search{flex:1;max-width:240px}
@@ -238,21 +250,31 @@
  :root[data-surface-style="glass"] .mlos-account-menu,
  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{background:var(--nav-menu-tint,var(--nav-tint))}
  @supports (background:color-mix(in srgb,red 50%,transparent)) and ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  :root[data-surface-style="glass"]{--nav-tint:color-mix(in srgb,var(--soft) 88%,transparent);--nav-menu-tint:color-mix(in srgb,var(--soft) 96%,transparent);--nav-edge:color-mix(in srgb,var(--accent) 22%,transparent)}
-  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:color-mix(in srgb,var(--sidebar) 94%,transparent);--nav-menu-tint:color-mix(in srgb,var(--sidebar) 98%,transparent)}
+  :root[data-surface-style="glass"]{--nav-tint:color-mix(in srgb,var(--soft) 62%,transparent);--nav-menu-tint:color-mix(in srgb,var(--soft) 76%,transparent);--nav-edge:color-mix(in srgb,var(--accent) 22%,transparent)}
+  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:color-mix(in srgb,var(--sidebar) 58%,transparent);--nav-menu-tint:color-mix(in srgb,var(--sidebar) 80%,transparent)}
   :root[data-surface-style="glass"] .mlos-header-top,
   :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
   :root[data-surface-style="glass"] .mlos-workspace-menu,
   :root[data-surface-style="glass"] .mlos-account-menu,
-  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1)}
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:blur(32px) saturate(1.45);-webkit-backdrop-filter:blur(32px) saturate(1.45);background-image:linear-gradient(125deg,color-mix(in srgb,var(--soft) 26%,transparent),transparent 60%,color-mix(in srgb,var(--accent) 7%,transparent));box-shadow:inset 0 1px 0 color-mix(in srgb,var(--accent) 12%,transparent),0 8px 28px #0002}
+  /* Keep popup descendants outside a filtered header backdrop root.
+     The separate frost layer paints the bar without constraining search/account. */
+  :root[data-surface-style="glass"] .mlos-header-top{background:transparent;background-image:none;border-color:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  :root[data-surface-style="glass"] .mlos-header-top::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--nav-tint);border-bottom:1px solid var(--nav-edge);backdrop-filter:blur(32px) saturate(1.45);-webkit-backdrop-filter:blur(32px) saturate(1.45);background-image:linear-gradient(125deg,color-mix(in srgb,var(--soft) 26%,transparent),transparent 60%,color-mix(in srgb,var(--accent) 7%,transparent));box-shadow:inset 0 1px 0 color-mix(in srgb,var(--accent) 12%,transparent),0 8px 28px #0002}
+  /* A second near-solid layer over the header erases translucency. */
+  :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav{background-color:color-mix(in srgb,var(--soft) 18%,transparent);backdrop-filter:none;-webkit-backdrop-filter:none}
+  :root[data-surface-style="glass"] .mlos-header-top .mlos-master-item[data-active="true"],
+  :root[data-surface-style="glass"] .mlos-header-top .mlos-master-item>button[aria-expanded="true"]{background:color-mix(in srgb,var(--soft) 38%,transparent)}
  }
  @media(prefers-reduced-transparency:reduce){
+  :root[data-surface-style="glass"] .mlos-header-top{background:var(--nav-tint);border-color:var(--nav-edge);box-shadow:0 4px 18px #0001}
+  :root[data-surface-style="glass"] .mlos-header-top::before{content:none}
   :root[data-surface-style="glass"]{--nav-tint:var(--soft);--nav-menu-tint:var(--nav-tint)}
   :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:var(--sidebar);--nav-menu-tint:var(--nav-tint)}
   :root[data-surface-style="glass"] .mlos-header-top,
   :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
   :root[data-surface-style="glass"] .mlos-workspace-menu,
   :root[data-surface-style="glass"] .mlos-account-menu,
-  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:none;-webkit-backdrop-filter:none}
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:none;-webkit-backdrop-filter:none;background-image:none}
  }
 }

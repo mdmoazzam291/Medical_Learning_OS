@@ -7,6 +7,27 @@ import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
 import { MASTERS, navigationFor, routeIdentity } from '../src/domain/app-navigation.js';
 import { ADMIN_VIEWS } from '../web/admin-workspace-view.js';
+// Read resolved paint, including the tint gradient, in the actual browser.
+function navigationPaint() {
+  const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
+  const context = canvas.getContext('2d');
+  const alpha = color => {
+    context.clearRect(0, 0, 1, 1); context.fillStyle = color; context.fillRect(0, 0, 1, 1);
+    return context.getImageData(0, 0, 1, 1).data[3] / 255;
+  };
+  const paint = (node, pseudo) => {
+    if (!node) return { base: 0, maximum: 0, blur: 'none' };
+    const styles = getComputedStyle(node, pseudo), base = alpha(styles.backgroundColor);
+    const stops = styles.backgroundImage === 'none' ? [] : styles.backgroundImage.match(/(?:color|rgba?|hsla?|oklab|oklch|lab|lch)\([^)]*\)|transparent/g);
+    if (styles.backgroundImage !== 'none' && !stops?.length) throw new Error('Unrecognized navigation background paint: ' + styles.backgroundImage);
+    const gradient = Math.max(0, ...(stops || []).map(alpha));
+    return { base, maximum: gradient + (1 - gradient) * base, blur: styles.backdropFilter || styles.webkitBackdropFilter || 'none' };
+  };
+  const headerNode = document.querySelector('.mlos-header');
+  const header = paint(headerNode, getComputedStyle(headerNode, '::before').content === 'none' ? undefined : '::before'), menu = paint(document.querySelector('#mlos-workspace-menu'));
+  const nav = paint(document.querySelector('.mlos-header>.mlos-master-nav'));
+  return { header, menu, stackedMaximum: nav.maximum + (1 - nav.maximum) * header.maximum };
+}
 const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
 const engine = process.env.BROWSER_ENGINE || 'chromium';
 assert.ok(['chromium', 'webkit'].includes(engine));
@@ -37,7 +58,7 @@ const user = { id: '11111111-1111-4111-8111-111111111111', email: 'fixture@examp
 const classification = { subjects: ['medicine'], systems: ['respiratory'], organs: ['lung'], domains: [], tasks: ['diagnosis'] };
 const question = { questionId: 'fixture-q', questionVersionId: 'fixture-q@1', stem: 'Synthetic question for UI verification only', options: [{ optionId: 'a', text: 'Alpha' }, { optionId: 'b', text: 'Beta' }], conceptLinks: [{ conceptId: 'fixture-c', role: 'primary' }], classification, origins: [], home: { kind: 'original', exams: [], platforms: [] }, observed: { attempts: 0, wrong: 0, state: 'unattempted', repeatedWrong: false }, intelligence: { presentation: ['clinical-vignette'], qualifiers: [], responseFormat: 'single-best-answer' } };
 const library = { concepts: [{ conceptId: 'fixture-c', label: 'Synthetic concept', aliases: [], classification }], questions: [question], notes: [{ noteVersionId: 'fixture-n@1', conceptId: 'fixture-c', title: 'Synthetic source note', bodyMarkdown: 'UI verification only. No real clinical content.' }], links: [] };
-const browser = await engines[engine].launch({ headless: true, ...(engine === 'chromium' && process.env.CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {}) }), errors = [];
+const browser = await engines[engine].launch({ headless: process.env.NAVIGATION_HEADED !== '1', ...(engine === 'chromium' && process.env.CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {}) }), errors = [];
 try {
   const layouts = engine === 'webkit' ? [['ipad-portrait', 820, 1180], ['ipad-landscape', 1180, 820], ['ipad-split', 620, 1024]] : [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]];
   for (const [name, width, height] of layouts) {
@@ -62,7 +83,7 @@ try {
     }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
-      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000)), page.viewportSize().width);
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
         if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
         return;
@@ -143,6 +164,82 @@ try {
       const research = document.querySelector('[data-admin-panel="research"]'), features = document.getElementById('owner-features-state'), alerts = document.getElementById('owner-alerts-state');
       return research && !research.textContent.includes('Loading admin evidence') && features && !features.textContent.includes('Loading feature gates') && alerts && !alerts.textContent.includes('Loading infrastructure alerts');
     });
+    // Regression: Glass must produce perceptible transparency in both the header
+    // and contextual menu. Merely declaring a blur on near-opaque paint is insufficient.
+    if (width > 700) {
+      await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Surface style', { exact: true }).selectOption('glass');
+      await go(origin + '/web/library.html?view=subjects'); await openTools();
+      const paint = await page.evaluate(navigationPaint);
+      assert.ok(paint.menu.base < .85 && paint.menu.maximum < .90, 'Glass contextual menu remains visibly translucent: ' + JSON.stringify(paint));
+      assert.ok(paint.header.base < .85 && paint.stackedMaximum < .90, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
+      assert.notEqual(paint.menu.blur, 'none', 'contextual Glass declares a backdrop blur');
+      assert.equal(await page.locator('.mlos-header').evaluate(node => getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none'), 'none', 'header container does not trap popup descendants in a backdrop root');
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'glass-initial-menu-' + name + '.png'), fullPage: false });
+      // Verify rendered frosting against an ordinary main-content backdrop.
+      // A computed blur alone can pass while ancestor/compositing rules suppress it.
+      const probeRules = await page.evaluate(() => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        const first = sheet.cssRules.length;
+        sheet.insertRule('main{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}', first);
+        sheet.insertRule('#mlos-workspace-menu>*,main>*{visibility:hidden}', first + 1);
+        return first;
+      });
+      const rect = await page.locator('#mlos-workspace-menu').boundingBox();
+      const clip = { x: Math.ceil(rect.x + 30), y: Math.ceil(rect.y + 80), width: 64, height: 64 };
+      const pixelContrast = async (bytes, suffix) => {
+        const url = origin + '/__glass-paint-' + name + '-' + suffix + '.png';
+        await page.route(url, route => route.fulfill({ contentType: 'image/png', body: bytes }));
+        return page.evaluate(async ({ src, clip }) => {
+          const image = new Image(); image.src = src; await image.decode();
+          const canvas = document.createElement('canvas'); canvas.width = image.width; canvas.height = image.height;
+          const context = canvas.getContext('2d'); context.drawImage(image, 0, 0);
+          if (image.width !== Math.round(innerWidth * devicePixelRatio) || image.height !== Math.round(innerHeight * devicePixelRatio)) throw new Error('Glass screenshot/sample viewport mismatch');
+          const scale = image.width / innerWidth;
+          const rgba = context.getImageData(Math.round(clip.x * scale), Math.round(clip.y * scale), Math.round(clip.width * scale), Math.round(clip.height * scale)).data, values = [];
+          for (let i = 0; i < rgba.length; i += 4) values.push(rgba[i] / 255);
+          const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+          return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length);
+        }, { src: url, clip });
+      };
+      const frosted = await page.screenshot({ fullPage: false, ...(process.env.SCREENSHOT_DIR ? { path: join(process.env.SCREENSHOT_DIR, 'glass-probe-frosted-' + name + '.png') } : {}) });
+      await page.evaluate(first => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        sheet.insertRule('#mlos-workspace-menu{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}', first + 2);
+      }, probeRules);
+      const clear = await page.screenshot({ fullPage: false, ...(process.env.SCREENSHOT_DIR ? { path: join(process.env.SCREENSHOT_DIR, 'glass-probe-clear-' + name + '.png') } : {}) });
+      const frostedContrast = await pixelContrast(frosted, 'frosted'), clearContrast = await pixelContrast(clear, 'clear');
+      await page.evaluate(first => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        for (let i = 0; i < 3; i++) sheet.deleteRule(first);
+      }, probeRules);
+      let renderingUnavailable = false;
+      if (!(clearContrast > .04 && frostedContrast < clearContrast * .25)) {
+        // A separate control distinguishes a navigation defect from snapshot
+        // paths that parse backdrop-filter but do not render it at all.
+        const probe = await context.newPage(), probeUrl = origin + '/__glass-capability.html';
+        await probe.route(probeUrl, route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>html{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}body{margin:0;min-height:100vh}#probe{position:fixed;left:' + rect.x + 'px;top:' + rect.y + 'px;width:380px;height:300px;background:rgba(221,232,220,.76);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}</style><div id="probe"></div>' }));
+        try {
+          await probe.goto(probeUrl);
+          const geometry = await probe.locator('#probe').evaluate(node => ({ x: node.getBoundingClientRect().x, y: node.getBoundingClientRect().y, width: innerWidth, blur: getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none' }));
+          assert.equal(geometry.width, width); assert.equal(geometry.x, rect.x); assert.equal(geometry.y, rect.y); assert.notEqual(geometry.blur, 'none');
+          const minimalBlur = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-blur');
+          await probe.evaluate(() => { const node = document.querySelector('#probe'); node.style.setProperty('backdrop-filter', 'none', 'important'); node.style.setProperty('-webkit-backdrop-filter', 'none', 'important'); });
+          assert.equal(await probe.locator('#probe').evaluate(node => getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none'), 'none');
+          const minimalClear = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-clear');
+          assert.ok(minimalClear > .04, 'independent clear control contains visible stripes');
+          renderingUnavailable = Math.abs(minimalBlur - minimalClear) < .005;
+          if (renderingUnavailable) console.warn('GLASS_FROST_VERIFICATION_UNAVAILABLE', JSON.stringify({ engine, name, minimalBlur, minimalClear, geometry }));
+        } finally { await probe.close(); }
+      }
+      if (!renderingUnavailable) {
+        assert.ok(clearContrast > .04 && frostedContrast < clearContrast * .25, 'Glass actually frosts the backdrop: ' + JSON.stringify({ frostedContrast, clearContrast }));
+        console.log('GLASS_FROST_VERIFIED', JSON.stringify({ engine, name, frostedContrast, clearContrast }));
+      }
+      await closeTools(); await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Surface style', { exact: true }).selectOption('standard');
+      await go(origin + '/web/library.html?view=subjects');
+    }
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true, includeHidden: true });
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
@@ -152,14 +249,14 @@ try {
     assert.equal(await page.locator('[data-subject]').count(), 19);
     assert.equal(new URL(page.url()).pathname, '/web/library');
     assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Library', exact: true }).getAttribute('aria-current'), 'page');
-    if (width >= 1000) {
+    if (width > 700) {
     const rowPositions = await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => Math.round(l.getBoundingClientRect().top)));
     assert.equal(new Set(rowPositions).size, 1);
     } else if (width <= 700) {
       assert.equal(await page.locator('.mlos-panel').isVisible(), false);
       assert.equal(await page.evaluate(() => getComputedStyle(document.body).paddingLeft), '0px');
       assert.equal(await page.locator('.mlos-header').evaluate(node => node.getBoundingClientRect().height), 56);
-      assert.equal(await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width), width);
+      assert.equal(await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width), await page.evaluate(() => document.documentElement.clientWidth));
       assert.equal(await page.getByRole('link', { name: 'Master Admin', exact: true }).count(), 0, 'admin master stays out of the closed phone header');
     }
     if (width <= 700) {
@@ -181,13 +278,12 @@ try {
       await page.evaluate(value => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...JSON.parse(localStorage.getItem('mlos-navigation-v1')), expanded: value } } })), desktopExpanded);
       await page.setViewportSize({ width: 820, height: 1180 }); await openTools();
       assert.equal(await page.locator('#mlos-workspace-menu').isVisible(), true);
-      await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').click();
-      assert.equal(await page.locator('#mlos-workspace-menu [data-master="library"]').getAttribute('aria-current'), 'page');
-      assert.equal(await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').getAttribute('aria-expanded'), 'true');
-      assert.equal(await page.locator('.mlos-workspace-launcher').getAttribute('aria-expanded'), 'true');
-      assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => node.getBoundingClientRect().left === Math.max(12, Math.min(document.querySelector('.mlos-workspace-launcher').getBoundingClientRect().left, innerWidth - node.getBoundingClientRect().width - 12))), true, 'compact tools stay anchored after switching');
+      await page.locator('.mlos-header [data-workspace-menu="study"]').click();
+      assert.equal(await page.locator('.mlos-header [data-master="library"]').getAttribute('aria-current'), 'page');
+      assert.equal(await page.locator('.mlos-header [data-workspace-menu="study"]').getAttribute('aria-expanded'), 'true');
+      assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => node.getBoundingClientRect().left === Math.max(12, Math.min(document.querySelector('.mlos-header [data-workspace-menu="study"]').getBoundingClientRect().left, innerWidth - node.getBoundingClientRect().width - 12))), true, 'portrait tools stay anchored to the visible workspace');
       await page.keyboard.press('Escape');
-      assert.equal(await page.locator('.mlos-workspace-launcher').evaluate(node => document.activeElement === node), true);
+      assert.equal(await page.locator('.mlos-header [data-workspace-menu="study"]').evaluate(node => document.activeElement === node), true);
       await openTools();
       await page.setViewportSize({ width: 1180, height: 820 });
       await page.waitForFunction(() => document.body.dataset.navigationLayout === 'top' && document.getElementById('mlos-workspace-menu').hidden);
@@ -197,15 +293,19 @@ try {
       assert.equal(await page.locator('[data-workspace-menu="library"]').evaluate(node => document.activeElement === node), true);
       assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')).expanded), desktopExpanded);
     }
-    for (const testWidth of [701, 999, 1000, 1180, 1440]) {
+    for (const testWidth of [701, 744, 768, 820, 999, 1000, 1050, 1051, 1180, 1440]) {
       await page.setViewportSize({ width: testWidth, height: 1000 });
-      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'top' && Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000), testWidth);
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'top' && Boolean(document.querySelector('.mlos-header>.mlos-master-nav')), testWidth);
       await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'header fit ' + testWidth);
       const headerControls = await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length && !(n.closest('.mlos-account-menu') && !n.closest('.mlos-account').open)).map(n => ({ label: n.getAttribute('aria-label') || n.textContent.trim(), left: n.getBoundingClientRect().left, right: n.getBoundingClientRect().right })));
       const overflowingControls = headerControls.filter(n => n.left < 0 || n.right > testWidth);
       if (overflowingControls.length && process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/navigation-fit-' + testWidth + '.png', fullPage: true });
       assert.deepEqual(overflowingControls, [], 'visible controls fit ' + testWidth);
+      const workspaces = page.locator('.mlos-header [data-master]');
+      assert.equal(await workspaces.count(), 5, 'all authorized workspaces stay at the top ' + testWidth);
+      assert.equal(await workspaces.evaluateAll(nodes => nodes.every(n => getComputedStyle(n.querySelector('span')).display !== 'none')), true, 'workspace labels remain visible ' + testWidth);
+      assert.equal(await page.locator('.mlos-header [data-master],.mlos-header [data-workspace-menu]').evaluateAll(nodes => nodes.every(n => { const r = n.getBoundingClientRect(); return r.width >= 44 && r.height >= 44; })), true, 'separate touch destinations and disclosures remain usable ' + testWidth);
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
@@ -526,12 +626,13 @@ try {
       const prefsBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
       await reload(); await page.getByLabel('Surface style', { exact: true }).waitFor();
       assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1'))), prefsBefore, 'full saved preference equality');
-      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: surfaceStyle !== 'glass' });
       for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/admin.html']) {
         await go(origin + destination); await page.locator('[data-theme]').waitFor();
         if (destination === '/web/admin.html') await settleAdmin();
         const actual = await page.evaluate(() => {
-          const root = document.documentElement, header = getComputedStyle(document.querySelector('.mlos-header'));
+          const root = document.documentElement, headerNode = document.querySelector('.mlos-header');
+          const before = getComputedStyle(headerNode, '::before'), header = before.content === 'none' ? getComputedStyle(headerNode) : before;
           const reading = [...document.querySelectorAll('main .panel,main .session-card,main .explanation')];
           return { surfaceStyle: root.dataset.surfaceStyle, palette: root.dataset.palette, theme: root.dataset.appearance,
             overflow: root.scrollWidth > innerWidth, padding: getComputedStyle(document.body).paddingLeft,
@@ -542,9 +643,14 @@ try {
         assert.equal(actual.overflow, false); assert.equal(actual.padding, '0px'); assert.equal(actual.readingBlur, true);
         if (width > 700 && surfaceStyle === 'glass') { assert.notEqual(actual.navColor, 'rgb(255, 255, 255)'); assert.notEqual(actual.blur, 'none'); }
         else assert.equal(actual.blur, 'none');
-        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: true });
+        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: surfaceStyle !== 'glass' });
         if (destination.includes('library')) {
           await openTools();
+          if (width > 700 && surfaceStyle === 'glass') {
+            const paint = await page.evaluate(navigationPaint);
+            assert.ok(paint.menu.base < .85 && paint.menu.maximum < .90, 'contextual Glass stays translucent in ' + palette + '/' + theme);
+            assert.notEqual(paint.menu.blur, 'none');
+          }
           if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: false });
           await closeTools();
         }
@@ -587,9 +693,7 @@ try {
       if (master.id === 'account') continue;
       if (width <= 700) continue; // phone catalog already covered by unchanged drawer and the existing route sweep
       const currentMenu = page.locator('#mlos-workspace-menu');
-      if (page.viewportSize().width < 1000) {
-        await currentMenu.locator('[data-workspace-menu="' + master.id + '"]').click();
-      } else await page.locator('.mlos-header [data-workspace-menu="' + master.id + '"]').click();
+      await page.locator('.mlos-header [data-workspace-menu="' + master.id + '"]').click();
       for (const row of flatten(navigationFor(master.id, { isAdmin: true }))) assert.ok(await currentMenu.locator('a').evaluateAll((nodes, href) => nodes.some(n => n.getAttribute('href') === href), row.href), master.id + ':' + row.id);
     }
     await closeTools();
@@ -672,7 +776,8 @@ try {
     if (width < 1050) {
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
-      if (touch) await page.touchscreen.tap(width - 12, 170); else await page.mouse.click(width - 12, 170);
+      const outsideX = await page.evaluate(() => document.documentElement.clientWidth - 12);
+      if (touch) await page.touchscreen.tap(outsideX, 170); else await page.mouse.click(outsideX, 170);
       assert.equal(await page.locator('#mlos-navigation').evaluate(node => node.classList.contains('mlos-search-open')), false);
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Unsubmitted draft');

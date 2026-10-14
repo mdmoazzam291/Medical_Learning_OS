@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-114 — Tablet orientation parity and perceptible navigation Glass
+**Status:** Accepted and implemented — 2026-10-14; PR #235 source acceptance complete, production release pending.
+
+The owner requested the same landscape-style navigation in tablet portrait and an effective Glass treatment in the main and contextual navigation. Above 700px, retain visible workspace labels and separate disclosures in both orientations. Compress decorative icons/brand spacing at narrow widths; keep 44px controls and all authorized destinations. Existing phone layout remains at 700px and below.
+
+Glass remains an opt-in surface style using the existing selected palette. Lower near-solid navigation tint, avoid stacking opaque header/cluster paint, and frost navigation surfaces without making reading cards transparent. Paint acceptance includes gradient alpha and a real rendered-pixel blur comparison. Keep the header container unfiltered and paint its frost in a separate background layer so Account/Search descendants can sample the page backdrop. Use a stable opaque reduced-transparency/unsupported fallback. Visual acceptance uses composited Chromium and native macOS WebKit; no physical-iPad claim.
+
 ## ADR-113 — One centered tablet/desktop layout with opt-in Glass rendering
 **Status:** Accepted and implemented on PR #233 — 2026-10-14; browser acceptance complete.
 

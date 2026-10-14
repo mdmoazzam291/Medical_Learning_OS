@@ -1,13 +1,13 @@
 # Final tablet and desktop navigation / appearance contract
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
-Status: implemented on PR #233; Q3 browser acceptance complete.
+Status: PR #233 released; owner-requested portrait/landscape parity and clearer Glass refinement verified on PR #235 and ready for source release.
 Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
 ## One layout, two surface styles
 
-Use the selected centered top navigation and single contextual page menu for tablet and desktop. Brand at left; major workspaces centered; search, appearance and avatar at right. Do not reserve a permanent left/right navigation rail or sidebar in this selected layout.
+Use the selected centered top navigation and single contextual page menu for tablet and desktop. Brand at left; major workspaces centered; search, appearance and avatar at right. Above phone width (700px), portrait and landscape use the same visible master links and contextual disclosures. Narrow top rows may compress decorative icons/brand spacing, but must not hide workspace labels inside a launcher. Phone and very narrow Split View retain the existing phone layout. Do not reserve a permanent left/right navigation rail or sidebar in this selected layout.
 
 Home, Study, Library and Exams retain their real canonical destinations. Master Admin remains visible only after server-confirmed authorization. Account utilities, including Preferences, stay in the avatar menu. Each workspace exposes its existing contextual tools from a separate disclosure affordance anchored under its top button. A main destination link still navigates; the adjacent chevron opens its tools.
 
@@ -28,7 +28,7 @@ Persist the surface choice through the existing validated device-preference stor
 
 ## Responsive behavior and interaction
 
-Preserve released phone behavior from PR #232; this owner decision targets tablet and desktop only. At narrow tablet/split widths, use available-width adaptation and labeled overflow/current-workspace controls rather than squeezing controls or overflowing horizontally. Keep current page and all destinations reachable. Center major navigation when width permits; fit and touch usability take precedence over mathematical centering.
+Preserve released phone behavior from PR #232; this owner decision targets tablet and desktop only. At tablet widths above 700px, adapt spacing and decorative icons while retaining every authorized workspace label/disclosure and touch targets. At 700px or below, retain the existing phone/Split View flow. Keep current page and all destinations reachable. Center major navigation when width permits; fit and touch usability take precedence over mathematical centering.
 
 Menus open on tap/click and keyboard, not hover alone. One outer menu open at a time; nested disclosures open independently. Support Escape/outside dismissal, focus return, sensible keyboard traversal and scroll within the viewport. Controls aim for at least 44 CSS px touch targets. Resolve menu positioning from the actual trigger and viewport; do not obscure content when closed. Preserve Back/Forward, library filter semantics, admin draft DOM and existing access gates.
 
@@ -45,4 +45,4 @@ Menus open on tap/click and keyboard, not hover alone. One outer menu open at a 
 
 ## Boundary / next action
 
-Runtime and Preferences controls are implemented on the task branch. New migration/menu/appearance/focus regressions passed after failing first; the whole Node suite passes 1,226 tests. Build and repository checks pass. Foundation run 38485686475 passed check, Chromium and iPad WebKit at API 186b4333. Screenshots of both palettes/styles and real menus were inspected. Q3 rotation, reload equality, all eight appearance combinations and opaque fallback cascade pass with synthetic fixtures. Physical-device/OS-setting acceptance is not claimed. PR #233 is prepared for integration review. No production merge/deployment is authorized by this plan. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
+PR #233 is released. PR #235 correction at 25bd210e passes Foundation 38523244802 (check, Chromium, native macOS WebKit flows), 1,227 Node tests/check/77-file build, all eight appearances, portrait/landscape parity, 44px fit, 172 rendered leaves and fallbacks. Ordinary-main Chromium frosting is measured at about 93% contrast suppression; actual viewport screenshots were inspected. Native WebKit snapshot blur is unavailable even for a validated independent plain pane; no WebKit/physical-iPad frosting claim. Faint sharp margin bleed remains a Minor capture observation with source cause unproven. Independent review has no Critical/Important source blocker. Next: existing owner-authorized GitHub -> Cloudflare release and production verification. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.

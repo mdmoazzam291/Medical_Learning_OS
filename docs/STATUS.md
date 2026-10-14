@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 - Tablet parity / Glass correction verified and ready for source release
+
+PR #235 verified head 25bd210e11985b66ee18ddcf0290835864075827 passes Foundation 38523244802: check, composited Chromium and native macOS WebKit flows. Local/CI Node suite passes 1,227/1,227; check/77-file build pass. Both tablet orientations retain the same visible top workspaces above 700px with 44px controls. Glass near-solid tint, stacked cluster paint and the header's popup backdrop-root trap are corrected; palettes/preferences, Standard default, opaque reading cards, phones and canonical routes remain.
+
+Failing-first portrait/alpha regressions are recorded. Ordinary-main Chromium frosting suppresses measured contrast about 93% on tablet/desktop, with actual screenshots inspected. All eight appearances, touch/width/rotation, 172 rendered leaves, persistence, permissions/focus/history/drafts and opaque fallbacks pass. Independent review has no Critical/Important source findings. The native WebKit snapshot control cannot render blur, so its pixel verification is unavailable rather than called a pass; physical iPad/OS setting and hosted real-account switching remain unverified. A faint sharp margin bleed remains a Minor capture observation with source cause unproven. Ready to release under the owner's existing GitHub -> Cloudflare route; no merge/deployment yet. Preview Issue #211 remains separate.
+
 ## 2026-10-14 - Centered navigation and optional Glass released
 
 PR #233 merged as 6913872a2222650fbfd1ef4cfc0887bee91741df through the owner-approved existing GitHub -> Cloudflare route. Main Foundation run 38516083659 passed check, Chromium and iPad WebKit; fresh merged-tree Node suite passed 1,226/1,226. Both Cloudflare production builds passed: learner web bc235da1-128d-4e7f-99e3-66c634e29fcc and heartbeat e5708e62-a369-4ff2-8487-b4568702a72f. Live public inspection confirmed new centered navigation, contextual menus, 19-subject index/independent nested groups, search reveal, persisted dark mode and signed-out access gates. Verification browser restored to Light.
