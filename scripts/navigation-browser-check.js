@@ -260,13 +260,29 @@ try {
       assert.equal(await page.getByRole('link', { name: 'Master Admin', exact: true }).count(), 0, 'admin master stays out of the closed phone header');
     }
     if (width <= 700) {
-      for (const phoneWidth of [320, 390]) {
+      for (const phoneWidth of [320, 375, 390, 430]) {
         await page.setViewportSize({ width: phoneWidth, height });
         await page.waitForFunction(() => Boolean(document.querySelector('.mlos-mobile-menu')));
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'phone content fits ' + phoneWidth);
         assert.equal(await page.locator('.mlos-header').evaluate(node => [...node.children].every(child => child.getBoundingClientRect().right <= innerWidth)), true, 'phone header fits ' + phoneWidth);
         await openTools();
         assert.equal(await mainNav.getByRole('link', { name: 'Home', exact: true }).isVisible(), true);
+        const drawerFit = await page.locator('#mlos-panel').evaluate(node => {
+          const rect = node.getBoundingClientRect();
+          const visibleControls = [...node.querySelectorAll('nav a,nav button')].filter(control => control.getClientRects().length);
+          return {
+            width: rect.width,
+            outsideWidth: innerWidth - rect.right,
+            controlsFit: visibleControls.every(control => {
+              const b = control.getBoundingClientRect();
+              return b.left >= rect.left - 1 && b.right <= rect.right + 1;
+            })
+          };
+        });
+        const expectedWidth = Math.min(Math.max(216, phoneWidth * .58), 244, phoneWidth - 96);
+        assert.ok(Math.abs(drawerFit.width - expectedWidth) < 2, 'actual phone drawer width ' + phoneWidth);
+        assert.ok(drawerFit.outsideWidth >= 95, 'outside dismissal region ' + phoneWidth);
+        assert.equal(drawerFit.controlsFit, true, 'drawer links and controls fit ' + phoneWidth);
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('.mlos-mobile-menu').evaluate(node => document.activeElement === node), true);
       }
