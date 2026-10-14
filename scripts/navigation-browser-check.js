@@ -96,6 +96,18 @@ try {
       await page.locator('#mlos-workspace-menu').waitFor({ state: 'visible' });
     };
     const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click(); } else await page.keyboard.press('Escape'); };
+    // Phone pin buttons are temporarily hidden by design. Seed/toggle the existing
+    // persisted preference in the test harness; real pin clicks remain tested above 700px.
+    const togglePinForNavigationTest = async key => {
+      if (page.viewportSize().width > 700) return activate(page.locator('#mlos-local-nav [data-pin="' + key + '"]'));
+      await page.evaluate(pinKey => {
+        const existing = JSON.parse(localStorage.getItem('mlos-navigation-v1'));
+        const pins = existing.pins.includes(pinKey)
+          ? existing.pins.filter(value => value !== pinKey)
+          : [...existing.pins, pinKey];
+        window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...existing, pins } } }));
+      }, key);
+    };
     // Wait for background access reads before abandoning a document. WebKit
     // reports canceled cross-origin fixture reads as access-control errors.
     const go = async url => { await page.waitForLoadState('networkidle'); await page.goto(url); };
@@ -356,7 +368,7 @@ try {
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:references"]').getAttribute('open'), '');
     if (width > 700) assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => { const r = node.getBoundingClientRect(); return r.top >= 56 && r.bottom <= innerHeight && node.scrollHeight > node.clientHeight; }), true, 'long independent indexes scroll inside the viewport');
     if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-library-index-' + name + '.png'), fullPage: false });
-    await activate(page.locator('#mlos-local-nav [data-pin="library:subjects"]'));
+    await togglePinForNavigationTest('library:subjects');
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).count(), 0, 'same-workspace pin does not duplicate its destination');
     await page.keyboard.press('Control+k');
     await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Preserved search');
@@ -457,10 +469,10 @@ try {
     // but still allow a shortcut pin and accessible collapsed flyout.
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').count(), 1);
     assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 1);
-    await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
+    await togglePinForNavigationTest('admin:content');
     assert.equal(await page.locator('[data-group="admin:content"]').count(), 1, 'a pinned group never duplicates the local Admin group');
     assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').getAttribute('aria-pressed'), 'true');
-    await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
+    await togglePinForNavigationTest('admin:content');
     assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
     await closeTools();
     await openTools();
@@ -634,7 +646,7 @@ try {
     await go(origin + '/web/workspace.html?master=account&section=preferences');
     await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
-    await activate(page.locator('#mlos-local-nav [data-pin="account:data"]'));
+    await togglePinForNavigationTest('account:data');
     if (width <= 1050) await closeTools();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
@@ -866,14 +878,14 @@ try {
     await go(origin + '/web/library.html?view=questions&master=study&build=1');
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
-    await activate(page.locator('#mlos-local-nav [data-pin="study:build"]'));
+    await togglePinForNavigationTest('study:build');
     await go(origin + '/web/library.html?view=notes');
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
     assert.equal(await page.locator('[data-filter="keyword"] option[value="diagnosis"]').count(), 0);
     await page.getByLabel('Collection', { exact: true }).selectOption('');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
-    await activate(page.locator('#mlos-local-nav [data-pin="library:notes"]'));
+    await togglePinForNavigationTest('library:notes');
     await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('build'), '1');
