@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Cashfree primary / PhonePe alternative migration (feature branch)
+Owner directed Cashfree primary, PhonePe as backup, and removal of unused Razorpay sandbox code. Branch `feature/cashfree-primary-phonepe-backup-20261014` adds a disabled Cashfree server-side sandbox Subscriptions adapter (create/fetch and raw-body signature verifier), a provider-neutral default-disabled routing policy, focused tests and `docs/CONSUMER_PAYMENT_GATEWAY.md`. Removed `src/adapters/razorpay-test.js`, `tests/razorpay-test.test.js`, and `docs/RAZORPAY_SANDBOX_PREPARATION.md` from active tree. Prior historical STATUS/ADR references describe the previous state, not an ongoing integration.
+
+Pending on this branch at checkpoint: new Node/check/build/browser CI verification and merge. No Cashfree account connection, test credentials, live checkout, webhook route, subscription DB, learner grant or customer debit exists. PhonePe requires explicit later implementation; no automatic rerouting or mandate portability claim. Existing Free/Pro/AI Pro plan UI stays preview-only and source/right/content readiness gates remain intact.
+
+
 ## 2026-10-14 — Consumer tiers, preview-only Plans and Razorpay test adapter merged
 PR #238 merged as `e5523ab2833e38da729440067057ea3846fe6c41`. Free/Pro/AI Pro pure entitlement definition and price proposals, account-linked responsive Plans preview in canonical Sage/Lavender themes, and a non-public default-disabled Razorpay test helper with raw-body webhook signature check are now in `main`. No checkout, live keys, payment endpoint, customer charging, grant issuance, or institution functionality was enabled.
 
