@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Cashfree next milestone: one-shot iPad remote-dev runner (2026-10-15)
+- Owner's Cloudflare screenshot shows `mlos-cashfree-sandbox` has no Cron triggers. Editor Schedule test button disabled. Cashfree Test API keys remain encrypted/bound; checkout and network flags off.
+- Branch `ops/cashfree-one-shot-remote-dev-runner-20261015` adds an operator-run **bash** harness `scripts/cashfree-probe-once.sh`, static fail-closed tests, and iPad+Codespaces setup notes in `docs/CASHFREE_READONLY_API_PROBE.md`. This is a Cloudflare temporary remote development session only, not a Worker deployment. It forces explicit owner confirmation, uses `wrangler dev --remote --test-scheduled` and process-only flag overrides, one local scheduled event and cleanup.
+- Cloudflare OAuth 2.0 Device Authorization (Wrangler v4.119.0+) enables login from iPad even though Codespaces runs remotely. Owner authorizes login in their own browser; do not request or save the OAuth code/token in chat or GitHub. Recommend Wrangler logout and deleting the Codespace after trial.
+- Caveat: Cloudflare documents production Secrets Store values unavailable to *local* dev, and remote dev binds remote resources, but the actual preview connectivity to these secrets has **not been established**. A failed preview does not imply invalid Cashfree keys. No actual Cashfree GET performed.
+- This branch and PR are pending CI at checkpoint. On green, merge docs/test/runner only and ask owner to open an isolated iPad Codespace, run device login + one-shot probe. No Cron, public route, checkout, mandate or entitlements. Do not conflate this with mobile navigation or other PRs.
+
+
 ## Cashfree read-only API diagnostic release receipt (2026-10-15, supersedes pending section)
 - PR #252 merged into `main` at `00989637a2907b1233aefa80f94b3a06edf4bdee`. GitHub Foundation run **38634200958** `check`, `browser`, `webkit` all successful.
 - Code on main: `probeCashfreeSandboxPlanAccess` in `src/adapters/cashfree-test.js` (GET nonexistent test plan, sanitized status enum, no response body), server-only service method in `src/adapters/cashfree-sandbox-bindings.js`, `auth_probe` run mode in `cloudflare/cashfree-sandbox-worker.js` (still HTTP 404, no cron). Tests all mocked; no Cashfree credentials read by assistant.

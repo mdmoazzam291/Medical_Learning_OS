@@ -59,3 +59,30 @@ Sources:
 - Cashfree documented **Fetch a plan** request (v2025-01-01): https://www.postman.com/cashfreedevelopers/cashfree-apis-v2025-01-01/request/gqu0p62/fetch-a-plan
 - Cashfree Subscriptions developer flow: https://www.cashfree.com/devstudio/preview/subs/web/checkout
 - Cloudflare scheduled event manual testing (development only): https://developers.cloudflare.com/workers/runtime-apis/handlers/scheduled/
+
+## 2026-10-15: Optional iPad-only one-shot remote diagnostic (manual operator)
+
+The previously deployed Cloudflare Worker is safe and remains **OFF** by default. The owner's Cloudflare UI confirmed zero Cron Triggers and the editor's Schedule test control was disabled. Instead of changing live runtime variables or creating a cron, `scripts/cashfree-probe-once.sh` supports **temporary Wrangler remote development**. Cloudflare officially supports both `wrangler dev --remote` (code executes in a temporary Cloudflare preview environment with remote bindings) and device OAuth authentication, which works from a separate browser/device. Exact behavior of your Secrets Store bindings in this temporary development mode has **not yet been tested**, so failure must not be interpreted as invalid Cashfree API keys.
+
+### Owner actions on iPad, without a computer
+
+**Only if GitHub Codespaces is available in your account**, and after this script has passed CI and merged:
+
+1. Open [GitHub Codespaces](https://github.com/codespaces) in iPad Safari, create a fresh private Codespace for `mdmoazzam291/Medical_Learning_OS` from the latest `main`. Codespace availability/usage may depend on your GitHub account.
+2. Open Codespaces' terminal. Ensure recent Node/npm are available (`node --version`). If Node is older than the repository's required 24, use `nvm install 24 && nvm use 24`.
+3. Execute `npx --yes wrangler@^4.119.0 login --device --browser=false`. Wrangler will show a URL and a temporary device code. Open the URL in a **private iPad browser tab**, sign in to your own Cloudflare account and approve only the requested permissions. **Never paste OAuth codes, access tokens or secrets into ChatGPT.** Cloudflare's device-login support starts in Wrangler v4.119.0.
+4. After login succeeds, run **exactly**: `MLOS_CONFIRM_ONE_CASHFREE_GET=YES_TEST_ONLY bash scripts/cashfree-probe-once.sh`. This script checks the disabled, isolated Wrangler file before proceeding. It starts a temporary remote-dev preview with **process-only** sandbox flags, binds existing account secrets remotely, invokes the local `/__scheduled` test endpoint **once**, and closes the temporary process, deleting local scratch logs.
+5. Record **only** the sanitized result label printed by the script, never a raw log or provider body. It may read `unauthorized`, `forbidden_or_product_restricted`, `not_found_auth_inconclusive`, `transport_failed`, or “No verified provider result captured.” **A 404 is not proof of successful authentication.** No result is assumed until actually observed.
+6. Finish with `npx --yes wrangler@^4.119.0 logout`, close the session and **delete the Codespace** once you have checked there are no unrelated changes to keep. This reduces exposure from temporary Cloudflare OAuth tokens stored within that development environment.
+
+**Do not run `wrangler deploy`, `wrangler secret put`, `wrangler preview secret put`, or use any Cloudflare production key.** You do not need to change Cloudflare's worker Settings, stored secret values, public route, Cron Trigger or the main `wrangler.jsonc`. The script only uses `dev --remote --test-scheduled` with the explicitly named isolated configuration.
+
+**Important limitation:** Cloudflare documents that *local* development cannot retrieve production Secrets Store values, and that *remote* development uses remote bindings. Whether this particular remote preview has access to both account Secrets Store bindings requires real-world confirmation. If remote preview fails, stop and report only a generic error type. Do **not** try to export/decrypt the Secrets Store values into Codespaces to work around it.
+
+**Security boundary:** The Codespace terminal is authenticated as the owner through Cloudflare device authorization. The temporary preview is not a production deployment and has no useful public HTTP route (all fetch requests return 404). One fixed GET is used for testing; customer checkout, subscriptions, mandates, webhook writers, recurring crons and learner entitlements stay untouched.
+
+Official references:
+- [Wrangler device authentication without callback, Aug 2026](https://developers.cloudflare.com/changelog/post/2026-08-04-wrangler-login-device-flow/)
+- [Remote development executes on Cloudflare infrastructure](https://developers.cloudflare.com/workers/local-development/)
+- [Wrangler `dev --var` and `--test-scheduled`](https://developers.cloudflare.com/workers/wrangler/commands/workers/)
+- [Secrets Store Worker integration, local/remote limitations](https://developers.cloudflare.com/secrets-store/integrations/workers/)
