@@ -267,6 +267,20 @@ try {
         assert.equal(await page.locator('.mlos-header').evaluate(node => [...node.children].every(child => child.getBoundingClientRect().right <= innerWidth)), true, 'phone header fits ' + phoneWidth);
         await openTools();
         assert.equal(await mainNav.getByRole('link', { name: 'Home', exact: true }).isVisible(), true);
+        const pinVisibility = await page.locator('#mlos-panel').evaluate(node => {
+          const pins = [...node.querySelectorAll('.mlos-pin')];
+          const rows = [...node.querySelectorAll('.mlos-nav-row')];
+          return {
+            pinsPresent: pins.length > 0,
+            allHidden: pins.every(button => getComputedStyle(button).display === 'none'),
+            fullWidthLinks: rows.every(row => {
+              const link = row.querySelector(':scope > a');
+              return !link || link.getBoundingClientRect().width >= row.getBoundingClientRect().width - 2;
+            })
+          };
+        });
+        assert.deepEqual(pinVisibility, { pinsPresent: true, allHidden: true, fullWidthLinks: true },
+          'phone hides pinnable actions without shrinking navigation links ' + phoneWidth);
         const drawerFit = await page.locator('#mlos-panel').evaluate(node => {
           const rect = node.getBoundingClientRect();
           const visibleControls = [...node.querySelectorAll('nav a,nav button')].filter(control => control.getClientRects().length);
