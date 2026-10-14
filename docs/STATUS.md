@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 - Release investigation blocked by provider authentication
+
+Owner authorized investigating/fixing the Cloudflare failure and completing PR #233 release verification. PR remains open/ready at validated head 4dccc636420ae0006b2f1eb4d343d4784480d34e. Final Foundation run 38487300811 and fresh local 1,226-test/check/build verification passed. The Cloudflare web check failed at build 1f9e5d09-f588-44f5-83c4-7f7172e68e3e; GitHub has no failure message. Repository static-delivery configuration was inspected with no demonstrated source-build defect. Current root cause is unconfirmed.
+
+Cloudflare required sign-in. The owner selected GitHub through secure browserAuth; GitHub reported Incorrect username or password. No provider configuration, security/access settings, merge or deployment was changed. Manual authentication is the next necessary step before reading the exact provider error. Keep existing production and heartbeat intact; then repair the evidenced cause, verify branch build, merge under the owner's release authorization, and verify main/deployment/live flows. Issue #211 remains open.
+
 ## 2026-10-14 — Centered navigation / optional Glass and Q3 acceptance complete
 
 The owner-approved tablet/desktop arrangement is implemented in PR #233: 56px centered master links with independent contextual tools, a narrow-window top launcher and no permanent sidebar. Phone flow and all canonical destinations, server Admin gates, pins, independent nested groups, filters and mounted learner/admin content remain. Preferences separates Standard (default) / optional Glass from existing Sage/Lavender and Light/Dark. Navigation Glass follows the chosen palette; reading cards stay opaque. Screenshot QA strengthened menu tint; reduced-transparency and unsupported-feature paths remain opaque.
