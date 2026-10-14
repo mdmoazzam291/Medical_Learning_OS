@@ -95,12 +95,8 @@ test('separately gated internal mode sends GET only; logs contain controlled res
   assert.equal(calls,1);
   assert.equal(JSON.stringify(result).includes('mock-secret-value-123'),false);
   assert.equal(resolveConsumerAccess().plan,'free');
-  const logs=[],oldInfo=console.info;
-  console.info=(...args)=>logs.push(args);
-  try {
-    await staging.scheduled({noRetry(){}},e);
-  } finally { console.info=oldInfo; }
-  // scheduled does not run through mocked transport here; no assertion on external network
+  // Never invoke the live scheduled() handler while the test network flag is
+  // enabled. CI unit tests must use injected mock transport only.
   assert.equal(publicFileSet.has('cloudflare/cashfree-sandbox-worker.js'),false);
 });
 test('sandbox service is disabled without network flag even if its direct probe method is called',async()=>{
