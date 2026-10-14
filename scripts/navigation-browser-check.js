@@ -200,12 +200,12 @@ try {
           return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length);
         }, { src: url, clip });
       };
-      const frosted = await page.screenshot({ fullPage: false });
+      const frosted = await page.screenshot({ fullPage: false, ...(process.env.SCREENSHOT_DIR ? { path: join(process.env.SCREENSHOT_DIR, 'glass-probe-frosted-' + name + '.png') } : {}) });
       await page.evaluate(first => {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
         sheet.insertRule('#mlos-workspace-menu{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}', first + 2);
       }, probeRules);
-      const clear = await page.screenshot({ fullPage: false });
+      const clear = await page.screenshot({ fullPage: false, ...(process.env.SCREENSHOT_DIR ? { path: join(process.env.SCREENSHOT_DIR, 'glass-probe-clear-' + name + '.png') } : {}) });
       const frostedContrast = await pixelContrast(frosted, 'frosted'), clearContrast = await pixelContrast(clear, 'clear');
       await page.evaluate(first => {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
@@ -215,11 +215,13 @@ try {
         // Diagnose renderer capability separately from app ancestry/paint.
         const probe = await context.newPage();
         const probeUrl = origin + '/__glass-capability.html';
-        await probe.route(probeUrl, route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><style>body{margin:0;background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}#probe{position:fixed;z-index:40;left:' + rect.x + 'px;top:' + rect.y + 'px;width:380px;height:300px;background:rgba(221,232,220,.76);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}</style><div id="probe"></div>' }));
+        await probe.route(probeUrl, route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>html{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}body{margin:0;min-height:100vh}#probe{position:fixed;z-index:40;left:' + rect.x + 'px;top:' + rect.y + 'px;width:380px;height:300px;background:rgba(221,232,220,.76);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}</style><div id="probe"></div>' }));
         await probe.goto(probeUrl);
         const minimalBlur = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-blur');
-        await probe.evaluate(() => { const node = document.querySelector('#probe'); node.style.backdropFilter = node.style.webkitBackdropFilter = 'none'; });
+        await probe.evaluate(() => { const node = document.querySelector('#probe'); node.style.setProperty('backdrop-filter', 'none', 'important'); node.style.setProperty('-webkit-backdrop-filter', 'none', 'important'); });
         const minimalClear = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-clear');
+        const minimalStyles = await probe.locator('#probe').evaluate(node => ({ blur: getComputedStyle(node).backdropFilter, webkitBlur: getComputedStyle(node).webkitBackdropFilter, width: innerWidth }));
+        if (process.env.SCREENSHOT_DIR) await probe.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'glass-minimal-clear-' + name + '.png') });
         await probe.close();
         const variants = [];
         await page.evaluate(() => {
@@ -235,7 +237,7 @@ try {
           await page.locator('#mlos-workspace-menu').evaluate((node, saved) => { node.style.cssText = saved; node.parentElement.style.cssText = ''; }, saved);
         }
         await page.evaluate(() => { const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css')); sheet.deleteRule(sheet.cssRules.length - 1); sheet.deleteRule(sheet.cssRules.length - 1); });
-        console.error('Glass renderer diagnosis', JSON.stringify({ engine, minimalBlur, minimalClear, variants }));
+        console.error('Glass renderer diagnosis', JSON.stringify({ engine, minimalBlur, minimalClear, minimalStyles, variants }));
       }
       assert.ok(clearContrast > .04 && frostedContrast < clearContrast * .25, 'Glass actually frosts the backdrop: ' + JSON.stringify({ frostedContrast, clearContrast }));
       await closeTools(); await go(origin + '/web/workspace.html?master=account&section=preferences');
@@ -778,7 +780,8 @@ try {
     if (width < 1050) {
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
-      if (touch) await page.touchscreen.tap(width - 12, 170); else await page.mouse.click(width - 12, 170);
+      const outsideX = await page.evaluate(() => document.documentElement.clientWidth - 12);
+      if (touch) await page.touchscreen.tap(outsideX, 170); else await page.mouse.click(outsideX, 170);
       assert.equal(await page.locator('#mlos-navigation').evaluate(node => node.classList.contains('mlos-search-open')), false);
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Unsubmitted draft');
