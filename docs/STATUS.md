@@ -1,5 +1,13 @@
 # Current status
 
+## 2026-10-14 — Screenshot-confirmed sidebar width: second, more visible reduction pending
+Owner's real post-release iPhone screenshot (`IMG_6475.jpeg`, 1179px wide) shows the Account drawer ends at approximately x=779px, ~66% of a 390 CSS-px viewport. This confirms the PR #249 CSS reduction **is active** (about 257px rather than the former 280px), but the observed ~8% reduction remains visually too small. The previously generated 320px→240px comparison illustration is not a measurement of the deployed app.
+
+Second pass branch `fix/mobile-drawer-compact-verified-20261014` uses `width:min(clamp(216px,58vw,244px),calc(100dvw - 96px))` consistently in both mobile drawer-open paths: 216px at 320, 217.5px at 375, 226.2px at 390 and 244px at 430. It leaves a visibly larger outside-dismissal region while retaining 44px-tall workspace links, 40×44px pins, text wrapping, and the existing full-width learning workspace when closed. A deterministic width regression plus an extended actual-browser geometry/control fit check target 320, 375, 390 and 430 CSS-px phones. Tablet/desktop CSS, preferences, backend and content remain unchanged.
+
+**Status:** code committed to feature branch; complete Foundation check/Chromium/WebKit verification, GitHub PR merge, Cloudflare production delivery and fresh screenshot acceptance remain separate gates. Only report these steps as completed once independently observed.
+
+
 ## 2026-10-14 — Mobile sidebar footprint reduction, PR #249 pending verification
 Owner's iPhone screenshot showed the Account navigation overlay using approximately 71% of screen width. On branch `fix/mobile-drawer-safe-width-20261014`, both mobile drawer-open CSS selectors now use `min(clamp(240px, 66vw, 272px), 100dvw - 64px)` instead of the 280px cap. At 320/375/390/430 CSS-px viewports this targets 240/247.5/257.4/272 px, leaving at least a 64px outside-dismissal region. Mobile master-link spacing is tightened, long account destinations may wrap, and pin button hit areas are at least 40×44px. Tablet and desktop rules are unchanged. A new regression test checks both CSS selectors, representative widths, and navigation affordances; targeted static checks passed before PR opening.
 
