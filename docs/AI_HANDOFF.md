@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Cashfree read-only API diagnostic release receipt (2026-10-15, supersedes pending section)
+- PR #252 merged into `main` at `00989637a2907b1233aefa80f94b3a06edf4bdee`. GitHub Foundation run **38634200958** `check`, `browser`, `webkit` all successful.
+- Code on main: `probeCashfreeSandboxPlanAccess` in `src/adapters/cashfree-test.js` (GET nonexistent test plan, sanitized status enum, no response body), server-only service method in `src/adapters/cashfree-sandbox-bindings.js`, `auth_probe` run mode in `cloudflare/cashfree-sandbox-worker.js` (still HTTP 404, no cron). Tests all mocked; no Cashfree credentials read by assistant.
+- **No real Cloudflare event or Cashfree sandbox authentication request has occurred.** All committed sandbox/network mode flags still disabled. 404 for missing test plan is inconclusive. No published subscription plans/mandates/payment access granted, no public checkout.
+- Next: verify separate Worker post-main Cloudflare build and bindings in the Dashboard, then plan an authenticated **one-time internal scheduled event** to run GET-only probe, without public routes/automatic cron. Since this chat cannot access Cloudflare as a connected app, explicit owner action or supported authorized cloud tooling is required. Preserve premium grant locks and PhonePe alternative.
+- Previous “PR pending” Cashfree subsection below is historical. Preserve unrelated mobile UI and auth state.
+
+
 ## Cashfree sandbox API readiness (2026-10-15 IST, independent of mobile UI work)
 - Owner supplied screenshots of Cashfree Test Environment Subscriptions menu, All Subscriptions and All Plans (No Plans Found under 30-day filter). Provider API authorization is NOT established by the dashboard.
 - Working branch: `feat/cashfree-readonly-auth-diagnostic-20261015`. Touches only `src/adapters/cashfree-test.js`, `src/adapters/cashfree-sandbox-bindings.js`, `cloudflare/cashfree-sandbox-worker.js`, Cashfree probe tests, and relevant docs. The separate Worker has no public route/cron, and default-off flags are unchanged.
