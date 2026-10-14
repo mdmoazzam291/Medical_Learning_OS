@@ -4,7 +4,9 @@ Independent read-only reviewer examined b17369d..250fccd and actual Chromium/Web
 
 - Minor: opacity assertions omitted gradient paint. Resolved by actual computed gradient-stop alpha and conservative combined-paint bounds.
 - Minor: acceptance paragraph still described PR #233 as unreleased and 1,226 tests. Resolved with current release/refinement state and 1,227 tests.
-- Important: underlying text stayed sharp through menus despite computed blur. Rendered-pixel regression failed RED on run 38520061703. Composited visual verification now uses native macOS WebKit and headed Chromium; threshold unchanged. Final GREEN/screenshots pending.
-- Important: a filtered header creates a backdrop root/containing block for nested Account/Search. Resolved in source by a separate header ::before frost layer; container remains unfiltered. Opaque fallbacks retained. Final browser acceptance pending.
+- Important: underlying text stayed sharp through menus despite computed blur. Rendered-pixel regression failed RED on run 38520061703. Composited visual verification now uses native macOS WebKit and headed Chromium; threshold unchanged. Composited Chromium passes the strict pixel check at 567dbbca/run 38521674800. Independent native WebKit control proves its snapshot path cannot render frosting, so report that limitation distinctly; retain the strict check for capable renderers. Final complete flows/normal screenshots pending.
+- Important: a filtered header creates a backdrop root/containing block for nested Account/Search. Resolved in source by a separate header ::before frost layer; container remains unfiltered. Opaque fallbacks retained. Follow-up independent review approves the pseudo-layer cascade and fallback. Final complete browser flows pending.
 
 Reviewer declined to establish optical quality, physical iPad/OS settings or live release from source alone. Production release remains pending real browser evidence. No content/backend/Auth change.
+
+The reviewer accepted capability-gated pixel verification only with validated independent clear stripes/geometry/computed blur, distinct unavailable reporting, and unchanged app assertion on capable renderers. This is a harness limitation, not an application visual pass. Chromium rendered frosting provides supported-renderer evidence; physical iPad remains unclaimed.

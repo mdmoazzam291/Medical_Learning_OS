@@ -193,6 +193,7 @@ try {
           const image = new Image(); image.src = src; await image.decode();
           const canvas = document.createElement('canvas'); canvas.width = image.width; canvas.height = image.height;
           const context = canvas.getContext('2d'); context.drawImage(image, 0, 0);
+          if (image.width !== Math.round(innerWidth * devicePixelRatio) || image.height !== Math.round(innerHeight * devicePixelRatio)) throw new Error('Glass screenshot/sample viewport mismatch');
           const scale = image.width / innerWidth;
           const rgba = context.getImageData(Math.round(clip.x * scale), Math.round(clip.y * scale), Math.round(clip.width * scale), Math.round(clip.height * scale)).data, values = [];
           for (let i = 0; i < rgba.length; i += 4) values.push(rgba[i] / 255);
@@ -211,35 +212,29 @@ try {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
         for (let i = 0; i < 3; i++) sheet.deleteRule(first);
       }, probeRules);
+      let renderingUnavailable = false;
       if (!(clearContrast > .04 && frostedContrast < clearContrast * .25)) {
-        // Diagnose renderer capability separately from app ancestry/paint.
-        const probe = await context.newPage();
-        const probeUrl = origin + '/__glass-capability.html';
-        await probe.route(probeUrl, route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>html{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}body{margin:0;min-height:100vh}#probe{position:fixed;z-index:40;left:' + rect.x + 'px;top:' + rect.y + 'px;width:380px;height:300px;background:rgba(221,232,220,.76);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}</style><div id="probe"></div>' }));
-        await probe.goto(probeUrl);
-        const minimalBlur = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-blur');
-        await probe.evaluate(() => { const node = document.querySelector('#probe'); node.style.setProperty('backdrop-filter', 'none', 'important'); node.style.setProperty('-webkit-backdrop-filter', 'none', 'important'); });
-        const minimalClear = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-clear');
-        const minimalStyles = await probe.locator('#probe').evaluate(node => ({ blur: getComputedStyle(node).backdropFilter, webkitBlur: getComputedStyle(node).webkitBackdropFilter, width: innerWidth }));
-        if (process.env.SCREENSHOT_DIR) await probe.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'glass-minimal-clear-' + name + '.png') });
-        await probe.close();
-        const variants = [];
-        await page.evaluate(() => {
-          const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
-          sheet.insertRule('body::after{content:"";position:fixed;inset:0;z-index:35;pointer-events:none;background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}', sheet.cssRules.length);
-          sheet.insertRule('#mlos-workspace-menu>*{visibility:hidden}', sheet.cssRules.length);
-        });
-        for (const [variant, css] of [['plain', 'background-image:none;box-shadow:none;overflow:visible'], ['blur-only', 'backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)'], ['promoted', 'transform:translateZ(0)'], ['absolute', 'position:absolute'], ['parent-layer', 'parent']]) {
-          const saved = await page.locator('#mlos-workspace-menu').evaluate((node, value) => {
-            const saved = node.style.cssText; if (value === 'parent') node.parentElement.style.cssText = 'position:relative;z-index:40'; else node.style.cssText += ';' + value; return saved;
-          }, css);
-          variants.push({ variant, contrast: await pixelContrast(await page.screenshot({ fullPage: false }), variant) });
-          await page.locator('#mlos-workspace-menu').evaluate((node, saved) => { node.style.cssText = saved; node.parentElement.style.cssText = ''; }, saved);
-        }
-        await page.evaluate(() => { const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css')); sheet.deleteRule(sheet.cssRules.length - 1); sheet.deleteRule(sheet.cssRules.length - 1); });
-        console.error('Glass renderer diagnosis', JSON.stringify({ engine, minimalBlur, minimalClear, minimalStyles, variants }));
+        // A separate control distinguishes a navigation defect from snapshot
+        // paths that parse backdrop-filter but do not render it at all.
+        const probe = await context.newPage(), probeUrl = origin + '/__glass-capability.html';
+        await probe.route(probeUrl, route => route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>html{background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}body{margin:0;min-height:100vh}#probe{position:fixed;left:' + rect.x + 'px;top:' + rect.y + 'px;width:380px;height:300px;background:rgba(221,232,220,.76);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}</style><div id="probe"></div>' }));
+        try {
+          await probe.goto(probeUrl);
+          const geometry = await probe.locator('#probe').evaluate(node => ({ x: node.getBoundingClientRect().x, y: node.getBoundingClientRect().y, width: innerWidth, blur: getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none' }));
+          assert.equal(geometry.width, width); assert.equal(geometry.x, rect.x); assert.equal(geometry.y, rect.y); assert.notEqual(geometry.blur, 'none');
+          const minimalBlur = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-blur');
+          await probe.evaluate(() => { const node = document.querySelector('#probe'); node.style.setProperty('backdrop-filter', 'none', 'important'); node.style.setProperty('-webkit-backdrop-filter', 'none', 'important'); });
+          assert.equal(await probe.locator('#probe').evaluate(node => getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none'), 'none');
+          const minimalClear = await pixelContrast(await probe.screenshot({ fullPage: false }), 'minimal-clear');
+          assert.ok(minimalClear > .04, 'independent clear control contains visible stripes');
+          renderingUnavailable = Math.abs(minimalBlur - minimalClear) < .005;
+          if (renderingUnavailable) console.warn('GLASS_FROST_VERIFICATION_UNAVAILABLE', JSON.stringify({ engine, name, minimalBlur, minimalClear, geometry }));
+        } finally { await probe.close(); }
       }
-      assert.ok(clearContrast > .04 && frostedContrast < clearContrast * .25, 'Glass actually frosts the backdrop: ' + JSON.stringify({ frostedContrast, clearContrast }));
+      if (!renderingUnavailable) {
+        assert.ok(clearContrast > .04 && frostedContrast < clearContrast * .25, 'Glass actually frosts the backdrop: ' + JSON.stringify({ frostedContrast, clearContrast }));
+        console.log('GLASS_FROST_VERIFIED', JSON.stringify({ engine, name, frostedContrast, clearContrast }));
+      }
       await closeTools(); await go(origin + '/web/workspace.html?master=account&section=preferences');
       await page.getByLabel('Surface style', { exact: true }).selectOption('standard');
       await go(origin + '/web/library.html?view=subjects');
