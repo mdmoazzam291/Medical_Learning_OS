@@ -7,6 +7,26 @@ import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
 import { MASTERS, navigationFor, routeIdentity } from '../src/domain/app-navigation.js';
 import { ADMIN_VIEWS } from '../web/admin-workspace-view.js';
+// Read resolved paint, including the tint gradient, in the actual browser.
+function navigationPaint() {
+  const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
+  const context = canvas.getContext('2d');
+  const alpha = color => {
+    context.clearRect(0, 0, 1, 1); context.fillStyle = color; context.fillRect(0, 0, 1, 1);
+    return context.getImageData(0, 0, 1, 1).data[3] / 255;
+  };
+  const paint = node => {
+    if (!node) return { base: 0, maximum: 0, blur: 'none' };
+    const styles = getComputedStyle(node), base = alpha(styles.backgroundColor);
+    const stops = styles.backgroundImage === 'none' ? [] : styles.backgroundImage.match(/(?:color|rgba?|hsla?|oklab|oklch|lab|lch)\([^)]*\)|transparent/g);
+    if (styles.backgroundImage !== 'none' && !stops?.length) throw new Error('Unrecognized navigation background paint: ' + styles.backgroundImage);
+    const gradient = Math.max(0, ...(stops || []).map(alpha));
+    return { base, maximum: gradient + (1 - gradient) * base, blur: styles.backdropFilter || styles.webkitBackdropFilter || 'none' };
+  };
+  const header = paint(document.querySelector('.mlos-header')), menu = paint(document.querySelector('#mlos-workspace-menu'));
+  const nav = paint(document.querySelector('.mlos-header>.mlos-master-nav'));
+  return { header, menu, stackedMaximum: nav.maximum + (1 - nav.maximum) * header.maximum };
+}
 const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
 const engine = process.env.BROWSER_ENGINE || 'chromium';
 assert.ok(['chromium', 'webkit'].includes(engine));
@@ -149,22 +169,46 @@ try {
       await go(origin + '/web/workspace.html?master=account&section=preferences');
       await page.getByLabel('Surface style', { exact: true }).selectOption('glass');
       await go(origin + '/web/library.html?view=subjects'); await openTools();
-      const paint = await page.evaluate(() => {
-        const alpha = color => {
-          const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
-          const context = canvas.getContext('2d'); context.clearRect(0, 0, 1, 1);
-          context.fillStyle = color; context.fillRect(0, 0, 1, 1);
-          return context.getImageData(0, 0, 1, 1).data[3] / 255;
-        };
-        const header = getComputedStyle(document.querySelector('.mlos-header'));
-        const menu = getComputedStyle(document.querySelector('#mlos-workspace-menu'));
-        const nav = document.querySelector('.mlos-header>.mlos-master-nav');
-        const headerAlpha = alpha(header.backgroundColor), navAlpha = nav ? alpha(getComputedStyle(nav).backgroundColor) : 0;
-        return { menuAlpha: alpha(menu.backgroundColor), headerAlpha, stackedAlpha: navAlpha + (1 - navAlpha) * headerAlpha, menuBlur: menu.backdropFilter || menu.webkitBackdropFilter || 'none' };
+      const paint = await page.evaluate(navigationPaint);
+      assert.ok(paint.menu.base < .85 && paint.menu.maximum < .90, 'Glass contextual menu remains visibly translucent: ' + JSON.stringify(paint));
+      assert.ok(paint.header.base < .85 && paint.stackedMaximum < .90, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
+      assert.notEqual(paint.menu.blur, 'none', 'contextual Glass declares a backdrop blur');
+      // Verify rendered frosting against a controlled high-frequency backdrop.
+      // A computed blur alone can pass while ancestor/compositing rules suppress it.
+      const probeRules = await page.evaluate(() => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        const first = sheet.cssRules.length;
+        sheet.insertRule('body::after{content:"";position:fixed;inset:0;z-index:35;pointer-events:none;background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 4px)}', first);
+        sheet.insertRule('#mlos-workspace-menu>*{visibility:hidden}', first + 1);
+        return first;
       });
-      assert.ok(paint.menuAlpha < .85, 'Glass contextual menu remains visibly translucent: ' + JSON.stringify(paint));
-      assert.ok(paint.headerAlpha < .85 && paint.stackedAlpha < .85, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
-      assert.notEqual(paint.menuBlur, 'none', 'contextual Glass blurs underlying content');
+      const rect = await page.locator('#mlos-workspace-menu').boundingBox();
+      const clip = { x: Math.ceil(rect.x + 30), y: Math.ceil(rect.y + 80), width: 64, height: 64 };
+      const pixelContrast = async (bytes, suffix) => {
+        const url = origin + '/__glass-paint-' + name + '-' + suffix + '.png';
+        await page.route(url, route => route.fulfill({ contentType: 'image/png', body: bytes }));
+        return page.evaluate(async src => {
+          const image = new Image(); image.src = src; await image.decode();
+          const canvas = document.createElement('canvas'); canvas.width = image.width; canvas.height = image.height;
+          const context = canvas.getContext('2d'); context.drawImage(image, 0, 0);
+          const rgba = context.getImageData(0, 0, image.width, image.height).data, values = [];
+          for (let i = 0; i < rgba.length; i += 4) values.push(rgba[i] / 255);
+          const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+          return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length);
+        }, url);
+      };
+      const frosted = await page.screenshot({ clip });
+      await page.evaluate(first => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        sheet.insertRule('#mlos-workspace-menu{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}', first + 2);
+      }, probeRules);
+      const clear = await page.screenshot({ clip });
+      const frostedContrast = await pixelContrast(frosted, 'frosted'), clearContrast = await pixelContrast(clear, 'clear');
+      await page.evaluate(first => {
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        for (let i = 0; i < 3; i++) sheet.deleteRule(first);
+      }, probeRules);
+      assert.ok(clearContrast > .04 && frostedContrast < clearContrast * .25, 'Glass actually frosts the backdrop: ' + JSON.stringify({ frostedContrast, clearContrast }));
       await closeTools(); await go(origin + '/web/workspace.html?master=account&section=preferences');
       await page.getByLabel('Surface style', { exact: true }).selectOption('standard');
       await go(origin + '/web/library.html?view=subjects');
@@ -575,13 +619,9 @@ try {
         if (destination.includes('library')) {
           await openTools();
           if (width > 700 && surfaceStyle === 'glass') {
-            const paint = await page.locator('#mlos-workspace-menu').evaluate(node => {
-              const styles = getComputedStyle(node), canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
-              const context = canvas.getContext('2d'); context.fillStyle = styles.backgroundColor; context.fillRect(0, 0, 1, 1);
-              return { alpha: context.getImageData(0, 0, 1, 1).data[3] / 255, blur: styles.backdropFilter || styles.webkitBackdropFilter || 'none' };
-            });
-            assert.ok(paint.alpha < .85, 'contextual Glass stays translucent in ' + palette + '/' + theme);
-            assert.notEqual(paint.blur, 'none');
+            const paint = await page.evaluate(navigationPaint);
+            assert.ok(paint.menu.base < .85 && paint.menu.maximum < .90, 'contextual Glass stays translucent in ' + palette + '/' + theme);
+            assert.notEqual(paint.menu.blur, 'none');
           }
           if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: false });
           await closeTools();

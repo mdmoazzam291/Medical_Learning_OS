@@ -1,8 +1,10 @@
 # Current status
 
-## 2026-10-14 - Tablet parity and visible Glass correction awaiting browser QA
+## 2026-10-14 - Tablet parity passes; rendered Glass diagnosis pending
 
-Owner requested portrait tablets retain landscape-style visible top navigation and Glass be apparent in top/contextual menus. Failing-first regression reproduced hidden workspaces at 701px. WebKit RED baseline run 38518038552 reproduced near-solid Glass paint (menu alpha 0.9608, header alpha 0.8784) despite an existing blur. The correction removes controller launcher selection above 700px, compresses decorative tablet icons while keeping all labeled destinations/disclosures and touch targets, and uses visibly translucent navigation paint, stronger blur and tinted sheen. Reading surfaces remain opaque; Standard/default, saved palettes/styles, phone behavior and fallbacks remain. Local Node suite passes 1,227/1,227; check and 77-file build pass. Full browser GREEN and screenshot QA are pending; PR #235 stays draft and this refinement is not deployed. Preview repair remains separate.
+PR #235 runtime checkpoint a66f43ed69c66dcfa534878fcc25876fda6af4db passes Foundation 38518676290 (check, Chromium and iPad WebKit), 1,227 Node tests, portrait/landscape top-workspace parity, narrow touch fit, rotation, all eight appearances and fallback checks. The failing-first tests reproduced hidden portrait workspaces and near-solid menu tint. Separate review found no blocking route, role or focus issue. Gradient-aware alpha assertions and stale acceptance documentation are corrected.
+
+Actual screenshot inspection found sharp page text through the translucent contextual menu despite declared blur. This is an important visual failure; a rendered-pixel frosting regression now compares controlled stripes with and without blur. Root cause and browser result are pending. PR #235 remains draft; no production release yet. Existing owner GitHub -> Cloudflare release authority applies once genuine frosting, final browser acceptance and screenshot review pass. Preview Issue #211 remains separate.
 
 ## 2026-10-14 - Centered navigation and optional Glass released
 
