@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-15 — Cashfree GET-only diagnostic merged; no real merchant request
+[PR #252](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/252) merged to main as `00989637a2907b1233aefa80f94b3a06edf4bdee`. GitHub Foundation run [38634200958](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38634200958) passed check/Node/Pages build, Chromium browser and WebKit. Adds only a **disabled-by-default** read-only GET to a nonexistent sandbox plan and sanitized 401/403/404 response classification under an internal scheduled diagnostic. No public route/cron/real Cashfree test/plan/mandate/payments/entitlement modifications. Existing `mlos-cashfree-sandbox` production-deployment status **after merge not independently checked**; deployed runtime flags remain specified OFF in Git. To perform a real test needs a separately authenticated Cloudflare manual event dispatch and flag changes. See `docs/CASHFREE_READONLY_API_PROBE.md`.
+
+
 ## 2026-10-15 — Cashfree GET-only auth diagnostic prepared, remote test NOT executed
 Cashfree merchant Test Environment screenshot confirms Subscriptions UI accessible, All Plans currently says “No Plans Found” under a Last 30 days filter. This does not authenticate subscription API access. Branch `feat/cashfree-readonly-auth-diagnostic-20261015` adds internal GET-only fixed sandbox `/pg/plans/mlos_nonexistent_auth_probe_20261015` probe, classification of 401/403/404/429/5xx without body/PII leakage, and secure Cloudflare binding/Worker dispatch wiring. **Existing Worker runtime flags remain OFF**; no HTTP routes, no cron, no real Cashfree API call, mandate, plan, order, payment or entitlement modification. GitHub PR and CI pending. A 404 for deliberately nonexistent plan is **inconclusive**, never evidence of accepted credentials. Remote test requires a separate Cloudflare-authorized manual dispatch; the current ChatGPT tools cannot do it. See `docs/CASHFREE_READONLY_API_PROBE.md`.
 
