@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-14 — Cashfree merchant onboarding: external action pending
+Checked official Cashfree signup and sandbox instructions. No Cashfree merchant account, KYC approval, sandbox credentials, Subscriptions entitlement or merchant dashboard session is verified from available tools. Connected email search found no Cashfree registration/onboarding message. Added `docs/CASHFREE_MERCHANT_ONBOARDING.md` with official signup path, owner-only KYC/OTP boundaries, MLOS education/SaaS description, credential handling and website policy readiness. Public web Pages asset allowlist currently lacks dedicated customer Terms/Refund/Contact/Privacy notices; internal `docs/PRIVACY.md` cannot stand in as public privacy notice. Existing Cashfree code remains non-deployed, server-only and payment-disabled; no attempt to register a merchant or obtain credentials using fabricated identity. Current blocker: owner sign-in/registration, merchant details and Test/Subscriptions dashboard access. No institutional work.
+
+
 ## 2026-10-14 — Cashfree primary, PhonePe fallback, Razorpay retired: merged
 PR [#240](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/240) merged as `b7b19fc23b992a9daa92a9f6c23da11fc45b6344`. Cashfree fixed-sandbox-only subscription create/fetch and raw-webhook HMAC receipt, explicit disabled payment route and PhonePe design-only alternative are committed on main. Retired Razorpay adapter/test/document deleted from active tree, history retained. Consumer plan UI and Free/Pro/AI Pro entitlements unchanged.
 
