@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Consumer subscription foundations (feature branch, pending CI/release)
+Owner authorized Q1 → Q2 → Q3 in order; work scoped to Free/Pro/AI Pro and institutional scope remains deferred. `src/domain/consumer-entitlements.js` now defines immutable plan/capability proposals, price versions and a default-Free fail-closed access evaluator with expiration/provenance gates; it does NOT issue grants or attach to authenticated production paths. `web/plans.html`, `plans.css` and `plans.js` provide an account-linked responsive, preview-only comparison within permanent Sage/Lavender appearance tokens and disabled paid actions. `src/adapters/razorpay-test.js` provides a server-only test-key gated subscription creation helper and raw-body HMAC-SHA256 webhook verification receipt, with no endpoint, secrets, checkout, payment processing, DB writes or entitlement activation.
+
+Tests added: `tests/consumer-entitlements.test.js`, `tests/consumer-plans-ui.test.js`, `tests/razorpay-test.test.js`. At this documentation checkpoint **local full Node/browser suite has not run**; verify CI results on the feature PR. Existing PYQ/source rights/review gates and Cloudflare auth/preview Issue #211 untouched. No production charging authorized.
+
+
 ## 2026-10-14 - Tablet parity / visible navigation Glass deployed
 
 PR #235 merged as 0ab1f964a1ccd0245e1d2d5d111e3dbc5394596f through the existing owner-authorized GitHub -> Cloudflare route. Portrait and landscape tablets now share visible top workspaces above 700px and 44px controls. Near-solid Glass tint, stacked cluster paint and the header's popup backdrop-root trap are corrected; palettes/preferences, Standard default, opaque reading cards, phone behavior and canonical routes remain.
