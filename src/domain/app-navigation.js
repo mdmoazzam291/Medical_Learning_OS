@@ -150,6 +150,6 @@ export function routeIdentity(pathname, search = '', hash = '') {
     return { master: 'admin', section: ownerAnchors[hash] || 'overview' };
   }
   if (pathname.endsWith('/content-import.html') || pathname.endsWith('/review.html')) return { master: 'admin', section: 'content' };
-  if (/\/(account|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
+  if (/\/(account|plans|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
   return { master: 'home', section: 'today' };
 }
