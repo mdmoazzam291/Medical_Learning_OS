@@ -10,6 +10,7 @@ A concept-centered medical learning system: study → answer → understand mist
 - [Current status and next task](docs/STATUS.md)
 - [Project context and continuity](docs/PROJECT_CONTEXT.md)
 - [Content lifecycle](docs/CONTENT_WORKFLOW.md)
+- [Consumer payment gateway decision](docs/CONSUMER_PAYMENT_GATEWAY.md)
 - [Product scope](docs/PRODUCT.md)
 - [Implementation roadmap](docs/ROADMAP.md)
 - [Architecture](docs/ARCHITECTURE.md)
