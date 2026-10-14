@@ -47,3 +47,6 @@ Official documentation inspected 2026-10-14:
 
 ## Engineering release receipt — 2026-10-14
 Merged in [PR #240](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/240) at `b7b19fc23b992a9daa92a9f6c23da11fc45b6344`. [Foundation run 38544793361](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38544793361) reports check/browser/WebKit success. Main readback verified payment policy, Cashfree sandbox adapter and absence of Razorpay source. This proves repository regression tests passed, not real Cashfree API credentials, hosted PWA appearance, merchant onboarding or charges. Checkout remains disabled.
+
+## 2026-10-14 Test credential readiness
+Owner reports Test/Sandbox API keys have been generated. A separate server-only secret-binding bridge `src/adapters/cashfree-sandbox-bindings.js` with opt-in flags and Cloudflare Secrets Store compatibility is prepared. Current checkout, webhook, subscription ledger and premium grants remain disabled; credentials are **not connected** to deployed infrastructure. See [Cashfree sandbox secret setup](CASHFREE_SANDBOX_SECRET_SETUP.md).
