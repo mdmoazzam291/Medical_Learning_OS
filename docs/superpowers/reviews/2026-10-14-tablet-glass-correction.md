@@ -10,3 +10,9 @@ Independent read-only reviewer examined b17369d..250fccd and actual Chromium/Web
 Reviewer declined to establish optical quality, physical iPad/OS settings or live release from source alone. Production release remains pending real browser evidence. No content/backend/Auth change.
 
 The reviewer accepted capability-gated pixel verification only with validated independent clear stripes/geometry/computed blur, distinct unavailable reporting, and unchanged app assertion on capable renderers. This is a harness limitation, not an application visual pass. Chromium rendered frosting provides supported-renderer evidence; physical iPad remains unclaimed.
+
+## Final ruling at 25bd210e
+
+Foundation 38523244802 passes check/Chromium/native WebKit flows. The ordinary-main Chromium pixel check (not an added fixed layer) suppresses contrast about 93% at tablet/desktop and resolves the probe coverage concern. Fresh initial Sage and final Lavender screenshots show readable menu content and suppressed interior backdrop. No Critical/Important source findings remain; ready for source release.
+
+Residual Minor: faint sharp margin bleed persists in fresh/normal captures; source cause unproven and fullPage-only attribution is not established. It is not a global frosting failure. Native WebKit's validated independent control cannot render blur in this snapshot path. WebKit frosting, physical iPad/OS settings and hosted real-account switching remain explicitly unverified. No additional source change is justified by the remaining capture observation.

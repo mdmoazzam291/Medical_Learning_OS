@@ -1,7 +1,7 @@
 # Decision log
 
 ## ADR-114 — Tablet orientation parity and perceptible navigation Glass
-**Status:** Accepted owner correction — 2026-10-14; PR #235 browser acceptance pending.
+**Status:** Accepted and implemented — 2026-10-14; PR #235 source acceptance complete, production release pending.
 
 The owner requested the same landscape-style navigation in tablet portrait and an effective Glass treatment in the main and contextual navigation. Above 700px, retain visible workspace labels and separate disclosures in both orientations. Compress decorative icons/brand spacing at narrow widths; keep 44px controls and all authorized destinations. Existing phone layout remains at 700px and below.
 

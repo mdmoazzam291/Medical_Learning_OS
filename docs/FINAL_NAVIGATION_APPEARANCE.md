@@ -1,7 +1,7 @@
 # Final tablet and desktop navigation / appearance contract
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
-Status: PR #233 released; owner-requested portrait/landscape parity and clearer Glass refinement in progress on PR #235.
+Status: PR #233 released; owner-requested portrait/landscape parity and clearer Glass refinement verified on PR #235 and ready for source release.
 Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
@@ -45,4 +45,4 @@ Menus open on tap/click and keyboard, not hover alone. One outer menu open at a 
 
 ## Boundary / next action
 
-PR #233 is released; PR #235 implements the owner-requested portrait/landscape parity and visible Glass correction. Local 1,227 Node tests/check/build pass. Composited Chromium at 567dbbca in Foundation 38521674800 passes strict rendered frosting and navigation flows. Native macOS WebKit's independent plain-pane control cannot render blur in this snapshot path; report that limit separately and continue interaction, transparency and fallback verification. Do not equate computed blur or unsupported snapshot coverage with physical-iPad visual acceptance. Final complete browser flow/screenshot checks remain pending before the existing owner-authorized GitHub -> Cloudflare release. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
+PR #233 is released. PR #235 correction at 25bd210e passes Foundation 38523244802 (check, Chromium, native macOS WebKit flows), 1,227 Node tests/check/77-file build, all eight appearances, portrait/landscape parity, 44px fit, 172 rendered leaves and fallbacks. Ordinary-main Chromium frosting is measured at about 93% contrast suppression; actual viewport screenshots were inspected. Native WebKit snapshot blur is unavailable even for a validated independent plain pane; no WebKit/physical-iPad frosting claim. Faint sharp margin bleed remains a Minor capture observation with source cause unproven. Independent review has no Critical/Important source blocker. Next: existing owner-authorized GitHub -> Cloudflare release and production verification. Preserve unrelated OAuth/PARSE drafts and content intake/reset boundaries.
