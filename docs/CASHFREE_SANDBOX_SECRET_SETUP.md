@@ -89,3 +89,11 @@ New standalone `cloudflare/cashfree-sandbox-worker.js` and `wrangler.cashfree-sa
 
 ## Final staging preparation receipt (2026-10-14)
 [PR #245](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/245) merged as `591e841bcfb61f94ebe04bca54f7190d04c09526`, [Foundation run 38565156604](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38565156604) **check/browser/WebKit success**. Only source/config/tests/docs were merged. No Cloudflare staging Worker deployed, no account Secrets Store values consumed, no sandbox transaction, no new payment endpoints. Do not use the default repository `npx wrangler deploy` command, which selects the existing public Worker configuration. For this isolated Worker use the explicit `-c wrangler.cashfree-sandbox.jsonc` file, then bind secrets ONLY to `mlos-cashfree-sandbox`.
+
+## Owner deployment screenshot: 2026-10-14, 18:38 IST
+The owner displayed a green Cloudflare build for the dedicated `mlos-cashfree-sandbox` deployment using the explicit `npx wrangler deploy -c wrangler.cashfree-sandbox.jsonc` command, no build vars; build `#166bcbc2`, 28 seconds. This indicates successful deployment in Cloudflare's **Production deployment environment**, not Cashfree live mode. It does not confirm Cashfree API authentication or secret bindings. Before continuing:
+1. Open Cloudflare → Workers & Pages → `mlos-cashfree-sandbox` → Overview and confirm that exact Worker name.
+2. Go to **Settings → Bindings → Add → Secrets Store** (may appear under Variables & Secrets/Bindings depending on dashboard).
+3. Choose **Variable name** `CASHFREE_TEST_APP_ID`, **Secret name** the already-stored `CASHFREE_TEST_APP_ID`. Repeat the same name-to-name mapping for `CASHFREE_TEST_SECRET_KEY`.
+4. Deploy/save the bindings to **this Worker only**. Never re-enter raw secret values; do not use plain Variables or the learner-facing Worker.
+5. Send a screenshot of binding NAMES only for verification. Keep Cashfree network and checkout flags disabled. No test request/mandate is authorized by completing bindings alone.
