@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Consumer tiers, preview-only Plans and Razorpay test adapter merged
+PR #238 merged as `e5523ab2833e38da729440067057ea3846fe6c41`. Free/Pro/AI Pro pure entitlement definition and price proposals, account-linked responsive Plans preview in canonical Sage/Lavender themes, and a non-public default-disabled Razorpay test helper with raw-body webhook signature check are now in `main`. No checkout, live keys, payment endpoint, customer charging, grant issuance, or institution functionality was enabled.
+
+Foundation run [38540502563](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38540502563) reports **check, browser and WebKit success**, including Node tests, Pages build, existing responsive navigation and iPad flows. New page visual screenshots and deployed hosted route were not independently checked. Next gated implementation requires verified content, a proven learning loop, server-authenticated subscription state and separate production payment approval. See `docs/RAZORPAY_SANDBOX_PREPARATION.md` and `docs/CONSUMER_COMMERCIAL_PLAN.md`.
+
+
 ## 2026-10-14 — Consumer subscription foundations (feature branch, pending CI/release)
 Owner authorized Q1 → Q2 → Q3 in order; work scoped to Free/Pro/AI Pro and institutional scope remains deferred. `src/domain/consumer-entitlements.js` now defines immutable plan/capability proposals, price versions and a default-Free fail-closed access evaluator with expiration/provenance gates; it does NOT issue grants or attach to authenticated production paths. `web/plans.html`, `plans.css` and `plans.js` provide an account-linked responsive, preview-only comparison within permanent Sage/Lavender appearance tokens and disabled paid actions. `src/adapters/razorpay-test.js` provides a server-only test-key gated subscription creation helper and raw-body HMAC-SHA256 webhook verification receipt, with no endpoint, secrets, checkout, payment processing, DB writes or entitlement activation.
 
