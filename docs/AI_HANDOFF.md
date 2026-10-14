@@ -3,14 +3,13 @@
 Snapshot: 2026-10-14 (Asia/Kolkata). Verify remote evidence before resuming.
 
 ## Current task
-- Checked at: 2026-10-14 (Asia/Kolkata) after GitHub readback. **Q1 → Q2 → Q3 completed as a non-charging foundation and merged**.
-- PR #238: https://github.com/mdmoazzam291/Medical_Learning_OS/pull/238; squash merge main `e5523ab2833e38da729440067057ea3846fe6c41`. Feature branch `feature/consumer-entitlements-plans-razorpay-sandbox-20261014` is now merged; feature ownership released.
-- Q1: `src/domain/consumer-entitlements.js` pure immutable Free/Pro/AI Pro capabilities and proposed price catalog, premiumReleaseEnabled OFF by default, trusted-server active grant only. No authenticated issuance, persistence or actual paywall.
-- Q2: `/web/plans.html` available in the Pages allowlist; account avatar Plans link; accessible billing-period selector; reusable Sage/Lavender Light/Dark tokens; default Standard, optional Glass continues to affect navigation only. Premium actions are disabled. UI browser visual screenshots for this specific new route have not been inspected independently.
-- Q3: `src/adapters/razorpay-test.js` server-only, non-public, sandbox-only helper and raw-body signature verifier. No deployed endpoint, test/live credential binding, mandate, DB receipt storage, checkout, charges or entitlement write.
-- Verification: PR #238 Foundation run **38540502563**, `check`, Chromium `browser`, native `webkit` all completed **success**; includes `npm run check`, `npm run build:pages`, `npm test`, existing navigation/browser/iPad flows. Source files read back on main. This does not prove payment-provider sandbox transactions or hosted production deployment.
-- Current ownership: release receipt docs branch only; avoid re-opening completed consumer foundation. Separate Cloudflare auth/preview Issue #211 and PYQ post-reset content gating remain unchanged. Institutional licensing, B2B, faculty/tenant seats and marketplace are deferred.
-- Exact next action: when authorized, validate the hosted preview-only Plans route across actual iPad palette/style combinations; continue original polished PYQ intake and rights-controlled publication. Before monetization, implement *authenticated server billing state and idempotent ledger*, tax and mandate flows, verified subscriber lifecycle and explicit checkout go-live approval. Do not enable production payments by inference.
+- Checked at 2026-10-14 Asia/Kolkata. The owner selected Cashfree as the primary consumer gateway, PhonePe as the deferred alternative, and retired Razorpay's unused sandbox implementation.
+- Branch: feature/cashfree-primary-phonepe-backup-20261014, base main b704d4f6a9767a76b3291b47bf2db5554c04fa23.
+- Code: src/adapters/cashfree-test.js (strict sandbox-only create/fetch subscription and raw-body Base64 HMAC verification), src/domain/consumer-payment-providers.js (Cashfree primary, PhonePe alternative, all checkout disabled), two new test suites. Razorpay test adapter/test/document deleted from active tree. Git history remains.
+- Documentation: docs/CONSUMER_PAYMENT_GATEWAY.md and consumer roadmap/decision/status updated. Entitlements and existing plan comparison unchanged.
+- Status: committed on task branch; full CI not run at this handoff. No deployed payment endpoint or customer transaction. No merchant onboarding, provider credentials, payment ledger or grant issuance. PhonePe fallback is not automatic and old mandates cannot be assumed portable.
+- Next: open PR, verify check/build/Node/Chromium/WebKit checks and merge only if successful. Then record release receipt. Separate approval required before real checkout.
+- Respect content-readiness, rights review, existing Cloudflare preview Issue #211 and unrelated product PRs.
 
 ## Latest product state from repository evidence
 - Sage Precision default; Lavender Precision selectable; independent light/dark appearance. STATUS records PR #224 / merge 9891df556aca22e634e42d87cf05fd21e407124d, passing Node/check/build/browser CI and production build evidence. This handoff does not independently verify hosted authenticated switching.
