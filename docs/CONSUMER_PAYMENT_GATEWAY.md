@@ -53,3 +53,6 @@ Owner reports Test/Sandbox API keys have been generated. A separate server-only 
 
 ## 2026-10-14 Secrets Store stored; isolated Worker design
 Owner screenshots establish `CASHFREE_TEST_APP_ID` and `CASHFREE_TEST_SECRET_KEY` are saved as encrypted Cloudflare account secrets with Workers scope. Their scope status does not prove a deployed Worker binding. Separate `cloudflare/cashfree-sandbox-worker.js` and `wrangler.cashfree-sandbox.jsonc` explicitly isolate a no-route/no-cron staging Worker with network disabled by default. They are **not deployed** or wired to production. Details in [sandbox secret setup](CASHFREE_SANDBOX_SECRET_SETUP.md).
+
+## 2026-10-15 read-only Cashfree API probe (no payment activation)
+Cashfree Test UI confirms Subscriptions is navigable and no plans are displayed under the Last 30 days filter. A server-only GET probe against a deliberately nonexistent sandbox plan has been prepared in `docs/CASHFREE_READONLY_API_PROBE.md`, default-disabled with no public route or Cron. HTTP 404 cannot prove credentials or product authorization. Real Cashfree API call remains outstanding, with no payment/grant changes.

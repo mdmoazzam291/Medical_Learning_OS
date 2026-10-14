@@ -13,9 +13,22 @@ export async function inspectCashfreeStagingWorker(env = {}, { fetchImpl } = {})
   if (!status.appIdBindingPresent || !status.secretBindingPresent) {
     return Object.freeze({ outcome: 'missing_bindings' });
   }
-  if (env.CASHFREE_SANDBOX_RUN_MODE !== 'read_only' ||
+  const mode = env.CASHFREE_SANDBOX_RUN_MODE;
+  if (!['read_only', 'auth_probe'].includes(mode) ||
       env.CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED !== 'true') {
     return Object.freeze({ outcome: 'bindings_present_network_disabled' });
+  }
+  // Read-only probe is isolated from subscription and mandate creation.
+  // A 404 on a nonexistent plan is INCONCLUSIVE, not proof of authorization.
+  if (mode === 'auth_probe') {
+    if (typeof fetchImpl !== 'function') return Object.freeze({ outcome: 'no_transport' });
+    try {
+      const service = createCashfreeSandboxService(env, { fetchImpl });
+      const receipt = await service.probeTestPlanAccess();
+      return Object.freeze({ outcome: 'auth_probe_status', assessment: receipt.result });
+    } catch {
+      return Object.freeze({ outcome: 'sandbox_request_failed' });
+    }
   }
   // Only a previously created TEST subscription identifier can be inspected.
   // This worker never creates a subscription or requests an AutoPay mandate.
@@ -56,6 +69,12 @@ export default {
     controller?.noRetry?.();
     const result = await inspectCashfreeStagingWorker(env, { fetchImpl: fetch });
     // Only coarse outcome categories, no secret names/values or subscription IDs.
-    console.info('cashfree_sandbox_probe', result.outcome);
+    // Only controlled result enum values appear, never credentials or provider
+    // response bodies. Observability remains disabled by default in Wrangler.
+    if (result.outcome === 'auth_probe_status') {
+      console.info('cashfree_sandbox_probe', result.outcome, result.assessment);
+    } else {
+      console.info('cashfree_sandbox_probe', result.outcome);
+    }
   }
 };

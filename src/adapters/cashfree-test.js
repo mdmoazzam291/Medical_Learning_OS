@@ -147,6 +147,40 @@ export async function fetchCashfreeSandboxSubscription(subscriptionId, config = 
   });
 }
 
+
+/**
+ * One read-only test-credential probe: no subscription creation, no mandate,
+ * no payments, no persistent writes, no response-body logging. A missing fake
+ * plan is NOT proof of authentication or Subscriptions product entitlement.
+ * Cashfree documented endpoint: GET /pg/plans/{plan_id}.
+ */
+export async function probeCashfreeSandboxPlanAccess(config = {}) {
+  const headers = authHeaders(config);
+  const fetchImpl = requireTransport(config);
+  const path = '/pg/plans/mlos_nonexistent_auth_probe_20261015';
+  let response;
+  try {
+    response = await fetchImpl(API_ROOT + path, {
+      method: 'GET', headers, redirect: 'error', cache: 'no-store'
+    });
+  } catch {
+    return Object.freeze({ provider: 'cashfree', environment: 'sandbox', result: 'transport_failed' });
+  }
+  const code = response?.status;
+  let result;
+  if (!Number.isInteger(code) || code < 100 || code > 599) result = 'invalid_response';
+  else if (code === 401) result = 'unauthorized';
+  else if (code === 403) result = 'forbidden_or_product_restricted';
+  else if (code === 404) result = 'not_found_auth_inconclusive';
+  else if (code === 400 || code === 422) result = 'bad_request_auth_inconclusive';
+  else if (code === 429) result = 'rate_limited';
+  else if (code >= 500) result = 'provider_unavailable';
+  else if (code >= 200 && code < 300) result = 'unexpected_plan_found_investigate';
+  else result = 'other_response_auth_inconclusive';
+  // Never read or return the provider's response body, headers or full URL.
+  return Object.freeze({ provider: 'cashfree', environment: 'sandbox', result });
+}
+
 function rawBytes(rawBody) {
   if (typeof rawBody === 'string') return encoder.encode(rawBody);
   if (rawBody instanceof Uint8Array) return rawBody;

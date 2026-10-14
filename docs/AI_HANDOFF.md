@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Cashfree sandbox API readiness (2026-10-15 IST, independent of mobile UI work)
+- Owner supplied screenshots of Cashfree Test Environment Subscriptions menu, All Subscriptions and All Plans (No Plans Found under 30-day filter). Provider API authorization is NOT established by the dashboard.
+- Working branch: `feat/cashfree-readonly-auth-diagnostic-20261015`. Touches only `src/adapters/cashfree-test.js`, `src/adapters/cashfree-sandbox-bindings.js`, `cloudflare/cashfree-sandbox-worker.js`, Cashfree probe tests, and relevant docs. The separate Worker has no public route/cron, and default-off flags are unchanged.
+- Adds controlled GET-only nonexistent-plan probe, returns sanitized statuses; 401 is rejected, 403 forbidden, 404 **inconclusive**, never writes or issues paid grant. Cloudflare network probe requires separately enabled flags AND a privileged manual scheduled dispatch. No merchant credentials/keys read or sent; GitHub tests use mocks only.
+- New canonical operations doc: `docs/CASHFREE_READONLY_API_PROBE.md`. No real Cashfree API call can be made by these ChatGPT tools because Cloudflare account actions are unavailable. Do not create a public test route/cron or call the probe successful based on CI. PhonePe remains design-only fallback.
+- PR/CI and main merge status pending at checkpoint; recheck GitHub before resuming. Treat Cloudflare deployment as separate and monitor actual build result. Preserve parallel mobile-nav/auth/branding work.
+
+
 ## Phone-sidebar temporary pin removal (ChatGPT, 2026-10-14 IST)
 - Objective: owner-requested temporary suppression of shortcut-pin icons in the mobile sidebar, while gaining text space without changing sidebar width or removing saved pins. Independent from the Cashfree binding, OAuth, PARSE branding branches.
 - Branch: `fix/phone-sidebar-hide-pins-20261014`, based on main `bfcc43deb43a89057d303bf58f1f2ddeb9855532` (PR #250 previously merged). Files: `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js`, `scripts/navigation-browser-check.js` plus STATUS/handoff.

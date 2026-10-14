@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-15 — Cashfree GET-only auth diagnostic prepared, remote test NOT executed
+Cashfree merchant Test Environment screenshot confirms Subscriptions UI accessible, All Plans currently says “No Plans Found” under a Last 30 days filter. This does not authenticate subscription API access. Branch `feat/cashfree-readonly-auth-diagnostic-20261015` adds internal GET-only fixed sandbox `/pg/plans/mlos_nonexistent_auth_probe_20261015` probe, classification of 401/403/404/429/5xx without body/PII leakage, and secure Cloudflare binding/Worker dispatch wiring. **Existing Worker runtime flags remain OFF**; no HTTP routes, no cron, no real Cashfree API call, mandate, plan, order, payment or entitlement modification. GitHub PR and CI pending. A 404 for deliberately nonexistent plan is **inconclusive**, never evidence of accepted credentials. Remote test requires a separate Cloudflare-authorized manual dispatch; the current ChatGPT tools cannot do it. See `docs/CASHFREE_READONLY_API_PROBE.md`.
+
+
 ## 2026-10-14 — Temporary phone-sidebar pin-button suppression (pending release)
 Owner requested temporarily removing shortcut pin icons from the mobile sidebar to recover label space. Branch `fix/phone-sidebar-hide-pins-20261014` retains the previously approved 216–244px drawer width, 2-column workspace shortcuts and pinned navigation destinations, but hides only `.mlos-panel .mlos-pin` under `max-width:700px`. Existing saved pin preferences and desktop/tablet pin controls remain intact; navigation links expand to the vacated width. CSS-only reversible change, with targeted UI/CSS regression and real-browser drawer assertions at 320/375/390/430px. No auth, content, billing, database or infrastructure change.
 

@@ -93,7 +93,7 @@ test('sandbox secret store bindings flow through existing server adapter without
       };
     }
   });
-  assert.deepEqual(Object.keys(svc), ['createTestSubscription', 'fetchTestSubscription', 'verifyTestWebhook']);
+  assert.deepEqual(Object.keys(svc), ['createTestSubscription', 'fetchTestSubscription', 'probeTestPlanAccess', 'verifyTestWebhook']);
   assert.equal(JSON.stringify(svc), '{}', 'service JSON serialization cannot expose secret values');
   const receipt = await svc.createTestSubscription(subscription);
   assert.equal(receipt.environment, 'sandbox');

@@ -4,7 +4,8 @@
 import {
   createCashfreeSandboxSubscription,
   fetchCashfreeSandboxSubscription,
-  verifyCashfreeSandboxWebhook
+  verifyCashfreeSandboxWebhook,
+  probeCashfreeSandboxPlanAccess
 } from './cashfree-test.js';
 import { CONSUMER_PAYMENT_PROVIDER_POLICY } from '../domain/consumer-payment-providers.js';
 
@@ -97,6 +98,10 @@ export function createCashfreeSandboxService(env = {}, { fetchImpl } = {}) {
     async fetchTestSubscription(subscriptionId) {
       const config = await subscriptionConfig(env, fetchImpl);
       return fetchCashfreeSandboxSubscription(subscriptionId, config);
+    },
+    async probeTestPlanAccess() {
+      const config = await subscriptionConfig(env, fetchImpl);
+      return probeCashfreeSandboxPlanAccess(config);
     },
     async verifyTestWebhook({ rawBody, signature, timestamp } = {}) {
       checkBase(env);
