@@ -189,22 +189,23 @@ try {
       const pixelContrast = async (bytes, suffix) => {
         const url = origin + '/__glass-paint-' + name + '-' + suffix + '.png';
         await page.route(url, route => route.fulfill({ contentType: 'image/png', body: bytes }));
-        return page.evaluate(async src => {
+        return page.evaluate(async ({ src, clip }) => {
           const image = new Image(); image.src = src; await image.decode();
           const canvas = document.createElement('canvas'); canvas.width = image.width; canvas.height = image.height;
           const context = canvas.getContext('2d'); context.drawImage(image, 0, 0);
-          const rgba = context.getImageData(0, 0, image.width, image.height).data, values = [];
+          const scale = image.width / innerWidth;
+          const rgba = context.getImageData(Math.round(clip.x * scale), Math.round(clip.y * scale), Math.round(clip.width * scale), Math.round(clip.height * scale)).data, values = [];
           for (let i = 0; i < rgba.length; i += 4) values.push(rgba[i] / 255);
           const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
           return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length);
-        }, url);
+        }, { src: url, clip });
       };
-      const frosted = await page.screenshot({ clip });
+      const frosted = await page.screenshot({ fullPage: false });
       await page.evaluate(first => {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
         sheet.insertRule('#mlos-workspace-menu{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}', first + 2);
       }, probeRules);
-      const clear = await page.screenshot({ clip });
+      const clear = await page.screenshot({ fullPage: false });
       const frostedContrast = await pixelContrast(frosted, 'frosted'), clearContrast = await pixelContrast(clear, 'clear');
       await page.evaluate(first => {
         const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
@@ -231,7 +232,7 @@ try {
       assert.equal(await page.locator('.mlos-panel').isVisible(), false);
       assert.equal(await page.evaluate(() => getComputedStyle(document.body).paddingLeft), '0px');
       assert.equal(await page.locator('.mlos-header').evaluate(node => node.getBoundingClientRect().height), 56);
-      assert.equal(await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width), width);
+      assert.equal(await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width), await page.evaluate(() => document.documentElement.clientWidth));
       assert.equal(await page.getByRole('link', { name: 'Master Admin', exact: true }).count(), 0, 'admin master stays out of the closed phone header');
     }
     if (width <= 700) {
