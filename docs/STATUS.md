@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 - Centered navigation and optional Glass released
+
+PR #233 merged as 6913872a2222650fbfd1ef4cfc0887bee91741df through the owner-approved existing GitHub -> Cloudflare route. Main Foundation run 38516083659 passed check, Chromium and iPad WebKit; fresh merged-tree Node suite passed 1,226/1,226. Both Cloudflare production builds passed: learner web bc235da1-128d-4e7f-99e3-66c634e29fcc and heartbeat e5708e62-a369-4ff2-8487-b4568702a72f. Live public inspection confirmed new centered navigation, contextual menus, 19-subject index/independent nested groups, search reveal, persisted dark mode and signed-out access gates. Verification browser restored to Light.
+
+Hosted real-account Glass/palette switching remains unverified because secure browserAuth returned locator_invalid; synthetic main CI covers all eight appearance combinations and tablet rotation. No physical-iPad acceptance or real learner mutation is claimed. Issue #211 preview repair remains open: Cloudflare sign-in failed through GitHub callback and email/password login API HTTP 403; provider root cause remains unconfirmed. Production success does not fix preview builds. [Release evidence and remaining scope](releases/2026-10-14-centered-navigation-release.md).
+
 ## 2026-10-14 - Release investigation blocked by provider authentication
 
 Owner authorized investigating/fixing the Cloudflare failure and completing PR #233 release verification. PR remains open/ready at validated head 4dccc636420ae0006b2f1eb4d343d4784480d34e. Final Foundation run 38487300811 and fresh local 1,226-test/check/build verification passed. The Cloudflare web check failed at build 1f9e5d09-f588-44f5-83c4-7f7172e68e3e; GitHub has no failure message. Repository static-delivery configuration was inspected with no demonstrated source-build defect. Current root cause is unconfirmed.
