@@ -86,3 +86,7 @@ Official references:
 - [Remote development executes on Cloudflare infrastructure](https://developers.cloudflare.com/workers/local-development/)
 - [Wrangler `dev --var` and `--test-scheduled`](https://developers.cloudflare.com/workers/wrangler/commands/workers/)
 - [Secrets Store Worker integration, local/remote limitations](https://developers.cloudflare.com/secrets-store/integrations/workers/)
+
+## October 15, 2026: scheduled testing route compatibility
+Cloudflare's current Wrangler documentation describes `--test-scheduled` as exposing `/cdn-cgi/local/scheduled`. An earlier iteration of the owner-run script attempted `/__scheduled?format=json`. Update the script and its regression test to the current documented path before owner execution. This is a **test-route fix only**, not a new Cloudflare Cron Trigger, deployed Worker route or payment API operation. Do not invoke both endpoints or retry the event automatically if the first endpoint fails; a single failed test remains inconclusive.
+Reference: https://developers.cloudflare.com/workers/wrangler/commands/workers/
