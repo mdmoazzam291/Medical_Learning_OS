@@ -60,3 +60,6 @@ References:
 - https://developers.cloudflare.com/workers/configuration/environment-variables/
 - https://www.cashfree.com/docs/api-reference/payments/latest/subscription/create-subscription
 - https://www.cashfree.com/devstudio/preview/subs/web/checkout
+
+## Engineering verification receipt (2026-10-14)
+Server-only secret-binding helper and safety tests were merged to main in [PR #243](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/243), commit `18af38b87fb4856da19df66f8b230de0992c5e57`. [Foundation workflow run 38561694687](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38561694687) passed check, browser and WebKit. This is **not** independent Cloudflare secret storage or a live Cashfree sandbox transaction. Only the user can confirm placing the two test credential values in the encrypted store.
