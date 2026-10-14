@@ -63,3 +63,26 @@ References:
 
 ## Engineering verification receipt (2026-10-14)
 Server-only secret-binding helper and safety tests were merged to main in [PR #243](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/243), commit `18af38b87fb4856da19df66f8b230de0992c5e57`. [Foundation workflow run 38561694687](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38561694687) passed check, browser and WebKit. This is **not** independent Cloudflare secret storage or a live Cashfree sandbox transaction. Only the user can confirm placing the two test credential values in the encrypted store.
+
+## 2026-10-14: Both TEST secrets saved, confirmed by owner screenshots
+
+The owner supplied screenshots from Cloudflare **Secrets Store**, showing exactly two active Workers-scoped entries with the names `CASHFREE_TEST_APP_ID` and `CASHFREE_TEST_SECRET_KEY` (usage 2/100). No secret **values** appeared. This supersedes the earlier pending-storage status. Workers scope `Active` means the secrets can be used by Workers; it is **not evidence of binding to a particular Worker**, validating Cashfree account keys or enabling subscriptions.
+
+### Next isolated deployment, intentionally not carried out
+
+New standalone `cloudflare/cashfree-sandbox-worker.js` and `wrangler.cashfree-sandbox.jsonc` provide a **different Worker** named `mlos-cashfree-sandbox`:
+- `workers_dev=false`, `preview_urls=false`, `triggers.crons=[]`. No HTTP endpoint is exposed. Every `fetch()` returns 404.
+- No secret IDs, values, names or store IDs are stored in the Wrangler file. Both `CASHFREE_SANDBOX_ENABLED=false` and `CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED=false` default OFF, with run mode disabled.
+- A scheduled/internal-only diagnostic may later check that bindings exist; an actual Cashfree call additionally requires explicit sandbox and network-test flags, a pre-existing TEST subscription ID and a separate controlled scheduled event invocation. It calls **GET only** against sandbox Cashfree, never starts checkout, creates mandates, or grants paid access.
+- No cron is scheduled, and no Worker is deployed by merely merging these files.
+
+**After the isolated Worker is independently deployed** (Cloudflare authenticated operator action; not automated by this repository change):
+
+1. Open Cloudflare Dashboard → Workers & Pages → **`mlos-cashfree-sandbox`**, not `medical-learning-os-web`.
+2. Open **Settings → Bindings → Add → Secrets Store**.
+3. Set binding variable name `CASHFREE_TEST_APP_ID`; select the existing identically named account secret.
+4. Add the second binding variable name `CASHFREE_TEST_SECRET_KEY`; select the existing identically named account secret.
+5. Review that only the new **sandbox** Worker is targeted, and choose the version/deployment controls appropriate for that Worker. This cannot be done until that separate Worker exists.
+6. Do not add a `CASHFREE_TEST_WEBHOOK_SECRET` before implementing Cashfree's approved webhook-secret process. Do not attach secrets to the learner-facing Worker or share their values in chat.
+
+**Deployment requires separate authorized Cloudflare access**, because ChatGPT's current connected tools have GitHub but no authenticated Cloudflare account actions. Never place Cloudflare API keys in repo or chat to compensate. For future Wrangler deploy use `npx wrangler deploy -c wrangler.cashfree-sandbox.jsonc` from a trusted authenticated environment, then bind Secrets Store via Dashboard; do not run this against the root `wrangler.jsonc`. Deployment can be done with safe options and disabled flags; actual real sandbox network tests must be a separate deliberate action. Even a 404 from Cashfree is not definitive proof that subscriptions are enabled.
