@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Owner generated Cashfree TEST keys; isolated secret-binding code prepared
+User confirmed Test/Sandbox App ID and Secret Key generated. No credential values were requested, copied or connected to Cloudflare by the agent. Branch `feat/cashfree-sandbox-secret-bindings-20261014` adds server-only `src/adapters/cashfree-sandbox-bindings.js` that reads encrypted Cloudflare Worker/Secrets Store bindings, checks explicit sandbox-only flags and keeps network tests OFF by default. Adds mock tests and a mobile-friendly secret-entry guide in `docs/CASHFREE_SANDBOX_SECRET_SETUP.md`. No public Pages assets, checkout routes, live billing, learner entitlement issuers, or existing Worker code changed.
+
+**Owner action pending:** securely store TEST App ID and TEST Secret Key in Cloudflare account-level Secrets Store without binding them to the public MLOS Worker; confirm Cashfree Subscriptions product separately. No real authenticated provider sandbox request or deployed private test harness was executed. Subsequent testing depends on these steps and an isolated authorized staging environment. PhonePe remains alternative; institutional model stays deferred. GitHub CI and PR merge status to be reconciled separately.
+
+
 ## 2026-10-14 — Cashfree merchant onboarding: external action pending
 Checked official Cashfree signup and sandbox instructions. No Cashfree merchant account, KYC approval, sandbox credentials, Subscriptions entitlement or merchant dashboard session is verified from available tools. Connected email search found no Cashfree registration/onboarding message. Added `docs/CASHFREE_MERCHANT_ONBOARDING.md` with official signup path, owner-only KYC/OTP boundaries, MLOS education/SaaS description, credential handling and website policy readiness. Public web Pages asset allowlist currently lacks dedicated customer Terms/Refund/Contact/Privacy notices; internal `docs/PRIVACY.md` cannot stand in as public privacy notice. Existing Cashfree code remains non-deployed, server-only and payment-disabled; no attempt to register a merchant or obtain credentials using fabricated identity. Current blocker: owner sign-in/registration, merchant details and Test/Subscriptions dashboard access. No institutional work.
 
