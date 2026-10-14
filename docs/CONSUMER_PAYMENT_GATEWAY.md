@@ -44,3 +44,6 @@ Official documentation inspected 2026-10-14:
 - Cashfree Subscription Event Feed: https://www.cashfree.com/docs/api-reference/payments/latest/subscription/webhooks
 - Cashfree signature background: https://www.cashfree.com/devstudio/preview/pg/tools/webhookVerification
 - PhonePe PG documentation (verify applicable AutoPay API at activation): https://developer.phonepe.com/
+
+## Engineering release receipt — 2026-10-14
+Merged in [PR #240](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/240) at `b7b19fc23b992a9daa92a9f6c23da11fc45b6344`. [Foundation run 38544793361](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38544793361) reports check/browser/WebKit success. Main readback verified payment policy, Cashfree sandbox adapter and absence of Razorpay source. This proves repository regression tests passed, not real Cashfree API credentials, hosted PWA appearance, merchant onboarding or charges. Checkout remains disabled.
