@@ -1,5 +1,10 @@
 # Current status
 
+## 2026-10-14 — Cashfree TEST secrets secure bridge merged; owner storage next
+PR [#243](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/243) merged as `18af38b87fb4856da19df66f8b230de0992c5e57`. New server-only Cashfree Cloudflare encrypted Secrets Store/Worker Secret bridge and rigorous fake-credential/disabled-network tests are in main. User confirmed Test/Sandbox keys generated but their values were not handled, and no Cloudflare account secrets were installed or verified. Network tests remain separately disabled, no public endpoint, checkout, billing, paid grant or institutional product work was introduced.
+[Foundation run 38561694687](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38561694687) passed **check, Chromium and WebKit** including Node tests and Pages build. Next owner action is securely saving TEST keys in account-level Cloudflare Secrets Store, unbound from public worker. The credential binding to an isolated test worker and actual merchant sandbox request remain separate deferred engineering operations. Guide: `docs/CASHFREE_SANDBOX_SECRET_SETUP.md`.
+
+
 ## 2026-10-14 — Owner generated Cashfree TEST keys; isolated secret-binding code prepared
 User confirmed Test/Sandbox App ID and Secret Key generated. No credential values were requested, copied or connected to Cloudflare by the agent. Branch `feat/cashfree-sandbox-secret-bindings-20261014` adds server-only `src/adapters/cashfree-sandbox-bindings.js` that reads encrypted Cloudflare Worker/Secrets Store bindings, checks explicit sandbox-only flags and keeps network tests OFF by default. Adds mock tests and a mobile-friendly secret-entry guide in `docs/CASHFREE_SANDBOX_SECRET_SETUP.md`. No public Pages assets, checkout routes, live billing, learner entitlement issuers, or existing Worker code changed.
 
