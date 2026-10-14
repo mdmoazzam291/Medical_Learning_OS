@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Phone-sidebar temporary pin removal (ChatGPT, 2026-10-14 IST)
+- Objective: owner-requested temporary suppression of shortcut-pin icons in the mobile sidebar, while gaining text space without changing sidebar width or removing saved pins. Independent from the Cashfree binding, OAuth, PARSE branding branches.
+- Branch: `fix/phone-sidebar-hide-pins-20261014`, based on main `bfcc43deb43a89057d303bf58f1f2ddeb9855532` (PR #250 previously merged). Files: `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js`, `scripts/navigation-browser-check.js` plus STATUS/handoff.
+- Implementation: phone-only `.mlos-panel .mlos-pin{display:none}`, leaving desktop/tablet controls, stored pin preferences and pinned destinations unchanged. Code commits `ecfccf565b203518eb6f24412ea2c0784dd80d9d`, `5cc9402a4b9cd3190ba25355892cf0f0d3415366`, `87a528e0d911252ef111be5d5e4b73acdb982f59`.
+- Verification/status: tests and browser CI pending at this checkpoint, not deployed. Next: open PR, wait for full check/browser/WebKit success, merge with head-SHA lease, confirm Cloudflare `medical-learning-os-web` production build and request refreshed iPhone screenshot. Do not claim build success before verified.
+
+
 ## Mobile drawer follow-up (ChatGPT, 2026-10-14 IST, owner screenshot)
 - User-provided 1179px-wide iPhone screenshot shows drawer boundary at ~779px (~257 CSS px on a 390 CSS-px viewport). This verifies earlier PR #249 is rendered after production build, but the ~8% width reduction from prior 280px is not meaningful enough.
 - Task scope: `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js`, `scripts/navigation-browser-check.js` and relevant docs only. Branch `fix/mobile-drawer-compact-verified-20261014` off main `a66c3f1160e606a2d67c2955b249c5335437e9e1`, distinct from Cashfree, OAuth, PARSE branding work.
