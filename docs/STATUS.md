@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-15 — iPad-only Cashfree one-shot runner staged (not executed)
+Cloudflare dashboard showed zero Cron Triggers for `mlos-cashfree-sandbox`, and its online Schedule-tab button was disabled. Source now includes `scripts/cashfree-probe-once.sh`: an owner-confirmed ephemeral `wrangler dev --remote --test-scheduled` probe suitable for a browser-based Codespaces terminal, Cloudflare OAuth device login, and local loopback-only one-time event. It uses temporary `--var` flags; **deployed Wrangler flags/keys/workers remain unchanged**, no public route, no Cron, no billing. New static/shell tests and detailed `docs/CASHFREE_READONLY_API_PROBE.md` steps describe run + logout/delete Codespace. **No Codespace, Cloudflare remote dev session or real Cashfree API call has been started by assistant.** Remote Secrets Store support for this exact preview is still unverified, and any response must be honestly classified. Verify PR/CI/merge separately before user attempts this optional process.
+
+
 ## 2026-10-15 — Cashfree GET-only diagnostic merged; no real merchant request
 [PR #252](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/252) merged to main as `00989637a2907b1233aefa80f94b3a06edf4bdee`. GitHub Foundation run [38634200958](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38634200958) passed check/Node/Pages build, Chromium browser and WebKit. Adds only a **disabled-by-default** read-only GET to a nonexistent sandbox plan and sanitized 401/403/404 response classification under an internal scheduled diagnostic. No public route/cron/real Cashfree test/plan/mandate/payments/entitlement modifications. Existing `mlos-cashfree-sandbox` production-deployment status **after merge not independently checked**; deployed runtime flags remain specified OFF in Git. To perform a real test needs a separately authenticated Cloudflare manual event dispatch and flag changes. See `docs/CASHFREE_READONLY_API_PROBE.md`.
 
