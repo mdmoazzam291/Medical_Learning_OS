@@ -42,3 +42,9 @@ The billing domain can issue **entitlement grants**; it cannot modify medical tr
 - [ ] No paid full-QBank claim before catalog actually exists
 - [ ] No public charging without separately authorized release
 - [ ] Institutional work remains frozen
+
+## 2026-10-14 implementation checkpoint (pending independent verification)
+- Q1: Added pure `src/domain/consumer-entitlements.js` (unreleased capabilities/price proposals, server-grant-only evaluation, Free default), plus focused tests.
+- Q2: Added `/web/plans.html` as responsive preview-only pricing surface using current permanent palettes, no live checkout; Account menu link, public Pages allowlist and route ownership updated.
+- Q3: Added default-disabled, non-public `src/adapters/razorpay-test.js` for Razorpay test-key subscription request and HMAC-signed raw webhook verification; no endpoints, secrets, charge, mandate, DB grants or production activation.
+- No institution work. Full CI/browser acceptance and genuine trusted-server entitlement integration remain pending; content gates are unchanged.
