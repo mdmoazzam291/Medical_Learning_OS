@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-14 — Mobile sidebar footprint reduction, PR #249 pending verification
+Owner's iPhone screenshot showed the Account navigation overlay using approximately 71% of screen width. On branch `fix/mobile-drawer-safe-width-20261014`, both mobile drawer-open CSS selectors now use `min(clamp(240px, 66vw, 272px), 100dvw - 64px)` instead of the 280px cap. At 320/375/390/430 CSS-px viewports this targets 240/247.5/257.4/272 px, leaving at least a 64px outside-dismissal region. Mobile master-link spacing is tightened, long account destinations may wrap, and pin button hit areas are at least 40×44px. Tablet and desktop rules are unchanged. A new regression test checks both CSS selectors, representative widths, and navigation affordances; targeted static checks passed before PR opening.
+
+[PR #249](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/249) is **unmerged**. Node suite, repository check, browser/iOS Safari acceptance and actual Cloudflare release are **not yet confirmed**. No authentication, persistence, learner evidence, medical content or infrastructure was modified. Next: inspect PR CI, address failures, then obtain release/hosted phone confirmation. This UI branch is independent of the active Cashfree secret-binding token-scope gate.
+
+
 ## 2026-10-14 19:12 IST — Cashfree sandbox binding names confirmed; CI token gate before IaC sync
 Owner screenshot shows `mlos-cashfree-sandbox` has both Secrets Store bindings mapped name-to-name: `CASHFREE_TEST_APP_ID`, `CASHFREE_TEST_SECRET_KEY`. Runtime vars still indicate sandbox and disabled network. Screenshot contains the public, noncredential store identifier and Cloudflare's suggested `secrets_store_secrets` Wrangler snippet. Branch `fix/cashfree-sandbox-binding-config-sync-20261014` adds matching references to the dedicated `wrangler.cashfree-sandbox.jsonc` file (no key values) and updates focused tests and mobile guide; **not yet merged or deployed**.
 

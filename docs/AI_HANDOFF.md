@@ -1,5 +1,14 @@
 # Current engineering handoff
 
+## Independent mobile-navigation task (ChatGPT, 2026-10-14 IST)
+- Objective: reduce the iPhone Account/Study/Library/Exams sidebar footprint while retaining accessible navigation and an obvious outside-dismissal region. Requested after owner screenshot on `medical-learning-os-web.medicalos.workers.dev`.
+- Owner/scope: ChatGPT owns only `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js` and this task's STATUS/handoff entries on branch `fix/mobile-drawer-safe-width-20261014`; base was current `main`. Existing Cashfree token-scope work and OAuth/branding PRs remain separately owned and untouched.
+- Code commits `937f3709eea3edf85627559759d5353d6a140209`, `2098e722e5b76c35df0a373879b634b106a92550` (regex repair `1024ed395b16f645963a842dff7d4c8e66dc920d`). PR [#249](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/249) open, unmerged at this checkpoint.
+- Changed: responsive drawer width `min(clamp(240px,66vw,272px),calc(100dvw - 64px))` in both open-path declarations, mobile grid spacing, wrapping long menu labels and a 40×44px pin tap target; no JS, app content, server or worker modification.
+- Verification: static checks of CSS selectors and 320/375/390/430px width math passed; full Node/Pages/Chromium/WebKit CI and hosted Safari checks pending. No production deployment or user-visible release claimed.
+- Exact next action: inspect PR #249 workflow status, fix failing checks if any, and verify Account plus other master drawers at mobile widths; if green, separately decide/authorize merge and verify Cloudflare-deployed behavior. Preserve the active Cashfree handoff below.
+
+
 Snapshot: 2026-10-14 (Asia/Kolkata). Verify remote evidence before resuming.
 
 ## Current task
