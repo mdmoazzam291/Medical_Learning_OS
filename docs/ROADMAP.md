@@ -1,5 +1,9 @@
 # Implementation roadmap
 
+## Current consumer gateway decision — 2026-10-14 (supersedes earlier Razorpay proposal)
+The owner selected **Cashfree primary** and **PhonePe fallback**. Retire inactive Razorpay test code from active tree, preserve history. Implement only a server-only, default-disabled Cashfree sandbox adapter and test receipt/verifier at this stage. PhonePe stays a documented alternative with no automatic mandate transfer, live adapter or production route. Next work before any paid checkout: approved published medical content, verified study-to-retention learning loop, actual Cashfree sandbox integration with test credentials, server-authenticated billing/reconciliation/idempotency, consent/mandate and tax review, and separate owner release authorization. See `docs/CONSUMER_PAYMENT_GATEWAY.md`.
+
+
 ## Consumer commercial workstream — owner scope 2026-10-14
 Order: (1) deterministic Free/Pro/AI Pro entitlement contract and tests; (2) account-linked preview-only pricing UI using existing Sage/Lavender appearance; (3) default-disabled Razorpay test-mode adapter and webhook verification primitives. This does not open checkout or imply live recurring payments. Next gate is independent CI/browser verification; integration with authenticated trusted server persistence only after sufficient published content and owner release approval. **Institutional B2B/tenant/seat/marketplace work deferred.** See [consumer contract](CONSUMER_COMMERCIAL_PLAN.md) and [Razorpay preparation](RAZORPAY_SANDBOX_PREPARATION.md).
 
