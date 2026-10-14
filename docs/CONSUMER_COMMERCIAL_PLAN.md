@@ -48,3 +48,6 @@ The billing domain can issue **entitlement grants**; it cannot modify medical tr
 - Q2: Added `/web/plans.html` as responsive preview-only pricing surface using current permanent palettes, no live checkout; Account menu link, public Pages allowlist and route ownership updated.
 - Q3: Added default-disabled, non-public `src/adapters/razorpay-test.js` for Razorpay test-key subscription request and HMAC-signed raw webhook verification; no endpoints, secrets, charge, mandate, DB grants or production activation.
 - No institution work. Full CI/browser acceptance and genuine trusted-server entitlement integration remain pending; content gates are unchanged.
+
+## Release receipt (2026-10-14)
+Q1/Q2/Q3 foundation merged in [PR #238](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/238) (`e5523ab2833e38da729440067057ea3846fe6c41`). Foundation run 38540502563 passed Node/check/build, Chromium and WebKit. This means code and preview design are in main; it does **not** mean an active subscription, tested Razorpay transaction or verified hosted deployment. Premium release remains OFF and institution scope remains frozen.

@@ -1,7 +1,7 @@
 # Decision log
 
 ## ADR-115 — Consumer tiers only; fail-closed grants and test-only payment seam
-**Status:** Owner approved implementation on 2026-10-14; feature branch prepared, release pending verification.
+**Status:** Accepted and merged 2026-10-14 in PR #238; Foundation check/Chromium/WebKit green. Charging remains disabled.
 
 Scope is Free OS, Pro and AI Pro only. Institutional licensing, marketplace and white-label remain frozen. Domain capability definitions and proposed GST-inclusive INR price intervals are versioned independently of gateway provider IDs. Default entitlement projection is Free unless a *separate server-controlled premium release flag* is explicitly enabled and an active, trusted-server grant bound to the authenticated learner satisfies temporal validation. The domain contract is not itself an authenticated grant issuer. Admin authorization, learner content, clinical truth, evidence, mastery and review permissions remain independent of billing.
 
