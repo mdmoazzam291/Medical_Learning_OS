@@ -12,6 +12,7 @@ A concept-centered medical learning system: study → answer → understand mist
 - [Content lifecycle](docs/CONTENT_WORKFLOW.md)
 - [Consumer payment gateway decision](docs/CONSUMER_PAYMENT_GATEWAY.md)
 - [Cashfree merchant onboarding and sandbox access preflight](docs/CASHFREE_MERCHANT_ONBOARDING.md)
+- [Cashfree sandbox credential storage for iPhone/iPad](docs/CASHFREE_SANDBOX_SECRET_SETUP.md)
 - [Product scope](docs/PRODUCT.md)
 - [Implementation roadmap](docs/ROADMAP.md)
 - [Architecture](docs/ARCHITECTURE.md)

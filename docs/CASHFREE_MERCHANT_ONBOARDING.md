@@ -63,3 +63,6 @@ No patient data, learner study evidence, raw financial credentials or government
 - Cashfree optional KYC fee terms for some unregistered GST merchants: https://www.cashfree.com/fee-tnc/
 
 **Next external action:** account owner opens the official Cashfree signup/dashboard and completes real registration or signs into an existing account. After obtaining test credentials **in the dashboard**, the owner confirms only that the Test environment and Subscriptions product are enabled. The secret values must remain outside chat and source control. No checkout go-live is authorized.
+
+## Owner account update, 2026-10-14
+The owner later confirmed Cashfree **Test/Sandbox API keys generated**. This supersedes the earlier “keys not obtained” checklist status, but is not independent merchant/API validation, does not establish Subscriptions activation and does not mean the keys have been stored in Cloudflare. The active next step is the [secure iPad/iPhone credential storage guide](CASHFREE_SANDBOX_SECRET_SETUP.md). Never share key values in chat or public files.
