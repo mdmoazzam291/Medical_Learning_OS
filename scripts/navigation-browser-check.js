@@ -143,6 +143,32 @@ try {
       const research = document.querySelector('[data-admin-panel="research"]'), features = document.getElementById('owner-features-state'), alerts = document.getElementById('owner-alerts-state');
       return research && !research.textContent.includes('Loading admin evidence') && features && !features.textContent.includes('Loading feature gates') && alerts && !alerts.textContent.includes('Loading infrastructure alerts');
     });
+    // Regression: Glass must produce perceptible transparency in both the header
+    // and contextual menu. Merely declaring a blur on near-opaque paint is insufficient.
+    if (width > 700) {
+      await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Surface style', { exact: true }).selectOption('glass');
+      await go(origin + '/web/library.html?view=subjects'); await openTools();
+      const paint = await page.evaluate(() => {
+        const alpha = color => {
+          const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
+          const context = canvas.getContext('2d'); context.clearRect(0, 0, 1, 1);
+          context.fillStyle = color; context.fillRect(0, 0, 1, 1);
+          return context.getImageData(0, 0, 1, 1).data[3] / 255;
+        };
+        const header = getComputedStyle(document.querySelector('.mlos-header'));
+        const menu = getComputedStyle(document.querySelector('#mlos-workspace-menu'));
+        const nav = document.querySelector('.mlos-header>.mlos-master-nav');
+        const headerAlpha = alpha(header.backgroundColor), navAlpha = nav ? alpha(getComputedStyle(nav).backgroundColor) : 0;
+        return { menuAlpha: alpha(menu.backgroundColor), headerAlpha, stackedAlpha: navAlpha + (1 - navAlpha) * headerAlpha, menuBlur: menu.backdropFilter || menu.webkitBackdropFilter || 'none' };
+      });
+      assert.ok(paint.menuAlpha < .85, 'Glass contextual menu remains visibly translucent: ' + JSON.stringify(paint));
+      assert.ok(paint.headerAlpha < .85 && paint.stackedAlpha < .85, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
+      assert.notEqual(paint.menuBlur, 'none', 'contextual Glass blurs underlying content');
+      await closeTools(); await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Surface style', { exact: true }).selectOption('standard');
+      await go(origin + '/web/library.html?view=subjects');
+    }
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true, includeHidden: true });
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });

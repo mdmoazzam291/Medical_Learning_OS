@@ -284,3 +284,16 @@ test('crossing header breakpoints returns menu focus after the new header is mou
   assert.equal(h.menu.hidden, true);
   assert.equal(focused, true);
 });
+
+// The portrait tablet must expose the same workspaces as landscape, not a launcher.
+test('tablet portrait and landscape retain all top workspace links', () => {
+  for (const width of [701, 744, 768, 820, 999, 1180]) {
+    const h = open({ width });
+    h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+    const header = h.shell.innerHTML.split('</header>')[0];
+    for (const master of ['home', 'study', 'library', 'exams', 'admin']) {
+      assert.ok(header.includes('data-master="' + master + '"'), width + ': visible ' + master + ' workspace');
+      assert.ok(header.includes('data-workspace-menu="' + master + '"'), width + ': ' + master + ' disclosure');
+    }
+  }
+});
