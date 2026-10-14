@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-14 - Tablet parity and visible Glass correction awaiting browser QA
+
+Owner requested portrait tablets retain landscape-style visible top navigation and Glass be apparent in top/contextual menus. Failing-first regression reproduced hidden workspaces at 701px. WebKit RED baseline run 38518038552 reproduced near-solid Glass paint (menu alpha 0.9608, header alpha 0.8784) despite an existing blur. The correction removes controller launcher selection above 700px, compresses decorative tablet icons while keeping all labeled destinations/disclosures and touch targets, and uses visibly translucent navigation paint, stronger blur and tinted sheen. Reading surfaces remain opaque; Standard/default, saved palettes/styles, phone behavior and fallbacks remain. Local Node suite passes 1,227/1,227; check and 77-file build pass. Full browser GREEN and screenshot QA are pending; PR #235 stays draft and this refinement is not deployed. Preview repair remains separate.
+
 ## 2026-10-14 - Centered navigation and optional Glass released
 
 PR #233 merged as 6913872a2222650fbfd1ef4cfc0887bee91741df through the owner-approved existing GitHub -> Cloudflare route. Main Foundation run 38516083659 passed check, Chromium and iPad WebKit; fresh merged-tree Node suite passed 1,226/1,226. Both Cloudflare production builds passed: learner web bc235da1-128d-4e7f-99e3-66c634e29fcc and heartbeat e5708e62-a369-4ff2-8487-b4568702a72f. Live public inspection confirmed new centered navigation, contextual menus, 19-subject index/independent nested groups, search reveal, persisted dark mode and signed-out access gates. Verification browser restored to Light.

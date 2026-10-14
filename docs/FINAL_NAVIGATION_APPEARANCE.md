@@ -1,13 +1,13 @@
 # Final tablet and desktop navigation / appearance contract
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
-Status: implemented on PR #233; Q3 browser acceptance complete.
+Status: PR #233 released; owner-requested portrait/landscape parity and clearer Glass refinement in progress on PR #235.
 Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.
 Reference: owner-selected IMG_5182.png, "Centered glass navigation — Refined", in the Medical Learning OS conversation. The raster is a visual reference, not route/schema authority.
 
 ## One layout, two surface styles
 
-Use the selected centered top navigation and single contextual page menu for tablet and desktop. Brand at left; major workspaces centered; search, appearance and avatar at right. Do not reserve a permanent left/right navigation rail or sidebar in this selected layout.
+Use the selected centered top navigation and single contextual page menu for tablet and desktop. Brand at left; major workspaces centered; search, appearance and avatar at right. Above phone width (700px), portrait and landscape use the same visible master links and contextual disclosures. Narrow top rows may compress decorative icons/brand spacing, but must not hide workspace labels inside a launcher. Phone and very narrow Split View retain the existing phone layout. Do not reserve a permanent left/right navigation rail or sidebar in this selected layout.
 
 Home, Study, Library and Exams retain their real canonical destinations. Master Admin remains visible only after server-confirmed authorization. Account utilities, including Preferences, stay in the avatar menu. Each workspace exposes its existing contextual tools from a separate disclosure affordance anchored under its top button. A main destination link still navigates; the adjacent chevron opens its tools.
 

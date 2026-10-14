@@ -7,7 +7,7 @@ import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
 const navigationAuth = createSupabaseAuth(cloudConfig);
-let compact = innerWidth <= 1050, phone = innerWidth <= 700, compactHeader = innerWidth < 1000, drawerOpen = false;
+let compact = innerWidth <= 1050, phone = innerWidth <= 700, drawerOpen = false;
 let workspaceOpener = null, workspaceMaster = null, workspaceReturnFocus = null;
 let navigationUser = navigationAuth.currentUser();
 const expanded = () => compact ? drawerOpen : prefs.expanded;
@@ -48,7 +48,7 @@ function render(focusSelector, captureSearch = true) {
   closeWorkspaceMenu();
   applyAppearance();
   navigationUser = navigationAuth.currentUser();
-  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), phone, compactHeader, currentHref: location.pathname + location.search + location.hash });
+  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), phone, currentHref: location.pathname + location.search + location.hash });
   shell.querySelector('#mlos-global-search').value = searchQuery;
   opener = null;
   syncDrawerAccessibility();
@@ -115,8 +115,8 @@ function openWorkspaceMenu(master, trigger) {
   if (!menu) return;
   const insideMenu = Boolean(trigger.closest?.('#mlos-workspace-menu'));
   workspaceMaster = master;
-  workspaceReturnFocus = insideMenu ? shell.querySelector('.mlos-workspace-launcher') : trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
-  menu.innerHTML = workspaceMenuMarkup({ master, currentMaster: identity.master, section: master === identity.master ? identity.section : '', prefs, isAdmin, compactHeader, currentHref: location.pathname + location.search + location.hash });
+  workspaceReturnFocus = insideMenu ? shell.querySelector('.mlos-header [data-workspace-menu="' + master + '"]') : trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
+  menu.innerHTML = workspaceMenuMarkup({ master, currentMaster: identity.master, section: master === identity.master ? identity.section : '', prefs, isAdmin, currentHref: location.pathname + location.search + location.hash });
   workspaceOpener = insideMenu ? menu.querySelector('[data-workspace-menu="' + master + '"]') : trigger;
   if (workspaceReturnFocus?.dataset?.workspaceMenu) workspaceReturnFocus.setAttribute?.('aria-expanded', 'true');
   menu.hidden = false; workspaceOpener?.setAttribute('aria-expanded', 'true'); positionWorkspaceMenu();
@@ -247,12 +247,12 @@ function syncRoute(event) {
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 window.addEventListener('resize', () => {
-  const next = innerWidth <= 1050, nextPhone = innerWidth <= 700, nextHeader = innerWidth < 1000;
-  if (next === compact && nextPhone === phone && nextHeader === compactHeader) { closeWorkspaceMenu(true); return; }
+  const next = innerWidth <= 1050, nextPhone = innerWidth <= 700;
+  if (next === compact && nextPhone === phone) { closeWorkspaceMenu(true); return; }
   const returnMaster = workspaceMaster, returnFocus = Boolean(workspaceOpener);
   closeWorkspaceMenu();
-  compact = next; phone = nextPhone; compactHeader = nextHeader; drawerOpen = false;
-  render(returnFocus ? phone ? '[data-rail]' : returnMaster === 'account' ? '.mlos-account summary' : compactHeader ? '.mlos-workspace-launcher' : '[data-workspace-menu="' + returnMaster + '"]' : undefined);
+  compact = next; phone = nextPhone; drawerOpen = false;
+  render(returnFocus ? phone ? '[data-rail]' : returnMaster === 'account' ? '.mlos-account summary' : '[data-workspace-menu="' + returnMaster + '"]' : undefined);
 });
 render();
 restoreAdminTarget();
