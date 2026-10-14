@@ -15,15 +15,16 @@ function navigationPaint() {
     context.clearRect(0, 0, 1, 1); context.fillStyle = color; context.fillRect(0, 0, 1, 1);
     return context.getImageData(0, 0, 1, 1).data[3] / 255;
   };
-  const paint = node => {
+  const paint = (node, pseudo) => {
     if (!node) return { base: 0, maximum: 0, blur: 'none' };
-    const styles = getComputedStyle(node), base = alpha(styles.backgroundColor);
+    const styles = getComputedStyle(node, pseudo), base = alpha(styles.backgroundColor);
     const stops = styles.backgroundImage === 'none' ? [] : styles.backgroundImage.match(/(?:color|rgba?|hsla?|oklab|oklch|lab|lch)\([^)]*\)|transparent/g);
     if (styles.backgroundImage !== 'none' && !stops?.length) throw new Error('Unrecognized navigation background paint: ' + styles.backgroundImage);
     const gradient = Math.max(0, ...(stops || []).map(alpha));
     return { base, maximum: gradient + (1 - gradient) * base, blur: styles.backdropFilter || styles.webkitBackdropFilter || 'none' };
   };
-  const header = paint(document.querySelector('.mlos-header')), menu = paint(document.querySelector('#mlos-workspace-menu'));
+  const headerNode = document.querySelector('.mlos-header');
+  const header = paint(headerNode, getComputedStyle(headerNode, '::before').content === 'none' ? undefined : '::before'), menu = paint(document.querySelector('#mlos-workspace-menu'));
   const nav = paint(document.querySelector('.mlos-header>.mlos-master-nav'));
   return { header, menu, stackedMaximum: nav.maximum + (1 - nav.maximum) * header.maximum };
 }
@@ -57,7 +58,7 @@ const user = { id: '11111111-1111-4111-8111-111111111111', email: 'fixture@examp
 const classification = { subjects: ['medicine'], systems: ['respiratory'], organs: ['lung'], domains: [], tasks: ['diagnosis'] };
 const question = { questionId: 'fixture-q', questionVersionId: 'fixture-q@1', stem: 'Synthetic question for UI verification only', options: [{ optionId: 'a', text: 'Alpha' }, { optionId: 'b', text: 'Beta' }], conceptLinks: [{ conceptId: 'fixture-c', role: 'primary' }], classification, origins: [], home: { kind: 'original', exams: [], platforms: [] }, observed: { attempts: 0, wrong: 0, state: 'unattempted', repeatedWrong: false }, intelligence: { presentation: ['clinical-vignette'], qualifiers: [], responseFormat: 'single-best-answer' } };
 const library = { concepts: [{ conceptId: 'fixture-c', label: 'Synthetic concept', aliases: [], classification }], questions: [question], notes: [{ noteVersionId: 'fixture-n@1', conceptId: 'fixture-c', title: 'Synthetic source note', bodyMarkdown: 'UI verification only. No real clinical content.' }], links: [] };
-const browser = await engines[engine].launch({ headless: true, ...(engine === 'chromium' && process.env.CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {}) }), errors = [];
+const browser = await engines[engine].launch({ headless: process.env.NAVIGATION_HEADED !== '1', ...(engine === 'chromium' && process.env.CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {}) }), errors = [];
 try {
   const layouts = engine === 'webkit' ? [['ipad-portrait', 820, 1180], ['ipad-landscape', 1180, 820], ['ipad-split', 620, 1024]] : [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]];
   for (const [name, width, height] of layouts) {
@@ -173,6 +174,7 @@ try {
       assert.ok(paint.menu.base < .85 && paint.menu.maximum < .90, 'Glass contextual menu remains visibly translucent: ' + JSON.stringify(paint));
       assert.ok(paint.header.base < .85 && paint.stackedMaximum < .90, 'Glass header avoids stacked opaque paint: ' + JSON.stringify(paint));
       assert.notEqual(paint.menu.blur, 'none', 'contextual Glass declares a backdrop blur');
+      assert.equal(await page.locator('.mlos-header').evaluate(node => getComputedStyle(node).backdropFilter || getComputedStyle(node).webkitBackdropFilter || 'none'), 'none', 'header container does not trap popup descendants in a backdrop root');
       // Verify rendered frosting against a controlled high-frequency backdrop.
       // A computed blur alone can pass while ancestor/compositing rules suppress it.
       const probeRules = await page.evaluate(() => {
@@ -604,7 +606,8 @@ try {
         await go(origin + destination); await page.locator('[data-theme]').waitFor();
         if (destination === '/web/admin.html') await settleAdmin();
         const actual = await page.evaluate(() => {
-          const root = document.documentElement, header = getComputedStyle(document.querySelector('.mlos-header'));
+          const root = document.documentElement, headerNode = document.querySelector('.mlos-header');
+          const before = getComputedStyle(headerNode, '::before'), header = before.content === 'none' ? getComputedStyle(headerNode) : before;
           const reading = [...document.querySelectorAll('main .panel,main .session-card,main .explanation')];
           return { surfaceStyle: root.dataset.surfaceStyle, palette: root.dataset.palette, theme: root.dataset.appearance,
             overflow: root.scrollWidth > innerWidth, padding: getComputedStyle(document.body).paddingLeft,
