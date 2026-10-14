@@ -5,12 +5,28 @@
   "compatibility_date": "2026-10-01",
   "workers_dev": false,
   "preview_urls": false,
-  "triggers": { "crons": [] },
-  "observability": { "enabled": false },
+  "triggers": {
+    "crons": []
+  },
+  "observability": {
+    "enabled": false
+  },
   "vars": {
     "CASHFREE_SANDBOX_MODE": "sandbox",
     "CASHFREE_SANDBOX_ENABLED": "false",
     "CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED": "false",
     "CASHFREE_SANDBOX_RUN_MODE": "disabled"
-  }
+  },
+  "secrets_store_secrets": [
+    {
+      "binding": "CASHFREE_TEST_APP_ID",
+      "store_id": "064ffb47a44c4d5b880dc71ea940efa2",
+      "secret_name": "CASHFREE_TEST_APP_ID"
+    },
+    {
+      "binding": "CASHFREE_TEST_SECRET_KEY",
+      "store_id": "064ffb47a44c4d5b880dc71ea940efa2",
+      "secret_name": "CASHFREE_TEST_SECRET_KEY"
+    }
+  ]
 }

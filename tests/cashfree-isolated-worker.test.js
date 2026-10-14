@@ -38,8 +38,21 @@ test('isolated wrangler config does not touch production Worker, schedule or sec
   assert.equal(isolated.vars.CASHFREE_SANDBOX_ENABLED, 'false');
   assert.equal(isolated.vars.CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED, 'false');
   assert.equal(isolated.vars.CASHFREE_SANDBOX_RUN_MODE, 'disabled');
-  assert.equal(JSON.stringify(isolated).includes('CASHFREE_TEST_APP_ID'), false);
-  assert.equal(JSON.stringify(isolated).includes('CASHFREE_TEST_SECRET_KEY'), false);
+  // Store IDs, binding names and secret names are non-credential metadata.
+  // Neither Cashfree TEST credential VALUE is ever embedded in repo configs.
+  assert.deepEqual(
+    isolated.secrets_store_secrets.map(({ binding, secret_name }) => ({ binding, secret_name })),
+    [
+      { binding: 'CASHFREE_TEST_APP_ID', secret_name: 'CASHFREE_TEST_APP_ID' },
+      { binding: 'CASHFREE_TEST_SECRET_KEY', secret_name: 'CASHFREE_TEST_SECRET_KEY' }
+    ]
+  );
+  assert.equal(new Set(isolated.secrets_store_secrets.map(x => x.store_id)).size, 1);
+  for (const binding of isolated.secrets_store_secrets) {
+    assert.match(binding.store_id, /^[a-f0-9]{32}$/);
+    assert.deepEqual(Object.keys(binding).sort(), ['binding', 'secret_name', 'store_id']);
+  }
+  assert.doesNotMatch(JSON.stringify(isolated), /rzp_live_|sk_test_|rzp_test_|fictional-test-secret/i);
   for (const p of ['cloudflare/cashfree-sandbox-worker.js', 'src/adapters/cashfree-sandbox-bindings.js'])
     assert.equal(publicFileSet.has(p), false);
 });

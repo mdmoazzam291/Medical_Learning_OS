@@ -97,3 +97,18 @@ The owner displayed a green Cloudflare build for the dedicated `mlos-cashfree-sa
 3. Choose **Variable name** `CASHFREE_TEST_APP_ID`, **Secret name** the already-stored `CASHFREE_TEST_APP_ID`. Repeat the same name-to-name mapping for `CASHFREE_TEST_SECRET_KEY`.
 4. Deploy/save the bindings to **this Worker only**. Never re-enter raw secret values; do not use plain Variables or the learner-facing Worker.
 5. Send a screenshot of binding NAMES only for verification. Keep Cashfree network and checkout flags disabled. No test request/mandate is authorized by completing bindings alone.
+
+## 2026-10-14 19:12 IST: dashboard bindings confirmed, IaC synchronization review pending
+
+Owner's iPad screenshot from **Workers & Pages → `mlos-cashfree-sandbox` → Settings** confirms:
+- Cloudflare runtime variables still read `sandbox`, `false`, `false`, `disabled`, consistent with the repository's default-off sandbox/network flags.
+- Both **Secrets Store** bindings are visible on this specific Worker and map `CASHFREE_TEST_APP_ID` → `CASHFREE_TEST_APP_ID` and `CASHFREE_TEST_SECRET_KEY` → `CASHFREE_TEST_SECRET_KEY`.
+- Cloudflare displayed the non-credential `secrets_store_secrets` Wrangler JSON binding snippet and an orange reminder to keep the deployment configuration in sync. No actual Cashfree API calls or secret values were shown.
+
+The correct Cloudflare config schema is `secrets_store_secrets: [{ binding, store_id, secret_name }]` at the top level of **`wrangler.cashfree-sandbox.jsonc`** only. Binding and store metadata are not payment keys. This feature PR copies those references to the repository, without changing `wrangler.jsonc`, the deployed Worker or the actual Cloudflare secrets.
+
+**Important deploy-permission gate:** According to [Cloudflare Secrets Store access control](https://developers.cloudflare.com/secrets-store/access-control/), Wrangler deploying a Worker **with** account Secrets Store bindings through CI/CD requires **Account Secrets Store Edit** on its Cloudflare API token, plus Workers permission and secret `workers` scopes. The previous screenshot named Cloudflare build token `mlos-web-builds`; its scopes are **unknown**. The owner's manual dashboard binding can succeed even when that separate CI token is underprivileged.
+
+**Do not merge or trigger a new GitHub-to-Cloudflare deployment of the updated binding configuration until the build token's necessary permissions are confirmed.** Otherwise Cloudflare's deployment may fail even though the current version and manual bindings continue to exist. Prefer a separate, appropriately scoped sandbox-deployment token over granting broader permissions to the main MLOS web deploy token when feasible. Never share the token value in chat or GitHub.
+
+Once Cloudflare token capability is confirmed, the owner can approve merging the binding-sync PR and check its Cloudflare build log. Only the isolated `mlos-cashfree-sandbox` Worker is targeted by the explicit `-c wrangler.cashfree-sandbox.jsonc` command. The Cashfree network flag, cron, HTTP routes, checkout and paid grants remain OFF.
