@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Mobile drawer follow-up (ChatGPT, 2026-10-14 IST, owner screenshot)
+- User-provided 1179px-wide iPhone screenshot shows drawer boundary at ~779px (~257 CSS px on a 390 CSS-px viewport). This verifies earlier PR #249 is rendered after production build, but the ~8% width reduction from prior 280px is not meaningful enough.
+- Task scope: `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js`, `scripts/navigation-browser-check.js` and relevant docs only. Branch `fix/mobile-drawer-compact-verified-20261014` off main `a66c3f1160e606a2d67c2955b249c5335437e9e1`, distinct from Cashfree, OAuth, PARSE branding work.
+- Implemented width `min(clamp(216px,58vw,244px),calc(100dvw - 96px))` on both mobile open paths; expected widths 216/217.5/226.2/244px at 320/375/390/430px. Keep two-column mobile Workspaces grid and readable long labels with wrapping, minimum accessible controls and full-width closed workspace.
+- Added CSS regression targets plus runtime Playwright geometry/control-fit assertions at four widths. Code commits: `2fbb1ab2fcfc44a998b8c22106d9daaff5bb690b`, `40dd42e1bf2dd4a4e039dcb1140210471a1e9105`, `65777a66eed4402e5fc65f46bdddcbbfb04f3779`.
+- Verification: not yet externally executed at this checkpoint. Next: open PR, inspect full check/browser/WebKit CI, fix any failures, squash-merge only on green, inspect Cloudflare `medical-learning-os-web` Build, then request fresh native iPhone screenshot. No content/data/admin/secret mutation intended. Prior PR #249 merged as `a66c3f1`; its learner Worker production build succeeded.
+
+
 ## Independent mobile-navigation task (ChatGPT, 2026-10-14 IST)
 - Objective: reduce the iPhone Account/Study/Library/Exams sidebar footprint while retaining accessible navigation and an obvious outside-dismissal region. Requested after owner screenshot on `medical-learning-os-web.medicalos.workers.dev`.
 - Owner/scope: ChatGPT owns only `web/navigation.css`, `tests/navigation-mobile-drawer-width.test.js` and this task's STATUS/handoff entries on branch `fix/mobile-drawer-safe-width-20261014`; base was current `main`. Existing Cashfree token-scope work and OAuth/branding PRs remain separately owned and untouched.
