@@ -7,9 +7,9 @@ const css = readFileSync(new URL('../web/navigation.css', import.meta.url), 'utf
 test('phone drawer uses the same compact width whether opened by rail or overlay', () => {
   const rule = 'width:min(clamp(240px,66vw,272px),calc(100dvw - 64px))';
   assert.equal(css.split(rule).length - 1, 2, 'both mobile drawer selectors must use the safe-width policy');
-  assert.doesNotMatch(css, /width:min\\(280px,calc\\(100vw - 40px\\)\\)/, 'old oversized drawer cap must not return');
-  assert.match(css, /\\.mlos-app\\[data-rail="expanded"\\] \\.mlos-panel\\{[^}]*width:min\\(clamp\\(240px,66vw,272px\\),calc\\(100dvw - 64px\\)\\)/);
-  assert.match(css, /\\.mlos-app\\[data-drawer="open"\\] \\.mlos-panel\\{[^}]*width:min\\(clamp\\(240px,66vw,272px\\),calc\\(100dvw - 64px\\)\\)/);
+  assert.doesNotMatch(css, /width:min\(280px,calc\(100vw - 40px\)\)/, 'old oversized drawer cap must not return');
+  assert.match(css, /\.mlos-app\[data-rail="expanded"\] \.mlos-panel\{[^}]*width:min\(clamp\(240px,66vw,272px\),calc\(100dvw - 64px\)\)/);
+  assert.match(css, /\.mlos-app\[data-drawer="open"\] \.mlos-panel\{[^}]*width:min\(clamp\(240px,66vw,272px\),calc\(100dvw - 64px\)\)/);
 });
 
 test('compact drawer leaves a tappable outside region across common phone widths', () => {
@@ -22,7 +22,7 @@ test('compact drawer leaves a tappable outside region across common phone widths
 });
 
 test('narrow drawer maintains readable destinations and accessible pin targets', () => {
-  assert.match(css, /\\.mlos-panel nav\\[aria-label="Main navigation"\\]\\{display:grid;grid-template-columns:1fr 1fr/);
-  assert.match(css, /\\.mlos-panel \\.mlos-nav-row>a\\{overflow-wrap:break-word;line-height:1\\.4\\}/);
-  assert.match(css, /\\.mlos-panel \\.mlos-pin\\{min-height:44px;min-width:40px;display:grid;place-items:center/);
+  assert.match(css, /\.mlos-panel nav\[aria-label="Main navigation"\]\{display:grid;grid-template-columns:1fr 1fr/);
+  assert.match(css, /\.mlos-panel \.mlos-nav-row>a\{overflow-wrap:break-word;line-height:1\.4\}/);
+  assert.match(css, /\.mlos-panel \.mlos-pin\{min-height:44px;min-width:40px;display:grid;place-items:center/);
 });
