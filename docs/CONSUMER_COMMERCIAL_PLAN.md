@@ -32,7 +32,7 @@ NEET-PG and INI-CET are a shared Indian consumer exam bundle. Premium availabili
 No institutional roles/data tables, multi-tenant billing, institutional sale workflows, public marketplace, revenue-sharing agreements, live gateway keys, checkout pages, production payment activation, or unverified medical claims should be introduced merely by documenting this proposal.
 
 ## System boundaries
-The billing domain can issue **entitlement grants**; it cannot modify medical truth, question scoring, immutable learner evidence or Digital Twin probabilities. Providers (Razorpay/Cashfree/PhonePe/other) are replaceable adapters. A future institution grant may be modeled via general grant provenance but no institution functionality is being built now.
+The billing domain can issue **entitlement grants**; it cannot modify medical truth, question scoring, immutable learner evidence or Digital Twin probabilities. Providers (Cashfree/PhonePe/other) are replaceable adapters. A future institution grant may be modeled via general grant provenance but no institution functionality is being built now.
 
 ## Implementation acceptance checklist
 - [ ] Business price/feature matrix re-approved for each launch stage
@@ -51,3 +51,6 @@ The billing domain can issue **entitlement grants**; it cannot modify medical tr
 
 ## Release receipt (2026-10-14)
 Q1/Q2/Q3 foundation merged in [PR #238](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/238) (`e5523ab2833e38da729440067057ea3846fe6c41`). Foundation run 38540502563 passed Node/check/build, Chromium and WebKit. This means code and preview design are in main; it does **not** mean an active subscription, tested Razorpay transaction or verified hosted deployment. Premium release remains OFF and institution scope remains frozen.
+
+## 2026-10-14 owner gateway selection (current, overrides older implementation receipt)
+**Cashfree primary** for consumer sandbox integration, **PhonePe alternative** (design only), **Razorpay retired** from the active repository. The old Q3 Razorpay implementation note above is historical. See [active gateway contract](CONSUMER_PAYMENT_GATEWAY.md) and ADR-116. No checkout, recurring mandate, merchant credentials, actual grant or production charging is enabled. Institution strategy stays deferred.
