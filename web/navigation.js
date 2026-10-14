@@ -1,5 +1,5 @@
 import { navigationFor, routeIdentity, preferenceStore, canSwitchLibraryView, canonicalPagePath } from '/src/domain/app-navigation.js';
-import { navigationMarkup, flyoutMarkup } from '/web/navigation-view.js';
+import { navigationMarkup, flyoutMarkup, workspaceMenuMarkup } from '/web/navigation-view.js';
 import { mutatePreference } from '/web/navigation-preferences.js';
 import { resolveAdminAccess } from '/web/navigation-access.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
@@ -7,7 +7,8 @@ import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 const store = preferenceStore();
 const navigationAuth = createSupabaseAuth(cloudConfig);
-let compact = innerWidth <= 1050, phone = innerWidth <= 700, drawerOpen = false;
+let compact = innerWidth <= 1050, phone = innerWidth <= 700, compactHeader = innerWidth < 1000, drawerOpen = false;
+let workspaceOpener = null, workspaceMaster = null, workspaceReturnFocus = null;
 let navigationUser = navigationAuth.currentUser();
 const expanded = () => compact ? drawerOpen : prefs.expanded;
 let prefs = store.read(), identity = routeIdentity(location.pathname, location.search, location.hash), isAdmin = globalThis.mlosNavigationAdmin === true, opener = null;
@@ -35,17 +36,19 @@ document.body.classList.add('mlos-app');
 function applyAppearance() {
   document.documentElement.dataset.appearance = prefs.theme;
   document.documentElement.dataset.palette = prefs.palette;
-  document.body.dataset.rail = expanded() ? 'expanded' : 'collapsed';
-  document.body.dataset.drawer = compact && drawerOpen ? 'open' : 'closed';
-  document.body.dataset.navigationLayout = compact ? 'overlay' : 'inline';
+  document.documentElement.dataset.surfaceStyle = prefs.surfaceStyle;
+  document.body.dataset.rail = phone && expanded() ? 'expanded' : 'collapsed';
+  document.body.dataset.drawer = phone && drawerOpen ? 'open' : 'closed';
+  document.body.dataset.navigationLayout = phone ? 'phone' : 'top';
   document.body.dataset.navigationMemory = store.persistence;
 }
 function render(focusSelector, captureSearch = true) {
   const input = shell.querySelector('#mlos-global-search'), hadSearchFocus = document.activeElement === input;
   if (input && captureSearch) searchQuery = input.value;
+  closeWorkspaceMenu();
   applyAppearance();
   navigationUser = navigationAuth.currentUser();
-  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), phone, currentHref: location.pathname + location.search + location.hash });
+  shell.innerHTML = navigationMarkup({ ...identity, prefs: { ...prefs, expanded: expanded() }, isAdmin, signedIn: Boolean(navigationUser), phone, compactHeader, currentHref: location.pathname + location.search + location.hash });
   shell.querySelector('#mlos-global-search').value = searchQuery;
   opener = null;
   syncDrawerAccessibility();
@@ -53,7 +56,7 @@ function render(focusSelector, captureSearch = true) {
   else if (hadSearchFocus) shell.querySelector('#mlos-global-search').focus();
 }
 function syncDrawerAccessibility() {
-  const modal = compact && drawerOpen;
+  const modal = phone && drawerOpen;
   const panel = shell.querySelector('#mlos-panel');
   if (modal) { panel?.setAttribute?.('role', 'dialog'); panel?.setAttribute?.('aria-modal', 'false'); }
   for (const node of document.body.children || []) {
@@ -79,10 +82,45 @@ function closeDrawer(restoreFocus = false) {
 }
 function save(action) { prefs = mutatePreference(store, action, next => { prefs = next; applyAppearance(); window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: next } })); }); }
 function closeFlyout(restoreFocus = false) {
-  shell.querySelector('#mlos-flyout').hidden = true;
+  const flyout = shell.querySelector('#mlos-flyout'); if (flyout) flyout.hidden = true;
   shell.querySelectorAll('[data-flyout]').forEach(button => button.setAttribute('aria-expanded', 'false'));
   if (restoreFocus) opener?.focus();
   opener = null;
+}
+function closeWorkspaceMenu(restoreFocus = false) {
+  const menu = shell.querySelector('#mlos-workspace-menu');
+  if (menu) menu.hidden = true;
+  workspaceOpener?.setAttribute?.('aria-expanded', 'false');
+  if (workspaceReturnFocus?.dataset?.workspaceMenu) workspaceReturnFocus.setAttribute?.('aria-expanded', 'false');
+  if (restoreFocus && workspaceOpener) workspaceReturnFocus?.focus?.();
+  workspaceOpener = null; workspaceMaster = null; workspaceReturnFocus = null;
+}
+function positionWorkspaceMenu() {
+  const menu = shell.querySelector('#mlos-workspace-menu');
+  if (!menu || !workspaceOpener || !menu.style) return;
+  const rect = workspaceReturnFocus?.getBoundingClientRect?.();
+  if (!rect) return;
+  const width = Math.min(380, innerWidth - 24);
+  const top = Math.max(60, rect.bottom + 6);
+  menu.style.width = width + 'px';
+  menu.style.left = Math.max(12, Math.min(rect.left, innerWidth - width - 12)) + 'px';
+  menu.style.top = top + 'px';
+  menu.style.maxHeight = Math.max(44, innerHeight - top - 12) + 'px';
+}
+function openWorkspaceMenu(master, trigger) {
+  if (phone || !navigationFor(master, { isAdmin }).length) return;
+  if (workspaceOpener === trigger) return closeWorkspaceMenu(true);
+  closeWorkspaceMenu(); closeAccount(); closeFlyout(); shell.classList.remove('mlos-search-open');
+  const menu = shell.querySelector('#mlos-workspace-menu');
+  if (!menu) return;
+  const insideMenu = Boolean(trigger.closest?.('#mlos-workspace-menu'));
+  workspaceMaster = master;
+  workspaceReturnFocus = insideMenu ? shell.querySelector('.mlos-workspace-launcher') : trigger.closest?.('.mlos-account')?.querySelector('summary') || trigger;
+  menu.innerHTML = workspaceMenuMarkup({ master, currentMaster: identity.master, section: master === identity.master ? identity.section : '', prefs, isAdmin, compactHeader, currentHref: location.pathname + location.search + location.hash });
+  workspaceOpener = insideMenu ? menu.querySelector('[data-workspace-menu="' + master + '"]') : trigger;
+  if (workspaceReturnFocus?.dataset?.workspaceMenu) workspaceReturnFocus.setAttribute?.('aria-expanded', 'true');
+  menu.hidden = false; workspaceOpener?.setAttribute('aria-expanded', 'true'); positionWorkspaceMenu();
+  menu.querySelector('a,button,summary')?.focus();
 }
 function navigateAdminLink(anchor, event) {
   if (!anchor || !isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html' || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || (event.button !== undefined && event.button !== 0)) return;
@@ -121,9 +159,11 @@ shell.addEventListener('click', event => {
         event.preventDefault(); window.dispatchEvent(new CustomEvent('mlos:library-view', { detail: { view: target.searchParams.get('view') } })); closeFlyout();
       }
     }
-    if (anchor) { closeAccount(); closeDrawer(); }
+    if (anchor) { closeWorkspaceMenu(); closeAccount(); closeDrawer(); }
     return;
   }
+  if (button.dataset.workspaceMenu) { openWorkspaceMenu(button.dataset.workspaceMenu, button); return; }
+  if (button.hasAttribute('data-close-workspace-menu')) { closeWorkspaceMenu(true); return; }
   if (button.hasAttribute('data-close-drawer')) { closeDrawer(true); return; }
   if (button.hasAttribute('data-signout')) {
     button.disabled = true;
@@ -143,9 +183,11 @@ shell.addEventListener('click', event => {
   if (button.hasAttribute('data-theme')) { closeDrawer(); closeAccount(); save({ type: 'theme' }); render('[data-theme]'); }
   if (button.dataset.pin) {
     event.preventDefault();
+    const menuMaster = workspaceMaster;
     const flyoutKey = opener?.dataset.flyout;
     save({ type: 'pin', id: button.dataset.pin }); render();
-    if (flyoutKey) shell.querySelector('[data-flyout="' + flyoutKey + '"]')?.click();
+    if (menuMaster) { const trigger = shell.querySelector('[data-workspace-menu="' + menuMaster + '"]'); if (trigger) { openWorkspaceMenu(menuMaster, trigger); shell.querySelector('[data-pin="' + button.dataset.pin + '"]')?.focus(); } }
+    else if (flyoutKey) shell.querySelector('[data-flyout="' + flyoutKey + '"]')?.click();
     else shell.querySelector('[data-pin="' + button.dataset.pin + '"]')?.focus();
   }
   if (button.hasAttribute('data-close-flyout')) closeFlyout(true);
@@ -162,19 +204,19 @@ shell.addEventListener('click', event => {
   }
 });
 shell.addEventListener('toggle', event => {
-  if (event.target.classList?.contains('mlos-account') && event.target.open) { closeFlyout(); shell.classList.remove('mlos-search-open'); }
+  if (event.target.classList?.contains('mlos-account') && event.target.open) { closeWorkspaceMenu(); closeFlyout(); shell.classList.remove('mlos-search-open'); }
   if (event.target.dataset.group) save({ type: 'group', id: event.target.dataset.group, open: event.target.open });
 }, true);
 function dismissOutside(event) {
   // The shell may replace its children before this click reaches the document.
   if (event.composedPath?.().includes(shell) || event.target.closest('#mlos-navigation')) return;
-  closeFlyout(); closeAccount(); shell.classList.remove('mlos-search-open');
+  closeWorkspaceMenu(); closeFlyout(); closeAccount(); shell.classList.remove('mlos-search-open');
   closeDrawer();
 }
 document.addEventListener('pointerdown', dismissOutside);
 document.addEventListener('click', event => { dismissOutside(event); navigateAdminLink(event.target.closest('a'), event); });
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') { closeFlyout(true); closeAccount(true); shell.classList.remove('mlos-search-open'); closeDrawer(true); }
+  if (event.key === 'Escape') { closeWorkspaceMenu(true); closeFlyout(true); closeAccount(true); shell.classList.remove('mlos-search-open'); closeDrawer(true); }
   if (event.key === 'Tab' && compact && drawerOpen) {
     const controls = [...(shell.querySelectorAll?.('a,button,summary') || [])].filter(node => !node.disabled && node.getClientRects().length);
     const first = controls[0], last = controls.at(-1);
@@ -182,12 +224,12 @@ document.addEventListener('keydown', event => {
       event.preventDefault(); (event.shiftKey ? last : first).focus();
     }
   }
-  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus(); }
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); closeWorkspaceMenu(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus(); }
 });
 shell.querySelectorAll('form').forEach(form => form.addEventListener('submit', () => closeFlyout()));
 shell.addEventListener('submit', event => {
-  if (event.target.matches('.mlos-search') && compact && !shell.classList.contains('mlos-search-open')) {
-    event.preventDefault(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
+  if (event.target.matches('.mlos-search') && (phone || innerWidth < 1600) && !shell.classList.contains('mlos-search-open')) {
+    event.preventDefault(); closeWorkspaceMenu(); closeDrawer(); closeAccount(); shell.classList.add('mlos-search-open'); shell.querySelector('#mlos-global-search').focus();
   }
 });
 window.addEventListener('mlos:access', event => {
@@ -205,9 +247,12 @@ function syncRoute(event) {
 for (const event of ['mlos:route', 'popstate', 'hashchange']) window.addEventListener(event, syncRoute);
 window.addEventListener('mlos:preferences', event => { const next = event.detail?.prefs ? store.write(event.detail.prefs) : store.read(); if (JSON.stringify(next) !== JSON.stringify(prefs)) { prefs = next; render(); } });
 window.addEventListener('resize', () => {
-  const next = innerWidth <= 1050, nextPhone = innerWidth <= 700;
-  if (next === compact && nextPhone === phone) return;
-  compact = next; phone = nextPhone; drawerOpen = false; render();
+  const next = innerWidth <= 1050, nextPhone = innerWidth <= 700, nextHeader = innerWidth < 1000;
+  if (next === compact && nextPhone === phone && nextHeader === compactHeader) { closeWorkspaceMenu(true); return; }
+  const returnMaster = workspaceMaster, returnFocus = Boolean(workspaceOpener);
+  closeWorkspaceMenu();
+  compact = next; phone = nextPhone; compactHeader = nextHeader; drawerOpen = false;
+  render(returnFocus ? phone ? '[data-rail]' : returnMaster === 'account' ? '.mlos-account summary' : compactHeader ? '.mlos-workspace-launcher' : '[data-workspace-menu="' + returnMaster + '"]' : undefined);
 });
 render();
 restoreAdminTarget();

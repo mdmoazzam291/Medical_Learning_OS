@@ -172,3 +172,87 @@
  .mlos-app .hero{gap:20px;margin-bottom:20px}
  .mlos-app .hero,.mlos-app .panel{padding:20px}
 }
+
+/* Tablet/desktop use one top navigation row; content never reserves rail width. */
+@media(min-width:701px){
+ .mlos-app[data-navigation-layout="top"],.mlos-app[data-navigation-layout="top"][data-rail="expanded"]{padding-left:0;padding-top:56px;transition:none}
+ .mlos-header-top{height:56px;min-height:56px;padding:0 16px;display:grid;grid-template-columns:minmax(100px,1fr) auto minmax(132px,1fr);gap:12px;align-items:center}
+ .mlos-header-top .mlos-brand{justify-self:start;font-size:15px;gap:8px}.mlos-header-top .mlos-brand-short{display:block}
+ .mlos-header-top .mlos-brand-mark{height:32px;width:32px;font-size:24px}
+ .mlos-header-top>.mlos-master-nav{display:flex;gap:2px;padding:2px;border:1px solid var(--line);border-radius:18px;background:var(--sidebar)}
+ .mlos-master-item{display:flex;align-items:center;border-radius:14px;min-width:0}
+ .mlos-master-item[data-active="true"]{background:var(--soft);color:var(--accent)}
+ .mlos-header-top .mlos-master-item>a{font-size:13px;padding:8px;gap:6px;min-height:44px;border-radius:14px 0 0 14px;color:var(--ink)}
+ .mlos-header-top .mlos-master-item>a[aria-current]{background:transparent;color:var(--accent)}
+ .mlos-master-item>button{display:grid;place-items:center;width:44px;min-width:44px;min-height:44px;padding:10px;border:0;background:transparent;color:var(--ink);border-radius:12px}
+ .mlos-master-item>button .mlos-icon{width:14px;height:14px;transform:rotate(90deg)}
+ .mlos-master-item>button[aria-expanded="true"]{background:var(--soft);color:var(--accent)}
+ .mlos-utilities{display:flex;align-items:center;justify-content:flex-end;gap:2px;min-width:0}
+ .mlos-header-top .mlos-search{margin:0;flex:0 0 44px;max-width:44px}
+ .mlos-header-top .mlos-search input[type="search"]{display:none}
+ .mlos-header-top .mlos-search button{position:static;min-height:44px;min-width:44px;padding:10px}
+ .mlos-header-top .mlos-theme{min-height:44px;min-width:44px;padding:10px}
+ .mlos-workspace-launcher{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:0;padding:8px 12px;border:1px solid var(--line);background:var(--sidebar);color:var(--ink);border-radius:16px;font-size:14px;white-space:nowrap}
+ .mlos-workspace-launcher .mlos-icon:last-child{width:14px;transform:rotate(90deg)}
+ .mlos-search-open .mlos-header-top .mlos-search{position:fixed;top:62px;left:12px;right:12px;max-width:none;background:var(--surface);border:1px solid var(--line);padding:4px;border-radius:18px;box-shadow:var(--shadow)}
+ .mlos-search-open .mlos-header-top .mlos-search input[type="search"]{display:block}
+ .mlos-search-open .mlos-header-top .mlos-search button{position:absolute;right:4px}
+ .mlos-app #admin-app [id]{scroll-margin-top:72px}
+}
+@media(min-width:1600px){
+ .mlos-header-top .mlos-search{flex:1;max-width:240px}
+ .mlos-header-top .mlos-search input[type="search"]{display:block}
+ .mlos-header-top .mlos-search button{position:absolute;right:2px}
+}
+.mlos-workspace-menu{position:fixed;top:62px;left:12px;width:min(380px,calc(100vw - 24px));max-height:calc(100dvh - 74px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;z-index:40;padding:10px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:0 12px 36px #0002}
+.mlos-workspace-menu[hidden]{display:none}
+.mlos-workspace-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 2px 8px;border-bottom:1px solid var(--line);font-size:14px}
+.mlos-workspace-heading button{min-height:44px;min-width:44px;display:grid;place-items:center;background:transparent;border:0;color:var(--ink);padding:10px}
+.mlos-workspace-menu nav{display:grid;gap:3px;margin-top:8px}
+.mlos-workspace-menu a{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-height:44px;padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);line-height:1.4;font-size:13px;white-space:normal}
+.mlos-workspace-menu a[aria-current],.mlos-workspace-menu details[data-active="true"]>summary{background:var(--soft);color:var(--accent)}
+.mlos-workspace-menu a:hover,.mlos-workspace-menu button:hover,.mlos-workspace-menu summary:hover{background:var(--soft)}
+.mlos-workspace-menu summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 10px;cursor:pointer;list-style:none;border-radius:10px;font-size:13px;line-height:1.4}
+.mlos-workspace-menu summary::after{content:'›';margin-left:auto;font-size:20px}
+.mlos-workspace-menu details[open]>summary::after{transform:rotate(90deg)}
+.mlos-workspace-menu .mlos-children{margin-left:6px;padding-left:6px}
+.mlos-workspace-menu .mlos-pin{min-height:44px;min-width:44px;padding:12px}
+.mlos-workspace-menu .mlos-master-nav{grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding-bottom:8px}
+.mlos-workspace-menu .mlos-master-item>a{flex:1;min-width:0;font-size:12px;padding:8px 4px}
+.mlos-workspace-menu .mlos-master-item>a .mlos-icon{width:18px;height:18px}
+.mlos-workspace-menu .mlos-master-item>button{min-width:44px;min-height:44px}
+.mlos-workspace-menu .mlos-caption{display:block}
+
+/* Surface style is independent of palette and appearance. Reading surfaces stay opaque. */
+@media(min-width:701px){
+ :root[data-surface-style="glass"]{--nav-tint:var(--soft);--nav-edge:var(--line)}
+ :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:var(--sidebar)}
+ :root[data-surface-style="glass"] .mlos-header-top,
+ :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+ :root[data-surface-style="glass"] .mlos-workspace-menu,
+ :root[data-surface-style="glass"] .mlos-account-menu,
+ :root[data-surface-style="glass"] .mlos-workspace-launcher,
+ :root[data-surface-style="glass"] .mlos-search-open .mlos-search{background:var(--nav-tint);border-color:var(--nav-edge);box-shadow:0 4px 18px #0001}
+ :root[data-surface-style="glass"] .mlos-header-top .mlos-search input[type="search"]{background:var(--nav-tint)}
+ :root[data-surface-style="glass"] .mlos-workspace-menu,
+ :root[data-surface-style="glass"] .mlos-account-menu,
+ :root[data-surface-style="glass"] .mlos-search-open .mlos-search{background:var(--nav-menu-tint,var(--nav-tint))}
+ @supports (background:color-mix(in srgb,red 50%,transparent)) and ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root[data-surface-style="glass"]{--nav-tint:color-mix(in srgb,var(--soft) 88%,transparent);--nav-menu-tint:color-mix(in srgb,var(--soft) 96%,transparent);--nav-edge:color-mix(in srgb,var(--accent) 22%,transparent)}
+  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:color-mix(in srgb,var(--sidebar) 94%,transparent);--nav-menu-tint:color-mix(in srgb,var(--sidebar) 98%,transparent)}
+  :root[data-surface-style="glass"] .mlos-header-top,
+  :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+  :root[data-surface-style="glass"] .mlos-workspace-menu,
+  :root[data-surface-style="glass"] .mlos-account-menu,
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1)}
+ }
+ @media(prefers-reduced-transparency:reduce){
+  :root[data-surface-style="glass"]{--nav-tint:var(--soft);--nav-menu-tint:var(--nav-tint)}
+  :root[data-surface-style="glass"][data-appearance="dark"]{--nav-tint:var(--sidebar);--nav-menu-tint:var(--nav-tint)}
+  :root[data-surface-style="glass"] .mlos-header-top,
+  :root[data-surface-style="glass"] .mlos-header-top>.mlos-master-nav,
+  :root[data-surface-style="glass"] .mlos-workspace-menu,
+  :root[data-surface-style="glass"] .mlos-account-menu,
+  :root[data-surface-style="glass"] .mlos-search-open .mlos-search{backdrop-filter:none;-webkit-backdrop-filter:none}
+ }
+}

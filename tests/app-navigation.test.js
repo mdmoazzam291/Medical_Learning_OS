@@ -48,7 +48,7 @@ test('role filtering never trusts query strings or stored admin preferences', ()
 test('malformed preferences discard arbitrary paths, private fields and unknown groups', () => {
   const { validatePreferences } = requireNav();
   const prefs = validatePreferences({ version: 1, expanded: 'yes', theme: 'code', pins: ['javascript:alert(1)', 'library:notes', 'library:notes'], groups: ['__proto__', 'library:subjects'], answer: 'private', token: 'secret' });
-  assert.deepEqual(prefs, { version: 1, expanded: false, theme: 'light', palette: 'sage_precision', pins: ['library:notes'], groups: ['library:subjects'] });
+  assert.deepEqual(prefs, { version: 1, expanded: false, theme: 'light', palette: 'sage_precision', surfaceStyle: 'standard', pins: ['library:notes'], groups: ['library:subjects'] });
   assert.deepEqual(validatePreferences({ version: 999, expanded: true }).expanded, false);
 });
 
@@ -58,10 +58,10 @@ test('approved palette defaults and migration preserve appearance, pins and grou
   const values = new Map([['mlos-navigation-v1', JSON.stringify(old)]]);
   const storage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) };
   const store = preferenceStore(() => storage);
-  assert.deepEqual(store.read(), { ...old, palette: 'sage_precision' });
+  assert.deepEqual(store.read(), { ...old, palette: 'sage_precision', surfaceStyle: 'standard' });
   const lavender = changePreference(store.read(), { type: 'palette', value: 'lavender_precision' });
   store.write(lavender);
-  assert.deepEqual(preferenceStore(() => storage).read(), { ...old, palette: 'lavender_precision' });
+  assert.deepEqual(preferenceStore(() => storage).read(), { ...old, palette: 'lavender_precision', surfaceStyle: 'standard' });
   assert.equal(changePreference(lavender, { type: 'theme' }).palette, 'lavender_precision');
   assert.equal(validatePreferences({ ...old, palette: 'adaptive-dusk' }).palette, 'sage_precision');
 });
@@ -116,4 +116,26 @@ test('Study subject leaves keep their contextual ownership without a second cata
     const url = new URL(row.href, 'https://example.invalid');
     assert.deepEqual(routeIdentity(url.pathname, url.search), { master: 'study', section: 'subjects' });
   }
+});
+
+test('old navigation records acquire Standard without losing independent preferences', () => {
+  const { validatePreferences } = requireNav();
+  const old = { version: 1, expanded: true, theme: 'dark', palette: 'lavender_precision', pins: ['library:notes'], groups: ['library:subjects'] };
+  assert.deepEqual(validatePreferences(old), { ...old, surfaceStyle: 'standard' });
+  for (const value of [null, 'unknown', {}, false]) assert.equal(validatePreferences({ ...old, surfaceStyle: value }).surfaceStyle, 'standard');
+});
+test('Glass survives reload and palette and appearance edits without losing pins or groups', () => {
+  const { preferenceStore, changePreference } = requireNav();
+  const values = new Map();
+  const storage = { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value) };
+  const store = preferenceStore(() => storage);
+  const before = store.write({ ...store.read(), theme: 'dark', palette: 'lavender_precision', expanded: true, pins: ['account:data'], groups: ['library:subjects', 'library:references'] });
+  const glass = store.write(changePreference(before, { type: 'surfaceStyle', value: 'glass' }));
+  assert.deepEqual(glass, { ...before, surfaceStyle: 'glass' });
+  const reloaded = preferenceStore(() => storage).read();
+  assert.deepEqual(reloaded, glass);
+  const sage = changePreference(reloaded, { type: 'palette', value: 'sage_precision' });
+  assert.equal(sage.surfaceStyle, 'glass');
+  assert.equal(changePreference(sage, { type: 'theme' }).surfaceStyle, 'glass');
+  assert.equal(changePreference(glass, { type: 'surfaceStyle', value: 'invalid' }).surfaceStyle, 'standard');
 });

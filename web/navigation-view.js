@@ -83,16 +83,41 @@ export function flyoutMarkup(row, master, prefs, currentHref = '') {
     '</button></div><div class="mlos-children">' +
     childrenMarkup(row.children, master + ':' + row.id, prefs, currentHref) + '</div>';
 }
-export function accountMarkup({ signedIn = false, active = false } = {}) {
-  return '<details class="mlos-account"><summary aria-label="Account menu" title="Account"' + (active ? ' data-active="true"' : '') + '>' + icon('user') + '</summary><nav class="mlos-account-menu" aria-label="Account navigation"><a href="/web/account.html">' + icon('user') + '<span>Profile</span></a><a href="/web/workspace.html?master=account&amp;section=preferences">' + icon('settings') + '<span>Preferences</span></a><a href="/web/account.html#sign-in-methods">' + icon('settings') + '<span>Account &amp; Security</span></a>' + (signedIn ? '<button type="button" data-signout>' + icon('path') + '<span>Sign out</span></button>' : '<a href="/web/account.html">' + icon('user') + '<span>Sign in</span></a>') + '</nav></details>';
+export function accountMarkup({ signedIn = false, active = false, workspaceTools = false } = {}) {
+  return '<details class="mlos-account"><summary aria-label="Account menu" title="Account"' + (active ? ' data-active="true"' : '') + '>' + icon('user') + '</summary><nav class="mlos-account-menu" aria-label="Account navigation"><a href="/web/account.html">' + icon('user') + '<span>Profile</span></a><a href="/web/workspace.html?master=account&amp;section=preferences">' + icon('settings') + '<span>Preferences</span></a><a href="/web/account.html#sign-in-methods">' + icon('settings') + '<span>Account &amp; Security</span></a>' + (workspaceTools ? '<button type="button" data-workspace-menu="account" aria-label="Open Account tools" aria-expanded="false" aria-controls="mlos-workspace-menu">' + icon('menu') + '<span>Account tools</span></button>' : '') + (signedIn ? '<button type="button" data-signout>' + icon('path') + '<span>Sign out</span></button>' : '<a href="/web/account.html">' + icon('user') + '<span>Sign in</span></a>') + '</nav></details>';
 }
 function localMarkup(rows, master, section, prefs, currentHref) {
   const markup = rows.map(row => sectionMarkup(row, master, section, prefs, currentHref));
   if (master !== 'study' || !prefs.expanded) return markup.join('');
   return markup.slice(0, 4).join('') + '<details data-group="study:tools"' + (prefs.groups.includes('study:tools') ? ' open' : '') + '><summary>More study tools</summary><div class="mlos-children">' + markup.slice(4).join('') + '</div></details>';
 }
-export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, signedIn = false, currentHref = '', phone = false } = {}) {
+function mastersMarkup(master, isAdmin, disclosures = true) {
+  return '<nav class="mlos-master-nav" aria-label="Main navigation">' + MASTERS.filter(m => m.id !== 'account' && (!m.adminOnly || isAdmin)).map(m => {
+    const link = '<a href="' + escapeText(m.href) + '" data-master="' + m.id + '" aria-label="' + m.label + '"' + (master === m.id ? ' aria-current="page"' : '') + '>' + icon(m.icon) + '<span>' + (m.id === 'admin' ? 'Admin' : m.label) + '</span></a>';
+    return '<div class="mlos-master-item"' + (master === m.id ? ' data-active="true"' : '') + '>' + link + (disclosures ? '<button type="button" data-workspace-menu="' + m.id + '" aria-label="Open ' + escapeText(m.label) + ' tools" aria-expanded="false" aria-controls="mlos-workspace-menu">' + icon('chevron') + '</button>' : '') + '</div>';
+  }).join('') + '</nav>';
+}
+export function workspaceMenuMarkup({ master = 'home', currentMaster = master, section = '', prefs: input, isAdmin = false, currentHref = '', compactHeader = false } = {}) {
+  const prefs = validatePreferences({ ...input, version: 1, expanded: true });
+  const rows = navigationFor(master, { isAdmin });
+  const pinned = pinnedSections(prefs, isAdmin).filter(row => row.master !== master && !rows.some(local => navigationHrefMatches(row.href, local.href)));
+  const label = MASTERS.find(m => m.id === master)?.label || 'Home';
+  return '<div class="mlos-workspace-heading"><strong>' + escapeText(label) + ' tools</strong><button type="button" data-close-workspace-menu aria-label="Close workspace tools">' + icon('close') + '</button></div>' +
+    (compactHeader ? mastersMarkup(currentMaster, isAdmin) : '') +
+    (pinned.length ? '<nav aria-label="Pinned shortcuts"><span class="mlos-caption">Pinned</span>' + pinned.map(row => sectionMarkup(row, row.master, '', prefs, currentHref)).join('') + '</nav>' : '') +
+    '<nav id="mlos-local-nav" aria-label="Section navigation">' + localMarkup(rows, master, section, prefs, currentHref) + '</nav>';
+}
+function topNavigationMarkup({ master, section, prefs, isAdmin, signedIn, currentHref, compactHeader }) {
+  const label = MASTERS.find(m => m.id === master)?.label || 'Home';
+  const launcher = '<button type="button" class="mlos-workspace-launcher" data-workspace-menu="' + master + '" aria-label="Open ' + escapeText(label) + ' tools" aria-expanded="false" aria-controls="mlos-workspace-menu">' + icon('menu') + '<span>' + escapeText(label) + '</span>' + icon('chevron') + '</button>';
+  const header = '<header class="mlos-header mlos-header-top"><a class="mlos-brand" href="/" aria-label="Medical Learning OS Home"><span class="mlos-brand-mark">m.</span><span class="mlos-brand-short">MLOS</span></a>' +
+    (compactHeader ? launcher : mastersMarkup(master, isAdmin)) +
+    '<div class="mlos-utilities"><form class="mlos-search" action="/web/library.html" role="search"><input type="hidden" name="view" value="questions"><label class="mlos-sr-only" for="mlos-global-search">Search all published content</label><input id="mlos-global-search" type="search" name="search" placeholder="Search concepts, questions…" maxlength="300"><button type="submit" aria-label="Search all published content">' + icon('search') + '</button></form><button type="button" class="mlos-theme" data-theme aria-label="Switch to ' + (prefs.theme === 'light' ? 'dark' : 'light') + ' appearance" aria-pressed="' + (prefs.theme === 'dark') + '">' + icon(prefs.theme === 'light' ? 'moon' : 'sun') + '</button>' + accountMarkup({ signedIn, active: master === 'account', workspaceTools: true }) + '</div></header>';
+  return header + '<div id="mlos-workspace-menu" class="mlos-workspace-menu" role="dialog" aria-label="Workspace tools" hidden>' + workspaceMenuMarkup({ master, section, prefs, isAdmin, currentHref, compactHeader }) + '</div>';
+}
+export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, signedIn = false, currentHref = '', phone = false, compactHeader = false } = {}) {
   const prefs = validatePreferences({ ...input, version: 1 }), rows = navigationFor(master, { isAdmin });
+  if (!phone) return topNavigationMarkup({ master, section, prefs, isAdmin, signedIn, currentHref, compactHeader });
   // Keep cross-workspace shortcuts, but never repeat a destination already in this sidebar.
   const pinned = pinnedSections(prefs, isAdmin).filter(row => row.master !== master && !rows.some(local => navigationHrefMatches(row.href, local.href)));
   const label = escapeText(MASTERS.find(m => m.id === master)?.label || 'Home');

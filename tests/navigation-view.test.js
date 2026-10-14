@@ -44,16 +44,16 @@ test('an expanded panel nests independent subject and reference disclosures in t
   assert.match(html, /Gross &amp; regional anatomy/);
 });
 test('rail controls expose click flyouts and pin shortcuts retain their original master ownership', () => {
-  const html = markup({ master: 'study', section: 'build', prefs: { pins: ['library:subjects'] } });
+  const html = markup({ phone: true, master: 'study', section: 'build', prefs: { pins: ['library:subjects'] } });
   assert.match(html, /data-flyout="library:subjects"/);
   assert.match(html, /aria-label="Pinned shortcuts"/);
   assert.match(html, /aria-label="Expand navigation"/);
 });
 test('collapsed Admin rail identifies the selected group without disclosing admin tools to learners', () => {
-  const active = markup({ master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: true });
+  const active = markup({ phone: true, master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: true });
   assert.match(active, /data-flyout="admin:content" data-active="true"/);
   assert.match(active, /data-flyout="admin:overview" data-active="false"/);
-  const denied = markup({ master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: false });
+  const denied = markup({ phone: true, master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: false });
   assert.ok(!denied.includes('data-flyout="admin:content"'));
 });
 test('admin tools appear only with verified access', () => {
@@ -130,7 +130,7 @@ test('Admin deep links mark only the exact destination current, not the group la
 
 test('standalone Study Practice remains selected on its landing page despite its deep-link href', () => {
   const collapsed = markup({
-    master: 'study', section: 'practice', prefs: { expanded: false },
+    phone: true, master: 'study', section: 'practice', prefs: { expanded: false },
     currentHref: '/web/medical.html'
   });
   assert.match(collapsed, /href="\/web\/medical.html#question-browser" aria-label="Study Now"[^>]*aria-current="page"/);
@@ -165,4 +165,41 @@ test('expanded Study navigation prioritizes the four approved destinations and n
 test('cross-workspace pins never repeat an existing local destination', () => {
   const html = markup({ master: 'library', section: 'notes', prefs: { expanded: true, pins: ['home:material'] } });
   assert.equal(html.split('href="/web/library.html?view=notes"').length - 1, 1);
+});
+
+test('larger screens expose separate workspace links and disclosures without a sidebar', () => {
+  const html = markup({ master: 'library', section: 'notes', isAdmin: true });
+  assert.doesNotMatch(html, /<aside/);
+  for (const id of ['home', 'study', 'library', 'exams', 'admin']) {
+    assert.match(html, new RegExp('data-master="' + id + '"'));
+    assert.match(html, new RegExp('data-workspace-menu="' + id + '"'));
+  }
+  assert.match(html, /id="mlos-workspace-menu"[^>]* hidden/);
+  assert.doesNotMatch(markup({ master: 'library' }), /data-workspace-menu="admin"/);
+});
+test('workspace menus preserve every nested route and gate pinned Admin shortcuts', () => {
+  assert.equal(typeof view.workspaceMenuMarkup, 'function');
+  const flatten = rows => rows.flatMap(row => [row, ...flatten(row.children)]);
+  for (const master of ['home', 'study', 'library', 'exams', 'account', 'admin']) {
+    const html = view.workspaceMenuMarkup({ master, section: 'notes', prefs: { groups: ['library:subjects', 'library:references'] }, isAdmin: true });
+    for (const row of flatten(model.navigationFor(master, { isAdmin: true }))) {
+      assert.ok(html.includes('href="' + view.escapeText(row.href) + '"'), master + ':' + row.id);
+    }
+  }
+  const denied = view.workspaceMenuMarkup({ master: 'admin', isAdmin: false, prefs: { pins: ['admin:content'] } });
+  assert.doesNotMatch(denied, /Content Intake|Source Rights/);
+});
+
+test('the avatar retains access to every Account tool on larger screens', () => {
+  const html = markup({ master: 'library', signedIn: true });
+  const account = html.split('class="mlos-account"')[1].split('</details>')[0];
+  assert.match(account, /data-workspace-menu="account"/);
+  assert.match(account, /Account tools/);
+});
+
+test('compact master current marker follows the page when another tools menu is selected', () => {
+  const html = view.workspaceMenuMarkup({ master: 'study', currentMaster: 'library', compactHeader: true, currentHref: '/web/library.html?view=notes' });
+  assert.match(html, /data-master="library"[^>]*aria-current="page"/);
+  assert.doesNotMatch(html, /data-master="study"[^>]*aria-current/);
+  assert.match(html, /Study tools/);
 });

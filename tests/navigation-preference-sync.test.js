@@ -16,3 +16,17 @@ test('rail, group and pin changes reach the preference editor before an appearan
   assert.deepEqual(edited.groups, ['library:subjects']);
   assert.equal(edited.theme, 'dark');
 });
+
+test('blocked-storage editor retains Glass through independent palette and theme edits', () => {
+  const navigation = preferenceStore(() => { throw new Error('blocked'); });
+  const editor = preferenceStore(() => { throw new Error('blocked'); });
+  const notify = prefs => editor.write(prefs);
+  sync.mutatePreference(navigation, { type: 'pin', id: 'account:data' }, notify);
+  sync.mutatePreference(navigation, { type: 'group', id: 'library:references', open: true }, notify);
+  sync.mutatePreference(navigation, { type: 'surfaceStyle', value: 'glass' }, notify);
+  const edited = editor.write({ ...editor.read(), palette: 'lavender_precision', theme: 'dark' });
+  assert.equal(edited.surfaceStyle, 'glass');
+  assert.deepEqual(edited.pins, ['account:data']);
+  assert.deepEqual(edited.groups, ['library:references']);
+  assert.equal(editor.persistence, 'session');
+});

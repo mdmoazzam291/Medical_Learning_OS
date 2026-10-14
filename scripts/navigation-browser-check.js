@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
-import { MASTERS, navigationFor } from '../src/domain/app-navigation.js';
+import { MASTERS, navigationFor, routeIdentity } from '../src/domain/app-navigation.js';
 import { ADMIN_VIEWS } from '../web/admin-workspace-view.js';
 const engines = await import(process.env.PLAYWRIGHT_MODULE_URL || 'playwright');
 const engine = process.env.BROWSER_ENGINE || 'chromium';
@@ -37,7 +37,7 @@ const user = { id: '11111111-1111-4111-8111-111111111111', email: 'fixture@examp
 const classification = { subjects: ['medicine'], systems: ['respiratory'], organs: ['lung'], domains: [], tasks: ['diagnosis'] };
 const question = { questionId: 'fixture-q', questionVersionId: 'fixture-q@1', stem: 'Synthetic question for UI verification only', options: [{ optionId: 'a', text: 'Alpha' }, { optionId: 'b', text: 'Beta' }], conceptLinks: [{ conceptId: 'fixture-c', role: 'primary' }], classification, origins: [], home: { kind: 'original', exams: [], platforms: [] }, observed: { attempts: 0, wrong: 0, state: 'unattempted', repeatedWrong: false }, intelligence: { presentation: ['clinical-vignette'], qualifiers: [], responseFormat: 'single-best-answer' } };
 const library = { concepts: [{ conceptId: 'fixture-c', label: 'Synthetic concept', aliases: [], classification }], questions: [question], notes: [{ noteVersionId: 'fixture-n@1', conceptId: 'fixture-c', title: 'Synthetic source note', bodyMarkdown: 'UI verification only. No real clinical content.' }], links: [] };
-const browser = await engines[engine].launch({ headless: true }), errors = [];
+const browser = await engines[engine].launch({ headless: true, ...(engine === 'chromium' && process.env.CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {}) }), errors = [];
 try {
   const layouts = engine === 'webkit' ? [['ipad-portrait', 820, 1180], ['ipad-landscape', 1180, 820], ['ipad-split', 620, 1024]] : [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]];
   for (const [name, width, height] of layouts) {
@@ -45,10 +45,13 @@ try {
     const context = await browser.newContext({ viewport: { width, height }, hasTouch: touch, isMobile: engine === 'webkit', deviceScaleFactor: engine === 'webkit' ? 2 : 1 });
     const activate = async locator => {
       await page.waitForLoadState('networkidle');
-      // Phone masters and contextual tools are revealed by the one header menu.
-      if (page.viewportSize().width <= 700 && await page.locator('.mlos-panel[hidden]').count() &&
-          await locator.and(page.locator('.mlos-panel a,.mlos-panel button,.mlos-panel summary')).count()) {
-        await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+      const local = page.locator('#mlos-workspace-menu a,#mlos-workspace-menu button,#mlos-workspace-menu summary,.mlos-panel a,.mlos-panel button,.mlos-panel summary');
+      if (await locator.and(local).count()) await openTools();
+      if (await locator.count()) {
+        const groups = await locator.first().evaluate(node => {
+          const keys = []; for (let parent = node.matches('summary') ? node.parentElement.parentElement : node.parentElement; parent; parent = parent.parentElement) if (parent.matches('details[data-group]') && !parent.open) keys.unshift(parent.dataset.group); return keys;
+        });
+        for (const key of groups) await page.locator('details[data-group="' + key + '"] > summary').click();
       }
       return touch ? locator.tap() : locator.click();
     };
@@ -58,6 +61,20 @@ try {
       sessionStorage.setItem('mlos-navigation-fixture-seeded', 'true');
     }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
+    const openTools = async () => {
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000)), page.viewportSize().width);
+      if (page.viewportSize().width <= 700) {
+        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+        return;
+      }
+      if (await page.locator('#mlos-workspace-menu').isVisible()) return;
+      const url = new URL(page.url()), master = routeIdentity(url.pathname, url.search, url.hash).master;
+      const trigger = page.locator('[data-workspace-menu="' + master + '"]').first();
+      if (!(await trigger.isVisible()) && master === 'account') await page.getByLabel('Account menu', { exact: true }).click();
+      await trigger.click();
+      await page.locator('#mlos-workspace-menu').waitFor({ state: 'visible' });
+    };
+    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click(); } else await page.keyboard.press('Escape'); };
     // Wait for background access reads before abandoning a document. WebKit
     // reports canceled cross-origin fixture reads as access-control errors.
     const go = async url => { await page.waitForLoadState('networkidle'); await page.goto(url); };
@@ -130,15 +147,15 @@ try {
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true, includeHidden: true });
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
     assert.deepEqual(await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams', 'Master Admin']);
-    assert.equal(await page.evaluate(() => document.body.dataset.rail), width <= 1050 ? 'collapsed' : 'expanded');
-    if (width > 1050) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+    assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
+
     assert.equal(await page.locator('[data-subject]').count(), 19);
     assert.equal(new URL(page.url()).pathname, '/web/library');
     assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Library', exact: true }).getAttribute('aria-current'), 'page');
-    if (width > 700) {
+    if (width >= 1000) {
     const rowPositions = await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => Math.round(l.getBoundingClientRect().top)));
     assert.equal(new Set(rowPositions).size, 1);
-    } else {
+    } else if (width <= 700) {
       assert.equal(await page.locator('.mlos-panel').isVisible(), false);
       assert.equal(await page.evaluate(() => getComputedStyle(document.body).paddingLeft), '0px');
       assert.equal(await page.locator('.mlos-header').evaluate(node => node.getBoundingClientRect().height), 56);
@@ -151,39 +168,48 @@ try {
         await page.waitForFunction(() => Boolean(document.querySelector('.mlos-mobile-menu')));
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'phone content fits ' + phoneWidth);
         assert.equal(await page.locator('.mlos-header').evaluate(node => [...node.children].every(child => child.getBoundingClientRect().right <= innerWidth)), true, 'phone header fits ' + phoneWidth);
-        await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+        await openTools();
         assert.equal(await mainNav.getByRole('link', { name: 'Home', exact: true }).isVisible(), true);
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('.mlos-mobile-menu').evaluate(node => document.activeElement === node), true);
       }
       await page.setViewportSize({ width, height });
     }
-    // Approved responsive layout: explicit desktop preference survives rotations.
+    // Rotation dismisses temporary top menus and preserves legacy/device preferences.
     const savedLayout = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
     for (const desktopExpanded of [false, true]) {
       await page.evaluate(value => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...JSON.parse(localStorage.getItem('mlos-navigation-v1')), expanded: value } } })), desktopExpanded);
-      await page.setViewportSize({ width: 820, height: 1180 });
-      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'overlay' && document.body.dataset.rail === 'collapsed');
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
-      await page.setViewportSize({ width: 1180, height: 820 });
-      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'inline' && document.body.dataset.rail === (value ? 'expanded' : 'collapsed'), desktopExpanded);
-      await page.setViewportSize({ width: 820, height: 1180 });
-      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'overlay' && document.body.dataset.rail === 'collapsed');
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
-      await page.evaluate(() => {
-        const buttons = [...document.querySelectorAll('#mlos-navigation a,#mlos-navigation button,#mlos-navigation summary')].filter(node => !node.disabled && node.getClientRects().length);
-        buttons.at(-1).focus();
-      });
-      await page.keyboard.press('Tab');
-      assert.equal(await page.locator('.mlos-brand').evaluate(node => document.activeElement === node), true, 'drawer keyboard wraps within navigation');
+      await page.setViewportSize({ width: 820, height: 1180 }); await openTools();
+      assert.equal(await page.locator('#mlos-workspace-menu').isVisible(), true);
+      await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').click();
+      assert.equal(await page.locator('#mlos-workspace-menu [data-master="library"]').getAttribute('aria-current'), 'page');
+      assert.equal(await page.locator('#mlos-workspace-menu [data-workspace-menu="study"]').getAttribute('aria-expanded'), 'true');
+      assert.equal(await page.locator('.mlos-workspace-launcher').getAttribute('aria-expanded'), 'true');
+      assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => node.getBoundingClientRect().left === Math.max(12, Math.min(document.querySelector('.mlos-workspace-launcher').getBoundingClientRect().left, innerWidth - node.getBoundingClientRect().width - 12))), true, 'compact tools stay anchored after switching');
       await page.keyboard.press('Escape');
-      assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
-      assert.equal(await page.locator('button[data-rail]').evaluate(node => document.activeElement === node), true);
+      assert.equal(await page.locator('.mlos-workspace-launcher').evaluate(node => document.activeElement === node), true);
+      await openTools();
+      await page.setViewportSize({ width: 1180, height: 820 });
+      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'top' && document.getElementById('mlos-workspace-menu').hidden);
+      assert.equal(await page.locator('.mlos-header [data-workspace-menu="library"]').evaluate(node => document.activeElement === node), true, 'rotation focus reaches the replacement header');
+      assert.equal(await page.evaluate(() => getComputedStyle(document.body).paddingLeft), '0px');
+      await openTools(); await page.keyboard.press('Escape');
+      assert.equal(await page.locator('[data-workspace-menu="library"]').evaluate(node => document.activeElement === node), true);
       assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')).expanded), desktopExpanded);
+    }
+    for (const testWidth of [701, 999, 1000, 1180, 1440]) {
+      await page.setViewportSize({ width: testWidth, height: 1000 });
+      await page.waitForFunction(value => document.body.dataset.navigationLayout === 'top' && Boolean(document.querySelector('.mlos-workspace-launcher')) === (value < 1000), testWidth);
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'header fit ' + testWidth);
+      const headerControls = await page.locator('.mlos-header').evaluate(node => [...node.querySelectorAll('a,button,summary')].filter(n => n.getClientRects().length && !(n.closest('.mlos-account-menu') && !n.closest('.mlos-account').open)).map(n => ({ label: n.getAttribute('aria-label') || n.textContent.trim(), left: n.getBoundingClientRect().left, right: n.getBoundingClientRect().right })));
+      const overflowingControls = headerControls.filter(n => n.left < 0 || n.right > testWidth);
+      if (overflowingControls.length && process.env.SCREENSHOT_DIR) await page.screenshot({ path: process.env.SCREENSHOT_DIR + '/navigation-fit-' + testWidth + '.png', fullPage: true });
+      assert.deepEqual(overflowingControls, [], 'visible controls fit ' + testWidth);
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
-    await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 1050 ? 'overlay' : 'inline') && document.body.dataset.rail === 'collapsed', width);
+    await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && document.body.dataset.rail === 'collapsed', width);
     await activate(page.getByLabel('Account menu', { exact: true }));
     const accountMenu = page.getByRole('navigation', { name: 'Account navigation', exact: true });
     for (const label of ['Profile', 'Preferences', 'Account & Security']) {
@@ -195,30 +221,16 @@ try {
     await page.keyboard.press('Escape');
     assert.equal(await page.locator('.mlos-account').evaluate(node => node.open), false);
     assert.equal(await page.getByLabel('Account menu', { exact: true }).evaluate(node => document.activeElement === node), true);
-    if (width > 700) {
-    await activate(page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }));
-    await page.getByRole('dialog', { name: 'Navigation submenu' }).waitFor();
-    await page.keyboard.press('Escape'); assert.equal(await page.locator('#mlos-flyout').isVisible(), false);
-    }
-    await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    await openTools();
     assert.equal(await page.locator('#mlos-local-nav').evaluate(node => getComputedStyle(node).display), 'grid');
-    assert.equal(await page.locator('#mlos-local-nav > .mlos-nav-row').first().locator('a span').evaluate(node => getComputedStyle(node).display !== 'none'), true);
-    if (width <= 1050) {
-      const mainWidth = await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width);
-      await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
-      const closedWidth = await page.locator('main').first().evaluate(node => node.getBoundingClientRect().width);
-      assert.equal(mainWidth, closedWidth, 'portrait overlay never squeezes the main page');
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
-      assert.equal(await page.locator('main').first().evaluate(node => node.inert || Boolean(node.closest('[inert]'))), true);
-    }
-    if (touch) await page.touchscreen.tap(width - 12, 170); else await page.mouse.click(width - 12, 170);
-    assert.equal(await page.evaluate(() => document.body.dataset.rail), width <= 1050 ? 'collapsed' : 'expanded');
-    if (width <= 1050) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (width > 700) assert.equal(await page.locator('main').first().evaluate(node => node.inert || Boolean(node.closest('[inert]'))), false, 'top menu leaves the learning canvas usable');
     await activate(page.locator('#mlos-local-nav > details[data-group="library:subjects"] > summary'));
     await activate(page.locator('#mlos-local-nav details[data-group="library:subjects:index"] > summary'));
     await activate(page.locator('#mlos-local-nav > details[data-group="library:references"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:subjects"]').getAttribute('open'), '');
     assert.equal(await page.locator('#mlos-local-nav > details[data-group="library:references"]').getAttribute('open'), '');
+    if (width > 700) assert.equal(await page.locator('#mlos-workspace-menu').evaluate(node => { const r = node.getBoundingClientRect(); return r.top >= 56 && r.bottom <= innerHeight && node.scrollHeight > node.clientHeight; }), true, 'long independent indexes scroll inside the viewport');
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'navigation-library-index-' + name + '.png'), fullPage: false });
     await activate(page.locator('#mlos-local-nav [data-pin="library:subjects"]'));
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).count(), 0, 'same-workspace pin does not duplicate its destination');
     await page.keyboard.press('Control+k');
@@ -227,15 +239,16 @@ try {
     assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Preserved search');
     await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('');
     await page.keyboard.press('Escape');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
     await reload(); await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
-    assert.equal(await page.evaluate(() => document.body.dataset.rail), width <= 1050 ? 'collapsed' : 'expanded');
-    if (width > 1050) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
+    assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
+    if (width > 1050) await closeTools();
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Study', exact: true }));
     await page.getByRole('heading', { name: 'Your study workspace.', exact: true }).waitFor();
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Study Now');
+    await openTools();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Study Now');
     await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).waitFor({ state: 'attached' });
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Exams', exact: true }));
     await page.getByRole('heading', { name: 'Rule-faithful, locked-section simulation.', exact: true }).waitFor();
@@ -247,13 +260,15 @@ try {
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
     await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
-    if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+    if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
     await page.waitForFunction(() => location.hash === '#research');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Research Participation');
+    await openTools();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Research Participation');
     await page.goBack();
     await page.waitForFunction(() => location.hash === '');
-    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('aria-label'), 'Overview');
+    await openTools();
+    assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Overview');
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }));
     await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
     await page.locator('#owner-home').waitFor();
@@ -261,10 +276,10 @@ try {
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['overview']);
     assert.match(await page.locator('#owner-home').innerText(), /Urgent actions/);
     assert.equal(await page.locator('#owner-home form').count(), 0);
-    assert.equal(await page.locator('aside').count(), 1, 'only one shared Admin sidebar');
+    assert.equal(await page.locator('aside').count(), width <= 700 ? 1 : 0, 'only phone navigation reserves an aside');
     assert.equal(await page.locator('header').count(), 1, 'only one shared Admin header');
     assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).getAttribute('aria-current'), 'page');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
     await go(origin + '/web/admin.html#admin-actions');
@@ -309,7 +324,7 @@ try {
 
     // Outside-panel touch intentionally collapses the rail on a phone.
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+      await openTools();
     }
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
@@ -322,15 +337,8 @@ try {
     assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').getAttribute('aria-pressed'), 'true');
     await activate(page.locator('#mlos-local-nav [data-pin="admin:content"]'));
     assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
-    await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
-    if (width > 700) {
-    await activate(page.locator('#mlos-local-nav [data-flyout="admin:content"]'));
-    const adminFlyout = page.getByRole('dialog', { name: 'Navigation submenu' });
-    assert.equal(await adminFlyout.locator('a[href="/web/content-import.html"]').count(), 1, 'collapsed group has one destination');
-    assert.equal(await adminFlyout.locator('.mlos-flyout-heading a[href="/web/content-import.html"]').count(), 0, 'group heading does not repeat the child route');
-    await activate(adminFlyout.getByRole('button', { name: 'Close submenu' }));
-    }
-    await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    await closeTools();
+    await openTools();
 
     largeFlags = true;
     await go(origin + '/web/admin.html#owner-infrastructure');
@@ -340,7 +348,7 @@ try {
       return rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
     });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Admin fits the viewport');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     const operationsGroup = page.locator('#mlos-local-nav details[data-group="admin:operations"]');
     if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
     projectionDelayed = true;
@@ -349,7 +357,7 @@ try {
     await page.waitForFunction(() => document.querySelector('[data-admin-panel="research"]')?.textContent.includes('No published alternate pairs'));
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'background research projection preserves a loaded owner draft');
     projectionDelayed = false;
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     if (!(await operationsGroup.evaluate(node => node.open))) await activate(operationsGroup.locator(':scope > summary'));
     await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
     await page.waitForFunction(() => {
@@ -357,7 +365,7 @@ try {
       return location.hash === '#owner-features' && rect && rect.top >= document.querySelector('.mlos-header').getBoundingClientRect().bottom && rect.top < innerHeight;
     });
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'same-page Admin navigation preserves owner drafts');
-    if (width <= 1050) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (width <= 1050) await openTools();
     assert.equal(await page.locator('#mlos-local-nav a[aria-current="page"]').getAttribute('href'), '/web/admin.html#owner-features');
     await page.locator('#owner-features').scrollIntoViewIfNeeded();
     await activate(page.locator('#mlos-local-nav a[href="/web/admin.html#owner-features"]'));
@@ -401,7 +409,7 @@ try {
       await page.getByRole('heading', { name: 'Admin access unavailable', exact: true }).waitFor();
       assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).count(), 0);
       accessStatus = 200; projectionUnavailable = true;
-      if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+      if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
       await activate(page.locator('[data-action="reload"]'));
       await settleAdmin();
       await go(origin + '/web/admin.html#research-gate');
@@ -422,7 +430,7 @@ try {
       await go(origin + '/web/admin.html#owner-users');
       await page.getByRole('heading', { name: 'Owner data unavailable', exact: true }).waitFor();
       assert.equal(dashboardReads, beforeOutage + 1, 'failed dashboard waits for an explicit Retry');
-      if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+      if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
       dashboardUnavailable = false;
       await activate(page.locator('[data-owner-dashboard-retry]'));
       await page.locator('#owner-users').waitFor();
@@ -432,7 +440,7 @@ try {
     await go(origin + '/web/admin.html');
     await page.locator('#owner-console').waitFor();
     await settleAdmin();
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     assert.deepEqual(writes, [], 'Admin sidebar actions never change user access or content');
     for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/admin.html#owner-source-watch', 'Source Change Watch'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
@@ -441,8 +449,8 @@ try {
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
-      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+      if (width > 700) assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:content"]').getAttribute('data-active'), 'true');
+      await openTools();
     }
     const contentGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
     if (!(await contentGroup.evaluate(node => node.open))) await activate(contentGroup.locator(':scope > summary'));
@@ -451,8 +459,8 @@ try {
     await page.waitForURL('**/web/review?workspace=references');
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
-      assert.equal(await page.locator('#mlos-local-nav [data-flyout="admin:content"]').getAttribute('data-active'), 'true');
-      await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+      if (width > 700) assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:content"]').getAttribute('data-active'), 'true');
+      await openTools();
     }
     const reviewGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
     if (!(await reviewGroup.evaluate(node => node.open))) await activate(reviewGroup.locator(':scope > summary'));
@@ -489,10 +497,10 @@ try {
     assert.equal(await page.getByLabel('System', { exact: true }).inputValue(), 'respiratory');
     await go(origin + '/web/library.html?view=recall');
     await page.getByLabel('Your recall', { exact: true }).fill('Unsaved self-review');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Unsaved self-review');
-    if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await go(origin + '/web/workspace.html?master=home&section=recent');
     await page.getByText('Concise practice', { exact: true }).waitFor();
     await go(origin + '/web/workspace.html?master=exams&section=autopsy');
@@ -500,16 +508,93 @@ try {
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);
     await go(origin + '/web/workspace.html?master=account&section=preferences');
     await page.getByRole('heading', { name: 'Appearance and navigation', exact: true }).waitFor();
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav [data-pin="account:data"]'));
-    if (width <= 1050) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+    if (width <= 1050) await closeTools();
     await page.getByLabel('Appearance', { exact: true }).selectOption('dark');
     assert.equal(await page.evaluate(() => document.documentElement.dataset.appearance), 'dark');
-    assert.equal(await page.evaluate(() => document.body.dataset.rail), width <= 1050 ? 'collapsed' : 'expanded');
+    assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')).pins.includes('account:data')), true, 'pin persists without duplicating the current sidebar');
     await reload(); await page.getByLabel('Appearance', { exact: true }).waitFor();
     assert.equal(await page.getByLabel('Appearance', { exact: true }).inputValue(), 'dark');
     admin = true;
+    // Style/palette/appearance are independent and survive real Preferences edits and reload.
+    for (const surfaceStyle of ['standard', 'glass']) for (const palette of ['sage_precision', 'lavender_precision']) for (const theme of ['light', 'dark']) {
+      await page.getByLabel('Surface style', { exact: true }).selectOption(surfaceStyle);
+      await page.getByLabel('Colour palette', { exact: true }).selectOption(palette);
+      await page.getByLabel('Appearance', { exact: true }).selectOption(theme);
+      const prefsBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1')));
+      await reload(); await page.getByLabel('Surface style', { exact: true }).waitFor();
+      assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1'))), prefsBefore, 'full saved preference equality');
+      if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: true });
+      for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/admin.html']) {
+        await go(origin + destination); await page.locator('[data-theme]').waitFor();
+        if (destination === '/web/admin.html') await settleAdmin();
+        const actual = await page.evaluate(() => {
+          const root = document.documentElement, header = getComputedStyle(document.querySelector('.mlos-header'));
+          const reading = [...document.querySelectorAll('main .panel,main .session-card,main .explanation')];
+          return { surfaceStyle: root.dataset.surfaceStyle, palette: root.dataset.palette, theme: root.dataset.appearance,
+            overflow: root.scrollWidth > innerWidth, padding: getComputedStyle(document.body).paddingLeft,
+            blur: header.backdropFilter || header.webkitBackdropFilter || 'none', navColor: header.backgroundColor,
+            readingBlur: reading.every(node => ['none',''].includes(getComputedStyle(node).backdropFilter || 'none')) };
+        });
+        assert.equal(actual.surfaceStyle, surfaceStyle); assert.equal(actual.palette, palette); assert.equal(actual.theme, theme);
+        assert.equal(actual.overflow, false); assert.equal(actual.padding, '0px'); assert.equal(actual.readingBlur, true);
+        if (width > 700 && surfaceStyle === 'glass') { assert.notEqual(actual.navColor, 'rgb(255, 255, 255)'); assert.notEqual(actual.blur, 'none'); }
+        else assert.equal(actual.blur, 'none');
+        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'surface-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '-' + (destination === '/' ? 'home' : destination.includes('medical') ? 'study' : destination.includes('admin') ? 'admin' : 'library') + '.png'), fullPage: true });
+        if (destination.includes('library')) {
+          await openTools();
+          if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'menu-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: false });
+          await closeTools();
+        }
+      }
+      await go(origin + '/web/workspace.html?master=account&section=preferences');
+      await page.getByLabel('Surface style', { exact: true }).waitFor();
+    }
+    // Exercise the fallback cascade in real CSSOM: force the reduced-transparency
+    // media branch, then omit the supports branch as an older renderer would.
+    if (width > 700) {
+      const fallbacks = await page.evaluate(() => {
+        const root = document.documentElement, saved = { ...root.dataset };
+        const sheet = [...document.styleSheets].find(s => s.href?.endsWith('/web/navigation.css'));
+        const glass = [...sheet.cssRules].find(r => r.type === CSSRule.MEDIA_RULE && /min-width:\s*701px/.test(r.conditionText) && r.cssText.includes('--nav-tint'));
+        const supportsIndex = [...glass.cssRules].findIndex(r => r.type === CSSRule.SUPPORTS_RULE);
+        const supportsText = glass.cssRules[supportsIndex].cssText;
+        const reduced = [...glass.cssRules].find(r => r.type === CSSRule.MEDIA_RULE && r.conditionText.includes('prefers-reduced-transparency'));
+        const reducedMedia = reduced.media.mediaText, results = [];
+        const inspect = mode => {
+          for (const palette of ['sage_precision', 'lavender_precision']) for (const theme of ['light', 'dark']) {
+            root.dataset.surfaceStyle = 'glass'; root.dataset.palette = palette; root.dataset.appearance = theme;
+            const swatch = document.createElement('span'); swatch.style.color = getComputedStyle(root).getPropertyValue(theme === 'dark' ? '--sidebar' : '--soft'); document.body.append(swatch);
+            const expected = getComputedStyle(swatch).color; swatch.remove();
+            const header = getComputedStyle(document.querySelector('.mlos-header')), menu = getComputedStyle(document.querySelector('#mlos-workspace-menu'));
+            results.push({ mode, palette, theme, opaque: header.backgroundColor === expected && menu.backgroundColor === expected, unblurred: [header, menu].every(s => (s.backdropFilter || s.webkitBackdropFilter || 'none') === 'none') });
+          }
+        };
+        try {
+          reduced.media.mediaText = 'all'; inspect('reduced-transparency'); reduced.media.mediaText = reducedMedia;
+          glass.deleteRule(supportsIndex);
+          try { inspect('unsupported-glass'); } finally { glass.insertRule(supportsText, supportsIndex); }
+        } finally { reduced.media.mediaText = reducedMedia; Object.assign(root.dataset, saved); }
+        return results;
+      });
+      for (const fallback of fallbacks) { assert.equal(fallback.opaque, true, JSON.stringify(fallback)); assert.equal(fallback.unblurred, true, JSON.stringify(fallback)); }
+    }
+    // Every real section/module leaf is reachable through rendered menu links.
+    await go(origin + '/web/library.html?view=subjects'); await openTools();
+    for (const master of MASTERS) {
+      if (master.id === 'account') continue;
+      if (width <= 700) continue; // phone catalog already covered by unchanged drawer and the existing route sweep
+      const currentMenu = page.locator('#mlos-workspace-menu');
+      if (page.viewportSize().width < 1000) {
+        await currentMenu.locator('[data-workspace-menu="' + master.id + '"]').click();
+      } else await page.locator('.mlos-header [data-workspace-menu="' + master.id + '"]').click();
+      for (const row of flatten(navigationFor(master.id, { isAdmin: true }))) assert.ok(await currentMenu.locator('a').evaluateAll((nodes, href) => nodes.some(n => n.getAttribute('href') === href), row.href), master.id + ':' + row.id);
+    }
+    await closeTools();
+    await go(origin + '/web/workspace.html?master=account&section=preferences'); await page.getByLabel('Surface style', { exact: true }).waitFor();
+    await page.getByLabel('Surface style', { exact: true }).selectOption('standard');
     // Exact approved light palettes, independent dark appearance, and cross-page persistence.
     for (const [palette, background, ink, primary, firstStop] of [
       ['sage_precision', 'rgb(250, 250, 247)', 'rgb(25, 42, 34)', '#244A3A', 'rgb(233, 241, 231)'],
@@ -594,39 +679,8 @@ try {
       await page.keyboard.press('Escape');
     }
     if (name === layouts[0][0]) {
-      if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
-      // Follow every generated module, reference and media leaf from the real menu catalog.
-      const leaves = destinations.filter(row => !row.children.length && /[?&](module|reference|category)=/.test(row.href));
-      assert.equal(leaves.filter(row => new URL(row.href, origin).searchParams.get('master') !== 'study').length, 96);
-      assert.equal(leaves.filter(row => new URL(row.href, origin).searchParams.get('master') === 'study').length, 76);
-      for (const row of leaves) {
-        await go(origin + row.href);
-        const title = new URL(row.href, origin).searchParams.get('view');
-        await page.getByRole('heading', { name: { subjects: 'Subjects & Topics', references: 'Reference Tools', media: 'Media Library' }[title], exact: true }).waitFor();
-        if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
-        assert.equal(await page.locator('#mlos-local-nav a[aria-current]').filter({ hasText: row.label }).count() >= 1, true, row.href);
-        const url = new URL(page.url());
-        if (url.searchParams.has('module')) assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), url.searchParams.get('subject'));
-        await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth);
-        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, row.href);
-      }
-      await go(origin + '/web/library.html?view=subjects');
-      await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
-      if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
-      if (width <= 700) {
-        await page.setViewportSize({ width: 820, height });
-        await page.waitForFunction(() => !document.querySelector('.mlos-mobile-menu'));
-      }
-      await activate(page.locator('#mlos-local-nav').getByRole('button', { name: 'Subjects & Topics', exact: true }));
-      const flyout = page.getByRole('dialog', { name: 'Navigation submenu' });
-      const group = flyout.locator('details[data-group="library:subjects:index"]');
-      if (!await group.evaluate(node => node.open)) await activate(group.locator(':scope > summary'));
-      await activate(flyout.locator('details[data-group="library:subjects:index:anatomy"] > summary'));
-      await activate(flyout.getByRole('link', { name: 'Gross & regional anatomy', exact: true }));
-      if (width <= 700) {
-        await page.setViewportSize({ width, height });
-        await page.waitForFunction(() => Boolean(document.querySelector('.mlos-mobile-menu')));
-      }
+      await openTools();
+      await activate(page.locator('#mlos-local-nav a[href="/web/library.html?view=subjects&subject=anatomy&module=gross-regional-anatomy"]'));
       await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
       assert.equal(new URL(page.url()).searchParams.get('subject'), 'anatomy');
       assert.equal(new URL(page.url()).searchParams.get('module'), 'gross-regional-anatomy');
@@ -647,7 +701,7 @@ try {
       questions: [{ ...question, intelligence: { ...question.intelligence, presentation: ['image'] } }, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@1', classification: otherClassification, conceptLinks: [{ conceptId: 'fixture-c2', role: 'primary' }], intelligence: { ...question.intelligence, presentation: ['image'] } }]
     };
     await go(origin + '/web/library.html?view=recall');
-    if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to first source');
     await page.getByRole('button', { name: 'Next card', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to second source');
@@ -681,14 +735,14 @@ try {
     selectionLibrary = { ...library, questions: [question, { ...question, questionId: 'fixture-q2', questionVersionId: 'fixture-q2@3' }, { ...question, questionId: 'fixture-q3', questionVersionId: 'fixture-q3@2' }] };
     await go(origin + '/web/library.html?view=questions&master=study&build=1');
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav [data-pin="study:build"]'));
     await go(origin + '/web/library.html?view=notes');
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
     assert.equal(await page.locator('[data-filter="keyword"] option[value="diagnosis"]').count(), 0);
     await page.getByLabel('Collection', { exact: true }).selectOption('');
-    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await activate(page.getByRole('button', { name: 'Expand navigation', exact: true }));
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav [data-pin="library:notes"]'));
     await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
@@ -698,7 +752,7 @@ try {
     assert.equal(new URL(page.url()).searchParams.get('build'), null);
     await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
-    if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await activate(page.getByRole('button', { name: 'Collapse navigation', exact: true }));
+    if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await page.getByLabel('Question count', { exact: true }).selectOption('1');
     await reload(); await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
