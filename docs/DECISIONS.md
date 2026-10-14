@@ -1,5 +1,13 @@
 # Decision log
 
+## ADR-116 — Cashfree primary, PhonePe fallback, Razorpay retired
+**Status:** Owner-approved change 2026-10-14; implementation on PR branch, production payments prohibited.
+
+Consumer-only payment gateway selection is updated to Cashfree as the first sandbox and future production candidate. PhonePe remains an alternative without an active adapter or automatic provider failover. The isolated Razorpay test adapter, test and preparation note are retired from current tree, not purged from Git history. The pure Free/Pro/AI Pro entitlement model and source rights/learning loops are unchanged.
+
+Cashfree adapter is server-only with hard-pinned sandbox hostname, explicit opt-in flags, 2025-01-01 Subscriptions API contract, UUID idempotency key requirement, input validation and exact raw-body timestamp-prefixed Base64 HMAC-SHA256 verification receipt. It issues **no** grant, has no HTTP route, does no webhook persistence and collects no money. Cashfree and PhonePe mandates are not automatically interchangeable: if the primary gateway becomes unavailable, manual provider selection and new mandate authorization may be needed. The decision does not approve public prices, KYC, checkout, production charging or institution billing. See `docs/CONSUMER_PAYMENT_GATEWAY.md`.
+
+
 ## ADR-115 — Consumer tiers only; fail-closed grants and test-only payment seam
 **Status:** Accepted and merged 2026-10-14 in PR #238; Foundation check/Chromium/WebKit green. Charging remains disabled.
 
