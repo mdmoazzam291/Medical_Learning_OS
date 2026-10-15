@@ -25,7 +25,7 @@ test('one-shot command is remote-dev only, never an account deployment or schedu
   assert.match(s, /--var CASHFREE_SANDBOX_ENABLED:true/);
   assert.match(s, /--var CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED:true/);
   assert.match(s, /--var CASHFREE_SANDBOX_RUN_MODE:auth_probe/);
-  assert.match(s, /http:\/\/127\.0\.0\.1:8787\/__scheduled\?format=json/);
+  assert.match(s, /http:\/\/127\.0\.0\.1:8787\/cdn-cgi\/local\/scheduled/);
   assert.doesNotMatch(s, /\bnpx [^\n]*wrangler[^\n]* (?:deploy|secret put|versions deploy)\b/);
   assert.doesNotMatch(s, /CASHFREE_TEST_APP_ID=[^\n]+|CASHFREE_TEST_SECRET_KEY=[^\n]+/);
   assert.match(s, /trap cleanup EXIT/);
