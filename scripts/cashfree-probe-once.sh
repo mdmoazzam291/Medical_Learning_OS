@@ -41,17 +41,29 @@ log_file="$(mktemp)"
 response_file="$(mktemp)"
 runner_pid=''
 cleanup() {
+  trap '' INT TERM
   if [[ -n "$runner_pid" ]]; then
-    kill "$runner_pid" 2>/dev/null || true
+    # npx can leave Wrangler descendants behind. Stop the isolated job group,
+    # including children that outlive npx, and bound shutdown for stuck children.
+    kill -TERM -- "-$runner_pid" 2>/dev/null || true
+    for _ in {1..20}; do
+      kill -0 -- "-$runner_pid" 2>/dev/null || break
+      sleep 0.1
+    done
+    kill -KILL -- "-$runner_pid" 2>/dev/null || true
     wait "$runner_pid" 2>/dev/null || true
   fi
   rm -f "$log_file" "$response_file"
 }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
 
 echo 'Starting an ephemeral Cloudflare remote-dev preview, NOT deploying the Worker.'
 echo 'Cloudflare TEST secrets stay bound remotely; no key values are entered here.'
 # Runtime overrides apply only to this dev session; checked-in defaults stay OFF.
+# Job control gives this background preview its own process group.
+set -m
 npx --yes wrangler@^4.119.0 dev --remote --test-scheduled \
   -c wrangler.cashfree-sandbox.jsonc --ip 127.0.0.1 --port 8787 \
   --var CASHFREE_SANDBOX_ENABLED:true \

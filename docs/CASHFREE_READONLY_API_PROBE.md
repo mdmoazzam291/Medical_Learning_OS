@@ -86,3 +86,9 @@ Official references:
 - [Remote development executes on Cloudflare infrastructure](https://developers.cloudflare.com/workers/local-development/)
 - [Wrangler `dev --var` and `--test-scheduled`](https://developers.cloudflare.com/workers/wrangler/commands/workers/)
 - [Secrets Store Worker integration, local/remote limitations](https://developers.cloudflare.com/secrets-store/integrations/workers/)
+
+## Runner shutdown repair (2026-10-15; pending review)
+
+The runner now starts the preview in an isolated Bash job process group. On exit it sends TERM to the group, allows up to two seconds for shutdown, then sends KILL to remaining group members before removing its temporary logs. This also handles descendants left behind when `npx` exits early. INT and TERM cancel the runner with exit codes 130 and 143 respectively, without continuing to the scheduled trigger after cancellation is handled.
+
+Regression checks use local mock commands and real child processes, including a TERM-resistant descendant. They cover normal completion, startup failure, INT and TERM; they make no Cloudflare or Cashfree requests. The scheduled-route compatibility change remains a separate pending change in PR #256. Review both repairs before another owner-authorized live attempt. Authentication and Secrets Store availability in remote preview remain unverified. Preserve the owner's existing Codespace and unrelated changes when preparing that attempt.

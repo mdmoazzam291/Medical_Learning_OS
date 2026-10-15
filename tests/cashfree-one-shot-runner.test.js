@@ -28,7 +28,9 @@ test('one-shot command is remote-dev only, never an account deployment or schedu
   assert.match(s, /http:\/\/127\.0\.0\.1:8787\/__scheduled\?format=json/);
   assert.doesNotMatch(s, /\bnpx [^\n]*wrangler[^\n]* (?:deploy|secret put|versions deploy)\b/);
   assert.doesNotMatch(s, /CASHFREE_TEST_APP_ID=[^\n]+|CASHFREE_TEST_SECRET_KEY=[^\n]+/);
-  assert.match(s, /trap cleanup EXIT INT TERM/);
+  assert.match(s, /trap cleanup EXIT/);
+  assert.match(s, /trap 'exit 130' INT/);
+  assert.match(s, /trap 'exit 143' TERM/);
   assert.match(s, /MLOS_CONFIRM_ONE_CASHFREE_GET/);
 });
 
