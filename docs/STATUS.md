@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-16 — Cloudflare branch preview build succeeds
+Owner supplied a successful native Worker Preview deployment log (22:49 UTC October15). GitHub independently confirms all four checks SUCCESS on PR #257 head fb30303: project check, Chromium, WebKit and Workers Builds: medical-learning-os-web. The missing-preview-config/build-command blocker is resolved for this feature branch. Preview URL: https://fix-cashfree-preview-process-cleanup-20-medical-learning-os-web.medicalos.workers.dev .
+
+Automated GETs to the deployed root and edge-health path returned403, so live visual/health acceptance is not claimed. Dynamic edge fallback remains intentionally disabled in this approved static-interface Preview; browser-side services are unchanged. No production promotion, main merge or Cashfree request ran. Review PR #257 and open the URL in the owner's browser for visual acceptance; actual Cashfree verification remains pending its separate authorization and authentication.
+
+
 ## 2026-10-16 — Approved native Worker Preview configuration added
 Owner explicitly approved a preview-only wrangler.jsonc change. PR #257 now adds previews.vars.ORIGIN_BASE_URL=https://preview-backend-disabled.invalid, with production settings verified exactly unchanged. Implementation d418412724ee31b9c91d05bcea03a9897a7cfa63. Mocked edge regression failed before the change; all1276 tests now pass, with project checks and the81-file Pages build. Dynamic Preview fallback intentionally returns503 on the unavailable reserved origin; static assets remain configured, and browser-side service connections are unchanged. This is not full authenticated staging acceptance.
 
