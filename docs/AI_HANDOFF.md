@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Preview command mismatch diagnosed (2026-10-16 03:54 IST; latest)
+- Owner supplied Cloudflare build logs: npm run build:pages succeeded (81 files), then npx wrangler preview failed because wrangler.jsonc lacks a previews block for ORIGIN_BASE_URL. This explains the previously unexplained provider failure; it is separate from the Cashfree runner tests.
+- Owner screenshots confirmed Production uses npx wrangler deploy and Previews Base used npx wrangler preview. Owner now reports the preview command changed to npx wrangler versions upload. Saved dashboard state is owner-reported, not independently verified. Production settings and repository Worker code/config are unchanged by this task.
+- PR #257 combined head b7aec8c560442fb571612811ac8c7655614e8641 passed check, browser and webkit (run 38761617770); its existing Cloudflare failure completed 2026-10-15T15:39:08Z. Owner's later copied failed log still used the old command. Do not ask owner to repeat an already-confirmed setting edit; a retry may retain original build settings.
+- This documentation checkpoint creates a fresh feature-branch push for preview-build verification with current settings. No main merge, production command, Cloudflare login, Cashfree request or payment execution is authorized by this checkpoint. Cashfree provider readiness remains UNVERIFIED.
+- Active owner/writer Codex, branch fix/cashfree-preview-process-cleanup-20261015, main base c8cee8c88c45731b0c1a7be36159d6aa002dba65; combined implementation commit 34881f1414ca63b08c11e9e60a44a82dff287f2f. Exact next: verify the new head and Cloudflare check; if failure persists, obtain logs for that new head and confirm the command it actually executed. No task processes remain active.
+
+
 ## Combined Cashfree runner ready for CI review (2026-10-15T15:34Z; latest)
 - Owner/writer: Codex. User asked for next best step/retry. Main remains `c8cee8c88c45731b0c1a7be36159d6aa002dba65`; active branch `fix/cashfree-preview-process-cleanup-20261015`, PR #257. Actual combined code commit `34881f1414ca63b08c11e9e60a44a82dff287f2f` integrates route-fix head `6f4953f84f0e36088026cef47a7b773764812479` as a merge parent. PR #256 is now included in #257; do not merge it separately before reviewing the combined change.
 - Resolved the real docs merge conflict while preserving both route compatibility and shutdown guidance. Corrected the operator instruction to `/cdn-cgi/local/scheduled`; runner invokes it once. Existing process-group cleanup and explicit signal exits retained. No web Worker/config, secrets or live resources changed.
