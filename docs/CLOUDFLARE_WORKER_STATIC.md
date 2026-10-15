@@ -102,3 +102,13 @@ Before treating the learner Worker URL as canonical:
 6. Study API authenticated reads/writes continue to reach Supabase directly.
 7. `/mcp`, `/mcp-readonly` and `/.well-known/oauth-protected-resource` continue to work through the dynamic fallback until separately migrated.
 8. Existing Render remains rollback/fallback until the above checks pass.
+
+### Approved Worker Preview configuration — 2026-10-16
+
+The owner supplied logs confirming successful static compilation followed by two separate failures: `wrangler preview` required a `previews` block, then the attempted `wrangler versions upload` alternative failed the Worker-name identity check in this branch environment. A branch Settings screenshot also confirmed its command remained independent of the previously edited Previews Base. Retrying uses the current saved build settings, as documented by Cloudflare; do not assume it retains the original settings.
+
+The owner explicitly approved adding only `previews.vars.ORIGIN_BASE_URL` to `wrangler.jsonc`. The reserved address `https://preview-backend-disabled.invalid` intentionally keeps the edge's Preview fallback away from the existing Render origin. Top-level production fields, Worker identity, static assets, heartbeat and Cashfree config remain unchanged. Mocked regression coverage checks that a Preview fallback request targets only this address and returns 503 on fetch failure. This is a static-interface Preview with an unavailable dynamic gateway; it is not a fully functional or isolated authenticated staging environment. Existing browser-side service connections are not changed by this config.
+
+After this feature-branch change is pushed, the owner must set the **branch's Preview command** back to `npx wrangler preview`, save it, then retry that branch's build. The current dashboard command was changed to `npx wrangler versions upload` during investigation and is not controlled by this repository. Preserve Production's `npx wrangler deploy`. Verify the new build's executed command and result; do not rename the production Worker or bypass its CI identity check. A green static build does not establish live Cashfree readiness or authenticated Preview acceptance.
+
+References: [Worker Previews setup](https://developers.cloudflare.com/workers/previews/get-started/), [Preview configuration](https://developers.cloudflare.com/workers/previews/configuration/), [Build settings](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/).

@@ -1,8 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import worker from '../cloudflare/edge-worker.js';
+import { readFile } from 'node:fs/promises';
 
 const origin = 'https://medical-learning-os-preview.onrender.com';
+
+test('branch Preview fallback cannot proxy to the production Render origin', async () => {
+  const config = JSON.parse(await readFile(new URL('../wrangler.jsonc', import.meta.url), 'utf8'));
+  assert.equal(config.previews?.vars?.ORIGIN_BASE_URL, 'https://preview-backend-disabled.invalid');
+  assert.equal(config.vars.ORIGIN_BASE_URL, origin);
+  const originalFetch = globalThis.fetch;
+  const destinations = [];
+  globalThis.fetch = async request => {
+    destinations.push(new URL(request.url).hostname);
+    throw new Error('preview_origin_disabled');
+  };
+  try {
+    const response = await worker.fetch(new Request('https://branch.example/api/health'), config.previews.vars);
+    assert.equal(response.status, 503);
+    assert.deepEqual(destinations, ['preview-backend-disabled.invalid']);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
 
 test('edge health is served without touching the Render origin', async () => {
   const originalFetch = globalThis.fetch;
