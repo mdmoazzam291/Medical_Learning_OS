@@ -95,3 +95,15 @@ Regression checks use local mock commands and real child processes, including a 
 ## October 15, 2026: scheduled testing route compatibility
 Cloudflare's current Wrangler documentation describes `--test-scheduled` as exposing `/cdn-cgi/local/scheduled`. An earlier iteration of the owner-run script attempted `/__scheduled?format=json`. The combined runner and its regression test now use the documented path. This is a **test-route fix only**, not a new Cloudflare Cron Trigger, deployed Worker route or payment API operation. Do not invoke both endpoints or retry the event automatically if the first endpoint fails; a single failed test remains inconclusive.
 Reference: https://developers.cloudflare.com/workers/wrangler/commands/workers/
+
+## October 16, 2026: browser-only GitHub alternative (prepared)
+
+The owner selected an alternative after Codespace authentication/pasting errors.
+See [the detailed manual GitHub guide](CASHFREE_GITHUB_MANUAL_TEST.md). The new
+workflow wraps the same reviewed one-shot runner, requires a fresh manual dispatch
+on main with YES_TEST_ONLY, rejects reruns and malformed token input, and receives
+only a short-lived Cloudflare token through a dedicated GitHub Actions secret.
+Cashfree key values remain bound in Cloudflare. Main merge and actual execution
+are separate owner decisions; no real test or authentication was performed while
+preparing it. The earlier successful web Preview and owner interface acceptance
+do not establish Cashfree API readiness.

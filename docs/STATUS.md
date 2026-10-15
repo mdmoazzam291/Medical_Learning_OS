@@ -1,5 +1,10 @@
 # Current status
 
+## 2026-10-16 — GitHub manual Cashfree alternative prepared, not executed
+Owner requested bypassing Codespaces. PR #257 now adds a manual-only Actions workflow and a fail-closed gate around the existing reviewed one-shot runner. Only main, the intended repository, workflow_dispatch, run attempt 1, and explicit YES_TEST_ONLY may proceed. A dedicated temporary Cloudflare repository secret reaches only the final step. The gate rejects malformed token input without printing it and never retries; no Cashfree keys are copied from Cloudflare.
+
+Implementation `7e1b4044aa0de6e088928f790c688aa13fb870ce`. All 1,289 local tests, project checks, Pages build (81 files), and YAML inspection pass; independent review found no blockers. No provider request or authenticated cloud operation ran. Remote binding support and Cashfree authorization remain unverified. Detailed owner guide: `docs/CASHFREE_GITHUB_MANUAL_TEST.md`. Main merge and actual execution still require separate owner approval; do not create the short-lived token until the workflow is ready on main. Existing web deployment builds may run on merge. The prior preview-build blocker is resolved and owner already confirmed interface loading.
+
 ## 2026-10-16 — Cloudflare branch preview build succeeds
 Owner supplied a successful native Worker Preview deployment log (22:49 UTC October15). GitHub independently confirms all four checks SUCCESS on PR #257 head fb30303: project check, Chromium, WebKit and Workers Builds: medical-learning-os-web. The missing-preview-config/build-command blocker is resolved for this feature branch. Preview URL: https://fix-cashfree-preview-process-cleanup-20-medical-learning-os-web.medicalos.workers.dev .
 
