@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-15 — Combined Cashfree runner fixes in PR #257
+PR #257 now includes PR #256's documented scheduled-route repair and the preview process cleanup/cancellation repair. Integration exposed a documentation merge conflict, now resolved; the operator instruction also uses `/cdn-cgi/local/scheduled`. Combined code commit `34881f1414ca63b08c11e9e60a44a82dff287f2f` passes all 1,275 local tests, project checks and the 81-file Pages build. The original heads passed GitHub project/Chromium/WebKit jobs; combined CI is pending recheck. Both have the separate failed `medical-learning-os-web` Cloudflare build check, also observed on main; the cause requires private build logs. No web Worker change, deployment, authentication or Cashfree request occurred. Review the combined PR rather than merging the two separately; live provider verification remains pending explicit execution approval.
+
+
 ## 2026-10-15 — Cashfree runner shutdown repair, pending review
 The one-shot runner could leave Wrangler descendants running after killing only its npx parent. It now isolates the preview process group, sends TERM with a bounded grace period then KILL, and removes scratch logs. INT/TERM exit with 130/143 instead of continuing toward another scheduled event. Five real-process regression cases use mocked npx/curl only, covering success, startup exit, both signals, and cancellation during readiness curl. The original runner fails the regression checks; the repaired full suite passes **1,275/1,275**. `npm run check`, Pages build (81 files), shell syntax and diff whitespace checks passed. Code review found no blocking issue; its readiness-curl test suggestion is included.
 
