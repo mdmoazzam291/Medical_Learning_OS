@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-16 — Approved native Worker Preview configuration added
+Owner explicitly approved a preview-only wrangler.jsonc change. PR #257 now adds previews.vars.ORIGIN_BASE_URL=https://preview-backend-disabled.invalid, with production settings verified exactly unchanged. Implementation d418412724ee31b9c91d05bcea03a9897a7cfa63. Mocked edge regression failed before the change; all1276 tests now pass, with project checks and the81-file Pages build. Dynamic Preview fallback intentionally returns503 on the unavailable reserved origin; static assets remain configured, and browser-side service connections are unchanged. This is not full authenticated staging acceptance.
+
+The latest dashboard build confirms versions upload was applied but fails Worker-name validation. Owner must restore this branch's Preview command to npx wrangler preview and retry after the repository update; native Preview configuration is now present. Production deploy command/name stay unchanged. No main merge, production deployment, credential operation or Cashfree request was performed. Actual Cloudflare success remains pending that owner-only dashboard action and new logs/checks.
+
+
 ## 2026-10-15 — Combined Cashfree runner fixes in PR #257
 PR #257 now includes PR #256's documented scheduled-route repair and the preview process cleanup/cancellation repair. Integration exposed a documentation merge conflict, now resolved; the operator instruction also uses `/cdn-cgi/local/scheduled`. Combined code commit `34881f1414ca63b08c11e9e60a44a82dff287f2f` passes all 1,275 local tests, project checks and the 81-file Pages build. The original heads passed GitHub project/Chromium/WebKit jobs; combined CI is pending recheck. Both have the separate failed `medical-learning-os-web` Cloudflare build check, also observed on main; the cause requires private build logs. No web Worker change, deployment, authentication or Cashfree request occurred. Review the combined PR rather than merging the two separately; live provider verification remains pending explicit execution approval.
 
