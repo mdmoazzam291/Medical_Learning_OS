@@ -25,7 +25,9 @@ create table if not exists public.consumer_billing_subscriptions (
   subject_id uuid not null,
   offer_id text not null references public.consumer_billing_offers(offer_id),
   provider text not null default 'cashfree' check (provider = 'cashfree'),
-  provider_subscription_id text unique,
+  environment text not null check (environment in ('sandbox','production')),
+  provider_subscription_id text,
+  unique (environment, provider_subscription_id),
   -- Provider authorization is never the same thing as captured payment.
   authorization_status text not null default 'unknown'
     check (authorization_status in ('unknown', 'pending', 'active', 'failed', 'revoked')),
@@ -47,7 +49,9 @@ create index if not exists consumer_billing_subscriptions_subject
 create table if not exists public.consumer_billing_payments (
   payment_id uuid primary key default gen_random_uuid(),
   subscription_id uuid not null references public.consumer_billing_subscriptions(subscription_id),
-  provider_payment_id text not null unique,
+  environment text not null check (environment in ('sandbox','production')),
+  provider_payment_id text not null,
+  unique (environment, provider_payment_id),
   -- No access can be granted merely from an event that mentions SUCCESS.
   payment_status text not null check (payment_status in ('pending','success','failed','refunded','reversed')),
   amount_minor integer not null check (amount_minor > 0),
@@ -91,6 +95,8 @@ create table if not exists public.consumer_billing_grants (
   starts_at timestamptz not null,
   ends_at timestamptz not null,
   provider_reconciled_at timestamptz not null,
+  -- Test transactions never become production grants; reconciler validates both.
+  environment text not null check (environment in ('sandbox','production')),
   revoked_at timestamptz,
   revocation_reason text,
   created_at timestamptz not null default now(),
