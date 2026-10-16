@@ -49,11 +49,16 @@ function approvedOffer(offer) {
     typeof offer.price_version === 'string' && offer.price_version.length >= 4);
 }
 function reservationMatches(reservation, offer, authenticatedSubjectId) {
-  return Boolean(reservation && reservation.status === 'reserved' &&
+  return Boolean(reservation && reservation.lifecycle_status === 'created' &&
     typeof authenticatedSubjectId === 'string' && authenticatedSubjectId.length > 0 &&
     reservation.subject_id === authenticatedSubjectId &&
     reservation.offer_id === offer.offer_id &&
     reservation.environment === 'production' &&
+    reservation.approved_amount_minor === offer.amount_minor &&
+    reservation.offer_price_version === offer.price_version &&
+    typeof reservation.terms_version === 'string' && reservation.terms_version.length >= 4 &&
+    typeof reservation.consent_recorded_at === 'string' &&
+    Number.isFinite(Date.parse(reservation.consent_recorded_at)) &&
     typeof reservation.idempotency_key === 'string' &&
     UUID_V4_STYLE.test(reservation.idempotency_key) &&
     VALID_PROVIDER_ID.test(reservation.provider_subscription_id));
