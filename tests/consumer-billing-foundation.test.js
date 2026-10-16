@@ -94,6 +94,9 @@ test('private schema stays deny-by-default; cannot create plans or paid grants a
  assert.match(sql,/status text not null default 'draft'/);
  assert.match(sql,/unique \(environment, provider_payment_id\)/);
  assert.match(sql,/unique \(environment, provider_subscription_id\)/);
+ assert.match(sql,/foreign key \(subscription_id, environment\)/);
+ assert.match(sql,/foreign key \(subscription_id, environment, subject_id\)/);
+ assert.match(sql,/foreign key \(payment_id, environment, subscription_id\)/);
  assert.doesNotMatch(sql,/insert into public\.consumer_billing_/i);
  assert.doesNotMatch(sql,/grant (select|insert|update|delete) on .* to (anon|authenticated)/i);
 });
