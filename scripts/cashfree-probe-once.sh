@@ -98,7 +98,7 @@ result=''
 if [[ "$status" =~ ^2[0-9][0-9]$ ]] && grep -Fq 'cashfree_sandbox_probe' "$log_file" && grep -Fq 'auth_probe_status' "$log_file"; then
   for item in unauthorized forbidden_or_product_restricted not_found_auth_inconclusive \
     bad_request_auth_inconclusive unexpected_plan_found_investigate rate_limited \
-    provider_unavailable transport_failed invalid_response other_response_auth_inconclusive; do
+    provider_unavailable transport_failed invalid_response redirect_response_auth_inconclusive other_response_auth_inconclusive; do
     if grep -Fq "$item" "$log_file"; then result="$item"; break; fi
   done
 fi

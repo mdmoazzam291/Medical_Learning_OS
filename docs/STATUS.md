@@ -1,5 +1,11 @@
 # Current status
 
+## 2026-10-16 — Cashfree second manual test: outbound transport failure, offline hardening
+Latest GitHub main has PR #258 merged (544aeab6bc504ecb05406863b1703c9dabaef9c0). Two distinct owner-dispatched Cashfree tests: #38827800192 was a **local scheduled-trigger 404 with no provider result**; #38830783379 then reached the sandbox probe and logged **`transport_failed`** after trying an outbound fetch. Neither establishes merchant authentication. The owner separately confirmed deleting `mlos-cashfree-actions-once` Cloudflare token and GitHub secret `MLOS_CASHFREE_PROBE_CF_TOKEN`; this cleanup was user-confirmed but not independently read from administrative APIs.
+
+Branch `fix/cashfree-fetch-transport-diagnostics-20261016` makes a surgical **offline-only** change: `redirect:'manual'` instead of `redirect:'error'` in fixed sandbox GET, classifies HTTP 3xx as `redirect_response_auth_inconclusive`, and expands mock tests and diagnostic docs. No redirects followed or credential headers forwarded, no provider body/log leak, and all other fetch throws remain `transport_failed`. This is an unproven possible cause, not a diagnosis of the second run. No new Cashfree attempt, workflow dispatch, temporary token, Cron, public payment route, subscription, mandate or entitlement grant. GitHub PR/CI/merge status for this branch to be checked. All deployed network flags remain false. Once validated, prioritize actual rights-cleared learner content while billing activation stays blocked.
+
+
 ## 2026-10-16 — Remote test route corrected offline, PR #258 awaiting checks/review
 Identified why the earlier general-docs route change failed in remote development: Wrangler4.151.0's injected scheduled middleware matches /__scheduled, whereas /cdn-cgi/local/scheduled belongs to local Miniflare control routing. The real tagged middleware reproduced404/zero dispatches for the old path and200/one dispatch for the remote path using only offline mocks. Detailed source/evidence: docs/CASHFREE_REMOTE_ROUTE_DIAGNOSIS.md.
 

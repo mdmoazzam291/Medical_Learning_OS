@@ -161,7 +161,9 @@ export async function probeCashfreeSandboxPlanAccess(config = {}) {
   let response;
   try {
     response = await fetchImpl(API_ROOT + path, {
-      method: 'GET', headers, redirect: 'error', cache: 'no-store'
+      // Never forward Cashfree credential headers to a redirect target.
+      // redirect:'error' turns 3xx into an indistinguishable fetch rejection.
+      method: 'GET', headers, redirect: 'manual', cache: 'no-store'
     });
   } catch {
     return Object.freeze({ provider: 'cashfree', environment: 'sandbox', result: 'transport_failed' });
@@ -173,6 +175,7 @@ export async function probeCashfreeSandboxPlanAccess(config = {}) {
   else if (code === 403) result = 'forbidden_or_product_restricted';
   else if (code === 404) result = 'not_found_auth_inconclusive';
   else if (code === 400 || code === 422) result = 'bad_request_auth_inconclusive';
+  else if (code >= 300 && code < 400) result = 'redirect_response_auth_inconclusive';
   else if (code === 429) result = 'rate_limited';
   else if (code >= 500) result = 'provider_unavailable';
   else if (code >= 200 && code < 300) result = 'unexpected_plan_found_investigate';
