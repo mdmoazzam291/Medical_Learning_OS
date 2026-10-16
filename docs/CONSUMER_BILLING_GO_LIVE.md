@@ -53,3 +53,10 @@ All tables have RLS enabled and SELECT/INSERT/UPDATE/DELETE revoked for `public`
 - [ ] Final explicit production charging activation
 
 **References:** Cashfree hosted Subscriptions flow at https://www.cashfree.com/devstudio/preview/subs/web/checkout, production API docs at https://www.cashfree.com/docs/api-reference/payments/latest/subscription/create-subscription, Cashfree webhook signature reference at https://www.cashfree.com/devstudio/preview/pg/tools/webhookVerification, current strategy at `docs/CONSUMER_COMMERCIAL_PLAN.md`.
+
+## Stage 2 prepared: server-only production Cashfree hosted checkout adapter (not an endpoint)
+`src/adapters/cashfree-production.js` can create a Cashfree hosted subscription session at the fixed `https://api.cashfree.com/pg/subscriptions` destination **only** when each independent trusted-server release flag is enabled. It requires a server-loaded approved offer, exact versioned price, stored idempotency UUID, matching learner, recorded consent/terms, live merchant access, ready ledger and reconciliation. It returns an inert subscription session ID with `entitlementGranted=false`; hosted checkout and mandate authorization alone never grant paid access. Production GET is also server-only, returns an observation, not paid proof. No redirects or retries forward credential headers.
+
+`supabase/migrations/20261016130000_consumer_billing_reservations.sql` adds price/terms/consent snapshots and a unique environment+idempotency index to the private subscription table. No new public RLS policy or browser permissions. **Apply this migration only after PR review and CI**, then verify RLS again.
+
+**Still missing:** an authenticated production billing HTTP service, genuine reserved-row transaction, secure server credentials (none provisioned), Cashfree merchant approval, real sandbox end-to-end lifecycle, signed webhook handler, provider payment-level verification, atomic grant/expiry/refund reconciliation, cancellation UX, final pricing/terms, and controlled production release. The adapter is never invoked from the app, so it cannot collect money by mere merge.
