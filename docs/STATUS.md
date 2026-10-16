@@ -1,5 +1,12 @@
 # Current status
 
+## PR #258 merged; temporary credentials removed (2026-10-16; latest)
+- Owner confirmed both mlos-cashfree-actions-once and GitHub secret MLOS_CASHFREE_PROBE_CF_TOKEN deleted, then explicitly approved PR #258 merge. Credential deletion is owner-reported.
+- Verified all four reviewed-head checks SUCCESS: check, browser, webkit, Workers Builds: medical-learning-os-web. Merged reviewed head 6d3328856b2cdb6eb1cb3ce37e95502bf93892d1 with SHA lease; independently confirmed merge commit 544aeab6bc504ecb05406863b1703c9dabaef9c0. Actual repair code commit 6021c4291fe46b60016ac451fa3ddc7d3ed998b7; local 1291 tests passed before merge.
+- PR https://github.com/mdmoazzam291/Medical_Learning_OS/pull/258 is merged. Remote route is /__scheduled with Wrangler4.151.0 pinned; missing provider classification exits1. Ordinary post-merge builds not yet verified. No second sandbox invocation or new authentication performed.
+- Exact next: obtain deliberate owner approval for one further read-only Cashfree sandbox GET before preparing fresh short-lived Actions credentials and manual dispatch. Preserve encrypted TEST bindings, default-off flags, build tokens and unrelated Codespace files. Cashfree authentication remains UNVERIFIED; prior run's local404 was not a provider response. No public endpoint, cron, payment write, automatic retry or key export authorized.
+- Receipt saved on fix/cashfree-remote-scheduled-route-20261016 only after merge; no further main change implied. Owner/writer Codex.
+
 ## 2026-10-16 — Remote test route corrected offline, PR #258 awaiting checks/review
 Identified why the earlier general-docs route change failed in remote development: Wrangler4.151.0's injected scheduled middleware matches /__scheduled, whereas /cdn-cgi/local/scheduled belongs to local Miniflare control routing. The real tagged middleware reproduced404/zero dispatches for the old path and200/one dispatch for the remote path using only offline mocks. Detailed source/evidence: docs/CASHFREE_REMOTE_ROUTE_DIAGNOSIS.md.
 
