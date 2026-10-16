@@ -35,7 +35,8 @@ export function evaluateVerifiedConsumerTerm({
       !Number.isSafeInteger(offer.amount_minor) || offer.amount_minor < 100) {
     return rejected('approved_offer_required');
   }
-  if (subscription.offer_id !== offer.offer_id ||
+  if (!nonempty(subscription.subscription_id) ||
+      subscription.offer_id !== offer.offer_id ||
       !nonempty(subscription.provider_subscription_id) ||
       subscription.provider !== 'cashfree' ||
       subscription.lifecycle_status !== 'active' ||
@@ -43,7 +44,8 @@ export function evaluateVerifiedConsumerTerm({
       subscription.cancelled_at != null) {
     return rejected('active_subscription_required');
   }
-  if (!payment || payment.subscription_id !== subscription.subscription_id ||
+  if (!payment || !nonempty(payment.payment_id) ||
+      payment.subscription_id !== subscription.subscription_id ||
       !nonempty(payment.provider_payment_id) ||
       payment.payment_status !== 'success' ||
       payment.amount_minor !== offer.amount_minor ||
