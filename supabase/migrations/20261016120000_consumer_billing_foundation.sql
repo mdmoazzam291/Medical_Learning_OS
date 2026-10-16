@@ -28,6 +28,8 @@ create table if not exists public.consumer_billing_subscriptions (
   environment text not null check (environment in ('sandbox','production')),
   provider_subscription_id text,
   unique (environment, provider_subscription_id),
+  unique (subscription_id, environment),
+  unique (subscription_id, environment, subject_id),
   -- Provider authorization is never the same thing as captured payment.
   authorization_status text not null default 'unknown'
     check (authorization_status in ('unknown', 'pending', 'active', 'failed', 'revoked')),
@@ -48,9 +50,12 @@ create index if not exists consumer_billing_subscriptions_subject
 
 create table if not exists public.consumer_billing_payments (
   payment_id uuid primary key default gen_random_uuid(),
-  subscription_id uuid not null references public.consumer_billing_subscriptions(subscription_id),
+  subscription_id uuid not null,
   environment text not null check (environment in ('sandbox','production')),
   provider_payment_id text not null,
+  foreign key (subscription_id, environment)
+    references public.consumer_billing_subscriptions(subscription_id, environment),
+  unique (payment_id, environment, subscription_id),
   unique (environment, provider_payment_id),
   -- No access can be granted merely from an event that mentions SUCCESS.
   payment_status text not null check (payment_status in ('pending','success','failed','refunded','reversed')),
@@ -89,14 +94,18 @@ create index if not exists consumer_billing_inbox_pending
 create table if not exists public.consumer_billing_grants (
   grant_id uuid primary key default gen_random_uuid(),
   subject_id uuid not null,
-  subscription_id uuid not null references public.consumer_billing_subscriptions(subscription_id),
-  payment_id uuid not null unique references public.consumer_billing_payments(payment_id),
+  subscription_id uuid not null,
+  payment_id uuid not null unique,
   plan text not null check (plan in ('pro','ai_pro')),
   starts_at timestamptz not null,
   ends_at timestamptz not null,
   provider_reconciled_at timestamptz not null,
   -- Test transactions never become production grants; reconciler validates both.
   environment text not null check (environment in ('sandbox','production')),
+  foreign key (subscription_id, environment, subject_id)
+    references public.consumer_billing_subscriptions(subscription_id, environment, subject_id),
+  foreign key (payment_id, environment, subscription_id)
+    references public.consumer_billing_payments(payment_id, environment, subscription_id),
   revoked_at timestamptz,
   revocation_reason text,
   created_at timestamptz not null default now(),
