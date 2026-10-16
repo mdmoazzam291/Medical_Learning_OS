@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## User priority switch: live consumer billing before next learning feature (2026-10-16)
+- Owner: finish consumer subscriptions and bring them live before other feature work. Cashfree primary; PhonePe backup design only; Free/Pro/AI Pro consumer tiers. This changes build sequence, NOT the requirement for real financial/merchant/security verification.
+- Branch `feat/consumer-live-billing-foundation-20261016`, foundation stage only: creates a private service-role-only billing SQL schema with five tables (draft offers, subscriptions, payment receipts, signed webhook inbox, grants); matching-production-payment preflight `src/domain/consumer-billing-eligibility.js` and tests; canonical launch runbook `docs/CONSUMER_BILLING_GO_LIVE.md`.
+- No schema deployment, live Cashfree keys, public billing API route, verified payment, checkout, cron or premium unlock in this stage. Draft prices remain unapproved. The two previous Cashfree diagnostic runs were inconclusive; latest outbound `transport_failed`. Avoid conflating this with merchant production readiness.
+- Subsequent implementation order: verify merchant production Subscriptions/KYC and real sandbox lifecycle; authenticated billing server + fixed-price hosted checkout; raw webhook/durable dedupe/provider fetch/atomic entitlements; cancellation/invoice UX; go/no-go confirmation and controlled real-money test. No browser-supplied amount or direct client grants.
+- CI/PR outcome for this branch pending; inspect before merging and ensure migration cannot auto-deploy unexpectedly. No changes to existing mobile navigation, content release or public MLOS Worker.
+
+
 ## Latest Cashfree Work reconciliation and offline diagnosis (2026-10-16)
 - Recovered latest Work run from GitHub: PR #257 merged, one-shot first run #38827800192 returned only **local trigger HTTP404**. PR #258 subsequently merged as `544aeab6bc504ecb05406863b1703c9dabaef9c0`, pinning Wrangler4.151.0 and using correct remote `/__scheduled` route.
 - A **second actual manual dispatch** exists: [run #38830783379](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38830783379), probe job success, but sanitized job log says **`Cashfree TEST response classification: transport_failed`**. This is an outbound fetch exception, not a verified Cashfree HTTP response/auth result. No further provider request has been approved.

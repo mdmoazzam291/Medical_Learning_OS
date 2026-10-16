@@ -1,5 +1,9 @@
 # Current status
 
+## 2026-10-16 — Owner priority: finish live consumer subscriptions first; private billing foundation staged
+Owner explicitly reprioritized Cashfree consumer subscriptions to production ahead of other MLOS milestones. The current public Free/Pro/AI Pro offer remains PREVIEW ONLY; proposed prices are NOT automatically approved. New branch `feat/consumer-live-billing-foundation-20261016` adds denied-by-default SQL tables for offers, subscriptions, payments, verified webhook inbox and grants; a pure provider-reconciled paid-term preflight; regression tests and `docs/CONSUMER_BILLING_GO_LIVE.md`. No migration applied, external Cashfree key read, API dispatch, payment endpoint, checkout, cron, mandate, live price or entitlement activation. Requires review CI and integration in follow-up PRs. Previous sandbox run #38830783379 ended `transport_failed`; authentication not proven. User must verify production KYC/product access, approve final price/renewal/refund terms, and approve a controlled real payment only after testing. Preserve learner truth/rights constraints. PhonePe design-only fallback.
+
+
 ## 2026-10-16 — Cashfree second manual test: outbound transport failure, offline hardening
 Latest GitHub main has PR #258 merged (544aeab6bc504ecb05406863b1703c9dabaef9c0). Two distinct owner-dispatched Cashfree tests: #38827800192 was a **local scheduled-trigger 404 with no provider result**; #38830783379 then reached the sandbox probe and logged **`transport_failed`** after trying an outbound fetch. Neither establishes merchant authentication. The owner separately confirmed deleting `mlos-cashfree-actions-once` Cloudflare token and GitHub secret `MLOS_CASHFREE_PROBE_CF_TOKEN`; this cleanup was user-confirmed but not independently read from administrative APIs.
 
