@@ -1,0 +1,48 @@
+name: Cashfree sandbox - one manual GET
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'Authorize one read-only Cashfree TEST GET (404 is inconclusive)'
+        type: choice
+        required: true
+        default: CANCEL
+        options:
+          - CANCEL
+          - YES_TEST_ONLY
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cashfree-sandbox-one-shot
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    if: >-
+      github.repository == 'mdmoazzam291/Medical_Learning_OS' &&
+      github.ref == 'refs/heads/main' &&
+      github.run_attempt == '1' &&
+      inputs.confirmation == 'YES_TEST_ONLY'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Check out reviewed main
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Attempt one sandbox GET and close temporary preview
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.MLOS_CASHFREE_PROBE_CF_TOKEN }}
+          MLOS_CONFIRM_ONE_CASHFREE_GET: ${{ inputs.confirmation }}
+          WRANGLER_SEND_METRICS: 'false'
+        run: bash scripts/cashfree-actions-once.sh

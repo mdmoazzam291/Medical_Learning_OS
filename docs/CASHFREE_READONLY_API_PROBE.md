@@ -71,7 +71,7 @@ The previously deployed Cloudflare Worker is safe and remains **OFF** by default
 1. Open [GitHub Codespaces](https://github.com/codespaces) in iPad Safari, create a fresh private Codespace for `mdmoazzam291/Medical_Learning_OS` from the latest `main`. Codespace availability/usage may depend on your GitHub account.
 2. Open Codespaces' terminal. Ensure recent Node/npm are available (`node --version`). If Node is older than the repository's required 24, use `nvm install 24 && nvm use 24`.
 3. Execute `npx --yes wrangler@^4.119.0 login --device --browser=false`. Wrangler will show a URL and a temporary device code. Open the URL in a **private iPad browser tab**, sign in to your own Cloudflare account and approve only the requested permissions. **Never paste OAuth codes, access tokens or secrets into ChatGPT.** Cloudflare's device-login support starts in Wrangler v4.119.0.
-4. After login succeeds, run **exactly**: `MLOS_CONFIRM_ONE_CASHFREE_GET=YES_TEST_ONLY bash scripts/cashfree-probe-once.sh`. This script checks the disabled, isolated Wrangler file before proceeding. It starts a temporary remote-dev preview with **process-only** sandbox flags, binds existing account secrets remotely, invokes the local `/__scheduled` test endpoint **once**, and closes the temporary process, deleting local scratch logs.
+4. After login succeeds, run **exactly**: `MLOS_CONFIRM_ONE_CASHFREE_GET=YES_TEST_ONLY bash scripts/cashfree-probe-once.sh`. This script checks the disabled, isolated Wrangler file before proceeding. It starts a temporary remote-dev preview with **process-only** sandbox flags, binds existing account secrets remotely, invokes the local `/cdn-cgi/local/scheduled` test endpoint **once**, and closes the temporary process, deleting local scratch logs.
 5. Record **only** the sanitized result label printed by the script, never a raw log or provider body. It may read `unauthorized`, `forbidden_or_product_restricted`, `not_found_auth_inconclusive`, `transport_failed`, or “No verified provider result captured.” **A 404 is not proof of successful authentication.** No result is assumed until actually observed.
 6. Finish with `npx --yes wrangler@^4.119.0 logout`, close the session and **delete the Codespace** once you have checked there are no unrelated changes to keep. This reduces exposure from temporary Cloudflare OAuth tokens stored within that development environment.
 
@@ -86,3 +86,24 @@ Official references:
 - [Remote development executes on Cloudflare infrastructure](https://developers.cloudflare.com/workers/local-development/)
 - [Wrangler `dev --var` and `--test-scheduled`](https://developers.cloudflare.com/workers/wrangler/commands/workers/)
 - [Secrets Store Worker integration, local/remote limitations](https://developers.cloudflare.com/secrets-store/integrations/workers/)
+
+## Runner shutdown repair (2026-10-15; pending review)
+
+The runner now starts the preview in an isolated Bash job process group. On exit it sends TERM to the group, allows up to two seconds for shutdown, then sends KILL to remaining group members before removing its temporary logs. This also handles descendants left behind when `npx` exits early. INT and TERM cancel the runner with exit codes 130 and 143 respectively, without continuing to the scheduled trigger after cancellation is handled.
+
+Regression checks use local mock commands and real child processes, including a TERM-resistant descendant. They cover normal completion, startup failure, INT and TERM; they make no Cloudflare or Cashfree requests. PR #257 now integrates the scheduled-route fix from PR #256 alongside shutdown cleanup. Review the combined repair before another owner-authorized live attempt. Authentication and Secrets Store availability in remote preview remain unverified. Preserve the owner's existing Codespace and unrelated changes when preparing that attempt.
+## October 15, 2026: scheduled testing route compatibility
+Cloudflare's current Wrangler documentation describes `--test-scheduled` as exposing `/cdn-cgi/local/scheduled`. An earlier iteration of the owner-run script attempted `/__scheduled?format=json`. The combined runner and its regression test now use the documented path. This is a **test-route fix only**, not a new Cloudflare Cron Trigger, deployed Worker route or payment API operation. Do not invoke both endpoints or retry the event automatically if the first endpoint fails; a single failed test remains inconclusive.
+Reference: https://developers.cloudflare.com/workers/wrangler/commands/workers/
+
+## October 16, 2026: browser-only GitHub alternative (prepared)
+
+The owner selected an alternative after Codespace authentication/pasting errors.
+See [the detailed manual GitHub guide](CASHFREE_GITHUB_MANUAL_TEST.md). The new
+workflow wraps the same reviewed one-shot runner, requires a fresh manual dispatch
+on main with YES_TEST_ONLY, rejects reruns and malformed token input, and receives
+only a short-lived Cloudflare token through a dedicated GitHub Actions secret.
+Cashfree key values remain bound in Cloudflare. Main merge and actual execution
+are separate owner decisions; no real test or authentication was performed while
+preparing it. The earlier successful web Preview and owner interface acceptance
+do not establish Cashfree API readiness.
