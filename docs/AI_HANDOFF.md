@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## PR #257 merged with owner approval (2026-10-16T00:03Z; latest)
+- Owner explicitly approved merging PR #257 at 2026-10-16 05:31 IST. Rechecked exact reviewed head 203f83287e4d7f3cf59d8a6481593a0b3292f983; all four checks (Workers Builds, check, Chromium, WebKit) were SUCCESS. Merged with head-SHA lease as 529de298b80832fab681c6f29783f9b9accdd96f at 00:02:12Z. PR state independently confirmed merged.
+- Verified .github/workflows/cashfree-sandbox-once.yml is present on main with manual-only trigger and CANCEL default. Workflow registration/UI endpoints are not supported by the GitHub connector, so the Run workflow button was not directly observed. Provide the direct Actions workflow page to the owner; do not claim a live dispatch.
+- Main's normal check/browser/WebKit and Workers Builds integration started after merge; results were still in progress at this checkpoint. Do not claim production deployment acceptance yet. No actual Cashfree workflow dispatch, Cloudflare authentication or provider GET by assistant. Merge approval did not authorize that execution.
+- Exact next OWNER ACTION: confirm exposed token3 revoked, then create a fresh short-TTL scoped Cloudflare token and add only its raw value via repository Settings > Secrets and variables > Actions as MLOS_CASHFREE_PROBE_CF_TOKEN. Never paste tokens into chat or terminal. After setup, obtain the separate execution approval before the deliberate YES_TEST_ONLY manual run. Provider authentication and remote Secrets Store access remain unverified. Preserve unrelated Codespace work.
+- Owner/writer Codex; post-merge receipt saved on the task feature branch only, no further main changes. No active processes or temporary remote previews from assistant.
+
 ## Manual GitHub alternative prepared (2026-10-15T23:48Z; latest)
 - Owner asked to bypass Codespaces after repeated token/header paste failures, then requested detailed guidance. Prepared the selected manual GitHub Actions alternative; no real provider execution, token storage, main merge, or production promotion performed.
 - Owner/writer Codex. Active remote branch remains `fix/cashfree-preview-process-cleanup-20261015`, PR #257; base main `c8cee8c88c45731b0c1a7be36159d6aa002dba65`. Actual new code commit `7e1b4044aa0de6e088928f790c688aa13fb870ce`, based on reviewed `dfef51cf3af8cb1275378c157afb8ce323522cab`. Local preparation branch `ops/cashfree-manual-actions-20261016` is the same task, not another release.

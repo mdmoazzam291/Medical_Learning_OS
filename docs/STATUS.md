@@ -1,5 +1,8 @@
 # Current status
 
+## 2026-10-16 — Manual GitHub workflow merged, execution pending
+Owner explicitly approved PR #257. Its exact head 203f83287e4d7f3cf59d8a6481593a0b3292f983 passed all four hosted checks, and the leased merge completed as 529de298b80832fab681c6f29783f9b9accdd96f at 00:02:12Z. The manual Cashfree workflow file is verified on main; no dispatch or real provider request ran. Ordinary main deployment/CI jobs started and remain pending. Next is owner-only secret entry through GitHub's web form, followed by separate deliberate execution approval and one manual test. Token3 revocation is still unconfirmed. Cashfree authorization and remote Secrets Store availability remain unverified. This receipt is a feature-branch checkpoint; it does not change main again.
+
 ## 2026-10-16 — GitHub manual Cashfree alternative prepared, not executed
 Owner requested bypassing Codespaces. PR #257 now adds a manual-only Actions workflow and a fail-closed gate around the existing reviewed one-shot runner. Only main, the intended repository, workflow_dispatch, run attempt 1, and explicit YES_TEST_ONLY may proceed. A dedicated temporary Cloudflare repository secret reaches only the final step. The gate rejects malformed token input without printing it and never retries; no Cashfree keys are copied from Cloudflare.
 
