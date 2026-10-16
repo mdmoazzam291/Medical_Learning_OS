@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Live billing execution stage 1 released, stage 2 in progress (2026-10-16)
+- User reprioritized Cashfree consumer go-live ahead of other features. Stage 1 PR #260 merged `3de7c546a1763f343c01d30cd03cec2a8c087e58` after check/browser/WebKit CI passed. Supabase `iyapppmeieqhflnzslao` applied `consumer_billing_foundation` successfully: five empty RLS tables, anonymous/authenticated SELECT and INSERT explicitly false, zero policies. No purchase or grant.
+- Stage 2 branch `feat/cashfree-hosted-checkout-server-adapter-20261016` implements `src/adapters/cashfree-production.js` fixed live API host and strict server checks, shared pure payload validation from sandbox adapter, and a private reservation migration to lock amount/price version/terms/consent and idempotency key. Offline tests and docs, PR/CI unverified at this checkpoint.
+- Stage 2 does NOT expose a route or activate merchant keys; all flags must be set by a FUTURE authenticated server after external go-live approvals. Checkout session and mandate are NOT payment success; integration cannot unlock paid content. Third-party merchant production privileges, live key values, real sandbox end-to-end reconciliation, signed webhook inbox + payment-level provider verification, cancellation UX and final prices remain open.
+- Resume by verifying stage2 PR green, then applying reviewed stage2 migration (no grants) and building actual authenticated billing service/webhook persistence and UX. Ask owner for Production Subscriptions merchant-access screenshot (redacted), final prices/terms, and price/feature honesty. Keep public Worker, isolated TEST Worker and learner events unchanged.
+
+
 ## User priority switch: live consumer billing before next learning feature (2026-10-16)
 - Owner: finish consumer subscriptions and bring them live before other feature work. Cashfree primary; PhonePe backup design only; Free/Pro/AI Pro consumer tiers. This changes build sequence, NOT the requirement for real financial/merchant/security verification.
 - Branch `feat/consumer-live-billing-foundation-20261016`, foundation stage only: creates a private service-role-only billing SQL schema with five tables (draft offers, subscriptions, payment receipts, signed webhook inbox, grants); matching-production-payment preflight `src/domain/consumer-billing-eligibility.js` and tests; canonical launch runbook `docs/CONSUMER_BILLING_GO_LIVE.md`.

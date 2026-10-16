@@ -98,6 +98,13 @@ function createPayload(input, config) {
   return body;
 }
 
+// Shared pure schema validator used by the separate, server-only production
+// adapter. Does NOT send a request or approve a price; the trusted caller must
+// fetch the approved offer from its own ledger, never a browser-chosen amount.
+export function buildCashfreeSubscriptionPayload(input, config = {}) {
+  return createPayload(input, config);
+}
+
 export async function createCashfreeSandboxSubscription(input, config = {}) {
   // Validate everything before a network request.
   const headers = authHeaders(config);
