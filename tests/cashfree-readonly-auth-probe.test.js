@@ -26,7 +26,7 @@ test('one read-only probe uses fixed Cashfree sandbox GET plan URL without creat
     assert.equal(url, 'https://sandbox.cashfree.com/pg/plans/mlos_nonexistent_auth_probe_20261015');
     assert.equal(init.method, 'GET');
     assert.equal(init.cache, 'no-store');
-    assert.equal(init.redirect, 'error');
+    assert.equal(init.redirect, 'manual');
     assert.deepEqual(Object.keys(init.headers).sort(), ['Accept', 'x-api-version','x-client-id','x-client-secret']);
     assert.equal(init.headers['x-api-version'], '2025-01-01');
     assert.equal(init.body, undefined);
@@ -46,7 +46,10 @@ test('probe separates auth denial from inconclusive 404; no successful authentic
     [422, 'bad_request_auth_inconclusive'],
     [429, 'rate_limited'],
     [503, 'provider_unavailable'],
-    [302, 'other_response_auth_inconclusive']
+    [301, 'redirect_response_auth_inconclusive'],
+    [302, 'redirect_response_auth_inconclusive'],
+    [307, 'redirect_response_auth_inconclusive'],
+    [308, 'redirect_response_auth_inconclusive']
   ];
   for(const [status,expected] of statuses) {
     const r=await probeCashfreeSandboxPlanAccess(cfg(async()=>({status})));
@@ -55,6 +58,38 @@ test('probe separates auth denial from inconclusive 404; no successful authentic
   }
   assert.equal((await probeCashfreeSandboxPlanAccess(cfg(async()=>{throw Error('sensitive remote credentials!')}))).result,'transport_failed');
 });
+test('redirect is reported without following, inspecting Location, or exposing keys', async () => {
+  let attempts = 0;
+  const result = await probeCashfreeSandboxPlanAccess(cfg(async (url, options) => {
+    attempts++;
+    assert.equal(url, 'https://sandbox.cashfree.com/pg/plans/mlos_nonexistent_auth_probe_20261015');
+    assert.equal(options.redirect, 'manual');
+    assert.equal(options.method, 'GET');
+    return {
+      status: 302,
+      headers: {
+        get() { throw Error('Must not inspect or forward Location/headers'); }
+      },
+      async text() { throw Error('Must not read body'); },
+      async json() { throw Error('Must not read body'); }
+    };
+  }));
+  assert.equal(attempts, 1);
+  assert.deepEqual(result, {
+    provider: 'cashfree',
+    environment: 'sandbox',
+    result: 'redirect_response_auth_inconclusive'
+  });
+  assert.equal(JSON.stringify(result).includes('mock-sandbox-secret-key'), false);
+  assert.equal(result.authenticated, undefined);
+});
+test('unknown fetch failure stays sanitized; no error message escapes', async () => {
+  const probe = await probeCashfreeSandboxPlanAccess(cfg(async () => {
+    throw new TypeError('sensitive test value and internal hostname should never be displayed');
+  }));
+  assert.deepEqual(probe, { provider: 'cashfree', environment: 'sandbox', result: 'transport_failed' });
+});
+
 test('probe rejects live mode, unset flags and missing credentials before network', async () => {
   let calls=0;
   const fetchImpl=()=>{calls++; throw Error('forbidden');};
