@@ -87,7 +87,7 @@ test('unknown fetch failure stays sanitized; no error message escapes', async ()
   const probe = await probeCashfreeSandboxPlanAccess(cfg(async () => {
     throw new TypeError('sensitive test value and internal hostname should never be displayed');
   }));
-  assert.deepEqual(probe, { provider: 'cashfree', environment: 'sandbox', result: 'transport_failed' });
+  assert.deepEqual(probe, { provider: 'cashfree', environment: 'sandbox', result: 'transport_failed', transportCategory: 'type_error' });
 });
 
 test('probe rejects live mode, unset flags and missing credentials before network', async () => {

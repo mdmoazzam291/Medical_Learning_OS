@@ -104,6 +104,14 @@ if [[ "$status" =~ ^2[0-9][0-9]$ ]] && grep -Fq 'cashfree_sandbox_probe' "$log_f
 fi
 if [[ -n "$result" ]]; then
   printf 'Cashfree TEST response classification: %s\n' "$result"
+  if [[ "$result" == transport_failed ]]; then
+    for category in type_error error unknown; do
+      if grep -Eq "cashfree_sandbox_transport[[:space:]]+$category([[:space:]]|$)" "$log_file"; then
+        printf 'Cashfree TEST transport category: %s\n' "$category"
+        break
+      fi
+    done
+  fi
   echo 'A 404 for a fake plan is INCONCLUSIVE, not accepted Subscriptions credentials.'
 else
   printf 'No verified provider result captured. Local test trigger HTTP status: %s\n' "$status"

@@ -25,7 +25,8 @@ export async function inspectCashfreeStagingWorker(env = {}, { fetchImpl } = {})
     try {
       const service = createCashfreeSandboxService(env, { fetchImpl });
       const receipt = await service.probeTestPlanAccess();
-      return Object.freeze({ outcome: 'auth_probe_status', assessment: receipt.result });
+      return Object.freeze({ outcome: 'auth_probe_status', assessment: receipt.result,
+        ...(receipt.result === 'transport_failed' ? { transportCategory: receipt.transportCategory } : {}) });
     } catch {
       return Object.freeze({ outcome: 'sandbox_request_failed' });
     }
@@ -73,6 +74,10 @@ export default {
     // response bodies. Observability remains disabled by default in Wrangler.
     if (result.outcome === 'auth_probe_status') {
       console.info('cashfree_sandbox_probe', result.outcome, result.assessment);
+      if (result.assessment === 'transport_failed' &&
+          ['type_error', 'error', 'unknown'].includes(result.transportCategory)) {
+        console.info('cashfree_sandbox_transport', result.transportCategory);
+      }
     } else {
       console.info('cashfree_sandbox_probe', result.outcome);
     }
