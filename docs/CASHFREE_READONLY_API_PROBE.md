@@ -2,6 +2,15 @@
 **Prepared:** 2026-10-15 (Asia/Kolkata)  
 **Owner scope:** Consumer billing only. All actual payment operations, checkout, subscriptions, UPI AutoPay, live keys, and paid grants remain disabled.
 
+**October 16 correction (supersedes route instructions below):** this runner uses
+remote development, so pinned Wrangler 4.151.0 must receive the single test at
+`http://127.0.0.1:8787/__scheduled`. `/cdn-cgi/local/scheduled` is a local Miniflare
+control endpoint and was incorrect for this remote middleware flow. The first
+owner-run GitHub attempt returned local 404 without a verified provider result.
+See [the versioned-source diagnosis](CASHFREE_REMOTE_ROUTE_DIAGNOSIS.md). No result
+now exits nonzero; never retry automatically. Token revocation and GitHub secret
+deletion after that first attempt still require owner confirmation.
+
 ## What we know
 - Cashfree merchant UI in **Test Environment** shows Subscriptions > All Subscriptions and All Plans. Owner's All Plans screenshot shows “No Plans Found” in a **Last 30 days** filter. This confirms UI navigation, not API merchant/product authorization.
 - The `mlos-cashfree-sandbox` Cloudflare Worker is deployed and both encrypted TEST Secrets Store bindings are present. It has no public route and no automatic cron. Its four vars remain `sandbox`, `false`, `false`, `disabled`.

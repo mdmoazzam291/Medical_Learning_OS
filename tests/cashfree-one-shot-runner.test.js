@@ -19,13 +19,14 @@ test('one-shot shell syntax and user confirmation guard are valid', async () => 
 
 test('one-shot command is remote-dev only, never an account deployment or scheduled cron', async () => {
   const s = await readFile(script, 'utf8');
-  assert.match(s, /wrangler@\^4\.119\.0 dev --remote --test-scheduled/);
+  assert.match(s, /wrangler@4\.151\.0 dev --remote --test-scheduled/);
   assert.match(s, /wrangler\.cashfree-sandbox\.jsonc/);
   assert.match(s, /--ip 127\.0\.0\.1 --port 8787/);
   assert.match(s, /--var CASHFREE_SANDBOX_ENABLED:true/);
   assert.match(s, /--var CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED:true/);
   assert.match(s, /--var CASHFREE_SANDBOX_RUN_MODE:auth_probe/);
-  assert.match(s, /http:\/\/127\.0\.0\.1:8787\/cdn-cgi\/local\/scheduled/);
+  assert.match(s, /http:\/\/127\.0\.0\.1:8787\/__scheduled/);
+  assert.doesNotMatch(s, /http:\/\/127\.0\.0\.1:8787\/cdn-cgi\/local\/scheduled/);
   assert.doesNotMatch(s, /\bnpx [^\n]*wrangler[^\n]* (?:deploy|secret put|versions deploy)\b/);
   assert.doesNotMatch(s, /CASHFREE_TEST_APP_ID=[^\n]+|CASHFREE_TEST_SECRET_KEY=[^\n]+/);
   assert.match(s, /trap cleanup EXIT/);

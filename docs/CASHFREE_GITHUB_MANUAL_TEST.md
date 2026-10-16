@@ -66,6 +66,11 @@ The GitHub secret name and Cloudflare token name are different. Never put the
 token in repository files, Actions inputs, issues, chat, or screenshots. Do not
 copy Cashfree TEST keys: their two existing encrypted bindings remain in Cloudflare.
 
+**After first attempt #1:** stop here until the remote-route repair is merged and
+a separate new attempt is approved. The first run returned a local trigger 404
+without a provider result. Remove its temporary credentials; do not recreate
+them just to repeat the same run. See [the routing diagnosis](CASHFREE_REMOTE_ROUTE_DIAGNOSIS.md).
+
 ## 5. Deliberately authorize one attempt
 
 Only after the owner approves the actual provider execution:
@@ -91,6 +96,8 @@ or a provider request already in flight cannot be undone by that cleanup.
 Copy only `Cashfree TEST response classification: ...`, or the fixed generic
 failure message. A green GitHub job alone does not prove valid credentials: the
 runner can complete with an inconclusive result. A skipped job did not execute.
+The corrected runner exits nonzero when it captures no verified provider result;
+the first run used older code which incorrectly exited zero in that case.
 
 | Result | Interpretation |
 | --- | --- |

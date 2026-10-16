@@ -64,7 +64,7 @@ echo 'Cloudflare TEST secrets stay bound remotely; no key values are entered her
 # Runtime overrides apply only to this dev session; checked-in defaults stay OFF.
 # Job control gives this background preview its own process group.
 set -m
-npx --yes wrangler@^4.119.0 dev --remote --test-scheduled \
+npx --yes wrangler@4.151.0 dev --remote --test-scheduled \
   -c wrangler.cashfree-sandbox.jsonc --ip 127.0.0.1 --port 8787 \
   --var CASHFREE_SANDBOX_ENABLED:true \
   --var CASHFREE_SANDBOX_NETWORK_TESTS_ENABLED:true \
@@ -88,8 +88,10 @@ if [[ "$ready" != true ]]; then
 fi
 
 echo 'Requesting exactly one manual scheduled test through localhost.'
+# Pinned Wrangler's remote --test-scheduled middleware intercepts /__scheduled.
+# /cdn-cgi/local/scheduled is the local Miniflare control route, not this mode.
 status="$(curl --silent --max-time 45 --output "$response_file" --write-out '%{http_code}' \
-  'http://127.0.0.1:8787/cdn-cgi/local/scheduled' || true)"
+  'http://127.0.0.1:8787/__scheduled' || true)"
 sleep 2
 # Only recognize fixed allowlisted status labels from the Cloudflare Worker.
 result=''
@@ -106,5 +108,7 @@ if [[ -n "$result" ]]; then
 else
   printf 'No verified provider result captured. Local test trigger HTTP status: %s\n' "$status"
   echo 'Do NOT infer successful Cashfree authentication.'
+  echo 'Closing temporary session and erasing its scratch logs. Deployed flags remain OFF.'
+  exit 1
 fi
 echo 'Closing temporary session and erasing its scratch logs. Deployed flags remain OFF.'

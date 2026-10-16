@@ -11,7 +11,7 @@ const config = fileURLToPath(new URL('../wrangler.cashfree-sandbox.jsonc', impor
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 // Only npx/curl are replaced: the real runner controls real child processes.
 // No Cloudflare session, credentials, port listener or provider request is used.
-for (const scenario of ['success', 'startup_exit', 'SIGTERM', 'SIGINT', 'SIGTERM_readiness_curl']) {
+for (const scenario of ['success', 'trigger404', 'missing_result', 'startup_exit', 'SIGTERM', 'SIGINT', 'SIGTERM_readiness_curl']) {
   test(`Cashfree runner stops descendants on ${scenario}`, { timeout: 15000 }, async t => {
     const directory = await mkdtemp(join(tmpdir(), 'mlos-runner-cleanup-'));
     const scratch = join(directory, 'scratch');
@@ -22,7 +22,9 @@ bash -c 'trap "" TERM; i=0; while :; do printf "%s" "$((i+=1))" > "$MLOS_FIXTURE
 child=$!
 printf '%s %s' "$$" "$child" > "$MLOS_FIXTURE_PIDS.tmp"
 mv "$MLOS_FIXTURE_PIDS.tmp" "$MLOS_FIXTURE_PIDS"
-echo 'cashfree_sandbox_probe auth_probe_status unauthorized'
+if [[ "$MLOS_FIXTURE_SCENARIO" != missing_result ]]; then
+  echo 'cashfree_sandbox_probe auth_probe_status unauthorized'
+fi
 if [[ "$MLOS_FIXTURE_SCENARIO" == startup_exit ]]; then exit 3; fi
 wait "$child"
 `, { mode: 0o700 });
@@ -33,12 +35,18 @@ if [[ ! -f "$MLOS_FIXTURE_FIRST_CURL" ]]; then
 fi
 if [[ "$*" == *scheduled* ]]; then
   echo event >> "$MLOS_FIXTURE_EVENTS"
-  printf 200
+  # Wrangler 4.151.0 remote middleware matches ONLY /__scheduled.
+  # Local Miniflare's /cdn-cgi/local/scheduled must not pass this fixture.
+  if [[ "$*" == *http://127.0.0.1:8787/__scheduled && "$MLOS_FIXTURE_SCENARIO" != trigger404 ]]; then
+    printf 200
+  else
+    printf 404
+  fi
 elif [[ "$MLOS_FIXTURE_SCENARIO" == SIGTERM_readiness_curl ]]; then
   touch "$MLOS_FIXTURE_CURL_STARTED"
   sleep 1
   printf 503
-elif [[ "$MLOS_FIXTURE_SCENARIO" == success ]]; then
+elif [[ "$MLOS_FIXTURE_SCENARIO" == success || "$MLOS_FIXTURE_SCENARIO" == trigger404 || "$MLOS_FIXTURE_SCENARIO" == missing_result ]]; then
   printf 404
 else
   printf 503
@@ -95,11 +103,18 @@ fi
     const result = await finished;
     clearTimeout(timeout);
     assert.equal(result.code, scenario === 'success' ? 0 : scenario === 'SIGINT' ? 130 : scenario.startsWith('SIGTERM') ? 143 : 1, output);
+    if (scenario === 'success') {
+      assert.match(output, /Cashfree TEST response classification: unauthorized/);
+    }
+    if (scenario === 'trigger404' || scenario === 'missing_result') {
+      assert.match(output, /No verified provider result captured/);
+      assert.doesNotMatch(output, /Cashfree TEST response classification:/);
+    }
     const heartbeat = await readFile(join(directory, 'heartbeat'), 'utf8');
     await pause(200);
     assert.equal(await readFile(join(directory, 'heartbeat'), 'utf8'), heartbeat, 'preview descendant must stop producing work before the runner exits');
     const events = await readFile(join(directory, 'events'), 'utf8').catch(() => '');
-    assert.equal(events.trim().split('\n').filter(Boolean).length, scenario === 'success' ? 1 : 0);
+    assert.equal(events.trim().split('\n').filter(Boolean).length, ['success', 'trigger404', 'missing_result'].includes(scenario) ? 1 : 0);
     const files = await readdir(scratch);
     assert.deepEqual(files, [], 'temporary logs must be removed');
   });
