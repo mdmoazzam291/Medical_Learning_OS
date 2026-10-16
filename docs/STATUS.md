@@ -1,5 +1,18 @@
 # Current status
 
+## 2026-10-16 — Remote test route corrected offline, PR #258 awaiting checks/review
+Identified why the earlier general-docs route change failed in remote development: Wrangler4.151.0's injected scheduled middleware matches /__scheduled, whereas /cdn-cgi/local/scheduled belongs to local Miniflare control routing. The real tagged middleware reproduced404/zero dispatches for the old path and200/one dispatch for the remote path using only offline mocks. Detailed source/evidence: docs/CASHFREE_REMOTE_ROUTE_DIAGNOSIS.md.
+
+PR #258 pins Wrangler4.151.0, restores the correct single remote trigger URL, and exits nonzero when no verified classification is captured so the Actions job cannot misleadingly pass that case. Actual code 6021c4291fe46b60016ac451fa3ddc7d3ed998b7, branch fix/cashfree-remote-scheduled-route-20261016, main base529de298. Three old-code regression failures were observed; all1291 local tests plus check/build81files now pass. Independent review found no blockers. Hosted CI pending; no new main merge or actual provider attempt occurred. Temporary token/secret cleanup by owner remains unconfirmed. Cashfree authorization and remote Secrets Store connectivity are still unverified; no automatic retries.
+
+## 2026-10-16 — First manual GitHub attempt inconclusive; cleanup required
+Owner ran Cashfree sandbox - one manual GET #1 at main 529de298b80832fab681c6f29783f9b9accdd96f. Independently inspected job 116739245365 in run 38827800192: temporary remote development started, one local scheduled test was requested, then 'No verified provider result captured. Local test trigger HTTP status: 404'. Runner printed its closing/erasing-logs message. The green Actions job is not successful Cashfree authentication. The 404 came from the local simulation endpoint, not a verified Cashfree response; whether a provider request occurred remains unverified. No automatic retry is authorized.
+
+Owner must revoke the temporary Cloudflare token mlos-cashfree-actions-once and delete GitHub secret MLOS_CASHFREE_PROBE_CF_TOKEN; cleanup in those account UIs is still unconfirmed. All six ordinary post-merge main checks passed, including all three Worker builds, separately from this inconclusive test. Any further execution requires investigation and a deliberate new owner decision. Root cause of remote scheduled endpoint 404 is not established from the sanitized logs.
+
+## 2026-10-16 — Manual GitHub workflow merged, execution pending
+Owner explicitly approved PR #257. Its exact head 203f83287e4d7f3cf59d8a6481593a0b3292f983 passed all four hosted checks, and the leased merge completed as 529de298b80832fab681c6f29783f9b9accdd96f at 00:02:12Z. The manual Cashfree workflow file is verified on main; no dispatch or real provider request ran. Ordinary main deployment/CI jobs started and remain pending. Next is owner-only secret entry through GitHub's web form, followed by separate deliberate execution approval and one manual test. Token3 revocation is still unconfirmed. Cashfree authorization and remote Secrets Store availability remain unverified. This receipt is a feature-branch checkpoint; it does not change main again.
+
 ## 2026-10-16 — GitHub manual Cashfree alternative prepared, not executed
 Owner requested bypassing Codespaces. PR #257 now adds a manual-only Actions workflow and a fail-closed gate around the existing reviewed one-shot runner. Only main, the intended repository, workflow_dispatch, run attempt 1, and explicit YES_TEST_ONLY may proceed. A dedicated temporary Cloudflare repository secret reaches only the final step. The gate rejects malformed token input without printing it and never retries; no Cashfree keys are copied from Cloudflare.
 
