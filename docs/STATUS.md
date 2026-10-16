@@ -1,5 +1,11 @@
 # Current status
 
+## Authorized second sandbox attempt: transport_failed (2026-10-16T00:41Z; latest)
+- Owner explicitly approved one further read-only sandbox GET, then reported Started. Independently inspected run https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/38830783379 job116748822951 on merged main544aeab6bc504ecb05406863b1703c9dabaef9c0. Job success means runner completed, not provider authentication success.
+- Sanitized evidence: 00:40:16Z ephemeral remote-dev preview started; 00:40:26Z exactly one manual scheduled test requested; 00:40:28Z Cashfree TEST response classification: transport_failed; cleanup message immediately followed. Adapter emits this classification when fetch throws before HTTP status classification. Cause unknown; provider receipt and authentication UNVERIFIED. Do not infer invalid keys or a specific networking defect. No retry authorized or performed by assistant.
+- Owner had confirmed previous temporary token and GitHub secret deleted before this new setup. Fresh temporary credentials used for this second run need cleanup: delete mlos-cashfree-actions-once and MLOS_CASHFREE_PROBE_CF_TOKEN only. New cleanup NOT yet confirmed. Preserve build credentials and encrypted TEST bindings. Cleanup path recorded; remote absence not independently audited.
+- All ordinary main checks now SUCCESS (three Worker builds, check, browser, webkit). Code route repair merged PR258; no additional code change this turn. Next engineering work should diagnose fetch exception offline with sanitized error categories before any new live attempt; do not create another token or repeat API requests. Payments, Cron and public test routes remain prohibited.
+
 ## PR #258 merged; temporary credentials removed (2026-10-16; latest)
 - Owner confirmed both mlos-cashfree-actions-once and GitHub secret MLOS_CASHFREE_PROBE_CF_TOKEN deleted, then explicitly approved PR #258 merge. Credential deletion is owner-reported.
 - Verified all four reviewed-head checks SUCCESS: check, browser, webkit, Workers Builds: medical-learning-os-web. Merged reviewed head 6d3328856b2cdb6eb1cb3ce37e95502bf93892d1 with SHA lease; independently confirmed merge commit 544aeab6bc504ecb05406863b1703c9dabaef9c0. Actual repair code commit 6021c4291fe46b60016ac451fa3ddc7d3ed998b7; local 1291 tests passed before merge.
