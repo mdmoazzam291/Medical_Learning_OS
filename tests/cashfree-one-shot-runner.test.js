@@ -32,6 +32,7 @@ test('one-shot command is remote-dev only, never an account deployment or schedu
   assert.match(s, /trap cleanup EXIT/);
   assert.match(s, /trap 'exit 130' INT/);
   assert.match(s, /trap 'exit 143' TERM/);
+  assert.match(s, /redirect_response_auth_inconclusive/);
   assert.match(s, /MLOS_CONFIRM_ONE_CASHFREE_GET/);
 });
 
