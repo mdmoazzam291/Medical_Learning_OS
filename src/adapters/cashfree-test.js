@@ -172,8 +172,13 @@ export async function probeCashfreeSandboxPlanAccess(config = {}) {
       // redirect:'error' turns 3xx into an indistinguishable fetch rejection.
       method: 'GET', headers, redirect: 'manual', cache: 'no-store'
     });
-  } catch {
-    return Object.freeze({ provider: 'cashfree', environment: 'sandbox', result: 'transport_failed' });
+  } catch (error) {
+    // Inspect only built-in error identity. Never copy message, stack, cause,
+    // custom name/code or any thrown payload into the diagnostic receipt.
+    const transportCategory = error instanceof TypeError ? 'type_error' :
+      error instanceof Error ? 'error' : 'unknown';
+    return Object.freeze({ provider: 'cashfree', environment: 'sandbox',
+      result: 'transport_failed', transportCategory });
   }
   const code = response?.status;
   let result;
