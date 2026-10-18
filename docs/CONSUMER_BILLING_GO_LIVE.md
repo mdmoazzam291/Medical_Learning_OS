@@ -2,7 +2,21 @@
 
 **Decision (owner, 2026-10-16):** Complete and eventually launch **consumer** subscriptions before expanding Medical Learning OS into other commercial initiatives. Cashfree remains primary; PhonePe is a deferred backup. This supersedes the previous preference to defer all payment engineering until more PYQ content arrives. It does **not** waive truthful-offer, medical content rights, merchant authorization, security, or financial safety requirements.
 
-## Current verified engineering state
+
+## Current readiness audit — 18 October 2026 (supersedes historical status below)
+See [source-backed readiness audit](CONSUMER_BILLING_READINESS_2026-10-18.md).
+Production preparation is authorized; customer charging remains disabled. PR263
+is merged at e46b3cc1cb6d42025e576f7a5a0047e150f39392. Four sandbox attempts now
+exist; latest run39128032212 returned HTTP400/422 inconclusive after owner-updated
+TEST values. The owner confirmed deleting its temporary token and Actions secret.
+No further probe or production request is authorized. No customer checkout,
+production webhook reconciler or atomic paid-grant service is implemented.
+Prior schema-application receipts remain historical; no fresh DB/account readback
+was performed in this audit. Next work is authenticated durable checkout design,
+not enabling the existing adapter's flags. Merchant production/KYC/Subscriptions
+approval and final commercial terms remain unknown.
+
+## Current verified engineering state (historical baseline)
 - The existing Free / Pro / AI Pro plans page is preview-only and public checkout buttons are disabled.
 - The present app's Cloudflare public Worker is a static/edge gateway. There is no authenticated production subscription checkout/API or production payment ledger integrated into it.
 - Cashfree TEST secrets belong only to the separate `mlos-cashfree-sandbox` Worker. Do not copy TEST or live credentials to the public Worker, GitHub, browser or client bundle.
