@@ -3,7 +3,7 @@
 **OWNER REVIEW DRAFT — not effective or published.** Effective date: OWNER INPUT. Final notice must match actual deployed processing, not just repository capability.
 
 ## Who is responsible
-Medretica is operated by **OWNER INPUT: exact legal operator name and public address**. Privacy and grievance contact: **OWNER INPUT: approved working contact**, also on [Contact Us](contact.md).
+Medretica is operated by **Md Moazzam**; public business/correspondence address: **OWNER INPUT**. Privacy and grievance contact: **support@medretica.com** (privacy/support) or **admin@medretica.com** (administration/escalation), also on [Contact Us](contact.md).
 
 ## Information used to provide the service
 The service uses account/sign-in information, learning activity (such as answers, progress and revision records), notes or files you choose to submit, preferences and technical/security information necessary to operate the website. Exact collected fields, purposes and any optional data categories: **OWNER INPUT: validate deployed flows**. Do not upload patient-identifying information or material you have no right to use.

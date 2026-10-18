@@ -3,7 +3,7 @@
 **OWNER REVIEW DRAFT — not effective or published.** Version: review-2026-10-19. Effective date: OWNER INPUT before publication.
 
 ## 1. Who operates Medretica
-Medretica (Medical Learning OS), available at https://medretica.com, is operated by **OWNER INPUT: exact legal operator name and entity type**, at **OWNER INPUT: public business/correspondence address**. Contact and grievance details are on the [Contact Us](contact.md) page. The customer-facing brand does not change the identity of the legal operator.
+Medretica (Medical Learning OS), available at https://medretica.com, is operated by **Md Moazzam** (operator name supplied by the owner; entity type still to confirm), at **OWNER INPUT: public business/correspondence address**. Contact and grievance details are on the [Contact Us](contact.md) page. The customer-facing brand does not change the identity of the legal operator.
 
 ## 2. Service and eligibility
 Medretica is a web-based medical education platform for learning, practice, revision and personal study organisation. Only features and content expressly marked available form part of the current service. Roadmap features, proposed tiers and previews are not promises of delivery. Eligibility and any parental/guardian requirements: **OWNER INPUT before publication**.

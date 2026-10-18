@@ -14,11 +14,17 @@ Owner asked to complete the public website requirements shown in Cashfree whitel
 
 Every OWNER INPUT marker is intentional and blocks publication. They must not be presented as completed policies to Cashfree. Proposed customer commitments are drafts requiring owner confirmation, not existing operational capabilities.
 
-## Facts required from the owner
-1. Exact legal merchant/operator name and entity type as held by Cashfree. Do not infer it from the Medretica brand, personal profile or display-brand verification. No KYC document/number is needed in chat.
-2. Support email and phone explicitly approved for public display; customer correspondence/business address approved for publication; designated grievance contact and contact details. Do not silently reuse personal details from screenshots.
-3. Refund eligibility and request window, decision/processing targets, cancellation effect and future renewal rules. Do not fabricate a 7-day/30-day promise or a blanket no-refunds policy.
-4. Final INR offer prices, period, taxes, included available content/features, limits and access-delivery target. Existing Pro/AI Pro values are explicitly proposals, not approved offers.
+## Owner-confirmed facts — 19 October 2026
+- Operator name: **Md Moazzam**, supplied explicitly by owner. Entity type and exact match to Cashfree KYC records not independently verified.
+- Public support email: **support@medretica.com**; administration email: **admin@medretica.com**. Delivery/receipt tests not performed by this task.
+- Paid plans must **remain unavailable**. Final premium prices are not needed to describe the current unpaid release; they remain a prerequisite for a future paid launch.
+- Refund/cancellation rules requested as a **proposal**, not yet approved. See refunds.md. Future terms-change clause remains intact.
+
+## Remaining facts required from the owner
+1. Entity type and confirmation that owner-supplied **Md Moazzam** matches the Cashfree legal operator record. No KYC document/number is needed in chat.
+2. Public support phone, customer correspondence/business address, support hours and designated grievance contact/details. Emails are owner-supplied; test reachability before publication. Do not silently reuse personal phone/address from screenshots.
+3. Review the explicit proposed refund/cancellation rules in refunds.md; no target or refund window becomes an active promise until approved and supported by actual operations.
+4. Current paid status is confirmed unavailable; any future paid launch still requires final INR prices/period/taxes/inclusions/limits/delivery target. Do not turn proposed existing prices into offers.
 5. Privacy retention periods, processors/locations and safeguards, request handling, age eligibility/parental handling and any AI data use. Confirm actual deployments; source alone does not prove current runtime settings.
 
 ## Implementation to complete after facts are confirmed

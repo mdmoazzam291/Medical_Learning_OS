@@ -6,7 +6,7 @@ Medretica is a web-based medical learning service. The planned service described
 
 Available learning features are accessed through the website and the learner account where sign-in is required. Content availability depends on actual reviewed/published inventory. An empty catalogue, preview feature or planned capability must not be described as an included paid resource.
 
-Paid checkout is currently disabled. Before selling access, publish the approved feature/content scope, account eligibility, access start, subscription period, any usage limits and the access-delivery target: **OWNER INPUT**.
+The owner has confirmed paid plans must remain unavailable; paid checkout is currently disabled. Before selling access, publish the approved feature/content scope, account eligibility, access start, subscription period, any usage limits and the access-delivery target: **OWNER INPUT**.
 
 A checkout return screen, mandate registration or pending bank message alone is not proof of successful payment or delivery. Any paid access must follow trusted server-side payment verification. This draft does not assert that the billing workflow is live.
 
