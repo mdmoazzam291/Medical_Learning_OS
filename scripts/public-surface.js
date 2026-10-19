@@ -41,6 +41,7 @@ export const publicFiles = Object.freeze([
   'web/styles.css',
   'web/favicon.svg',
   'web/medretica-mark.svg',
+  'web/medretica-fold.svg',
   'web/apple-touch-icon.png',
   'src/domain/consumer-entitlements.js',
   'web/plans.html',

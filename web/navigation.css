@@ -283,13 +283,19 @@
  }
 }
 
-/* Medretica: one vector mark, tinted by the selected permanent palette. */
-.mlos-brand-mark{flex:none;font-size:0;background:transparent;border-radius:0;color:var(--accent)}
-.mlos-brand-mark::before{content:"";display:block;width:100%;height:100%;background:currentColor;-webkit-mask:url('/web/medretica-mark.svg') center/contain no-repeat;mask:url('/web/medretica-mark.svg') center/contain no-repeat}
+/* Open Knowledge: palette-independent geometry; semantic colours, never palette names.
+   Future palettes supply a contrast-safe --accent and --surface, as the rest of the UI does.
+   Optional --logo-primary/--logo-secondary overrides support special brand surfaces. */
+.mlos-brand-mark{flex:none;font-size:0;background:transparent;border-radius:0;color:var(--logo-primary,var(--accent));isolation:isolate}
+.mlos-brand-mark::before,.mlos-brand-mark::after{content:"";display:block;grid-area:1/1;width:100%;height:100%;background:currentColor;-webkit-mask:url('/web/medretica-mark.svg?v=2') center/contain no-repeat;mask:url('/web/medretica-mark.svg?v=2') center/contain no-repeat}
+.mlos-brand-mark::after{-webkit-mask-image:url('/web/medretica-fold.svg?v=2');mask-image:url('/web/medretica-fold.svg?v=2');background:var(--logo-secondary,currentColor)}
+@supports(background:color-mix(in srgb,black,white)){
+ .mlos-brand-mark::after{background:var(--logo-secondary,color-mix(in srgb,currentColor 85%,var(--surface)))}
+}
 .mlos-brand-full,.mlos-brand-short{letter-spacing:-.025em}
 /* Tablet portrait retains every workspace; the symbol carries the compact brand. */
 @media(min-width:701px) and (max-width:1050px){.mlos-header-top .mlos-brand-short{display:none}}
-@media(forced-colors:active){.mlos-brand-mark{color:LinkText}.mlos-brand-mark::before{forced-color-adjust:none}}
+@media(forced-colors:active){.mlos-brand-mark{color:LinkText}.mlos-brand-mark::before{forced-color-adjust:none}.mlos-brand-mark::after{display:none}}
 
 .mlos-signin{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 10px;border-radius:10px;color:var(--ink);font-size:13px;font-weight:650;white-space:nowrap;text-decoration:none}.mlos-signin:hover,.mlos-signin:focus-visible{background:var(--soft)}
 @media(max-width:700px){.mlos-signin{padding:8px 5px;font-size:12px;flex-shrink:0}}
