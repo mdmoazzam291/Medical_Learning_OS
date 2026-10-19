@@ -1,5 +1,13 @@
 # Decision log
 
+## ADR-119 — Open Knowledge logo follows semantic theme colours
+**Status:** Owner-selected concept26, theme compatibility requested20October2026; implementation on feature branch, release pending verification.
+
+Supersede ADR117's three-leaf geometry with the selected M/open-page concept. Keep vector geometry colourless and shared across learner/admin/public components. CSS uses the active accent and a contrast-preserving accent/surface fold mix, with an optional local semantic override and a single-colour/forced-colours fallback. Future palettes supply the same semantic tokens and must pass actual-surface contrast checks; adding a palette does not require a new logo asset or palette-name condition. The exact vector is an implementation interpretation of the approved raster direction.
+
+Page themes cannot propagate into browser/OS-owned saved icons or third-party Google consent branding. Refresh those shape assets separately and document their fixed/default or browser-controlled colours rather than promise in-app synchronization. Existing permanent palettes, appearance persistence, roles and provider configuration are unchanged.
+
+
 ## ADR-118 — Selective Account presentation and an honest persistence choice
 **Status:** Owner-approved selective visual restoration and released in PR #276 on 2026-10-20 IST.
 

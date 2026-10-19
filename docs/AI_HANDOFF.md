@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Theme-adaptive Open Knowledge logo — 2026-10-19T21:05:42.483268+00:00
+- Owner selected concept 26 and requested palette/light-dark compatibility, including future palettes. Writer Codex; branch feat/theme-adaptive-open-knowledge, base main c0d1a11ac799b615d8cf73d35600e6431fec47f4. Existing unrelated PRs264/229/228/203 untouched. No competing branding writer observed.
+- Redrawn Open Knowledge M/open-page vector replaces three leaves; shared learner/admin/public/account-preview masks inherit semantic accent and an 85% accent/surface fold mix. Optional local logo overrides; no per-palette logo dispatch. Forced-colours uses LinkText/single silhouette; unsupported colour-mix falls back to primary. New fold asset is explicitly allowlisted. Tab and Apple icons use new shape; cache-version links updated. Browser/OS and external Google branding do not inherit in-app theme; static iOS icon stays default sage.
+- Verification so far:1328/1328Node tests, npm run check,96file build,48Chromium logo checks pass. Tests cover actual Preferences palette/appearance changes and persistence across routes at390/820/1440, both role renderings, future test-only token set, forced-colours overlay fallback, public asset availability and both tones >=3:1 against surface/background. Screenshots inspected (dark tablet Preferences and180px iOS icon). Broader fixture navigation/hosted WebKit checks pending. No real learner/provider/data writes.
+- Logo colour geometry/rules documented in MEDRETICA_BRAND.md and ADR119; automated Chromium/WebKit CI steps added. No new palette, auth-provider config, backend, data/content/payment/DNS changes.
+- Next: finish navigation checks, save and verify feature commit/PR, inspect hosted checks before any release, verify live assets if released. No production release claimed at this checkpoint; ownership retained. The original raster concept was interpreted as production SVG, not traced pixel-for-pixel.
+
+
 ## Selective account restoration released — 2026-10-19T20:10:53.370Z
 - Owner requested restoration of the marked features except the module list in the introduction. PR276 merged ase4d03ae03035779e6bd94775bebd076df22deec7; tested headc32cde5edd439a276c18950d511ddd28db3ea10d, hardened auth codeed275dac4eae27c1359ec54dddc4e64d98415161. This receipt supersedes the pending checkpoint below.
 - Live: direct moon/sun toggle, enabled Keep me signed in, four benefit rows inside the card, and product story/features/illustrative preview outside and below it. Preview notice is a separate nonoverlapping block. Introduction stays Continue your learning across devices. Single shared header and cleaned registration/recovery controls remain.

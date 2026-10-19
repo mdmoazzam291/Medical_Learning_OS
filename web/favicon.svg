@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#244A3A"/>
-  <g fill="#DDE8DC" transform="translate(6.4 6.4) scale(.8)">
-  <path d="M32 4C29 10 22 16 22 23c0 6 4 11 10 16 6-5 10-10 10-16C42 16 35 10 32 4Z"/>
-  <path d="M6 24c11 0 21 9 23 28C15 52 6 42 6 24Z"/>
-  <path d="M58 24c-11 0-21 9-23 28 14 0 23-10 23-28Z"/>
+  <style>:root{--tile:#244A3A;--mark:#FFFFFF}@media(prefers-color-scheme:dark){:root{--tile:#DDE8DC;--mark:#192A22}}</style>
+  <rect width="64" height="64" rx="16" fill="var(--tile,#244A3A)"/>
+  <g fill="var(--mark,#FFFFFF)" transform="translate(6.4 6.4) scale(.8)">
+    <path d="M8 8Q8 5 11 7C20 11 27 18 30 25V37C27 33 23 30 20 29V58L10 53Q8 52 8 49Z"/>
+    <path d="M56 8Q56 5 53 7C44 11 37 18 34 25V37C37 33 41 30 44 29V58L54 53Q56 52 56 49Z"/>
   </g>
 </svg>
