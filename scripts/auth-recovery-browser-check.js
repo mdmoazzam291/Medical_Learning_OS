@@ -31,8 +31,10 @@ async function fixture(page, state = {}) {
   });
 }
 
-async function signIn(page) {
+async function signIn(page, { remember = true } = {}) {
   await page.goto(origin + '/web/account.html');
+  await page.waitForSelector('body.account-landing-active');
+  await page.getByLabel('Keep me signed in', { exact: true }).setChecked(remember);
   await page.locator('#signin-form [name=email]').fill(user.email);
   await page.locator('#signin-form [name=password]').fill('synthetic-password');
   await page.locator('#signin-form button').click();
@@ -87,6 +89,50 @@ try {
     await context.close();
   }
 
+  for (const remember of [true, false]) {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await fixture(page);
+    await signIn(page, { remember });
+    await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+    const stored = () => page.evaluate(key => ({ durable: Boolean(localStorage.getItem(key)), tab: Boolean(sessionStorage.getItem(key)) }), storageKey);
+    assert.deepEqual(await stored(), { durable: remember, tab: !remember });
+    await page.reload();
+    await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+    const other = await context.newPage();
+    await fixture(other);
+    await other.goto(origin);
+    await other.getByRole('heading', { name: remember ? 'What should you study next?' : 'Your Medical Learning Operating System.' }).waitFor();
+    if (!remember) {
+      await page.evaluate(key => { const value = JSON.parse(sessionStorage.getItem(key)); value.expiresAt = 1; sessionStorage.setItem(key, JSON.stringify(value)); }, storageKey);
+      await page.reload();
+      await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+      assert.deepEqual(await stored(), { durable: false, tab: true });
+    }
+    await page.goto(origin + '/web/account.html');
+    await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
+    await page.locator('#main [data-action="signout"]').click();
+    await page.waitForSelector('body.account-landing-active');
+    assert.deepEqual(await stored(), { durable: false, tab: false });
+    await context.close();
+  }
+
+  // The checkbox choice survives a same-tab Google redirect without altering callback URLs.
+  const googleContext = await browser.newContext();
+  const googlePage = await googleContext.newPage();
+  await fixture(googlePage);
+  await googlePage.route('**/auth/v1/authorize?**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<p>Synthetic provider redirect</p>' }));
+  await googlePage.goto(origin + '/web/account.html');
+  await googlePage.waitForSelector('body.account-landing-active');
+  await googlePage.getByLabel('Keep me signed in', { exact: true }).uncheck();
+  await googlePage.locator('a.oauth-google').click();
+  await googlePage.waitForURL('**/auth/v1/authorize?**');
+  await googlePage.goto(origin + '/web/account.html#access_token=synthetic-access&refresh_token=synthetic-refresh&expires_at=2100000000&type=signup');
+  await googlePage.getByRole('heading', { name: 'What should you study next?' }).waitFor();
+  assert.equal(await googlePage.evaluate(key => localStorage.getItem(key), storageKey), null);
+  assert.ok(await googlePage.evaluate(key => sessionStorage.getItem(key), storageKey));
+  await googleContext.close();
+
   const blocked = await browser.newContext();
   await blocked.addInitScript(() => {
     Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Fixture storage blocked', 'SecurityError'); } });
@@ -119,7 +165,7 @@ try {
     assert.equal(new URL(callback.url()).hash, '');
     await context.close();
   }
-  console.log('Auth landing, transient refresh recovery, revocation, storage denial, account projection isolation and callback exceptions passed');
+  console.log('Auth landing, durable/tab-only choice, reload/new-tab/refresh/signout, simulated Google choice, transient recovery, revocation, storage denial and callback exceptions passed');
 } finally {
   await browser.close();
 }

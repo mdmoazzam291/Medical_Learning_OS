@@ -87,7 +87,7 @@ export function flyoutMarkup(row, master, prefs, currentHref = '') {
 export function accountMarkup({ signedIn = false, active = false, workspaceTools = false, currentHref = '/' } = {}) {
   if (!signedIn) {
     if (canonicalPagePath(new URL(currentHref || '/', 'https://medretica.com').pathname) === '/web/account.html') {
-      return '<details class="mlos-account"><summary aria-label="Appearance menu" title="Appearance">' + icon('menu') + '</summary><nav class="mlos-account-menu" aria-label="Appearance"><button type="button" data-theme>Switch appearance</button><a href="/web/workspace.html?master=account&amp;section=preferences">' + icon('settings') + '<span>Appearance preferences</span></a></nav></details>';
+      return '<details class="mlos-account"><summary aria-label="Appearance menu" title="Appearance">' + icon('menu') + '</summary><nav class="mlos-account-menu" aria-label="Appearance"><a href="/web/workspace.html?master=account&amp;section=preferences">' + icon('settings') + '<span>Appearance preferences</span></a></nav></details>';
     }
     const signIn = escapeText(accountEntryHref(currentHref));
     return '<a class="mlos-signin" href="'+signIn+'">Sign in</a><details class="mlos-account"><summary aria-label="Account menu" title="Preferences">'+icon('settings')+'</summary><nav class="mlos-account-menu" aria-label="Account navigation"><a href="'+signIn+'"><span>Sign in</span></a><a href="'+escapeText(accountEntryHref(currentHref,true))+'"><span>Create account</span></a><a href="/web/workspace.html?master=account&amp;section=preferences">'+icon('settings')+'<span>Preferences</span></a><a href="/web/plans.html">'+icon('book')+'<span>Plans</span></a></nav></details>';
@@ -117,7 +117,6 @@ export function workspaceMenuMarkup({ master = 'home', currentMaster = master, s
     '<nav id="mlos-local-nav" aria-label="Section navigation">' + localMarkup(rows, master, section, prefs, currentHref) + '</nav>';
 }
 function themeMarkup(prefs, signedIn, currentHref) {
-  if (!signedIn && canonicalPagePath(new URL(currentHref || '/', 'https://medretica.com').pathname) === '/web/account.html') return '';
   return '<button type="button" class="mlos-theme" data-theme aria-label="Switch to ' + (prefs.theme === 'light' ? 'dark' : 'light') + ' appearance" aria-pressed="' + (prefs.theme === 'dark') + '">' + icon(prefs.theme === 'light' ? 'moon' : 'sun') + '</button>';
 }
 function topNavigationMarkup({ master, section, prefs, isAdmin, signedIn, currentHref, compactHeader }) {

@@ -97,16 +97,67 @@ function cleanOAuthClientRedirect(value) {
   return redirect.href;
 }
 
-function browserSessionStorage() {
-  // Resolve the accessor inside each operation: privacy settings can make it throw.
+const persistenceByStore = new WeakMap();
+
+export function createBrowserAuthStorage({ local = () => globalThis.localStorage, session = () => globalThis.sessionStorage } = {}) {
+  const preferenceKey = 'mlos-auth-session-only-v1';
+  let state = { mode: null };
+  try {
+    const scope = local();
+    state = persistenceByStore.get(scope) || state;
+    persistenceByStore.set(scope, state);
+  } catch { /* Storage denial is reported by the operation that needs it. */ }
+  const mode = (writing = false) => {
+    try {
+      state.mode = session().getItem(preferenceKey) === 'tab' ? 'tab' : 'durable';
+      return state.mode;
+    } catch {
+      if (state.mode) return state.mode;
+      if (writing) throw new Error('persistence_unavailable');
+      return 'durable'; // Existing durable sessions remain readable.
+    }
+  };
   return {
-    getItem: key => globalThis.localStorage.getItem(key),
-    setItem: (key, value) => globalThis.localStorage.setItem(key, value),
-    removeItem: key => globalThis.localStorage.removeItem(key)
+    setPersistent(persistent) {
+      if (typeof persistent !== 'boolean') throw new Error('invalid_persistence');
+      if (!persistent) {
+        session().setItem(preferenceKey, 'tab');
+        local().removeItem(SESSION_KEY);
+        session().removeItem(SESSION_KEY);
+        state.mode = 'tab';
+      }
+      else {
+        let tab;
+        try { tab = session(); } catch { state.mode = 'durable'; return; }
+        if (tab) { tab.removeItem(preferenceKey); tab.removeItem(SESSION_KEY); }
+        state.mode = 'durable';
+      }
+    },
+    getItem(key) {
+      const selected = mode();
+      const value = (selected === 'tab' ? session() : local()).getItem(key);
+      if (value && selected === 'durable') state.mode = 'durable';
+      return value;
+    },
+    setItem(key, value) {
+      if (mode(true) === 'tab') {
+        // Never leave a durable copy after a user selects a tab-only login.
+        local().removeItem(key);
+        session().setItem(key, value);
+      } else {
+        local().setItem(key, value);
+        try { session().removeItem(key); } catch { /* Inactive tab storage is optional. */ }
+      }
+    },
+    removeItem(key) {
+      const tabOnly = mode() === 'tab';
+      (tabOnly ? session() : local()).removeItem(key);
+      try { (tabOnly ? local() : session()).removeItem(key); } catch { /* The active store was cleared above. */ }
+    }
   };
 }
 
-export function createSupabaseAuth({ projectUrl, publishableKey, storage = browserSessionStorage(), fetchFn = fetch, now = Date.now }) {
+export function createSupabaseAuth({ projectUrl, publishableKey, storage = createBrowserAuthStorage(), fetchFn = fetch, now = Date.now }) {
   const base = cleanBase(projectUrl);
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' || typeof storage.removeItem !== 'function') throw new Error('invalid_storage');
@@ -178,6 +229,13 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage = brows
   }
 
   return {
+    setSessionPersistence(persistent) {
+      try {
+        if (typeof persistent !== 'boolean') throw new Error('invalid_persistence');
+        if (typeof storage.setPersistent === 'function') storage.setPersistent(persistent);
+        else if (!persistent) throw new Error('persistence_not_supported');
+      } catch { throw new AuthError(0, 'auth_storage_unavailable'); }
+    },
     oauthAuthorizeUrl(provider, { redirectTo } = {}) {
       if (provider !== 'google') throw new AuthError(400, 'unsupported_oauth_provider');
       const redirect = cleanRedirectUrl(redirectTo);

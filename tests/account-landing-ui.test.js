@@ -33,9 +33,14 @@ test('production public-surface contract exposes every account landing asset', (
   assert.match(serve, /publicFileSet\.has\(path\)/);
 });
 
-test('signed-out account focuses on authentication without a second header or marketing', () => {
+test('signed-out account restores selected benefits and preview without repeating the introduction or header', () => {
   assert.match(landing, /Continue your learning across devices\./);
-  assert.doesNotMatch(landing, /<header|account-product-story|account-benefits|account-device-stage|account-nav-actions/);
+  assert.doesNotMatch(landing, /<header|account-nav-actions/);
+  assert.match(landing, /account-product-story/);
+  assert.match(landing, /account-benefits/);
+  assert.match(landing, /account-device-stage/);
+  assert.match(landing, /name="remember"/);
+  assert.doesNotMatch(landing.match(/<p class="account-auth-intro">(.*?)<\/p>/s)?.[1] || '', /Study Now|QBank|Exams|NeuralVault|Progress/);
   assert.match(landing, /New here\? Create account/);
 });
 
@@ -44,9 +49,11 @@ test('account header avoids redundant auth links and offers one appearance menu'
     const markup = accountMarkup({ currentHref });
     assert.doesNotMatch(markup, />Sign in<|>Create account</);
     assert.match(markup, /aria-label="Appearance menu"/);
+    assert.doesNotMatch(markup, /data-theme/);
     for (const phone of [false, true]) {
       const header = navigationMarkup({ master: 'account', currentHref, phone });
       assert.equal((header.match(/data-theme/g) || []).length, 1);
+      assert.match(header, /class="mlos-theme" data-theme/);
     }
   }
   assert.match(accountMarkup({ currentHref: '/web/medical.html' }), />Sign in</);
