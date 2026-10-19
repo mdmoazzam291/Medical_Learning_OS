@@ -2,14 +2,14 @@
 
 **OWNER REVIEW DRAFT — not published.**
 
-Medretica — Medical Learning OS is operated by **Md Moazzam, sole proprietor trading as Medretica**. The owner confirms that Md Moazzam matches the Cashfree legal-name record; no KYC document was requested or inspected.
+Medretica — Medical Learning OS is operated by **Md Moazzam as a sole proprietor**. The owner confirms that Md Moazzam matches the Cashfree legal-name record; no KYC document was requested or inspected.
 
 - Website: https://medretica.com
 - Customer-support email: **support@medretica.com**
 - Administration/escalation email: **admin@medretica.com**
 - Support channel: **Email support only; telephone support is currently unavailable.**
 - Business/correspondence address: **Bhogari, Bettiah, Bihar, Bharat (India) — 845454**
-- Email receipt: **Owner confirms the supplied email addresses can receive messages.** Reply capability and support operating hours/response commitments have not been verified by this task
+- Email receipt: **Owner confirms the supplied email addresses can receive messages.** Owner also confirms replies can be sent from support@medretica.com. Independent mailbox tests were not performed; support operating hours/response commitments remain subject to review
 - Grievance contact designation/name: **OWNER INPUT**; administration/escalation email remains admin@medretica.com. Do not invent a designated statutory role
 - Complaint acknowledgement and resolution commitments: **OWNER INPUT: verify applicable requirements and operational capacity before publication**
 
