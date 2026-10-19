@@ -97,16 +97,40 @@ function cleanOAuthClientRedirect(value) {
   return redirect.href;
 }
 
-function browserSessionStorage() {
-  // Resolve the accessor inside each operation: privacy settings can make it throw.
+export function createBrowserAuthStorage({ local = () => globalThis.localStorage, session = () => globalThis.sessionStorage } = {}) {
+  const preferenceKey = 'mlos-auth-session-only-v1';
+  const tabOnly = () => {
+    try { return session().getItem(preferenceKey) === 'tab'; } catch { return false; }
+  };
   return {
-    getItem: key => globalThis.localStorage.getItem(key),
-    setItem: (key, value) => globalThis.localStorage.setItem(key, value),
-    removeItem: key => globalThis.localStorage.removeItem(key)
+    setPersistent(persistent) {
+      if (typeof persistent !== 'boolean') throw new Error('invalid_persistence');
+      if (!persistent) session().setItem(preferenceKey, 'tab');
+      else {
+        let tab;
+        try { tab = session(); } catch { return; /* Durable storage can work when tab storage is unavailable. */ }
+        if (tab) { tab.removeItem(preferenceKey); tab.removeItem(SESSION_KEY); }
+      }
+    },
+    getItem(key) { return (tabOnly() ? session() : local()).getItem(key); },
+    setItem(key, value) {
+      if (tabOnly()) {
+        // Never leave a durable copy after a user selects a tab-only login.
+        local().removeItem(key);
+        session().setItem(key, value);
+      } else {
+        local().setItem(key, value);
+        try { session().removeItem(key); } catch { /* Inactive tab storage is optional. */ }
+      }
+    },
+    removeItem(key) {
+      (tabOnly() ? session() : local()).removeItem(key);
+      try { (tabOnly() ? local() : session()).removeItem(key); } catch { /* The active store was cleared above. */ }
+    }
   };
 }
 
-export function createSupabaseAuth({ projectUrl, publishableKey, storage = browserSessionStorage(), fetchFn = fetch, now = Date.now }) {
+export function createSupabaseAuth({ projectUrl, publishableKey, storage = createBrowserAuthStorage(), fetchFn = fetch, now = Date.now }) {
   const base = cleanBase(projectUrl);
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!storage || typeof storage.getItem !== 'function' || typeof storage.setItem !== 'function' || typeof storage.removeItem !== 'function') throw new Error('invalid_storage');
@@ -178,6 +202,13 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage = brows
   }
 
   return {
+    setSessionPersistence(persistent) {
+      try {
+        if (typeof persistent !== 'boolean') throw new Error('invalid_persistence');
+        if (typeof storage.setPersistent === 'function') storage.setPersistent(persistent);
+        else if (!persistent) throw new Error('persistence_not_supported');
+      } catch { throw new AuthError(0, 'auth_storage_unavailable'); }
+    },
     oauthAuthorizeUrl(provider, { redirectTo } = {}) {
       if (provider !== 'google') throw new AuthError(400, 'unsupported_oauth_provider');
       const redirect = cleanRedirectUrl(redirectTo);

@@ -201,7 +201,16 @@ async function loadCloud({ forceRefresh = false } = {}) {
   render();
 }
 
+function applySessionPreference() {
+  auth.setSessionPersistence(root.querySelector('input[name="remember"]')?.checked ?? true);
+}
+
 root.addEventListener('click', event => {
+  if (event.target.closest('a.oauth-google')) {
+    try { applySessionPreference(); }
+    catch { event.preventDefault(); announce('This browser cannot save your session choice. Enable site storage and try again.'); }
+    return;
+  }
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
@@ -242,7 +251,7 @@ root.addEventListener('submit', event => {
       if (submit.disabled) return;
       submit.disabled = true;
       submit.textContent = 'Signing in…';
-      try { await auth.signIn(data.get('email'), data.get('password')); finishSignIn(); }
+      try { applySessionPreference(); await auth.signIn(data.get('email'), data.get('password')); finishSignIn(); }
       catch (error) {
         reportUnexpected(error, 'sign_in');
         announce(error.code === 'auth_storage_unavailable' ? 'Browser storage is unavailable. Enable site storage and retry sign-in.' : `Sign in failed: ${error.code || error.message || 'authentication_failed'}.`);
@@ -333,6 +342,7 @@ root.addEventListener('submit', event => {
     (async () => {
       try {
         const emailRedirectTo = new URL('/web/account.html', window.location.origin).href;
+        applySessionPreference();
         const result = await auth.signUp(data.get('email'), data.get('password'), { emailRedirectTo });
         state.user = auth.currentUser();
         if (result.session) finishSignIn();
