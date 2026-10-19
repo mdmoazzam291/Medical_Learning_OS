@@ -1,4 +1,6 @@
 export const publicFiles = Object.freeze([
+  'sitemap.xml',
+  'robots.txt',
   'src/domain/app-navigation.js',
   'src/domain/admin-action-inbox.js',
   'src/domain/catalog-integrity-audit.js',

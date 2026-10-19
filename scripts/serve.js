@@ -5,7 +5,7 @@ import { handleAdminMcpHttp, protectedResourceMetadata } from '../src/server/adm
 import { publicFileSet } from './public-surface.js';
 
 const root = new URL('../', import.meta.url);
-const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png', json: 'application/json' };
+const types = { xml: 'application/xml', txt: 'text/plain', html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png', json: 'application/json' };
 
 const securityHeaders = {
   'X-Content-Type-Options': 'nosniff',
