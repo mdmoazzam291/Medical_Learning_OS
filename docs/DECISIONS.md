@@ -1,7 +1,7 @@
 # Decision log
 
 ## ADR-117 — Medretica is the public brand with one three-leaf vector mark
-**Status:** Owner requests website update on 2026-10-19; implementation on feature branch, release pending verification.
+**Status:** Released 2026-10-19 through PR #268; main2d31d9d3a1d04f0f1637d0075f5ce211dc71175d. PR check/Chromium/WebKit/preview passed; production web build and11live asset readbacks verified.
 
 Use Medretica, “Your Medical Learning Operating System” and the integrated-platform descriptor. Public UI no longer uses the provisional PARSE, MLOS or m. lockups. The logo follows the latest Medretica mockup’s three-leaf direction using a single theme-aware SVG; exact geometry is an implementation choice because no final vector master was recovered. Preserve learner identities, resource names, navigation and permanent Sage/Lavender palettes. See MEDRETICA_BRAND.md.
 
