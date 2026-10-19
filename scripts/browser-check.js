@@ -30,7 +30,7 @@ try {
     activePage = page;
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(origin);
-    await page.getByRole('heading', { name: 'Your study workspace starts after sign-in.' }).waitFor();
+    await page.getByRole('heading', { name: 'Your Medical Learning Operating System.' }).waitFor();
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' horizontal overflow');
     await page.getByRole('link', { name: 'Sign in / create account' }).waitFor();
     const body = await page.locator('body').innerText();

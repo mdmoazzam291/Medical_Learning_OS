@@ -11,6 +11,8 @@ import { errorMonitor } from '/web/monitoring.js';
 
 const app = document.querySelector('#app');
 const notice = document.querySelector('#notice');
+// Keep the public HTML as the single signed-out view, including after sign-out.
+const publicHomepage = app.innerHTML;
 const escape = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
@@ -46,7 +48,7 @@ function reportUnexpected(error, operation) {
 }
 
 function signedOut() {
-  return '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">MEDRETICA · BETA</span><h1>Your study workspace starts after sign-in.</h1><p>The public demo has been retired. Beta learning uses authenticated, reviewed medical content and server-owned learner evidence.</p></div><span class="badge">BETA</span></div><section class="hero"><div><span class="eyebrow">ONE LEARNING SYSTEM</span><h2>Study, revise, test, and keep your medical knowledge connected.</h2><p>Sign in to continue your learner state across Study Now, QBank, Exams and NeuralVault.</p><a class="primary action-link" href="/web/account.html">Sign in / create account →</a></div><div class="session-card"><span class="eyebrow">CORE LOOP</span><ol><li><span>01</span> Study Now chooses a useful action</li><li><span>02</span> You answer reviewed medical content</li><li><span>03</span> Evidence updates future revision</li></ol><p>Observed evidence stays separate from inferred mastery.</p></div></section></main>';
+  return publicHomepage;
 }
 
 

@@ -1,11 +1,11 @@
 const root = document.querySelector('#account-app');
 
 const featureCards = [
-  ['study', 'Study Now', 'Personalized learning sessions that adapt to you.'],
-  ['qbank', 'QBank', 'High-yield questions with detailed explanations.'],
-  ['exam', 'Exams', 'Realistic, timed simulations that build exam confidence.'],
-  ['vault', 'NeuralVault', 'Spaced revision that keeps key concepts in memory.'],
-  ['progress', 'Progress', 'Actionable analytics to focus your time where it matters.']
+  ['study', 'Study Now', 'Resume unfinished work and available due reviews.'],
+  ['qbank', 'QBank', 'Practise with questions that have been reviewed and published.'],
+  ['exam', 'Exams', 'Check practice options and full-mock readiness for the available pool.'],
+  ['vault', 'NeuralVault', 'Revisit connected concepts and keep your private notes.'],
+  ['progress', 'Progress', 'Review recorded attempts and your revision schedule.']
 ];
 
 function featureIcon(kind) {
@@ -57,7 +57,7 @@ function signedOutMarkup(googleUrl) {
           <div class="account-hero-copy">
             <p class="account-kicker">YOUR MEDICAL LEARNING OPERATING SYSTEM</p>
             <h1 id="account-hero-title">Your intelligent preparation <span>command center.</span></h1>
-            <p class="account-hero-lede">Medretica is an integrated medical learning platform combining adaptive Study Now sessions, a high-yield QBank, realistic Exams, intelligent NeuralVault revision and detailed Progress analytics — all in one integrated system.</p>
+            <p class="account-hero-lede">Medretica connects study, question practice, revision, private notes and recorded progress. Beta content depends on what has been reviewed and published; some collections may be empty. Current access is free, and paid plans are unavailable. Advanced AI and adaptive features remain in development.</p>
           </div>
 
           <div class="account-journey" aria-hidden="true">
@@ -72,7 +72,8 @@ function signedOutMarkup(googleUrl) {
             ${cards}
           </section>
 
-          <section class="account-device-stage" aria-label="Product preview">
+          <p class="account-preview-label">Illustrative interface preview — example names, numbers and content; not your learning record or a promise of available content.</p>
+          <section class="account-device-stage" aria-label="Illustrative interface preview">
             <div class="account-phone-preview" aria-hidden="true">
               <div class="phone-status"><span>9:41</span><span>•••</span></div>
               <div class="phone-title"><strong>Study Now</strong><span>+</span></div>
