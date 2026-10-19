@@ -11,12 +11,13 @@ try {
   for (const viewport of [{ width: 390, height: 844 }, { width: 820, height: 1180 }, { width: 1440, height: 1000 }]) {
     for (const javaScriptEnabled of [false, true]) {
       const context = await browser.newContext({ viewport, javaScriptEnabled });
-      let signupCalls = 0;
+      let signupCalls = 0, recoveryCalls = 0;
       await context.route('**/*', async route => {
         const url = new URL(route.request().url());
         if (url.origin === origin) return route.continue();
         if (url.hostname !== 'iyapppmeieqhflnzslao.supabase.co') return route.abort();
         const reply = body => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) });
+        if (url.pathname === '/auth/v1/recover') { recoveryCalls++; return reply({}); }
         if (url.pathname === '/auth/v1/signup') { signupCalls++; return reply({ user, session: null }); }
         if (url.pathname === '/auth/v1/token') return reply(token);
         if (url.pathname === '/auth/v1/user') return reply(user);
@@ -43,7 +44,30 @@ try {
       await page.waitForURL(`${origin}/web/account.html`);
       if (javaScriptEnabled) {
         await page.waitForSelector('body.account-landing-active');
-        await page.locator('.account-create-cta').click();
+        assert.equal(await page.locator('header').count(), 1, 'one shared header');
+        assert.equal(await page.locator('.mlos-signin').count(), 0, 'no sign-in shortcut on sign-in page');
+        assert.equal(await page.locator('#recovery-request-form').isVisible(), false);
+        assert.equal(await page.locator('#signup-form').isVisible(), false);
+        assert.equal(await page.getByRole('button', { name: 'Send password reset link', exact: true }).isVisible(), false);
+        assert.equal(await page.locator('.account-product-story, .account-benefits, .account-device-stage').count(), 0);
+        await page.locator('summary[aria-label="Appearance menu"]').click();
+        assert.equal(await page.locator('.mlos-account-menu a').filter({ hasText: /Sign in|Create account/ }).count(), 0);
+        await page.getByRole('button', { name: 'Switch appearance', exact: true }).click();
+        assert.equal(await page.locator('html').getAttribute('data-appearance'), 'dark');
+        assert.equal(await page.locator('.mlos-account summary').evaluate(el => el === document.activeElement), true);
+        await page.reload();
+        await page.waitForSelector('body.account-landing-active');
+        assert.equal(await page.locator('html').getAttribute('data-appearance'), 'dark', 'appearance persists');
+        if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: `${process.env.SCREENSHOT_DIR}/account-${viewport.width}.png`, fullPage: true });
+        await page.locator('#password-recovery summary').focus();
+        await page.keyboard.press('Enter');
+        await page.locator('#recovery-request-form input').fill(user.email);
+        assert.equal(await page.locator('#recovery-request-form input').evaluate(el => el === document.activeElement), true);
+        await page.getByRole('button', { name: 'Send password reset link', exact: true }).click();
+        await page.getByRole('alert').filter({ hasText: 'reset link has been sent' }).waitFor();
+        assert.equal(recoveryCalls, 1);
+        await page.locator('#password-recovery summary').click();
+        await page.locator('#create-account summary').click();
         assert.equal(await page.locator('#signup-form').isVisible(), true, 'Create account CTA must open registration');
         await page.locator('#signup-form input[name="email"]').fill(user.email);
         await page.locator('#signup-form input[name="password"]').fill('synthetic-password-123');

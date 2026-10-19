@@ -782,12 +782,11 @@ try {
         const swatch = document.createElement('span'); document.body.append(swatch);
         swatch.style.color = expectedBg; const bg = getComputedStyle(swatch).color;
         swatch.style.color = expectedInk; const ink = getComputedStyle(swatch).color; swatch.remove();
-        const brand = document.querySelector('.account-brand>span:last-child').getBoundingClientRect(), cta = document.querySelector('.account-create-cta').getBoundingClientRect();
-        return { palette: document.documentElement.dataset.palette, appearance: document.documentElement.dataset.appearance, brandOverlap: brand.right > cta.left, backgroundMatches: body.backgroundColor === bg, inkMatches: body.color === ink,
-          previewInk: getComputedStyle(document.querySelector('.continue-card small')).color === ink,
+        return { palette: document.documentElement.dataset.palette, appearance: document.documentElement.dataset.appearance, backgroundMatches: body.backgroundColor === bg, inkMatches: body.color === ink,
+          authHeaders: document.querySelectorAll('header').length,
           overflow: document.documentElement.scrollWidth > innerWidth };
       });
-      assert.deepEqual(actual, { palette, appearance, brandOverlap: false, backgroundMatches: true, inkMatches: true, previewInk: true, overflow: false }, palette + ' signed-out ' + appearance);
+      assert.deepEqual(actual, { palette, appearance, backgroundMatches: true, inkMatches: true, authHeaders: 1, overflow: false }, palette + ' signed-out ' + appearance);
       await signedOut.close();
     }
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
@@ -930,9 +929,13 @@ try {
       await page.waitForFunction(() => !JSON.parse(localStorage.getItem('mlos-supabase-auth-v1') || 'null'));
       await page.waitForFunction(() => !document.querySelector('[data-master="admin"]'));
       await page.waitForLoadState('networkidle');
-      await activate(page.getByLabel('Account menu', { exact: true }));
-      assert.equal(await accountMenu.getByRole('link', { name: 'Sign in', exact: true }).isVisible(), true);
-      assert.equal(await accountMenu.getByRole('button', { name: 'Sign out', exact: true }).count(), 0);
+      await page.locator('body.account-landing-active').waitFor();
+      await activate(page.getByLabel('Appearance menu', { exact: true }));
+      const guestMenu = page.getByRole('navigation', { name: 'Appearance', exact: true });
+      assert.equal(await guestMenu.getByRole('link', { name: 'Sign in', exact: true }).count(), 0);
+      assert.equal(await guestMenu.getByRole('link', { name: 'Create account', exact: true }).count(), 0);
+      assert.equal(await guestMenu.getByRole('link', { name: 'Appearance preferences', exact: true }).isVisible(), true);
+      assert.equal(await guestMenu.getByRole('button', { name: 'Sign out', exact: true }).count(), 0);
     }
 
     await page.waitForLoadState('networkidle'); await context.close();

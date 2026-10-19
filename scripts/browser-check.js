@@ -346,7 +346,11 @@ try {
 
   await page.goto(origin + '/web/account.html');
   await page.getByRole('heading', { name: 'Sign in to Medretica.' }).waitFor();
-  await page.getByRole('button', { name: 'Send password reset link' }).waitFor();
+  await page.waitForSelector('body.account-landing-active');
+  assert.equal(await page.locator('#recovery-request-form').isVisible(), false);
+  await page.locator('#password-recovery summary').click();
+  await page.getByRole('button', { name: 'Send password reset link', exact: true }).waitFor();
+  await page.locator('#password-recovery summary').click();
   const form = page.locator('#signin-form');
   await form.getByLabel('Email').fill('admin@example.com');
   await form.getByLabel('Password').fill('strong-password');
