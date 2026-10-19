@@ -1,5 +1,8 @@
 # Current status
 
+## 2026-10-19 — Public Medretica policies implemented; release pending
+Draft PR #267 now implements six public static service/policy pages and persistent entry footer links; actual code 85b044edcfcdd652324ad1d7aace8e6c3720ff0e. Approved identity/sole proprietor/address/email-only support shown, INR0 current access and paid plans unavailable. Terms include future changes; current refunds notice excludes unapproved paid-launch promises. No live deployment, merchant submission or payment. Verification:1308tests pass, check/build88files pass,6GET+6HEAD200/internaldraft404,27responsive Chromium checks plus existing auth-recovery checks pass. Contact screenshots inspected on phone/tablet. No runtime/provider credential/backend changes. Native WebKit/live domain and hosted CI still to verify. Owner must review actual copy and authorise release; then verify live URLs before Cashfree submission. See docs/MEDRETICA_PUBLIC_POLICIES.md.
+
 ## 2026-10-19 — Sole proprietor details confirmed; paid refund policy deferred
 Owner confirms Md Moazzam legal-name match, sole proprietorship, Bhogari/Bettiah/Bihar/Bharat845454 public address, no public phone and email receipt. Draft PR #267 updated at artifact 2d301f771735fcdacdf4105671b2e292ffc8b77f. Contact/Terms/Privacy now record supplied facts and email-only support. Current Refunds page explains no payments/subscriptions; future unapproved paid refund proposal moved to separate internal file, consistent with owner clarification. Draft/link checks pass; documentation only, no runtime/publication or payment. Further public-copy/privacy/grievance review and actual static-page implementation/verification remain; do not infer Cashfree approval or outbound email delivery.
 
