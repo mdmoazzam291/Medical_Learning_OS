@@ -97,24 +97,50 @@ function cleanOAuthClientRedirect(value) {
   return redirect.href;
 }
 
+const persistenceByStore = new WeakMap();
+
 export function createBrowserAuthStorage({ local = () => globalThis.localStorage, session = () => globalThis.sessionStorage } = {}) {
   const preferenceKey = 'mlos-auth-session-only-v1';
-  const tabOnly = () => {
-    try { return session().getItem(preferenceKey) === 'tab'; } catch { return false; }
+  let state = { mode: null };
+  try {
+    const scope = local();
+    state = persistenceByStore.get(scope) || state;
+    persistenceByStore.set(scope, state);
+  } catch { /* Storage denial is reported by the operation that needs it. */ }
+  const mode = (writing = false) => {
+    try {
+      state.mode = session().getItem(preferenceKey) === 'tab' ? 'tab' : 'durable';
+      return state.mode;
+    } catch {
+      if (state.mode) return state.mode;
+      if (writing) throw new Error('persistence_unavailable');
+      return 'durable'; // Existing durable sessions remain readable.
+    }
   };
   return {
     setPersistent(persistent) {
       if (typeof persistent !== 'boolean') throw new Error('invalid_persistence');
-      if (!persistent) session().setItem(preferenceKey, 'tab');
+      if (!persistent) {
+        session().setItem(preferenceKey, 'tab');
+        local().removeItem(SESSION_KEY);
+        session().removeItem(SESSION_KEY);
+        state.mode = 'tab';
+      }
       else {
         let tab;
-        try { tab = session(); } catch { return; /* Durable storage can work when tab storage is unavailable. */ }
+        try { tab = session(); } catch { state.mode = 'durable'; return; }
         if (tab) { tab.removeItem(preferenceKey); tab.removeItem(SESSION_KEY); }
+        state.mode = 'durable';
       }
     },
-    getItem(key) { return (tabOnly() ? session() : local()).getItem(key); },
+    getItem(key) {
+      const selected = mode();
+      const value = (selected === 'tab' ? session() : local()).getItem(key);
+      if (value && selected === 'durable') state.mode = 'durable';
+      return value;
+    },
     setItem(key, value) {
-      if (tabOnly()) {
+      if (mode(true) === 'tab') {
         // Never leave a durable copy after a user selects a tab-only login.
         local().removeItem(key);
         session().setItem(key, value);
@@ -124,8 +150,9 @@ export function createBrowserAuthStorage({ local = () => globalThis.localStorage
       }
     },
     removeItem(key) {
-      (tabOnly() ? session() : local()).removeItem(key);
-      try { (tabOnly() ? local() : session()).removeItem(key); } catch { /* The active store was cleared above. */ }
+      const tabOnly = mode() === 'tab';
+      (tabOnly ? session() : local()).removeItem(key);
+      try { (tabOnly ? local() : session()).removeItem(key); } catch { /* The active store was cleared above. */ }
     }
   };
 }

@@ -41,9 +41,45 @@ test('blocked tab storage fails tab-only selection without preventing ordinary p
  auth.setSessionPersistence(true);await auth.signIn('fixture@example.invalid','synthetic-password');assert.ok(local.getItem(key));
 });
 
-test('tab-only write fails if a previous durable token cannot be removed', async()=>{
+test('tab-only selection fails before authentication if a durable token cannot be removed', async()=>{
  const local=memory(),tab=memory();local.setItem(key,'old-token');
  const storage=createBrowserAuthStorage({local:()=>({...local,removeItem:()=>{throw Error('blocked');}}),session:()=>tab}),auth=authFor(storage);
- auth.setSessionPersistence(false);await assert.rejects(auth.signIn('fixture@example.invalid','synthetic-password'),e=>e.code==='auth_storage_unavailable');
+ assert.throws(()=>auth.setSessionPersistence(false),e=>e.code==='auth_storage_unavailable');
  assert.equal(tab.getItem(key),null);
+});
+
+test('tab-only sign-in cannot become durable if tab storage fails while the provider request is pending', async()=>{
+ const local=memory(),tab=memory();let blocked=false;
+ const storage=createBrowserAuthStorage({local:()=>local,session:()=>{if(blocked)throw Error('blocked');return tab;}});
+ const auth=createSupabaseAuth({projectUrl:'https://example-ref.supabase.co',publishableKey:'sb_publishable_test',storage,fetchFn:async()=>{blocked=true;return provider('/token');}});
+ auth.setSessionPersistence(false);
+ await assert.rejects(auth.signIn('fixture@example.invalid','synthetic-password'),e=>e.code==='auth_storage_unavailable');
+ assert.equal(local.getItem(key),null);
+});
+
+test('fresh callback fails closed if persistence preference cannot be read, without writing durable tokens', async()=>{
+ const local=memory();const auth=authFor(createBrowserAuthStorage({local:()=>local,session:()=>{throw Error('blocked');}}));
+ await assert.rejects(auth.consumeImplicitRedirect('https://medretica.com/web/account.html#access_token=callback&refresh_token=refresh&expires_at=2100000000'),e=>e.code==='auth_storage_unavailable');
+ assert.equal(local.getItem(key),null);
+});
+
+test('legacy durable session can refresh when tab preference storage is unavailable', async()=>{
+ const local=memory();local.setItem(key,JSON.stringify({accessToken:'old',refreshToken:'refresh',expiresAt:1,user:{id:'fixture-user'}}));
+ const auth=authFor(createBrowserAuthStorage({local:()=>local,session:()=>{throw Error('blocked');}}));
+ assert.equal((await auth.getSession()).accessToken,'fixture-access');assert.ok(local.getItem(key));
+});
+
+
+test('tab-only selection removes old durable credentials before a fresh callback with unreadable tab metadata', async()=>{
+ const local=memory(),tab=memory();
+ const auth=authFor(createBrowserAuthStorage({local:()=>local,session:()=>tab}));
+ await auth.signIn('fixture@example.invalid','synthetic-password');
+ assert.ok(local.getItem(key));
+ auth.setSessionPersistence(false);
+ assert.equal(local.getItem(key),null,'remove old durable credentials before leaving for provider');
+ const fresh=await import('../src/adapters/supabase-auth.js?fresh-callback-document');
+ const callback=fresh.createSupabaseAuth({projectUrl:'https://example-ref.supabase.co',publishableKey:'sb_publishable_test',storage:fresh.createBrowserAuthStorage({local:()=>local,session:()=>{throw Error('blocked');}}),fetchFn:provider});
+ assert.equal(callback.currentUser(),null);
+ await assert.rejects(callback.consumeImplicitRedirect('https://medretica.com/web/account.html#access_token=new-callback&refresh_token=refresh&expires_at=2100000000'),e=>e.code==='auth_storage_unavailable');
+ assert.equal(local.getItem(key),null);
 });
