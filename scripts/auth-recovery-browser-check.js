@@ -97,7 +97,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   await fixture(page);
   await page.goto(origin);
-  await page.getByRole('heading', { name: 'Your study workspace starts after sign-in.' }).waitFor();
+  await page.getByRole('heading', { name: 'Your Medical Learning Operating System.' }).waitFor();
   await signIn(page);
   await page.getByText('Browser storage is unavailable. Enable site storage and retry sign-in.').waitFor();
   assert.equal(await page.locator('#signin-form button').isEnabled(), true);

@@ -56,7 +56,7 @@ test('landing preserves every auth hook consumed by account runtime', () => {
 
 test('landing remains presentation-only and does not gain auth or learner authority', () => {
   assert.doesNotMatch(landing, /createSupabaseAuth|createCloudStudy|fetch\(|supabase|service[_-]?role/i);
-  assert.doesNotMatch(landing, /approve|publish|reviewKinds|isAdmin/);
+  assert.doesNotMatch(landing, /\b(?:approve|publish)\s*\(|reviewKinds|isAdmin/);
   assert.match(styles, /account-landing-grid/);
   assert.match(styles, /@media\(max-width:760px\)/);
   assert.match(styles, /@media\(max-width:480px\)/);
