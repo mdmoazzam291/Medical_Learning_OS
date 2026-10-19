@@ -1,5 +1,12 @@
 # Decision log
 
+## ADR-118 — Selective Account presentation and an honest persistence choice
+**Status:** Owner-approved selective visual restoration and released in PR #276 on 2026-10-20 IST.
+
+Restore the direct moon/sun switch, four account benefits and the product preview below the card. Keep one shared header and one registration/recovery entry. The owner explicitly excluded restoring the introduction's module list; keep the short cross-device sentence. Preview content remains labelled illustrative, with the notice separated from decoration.
+
+The implementation choice for the enabled Keep me signed in control is checked-by-default durable browser storage, or unchecked same-tab session storage. Keep the existing token record and learner identity. Successful tab-only selection removes old durable credentials before authentication begins; storage failures must not silently switch a new login to durable persistence. Refresh and independent clients retain the selected mode; known existing durable sessions remain compatible with unavailable optional tab storage. Browser restore/duplicate-tab behavior follows standard sessionStorage, not a server-side expiry/revocation promise. A callback on another device/tab cannot inherit the originating tab's preference. Provider settings and callback URLs are unchanged.
+
 ## ADR-117 — Medretica is the public brand with one three-leaf vector mark
 **Status:** Owner requests website update on 2026-10-19; implementation on feature branch, release pending verification.
 
