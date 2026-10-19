@@ -1,4 +1,6 @@
-# Medical Learning OS
+# Medretica
+
+**Your Medical Learning Operating System.** An integrated medical learning platform. See the [brand contract](docs/MEDRETICA_BRAND.md).
 
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 

@@ -1,5 +1,10 @@
 # Decision log
 
+## ADR-117 — Medretica is the public brand with one three-leaf vector mark
+**Status:** Owner requests website update on 2026-10-19; implementation on feature branch, release pending verification.
+
+Use Medretica, “Your Medical Learning Operating System” and the integrated-platform descriptor. Public UI no longer uses the provisional PARSE, MLOS or m. lockups. The logo follows the latest Medretica mockup’s three-leaf direction using a single theme-aware SVG; exact geometry is an implementation choice because no final vector master was recovered. Preserve learner identities, resource names, navigation and permanent Sage/Lavender palettes. See MEDRETICA_BRAND.md.
+
 ## ADR-116 — Cashfree primary, PhonePe fallback, Razorpay retired
 **Status:** Accepted and merged in PR #240 on 2026-10-14; GitHub Node/browser/WebKit green. Production payments prohibited.
 

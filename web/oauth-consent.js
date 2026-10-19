@@ -44,23 +44,23 @@ function renderScopes(scope) {
 }
 function render() {
   if (state.loading) {
-    root.innerHTML = '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">MEDICAL LEARNING OS · AUTHORIZATION</span><h1>Checking connection request…</h1><p>Verifying the requesting application and your current MLOS session.</p></div></div><section class="panel"><p>Loading secure authorization details…</p></section></main>';
+    root.innerHTML = '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">MEDRETICA · AUTHORIZATION</span><h1>Checking connection request…</h1><p>Verifying the requesting application and your current Medretica session.</p></div></div><section class="panel"><p>Loading secure authorization details…</p></section></main>';
     return;
   }
   if (state.error) {
-    root.innerHTML = '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">MEDICAL LEARNING OS · AUTHORIZATION</span><h1>This request cannot be authorized.</h1><p id="oauth-error"></p></div></div><section class="panel"><p>No access was granted. You can close this page or return to Medical Learning OS.</p><a class="secondary action-link" href="/">Return home →</a></section></main>';
+    root.innerHTML = '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">MEDRETICA · AUTHORIZATION</span><h1>This request cannot be authorized.</h1><p id="oauth-error"></p></div></div><section class="panel"><p>No access was granted. You can close this page or return to Medretica.</p><a class="secondary action-link" href="/">Return home →</a></section></main>';
     document.querySelector('#oauth-error').textContent = state.error;
     return;
   }
 
   const d = state.details || {};
   const clientName = d.client?.name || 'External application';
-  const account = d.user?.email || auth.currentUser()?.email || 'your MLOS account';
+  const account = d.user?.email || auth.currentUser()?.email || 'your Medretica account';
   root.innerHTML = '<main id="main" class="account-page">' +
-    '<div class="page-heading"><div><span class="eyebrow">MEDICAL LEARNING OS · AUTHORIZATION</span><h1 id="oauth-client-name"></h1><p>Review exactly what is being requested before connecting.</p></div><span class="badge">OAUTH 2.1</span></div>' +
+    '<div class="page-heading"><div><span class="eyebrow">MEDRETICA · AUTHORIZATION</span><h1 id="oauth-client-name"></h1><p>Review exactly what is being requested before connecting.</p></div><span class="badge">OAUTH 2.1</span></div>' +
     '<section class="panel"><span class="eyebrow">REQUESTING APP</span><h2 id="oauth-client"></h2><p>Signed in as <strong id="oauth-account"></strong>.</p><div id="oauth-scopes">' + renderScopes(d.scope) + '</div></section>' +
-    '<section class="panel"><span class="eyebrow">AUTHORITY BOUNDARY</span><h2>Connecting does not grant admin powers by itself.</h2><p>The app receives an authenticated MLOS token only for the scopes shown above. Medical Learning OS still checks server-side content-admin and reviewer authority on every admin request. No service-role credential is shared.</p></section>' +
-    '<section class="panel"><div class="button-row"><button class="primary" data-action="approve"' + (state.deciding ? ' disabled' : '') + '>Allow connection</button><button class="secondary" data-action="deny"' + (state.deciding ? ' disabled' : '') + '>Deny</button></div><p class="muted">Medical-content approval, Rights decisions, publication, and learner controls remain separate MLOS permissions.</p></section>' +
+    '<section class="panel"><span class="eyebrow">AUTHORITY BOUNDARY</span><h2>Connecting does not grant admin powers by itself.</h2><p>The app receives an authenticated Medretica token only for the scopes shown above. Medretica still checks server-side content-admin and reviewer authority on every admin request. No service-role credential is shared.</p></section>' +
+    '<section class="panel"><div class="button-row"><button class="primary" data-action="approve"' + (state.deciding ? ' disabled' : '') + '>Allow connection</button><button class="secondary" data-action="deny"' + (state.deciding ? ' disabled' : '') + '>Deny</button></div><p class="muted">Medical-content approval, Rights decisions, publication, and learner controls remain separate Medretica permissions.</p></section>' +
     '</main>';
   document.querySelector('#oauth-client-name').textContent = 'Connect ' + clientName + '?';
   document.querySelector('#oauth-client').textContent = clientName;
