@@ -33,10 +33,10 @@ function signedOutMarkup(googleUrl) {
 
   return `
     <main id="main" class="account-landing-page" data-account-landing-enhanced="true">
-      <header class="account-landing-nav" aria-label="Medical Learning OS">
-        <a class="account-brand" href="/" aria-label="Medical Learning OS home">
-          <span class="mlos-brand-mark" aria-hidden="true">m.</span>
-          <span>Medical Learning OS</span>
+      <header class="account-landing-nav" aria-label="Medretica">
+        <a class="account-brand" href="/" aria-label="Medretica home">
+          <span class="mlos-brand-mark" aria-hidden="true"></span>
+          <span>Medretica</span>
         </a>
         <nav class="account-nav-links" aria-label="Product">
           <a href="/web/medical.html">Study Now</a>
@@ -55,9 +55,9 @@ function signedOutMarkup(googleUrl) {
       <div class="account-landing-grid">
         <section class="account-product-story" aria-labelledby="account-hero-title">
           <div class="account-hero-copy">
-            <p class="account-kicker">PLAN · PRACTICE · REVISE · TRACK · SUCCEED</p>
+            <p class="account-kicker">YOUR MEDICAL LEARNING OPERATING SYSTEM</p>
             <h1 id="account-hero-title">Your intelligent preparation <span>command center.</span></h1>
-            <p class="account-hero-lede">Medical Learning OS combines adaptive Study Now sessions, a high-yield QBank, realistic Exams, intelligent NeuralVault revision and detailed Progress analytics — all in one integrated system.</p>
+            <p class="account-hero-lede">Medretica is an integrated medical learning platform combining adaptive Study Now sessions, a high-yield QBank, realistic Exams, intelligent NeuralVault revision and detailed Progress analytics — all in one integrated system.</p>
           </div>
 
           <div class="account-journey" aria-hidden="true">
@@ -68,7 +68,7 @@ function signedOutMarkup(googleUrl) {
             <div class="account-flag"></div>
           </div>
 
-          <section class="account-feature-grid" aria-label="What Medical Learning OS gives you">
+          <section class="account-feature-grid" aria-label="What Medretica gives you">
             ${cards}
           </section>
 
@@ -88,7 +88,7 @@ function signedOutMarkup(googleUrl) {
             <div class="account-laptop-preview" aria-hidden="true">
               <div class="laptop-screen">
                 <aside class="preview-sidebar">
-                  <div class="preview-brand">◒ <span>Medical Learning OS</span></div>
+                  <div class="preview-brand"><span class="mlos-brand-mark" aria-hidden="true"></span> <span>Medretica</span></div>
                   <strong>⌂ Home</strong><span>▣ Study Now</span><span>▥ QBank</span><span>▤ Exams</span><span>✣ NeuralVault</span><span>↗ Progress</span>
                   <div class="preview-spacer"></div><span>□ Notes</span><span>☆ Bookmarks</span><span>⚙ Settings</span>
                 </aside>
@@ -111,7 +111,7 @@ function signedOutMarkup(googleUrl) {
 
         <aside class="account-auth-card" aria-labelledby="signin-title">
           <p class="account-kicker">WELCOME BACK</p>
-          <h2 id="signin-title">Sign in to<br>Medical Learning OS.</h2>
+          <h2 id="signin-title">Sign in to <br>Medretica.</h2>
           <p class="account-auth-intro">Your authenticated identity connects Study Now, QBank, Exams, NeuralVault and Progress across all your sessions and devices.</p>
 
           <a class="account-google oauth-google" href="${googleUrl}"><span class="google-g">G</span> Continue with Google</a>
@@ -134,7 +134,7 @@ function signedOutMarkup(googleUrl) {
 
           <details id="create-account" class="account-create-panel">
             <summary>
-              <span><small>NEW TO MEDICAL LEARNING OS?</small><strong>Create your learner account</strong><em>One verified email keeps everything connected across your devices and learning journey.</em></span>
+              <span><small>NEW TO MEDRETICA?</small><strong>Create your learner account</strong><em>One verified email keeps everything connected across your devices and learning journey.</em></span>
               <b>Create account →</b>
             </summary>
             <form id="signup-form" class="account-auth-form account-compact-form">

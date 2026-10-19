@@ -13,3 +13,6 @@ body.account-landing-active{background:var(--bg);color:var(--ink)}.account-landi
 .phone-primary{color:var(--on-primary)}
 
 .continue-card small,.continue-card span:not(.play-orb){color:var(--ink)}
+
+.account-brand .mlos-brand-mark{flex:none}
+.preview-brand .mlos-brand-mark{width:18px;height:18px;display:inline-grid;vertical-align:middle}

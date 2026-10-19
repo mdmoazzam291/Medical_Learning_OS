@@ -83,7 +83,7 @@ test('password recovery returns to the same learner identity instead of creating
   assert.match(account, /recovery-password-form/);
   assert.match(account, /callback\.type === 'recovery'/);
   assert.match(account, /auth\.setPassword/);
-  assert.match(account, /Supabase user ID and all Medical Learning OS history stay unchanged/);
+  assert.match(account, /Supabase user ID and all Medretica history stay unchanged/);
   assert.doesNotMatch(account, /create.*recovery.*account/i);
 });
 

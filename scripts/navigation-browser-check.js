@@ -49,7 +49,7 @@ const server = createServer(async (req, res) => {
   const cleanFile = path.replace(/\/$/, '').slice(1) + '.html';
   const file = path === '/' ? 'web/index.html' : publicFileSet.has(path.slice(1)) ? path.slice(1) : publicFileSet.has(cleanFile) ? cleanFile : path.slice(1);
   if (!publicFileSet.has(file)) { res.writeHead(404); return res.end(); }
-  try { res.writeHead(200, { ...headers, 'Content-Type': file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : 'text/javascript' }); res.end(await readFile(join(directory, file))); }
+  try { res.writeHead(200, { ...headers, 'Content-Type': file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.png') ? 'image/png' : 'text/javascript' }); res.end(await readFile(join(directory, file))); }
   catch { res.writeHead(404); res.end(); }
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -83,7 +83,7 @@ try {
     }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
-      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
+      await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
         if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
         return;
@@ -346,7 +346,7 @@ try {
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
-    await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && document.body.dataset.rail === 'collapsed', width);
+    await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && document.body.dataset.rail === 'collapsed', width);
     await activate(page.getByLabel('Account menu', { exact: true }));
     const accountMenu = page.getByRole('navigation', { name: 'Account navigation', exact: true });
     for (const label of ['Profile', 'Preferences', 'Account & Security']) {
@@ -395,7 +395,7 @@ try {
     assert.match(await page.locator('[data-study-start]').getAttribute('href'), /studyNow=5$/);
     await activate(page.getByLabel('Account menu', { exact: true }));
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
-    await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
     if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
@@ -606,8 +606,8 @@ try {
     await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
     await activate(page.getByLabel('Account menu', { exact: true }));
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
-    await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
-    admin = false; await reload(); await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
+    admin = false; await reload(); await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
     await page.waitForFunction(() => document.querySelector('#mlos-navigation') && !document.querySelector('[data-master="admin"]'));
     assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).count(), 0);
     await go(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
@@ -924,7 +924,7 @@ try {
       logoutFails = fail;
       await page.evaluate(value => localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value })), user);
       await go(origin + '/web/account.html');
-      await page.getByRole('heading', { name: 'Your Medical Learning OS account.', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
       await activate(page.getByLabel('Account menu', { exact: true }));
       await activate(accountMenu.getByRole('button', { name: 'Sign out', exact: true }));
       await page.waitForFunction(() => !JSON.parse(localStorage.getItem('mlos-supabase-auth-v1') || 'null'));

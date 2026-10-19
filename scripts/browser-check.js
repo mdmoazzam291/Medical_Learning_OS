@@ -345,7 +345,7 @@ try {
   });
 
   await page.goto(origin + '/web/account.html');
-  await page.getByRole('heading', { name: 'Sign in to Medical Learning OS.' }).waitFor();
+  await page.getByRole('heading', { name: 'Sign in to Medretica.' }).waitFor();
   await page.getByRole('button', { name: 'Send password reset link' }).waitFor();
   const form = page.locator('#signin-form');
   await form.getByLabel('Email').fill('admin@example.com');
@@ -354,7 +354,7 @@ try {
   await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
   assert.equal(new URL(page.url()).pathname, '/');
   await page.goto(origin + '/web/account.html');
-  await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+  await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
   await page.getByRole('heading', { name: 'One learner account, two ways in.' }).waitFor();
   await page.getByRole('button', { name: 'Opt in to retention feasibility' }).waitFor();
   await page.getByRole('link', { name: 'Open Admin Console' }).waitFor();
@@ -449,7 +449,7 @@ try {
 
   await page.goto(origin + '/web/account.html');
   await page.getByRole('button', { name: 'Sign out' }).click();
-  await page.getByRole('heading', { name: 'Sign in to Medical Learning OS.' }).waitFor();
+  await page.getByRole('heading', { name: 'Sign in to Medretica.' }).waitFor();
 
   isAdmin = false;
   await form.getByLabel('Email').fill('learner@example.com').catch(() => {});
@@ -460,7 +460,7 @@ try {
   await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
   assert.equal(new URL(page.url()).pathname, '/');
   await page.goto(origin + '/web/account.html');
-  await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+  await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
   await page.getByRole('heading', { name: 'Email + password is connected.' }).waitFor();
   assert.equal(await page.getByRole('link', { name: 'Open Admin Console' }).count(), 0);
   await page.goto(origin + '/web/admin.html');

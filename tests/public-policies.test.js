@@ -20,7 +20,8 @@ test('public policy bundle provides readable unauthenticated pages without priva
       assert.match(html, /Medretica/);
       assert.doesNotMatch(html, /<script\b|<form\b|OWNER INPUT|PLACEHOLDER|TODO|waiting for approval/i);
       for (const match of html.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
-        const path = match[1] === '/' ? 'index.html' : match[1].slice(1);
+        const pathname = new URL(match[1], 'https://medretica.invalid').pathname;
+        const path = pathname === '/' ? 'index.html' : pathname.slice(1);
         await assert.doesNotReject(readFile(join(output, path)), `${name} link must resolve: ${path}`);
       }
     }

@@ -73,7 +73,7 @@ try {
     await page.reload();
     await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
     await page.goto(origin + '/web/account.html');
-    await page.getByRole('heading', { name: 'Your Medical Learning OS account.' }).waitFor();
+    await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
     await page.getByText('Consent status is unavailable right now.', { exact: false }).waitFor();
     assert.match(await page.locator('.metrics').innerText(), /12\s*Recorded attempts/);
     await page.goto(origin);
