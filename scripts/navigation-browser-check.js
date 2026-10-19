@@ -929,8 +929,11 @@ try {
       await page.waitForFunction(() => !JSON.parse(localStorage.getItem('mlos-supabase-auth-v1') || 'null'));
       await page.waitForFunction(() => !document.querySelector('[data-master="admin"]'));
       await page.waitForLoadState('networkidle');
-      await activate(page.getByLabel('Account menu', { exact: true }));
-      assert.equal(await accountMenu.getByRole('link', { name: 'Sign in', exact: true }).isVisible(), true);
+      await page.locator('body.account-landing-active').waitFor();
+      await activate(page.getByLabel('Appearance menu', { exact: true }));
+      assert.equal(await accountMenu.getByRole('link', { name: 'Sign in', exact: true }).count(), 0);
+      assert.equal(await accountMenu.getByRole('link', { name: 'Create account', exact: true }).count(), 0);
+      assert.equal(await accountMenu.getByRole('link', { name: 'Appearance preferences', exact: true }).isVisible(), true);
       assert.equal(await accountMenu.getByRole('button', { name: 'Sign out', exact: true }).count(), 0);
     }
 
