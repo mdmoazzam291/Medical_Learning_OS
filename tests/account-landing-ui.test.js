@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { accountMarkup, navigationMarkup } from '../web/navigation-view.js';
 import { publicFileSet } from '../scripts/public-surface.js';
 
 const [html, landing, styles, account, serve] = await Promise.all([
@@ -32,17 +33,23 @@ test('production public-surface contract exposes every account landing asset', (
   assert.match(serve, /publicFileSet\.has\(path\)/);
 });
 
-test('signed-out landing communicates the canonical learner product', () => {
-  assert.match(landing, /Your intelligent preparation/);
-  assert.match(landing, /command center/);
-  assert.match(landing, /Study Now/);
-  assert.match(landing, /QBank/);
-  assert.match(landing, /Exams/);
-  assert.match(landing, /NeuralVault/);
-  assert.match(landing, /Progress/);
-  assert.match(landing, /Continue Learning/);
-  assert.match(landing, /Due for Revision/);
-  assert.match(landing, /Weak Areas/);
+test('signed-out account focuses on authentication without a second header or marketing', () => {
+  assert.match(landing, /Continue your learning across devices\./);
+  assert.doesNotMatch(landing, /<header|account-product-story|account-benefits|account-device-stage|account-nav-actions/);
+  assert.match(landing, /New here\? Create account/);
+});
+
+test('account header avoids redundant auth links and offers one appearance menu', () => {
+  for (const currentHref of ['/web/account.html', '/web/account?mode=create', '/web/account.html?returnTo=%2Fweb%2Fmedical.html']) {
+    const markup = accountMarkup({ currentHref });
+    assert.doesNotMatch(markup, />Sign in<|>Create account</);
+    assert.match(markup, /aria-label="Appearance menu"/);
+    for (const phone of [false, true]) {
+      const header = navigationMarkup({ master: 'account', currentHref, phone });
+      assert.equal((header.match(/data-theme/g) || []).length, 1);
+    }
+  }
+  assert.match(accountMarkup({ currentHref: '/web/medical.html' }), />Sign in</);
 });
 
 test('landing preserves every auth hook consumed by account runtime', () => {

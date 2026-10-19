@@ -180,7 +180,11 @@ shell.addEventListener('click', event => {
     else save({ type: 'expanded', open: !prefs.expanded });
     render('[data-rail]');
   }
-  if (button.hasAttribute('data-theme')) { closeDrawer(); closeAccount(); save({ type: 'theme' }); render('[data-theme]'); }
+  if (button.hasAttribute('data-theme')) {
+    const fromMenu = Boolean(button.closest?.('.mlos-account'));
+    closeDrawer(); closeAccount(); save({ type: 'theme' });
+    render(fromMenu ? '.mlos-account summary' : '[data-theme]');
+  }
   if (button.dataset.pin) {
     event.preventDefault();
     const menuMaster = workspaceMaster;

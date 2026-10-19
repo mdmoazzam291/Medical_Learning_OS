@@ -782,12 +782,11 @@ try {
         const swatch = document.createElement('span'); document.body.append(swatch);
         swatch.style.color = expectedBg; const bg = getComputedStyle(swatch).color;
         swatch.style.color = expectedInk; const ink = getComputedStyle(swatch).color; swatch.remove();
-        const brand = document.querySelector('.account-brand>span:last-child').getBoundingClientRect(), cta = document.querySelector('.account-create-cta').getBoundingClientRect();
-        return { palette: document.documentElement.dataset.palette, appearance: document.documentElement.dataset.appearance, brandOverlap: brand.right > cta.left, backgroundMatches: body.backgroundColor === bg, inkMatches: body.color === ink,
-          previewInk: getComputedStyle(document.querySelector('.continue-card small')).color === ink,
+        return { palette: document.documentElement.dataset.palette, appearance: document.documentElement.dataset.appearance, backgroundMatches: body.backgroundColor === bg, inkMatches: body.color === ink,
+          authHeaders: document.querySelectorAll('header').length,
           overflow: document.documentElement.scrollWidth > innerWidth };
       });
-      assert.deepEqual(actual, { palette, appearance, brandOverlap: false, backgroundMatches: true, inkMatches: true, previewInk: true, overflow: false }, palette + ' signed-out ' + appearance);
+      assert.deepEqual(actual, { palette, appearance, backgroundMatches: true, inkMatches: true, authHeaders: 1, overflow: false }, palette + ' signed-out ' + appearance);
       await signedOut.close();
     }
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
