@@ -12,10 +12,10 @@ test('production bundle publishes the canonical homepage sitemap and discovery r
     await buildPages({ outputDirectory: output });
     const xml = await readFile(join(output, 'sitemap.xml'), 'utf8');
     assert.match(xml, /<urlset xmlns="http:\/\/www.sitemaps.org\/schemas\/sitemap\/0.9">/);
-    assert.deepEqual([...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]), ['https://medretica.com/', ...['services', 'contact', 'terms', 'privacy', 'refunds', 'delivery'].map(name => `https://medretica.com/web/${name}.html`)]);
+    assert.deepEqual([...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]), ['https://medretica.com/', ...['services', 'contact', 'terms', 'privacy', 'refunds', 'delivery'].map(name => `https://medretica.com/web/${name}`)]);
     for (const url of [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1])) {
       const path = new URL(url).pathname;
-      const html = await readFile(join(output, path === '/' ? 'index.html' : path.slice(1)), 'utf8');
+      const html = await readFile(join(output, path === '/' ? 'index.html' : path.slice(1) + '.html'), 'utf8');
       assert.ok(html.includes(`<link rel="canonical" href="${url}">`), `${url} needs its own canonical`);
     }
     assert.equal(publicFileSet.has('sitemap.xml'), true);
