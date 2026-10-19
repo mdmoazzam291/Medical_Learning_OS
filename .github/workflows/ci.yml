@@ -89,6 +89,8 @@ jobs:
             sleep 1
           done
           PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/browser-check.js
+      - name: Verify signed-out sections and safe authentication return
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/guest-access-browser-check.js
       - name: Verify public homepage and new-learner entry
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/public-home-browser-check.js
       - name: Verify public policies without login or JavaScript

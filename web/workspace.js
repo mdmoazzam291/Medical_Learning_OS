@@ -13,6 +13,8 @@ async function load(offset = 0) {
   if (loading) return;
   loading = true; data = null; root.textContent = 'Loading your saved workspace…';
   try {
+    // Appearance preferences are local device settings, available without learner data.
+    if (identity.master === 'account' && identity.section === 'preferences') { data = {}; render(); return; }
     const session = await auth.getSession(); user = session?.user;
     if (!user) { root.innerHTML = '<p>Sign in to open your learning workspace.</p><a class="primary action-link" href="/web/account.html">Open Account</a>'; return; }
     const section = identity.section;
@@ -55,5 +57,5 @@ root.addEventListener('submit', event => {
   try { localStorage.setItem('mlos-personal-target-v1', target); root.querySelector('#plan-status').textContent = 'Personal target saved on this device.'; }
   catch { data.targetDate = target; root.querySelector('#plan-status').textContent = 'Target stays in page memory; device storage is unavailable.'; }
 });
-window.addEventListener('mlos:preferences', event => { if (event.detail?.prefs) prefs.write(event.detail.prefs); if (identity.section === 'preferences' && user) render(); });
+window.addEventListener('mlos:preferences', event => { if (event.detail?.prefs) prefs.write(event.detail.prefs); if (identity.master === 'account' && identity.section === 'preferences') render(); });
 load();

@@ -7,6 +7,8 @@ export const publicFiles = Object.freeze([
   'src/domain/catalog-integrity-audit.js',
   'src/domain/operational-recovery.js',
   'src/domain/subject-index.js',
+  'web/auth-return.js',
+  'web/guest-view.js',
   'web/navigation-view.js',
   'web/navigation.js',
   'web/navigation.css',

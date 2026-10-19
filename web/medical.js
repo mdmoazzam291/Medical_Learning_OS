@@ -1,3 +1,4 @@
+import { guestPage } from '/web/guest-view.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -148,7 +149,7 @@ function canonicalTeachingFeedback(receipt) {
 }
 
 function signedOut() {
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">MEDICAL QBANK</span><h1>Sign in to study reviewed medical content.</h1><p>The medical QBank uses your authenticated learner identity and server-side scoring.</p></div><span class="badge">M04c</span></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open cloud account →</a></section></main>';
+  return guestPage('study', location.pathname + location.search);
 }
 
 function overview() {

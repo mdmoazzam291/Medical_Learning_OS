@@ -1,3 +1,4 @@
+import { guestPage } from '/web/guest-view.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -72,7 +73,7 @@ function questionMedia(media) {
 }
 
 function signedOutView() {
-  return '<main id="main" class="exam-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">EXAM MODE</span><h1>Sign in to use the simulator.</h1><p>Exam state is learner-scoped and server-authoritative.</p></div></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open cloud account →</a></section></main>';
+  return guestPage('exams', location.pathname + location.search);
 }
 
 function readinessCard({ label, readiness, error, testing }) {

@@ -159,6 +159,7 @@ function signedOutMarkup(googleUrl) {
 
 function bindSignedOutInteractions() {
   const registration = root?.querySelector('#create-account');
+  if (registration && new URLSearchParams(location.search).get('mode') === 'create') registration.open = true;
   root?.querySelectorAll('a[href="#create-account"]').forEach(link => {
     link.addEventListener('click', () => {
       if (!registration) return;
