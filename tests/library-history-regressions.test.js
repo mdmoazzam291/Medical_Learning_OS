@@ -8,7 +8,7 @@ const source = (await readFile(new URL('../web/library.js', import.meta.url), 'u
 async function open(search = '?view=notes&subject=medicine&count=5') {
   const listeners = {}, events = {}, location = { pathname: '/web/library.html', search };
   const stack = [location.pathname + location.search];
-  const root = { innerHTML: '', addEventListener(type, fn) { listeners[type] = fn; }, querySelector() { return { focus() {} }; } };
+  const root = { closest() { return { classList: { toggle() {} } }; }, innerHTML: '', addEventListener(type, fn) { listeners[type] = fn; }, querySelector() { return { focus() {} }; } };
   const context = vm.createContext({ ...libraryDomain, SUBJECTS, URLSearchParams, location, console, e: text => String(text), request: async () => ({ concepts: [], notes: [], questions: [], links: [] }), setupLibraryWorkspaces: () => ({ decorate() {} }), document: { querySelector: () => root }, window: { addEventListener(type, fn) { events[type] = fn; }, dispatchEvent() {} }, CustomEvent: class {}, history: { replaceState(_a, _b, href) { stack[stack.length - 1] = href; location.search = new URL(href, 'https://example.invalid').search; }, pushState(_a, _b, href) { stack.push(href); location.search = new URL(href, 'https://example.invalid').search; } } });
   vm.runInContext(source, context); await new Promise(r => setImmediate(r));
   return { root, location, stack, events, change(target) { return listeners.change({ target: { hasAttribute: () => false, ...target } }); }, switch(view) { return listeners.click({ target: { closest: () => ({ dataset: { view }, hasAttribute: () => false }) } }); } };

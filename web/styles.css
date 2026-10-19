@@ -173,3 +173,8 @@
 /* Public introduction shares the existing palette and responsive learner layout. */
 .public-home .session-card{display:block}.public-home .hero{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}.public-home .hero h2{max-width:none}.public-home .hero p{max-width:52ch}.public-home .public-home-access{font-size:.8rem;margin:18px 0 10px}.public-home .public-home-note{font-size:.82rem;margin-top:24px}.public-home .two-column h2{font-size:1.25rem}.public-home .text-button{min-height:44px;display:inline-flex;align-items:center}.public-home .session-card li{line-height:1.6}
 @media(max-width:1050px){.public-home .hero{grid-template-columns:1fr}.public-home .session-card{align-self:stretch}.public-home .session-card ol{margin:12px 0}}
+
+/* Consistent guest introductions; signed-in learning layouts remain independent. */
+.guest-page{max-width:940px;margin:0 auto;padding-top:28px}.guest-page .page-heading{margin:18px 0 24px}.guest-page h1{max-width:24ch}.guest-page .page-heading p{max-width:65ch}.guest-card{max-width:760px}.guest-card h2{font-size:1.25rem}.guest-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0 24px}.guest-actions .action-link{margin-top:0;min-height:44px;display:inline-flex;align-items:center}.guest-card ul{padding-left:20px;line-height:1.7}.guest-card li{margin:10px 0}.guest-availability{border-top:1px solid var(--line);padding-top:18px;font-size:.82rem;color:var(--muted)}
+@media(min-width:800px) and (max-width:1050px){.public-home .hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px}.public-home .session-card{padding:20px}}
+@media(max-width:700px){.guest-page{padding-top:20px}.guest-page h1{font-size:1.9rem}.guest-actions{gap:10px}}

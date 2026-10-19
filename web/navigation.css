@@ -290,3 +290,8 @@
 /* Tablet portrait retains every workspace; the symbol carries the compact brand. */
 @media(min-width:701px) and (max-width:1050px){.mlos-header-top .mlos-brand-short{display:none}}
 @media(forced-colors:active){.mlos-brand-mark{color:LinkText}.mlos-brand-mark::before{forced-color-adjust:none}}
+
+.mlos-signin{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 10px;border-radius:10px;color:var(--ink);font-size:13px;font-weight:650;white-space:nowrap;text-decoration:none}.mlos-signin:hover,.mlos-signin:focus-visible{background:var(--soft)}
+@media(max-width:700px){.mlos-signin{padding:8px 5px;font-size:12px;flex-shrink:0}}
+
+@media(max-width:700px){.mlos-header:has(.mlos-signin)>.mlos-theme{display:none}}

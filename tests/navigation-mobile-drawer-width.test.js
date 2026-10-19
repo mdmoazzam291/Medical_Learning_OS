@@ -37,8 +37,8 @@ test('narrow drawer preserves two-column navigation while hiding phone shortcut 
   // Pin controls and saved preferences remain to preserve tablet/desktop pinning
   // and allow this temporary phone-only visual change to be reversed later.
   const { navigationMarkup } = await import('../web/navigation-view.js');
-  const mobile = navigationMarkup({ phone: true, master: 'account', prefs: { expanded: true, pins: ['study:practice'] } });
-  const desktop = navigationMarkup({ phone: false, master: 'account', prefs: { expanded: true, pins: ['study:practice'] } });
+  const mobile = navigationMarkup({ phone: true, master: 'account', signedIn: true, prefs: { expanded: true, pins: ['study:practice'] } });
+  const desktop = navigationMarkup({ phone: false, master: 'account', signedIn: true, prefs: { expanded: true, pins: ['study:practice'] } });
   assert.match(mobile, /data-pin="account:overview"/);
   assert.match(mobile, /aria-label="Pinned shortcuts"/);
   assert.match(desktop, /data-pin="account:overview"/);

@@ -1,3 +1,4 @@
+import { createLearnerReturn } from '/web/auth-return.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
@@ -6,6 +7,12 @@ import { errorMonitor } from '/web/monitoring.js';
 
 const root = document.querySelector('#account-app');
 const notice = document.querySelector('#notice');
+let navigationStorage;
+try { navigationStorage = sessionStorage; } catch { /* Sign-in can continue without optional return memory. */ }
+const learnerReturn = createLearnerReturn({ storage: navigationStorage });
+const callbackParams = new URLSearchParams(location.hash.slice(1));
+learnerReturn.capture(location.search, callbackParams.has('access_token') || callbackParams.has('error'));
+
 const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', "'": '&#39;' }[c]));
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
@@ -33,8 +40,10 @@ function resumePendingOAuthConsent() {
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 function finishSignIn() {
-  if (resumePendingOAuthConsent()) return;
-  location.replace('/');
+  if (resumePendingOAuthConsent()) { learnerReturn.clear(); return; }
+  const destination = learnerReturn.destination(location.search);
+  learnerReturn.clear();
+  location.replace(destination);
 }
 function reportUnexpected(error, operation) {
   const status = Number(error?.status || 0);
