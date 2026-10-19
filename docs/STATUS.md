@@ -1,5 +1,8 @@
 # Current status
 
+## 2026-10-19 — Sole proprietor details confirmed; paid refund policy deferred
+Owner confirms Md Moazzam legal-name match, sole proprietorship, Bhogari/Bettiah/Bihar/Bharat845454 public address, no public phone and email receipt. Draft PR #267 updated at artifact 2d301f771735fcdacdf4105671b2e292ffc8b77f. Contact/Terms/Privacy now record supplied facts and email-only support. Current Refunds page explains no payments/subscriptions; future unapproved paid refund proposal moved to separate internal file, consistent with owner clarification. Draft/link checks pass; documentation only, no runtime/publication or payment. Further public-copy/privacy/grievance review and actual static-page implementation/verification remain; do not infer Cashfree approval or outbound email delivery.
+
 ## 2026-10-19 — Operator/email facts recorded; refund rules proposed
 Owner supplied Md Moazzam as operator, support@medretica.com and admin@medretica.com; paid plans must remain unavailable. Updated seven review-package files in draft PR #267 (actual artifact commit 12d5e3e80325054c937696968ae0128ad1dc66a9). Added explicit proposed7-day initial/renewal full-refund policy, duplicate/non-delivery remedies, free cancellation/end-of-paid-term access and bounded support processing targets, all pending owner approval. Future policy-change protections remain. Operator entity type, exact KYC match, public phone/address/grievance and privacy facts unresolved; email reachability not independently tested. Draft labels/relative links reviewed; no runtime change or new deployment/test claim, payment or live merchant edit. Continue with owner policy review and remaining factual inputs before publication.
 
