@@ -83,7 +83,7 @@ try {
     }, user);
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
-      await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
+      await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
         if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
         return;
@@ -346,7 +346,7 @@ try {
     }
     await page.setViewportSize({ width, height });
     await page.evaluate(prefs => window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs } })), savedLayout);
-    await page.waitForFunction(value => document.body.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && document.body.dataset.rail === 'collapsed', width);
+    await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && document.body.dataset.rail === 'collapsed', width);
     await activate(page.getByLabel('Account menu', { exact: true }));
     const accountMenu = page.getByRole('navigation', { name: 'Account navigation', exact: true });
     for (const label of ['Profile', 'Preferences', 'Account & Security']) {
