@@ -43,7 +43,8 @@ try {
       await page.waitForURL(`${origin}/web/account.html`);
       if (javaScriptEnabled) {
         await page.waitForSelector('body.account-landing-active');
-        await page.locator('#create-account summary').click();
+        await page.locator('.account-create-cta').click();
+        assert.equal(await page.locator('#signup-form').isVisible(), true, 'Create account CTA must open registration');
         await page.locator('#signup-form input[name="email"]').fill(user.email);
         await page.locator('#signup-form input[name="password"]').fill('synthetic-password-123');
         await page.locator('#signup-form button').click();

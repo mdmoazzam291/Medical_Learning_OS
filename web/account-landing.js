@@ -158,6 +158,14 @@ function signedOutMarkup(googleUrl) {
 }
 
 function bindSignedOutInteractions() {
+  const registration = root?.querySelector('#create-account');
+  root?.querySelectorAll('a[href="#create-account"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (!registration) return;
+      registration.open = true;
+      queueMicrotask(() => registration.querySelector('input[name="email"]')?.focus());
+    });
+  });
   const recovery = root?.querySelector('#password-recovery');
   const recoveryLink = root?.querySelector('[data-open-recovery]');
   recoveryLink?.addEventListener('click', () => {
