@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Medretica IndexNow setup — 2026-10-19
+- Owner approved IndexNow after requesting one way to notify multiple engines. Writer Codex; isolated branch feat/medretica-indexnow-20261019, base main5fc00e8ba4ea98362fc1f5ebc03ed3cf2cc9dec1. Prior sitemap repairPR269 is merged/live200; owner screenshot confirms Google sitemap Success with1discovered page, not indexed proof. Prior task receipt034bbd84 is on its feature branch; stale main handoff below does not reverse that evidence.
+- Bounded extension to deployment/public asset flow: public verification text file in allowlist; fixed-homepage-only IndexNow POST after live key+homepage match; main-only GitHub workflow for homepage HTML/script/workflow changes with bounded readiness polling, no submission retries. No private URLs, billing/auth/DNS changes, new dependency, private key or paid service. Cloudflare Crawler Hints documented native alternative but no account access to enable/inspect it.
+- Tests: missing module failed before implementation;4focused IndexNow tests pass including rejection/mismatch/no-submission checks and actual key allowlist. Shared build tests passed; check and93-file build pass. Full suite1312/1312passed; the fourth added asset test separately passed in4/4focused checks. No live notification or release claimed yet.
+- Next: confirm full suite, save code/PR, inspect core CI+preview, deploy verified key, verify live artifact, inspect initial notification HTTP200/202 in main workflow or deliberate single local execution. Do not equate acceptance with indexing/ranking. Google stays separate. Checked2026-10-19; no competing IndexNow writer found.
+
+
 ## Medretica sitemap 404 repair — 2026-10-19
 - Owner explicitly requested fixing the live sitemap; writer Codex, branch fix/medretica-sitemap-20261019, base main 2d31d9d3a1d04f0f1637d0075f5ce211dc71175d. Open PRs264/229/228/203 unrelated. Checked 2026-10-19T11:03Z.
 - Root cause: no sitemap asset existed in the explicit public surface. Added canonical-homepage-only sitemap.xml and robots.txt discovery record to shared allowlist; added XML/text MIME types to origin server. No auth, DNS, security controls, learner content or billing changes. Start with one verified canonical URL; extend sitemap only after public route canonical audit.

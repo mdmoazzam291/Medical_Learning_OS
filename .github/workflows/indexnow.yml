@@ -1,0 +1,26 @@
+name: Notify IndexNow of public homepage updates
+on:
+  push:
+    branches: [main]
+    paths:
+      - web/index.html
+      - scripts/indexnow-submit.js
+      - .github/workflows/indexnow.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: medretica-indexnow
+  cancel-in-progress: true
+jobs:
+  notify:
+    if: github.repository == 'mdmoazzam291/Medical_Learning_OS' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Wait for matching live homepage and notify participating engines
+        run: node scripts/indexnow-submit.js --wait

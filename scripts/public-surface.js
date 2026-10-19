@@ -1,4 +1,5 @@
 export const publicFiles = Object.freeze([
+  '94df2900a699a7c8797e515d868f2010.txt',
   'sitemap.xml',
   'robots.txt',
   'src/domain/app-navigation.js',
