@@ -7,7 +7,8 @@ Owner asked to complete the public website requirements shown in Cashfree whitel
 ## Review copy
 - [Terms & Conditions](terms.md), including future changes and existing-purchase protection.
 - [Privacy Notice](privacy.md).
-- [Refunds & Cancellations](refunds.md).
+- [Refunds & Cancellations](refunds.md), current unpaid-release notice only.
+- [Future paid-launch refund proposal](future-refund-proposal.md), internal review only, not current customer terms.
 - [Contact Us / operator disclosure](contact.md).
 - [Digital Service Delivery](delivery.md).
 - [Services & Pricing](services.md).
@@ -15,15 +16,17 @@ Owner asked to complete the public website requirements shown in Cashfree whitel
 Every OWNER INPUT marker is intentional and blocks publication. They must not be presented as completed policies to Cashfree. Proposed customer commitments are drafts requiring owner confirmation, not existing operational capabilities.
 
 ## Owner-confirmed facts — 19 October 2026
-- Operator name: **Md Moazzam**, supplied explicitly by owner. Entity type and exact match to Cashfree KYC records not independently verified.
-- Public support email: **support@medretica.com**; administration email: **admin@medretica.com**. Delivery/receipt tests not performed by this task.
+- Operator: **Md Moazzam**, **sole proprietorship**; exact legal-name match to Cashfree confirmed by owner. No independent KYC-document inspection; none requested.
+- Public address supplied for this task: **Bhogari, Bettiah, Bihar, Bharat (India) — 845454**.
+- Owner asks whether Dr. Moazzam can be used as display name: keep any accurate professional/personal display name separate from exact legal operator disclosure. Do not replace Md Moazzam in the operator line or Cashfree KYC. Suggested operator line: Medretica is operated by Md Moazzam, sole proprietor trading as Medretica.
+- Public support email: **support@medretica.com**; administration email: **admin@medretica.com**. Owner confirms the supplied email can receive messages. This task did not send a test email or verify outbound reply capability.
 - Paid plans must **remain unavailable**. Final premium prices are not needed to describe the current unpaid release; they remain a prerequisite for a future paid launch.
 - Refund/cancellation rules requested as a **proposal**, not yet approved. See refunds.md. Future terms-change clause remains intact.
 
 ## Remaining facts required from the owner
-1. Entity type and confirmation that owner-supplied **Md Moazzam** matches the Cashfree legal operator record. No KYC document/number is needed in chat.
-2. Public support phone, customer correspondence/business address, support hours and designated grievance contact/details. Emails are owner-supplied; test reachability before publication. Do not silently reuse personal phone/address from screenshots.
-3. Review the explicit proposed refund/cancellation rules in refunds.md; no target or refund window becomes an active promise until approved and supported by actual operations.
+1. Legal operator/type/name-match and public address are now owner-confirmed; do not ask for them again. No KYC document/number needed.
+2. No public phone is available: state email-only support honestly. Do not invent or reuse a personal number. Address is supplied. Confirm support hours/complaint commitments and designated grievance contact; owner confirms email receipt, outbound replies not verified. Email-only disclosure is not proof that Cashfree will accept the site without a phone.
+3. Owner clarified refunds/cancellation are for later, with no paid subscriptions currently. refunds.md now contains only the current unpaid-release notice. Future detailed policy is preserved separately in future-refund-proposal.md, excluded from current customer policy and still unapproved. Do not ask for approval of paid-launch commitments as a prerequisite to an unpaid-release page.
 4. Current paid status is confirmed unavailable; any future paid launch still requires final INR prices/period/taxes/inclusions/limits/delivery target. Do not turn proposed existing prices into offers.
 5. Privacy retention periods, processors/locations and safeguards, request handling, age eligibility/parental handling and any AI data use. Confirm actual deployments; source alone does not prove current runtime settings.
 
