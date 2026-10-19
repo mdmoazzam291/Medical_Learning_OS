@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Medretica sitemap 404 repair — 2026-10-19
+- Owner explicitly requested fixing the live sitemap; writer Codex, branch fix/medretica-sitemap-20261019, base main 2d31d9d3a1d04f0f1637d0075f5ce211dc71175d. Open PRs264/229/228/203 unrelated. Checked 2026-10-19T11:03Z.
+- Root cause: no sitemap asset existed in the explicit public surface. Added canonical-homepage-only sitemap.xml and robots.txt discovery record to shared allowlist; added XML/text MIME types to origin server. No auth, DNS, security controls, learner content or billing changes. Start with one verified canonical URL; extend sitemap only after public route canonical audit.
+- Regression reproduced ENOENT before fix; all5targeted build/discovery checks pass after. npm run check and build92files pass. Actual local GET+HEAD of both routes200 with correct MIME; XML parsed and homepage URL verified. Full npm test passed1309/1309; no failures. Production 404 not yet repaired until deployment verified.
+- User request authorizes this bounded live fix. Next: save reviewed code commit and PR, inspect hosted CI, merge only tested head, verify live sitemap200/XML and robots discovery. Google Search Console submission remains owner-side.
+
+
 ## Medretica website brand and precise vector logo — 2026-10-19
 - Objective: current owner asks to update website final brand and its new precise logo. Writer Codex, isolated task checkout/branch feat/medretica-brand-logo-20261019; base remote main e141ef282fa59e1f1f05d24e90f918e6e1c94785. PR267 already merged; earlier handoff says unmerged and is stale. Other open PRs264/229/228/203 are separate; do not merge PARSE proposals. No competing writer observed for this task.
 - Implemented: Medretica name and approved tagline/descriptor; three-leaf SVG mask shared by navigation/account/policy headers, same geometry favicon and180px iOS icon; titles/description/application-name/primary Open Graph metadata; owner and authorization labels. Preserved storage/API/resource identities, navigation/Glass, Sage/Lavender, legal operator copy and disabled payments. Geometry based on recent welcome mockup; no finalized vector master recovered. See MEDRETICA_BRAND.md.

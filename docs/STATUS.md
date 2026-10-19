@@ -1,5 +1,12 @@
 # Current status
 
+## Medretica sitemap 404 repair — 2026-10-19
+- Owner explicitly requested fixing the live sitemap; writer Codex, branch fix/medretica-sitemap-20261019, base main 2d31d9d3a1d04f0f1637d0075f5ce211dc71175d. Open PRs264/229/228/203 unrelated. Checked 2026-10-19T11:03Z.
+- Root cause: no sitemap asset existed in the explicit public surface. Added canonical-homepage-only sitemap.xml and robots.txt discovery record to shared allowlist; added XML/text MIME types to origin server. No auth, DNS, security controls, learner content or billing changes. Start with one verified canonical URL; extend sitemap only after public route canonical audit.
+- Regression reproduced ENOENT before fix; all5targeted build/discovery checks pass after. npm run check and build92files pass. Actual local GET+HEAD of both routes200 with correct MIME; XML parsed and homepage URL verified. Full npm test passed1309/1309; no failures. Production 404 not yet repaired until deployment verified.
+- User request authorizes this bounded live fix. Next: save reviewed code commit and PR, inspect hosted CI, merge only tested head, verify live sitemap200/XML and robots discovery. Google Search Console submission remains owner-side.
+
+
 ## 2026-10-19 — Medretica website brand and vector logo prepared
 Current owner asks to update final brand and precise logo. Branch feat/medretica-brand-logo-20261019 from main e141ef282fa59e1f1f05d24e90f918e6e1c94785 (PR267 already merged). Replaced old public name in learner/admin/account/consent screens, page titles and metadata, and added a shared theme-aware three-leaf SVG, matching favicon and180px iOS bookmark icon. Geometry interprets the recent mockup; no recovered final vector master. Preserves resource/storage/API identifiers, palettes/navigation and disabled paid plans. Baseline1308 tests; updated auth-recovery and27 public-policy browser checks pass.32 responsive/theme/landing checks and icon HTTP/MIME checks pass. Final1308/1308tests, syntax/build90files and12affected tests pass. Independent review oneP3policy accent finding fixed; phone/tablet screenshots inspected. Full navigation rerun pending after guarding a document-body polling race on clean-URL redirect. Remote code c652e7cfdfcae07e2484ac2f2df5759ea8f787ff saved; hosted checks and release pending.
 
