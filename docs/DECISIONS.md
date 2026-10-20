@@ -1,5 +1,11 @@
 # Decision log
 
+## ADR-120 — Public navigation with an unchanged default sign-in page
+**Status:** Owner approved; implementation on feature branch pending hosted verification.
+
+Signed-out pages outside Account use public product information and clear authentication actions. Full learning masters appear after authentication; private destinations keep explicit allowlisted return intent. Keep public Preferences and the theme toggle. Preserve Account's existing shared header, form, benefits and preview exactly; do not apply the new public-header rendering there. Static policy content remains available without JavaScript.
+
+
 ## ADR-119 — Open Knowledge logo follows semantic theme colours
 **Status:** Owner-selected concept26; theme compatibility released in PR278 on20October2026 IST.
 

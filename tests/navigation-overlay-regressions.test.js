@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import * as nav from '../src/domain/app-navigation.js';
 import * as view from '../web/navigation-view.js';
-const { navigationMarkup, flyoutMarkup, workspaceMenuMarkup } = view;
+const { navigationMarkup, flyoutMarkup, workspaceMenuMarkup, isPublicGuestNavigation } = view;
 import { mutatePreference } from '../web/navigation-preferences.js';
 const source = (await readFile(new URL('../web/navigation.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
 function open({ ready = true, width = 620 } = {}) {
@@ -14,7 +14,7 @@ function open({ ready = true, width = 620 } = {}) {
   const triggers = new Map();
   const shell = { innerHTML: '', classList: { add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x) }, addEventListener(type, fn) { shellHandlers[type] = fn; }, querySelector(key) { return key === '#mlos-flyout' ? flyout : key === '#mlos-workspace-menu' ? menu : input; }, querySelectorAll: () => [] };
   const body = { dataset: {}, prepend() {}, classList: { add() {} } };
-  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, workspaceMenuMarkup, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => null }), cloudConfig: {}, innerWidth: width, innerHeight: 1000, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
+  const context = vm.createContext({ ...nav, URL, URLSearchParams, CustomEvent: class { constructor(type, options = {}) { this.type = type; this.detail = options.detail; } }, navigationMarkup, flyoutMarkup, workspaceMenuMarkup, isPublicGuestNavigation, mutatePreference, preferenceStore: () => nav.preferenceStore(() => { throw Error('blocked'); }), createSupabaseAuth: () => ({ currentUser: () => ({ id: 'fixture-learner' }) }), cloudConfig: {}, createCloudReview: () => ({ me: async () => ({ isAdmin: false }) }), resolveAdminAccess: async () => false, innerWidth: width, innerHeight: 1000, location: { pathname: '/web/library.html', search: '?view=notes', hash: '' }, document: { body, activeElement: null, documentElement: { dataset: {} }, createElement: () => shell, querySelector: () => ready ? {} : null, addEventListener(type, fn) { docHandlers[type] = fn; } }, window: { addEventListener(type, fn) { windowHandlers[type] = fn; }, dispatchEvent(event) { windowHandlers[event.type]?.(event); } } });
   vm.runInContext(source, context);
   context.document.getElementById = id => targets[id] || null;
   return { body, shell, menu, triggers, classes, shellHandlers, docHandlers, input, targets, context, location: context.location, windowHandlers, outside() { docHandlers.click({ target: { closest: () => null } }); } };

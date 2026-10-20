@@ -82,16 +82,16 @@ test('a delayed research projection updates its workspace without replacing load
 });
 test('pinned Admin groups do not duplicate local sidebar controls', () => {
   for (const expanded of [false, true]) {
-    const html = navigationMarkup({ phone: true, ...routeIdentity('/web/admin'), isAdmin: true, prefs: { expanded, pins: ['admin:content', 'admin:operations'] } });
+    const html = navigationMarkup({ signedIn: true, phone: true, ...routeIdentity('/web/admin'), isAdmin: true, prefs: { expanded, pins: ['admin:content', 'admin:operations'] } });
     for (const id of ['content', 'operations']) assert.equal((html.match(new RegExp((expanded ? 'data-group' : 'data-flyout') + '="admin:' + id + '"', 'g')) || []).length, 1);
   }
 });
 test('Admin shortcuts remain available outside the Admin master', () => {
-  const html = navigationMarkup({ phone: true, master: 'study', section: 'practice', isAdmin: true, prefs: { pins: ['admin:operations'] } });
+  const html = navigationMarkup({ signedIn: true, phone: true, master: 'study', section: 'practice', isAdmin: true, prefs: { pins: ['admin:operations'] } });
   assert.match(html, /data-flyout="admin:operations"/);
 });
 test('Admin remains a top master with the current grouped sidebar', () => {
-  const html = navigationMarkup({ ...routeIdentity('/web/admin'), isAdmin: true });
+  const html = navigationMarkup({ signedIn: true, ...routeIdentity('/web/admin'), isAdmin: true });
   assert.match(html, /data-master="admin"[^>]*aria-current="page"/);
   assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(row => row.id), ['overview', 'content', 'learners', 'research', 'operations']);
 });

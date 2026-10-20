@@ -127,8 +127,16 @@ function topNavigationMarkup({ master, section, prefs, isAdmin, signedIn, curren
     '<div class="mlos-utilities"><form class="mlos-search" action="/web/library.html" role="search"><input type="hidden" name="view" value="questions"><label class="mlos-sr-only" for="mlos-global-search">Search all published content</label><input id="mlos-global-search" type="search" name="search" placeholder="Search concepts, questions…" maxlength="300"><button type="submit" aria-label="Search all published content">' + icon('search') + '</button></form>' + themeMarkup(prefs, signedIn, currentHref) + accountMarkup({ signedIn, active: master === 'account', workspaceTools: true, currentHref }) + '</div></header>';
   return header + '<div id="mlos-workspace-menu" class="mlos-workspace-menu" role="dialog" aria-label="Workspace tools" hidden>' + workspaceMenuMarkup({ master, section, prefs, isAdmin, currentHref, compactHeader }) + '</div>';
 }
+export function isPublicGuestNavigation(signedIn, currentHref = '') {
+  return !signedIn && canonicalPagePath(new URL(currentHref || '/', 'https://medretica.com').pathname) !== '/web/account.html';
+}
+function publicNavigationMarkup(prefs, currentHref) {
+  const links = '<a href="/web/services.html#explore">Explore Medretica</a><a href="/web/services.html#how-it-works">How it works</a><a href="/web/services.html#about">About</a>';
+  return '<header class="mlos-header mlos-public-header"><a class="mlos-brand" href="/" aria-label="Medretica Home" title="Medretica — Your Medical Learning Operating System"><span class="mlos-brand-mark" aria-hidden="true"></span><span class="mlos-brand-short">Medretica</span></a><nav class="mlos-public-links" aria-label="Public navigation">' + links + '</nav><div class="mlos-utilities">' + themeMarkup(prefs, false, currentHref) + '<a class="mlos-signin" href="' + escapeText(accountEntryHref(currentHref)) + '">Sign in</a><a class="mlos-public-create" href="' + escapeText(accountEntryHref(currentHref,true)) + '">Create account</a><details class="mlos-public-menu"><summary aria-label="Open public menu" title="Public menu">' + icon('menu') + '</summary><nav aria-label="Public menu">' + links + '<a href="/web/workspace.html?master=account&amp;section=preferences">Preferences</a></nav></details></div></header>';
+}
 export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, signedIn = false, currentHref = '', phone = false, compactHeader = false } = {}) {
   const prefs = validatePreferences({ ...input, version: 1 }), rows = navigationFor(master, { isAdmin });
+  if (isPublicGuestNavigation(signedIn, currentHref)) return publicNavigationMarkup(prefs, currentHref);
   if (!phone) return topNavigationMarkup({ master, section, prefs, isAdmin, signedIn, currentHref, compactHeader });
   // Keep cross-workspace shortcuts, but never repeat a destination already in this sidebar.
   const pinned = pinnedSections(prefs, isAdmin).filter(row => row.master !== master && !rows.some(local => navigationHrefMatches(row.href, local.href)));

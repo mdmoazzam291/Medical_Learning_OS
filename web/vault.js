@@ -1,3 +1,4 @@
+import { guestPage } from '/web/guest-view.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -89,7 +90,7 @@ function reportUnexpected(error, operation) {
 }
 
 function signedOut() {
-  return '<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Cloud account</a><div class="page-heading"><div><span class="eyebrow">NEURALVAULT</span><h1>Sign in to open your concept notes.</h1><p>Personal annotations are learner-scoped cloud data. Canonical medical content stays separate.</p></div><span class="badge">M06</span></div><section class="panel"><a class="primary action-link" href="/web/account.html">Open cloud account</a></section></main>';
+  return guestPage('vault', location.pathname + location.search + location.hash);
 }
 
 function conceptButton(concept) {

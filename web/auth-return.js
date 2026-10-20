@@ -1,5 +1,6 @@
 // Navigation intent only: never store credentials or authorization decisions here.
-const allowed = new Set(['/', '/web/medical', '/web/medical.html', '/web/library', '/web/library.html', '/web/exam', '/web/exam.html']);
+const allowed = new Set(['/', '/web/medical', '/web/medical.html', '/web/library', '/web/library.html', '/web/exam', '/web/exam.html', '/web/vault', '/web/vault.html', '/web/workspace', '/web/workspace.html']);
+const workspaceReturns = new Set(['home:progress','home:recent','study:mistakes','study:revision','exams:dna','exams:past','exams:autopsy','exams:rules','account:preferences','account:data']);
 const key = 'mlos-learner-return-v1';
 const maxAge = 30 * 60 * 1000;
 export function safeLearnerDestination(value) {
@@ -7,6 +8,9 @@ export function safeLearnerDestination(value) {
   try {
     const url = new URL(value, 'https://medretica.invalid');
     if (url.origin !== 'https://medretica.invalid' || !allowed.has(url.pathname) || (url.hash && !/^#[a-z][a-z0-9-]{0,80}$/.test(url.hash)) || [...url.searchParams.keys()].some(k => /token|password|secret|^code$|^state$|^error/i.test(k))) return null;
+    if (/^\/web\/workspace(?:\.html)?$/.test(url.pathname)) {
+      if (url.searchParams.getAll('master').length !== 1 || url.searchParams.getAll('section').length !== 1 || [...url.searchParams.keys()].some(k => !['master','section'].includes(k)) || !workspaceReturns.has(url.searchParams.get('master') + ':' + url.searchParams.get('section'))) return null;
+    }
     return url.pathname + url.search + url.hash;
   } catch { return null; }
 }
