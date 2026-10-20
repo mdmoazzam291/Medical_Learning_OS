@@ -1,5 +1,11 @@
 # Decision log
 
+## ADR-122 — One public product-information destination
+**Status:** Owner approved20October2026; implementation pending hosted verification.
+
+Explore Medretica, How it works and About pointed to different sections of one combined Services page. Keep that combined page and its deep links, but present one Explore Medretica entry in shared public navigation, opening canonical /web/services from the top. Keep Preferences separately in the public menu. Preserve signed-out Account's public header and existing form/content; authenticated workspace navigation remains unchanged.
+
+
 ## ADR-121 — Signed-out Account uses public navigation
 **Status:** Released in PR284 on20October2026; hosted Chromium/WebKit checks and live Account verification passed.
 

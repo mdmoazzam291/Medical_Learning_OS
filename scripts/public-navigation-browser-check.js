@@ -45,6 +45,8 @@ try {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), String(width));
       await page.getByLabel('Open public menu',{exact:true}).click();
       assert.ok(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Preferences',exact:true}).isVisible());
+      assert.deepEqual(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link').allTextContents(),['Explore Medretica','Preferences']);
+      assert.equal(await page.getByRole('navigation',{name:'Public navigation',exact:true}).getByRole('link').count(),width>1050?1:0);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'open menu overflows '+width);
       await page.keyboard.press('Escape');
       assert.ok(await page.getByLabel('Open public menu',{exact:true}).evaluate(node => node === document.activeElement));
@@ -74,6 +76,13 @@ try {
       assert.equal(new URL(href,origin).searchParams.get('returnTo'),destination.replace('.html',''));
       checks++;
     }
+    await page.getByLabel('Open public menu',{exact:true}).click();
+    await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Explore Medretica',exact:true}).click();
+    await page.waitForURL(origin+'/web/services');
+    assert.equal(new URL(page.url()).hash,'');
+    assert.ok(await page.getByRole('heading',{name:'About Medretica & Services',exact:true}).isVisible());
+    assert.equal(await page.locator('.mlos-public-menu').getAttribute('open'),null);
+    checks++;
     for (const anchor of ['explore','how-it-works','about']) {
       await page.goto(origin+'/web/services.html#'+anchor);
       await page.locator('.mlos-public-header').waitFor();
