@@ -13,7 +13,11 @@ Append-only history is not a justification for retaining personal learner eviden
 
 ## Current contract
 
-The registered privacy scope is `learner-privacy-scope-v3`. It covers every current public table with a `learner_id` column, including learner content-issue reports introduced by the private-correction feedback loop.
+The registered privacy scope is `learner-privacy-scope-v10`. Its explicit mapping includes learner content-issue reports, confidence events and learner-scoped owner administration data alongside the learning records.
+
+Scope discovery checks public-schema stored relations with a live `learner_id` column: ordinary/partitioned tables, foreign tables and materialized views. Ordinary views are projections of their underlying data and are not independent erasure targets. A view cannot substitute for a missing expected table. New stored relations still require an explicit mapping; a materialized copy must not be treated as an ordinary view.
+
+`scripts/privacy-scope-db-check.js` exercises the actual scope, preview and erasure SQL in disposable PGlite, including the original-attempt projection, new stored-data failures, missing tables, two synthetic learners, immutable evidence/receipts and service-only permissions. CI reuses its existing pinned PostgreSQL verification dependency. The focused fixture does not reproduce the entire production foreign-key graph or Auth/session lifecycle.
 
 Use the service-only functions:
 
