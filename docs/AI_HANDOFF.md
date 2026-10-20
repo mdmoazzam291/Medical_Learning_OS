@@ -1,5 +1,11 @@
 # Current engineering handoff
 
+## Public navigation checkpoint follow-up — 2026-10-20T09:36:11.523549+00:00
+- PR282: https://github.com/mdmoazzam291/Medical_Learning_OS/pull/282. Verified remote code19232864480fb8e4e861357e3b4c9ef9207acf69, tree29227e8fb2cbf2828a1bbdf1b34255bc6b45b7b5, based on main3be392e. No competing writer; Codex remains owner.
+- Local focused Chromium50 cases, policy27 cases and extended guest21 cases pass. Added actual email Progress return and synthetic callback My Notes return, with authenticated master navigation restored. Phone320 and desktop1440 screenshots inspected; no header overflow. Default sign-in four files unchanged and16 original renderer hashes pass.
+- Hosted Foundation39401594595 core check passed; browser/WebKit broad navigation in progress at checkpoint. Initial guest/public/policy browser stages passed. Follow-up extends test coverage only. Not published; next inspect hosted results and complete review before release. Earlier pending records remain historical.
+
+
 ## Public guest navigation — 2026-10-20T09:32:34.990037+00:00
 - Writer Codex; branch fix/public-guest-navigation-20261020; base 3be392e5e55fd6d42ad76f40fae260a91a17785e. Owner approved proceeding with default sign-in page untouched.
 - Implemented public Explore/How it works/About navigation, moon, sign-in and create-account actions outside Account. Existing authenticated masters remain; Account rendering is excluded. Public policy pages share navigation and retain readable static content.

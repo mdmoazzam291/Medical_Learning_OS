@@ -19,6 +19,7 @@ async function fixture(context, counters={}) {
     if(url.pathname==='/auth/v1/signup')return reply({user,session:null});
     if(url.pathname.endsWith('/content-library-api/library')){counters.libraryReads=(counters.libraryReads||0)+1;return reply(emptyLibrary);}
     if(url.pathname.endsWith('/me'))return reply({isAdmin:false,reviewKinds:[]});
+    if(url.pathname.endsWith('/vault/concepts'))return reply({concepts:[],catalogVersion:null});
     if(url.pathname.endsWith('/progress'))return reply({attempts:0,correct:0});
     if(url.pathname.endsWith('/questions'))return reply({questions:[]});
     if(url.pathname.endsWith('/revision/due'))return reply({dueCount:0,unseenCount:0,items:[]});
@@ -69,7 +70,7 @@ try {
     if(process.env.SCREENSHOT_DIR) await page.screenshot({path:`${process.env.SCREENSHOT_DIR}/preferences-${width}-dark.png`,fullPage:true});
     await context.close();
   }
-  for(const [path,callback] of [['/web/medical.html?studyNow=20',false],['/web/library.html?view=notes&subject=anatomy',false],['/web/exam.html',false],['/web/library.html?view=graph&subject=anatomy',true]]){
+  for(const [path,callback] of [['/web/medical.html?studyNow=20',false],['/web/library.html?view=notes&subject=anatomy',false],['/web/exam.html',false],['/web/library.html?view=graph&subject=anatomy',true],['/web/workspace.html?master=home&section=progress',false],['/web/vault.html',true]]){
     const context=await browser.newContext({viewport:{width:390,height:844}});await fixture(context);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
     await page.goto(origin+path);await page.locator('.guest-card').waitFor();
     await page.locator('.guest-card').getByRole('link',{name:'Sign in',exact:false}).click();
@@ -80,6 +81,8 @@ try {
     await page.waitForURL(origin+path);
     if(path.includes('library'))await page.locator('.library-filters').waitFor();
     assert.equal(await page.locator('.guest-card').count(),0);
+    assert.equal(await page.locator('.mlos-public-header').count(),0);
+    assert.ok(await page.locator('[data-master="study"]').count()>0);
     await context.close();cases++;
   }
   const context=await browser.newContext({viewport:{width:390,height:844}});await fixture(context);const page=await context.newPage();
