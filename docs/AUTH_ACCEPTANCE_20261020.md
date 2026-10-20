@@ -19,7 +19,7 @@ No reproducible runtime defect found in these checks. No runtime change required
 | Journey | Required observed result | Current evidence |
 |---|---|---|
 | Google login | Google completes; fresh Medretica page visibly signed in; no localhost redirect | Initial real redirect reached Google’s Sign in page naming Medretica; credential request declined, full login/return pending |
-| Existing email/password | Valid account signs in; correct section returns; reload stays signed in when chosen | Fixture only |
+| Existing email/password | Valid account signs in; correct section returns; reload stays signed in when chosen | Real login to Home, reload and fresh-tab persistence PASS in cloud Chromium; intended-section return still fixture only |
 | New email confirmation | Owner-controlled new address receives confirmation; link establishes usable session | Fixture callback only; real delivery pending |
 | Password recovery | Email received; owner sets password; new password works; same account remains | Fixture request/callback only; real delivery/reset pending |
 | Return context | Same-tab login returns to selected section/filter; callback URL no longer contains token fragment | Fixture only |
@@ -37,3 +37,9 @@ Use secure browser authentication for existing credentials. Never place password
 Release reconciliation is complete in the accompanying handoff/status update. Real authentication acceptance remains pending; source readiness and release success must not be reported as email delivery or Google acceptance.
 
 Checkpoint: PR [288](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/288). Three documentation files only; no runtime change. No account credentials were entered by the agent. Owner declining credential entry is not a website failure.
+
+## Real email/password acceptance — 2026-10-20T12:28:36+00:00
+
+Owner explicitly requested reopening email login. Secure browserAuth submitted existing credentials, which were not disclosed to the agent. The live site navigated to Home and displayed authenticated main navigation and the learner dashboard. Reload retained authenticated state; a separate fresh tab also displayed and loaded the dashboard with Keep me signed in selected. Account-menu Sign out was submitted; explicit target-origin navigation then showed the public homepage with Sign in/Create account.
+
+Result: real email/password login, reload/fresh-tab persistence and sign-out PASS in cloud Chromium. No native iPad, browser restart, natural refresh/expiry, real intended-section return, confirmation delivery or password recovery claim. No content/attempt/note writes or password change. No identifiers, passwords or tokens stored in this record. The earlier Google decline remains historical; owner chose email login for this continuation.
