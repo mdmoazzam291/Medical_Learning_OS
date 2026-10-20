@@ -317,7 +317,7 @@
 .mlos-public-menu nav{position:absolute;right:0;top:calc(100% + 8px);width:min(260px,calc(100vw - 24px));padding:10px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);z-index:60;display:grid;gap:4px}
 .mlos-public-menu nav a{padding:12px;min-height:44px;font-size:14px;color:var(--ink)}
 .mlos-public-menu summary:hover,.mlos-public-menu nav a:hover{background:var(--soft)}
-.mlos-app[data-public-navigation="true"] .policy-header{display:none}
+.mlos-app .policy-header{display:none}
 .mlos-app[data-public-navigation="true"] .policy-main [id]{scroll-margin-top:94px}
 @media(max-width:1050px){.mlos-public-header{gap:12px;padding:0 16px}.mlos-public-header .mlos-public-links{display:none}.mlos-public-header .mlos-utilities{margin-left:auto}}
 @media(max-width:700px){.mlos-public-header{padding:0 10px;gap:6px}.mlos-public-header .mlos-brand-short{display:none}.mlos-public-header .mlos-brand-mark{width:30px;height:32px}.mlos-public-header .mlos-utilities{gap:3px}.mlos-public-header .mlos-theme{min-width:36px;padding:8px}.mlos-public-create{font-size:12px;padding:9px 10px}.mlos-public-header .mlos-signin{padding:8px;font-size:12px}}

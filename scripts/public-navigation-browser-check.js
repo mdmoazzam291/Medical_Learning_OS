@@ -61,7 +61,10 @@ try {
       await page.goto(origin+'/web/services.html#'+anchor);
       await page.locator('.mlos-public-header').waitFor();
       assert.equal(await page.locator('header:visible').count(),1);
-      assert.ok(await page.locator('#'+anchor).isVisible()); checks++;
+      assert.ok(await page.locator('#'+anchor).isVisible());
+      // Enhanced policy pages keep one header for either authentication state.
+      await page.evaluate(() => document.body.dataset.publicNavigation = 'false');
+      assert.equal(await page.locator('header:visible').count(),1); checks++;
     }
     await page.goto(origin+'/web/account.html');
     await page.locator('#signin-form').waitFor();
