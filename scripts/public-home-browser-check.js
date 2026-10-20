@@ -40,6 +40,16 @@ try {
         await mkdir(process.env.SCREENSHOT_DIR, { recursive: true });
         await page.screenshot({ path: `${process.env.SCREENSHOT_DIR}/home-${viewport.width}-${javaScriptEnabled}.png`, fullPage: true });
       }
+      if (javaScriptEnabled) {
+        // Exercise the documented preview server, which serves allowlisted .html paths.
+        await page.getByLabel('Open public menu',{exact:true}).click();
+        await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Explore Medretica',exact:true}).click();
+        await page.waitForURL(`${origin}/web/services.html`);
+        await page.getByRole('heading',{name:'About Medretica & Services',exact:true}).waitFor();
+        assert.equal(await page.locator('.mlos-public-menu').getAttribute('open'),null);
+        await page.getByRole('link',{name:'Medretica Home',exact:true}).click();
+        await page.getByRole('heading',{name:'Your Medical Learning Operating System.',exact:true}).waitFor();
+      }
       await page.getByRole('link', { name: 'Sign in / create account' }).click();
       await page.waitForURL(`${origin}/web/account.html`);
       if (javaScriptEnabled) {

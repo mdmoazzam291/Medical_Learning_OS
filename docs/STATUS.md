@@ -1,5 +1,11 @@
 # Current status
 
+## Combined information link preview compatibility — 2026-10-20T11:37:21.479517+00:00
+- PR286 initial coded2ab6ae269a4c9bf23dcebdd65ecb0b514f0f575; independent review caught preview-only404 for clean /web/services because npm start admits exact allowlisted paths. Resolved with existing /web/services.html href, no fragment. Hosted canonical URL remains /web/services. No preview-server changes needed.
+- Added an actual npm start browser click to public-home-browser-check.js: Explore opens the combined page, closes menu, and returns Home across supported JS viewport cases. The existing hosted-style check covers canonical redirect and preserved section anchors. Exact-href regression failed before fix and passes afterward.
+- Final local1336Node/check/96-file build,125focused browser cases and6actual-preview/homepage/script/registration cases pass. Independent re-review reproduced HTTP200 for the rendered href and found no remaining actionable issues, with27focused Node tests independently passing. Hosted checks must rerun on this follow-up head before publication. Protected Account and services content files remain unchanged. Next: wait latest CI, merge after green, verify live2entry menu and canonical destination, then save release receipt.
+
+
 ## Consolidate public information links — 2026-10-20T11:33:19.938755+00:00
 - Owner approved the read-only audit recommendation: replace Explore/How it works/About header/menu entries with one Explore Medretica destination, keeping Preferences separately. Writer Codex; branch fix/consolidate-public-information-link; base0642387bbd797cbcb4b8f390f4a50c91bdf0521b. No overlapping writer observed.
 - Public information link now uses canonical /web/services without a fragment, opening the combined page from the top. Dropdown contains exactly Explore Medretica and Preferences; desktop inline public nav contains one information link. Services content, all3section IDs and old deep links remain; authenticated navigation, auth actions/theme control and protected Account content/runtime files are unchanged.
