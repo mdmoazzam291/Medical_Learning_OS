@@ -71,7 +71,9 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
   browser:
-    runs-on: ubuntu-latest
+    # Playwright 1.56.1 does not support the Ubuntu 26.04 image used by ubuntu-latest.
+    # Pin to a supported LTS runner until the browser verification stack is upgraded.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
