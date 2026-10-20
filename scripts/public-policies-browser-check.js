@@ -50,7 +50,7 @@ try {
   await page.goto(`${origin}/web/refunds.html`);
   assert.match(await page.locator('main').innerText(), /do not currently accept payments/);
   assert.doesNotMatch(await page.locator('main').innerText(), /7 calendar days/);
-  assert.equal(await page.locator('script, form, input').count(), 0);
+  assert.equal(await page.locator('form, input').count(), 0);
   await context.close();
   console.log(`Public policy browser checks passed: ${checks} page/viewport and rendered-footer checks; no external service calls permitted.`);
 } finally { await browser.close(); }

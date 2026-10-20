@@ -55,6 +55,8 @@ jobs:
           NAVIGATION_HEADED=1 DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/navigation-browser-check.js
       - name: Verify adaptive brand palettes in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/brand-browser-check.js
+      - name: Public guest navigation and preserved sign-in
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/public-navigation-browser-check.js
       - name: Verify Reference Review entry and authorized gate selection in WebKit
         run: |
           npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &
@@ -97,6 +99,8 @@ jobs:
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/guest-access-browser-check.js
       - name: Verify adaptive brand palettes and contrast
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/brand-browser-check.js
+      - name: Public guest navigation and preserved sign-in
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/public-navigation-browser-check.js
       - name: Verify public homepage and new-learner entry
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/public-home-browser-check.js
       - name: Verify public policies without login or JavaScript

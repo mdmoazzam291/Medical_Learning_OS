@@ -1,5 +1,13 @@
 # Current engineering handoff
 
+## Public guest navigation — 2026-10-20T09:32:34.990037+00:00
+- Writer Codex; branch fix/public-guest-navigation-20261020; base 3be392e5e55fd6d42ad76f40fae260a91a17785e. Owner approved proceeding with default sign-in page untouched.
+- Implemented public Explore/How it works/About navigation, moon, sign-in and create-account actions outside Account. Existing authenticated masters remain; Account rendering is excluded. Public policy pages share navigation and retain readable static content.
+- Personal workspace and My Notes guest gates explain each destination and preserve allowlisted return intent through authentication. Preferences remains available publicly. No provider, backend, content or learner-data changes.
+- Verified 1334/1334 Node tests; npm run check and 96-file build; 50 focused Chromium responsive/theme/destination cases; 19 existing guest authentication/return cases and 27 policy-page cases. Sixteen original sign-in header hashes pass; four default sign-in implementation files have no diff. Browser fixtures use synthetic local data only.
+- Checkpoint code commit is the commit containing this entry (resolve branch head; no self-referential SHA). Hosted Chromium/WebKit CI and broader navigation suite remain to verify. Not released to production. Next: inspect PR CI, fix any regressions, review final diff and follow owner publication authorization. No other writer owns this branch.
+
+
 ## Open Knowledge logo released — 2026-10-19T21:18Z
 - PR278 merged as 7d2d7faa2919c43f49dafd193d2a3bdb9b3b8f26; tested code d804ad3019f0dca68f3dacf9cbd8a90486b79e3d, tree98b4ce2ffc021ebc4190b9bb332303740c426113. This receipt supersedes the pending checkpoint below. Owner selected concept26 and requested present/future theme compatibility.
 - Live: the M/open-page vector replaces the leaf throughout shared learner/admin/public/account-preview branding. Primary follows the active accent, fold derives from accent/surface; future palettes need semantic tokens and contrast verification, not another logo or palette-name switch. Forced-colours uses LinkText with one silhouette; older colour-mix engines have a primary-only fallback.

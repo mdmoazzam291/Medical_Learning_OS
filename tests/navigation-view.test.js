@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 const view = await import('../web/navigation-view.js').catch(() => null);
 const model = await import('../src/domain/app-navigation.js').catch(() => null);
-const markup = options => { assert.ok(view, 'navigation can render the real shared shell'); return view.navigationMarkup(options); };
+const markup = options => { assert.ok(view, 'navigation can render the real shared shell'); return view.navigationMarkup({ signedIn: true, ...options }); };
 test('phone navigation uses one workspace menu and hides the closed sidebar', () => {
   const html = markup({ phone: true, master: 'study', prefs: { expanded: false }, isAdmin: true });
   const header = html.split('</header>')[0];

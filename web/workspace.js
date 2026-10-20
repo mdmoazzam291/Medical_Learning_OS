@@ -1,3 +1,4 @@
+import { guestToolContent } from '/web/guest-view.js';
 import { routeIdentity, navigationFor, preferenceStore } from '/src/domain/app-navigation.js';
 import { workspaceContent, preferencesContent } from '/web/workspace-view.js';
 import { escapeText as e } from '/web/navigation-view.js';
@@ -16,7 +17,7 @@ async function load(offset = 0) {
     // Appearance preferences are local device settings, available without learner data.
     if (identity.master === 'account' && identity.section === 'preferences') { data = {}; render(); return; }
     const session = await auth.getSession(); user = session?.user;
-    if (!user) { root.innerHTML = '<p>Sign in to open your learning workspace.</p><a class="primary action-link" href="/web/account.html">Open Account</a>'; return; }
+    if (!user) { root.innerHTML = guestToolContent(identity.section, location.pathname + location.search + location.hash); return; }
     const section = identity.section;
     if (section === 'preferences') data = {};
     else if (section === 'progress' || section === 'data') data = await cloud.progress();

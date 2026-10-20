@@ -44,11 +44,11 @@ try {
       assert.equal(await page.getByRole('button',{name:'Retry library',exact:true}).count(),0);
       assert.doesNotMatch(await page.locator('main').innerText(),/server-authoritative|server-side scoring|Cloud account/);
       assert.equal(await page.locator('[data-public-policies] a[href="/web/privacy.html"]').count(),1);
-      await page.getByLabel('Account menu',{exact:true}).click();
-      const menu=page.getByRole('navigation',{name:'Account navigation',exact:true});
+      await page.getByLabel('Open public menu',{exact:true}).click();
+      const menu=page.getByRole('navigation',{name:'Public menu',exact:true});
       assert.equal(await menu.getByRole('link',{name:'Profile',exact:true}).count(),0);
       assert.equal(await menu.getByRole('link',{name:'Preferences',exact:true}).isVisible(),true);
-      await page.getByLabel('Account menu',{exact:true}).click();
+      await page.getByLabel('Open public menu',{exact:true}).click();
       if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:`${process.env.SCREENSHOT_DIR}/guest-${width}-${path.includes('library')?'library':path.includes('exam')?'exam':'study'}.png`,fullPage:true});}
       cases++;
     }
@@ -56,8 +56,8 @@ try {
     await page.goto(origin+'/');
     await page.locator('.public-home').waitFor();
     if(width===820){const columns=await page.locator('.public-home .hero').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length);assert.equal(columns,2,'tablet Home should use two columns');}
-    await page.getByLabel('Account menu',{exact:true}).click();
-    await page.getByRole('navigation',{name:'Account navigation',exact:true}).getByRole('link',{name:'Preferences',exact:true}).click();
+    await page.getByLabel('Open public menu',{exact:true}).click();
+    await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Preferences',exact:true}).click();
     await page.getByRole('heading',{name:'Appearance and navigation',exact:true}).waitFor({timeout:3000});
     await page.getByLabel('Colour palette',{exact:true}).selectOption('lavender_precision');
     await page.getByLabel('Appearance',{exact:true}).selectOption('dark');
