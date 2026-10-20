@@ -1,5 +1,18 @@
 # Current engineering handoff
 
+## Combined information link preview compatibility — 2026-10-20T11:37:21.479517+00:00
+- PR286 initial coded2ab6ae269a4c9bf23dcebdd65ecb0b514f0f575; independent review caught preview-only404 for clean /web/services because npm start admits exact allowlisted paths. Resolved with existing /web/services.html href, no fragment. Hosted canonical URL remains /web/services. No preview-server changes needed.
+- Added an actual npm start browser click to public-home-browser-check.js: Explore opens the combined page, closes menu, and returns Home across supported JS viewport cases. The existing hosted-style check covers canonical redirect and preserved section anchors. Exact-href regression failed before fix and passes afterward.
+- Final local1336Node/check/96-file build,125focused browser cases and6actual-preview/homepage/script/registration cases pass. Independent re-review reproduced HTTP200 for the rendered href and found no remaining actionable issues, with27focused Node tests independently passing. Hosted checks must rerun on this follow-up head before publication. Protected Account and services content files remain unchanged. Next: wait latest CI, merge after green, verify live2entry menu and canonical destination, then save release receipt.
+
+
+## Consolidate public information links — 2026-10-20T11:33:19.938755+00:00
+- Owner approved the read-only audit recommendation: replace Explore/How it works/About header/menu entries with one Explore Medretica destination, keeping Preferences separately. Writer Codex; branch fix/consolidate-public-information-link; base0642387bbd797cbcb4b8f390f4a50c91bdf0521b. No overlapping writer observed.
+- Public information link now uses canonical /web/services without a fragment, opening the combined page from the top. Dropdown contains exactly Explore Medretica and Preferences; desktop inline public nav contains one information link. Services content, all3section IDs and old deep links remain; authenticated navigation, auth actions/theme control and protected Account content/runtime files are unchanged.
+- Tests-first reproduced the old3entry menu in2failing cases; focused regression now passes.1336/1336Node tests, npm run check,96-file build and125focused Chromium responsive/palette/appearance/click/destination cases pass. Test coverage verifies exact menu entries, responsive inline-link visibility, clicking Explore reaches combined page with no hash and closes menu, plus all prior section deep links. One initial browser assertion wrongly counted hidden inline links on phones; corrected to test responsive visibility, no product fix was required.
+- Current code commit resolves to feature branch head; not published. Next: independent review, hosted Chromium/WebKit checks, merge after green, verify live menu and save release receipt. No provider/backend/content/learner-data mutation or dependency change.
+
+
 ## Account public header released and audited — 2026-10-20T10:11:17.447640+00:00
 - PR284 merged as6cf629885f79b45e8ac1f1872dd8606da311a471; tested featured616ccb80f4398457ca88789ef0c75a267dc5029, tree19655b2504d4e872d2a13f99344793a56017cabf. Owner requested correcting masters on default sign-in and auditing recent changes; this supersedes Account-header exclusion while preserving Account content. The pending checkpoint below is historical.
 - Root cause was the explicit Account exception in isPublicGuestNavigation. All signed-out routes now use public navigation. Account has no Home/Study/Library/Exams master buttons, workspace search, private-tools menus, or redundant header auth shortcuts. It retains public product links, theme toggle and public Preferences. Signed-in learner/admin navigation is unchanged.

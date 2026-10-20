@@ -9,9 +9,20 @@ import * as guest from '../web/guest-view.js';
 test('signed-out visitors get public destinations instead of private workspace tools', () => {
   for(const phone of [false,true])for(const currentHref of ['/','/web/library.html?view=notes','/web/workspace?master=home&section=progress','/web/vault']){
     const html=navigationMarkup({signedIn:false,phone,currentHref});
-    assert.match(html,/Explore Medretica/); assert.match(html,/How it works/); assert.match(html,/About/);
+    assert.match(html,/Explore Medretica/);
+    assert.doesNotMatch(html,/>How it works<|>About</);
     assert.match(html,/Create account/); assert.match(html,/Preferences/); assert.match(html,/data-theme/);
     assert.doesNotMatch(html,/data-master=|data-workspace-menu=|data-pin=|role="search"|Past Runs|Mistake Review|Plans/);
+  }
+});
+
+test('public menu has one information destination plus Preferences', () => {
+  for (const phone of [false,true]) for (const currentHref of ['/','/web/services#how-it-works','/web/account']) {
+    const html=navigationMarkup({signedIn:false,phone,currentHref});
+    const menu=html.match(/<nav aria-label="Public menu">(.*?)<\/nav>/s)?.[1];
+    assert.ok(menu);
+    assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match=>match[1]), ['/web/services.html','/web/workspace.html?master=account&amp;section=preferences']);
+    assert.equal((menu.match(/>Explore Medretica</g)||[]).length,1);
   }
 });
 

@@ -133,7 +133,7 @@ export function isPublicGuestNavigation(signedIn, currentHref = '') {
 function publicNavigationMarkup(prefs, currentHref) {
   const accountPage = canonicalPagePath(new URL(currentHref || '/', 'https://medretica.com').pathname) === '/web/account.html';
   const authActions = accountPage ? '' : '<a class="mlos-signin" href="' + escapeText(accountEntryHref(currentHref)) + '">Sign in</a><a class="mlos-public-create" href="' + escapeText(accountEntryHref(currentHref,true)) + '">Create account</a>';
-  const links = '<a href="/web/services.html#explore">Explore Medretica</a><a href="/web/services.html#how-it-works">How it works</a><a href="/web/services.html#about">About</a>';
+  const links = '<a href="/web/services.html">Explore Medretica</a>';
   return '<header class="mlos-header mlos-public-header"><a class="mlos-brand" href="/" aria-label="Medretica Home" title="Medretica — Your Medical Learning Operating System"><span class="mlos-brand-mark" aria-hidden="true"></span><span class="mlos-brand-short">Medretica</span></a><nav class="mlos-public-links" aria-label="Public navigation">' + links + '</nav><div class="mlos-utilities">' + themeMarkup(prefs, false, currentHref) + authActions + '<details class="mlos-public-menu"><summary aria-label="Open public menu" title="Public menu">' + icon('menu') + '</summary><nav aria-label="Public menu">' + links + '<a href="/web/workspace.html?master=account&amp;section=preferences">Preferences</a></nav></details></div></header>';
 }
 export function navigationMarkup({ master = 'home', section = 'today', prefs: input, isAdmin = false, signedIn = false, currentHref = '', phone = false, compactHeader = false } = {}) {
