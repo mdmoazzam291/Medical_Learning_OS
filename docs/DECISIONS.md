@@ -1,5 +1,11 @@
 # Decision log
 
+## ADR-121 — Signed-out Account uses public navigation
+**Status:** Owner requested correction20October2026; implementation pending hosted verification.
+
+Supersede ADR120's Account-header exclusion following the owner's report that masters remain on sign-in. Apply public navigation to every signed-out route, including sign-in and registration. Account omits header auth shortcuts because the existing form supplies those actions; preserve the form, recovery, remember-me choice, benefits and product preview without edits. Authenticated learners/admin retain full workspace navigation.
+
+
 ## ADR-120 — Public navigation with an unchanged default sign-in page
 **Status:** Released in PR282 on20October2026; hosted check/browser/WebKit and production verification passed.
 

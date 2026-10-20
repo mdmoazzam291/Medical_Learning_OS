@@ -930,11 +930,11 @@ try {
       await page.waitForFunction(() => !document.querySelector('[data-master="admin"]'));
       await page.waitForLoadState('networkidle');
       await page.locator('body.account-landing-active').waitFor();
-      await activate(page.getByLabel('Appearance menu', { exact: true }));
-      const guestMenu = page.getByRole('navigation', { name: 'Appearance', exact: true });
+      await activate(page.getByLabel('Open public menu', { exact: true }));
+      const guestMenu = page.getByRole('navigation', { name: 'Public menu', exact: true });
       assert.equal(await guestMenu.getByRole('link', { name: 'Sign in', exact: true }).count(), 0);
       assert.equal(await guestMenu.getByRole('link', { name: 'Create account', exact: true }).count(), 0);
-      assert.equal(await guestMenu.getByRole('link', { name: 'Appearance preferences', exact: true }).isVisible(), true);
+      assert.equal(await guestMenu.getByRole('link', { name: 'Preferences', exact: true }).isVisible(), true);
       assert.equal(await guestMenu.getByRole('button', { name: 'Sign out', exact: true }).count(), 0);
     }
 

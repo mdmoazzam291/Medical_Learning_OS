@@ -45,12 +45,29 @@ try {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), String(width));
       await page.getByLabel('Open public menu',{exact:true}).click();
       assert.ok(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Preferences',exact:true}).isVisible());
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'open menu overflows '+width);
       await page.keyboard.press('Escape');
+      assert.ok(await page.getByLabel('Open public menu',{exact:true}).evaluate(node => node === document.activeElement));
       assert.equal(await page.locator('.mlos-public-menu').getAttribute('open'),null);
+      for (const accountPath of ['/web/account.html','/web/account?mode=create']) {
+        await page.goto(origin+accountPath);
+        await page.locator('body.account-landing-active').waitFor();
+        assert.equal(await page.locator('[data-master], [data-workspace-menu], #mlos-panel, #mlos-global-search, .mlos-signin, .mlos-public-create').count(),0);
+        assert.equal(await page.locator('header:visible').count(),1);
+        assert.ok(await page.locator('[data-theme]').isVisible());
+        assert.equal(await page.locator('.account-product-story, .account-benefits, .account-device-stage').count(),3);
+        assert.ok(await page.getByLabel('Keep me signed in',{exact:true}).isChecked());
+        assert.equal(await page.locator('html').getAttribute('data-palette'),palette);
+        assert.equal(await page.locator('html').getAttribute('data-appearance'),appearance);
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+        if(accountPath.includes('create')) assert.ok(await page.locator('#signup-form').isVisible());
+        else assert.ok(await page.locator('#signin-form').isVisible());
+        checks++;
+      }
       await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
       checks++;
     }
-    for (const destination of ['/web/workspace.html?master=home&section=progress','/web/workspace.html?master=study&section=mistakes','/web/vault.html']) {
+    for (const destination of ['home:progress','home:recent','study:mistakes','study:revision','exams:dna','exams:past','exams:autopsy','exams:rules'].map(pair => { const [master,section]=pair.split(':'); return '/web/workspace.html?master='+master+'&section='+section; }).concat('/web/vault.html')) {
       await page.goto(origin+destination);
       await page.locator('.guest-card').waitFor();
       const href = await page.locator('.guest-card').getByRole('link',{name:'Sign in →',exact:true}).getAttribute('href');
@@ -68,7 +85,8 @@ try {
     }
     await page.goto(origin+'/web/account.html');
     await page.locator('#signin-form').waitFor();
-    assert.equal(await page.locator('.mlos-public-header').count(),0);
+    assert.equal(await page.locator('.mlos-public-header').count(),1);
+    assert.equal(await page.locator('[data-master], [data-workspace-menu], #mlos-panel, #mlos-global-search, .mlos-signin, .mlos-public-create').count(),0);
     assert.equal(await page.locator('header:visible').count(),1);
     assert.deepEqual(errors,[]);
     await context.close();

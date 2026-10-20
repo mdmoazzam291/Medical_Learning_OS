@@ -53,9 +53,9 @@ try {
         assert.equal(await page.getByLabel('Keep me signed in', { exact: true }).isChecked(), true);
         assert.equal(await page.getByLabel('Keep me signed in', { exact: true }).isEnabled(), true);
         assert.equal(await page.locator('.account-auth-intro').innerText(), 'Continue your learning across devices.');
-        await page.locator('summary[aria-label="Appearance menu"]').click();
+        await page.getByLabel('Open public menu',{exact:true}).click();
         assert.equal(await page.locator('.mlos-account-menu a').filter({ hasText: /Sign in|Create account/ }).count(), 0);
-        await page.locator('.mlos-account summary').click();
+        await page.getByLabel('Open public menu',{exact:true}).click();
         await page.locator('.mlos-theme').click();
         assert.equal(await page.locator('html').getAttribute('data-appearance'), 'dark');
         assert.equal(await page.locator('.mlos-theme').evaluate(el => el === document.activeElement), true);

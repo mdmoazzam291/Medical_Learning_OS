@@ -15,9 +15,18 @@ test('signed-out visitors get public destinations instead of private workspace t
   }
 });
 
-test('default sign-in navigation remains byte-for-byte identical across appearances and layouts', async () => {
-  const cases=JSON.parse(await readFile(new URL('./fixtures/signin-navigation-baseline.json',import.meta.url),'utf8'));
-  for(const row of cases)assert.equal(createHash('sha256').update(navigationMarkup(row.options)).digest('hex'),row.sha256);
+test('signed-out sign-in and registration routes show only public navigation', () => {
+  for (const phone of [false,true]) for (const currentHref of ['/web/account','/web/account.html','/web/account?mode=create','/web/account.html?returnTo=%2Fweb%2Fvault','/web/account#access_token=synthetic']) {
+    const html=navigationMarkup({signedIn:false,phone,currentHref,master:'account'});
+    assert.match(html,/mlos-public-header/);
+    assert.match(html,/Explore Medretica/); assert.match(html,/data-theme/); assert.match(html,/Preferences/);
+    assert.doesNotMatch(html,/data-master=|data-workspace-menu=|data-rail|mlos-global-search|mlos-panel|mlos-signin|mlos-public-create/);
+  }
+});
+
+test('sign-in form, benefits and preview implementation stay unchanged', async () => {
+  const files=JSON.parse(await readFile(new URL('./fixtures/signin-content-baseline.json',import.meta.url),'utf8'));
+  for(const [path,sha256] of Object.entries(files)) assert.equal(createHash('sha256').update(await readFile(new URL('../'+path,import.meta.url))).digest('hex'),sha256,path);
 });
 
 test('signed-in learners and administrators retain workspace navigation',()=>{
