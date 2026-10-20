@@ -302,7 +302,7 @@
 
 @media(max-width:700px){.mlos-header:has(.mlos-signin)>.mlos-theme{display:none}}
 
-/* Public navigation is scoped away from the owner-preserved sign-in page. */
+/* Public navigation applies to every signed-out page, including Account. */
 .mlos-app[data-public-navigation="true"]{padding-left:0}
 .mlos-public-header{display:flex;gap:24px;justify-content:space-between;padding:0 24px}
 .mlos-public-header .mlos-brand{flex:none}

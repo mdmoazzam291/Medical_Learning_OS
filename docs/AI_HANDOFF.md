@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Account public-header correction — 2026-10-20T09:58:53.833458+00:00
+- Owner reports master navigation on default sign-in page and requests a bug audit. This supersedes the earlier instruction to exclude Account's shared header; only the header changes. Preserve account.html/account.js/account-landing.js/css exactly. Writer Codex; branch fix/account-public-navigation-20261020, basec14ff201c81dcd375393e97e25fab118a7ad7c4c; no competing writer observed.
+- Root cause reproduced with a failing test: isPublicGuestNavigation explicitly excluded /web/account. Now all signed-out pages use the public header. Account header omits redundant Sign in/Create account shortcuts, while keeping public product links, theme toggle and Preferences menu. Authenticated masters remain. No provider/backend/content/learner-data changes.
+- Replaced obsolete original-header hashes with byte baselines for the four unchanged sign-in content/runtime assets. Added actual Account/create rendering across5viewport widths,2palettes,2appearances, menu overflow/Escape focus and all8personal tool gates. Updated existing logout/header browser selectors to match the revised owner requirement.
+- Verified1335/1335Node tests, npm run check,96-file build;120focused responsive/theme/destination cases,6homepage/registration cases,21guest/auth-return cases,27policy cases pass in local Chromium. No further functional defect reproduced in those flows. Broad navigation and hosted Chromium/WebKit pending. Current code commit resolves to the feature branch head; not yet published. Next: inspect hosted checks and broader suite, fix any actual failure, merge only after green, then verify live Account and save receipt.
+
+
 ## Public navigation released — 2026-10-20T09:51:07.844349+00:00
 - Owner approved implementing the preview on20October2026. PR282 merged as9b6ce6945eeb5b93029a91f960f18ebafd7f2daa; final tested feature head1041d90c78428733115cd55007829cf0ad480b10, tree3da8a186f7f32c1f28ba313f0f56e83174dec7fe. This release supersedes the pending checkpoints below.
 - Signed-out pages outside Account now use Explore/How it works/About, theme toggle, Sign in/Create account and a compact public menu with Preferences. Authenticated master navigation stays intact. Personal tool/My Notes gates keep safe sign-in return intent. Static policy content remains readable without JavaScript and has one enhanced header in either auth state.
