@@ -1,13 +1,30 @@
 import { CONTENT_GROUPS, exploreConcepts, conceptDossier, conceptNeighborhood, transitionContext } from '../src/domain/content-workspace.js';
+import { groupReviewedNoteSections } from '../src/domain/concept-dossier-sections.js';
 import { escapeText as e } from './navigation-view.js';
 const title = value => String(value).replace(/-/g,' ').replace(/^./,c=>c.toUpperCase());
 const empty = text => '<div class="workspace-empty"><p>'+e(text)+'</p></div>';
 const href = (search, values) => e(transitionContext(search,values));
 const noteMarkup = (n,draft=false) => '<article class="panel" data-note-card="'+e(n.noteVersionId)+'" tabindex="-1"><h3>'+e(n.title)+'</h3><small>'+(draft?'Draft note · ':'Published note · ')+e(n.noteVersionId)+'</small><div class="library-note-body">'+e(n.bodyMarkdown)+'</div><a href="/web/vault.html?concept='+encodeURIComponent(n.conceptId)+'">Sources and private notes in NeuralVault</a></article>';
+const MAX_DOSSIER_EXCERPTS = 24;
 function overview(d, search, draft) {
   if (!d.concept) return '';
   const collection = (view, label, count, extra={}) => '<a class="cw-content-home" href="'+href(search,{view,...extra})+'"><strong>'+count+'</strong><span>'+label+'</span></a>';
-  return '<section aria-label="Concept dossier" data-dossier-id="'+e(d.concept.conceptId)+'"><div class="cw-homes">'+collection('notes','Notes',d.counts.notes)+collection('questions','Questions',d.counts.questions)+collection('questions','PYQs',d.counts.pyq,{collection:'pyq'})+collection('media','Visuals',d.counts.media)+collection('cases','Cases',d.counts.cases)+'</div><h2>Essential understanding</h2>'+(d.notes.length ? d.notes.slice(0,1).map(n=>noteMarkup(n,draft)).join('') : empty(draft?'No draft note is linked to this concept.':'No published note for this concept. It will appear here after review and publication.'))+'<div class="workspace-chips"><a href="'+href(search,{view:'questions'})+'">Retrieve with linked questions</a><a href="'+href(search,{view:'foundation'})+'">Explore prerequisites</a><a href="'+href(search,{view:'compare'})+'">Compare concepts</a></div><p class="muted">Reading and graph exploration do not establish mastery. Practice uses the separate scored Study session.</p></section>';
+  const sections = groupReviewedNoteSections(d.notes,d.sources);
+  let shown=0;
+  const fragments=sections.map(group=>{
+    const count=Math.max(0,MAX_DOSSIER_EXCERPTS-shown),items=group.items.slice(0,count);
+    shown+=items.length;
+    if(!items.length)return '';
+    return '<section class="cw-dossier-section" data-dossier-section="'+e(group.id)+'"><h3>'+e(group.label)+'</h3>'+items.map(item=>
+      '<article class="cw-dossier-excerpt"><h4>'+e(item.title)+'</h4><p class="cw-dossier-body">'+e(item.body)+'</p><p class="cw-dossier-provenance">'+(draft?'Draft note':'Published note')+': '+e(item.noteTitle)+' · '+e(item.noteVersionId)+'</p>'+
+      (item.sourceRecords.length?'<p class="cw-dossier-provenance">'+(draft?'Candidate source records':'Linked sources')+': '+item.sourceRecords.map(s=>e(s.title||s.sourceId)+' · '+e(s.version||'Version unavailable')).join(' | ')+'</p>':'<p class="cw-dossier-provenance">Source metadata unavailable here; inspect full note/reference context.</p>')+
+      (item.missingSourceIds.length?'<p class="cw-dossier-provenance">'+item.missingSourceIds.length+' unresolved source ID(s)</p>':'')+
+      '</article>').join('')+'</section>';
+  }).join('');
+  const total=sections.reduce((sum,g)=>sum+g.items.length,0);
+  return '<section aria-label="Concept dossier" data-dossier-id="'+e(d.concept.conceptId)+'"><div class="cw-homes">'+collection('notes','Notes',d.counts.notes)+collection('questions','Questions',d.counts.questions)+collection('questions','PYQs',d.counts.pyq,{collection:'pyq'})+collection('media','Visuals',d.counts.media)+collection('cases','Cases',d.counts.cases)+'</div>'+
+    (total?'<h2>'+(draft?'Draft note sections · not reviewed':'Reviewed clinical content')+'</h2><p class="muted">Sections follow explicit note headings. Missing clinical knowledge is not generated.</p>'+fragments+(shown<total?'<p class="muted">Showing '+shown+' of '+total+' exact note sections. Open Notes for the remainder.</p>':''):'<h2>Essential understanding</h2>'+empty(draft?'No draft note is linked to this concept.':'No published note for this concept. It will appear here after review and publication.'))+
+    '<div class="workspace-chips"><a href="'+href(search,{view:'notes'})+'">Open exact notes</a>'+(draft?'':'<a href="'+href(search,{view:'recall'})+'">Recall before rereading</a>')+'<a href="'+href(search,{view:'questions'})+'">Retrieve with linked questions</a><a href="'+href(search,{view:'foundation'})+'">Explore prerequisites</a><a href="'+href(search,{view:'compare'})+'">Compare concepts</a></div><p class="muted">Reading, recall drafts and graph exploration do not establish mastery. Only accepted scored attempts generate assessment evidence.</p></section>';
 }
 function inspector(d, search, draft, limit=50) {
   if (!d.concept) return '<h2>Related context</h2><p>Select a concept to see its artifacts, references and learning actions.</p>';
