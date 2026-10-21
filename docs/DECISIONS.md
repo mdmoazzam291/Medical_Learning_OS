@@ -1,5 +1,10 @@
 # Decision log
 
+## ADR-125 — One responsive website with a shared-backend PWA
+**Status:** Owner-approved future direction, 21 October 2026; implementation planned.
+
+Maintain one responsive website, strengthen its installable PWA experience, and keep the same backend across phones, tablets and desktop computers. Extend the existing learner application and operations roadmap rather than creating platform-specific learning stores. Installation, explicitly supported offline activities, incremental synchronization and safe updates require device-level acceptance; this decision is not evidence that those capabilities already work. Preserve canonical IDs, exact event/content versions, learner isolation, review authority and provider independence. Dedicated mobile packages may be evaluated later against demonstrated needs; a separate desktop application is lower priority. See the cross-device section in [ROADMAP.md](ROADMAP.md). Engineering and provider migrations remain paused outside the documentation authorized here.
+
 ## ADR-122 — One public product-information destination
 **Status:** Released in PR286 on20October2026; hosted Chromium/WebKit and live menu/destination verification passed.
 

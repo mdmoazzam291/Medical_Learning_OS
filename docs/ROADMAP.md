@@ -1,5 +1,19 @@
 # Implementation roadmap
 
+## Cross-device website and installable PWA — owner-approved direction, 2026-10-21
+
+**Status: PLANNED; future implementation.** Maintain one responsive website, strengthen its installable Progressive Web App (PWA) experience, and use the same backend across phones, tablets and desktop computers. This extends M03 (learner application/access) and M14 (operations/reliability); it does not reopen completed milestones or create a separate learning system.
+
+- Keep one shared responsive interface and canonical backend for accounts, content versions, learner evidence and derived learning state. Preserve provider-independent domain logic and existing review/access controls.
+- Improve installation and standalone launch on supported browsers, then add explicitly scoped offline study with durable local queues and incremental synchronization. Cache only content the learner may access; do not assume protected answers or private records are safe to include in public static assets.
+- Preserve exact question/event versions, idempotent retries, account isolation and resumable sessions. Expose pending/failed sync honestly and handle reconnection, storage eviction and account changes without losing or duplicating answers.
+- Apply updates at safe study boundaries; avoid forced reloads during an answer or exam. Keep old clients compatible while updates roll out.
+- Verify phone, tablet and desktop layouts; installation, offline recovery, synchronization and updates on iPhone/iPad Safari, Android and desktop browsers. Document unsupported capabilities rather than promising identical browser behavior.
+
+**Exit evidence:** a supported device can install and reopen the app; the same account retrieves synchronized history across devices; supported offline answers survive restart and reconnect exactly once; account switching does not expose another learner's cache; an update preserves an in-progress session. Measure failures, transferred bytes and sync reliability before expanding scope.
+
+**Priority:** launch prerequisites and a reliable online learning loop come first. Evaluate packaged Android/iOS apps later only when demonstrated learner needs justify the additional maintenance; a separate desktop application is lower priority. Recording this direction does not resume paused engineering, authorize a provider migration, or claim that offline/PWA acceptance is complete.
+
 ## Current consumer gateway decision — 2026-10-14 (supersedes earlier Razorpay proposal)
 The owner selected **Cashfree primary** and **PhonePe fallback**. Retire inactive Razorpay test code from active tree, preserve history. Implement only a server-only, default-disabled Cashfree sandbox adapter and test receipt/verifier at this stage. PhonePe stays a documented alternative with no automatic mandate transfer, live adapter or production route. Next work before any paid checkout: approved published medical content, verified study-to-retention learning loop, actual Cashfree sandbox integration with test credentials, server-authenticated billing/reconciliation/idempotency, consent/mandate and tax review, and separate owner release authorization. See `docs/CONSUMER_PAYMENT_GATEWAY.md`.
 
