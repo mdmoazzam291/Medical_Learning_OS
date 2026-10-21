@@ -12,6 +12,8 @@
     "demo": "node examples/study-session.js",
     "build:pages": "node scripts/build-pages.js",
     "start": "node scripts/serve.js",
-    "start:api": "node scripts/api.js"
+    "start:api": "node scripts/api.js",
+    "check:portability": "node scripts/check-portability.js",
+    "migration:pack": "node scripts/migration-pack.js"
   }
 }

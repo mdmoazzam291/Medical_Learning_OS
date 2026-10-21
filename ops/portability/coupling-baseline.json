@@ -1,0 +1,694 @@
+{
+  ".github/workflows/cashfree-sandbox-once.yml": [
+    "cashfree",
+    "cloudflare",
+    "github"
+  ],
+  ".github/workflows/ci.yml": [
+    "github"
+  ],
+  ".github/workflows/content-inbox.yml": [
+    "github",
+    "supabase"
+  ],
+  ".github/workflows/content-reset-backup-erasure.yml": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  ".github/workflows/indexnow.yml": [
+    "github"
+  ],
+  ".github/workflows/r2-smoke-test.yml": [
+    "cloudflare",
+    "github"
+  ],
+  ".github/workflows/r2-storage-audit.yml": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  ".github/workflows/restore-drill.yml": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  ".github/workflows/study-api-smoke.yml": [
+    "cloudflare",
+    "render",
+    "supabase"
+  ],
+  ".github/workflows/supabase-r2-backup.yml": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  ".github/workflows/supabase-r2-restore-drill.yml": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  "cloudflare/cashfree-sandbox-worker.js": [
+    "cashfree",
+    "cloudflare"
+  ],
+  "cloudflare/edge-worker.js": [
+    "cloudflare",
+    "render"
+  ],
+  "ops/cloudflare-heartbeat/worker.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "ops/cloudflare-heartbeat/wrangler.jsonc": [
+    "cloudflare"
+  ],
+  "ops/content-reset/purge_backups.py": [
+    "cloudflare",
+    "supabase"
+  ],
+  "ops/r2-backups/storage_guard.py": [
+    "cloudflare",
+    "supabase"
+  ],
+  "render.yaml": [
+    "render"
+  ],
+  "scripts/auth-recovery-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/brand-browser-check.js": [
+    "cloudflare"
+  ],
+  "scripts/browser-check.js": [
+    "github",
+    "supabase"
+  ],
+  "scripts/build-pages.js": [
+    "cloudflare",
+    "sentry",
+    "supabase"
+  ],
+  "scripts/cashfree-actions-once.sh": [
+    "cashfree",
+    "cloudflare",
+    "github"
+  ],
+  "scripts/cashfree-probe-once.sh": [
+    "cashfree",
+    "cloudflare"
+  ],
+  "scripts/confidence-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/correction-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/exam-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/feedback-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/guest-access-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/learner-report-triage-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/lib/service-portability.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "scripts/library-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/navigation-browser-check.js": [
+    "cloudflare",
+    "github",
+    "supabase"
+  ],
+  "scripts/privacy-scope-db-check.js": [
+    "supabase"
+  ],
+  "scripts/public-home-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/public-navigation-browser-check.js": [
+    "cloudflare"
+  ],
+  "scripts/public-surface.js": [
+    "sentry",
+    "supabase"
+  ],
+  "scripts/question-intelligence-db-check.js": [
+    "supabase"
+  ],
+  "scripts/references-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/retention-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/retention-origin-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/serve.js": [
+    "sentry",
+    "supabase"
+  ],
+  "scripts/stage-content-inbox.js": [
+    "supabase"
+  ],
+  "scripts/study-entry-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/ux-journey-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/vault-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/vault-drafts-browser-check.js": [
+    "supabase"
+  ],
+  "src/adapters/cashfree-production.js": [
+    "cashfree"
+  ],
+  "src/adapters/cashfree-sandbox-bindings.js": [
+    "cashfree",
+    "cloudflare"
+  ],
+  "src/adapters/cashfree-test.js": [
+    "cashfree"
+  ],
+  "src/adapters/cloud-owner.js": [
+    "supabase"
+  ],
+  "src/adapters/cloud-retention-probe.js": [
+    "supabase"
+  ],
+  "src/adapters/cloud-review.js": [
+    "supabase"
+  ],
+  "src/adapters/cloud-study.js": [
+    "supabase"
+  ],
+  "src/adapters/error-monitoring.js": [
+    "supabase"
+  ],
+  "src/adapters/supabase-auth.js": [
+    "supabase"
+  ],
+  "src/domain/consumer-billing-eligibility.js": [
+    "cashfree"
+  ],
+  "src/domain/consumer-payment-providers.js": [
+    "cashfree",
+    "phonepe"
+  ],
+  "src/domain/exam-simulator.js": [
+    "supabase"
+  ],
+  "src/domain/operational-recovery.js": [
+    "github"
+  ],
+  "src/server/admin-mcp.js": [
+    "render",
+    "supabase"
+  ],
+  "supabase/functions/content-library-api/_shared/handler.js": [
+    "supabase"
+  ],
+  "supabase/functions/content-library-api/index.ts": [
+    "render",
+    "supabase"
+  ],
+  "supabase/functions/infrastructure-monitor/index.ts": [
+    "cloudflare",
+    "github",
+    "render",
+    "resend",
+    "sentry",
+    "supabase"
+  ],
+  "supabase/functions/learner-experiment-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/learner-experiment-api/index.ts": [
+    "render",
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/index.ts": [
+    "cloudflare",
+    "github",
+    "render",
+    "resend",
+    "sentry",
+    "supabase"
+  ],
+  "supabase/functions/retention-probe-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/retention-probe-api/index.ts": [
+    "render",
+    "supabase"
+  ],
+  "supabase/functions/review-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/review-api/index.ts": [
+    "render",
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/exam-runtime.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/gt-autopsy.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/learner-navigation.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/post-answer-teaching.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/session-summary.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/_shared/visual-detection.js": [
+    "supabase"
+  ],
+  "supabase/functions/study-api/index.ts": [
+    "render",
+    "supabase"
+  ],
+  "supabase/migrations/20260926120000_content_review_evidence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926123000_atomic_review_projection.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926124000_fix_review_hash_ambiguity.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926130000_verified_publication_gate.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926133000_gate_specific_review_and_rights.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926140000_reviewer_grant_governance.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926144550_add_citation_only_source_rights.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926172500_revision_projection.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926190000_study_recommendation_events.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926192000_study_recommendation_outcomes.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260926194000_memory_judgments.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927101000_fsrs_shadow_evidence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927103500_fsrs_shadow_question_coverage.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927111500_schedule_policy_decisions.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927114500_policy_experiment_framework.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927123000_neural_vault_foundation.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927124500_neural_note_review_lifecycle.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927125000_concept_evidence_projection.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927130000_neural_note_provenance.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927132000_mistake_evidence_projection.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927140500_exam_occurrence_pyq_evidence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927143500_exam_dna_observations.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927145500_exam_run_ledger.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927162000_exam_mock_readiness.sql": [
+    "drive",
+    "supabase"
+  ],
+  "supabase/migrations/20260927173000_content_intake_pipeline.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927174500_content_intake_trigger_permissions.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927175500_internal_trigger_rpc_permissions.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927181000_content_intake_overlap_preflight.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927182000_fix_content_intake_overlap_tokenization.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927213048_ai_test_review_authority.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927213800_ai_test_review_trigger_security.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927222051_m10a_media_persistence_review_binding.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927224500_m10a_existing_media_link.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260927232000_canonical_learning_event_stream.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928003000_privacy_safe_evidence_immutability.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928112019_m10b_visual_interaction_ledger.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928112441_m10b_visual_interaction_fk_indexes.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928115059_review_api_media_target_service_access.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928120011_m10b_canonical_visual_interaction_profile.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928145039_m02c_review_workflow_measurement.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928164037_m14_revoke_trigger_function_browser_execute.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928180541_m08b_historical_exam_item_evidence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928192031_m11a_delayed_retrieval_observation_projection.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928193141_m11b_retention_probe_readiness.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928203738_m02b_retire_duplicate_candidate.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928205212_m02c_atomic_batch_human_review.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928205518_full_question_review_bundle.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928210400_structured_human_review_batch.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928214728_m06d_personal_correction_overlay.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928220030_m06d_privacy_scope_v3.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928221939_m02d_learner_report_triage.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260928224239_m11b1_retention_probe_preregistration.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929030036_m11c_transfer_pair_validation.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929030109_m11c_transfer_pair_validator_index.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929030652_m11c_refresh_structural_readiness.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929032000_single_content_admin.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929034500_m11d_retention_probe_learner_opt_in.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929034600_m11d_privacy_scope_v4.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929233000_m11f_activation_authorization.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929235000_m11f2_probe_scheduler_kernel.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929235100_m11f2_privacy_scope_v5.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260929235900_m11f3_delivery_evidence_kernel.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930000500_m11f3_privacy_scope_v6.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930002000_m11g_feasibility_analysis.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930004500_m05c_study_now_integrity.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930004600_m05c_privacy_scope_v7.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930010500_m05d_memory_engine_evidence_readiness.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930090000_m11f4_learner_delivery_render.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930090100_m11f4_privacy_scope_v8.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930090200_m11f4_probe_answer_rpc.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930090300_m11f4_definer_search_path.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930102000_m11c_fix_pair_readiness_lookup.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930103500_m11f4_refresh_evidence_readiness.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930105000_m11f2_fix_scheduler_pair_resolution.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260930164500_m11f5_learner_origin_handoff.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003111000_owner_admin_console_v1.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003114500_owner_operations_v2.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003115000_owner_operations_v2_followup.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003115100_owner_admin_audit_immutable.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003145000_owner_monitor_cron_timeout_v2.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003153000_owner_operations_v3.sql": [
+    "resend",
+    "sentry",
+    "supabase"
+  ],
+  "supabase/migrations/20261003160000_answer_confidence_beta.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003170000_infrastructure_alert_delivery.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003173000_privacy_scope_v10_owner_operations.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003174500_infrastructure_alert_indexes.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261003224909_canonical_content_library.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261004135405_question_intelligence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261004141627_original_question_evidence.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261012070645_owner_medical_source_observations_v1.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261016120000_consumer_billing_foundation.sql": [
+    "cashfree",
+    "supabase"
+  ],
+  "supabase/migrations/20261016130000_consumer_billing_reservations.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261020131627_privacy_scope_stored_relations.sql": [
+    "supabase"
+  ],
+  "supabase/verification/connected-learning-pilot.sql": [
+    "supabase"
+  ],
+  "supabase/verification/content-library.sql": [
+    "supabase"
+  ],
+  "supabase/verification/rls-isolation.sql": [
+    "supabase"
+  ],
+  "supabase/verification/service-boundary-audit.sql": [
+    "supabase"
+  ],
+  "web/account.html": [
+    "sentry"
+  ],
+  "web/account.js": [
+    "supabase"
+  ],
+  "web/admin.html": [
+    "sentry"
+  ],
+  "web/admin.js": [
+    "supabase"
+  ],
+  "web/answer-confidence-beta.js": [
+    "supabase"
+  ],
+  "web/app.js": [
+    "supabase"
+  ],
+  "web/cloud-config.js": [
+    "supabase"
+  ],
+  "web/content-library-client.js": [
+    "supabase"
+  ],
+  "web/exam.html": [
+    "sentry"
+  ],
+  "web/exam.js": [
+    "supabase"
+  ],
+  "web/index.html": [
+    "sentry"
+  ],
+  "web/medical.html": [
+    "sentry"
+  ],
+  "web/medical.js": [
+    "supabase"
+  ],
+  "web/monitoring.js": [
+    "render",
+    "sentry"
+  ],
+  "web/navigation.js": [
+    "supabase"
+  ],
+  "web/oauth-consent.html": [
+    "sentry"
+  ],
+  "web/oauth-consent.js": [
+    "supabase"
+  ],
+  "web/owner-console.js": [
+    "cloudflare",
+    "resend",
+    "sentry",
+    "supabase"
+  ],
+  "web/owner-v3-console.js": [
+    "supabase"
+  ],
+  "web/plans.html": [
+    "sentry"
+  ],
+  "web/privacy.html": [
+    "cloudflare",
+    "sentry",
+    "supabase"
+  ],
+  "web/retention-origin.html": [
+    "sentry"
+  ],
+  "web/retention-origin.js": [
+    "supabase"
+  ],
+  "web/retention.html": [
+    "sentry"
+  ],
+  "web/retention.js": [
+    "supabase"
+  ],
+  "web/review.html": [
+    "sentry"
+  ],
+  "web/review.js": [
+    "supabase"
+  ],
+  "web/sentry-bootstrap.js": [
+    "render",
+    "resend",
+    "sentry",
+    "supabase"
+  ],
+  "web/vault.html": [
+    "sentry"
+  ],
+  "web/vault.js": [
+    "supabase"
+  ],
+  "web/workspace.js": [
+    "supabase"
+  ],
+  "wrangler.cashfree-sandbox.jsonc": [
+    "cashfree",
+    "cloudflare"
+  ],
+  "wrangler.jsonc": [
+    "cloudflare",
+    "render"
+  ]
+}

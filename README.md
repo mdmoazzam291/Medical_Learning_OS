@@ -5,6 +5,7 @@
 A concept-centered medical learning system: study → answer → understand mistakes → revise → measure retention.
 
 ## Start here
+- [Replaceable services, data migration and future integration rules](docs/SERVICE_PORTABILITY.md)
 - [AI-independent development and switching tools](docs/AI_CONTINUITY.md)
 - [Current engineering handoff](docs/AI_HANDOFF.md)
 - [Starter prompt for Claude Code or Codex](docs/AI_STARTER_PROMPT.md)

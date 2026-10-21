@@ -1,3 +1,4 @@
+import { checkServicePortability } from './lib/service-portability.js';
 import { readdirSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { validateCatalog, selectPublishedQuestions } from '../src/domain/content.js';
@@ -33,5 +34,6 @@ for (const id of legacyDuplicateAdrIds) {
   }
 }
 
-console.log('Syntax, draft catalog, and decision-ledger checks passed');
+const portability = checkServicePortability();
+console.log(`Syntax, draft catalog, decision-ledger and service-portability checks passed (${portability.services} services; ${portability.locations} coupling locations)`);
 
