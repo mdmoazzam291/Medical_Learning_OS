@@ -819,8 +819,12 @@ try {
       assert.equal(await page.locator('#cw-pane-dialog').evaluate(node=>node.open),false,'Global search must not open an underlying Library pane');
       await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
       const outsideX = await page.evaluate(() => document.documentElement.clientWidth - 12);
+      assert.equal(await page.evaluate(x => document.elementFromPoint(x, 170)?.hasAttribute('data-close-global-search'), outsideX),
+        true, 'Expanded search must cover the underlying Library controls with a dismiss-only surface');
       if (touch) await page.touchscreen.tap(outsideX, 170); else await page.mouse.click(outsideX, 170);
       assert.equal(await page.locator('#mlos-navigation').evaluate(node => node.classList.contains('mlos-search-open')), false);
+      assert.equal(await page.locator('#cw-pane-dialog').evaluate(node => node.open), false,
+        'Outside tap must only dismiss search, never open the Explorer or context dialog');
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       assert.equal(await page.locator('#cw-pane-dialog').evaluate(node=>node.open),false,'Global search must not open an underlying Library pane');
       assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Unsubmitted draft');
