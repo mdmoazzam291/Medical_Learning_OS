@@ -16,6 +16,7 @@ export const MEDIA_TYPES = Object.freeze([
   ['procedure-videos', 'Procedure videos'], ['mechanism-animations', 'Mechanism animations']
 ].map(([id, label]) => ({ id, label })));
 const libraryRows = [
+  item('overview', 'Concept Explorer', 'reference', library('overview')),
   item('subjects', 'Subjects & Topics', 'subjects', library('subjects'), [item('index', 'Subject Index', 'subjects', library('subjects'), SUBJECT_INDEX.map(s => item(s.id, s.label, 'book', library('subjects', '&subject=' + s.id), s.modules.map(m => item(m.id, m.label, 'book', library('subjects', '&subject=' + s.id + '&module=' + m.id))))))]),
   item('notes', 'Concept Notes', 'book', library('notes')),
   item('questions', 'Questions', 'questions', library('questions')),
@@ -31,7 +32,7 @@ const libraryRows = [
 export const MASTERS = Object.freeze([
   { id: 'home', label: 'Home', icon: 'home', href: '/' },
   { id: 'study', label: 'Study', icon: 'book', href: '/web/medical.html' },
-  { id: 'library', label: 'Library', icon: 'reference', href: library('subjects') },
+  { id: 'library', label: 'Library', icon: 'reference', href: library('overview') },
   { id: 'exams', label: 'Exams', icon: 'exam', href: '/web/exam.html' },
   { id: 'account', label: 'Account', icon: 'user', href: '/web/account.html' },
   { id: 'admin', label: 'Master Admin', icon: 'settings', href: '/web/admin.html', adminOnly: true }
@@ -141,7 +142,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   pathname = canonicalPagePath(pathname);
   const p = new URLSearchParams(search);
   if (pathname.endsWith('/workspace.html')) { const master = MASTERS.some(x => x.id === p.get('master')) ? p.get('master') : 'home'; const section = (SECTIONS[master] || []).some(x => x.id === p.get('section')) ? p.get('section') : SECTIONS[master][0].id; return { master, section }; }
-  if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'notes'; if (p.get('master') === 'study' && view === 'subjects') return { master: 'study', section: 'subjects' }; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'notes' }; }
+  if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'overview'; if (p.get('master') === 'study' && view === 'subjects') return { master: 'study', section: 'subjects' }; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'overview' }; }
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };

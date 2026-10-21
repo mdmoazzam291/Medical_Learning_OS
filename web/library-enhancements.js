@@ -1,9 +1,14 @@
+import { workspaceFrame } from '/web/content-workspace-view.js';
+import { workspaceControls } from '/web/content-workspace-controls.js';
+import { transitionContext } from '/src/domain/content-workspace.js';
+import { libraryRouteState } from '/src/domain/library-workspaces.js';
 import { deviceCollections, selectWorkspace, addSavedView } from '/src/domain/library-workspaces.js';
 import { workspaceMarkup } from '/web/library-workspace-view.js';
 import { escape as e, auth, request } from '/web/content-library-client.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
 export function setupLibraryWorkspaces({ root, state, change, render, remember }) {
+  const panes = workspaceControls({root,render,navigate(overrides,search){const next=libraryRouteState(search ?? new URL(transitionContext(location.search,overrides),location.origin).search);change(next);remember(true);render();}});
   const storage = deviceCollections(), cloud = createCloudStudy({ ...cloudConfig, auth });
   let device = storage.read(), compare = [], recallIndex = 0, activeRecallId = null, viewer = null, requestId = 0, pending = false;
   const recallStates = new Map();
@@ -13,7 +18,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     if (!recallStates.has(activeRecallId)) recallStates.set(activeRecallId, { draft: '', revealed: false });
     return recallStates.get(activeRecallId);
   };
-  const titles = { subjects: 'Subjects & Topics', notes: 'Concept Notes', questions: 'Questions', graph: 'Knowledge Graph', atlas: 'Atlas', media: 'Media Library', references: 'Reference Tools', compare: 'Compare Concepts', foundation: 'Prerequisite Paths', savedviews: 'Saved Views', recall: 'Recall & Flashcards', cases: 'Clinical Cases', images: 'Image Drills', skills: 'Skills & Viva' };
+  const titles = { overview: 'Concept Explorer', subjects: 'Subjects & Topics', notes: 'Concept Notes', questions: 'Questions', graph: 'Knowledge Graph', atlas: 'Atlas', media: 'Media Library', references: 'Reference Tools', compare: 'Compare Concepts', foundation: 'Prerequisite Paths', savedviews: 'Saved Views', recall: 'Recall & Flashcards', cases: 'Clinical Cases', images: 'Image Drills', skills: 'Skills & Viva' };
   const current = () => { const s = state(); return selectWorkspace(s.library, { view: s.view, filters: s.filters, ...s.options }); };
   function select(key, choices) {
     return '<label>' + key[0].toUpperCase() + key.slice(1) + '<select aria-label="' + key[0].toUpperCase() + key.slice(1) + '" data-workspace-option="' + key + '"><option value="">All</option>' + choices.map(([value, label]) => '<option value="' + value + '"' + (state().options[key] === value ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label>';
@@ -41,6 +46,9 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
       if (q) card.insertAdjacentHTML('beforeend', '<div class="workspace-chips"><button data-one-study="' + e(q.questionVersionId) + '" ' + (pending ? 'disabled' : '') + '>Practice original question</button>' + bookmark('question', q.questionId) + '</div>');
     }
     for (const card of root.querySelectorAll('[data-note-card]')) card.insertAdjacentHTML('beforeend', bookmark('note', card.dataset.noteCard));
+    root.querySelector('.library-tabs')?.remove();
+    panes.beforeRender();
+    root.innerHTML=workspaceFrame(s,root.innerHTML,{search:location.search,...panes.state()});
     if (viewer && ['media', 'atlas', 'images'].includes(s.view)) renderViewer();
   }
   function renderViewer() {
@@ -97,5 +105,5 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     if (t.hasAttribute('data-image-commit') && viewer?.draft.trim()) { viewer.committed = true; renderViewer(); }
   });
   window.addEventListener('mlos:library-view', event => { if (state().library && ['notes', 'questions', 'graph'].includes(event.detail?.view)) { clearViewer(); update({ view: event.detail.view }); } });
-  return { decorate };
+  return { decorate, graphLimit:()=>panes.state().graphLimit };
 }

@@ -1,3 +1,5 @@
+import { transitionContext } from '/src/domain/content-workspace.js';
+import { neighborhoodMarkup } from '/web/content-workspace-view.js';
 import { guestContent } from '/web/guest-view.js';
 import { SUBJECTS } from '/src/domain/content-library.js';
 import { setupLibraryWorkspaces } from '/web/library-enhancements.js';
@@ -12,12 +14,7 @@ const label=s=>s.replace(/-/g,' ').replace(/^./,c=>c.toUpperCase());
 function remember(push=false){const p=new URLSearchParams();keys.forEach(k=>{if(filters[k])p.set(k,filters[k]);});p.set('view',view);p.set('count',String(sessionCount));Object.entries(options).forEach(([k,v])=>{if(v)p.set(k,v);});if(building){p.set('build','1');p.set('master','study');}else if(['recall','cases','images','skills'].includes(view)||(view==='subjects'&&new URLSearchParams(location.search).get('master')==='study'))p.set('master','study');const href=location.pathname+'?'+p;if(push && href!==location.pathname+location.search)history.pushState(null,'',href);else history.replaceState(null,'',href);window.dispatchEvent(new CustomEvent('mlos:route'));}
 function select(key,values){return '<label>'+label(key)+'<select aria-label="'+label(key)+'" data-filter="'+key+'"><option value="">All</option>'+values.map(v=>'<option value="'+e(v.id??v)+'" '+(filters[key]===(v.id??v)?'selected':'')+'>'+e(v.label??label(v))+'</option>').join('')+'</select></label>';}
 function graph(data){
-  const concepts=data.concepts.slice(0,30),notes=data.notes.slice(0,30),questions=data.questions.slice(0,50);
-  const height=Math.max(240,Math.max(concepts.length,notes.length,questions.length)*100+80);
-  const cy=new Map(concepts.map((c,i)=>[c.conceptId,70+i*100])),ny=new Map(notes.map((n,i)=>[n.noteVersionId,70+i*100])),qy=new Map(questions.map((q,i)=>[q.questionId,70+i*100]));
-  const line=(x1,y1,x2,y2)=>'<line class="graph-edge" x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'"/>';
-  const edges=questions.flatMap(q=>q.conceptLinks.filter(l=>cy.has(l.conceptId)).map(l=>line(325,cy.get(l.conceptId),610,qy.get(q.questionId)))).join('')+notes.filter(n=>cy.has(n.conceptId)).map(n=>line(65,ny.get(n.noteVersionId),325,cy.get(n.conceptId))).join('')+(data.links||[]).filter(l=>ny.has(l.note_version_id)&&qy.has(l.question_id)).map(l=>line(65,ny.get(l.note_version_id),610,qy.get(l.question_id))).join('');
-  return '<div class="library-graph"><svg role="img" aria-label="Connected question graph" viewBox="0 0 880 '+height+'" width="880" height="'+height+'"><title>Notes connect to canonical concepts and questions. Use the lists below for complete text.</title>'+edges+notes.map(n=>'<g tabindex="0" role="button" aria-label="Open note '+e(n.title)+'" data-graph-note="'+e(n.noteVersionId)+'" class="graph-node note"><circle cx="65" cy="'+ny.get(n.noteVersionId)+'" r="22"/><text x="15" y="'+(ny.get(n.noteVersionId)+45)+'">'+e(n.title.slice(0,28))+'</text></g>').join('')+concepts.map(c=>'<g tabindex="0" role="button" aria-label="Filter concept '+e(c.label)+'" data-graph-concept="'+e(c.conceptId)+'" class="graph-node concept"><circle cx="325" cy="'+cy.get(c.conceptId)+'" r="30"/><text x="225" y="'+(cy.get(c.conceptId)+50)+'">'+e(c.label.slice(0,32))+'</text></g>').join('')+questions.map((q,i)=>'<g tabindex="0" role="button" aria-label="Open question '+(i+1)+': '+e(q.observed.state)+'" data-graph-question="'+e(q.questionId)+'" class="graph-node '+e(q.observed.state)+(q.observed.repeatedWrong?' repeated':'')+'"><circle cx="610" cy="'+qy.get(q.questionId)+'" r="25"/><text x="650" y="'+(qy.get(q.questionId)+5)+'">Q'+(i+1)+' · '+e(q.connection)+' · '+q.observed.wrong+'/'+q.observed.attempts+' wrong</text></g>').join('')+'</svg></div>';
+  return neighborhoodMarkup(library,filters.concept || data.concepts[0]?.conceptId,{perspective:options.perspective||'exam',limit:enhancements.graphLimit(),filters,...options});
 }
 function libraryGuest(active) {
   root.closest('main').classList.toggle('guest-page', active);
@@ -45,18 +42,18 @@ async function load(){
       : '<section class="panel" role="status"><h2>Library could not be loaded.</h2><p>Check your connection and try again.</p><button data-retry>Retry library</button></section>';
   }
 }
-root.addEventListener('change',event=>{if(event.target.hasAttribute('data-session-count')){sessionCount=Number(event.target.value);remember();render();return;}const key=event.target.dataset.filter;if(key){filters[key]=event.target.value;remember();render();}});
+root.addEventListener('change',event=>{if(event.target.hasAttribute('data-session-count')){sessionCount=Number(event.target.value);remember();render();return;}const key=event.target.dataset.filter;if(key){filters[key]=event.target.value;remember(true);render();}});
 root.addEventListener('click',async event=>{
   const t=event.target.closest('button,[data-graph-question],[data-graph-note],[data-graph-concept]');if(!t)return;
   if(t.hasAttribute('data-retry'))return load();
-  if(t.dataset.view){const changed=view!==t.dataset.view;if(changed&&!['notes','questions','graph'].includes(view))options={...options,module:'',reference:'',category:''};view=t.dataset.view;remember(changed);render();return root.querySelector('[data-view="'+view+'"]').focus();}
+  if(t.dataset.view){const changed=view!==t.dataset.view;({view,filters,options}=libraryRouteState(new URL(transitionContext(location.search,{view:t.dataset.view}),location.origin).search));remember(changed);render();return root.querySelector('[data-view="'+view+'"]').focus();}
   if(t.hasAttribute('data-clear')){options=Object.fromEntries(Object.keys(options).map(k=>[k,'']));filters=Object.fromEntries(keys.map(k=>[k,'']));remember();return render();}
-  if(t.dataset.graphConcept){filters.concept=t.dataset.graphConcept;remember();return render();}
+  if(t.dataset.graphConcept){filters.concept=t.dataset.graphConcept;remember(true);return render();}
   if(t.dataset.graphNote){const card=[...root.querySelectorAll('[data-note-card]')].find(c=>c.dataset.noteCard===t.dataset.graphNote);card?.focus();card?.scrollIntoView({block:'center'});return;}
   if(t.dataset.graphQuestion){const card=[...root.querySelectorAll('[data-question-card]')].find(c=>c.dataset.questionCard===t.dataset.graphQuestion);card?.focus();card?.scrollIntoView({block:'center'});return;}
   if((t.hasAttribute('data-study')||t.dataset.conciseQuestion)&&!busy){busy=true;render();try{const session=await request('/study',t.dataset.conciseQuestion?{questionVersionIds:[t.dataset.conciseQuestion],variants:{[t.dataset.conciseQuestion]:t.dataset.variant}}:{questionVersionIds:studySelection(selectWorkspace(library,{filters,view,...options}),sessionCount)});const url='/web/medical.html?resume='+encodeURIComponent(session.sessionId);if(session.resumedExisting){busy=false;render();document.querySelector('#library-status').innerHTML='You have an unfinished session. Finish it before starting this selection. <a href="'+e(url)+'">Continue unfinished session</a>';}else location.assign(url);}catch(error){busy=false;render();document.querySelector('#library-status').textContent=error.message;}}
 });
 root.addEventListener('keydown',event=>{if((event.target.dataset.graphQuestion||event.target.dataset.graphNote||event.target.dataset.graphConcept)&&['Enter',' '].includes(event.key)){event.preventDefault();event.target.click();}});
-const enhancements=setupLibraryWorkspaces({root,state:()=>({library,view,filters,options,busy}),change(update){if(update.view)view=update.view;if(update.filters)filters={...filters,...update.filters};if(update.options)options={...options,...update.options};},render,remember});
+const enhancements=setupLibraryWorkspaces({root,state:()=>({library,view,filters,options,busy}),change(update){if(update.sessionCount)sessionCount=update.sessionCount;if(update.building!==undefined)building=update.building;if(update.view)view=update.view;if(update.filters)filters={...filters,...update.filters};if(update.options)options={...options,...update.options};},render,remember});
 window.addEventListener('popstate',()=>{({building,sessionCount,view,filters,options}=libraryRouteState(location.search));if(library)render();window.dispatchEvent(new CustomEvent('mlos:route'));});
 load();

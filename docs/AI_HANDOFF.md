@@ -1,3 +1,9 @@
+# Active Unified Content Workspace — checked 2026-10-22 (Asia/Kolkata)
+- Owner: Codex, continuing the existing unfinished task on feat/unified-content-workspace-20261022, base/main a653853953c5c38b679f6db62a33cb4cb0bc975e. Remote main verified unchanged; no task PR exists. No competing task process observed.
+- Objective: implement the accepted Library workspace, connected canonical views, responsive panes and isolated admin placement preview. Existing spec/plan and partial domain/renderer work retained. User “Build this all” authorizes inline implementation; no additional design approval requested.
+- Current: baseline 1358/1358 passed. Shared context, dossier, responsive shell, bounded graph and admin draft-placement/preview code integrated locally; 35 focused tests pass. Full changed suite/check running; browser acceptance and review remain incomplete. No production publication/content ingestion/migration authorized or performed.
+- Exact next action: complete responsive browser acceptance, resolve failures, review and persist feature PR. All earlier release receipts below remain historical.
+
 # Current engineering handoff
 
 ## Future PWA roadmap documentation — checked 2026-10-21 (Asia/Kolkata)
