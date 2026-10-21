@@ -77,6 +77,9 @@
   "scripts/auth-recovery-browser-check.js": [
     "supabase"
   ],
+  "scripts/baseline-migrations-db-check.js": [
+    "supabase"
+  ],
   "scripts/brand-browser-check.js": [
     "cloudflare"
   ],
@@ -102,6 +105,9 @@
     "supabase"
   ],
   "scripts/correction-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/data-api-grants-db-check.js": [
     "supabase"
   ],
   "scripts/exam-browser-check.js": [
@@ -287,6 +293,21 @@
   ],
   "supabase/functions/study-api/index.ts": [
     "render",
+    "supabase"
+  ],
+  "supabase/migrations/20260925112056_study_state_v1.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260925112441_study_attempt_session_fk_index.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260925113131_study_atomic_mutations.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260925114912_shared_study_catalog.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20260925115339_answer_catalog_version_gate.sql": [
     "supabase"
   ],
   "supabase/migrations/20260926120000_content_review_evidence.sql": [
@@ -569,10 +590,16 @@
   "supabase/migrations/20261020131627_privacy_scope_stored_relations.sql": [
     "supabase"
   ],
+  "supabase/migrations/20261021041935_explicit_service_read_grants.sql": [
+    "supabase"
+  ],
   "supabase/verification/connected-learning-pilot.sql": [
     "supabase"
   ],
   "supabase/verification/content-library.sql": [
+    "supabase"
+  ],
+  "supabase/verification/data-api-grants.sql": [
     "supabase"
   ],
   "supabase/verification/rls-isolation.sql": [
