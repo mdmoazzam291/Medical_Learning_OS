@@ -144,7 +144,7 @@ function navigateAdminLink(anchor, event) {
 }
 shell.addEventListener('click', event => {
   const button = event.target.closest('button');
-  if (button?.hasAttribute('data-close-global-search')) {
+  if (button?.hasAttribute?.('data-close-global-search') === true) {
     shell.classList.remove('mlos-search-open');
     shell.querySelector('.mlos-search button[type="submit"]')?.focus();
     return;
