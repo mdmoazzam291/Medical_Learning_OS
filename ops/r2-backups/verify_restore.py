@@ -86,6 +86,9 @@ def verify(data_path, migrations, container):
     query(FK_AUDIT, 'foreign_key_audit')
     if not {('auth', 'users'), ('auth', 'identities'), ('auth', 'sessions')}.issubset(expected):
         raise ValueError('auth_backup_coverage_missing')
+    print(json.dumps({'stage': 'database_data_verified', 'publicTables': len(required),
+                      'copyTables': len(expected), 'allCopyDataMatched': True,
+                      'foreignKeysChecked': True, 'authDataMatched': True}), flush=True)
     # Count only: decrypted secrets must never enter output or artifacts.
     if ('vault', 'secrets') not in expected:
         raise ValueError('vault_backup_coverage_missing')

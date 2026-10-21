@@ -77,6 +77,9 @@
   "render.yaml": [
     "render"
   ],
+  "scripts/access-manifest-db-check.js": [
+    "supabase"
+  ],
   "scripts/auth-recovery-browser-check.js": [
     "supabase"
   ],
@@ -603,6 +606,9 @@
     "supabase"
   ],
   "supabase/verification/data-api-grants.sql": [
+    "supabase"
+  ],
+  "supabase/verification/export-access.sql": [
     "supabase"
   ],
   "supabase/verification/rls-isolation.sql": [

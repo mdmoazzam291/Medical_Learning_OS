@@ -30,7 +30,11 @@ test('recovery drill restores only into disposable local Supabase and verifies a
   assert.match(workflow, /supabase\/verification\/data-api-grants\.sql/);
   assert.ok(workflow.indexOf('docker network disconnect') < workflow.indexOf('--file "/tmp/mlos-restore/roles.sql"'));
   assert.ok(workflow.indexOf('test "$cron_state" = off') < workflow.indexOf('--file "/tmp/mlos-restore/roles.sql"'));
-  assert.doesNotMatch(workflow, /SUPABASE_DB_URL|upload-artifact/);
+  const isolatedRestore = workflow.slice(workflow.indexOf('\n  restore:'));
+  assert.doesNotMatch(isolatedRestore, /SUPABASE_DB_URL|upload-artifact/);
+  assert.match(workflow, /uses: \.\/\.github\/workflows\/supabase-r2-backup\.yml/);
+  assert.match(workflow, /supabase-cli-sql-access-v2/);
+  assert.match(isolatedRestore, /--file "\/tmp\/mlos-restore\/access\.sql"/);
   assert.match(workflow, /head\.repo\.full_name == github\.repository/);
   assert.match(workflow, /user\.login == github\.repository_owner/);
 });

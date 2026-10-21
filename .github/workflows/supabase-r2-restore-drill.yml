@@ -6,6 +6,9 @@ on:
       - '.github/workflows/supabase-r2-restore-drill.yml'
       - 'ops/r2-backups/verify_restore.py'
       - 'ops/r2-backups/test_verify_restore.py'
+      - '.github/workflows/supabase-r2-backup.yml'
+      - 'supabase/verification/export-access.sql'
+      - 'scripts/access-manifest-db-check.js'
   workflow_dispatch:
   schedule:
     # Monthly full recoverability proof. Weekly backups remain separate.
@@ -19,9 +22,17 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  snapshot:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner
+    uses: ./.github/workflows/supabase-r2-backup.yml
+    secrets:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
   restore:
+    needs: snapshot
     # Secrets are available only to owner-authored same-repository validation.
-    if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner)
+    if: always() && (github.event_name != 'pull_request' || (needs.snapshot.result == 'success' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -114,7 +125,7 @@ jobs:
                   digest.update(block)
           assert digest.hexdigest() == expected, 'R2 archive checksum mismatch'
 
-          names = {'roles.sql', 'schema.sql', 'data.sql', 'SHA256SUMS', 'manifest.json'}
+          names = {'roles.sql', 'schema.sql', 'data.sql', 'access.sql', 'SHA256SUMS', 'manifest.json'}
           with tarfile.open(archive, 'r:gz') as tar:
               members = tar.getmembers()
               assert len(members) == len(names), 'Unexpected archive member count'
@@ -125,6 +136,7 @@ jobs:
                       shutil.copyfileobj(source, target)
 
           manifest = json.loads((root / 'manifest.json').read_text())
+          assert manifest['format'] == 'supabase-cli-sql-access-v2', 'Backup lacks exact access manifest; create a current v2 snapshot'
           assert manifest['project_ref'] == 'iyapppmeieqhflnzslao', 'Wrong source project'
           assert manifest['repository'] == 'mdmoazzam291/Medical_Learning_OS', 'Wrong source repository'
           assert str(manifest['workflow_run_id']).isdigit(), 'Invalid backup workflow run id'
@@ -146,15 +158,15 @@ jobs:
           )
 
           lines = (root / 'SHA256SUMS').read_text().splitlines()
-          assert len(lines) == 3, 'Unexpected inner checksum count'
+          assert len(lines) == 4, 'Unexpected inner checksum count'
           actual_names = set()
           for line in lines:
-              match = re.fullmatch(r'([0-9a-f]{64})  (roles\.sql|schema\.sql|data\.sql)', line)
+              match = re.fullmatch(r'([0-9a-f]{64})  (roles\.sql|schema\.sql|data\.sql|access\.sql)', line)
               assert match, 'Invalid inner checksum entry'
               file_digest, filename = match.groups()
               actual_names.add(filename)
               assert hashlib.sha256((root / filename).read_bytes()).hexdigest() == file_digest, 'SQL checksum mismatch'
-          assert actual_names == {'roles.sql', 'schema.sql', 'data.sql'}, 'Missing SQL dump'
+          assert actual_names == {'roles.sql', 'schema.sql', 'data.sql', 'access.sql'}, 'Missing SQL dump'
           print(
               'Latest backup verified: '
               f"prefix={prefix} run={manifest['workflow_run_id']} "
@@ -201,12 +213,13 @@ jobs:
             --file "/tmp/mlos-restore/schema.sql" \
             --command 'SET session_replication_role = replica' \
             --file "/tmp/mlos-restore/data.sql" \
+            --file "/tmp/mlos-restore/access.sql" \
             --dbname postgres > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
             python3 - <<'PYERR'
           import os, re
           from pathlib import Path
           for line in (Path(os.environ['RUNNER_TEMP']) / 'restore.err').read_text().splitlines():
-              match = re.search(r'(roles|schema|data)\.sql:(\d+): ERROR:  ([A-Z0-9]{5})', line)
+              match = re.search(r'(roles|schema|data|access)\.sql:(\d+): ERROR:  ([A-Z0-9]{5})', line)
               if match:
                   name, number, code = match.groups()
                   print(f'Restore SQLSTATE={code} file={name}.sql line={number}')
@@ -218,6 +231,13 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           docker exec -i "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
             < supabase/verification/data-api-grants.sql
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 \
+            < supabase/verification/export-access.sql > "$RUNNER_TEMP/mlos-restore/access.restored.sql"
+          if ! cmp --silent "$RUNNER_TEMP/mlos-restore/access.sql" "$RUNNER_TEMP/mlos-restore/access.restored.sql"; then
+            echo 'Restored access metadata differs from the source snapshot.'
+            exit 1
+          fi
+          echo 'Exact source public owners, grants, column privileges and defaults matched.'
           python3 ops/r2-backups/verify_restore.py \
             "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
 

@@ -1,6 +1,14 @@
 name: Supabase logical backup to R2
 
 on:
+  workflow_call:
+    secrets:
+      SUPABASE_DB_URL:
+        required: true
+      R2_ACCESS_KEY_ID:
+        required: true
+      R2_SECRET_ACCESS_KEY:
+        required: true
   push:
     branches: [main]
     paths: ['ops/content-reset/purge_backups.py']
@@ -60,7 +68,7 @@ jobs:
 
       - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
         with:
-          version: latest
+          version: 2.121.0
 
       - name: Ensure AWS CLI
         shell: bash
@@ -92,22 +100,26 @@ jobs:
           backup_dir="$RUNNER_TEMP/mlos-backup-$timestamp"
           mkdir -p "$backup_dir"
 
+          psql "$SUPABASE_DB_URL" -X -qAt -v ON_ERROR_STOP=1 --file supabase/verification/export-access.sql > "$backup_dir/access.sql"
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/roles.sql" --role-only
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/schema.sql"
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/data.sql" --use-copy --data-only
 
-          for file in roles.sql schema.sql data.sql; do
+          psql "$SUPABASE_DB_URL" -X -qAt -v ON_ERROR_STOP=1 --file supabase/verification/export-access.sql > "$backup_dir/access.after.sql"
+          cmp --silent "$backup_dir/access.sql" "$backup_dir/access.after.sql"
+          rm "$backup_dir/access.after.sql"
+          for file in roles.sql schema.sql data.sql access.sql; do
             test -s "$backup_dir/$file"
           done
 
           (
             cd "$backup_dir"
-            sha256sum roles.sql schema.sql data.sql > SHA256SUMS
+            sha256sum roles.sql schema.sql data.sql access.sql > SHA256SUMS
           )
 
           cat > "$backup_dir/manifest.json" <<EOF
           {
-            "format": "supabase-cli-sql-v1",
+            "format": "supabase-cli-sql-access-v2",
             "project_ref": "iyapppmeieqhflnzslao",
             "repository": "$GITHUB_REPOSITORY",
             "workflow_run_id": "$GITHUB_RUN_ID",
@@ -116,7 +128,7 @@ jobs:
           }
           EOF
 
-          tar -C "$backup_dir" -czf "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             roles.sql schema.sql data.sql SHA256SUMS manifest.json
+          tar -C "$backup_dir" -czf "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             roles.sql schema.sql data.sql access.sql SHA256SUMS manifest.json
           sha256sum "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             > "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz.sha256"
 
           echo "timestamp=$timestamp" >> "$GITHUB_OUTPUT"
