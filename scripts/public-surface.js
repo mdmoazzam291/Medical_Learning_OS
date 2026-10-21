@@ -32,6 +32,7 @@ export const publicFiles = Object.freeze([
   'src/domain/content-placement.js',
   'web/content-placement-view.js',
   'web/content-preview-frame.css',
+  'web/content-preview-bridge.js',
   'web/content-library-client.js',
   'src/domain/content-library.js',
   'src/domain/intake-integrity-report.js',
