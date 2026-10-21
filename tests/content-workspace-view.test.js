@@ -16,7 +16,7 @@ test('unavailable concept does not show another concept dossier',()=>{
 test('neighborhood supplies equivalent exact-version list and no unsupported medical edges',()=>{
  assert.equal(typeof v.neighborhoodMarkup,'function');
  const html=v.neighborhoodMarkup(library,'c',{perspective:'medical'});
- assert.match(html,/No published medical relationships/);assert.match(html,/Graph connections/);assert.doesNotMatch(html,/causes|mastery score/);
+ assert.match(html,/No published medical relationships/);assert.match(html,/Graph connections/);assert.match(html,/aria-label="Graph perspective"/);assert.doesNotMatch(html,/causes|mastery score/);
 });
 
  test('Library actually loads the workspace shell and builds every imported public module', async()=>{

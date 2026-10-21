@@ -30,7 +30,7 @@ try{
   assert.equal(await page.locator('[data-dossier-id=a]').count(),1);
   assert.equal(await page.locator('#cw-explorer').isVisible(),width>=1000);assert.equal(await page.locator('#cw-context').isVisible(),width>=1400);
   assert.equal(await page.locator('[data-cw-toggle=context]').getAttribute('aria-expanded'),String(width>=1400));
-  if(width<1400){await page.locator('[data-cw-toggle=context]').click();await page.getByRole('dialog',{name:'Library panel'}).waitFor();await page.keyboard.press('Escape');assert.equal(await page.locator('#cw-pane-dialog').isVisible(),false);assert.equal(await page.locator('[data-cw-toggle=context]').evaluate(e=>e===document.activeElement),true);}
+  if(width<1400){await page.locator('[data-cw-toggle=context]').click();await page.getByRole('dialog',{name:'Library panel'}).waitFor();assert.equal(await page.locator('[data-cw-toggle=context]').getAttribute('aria-expanded'),'true');await page.keyboard.press('Escape');assert.equal(await page.locator('#cw-pane-dialog').isVisible(),false);assert.equal(await page.locator('[data-cw-toggle=context]').evaluate(e=>e===document.activeElement),true);}
   if(width<1000){await page.locator('[data-cw-toggle=explorer]').click();await page.getByRole('dialog',{name:'Library panel'}).waitFor();}
   await page.getByLabel('Concept name or alias',{exact:true}).fill('Alias Alpha');await page.getByRole('button',{name:'Find concept',exact:true}).click();
   // Search keeps the narrow-window Explorer open and its results usable.
@@ -51,7 +51,7 @@ try{
   empty=true;await page.goto(origin+'/web/library.html');await page.getByText(/Your content homes are ready/).waitFor();assert.equal(await page.locator('[data-question-card]').count(),0);
   await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'workspace-fixture',exact:true}).click();await page.getByRole('heading',{name:'Content Placement Inspector',exact:true}).waitFor();await page.getByRole('button',{name:'Preview draft as learner',exact:true}).click();
   const preview=page.getByRole('dialog',{name:'Draft learner preview'});await preview.waitFor();assert.doesNotMatch(await preview.textContent(),/SECRET ANSWER TEXT|PRIVATE REVIEW EVIDENCE|answerOptionId/);
-  await preview.getByRole('button',{name:'Desktop · 1440 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1440);
+  await preview.getByRole('button',{name:'Desktop · 1440 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1440);assert.equal(await preview.locator('.cw-context').isVisible(),true,'Desktop preview must show its right inspector even on an iPad/phone host.');
   await preview.getByRole('tab',{name:'Questions',exact:true}).click();await preview.getByRole('heading',{name:'Synthetic prompt draft',exact:true}).waitFor();
   await preview.getByRole('button',{name:'iPad · 1024 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1024);
   await page.keyboard.press('Escape');assert.equal(await preview.isVisible(),false);assert.deepEqual(writes,[]);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

@@ -37,7 +37,7 @@ export function workspaceFrame(s, content, { search='', explorerSearch='', explo
 export function neighborhoodMarkup(library, conceptId, {perspective='exam',limit=30,...options}={}) {
   const graph=conceptNeighborhood(library,conceptId,{perspective,limit,...options}), center=graph.nodes[0];
   const safePerspective=['medical','learning','exam'].includes(perspective)?perspective:'exam';
-  const controls='<label>Graph perspective<select data-workspace-option="perspective">'+[['exam','Exam & content'],['learning','Learning dependencies'],['medical','Medical relationships']].map(([id,label])=>'<option value="'+id+'"'+(id===safePerspective?' selected':'')+'>'+label+'</option>').join('')+'</select></label>';
+  const controls='<label>Graph perspective<select aria-label="Graph perspective" data-workspace-option="perspective">'+[['exam','Exam & content'],['learning','Learning dependencies'],['medical','Medical relationships']].map(([id,label])=>'<option value="'+id+'"'+(id===safePerspective?' selected':'')+'>'+label+'</option>').join('')+'</select></label>';
   if(!center)return controls+empty('Select a published concept in Explore to inspect its connections.');
   const count=graph.nodes.length-1, rows=Math.ceil(count/2), height=Math.max(320,rows*80+80), xy=new Map([[center.id,[440,height/2]]]);
   graph.nodes.slice(1).forEach((n,i)=>xy.set(n.id,[i%2?730:150,60+Math.floor(i/2)*80]));

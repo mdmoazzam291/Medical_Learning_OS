@@ -1,13 +1,13 @@
 // Transient pane state only. Canonical selection and shareable filters live in the URL.
 export function workspaceControls({root,render,navigate}) {
   let explorerSearch='',explorerLimit=60,graphLimit=30,contentLimit=50,filterOpen=false,groups=null,explorerHidden=false,contextHidden=false,returnFocus=null,movedPane=null,pendingPane=null;
-  const restore=()=>{if(movedPane){const {pane,parent,next}=movedPane;parent.insertBefore(pane,next);movedPane=null;}root.querySelector('[data-cw-toggle="'+returnFocus+'"]')?.focus();};
+  const restore=()=>{if(movedPane){const {pane,parent,next}=movedPane;parent.insertBefore(pane,next);root.querySelector('[data-cw-toggle="'+movedPane.name+'"]')?.setAttribute('aria-expanded',String(getComputedStyle(pane).display!=='none'));movedPane=null;}root.querySelector('[data-cw-toggle="'+returnFocus+'"]')?.focus();};
   function showPane(name,trigger) {
     const threshold=name==='context'?1400:1000;
     if(window.innerWidth>=threshold){if(name==='context')contextHidden=!contextHidden;else explorerHidden=!explorerHidden;render();root.querySelector('[data-cw-toggle="'+name+'"]')?.focus();return;}
     const pane=root.querySelector('[data-workspace-pane="'+name+'"]'),dialog=root.querySelector('#cw-pane-dialog');
     if(!pane||!dialog)return;returnFocus=name;movedPane={name,pane,parent:pane.parentNode,next:pane.nextSibling};
-    dialog.querySelector('[data-cw-dialog-body]').append(pane);dialog.showModal();dialog.querySelector('button').focus();
+    dialog.querySelector('[data-cw-dialog-body]').append(pane);dialog.showModal();root.querySelector('[data-cw-toggle="'+name+'"]')?.setAttribute('aria-expanded','true');dialog.querySelector('button').focus();
   }
   root.addEventListener('close',event=>{if(event.target===root.querySelector('#cw-pane-dialog'))restore();},true);
   root.addEventListener('submit',event=>{if(event.target.matches('[data-cw-search]')){event.preventDefault();explorerSearch=event.target.elements.conceptSearch.value.trim().slice(0,300);explorerLimit=60;render();root.querySelector('[name="conceptSearch"]')?.focus();}});
