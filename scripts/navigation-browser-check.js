@@ -78,7 +78,12 @@ try {
         });
         for (const key of groups) await page.locator('details[data-group="' + key + '"] > summary').click();
       }
-      return touch ? locator.tap() : locator.click();
+      try { return await (touch ? locator.tap() : locator.click()); }
+      catch(error) {
+        const debug=await page.evaluate(()=>({url:location.href,modal:document.querySelector('#cw-pane-dialog')?.open,trace:window.__cwOpenTrace||[],active:document.activeElement?.outerHTML?.slice(0,400)})).catch(()=>null);
+        console.error('NAVIGATION_ACTIVATION_FAILED',JSON.stringify(debug));
+        throw error;
+      }
     };
     await context.addInitScript(value => {
       if (sessionStorage.getItem('mlos-navigation-fixture-seeded')) return;
