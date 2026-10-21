@@ -23,6 +23,7 @@ export const publicFiles = Object.freeze([
   'web/library.html',
   'web/library.js',
   'src/domain/content-workspace.js',
+  'src/domain/concept-dossier-sections.js',
   'web/content-workspace-view.js',
   'web/content-workspace-controls.js',
   'web/content-workspace.css',
