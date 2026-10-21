@@ -1,5 +1,12 @@
 # Current status
 
+## Unified Content Workspace merged — 2026-10-22
+- PR296 merged to main at `8ddb1c84a2f37a7c50da8960fe76259f527586d3` from exact feature head `184f1c14377398279ab48ec5bf9bc0f0c93eaae5`. Foundation run `39686401986` passed all three jobs: core Node/Python/build/isolated PG checks; Chromium browser, Library/Admin, Study, Vault/Exam journeys; and WebKit iPad responsive navigation/draft-preview isolation.
+- Release includes a canonical concept-centered Overview/Notes/Questions/Graph Library, bounded Explorer/context panels, URL-preserved navigation and the isolated opaque-origin Admin Content Placement Preview. The compact search outside-tap bug is fixed; focused synthetic browser tests confirm no background Library modal opens.
+- Cloudflare production website Worker build for the merge reports success (service `medical-learning-os-web`, build `7cd8e76a-d35a-4cee-9a41-25cb9fe9fe2e`). Main merge commit message inherited an older `[skip ci]` marker, so there was no fresh main-push Foundation run for that merge. This documentation-only receipt intentionally has no skip marker to request integrated-main CI on identical runtime bytes.
+- Do not infer live authenticated learner/admin success from synthetic CI or Workers build status. Public provider readback, API source-metadata availability, actual content publication and post-onboarding monitoring remain separate verification work. No new content, migration, credentials, paid service or rights authority introduced.
+
+
 ## Unified Content Workspace implementation — 2026-10-22
 - Owner accepted the supplied workspace design with “Build this all”. Feature branch feat/unified-content-workspace-20261022 / draft PR296 extends Library around one selected canonical concept with Overview, Notes, Questions and Graph; grouped Explorer, PYQ/QBank/original homes, responsive panes, exact-version context and private NeuralVault handoff.
 - Added alias discovery, context-compatible URL transitions, bounded artifact/graph renderers, metadata placement checks and isolated prompt-only desktop/iPad draft preview. Existing review/publication and scored Study/Exam boundaries remain authoritative. No new provider, dependency, database migration or content is introduced. One reviewed mock-origin portability marker added for browser acceptance.
