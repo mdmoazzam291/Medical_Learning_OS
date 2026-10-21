@@ -13,6 +13,7 @@ export function setupPlacementPreview({detail,getDraft}) {
     const s=libraryRouteState(search),data=selectWorkspace(library,{view:s.view,filters:s.filters,...s.options});
     const content=s.view==='graph'?neighborhoodMarkup(library,s.filters.concept,{perspective:s.options.perspective||'exam'}):s.view==='questions'?'<h3>Draft questions</h3>'+data.questions.map(q=>'<article class="panel"><h4>'+e(q.stem)+'</h4><p>'+e(q.questionVersionId)+' · '+e(q.home.kind)+'</p><ol>'+q.options.map(o=>'<li>'+e(o.text)+'</li>').join('')+'</ol></article>').join(''):s.view==='notes'?'<h3>Draft notes</h3>'+data.notes.map(n=>'<article class="panel"><h4>'+e(n.title)+'</h4><p>'+e(n.noteVersionId)+'</p><div class="library-note-body">'+e(n.bodyMarkdown)+'</div></article>').join(''):'';
     const frame=detail.querySelector('[data-draft-canvas]');
+    frame.dataset.previewReady='false';frame.setAttribute('aria-busy','true');
     for(const x of detail.querySelectorAll('[data-preview-width]'))x.dataset.previewWidth=width;
     const markup=workspaceFrame({...s,library},content,{search,draft:true});
     frame.onload=()=>{
@@ -45,6 +46,7 @@ export function setupPlacementPreview({detail,getDraft}) {
       });
       doc.addEventListener('change',event=>{const key=event.target.dataset.cwFacet||event.target.dataset.workspaceOption;if(key)navigate({[key]:event.target.value});});
       doc.addEventListener('submit',event=>{event.preventDefault();if(event.target.matches('[data-cw-search]')){const term=event.target.elements.conceptSearch.value.toLowerCase(),match=library.concepts.find(c=>[c.label,...c.aliases].some(x=>x.toLowerCase().includes(term)));if(match)navigate({concept:match.conceptId});}});
+      frame.dataset.previewReady='true';frame.removeAttribute('aria-busy');
     };
     // A script-free same-origin frame supplies a real responsive viewport independent of the admin's device.
     frame.srcdoc='<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/library.css"><link rel="stylesheet" href="/web/content-workspace.css"><link rel="stylesheet" href="/web/navigation.css"><link rel="stylesheet" href="/web/content-preview-frame.css"></head><body><main class="library-page">'+markup+'</main></body></html>';
