@@ -43,8 +43,8 @@ try{
   await page.getByLabel('Question search',{exact:true}).fill('');await page.getByLabel('Question search',{exact:true}).press('Tab');
   await page.getByRole('tab',{name:'Graph',exact:true}).click();await page.getByRole('img',{name:'Connected question graph'}).waitFor();
   assert.equal(await page.locator('.graph-node.incorrect').count(),1);assert.equal(await page.locator('.graph-node.unattempted').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2\/3 wrong/);
-  await page.getByLabel('Platform').selectOption('marrow');assert.equal(await page.locator('[data-question-card]').count(),1);assert.equal(await page.locator('[data-question-card="pyq"]').count(),0);
-  await page.getByLabel('Platform').selectOption('');await page.getByLabel('Exam',{exact:true}).selectOption('neet-pg');assert.equal(await page.locator('[data-question-card]').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2024.*2025/);
+  await page.getByLabel('Platform',{exact:true}).selectOption('marrow');assert.equal(await page.locator('[data-question-card]').count(),1);assert.equal(await page.locator('[data-question-card="pyq"]').count(),0);
+  await page.getByLabel('Platform',{exact:true}).selectOption('');await page.getByLabel('Exam',{exact:true}).selectOption('neet-pg');assert.equal(await page.locator('[data-question-card]').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2024.*2025/);
   assert.equal(await page.evaluate(()=>window.injected===true),false);assert.equal(writes.length,0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'library-graph-'+name+'.png'),fullPage:true});
   await page.reload();await page.getByRole('tab',{name:'Graph',exact:true}).waitFor();await openFilters();assert.equal(await page.locator('[data-question-card]').count(),1);
