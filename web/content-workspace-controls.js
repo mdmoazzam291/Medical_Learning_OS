@@ -9,6 +9,19 @@ export function workspaceControls({root,render,navigate}) {
     if(!pane||!dialog)return;returnFocus=name;movedPane={name,pane,parent:pane.parentNode,next:pane.nextSibling};
     dialog.querySelector('[data-cw-dialog-body]').append(pane);dialog.showModal();root.querySelector('[data-cw-toggle="'+name+'"]')?.setAttribute('aria-expanded','true');dialog.querySelector('button').focus();
   }
+  // A browser Back/Forward action or workspace route switch changes the reader.
+  // Dismiss an open narrow-screen pane rather than carrying a modal into the
+  // next view, where it would block global navigation and search controls.
+  // This is deliberately distinct from an in-pane search, which must stay open.
+  const dismissForRoute=()=>{
+    const dialog=root.querySelector('#cw-pane-dialog');
+    pendingPane=null;
+    if(!dialog?.open)return;
+    returnFocus=null;
+    dialog.close();
+    restore();
+  };
+  window.addEventListener('mlos:route',dismissForRoute);
   root.addEventListener('close',event=>{if(event.target===root.querySelector('#cw-pane-dialog'))restore();},true);
   root.addEventListener('submit',event=>{if(event.target.matches('[data-cw-search]')){event.preventDefault();explorerSearch=event.target.elements.conceptSearch.value.trim().slice(0,300);explorerLimit=60;render();root.querySelector('[name="conceptSearch"]')?.focus();}});
   root.addEventListener('change',event=>{if(event.target.dataset.cwFacet)navigate({[event.target.dataset.cwFacet]:event.target.value,concept:''});});
