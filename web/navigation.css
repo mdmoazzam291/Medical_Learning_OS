@@ -63,6 +63,11 @@
 .mlos-header>nav a[aria-current]{background:var(--soft);color:var(--accent)}
 .mlos-header>nav a span{opacity:1}
 .mlos-search{display:flex;align-items:center;position:relative;min-width:0;flex:1;max-width:400px;margin-left:auto}
+/* Expanding compact search must consume the outside dismissal tap, not pass it
+   through to Library Explorer/context buttons (especially in touch WebKit).
+   Search remains in the fixed header above this transparent dismiss surface. */
+.mlos-search-dismiss{display:none}
+.mlos-search-open .mlos-search-dismiss{display:block;position:fixed;inset:0;z-index:29;min-width:0;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;cursor:default}
 .mlos-search input[type="search"]{margin:0;padding:10px 45px 10px 13px;min-height:40px;width:100%;background:var(--bg);border-radius:24px;font-size:13px}
 .mlos-search button{position:absolute;right:3px;min-width:38px;min-height:38px;padding:8px;border:0;background:transparent}
 .mlos-theme{padding:10px;min-width:42px;min-height:42px;border:0;background:transparent;flex-shrink:0}
