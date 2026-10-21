@@ -31,3 +31,19 @@ test('overview retains the shared feedback region for a study request completed 
  const html=v.workspaceFrame({library,filters:{concept:'c'},view:'overview',options:{}},'',{search:'?concept=c'});
  assert.match(html,/id="library-status"[^>]*role="status"/);assert.match(html,/data-save-view/);
 });
+
+test('overview shows source-grounded, escaped note sections and distinguishes drafts',()=>{
+ const rich={...library,notes:[{noteVersionId:'note@3',conceptId:'c',title:'Reviewed note',sourceIds:['source@2'],bodyMarkdown:'## Diagnosis\n<synthetic-assertion> and source text'}],sources:[{sourceId:'source@2',title:'Reviewed reference',version:'v2'}]};
+ const state={library:rich,filters:{concept:'c'},view:'overview',options:{}};
+ const published=v.workspaceFrame(state,'',{search:'?concept=c'});
+ assert.match(published,/data-dossier-section="diagnosis"/);
+ assert.match(published,/&lt;synthetic-assertion&gt;/);
+ assert.doesNotMatch(published,/<synthetic-assertion>/);
+ assert.match(published,/Reviewed reference/);
+ assert.match(published,/note@3/);
+ assert.match(published,/Recall before rereading/);
+ const draft=v.workspaceFrame(state,'',{search:'?concept=c',draft:true});
+ assert.match(draft,/Draft note sections/);
+ assert.doesNotMatch(draft,/Reviewed clinical content/);
+ assert.doesNotMatch(draft,/Recall before rereading/);
+});

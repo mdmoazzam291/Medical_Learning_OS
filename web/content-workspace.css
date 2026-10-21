@@ -7,3 +7,6 @@
 iframe.cw-preview-canvas{display:block;max-width:none;border:0;background:var(--surface);height:900px}
 
 iframe.cw-preview-canvas[data-preview-ready=false]{visibility:hidden}
+
+/* Reviewed note excerpts retain literal line breaks and opaque reader surfaces. */
+.cw-dossier-section{margin-block:1.35rem}.cw-dossier-section h3{margin-bottom:.7rem}.cw-dossier-excerpt{padding:1rem;margin:.6rem 0;border:1px solid var(--border-color,rgba(108,122,109,.24));border-radius:12px;background:var(--card-bg,transparent)}.cw-dossier-excerpt h4{margin:0 0 .6rem}.cw-dossier-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}.cw-dossier-provenance{font-size:.82rem;opacity:.78;overflow-wrap:anywhere}
