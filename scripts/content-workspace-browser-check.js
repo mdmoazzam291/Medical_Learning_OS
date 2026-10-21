@@ -44,6 +44,14 @@ try{
   await page.getByLabel('Graph perspective',{exact:true}).selectOption('medical');await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
   await page.getByRole('tab',{name:'Notes',exact:true}).click();assert.equal(new URL(page.url()).searchParams.get('concept'),'a');await page.goBack();assert.equal(new URL(page.url()).searchParams.get('view'),'graph');await page.reload();await page.getByLabel('Graph perspective',{exact:true}).waitFor();assert.equal(await page.getByLabel('Graph perspective',{exact:true}).inputValue(),'medical');
   if(width<1000){
+   // A touch that begins on global search but produces a displaced synthetic
+   // click on the Explorer button must never show the Library modal.
+   await page.evaluate(()=>{
+    const originButton=document.querySelector('.mlos-search button[type=submit]');
+    originButton.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerType:'touch'}));
+    document.querySelector('[data-cw-toggle=explorer]').dispatchEvent(new MouseEvent('click',{bubbles:true,detail:1}));
+   });
+   assert.equal(await page.locator('#cw-pane-dialog').evaluate(dialog=>dialog.open),false,'A retargeted global-search tap cannot open a Library pane');
    // Browser history must dismiss an on-demand Explorer rather than keep a
    // modal over the global search control after the reader view changes.
    await page.locator('[data-cw-toggle=explorer]').click();
