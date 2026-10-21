@@ -1,6 +1,7 @@
 import contextlib
 import importlib.util
 import io
+import inspect
 import json
 import os
 from pathlib import Path
@@ -93,6 +94,21 @@ class VaultRecoveryTests(unittest.TestCase):
         with patch('subprocess.run', return_value=result):
             with self.assertRaisesRegex(ValueError, '^controlled_failure$'):
                 m.run_private(['synthetic'], stage='controlled_failure')
+
+    def test_sqlstate_diagnostic_reveals_only_the_controlled_code(self):
+        m = self.module()
+        self.assertIn('sqlstate', inspect.signature(m.run_private).parameters, 'SQLSTATE-only diagnostic is missing')
+        result = subprocess.CompletedProcess([], 1, stdout=b'private value', stderr=b'ERROR:  23502\nSTATEMENT: private value')
+        with patch('subprocess.run', return_value=result):
+            with self.assertRaisesRegex(ValueError, '^controlled_failure_sqlstate_23502$'):
+                m.run_private(['synthetic'], stage='controlled_failure', sqlstate=True)
+
+    def test_null_description_rejected_by_supported_vault_contract(self):
+        m = self.module()
+        payload = self.payload()
+        payload['secrets'][0]['description'] = None
+        with self.assertRaisesRegex(ValueError, 'vault_description_invalid'):
+            m.validate_payload(payload, payload['snapshot'])
 
     def test_unconfigured_export_never_queries_source(self):
         m = self.module()

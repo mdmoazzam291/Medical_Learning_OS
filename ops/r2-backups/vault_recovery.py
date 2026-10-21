@@ -33,7 +33,7 @@ def validate_payload(payload, snapshot):
             raise ValueError('vault_names_invalid')
         if not isinstance(entry['secret'], str) or not entry['secret']:
             raise ValueError('vault_secret_invalid')
-        if entry['description'] is not None and not isinstance(entry['description'], str):
+        if not isinstance(entry['description'], str):
             raise ValueError('vault_description_invalid')
         if any('\0' in value for value in entry.values() if isinstance(value, str)):
             raise ValueError('vault_text_invalid')
@@ -43,12 +43,16 @@ def validate_payload(payload, snapshot):
     return payload
 
 
-def run_private(command, *, data=None, env=None, stage):
+def run_private(command, *, data=None, env=None, stage, sqlstate=False):
     try:
         result = subprocess.run(command, input=data, capture_output=True, env=env, timeout=120)
     except (OSError, subprocess.TimeoutExpired):
         raise ValueError(stage) from None
     if result.returncode:
+        if sqlstate:
+            code = re.search(rb'ERROR:\s+([A-Z0-9]{5})(?:\s|$)', result.stderr)
+            if code:
+                raise ValueError(stage + '_sqlstate_' + code[1].decode().lower())
         raise ValueError(stage)
     return result.stdout
 
@@ -147,7 +151,8 @@ def restore_vault(cipher, snapshot, container):
     payload = decrypt_payload(cipher, os.environ.get('MLOS_RECOVERY_AGE_IDENTITY', ''), snapshot,
                               os.environ.get('AGE_BIN', 'age'))
     run_private(['docker', 'exec', '-i', container, 'psql', '-U', 'supabase_admin', '-d', 'postgres',
-                 '-X', '-qAt', '-v', 'ON_ERROR_STOP=1'], data=restore_sql(payload).encode(), stage='vault_provisioning_failed')
+                 '-X', '-qAt', '-v', 'ON_ERROR_STOP=1', '-v', 'VERBOSITY=sqlstate'],
+                data=restore_sql(payload).encode(), stage='vault_provisioning_failed', sqlstate=True)
     return {'vaultReadable': True, 'vaultValuesMatched': True, 'vaultRecovery': 'encrypted-named-provisioning'}
 
 
@@ -157,6 +162,6 @@ if __name__ == '__main__':
             raise ValueError('vault_arguments_invalid')
         print(json.dumps(export_vault(sys.argv[2], sys.argv[3])))
     except Exception as error:
-        code = str(error) if isinstance(error, ValueError) and re.fullmatch('[a-z_]+', str(error)) else 'vault_recovery_failed'
+        code = str(error) if isinstance(error, ValueError) and re.fullmatch('[a-z_][a-z_0-9]*', str(error)) else 'vault_recovery_failed'
         print('Vault recovery failed: ' + code, file=sys.stderr)
         sys.exit(1)

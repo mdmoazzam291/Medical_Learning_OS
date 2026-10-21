@@ -138,6 +138,6 @@ if __name__ == '__main__':
         print(json.dumps(verify(*sys.argv[1:])))
     except Exception as error:
         # Never echo private rows, SQL payloads, stderr or local dump paths.
-        code = str(error) if isinstance(error, ValueError) and re.fullmatch('[a-z_]+', str(error)) else 'verification_failed'
+        code = str(error) if isinstance(error, ValueError) and re.fullmatch('[a-z_][a-z_0-9]*', str(error)) else 'verification_failed'
         print('Full database restore verification failed: ' + code, file=sys.stderr)
         sys.exit(1)

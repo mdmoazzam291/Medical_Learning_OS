@@ -1,5 +1,6 @@
 """Synthetic-only acceptance against the disconnected disposable Supabase DB."""
 import os
+import re
 from pathlib import Path
 import subprocess
 import tempfile
@@ -15,7 +16,7 @@ def check():
     payload = {'format': 'mlos-vault-recovery-v1', 'project': PROJECT, 'snapshot': '20261021T000000Z',
                'secrets': [
                    {'name': 'mlos_recovery_fixture_one', 'description': "fixture ' α", 'secret': "synthetic ' \\ \n $mlos_check$ α"},
-                   {'name': 'mlos_recovery_fixture_two', 'description': None, 'secret': 'synthetic-two'}]}
+                   {'name': 'mlos_recovery_fixture_two', 'description': '', 'secret': 'synthetic-two'}]}
     previous = os.environ.get('MLOS_RECOVERY_AGE_IDENTITY')
     try:
         os.environ['MLOS_RECOVERY_AGE_IDENTITY'] = key.decode()
@@ -26,7 +27,7 @@ def check():
             try:
                 restore_vault(cipher, payload['snapshot'], TARGET)
             except ValueError as error:
-                assert str(error) == 'vault_provisioning_failed'
+                assert str(error) == 'vault_provisioning_failed_sqlstate_p0001'
             else:
                 raise AssertionError('existing target secrets must not be overwritten')
     finally:
@@ -44,6 +45,7 @@ def check():
 if __name__ == '__main__':
     try:
         check()
-    except Exception:
-        # Exceptions may carry private process details; never render them.
-        raise SystemExit('Synthetic Vault recovery failed; private details suppressed') from None
+    except Exception as error:
+        # Print only our controlled stage/SQLSTATE, never stderr, SQL or values.
+        stage = str(error) if isinstance(error, ValueError) and re.fullmatch('[a-z_][a-z_0-9]*', str(error)) else 'synthetic_vault_failed'
+        raise SystemExit('Synthetic Vault recovery failed: ' + stage) from None
