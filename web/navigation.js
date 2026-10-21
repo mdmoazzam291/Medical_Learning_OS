@@ -144,6 +144,11 @@ function navigateAdminLink(anchor, event) {
 }
 shell.addEventListener('click', event => {
   const button = event.target.closest('button');
+  if (button?.hasAttribute('data-close-global-search')) {
+    shell.classList.remove('mlos-search-open');
+    shell.querySelector('.mlos-search button[type="submit"]')?.focus();
+    return;
+  }
   if (!button) {
     if (event.target.closest('summary')?.closest('.mlos-account') && compact && drawerOpen) {
       event.preventDefault(); closeDrawer();
