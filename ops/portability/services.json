@@ -15,13 +15,19 @@
       "boundary": "src/adapters/cloud-*.js, supabase-auth.js, web/content-library-client.js and supabase/functions; SQL RPC/Auth coupling remains.",
       "export": "Existing SQL backup workflow plus current schema, roles/grants, all data, migration ledger, extension inventory, Auth settings, SMTP/OAuth configuration and separate Storage object bytes.",
       "restore": "Disposable compatible Postgres/Supabase first; reconcile migration history, extensions, auth.uid/RLS/RPC behavior and two-user isolation. Other engines require translation and contract parity.",
-      "gaps": "Five historical baseline migrations are recovered with pinned hashes and isolated baseline/ACL checks in PR290; full platform replay, current full Auth/Storage recovery and non-Supabase target remain unverified. See the PR for integration state.",
+      "gaps": "PR292 actual encrypted v3 restore39624386430 on20261021T151857Z matched69public/102COPY tables, Auth, FKs, exact public access and actual Vault names/descriptions/values; cleanup passed. Separately saved key retrieval/crypto verified; owner offline download not observed. Task-branch acceptance only; Vault UUIDs regenerate. External Storage bytes, private Auth/provider configuration, API/runtime parity, consistent snapshots and provider failover remain unverified.",
       "references": [
         "supabase/migrations/README.md",
         ".github/workflows/supabase-r2-backup.yml",
         "src/adapters/supabase-auth.js",
         "scripts/baseline-migrations-db-check.js",
-        "scripts/data-api-grants-db-check.js"
+        "scripts/data-api-grants-db-check.js",
+        ".github/workflows/supabase-r2-restore-drill.yml",
+        "ops/r2-backups/verify_restore.py",
+        "supabase/verification/export-access.sql",
+        "scripts/access-manifest-db-check.js",
+        "ops/r2-backups/vault_recovery.py",
+        "ops/r2-backups/VAULT_RECOVERY_SETUP.md"
       ]
     },
     {

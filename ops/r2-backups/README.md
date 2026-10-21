@@ -1,6 +1,6 @@
 # R2 backup storage
 
-Status: **R2 transport verified, first Supabase logical backup succeeded, and a no-paid-infrastructure local application-data restore drill passed**.
+Status: **Actual encrypted Vault plus database restore passed on the PR292 task branch on 2026-10-21. Weekly default-branch integration and full provider/runtime recovery are separate.**
 
 The private Cloudflare R2 bucket is reserved for Medical Learning OS backups. GitHub Actions holds the S3 credentials as encrypted repository secrets and the non-sensitive bucket/endpoint values as repository variables. Public access stays disabled.
 
@@ -37,10 +37,11 @@ It uses the official Supabase CLI dump pattern and creates:
 - `roles.sql`
 - `schema.sql`
 - `data.sql`
+- `access.sql` (v2: exact public owners, grants, column privileges and defaults)
 - `SHA256SUMS`
 - `manifest.json`
 
-These are packaged into one `backup.tar.gz`, checksummed, uploaded under a UTC date/timestamp prefix, then size-verified in R2.
+These are packaged into one `backup.tar.gz`, checksummed, uploaded under a UTC date/timestamp prefix, then size-verified in R2. Format `supabase-cli-sql-access-v2` includes four SQL checksums. The read-only access exporter runs before and after the dump and rejects metadata drift; this does not make separate dump connections a single transactional snapshot.
 
 Use a **Session pooler** PostgreSQL connection string for `SUPABASE_DB_URL` because GitHub-hosted runners need reliable IPv4 connectivity. Store the complete connection string only as an encrypted GitHub repository secret.
 
@@ -124,3 +125,41 @@ No age-only R2 expiration rule is installed: such a rule could remove the last r
 
 ## Weekly activation — 2026-09-26 IST
 User explicitly authorized weekly backups. Cron `17 22 * * 6` runs on the default branch; first scheduled slot is 2026-09-27 03:47 IST. GitHub may delay scheduled execution. Existing upload limits and concurrency remain active. Cleanup remains report-only: backups accumulate until manually reviewed or upload limits stop new backups. Account billing settings have not been changed or verified. To disable recurrence, remove only the `schedule` block; retain `workflow_dispatch`.
+
+
+## Database and encrypted Vault restore gate — verified 2026-10-21
+
+The encrypted Vault recovery implementation passed actual-secret acceptance in workflow39624386430 on source e5584df91b6f92edd604a6b6a52c9ebc1283e289. Follow [private key setup and acceptance](VAULT_RECOVERY_SETUP.md). With a configured public age recipient, the producer creates `supabase-cli-sql-vault-v3` and includes `vault.json.age` with its fifth inner checksum. Without a recipient, the existing v2 SQL backups continue and strict Vault recovery remains blocked. The private recovery identity is supplied only to the isolated verification step. Target provisioning uses the supported Vault API and compares every unique name, description and value; Vault row UUIDs/timestamps are regenerated. The owner delegated key setup; the private identity/public recipient are configured and a separately saved owner kit was retrieved and cryptographically verified. Actual v3 backup and isolated Vault value recovery passed. Owner offline download has not been observed. Synthetic fixtures never substitute for actual acceptance.
+
+The expanded latest-backup drill uses pinned CLI 2.121.0 and the real local Supabase Postgres 17 image. It restores the original roles/schema/data archive unmodified, with no production connection supplied to the restore step. Before any archive SQL runs, its disposable database is disconnected from every Docker network and cron job launching is disabled and checked. The archive keeps its existing post-reset, nine-day freshness and checksum gates. Private logs/dumps are removed and never uploaded as artifacts.
+
+`verify_restore.py` requires every public application table declared in the repository (currently 69), compares every COPY block in every dumped schema using order-independent, duplicate-sensitive SHA-256 row fingerprints, checks public/Auth/Storage foreign keys, requires Auth users/identities/sessions in the backup, requires actual Vault backup coverage and successful decryption, and rechecks disabled cron. Table rows, hashes, identities and decrypted secrets are not printed. The read-only role/RLS audit runs against the restored database, followed by an exact comparison of source and restored public access metadata. Owner-authored same-repository PR validation first invokes the existing private backup producer for a fresh v3 archive when the public recipient is configured (otherwise v2); fork/non-owner PRs cannot run its credentialed jobs. Monthly/manual drills use the latest archive. No new remote project is created.
+
+The first real PG17 probe (run39603974776) restored the original post-reset roles/schema/data but failed the access audit: destination platform grants survived restoration. The v2 access manifest explicitly removes destination public grants/defaults and restores the source owners and permissions. Do not weaken the audit to accept the destination defaults.
+
+CLI2.121.0 excludes Vault from its normal data dump. The v3 producer therefore separately reads named Vault values in a read-only transaction, encrypts in process with the public age recipient and archives only ciphertext. The restore uses the separately provisioned identity and target-supported Vault API; exact unique names/descriptions/values must match. Missing/wrong identity, missing coverage or modified ciphertext still fails closed. Vault UUIDs/timestamps regenerate. Repository source names five possible monitoring settings; that list is not a live inventory. Keep cron and outbound networking disabled until target endpoints and application authorization are independently validated. No private identity, plaintext values, dumps or private logs belong in Git or CI artifacts.
+
+A pass proves the specified checks for the selected snapshot, not live failover, zero data loss since that snapshot, external Storage object recovery, JWT/OAuth/SMTP configuration recovery or end-to-end Auth/PostgREST/Edge Function behavior. The receipt must retain its actual backup date. A fresh export and separately tested cutover are still required before replacing a provider.
+
+Blank historical migration replay is a different operation: old source files include one-time content-dependent calls and a cron modification before its source creator. Do not restore erased pilot material or silently skip/shim historical statements to label that replay successful. Use a current post-reset logical snapshot for recovery; a clean-install schema baseline requires separate reconciliation.
+
+
+### Actual v2 restore receipt
+
+Draft [PR292](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/292), tested source `637807749bc9f9cb0dcbb91312740ecaea046a6b`, workflow [39606903113](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39606903113): snapshot `supabase/2026/10/21/20261021T131907Z` was created and verified, then restored into isolated PG17. The 69-table public access/RLS audit passed and exported source/restored public access metadata matched exactly. All 69 required public tables and all 102 dumped COPY tables matched, Auth coverage passed and public/Auth/Storage foreign-key checks passed. The strict final gate failed `vault_backup_coverage_missing`. Cleanup succeeded. This receipt establishes the completed data/access checks only; full recovery remains incomplete. No production SQL or erased content was restored.
+
+
+### Historical mechanism acceptance before owner configuration
+
+On tested code `12cbafe87cde162872370e29d2aa9d613ffbda62`, [workflow39619055185](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39619055185) verified snapshot `supabase/2026/10/21/20261021T144629Z`. The real isolated PG17 synthetic fixture passed age encryption, target-key Vault provisioning, exact value/description comparison and refusal to overwrite existing secrets. Source restoration then passed exact public access, all69required public/all102COPY tables, Auth coverage and FK checks. Final strict gate still failed `vault_backup_coverage_missing`: the actual archive is v2 while the owner recipient is unconfigured. Cleanup passed. Foundation39619055184 core, Chromium and WebKit all passed on that code. This receipt proves the mechanism and specified data/access checks; actual-secret v3 and independent-key acceptance remain required. Follow [private owner setup](VAULT_RECOVERY_SETUP.md); do not mark full recovery complete or merge the draft on synthetic evidence alone.
+
+
+### Actual encrypted v3 acceptance — 2026-10-21
+
+[Workflow39624386430](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39624386430) passed on tested source `e5584df91b6f92edd604a6b6a52c9ebc1283e289` (tree `975c915807bf3719211b2de7008cba3e2de461d5`). Fresh snapshot `supabase/2026/10/21/20261021T151857Z` was encrypted, uploaded and size-verified, then archive/inner checksums/source/freshness were verified. Real PG17 synthetic Vault acceptance passed first. Actual source roles/schema/data/access restored; exact public owners/grants/defaults matched. All69required public/all102COPY tables, Auth and foreign keys matched; actual `vaultReadable` and `vaultValuesMatched` were true with `encrypted-named-provisioning`. Cleanup stopped the disposable target and removed downloaded/private files.
+
+A dedicated private key was preserved independently of Supabase/Cloudflare/GitHub, retrieved back, compared byte-for-byte and used for a real synthetic age roundtrip. The same identity file configured the Actions secret used by the actual v3 drill. This verifies retained-key retrieval and cryptographic usability; owner offline retention is recommended and not observed. Do not regenerate or rotate the configured key during routine continuation. The earlier configured-key run39623460079 failed before upload because PGDATABASE did not expand the full URI; explicit psql -d fixes the connection, with a failing-then-passing regression and SQLSTATE-only errors. No source credentials or root key changed.
+
+This is task-branch acceptance. The default branch still requires reviewed integration before its weekly schedule uses this implementation. No merge, release, production SQL changes, source deletion or provider cutover occurred. External Storage bytes, Auth/OAuth/JWT/SMTP configuration, complete API/runtime authorization and consistent cross-service snapshots remain separate acceptance gaps.
+
+A second records-only head `232082653026ca9fc234ab2378f675538249a29b` passed [workflow39624968454](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39624968454) on fresh snapshot `supabase/2026/10/21/20261021T152328Z`, repeating all data/access/Vault checks and cleanup. [Foundation39624968689](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39624968689) passed core/build/1358Node/five PostgreSQL checks, Chromium and WebKit. Local26Python tests and full check pass; independent focused review approved. Final receipt-only documentation does not change the tested implementation.

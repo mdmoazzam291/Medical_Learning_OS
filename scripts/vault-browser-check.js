@@ -19,6 +19,8 @@ try {
     page.on('pageerror', error => errors.push(error.message));
     let annotation = null;
     const writes = [];
+    let releaseSearch;
+    const searchResponse = new Promise(resolve => { releaseSearch = resolve; });
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const request = route.request();
       const path = new URL(request.url()).pathname.split('/functions/v1/study-api')[1];
@@ -26,7 +28,10 @@ try {
       const fulfill = (body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
       if (method !== 'GET') writes.push({ path, method, body: request.postDataJSON() });
       if (path === '/vault/concepts') return fulfill({ catalogVersion: 1, concepts });
-      if (path === '/vault/search') return fulfill({ results: [concepts[1]] });
+      if (path === '/vault/search') {
+        await searchResponse;
+        return fulfill({ results: [concepts[1]] });
+      }
       if (path?.startsWith('/vault/concepts/')) {
         const concept = concepts.find(item => item.conceptId === decodeURIComponent(path.split('/').at(-1)));
         return fulfill({ concept, canonicalNote: concept.conceptId === conceptId ? { noteVersionId, version: 1, title: 'A place to connect your knowledge', bodyMarkdown: 'Synthetic interface fixture — no clinical teaching.\n\nThe published note stays visible while personal notes and private corrections occupy their own sections.\n\nLiteral text: <script>window.fixtureInjected = true</script>', contentSha256: 'e'.repeat(64) } : null, annotations: concept.conceptId === conceptId && annotation ? [annotation] : [] });
@@ -87,8 +92,19 @@ try {
     await page.getByLabel('Add a personal note').waitFor();
     if (width <= 800) await page.locator('#vault-concept-browser > summary').click();
     await page.getByLabel('Search NeuralVault').fill('empty');
+    const searchStarted = page.waitForRequest(request => new URL(request.url()).pathname.endsWith('/vault/search'));
     await page.getByRole('button', { name: 'Search', exact: true }).click();
-    await page.getByRole('button', { name: 'Unpublished concept fixture', exact: false }).click();
+    await searchStarted;
+    const alternateConcept = page.getByRole('button', { name: 'Unpublished concept fixture', exact: false });
+    let selectAfterSearch;
+    try {
+      // The old catalog also contains this match. Hold the response so a fast
+      // click must wait for a usable result instead of being silently discarded.
+      assert.equal(await alternateConcept.isDisabled(), true, name + ' stale match disabled during search');
+      assert.equal(await page.getByRole('button', { name: 'Search', exact: true }).isDisabled(), true);
+      selectAfterSearch = alternateConcept.click();
+    } finally { releaseSearch(); }
+    await selectAfterSearch;
     await page.getByRole('heading', { name: 'No reviewed canonical note is published yet.' }).waitFor();
     assert.equal(await page.evaluate(() => document.activeElement.id), 'concept-title');
     assert.equal(new URL(page.url()).searchParams.get('concept'), alternateId);

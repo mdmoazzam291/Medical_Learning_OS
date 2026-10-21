@@ -1,6 +1,19 @@
 name: Supabase R2 restore drill
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/supabase-r2-restore-drill.yml'
+      - 'ops/r2-backups/verify_restore.py'
+      - 'ops/r2-backups/test_verify_restore.py'
+      - '.github/workflows/supabase-r2-backup.yml'
+      - 'supabase/verification/export-access.sql'
+      - 'scripts/access-manifest-db-check.js'
+      - 'ops/r2-backups/vault_recovery.py'
+      - 'ops/r2-backups/test_vault_recovery.py'
+      - 'ops/r2-backups/test_restore_archive.py'
+      - 'ops/r2-backups/check_vault_recovery.py'
+      - 'ops/r2-backups/install_age.sh'
   workflow_dispatch:
   schedule:
     # Monthly full recoverability proof. Weekly backups remain separate.
@@ -14,10 +27,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  snapshot:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner
+    uses: ./.github/workflows/supabase-r2-backup.yml
+    secrets:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
   restore:
+    needs: snapshot
+    # Secrets are available only to owner-authored same-repository validation.
+    if: always() && (github.event_name != 'pull_request' || (needs.snapshot.result == 'success' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test private restore verifier
+        run: python3 -m unittest discover -s ops/r2-backups -p 'test_*.py' -v
+      - name: Install pinned encryption tool and test private recovery
+        run: |
+          bash ops/r2-backups/install_age.sh
+          AGE_BIN="$RUNNER_TEMP/mlos-age/age" python3 -m unittest discover -s ops/r2-backups -p test_vault_recovery.py -v
       - name: Discover and download latest backup from R2
         shell: bash
         env:
@@ -102,9 +134,11 @@ jobs:
                   digest.update(block)
           assert digest.hexdigest() == expected, 'R2 archive checksum mismatch'
 
-          names = {'roles.sql', 'schema.sql', 'data.sql', 'SHA256SUMS', 'manifest.json'}
+          names = {'roles.sql', 'schema.sql', 'data.sql', 'access.sql', 'SHA256SUMS', 'manifest.json'}
           with tarfile.open(archive, 'r:gz') as tar:
               members = tar.getmembers()
+              if any(member.name == 'vault.json.age' for member in members):
+                  names.add('vault.json.age')
               assert len(members) == len(names), 'Unexpected archive member count'
               assert {member.name for member in members} == names, 'Unexpected archive paths'
               assert all(member.isfile() and member.size <= 100_000_000 for member in members), 'Unsafe archive member'
@@ -113,6 +147,9 @@ jobs:
                       shutil.copyfileobj(source, target)
 
           manifest = json.loads((root / 'manifest.json').read_text())
+          has_vault = 'vault.json.age' in names
+          required_format = 'supabase-cli-sql-vault-v3' if has_vault else 'supabase-cli-sql-access-v2'
+          assert manifest['format'] == required_format, 'Backup format and members disagree'
           assert manifest['project_ref'] == 'iyapppmeieqhflnzslao', 'Wrong source project'
           assert manifest['repository'] == 'mdmoazzam291/Medical_Learning_OS', 'Wrong source repository'
           assert str(manifest['workflow_run_id']).isdigit(), 'Invalid backup workflow run id'
@@ -134,15 +171,18 @@ jobs:
           )
 
           lines = (root / 'SHA256SUMS').read_text().splitlines()
-          assert len(lines) == 3, 'Unexpected inner checksum count'
+          required_files = {'roles.sql', 'schema.sql', 'data.sql', 'access.sql'}
+          if has_vault:
+              required_files.add('vault.json.age')
+          assert len(lines) == len(required_files), 'Unexpected inner checksum count'
           actual_names = set()
           for line in lines:
-              match = re.fullmatch(r'([0-9a-f]{64})  (roles\.sql|schema\.sql|data\.sql)', line)
+              match = re.fullmatch(r'([0-9a-f]{64})  (roles\.sql|schema\.sql|data\.sql|access\.sql|vault\.json\.age)', line)
               assert match, 'Invalid inner checksum entry'
               file_digest, filename = match.groups()
               actual_names.add(filename)
               assert hashlib.sha256((root / filename).read_bytes()).hexdigest() == file_digest, 'SQL checksum mismatch'
-          assert actual_names == {'roles.sql', 'schema.sql', 'data.sql'}, 'Missing SQL dump'
+          assert actual_names == required_files, 'Missing or extra backup checksum'
           print(
               'Latest backup verified: '
               f"prefix={prefix} run={manifest['workflow_run_id']} "
@@ -152,7 +192,7 @@ jobs:
 
       - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
         with:
-          version: latest
+          version: 2.121.0
 
       - name: Restore only into disposable local Supabase database
         shell: bash
@@ -166,23 +206,38 @@ jobs:
           cd "$RUNNER_TEMP/mlos-local-restore"
           supabase init --yes >/dev/null
           sed -i 's/^major_version = .*/major_version = 17/' supabase/config.toml
-          supabase db start >/dev/null
+          supabase db start > "$RUNNER_TEMP/restore-platform.log" 2>&1
           local_url=postgresql://postgres:postgres@127.0.0.1:54322/postgres
           pg_isready -h 127.0.0.1 -p 54322 -U postgres >/dev/null
 
           container=supabase_db_mlos-local-restore
+          # Pull/start happens before isolation. All restore SQL runs afterward.
+          networks="$(docker inspect --format '{{range $k, $v := .NetworkSettings.Networks}}{{$k}} {{end}}' "$container")"
+          for network in $networks; do docker network disconnect "$network" "$container"; done
+          test "$(docker inspect --format '{{len .NetworkSettings.Networks}}' "$container")" = 0
+          docker exec "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
+            -c "ALTER SYSTEM SET cron.launch_active_jobs = off" \
+            -c "SELECT pg_reload_conf()" > /dev/null
+          sleep 2
+          cron_state="$(docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 -c "SHOW cron.launch_active_jobs")"
+          test "$cron_state" = off
+          docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 \
+            -c "SELECT encode(extensions.digest('abc','sha256'),'hex') = 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'" | grep -qx t
+          cd "$GITHUB_WORKSPACE"
+          python3 ops/r2-backups/check_vault_recovery.py
           docker cp "$RUNNER_TEMP/mlos-restore" "$container:/tmp/mlos-restore"
           if ! docker exec "$container" psql --username supabase_admin --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
             --variable VERBOSITY=sqlstate --quiet --file "/tmp/mlos-restore/roles.sql" \
             --file "/tmp/mlos-restore/schema.sql" \
             --command 'SET session_replication_role = replica' \
             --file "/tmp/mlos-restore/data.sql" \
+            --file "/tmp/mlos-restore/access.sql" \
             --dbname postgres > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
             python3 - <<'PYERR'
           import os, re
           from pathlib import Path
           for line in (Path(os.environ['RUNNER_TEMP']) / 'restore.err').read_text().splitlines():
-              match = re.search(r'(roles|schema|data)\.sql:(\d+): ERROR:  ([A-Z0-9]{5})', line)
+              match = re.search(r'(roles|schema|data|access)\.sql:(\d+): ERROR:  ([A-Z0-9]{5})', line)
               if match:
                   name, number, code = match.groups()
                   print(f'Restore SQLSTATE={code} file={name}.sql line={number}')
@@ -191,42 +246,24 @@ jobs:
             exit 1
           fi
 
-          tables="$(psql --no-psqlrc --tuples-only --no-align --variable ON_ERROR_STOP=1 \
-            --dbname "$local_url" --command "SELECT count(*) FROM pg_class WHERE oid IN (
-              'public.study_catalog'::regclass, 'public.study_sessions'::regclass,
-              'public.study_attempts'::regclass, 'public.study_bookmarks'::regclass
-            ) AND relrowsecurity")"
-          test "$tables" = 4
-
-          python3 - <<'PYCHECK'
-          import os, re, subprocess
-          from pathlib import Path
-
-          tables = {'study_catalog', 'study_sessions', 'study_attempts', 'study_bookmarks'}
-          verified = set()
-          lines = iter((Path(os.environ['RUNNER_TEMP']) / 'mlos-restore/data.sql').read_text().splitlines())
-          for line in lines:
-              match = re.fullmatch(r'COPY "?public"?\."?([a-z_]+)"? \(([a-z_, "\s]+)\) FROM stdin;', line)
-              if not match or match[1] not in tables:
-                  continue
-              name, columns = match.groups()
-              expected = []
-              for row in lines:
-                  if row == r'\.':
-                      break
-                  expected.append(row)
-              result = subprocess.run([
-                  'docker', 'exec', 'supabase_db_mlos-local-restore',
-                  'psql', '-U', 'supabase_admin', '-d', 'postgres', '--no-psqlrc',
-                  '--variable', 'ON_ERROR_STOP=1', '--command',
-                  f'COPY public."{name}" ({columns}) TO STDOUT'
-              ], capture_output=True, text=True)
-              assert result.returncode == 0, 'Restored table read failed'
-              assert sorted(result.stdout.splitlines()) == sorted(expected), 'Restored table data mismatch'
-              verified.add(name)
-          assert verified == tables, 'Missing study table COPY data in backup'
-          print('Latest-backup restore passed: four RLS-enabled study tables match backup data exactly.')
-          PYCHECK
+      - name: Verify restored access, data and encrypted Vault configuration
+        shell: bash
+        env:
+          MLOS_RECOVERY_AGE_IDENTITY: ${{ secrets.MLOS_RECOVERY_AGE_IDENTITY }}
+        run: |
+          set -euo pipefail
+          container=supabase_db_mlos-local-restore
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
+            < supabase/verification/data-api-grants.sql
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 \
+            < supabase/verification/export-access.sql > "$RUNNER_TEMP/mlos-restore/access.restored.sql"
+          if ! cmp --silent "$RUNNER_TEMP/mlos-restore/access.sql" "$RUNNER_TEMP/mlos-restore/access.restored.sql"; then
+            echo 'Restored access metadata differs from the source snapshot.'
+            exit 1
+          fi
+          echo 'Exact source public owners, grants, column privileges and defaults matched.'
+          python3 ops/r2-backups/verify_restore.py \
+            "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
 
       - name: Remove disposable database and downloaded backup
         if: always()
@@ -237,4 +274,4 @@ jobs:
             supabase stop --no-backup || true
           fi
           rm -rf "$RUNNER_TEMP/mlos-restore"
-          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err"
+          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err" "$RUNNER_TEMP/restore-platform.log"

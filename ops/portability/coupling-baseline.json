@@ -67,12 +67,27 @@
     "cloudflare",
     "supabase"
   ],
+  "ops/r2-backups/check_vault_recovery.py": [
+    "supabase"
+  ],
+  "ops/r2-backups/install_age.sh": [
+    "github"
+  ],
   "ops/r2-backups/storage_guard.py": [
     "cloudflare",
     "supabase"
   ],
+  "ops/r2-backups/vault_recovery.py": [
+    "supabase"
+  ],
+  "ops/r2-backups/verify_restore.py": [
+    "supabase"
+  ],
   "render.yaml": [
     "render"
+  ],
+  "scripts/access-manifest-db-check.js": [
+    "supabase"
   ],
   "scripts/auth-recovery-browser-check.js": [
     "supabase"
@@ -600,6 +615,9 @@
     "supabase"
   ],
   "supabase/verification/data-api-grants.sql": [
+    "supabase"
+  ],
+  "supabase/verification/export-access.sql": [
     "supabase"
   ],
   "supabase/verification/rls-isolation.sql": [
