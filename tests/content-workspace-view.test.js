@@ -27,3 +27,7 @@ test('neighborhood supplies equivalent exact-version list and no unsupported med
  for(const path of ['web/content-workspace-view.js','web/content-workspace.css','web/content-workspace-controls.js','src/domain/content-workspace.js'])assert.ok(publicFileSet.has(path),path);
  const html=await readFile(new URL('../web/library.html',import.meta.url),'utf8');assert.match(html,/content-workspace.css/);
  });
+test('overview retains the shared feedback region for a study request completed after a view switch',()=>{
+ const html=v.workspaceFrame({library,filters:{concept:'c'},view:'overview',options:{}},'',{search:'?concept=c'});
+ assert.match(html,/id="library-status"[^>]*role="status"/);assert.match(html,/data-save-view/);
+});

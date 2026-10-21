@@ -7,6 +7,10 @@ import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
 import { MASTERS, navigationFor, routeIdentity } from '../src/domain/app-navigation.js';
 import { ADMIN_VIEWS } from '../web/admin-workspace-view.js';
+async function ensureLibraryFilters(page) {
+  const filters=page.locator('.cw-filter-disclosure');await filters.waitFor({state:'attached'});
+  if(await filters.getAttribute('open')===null)await filters.locator('summary').click();
+}
 // Read resolved paint, including the tint gradient, in the actual browser.
 function navigationPaint() {
   const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
@@ -846,18 +850,18 @@ try {
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to first source');
     await page.getByRole('button', { name: 'Next card', exact: true }).click();
     await page.getByLabel('Your recall', { exact: true }).fill('Draft tied to second source');
-    await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c');
+    await ensureLibraryFilters(page);await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c');
     assert.equal(await page.getByLabel('Your recall', { exact: true }).count(), 1, 'Recall after concept filter: ' + JSON.stringify(errors) + ' ' + await page.locator('#library-app').innerText());
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to first source');
     await page.getByRole('button', { name: 'Reveal source note', exact: true }).click();
-    await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c2');
+    await ensureLibraryFilters(page);await page.getByLabel('Concept', { exact: true }).selectOption('fixture-c2');
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Draft tied to second source');
     assert.equal(await page.getByRole('button', { name: 'Reveal source note', exact: true }).isVisible(), true);
     assert.equal(await page.getByText('Second isolated source body.', { exact: true }).count(), 0);
     await go(origin + '/web/library.html?view=images&system=respiratory');
     await page.getByRole('button', { name: 'Open original media', exact: true }).click();
     await page.getByRole('heading', { name: 'Original media', exact: true }).waitFor();
-    await page.getByLabel('System', { exact: true }).selectOption('cardiovascular');
+    await ensureLibraryFilters(page);await page.getByLabel('System', { exact: true }).selectOption('cardiovascular');
     assert.equal(await page.getByRole('heading', { name: 'Original media', exact: true }).count(), 0);
     await page.evaluate(() => localStorage.setItem('mlos-library-device-v1', JSON.stringify({ version: 1, bookmarks: [], views: Array.from({ length: 30 }, (_, i) => ({ id: 'limit-' + i, name: 'Saved fixture ' + i, view: 'notes', filters: {} })) })));
     await go(origin + '/web/library.html?view=notes');
@@ -867,7 +871,7 @@ try {
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-library-device-v1')).views.length), 30);
     await go(origin + '/web/library.html?view=subjects&master=study');
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
-    await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
+    await ensureLibraryFilters(page);await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
     assert.equal(new URL(page.url()).searchParams.get('master'), 'study');
     assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Study', exact: true }).getAttribute('aria-current'), 'page');
     await reload();
@@ -880,9 +884,9 @@ try {
     await togglePinForNavigationTest('study:build');
     await go(origin + '/web/library.html?view=notes');
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
-    await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
+    await ensureLibraryFilters(page);await page.getByLabel('Collection', { exact: true }).selectOption('pyq');
     assert.equal(await page.locator('[data-filter="keyword"] option[value="diagnosis"]').count(), 0);
-    await page.getByLabel('Collection', { exact: true }).selectOption('');
+    await ensureLibraryFilters(page);await page.getByLabel('Collection', { exact: true }).selectOption('');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await togglePinForNavigationTest('library:notes');
     await activate(page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).getByRole('link', { name: 'Questions', exact: true, includeHidden: true }));
@@ -897,8 +901,8 @@ try {
     await page.getByLabel('Question count', { exact: true }).selectOption('1');
     await reload(); await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Question count', { exact: true }).inputValue(), '1');
-    await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
-    await page.getByLabel('System', { exact: true }).selectOption('respiratory');
+    await ensureLibraryFilters(page);await page.getByLabel('Subject', { exact: true }).selectOption('medicine');
+    await ensureLibraryFilters(page);await page.getByLabel('System', { exact: true }).selectOption('respiratory');
     await page.getByRole('link', { name: 'Synthetic concept (primary)', exact: true }).first().click();
     await page.getByRole('heading', { name: 'Build Session', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Subject', { exact: true }).inputValue(), 'medicine');

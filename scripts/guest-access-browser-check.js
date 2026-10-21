@@ -79,7 +79,7 @@ try {
     if(callback)await page.goto(origin+'/web/account.html#access_token=synthetic-access&refresh_token=synthetic-refresh&expires_at=2100000000&type=signup');
     else await emailSignIn(page);
     await page.waitForURL(origin+path);
-    if(path.includes('library'))await page.locator('.library-filters').waitFor();
+    if(path.includes('library')){await page.getByText('Search & filters',{exact:true}).click();await page.locator('.library-filters').waitFor();}
     assert.equal(await page.locator('.guest-card').count(),0);
     assert.equal(await page.locator('.mlos-public-header').count(),0);
     assert.ok(await page.locator('[data-master="study"]').count()>0);
