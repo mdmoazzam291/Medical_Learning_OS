@@ -32,3 +32,10 @@ test('headings are explicit; CRLF and decorated headings are supported',()=>{
  assert.equal(g[0].items[0].body,'Exact mechanism');
  assert.equal(DOSSIER_SECTIONS.length,7);
 });
+
+test('does not misinterpret heading-shaped lines inside fenced examples',()=>{
+ const body=['## Diagnosis','Actual clinical note','~~~text','## Management','Code example, not another section','~~~'].join('\n');
+ const grouped=groupReviewedNoteSections([note({bodyMarkdown:body})],[]);
+ assert.deepEqual(grouped.map(x=>x.id),['diagnosis']);
+ assert.match(grouped[0].items[0].body,/## Management/);
+});
