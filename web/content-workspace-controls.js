@@ -22,6 +22,14 @@ export function workspaceControls({root,render,navigate}) {
     restore();
   };
   window.addEventListener('mlos:route',dismissForRoute);
+  // A touch can start on the compact global-search icon and finish after its
+  // layout expands, producing a synthesized click on a different button.
+  // Associate the click with its original pointer target. Keyboard-generated
+  // clicks (detail=0) remain supported without a pointer.
+  let pointerPane=null;
+  document.addEventListener('pointerdown',event=>{
+    pointerPane=event.target.closest?.('button[data-cw-toggle]')?.dataset.cwToggle||null;
+  },true);
   root.addEventListener('close',event=>{if(event.target===root.querySelector('#cw-pane-dialog'))restore();},true);
   root.addEventListener('submit',event=>{if(event.target.matches('[data-cw-search]')){event.preventDefault();explorerSearch=event.target.elements.conceptSearch.value.trim().slice(0,300);explorerLimit=60;render();root.querySelector('[name="conceptSearch"]')?.focus();}});
   root.addEventListener('change',event=>{if(event.target.dataset.cwFacet)navigate({[event.target.dataset.cwFacet]:event.target.value,concept:''});});
@@ -29,7 +37,7 @@ export function workspaceControls({root,render,navigate}) {
     const b=event.target.closest('button');
     // Compact global search can retarget its first touch to the underlying toolbar during reflow.
     // While search owns the foreground interaction, background panes must not open.
-    if(b?.dataset.cwToggle && !document.querySelector('#mlos-navigation')?.classList.contains('mlos-search-open'))showPane(b.dataset.cwToggle,b);
+    if(b?.dataset.cwToggle && (event.detail===0 || pointerPane===b.dataset.cwToggle) && !document.querySelector('#mlos-navigation')?.classList.contains('mlos-search-open'))showPane(b.dataset.cwToggle,b);
     if(b?.dataset.cwClose){const dialog=root.querySelector('#cw-pane-dialog');if(dialog?.open)dialog.close();else{if(b.dataset.cwClose==='context')contextHidden=true;else explorerHidden=true;render();root.querySelector('[data-cw-toggle="'+b.dataset.cwClose+'"]')?.focus();}}
     if(b?.hasAttribute('data-cw-dialog-close'))root.querySelector('#cw-pane-dialog')?.close();
     if(b?.dataset.cwMore){if(b.dataset.cwMore==='inspector')inspectorLimit+=50;else if(b.dataset.cwMore==='content')contentLimit+=50;else if(b.dataset.cwMore==='concepts')explorerLimit=Math.min(1000,explorerLimit+60);else {graphLimit=Math.min(100,graphLimit+20);contentLimit=Math.max(contentLimit,graphLimit);}render();}
