@@ -1,5 +1,12 @@
 # Current engineering handoff
 
+## Owner-delegated recovery-key configuration completed; actual v3 acceptance pending — 2026-10-21T15:09:17Z
+- Owner explicitly granted full authority to finish the remaining key setup and recovery test. Codex resumes the same task branch test/full-platform-replay-20261021 / draft PR292; remote main b3baeec7845fa9d9dfaba28bead4b41001192efe and branch d6ae810b3ad5b8129ac664062039237c1b819740 verified unchanged. No competing task writer observed.
+- Generated a dedicated age1.3.2 recovery identity outside the repository. Preserved a private owner-downloadable recovery kit independently of Supabase/Cloudflare/GitHub; independently retrieved that saved copy, verified exact bytes/public recipient and an actual synthetic age encryption/decryption roundtrip. No private identity entered chat, Git or logs. Owner download/offline retention is recommended and has not been observed.
+- Configured this repository's MLOS_RECOVERY_AGE_IDENTITY Actions secret and public MLOS_RECOVERY_AGE_RECIPIENT Actions variable. GitHub visibly confirmed the secret addition and public variable value. Existing source DB/R2 access is unchanged; no provider key extraction or production SQL performed.
+- Exact next action: manually dispatch the existing backup workflow on this task branch (v3 code), require fresh encrypted archive success, then dispatch the isolated restore workflow on this branch and require actual Vault/data/Auth/FK/access parity plus cleanup. Verified implementation code remains12cbafe87cde162872370e29d2aa9d613ffbda62 (treefd09fa0efafec8d0c679c096221dcde76c744301). Do not treat configuration or synthetic retained-key acceptance as actual-secret recovery. Keep PR draft pending real v3 result; no merge/release/cutover authorized by this step.
+
+
 
 
 
