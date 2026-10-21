@@ -27,7 +27,9 @@ export function workspaceControls({root,render,navigate}) {
   root.addEventListener('change',event=>{if(event.target.dataset.cwFacet)navigate({[event.target.dataset.cwFacet]:event.target.value,concept:''});});
   root.addEventListener('click',event=>{
     const b=event.target.closest('button');
-    if(b?.dataset.cwToggle)showPane(b.dataset.cwToggle,b);
+    // Compact global search can retarget its first touch to the underlying toolbar during reflow.
+    // While search owns the foreground interaction, background panes must not open.
+    if(b?.dataset.cwToggle && !document.querySelector('#mlos-navigation')?.classList.contains('mlos-search-open'))showPane(b.dataset.cwToggle,b);
     if(b?.dataset.cwClose){const dialog=root.querySelector('#cw-pane-dialog');if(dialog?.open)dialog.close();else{if(b.dataset.cwClose==='context')contextHidden=true;else explorerHidden=true;render();root.querySelector('[data-cw-toggle="'+b.dataset.cwClose+'"]')?.focus();}}
     if(b?.hasAttribute('data-cw-dialog-close'))root.querySelector('#cw-pane-dialog')?.close();
     if(b?.dataset.cwMore){if(b.dataset.cwMore==='inspector')inspectorLimit+=50;else if(b.dataset.cwMore==='content')contentLimit+=50;else if(b.dataset.cwMore==='concepts')explorerLimit=Math.min(1000,explorerLimit+60);else {graphLimit=Math.min(100,graphLimit+20);contentLimit=Math.max(contentLimit,graphLimit);}render();}
