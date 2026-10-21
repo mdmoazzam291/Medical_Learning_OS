@@ -117,6 +117,37 @@ class VaultRecoveryTests(unittest.TestCase):
                 m.export_vault('/unused', self.payload()['snapshot'])
             process.assert_not_called()
 
+    def test_export_connects_to_requested_uri_and_encrypts_source_payload(self):
+        m = self.module()
+        age = os.environ.get('AGE_BIN')
+        if not age:
+            self.skipTest('AGE_BIN not configured for real cryptographic test')
+        keygen = str(Path(age).with_name('age-keygen'))
+        identity = subprocess.run([keygen], capture_output=True, check=True).stdout
+        recipient = subprocess.run([keygen, '-y'], input=identity, capture_output=True, check=True).stdout.decode().strip()
+        source = 'postgresql://synthetic:fixture@requested.invalid/postgres'
+        real_run = subprocess.run
+
+        def database_boundary(command, **kwargs):
+            if command[0] != 'psql':
+                return real_run(command, **kwargs)
+            # libpq expands an explicit dbname URI before applying environment defaults.
+            if '-d' not in command or command[command.index('-d') + 1] != source:
+                return subprocess.CompletedProcess(command, 2, b'', b'default connection failed')
+            return subprocess.CompletedProcess(command, 0, json.dumps(self.payload()).encode(), b'')
+
+        with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ, {
+            'SUPABASE_DB_URL': source, 'MLOS_RECOVERY_AGE_RECIPIENT': recipient,
+        }), patch('subprocess.run', side_effect=database_boundary):
+            cipher = Path(directory) / 'vault.json.age'
+            try:
+                result = m.export_vault(cipher, self.payload()['snapshot'])
+            except ValueError as error:
+                self.fail('Requested source URI was not selected: ' + str(error))
+            self.assertEqual(result, {'vaultEncrypted': True})
+            self.assertNotIn(b'fixture-only', cipher.read_bytes())
+            self.assertEqual(m.decrypt_payload(cipher, identity.decode(), self.payload()['snapshot'], age), self.payload())
+
 
 if __name__ == '__main__':
     unittest.main()

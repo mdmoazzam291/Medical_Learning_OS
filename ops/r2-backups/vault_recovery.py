@@ -115,12 +115,14 @@ def export_vault(output, snapshot):
     # Validate the public recipient before querying any decrypted value.
     empty = {'format': 'mlos-vault-recovery-v1', 'project': PROJECT, 'snapshot': snapshot, 'secrets': []}
     encrypt_payload(empty, recipient, age)
-    env = {**os.environ, 'PGDATABASE': os.environ.get('SUPABASE_DB_URL', '')}
-    if not env['PGDATABASE']:
+    source = os.environ.get('SUPABASE_DB_URL', '')
+    if not source:
         raise ValueError('vault_source_connection_missing')
     sql = "BEGIN READ ONLY; SELECT json_build_object('format','mlos-vault-recovery-v1','project','" + PROJECT + "','snapshot','" + snapshot + "','secrets',coalesce(json_agg(json_build_object('name',name,'description',description,'secret',decrypted_secret) ORDER BY name),'[]'::json)) FROM vault.decrypted_secrets; COMMIT;"
-    raw = run_private(['psql', '-X', '-qAt', '-v', 'ON_ERROR_STOP=1', '-c', sql],
-                      env=env, stage='vault_export_failed')
+    # libpq expands a connection-string dbname before adding PGDATABASE defaults.
+    raw = run_private(['psql', '-d', source, '-X', '-qAt', '-v', 'ON_ERROR_STOP=1',
+                       '-v', 'VERBOSITY=sqlstate', '-c', sql],
+                      stage='vault_export_failed', sqlstate=True)
     try:
         payload = validate_payload(json.loads(raw), snapshot)
     except (json.JSONDecodeError, UnicodeDecodeError):
