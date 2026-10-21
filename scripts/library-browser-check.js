@@ -17,7 +17,7 @@ const manifest={schemaVersion:1,importId:'synthetic-browser',concepts:[],sources
 const browser=await chromium.launch({headless:true});const errors=[];
 try{
  for(const [name,width,height] of [['phone',390,844],['tablet',820,1180],['desktop',1440,1000]]){
-  const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
+  const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>{if(window!==window.top)return;localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}}));});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let outage=false,releaseSlowDraft;
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{const request=route.request(),path=new URL(request.url()).pathname;const reply=(body,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(body)});
    if(request.method()!=='GET')writes.push({path,body:request.postDataJSON()});
