@@ -21,7 +21,9 @@
         ".github/workflows/supabase-r2-backup.yml",
         "src/adapters/supabase-auth.js",
         "scripts/baseline-migrations-db-check.js",
-        "scripts/data-api-grants-db-check.js"
+        "scripts/data-api-grants-db-check.js",
+        ".github/workflows/supabase-r2-restore-drill.yml",
+        "ops/r2-backups/verify_restore.py"
       ]
     },
     {

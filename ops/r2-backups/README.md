@@ -124,3 +124,14 @@ No age-only R2 expiration rule is installed: such a rule could remove the last r
 
 ## Weekly activation — 2026-09-26 IST
 User explicitly authorized weekly backups. Cron `17 22 * * 6` runs on the default branch; first scheduled slot is 2026-09-27 03:47 IST. GitHub may delay scheduled execution. Existing upload limits and concurrency remain active. Cleanup remains report-only: backups accumulate until manually reviewed or upload limits stop new backups. Account billing settings have not been changed or verified. To disable recurrence, remove only the `schedule` block; retain `workflow_dispatch`.
+
+
+## Full database restore gate — 2026-10-21 (verification pending)
+
+The expanded latest-backup drill uses pinned CLI 2.121.0 and the real local Supabase Postgres 17 image. It restores the original roles/schema/data archive unmodified, with no production connection supplied to the restore step. Before any archive SQL runs, its disposable database is disconnected from every Docker network and cron job launching is disabled and checked. The archive keeps its existing post-reset, nine-day freshness and checksum gates. Private logs/dumps are removed and never uploaded as artifacts.
+
+`verify_restore.py` requires every public application table declared in the repository (currently 69), compares every COPY block in every dumped schema using order-independent, duplicate-sensitive SHA-256 row fingerprints, checks public/Auth/Storage foreign keys, requires Auth users/identities/sessions in the backup, verifies Vault decryption is callable and rechecks disabled cron. Table rows, hashes, identities and decrypted secrets are not printed. The existing read-only role/RLS audit runs against the restored database. Owner-authored same-repository PRs can validate this workflow using the existing private R2 backup; fork/non-owner PRs cannot run its credentialed job. No new remote project is created.
+
+A pass proves the specified checks for the selected snapshot, not live failover, zero data loss since that snapshot, external Storage object recovery, JWT/OAuth/SMTP configuration recovery or end-to-end Auth/PostgREST/Edge Function behavior. The receipt must retain its actual backup date. A fresh export and separately tested cutover are still required before replacing a provider.
+
+Blank historical migration replay is a different operation: old source files include one-time content-dependent calls and a cron modification before its source creator. Do not restore erased pilot material or silently skip/shim historical statements to label that replay successful. Use a current post-reset logical snapshot for recovery; a clean-install schema baseline requires separate reconciliation.

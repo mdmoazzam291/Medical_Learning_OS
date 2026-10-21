@@ -1,6 +1,11 @@
 name: Supabase R2 restore drill
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/supabase-r2-restore-drill.yml'
+      - 'ops/r2-backups/verify_restore.py'
+      - 'ops/r2-backups/test_verify_restore.py'
   workflow_dispatch:
   schedule:
     # Monthly full recoverability proof. Weekly backups remain separate.
@@ -15,9 +20,16 @@ concurrency:
 
 jobs:
   restore:
+    # Secrets are available only to owner-authored same-repository validation.
+    if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == github.repository_owner)
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test private restore verifier
+        run: python3 -m unittest discover -s ops/r2-backups -p 'test_*.py' -v
       - name: Discover and download latest backup from R2
         shell: bash
         env:
@@ -152,7 +164,7 @@ jobs:
 
       - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
         with:
-          version: latest
+          version: 2.121.0
 
       - name: Restore only into disposable local Supabase database
         shell: bash
@@ -166,11 +178,23 @@ jobs:
           cd "$RUNNER_TEMP/mlos-local-restore"
           supabase init --yes >/dev/null
           sed -i 's/^major_version = .*/major_version = 17/' supabase/config.toml
-          supabase db start >/dev/null
+          supabase db start > "$RUNNER_TEMP/restore-platform.log" 2>&1
           local_url=postgresql://postgres:postgres@127.0.0.1:54322/postgres
           pg_isready -h 127.0.0.1 -p 54322 -U postgres >/dev/null
 
           container=supabase_db_mlos-local-restore
+          # Pull/start happens before isolation. All restore SQL runs afterward.
+          networks="$(docker inspect --format '{{range $k, $v := .NetworkSettings.Networks}}{{$k}} {{end}}' "$container")"
+          for network in $networks; do docker network disconnect "$network" "$container"; done
+          test "$(docker inspect --format '{{len .NetworkSettings.Networks}}' "$container")" = 0
+          docker exec "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
+            -c "ALTER SYSTEM SET cron.launch_active_jobs = off" \
+            -c "SELECT pg_reload_conf()" > /dev/null
+          sleep 2
+          cron_state="$(docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 -c "SHOW cron.launch_active_jobs")"
+          test "$cron_state" = off
+          docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 \
+            -c "SELECT encode(extensions.digest('abc','sha256'),'hex') = 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'" | grep -qx t
           docker cp "$RUNNER_TEMP/mlos-restore" "$container:/tmp/mlos-restore"
           if ! docker exec "$container" psql --username supabase_admin --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
             --variable VERBOSITY=sqlstate --quiet --file "/tmp/mlos-restore/roles.sql" \
@@ -191,42 +215,11 @@ jobs:
             exit 1
           fi
 
-          tables="$(psql --no-psqlrc --tuples-only --no-align --variable ON_ERROR_STOP=1 \
-            --dbname "$local_url" --command "SELECT count(*) FROM pg_class WHERE oid IN (
-              'public.study_catalog'::regclass, 'public.study_sessions'::regclass,
-              'public.study_attempts'::regclass, 'public.study_bookmarks'::regclass
-            ) AND relrowsecurity")"
-          test "$tables" = 4
-
-          python3 - <<'PYCHECK'
-          import os, re, subprocess
-          from pathlib import Path
-
-          tables = {'study_catalog', 'study_sessions', 'study_attempts', 'study_bookmarks'}
-          verified = set()
-          lines = iter((Path(os.environ['RUNNER_TEMP']) / 'mlos-restore/data.sql').read_text().splitlines())
-          for line in lines:
-              match = re.fullmatch(r'COPY "?public"?\."?([a-z_]+)"? \(([a-z_, "\s]+)\) FROM stdin;', line)
-              if not match or match[1] not in tables:
-                  continue
-              name, columns = match.groups()
-              expected = []
-              for row in lines:
-                  if row == r'\.':
-                      break
-                  expected.append(row)
-              result = subprocess.run([
-                  'docker', 'exec', 'supabase_db_mlos-local-restore',
-                  'psql', '-U', 'supabase_admin', '-d', 'postgres', '--no-psqlrc',
-                  '--variable', 'ON_ERROR_STOP=1', '--command',
-                  f'COPY public."{name}" ({columns}) TO STDOUT'
-              ], capture_output=True, text=True)
-              assert result.returncode == 0, 'Restored table read failed'
-              assert sorted(result.stdout.splitlines()) == sorted(expected), 'Restored table data mismatch'
-              verified.add(name)
-          assert verified == tables, 'Missing study table COPY data in backup'
-          print('Latest-backup restore passed: four RLS-enabled study tables match backup data exactly.')
-          PYCHECK
+          cd "$GITHUB_WORKSPACE"
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
+            < supabase/verification/data-api-grants.sql
+          python3 ops/r2-backups/verify_restore.py \
+            "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
 
       - name: Remove disposable database and downloaded backup
         if: always()
@@ -237,4 +230,4 @@ jobs:
             supabase stop --no-backup || true
           fi
           rm -rf "$RUNNER_TEMP/mlos-restore"
-          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err"
+          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err" "$RUNNER_TEMP/restore-platform.log"
