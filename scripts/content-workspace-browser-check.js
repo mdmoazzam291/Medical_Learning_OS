@@ -7,7 +7,8 @@ import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-content-workspace-'));await buildPages({outputDirectory:output});
-const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
+const headers=Object.fromEntries((await readFile(join(output,'_headers'),'utf8')).split('\n').filter(l=>/^\s+[^:]+:/.test(l)).map(l=>{const i=l.indexOf(':');return[l.slice(0,i).trim(),l.slice(i+1).trim()];}));
+const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{...headers,'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
 const facets={subjects:['medicine'],systems:['synthetic-system'],organs:[],domains:[],tasks:['diagnosis']};
 const c=id=>({conceptId:id,label:id==='a'?'Synthetic Alpha':id==='b'?'Synthetic Beta':'Long synthetic label '+id+' repeated '.repeat(12),aliases:id==='a'?['Alias Alpha']:[],classification:facets});
@@ -50,11 +51,11 @@ try{
   await page.goto(origin+'/web/library.html?concept=missing');await page.getByRole('heading',{name:'Concept unavailable',exact:true}).waitFor();assert.equal(await page.locator('[data-dossier-id]').count(),0);
   empty=true;await page.goto(origin+'/web/library.html');await page.getByText(/Your content homes are ready/).waitFor();assert.equal(await page.locator('[data-question-card]').count(),0);
   await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'workspace-fixture',exact:true}).click();await page.getByRole('heading',{name:'Content Placement Inspector',exact:true}).waitFor();await page.getByRole('button',{name:'Preview draft as learner',exact:true}).click();
-  const preview=page.getByRole('dialog',{name:'Draft learner preview'});await preview.waitFor();assert.doesNotMatch(await preview.textContent(),/SECRET ANSWER TEXT|PRIVATE REVIEW EVIDENCE|answerOptionId/);
-  await preview.getByRole('button',{name:'Desktop · 1440 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1440);assert.equal(await preview.locator('.cw-context').isVisible(),true,'Desktop preview must show its right inspector even on an iPad/phone host.');
-  await preview.getByRole('tab',{name:'Questions',exact:true}).click();await preview.getByRole('heading',{name:'Synthetic prompt draft',exact:true}).waitFor();
+  const preview=page.getByRole('dialog',{name:'Draft learner preview'}),canvas=page.frameLocator('#draft-preview iframe');await preview.waitFor();await canvas.getByRole('tab',{name:'Overview',exact:true}).waitFor();assert.doesNotMatch(await canvas.locator('body').textContent(),/SECRET ANSWER TEXT|PRIVATE REVIEW EVIDENCE|answerOptionId/);
+  await preview.getByRole('button',{name:'Desktop · 1440 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1440);await canvas.locator('#cw-context').waitFor({state:'visible'});assert.equal(await canvas.locator('#cw-context').isVisible(),true,'Desktop preview must show its right inspector even on an iPad/phone host.');
+  await canvas.getByRole('tab',{name:'Questions',exact:true}).click();await canvas.getByRole('heading',{name:'Synthetic prompt draft',exact:true}).waitFor();
   await preview.getByRole('button',{name:'iPad · 1024 px',exact:true}).click();assert.equal(await page.locator('[data-draft-canvas]').evaluate(e=>e.getBoundingClientRect().width),1024);
-  await page.keyboard.press('Escape');assert.equal(await preview.isVisible(),false);assert.deepEqual(writes,[]);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await canvas.getByRole('tab',{name:'Questions',exact:true}).waitFor();assert.equal(await canvas.locator('#cw-context').isVisible(),false);await page.keyboard.press('Escape');assert.equal(await preview.isVisible(),false);assert.deepEqual(writes,[]);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await context.close();
  }
  assert.deepEqual(errors,[]);console.log('Unified content workspace: five viewport sizes, concept continuity, bounded catalogs/graph, Back/reload, dialogs/focus, draft isolation and zero browse writes passed. Synthetic fixtures only.');
