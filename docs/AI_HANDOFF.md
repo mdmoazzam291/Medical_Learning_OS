@@ -1,5 +1,11 @@
 # Current engineering handoff
 
+## Future PWA roadmap documentation — checked 2026-10-21 (Asia/Kolkata)
+- Owner request: add appropriate GitHub roadmap wording for one responsive website, strengthened installable PWA and the same backend across devices. Codex owns only this documentation task; unrelated work remains untouched.
+- Branch docs/pwa-shared-backend-roadmap-20261021; base main 7877dc596f980b04eabb9106feccc29d1ce3cbe4. Roadmap content commit e24f131b4afda4c37115af70a87a4aee25bc3db0; subsequent documentation commits add ADR-125, STATUS and this checkpoint. The task PR and remote head own final integration metadata.
+- Completed: planned M03/M14 extension, explicit offline/sync/update acceptance and later-only native app evaluation. Documentation reviewed; no executable tests needed/run for these prose-only changes. No implementation, configuration change or migration authorized by this task.
+- Exact next action: verify the documentation PR diff contains only these four documentation files and preserve it through normal integration. Future feature work waits for explicit resumption; first inspect current PWA implementation before choosing the smallest delivery slice. Prior release receipts below remain historical evidence, not tasks to repeat. No custom background job retained; ownership released once documentation is saved.
+
 ## Cloudflare deployment confirmed through GitHub without sign-in — 2026-10-21T16:17:29Z
 - Owner requested an alternative without Cloudflare sign-in. Codex inspected the existing GitHub integration only; no additional login, deployment, credentials or security-rule changes were needed. This supersedes the provider-build blocker below.
 - Exact runtime merge a0943495b2cd9e8855c3f1aa4ac5c771062cba75 now has successful production Workers Builds receipts: website build4246d646-4619-4a8f-92b9-2e4293b7217f completed2026-10-21T16:16:30Z, deployed version675c93dd-5c13-4738-ac4b-2338b15c9c81 (GitHub check119336862776); heartbeat buildad63aa1b-1714-4af4-90aa-530c5e1488c2 succeeded with version219f4afb-7acd-4a55-b023-254b13e7e812 (check119336345376). Receipt: https://github.com/mdmoazzam291/Medical_Learning_OS/commit/a0943495b2cd9e8855c3f1aa4ac5c771062cba75/checks . The provider published these after the earlier inspection; no failed deployment or repair is inferred from that delay.
