@@ -43,6 +43,17 @@ try{
   await page.getByLabel('Graph perspective',{exact:true}).selectOption('learning');assert.match(await page.locator('.cw-graph-list').textContent(),/q.*@2/);
   await page.getByLabel('Graph perspective',{exact:true}).selectOption('medical');await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
   await page.getByRole('tab',{name:'Notes',exact:true}).click();assert.equal(new URL(page.url()).searchParams.get('concept'),'a');await page.goBack();assert.equal(new URL(page.url()).searchParams.get('view'),'graph');await page.reload();await page.getByLabel('Graph perspective',{exact:true}).waitFor();assert.equal(await page.getByLabel('Graph perspective',{exact:true}).inputValue(),'medical');
+  if(width<1000){
+   // Browser history must dismiss an on-demand Explorer rather than keep a
+   // modal over the global search control after the reader view changes.
+   await page.locator('[data-cw-toggle=explorer]').click();
+   await page.getByRole('dialog',{name:'Library panel'}).waitFor();
+   await page.goBack();
+   await page.waitForFunction(()=>!document.querySelector('#cw-pane-dialog')?.open);
+   assert.equal(await page.locator('#cw-pane-dialog').isVisible(),false,'History navigation must dismiss the Explorer modal');
+   await page.getByRole('button',{name:'Search all published content',exact:true}).click();
+   await page.keyboard.press('Escape');
+  }
   await page.goto(origin+'/web/library.html?view=questions&concept=a&collection=pyq');await page.locator('[data-question-card=pyq]').waitFor();assert.equal(await page.locator('[data-question-card]').count(),1);await page.getByRole('tab',{name:'Notes',exact:true}).click();assert.equal(new URL(page.url()).searchParams.has('collection'),false);await page.getByRole('heading',{name:'Synthetic note',exact:true}).waitFor();
   assert.equal(await page.evaluate(()=>window.injected===true),false);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.deepEqual(writes,[]);
   if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'content-workspace-'+name+'.png'),fullPage:true});}
