@@ -1,5 +1,11 @@
 # Current status
 
+## Unified Content Workspace implementation — 2026-10-22
+- Owner accepted the supplied workspace design with “Build this all”. Feature branch feat/unified-content-workspace-20261022 / draft PR296 extends Library around one selected canonical concept with Overview, Notes, Questions and Graph; grouped Explorer, PYQ/QBank/original homes, responsive panes, exact-version context and private NeuralVault handoff.
+- Added alias discovery, context-compatible URL transitions, bounded artifact/graph renderers, metadata placement checks and isolated prompt-only desktop/iPad draft preview. Existing review/publication and scored Study/Exam boundaries remain authoritative. No new provider, dependency, database migration or content is introduced. One reviewed mock-origin portability marker added for browser acceptance.
+- Baseline 1358 tests and changed 1373-test suite passed; latest full acceptance after pagination/pane refinements is pending. Local check/portability and 102-file build pass. Independent code review's blocking findings were fixed. Cloud browser visual QA used isolated nonclinical fixtures at its available desktop width; new actual-controller browser acceptance is wired into Chromium and WebKit CI. No live signed-in learner/admin acceptance, production merge or deployment claimed.
+- See UNIFIED_CONTENT_WORKSPACE.md for actual behavior, extension seams and limits: server pagination, a reviewed typed medical edge registry, clinical encounters and validated Digital Twin inference remain separate. Additional source metadata is backward-compatible with older API responses and needs normal API deployment to appear live.
+
 ## Responsive website and shared-backend PWA direction recorded — 2026-10-21
 - Owner authorized adding the approved future direction to the GitHub roadmap. Documentation only: one responsive website, stronger installable PWA experience, shared backend across devices.
 - ROADMAP extends M03/M14 with scoped offline synchronization, safe updates and device-level exit evidence; ADR-125 records the decision. Existing launch gates retain priority.

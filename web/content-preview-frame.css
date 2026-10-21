@@ -1,0 +1,6 @@
+/* Runs inside an opaque-origin read-only draft iframe; width media queries use the preview canvas. */
+html,body{margin:0;min-width:0;background:var(--bg);color:var(--ink)}main.library-page{max-width:none;margin:0;padding:20px}.cw-toolbar{display:none}.cw-pane-close{display:none}.cw-main{min-height:600px}.cw-group a[aria-disabled=true]{color:var(--muted);cursor:default}
+
+/* Parent-only controls are replaced by a constrained message relay in the preview. */
+[data-cw-toggle],[data-cw-close],[data-cw-more],[data-cw-dialog-close]{display:none!important}
+a[aria-disabled=true]{pointer-events:none;text-decoration:none}

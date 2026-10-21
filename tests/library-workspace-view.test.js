@@ -28,3 +28,7 @@ test('saved view links stay local and device bookmarks do not manufacture delete
   assert.match(html, /page memory/);
   assert.doesNotMatch(html, /data-question-card="erased"/);
 });
+test('media renderer accepts an expanded content limit rather than silently stopping at fifty',()=>{
+ const questions=Array.from({length:120},(_,i)=>({questionVersionId:'q'+i,stem:'Synthetic visual '+i}));
+ const html=render('media',{...empty,questions},{limit:100});assert.equal((html.match(/data-media=/g)||[]).length,100);
+});

@@ -101,3 +101,11 @@ test('keyword and free text combine with exclusive platform filters without answ
   assert.equal(domain.filterLibrary(a,{search:'Do not reveal'}).questions.length,0);
   assert.equal(domain.filterLibrary(a,{keyword:'next-best-step',platform:'marrow'}).questions.length,1);
 });
+test('workspace sources expose only references attached to published artifacts, excluding private rights/reviews',()=>{
+ const x=input();x.catalog.sources=[{sourceId:'s1',title:'Public title',url:'https://example.invalid',version:'edition-2',rights:{evidence:'PRIVATE'},secret:'PRIVATE'},{sourceId:'draft-only',title:'PRIVATE'}];
+ x.notes[0].source_ids=['s1'];
+ const result=domain.projectLibrary(x);
+ assert.deepEqual(result.sources,[{sourceId:'s1',title:'Public title',url:'https://example.invalid',version:'edition-2'}]);
+ assert.deepEqual(result.questions[0].sourceIds,['s1']);assert.deepEqual(result.notes[0].sourceIds,['s1']);
+ assert.doesNotMatch(JSON.stringify(result),/PRIVATE|draft-only/);
+});

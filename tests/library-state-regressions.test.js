@@ -17,7 +17,7 @@ function harness(view = 'recall', cloud = {}) {
   const listeners = {}, targets = new Map(), s = { library, view, filters: {}, options: {}, busy: false };
   const target = key => { if (!targets.has(key)) targets.set(key, { innerHTML: '', textContent: '', insertAdjacentHTML(_where, html) { this.innerHTML = html; }, remove() {} }); return targets.get(key); };
   const root = { querySelector: target, querySelectorAll: () => [], addEventListener(type, fn) { (listeners[type] ||= []).push(fn); } };
-  const context = vm.createContext({ URL, URLSearchParams, location: { search: '', origin: 'https://example.invalid' }, window: { addEventListener() {} }, document: { querySelector: target }, deviceCollections: () => deviceCollections(() => { throw Error('blocked'); }), selectWorkspace, workspaceMarkup, e: value => String(value), auth: {}, request() { throw Error('No session write expected'); }, createCloudStudy: () => cloud, cloudConfig: { projectUrl: 'https://example.invalid' } });
+  const context = vm.createContext({ URL, URLSearchParams, location: { search: '', origin: 'https://example.invalid' }, window: { addEventListener() {} }, document: { querySelector: target }, deviceCollections: () => deviceCollections(() => { throw Error('blocked'); }), selectWorkspace, workspaceMarkup, workspaceFrame:(_s,html)=>html, workspaceControls:()=>({beforeRender(){},afterRender(){},state:()=>({})}), e: value => String(value), auth: {}, request() { throw Error('No session write expected'); }, createCloudStudy: () => cloud, cloudConfig: { projectUrl: 'https://example.invalid' } });
   vm.runInContext(source, context);
   let api;
   const render = () => { target('#media-viewer').innerHTML = ''; api.decorate(); };

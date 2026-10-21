@@ -82,13 +82,15 @@ export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],ques
     const conceptLinks=[...new Map([...q.conceptLinks,...(meta.concept_links_version_id===q.questionVersionId?(meta.concept_links||[]).filter(l=>l.role!=='primary'):[])].map(l=>[l.conceptId+'|'+l.role,l])).values()];
     const classification=structuredClone(meta.classification||emptyFacets());
     if(!classification.subjects.length) classification.subjects=unique(conceptLinks.flatMap(l=>catalog.concepts.find(c=>c.conceptId===l.conceptId)?.subjectTags||[]));
-    return {questionId:q.questionId,questionVersionId:q.questionVersionId,stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
+    return {questionId:q.questionId,questionVersionId:q.questionVersionId,sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
   });
-  const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,bodyMarkdown:n.body_markdown}));
+  const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,sourceIds:[...(n.source_ids||[])],bodyMarkdown:n.body_markdown}));
   const visibleIds=new Set([...questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)),...publishedNotes.map(n=>n.conceptId)]);
   const concepts=catalog.concepts.filter(c=>visibleIds.has(c.conceptId)).map(c=>({conceptId:c.conceptId,label:c.label,aliases:c.aliases||[],classification:cm.get(c.conceptId)?.classification||{...emptyFacets(),subjects:c.subjectTags||[]}}));
   const noteIds=new Set(publishedNotes.map(n=>n.noteVersionId));const questionIds=new Set(questions.map(q=>q.questionId));
-  return {contractId:'canonical-content-library-v1',concepts,questions,notes:publishedNotes,links:links.filter(l=>noteIds.has(l.note_version_id)&&questionIds.has(l.question_id)),masteryInference:false};
+  const sourceIds=new Set([...questions,...publishedNotes].flatMap(x=>x.sourceIds));
+  const sources=(catalog.sources||[]).filter(s=>sourceIds.has(s.sourceId)).map(({sourceId,title,url,version})=>({sourceId,title,url,version}));
+  return {contractId:'canonical-content-library-v1',concepts,questions,notes:publishedNotes,sources,links:links.filter(l=>noteIds.has(l.note_version_id)&&questionIds.has(l.question_id)),masteryInference:false};
 }
 // Pattern tags describe the prompt, never the answer or explanation.
 const keywordPatterns = [

@@ -1,9 +1,14 @@
+import { workspaceFrame } from '/web/content-workspace-view.js';
+import { workspaceControls } from '/web/content-workspace-controls.js';
+import { transitionContext } from '/src/domain/content-workspace.js';
+import { libraryRouteState } from '/src/domain/library-workspaces.js';
 import { deviceCollections, selectWorkspace, addSavedView } from '/src/domain/library-workspaces.js';
 import { workspaceMarkup } from '/web/library-workspace-view.js';
 import { escape as e, auth, request } from '/web/content-library-client.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
 export function setupLibraryWorkspaces({ root, state, change, render, remember }) {
+  const panes = workspaceControls({root,render,navigate(overrides,search){const next=libraryRouteState(search ?? new URL(transitionContext(location.search,overrides),location.origin).search);change(next);remember(true);render();}});
   const storage = deviceCollections(), cloud = createCloudStudy({ ...cloudConfig, auth });
   let device = storage.read(), compare = [], recallIndex = 0, activeRecallId = null, viewer = null, requestId = 0, pending = false;
   const recallStates = new Map();
@@ -13,7 +18,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     if (!recallStates.has(activeRecallId)) recallStates.set(activeRecallId, { draft: '', revealed: false });
     return recallStates.get(activeRecallId);
   };
-  const titles = { subjects: 'Subjects & Topics', notes: 'Concept Notes', questions: 'Questions', graph: 'Knowledge Graph', atlas: 'Atlas', media: 'Media Library', references: 'Reference Tools', compare: 'Compare Concepts', foundation: 'Prerequisite Paths', savedviews: 'Saved Views', recall: 'Recall & Flashcards', cases: 'Clinical Cases', images: 'Image Drills', skills: 'Skills & Viva' };
+  const titles = { overview: 'Concept Explorer', subjects: 'Subjects & Topics', notes: 'Concept Notes', questions: 'Questions', graph: 'Knowledge Graph', atlas: 'Atlas', media: 'Media Library', references: 'Reference Tools', compare: 'Compare Concepts', foundation: 'Prerequisite Paths', savedviews: 'Saved Views', recall: 'Recall & Flashcards', cases: 'Clinical Cases', images: 'Image Drills', skills: 'Skills & Viva' };
   const current = () => { const s = state(); return selectWorkspace(s.library, { view: s.view, filters: s.filters, ...s.options }); };
   function select(key, choices) {
     return '<label>' + key[0].toUpperCase() + key.slice(1) + '<select aria-label="' + key[0].toUpperCase() + key.slice(1) + '" data-workspace-option="' + key + '"><option value="">All</option>' + choices.map(([value, label]) => '<option value="' + value + '"' + (state().options[key] === value ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label>';
@@ -23,7 +28,9 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     return '<button data-bookmark="' + e(key) + '" aria-pressed="' + device.bookmarks.includes(key) + '">' + (device.bookmarks.includes(key) ? 'Remove bookmark' : 'Bookmark') + '</button>';
   }
   function decorate() {
-    const s = state(), data = current();
+    const s = state(), allData = current(), limit=panes.state().contentLimit||50;
+    const data=['recall','savedviews'].includes(s.view)?allData:{...allData,questions:allData.questions.slice(0,limit),notes:allData.notes.slice(0,limit)};
+    if(s.view==='compare'&&!compare.filter(Boolean).length&&s.filters.concept)compare=[s.filters.concept];
     const retainedIndex = data.notes.findIndex(n => n.noteVersionId === activeRecallId);
     recallIndex = retainedIndex >= 0 ? retainedIndex : Math.min(recallIndex, Math.max(0, data.notes.length - 1));
     activeRecallId = data.notes[recallIndex]?.noteVersionId || null;
@@ -35,12 +42,15 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     const common = ['notes', 'questions', 'graph'].includes(s.view);
     if (!common && !['subjects', 'cases'].includes(s.view)) root.querySelector('.library-grid')?.remove();
     if (s.view === 'questions' && !s.filters.search) root.querySelector('[aria-label="Connected notes"]')?.remove();
-    root.querySelector('#library-status').insertAdjacentHTML('afterend', workspaceMarkup(s.view, data, { ...s.options, filters: s.filters, library: s.library, compare, recallIndex, recallReveal: recall.revealed, recallDraft: recall.draft, device, persistence: storage.persistence }));
+    root.querySelector('#library-status').insertAdjacentHTML('afterend', workspaceMarkup(s.view, s.view==='compare'?selectWorkspace(s.library,{...s.options,filters:{...s.filters,concept:''}}):data, { ...s.options, limit, filters: s.filters, library: s.library, compare, recallIndex, recallReveal: recall.revealed, recallDraft: recall.draft, device, persistence: storage.persistence }));
     for (const card of root.querySelectorAll('[data-question-card]')) {
       const q = data.questions.find(q => q.questionId === card.dataset.questionCard);
       if (q) card.insertAdjacentHTML('beforeend', '<div class="workspace-chips"><button data-one-study="' + e(q.questionVersionId) + '" ' + (pending ? 'disabled' : '') + '>Practice original question</button>' + bookmark('question', q.questionId) + '</div>');
     }
     for (const card of root.querySelectorAll('[data-note-card]')) card.insertAdjacentHTML('beforeend', bookmark('note', card.dataset.noteCard));
+    root.querySelector('.library-tabs')?.remove();
+    root.innerHTML=workspaceFrame(s,root.innerHTML,{search:location.search,...panes.state()});
+    panes.afterRender();
     if (viewer && ['media', 'atlas', 'images'].includes(s.view)) renderViewer();
   }
   function renderViewer() {
@@ -60,7 +70,7 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
   }
   const update = value => { const previousView = state().view; change(value); remember(Boolean(value.view && value.view !== previousView)); render(); };
   root.addEventListener('change', event => {
-    if (event.target.dataset.workspaceOption) update({ options: { [event.target.dataset.workspaceOption]: event.target.value } });
+    if (event.target.dataset.workspaceOption) {const key=event.target.dataset.workspaceOption;update(libraryRouteState(new URL(transitionContext(location.search,{[key]:event.target.value}),location.origin).search));root.querySelector('[data-workspace-option="'+key+'"]')?.focus();}
     if (event.target.hasAttribute('data-compare')) { compare[Number(event.target.dataset.compare)] = event.target.value; render(); }
   });
   root.addEventListener('input', event => {
@@ -96,6 +106,6 @@ export function setupLibraryWorkspaces({ root, state, change, render, remember }
     if (t.dataset.mediaControl && viewer) { const action = t.dataset.mediaControl; if (action === 'zoom') viewer.zoom = (viewer.zoom + 1) % 3; if (action === 'rotate') viewer.rotation = (viewer.rotation + 1) % 4; if (action === 'labels') viewer.labels = !viewer.labels; if (action === 'reset') { viewer.zoom = 0; viewer.rotation = 0; viewer.labels = true; } renderViewer(); }
     if (t.hasAttribute('data-image-commit') && viewer?.draft.trim()) { viewer.committed = true; renderViewer(); }
   });
-  window.addEventListener('mlos:library-view', event => { if (state().library && ['notes', 'questions', 'graph'].includes(event.detail?.view)) { clearViewer(); update({ view: event.detail.view }); } });
-  return { decorate };
+  window.addEventListener('mlos:library-view', event => { if (state().library && ['overview', 'notes', 'questions', 'graph'].includes(event.detail?.view)) { clearViewer(); update(libraryRouteState(new URL(transitionContext(location.search,{view:event.detail.view}),location.origin).search)); } });
+  return { decorate, beforeRender:panes.beforeRender, graphLimit:()=>panes.state().graphLimit, contentLimit:()=>panes.state().contentLimit };
 }

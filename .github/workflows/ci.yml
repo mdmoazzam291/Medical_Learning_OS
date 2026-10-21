@@ -57,6 +57,8 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.62.1
           node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
+      - name: Verify unified content workspace in WebKit
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/content-workspace-browser-check.js
       - name: Verify iPad portrait, landscape and split-screen navigation with touch
         run: |
           mkdir -p "$RUNNER_TEMP/mlos-webkit-screenshots"
@@ -121,6 +123,8 @@ jobs:
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/study-entry-browser-check.js
       - name: Verify confidence capture in built static bundle
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/confidence-browser-check.js
+      - name: Verify unified concept workspace and isolated draft previews
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/content-workspace-browser-check.js
       - name: Verify shared navigation and all published workspaces
         run: xvfb-run -a env NAVIGATION_HEADED=1 LIBGL_ALWAYS_SOFTWARE=1 PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/navigation-browser-check.js
       - name: Verify connected Notes/Graph and one-action admin import
