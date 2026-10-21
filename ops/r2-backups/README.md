@@ -1,6 +1,6 @@
 # R2 backup storage
 
-Status: **Actual encrypted Vault plus database restore passed on the PR292 task branch on 2026-10-21. Weekly default-branch integration and full provider/runtime recovery are separate.**
+Status: **PR292 encrypted Vault/database recovery is integrated into main; main CI passed on 2026-10-21. Actual two-snapshot restore acceptance passed. Full provider/runtime recovery and live UI deployment verification remain separate.**
 
 The private Cloudflare R2 bucket is reserved for Medical Learning OS backups. GitHub Actions holds the S3 credentials as encrypted repository secrets and the non-sensitive bucket/endpoint values as repository variables. Public access stays disabled.
 
@@ -160,6 +160,13 @@ On tested code `12cbafe87cde162872370e29d2aa9d613ffbda62`, [workflow39619055185]
 
 A dedicated private key was preserved independently of Supabase/Cloudflare/GitHub, retrieved back, compared byte-for-byte and used for a real synthetic age roundtrip. The same identity file configured the Actions secret used by the actual v3 drill. This verifies retained-key retrieval and cryptographic usability; owner offline retention is recommended and not observed. Do not regenerate or rotate the configured key during routine continuation. The earlier configured-key run39623460079 failed before upload because PGDATABASE did not expand the full URI; explicit psql -d fixes the connection, with a failing-then-passing regression and SQLSTATE-only errors. No source credentials or root key changed.
 
-This is task-branch acceptance. The default branch still requires reviewed integration before its weekly schedule uses this implementation. No merge, release, production SQL changes, source deletion or provider cutover occurred. External Storage bytes, Auth/OAuth/JWT/SMTP configuration, complete API/runtime authorization and consistent cross-service snapshots remain separate acceptance gaps.
+PR292 merged as `a0943495b2cd9e8855c3f1aa4ac5c771062cba75`; main Foundation39630231480 passed core1358tests/build/fivePostgreSQL checks, Chromium and WebKit. The existing default-branch weekly schedule now uses this configured implementation. No new scheduled backup execution is claimed yet. No production SQL changes, source deletion or provider cutover occurred. External Storage bytes, Auth/OAuth/JWT/SMTP configuration, complete API/runtime authorization and consistent cross-service snapshots remain separate acceptance gaps.
 
 A second records-only head `232082653026ca9fc234ab2378f675538249a29b` passed [workflow39624968454](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39624968454) on fresh snapshot `supabase/2026/10/21/20261021T152328Z`, repeating all data/access/Vault checks and cleanup. [Foundation39624968689](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39624968689) passed core/build/1358Node/five PostgreSQL checks, Chromium and WebKit. Local26Python tests and full check pass; independent focused review approved. Final receipt-only documentation does not change the tested implementation.
+
+
+### Main integration receipt — 2026-10-21
+
+[PR292](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/292) merged at `a0943495b2cd9e8855c3f1aa4ac5c771062cba75`. [Main Foundation39630231480](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39630231480) passed all three jobs. Both actual encrypted snapshot receipts above remain valid; key setup must not be repeated. Main integration changes neither the snapshot consistency limits nor the external provider/runtime gaps.
+
+Cloudflare deployment remains unverified: no build check for this merge was reported during inspection; public workers.dev/medretica.com asset readbacks returned403 (canonical1010), and secure dashboard sign-in returned login403. No credentials were exposed, no alternative sign-in was retried, and no provider/security settings changed. Do not equate main CI with a verified live UI deployment. Final documentation receipt is PR293.
