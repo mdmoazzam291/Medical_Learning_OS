@@ -78,27 +78,13 @@ try {
         });
         for (const key of groups) await page.locator('details[data-group="' + key + '"] > summary').click();
       }
-      try { return await (touch ? locator.tap() : locator.click()); }
-      catch(error) {
-        const debug=await page.evaluate(()=>({url:location.href,modal:document.querySelector('#cw-pane-dialog')?.open,trace:window.__cwOpenTrace||[],active:document.activeElement?.outerHTML?.slice(0,400)})).catch(()=>null);
-        console.error('NAVIGATION_ACTIVATION_FAILED',JSON.stringify(debug));
-        throw error;
-      }
+      return touch ? locator.tap() : locator.click();
     };
     await context.addInitScript(value => {
       if (sessionStorage.getItem('mlos-navigation-fixture-seeded')) return;
       localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value }));
       sessionStorage.setItem('mlos-navigation-fixture-seeded', 'true');
     }, user);
-    await context.addInitScript(() => {
-      const showModal = HTMLDialogElement.prototype.showModal;
-      HTMLDialogElement.prototype.showModal = function (...args) {
-        if (this.id === 'cw-pane-dialog') {
-          (window.__cwOpenTrace ||= []).push({ url: location.href, stack: new Error('Library panel opened').stack });
-        }
-        return showModal.apply(this, args);
-      };
-    });
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
       await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
@@ -828,18 +814,15 @@ try {
     await page.goForward();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     if (width < 1050) {
-      const panelDiagnostic = await page.evaluate(() => {
-        const dialog = document.querySelector('#cw-pane-dialog');
-        return { open: dialog?.open || false, pane: dialog?.querySelector('[data-workspace-pane]')?.dataset.workspacePane,
-          url: location.href, trace: window.__cwOpenTrace || [] };
-      });
-      assert.equal(panelDiagnostic.open, false, 'Library pane must be dismissed before global search: ' + JSON.stringify(panelDiagnostic));
+      assert.equal(await page.locator('#cw-pane-dialog').evaluate(node=>node.open),false,'Global search starts without a Library pane');
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
+      assert.equal(await page.locator('#cw-pane-dialog').evaluate(node=>node.open),false,'Global search must not open an underlying Library pane');
       await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
       const outsideX = await page.evaluate(() => document.documentElement.clientWidth - 12);
       if (touch) await page.touchscreen.tap(outsideX, 170); else await page.mouse.click(outsideX, 170);
       assert.equal(await page.locator('#mlos-navigation').evaluate(node => node.classList.contains('mlos-search-open')), false);
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
+      assert.equal(await page.locator('#cw-pane-dialog').evaluate(node=>node.open),false,'Global search must not open an underlying Library pane');
       assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Unsubmitted draft');
       await page.keyboard.press('Escape');
     }
