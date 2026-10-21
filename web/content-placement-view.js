@@ -7,42 +7,6 @@ export function placementMarkup(manifest) {
   const r=contentPlacement(manifest);
   return '<section class="review-packet" id="content-placement"><h3>Content Placement Inspector</h3><p>Draft metadata eligibility · not medical, reference or rights approval. Existing catalog links resolve on the server before publication.</p><div class="table-wrap"><table><thead><tr><th>Artifact / home</th><th>Location checks</th></tr></thead><tbody>'+r.items.map(x=>'<tr><th>'+e(x.id)+'<small> · '+e(x.home)+'</small></th><td><ul>'+x.checks.map(c=>'<li><strong>'+e(c.id)+' · '+e(c.status)+'</strong> — '+e(c.detail)+'</li>').join('')+'</ul></td></tr>').join('')+'</tbody></table></div><button type="button" data-draft-preview>Preview draft as learner</button><dialog id="draft-preview" class="cw-draft-dialog" aria-label="Draft learner preview"><div class="workspace-chips"><button type="button" data-preview-close>Close preview</button><button type="button" data-preview-size="desktop">Desktop · 1440 px</button><button type="button" data-preview-size="tablet">iPad · 1024 px</button></div><p>Draft only · no learner writes or publication. References to existing catalog objects may remain unresolved in this manifest-only preview.</p><div class="cw-preview-viewport" data-preview-width="tablet"><iframe class="cw-preview-canvas" data-preview-width="tablet" data-draft-canvas title="Draft content viewport" sandbox="allow-scripts" referrerpolicy="no-referrer" height="900"></iframe></div></dialog></section>';
 }
-// The iframe has an opaque origin. Only this fixed, nonce-authorized event relay runs
-// inside it; no manifest fields, account tokens, keys or arbitrary scripts are passed in.
-function previewFrameBridge(revision) {
-  const send = message => parent.postMessage({channel:'mlos-draft-preview',revision,...message}, '*');
-  document.addEventListener('click', event => {
-    const a=event.target.closest('a');
-    if(a){event.preventDefault();if(a.hasAttribute('href'))send({kind:'link',href:a.getAttribute('href')});return;}
-    const b=event.target.closest('button');
-    if(b?.dataset.view){event.preventDefault();send({kind:'view',value:b.dataset.view});return;}
-    const g=event.target.closest('[data-graph-concept],[data-graph-question],[data-graph-note]');
-    if(g?.dataset.graphConcept)send({kind:'concept',value:g.dataset.graphConcept});
-    else if(g?.hasAttribute('data-graph-question'))send({kind:'view',value:'questions'});
-    else if(g?.hasAttribute('data-graph-note'))send({kind:'view',value:'notes'});
-  });
-  document.addEventListener('change',event=>{
-    const facet=event.target.dataset.cwFacet||event.target.dataset.workspaceOption;
-    if(facet)send({kind:'filter',field:facet,value:event.target.value});
-  });
-  document.addEventListener('submit',event=>{
-    event.preventDefault();
-    if(event.target.matches('[data-cw-search]'))send({kind:'search',value:event.target.elements.conceptSearch.value});
-  });
-  document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'){send({kind:'close'});return;}
-    const tab=event.target.closest('[role="tab"]');
-    if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){
-      const tabs=[...tab.parentNode.querySelectorAll('[role="tab"]')],i=tabs.indexOf(tab);
-      const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(i+(event.key==='ArrowLeft'?-1:1)+tabs.length)%tabs.length;
-      event.preventDefault();send({kind:'view',value:tabs[next].dataset.view});return;
-    }
-    if(event.target.matches('[data-graph-concept],[data-graph-question],[data-graph-note]')&&['Enter',' '].includes(event.key)){
-      event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));
-    }
-  });
-  send({kind:'ready'});
-}
 export function setupPlacementPreview({detail,getDraft}) {
   let library=null,search='',width='tablet',trigger=null,revision=0;
   const allowedViews=new Set(['overview','notes','questions','graph']);
@@ -70,11 +34,10 @@ export function setupPlacementPreview({detail,getDraft}) {
       if(!valid){link.removeAttribute('href');link.setAttribute('aria-disabled','true');}
     }
     const attrs=['palette','appearance','theme','surfaceStyle'].map(key=>document.documentElement.dataset[key]?' data-'+key.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())+'="'+e(document.documentElement.dataset[key])+'"':'').join('');
-    const nonce=crypto.randomUUID().replaceAll('-','');
-    // The opaque sandbox cannot access localStorage, cookies or the authenticated admin page.
-    // CSP permits only our fixed inline relay; network calls, forms and other scripts are barred.
-    const csp="default-src 'none'; style-src "+location.origin+"; font-src "+location.origin+"; img-src "+location.origin+" data:; connect-src 'none'; form-action 'none'; base-uri 'none'; script-src 'nonce-"+nonce+"'";
-    canvas.srcdoc='<!doctype html><html'+attrs+'><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="'+e(csp)+'"><link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/library.css"><link rel="stylesheet" href="/web/content-workspace.css"><link rel="stylesheet" href="/web/navigation.css"><link rel="stylesheet" href="/web/content-preview-frame.css"></head><body><main class="library-page">'+scratch.innerHTML+'</main><script nonce="'+nonce+'">('+previewFrameBridge.toString()+')('+currentRevision+');</script></body></html>';
+    // Opaque sandbox denies access to the admin page and its authentication storage.
+    // The fixed external relay is permitted by the site's existing restrictive CSP.
+    const csp="default-src 'none'; style-src "+location.origin+"; font-src "+location.origin+"; img-src "+location.origin+" data:; script-src "+location.origin+"; connect-src 'none'; form-action 'none'; base-uri 'none'";
+    canvas.srcdoc='<!doctype html><html'+attrs+' data-preview-revision="'+currentRevision+'"><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="'+e(csp)+'"><link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/library.css"><link rel="stylesheet" href="/web/content-workspace.css"><link rel="stylesheet" href="/web/navigation.css"><link rel="stylesheet" href="/web/content-preview-frame.css"></head><body><main class="library-page">'+scratch.innerHTML+'</main><script src="/web/content-preview-bridge.js"></script></body></html>';
   }
   const navigate=value=>{search=new URL(transitionContext(search,value),location.origin).search;render();};
   window.addEventListener('message',event=>{
