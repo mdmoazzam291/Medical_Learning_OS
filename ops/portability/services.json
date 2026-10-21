@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21",
+  "evidenceScope": "Repository inspection and explicit owner context; not a live account inventory or migration certification.",
+  "services": [
+    {
+      "id": "supabase",
+      "provider": "Supabase",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "supabase"
+      ],
+      "data": "Application database, Auth identities, reviewed catalog, learner evidence, private notes, review/audit records, API functions and settings.",
+      "boundary": "src/adapters/cloud-*.js, supabase-auth.js, web/content-library-client.js and supabase/functions; SQL RPC/Auth coupling remains.",
+      "export": "Existing SQL backup workflow plus current schema, roles/grants, all data, migration ledger, extension inventory, Auth settings, SMTP/OAuth configuration and separate Storage object bytes.",
+      "restore": "Disposable compatible Postgres/Supabase first; reconcile migration history, extensions, auth.uid/RLS/RPC behavior and two-user isolation. Other engines require translation and contract parity.",
+      "gaps": "Five historical baseline migrations are recovered with pinned hashes and isolated baseline/ACL checks in PR290; full platform replay, current full Auth/Storage recovery and non-Supabase target remain unverified. See the PR for integration state.",
+      "references": [
+        "supabase/migrations/README.md",
+        ".github/workflows/supabase-r2-backup.yml",
+        "src/adapters/supabase-auth.js",
+        "scripts/baseline-migrations-db-check.js",
+        "scripts/data-api-grants-db-check.js"
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "provider": "Cloudflare",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "cloudflare",
+        "R2_"
+      ],
+      "data": "Static delivery, edge fallback, separate heartbeat/sandbox workers, private R2 backups, DNS and server-side bindings.",
+      "boundary": "cloudflare/, wrangler*.jsonc, ops/cloudflare-heartbeat and S3 backup transport. Keep the web, heartbeat and sandbox applications distinct.",
+      "export": "Build static bundle from exact commit; export routes/DNS/cron/binding metadata; inventory/copy R2 object bytes, keys and metadata through S3-compatible tools. Secrets recreated privately.",
+      "restore": "Serve static bundle with matching rewrites/security headers, reimplement Worker handlers and schedules, copy object inventory with checksums, then validate domain/TLS/CORS/OAuth redirects.",
+      "gaps": "No complete current account/DNS/config export or second independently controlled backup verified. Inventory any future D1/KV/Durable Object/Queue/Vectorize state before use; none is inferred from Cloudflare hosting.",
+      "references": [
+        "wrangler.jsonc",
+        "wrangler.cashfree-sandbox.jsonc",
+        "ops/cloudflare-heartbeat/wrangler.jsonc",
+        "ops/r2-backups/README.md"
+      ]
+    },
+    {
+      "id": "github",
+      "provider": "GitHub",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "github.com",
+        "GITHUB_",
+        "actions/"
+      ],
+      "data": "Engineering source/history, CI workflows, issues/PR context and encrypted secret configuration.",
+      "boundary": "Git repository plus .github/workflows; canonical learner data must not live in issues or Actions logs.",
+      "export": "Full git mirror/bundle and separately export issue/PR/release/LFS/submodule/CI metadata as used; record secret names only and provision values privately.",
+      "restore": "Clone elsewhere, restore branches/tags, recreate CI/secrets and branch controls, run tests/build and verify deployment integration.",
+      "gaps": "Git alone excludes issues, PRs, secrets, branch controls and expiring artifacts. No alternate CI or host restore tested.",
+      "references": [
+        "AGENTS.md",
+        ".github/workflows/ci.yml",
+        "docs/AI_CONTINUITY.md"
+      ]
+    },
+    {
+      "id": "render",
+      "provider": "Render",
+      "status": "fallback-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "onrender.com",
+        "render.yaml"
+      ],
+      "data": "Fallback application runtime, environment settings and any persistent local runtime state if used.",
+      "boundary": "ORIGIN_BASE_URL in web Worker; render.yaml and scripts/api.js.",
+      "export": "Source/runtime config plus inventory of any live disk/database state; determine whether production requests still require fallback before retirement.",
+      "restore": "Deploy equivalent Node runtime and health endpoint, restore any authoritative disk data, change origin configuration and run API acceptance.",
+      "gaps": "Actual live dependency and persistent disk state not audited in this task; do not remove fallback based on static hosting alone.",
+      "references": [
+        "render.yaml",
+        "cloudflare/edge-worker.js",
+        "docs/CLOUDFLARE_WORKER_STATIC.md"
+      ]
+    },
+    {
+      "id": "resend",
+      "provider": "Resend",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "resend"
+      ],
+      "data": "Auth SMTP delivery and infrastructure alerts; provider delivery logs, suppression and domain configuration.",
+      "boundary": "Supabase SMTP settings and infrastructure-monitor alert transport; SMTP settings are outside SQL backup.",
+      "export": "Record templates, verified sender/domain, DNS records, suppression/bounce/complaint data and delivery policy; secret values stay private.",
+      "restore": "Configure replacement SMTP/API adapter with same auth templates and redirects; verify test-account signup/recovery, alert idempotency and bounce handling before cutover.",
+      "gaps": "No new SMTP service configured or mail sent here; mailbox access does not establish transactional throughput or deliverability.",
+      "references": [
+        "docs/RESEND_AUTH_SMTP.md",
+        "supabase/functions/infrastructure-monitor/index.ts"
+      ]
+    },
+    {
+      "id": "sentry",
+      "provider": "Sentry",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "sentry"
+      ],
+      "data": "Optional error telemetry and issue history, never authoritative learner evidence.",
+      "boundary": "src/adapters/error-monitoring.js, web bootstrap/monitoring and provider health probe.",
+      "export": "Export needed sanitized issues/configuration/retention rules or explicitly accept historical telemetry loss.",
+      "restore": "Replace telemetry transport, scrub private data, update CSP/config and verify learning remains available when telemetry fails.",
+      "gaps": "Historical issue portability and replacement exporter not verified.",
+      "references": [
+        "src/adapters/error-monitoring.js",
+        "web/sentry-bootstrap.js",
+        "docs/OBSERVABILITY.md"
+      ]
+    },
+    {
+      "id": "posthog",
+      "provider": "PostHog",
+      "status": "optional-design",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "posthog"
+      ],
+      "data": "Optional analytics; canonical learning events remain in application storage.",
+      "boundary": "Telemetry boundary described in observability contract; no active deployment inferred.",
+      "export": "If enabled later, record event definitions, consent, export API, retention and required historical export.",
+      "restore": "Rebuild product metrics from retained canonical evidence where semantics match; replace optional analytics adapter.",
+      "gaps": "No live PostHog inventory or historical export verified.",
+      "references": [
+        "docs/OBSERVABILITY.md"
+      ]
+    },
+    {
+      "id": "ai",
+      "provider": "AI model providers",
+      "status": "optional-design",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "generativelanguage.googleapis.com",
+        "GEMINI_API_KEY",
+        "api.openai.com",
+        "api.anthropic.com"
+      ],
+      "data": "Generated drafts, model/config versions, evaluation outputs and usage receipts; not canonical medical approval.",
+      "boundary": "src/domain/intelligence-provider.js and capability/evaluation contracts; credentials behind adapters.",
+      "export": "Keep prompt/schema/model-version/evaluation metadata and required inputs/outputs in application-owned formats with rights/retention.",
+      "restore": "Implement equivalent capability port, run groundedness/quality/privacy/cost evaluations; never equate model swap with identical behavior.",
+      "gaps": "No universal output equivalence or active remote provider deployment established.",
+      "references": [
+        "src/domain/intelligence-provider.js",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "id": "cashfree",
+      "provider": "Cashfree",
+      "status": "sandbox-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "cashfree"
+      ],
+      "data": "Sandbox diagnostics, prospective billing identifiers/receipts, private merchant keys.",
+      "boundary": "src/adapters/cashfree-* and separate default-disabled Worker; production activation requires existing go-live gates.",
+      "export": "Preserve application entitlements, provider identity mapping, payment/reconciliation receipts and lawful accounting records privately.",
+      "restore": "Replace provider adapter and verify signed webhook/replay/idempotency contracts. Existing mandates may require new user authorization.",
+      "gaps": "No mandate transfer or active paid checkout implied; no live payment changes.",
+      "references": [
+        "docs/CONSUMER_PAYMENT_GATEWAY.md",
+        "docs/CONSUMER_BILLING_GO_LIVE.md"
+      ]
+    },
+    {
+      "id": "phonepe",
+      "provider": "PhonePe",
+      "status": "planned-fallback",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "phonepe"
+      ],
+      "data": "Prospective fallback payment integration; no live data inferred.",
+      "boundary": "Alternative within consumer payment provider contract.",
+      "export": "Require receipt, reconciliation and mandate exit design before implementation.",
+      "restore": "Provider parity tests and new mandate consent where needed; explicit release before payments.",
+      "gaps": "No live adapter, automatic mandate transfer or production readiness established.",
+      "references": [
+        "docs/CONSUMER_PAYMENT_GATEWAY.md"
+      ]
+    },
+    {
+      "id": "google-oauth",
+      "provider": "Google OAuth",
+      "status": "configured-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "accounts.google.com",
+        "googleusercontent.com",
+        "oauth2.googleapis.com"
+      ],
+      "data": "External identity links and OAuth consent/configuration; passwords are not controlled by this integration.",
+      "boundary": "Existing Supabase Auth adapter and account callback flow.",
+      "export": "Record client/configuration identifiers privately, allowed origins, redirects and stable issuer/subject mapping; preserve application learner IDs.",
+      "restore": "Reconfigure provider callbacks and verify existing Google and email accounts cannot be duplicated, merged incorrectly or escalated.",
+      "gaps": "Cross-provider identity transfer/re-authentication behavior untested; never map identities by unverified email alone.",
+      "references": [
+        "docs/SUPABASE_AUTH.md",
+        "src/adapters/supabase-auth.js"
+      ]
+    },
+    {
+      "id": "drive",
+      "provider": "Google Drive",
+      "status": "workflow-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "drive.google.com",
+        "google_drive"
+      ],
+      "data": "Material originals, provenance, governance and immutable releases; separate from learner application records.",
+      "boundary": "Material release archive/staging ports; repository workflow snapshots do not replace Drive authority.",
+      "export": "Export original bytes, folder/index hierarchy, stable release IDs, metadata/rights and permissions with checksums, including native document exports as needed.",
+      "restore": "Implement archive/index ports, preserve release/source lineage and verify readback before redirecting intake.",
+      "gaps": "External ports and actual archive/staging readback remain pending; no Drive export performed.",
+      "references": [
+        "docs/MATERIAL_RELEASE_ADAPTER.md",
+        "docs/workflows/material-contract.md"
+      ]
+    },
+    {
+      "id": "zoho",
+      "provider": "Zoho Mail",
+      "status": "owner-reported",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "zoho"
+      ],
+      "data": "Domain admin/support mailboxes reported by owner; transactional SMTP configuration not established by source.",
+      "boundary": "Business mailbox service; keep separate from application auth identity and transactional transport.",
+      "export": "Export messages/folders/contacts and domain/MX metadata as required using supported mailbox tools.",
+      "restore": "Import mail into selected host and validate MX, incoming/outgoing mail and aliases before changing DNS.",
+      "gaps": "Mailbox plan, export and transactional suitability not verified in this task.",
+      "references": [
+        "docs/SERVICE_PORTABILITY.md"
+      ]
+    }
+  ]
+}

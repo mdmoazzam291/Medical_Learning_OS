@@ -460,3 +460,7 @@ The pure domain contract lives in `src/domain/source-grounded-verification.js`. 
 M02c reuses the existing provider-neutral `content.source.inspect` and `content.review.propose` capabilities. No model provider is canonical medical memory.
 
 Persistent passage/claim/packet storage is intentionally deferred. See [SOURCE_GROUNDED_VERIFICATION.md](SOURCE_GROUNDED_VERIFICATION.md).
+
+## Replaceable infrastructure
+
+All future integrations follow [SERVICE_PORTABILITY.md](SERVICE_PORTABILITY.md) and the versioned service register under ops/portability. Application IDs, medical content/evidence versions and learner ownership survive provider replacement; external identity mappings and transports belong at adapters. Existing Supabase RPC/Auth/RLS and Cloudflare runtime dependencies are explicit exit debt, not proof of universal backend interchangeability. CI guards registered coupling locations; private offline migration packs verify file integrity separately from a real target restore. See the service register for each export/restore gap.

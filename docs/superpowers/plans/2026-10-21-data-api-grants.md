@@ -19,3 +19,10 @@ Acceptance: all existing Node and database checks pass; live catalog audit passe
 - [x] Remove invented baseline ACL fixtures and remove four redundant forward grants proved by recovered sources.
 - [x] Attempt broader unmodified source replay; stop at the first missing platform dependency.
 - [ ] Complete replay in a disposable environment with the real Supabase extensions/platform schemas. PGlite stopped after 19 migrations at missing pgcrypto digest.
+
+## Portability integration follow-up — 2026-10-21
+- [x] Merge latest main/PR291 into this task branch, preserving both continuity records.
+- [x] Review/register the nine added Supabase paths and update the service exit evidence.
+- [x] Rerun the four isolated database checks and reproduce the full-replay extension limit without shims.
+- [ ] Complete final local/independent/hosted checks and merge PR290; actual receipts belong to its PR body.
+- Full compatible-platform replay remains a separate, uncompleted operational gate above. No production replay is authorized.
