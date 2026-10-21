@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 
 // ACL-only replay: real migration GRANT/REVOKE/RLS statements against data-free
-// table shapes. Not a full schema rebuild: five historical migrations are absent.
+// table shapes. This is separate from full DDL and Auth/platform replay.
 const { PGlite } = await import(process.env.PGLITE_MODULE_URL || '@electric-sql/pglite');
 const db = new PGlite();
 const root = new URL('../supabase/migrations/', import.meta.url);
 const files = (await readdir(root)).filter(n => n.endsWith('.sql')).sort();
 const sources = await Promise.all(files.map(n => readFile(new URL(n, root), 'utf8')));
-const tables = new Set(['study_sessions', 'study_attempts', 'study_bookmarks', 'study_catalog']);
+const tables = new Set();
 for (const sql of sources) {
   for (const match of sql.matchAll(/create\s+table\s+(?:if\s+not\s+exists\s+)?public\.(\w+)/gi)) tables.add(match[1]);
 }
@@ -18,12 +18,6 @@ try {
   await db.exec('create role anon; create role authenticated; create role service_role bypassrls;');
   await db.exec('grant usage on schema public to anon, authenticated, service_role;');
   for (const table of tables) await db.exec(`create table public.${table}(id int);`);
-  // Documented baseline behavior is represented only as a fixture, never shipped
-  // as invented historical migration SQL. No automatic grants to service_role.
-  for (const table of ['study_sessions', 'study_attempts', 'study_bookmarks', 'study_catalog']) {
-    await db.exec(`alter table public.${table} enable row level security;`);
-  }
-  await db.exec('grant select on public.study_sessions, public.study_attempts, public.study_bookmarks to authenticated;');
   let replayed = 0;
   const repairIndex = files.findIndex(n => n.endsWith('_explicit_service_read_grants.sql'));
   assert.notEqual(repairIndex, -1, 'forward read-grant migration must exist');

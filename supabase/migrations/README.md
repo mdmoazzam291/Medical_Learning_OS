@@ -1,6 +1,6 @@
 # Supabase migration provenance
 
-The live `medical_learning_os` project already has migration history. The historical SQL bodies were applied before this repository contained a `supabase/migrations` directory, so this repository must not fabricate those old files after the fact.
+The live `medical_learning_os` project already has migration history. The five historical SQL bodies were recovered exactly from the provider migration ledger on 2026-10-21. Their filenames retain the original versions and names; no inferred SQL was added. SHA-256 provenance tests pin their recovered bytes. Do not rewrite applied history.
 
 Live migration versions observed on 2026-09-26:
 
@@ -14,7 +14,7 @@ The resulting live schema includes `study_sessions`, `study_attempts`, `study_bo
 
 ## Rule from now on
 
-All future DDL must be committed as a migration in this directory before, or in the same change as, applying it to the live project. Do not rewrite the five historical versions unless their original SQL is recovered exactly.
+All future DDL must be committed as a migration in this directory before, or in the same change as, applying it to the live project. The five recovered historical files are now present and immutable.
 
 The project status must describe the live schema as existing. "No migrations" was an obsolete statement.
 
@@ -71,8 +71,10 @@ The migration body for `20260928112019` was recovered directly from `supabase_mi
 
 New public tables must declare intended role grants alongside their creation and enable RLS. Do not rely on Supabase's automatic defaults or grant browser access to server-only tables. Writes through existing authorized SECURITY DEFINER RPCs do not require granting direct table writes. Preserve ledger immutability.
 
-`20261021041935_explicit_service_read_grants.sql` supplies explicit service SELECT for 18 tables whose committed sources depend on historical defaults. It changes neither browser access nor service write privileges, RLS, function execution or defaults. It is a forward migration, not a rewrite of applied history.
+`20261021041935_explicit_service_read_grants.sql` supplies explicit service SELECT for 14 tables whose committed sources depend on historical defaults. It changes neither browser access nor service write privileges, RLS, function execution or defaults. It is a forward migration, not a rewrite of applied history.
 
 Run `scripts/data-api-grants-db-check.js` with the CI-pinned PGlite runtime to replay supported explicit table ACL/RLS statements with automatic grants absent. It builds 69 data-free table shapes, executes the new migration in full twice, and verifies missing-grant, browser-write, browser-exposure, RLS and future-table failures. `supabase/verification/data-api-grants.sql` is the corresponding read-only live catalog audit. Views, sequence grants, function execution, full constraints, Auth and end-to-end PostgREST behavior remain separate checks. The ACL extractor covers conventional schema-qualified explicit SQL; dynamic DDL or nonstandard naming needs dedicated database fixtures.
 
-This is NOT a complete fresh-reset acceptance test. The five exact historical baseline bodies above are still absent. Recover and review those bodies before attempting a full disposable schema replay; do not invent them or restore erased content. The fixture models baseline table names and browser read grants solely for ACL verification. No current project reset is authorized.
+This is NOT a complete fresh-reset acceptance test. The five exact baseline files are now recovered; `scripts/baseline-migrations-db-check.js` executes them unmodified with a minimal Auth fixture and tests real baseline constraints/RPCs/two-learner RLS. The ACL test now derives baseline names/grants from those files. A separate disposable full-source replay applied 19 migrations before stopping at `20260927114500_policy_experiment_framework.sql`: this PGlite runtime does not provide `extensions.digest(text,text)` from pgcrypto. Complete Supabase platform/extension setup and remaining migration replay are unverified. No source SQL was bypassed or shimmed to claim success; production was not reset.
+
+Recovery note: the original 18-table ACL gap included four tables whose explicit grants were in the missing historical baseline. Recovery proved those four already declare grants; the new forward migration therefore covers the remaining 14 only. Baseline recovery inserts only an empty initial catalog in the disposable test, never historical medical content or real accounts.
