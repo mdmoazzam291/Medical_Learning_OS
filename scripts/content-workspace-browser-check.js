@@ -18,7 +18,7 @@ const manifest={schemaVersion:1,importId:'workspace-fixture',concepts:[{...c('a'
 const browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({headless:true});const errors=[];
 try{
  for(const [name,width,height] of [['phone',390,844],['split',768,1024],['ipad-portrait',820,1180],['ipad-landscape',1180,820],['desktop',1600,1000]]){
-  const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
+  const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>{if(window!==window.top)return;localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}}));});
   console.log('Workspace viewport:',name);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let empty=false;
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{const request=route.request(),path=new URL(request.url()).pathname;const reply=body=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});if(request.method()!=='GET')writes.push(path);
    if(path.endsWith('/content-library-api/library'))return reply(empty?{concepts:[],notes:[],questions:[],links:[]}:library);
