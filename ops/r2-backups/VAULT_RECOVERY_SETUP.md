@@ -2,9 +2,11 @@
 
 The source database contains live Vault configuration. Standard SQL backups exclude it, and its platform root key is stored outside the database. The prepared v3 path exports named secrets read-only, encrypts the JSON with pinned age 1.3.2, and archives only `vault.json.age`. During an isolated restore, the supported `vault.create_secret` API encrypts those values with the target's own root key. All names, descriptions and values must match before the transaction commits. No source root key is changed or extracted.
 
-Configuration was completed on 2026-10-21 under explicit owner delegation; a private recovery kit was preserved and independently retrieved for a synthetic cryptographic check. Actual v3 backup/restore acceptance is still pending. Configuration alone does not certify recovery. Missing public recipient leaves the existing v2 SQL backup working; the full Vault recovery gate still fails. Missing/wrong private identity or modified ciphertext also fails.
+Configuration was completed on 2026-10-21 under explicit owner delegation; a private recovery kit was preserved and independently retrieved for a synthetic cryptographic check. Actual v3 backup and isolated restore39624386430 passed on snapshot20261021T151857Z, including exact Vault values, database/Auth/FK/access checks and cleanup. The separately saved kit was independently retrieved and cryptographically verified. This task-branch result is bounded to that snapshot; owner offline retention and full provider/runtime recovery remain separate. Missing public recipient leaves the existing v2 SQL backup working; the full Vault recovery gate still fails. Missing/wrong private identity or modified ciphertext also fails.
 
 ## One-time owner configuration
+
+This repository is already configured under owner delegation. Do not repeat key generation or replace the active identity during routine continuation. The following commands describe first-time setup; deliberate key rotation must retain old identities for existing archives.
 
 On a trusted machine with [age installed](https://github.com/FiloSottile/age#installation), generate a dedicated key:
 
