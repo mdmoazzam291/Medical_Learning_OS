@@ -1,5 +1,11 @@
 # Current status
 
+## Responsive website and shared-backend PWA direction recorded — 2026-10-21
+- Owner authorized adding the approved future direction to the GitHub roadmap. Documentation only: one responsive website, stronger installable PWA experience, shared backend across devices.
+- ROADMAP extends M03/M14 with scoped offline synchronization, safe updates and device-level exit evidence; ADR-125 records the decision. Existing launch gates retain priority.
+- Reviewed the documentation additions for scope and consistency. Runtime/domain tests not run because no executable code, configuration, schema or workflow changed. No PWA feature implemented or live acceptance claimed.
+- Integration tracked by the documentation PR from docs/pwa-shared-backend-roadmap-20261021; paused engineering and provider migrations remain outside this task.
+
 ## Cloudflare deployment confirmed through GitHub without sign-in — 2026-10-21T16:17:29Z
 - Owner requested an alternative without Cloudflare sign-in. Codex inspected the existing GitHub integration only; no additional login, deployment, credentials or security-rule changes were needed. This supersedes the provider-build blocker below.
 - Exact runtime merge a0943495b2cd9e8855c3f1aa4ac5c771062cba75 now has successful production Workers Builds receipts: website build4246d646-4619-4a8f-92b9-2e4293b7217f completed2026-10-21T16:16:30Z, deployed version675c93dd-5c13-4738-ac4b-2338b15c9c81 (GitHub check119336862776); heartbeat buildad63aa1b-1714-4af4-90aa-530c5e1488c2 succeeded with version219f4afb-7acd-4a55-b023-254b13e7e812 (check119336345376). Receipt: https://github.com/mdmoazzam291/Medical_Learning_OS/commit/a0943495b2cd9e8855c3f1aa4ac5c771062cba75/checks . The provider published these after the earlier inspection; no failed deployment or repair is inferred from that delay.
