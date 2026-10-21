@@ -73,7 +73,7 @@ export function setupPlacementPreview({detail,getDraft}) {
     const nonce=crypto.randomUUID().replaceAll('-','');
     // The opaque sandbox cannot access localStorage, cookies or the authenticated admin page.
     // CSP permits only our fixed inline relay; network calls, forms and other scripts are barred.
-    const csp="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; script-src 'nonce-"+nonce+"'";
+    const csp="default-src 'none'; style-src "+location.origin+"; font-src "+location.origin+"; img-src "+location.origin+" data:; connect-src 'none'; form-action 'none'; base-uri 'none'; script-src 'nonce-"+nonce+"'";
     canvas.srcdoc='<!doctype html><html'+attrs+'><head><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="'+e(csp)+'"><link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/library.css"><link rel="stylesheet" href="/web/content-workspace.css"><link rel="stylesheet" href="/web/navigation.css"><link rel="stylesheet" href="/web/content-preview-frame.css"></head><body><main class="library-page">'+scratch.innerHTML+'</main><script nonce="'+nonce+'">('+previewFrameBridge.toString()+')('+currentRevision+');</script></body></html>';
   }
   const navigate=value=>{search=new URL(transitionContext(search,value),location.origin).search;render();};
