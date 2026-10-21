@@ -68,6 +68,14 @@ No Supabase service-role key, database password, R2 secret, Resend credential or
 
 ## Release gate
 
+### Confirm production deployment without Cloudflare sign-in — 2026-10-21
+
+Use the existing Cloudflare GitHub checks for the **exact runtime merge commit**. In the repository, open that commit's Checks and select `Workers Builds: medical-learning-os-web`. Require `completed` / `success`, the matching commit SHA, and a production build receipt containing a Version ID. Treat a missing or running check as pending; provider results can arrive after Foundation finishes. Keep the heartbeat's `Workers Builds: medical-learning-os` receipt separate. A later documentation commit with `[skip ci]` can have no checks; compare its runtime files with the checked merge rather than claiming that documentation SHA was deployed.
+
+This route confirmed production runtime merge `a0943495b2cd9e8855c3f1aa4ac5c771062cba75` without another Cloudflare sign-in: website build `4246d646-4619-4a8f-92b9-2e4293b7217f` succeeded at `2026-10-21T16:16:30Z`, version `675c93dd-5c13-4738-ac4b-2338b15c9c81`; heartbeat build `ad63aa1b-1714-4af4-90aa-530c5e1488c2` also succeeded. See the [exact commit checks](https://github.com/mdmoazzam291/Medical_Learning_OS/commit/a0943495b2cd9e8855c3f1aa4ac5c771062cba75/checks) and [Foundation run](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39630231480).
+
+This confirms the provider's deployment result. It does not replace live route/asset/authentication acceptance. Public readback previously returned403 and dashboard login returned403; those access failures are unresolved. Do not retry blocked authentication, weaken security rules or alter the production deployment merely to inspect a receipt. The existing Foundation static preview artifact below remains available for local interface inspection without Cloudflare login.
+
 ### Branch-preview investigation checkpoint — 2026-10-03
 
 Release PR #192 merged at `c14d0dd8a10e0e5c5640c1b6f5316712a550b39d`. Both production Worker Builds checks passed. The PR head `056643d98f3d3dec7f6a48e79bcba8941d5767c6` passed Foundation checks/browser verification but failed `Workers Builds: medical-learning-os-web`, build ID `e2cd7fa2-7f55-4948-aba3-d9e6b5e753d7`. The GitHub check provides no error text or annotations. Repository static build passes; this does not establish the private Cloudflare failure cause.
