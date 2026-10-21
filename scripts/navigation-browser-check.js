@@ -85,6 +85,15 @@ try {
       localStorage.setItem('mlos-supabase-auth-v1', JSON.stringify({ accessToken: 'fixture', refreshToken: 'fixture', expiresAt: 2100000000, user: value }));
       sessionStorage.setItem('mlos-navigation-fixture-seeded', 'true');
     }, user);
+    await context.addInitScript(() => {
+      const showModal = HTMLDialogElement.prototype.showModal;
+      HTMLDialogElement.prototype.showModal = function (...args) {
+        if (this.id === 'cw-pane-dialog') {
+          (window.__cwOpenTrace ||= []).push({ url: location.href, stack: new Error('Library panel opened').stack });
+        }
+        return showModal.apply(this, args);
+      };
+    });
     const page = await context.newPage(); page.on('pageerror', error => { errors.push(error.message); console.error('Navigation page error', name, page.url(), error.message); });
     const openTools = async () => {
       await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
@@ -814,6 +823,12 @@ try {
     await page.goForward();
     await page.getByRole('heading', { name: 'Concept Notes', exact: true }).waitFor();
     if (width < 1050) {
+      const panelDiagnostic = await page.evaluate(() => {
+        const dialog = document.querySelector('#cw-pane-dialog');
+        return { open: dialog?.open || false, pane: dialog?.querySelector('[data-workspace-pane]')?.dataset.workspacePane,
+          url: location.href, trace: window.__cwOpenTrace || [] };
+      });
+      assert.equal(panelDiagnostic.open, false, 'Library pane must be dismissed before global search: ' + JSON.stringify(panelDiagnostic));
       await activate(page.getByRole('button', { name: 'Search all published content', exact: true }));
       await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Unsubmitted draft');
       const outsideX = await page.evaluate(() => document.documentElement.clientWidth - 12);
