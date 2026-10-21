@@ -27,8 +27,10 @@ export function groupReviewedNoteSections(notes=[],sources=[]) {
       if(body)index.get(groupId).items.push({title,body,noteTitle:typeof note.title==='string'?note.title:'',noteVersionId:note.noteVersionId,sourceIds,sourceRecords,missingSourceIds:sourceIds.filter(id=>!sourceMap.has(id))});
       lines=[];
     };
+    let inCodeFence=false;
     for(const line of note.bodyMarkdown.replace(/\r\n?/g,'\n').split('\n')){
-      const m=heading(line);
+      if(/^\s{0,3}(?:\x60{3,}|~{3,})/.test(line)){inCodeFence=!inCodeFence;lines.push(line);continue;}
+      const m=inCodeFence?null:heading(line);
       if(m && m[1].length<=120){emit();title=normalizeHeading(m[1]);groupId=classify(title);}
       else lines.push(line);
     }
