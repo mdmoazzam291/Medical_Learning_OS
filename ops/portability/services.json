@@ -15,7 +15,7 @@
       "boundary": "src/adapters/cloud-*.js, supabase-auth.js, web/content-library-client.js and supabase/functions; SQL RPC/Auth coupling remains.",
       "export": "Existing SQL backup workflow plus current schema, roles/grants, all data, migration ledger, extension inventory, Auth settings, SMTP/OAuth configuration and separate Storage object bytes.",
       "restore": "Disposable compatible Postgres/Supabase first; reconcile migration history, extensions, auth.uid/RLS/RPC behavior and two-user isolation. Other engines require translation and contract parity.",
-      "gaps": "PR290 merged recovered baselines and isolated ACL checks. PR292 real PG17 logical restore exposed destination grants; exact source access manifest repair is under validation. Standard CLI dump excludes Vault secrets: full recovery remains blocked pending a private configuration/key recovery strategy. External Storage bytes, provider failover and API/runtime parity remain unverified.",
+      "gaps": "PR290 baseline/ACL prerequisite merged. PR292 real PG17 restore39606903113 matched69public/102COPY tables, Auth data, FKs and exact public access metadata. Full recovery remains blocked by missing Vault backup/key recovery. External Storage bytes, private provider configuration, API/runtime parity and target-provider failover remain unverified.",
       "references": [
         "supabase/migrations/README.md",
         ".github/workflows/supabase-r2-backup.yml",

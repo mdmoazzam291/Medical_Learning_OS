@@ -37,10 +37,11 @@ It uses the official Supabase CLI dump pattern and creates:
 - `roles.sql`
 - `schema.sql`
 - `data.sql`
+- `access.sql` (v2: exact public owners, grants, column privileges and defaults)
 - `SHA256SUMS`
 - `manifest.json`
 
-These are packaged into one `backup.tar.gz`, checksummed, uploaded under a UTC date/timestamp prefix, then size-verified in R2.
+These are packaged into one `backup.tar.gz`, checksummed, uploaded under a UTC date/timestamp prefix, then size-verified in R2. Format `supabase-cli-sql-access-v2` includes four SQL checksums. The read-only access exporter runs before and after the dump and rejects metadata drift; this does not make separate dump connections a single transactional snapshot.
 
 Use a **Session pooler** PostgreSQL connection string for `SUPABASE_DB_URL` because GitHub-hosted runners need reliable IPv4 connectivity. Store the complete connection string only as an encrypted GitHub repository secret.
 
@@ -126,12 +127,21 @@ No age-only R2 expiration rule is installed: such a rule could remove the last r
 User explicitly authorized weekly backups. Cron `17 22 * * 6` runs on the default branch; first scheduled slot is 2026-09-27 03:47 IST. GitHub may delay scheduled execution. Existing upload limits and concurrency remain active. Cleanup remains report-only: backups accumulate until manually reviewed or upload limits stop new backups. Account billing settings have not been changed or verified. To disable recurrence, remove only the `schedule` block; retain `workflow_dispatch`.
 
 
-## Full database restore gate — 2026-10-21 (verification pending)
+## Full database restore gate — 2026-10-21 (partial verification; Vault blocked)
 
 The expanded latest-backup drill uses pinned CLI 2.121.0 and the real local Supabase Postgres 17 image. It restores the original roles/schema/data archive unmodified, with no production connection supplied to the restore step. Before any archive SQL runs, its disposable database is disconnected from every Docker network and cron job launching is disabled and checked. The archive keeps its existing post-reset, nine-day freshness and checksum gates. Private logs/dumps are removed and never uploaded as artifacts.
 
-`verify_restore.py` requires every public application table declared in the repository (currently 69), compares every COPY block in every dumped schema using order-independent, duplicate-sensitive SHA-256 row fingerprints, checks public/Auth/Storage foreign keys, requires Auth users/identities/sessions in the backup, verifies Vault decryption is callable and rechecks disabled cron. Table rows, hashes, identities and decrypted secrets are not printed. The existing read-only role/RLS audit runs against the restored database. Owner-authored same-repository PRs can validate this workflow using the existing private R2 backup; fork/non-owner PRs cannot run its credentialed job. No new remote project is created.
+`verify_restore.py` requires every public application table declared in the repository (currently 69), compares every COPY block in every dumped schema using order-independent, duplicate-sensitive SHA-256 row fingerprints, checks public/Auth/Storage foreign keys, requires Auth users/identities/sessions in the backup, requires actual Vault backup coverage and successful decryption, and rechecks disabled cron. Table rows, hashes, identities and decrypted secrets are not printed. The read-only role/RLS audit runs against the restored database, followed by an exact comparison of source and restored public access metadata. Owner-authored same-repository PR validation first invokes the existing private backup producer for a fresh v2 archive; fork/non-owner PRs cannot run its credentialed jobs. Monthly/manual drills use the latest archive. No new remote project is created.
+
+The first real PG17 probe (run39603974776) restored the original post-reset roles/schema/data but failed the access audit: destination platform grants survived restoration. The v2 access manifest explicitly removes destination public grants/defaults and restores the source owners and permissions. Do not weaken the audit to accept the destination defaults.
+
+Full recovery remains blocked: CLI2.121.0 excludes Vault from its normal data dump. Encrypted Vault rows alone would also require a tested key recovery strategy. The gate deliberately rejects missing Vault coverage; a successful data/access stage is partial evidence. Current code does not export decrypted secrets. Before implementing a secrets backup, establish a separately recoverable encryption recipient/key and private provisioning process. Alternatively, explicitly adopt and test replacement credential provisioning; changing the acceptance contract must be documented rather than treating an empty Vault as a restore. Repository source names five monitoring settings in `20261003153000_owner_operations_v3.sql`; this source list is not a live secret inventory. Keep cron and outbound networking disabled until target secrets/endpoints and application authorization are independently validated. No secret values belong in Git, logs or CI artifacts.
 
 A pass proves the specified checks for the selected snapshot, not live failover, zero data loss since that snapshot, external Storage object recovery, JWT/OAuth/SMTP configuration recovery or end-to-end Auth/PostgREST/Edge Function behavior. The receipt must retain its actual backup date. A fresh export and separately tested cutover are still required before replacing a provider.
 
 Blank historical migration replay is a different operation: old source files include one-time content-dependent calls and a cron modification before its source creator. Do not restore erased pilot material or silently skip/shim historical statements to label that replay successful. Use a current post-reset logical snapshot for recovery; a clean-install schema baseline requires separate reconciliation.
+
+
+### Actual v2 restore receipt
+
+Draft [PR292](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/292), tested source `637807749bc9f9cb0dcbb91312740ecaea046a6b`, workflow [39606903113](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/39606903113): snapshot `supabase/2026/10/21/20261021T131907Z` was created and verified, then restored into isolated PG17. The 69-table public access/RLS audit passed and exported source/restored public access metadata matched exactly. All 69 required public tables and all 102 dumped COPY tables matched, Auth coverage passed and public/Auth/Storage foreign-key checks passed. The strict final gate failed `vault_backup_coverage_missing`. Cleanup succeeded. This receipt establishes the completed data/access checks only; full recovery remains incomplete. No production SQL or erased content was restored.
