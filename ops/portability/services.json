@@ -15,7 +15,7 @@
       "boundary": "src/adapters/cloud-*.js, supabase-auth.js, web/content-library-client.js and supabase/functions; SQL RPC/Auth coupling remains.",
       "export": "Existing SQL backup workflow plus current schema, roles/grants, all data, migration ledger, extension inventory, Auth settings, SMTP/OAuth configuration and separate Storage object bytes.",
       "restore": "Disposable compatible Postgres/Supabase first; reconcile migration history, extensions, auth.uid/RLS/RPC behavior and two-user isolation. Other engines require translation and contract parity.",
-      "gaps": "PR292 real PG17 restore39606903113 matched69public/102COPY tables, Auth data, FKs and exact public access. Encrypted named Vault recovery is implemented but inactive until owner-held age key/recipient configuration and actual encrypted restore acceptance. New Vault UUIDs replace source opaque IDs. External Storage bytes, private provider configuration, API/runtime parity, consistent snapshots and provider failover remain unverified.",
+      "gaps": "PR292 real PG17 restore39619055185 matched69public/102COPY tables, Auth, FKs and exact public access; synthetic encrypted Vault provisioning/value/overwrite checks pass. Actual Vault recovery remains blocked until owner-held age key configuration and real v3 acceptance. Vault UUIDs regenerate. External Storage bytes, private provider configuration, API/runtime parity, consistent snapshots and provider failover remain unverified.",
       "references": [
         "supabase/migrations/README.md",
         ".github/workflows/supabase-r2-backup.yml",
