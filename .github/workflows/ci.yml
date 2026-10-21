@@ -30,6 +30,8 @@ jobs:
           PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/question-intelligence-db-check.js
       - name: Verify privacy scope and erasure against isolated PostgreSQL
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/privacy-scope-db-check.js
+      - name: Verify explicit Data API grants without automatic defaults
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/data-api-grants-db-check.js
       - run: npm run demo
       - name: Preserve allowlisted static preview bundle
         uses: actions/upload-artifact@v4

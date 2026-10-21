@@ -66,3 +66,13 @@ The migration body for `20260928112019` was recovered directly from `supabase_mi
 - `20260928145039_m02c_review_workflow_measurement.sql` adds append-only, service-only workflow measurement receipts linked one-to-one with immutable question review receipts.
 - Metrics are explicitly non-authoritative and descriptive. They cannot alter review, verification, publication or reviewer grants.
 - A service-only summary RPC reports counts, rejection proxy and total/median foreground/wall timing by workflow mode for a named experiment.
+
+## Explicit Data API access — 2026-10-21
+
+New public tables must declare intended role grants alongside their creation and enable RLS. Do not rely on Supabase's automatic defaults or grant browser access to server-only tables. Writes through existing authorized SECURITY DEFINER RPCs do not require granting direct table writes. Preserve ledger immutability.
+
+`20261021041935_explicit_service_read_grants.sql` supplies explicit service SELECT for 18 tables whose committed sources depend on historical defaults. It changes neither browser access nor service write privileges, RLS, function execution or defaults. It is a forward migration, not a rewrite of applied history.
+
+Run `scripts/data-api-grants-db-check.js` with the CI-pinned PGlite runtime to replay supported explicit table ACL/RLS statements with automatic grants absent. It builds 69 data-free table shapes, executes the new migration in full twice, and verifies missing-grant, browser-write, browser-exposure, RLS and future-table failures. `supabase/verification/data-api-grants.sql` is the corresponding read-only live catalog audit. Views, sequence grants, function execution, full constraints, Auth and end-to-end PostgREST behavior remain separate checks. The ACL extractor covers conventional schema-qualified explicit SQL; dynamic DDL or nonstandard naming needs dedicated database fixtures.
+
+This is NOT a complete fresh-reset acceptance test. The five exact historical baseline bodies above are still absent. Recover and review those bodies before attempting a full disposable schema replay; do not invent them or restore erased content. The fixture models baseline table names and browser read grants solely for ACL verification. No current project reset is authorized.
