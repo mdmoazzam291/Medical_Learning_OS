@@ -120,8 +120,8 @@ export function canSwitchLibraryView(pathname, search, targetPathname, targetSea
   const current = new URLSearchParams(search), target = new URLSearchParams(targetSearch);
   return pathname === '/web/library.html' && targetPathname === pathname
     && (current.get('build') === '1') === (target.get('build') === '1')
-    && ['notes', 'questions', 'graph'].includes(current.get('view') || 'notes')
-    && ['notes', 'questions', 'graph'].includes(target.get('view'));
+    && ['overview', 'notes', 'questions', 'graph'].includes(current.get('view') || 'overview')
+    && ['overview', 'notes', 'questions', 'graph'].includes(target.get('view'));
 }
 export function reviewEntryKind(search, grants) {
   const allowed = Array.isArray(grants) ? grants.filter(kind => ['medical', 'references', 'rights'].includes(kind)) : [];

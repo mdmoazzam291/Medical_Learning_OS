@@ -1,0 +1,49 @@
+# Medical Library workspace
+
+Owner-approved design: 22 October 2026. Implementation extends the existing Library; no new top-level application or duplicate catalog.
+
+## Homes and connections
+
+| Object | Authoritative owner | Learner entry |
+|---|---|---|
+| Concept | Existing canonical concept registry | Library → Concept Explorer → Overview |
+| Published note | Versioned reviewed content | Concept → Overview / Notes; NeuralVault for references and annotations |
+| Question / original QBank | Question Intelligence / exact version | Concept → Questions; Original QBank |
+| PYQ | Same question identity plus actual occurrence evidence | PYQs collection; concept Questions; Exam DNA |
+| Platform QBank | Existing exclusive source-home policy | QBank collection; concept Questions |
+| Medical visual / clinical vignette | Existing reviewed question/media contract | Media / Atlas / Cases; original scored Study |
+| Personal annotation | Authenticated NeuralVault | Related context → Private notes |
+| Bookmark / saved filter | Device collection | My Library → Bookmarks & Saved Views |
+| Answer / exam outcome | Existing server-owned evidence ledgers | Study / Exams → Progress / Revision |
+
+Selecting a concept preserves its ID across Overview, Notes, Questions and Graph. Shareable URL state is allowlisted. Back/Forward and reload restore the selected representation. Notes and Overview discard incompatible question-only collections. Intentional PYQ/QBank collection changes clear contradictory source filters. A missing concept stays unavailable rather than displaying another dossier.
+
+Explore offers subject, body-system and clinical-task perspectives over the same canonical IDs. Clinical tasks represent declared assessment metadata, not an exhaustive clinical-presentation ontology. Aliases find the same concept. Collections preserve source occurrences without duplicating canonical questions. The central list starts at 50 artifacts and offers more; study selection still uses the complete filtered pool. The Explorer initially shows 60 concepts, up to 1,000 before requiring refinement. These client render limits do not constitute server pagination or unlimited-catalog capacity.
+
+## Responsive behavior
+
+At 1,400 CSS px or wider: 240 px Explorer, flexible reader, 280 px Context. Between 1,000 and 1,399 px: 220 px Explorer plus reader; Context opens in a modal. Below 1,000 px: reader plus on-demand Explorer and Context. Both desktop side panes collapse. Width, rather than device identity/orientation, determines the layout. Existing centered global navigation, themes and opaque reading surfaces remain.
+
+Pane dialogs support Escape and focus return; Explorer search/load-more keeps a narrow-window pane open. Concept tabs support arrows, Home and End. Filters collapse so the reader keeps priority. Private notes stay in NeuralVault; no new unsaved learner editor is introduced.
+
+## Graph contract
+
+The initial neighborhood contains at most 30 nodes and 60 evidence edges; expansion is capped at 100 nodes and 200 edges. Lists expose the same exact evidence versions and explicit hidden counts. Exam/content edges are published question-concept/note associations. Learning dependencies use explicit prerequisite-to-primary co-links at exact question versions and are labeled educational evidence. They do not establish clinical causality. The Medical perspective remains an honest empty state until a reviewed typed medical-relationship contract exists. This release does not invent or publish such relationships or introduce a graph database.
+
+## Admin preview
+
+Open Master Admin → Content Intake → staged import → Content Placement Inspector. Checks show eligible, missing, unresolved or not-applicable metadata per artifact. Existing catalog references remain unresolved in the manifest-only preview; the server validates them at publication. No check claims human medical accuracy, PYQ authenticity or source-rights approval.
+
+Draft learner preview reuses the shared dossier and graph renderer inside an authenticated admin-only dialog, with 1,440 px desktop and 1,024 px tablet canvases. Only its prompt-safe projection reaches the preview; answer keys, explanations, private evidence and derivative keys are excluded. Overview/Notes/Questions/Graph and canonical selections work inside it. Specialized destinations are disabled in this bounded preview rather than sending drafts to learner routes. The actual existing human Review & publish action and server publication transaction are unchanged.
+
+## Extension seams and limits
+
+- `src/domain/content-workspace.js`: context transitions, dossiers, alias explorer and bounded graph projection.
+- `src/domain/library-workspaces.js`: shared filters, route state and collection logic.
+- `web/content-workspace-view.js` / `content-workspace-controls.js` / `content-workspace.css`: content renderer, transient pane behavior and responsive surfaces.
+- `src/domain/content-placement.js` / `web/content-placement-view.js`: metadata placement and isolated draft projection/preview.
+- Existing specialized Library renderers, Study runtime, Exams and NeuralVault remain domain owners.
+
+The published-library projection adds allowlisted attached source IDs and title/URL/version metadata. The interface tolerates older deployed API responses by directing learners to NeuralVault for available source references. The API function needs its normal deployment for these additive source fields; a frontend merge alone does not update Supabase Edge Functions.
+
+No new service, package, database store, migration, paid plan or model dependency. The new browser script mocks the existing configured API origin; its single reviewed portability marker adds no production call. Catalog publication, a complete medical assertion/relationship registry, longitudinal clinical encounters, inferred mastery, generated content and 3D anatomy remain governed by separate contracts and acceptance work.

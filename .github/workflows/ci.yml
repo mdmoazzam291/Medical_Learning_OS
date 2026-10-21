@@ -61,6 +61,8 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/mlos-webkit-screenshots"
           NAVIGATION_HEADED=1 DEBUG=pw:browser BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/navigation-browser-check.js
+      - name: Verify unified content workspace in WebKit
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/content-workspace-browser-check.js
       - name: Verify adaptive brand palettes in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/brand-browser-check.js
       - name: Public guest navigation and preserved sign-in
@@ -125,6 +127,8 @@ jobs:
         run: xvfb-run -a env NAVIGATION_HEADED=1 LIBGL_ALWAYS_SOFTWARE=1 PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/navigation-browser-check.js
       - name: Verify connected Notes/Graph and one-action admin import
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/library-browser-check.js
+      - name: Verify unified concept workspace and isolated draft previews
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/content-workspace-browser-check.js
       - name: Verify integrated learner UX journey and recovery
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/ux-journey-browser-check.js
       - name: Verify learner-private correction overlay

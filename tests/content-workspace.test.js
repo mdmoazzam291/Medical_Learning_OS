@@ -33,3 +33,11 @@ test('large graph is bounded with no dangling edges and an explicit truncated co
  const big=fixture();big.questions=Array.from({length:1000},(_,i)=>question('q'+i,[{conceptId:'a',role:'primary'}]));
  const x=d.conceptNeighborhood(big,'a',{perspective:'exam',limit:20});assert.equal(x.nodes.length,20);assert.equal(x.hidden,982);const ids=new Set(x.nodes.map(n=>n.id));assert.ok(x.edges.every(e=>ids.has(e.from)&&ids.has(e.to)));
 });
+test('collection selection preserves canonical concept but switching collection clears contradictory source filters',()=>{
+ assert.doesNotMatch(d.transitionContext('?concept=a&view=questions&platform=marrow&exam=test-exam',{view:'questions',collection:'pyq'}),/platform=marrow/);
+ assert.doesNotMatch(d.transitionContext('?concept=a&view=questions&exam=test-exam',{view:'questions',collection:'platform'}),/exam=test-exam/);
+});
+test('learning dependency evidence is bounded even when thousands of questions share the same two nodes',()=>{
+ const big=fixture();big.questions=Array.from({length:1000},(_,i)=>question('q'+i,[{conceptId:'a',role:'primary'},{conceptId:'b',role:'prerequisite'}]));
+ const x=d.conceptNeighborhood(big,'a',{perspective:'learning',limit:20});assert.ok(x.edges.length<=40);assert.equal(x.hiddenEdges,960);
+});

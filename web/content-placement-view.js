@@ -29,8 +29,12 @@ export function setupPlacementPreview({detail,getDraft}) {
     if(!event.target.closest('[data-draft-canvas]'))return;
     const a=event.target.closest('a[href]');if(a){event.preventDefault();search=new URL(a.href).search;render();}
     if(b?.dataset.view){search=new URL(transitionContext(search,{view:b.dataset.view}),location.origin).search;render();}
-    if(b?.dataset.graphConcept){search=new URL(transitionContext(search,{concept:b.dataset.graphConcept}),location.origin).search;render();}
+    const graph=event.target.closest('[data-graph-concept],[data-graph-question],[data-graph-note]');
+    if(graph?.dataset.graphQuestion){search=new URL(transitionContext(search,{view:'questions'}),location.origin).search;render();}
+    if(graph?.dataset.graphNote){search=new URL(transitionContext(search,{view:'notes'}),location.origin).search;render();}
+    if(graph?.dataset.graphConcept){search=new URL(transitionContext(search,{concept:graph.dataset.graphConcept}),location.origin).search;render();}
   });
+  detail.addEventListener('keydown',event=>{const tab=event.target.closest('[data-draft-canvas] [role="tab"]');if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){const tabs=[...tab.parentNode.querySelectorAll('[role="tab"]')],i=tabs.indexOf(tab),next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(i+(event.key==='ArrowLeft'?-1:1)+tabs.length)%tabs.length;event.preventDefault();tabs[next].click();detail.querySelectorAll('[data-draft-canvas] [role="tab"]')[next]?.focus();return;}if(event.target.closest('[data-draft-canvas]')&&event.target.matches('[data-graph-concept],[data-graph-question],[data-graph-note]')&&['Enter',' '].includes(event.key)){event.preventDefault();event.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
   detail.addEventListener('change',event=>{if(!event.target.closest('[data-draft-canvas]'))return;const key=event.target.dataset.cwFacet||event.target.dataset.workspaceOption;if(key){search=new URL(transitionContext(search,{[key]:event.target.value}),location.origin).search;render();}});
   detail.addEventListener('submit',event=>{if(event.target.matches('[data-cw-search]')){event.preventDefault();const term=event.target.elements.conceptSearch.value.toLowerCase();const match=library.concepts.find(c=>[c.label,...c.aliases].some(x=>x.toLowerCase().includes(term)));if(match){search=new URL(transitionContext(search,{concept:match.conceptId}),location.origin).search;render();}}});
   detail.addEventListener('close',event=>{if(event.target.id==='draft-preview'){library=null;trigger?.focus();}},true);

@@ -30,13 +30,14 @@ try{
    if(path.endsWith('/content-library-api/imports/synthetic-browser/publish'))return reply({contractId:'content-library-publication-v1',status:'published',newQuestions:0,existingQuestionsLinked:0,newNotes:1});
    throw new Error('Unexpected request '+request.method()+' '+path);
   });
-  await page.goto(origin+'/web/library.html?concept=c1');await page.getByRole('heading',{name:'Synthetic connected note',exact:true}).waitFor();
+  const openFilters=async()=>{const box=page.locator('.cw-filter-disclosure');if(await box.count()&&!(await box.getAttribute('open')!==null))await box.locator('summary').click();};
+  await page.goto(origin+'/web/library.html?view=notes&concept=c1');await page.getByRole('heading',{name:'Synthetic connected note',exact:true}).waitFor();
   assert.equal(await page.locator('[data-question-card]').count(),2);
-  await page.getByLabel('Qualifier',{exact:true}).selectOption('initial');assert.equal(await page.locator('[data-question-card]').count(),1);await page.reload();await page.getByLabel('Qualifier',{exact:true}).waitFor();assert.equal(await page.getByLabel('Qualifier',{exact:true}).inputValue(),'initial');await page.getByLabel('Qualifier',{exact:true}).selectOption('');
+  await openFilters();await page.getByLabel('Qualifier',{exact:true}).selectOption('initial');assert.equal(await page.locator('[data-question-card]').count(),1);await page.reload();await openFilters();await page.getByLabel('Qualifier',{exact:true}).waitFor();assert.equal(await page.getByLabel('Qualifier',{exact:true}).inputValue(),'initial');await openFilters();await page.getByLabel('Qualifier',{exact:true}).selectOption('');
   await page.getByLabel('Medium',{exact:true}).selectOption('clinical-vignette');assert.equal(await page.locator('[data-question-card]').count(),2);await page.getByLabel('Medium',{exact:true}).selectOption('');
   await page.getByText('Concise practice · adapted from original',{exact:true}).click();await page.getByRole('button',{name:'Practice this concise version',exact:true}).click();await page.getByRole('link',{name:'Continue unfinished session'}).waitFor();assert.deepEqual(writes.pop().body,{questionVersionIds:['pyq@1'],variants:{'pyq@1':'pyq-concise'}});
   await page.getByLabel('Keyword',{exact:true}).selectOption('next-best-step');assert.equal(await page.locator('[data-question-card="platform"]').count(),1);
-  await page.reload();await page.getByLabel('Keyword',{exact:true}).waitFor();assert.equal(await page.getByLabel('Keyword',{exact:true}).inputValue(),'next-best-step');
+  await page.reload();await openFilters();await page.getByLabel('Keyword',{exact:true}).waitFor();assert.equal(await page.getByLabel('Keyword',{exact:true}).inputValue(),'next-best-step');
   await page.getByLabel('Keyword',{exact:true}).selectOption('');
   await page.getByLabel('Question search',{exact:true}).fill('Most likely');await page.getByLabel('Question search',{exact:true}).press('Tab');assert.equal(await page.locator('[data-question-card]').count(),1);
   await page.getByLabel('Question search',{exact:true}).fill('');await page.getByLabel('Question search',{exact:true}).press('Tab');
@@ -46,7 +47,7 @@ try{
   await page.getByLabel('Platform').selectOption('');await page.getByLabel('Exam',{exact:true}).selectOption('neet-pg');assert.equal(await page.locator('[data-question-card]').count(),1);assert.match(await page.locator('[data-question-card="pyq"]').textContent(),/2024.*2025/);
   assert.equal(await page.evaluate(()=>window.injected===true),false);assert.equal(writes.length,0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'library-graph-'+name+'.png'),fullPage:true});
-  await page.reload();await page.getByRole('tab',{name:'Graph',exact:true}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),1);
+  await page.reload();await page.getByRole('tab',{name:'Graph',exact:true}).waitFor();await openFilters();assert.equal(await page.locator('[data-question-card]').count(),1);
   outage=true;await page.reload();await page.getByRole('button',{name:'Retry library'}).waitFor();assert.equal(await page.locator('[data-question-card]').count(),0);outage=false;await page.getByRole('button',{name:'Retry library'}).click();await page.locator('[data-question-card]').waitFor();
   await page.getByRole('button',{name:/Study these questions/}).click();await page.getByRole('link',{name:'Continue unfinished session'}).waitFor();assert.equal(writes.length,1);assert.deepEqual(writes[0].body,{questionVersionIds:['pyq@1']});assert.equal(await page.locator('[data-question-card]').count(),1);writes.length=0;
   await page.goto(origin+'/web/content-import.html');await page.getByRole('button',{name:'slow-draft',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#import-detail').textContent==='Loading exact draft…');await page.getByRole('button',{name:'synthetic-browser'}).click();await page.getByRole('button',{name:'Review & publish',exact:true}).waitFor();

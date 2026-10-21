@@ -60,3 +60,7 @@ test('contextual subject links retain Study ownership but changing view returns 
   assert.match(libraryDomain.libraryContextUrl('?view=subjects&master=study', { subject: 'medicine' }), /master=study/);
   assert.doesNotMatch(libraryDomain.libraryContextUrl('?view=subjects&master=study', { view: 'notes' }), /master=study/);
 });
+test('overview tabs preserve concept while clearing a question-only collection and exam',async()=>{
+ const h=await open('?view=questions&concept=c&collection=pyq&exam=neet-pg');await h.switch('overview');
+ const p=new URLSearchParams(h.location.search);assert.equal(p.get('concept'),'c');assert.equal(p.has('collection'),false);assert.equal(p.has('exam'),false);
+});

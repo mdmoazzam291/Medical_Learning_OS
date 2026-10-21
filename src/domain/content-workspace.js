@@ -2,12 +2,17 @@ import { libraryContextUrl, libraryRouteState, selectWorkspace } from './library
 const normalized = value => String(value || '').normalize('NFKC').toLowerCase().trim();
 export const CONTENT_GROUPS = Object.freeze([
   { label: 'Explore', items: [['overview','Concept Explorer'],['subjects','Subjects & Topics'],['overview','Body Systems','system'],['overview','Clinical Problems','task']] },
-  { label: 'Content Collections', items: [['notes','Concept Notes'],['questions','QBank','platform'],['questions','PYQs','pyq'],['media','Media Library'],['atlas','Atlas'],['cases','Clinical Cases']] },
+  { label: 'Content Collections', items: [['notes','Concept Notes'],['questions','QBank','platform'],['questions','Original QBank','original'],['questions','PYQs','pyq'],['media','Media Library'],['atlas','Atlas'],['cases','Clinical Cases']] },
   { label: 'Connections', items: [['graph','Knowledge Graph'],['compare','Compare Concepts'],['foundation','Prerequisite Paths'],['references','Reference Tools']] },
   { label: 'My Library', items: [['vault','NeuralVault / My Notes'],['savedviews','Bookmarks & Saved Views']] }
 ]);
 export function transitionContext(search, overrides = {}) {
   const next = { ...overrides };
+  if (Object.hasOwn(next,'collection')) {
+    if(next.collection==='pyq')next.platform='';
+    if(['platform','original'].includes(next.collection))next.exam='';
+    if(next.collection==='original')next.platform='';
+  }
   if (next.view) {
     const to = next.view;
     if (!['media','atlas','images'].includes(to)) next.category = '';
@@ -17,6 +22,7 @@ export function transitionContext(search, overrides = {}) {
       for (const k of ['collection','exam','platform','observed','keyword','qualifier','medium','response']) next[k] = '';
     }
     if (to !== 'graph') next.perspective = '';
+    if(to!=='overview')next.browse='';
   }
   return libraryContextUrl(search, next);
 }
@@ -33,7 +39,7 @@ export function conceptDossier(library, conceptId, options = {}) {
 }
 export function conceptNeighborhood(library, conceptId, { perspective = 'exam', limit = 30, ...options } = {}) {
   const dossier = conceptDossier(library, conceptId, options);
-  if (!dossier.concept) return { nodes: [], edges: [], hidden: 0, perspective };
+  if (!dossier.concept) return { nodes: [], edges: [], hidden: 0, hiddenEdges:0, perspective };
   const center = 'concept:' + conceptId, nodes = new Map([[center,{ id:center, kind:'concept', conceptId, label:dossier.concept.label }]]), edges = [];
   const known = new Map(library.concepts.map(c => [c.conceptId,c]));
   if (perspective === 'learning') {
@@ -54,6 +60,7 @@ export function conceptNeighborhood(library, conceptId, { perspective = 'exam', 
     }
   }
   const max = Math.max(2,Math.min(100,Number(limit)||30)), selected=[...nodes.values()].slice(0,max), ids=new Set(selected.map(n=>n.id));
-  return { nodes:selected,edges:edges.filter(x=>ids.has(x.from)&&ids.has(x.to)),hidden:nodes.size-selected.length,perspective };
+  const eligibleEdges=edges.filter(x=>ids.has(x.from)&&ids.has(x.to));
+  return { nodes:selected,edges:eligibleEdges.slice(0,max*2),hidden:nodes.size-selected.length,hiddenEdges:eligibleEdges.length-Math.min(eligibleEdges.length,max*2),perspective };
 }
 export function contextState(search) { return libraryRouteState(search); }

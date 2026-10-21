@@ -10,25 +10,25 @@
 Preserve exclusive PYQ homes, publication gates, opaque themes, server scoring and private overlay ownership. Test unavailable/stale concept IDs, partial old API responses, aliases/long labels, draft leakage, large neighborhoods, route filter leakage and unsaved review interactions.
 
 ## Task 1 — Shared content context and projections
-- [ ] Add failing tests in tests/content-workspace.test.js for validated transitions, alias discovery, dossiers and bounded exact-evidence neighborhoods.
-- [ ] Implement src/domain/content-workspace.js. Extend library-workspaces routes with overview and graph perspective, shared context transitions and alias search. Extend projectLibrary with safe source references only.
-- [ ] Run focused domain/projection tests; expect no failures.
+- [x] Add failing tests in tests/content-workspace.test.js for validated transitions, alias discovery, dossiers and bounded exact-evidence neighborhoods.
+- [x] Implement src/domain/content-workspace.js. Extend library-workspaces routes with overview and graph perspective, shared context transitions and alias search. Extend projectLibrary with safe source references only.
+- [x] Run focused domain/projection tests; expect no failures.
 
 ## Task 2 — Workspace rendering and controller
-- [ ] Add failing markup and route tests for four tabs, groups, selected concept, graph list equivalent and empty states.
-- [ ] Create web/content-workspace-view.js and web/content-workspace.css. Integrate the shell with library.js while retaining specialized library-enhancements tools.
-- [ ] Keep actual selection/filter/session behavior and Back restoration; wire context/explorer dialogs, load-more and accessible focus.
-- [ ] Extend public surface allowlist and default Library navigation to overview.
-- [ ] Verify focused tests and static build.
+- [x] Add failing markup and route tests for four tabs, groups, selected concept, graph list equivalent and empty states.
+- [x] Create web/content-workspace-view.js and web/content-workspace.css. Integrate the shell with library.js while retaining specialized library-enhancements tools.
+- [x] Keep actual selection/filter/session behavior and Back restoration; wire context/explorer dialogs, load-more and accessible focus.
+- [x] Extend public surface allowlist and default Library navigation to overview.
+- [x] Verify focused tests and static build.
 
 ## Task 3 — Placement inspection and isolated draft preview
-- [ ] Test metadata eligibility, unresolved external links, duplicate source homes and prompt-only preview.
-- [ ] Create src/domain/content-placement.js and web/content-placement-view.js; integrate with authenticated content-import.js.
-- [ ] Reuse workspace renderer in a draft-only dialog with responsive width controls. Never mark preview interactions as approval or learner evidence.
-- [ ] Run domain/admin tests and verify existing review workflow behavior.
+- [x] Test metadata eligibility, unresolved external links, duplicate source homes and prompt-only preview.
+- [x] Create src/domain/content-placement.js and web/content-placement-view.js; integrate with authenticated content-import.js.
+- [x] Reuse workspace renderer in a draft-only dialog with responsive width controls. Never mark preview interactions as approval or learner evidence.
+- [x] Run domain/admin tests and verify existing review workflow behavior.
 
 ## Task 4 — Acceptance, review and checkpoint
-- [ ] Add responsive synthetic browser acceptance and CI steps, including WebKit. Preserve no real-content publication.
-- [ ] Run npm test, npm run check, build:pages and available affected browser checks; record exact limitations/failures.
-- [ ] Review diff for API leakage, URL/state loss, accessibility, source status and old client compatibility.
-- [ ] Update STATUS/DECISIONS/AI_HANDOFF, persist focused feature branch and create reviewable PR. Verify remote head/checks; do not claim deployed behavior.
+- [x] Add responsive synthetic browser acceptance and CI steps, including WebKit. Preserve no real-content publication.
+- [ ] Complete hosted Chromium/WebKit acceptance after local suite/check/build; record exact limitations/failures.
+- [x] Review diff for API leakage, URL/state loss, accessibility, source status and old client compatibility.
+- [ ] Record final hosted acceptance, update STATUS/AI_HANDOFF and verify PR remote head/checks; do not claim deployed behavior.
