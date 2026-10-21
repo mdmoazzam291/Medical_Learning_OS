@@ -67,8 +67,17 @@
     "cloudflare",
     "supabase"
   ],
+  "ops/r2-backups/check_vault_recovery.py": [
+    "supabase"
+  ],
+  "ops/r2-backups/install_age.sh": [
+    "github"
+  ],
   "ops/r2-backups/storage_guard.py": [
     "cloudflare",
+    "supabase"
+  ],
+  "ops/r2-backups/vault_recovery.py": [
     "supabase"
   ],
   "ops/r2-backups/verify_restore.py": [

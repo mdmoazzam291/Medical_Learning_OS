@@ -1,6 +1,7 @@
 """Verify private Supabase COPY data without printing rows or fingerprints."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -89,17 +90,25 @@ def verify(data_path, migrations, container):
     print(json.dumps({'stage': 'database_data_verified', 'publicTables': len(required),
                       'copyTables': len(expected), 'allCopyDataMatched': True,
                       'foreignKeysChecked': True, 'authDataMatched': True}), flush=True)
-    # Count only: decrypted secrets must never enter output or artifacts.
-    if ('vault', 'secrets') not in expected:
-        raise ValueError('vault_backup_coverage_missing')
-    if query("select count(*) = count(decrypted_secret) from vault.decrypted_secrets", 'vault_decryption').strip() != 't':
-        raise ValueError('vault_decryption_failed')
     if query("select current_setting('cron.launch_active_jobs')").strip() != 'off':
         raise ValueError('cron_not_disabled')
+    cipher = Path(data_path).with_name('vault.json.age')
+    if cipher.is_file():
+        from vault_recovery import restore_vault
+        snapshot = os.environ.get('MLOS_BACKUP_PREFIX', '').rsplit('/', 1)[-1]
+        vault = restore_vault(cipher, snapshot, container)
+    else:
+        # Encrypted raw rows require the original platform root key. Never accept
+        # an empty target when no Vault backup is present.
+        if ('vault', 'secrets') not in expected:
+            raise ValueError('vault_backup_coverage_missing')
+        if query("select count(*) = count(decrypted_secret) from vault.decrypted_secrets", 'vault_decryption').strip() != 't':
+            raise ValueError('vault_decryption_failed')
+        vault = {'vaultReadable': True, 'vaultRecovery': 'raw-platform-key'}
     return {'format': 'database-restore-verification-v1', 'publicTables': len(required),
             'copyTables': len(expected), 'copySchemas': sorted({s for s, _ in expected}),
             'allCopyDataMatched': True, 'foreignKeysChecked': True, 'cronDisabled': True,
-            'authDataMatched': True, 'vaultReadable': True,
+            'authDataMatched': True, **vault,
             'providerFailoverTested': False}
 
 

@@ -93,12 +93,23 @@ jobs:
       - name: Create Supabase logical dump set
         id: dump
         shell: bash
+        env:
+          MLOS_RECOVERY_AGE_RECIPIENT: ${{ vars.MLOS_RECOVERY_AGE_RECIPIENT }}
         run: |
           set -euo pipefail
           timestamp="$(date -u +%Y%m%dT%H%M%SZ)"
           day="$(date -u +%Y/%m/%d)"
           backup_dir="$RUNNER_TEMP/mlos-backup-$timestamp"
           mkdir -p "$backup_dir"
+          chmod 700 "$backup_dir"
+          format=supabase-cli-sql-access-v2
+          files=(roles.sql schema.sql data.sql access.sql)
+          if [ -n "$MLOS_RECOVERY_AGE_RECIPIENT" ]; then
+            bash ops/r2-backups/install_age.sh
+            AGE_BIN="$RUNNER_TEMP/mlos-age/age" python3 ops/r2-backups/vault_recovery.py export "$backup_dir/vault.json.age" "$timestamp"
+            format=supabase-cli-sql-vault-v3
+            files+=(vault.json.age)
+          fi
 
           psql "$SUPABASE_DB_URL" -X -qAt -v ON_ERROR_STOP=1 --file supabase/verification/export-access.sql > "$backup_dir/access.sql"
           supabase db dump --db-url "$SUPABASE_DB_URL" -f "$backup_dir/roles.sql" --role-only
@@ -114,12 +125,12 @@ jobs:
 
           (
             cd "$backup_dir"
-            sha256sum roles.sql schema.sql data.sql access.sql > SHA256SUMS
+            sha256sum "${files[@]}" > SHA256SUMS
           )
 
           cat > "$backup_dir/manifest.json" <<EOF
           {
-            "format": "supabase-cli-sql-access-v2",
+            "format": "$format",
             "project_ref": "iyapppmeieqhflnzslao",
             "repository": "$GITHUB_REPOSITORY",
             "workflow_run_id": "$GITHUB_RUN_ID",
@@ -128,7 +139,7 @@ jobs:
           }
           EOF
 
-          tar -C "$backup_dir" -czf "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             roles.sql schema.sql data.sql access.sql SHA256SUMS manifest.json
+          tar -C "$backup_dir" -czf "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz" "${files[@]}" SHA256SUMS manifest.json
           sha256sum "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz"             > "$RUNNER_TEMP/mlos-supabase-$timestamp.tar.gz.sha256"
 
           echo "timestamp=$timestamp" >> "$GITHUB_OUTPUT"
