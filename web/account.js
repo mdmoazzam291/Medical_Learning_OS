@@ -1,3 +1,4 @@
+import { preparationAccountMarkup } from '/web/preparation-view.js';
 import { createLearnerReturn } from '/web/auth-return.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
@@ -17,6 +18,7 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
+let preparationState = { profile:null, loading:true, saving:false, error:null };
 const emptyProjectionErrors = () => ({ progress: null, questions: null, retention: null });
 let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
 
@@ -54,6 +56,7 @@ function projectionError(result) {
   return result.reason?.code || result.reason?.message || 'projection_unavailable';
 }
 function signedOutState() {
+  preparationState = { profile:null, loading:false, saving:false, error:null };
   return { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
 }
 
@@ -124,7 +127,7 @@ function signedIn() {
   const admin = state.isAdmin
     ? `<section class="panel reviewer-access"><div><span class="eyebrow">ADMIN</span><h2>Content Admin Console</h2><p>This account is the beta content authority for Medical, References and Rights review. Learners do not receive these controls.</p></div><a class="secondary action-link" href="/web/admin.html">Open Admin Console →</a></section>`
     : '';
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Your Medretica account.</h1><p>${escape(state.user?.email || 'Authenticated learner')}</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Learning record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh session'}</button></div>${body}<p><a class="primary action-link" href="/">Home →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a> <a class="secondary action-link" href="/web/exam.html">Exams →</a> <a class="secondary action-link" href="/web/vault.html">NeuralVault →</a></p><p class="muted">Only published, reviewed question versions enter the learner path.</p></section>${recoveryPasswordPanel()}${signInMethodsPanel()}${retentionPilotPanel()}${admin}<section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Learner and admin responsibilities are separate.</h2><p>Learners may report suspected errors. Only the server-authorized content admin can approve Medical, References, Rights, or research pair-validation evidence.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Your Medretica account.</h1><p>${escape(state.user?.email || 'Authenticated learner')}</p></div><button class="secondary" data-action="signout">Sign out</button></div><section class="panel"><div class="section-heading"><h2>Learning record</h2><button class="text-button" data-action="refresh" ${state.loading ? 'disabled' : ''}>${state.loading ? 'Refreshing…' : 'Refresh session'}</button></div>${body}<p><a class="primary action-link" href="/">Home →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a> <a class="secondary action-link" href="/web/exam.html">Exams →</a> <a class="secondary action-link" href="/web/vault.html">NeuralVault →</a></p><p class="muted">Only published, reviewed question versions enter the learner path.</p></section>${preparationAccountMarkup(preparationState)}${recoveryPasswordPanel()}${signInMethodsPanel()}${retentionPilotPanel()}${admin}<section class="panel"><span class="eyebrow">CONTENT GOVERNANCE</span><h2>Learner and admin responsibilities are separate.</h2><p>Learners may report suspected errors. Only the server-authorized content admin can approve Medical, References, Rights, or research pair-validation evidence.</p></section></main>`;
 }
 
 function render() {
@@ -169,11 +172,13 @@ async function loadCloud({ forceRefresh = false } = {}) {
     }
   }
 
-  const [progressResult, questionsResult, retentionResult] = await Promise.allSettled([
+  const [progressResult, questionsResult, retentionResult, preparationResult] = await Promise.allSettled([
     cloud.progress(),
     cloud.questions('all'),
-    cloud.retentionProbeConsent()
+    cloud.retentionProbeConsent(),
+    auth.preparationProfile()
   ]);
+  preparationState = { ...preparationState, loading:false, error:preparationResult.status === 'rejected' ? 'preparation_unavailable' : null, profile:preparationResult.status === 'fulfilled' ? preparationResult.value : preparationState.profile };
   const projectionErrors = {
     progress: projectionError(progressResult),
     questions: projectionError(questionsResult),
@@ -214,6 +219,7 @@ root.addEventListener('click', event => {
   const target = event.target.closest('[data-action]');
   if (!target) return;
   event.preventDefault();
+  if (target.dataset.action === 'retry-preparation') { loadCloud(); return; }
   if (target.dataset.action === 'refresh') loadCloud({ forceRefresh: true });
   if (target.dataset.action === 'withdraw-retention') {
     (async () => {
@@ -270,6 +276,26 @@ root.addEventListener('submit', event => {
         reportUnexpected(error, 'password_recovery_request');
         announce(`Password recovery request failed: ${error.code || error.message || 'recovery_request_failed'}.`);
       }
+    })();
+  }
+  if (form.id === 'preparation-profile-form') {
+    (async () => {
+      if (preparationState.saving || preparationState.loading || !state.user) return;
+      const learnerId = state.user.id, goal = String(data.get('preparationGoal'));
+      const pathwayIds = goal === 'both' ? ['neet-pg','ini-cet'] : [goal];
+      const profile = {schemaVersion:1,pathwayIds,primaryPathwayId:goal === 'both' ? String(data.get('primaryGoal')) : goal};
+      preparationState = {...preparationState,saving:true,error:null}; render();
+      try {
+        const saved = await auth.setPreparationProfile(profile);
+        if (state.user?.id !== learnerId || auth.currentUser()?.id !== learnerId) return;
+        preparationState = {profile:saved,loading:false,saving:false,error:null};
+        announce('Preparation goals saved to your account. Your learning history and unfinished sessions are kept.');
+      } catch (error) {
+        if (state.user?.id !== learnerId) return;
+        preparationState = {...preparationState,saving:false,error:'preparation_save_failed'};
+        announce('Preparation goals were not confirmed saved. Retry when connected.');
+      }
+      render();
     })();
   }
   if (form.id === 'retention-optin-form') {
