@@ -47,3 +47,21 @@ Draft learner preview reuses the shared dossier and graph renderer inside an aut
 The published-library projection adds allowlisted attached source IDs and title/URL/version metadata. The interface tolerates older deployed API responses by directing learners to NeuralVault for available source references. The API function needs its normal deployment for these additive source fields; a frontend merge alone does not update Supabase Edge Functions.
 
 No new service, package, database store, migration, paid plan or model dependency. The new browser script mocks the existing configured API origin; its single reviewed portability marker adds no production call. The preview bridge is a local static asset, not a service or external script. Chromium/WebKit acceptance checks verify read-only behavior and the opaque sandbox boundary. Catalog publication, a complete medical assertion/relationship registry, longitudinal clinical encounters, inferred mastery, generated content and 3D anatomy remain governed by separate contracts and acceptance work.
+
+## Audited implementation stage — 22 October 2026
+
+| Design requirement | Current implementation | Evidence / remaining boundary |
+|---|---|---|
+| One canonical home across content types | Implemented in PR296 | Existing concept IDs, exclusive PYQ/QBank homes and exact artifact versions are reused |
+| Concept dossier and four synchronized representations | Implemented in PR296/298 | Overview, Notes, Questions and Graph preserve canonical selection and compatible URL state |
+| Desktop/iPad adaptable panes | Implemented | Five-width Chromium acceptance; existing macOS WebKit CI covers iPad windows, not physical-device testing |
+| Source-grounded structured sections | Implemented in PR298 | Only explicitly headed published note material is assembled; missing sections remain missing |
+| Placement inspection and draft preview | Implemented in PR296 | Prompt-only opaque iframe, restricted relay, source/evidence boundaries and desktop/iPad canvas tests |
+| Medical relationship read/display | PR303 | Explicit directed, exact-source/fingerprint projection; no automatic clinical inference |
+| Authoritative medical relationship registry | Pending #299 | Database versions, actual grants/rights/review receipts, publish/retire transaction, Admin controls and protected snapshot feed |
+| Large-catalog discovery | Pending #300 | Present client render limits do not provide server pagination or an indexed search contract |
+| Live signed-in acceptance | Pending #301 | Public homepage and Library guest gate observed in this audit; no authenticated session or real-content acceptance |
+| Rich clinical presentations and overlays | Pending #302 | Current task facets and linked/private views are foundations; reviewed symptom mappings, grounded comparisons and full media/case workflows remain |
+| Learning outcome claims | Unvalidated | Browsing and graph exploration do not create mastery evidence; recall/transfer experiments require reviewed content and prospective responses |
+
+Read/display approval must not be interpreted as registry/publication completion. Normal publication review remains authoritative for every clinical artifact.
