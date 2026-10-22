@@ -170,7 +170,10 @@ async function loadCloud({ forceRefresh = false } = {}) {
   if (generation !== accountLoadGeneration) return;
   if (!session?.user) { state = signedOutState(); render(); return; }
   if (auth.currentUser()?.id !== session.user.id) return;
-  preparationState = {...preparationState,loading:true};
+  if (state.user?.id !== session.user.id) {
+    preparationState = {profile:null,loading:true,saving:false,error:null};
+    state = {...state,progress:null,questions:null,retentionConsent:null,retentionSaving:false,recoveryMode:false,isAdmin:false,reviewKinds:[]};
+  } else preparationState = {...preparationState,loading:true};
   state = { ...state, user: session.user, loading: true, projectionErrors: emptyProjectionErrors() }; render();
 
   let enrichedUser = auth.currentUser() || session.user;

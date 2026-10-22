@@ -27,12 +27,13 @@ try{
     console.log('Preparation viewport:',name);
     const context=await browser.newContext({viewport:{width,height}});
     await context.addInitScript(()=>{localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'synthetic@example.invalid',providers:['email']}}));});
-    let saved=null,failSave=false,empty=false,updates=0;
-    const metadata=()=>({id:'11111111-1111-4111-8111-111111111111',email:'synthetic@example.invalid',app_metadata:{providers:['email']},user_metadata:{mlos_preparation_profile:saved,unrelated:'keep'}});
+    let saved=null,failSave=false,failRead=false,empty=false,updates=0,activeId='11111111-1111-4111-8111-111111111111';
+    const metadata=()=>({id:activeId,email:'synthetic@example.invalid',app_metadata:{providers:['email']},user_metadata:{mlos_preparation_profile:saved,unrelated:'keep'}});
     const routeApi=async route=>{
       const request=route.request(),path=new URL(request.url()).pathname;
       const reply=(body,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(body)});
       if(path==='/auth/v1/user'){
+        if(request.method()==='GET'&&failRead)return reply({error:'temporarily_unavailable'},503);
         if(request.method()==='PUT'){
           if(failSave)return reply({error:'temporarily_unavailable'},503);
           const body=request.postDataJSON();assert.deepEqual(Object.keys(body),['data']);assert.deepEqual(Object.keys(body.data),['mlos_preparation_profile']);saved=body.data.mlos_preparation_profile;updates++;
@@ -64,6 +65,16 @@ try{
     failSave=true;await page.locator('[name="preparationGoal"]').selectOption('neet-pg');await page.getByRole('button',{name:'Save preparation goals',exact:true}).click();
     await page.getByRole('button',{name:'Retry goals',exact:true}).waitFor();assert.equal(saved.pathwayIds.length,2);failSave=false;
     await page.getByRole('button',{name:'Retry goals',exact:true}).click();await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).waitFor();
+    // A different tab can replace this browser's authenticated identity.
+    activeId='22222222-2222-4222-8222-222222222222';failRead=true;
+    await page.evaluate(id=>{const session=JSON.parse(localStorage.getItem('mlos-supabase-auth-v1'));session.user.id=id;localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify(session));},activeId);
+    await page.getByRole('button',{name:'Refresh session',exact:true}).click();
+    await page.getByRole('button',{name:'Retry goals',exact:true}).waitFor();
+    assert.equal(await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).count(),0);
+    activeId='11111111-1111-4111-8111-111111111111';failRead=false;
+    await page.evaluate(id=>{const session=JSON.parse(localStorage.getItem('mlos-supabase-auth-v1'));session.user.id=id;localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify(session));},activeId);
+    await page.getByRole('button',{name:'Retry goals',exact:true}).click();
+    await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).waitFor();
     await page.goto(origin+'/web/library.html?view=questions&scope=goals');
     await page.locator('[data-question-card]').first().waitFor();assert.equal(await page.locator('[data-question-card]').count(),4);
     await page.getByLabel('Content scope',{exact:true}).selectOption('foundations');assert.equal(await page.locator('[data-question-card]').count(),1);

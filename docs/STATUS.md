@@ -1,5 +1,11 @@
 # Current status
 
+## Final account-owner isolation regression — 23 October 2026 (Asia/Kolkata)
+- PR304 runtime7c358cfad245431ad0e7f57015ffbaaf1306cb1a / treea76dff8abdfca5612aa2dd3b6dd8ae9af9f33c4c passed hosted core checks and the new five-width WebKit preparation step in Foundation39844636236; remaining job results were still running at inspection. Local1410Node tests, full check13services/226locations and108-file build pass.
+- Reviewer found one further case: starting a fresh load as learnerB after learnerA could retain A's preference if B's read failed. New RED→GREEN regression verifies the profile clears on identity change; the same reset clears previous progress/question/consent/admin display caches. Added browser coverage that changes the stored synthetic identity, fails its preference read and verifies no saved-goal display leaks.
+- Follow-up remains on this owned feature branch, no release/merge or production request. Full fresh suite and final saved-head hosted acceptance are required before ready-for-review. Earlier failed runs remain superseded evidence, not successes.
+
+
 ## Preparation review corrections and hosted acceptance — 23 October 2026 (Asia/Kolkata)
 - Active Codex branch feat/combined-preparation-pathways-20261023, draft PR304. Saved code7d3be4060a10c70ce896d275ff396db75f8f458f has exact treeb28df63469a0330910af693f63aba584c316b906; source trees verified equal locally/remotely. All1407Node tests pass on this scope-fix implementation; static build108files passes.
 - First hosted Foundation39844047399 core failed only on the new synthetic-auth browser marker missing from the portability baseline. Reviewed script intercepts every existing-origin request; explicitly added its single path/provider pair (13services/226locations). No new service. Chromium passed all earlier adjacent journeys, then new preparation flow timed out on a standalone note-title selector; actual dossier displays the title in a provenance line. Selector now targets that actual line. WebKit pending at this checkpoint; no hosted full acceptance claimed.
