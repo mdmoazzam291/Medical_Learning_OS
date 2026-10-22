@@ -1,4 +1,5 @@
 import { validateIntelligence, learnerIntelligence, taskAxes } from './question-intelligence.js';
+import { projectReviewedMedicalRelations } from './medical-relationships.js';
 export const SUBJECTS = Object.freeze(['anatomy','physiology','biochemistry','pathology','pharmacology','microbiology','forensic-medicine','community-medicine','medicine','surgery','obstetrics-gynaecology','pediatrics','ent','ophthalmology','orthopaedics','dermatology','psychiatry','anaesthesia','radiology']);
 const facets = ['subjects','systems','organs','domains','tasks'];
 const normalize = value => String(value).trim().toLowerCase().replace(/\s+/g,' ');
@@ -72,7 +73,7 @@ export function validateImport(m) {
   return m;
 }
 const emptyFacets=()=>Object.fromEntries(facets.map(f=>[f,[]]));
-export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],questionMetadata=[],conceptMetadata=[],links=[],stats=[]}) {
+export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],questionMetadata=[],conceptMetadata=[],links=[],stats=[],medicalRelationships=[]}) {
   const qm=new Map(questionMetadata.map(x=>[x.question_id,x])); const cm=new Map(conceptMetadata.map(x=>[x.concept_id,x])); const observations=new Map(stats.map(x=>[x.question_id,x]));
   const seen=new Set();
   const questions=catalog.questions.filter(q=>q.status==='published').filter(q=>{if(seen.has(q.questionId))return false;seen.add(q.questionId);return true;}).map(q=>{
@@ -85,12 +86,14 @@ export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],ques
     return {questionId:q.questionId,questionVersionId:q.questionVersionId,sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
   });
   const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,sourceIds:[...(n.source_ids||[])],bodyMarkdown:n.body_markdown}));
-  const visibleIds=new Set([...questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)),...publishedNotes.map(n=>n.conceptId)]);
+  const reviewedMedicalRelationships=projectReviewedMedicalRelations({relations:medicalRelationships,concepts:catalog.concepts,sources:catalog.sources||[]});
+  const visibleIds=new Set([...questions.flatMap(q=>q.conceptLinks.map(l=>l.conceptId)),...publishedNotes.map(n=>n.conceptId),...reviewedMedicalRelationships.flatMap(r=>[r.fromConceptId,r.toConceptId])]);
   const concepts=catalog.concepts.filter(c=>visibleIds.has(c.conceptId)).map(c=>({conceptId:c.conceptId,label:c.label,aliases:c.aliases||[],classification:cm.get(c.conceptId)?.classification||{...emptyFacets(),subjects:c.subjectTags||[]}}));
   const noteIds=new Set(publishedNotes.map(n=>n.noteVersionId));const questionIds=new Set(questions.map(q=>q.questionId));
   const sourceIds=new Set([...questions,...publishedNotes].flatMap(x=>x.sourceIds));
+  for(const relationship of reviewedMedicalRelationships)sourceIds.add(relationship.sourceId);
   const sources=(catalog.sources||[]).filter(s=>sourceIds.has(s.sourceId)).map(({sourceId,title,url,version})=>({sourceId,title,url,version}));
-  return {contractId:'canonical-content-library-v1',concepts,questions,notes:publishedNotes,sources,links:links.filter(l=>noteIds.has(l.note_version_id)&&questionIds.has(l.question_id)),masteryInference:false};
+  return {contractId:'canonical-content-library-v1',concepts,questions,notes:publishedNotes,sources,medicalRelationships:reviewedMedicalRelationships,links:links.filter(l=>noteIds.has(l.note_version_id)&&questionIds.has(l.question_id)),masteryInference:false};
 }
 // Pattern tags describe the prompt, never the answer or explanation.
 const keywordPatterns = [
