@@ -27,8 +27,8 @@ export function projectReviewedMedicalRelations({relations=[],concepts=[],source
   for(const r of input){
     if(!validId(r?.relationshipId)||!recentInteger(r?.version))continue;
     const current=latest.get(r.relationshipId);
-    if(!current||current.version<r.version)latest.set(r.relationshipId,r);
-    else if(current.version===r.version)latest.set(r.relationshipId,null); // ambiguous duplicate fails closed
+    if(!current || current.version<r.version)latest.set(r.relationshipId,r);
+    else if(current.version===r.version)latest.set(r.relationshipId,{version:r.version,status:'ambiguous'}); // duplicate fails closed
   }
   const approved=[];
   for(const r of latest.values()){
