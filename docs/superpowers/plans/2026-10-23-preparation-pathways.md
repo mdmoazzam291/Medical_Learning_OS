@@ -32,8 +32,8 @@ No duplicated catalog, fabricated clinical requirements, changed publication aut
 - [x] Test shared domain selection with new/revision questions and exact-version boundaries.
 - [x] Integrate goal scope before new Study Now plans, preserving existing session resume.
 - [x] Add responsive synthetic browser acceptance for selector, goals/foundations/all and persistence.
-- [ ] Run npm test, npm run check, build and browser checks; review complete diff.
-- [ ] Update ADR/STATUS/handoff and save focused feature-branch commits plus PR, verify remote head.
+- [x] Run npm test, npm run check, build and browser checks; review complete diff.
+- [x] Update ADR/STATUS/handoff and save focused feature-branch commits plus PR, verify remote head.
 
 ## Execution ledger
 - Inspection complete: current main and open PRs checked. New branch owns only combined preparation work. Owner's direct request authorizes inline implementation of the supplied design; no additional approval loop introduced.
@@ -43,3 +43,5 @@ No duplicated catalog, fabricated clinical requirements, changed publication aut
 - Fresh full suite after lifecycle changes and final check/build required before completion. No release performed.
 
 - Final runtime0bddf286b8bebdbf6aa38ac31a859602374af796:1411Node tests, check13services/226locations and108-file build pass. Independent review clean. Hosted core and fullWebKit pass; feature-specific Chromium tests pass. Chromium broad job was cancelled at15minutes after a9minute dependency installation; only that job is retried. Keep final verification checkbox open until its result is recorded.
+
+- Complete: Foundation39845183157 attempt2 passed core, fullChromium and fullWebKit on runtime0bddf286b8bebdbf6aa38ac31a859602374af796. Documentation-only completion receipt preserves tested runtime; PR304 ready for review, not production deployment. All tasks complete within the foundation scope; curriculum population, specialist/future runtimes and live acceptance remain explicit future work.
