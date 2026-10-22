@@ -50,3 +50,5 @@ Frontend assets, `content-library-api` and `study-api` require coordinated norma
 Acceptance combines pure behavioral tests, authenticated API-handler tests, adapter isolation/failure tests and responsive synthetic Chromium/WebKit journeys. Synthetic fixtures are not published medical content or observed learner results.
 
 Portability review: `scripts/preparation-browser-check.js` adds one existing-provider marker for the synthetic Auth session key. All API requests are intercepted against the existing configured origin; no new integration or provider is added. The reviewed baseline adds exactly this one path/provider pair (13 services / 226 locations).
+
+Release packaging must include the shared `src/domain/preparation-pathways.js` and `data/preparation-curriculum.js` imports in both function bundles. Concurrent preference edits use the latest confirmed account value; immutable Study Now recommendation receipts retain the profile and registry version used for their selection. Existing Home/QBank/revision inventory counts describe the full saved catalog/evidence; goal-specific selection is applied by Library and new Study Now plans in this foundation.
