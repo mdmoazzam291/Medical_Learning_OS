@@ -42,7 +42,19 @@ export function conceptNeighborhood(library, conceptId, { perspective = 'exam', 
   if (!dossier.concept) return { nodes: [], edges: [], hidden: 0, hiddenEdges:0, perspective };
   const center = 'concept:' + conceptId, nodes = new Map([[center,{ id:center, kind:'concept', conceptId, label:dossier.concept.label }]]), edges = [];
   const known = new Map(library.concepts.map(c => [c.conceptId,c]));
-  if (perspective === 'learning') {
+  if (perspective === 'medical') {
+    // Only pre-reviewed, exact-version projections from the protected library API.
+    // Neither educational co-links nor learner weaknesses imply clinical causality.
+    for (const r of library.medicalRelationships || []) {
+      if (!r || (r.fromConceptId !== conceptId && r.toConceptId !== conceptId)) continue;
+      if (!known.has(r.fromConceptId) || !known.has(r.toConceptId) || r.fromConceptId === r.toConceptId) continue;
+      for (const id of [r.fromConceptId,r.toConceptId])
+        nodes.set('concept:'+id,{id:'concept:'+id,kind:'concept',conceptId:id,label:known.get(id).label});
+      edges.push({from:'concept:'+r.fromConceptId,to:'concept:'+r.toConceptId,
+        kind:r.relationType,evidenceVersionId:r.evidenceVersionId,relationVersionId:r.relationshipVersionId,
+        claimText:r.claimText,sourceId:r.sourceId,sourceVersion:r.sourceVersion});
+    }
+  } else if (perspective === 'learning') {
     for (const q of dossier.questions) for (const from of q.conceptLinks.filter(l => l.role === 'prerequisite')) for (const to of q.conceptLinks.filter(l => l.role === 'primary')) {
       if (from.conceptId === to.conceptId || ![from.conceptId,to.conceptId].includes(conceptId) || !known.has(from.conceptId) || !known.has(to.conceptId)) continue;
       for (const id of [from.conceptId,to.conceptId]) nodes.set('concept:'+id,{ id:'concept:'+id,kind:'concept',conceptId:id,label:known.get(id).label });
