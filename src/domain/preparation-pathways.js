@@ -70,7 +70,7 @@ export function validatePreparationProfile(input, curriculum) {
   ids(input.pathwayIds); id(input.primaryPathwayId);
   if (!input.pathwayIds.length || input.pathwayIds.length > 8 || !input.pathwayIds.includes(input.primaryPathwayId)) fail('preparation_primary_invalid');
   if (input.pathwayIds.some(key => !curriculum.pathways.some(p => p.pathwayId === key && p.status === 'active'))) fail('preparation_pathway_unavailable');
-  return structuredClone(input);
+  return {schemaVersion:1,pathwayIds:curriculum.pathways.filter(p => input.pathwayIds.includes(p.pathwayId)).map(p => p.pathwayId),primaryPathwayId:input.primaryPathwayId};
 }
 export function preparationContext(curriculum, input) {
   const checked = validatePreparationCurriculum(curriculum);

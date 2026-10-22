@@ -46,3 +46,9 @@ test('preparation requires an authenticated session and checks returned identity
   await h.auth.signIn('synthetic@example.invalid','synthetic-password');h.user.id='other-user';
   await assert.rejects(h.auth.setPreparationProfile(profile),/preparation_identity_mismatch/);
 });
+
+test('equivalent metadata field order confirms the saved profile without a false failure',async()=>{
+  const storage={getItem:()=>JSON.stringify({accessToken:'synthetic',refreshToken:'r',expiresAt:2100000000,user:{id:'u1'}}),setItem(){},removeItem(){}};
+  const auth=createSupabaseAuth({projectUrl:'https://example.supabase.co',publishableKey:'sb_publishable_synthetic',storage,fetchFn:async()=>Response.json({id:'u1',user_metadata:{mlos_preparation_profile:{primaryPathwayId:'neet-pg',pathwayIds:['ini-cet','neet-pg'],schemaVersion:1}}})});
+  assert.deepEqual(await auth.setPreparationProfile(profile),profile);
+});

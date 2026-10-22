@@ -48,3 +48,5 @@ Older Library APIs show existing published content and an honest focus-unavailab
 Frontend assets, `content-library-api` and `study-api` require coordinated normal deployment for full behavior. Source/PR checks are not a production rollout or authenticated live acceptance. No SQL migration is required. The small public curriculum contains reviewed structural metadata only; do not store private review evidence or answer keys in it. Large-scale curriculum indexing/server pagination and a protected curriculum-authoring workflow remain future work.
 
 Acceptance combines pure behavioral tests, authenticated API-handler tests, adapter isolation/failure tests and responsive synthetic Chromium/WebKit journeys. Synthetic fixtures are not published medical content or observed learner results.
+
+Portability review: `scripts/preparation-browser-check.js` adds one existing-provider marker for the synthetic Auth session key. All API requests are intercepted against the existing configured origin; no new integration or provider is added. The reviewed baseline adds exactly this one path/provider pair (13 services / 226 locations).

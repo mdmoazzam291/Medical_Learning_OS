@@ -18,6 +18,7 @@ const escape = text => String(text).replace(/[&<>\"']/g, c => ({ '&': '&amp;', '
 const auth = createSupabaseAuth({ ...cloudConfig });
 const cloud = createCloudStudy({ ...cloudConfig, auth });
 const review = createCloudReview({ ...cloudConfig, auth });
+let accountLoadGeneration = 0;
 let preparationState = { profile:null, loading:true, saving:false, error:null };
 const emptyProjectionErrors = () => ({ progress: null, questions: null, retention: null });
 let state = { user: auth.currentUser(), loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
@@ -56,6 +57,7 @@ function projectionError(result) {
   return result.reason?.code || result.reason?.message || 'projection_unavailable';
 }
 function signedOutState() {
+  accountLoadGeneration += 1;
   preparationState = { profile:null, loading:false, saving:false, error:null };
   return { user: null, loading: false, progress: null, questions: null, retentionConsent: null, retentionSaving: false, recoveryMode: false, isAdmin: false, reviewKinds: [], projectionErrors: emptyProjectionErrors() };
 }
@@ -134,25 +136,29 @@ function render() {
   globalThis.mlosNavigationAdmin = Boolean(state.user && state.isAdmin === true);
   globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } })); root.innerHTML = state.user ? signedIn() : signedOut(); }
 
-async function loadReviewerAccess() {
+async function loadReviewerAccess(generation, learnerId) {
   try {
     const me = await review.me();
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== learnerId || state.user?.id !== learnerId) return;
     state = {
       ...state,
       isAdmin: me?.isAdmin === true,
       reviewKinds: me?.isAdmin === true && Array.isArray(me?.reviewKinds) ? me.reviewKinds : []
     };
   } catch (error) {
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== learnerId || state.user?.id !== learnerId) return;
     state = { ...state, isAdmin: false, reviewKinds: [] };
     if (Number(error?.status || 0) >= 500) reportUnexpected(error, 'load_admin_access');
   }
 }
 
 async function loadCloud({ forceRefresh = false } = {}) {
+  const generation = ++accountLoadGeneration;
   let session;
   try {
     session = await auth.getSession({ forceRefresh });
   } catch (error) {
+    if (generation !== accountLoadGeneration) return;
     reportUnexpected(error, 'refresh_session');
     state = signedOutState();
     render();
@@ -161,7 +167,10 @@ async function loadCloud({ forceRefresh = false } = {}) {
       : 'This session is no longer available. Sign in again.');
     return;
   }
+  if (generation !== accountLoadGeneration) return;
   if (!session?.user) { state = signedOutState(); render(); return; }
+  if (auth.currentUser()?.id !== session.user.id) return;
+  preparationState = {...preparationState,loading:true};
   state = { ...state, user: session.user, loading: true, projectionErrors: emptyProjectionErrors() }; render();
 
   let enrichedUser = auth.currentUser() || session.user;
@@ -178,6 +187,7 @@ async function loadCloud({ forceRefresh = false } = {}) {
     cloud.retentionProbeConsent(),
     auth.preparationProfile()
   ]);
+  if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
   preparationState = { ...preparationState, loading:false, error:preparationResult.status === 'rejected' ? 'preparation_unavailable' : null, profile:preparationResult.status === 'fulfilled' ? preparationResult.value : preparationState.profile };
   const projectionErrors = {
     progress: projectionError(progressResult),
@@ -197,7 +207,8 @@ async function loadCloud({ forceRefresh = false } = {}) {
     retentionConsent: retentionResult.status === 'fulfilled' ? retentionResult.value : state.retentionConsent,
     projectionErrors
   };
-  await loadReviewerAccess();
+  await loadReviewerAccess(generation, session.user.id);
+  if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
   if (forceRefresh) {
     announce(Object.values(projectionErrors).some(Boolean)
       ? 'Session refresh verified. Available cloud data reloaded; one or more account projections remain temporarily unavailable.'

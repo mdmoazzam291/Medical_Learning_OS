@@ -18,22 +18,26 @@ No duplicated catalog, fabricated clinical requirements, changed publication aut
 - An older API or failed preference request must not invent a saved goal.
 
 ### Task 1: Curriculum and preparation domain
-- [ ] Write failing behavioral tests for registry/profile validation, union/closure, exact bindings, gaps and question identity deduplication.
-- [ ] Implement src/domain/preparation-pathways.js and data/preparation-curriculum.js.
-- [ ] Run focused tests, inspect failures, then full suite baseline.
+- [x] Write failing behavioral tests for registry/profile validation, union/closure, exact bindings, gaps and question identity deduplication.
+- [x] Implement src/domain/preparation-pathways.js and data/preparation-curriculum.js.
+- [x] Run focused tests, inspect failures, then full suite baseline.
 
 ### Task 2: Synced account preference and scoped Library
-- [ ] Add failing Auth adapter tests for read/write validation, network failure and metadata isolation.
-- [ ] Implement preparation methods in existing Auth adapter; Account selector and retry status.
-- [ ] Attach trusted curriculum/profile in content-library-api; scope shared Library route/filter/renderers and expose per-exam inventory.
-- [ ] Test old API fallback, empty profile, URL transitions and no answer-bearing data exposure.
+- [x] Add failing Auth adapter tests for read/write validation, network failure and metadata isolation.
+- [x] Implement preparation methods in existing Auth adapter; Account selector and retry status.
+- [x] Attach trusted curriculum/profile in content-library-api; scope shared Library route/filter/renderers and expose per-exam inventory.
+- [x] Test old API fallback, empty profile, URL transitions and no answer-bearing data exposure.
 
 ### Task 3: Study Now and acceptance
-- [ ] Test shared domain selection with new/revision questions and exact-version boundaries.
-- [ ] Integrate goal scope before new Study Now plans, preserving existing session resume.
-- [ ] Add responsive synthetic browser acceptance for selector, goals/foundations/all and persistence.
+- [x] Test shared domain selection with new/revision questions and exact-version boundaries.
+- [x] Integrate goal scope before new Study Now plans, preserving existing session resume.
+- [x] Add responsive synthetic browser acceptance for selector, goals/foundations/all and persistence.
 - [ ] Run npm test, npm run check, build and browser checks; review complete diff.
 - [ ] Update ADR/STATUS/handoff and save focused feature-branch commits plus PR, verify remote head.
 
 ## Execution ledger
 - Inspection complete: current main and open PRs checked. New branch owns only combined preparation work. Owner's direct request authorizes inline implementation of the supplied design; no additional approval loop introduced.
+
+- Review: three Important scope defects reproduced and fixed; focused15workspace tests pass. Later account lifecycle review reproduced late projection/account authority contamination; generation and identity guards added with two RED→GREEN VM regressions. Metadata order confirmation regression also RED→GREEN.
+- First hosted run39844047399: core failed on one unreviewed synthetic-session marker; explicitly reviewed and added scripts/preparation-browser-check.js → existing auth provider to coupling baseline (13services/226locations). Chromium reached the new preparation test and failed a selector expecting a standalone note title; actual dossier renders title in its provenance line. Selector corrected to the exact displayed provenance line. Neither failure is hidden as a pass. WebKit was still queued at inspection.
+- Fresh full suite after lifecycle changes and final check/build required before completion. No release performed.
