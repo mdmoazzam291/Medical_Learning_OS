@@ -116,6 +116,7 @@ export function preparationLibrary(library, scope) {
   if (!library.preparation) return library;
   const context = preparationContext(library.preparation.curriculum, library.preparation.profile);
   if (library.preparation.status === 'invalid-profile') context.status = 'invalid-profile';
+  scope = scope || library.preparation.scope;
   const selectedScope = ['goals', 'foundations', 'all'].includes(scope) ? scope : context.status === 'unconfigured' ? 'all' : 'goals';
   if (context.status === 'unconfigured' || selectedScope === 'all') return {...library,preparation:{...context,scope:selectedScope}};
   const empty = () => ({...library,concepts:[],questions:[],notes:[],links:[],sources:[],preparation:{...context,scope:selectedScope}});

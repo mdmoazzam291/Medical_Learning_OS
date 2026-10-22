@@ -1,8 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { libraryRouteState, libraryContextUrl, selectWorkspace, validateSavedViews, savedViewUrl } from '../src/domain/library-workspaces.js';
-import { transitionContext } from '../src/domain/content-workspace.js';
+import { conceptDossier, transitionContext } from '../src/domain/content-workspace.js';
 import { profile, curriculum, library } from './fixtures/preparation-fixture.js';
+import { preparationLibrary } from '../src/domain/preparation-pathways.js';
+import { workspaceMarkup } from '../web/library-workspace-view.js';
 import { createLibraryHandler } from '../supabase/functions/content-library-api/_shared/handler.js';
 const view = await import('../web/preparation-view.js').catch(()=>({}));
 test('scope survives view changes, saved views and browser route restoration',()=>{
@@ -35,4 +37,20 @@ test('preparation UI shows honest unmapped coverage, an explicit all-knowledge e
   const account=view.preparationAccountMarkup({profile:null,loading:false,error:null,saving:false});
   for(const label of ['NEET-PG','INI-CET','Both'])assert.ok(account.includes(label));
   assert.doesNotMatch(account,/USMLE|FMGE|PLAB/);
+});
+
+test('Explore all retains unbound content through nested concept dossiers',()=>{
+  const c=curriculum();c.mappings=[];
+  const lib={...library(),preparation:{profile,curriculum:c}};
+  const all=preparationLibrary(lib,'all');
+  const dossier=conceptDossier(all,'shared');
+  assert.equal(dossier.questions.length,1);assert.equal(dossier.notes.length,2);
+});
+test('subjects and saved bookmarks use the same scoped inventory as other Library views',()=>{
+  const lib={...library(),preparation:{profile,curriculum:curriculum()}};
+  const scoped=selectWorkspace(lib,{scope:'foundations'});
+  const subjects=workspaceMarkup('subjects',scoped,{scope:'foundations',library:lib});
+  assert.match(subjects,/1 published questions/);assert.doesNotMatch(subjects,/5 published questions/);
+  const saved=workspaceMarkup('savedviews',scoped,{scope:'foundations',library:lib,device:{views:[],bookmarks:['question:other-q']}});
+  assert.doesNotMatch(saved,/other-q/);
 });

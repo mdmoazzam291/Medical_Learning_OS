@@ -12,7 +12,7 @@ export function curriculum() {
     artifacts:[artifact('question','shared-q@1','shared','assessment'),artifact('question','n-q@1','neet-only','assessment'),artifact('question','i-q@1','ini-only','assessment'),artifact('question','f-q@1','foundation','assessment'),artifact('note','shared-note@1','shared','teaching')]};
 }
 export function library() {
-  return {concepts:['shared','foundation','neet-only','ini-only','other'].map(conceptId=>({conceptId,label:conceptId,classification:{}})),
-    questions:['shared-q','n-q','i-q','f-q','other-q'].map((questionId,i)=>({questionId,questionVersionId:questionId+'@1',conceptLinks:[{conceptId:['shared','neet-only','ini-only','foundation','other'][i],role:'primary'}],home:{kind:'pyq',exams:['unrelated-exam']}})),
-    notes:[{noteVersionId:'shared-note@1',conceptId:'shared'},{noteVersionId:'unbound-note@1',conceptId:'shared'}],sources:[],links:[]};
+  return {concepts:['shared','foundation','neet-only','ini-only','other'].map(conceptId=>({conceptId,label:conceptId,classification:{subjects:['medicine'],systems:[],organs:[],domains:[],tasks:[]}})),
+    questions:['shared-q','n-q','i-q','f-q','other-q'].map((questionId,i)=>({questionId,questionVersionId:questionId+'@1',stem:questionId,options:[],classification:{subjects:['medicine'],systems:[],organs:[],domains:[],tasks:[]},observed:{attempts:0,wrong:0,state:'unattempted'},conceptLinks:[{conceptId:['shared','neet-only','ini-only','foundation','other'][i],role:'primary'}],origins:[],home:{kind:'pyq',exams:['unrelated-exam'],platforms:[]}})),
+    notes:[{noteVersionId:'shared-note@1',conceptId:'shared',title:'Shared note',bodyMarkdown:'Synthetic teaching only.'},{noteVersionId:'unbound-note@1',conceptId:'shared',title:'Unbound shared note',bodyMarkdown:'Synthetic unbound content.'}],sources:[],links:[]};
 }
