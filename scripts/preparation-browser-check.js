@@ -32,6 +32,10 @@ try{
     const routeApi=async route=>{
       const request=route.request(),path=new URL(request.url()).pathname;
       const reply=(body,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(body)});
+      if(path==='/auth/v1/token'&&request.method()==='POST'&&new URL(request.url()).searchParams.get('grant_type')==='refresh_token'){
+        assert.equal(request.postDataJSON().refresh_token,'synthetic');
+        return reply({access_token:'synthetic',refresh_token:'synthetic',expires_at:2100000000,user:metadata()});
+      }
       if(path==='/auth/v1/user'){
         if(request.method()==='GET'&&failRead)return reply({error:'temporarily_unavailable'},503);
         if(request.method()==='PUT'){
