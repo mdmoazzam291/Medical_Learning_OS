@@ -24,6 +24,7 @@ export const publicFiles = Object.freeze([
   'web/library.js',
   'src/domain/content-workspace.js',
   'src/domain/concept-dossier-sections.js',
+  'src/domain/medical-relationships.js',
   'web/content-workspace-view.js',
   'web/content-workspace-controls.js',
   'web/content-workspace.css',
