@@ -28,7 +28,7 @@ Pane dialogs support Escape and focus return; Explorer search/load-more keeps a 
 
 ## Graph contract
 
-The initial neighborhood contains at most 30 nodes and 60 evidence edges; expansion is capped at 100 nodes and 200 edges. Lists expose the same exact evidence versions and explicit hidden counts. Exam/content edges are published question-concept/note associations. Learning dependencies use explicit prerequisite-to-primary co-links at exact question versions and are labeled educational evidence. They do not establish clinical causality. The Medical perspective remains an honest empty state until a reviewed typed medical-relationship contract exists. This release does not invent or publish such relationships or introduce a graph database.
+The initial neighborhood contains at most 30 nodes and 60 evidence edges; expansion is capped at 100 nodes and 200 edges. Lists expose the same exact evidence versions and explicit hidden counts. Exam/content edges are published question-concept/note associations. Learning dependencies use explicit prerequisite-to-primary co-links at exact question versions and are labeled educational evidence. They do not establish clinical causality. The deployed Medical perspective remains an honest empty state until a protected reviewed relationship feed exists. PR #303 supplies an optional directed read/display contract, bounded graph/list and exact source/fingerprint validation; it does not implement the database registry, Admin human-review workflow or production snapshot feed. See MEDICAL_RELATIONSHIP_PROJECTION.md and #299. No clinical edges are inferred from associations, and no graph database is introduced.
 
 ## Admin preview
 

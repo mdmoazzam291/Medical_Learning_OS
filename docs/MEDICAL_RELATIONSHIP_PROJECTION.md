@@ -9,11 +9,11 @@ The canonical learner API's optional `medicalRelationships` snapshot input is pr
 A projected medical relationship requires:
 - Stable `relationshipId`, exact `relationshipVersionId`, integer version and two existing distinct canonical `fromConceptId` / `toConceptId`.
 - Explicit direction and a bounded relation type: causes, mechanism-of, risk-factor-for, differential-of, complication-of, treated-by, diagnosed-by, or contraindicated-in. The string identifies the reviewed assertion's type, **not** a medical inference.
-- Exact `sourceId`, `sourceVersion` matching the published catalog, source fingerprint SHA-256, and exact `evidenceVersionId`.
+- Exact `sourceId`, `sourceVersion` matching the published catalog, source fingerprint SHA-256 matching the current privileged source record’s `fingerprintSha256`, and exact `evidenceVersionId`. Human review/rights checks must be bound to that fingerprint upstream; a matching version label alone is insufficient.
 - Literal, bounded `claimText` reviewed by humans and parseable `reviewedAt`.
 - `status='published'` and `medicalReviewVerified`, `referenceReviewVerified`, `rightsVerified` all set to `true` by a privileged authority.
 
-Newer draft, in-review or retired versions suppress older published versions; ambiguous same-version duplicates fail closed. Empty/missing medical input remains a truthful empty medical graph. Graph edges show review version, source ID/version and claim text, escaped against markup injection. This projection does not create independent storage or modify question/note ownership.
+Newer draft, in-review or retired versions suppress older published versions; ambiguous same-version duplicates, duplicate source/concept identities, malformed version states and reused exact relationship-version identities fail closed. These checks do not resolve conflicts by input order. Empty/missing medical input remains a truthful empty medical graph. Graph edges show review version, source ID/version and claim text, escaped against markup injection. This projection does not create independent storage or modify question/note ownership.
 
 ## Still required for production medical assertions
 
@@ -26,6 +26,14 @@ No genuine medical assertion is imported or published by this change. The curren
 ## Acceptance boundary
 
 - Node projection tests: fail-closed reviews, rights, stale versions, unknown concepts, retired versions, duplicated IDs.
-- Browser markup test: XSS-escaped claim, visible source/version and direction; medical graph never inherits educational-only edges.
+- Authenticated handler tests: only the service snapshot supplies relationships; client query injection is rejected; source corrections remove dependent edges/concept/source visibility; RPC failure returns an error without a stale fallback.
+- Browser acceptance at 390/768/820/1180/1600 CSS px: positive Medical graph, escaped claim, source/evidence version, visible direction arrowheads, progressive 60→100→140→180→200 edge bound, inbound/outbound concept navigation and retirement/rights withdrawal. The fixtures exercise the projection and actual learner controller without production content or writes.
+- Existing empty Medical, educational-only graph, opaque Admin preview and context continuity regressions remain enabled.
 - Existing CI core/Chromium/WebKit and static build must pass before merge.
 - Live authenticated Admin/learner acceptance remains [Issue #301](https://github.com/mdmoazzam291/Medical_Learning_OS/issues/301); server/rights publication work remains [Issue #299](https://github.com/mdmoazzam291/Medical_Learning_OS/issues/299).
+
+## Current milestone and next dependency
+
+The read/display slice is PR #303. Its new fingerprint input is deliberately fail-closed and additive: old snapshots with no medical feed remain valid and empty; a future feed without current source fingerprints remains empty. Deployment must include the new domain module wherever `content-library.js` is bundled; a static frontend release cannot install a server snapshot feed.
+
+The next registry slice (#299) must extend the existing canonical publication architecture with authoritative storage, immutable versions/review/publish/retire receipts, exact-source current-rights checks, scoped reviewer authorization, Admin review controls and a service-owned snapshot feed. Disposable PostgreSQL tests must cover privileges/RLS, stale review/source/version rejection, retirement/corrections and rollback. Preserve account privacy and exports when adding reviewer-linked records. No browser-supplied verification flags, new clinical content or inference is authorized by this read contract.
