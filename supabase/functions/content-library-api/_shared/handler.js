@@ -1,3 +1,5 @@
+import preparationCurriculumDefault from '../../../../data/preparation-curriculum.js';
+import { preparationContext } from '../../../../src/domain/preparation-pathways.js';
 import { selectConcise } from '../../../../src/domain/question-intelligence.js';
 import { validateImport, projectLibrary, questionSignature } from '../../../../src/domain/content-library.js';
 
@@ -5,7 +7,7 @@ class LibraryError extends Error { constructor(status,code){super(code);this.sta
 const fail=(status,code)=>{throw new LibraryError(status,code);};
 const fields=(value,keys)=>{if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).sort().join('|')!==[...keys].sort().join('|')) fail(400,'invalid_fields');};
 const knownErrors=new Set(['import_payload_conflict','stale_import_digest','answer_conflict','question_identity_conflict','concept_identity_conflict','source_identity_conflict','duplicate_target_not_published','duplicate_concept_conflict','publication_rights_unresolved','rights_not_resolved','publication_review_evidence_invalid','source_unknown','concept_unknown','linked_question_unknown','rights_source_invalid','note_link_invalid','source_evidence_required','rights_decision_conflict','stale_source_version','intelligence_version_conflict','compression_gate_failed']);
-export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins}) {
+export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins,preparationCurriculum=preparationCurriculumDefault}) {
   return async req=>{
     const origin=req.headers.get('origin');
     const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff',Vary:'Origin',...(origin&&allowedOrigins.includes(origin)?{'Access-Control-Allow-Origin':origin}:{}),'Access-Control-Allow-Headers':'authorization, apikey, content-type','Access-Control-Allow-Methods':'GET, POST, OPTIONS'};
@@ -30,7 +32,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
       const requireAdmin=async()=>{const data=await checked(admin.rpc('content_admin_status_v1',{p_user:user.id}));if(data?.isAdmin!==true)fail(403,'content_admin_required');};
       if(req.method==='GET'&&path==='/library'){
         const snapshot=await checked(admin.rpc('content_library_snapshot_v1',{p_learner:user.id}));
-        return reply(200,projectLibrary(snapshot));
+        return reply(200,{...projectLibrary(snapshot),preparation:preparationContext(preparationCurriculum,user.user_metadata?.mlos_preparation_profile)});
       }
       if(req.method==='POST'&&path==='/study'){
         const input=await body(32768);fields(input,['questionVersionIds',...(Object.hasOwn(input,'variants')?['variants']:[])]);

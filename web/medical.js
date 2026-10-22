@@ -434,7 +434,7 @@ async function startStudyNow(availableMinutes) {
     const result = await cloud.studyNow(availableMinutes, 50);
     if (!result.session) {
       state.busy = false;
-      announce('Nothing is currently recommended inside this Study Now window. Future reviews were not pulled early.');
+      announce(result.plan?.preparation?.status === 'configured' ? 'No reviewed questions match your preparation goals in this Study Now window. Check Library coverage or choose Explore all knowledge in Library. Your saved revision history is kept.' : result.plan?.preparation?.status === 'invalid-profile' ? 'Your saved preparation goals need updating in Account before focused Study Now can start.' : 'Nothing is currently recommended inside this Study Now window. Future reviews were not pulled early.');
       await loadOverview();
       return;
     }

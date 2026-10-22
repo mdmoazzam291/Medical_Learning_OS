@@ -1,3 +1,5 @@
+import preparationCurriculum from "../../../data/preparation-curriculum.js";
+import { preparationQuestionScope } from "../../../src/domain/preparation-pathways.js";
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
@@ -2213,17 +2215,21 @@ Deno.serve(async (req: Request) => {
 
       await rebuildRevision();
       const [catalog, revisionRows] = await Promise.all([getCatalog(), getRevisionState()]);
+      const preparation = preparationQuestionScope(
+        publishedQuestions(catalog.body), preparationCurriculum,
+        authData.user.user_metadata?.mlos_preparation_profile
+      );
       const published = new Map(
-        publishedQuestions(catalog.body).map((question: any) => [question.questionVersionId, question])
+        preparation.questions.map((question: any) => [question.questionVersionId, question])
       );
       const generatedAt = new Date().toISOString();
-      const plan = buildStudyNowPlan(
+      const plan = { ...buildStudyNowPlan(
         revisionRows,
         published,
         availableMinutes,
         maxItems,
         generatedAt
-      );
+      ), preparation: {status:preparation.status,registryVersion:preparation.registryVersion,profile:preparation.profile} };
       const ids = plan.selected.map((item: any) => item.questionVersionId);
       if (!ids.length) {
         return response(req, 200, { plan, session: null });

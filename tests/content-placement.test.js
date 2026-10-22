@@ -17,3 +17,10 @@ test('draft preview strips keys, explanations and private provenance at every ne
  assert.doesNotMatch(JSON.stringify(r),/answerOptionId|SECRET KEY|Private evidence|derivatives|publishedAt/);
  assert.equal(r.draftOnly,true);
 });
+
+test('PYQ placement does not imply exam preparation suitability before reviewed objective mapping',()=>{
+  const report=d.contentPlacement(manifest());
+  const mapping=report.items[0].checks.find(x=>x.id==='preparation');
+  assert.equal(mapping?.status,'unresolved');
+  assert.match(mapping.detail,/exact published version/);
+});

@@ -13,12 +13,14 @@ export function contentPlacement(manifest) {
       check('notes','Linked notes',note?'eligible':'missing',note?'Explicit note/question link declared.':'No note link supplied; no note is generated.'),
       check('graph','Exam graph',primary?'eligible':'missing','Displays declared associations, not medical causation.'),
       check('sources','Source references',!q.sourceIds.length?'missing':q.sourceIds.every(id=>sources.has(id))?'eligible':'unresolved','Exact source records outside this batch require server resolution.'),
+      check('preparation','Preparation goals','unresolved','Requires a reviewed objective binding to the exact published version; PYQ origin alone is not exam suitability.'),
       check('review','Medical, reference & rights approval','pending','An administrator must inspect exact content and the server must accept publication.') ]};
   }),...manifest.notes.map(n=>({kind:'note',id:n.noteId,title:n.title,home:'notes',checks:[
     check('concept','Canonical concept',concepts.has(n.conceptId)?'eligible':'unresolved','External concept IDs require server resolution.'),
     check('notes','Concept Notes & dossier','eligible','Uses this supplied note body; no generated replacement.'),
     check('questions','Linked questions',manifest.noteQuestionLinks.some(l=>l.noteId===n.noteId)?'eligible':'missing','Explicit note/question links are required.'),
     check('sources','Source references',!n.sourceIds.length?'missing':n.sourceIds.every(id=>sources.has(id))?'eligible':'unresolved','Source declarations require exact-version and reuse checks.'),
+    check('preparation','Preparation goals','unresolved','Requires a reviewed objective binding to the exact published version; notes are shared through mapped objectives.'),
     check('review','Medical, reference & rights approval','pending','Preview is not approval.') ]}))];
   return {items,publicationApproved:false};
 }
