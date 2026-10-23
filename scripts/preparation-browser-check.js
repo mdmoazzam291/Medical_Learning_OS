@@ -27,7 +27,7 @@ try{
     console.log('Preparation viewport:',name);
     const context=await browser.newContext({viewport:{width,height}});
     await context.addInitScript(()=>{localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'synthetic@example.invalid',providers:['email']}}));});
-    let saved=null,failSave=false,failRead=false,empty=false,updates=0,activeId='11111111-1111-4111-8111-111111111111';
+    let saved=null,failSave=false,failRead=false,empty=false,updates=0,retentionMode='inactive',activeId='11111111-1111-4111-8111-111111111111';
     const metadata=()=>({id:activeId,email:'synthetic@example.invalid',app_metadata:{providers:['email']},user_metadata:{mlos_preparation_profile:saved,unrelated:'keep'}});
     const routeApi=async route=>{
       const request=route.request(),path=new URL(request.url()).pathname;
@@ -46,7 +46,12 @@ try{
       }
       if(path.endsWith('/study-api/progress'))return reply({attempts:7,correct:4});
       if(path.endsWith('/study-api/questions'))return reply({questions:[]});
-      if(path.endsWith('/study-api/retention-probe/consent'))return reply({optedIn:false,protocol:{}});
+      if(path.endsWith('/study-api/retention-probe/consent')){
+        if(retentionMode==='failure')return reply({error:'retention_probe_consent_unavailable'},500);
+        const authority={activationAuthority:false,probeSchedulingEnabled:false,masteryInferenceAuthority:false};
+        if(retentionMode==='registered')return reply({contractId:'retention-probe-learner-consent-v1',protocol:{protocolId:'synthetic',protocolVersion:1,protocolSha256:'a'.repeat(64),preregisteredAt:'2026-10-01T00:00:00Z',targetDays:7,windowStartDays:6,windowEndDays:8,maxProbeAssignmentsPerLearnerPer7Days:1,maxTotalAssignments:20,mayDisplaceDueOrMistakeRepairWork:false},decision:'not_decided',optedIn:false,lastDecisionAt:null,consentEventId:null,...authority});
+        return reply({contractId:'retention-probe-learner-consent-v1',availability:'inactive',reason:'no_preregistered_protocol',protocol:null,decision:'not_decided',optedIn:false,lastDecisionAt:null,consentEventId:null,...authority});
+      }
       if(path.endsWith('/review-api/me'))return reply({isAdmin:false,reviewKinds:[]});
       if(path.endsWith('/content-library-api/library')){
         const c=curriculum();if(empty)c.mappings=[];
@@ -59,6 +64,21 @@ try{
     const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
     await page.goto(origin+'/web/account.html');
     await page.getByRole('button',{name:'Save preparation goals',exact:true}).waitFor({state:'visible'});
+    await page.getByRole('heading',{name:'Retention feasibility: inactive',exact:true}).waitFor();
+    assert.deepEqual(await page.locator('.metrics strong').allTextContents(),['7','4','0']);
+    assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),0);
+    assert.equal(await page.locator('#retention-optin-form').count(),0);
+    retentionMode='failure';await page.getByRole('button',{name:'Refresh session',exact:true}).click();
+    await page.getByText(/Consent status is unavailable right now/).waitFor();
+    assert.deepEqual(await page.locator('.metrics strong').allTextContents(),['7','4','0']);
+    assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),1);
+    assert.equal(await page.locator('#retention-optin-form').count(),0);
+    retentionMode='registered';await page.getByRole('button',{name:'Refresh session',exact:true}).click();
+    await page.locator('#retention-optin-form').waitFor();
+    assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),0);
+    retentionMode='inactive';await page.reload();
+    await page.getByRole('heading',{name:'Retention feasibility: inactive',exact:true}).waitFor();
+    assert.equal(await page.locator('#retention-optin-form').count(),0);
     await page.locator('#preparation-profile-form select[name="preparationGoal"]').selectOption('both');
     await page.locator('#preparation-profile-form select[name="primaryGoal"]').selectOption('ini-cet');
     await page.getByRole('button',{name:'Save preparation goals',exact:true}).click();

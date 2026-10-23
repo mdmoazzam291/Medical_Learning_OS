@@ -2,6 +2,24 @@
 
 Retention probes exist to measure whether learning survives delay and generalizes beyond the exact item that produced the original evidence. They must not become a mechanism for manufacturing convenient data.
 
+## Optional protocol availability
+
+The post-reset feasibility protocol remains absent and inactive. An authenticated
+`GET /retention-probe/consent` returns HTTP 200 with the existing
+`retention-probe-learner-consent-v1` contract, `availability: inactive`,
+`reason: no_preregistered_protocol`, `protocol: null`, no consent event, and all
+activation, scheduling and mastery authority flags false when the read RPC
+successfully returns SQL NULL. Account shows an inactive pilot without opt-in
+controls or a global data-failure warning. This read creates no protocol,
+consent, enrollment, assignment or learner evidence.
+
+Registered protocol responses retain their existing fields and behavior.
+Database/permission/network errors remain failures, with independent account
+metrics preserved where available. This application change requires coordinated
+Study API and Account frontend deployment; source tests alone are not a live
+acceptance receipt. Historical protocol/scheduler milestones below do not
+authorize recreating the cancelled protocol or activating research.
+
 ## Current stage
 
 M11b now has two completed foundations:

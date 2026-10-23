@@ -1022,7 +1022,22 @@ Deno.serve(async (req: Request) => {
       const { data, error } = await admin.rpc("study_retention_probe_learner_consent_v1", {
         p_learner: learnerId
       });
-      if (error || !data) fail(500, "retention_probe_consent_unavailable");
+      if (error) fail(500, "retention_probe_consent_unavailable");
+      // This read returns SQL NULL when no preregistered optional protocol exists.
+      if (data === null) return response(req, 200, {
+        contractId: "retention-probe-learner-consent-v1",
+        availability: "inactive",
+        reason: "no_preregistered_protocol",
+        protocol: null,
+        decision: "not_decided",
+        optedIn: false,
+        lastDecisionAt: null,
+        consentEventId: null,
+        activationAuthority: false,
+        probeSchedulingEnabled: false,
+        masteryInferenceAuthority: false
+      });
+      if (!data) fail(500, "retention_probe_consent_unavailable");
       return response(req, 200, data);
     }
 
