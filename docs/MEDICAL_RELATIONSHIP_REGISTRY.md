@@ -1,6 +1,6 @@
 # Protected medical relationship registry
 
-Development extension of issue299, based on the accepted [learner projection](MEDICAL_RELATIONSHIP_PROJECTION.md). This implementation does not seed, clinically approve or publish any assertion. Until the migration/API/static release is explicitly performed, production continues on the previous empty-feed release.
+Live engineering extension of issue299, based on the accepted [learner projection](MEDICAL_RELATIONSHIP_PROJECTION.md). The owner-authorized migration, Library APIv7 and static release completed on23October2026; see the [production receipt](releases/2026-10-23-relationship-registry-release.md). The registry/catalog remain empty. This implementation does not clinically approve or publish any assertion by itself.
 
 ## Authority and ownership
 
