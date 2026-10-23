@@ -103,7 +103,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/mlos-browser" --no-audit --no-fund playwright@1.56.1
           node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
       - name: Verify protected relationship review in Chromium
-        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/medical-relationship-browser-check.js
+        run: SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/medical-relationship-browser-check.js
       - name: Verify responsive study flows and storage
         run: |
           npm start > "$RUNNER_TEMP/mlos-server.log" 2>&1 &

@@ -24,6 +24,7 @@ try{
    if(path.endsWith('/content-library-api/library'))return reply(outage?{error:'library_unavailable'}:library,outage?503:200);
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/content-library-api/study'))return reply({sessionId:'unfinished-session',resumedExisting:true});
+   if (path.endsWith('/content-library-api/relationships')) return reply({versions:[],reviewKinds:[]});
    if(path.endsWith('/content-library-api/imports'))return reply({contractId:'content-library-inbox-v1',imports:[{import_id:'slow-draft',status:'draft'},{import_id:'synthetic-browser',digest:'a'.repeat(64),status:'draft'}]});
    if(path.endsWith('/content-library-api/imports/slow-draft')){await new Promise(resolve=>{releaseSlowDraft=resolve;});return reply({import_id:'slow-draft',manifest,digest:'b'.repeat(64),status:'draft',sources:[],duplicateTargets:[]});}
    if(path.endsWith('/content-library-api/imports/synthetic-browser'))return reply({import_id:'synthetic-browser',manifest,digest:'a'.repeat(64),status:'draft',sources:[{...manifest.sources[0],rights:{status:'unknown'}}],duplicateTargets:[]});

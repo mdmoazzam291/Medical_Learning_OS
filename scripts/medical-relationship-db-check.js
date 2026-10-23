@@ -24,7 +24,7 @@ try {
  grant usage on schema public,auth to anon,authenticated,service_role;
  `);
  // Exact existing helpers, with a minimal platform/data shape; no copied clinical data or hosted writes.
- for(const [name,sourceFile] of [['is_content_admin','20260929032000_single_content_admin.sql'],['has_active_reviewer_grant','20260926140000_reviewer_grant_governance.sql'],['current_source_fingerprint_sha256','20260926133000_gate_specific_review_and_rights.sql']]) {
+ for(const [name,sourceFile] of [['is_content_admin','20260929032000_single_content_admin.sql'],['has_active_reviewer_grant','20260929032000_single_content_admin.sql'],['current_source_fingerprint_sha256','20260926133000_gate_specific_review_and_rights.sql']]) {
   const source=await readFile(new URL(sourceFile,root),'utf8');
   const pattern=new RegExp('create (?:or replace )?function public\\.'+name+'\\([\\s\\S]*?as (\\$[a-z_]*\\$)[\\s\\S]*?\\1;','i');
   const definition=source.match(pattern)?.[0];assert.ok(definition,name);await db.exec(definition);
@@ -67,6 +67,9 @@ try {
   assert.equal(projectLibrary(await rpc('content_library_snapshot_v1',[outsider])).medicalRelationships.length,0);
   await db.exec('update content_reviewer_grants set expires_at=null');
  }
+ await db.query('update content_admin_account set admin_user_id=$1',[outsider]);
+ assert.equal(projectLibrary(await rpc('content_library_snapshot_v1',[outsider])).medicalRelationships.length,0);
+ await db.query('update content_admin_account set admin_user_id=$1',[actor]);
  await db.query("update source_rights_events set rights_status='restricted'"); assert.equal((await feed())[0].rightsVerified,false);await db.exec("update source_rights_events set rights_status='licensed'");
  await db.query("update study_catalog set body=jsonb_set(body,'{sources,0,rights,status}','\"restricted\"')");assert.equal((await feed())[0].rightsVerified,false);await db.query('update study_catalog set body=$1',[catalog]);
  await db.query("update study_catalog set body=jsonb_set(body,'{sources,0,title}','\"Changed\"')");assert.equal(projectLibrary(await rpc('content_library_snapshot_v1',[outsider])).medicalRelationships.length,0);await db.query('update study_catalog set body=$1',[catalog]);
