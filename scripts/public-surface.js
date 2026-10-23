@@ -34,6 +34,7 @@ export const publicFiles = Object.freeze([
   'web/library.css',
   'web/content-import.html',
   'web/content-import.js',
+  'web/medical-relationship-admin.js',
   'src/domain/content-placement.js',
   'web/content-placement-view.js',
   'web/content-preview-frame.css',

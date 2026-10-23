@@ -17,7 +17,7 @@ const verify = () => db.exec(audit);
 try {
   await db.exec('create role anon; create role authenticated; create role service_role bypassrls;');
   await db.exec('grant usage on schema public to anon, authenticated, service_role;');
-  for (const table of tables) await db.exec(`create table public.${table}(id int);`);
+
   let replayed = 0;
   const repairIndex = files.findIndex(n => n.endsWith('_explicit_service_read_grants.sql'));
   assert.notEqual(repairIndex, -1, 'forward read-grant migration must exist');
@@ -34,6 +34,11 @@ try {
     order by c.relname,r.rolname
   `)).rows.map(row => row.rolname === 'service_role' ? { ...row, read: true } : row);
   for (const [index, source] of sources.entries()) {
+    // Create shapes at their real chronological boundary. Pre-creating future
+    // tables makes historical audits fail on tables whose RLS DDL has not run.
+    for (const match of source.matchAll(/create\s+table\s+(?:if\s+not\s+exists\s+)?public\.(\w+)/gi)) {
+      await db.exec(`create table if not exists public.${match[1]}(id int);`);
+    }
     if (index === repairIndex) {
       await assert.rejects(verify(), /missing_service_read_grant/, 'legacy sources must reproduce missing automatic grants');
       const before = await boundary();

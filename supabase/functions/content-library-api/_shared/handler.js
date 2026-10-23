@@ -55,6 +55,41 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         if(result?.error||!result?.id)fail(409,'study_session_unavailable');
         return reply(200,{sessionId:result.id,resumedExisting:result.id!==proposedId});
       }
+      if(path==='/relationships'||path.startsWith('/relationships/')){
+        await requireAdmin();
+        const invoke=async(name,args)=>{
+          const {data,error}=await admin.rpc(name,args);
+          if(error){
+            const message=String(error.message);
+            if(/content_admin_required|reviewer_not_authorized/.test(message))fail(403,'reviewer_not_authorized');
+            const invalid=['relationship_invalid','relationship_fields_invalid','relationship_provenance_required','external_provenance_required','review_attestation_required','retirement_reason_required'];
+            const conflicts=['relationship_payload_conflict','stale_relationship_predecessor','relationship_target_unknown','stale_relationship_digest','relationship_not_latest','relationship_retired','stale_relationship_target','publication_rights_unresolved'];
+            if(message.includes('relationship_not_found'))fail(404,'relationship_not_found');
+            const code=[...invalid,...conflicts].find(x=>message.includes(x));
+            fail(code?(invalid.includes(code)?400:409):500,code||'relationship_unavailable');
+          }
+          return reply(200,data);
+        };
+        if(path==='/relationships'){
+          if(req.method==='GET')return await invoke('medical_relationship_inspect_v1',{p_actor:user.id,p_version_id:null});
+          const input=await body(32768);fields(input,['assertion']);
+          return await invoke('medical_relationship_stage_v1',{p_assertion:input.assertion,p_actor:user.id});
+        }
+        const relation=/^\/relationships\/([a-zA-Z0-9:_@.\-]{1,160})(?:\/(publish|retire))?$/.exec(path);
+        if(!relation)fail(404,'not_found');
+        if(req.method==='GET'&&!relation[2])return await invoke('medical_relationship_inspect_v1',{p_actor:user.id,p_version_id:relation[1]});
+        if(req.method==='POST'&&relation[2]){
+          const input=await body(16384);
+          const publish=relation[2]==='publish';fields(input,publish?['digest','reviewNotes','attested']:['digest','reason']);
+          const note=publish?input.reviewNotes:input.reason;
+          if(typeof input.digest!=='string'||!/^[a-f0-9]{64}$/.test(input.digest)||typeof note!=='string'||!note.trim()||note.length>4000||(publish&&input.attested!==true))fail(400,publish?'review_attestation_required':'retirement_reason_required');
+          return await invoke(publish?'medical_relationship_publish_v1':'medical_relationship_retire_v1',{
+            p_version_id:relation[1],p_actor:user.id,p_expected_digest:input.digest,
+            ...(publish?{p_review_notes:note,p_attested:true}:{p_reason:note})
+          });
+        }
+        fail(404,'not_found');
+      }
       if(!path.startsWith('/imports'))fail(404,'not_found');
       await requireAdmin();
       if(req.method==='GET'&&path==='/imports')return reply(200,{contractId:'content-library-inbox-v1',imports:await checked(admin.from('content_library_imports').select('import_id,digest,status,created_at').order('created_at',{ascending:false}).limit(100))});

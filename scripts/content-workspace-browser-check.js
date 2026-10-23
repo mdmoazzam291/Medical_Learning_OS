@@ -40,6 +40,7 @@ try{
      ...(focusedMedical?{preparation:{curriculum,profile:preparationProfile}}:{})});
    }
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
+   if (path.endsWith('/content-library-api/relationships')) return reply({versions:[],reviewKinds:[]});
    if(path.endsWith('/content-library-api/imports'))return reply({imports:[{import_id:'workspace-fixture',status:'draft'}]});
    if(path.endsWith('/content-library-api/imports/workspace-fixture'))return reply({import_id:'workspace-fixture',status:'draft',digest:'a'.repeat(64),manifest,sources:[],duplicateTargets:[]});
    throw new Error('Unexpected API '+request.method()+' '+path);
