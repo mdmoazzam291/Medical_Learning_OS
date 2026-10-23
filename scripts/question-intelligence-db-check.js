@@ -21,6 +21,9 @@ await db.exec(start.slice(start.indexOf('create or replace function public.study
 // Original scheduler table and implementation are real, not mocked.
 await db.exec(await readFile('supabase/migrations/20260926172500_revision_projection.sql','utf8'));
 await db.exec(migration);
+for (const file of (await readdir('supabase/migrations')).filter(p=>p.endsWith('_content_import_intelligence_grouping.sql')).sort()) {
+ await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
+}
 // Rehearse every evidence definition against a data-free column snapshot. Load
 // genuine existing helper definitions only when the SQL compiler requires them.
 await db.exec('create table auth.users(id uuid primary key, email text);');
@@ -52,6 +55,59 @@ for(const mutate of [m=>m.derivatives[0].answerOptionId='b',m=>m.derivatives[0].
 }
 await db.query('insert into study_catalog values(1,1,$1,now())',[{concepts:[],sources:[],questions:[source]}]);
 await db.query('insert into content_library_question_metadata(question_id,classification,intelligence) values($1,$2,$3)',[source.questionId,{},metadata]);
+// Exercise the real publication wrapper, including its first write and immutable
+// derivative checks. The legacy publisher is an explicit component boundary:
+// this minimal nonclinical delegate records its transaction side effect and maps
+// to the already-published synthetic question above. It does not test or replace
+// genuine legacy Medical/References/Rights authority in production.
+await db.exec(`create or replace function public.content_library_review_publish_legacy_v1(
+ p_import_id text,p_reviewer uuid,p_expected_digest text,p_rights_decisions jsonb,p_review_notes text,p_attested boolean)
+ returns jsonb language plpgsql as $$
+ begin
+  if p_attested is not true then raise exception 'review_attestation_required'; end if;
+  if p_expected_digest <> 'synthetic-digest' then raise exception 'stale_import_digest'; end if;
+  update public.content_library_imports set status='published' where import_id=p_import_id;
+  return jsonb_build_object('questionMap',jsonb_build_object('fresh-synthetic','fresh-synthetic'),'status','published');
+ end; $$;`);
+const reviewActor='99999999-9999-4999-8999-999999999999';
+const stageIntelligence=async(id,value)=>db.query('insert into content_library_imports values($1,$2,\'draft\')',[id,{schemaVersion:2,questions:[{...source,intelligence:value}]}]);
+const publishIntelligence=async(id,digest='synthetic-digest',attested=true)=>db.query('select public.content_library_review_publish_v1($1,$2,$3,$4,$5,$6) result',[id,reviewActor,digest,[],'Synthetic exact-version inspection only.',attested]);
+const savedIntelligence=async()=>(await db.query('select intelligence from content_library_question_metadata where question_id=$1',[source.questionId])).rows[0].intelligence;
+const importStatus=async id=>(await db.query('select status from content_library_imports where import_id=$1',[id])).rows[0].status;
+await db.exec('update public.content_library_question_metadata set intelligence=null');
+const originalOnlyMetadata={...structuredClone(metadata),derivatives:[]};
+await stageIntelligence('synthetic-first-publish',originalOnlyMetadata);
+await assert.rejects(publishIntelligence('synthetic-first-publish','synthetic-digest',false),/review_attestation_required/);
+assert.equal(await importStatus('synthetic-first-publish'),'draft');
+await assert.rejects(publishIntelligence('synthetic-first-publish','stale'),/stale_import_digest/);
+assert.equal(await importStatus('synthetic-first-publish'),'draft');
+await publishIntelligence('synthetic-first-publish');
+assert.equal(await importStatus('synthetic-first-publish'),'published');
+assert.deepEqual(await savedIntelligence(),originalOnlyMetadata);
+await publishIntelligence('synthetic-first-publish');
+assert.deepEqual(await savedIntelligence(),originalOnlyMetadata);
+await stageIntelligence('synthetic-first-derivative',metadata);await publishIntelligence('synthetic-first-derivative');
+assert.deepEqual(await savedIntelligence(),metadata);
+const appended=structuredClone(metadata);appended.derivatives.push({...structuredClone(metadata.derivatives[0]),variantId:'fresh-short-second'});
+await stageIntelligence('synthetic-append',appended);await publishIntelligence('synthetic-append');
+assert.deepEqual(await savedIntelligence(),appended);
+for(const [id,mutate] of [
+ ['changed-task',m=>m.primaryTask='mechanism'],
+ ['removed-derivative',m=>m.derivatives.pop()],
+ ['changed-derivative',m=>m.derivatives[0].stem='Synthetic subject has no signal for 3 days. Best initial test?']
+]){
+ const changed=structuredClone(appended);mutate(changed);await stageIntelligence('synthetic-'+id,changed);
+ await assert.rejects(publishIntelligence('synthetic-'+id),/intelligence_version_conflict/);
+ assert.equal(await importStatus('synthetic-'+id),'draft','Wrapper rejection must roll back the delegate publication');
+ assert.deepEqual(await savedIntelligence(),appended,'Rejected review must preserve previously accepted intelligence');
+}
+assert.equal((await db.query("select has_function_privilege('service_role','public.content_library_review_publish_v1(text,uuid,text,jsonb,text,boolean)','EXECUTE') ok")).rows[0].ok,true);
+for(const role of ['anon','authenticated'])await assert.rejects(db.exec('set role '+role+'; select public.content_library_review_publish_v1(null,null,null,null,null,null)'),/permission denied/).finally(()=>db.exec('reset role'));
+await db.query('insert into content_library_imports values($1,$2,\'draft\')',['synthetic-v1',{schemaVersion:1,questions:[source]}]);
+await publishIntelligence('synthetic-v1');assert.equal(await importStatus('synthetic-v1'),'published');
+assert.deepEqual(await savedIntelligence(),appended,'Original schema without intelligence must not overwrite existing metadata');
+// Continue the existing session/evidence checks with their original metadata.
+await db.query('update content_library_question_metadata set intelligence=$1 where question_id=$2',[metadata,source.questionId]);
 const learner='11111111-1111-4111-8111-111111111111',sid='22222222-2222-4222-8222-222222222222';
 let r=await db.query('select study_start_library_session_v2($1,$2,$3,now(),$4) result',[learner,sid,[source.questionVersionId],{[source.questionVersionId]:'fresh-short'}]);assert.equal(r.rows[0].result.id,sid);
 r=await db.query('select question_presentations from study_sessions where id=$1',[sid]);assert.equal(r.rows[0].question_presentations[source.questionVersionId].stem,metadata.derivatives[0].stem);
@@ -73,4 +129,4 @@ assert.equal(conceptEvidence.concepts[0].totalAttempts,1);
 const stream=(await db.query('select study_learning_event_stream_v2($1) r',[learner])).rows[0].r;
 assert.equal(stream.events.filter(e=>e.family==='question.answered').length,2);
 assert.deepEqual(stream.events.filter(e=>e.family==='question.answered').map(e=>e.payload.presentation.representation).sort(),['concise-practice','original']);
-await db.close();console.log('Isolated PostgreSQL checks passed: critical gates, stale source, server prompt binding, immutable presentation, original-only scheduling and privileges. Synthetic fixtures only; no hosted writes.');
+await db.close();console.log('Isolated PostgreSQL checks passed: publication wrapper first-write/retry/append/conflicts/rollback/browser denial, critical gates, stale source, server prompt binding, immutable presentation, original-only scheduling and privileges. Legacy publication delegate is a component fixture; synthetic only, no hosted writes.');
