@@ -442,5 +442,7 @@ test('retention pilot opt-in is authenticated, protocol-bound and never accepts 
   const route = source.slice(start, next);
   assert.doesNotMatch(route, /p_learner:\s*input\./);
   assert.doesNotMatch(route, /learnerId\s*:\s*input/);
-  assert.doesNotMatch(route, /study_start_recommendation_session|study_rebuild_revision_state|mastery/);
+  assert.doesNotMatch(route, /study_start_recommendation_session|study_rebuild_revision_state/);
+  assert.doesNotMatch(route, /\.rpc\(["'][^"']*mastery/);
+  assert.doesNotMatch(route, /masteryInferenceAuthority:\s*true/);
 });

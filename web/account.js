@@ -74,6 +74,10 @@ function retentionPilotPanel() {
     return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted">Consent status is unavailable right now. No probe can be scheduled from this screen.</p><button class="text-button" data-action="refresh">Retry account data</button></section>';
   }
 
+  if (consent.availability === 'inactive') {
+    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility: inactive</h2><p>The optional retention pilot is inactive. You can continue studying normally.</p></section>';
+  }
+
   const protocol = consent.protocol || {};
   const targetDays = Number(protocol.targetDays ?? 7);
   const windowStart = Number(protocol.windowStartDays ?? 6);
