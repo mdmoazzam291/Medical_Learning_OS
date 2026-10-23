@@ -1,6 +1,7 @@
 # Current status
 
 ## Preparation curriculum and supplied-material readiness — 2026-10-23
+- Checkpoint receipt checked2026-10-23T07:21Z: documentation commit27b21c67d850ca108f3888e181f09d0aeea32e3d, treec0a1ddfa21e1a0baf1512250e80d46a6360f5ca3, saved and fetched byte-identically on the owned branch; PR308 OPEN, not merged. Foundation39917058815 was queued at this receipt, not a passing result. This follow-up records the prior commit and PR; no code commit exists for this docs-only task.
 - Checked2026-10-23T07:15:08Z against main26b9c0f48b7f70a36a38afe714794cf36f9d72f9. Connected material is already archived: live governance INDEX29 / ACTIVE_RULES6 identifies private working v0.23, extending the v0.21 evidence freeze. This supersedes a blanket “awaiting supplied material” description, not human review or release gates.
 - Reported unified inventory:5285 question identities/5358 appearances;204 older items have provisional subject tags;33 classification rechecks proposed9 revisions with3 cases still unresolved. No human subject/clinical approvals or official year verifications. Frozen review requests cover20 source-incomplete questions/21 appearances and12 unsigned clinician packets; all other material also remains unapproved and rights remain unknown.
 - Separate NEET-PG2026 extractionv2:171 fragments,103 structurally complete drafts,68 source-gap fragments and8 priority review packets. Structural completeness does not mean clinically valid or study-ready. No merge with the unified bank was performed or inferred.
