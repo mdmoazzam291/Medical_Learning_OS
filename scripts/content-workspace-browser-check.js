@@ -5,6 +5,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildPages } from './build-pages.js';
 import { publicFileSet } from './public-surface.js';
+import { projectReviewedMedicalRelations } from '../src/domain/medical-relationships.js';
+import { curriculum as preparationCurriculum, profile as preparationProfile } from '../tests/fixtures/preparation-fixture.js';
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-content-workspace-'));await buildPages({outputDirectory:output});
 const headers=Object.fromEntries((await readFile(join(output,'_headers'),'utf8')).split('\n').filter(l=>/^\s+[^:]+:/.test(l)).map(l=>{const i=l.indexOf(':');return[l.slice(0,i).trim(),l.slice(i+1).trim()];}));
@@ -19,9 +21,24 @@ const browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({head
 try{
  for(const [name,width,height] of [['phone',390,844],['split',768,1024],['ipad-portrait',820,1180],['ipad-landscape',1180,820],['desktop',1600,1000]]){
   const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(()=>{if(window!==window.top)return;localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}}));});
-  console.log('Workspace viewport:',name);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let empty=false;
+  console.log('Workspace viewport:',name);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));const writes=[];let empty=false,medicalState='absent',focusedMedical=false;
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{const request=route.request(),path=new URL(request.url()).pathname;const reply=body=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});if(request.method()!=='GET')writes.push(path);
-   if(path.endsWith('/content-library-api/library'))return reply(empty?{concepts:[],notes:[],questions:[],links:[]}:library);
+   if(path.endsWith('/content-library-api/library')) {
+    const source={...library.sources[0],fingerprintSha256:'a'.repeat(64)};
+    const relations=medicalState==='absent'?[]:Array.from({length:230},(_,i)=>({
+     relationshipId:'synthetic-relation-'+i,relationshipVersionId:'synthetic-relation-'+i+'@1',version:1,status:'published',
+     fromConceptId:'a',toConceptId:'b',relationType:'mechanism-of',sourceId:'s',sourceVersion:'edition-2',
+     sourceFingerprintSha256:'a'.repeat(64),evidenceVersionId:'synthetic-evidence-'+i+'@1',
+     claimText:'Synthetic assertion <img src=x onerror="window.injected=true">',reviewedAt:'2026-10-22T09:00:00Z',
+     medicalReviewVerified:true,referenceReviewVerified:true,rightsVerified:medicalState!=='revoked'
+    }));
+    if(medicalState==='retired')relations.push(...relations.map(r=>({...r,version:2,relationshipVersionId:r.relationshipId+'@2',status:'retired'})));
+    const medicalRelationships=projectReviewedMedicalRelations({relations,concepts:library.concepts,sources:[source]});
+    const curriculum=preparationCurriculum();
+    for(const objective of curriculum.objectives)objective.conceptId=({shared:'a',foundation:'b','neet-only':'c0','ini-only':'c1'})[objective.conceptId];
+    return reply(empty?{concepts:[],notes:[],questions:[],links:[]}:{...library,medicalRelationships,
+     ...(focusedMedical?{preparation:{curriculum,profile:preparationProfile}}:{})});
+   }
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/content-library-api/imports'))return reply({imports:[{import_id:'workspace-fixture',status:'draft'}]});
    if(path.endsWith('/content-library-api/imports/workspace-fixture'))return reply({import_id:'workspace-fixture',status:'draft',digest:'a'.repeat(64),manifest,sources:[],duplicateTargets:[]});
@@ -42,6 +59,49 @@ try{
   await page.getByRole('tab',{name:'Graph',exact:true}).click();await page.getByRole('img',{name:'Connected question graph'}).waitFor();assert.ok(await page.locator('.graph-node').count()<=30);assert.ok(await page.getByRole('region',{name:'Graph connections'}).count());
   await page.getByLabel('Graph perspective',{exact:true}).selectOption('learning');assert.match(await page.locator('.cw-graph-list').textContent(),/q.*@2/);
   await page.getByLabel('Graph perspective',{exact:true}).selectOption('medical');await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
+  medicalState='published';await page.reload();await page.locator('.cw-graph-list li').first().waitFor();
+  assert.equal(await page.locator('.cw-graph-list li').count(),60);
+  assert.match(await page.locator('.cw-graph-list').textContent(),/Synthetic Alpha → Synthetic Beta/);
+  assert.match(await page.locator('.cw-graph-list').textContent(),/synthetic-evidence-.*@1/);
+  assert.match(await page.locator('.cw-graph-list').textContent(),/source s · edition-2/);
+  assert.equal(await page.locator('.cw-graph-list img').count(),0);
+  assert.equal(await page.evaluate(()=>window.injected===true),false);
+  for(const expected of [100,140,180,200]) {
+   await page.getByRole('button',{name:'Expand neighborhood',exact:true}).click();
+   assert.equal(await page.locator('.cw-graph-list li').count(),expected);
+  }
+  assert.equal(await page.getByRole('button',{name:'Expand neighborhood',exact:true}).count(),0);
+  if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.locator('.library-graph').scrollIntoViewIfNeeded();await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'medical-graph-'+name+'.png')});}
+  await page.locator('.cw-graph-list li').first().getByRole('button',{name:'Synthetic Beta',exact:true}).click();
+  assert.equal(new URL(page.url()).searchParams.get('concept'),'b');
+  assert.match(await page.locator('.cw-graph-list').textContent(),/Synthetic Alpha → Synthetic Beta/);
+  await page.goBack();assert.equal(new URL(page.url()).searchParams.get('concept'),'a');
+  for(const state of ['revoked','retired']) {
+   medicalState=state;await page.reload();await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
+   assert.equal(await page.locator('.cw-graph-list li').count(),0);
+   assert.doesNotMatch(await page.locator('#library-app').textContent(),/Synthetic assertion/);
+  }
+  medicalState='absent';
+  // Integration with the real preparation scope: exact reviewed edges survive
+  // only while both canonical endpoints are in the selected scope.
+  focusedMedical=true;medicalState='published';
+  await page.goto(origin+'/web/library.html?view=graph&concept=a&perspective=medical&scope=goals');
+  await page.locator('.cw-graph-list li').first().waitFor();
+  assert.equal(await page.locator('.cw-graph-list li').count(),60);
+  assert.match(await page.locator('.cw-graph-list').textContent(),/Synthetic Alpha → Synthetic Beta/);
+  await page.goto(origin+'/web/library.html?view=graph&concept=b&perspective=medical&scope=foundations');
+  await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
+  assert.equal(await page.locator('.cw-graph-list li').count(),0);
+  await page.goto(origin+'/web/library.html?view=graph&concept=b&perspective=medical&scope=all');
+  await page.locator('.cw-graph-list li').first().waitFor();
+  assert.equal(await page.locator('.cw-graph-list li').count(),60);
+  await page.goBack();await page.reload();
+  await page.getByText('No published medical relationships are available in the current contract.',{exact:true}).waitFor();
+  assert.equal(new URL(page.url()).searchParams.get('scope'),'foundations');
+  assert.equal(await page.locator('.cw-graph-list li').count(),0);
+  focusedMedical=false;medicalState='absent';
+  await page.goto(origin+'/web/library.html?view=graph&concept=a&perspective=medical');
+  await page.getByLabel('Graph perspective',{exact:true}).waitFor();
   await page.getByRole('tab',{name:'Notes',exact:true}).click();assert.equal(new URL(page.url()).searchParams.get('concept'),'a');await page.goBack();assert.equal(new URL(page.url()).searchParams.get('view'),'graph');await page.reload();await page.getByLabel('Graph perspective',{exact:true}).waitFor();assert.equal(await page.getByLabel('Graph perspective',{exact:true}).inputValue(),'medical');
   if(width<1000){
    // A touch that begins on global search but produces a displaced synthetic
