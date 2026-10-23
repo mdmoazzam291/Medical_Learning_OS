@@ -15,11 +15,13 @@ A projected medical relationship requires:
 
 Newer draft, in-review or retired versions suppress older published versions; ambiguous same-version duplicates, duplicate source/concept identities, malformed version states and reused exact relationship-version identities fail closed. These checks do not resolve conflicts by input order. Empty/missing medical input remains a truthful empty medical graph. Graph edges show review version, source ID/version and claim text, escaped against markup injection. This projection does not create independent storage or modify question/note ownership.
 
-## Registry development status — 23 October 2026
+## Protected registry released — 23 October 2026
 
-[PR309](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/309) implements the protected registry, immutable lifecycle receipts, Admin review and trusted snapshot extension in development. See [registry authority and release boundary](MEDICAL_RELATIONSHIP_REGISTRY.md). It has no production migration or clinical publication authority by itself. The following original read-path release boundary remains a record of production until that reviewed release occurs.
+[PR309](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/309) is merged and its owner-approved migration/API/static release is live. The registry and canonical catalog remain empty; no medical assertion was imported or attested. See the [production receipt](releases/2026-10-23-relationship-registry-release.md) and [registry authority/lifecycle](MEDICAL_RELATIONSHIP_REGISTRY.md). Genuine clinical signoff and populated acceptance remain separate.
 
-## Still required for production medical assertions
+The following original read-path boundary records the earlier v6 release; it is historical, not the current registry status.
+
+## Original read-path release boundary (historical)
 
 **This is P1 read-path work only, not a completed medical relationship registry.** The production `content-library-api` v6 read/display release has no medical-relationship feed, so this feature will correctly continue to show no clinical edges. See the [23 October release receipt](releases/2026-10-23-medical-graph-integration-release.md).
 
