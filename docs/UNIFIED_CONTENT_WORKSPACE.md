@@ -28,7 +28,7 @@ Pane dialogs support Escape and focus return; Explorer search/load-more keeps a 
 
 ## Graph contract
 
-The initial neighborhood contains at most 30 nodes and 60 evidence edges; expansion is capped at 100 nodes and 200 edges. Lists expose the same exact evidence versions and explicit hidden counts. Exam/content edges are published question-concept/note associations. Learning dependencies use explicit prerequisite-to-primary co-links at exact question versions and are labeled educational evidence. They do not establish clinical causality. The Medical perspective remains an honest empty state until a reviewed typed medical-relationship contract exists. This release does not invent or publish such relationships or introduce a graph database.
+The initial neighborhood contains at most 30 nodes and 60 evidence edges; expansion is capped at 100 nodes and 200 edges. Lists expose the same exact evidence versions and explicit hidden counts. Exam/content edges are published question-concept/note associations. Learning dependencies use explicit prerequisite-to-primary co-links at exact question versions and are labeled educational evidence. They do not establish clinical causality. The deployed Medical perspective remains an honest empty state until a protected reviewed relationship feed exists. PR #303 supplies an optional directed read/display contract, bounded graph/list and exact source/fingerprint validation; it does not implement the database registry, Admin human-review workflow or production snapshot feed. See MEDICAL_RELATIONSHIP_PROJECTION.md and #299. No clinical edges are inferred from associations, and no graph database is introduced.
 
 ## Admin preview
 
@@ -49,3 +49,21 @@ The published-library projection adds allowlisted attached source IDs and title/
 No new service, package, database store, migration, paid plan or model dependency. The new browser script mocks the existing configured API origin; its single reviewed portability marker adds no production call. The preview bridge is a local static asset, not a service or external script. Chromium/WebKit acceptance checks verify read-only behavior and the opaque sandbox boundary. Catalog publication, a complete medical assertion/relationship registry, longitudinal clinical encounters, inferred mastery, generated content and 3D anatomy remain governed by separate contracts and acceptance work.
 
 Preparation focus now extends this workspace through the shared contracts in [PREPARATION_PATHWAYS.md](PREPARATION_PATHWAYS.md). It preserves the existing homes and requires normal API deployment; no curriculum is inferred from provenance.
+
+## Audited implementation stage — 23 October 2026
+
+| Design requirement | Current implementation | Evidence / remaining boundary |
+|---|---|---|
+| One canonical home across content types | Implemented in PR296 | Existing concept IDs, exclusive PYQ/QBank homes and exact artifact versions are reused |
+| Concept dossier and four synchronized representations | Implemented in PR296/298 | Overview, Notes, Questions and Graph preserve canonical selection and compatible URL state |
+| Desktop/iPad adaptable panes | Implemented | Five-width Chromium acceptance; existing macOS WebKit CI covers iPad windows, not physical-device testing |
+| Source-grounded structured sections | Implemented in PR298 | Only explicitly headed published note material is assembled; missing sections remain missing |
+| Placement inspection and draft preview | Implemented in PR296 | Prompt-only opaque iframe, restricted relay, source/evidence boundaries and desktop/iPad canvas tests |
+| Medical relationship read/display | Released through PR303 | Explicit directed, exact-source/fingerprint projection; preparation scope enforced at the shared graph boundary; no automatic clinical inference |
+| Authoritative medical relationship registry | Pending #299 | Database versions, actual grants/rights/review receipts, publish/retire transaction, Admin controls and protected snapshot feed |
+| Large-catalog discovery | Pending #300 | Present client render limits do not provide server pagination or an indexed search contract |
+| Live signed-in acceptance | Pending #301 | This graph release rechecked the Library guest gate; signed-in and populated real-content acceptance was not rerun |
+| Rich clinical presentations and overlays | Pending #302 | Current task facets and linked/private views are foundations; reviewed symptom mappings, grounded comparisons and full media/case workflows remain |
+| Learning outcome claims | Unvalidated | Browsing and graph exploration do not create mastery evidence; recall/transfer experiments require reviewed content and prospective responses |
+
+Read/display approval must not be interpreted as registry/publication completion. Normal publication review remains authoritative for every clinical artifact.

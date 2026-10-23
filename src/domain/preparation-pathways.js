@@ -119,7 +119,7 @@ export function preparationLibrary(library, scope) {
   scope = scope || library.preparation.scope;
   const selectedScope = ['goals', 'foundations', 'all'].includes(scope) ? scope : context.status === 'unconfigured' ? 'all' : 'goals';
   if (context.status === 'unconfigured' || selectedScope === 'all') return {...library,preparation:{...context,scope:selectedScope}};
-  const empty = () => ({...library,concepts:[],questions:[],notes:[],links:[],sources:[],preparation:{...context,scope:selectedScope}});
+  const empty = () => ({...library,concepts:[],questions:[],notes:[],links:[],sources:[],medicalRelationships:[],preparation:{...context,scope:selectedScope}});
   if (!context.profile) return empty();
   const resolved = resolvePreparation(context.curriculum, context.profile);
   const ids = new Set(selectedScope === 'foundations' ? resolved.foundationObjectiveVersionIds : resolved.objectiveVersionIds);
@@ -132,8 +132,12 @@ export function preparationLibrary(library, scope) {
   // Preserve the complete published context of eligible artifacts without inventing objective mappings.
   uniqueQuestions.flatMap(q => q.conceptLinks || []).forEach(l => conceptIds.add(l.conceptId)); notes.forEach(n => conceptIds.add(n.conceptId));
   const questionIds = new Set(uniqueQuestions.map(q => q.questionId)), noteIds = new Set(notes.map(n => n.noteVersionId));
+  const concepts = library.concepts.filter(c => conceptIds.has(c.conceptId));
+  const visibleConceptIds = new Set(concepts.map(c => c.conceptId));
+  const medicalRelationships = (library.medicalRelationships || []).filter(r => visibleConceptIds.has(r.fromConceptId) && visibleConceptIds.has(r.toConceptId));
   const sourceIds = new Set([...uniqueQuestions, ...notes].flatMap(a => a.sourceIds || []));
-  return {...library,concepts:library.concepts.filter(c => conceptIds.has(c.conceptId)),questions:uniqueQuestions,notes,
+  medicalRelationships.forEach(r => sourceIds.add(r.sourceId));
+  return {...library,concepts,questions:uniqueQuestions,notes,medicalRelationships,
     sources:(library.sources || []).filter(s => sourceIds.has(s.sourceId)),links:(library.links || []).filter(l => questionIds.has(l.question_id) && noteIds.has(l.note_version_id)),
     preparation:{...context,scope:selectedScope,coverage:preparationCoverage(library,context.curriculum,context.profile)}};
 }
