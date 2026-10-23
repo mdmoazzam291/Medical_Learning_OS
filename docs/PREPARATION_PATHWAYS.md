@@ -32,6 +32,8 @@ Combined preparation unions direct objectives and their transitive prerequisites
 
 ## Adding reviewed curricula
 
+The [23 October readiness reconciliation](PREPARATION_CURRICULUM_READINESS.md) identifies already-archived private material, outstanding source/clinical/rights gates and official-requirement acquisition gaps. It does not add approved objectives or bindings. Reuse those records rather than inventing a replacement content batch.
+
 1. Verify official requirements for the intended exam/component/session. Keep expert interpretation and historical evidence labeled separately.
 2. Reuse canonical concepts and objectives where capability/task/context/depth are genuinely shared; create exact new objective versions for changed requirements. Add deeper specialist objectives without replacing foundational history.
 3. Add mappings with source/version and real accountable review; never fabricate a reviewer. Proposed records remain draft and cannot affect recommendations.

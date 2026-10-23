@@ -2,6 +2,10 @@
 
 Current direction — 8 October 2026. The owner cancelled the fixed respiratory batch; the former 12-question/three-note plan is superseded. This is an intake plan, not supplied clinical inventory, approval or an import receipt.
 
+## Supplied-material status — 23 October 2026
+
+Connected Drive governance INDEX29 / ACTIVE_RULES6 already records private working material v0.23: 5,285 unified question identities and 5,358 appearances, plus a separate NEET-PG2026 extractionv2. The material remains unapproved and unimported. The current blocker is source/clinical/rights evidence, not absence of every supplied file. Reuse the existing records and review desk; do not request a duplicate upload or restore erased pilots. See [the readiness reconciliation](PREPARATION_CURRICULUM_READINESS.md) for exact counts, current-version precedence, evidence limits and the next actions. The clinical originals, private review packets and file IDs remain in Drive.
+
 ## Scope
 
 Receive the owner's final polished PYQs without a fixed minimum count, required disease set or note count. Preserve the actual questions and tasks. Link useful canonical notes where warranted; do not create respiratory placeholders or manufacture missing patterns. Erased pilots, seed catalogs, pre-reset backups and engineering fixtures remain excluded from clinical reimport.

@@ -1,6 +1,10 @@
 # Medical Learning OS — context register
 
-Last reconciled: 2026-10-12 (Asia/Kolkata).
+Last reconciled: 2026-10-23 (Asia/Kolkata).
+
+## Supplied-material reconciliation — 2026-10-23
+
+Current Drive governance was read directly: INDEX29 / ACTIVE_RULES6 identifies unified private working material v0.23 over the retained v0.21 evidence freeze, with 5,285 question identities and 5,358 source appearances. A separate NEET-PG2026 extractionv2 also exists. These are archived drafts, not clinically approved releases or app imports. The three unresolved subject cases, 20 incomplete unified questions, 12 unsigned clinician packets and unknown rights remain distinct holds; the remainder is also unapproved. See PREPARATION_CURRICULUM_READINESS.md for source-reported counts and actual verification limits. Older “awaiting supplied material” entries do not mean no private material exists; resume current Drive governance without restoring erased pilots or copying private clinical text into Git.
 
 ## AI-independent continuity and latest releases — 2026-10-12
 
