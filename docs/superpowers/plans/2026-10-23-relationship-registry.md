@@ -27,7 +27,7 @@ Interfaces: `medical_relationship_stage_v1(jsonb,uuid)` → staged version/diges
 - [x] Write disposable PostgreSQL assertions for staging, review, rights, correction, feed, immutability, role isolation, exact retries and rollback; run to show the missing migration fails.
 - [x] Implement immutable tables, exact-target hashes, service-only functions and snapshot composition. Use existing canonical publication lock and genuine reviewer/source-rights helpers.
 - [x] Run PGlite and existing Data API/privacy checks; expected pass. Inspect coupling additions individually and register only the new reviewed paths.
-- [ ] Checkpoint engineering and handoff to owned branch.
+- [x] Checkpoint engineering and handoff to owned branch.
 
 ### Task 2: Authenticated routes
 
@@ -43,7 +43,7 @@ Interfaces: GET/POST `/relationships`, GET `/relationships/:versionId`, POST `/r
 Files: create `web/medical-relationship-admin.js`, `scripts/medical-relationship-browser-check.js`; modify `web/content-import.html`, `scripts/build-pages.js` if allowlist requires, CI and relevant docs.
 Interfaces: own section/form/status on existing Import & review; use existing content-library request/escape adapter. Structured assertion input with previous-version/digest for corrections; inspected server packet shown before human attestation or retirement. Capabilities from server, no assumed reviewer authority.
 
-- [ ] Write browser journey with synthetic service responses for stage/inspect/approve, stale conflicts, retirement and dirty edits across phone/tablet/desktop; run RED in hosted browser when local engines unavailable.
-- [ ] Implement escaped packet, exact digest-bound actions, dirty/busy/stale-selection protection and truthful empty state.
+- [x] Write browser journey with synthetic service responses for stage/inspect/approve, stale conflicts, retirement and dirty edits across phone/tablet/desktop; run RED in hosted browser when local engines unavailable.
+- [x] Implement escaped packet, exact digest-bound actions, dirty/busy/stale-selection protection and truthful empty state.
 - [ ] Run npm test/check/build, SQL suites and hosted Chromium/WebKit; expected all green.
 - [ ] Fresh whole-branch review under requesting-code-review, fix material findings with failing regressions, update plan/handoff/STATUS, preserve branch/PR checkpoint. Do not claim live registry deployment or clinical acceptance.

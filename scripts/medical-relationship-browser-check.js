@@ -19,18 +19,18 @@ try{
  for(const [name,width,height] of [['phone',390,844],['tablet',820,1180],['desktop',1600,1000]]){
   console.log('Relationship viewport:',name);const context=await browser.newContext({viewport:{width,height}});
   await context.addInitScript(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
-  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));let saved=null,status='draft',events=[],failPublish=false,failStage=false,stageWrites=0,publishWrites=0,rightsReady=true,reviewKinds=['medical','references','rights'];
+  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));let saved=null,status='draft',events=[],failPublish=false,failStage=false,stageWrites=0,publishWrites=0,rightsReady=true,reviewKinds=['medical','references','rights'],stageGate=null,publishGate=null;
   const packet=()=>({reviewKinds,version:{relationshipVersionId:'synthetic@'+saved.version,digest:saved.version===1?digest:secondDigest,assertion:saved,bindings},isLatest:true,currentBindings:bindings,rightsReady,source:catalog.sources[0],concepts:catalog.concepts,events});
   const queue=()=>({reviewKinds,versions:saved?[{relationshipVersionId:'synthetic@'+saved.version,status}]:[]});
-  await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
+  await context.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
    const req=route.request(),path=new URL(req.url()).pathname,body=req.postDataJSON();const reply=(data,code=200)=>route.fulfill({status:code,contentType:'application/json',body:JSON.stringify(data)});
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds});
    if(path.endsWith('/content-library-api/imports'))return reply({imports:[]});
    if(path.endsWith('/content-library-api/relationships')){
-    if(req.method()==='GET')return reply(queue());stageWrites++;if(failStage)return reply({error:'stale_relationship_predecessor'},409);saved=body.assertion;status='draft';events=[];return reply({relationshipVersionId:'synthetic@'+saved.version,digest:saved.version===1?digest:secondDigest,status});
+    if(req.method()==='GET')return reply(queue());stageWrites++;if(stageGate)await stageGate;if(failStage)return reply({error:'stale_relationship_predecessor'},409);saved=body.assertion;status='draft';events=[];return reply({relationshipVersionId:'synthetic@'+saved.version,digest:saved.version===1?digest:secondDigest,status});
    }
    if(/\/relationships\/synthetic@\d+$/.test(decodeURIComponent(path)))return reply(packet());
-   if(path.endsWith('/publish')){publishWrites++;assert.deepEqual(body,{digest:saved.version===1?digest:secondDigest,reviewNotes:'Inspected synthetic source only.',attested:true});if(failPublish)return reply({error:'stale_relationship_target'},409);status='published';events=[{action:'published',notes:'PRIVATE REVIEW NOTE'}];return reply({status});}
+   if(path.endsWith('/publish')){publishWrites++;if(publishGate)await publishGate;assert.deepEqual(body,{digest:saved.version===1?digest:secondDigest,reviewNotes:'Inspected synthetic source only.',attested:true});if(failPublish)return reply({error:'stale_relationship_target'},409);status='published';events=[{action:'published',notes:'PRIVATE REVIEW NOTE'}];return reply({status});}
    if(path.endsWith('/retire')){assert.equal(body.digest,secondDigest);assert.equal(body.reason,'Synthetic correction.');status='retired';events.push({action:'retired',notes:body.reason});return reply({status});}
    if(path.endsWith('/content-library-api/library')){
     return reply(projectLibrary({catalog,medicalRelationships:saved?[{...saved,relationshipVersionId:'synthetic@'+saved.version,status,sourceFingerprintSha256:fingerprint,reviewedAt:'2026-10-23T09:00:00Z',medicalReviewVerified:true,referenceReviewVerified:true,rightsVerified:true}]:[]}));
@@ -42,13 +42,13 @@ try{
   await page.getByText('No relationship drafts or publications yet.',{exact:true}).waitFor();
   const input=page.getByLabel('Relationship assertion JSON',{exact:true});await input.fill(JSON.stringify(assertion));
   failStage=true;await page.getByRole('button',{name:'Stage relationship draft',exact:true}).click();await page.locator('#relationship-status').filter({hasText:'stale_relationship_predecessor'}).waitFor();assert.equal(await input.inputValue(),JSON.stringify(assertion));
-  failStage=false;await page.getByRole('button',{name:'Stage relationship draft',exact:true}).click();await page.getByRole('heading',{name:'Inspect synthetic@1',exact:true}).waitFor();assert.equal(stageWrites,2);assert.equal(publishWrites,0);
+  failStage=false;let releaseStage;stageGate=new Promise(resolve=>{releaseStage=resolve;});await page.getByRole('button',{name:'Stage relationship draft',exact:true}).click();assert.equal(await input.isDisabled(),true);releaseStage();stageGate=null;await page.getByRole('heading',{name:'Inspect synthetic@1',exact:true}).waitFor();assert.equal(stageWrites,2);assert.equal(publishWrites,0);
   assert.match(await page.locator('#relationship-detail').textContent(),/Synthetic Alpha/);assert.match(await page.locator('#relationship-detail').textContent(),/Synthetic section A/);assert.equal(await page.locator('#relationship-detail img').count(),0);assert.equal(await page.evaluate(()=>window.injected===true),false);
   await page.getByLabel('Relationship review notes',{exact:true}).fill('Inspected synthetic source only.');
   // Required human attestation prevents a submit, independent of server enforcement.
   await page.getByRole('button',{name:'Publish reviewed relationship',exact:true}).click();assert.equal(publishWrites,0);
   await page.getByLabel('I curated externally authored content and inspected this exact assertion, direction, source, evidence and reuse permission; I approve medical accuracy and references.').check();
-  failPublish=true;await page.getByRole('button',{name:'Publish reviewed relationship',exact:true}).click();await page.locator('#relationship-status').filter({hasText:'stale_relationship_target'}).waitFor();assert.equal(await page.getByLabel('Relationship review notes',{exact:true}).inputValue(),'Inspected synthetic source only.');
+  failPublish=true;let releasePublish;publishGate=new Promise(resolve=>{releasePublish=resolve;});await page.getByRole('button',{name:'Publish reviewed relationship',exact:true}).click();assert.equal(await input.isDisabled(),true);assert.equal(await page.getByLabel('Relationship review notes',{exact:true}).isDisabled(),true);releasePublish();publishGate=null;await page.locator('#relationship-status').filter({hasText:'stale_relationship_target'}).waitFor();assert.equal(await page.getByLabel('Relationship review notes',{exact:true}).inputValue(),'Inspected synthetic source only.');
   failPublish=false;await page.getByRole('button',{name:'Publish reviewed relationship',exact:true}).click();await page.getByText('Published exact relationship version.',{exact:true}).waitFor();assert.equal(publishWrites,2);
   if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.locator('#medical-relationships').scrollIntoViewIfNeeded();await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'relationship-review-'+name+'.png')});}
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);

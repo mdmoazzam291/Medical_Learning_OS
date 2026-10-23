@@ -3,6 +3,19 @@ const root=document.querySelector('#medical-relationships');
 const list=root.querySelector('#relationship-list'),detail=root.querySelector('#relationship-detail'),status=root.querySelector('#relationship-status');
 const stageForm=root.querySelector('#relationship-stage'),input=root.querySelector('#relationship-json');
 let selected=null,busy=false,reviewDirty=false,stageDirty=false,generation=0,queueGeneration=0;
+const lockedControls=new Map();
+function setBusy(value){
+ busy=value;
+ root.setAttribute('aria-busy',String(value));
+ if(value){
+  for(const control of root.querySelectorAll('input,textarea,button')){
+   lockedControls.set(control,control.disabled);control.disabled=true;
+  }
+ }else{
+  for(const [control,disabled] of lockedControls)if(control.isConnected)control.disabled=disabled;
+  lockedControls.clear();
+ }
+}
 const pretty=value=>'<pre>'+e(JSON.stringify(value,null,2))+'</pre>';
 const route=id=>'/relationships/'+encodeURIComponent(id);
 const discard=()=>!reviewDirty||window.confirm('Discard unsaved relationship review changes and refresh the inspection?');
@@ -45,9 +58,9 @@ stageForm.addEventListener('submit',async event=>{
  event.preventDefault();if(busy||!discard())return;
  const raw=input.value;if(new TextEncoder().encode(raw).length>24576){status.textContent='Maximum assertion size is 24 KiB.';return;}
  let assertion;try{assertion=JSON.parse(raw);}catch{status.textContent='Enter valid assertion JSON.';return;}
- busy=true;const button=stageForm.querySelector('button');button.disabled=true;
+ setBusy(true);
  try{const receipt=await request('/relationships',{assertion});stageDirty=false;reviewDirty=false;await load();await inspect(receipt.relationshipVersionId,{internal:true});status.textContent='Draft staged. It has no publication authority. Inspect the exact source and assertion before approval.';}
- catch(error){message(error);}finally{busy=false;button.disabled=false;}
+ catch(error){message(error);}finally{setBusy(false);}
 });
 detail.addEventListener('input',()=>{reviewDirty=true;});
 detail.addEventListener('change',()=>{reviewDirty=true;});
@@ -64,11 +77,14 @@ detail.addEventListener('click',event=>{
 detail.addEventListener('submit',async event=>{
  event.preventDefault();if(busy||!selected)return;
  const form=event.target,publish=form.id==='relationship-publish';if(!publish&&form.id!=='relationship-retire')return;
- busy=true;const button=form.querySelector('button'),v=selected.version;button.disabled=true;
+ const other=detail.querySelector(publish?'#relationship-retire':'#relationship-publish');
+ const otherDirty=publish?other?.elements.reason.value.trim():other&&(other.elements.reviewNotes.value.trim()||other.elements.attested.checked);
+ if(otherDirty&&!window.confirm('This action will discard unsaved changes in the other relationship review form. Continue?'))return;
+ const v=selected.version;setBusy(true);
  try{
   await request(route(v.relationshipVersionId)+(publish?'/publish':'/retire'),publish?{digest:v.digest,reviewNotes:form.elements.reviewNotes.value,attested:form.elements.attested.checked}:{digest:v.digest,reason:form.elements.reason.value});
   reviewDirty=false;await load();await inspect(v.relationshipVersionId,{internal:true});status.textContent=publish?'Published exact relationship version.':'Retired exact relationship version.';
- }catch(error){message(error);}finally{busy=false;button.disabled=false;}
+ }catch(error){message(error);}finally{setBusy(false);}
 });
 window.addEventListener('beforeunload',event=>{if(stageDirty||reviewDirty){event.preventDefault();event.returnValue='';}});
 load();
