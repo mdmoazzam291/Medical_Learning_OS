@@ -1,5 +1,9 @@
 # Supabase migration provenance
 
+## Content publication grouping repair — 2026-10-24
+
+`20261023214659_content_import_intelligence_grouping.sql` is a forward replacement of the existing intelligence publication wrapper. It groups JSONB extraction before subtraction, fixing live SQLSTATE42725 without changing the legacy authority delegate, conflicts, security/search path or service-only execution. It writes no content or human review records. The historical migration is unchanged. CLI-generated filename; deployment/ledger mapping pending. See `docs/releases/2026-10-24-content-publication-grouping-repair.md` for validation and rollout state.
+
 The live `medical_learning_os` project already has migration history. The five historical SQL bodies were recovered exactly from the provider migration ledger on 2026-10-21. Their filenames retain the original versions and names; no inferred SQL was added. SHA-256 provenance tests pin their recovered bytes. Do not rewrite applied history.
 
 Live migration versions observed on 2026-09-26:
