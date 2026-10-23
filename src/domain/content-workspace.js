@@ -1,4 +1,5 @@
 import { libraryContextUrl, libraryRouteState, selectWorkspace } from './library-workspaces.js';
+import { preparationLibrary } from './preparation-pathways.js';
 const normalized = value => String(value || '').normalize('NFKC').toLowerCase().trim();
 export const CONTENT_GROUPS = Object.freeze([
   { label: 'Explore', items: [['overview','Concept Explorer'],['subjects','Subjects & Topics'],['overview','Body Systems','system'],['overview','Clinical Problems','task']] },
@@ -38,6 +39,7 @@ export function conceptDossier(library, conceptId, options = {}) {
   return { concept, questions: data.questions, notes: data.notes, links: data.links || [], sources: (library.sources || []).filter(s => sourceIds.has(s.sourceId)), counts: { questions: data.questions.length, notes: data.notes.length, pyq: data.questions.filter(q => q.home.kind === 'pyq').length, media: data.questions.filter(q => q.intelligence?.presentation?.some(p => ['image','ecg-tracing','histology','audio','video'].includes(p))).length, cases: data.questions.filter(q => q.intelligence?.presentation?.some(p => ['clinical-vignette','sequential-case'].includes(p))).length } };
 }
 export function conceptNeighborhood(library, conceptId, { perspective = 'exam', limit = 30, ...options } = {}) {
+  library = preparationLibrary(library, options.scope);
   const dossier = conceptDossier(library, conceptId, options);
   if (!dossier.concept) return { nodes: [], edges: [], hidden: 0, hiddenEdges:0, perspective };
   const center = 'concept:' + conceptId, nodes = new Map([[center,{ id:center, kind:'concept', conceptId, label:dossier.concept.label }]]), edges = [];

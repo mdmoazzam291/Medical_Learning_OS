@@ -1,3 +1,5 @@
+import curriculum from '../../data/preparation-curriculum.js';
+import { validatePreparationProfile } from '../domain/preparation-pathways.js';
 const SESSION_KEY = 'mlos-supabase-auth-v1';
 
 export class AuthError extends Error {
@@ -343,6 +345,27 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage = creat
       session.user = user;
       write(session);
       return user;
+    },
+    async preparationProfile() {
+      const session = await authenticatedSession();
+      const data = await api('/auth/v1/user', { method: 'GET', accessToken: session.accessToken });
+      const user = data?.user ?? data;
+      if (user?.id !== session.user?.id || read()?.user?.id !== session.user?.id) throw new AuthError(409, 'preparation_identity_mismatch');
+      const profile = user.user_metadata?.mlos_preparation_profile;
+      return profile == null ? null : validatePreparationProfile(profile, curriculum);
+    },
+    async setPreparationProfile(input) {
+      const profile = validatePreparationProfile(input, curriculum);
+      const session = await authenticatedSession();
+      const data = await api('/auth/v1/user', {
+        method: 'PUT', accessToken: session.accessToken,
+        body: { data: { mlos_preparation_profile: profile } }
+      });
+      const user = data?.user ?? data;
+      if (user?.id !== session.user?.id || read()?.user?.id !== session.user?.id) throw new AuthError(409, 'preparation_identity_mismatch');
+      const saved = validatePreparationProfile(user.user_metadata?.mlos_preparation_profile, curriculum);
+      if (JSON.stringify(saved) !== JSON.stringify(profile)) throw new AuthError(409, 'preparation_save_unconfirmed');
+      return saved;
     },
     async setPassword(password) {
       const session = await authenticatedSession();

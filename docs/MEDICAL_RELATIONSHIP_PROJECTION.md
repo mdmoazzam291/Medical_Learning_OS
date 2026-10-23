@@ -17,7 +17,7 @@ Newer draft, in-review or retired versions suppress older published versions; am
 
 ## Still required for production medical assertions
 
-**This is P1 read-path work only, not a completed medical relationship registry.** The current production `content-library-api` v4 snapshot has no medical-relationship feed, so this feature will correctly continue to show no clinical edges.
+**This is P1 read-path work only, not a completed medical relationship registry.** The production `content-library-api` v5 preparation release has no medical-relationship feed, so this feature will correctly continue to show no clinical edges. Later read/display deployments do not create that feed.
 
 Follow-up implementation must include the database relationship/version table, current-rights evidence checks and immutable publication/retirement events, an authorized Admin stage/review UI, and a service-only snapshot RPC bound to the versioned source, actual reviewer grants and published concept registry. Do not feed `medicalRelationships` from a caller-supplied client payload. Source-rights reuse, corrections, stale versions, disabled reviewer grants, and rollback require PostgreSQL integration tests before migration or API deployment. The new optional projection must not silently fall back to an unverified dataset when source resolution fails.
 
@@ -35,5 +35,7 @@ No genuine medical assertion is imported or published by this change. The curren
 ## Current milestone and next dependency
 
 The read/display slice is PR #303. Its new fingerprint input is deliberately fail-closed and additive: old snapshots with no medical feed remain valid and empty; a future feed without current source fingerprints remains empty. Deployment must include the new domain module wherever `content-library.js` is bundled; a static frontend release cannot install a server snapshot feed.
+
+Preparation integration applies the selected scope at the shared graph boundary, including calls with the original API library. A relationship remains only when both canonical endpoints survive the scope; its exact source metadata remains available. Empty, invalid and unmapped scopes clear medical relationships. Explore all retains the published context. These inventory filters do not grant curriculum suitability, human review or learning authority.
 
 The next registry slice (#299) must extend the existing canonical publication architecture with authoritative storage, immutable versions/review/publish/retire receipts, exact-source current-rights checks, scoped reviewer authorization, Admin review controls and a service-owned snapshot feed. Disposable PostgreSQL tests must cover privileges/RLS, stale review/source/version rejection, retirement/corrections and rollback. Preserve account privacy and exports when adding reviewer-linked records. No browser-supplied verification flags, new clinical content or inference is authorized by this read contract.

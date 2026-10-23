@@ -1,3 +1,4 @@
+import { preparationLibrary } from './preparation-pathways.js';
 import { filterLibrary, keywordCounts } from './content-library.js';
 export const FILTER_KEYS = Object.freeze(['qualifier', 'medium', 'response', 'subject', 'system', 'organ', 'domain', 'task', 'exam', 'platform', 'concept', 'keyword', 'search']);
 export const LIBRARY_VIEWS = Object.freeze(['overview', 'subjects', 'notes', 'questions', 'graph', 'atlas', 'media', 'references', 'compare', 'foundation', 'savedviews', 'recall', 'cases', 'images', 'skills']);
@@ -8,7 +9,7 @@ export function libraryRouteState(search) {
     sessionCount: [1, 5, 10, 15, 20, 30, 50].includes(count) ? count : 50,
     view: LIBRARY_VIEWS.includes(p.get('view')) ? p.get('view') : 'overview',
     filters: Object.fromEntries(FILTER_KEYS.map(key => [key, (p.get(key) || '').slice(0, 300)])),
-    options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse'].map(key => [key, /^[a-z0-9-]{0,100}$/.test(p.get(key) || '') ? p.get(key) || '' : '']))
+    options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse', 'scope'].map(key => [key, /^[a-z0-9-]{0,100}$/.test(p.get(key) || '') ? (key !== 'scope' || ['goals','foundations','all'].includes(p.get(key))) ? p.get(key) || '' : '' : '']))
   };
 }
 const normal = text => String(text || '').normalize('NFKC').toLowerCase();
@@ -21,7 +22,7 @@ export function studySelection(data, count = 50) {
 }
 export function libraryContextUrl(search, overrides = {}) {
   const input = new URLSearchParams(search), output = new URLSearchParams();
-  const keys = [...FILTER_KEYS, 'view', 'module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse', 'build', 'count'];
+  const keys = [...FILTER_KEYS, 'view', 'module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse', 'scope', 'build', 'count'];
   for (const key of keys) {
     const value = Object.hasOwn(overrides, key) ? overrides[key] : input.get(key);
     if (typeof value === 'string' && value.length <= 300 && value) output.set(key, value);
@@ -30,6 +31,7 @@ export function libraryContextUrl(search, overrides = {}) {
   return '/web/library.html?' + output;
 }
 export function selectWorkspace(library, options = {}) {
+  library = preparationLibrary(library, options.scope);
   const filters = { ...(options.filters || {}), ...(options.collection ? { home: options.collection } : {}) };
   const needle = normal(filters.search).trim();
   const aliasIds = new Set(needle ? library.concepts.filter(c => normal([c.label, ...(c.aliases || [])].join(' ')).includes(needle)).map(c => c.conceptId) : []);
@@ -76,7 +78,7 @@ export function prerequisiteLinks(library) {
 export function validateSavedViews(values) {
   if (!Array.isArray(values)) return [];
   const seen = new Set();
-  return values.filter(v => v && typeof v.id === 'string' && /^[a-zA-Z0-9-]{1,80}$/.test(v.id) && typeof v.name === 'string' && v.name.trim() && v.name.length <= 80 && LIBRARY_VIEWS.includes(v.view) && !seen.has(v.id) && seen.add(v.id)).slice(0, 30).map(v => ({ id: v.id, name: v.name.trim(), view: v.view, filters: Object.fromEntries(FILTER_KEYS.filter(k => typeof v.filters?.[k] === 'string' && v.filters[k].length <= 300).map(k => [k, v.filters[k]])), options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse'].filter(k => typeof v.options?.[k] === 'string' && /^[a-z0-9-]{0,100}$/.test(v.options[k])).map(k => [k, v.options[k]])) }));
+  return values.filter(v => v && typeof v.id === 'string' && /^[a-zA-Z0-9-]{1,80}$/.test(v.id) && typeof v.name === 'string' && v.name.trim() && v.name.length <= 80 && LIBRARY_VIEWS.includes(v.view) && !seen.has(v.id) && seen.add(v.id)).slice(0, 30).map(v => ({ id: v.id, name: v.name.trim(), view: v.view, filters: Object.fromEntries(FILTER_KEYS.filter(k => typeof v.filters?.[k] === 'string' && v.filters[k].length <= 300).map(k => [k, v.filters[k]])), options: Object.fromEntries(['module', 'reference', 'category', 'collection', 'observed', 'sort', 'perspective', 'browse', 'scope'].filter(k => typeof v.options?.[k] === 'string' && /^[a-z0-9-]{0,100}$/.test(v.options[k])).map(k => [k, v.options[k]])) }));
 }
 export function addSavedView(values, view) {
   const current = validateSavedViews(values), entry = validateSavedViews([view])[0];

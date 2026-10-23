@@ -1,3 +1,5 @@
+import { libraryRouteState } from '../src/domain/library-workspaces.js';
+import { transitionContext } from '../src/domain/content-workspace.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
@@ -14,18 +16,18 @@ const library = {
   links: []
 };
 function harness(view = 'recall', cloud = {}) {
-  const listeners = {}, targets = new Map(), s = { library, view, filters: {}, options: {}, busy: false };
-  const target = key => { if (!targets.has(key)) targets.set(key, { innerHTML: '', textContent: '', insertAdjacentHTML(_where, html) { this.innerHTML = html; }, remove() {} }); return targets.get(key); };
+  const remembered = [], listeners = {}, targets = new Map(), s = { library, view, filters: {}, options: {}, busy: false };
+  const target = key => { if (!targets.has(key)) targets.set(key, { innerHTML: '', textContent: '', focus() {}, insertAdjacentHTML(_where, html) { this.innerHTML = html; }, remove() {} }); return targets.get(key); };
   const root = { querySelector: target, querySelectorAll: () => [], addEventListener(type, fn) { (listeners[type] ||= []).push(fn); } };
-  const context = vm.createContext({ URL, URLSearchParams, location: { search: '', origin: 'https://example.invalid' }, window: { addEventListener() {} }, document: { querySelector: target }, deviceCollections: () => deviceCollections(() => { throw Error('blocked'); }), selectWorkspace, workspaceMarkup, workspaceFrame:(_s,html)=>html, workspaceControls:()=>({beforeRender(){},afterRender(){},state:()=>({})}), e: value => String(value), auth: {}, request() { throw Error('No session write expected'); }, createCloudStudy: () => cloud, cloudConfig: { projectUrl: 'https://example.invalid' } });
+  const context = vm.createContext({ libraryRouteState, transitionContext, URL, URLSearchParams, location: { search: '?view='+view, origin: 'https://example.invalid' }, window: { addEventListener() {} }, document: { querySelector: target }, deviceCollections: () => deviceCollections(() => { throw Error('blocked'); }), selectWorkspace, workspaceMarkup, workspaceFrame:(_s,html)=>html, workspaceControls:()=>({beforeRender(){},afterRender(){},state:()=>({})}), e: value => String(value), auth: {}, request() { throw Error('No session write expected'); }, createCloudStudy: () => cloud, cloudConfig: { projectUrl: 'https://example.invalid' } });
   vm.runInContext(source, context);
   let api;
   const render = () => { target('#media-viewer').innerHTML = ''; api.decorate(); };
-  api = context.setupLibraryWorkspaces({ root, state: () => s, change(update) { if (update.options) s.options = { ...s.options, ...update.options }; }, render, remember() {} });
+  api = context.setupLibraryWorkspaces({ root, state: () => s, change(update) { if (update.options) s.options = { ...s.options, ...update.options }; }, render, remember(value) { remembered.push(value); } });
   render();
   const click = async dataset => { const button = { dataset, hasAttribute: name => name === 'data-reveal-recall' && dataset.reveal === true }; await Promise.all((listeners.click || []).map(fn => fn({ target: { closest: () => button } }))); };
   const input = value => listeners.input.forEach(fn => fn({ target: { id: 'self-recall', value, hasAttribute: () => false } }));
-  return { s, render, click, input, target, markup: () => target('#library-status').innerHTML };
+  return { s, render, click, input, target, remembered, changeOption(key,value) { return Promise.all((listeners.change||[]).map(fn=>fn({target:{dataset:{workspaceOption:key},value,hasAttribute:()=>false}}))); }, markup: () => target('#library-status').innerHTML };
 }
 test('recall drafts stay bound to exact source notes across card changes and filters', async () => {
   const h = harness(); h.input('Draft for A'); await h.click({ recallStep: '1' }); h.input('Draft for B');
@@ -80,4 +82,10 @@ test('keyword frequencies respect workspace collection and observed filters', ()
 test('restored recall drafts keep a stable field label independent of their text', () => {
   const html = workspaceMarkup('recall', library, { recallDraft: 'Restored draft text' });
   assert.match(html, /<textarea[^>]*aria-label="Your recall"/);
+});
+
+test('preparation scope changes create Back destinations even when the view is unchanged',async()=>{
+  const h=harness('questions');
+  await h.changeOption('scope','foundations');
+  assert.equal(h.remembered.at(-1),true);
 });

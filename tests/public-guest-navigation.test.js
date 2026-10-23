@@ -37,7 +37,13 @@ test('signed-out sign-in and registration routes show only public navigation', (
 
 test('sign-in form, benefits and preview implementation stay unchanged', async () => {
   const files=JSON.parse(await readFile(new URL('./fixtures/signin-content-baseline.json',import.meta.url),'utf8'));
-  for(const [path,sha256] of Object.entries(files)) assert.equal(createHash('sha256').update(await readFile(new URL('../'+path,import.meta.url))).digest('hex'),sha256,path);
+  for(const [path,sha256] of Object.entries(files)) {
+    const [file,fragment]=path.split('#');
+    let content=await readFile(new URL('../'+file,import.meta.url),'utf8');
+    // Freeze public sign-in content; authenticated Account may gain preparation controls.
+    if(fragment==='signedOut') content=content.slice(content.indexOf('function signedOut() {'),content.indexOf('\nfunction retentionPilotPanel()'));
+    assert.equal(createHash('sha256').update(content).digest('hex'),sha256,path);
+  }
 });
 
 test('signed-in learners and administrators retain workspace navigation',()=>{

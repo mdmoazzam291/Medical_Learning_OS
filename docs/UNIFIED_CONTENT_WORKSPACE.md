@@ -48,6 +48,8 @@ The published-library projection adds allowlisted attached source IDs and title/
 
 No new service, package, database store, migration, paid plan or model dependency. The new browser script mocks the existing configured API origin; its single reviewed portability marker adds no production call. The preview bridge is a local static asset, not a service or external script. Chromium/WebKit acceptance checks verify read-only behavior and the opaque sandbox boundary. Catalog publication, a complete medical assertion/relationship registry, longitudinal clinical encounters, inferred mastery, generated content and 3D anatomy remain governed by separate contracts and acceptance work.
 
+Preparation focus now extends this workspace through the shared contracts in [PREPARATION_PATHWAYS.md](PREPARATION_PATHWAYS.md). It preserves the existing homes and requires normal API deployment; no curriculum is inferred from provenance.
+
 ## Audited implementation stage — 22 October 2026
 
 | Design requirement | Current implementation | Evidence / remaining boundary |

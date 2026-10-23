@@ -1,3 +1,4 @@
+import { preparationLibrary } from '../src/domain/preparation-pathways.js';
 import { SUBJECT_INDEX, REFERENCES, MEDIA_TYPES } from '../src/domain/app-navigation.js';
 import { prerequisiteLinks, savedViewUrl } from '../src/domain/library-workspaces.js';
 import { escapeText as e } from './navigation-view.js';
@@ -42,6 +43,7 @@ function saved(data, options) {
   return '<p>' + (options.persistence === 'device' ? 'Saved views and bookmarks are stored on this device.' : 'Storage is unavailable; saved views and bookmarks stay in page memory.') + '</p><h2>Saved filter views</h2>' + (device.views.map(v => '<div class="panel workspace-saved-row"><a href="' + e(savedViewUrl(v)) + '">' + e(v.name) + '</a><button data-delete-view="' + e(v.id) + '" aria-label="Delete saved view ' + e(v.name) + '">Delete</button></div>').join('') || '<p>No filter views saved yet. Use Save current view from any Library selection.</p>') + '<h2>Bookmarked notes</h2>' + (notes.map(note).join('') || '<p>No bookmarked published notes.</p>') + '<h2>Bookmarked questions</h2>' + (questions.map(q => '<article class="panel"><h3>' + e(q.stem) + '</h3><button data-one-study="' + e(q.questionVersionId) + '">Practice original question</button><button data-bookmark="question:' + e(q.questionId) + '" aria-pressed="true">Remove bookmark</button></article>').join('') || '<p>No bookmarked published questions. Unavailable catalog records are not reconstructed.</p>');
 }
 export function workspaceMarkup(view, data, options = {}) {
+  if (options.library) options = {...options,library:preparationLibrary(options.library,options.scope)};
   if (view === 'subjects') return subjects(options.library || data, options);
   if (view === 'compare') return compare(data, options);
   if (view === 'foundation') return foundation(data);
