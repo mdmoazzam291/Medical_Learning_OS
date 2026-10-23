@@ -45,5 +45,5 @@ Interfaces: own section/form/status on existing Import & review; use existing co
 
 - [x] Write browser journey with synthetic service responses for stage/inspect/approve, stale conflicts, retirement and dirty edits across phone/tablet/desktop; run RED in hosted browser when local engines unavailable.
 - [x] Implement escaped packet, exact digest-bound actions, dirty/busy/stale-selection protection and truthful empty state.
-- [ ] Run npm test/check/build, SQL suites and hosted Chromium/WebKit; expected all green.
-- [ ] Fresh whole-branch review under requesting-code-review, fix material findings with failing regressions, update plan/handoff/STATUS, preserve branch/PR checkpoint. Do not claim live registry deployment or clinical acceptance.
+- [x] Run npm test/check/build, SQL suites and hosted Chromium/WebKit; expected all green.
+- [x] Fresh whole-branch review under requesting-code-review, fix material findings with failing regressions, update plan/handoff/STATUS, preserve branch/PR checkpoint. Do not claim live registry deployment or clinical acceptance.
