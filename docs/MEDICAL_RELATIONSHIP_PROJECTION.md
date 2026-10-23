@@ -17,7 +17,7 @@ Newer draft, in-review or retired versions suppress older published versions; am
 
 ## Still required for production medical assertions
 
-**This is P1 read-path work only, not a completed medical relationship registry.** The production `content-library-api` v5 preparation release has no medical-relationship feed, so this feature will correctly continue to show no clinical edges. Later read/display deployments do not create that feed.
+**This is P1 read-path work only, not a completed medical relationship registry.** The production `content-library-api` v6 read/display release has no medical-relationship feed, so this feature will correctly continue to show no clinical edges. See the [23 October release receipt](releases/2026-10-23-medical-graph-integration-release.md).
 
 Follow-up implementation must include the database relationship/version table, current-rights evidence checks and immutable publication/retirement events, an authorized Admin stage/review UI, and a service-only snapshot RPC bound to the versioned source, actual reviewer grants and published concept registry. Do not feed `medicalRelationships` from a caller-supplied client payload. Source-rights reuse, corrections, stale versions, disabled reviewer grants, and rollback require PostgreSQL integration tests before migration or API deployment. The new optional projection must not silently fall back to an unverified dataset when source resolution fails.
 

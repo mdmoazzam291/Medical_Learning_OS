@@ -50,7 +50,7 @@ No new service, package, database store, migration, paid plan or model dependenc
 
 Preparation focus now extends this workspace through the shared contracts in [PREPARATION_PATHWAYS.md](PREPARATION_PATHWAYS.md). It preserves the existing homes and requires normal API deployment; no curriculum is inferred from provenance.
 
-## Audited implementation stage — 22 October 2026
+## Audited implementation stage — 23 October 2026
 
 | Design requirement | Current implementation | Evidence / remaining boundary |
 |---|---|---|
@@ -59,10 +59,10 @@ Preparation focus now extends this workspace through the shared contracts in [PR
 | Desktop/iPad adaptable panes | Implemented | Five-width Chromium acceptance; existing macOS WebKit CI covers iPad windows, not physical-device testing |
 | Source-grounded structured sections | Implemented in PR298 | Only explicitly headed published note material is assembled; missing sections remain missing |
 | Placement inspection and draft preview | Implemented in PR296 | Prompt-only opaque iframe, restricted relay, source/evidence boundaries and desktop/iPad canvas tests |
-| Medical relationship read/display | PR303 | Explicit directed, exact-source/fingerprint projection; no automatic clinical inference |
+| Medical relationship read/display | Released through PR303 | Explicit directed, exact-source/fingerprint projection; preparation scope enforced at the shared graph boundary; no automatic clinical inference |
 | Authoritative medical relationship registry | Pending #299 | Database versions, actual grants/rights/review receipts, publish/retire transaction, Admin controls and protected snapshot feed |
 | Large-catalog discovery | Pending #300 | Present client render limits do not provide server pagination or an indexed search contract |
-| Live signed-in acceptance | Pending #301 | Public homepage and Library guest gate observed in this audit; no authenticated session or real-content acceptance |
+| Live signed-in acceptance | Pending #301 | This graph release rechecked the Library guest gate; signed-in and populated real-content acceptance was not rerun |
 | Rich clinical presentations and overlays | Pending #302 | Current task facets and linked/private views are foundations; reviewed symptom mappings, grounded comparisons and full media/case workflows remain |
 | Learning outcome claims | Unvalidated | Browsing and graph exploration do not create mastery evidence; recall/transfer experiments require reviewed content and prospective responses |
 

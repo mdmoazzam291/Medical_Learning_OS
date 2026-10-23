@@ -35,9 +35,9 @@
 - [x] Record baseline and reproduce merge conflicts; keep the newer main receipts and original graph history.
 - [x] Write executable scope/source regressions against real projections and watch the reproduced failures before the minimal fix.
 - [x] Retain relationships only when both endpoints survive preparation scope; keep their referenced source rows; clear them in empty scope.
-- [ ] Run focused regressions, npm test, npm run check, npm run build:pages and five-width workspace/preparation browser checks; inspect screenshots.
-- [ ] Obtain fresh independent review and resolve material findings with failing-first regression evidence.
-- [ ] Save to the original PR303 branch using a non-forced update, verify remote source, then inspect exact-head hosted checks before integration/release claims.
+- [x] Run focused regressions, npm test, npm run check, npm run build:pages and five-width workspace/preparation browser checks; inspect screenshots.
+- [x] Obtain fresh independent review and resolve material findings with failing-first regression evidence.
+- [x] Save to the original PR303 branch using a non-forced update, verify remote source, then inspect exact-head hosted checks before integration/release claims.
 
 ## Execution record
 
@@ -45,3 +45,4 @@
 - Ruling: this resumes the existing approved graph and preparation design; no new design approval is needed for merge/conflict repairs. Source/clinical publication authority remains unchanged.
 - Initial full test command reported1399 passes, but its source read overlapped the exploratory merge; do not treat it as an isolated baseline. Final combined source receives a fresh full suite.
 - Independent review found one Important raw-renderer scope bypass. Two regressions failed before applying scope at conceptNeighborhood; all35 focused tests then passed. No Critical or Minor findings. Existing #299 storage/authority, actual clinical validity, live production acceptance and hosted browser acceptance remain separate gates; no additional review authority is implied.
+- Final1441/1441 tests; hosted39926198142 core/Chromium/WebKit all SUCCESS. Runtime dd5424eddcba97587f0b2c2032ccb62b1a315e58 merged as ff46e6d9207d5fc0766246b8b88c7ff5b19324a5 with identical tree94bfad145755f7a83422ecc02ce549eb79cd2411. Release receipt records Library APIv6 / Study APIv52 source parity, normal frontend deployment and remaining production-content gates.
