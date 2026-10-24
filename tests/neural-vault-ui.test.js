@@ -32,7 +32,8 @@ test('NeuralVault UI supports create, revision-safe update and delete', () => {
 
 test('personal note text is escaped before HTML rendering', () => {
   assert.match(source, /escape\(annotation\.bodyMarkdown\)/);
-  assert.match(source, /escape\(note\.bodyMarkdown\)/);
+  assert.match(source, /renderCanonicalNote\(note\.bodyMarkdown/);
+  assert.match(source, /renderNoteOutline\(rendered\.sections\)/);
 });
 
 test('NeuralVault UI supports authenticated search and update-aware anchor messaging', () => {
@@ -52,6 +53,9 @@ test('NeuralVault startup honors exact concept deep links', () => {
 test('production public surface exposes NeuralVault HTML and module assets', () => {
   assert.equal(publicFileSet.has('web/vault.html'), true);
   assert.equal(publicFileSet.has('web/vault.js'), true);
+  assert.equal(publicFileSet.has('web/canonical-note-reader.js'), true);
+  assert.equal(publicFileSet.has('web/canonical-note-reader.css'), true);
+  assert.match(html, /canonical-note-reader\.css/);
 });
 
 test('NeuralVault renders only allowlisted Study Now arrival context for the exact concept', () => {
