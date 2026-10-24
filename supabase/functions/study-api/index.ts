@@ -19,6 +19,7 @@ import { buildCanonicalPostAnswerTeaching } from "./_shared/post-answer-teaching
 import { buildServerScoredVisualDetectionEvent } from "./_shared/visual-detection.js";
 import { buildSessionSummary } from "./_shared/session-summary.js";
 import { readLearnerNavigation } from "./_shared/learner-navigation.js";
+import { readLearnerAttemptReview } from "./_shared/attempt-review.js";
 
 type Json = Record<string, unknown>;
 
@@ -1439,6 +1440,17 @@ Deno.serve(async (req: Request) => {
       } catch (error) {
         const code = error instanceof Error ? error.message : "navigation_read_failed";
         fail(["query_not_supported", "offset_invalid"].includes(code) ? 400 : 500, code);
+      }
+    }
+
+    const attemptReviewMatch = path.match(/^\/attempts\/([a-zA-Z0-9:_@.\-]{1,160})\/review$/);
+    if (req.method === "GET" && attemptReviewMatch) {
+      try {
+        return response(req, 200, await readLearnerAttemptReview({ admin, learnerId, attemptId: attemptReviewMatch[1], search: url.search, getCatalog, trustedRead }));
+      } catch (error) {
+        const code = error instanceof Error ? error.message : "attempt_review_read_failed";
+        fail(code === "attempt_not_found" ? 404 : ["query_not_supported", "invalid_identifier"].includes(code) ? 400 : 500,
+          ["attempt_not_found", "query_not_supported", "invalid_identifier", "attempt_evidence_invalid"].includes(code) ? code : "attempt_review_read_failed");
       }
     }
 

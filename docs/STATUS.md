@@ -1,3 +1,7 @@
+## Saved-attempt review continuation PR324 — 25 October 2026
+
+PR324 supersedes closed PR322, preserving main90aaacdc and the released PR321 learner-content fallback. Combined1484Node tests/check/build pass on exact source0e59653. Fresh Foundation40142407864 is queued; responsive hosted acceptance, runtime deployment and website release are pending. Original text review is implemented; archived-retired authorization and non-original/media history remain unfinished. All content and learner data stay in Supabase.
+
 ## Published learner-content fallback — production release verified
 - Checked 25 October 2026 IST. Owner fix PR #321 merged as `c264eb1bfcd23e3158760ff721d7979fc3148181`. Foundation run 40141314085 passed Node/check, Chromium and native WebKit; Cloudflare production web/heartbeat builds succeeded. Supabase `study-api` v53 ACTIVE includes the no-mapping fallback; exact ten-file bundle audited. Catalog v446, 6 published questions and 6 published notes unchanged. No clinical review/rights/learner writes or migration. Real authenticated production learner acceptance and served-asset equality remain unverified. See [release receipt](releases/2026-10-25-learner-content-visibility-release.md). Follow up with normal learner Library/Study Now/Notes/Graph acceptance and approved exam requirements.
 
@@ -6,6 +10,14 @@
 - Owner requested a fix. Feature branch `fix/learner-unmapped-content-fallback-20261025`, PR #321 changes only the shared preparation projection, Study Now fallback receipt/learner message, Library status message, preparation tests, responsive browser assertions and documentation. It does not publish content, grant medical/exam approval, change DB privileges, or restore erased pilots.
 - Initial CI check failed on two older medical-graph integration assertions expecting unmapped to hide published graph context. Those assertions were updated on the same feature branch to retain published context only for valid profiles. Follow-up CI is not yet confirmed here. Production web and `study-api` deployment and genuine signed-in acceptance remain pending; existing sessions and approved mapped scopes retain old behavior.
 - Exact next: verify PR #321 full Node/check, Chromium and WebKit; review diff; merge only if green; deploy coupled web + study-api; inspect live API and route with genuine learner credentials when available. Unrelated PR #318 remains untouched.
+
+## Saved-attempt review UI — 25 October 2026
+
+PR322 now includes Recent Activity review links and read-only exact-version question/result/explanation display. URL preserves attempt/page across reload/return; failures and restrictions preserve activity with no protected content.1482Node tests/check/build pass. Hosted responsive/Chromium/WebKit flow and deployment acceptance pending. All retired versions remain denied; archive authorization and non-original/media retrieval remain open. No database or production runtime changed in this follow-up.
+
+## Protected attempt review backend — 25 October 2026
+
+PR322 saves the first learner-owned historical review boundary on codea38e22b. Exact still-published original-text prompts and stored receipts can be retrieved independently of session closure; retired/rights-restricted/missing content stays redacted. Final1476Node tests/check/build pass; hosted CI and deployment pending. No UI or archived-retired authorization is claimed; frozen non-original/media retrieval remains open. No production database or learner records changed. See latest handoff and the scoped plan.
 
 ## Scheduled retention acceptance — 25 October 2026
 
