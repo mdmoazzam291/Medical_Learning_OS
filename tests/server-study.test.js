@@ -213,3 +213,19 @@ test('HTTP enforces authorization, origin, body contracts, learner isolation and
     assert.equal((await request('/api/export')).status, 401);
   } finally { await new Promise(resolve => server.close(resolve)); }
 });
+
+test('retirement and a byte-preserving catalog restore retain exact historical learner evidence', t => {
+  const {service}=setup(t);const catalog=published();service.importCatalog(catalog);
+  const session=service.start('learner-a',{});const receipt=answer(service,'learner-a',session,{optionId:'copies'});
+  const evidence=JSON.stringify(service.events('learner-a'));
+  const retired=retireQuestion(catalog,version);
+  const exported=JSON.stringify(retired);const restored=JSON.parse(exported);
+  service.importCatalog(restored);
+  assert.equal(JSON.stringify(service.events('learner-a')),evidence);
+  assert.equal(receipt.event.questionVersionId,version);
+  assert.equal(restored.questions.find(q=>q.questionVersionId===version).stem,catalog.questions[0].stem);
+  assert.equal(service.session('learner-a',session.sessionId).receipt.explanation,receipt.explanation);
+  assert.deepEqual(service.events('learner-b'),[]);
+  assert.deepEqual(service.questions('learner-a'),[]);
+  assert.throws(()=>service.start('learner-b',{}),/no_published_questions/);
+});

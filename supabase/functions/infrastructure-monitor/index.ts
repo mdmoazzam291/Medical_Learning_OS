@@ -98,12 +98,18 @@ async function r2Probe(): Promise<ProviderResult> {
   const runs: Record<string, unknown>[] = [];
   try {
     for (const workflow of githubWorkflows) {
-      const url = `https://api.github.com/repos/${githubRepo}/actions/workflows/${encodeURIComponent(workflow)}/runs?per_page=1`;
+      const url = `https://api.github.com/repos/${githubRepo}/actions/workflows/${encodeURIComponent(workflow)}/runs?branch=main&per_page=1`;
       const { response, body } = await fetchJson(url, { headers: { "user-agent": "medical-learning-os-infra-monitor" } }, 6000);
       const run = Array.isArray(body?.workflow_runs) ? body.workflow_runs[0] : null;
-      runs.push({ workflow, httpStatus: response.status, status: run?.status ?? null, conclusion: run?.conclusion ?? null, updatedAt: run?.updated_at ?? null, htmlUrl: run?.html_url ?? null });
+      runs.push({ workflow, httpStatus: response.status, status: run?.status ?? null, conclusion: run?.conclusion ?? null, createdAt: run?.created_at ?? null, updatedAt: run?.updated_at ?? null, htmlUrl: run?.html_url ?? null });
     }
-    const failed = runs.some((run: any) => run.httpStatus !== 200 || run.status !== "completed" || run.conclusion !== "success");
+    // Restore drills can consume an existing archive; their run time is not backup freshness.
+    const failed = runs.some((run: any) => {
+      const age = Date.now() - Date.parse(String(run.createdAt));
+      const maxDays = run.workflow === "supabase-r2-backup.yml" ? 8 : 35;
+      return run.httpStatus !== 200 || run.status !== "completed" || run.conclusion !== "success" ||
+        !Number.isFinite(age) || age < 0 || age > maxDays * 86400000;
+    });
     return { provider: "r2", status: failed ? "degraded" : "healthy", source: "github_workflow_runs", observedAt, metrics: { workflows: runs } };
   } catch (error) {
     return { provider: "r2", status: "unavailable", source: "github_workflow_runs", observedAt, metrics: { workflows: runs, error: String((error as Error)?.message || "probe_failed") } };
@@ -114,19 +120,31 @@ async function supabaseProbe(admin: any): Promise<ProviderResult> {
   const observedAt = new Date().toISOString();
   const started = Date.now();
   try {
-    const [summary, storage] = await Promise.all([
+    const [summary, storage, dashboard] = await Promise.all([
       admin.rpc("owner_admin_access_summary_v1"),
-      admin.storage.listBuckets()
+      admin.storage.listBuckets(),
+      admin.rpc("owner_admin_dashboard_v1")
     ]);
-    const ok = !summary.error && !storage.error;
+    const databaseBytes = dashboard.error ? null : dashboard.data?.infrastructure?.databaseBytes;
+    // Conservative operating budget, not a discovered billing entitlement. Override on plan changes.
+    const budget = Number(Deno.env.get("MLOS_DATABASE_BUDGET_BYTES") ?? "500000000");
+    const capacityKnown = Number.isSafeInteger(databaseBytes) && databaseBytes >= 0 && Number.isSafeInteger(budget) && budget > 0;
+    const ratio = capacityKnown ? databaseBytes / budget : null;
+    const capacityStage = ratio === null ? "unknown" : ratio >= .95 ? "critical" : ratio >= .85 ? "urgent" : ratio >= .75 ? "action" : ratio >= .60 ? "review" : "normal";
+    const ok = !summary.error && !storage.error && !dashboard.error && capacityStage === "normal";
     return {
       provider: "supabase",
-      status: ok ? "healthy" : "degraded",
+      status: capacityStage === "critical" ? "unavailable" : ok ? "healthy" : "degraded",
       source: "service_role_runtime_probe",
       observedAt,
       metrics: {
         latencyMs: Date.now() - started,
         databaseRpc: summary.error ? "error" : "ok",
+        databaseBytes: capacityKnown ? databaseBytes : null,
+        databaseBudgetBytes: Number.isSafeInteger(budget) && budget > 0 ? budget : null,
+        databaseBudgetSource: "configured_operating_budget",
+        capacityStage,
+        capacityRatio: ratio,
         storage: storage.error ? "error" : "ok",
         bucketCount: storage.error ? null : (storage.data ?? []).length
       }
@@ -258,6 +276,11 @@ async function sendAlertNotification(admin: any, intent: DeliveryIntent) {
   return typeof body?.id === "string" ? body.id : null;
 }
 
+function alertDeliveryErrorCode(error: unknown) {
+  const code = error instanceof Error ? error.message : String((error as any)?.message ?? "");
+  return /^(alert_delivery_not_configured|alert_owner_unavailable|alert_owner_email_unavailable|resend_alert_http_[45][0-9]{2})$/.test(code) ? code : "delivery_failed";
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method !== "POST") return json(405, { error: "method_not_allowed" });
   if (!supabaseUrl || !secretKey) return json(500, { error: "server_configuration_error" });
@@ -306,7 +329,7 @@ Deno.serve(async (req: Request) => {
         ? { idempotencyKey: intent.idempotencyKey, error: "delivery_evidence_record_failed" }
         : data);
     } catch (error) {
-      const deliveryErrorCode = "delivery_failed";
+      const deliveryErrorCode = alertDeliveryErrorCode(error);
       const { data, error: recordError } = await admin.rpc("owner_monitor_record_notification_delivery_v1", {
         p_idempotency_key: intent.idempotencyKey,
         p_outcome: "failed",
@@ -316,7 +339,7 @@ Deno.serve(async (req: Request) => {
       deliveries.push({
         idempotencyKey: intent.idempotencyKey,
         error: deliveryErrorCode,
-        detail: String((error as Error)?.message || "alert_send_failed").slice(0, 120),
+        detail: deliveryErrorCode,
         evidence: recordError ? "record_failed" : data
       });
     }

@@ -128,3 +128,7 @@ The controlled browser event was received by Sentry with the learner email/token
 The same verification also exposed an implementation flaw: the static Sentry Loader Script was loading in localhost/CI despite documentation saying preview-only. That caused deliberate browser-test failures such as quota and unsupported-data simulations to appear as Sentry issues.
 
 The loader is now inserted only when the hostname ends in `.onrender.com`. Localhost and CI no longer initialize Sentry. The temporary controlled test trigger has been removed.
+
+## Supabase retention capacity guard (25 October 2026)
+
+The monitor source now reuses the service-only owner dashboard database-byte measurement, with a conservative configurable `MLOS_DATABASE_BUDGET_BYTES` operating budget (default 500,000,000). Stages are 60/75/85/95%; missing evidence is degraded. Main-branch workflow evidence is freshness-checked, with an eight-day backup and 35-day audit/restore window. No automatic migration, write blocking or deletion. See [retention readiness](SUPABASE_RETENTION_READINESS.md) for verification, sender-configuration blocker and historical-version limits. A repository change is not proof the pinned live monitor has been redeployed.

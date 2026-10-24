@@ -1,3 +1,22 @@
+## Scheduled retention acceptance — 25 October 2026
+
+Natural04:15IST monitor execution persisted normal capacity:22,047,891bytes against500,000,000 operating budget. Delivery now diagnoses missing configuration. R2 correctly remains degraded because no main storage audit exists; repaired its manual-only workflow with monthly read-only inventory and scoped main-file-change triggers. Eight guard tests and1465Node/check/build pass. Hosted repaired CI and audit execution pending; sender and withdrawal-aware historical retrieval remain open. Supabase remains authoritative.
+
+## Retention acceptance follow-up — 25 October 2026
+
+PR319 hosted core checks pass; Chromium found an eager accessible-name selection race in the navigation test helper. The helper now waits for either valid phone Tools control without weakening assertions or changing runtime. Local tests/check/build and full hosted browser acceptance pending. Version7 scheduled snapshots, sender configuration and withdrawal-aware historical retrieval remain separately unverified. No content or learner data moved.
+
+## Supabase retention monitor deployed — 25 October 2026
+
+PR319 monitoring source is live as version7; exact pin readback and unauthenticated401 verified. Database-byte measurement22,047,891 is below budget. Local1465tests/check/build pass; exact-head CI and natural scheduled snapshot pending. Email remains blocked by sender configuration; full hosted historical-prompt retrieval remains unimplemented. No content, learner records, schema or credentials changed. See retention readiness and handoff.
+
+## Supabase retention safeguards — 25 October 2026
+
+PR319 adds capacity stages and accurate backup/notification evidence while retaining Supabase authority. Local1465Node tests/check/build pass; Python24pass/2skip. Exact-head CI and pinned monitor rollout pending. Existing encrypted backup repair was already integrated; sender configuration and safe hosted historical-prompt retrieval remain gaps. See [readiness](SUPABASE_RETENTION_READINESS.md) and latest handoff for limits and exact next action. No production data/schema/credentials changed.
+
+## Responsive Admin top entry and complete feature map — released
+- Checked 24 October 2026 at 15:32 IST. Owner explicitly chose Master Admin in tablet/iPad/desktop top navigation, phone/narrow split entry in avatar. PR316 merged asfacfbaa2b351f607e21c2ceb77c46b83d13440fa fromd72fc325a5b546474d0cc08a49ca936c607e6778; merged treee614aa4fad2451b45fbadad3c63f00c5d4d1cb69 equals the exact tested feature tree. Codex owns docs/admin-responsive-entry-release-20261024 for this receipt; no runtime change after merge.
+
 ## Responsive Admin top entry and complete feature map — released
 - Checked 24 October 2026 at 15:32 IST. Owner explicitly chose Master Admin in tablet/iPad/desktop top navigation, phone/narrow split entry in avatar. PR316 merged asfacfbaa2b351f607e21c2ceb77c46b83d13440fa fromd72fc325a5b546474d0cc08a49ca936c607e6778; merged treee614aa4fad2451b45fbadad3c63f00c5d4d1cb69 equals the exact tested feature tree. Codex owns docs/admin-responsive-entry-release-20261024 for this receipt; no runtime change after merge.
 - Single authorized entry per layout; wide Admin is a destination without a learner-context Admin tool disclosure. Existing Admin local toolbar, five groups, legacy-pin isolation, draft/history and denial behavior remain. Ordinary learner/guest navigation is byte-identical to base across40 rendering combinations. No backend/grant/content or other learner-feature changes.
