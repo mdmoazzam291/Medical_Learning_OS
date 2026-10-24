@@ -2244,7 +2244,8 @@ Deno.serve(async (req: Request) => {
         availableMinutes,
         maxItems,
         generatedAt
-      ), preparation: {status:preparation.status,registryVersion:preparation.registryVersion,profile:preparation.profile} };
+      ), preparation: {status:preparation.status,registryVersion:preparation.registryVersion,profile:preparation.profile,
+        fallbackReason:preparation.fallbackReason} };
       const ids = plan.selected.map((item: any) => item.questionVersionId);
       if (!ids.length) {
         return response(req, 200, { plan, session: null });

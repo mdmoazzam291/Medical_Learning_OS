@@ -31,6 +31,24 @@ test('scope uses reviewed exact artifact bindings, never historical exam origin 
   lib.questions[0].questionVersionId='shared-q@2';
   assert.equal(domain.preparationLibrary(lib,'goals').questions.some(q=>q.questionId==='shared-q'),false);
 });
+test('zero approved requirements preserve published general practice without claiming exam relevance',()=>{
+  const c=curriculum();c.mappings=[];
+  const all=library(), scoped=domain.preparationLibrary({...all,preparation:{profile,curriculum:c}},'goals');
+  assert.deepEqual(scoped.questions.map(q=>q.questionId),all.questions.map(q=>q.questionId));
+  assert.deepEqual(scoped.notes.map(n=>n.noteVersionId),all.notes.map(n=>n.noteVersionId));
+  assert.equal(scoped.preparation.fallbackReason,'unmapped-goal-requirements');
+  assert.deepEqual(scoped.preparation.coverage.pathways.map(p=>p.status),['unmapped','unmapped']);
+  assert.equal(domain.preparationLibrary({...all,preparation:{profile,curriculum:c}},'foundations').questions.length,0);
+  const cPartial=curriculum();cPartial.mappings=cPartial.mappings.filter(m=>m.objectiveVersionId==='shared@1');
+  const partly=domain.preparationLibrary({...all,preparation:{profile,curriculum:cPartial}},'goals');
+  assert.deepEqual(partly.questions.map(q=>q.questionId),['shared-q','f-q']);
+  assert.equal(partly.preparation.fallbackReason,undefined);
+});
+test('shipped registry falls back to general content only for a valid configured profile',()=>{
+  const scoped=domain.preparationLibrary({...library(),preparation:{profile,curriculum:initialCurriculum}},'goals');
+  assert.equal(scoped.questions.length,5);
+  assert.equal(scoped.preparation.fallbackReason,'unmapped-goal-requirements');
+});
 test('coverage distinguishes teaching, independent assessments and unmapped pathway requirements',()=>{
   assert.equal(typeof domain.preparationCoverage,'function');
   const report=domain.preparationCoverage(library(),curriculum(),profile);

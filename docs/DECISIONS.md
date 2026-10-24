@@ -1,5 +1,10 @@
 # Decision log
 
+## ADR-131 — Unmapped preparation goals show published general practice, not false exam coverage
+
+Accepted owner repair request 25 October 2026: When all selected preparation pathways lack approved requirements, the default Library goal view and newly generated Study Now sessions may use the already-published catalog as **explicitly unmapped general practice**. Learners must see that neither NEET-PG nor INI-CET exam suitability has been reviewed. Never derive approved exam requirements from PYQ origin, topics or user metadata. Keep invalid profiles fail-closed, Needed foundations without approved prerequisites empty, and restore exact-version approved scope as soon as a selected pathway has mapped requirements. This is an availability/display fallback, not content publication, clinical approval, learner-model inference or exam eligibility.
+
+
 ## ADR-130 — Responsive Admin destination placement
 
 Accepted owner clarification on 24 October 2026: Master Admin itself belongs in the top master row on tablet/iPad and desktop; phone/narrow split entry remains in the avatar. This supersedes only the all-device avatar placement in ADR-129. Keep one Admin navigation entry per responsive layout, show it only after server-confirmed authority, and keep Admin tool menus and legacy Admin pins out of learner contextual menus. Wide Admin is a destination link without a tool disclosure; its existing local Tools menu stays inside Admin pages. No learner feature or authority-model change.

@@ -122,6 +122,14 @@ export function preparationLibrary(library, scope) {
   const empty = () => ({...library,concepts:[],questions:[],notes:[],links:[],sources:[],medicalRelationships:[],preparation:{...context,scope:selectedScope}});
   if (!context.profile) return empty();
   const resolved = resolvePreparation(context.curriculum, context.profile);
+  // No approved requirements means exam suitability is unknown, not that the
+  // published catalog is unusable. Expose it only as explicitly unmapped
+  // general practice; never infer objective bindings from topic or PYQ origin.
+  if (selectedScope === 'goals' && resolved.pathways.every(p => !p.requiredObjectiveVersionIds.length)) {
+    return {...library,preparation:{...context,scope:selectedScope,
+      fallbackReason:'unmapped-goal-requirements',
+      coverage:preparationCoverage(library,context.curriculum,context.profile)}};
+  }
   const ids = new Set(selectedScope === 'foundations' ? resolved.foundationObjectiveVersionIds : resolved.objectiveVersionIds);
   const bindings = availableBindings(library, context.curriculum).filter(a => a.objectiveVersionIds.some(key => ids.has(key)));
   const questions = library.questions.filter(q => bindings.some(a => a.artifactKind === 'question' && a.artifactVersionId === q.questionVersionId));
@@ -144,5 +152,6 @@ export function preparationLibrary(library, scope) {
 export function preparationQuestionScope(questions, curriculum, profile) {
   const context = preparationContext(curriculum, profile);
   const result = preparationLibrary({concepts:[],questions,notes:[],links:[],preparation:context}, 'goals');
-  return {questions:result.questions,registryVersion:curriculum.registryVersion,status:context.status,profile:context.profile};
+  return {questions:result.questions,registryVersion:curriculum.registryVersion,status:context.status,profile:context.profile,
+    fallbackReason:result.preparation?.fallbackReason||null};
 }
