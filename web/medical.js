@@ -434,7 +434,9 @@ async function startStudyNow(availableMinutes) {
     const result = await cloud.studyNow(availableMinutes, 50);
     if (!result.session) {
       state.busy = false;
-      announce(result.plan?.preparation?.status === 'configured' ? 'No reviewed questions match your preparation goals in this Study Now window. Check Library coverage or choose Explore all knowledge in Library. Your saved revision history is kept.' : result.plan?.preparation?.status === 'invalid-profile' ? 'Your saved preparation goals need updating in Account before focused Study Now can start.' : 'Nothing is currently recommended inside this Study Now window. Future reviews were not pulled early.');
+      announce(result.plan?.preparation?.fallbackReason === 'unmapped-goal-requirements'
+        ? 'There are no published questions available for general practice in this Study Now window. Exam-goal mappings are still pending; no exam suitability has been inferred.'
+        : result.plan?.preparation?.status === 'configured' ? 'No reviewed questions match your preparation goals in this Study Now window. Check Library coverage or choose Explore all knowledge in Library. Your saved revision history is kept.' : result.plan?.preparation?.status === 'invalid-profile' ? 'Your saved preparation goals need updating in Account before focused Study Now can start.' : 'Nothing is currently recommended inside this Study Now window. Future reviews were not pulled early.');
       await loadOverview();
       return;
     }
@@ -449,6 +451,9 @@ async function startStudyNow(availableMinutes) {
       error: null
     };
     retainSessionRoute(result.session);
+    if (result.plan?.preparation?.fallbackReason === 'unmapped-goal-requirements' && result.plan?.resumedExisting === false) {
+      announce('This session uses published general-practice questions while reviewed exam-goal mappings are unavailable. It does not establish suitability for NEET-PG or INI-CET.');
+    }
     if (result.plan?.resumedExisting === true) {
       announce(result.session.receipt
         ? 'Resumed your unfinished Study Now session. This question was already answered earlier; review the saved feedback, then finish or continue.'

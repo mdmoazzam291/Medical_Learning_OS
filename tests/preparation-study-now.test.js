@@ -14,11 +14,16 @@ test('one combined plan revises a shared question once and excludes unrelated ne
   assert.equal(plan.selected.filter(q=>q.questionVersionId==='shared-q@1').length,1);
   assert.equal(plan.selected.some(q=>q.questionVersionId==='other-q@1'),false);
 });
-test('missing or invalid goals never silently produce a different goal recommendation',()=>{
+test('unmapped approved requirements permit labeled general practice but invalid goals fail closed',()=>{
   const c=curriculum();c.mappings=[];
-  assert.equal(preparationQuestionScope(library().questions,c,profile).questions.length,0);
+  const selected=preparationQuestionScope(library().questions,c,profile);
+  assert.equal(selected.questions.length,5);
+  assert.equal(selected.fallbackReason,'unmapped-goal-requirements');
+  assert.equal(selected.status,'configured');
   assert.equal(preparationQuestionScope(library().questions,c,null).questions.length,5);
-  assert.equal(preparationQuestionScope(library().questions,c,{...profile,primaryPathwayId:'unknown'}).questions.length,0);
+  const invalid=preparationQuestionScope(library().questions,c,{...profile,primaryPathwayId:'unknown'});
+  assert.equal(invalid.questions.length,0);
+  assert.equal(invalid.fallbackReason,null);
 });
 test('deployed Study Now source scopes only new plan creation after existing-session resume',()=>{
   const source=readFileSync(new URL('../supabase/functions/study-api/index.ts',import.meta.url),'utf8');
@@ -26,4 +31,5 @@ test('deployed Study Now source scopes only new plan creation after existing-ses
   assert.ok(route.indexOf('const existingSessionId')<route.indexOf('preparationQuestionScope('));
   assert.match(route,/preparationQuestionScope\([\s\S]*?authData\.user\.user_metadata\?\.mlos_preparation_profile/);
   assert.match(route,/preparation:.*preparation\.status/);
+  assert.match(route,/fallbackReason:preparation\.fallbackReason/);
 });

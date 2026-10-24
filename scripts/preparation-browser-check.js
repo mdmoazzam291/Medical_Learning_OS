@@ -109,8 +109,12 @@ try{
     await page.goto(origin+'/web/library.html?view=overview&concept=shared&scope=all');
     await page.getByText('Published note: Unbound shared note · unbound-note@1',{exact:true}).first().waitFor();
     empty=true;await page.goto(origin+'/web/library.html?view=questions&scope=goals');await page.getByLabel('Content scope',{exact:true}).waitFor();
-    assert.equal(await page.locator('[data-question-card]').count(),0);
+    assert.equal(await page.locator('[data-question-card]').count(),5);
+    await page.getByText(/Showing published questions and notes for general practice only/).waitFor();
     await page.locator('.preparation-focus summary').click();assert.equal(await page.getByText(/Not mapped yet/).count(),2);
+    await page.getByLabel('Content scope',{exact:true}).selectOption('foundations');
+    assert.equal(await page.locator('[data-question-card]').count(),0);
+    await page.getByText(/required foundations cannot be identified/).waitFor();
     await page.getByLabel('Content scope',{exact:true}).selectOption('all');assert.equal(await page.locator('[data-question-card]').count(),5);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,name+' horizontal overflow');
     await context.close();

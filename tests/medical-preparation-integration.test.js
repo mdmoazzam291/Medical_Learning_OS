@@ -36,16 +36,21 @@ test('foundation scope cannot carry a goal-only medical relationship or its sour
   assert.deepEqual(conceptNeighborhood(scoped,'foundation',{perspective:'medical'}).edges,[]);
 });
 
-test('invalid and unmapped preparation clear medical relationships along with the empty inventory',()=>{
-  for(const state of ['invalid','unmapped']) {
-    const lib=fixture();
-    if(state==='invalid')lib.preparation.profile={...profile,pathwayIds:['future'],primaryPathwayId:'future'};
-    else lib.preparation.curriculum.mappings=[];
-    const scoped=preparationLibrary(lib,'goals');
-    assert.deepEqual(scoped.concepts,[],state);
-    assert.deepEqual(scoped.sources,[],state);
-    assert.deepEqual(scoped.medicalRelationships,[],state);
-  }
+test('invalid profiles hide scoped medical context, but unmapped goals retain reviewed published context',()=>{
+  const invalid=fixture();
+  invalid.preparation.profile={...profile,pathwayIds:['future'],primaryPathwayId:'future'};
+  const blocked=preparationLibrary(invalid,'goals');
+  assert.deepEqual(blocked.concepts,[]);
+  assert.deepEqual(blocked.sources,[]);
+  assert.deepEqual(blocked.medicalRelationships,[]);
+
+  const unmapped=fixture();
+  unmapped.preparation.curriculum.mappings=[];
+  const general=preparationLibrary(unmapped,'goals');
+  assert.equal(general.preparation.fallbackReason,'unmapped-goal-requirements');
+  assert.deepEqual(general.concepts,unmapped.concepts);
+  assert.deepEqual(general.sources,unmapped.sources);
+  assert.deepEqual(general.medicalRelationships,unmapped.medicalRelationships);
 });
 
 test('Explore all and unconfigured preferences preserve published medical context without granting coverage',()=>{
@@ -69,14 +74,17 @@ test('the graph renderer applies scope when called with the original API library
   }
 });
 
-test('raw graph entry points cannot render assertions for invalid or unmapped preferences',()=>{
-  for(const state of ['invalid','unmapped']) {
-    const lib=fixture();
-    if(state==='invalid')lib.preparation.profile={...profile,pathwayIds:['future'],primaryPathwayId:'future'};
-    else lib.preparation.curriculum.mappings=[];
-    const graph=conceptNeighborhood(lib,'foundation',{perspective:'medical',scope:'goals'});
-    assert.deepEqual(graph.nodes,[],state);
-    assert.deepEqual(graph.edges,[],state);
-    assert.doesNotMatch(neighborhoodMarkup(lib,'foundation',{perspective:'medical',scope:'goals'}),/Synthetic reviewed assertion|inside@1|outside@1/,state);
-  }
+test('raw graph entry points reject invalid profiles but retain reviewed unmapped medical context',()=>{
+  const invalid=fixture();
+  invalid.preparation.profile={...profile,pathwayIds:['future'],primaryPathwayId:'future'};
+  const hidden=conceptNeighborhood(invalid,'foundation',{perspective:'medical',scope:'goals'});
+  assert.deepEqual(hidden.nodes,[]);
+  assert.deepEqual(hidden.edges,[]);
+  assert.doesNotMatch(neighborhoodMarkup(invalid,'foundation',{perspective:'medical',scope:'goals'}),/Synthetic reviewed assertion|inside@1|outside@1/);
+
+  const unmapped=fixture();
+  unmapped.preparation.curriculum.mappings=[];
+  const graph=conceptNeighborhood(unmapped,'foundation',{perspective:'medical',scope:'goals'});
+  assert.equal(graph.edges.length,2);
+  assert.equal((neighborhoodMarkup(unmapped,'foundation',{perspective:'medical',scope:'goals'}).match(/Synthetic reviewed assertion/g)||[]).length,2);
 });
