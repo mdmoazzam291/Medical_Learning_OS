@@ -42,6 +42,7 @@ Cross-cutting behavior: server-verified Admin access; independent review grants;
 
 | Priority | Change | Purpose and scope |
 | --- | --- | --- |
+| P0 | Complete Action Inbox coverage | Existing inbox derives catalog-review, reports, rights and infrastructure signals. Add authoritative import-draft and relationship-draft counts/links so those pending workflows cannot be overlooked; avoid duplicate totals across gates. |
 | P0 | Consistent workflow status and blockers | One presentation contract for Draft/In review/Verified/Published/Blocked/Retired, adapted to each real backend workflow. Explain required current grants, source evidence and exact-version changes; never merge the authority paths. |
 | P0 | Draft safety across full-page navigation | Preserve or explicitly confirm unsaved intake/review changes across tool switches, reload/back and failed writes. Existing in-page preservation is already tested; full-page draft recovery should be designed separately with private data/account boundaries. |
 | P0 | Actionable errors and deterministic retries | Translate raw error codes into the failed gate, retained work and exact next action. Keep authoritative receipts, digest checks, disabled pending mutations and idempotent retry behavior. |
@@ -52,7 +53,7 @@ Cross-cutting behavior: server-verified Admin access; independent review grants;
 | P1 | Consistent data-health labels | Distinguish Observed/live, Snapshot/stale, Configured, Unavailable and Experimental. Missing telemetry must not read as zero or successful recovery. |
 | Release gate | Genuine authenticated end-to-end acceptance | After actual clinical/rights review, verify a small real batch from Admin publication through learner Library/Study/Notes/Graph on phone/iPad/desktop. Existing synthetic browser/SQL checks remain valuable but distinct. |
 
-Suggested implementation order: status/blockers + errors + draft safety; inbox pagination; guided relationship editor; simplify experimental/analytics panels; governance activity view. Keep current five top-level Admin groups rather than growing new overlapping modules. The authorized entry-placement change is separate and does not implement these proposals.
+Suggested implementation order: Action Inbox coverage + status/blockers + errors + draft safety; inbox pagination; guided relationship editor; simplify experimental/analytics panels; governance activity view. Keep current five top-level Admin groups rather than growing new overlapping modules. The authorized entry-placement change is separate and does not implement these proposals.
 
 ## Code references
 

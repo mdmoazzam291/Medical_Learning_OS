@@ -1,6 +1,6 @@
 # Responsive Admin Entry Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Restore the authorized Master Admin entry to tablet/desktop top navigation while preserving phone avatar entry and tool isolation.
 
@@ -26,8 +26,10 @@
 
 Files: web/navigation-view.js; tests/admin-navigation-regressions.test.js, tests/navigation-view.test.js; scripts/navigation-browser-check.js, scripts/browser-check.js; Admin map/design/status docs.
 
-- [ ] Update responsive entry regression first; observe tablet top-entry failure.
-- [ ] Render authorized Admin destination in top row without a tools disclosure; omit duplicate wide avatar link and preserve phone entry.
-- [ ] Update browser entry discovery and verify both layouts, fits, drafts and denial.
-- [ ] Run focused/full Node, check/build, Chromium/WebKit; independent review, then scoped release and receipt.
-- [ ] Deliver complete Admin map and prioritized suggestions; do not implement broader suggestions.
+- [x] Update responsive entry regression first; observe tablet top-entry failure.
+- [x] Render authorized Admin destination in top row without a tools disclosure; omit duplicate wide avatar link and preserve phone entry.
+- [x] Update browser entry discovery and verify both layouts, fits, drafts and denial.
+- [x] Run focused/full Node, check/build, Chromium/WebKit; independent review, then scoped release and receipt.
+- [x] Deliver complete Admin map and prioritized suggestions; do not implement broader suggestions.
+
+Completed: exact-head Foundation40083545559 passed core/Chromium/WebKit;1460Node tests/check/build. Fresh review had no findings. PR316 mergedfacfbaa2b351f607e21c2ceb77c46b83d13440fa, identical tested tree; production builds succeeded and live guest Admin remains protected. Broader feature suggestions are not implemented. See docs/releases/2026-10-24-admin-responsive-entry-release.md.
