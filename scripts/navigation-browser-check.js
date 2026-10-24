@@ -89,7 +89,7 @@ try {
     const openTools = async () => {
       await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
-        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: 'Expand navigation', exact: true }).click();
+        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? 'Admin tools' : 'Expand navigation', exact: true }).click();
         return;
       }
       if (await page.locator('#mlos-workspace-menu').isVisible()) return;
@@ -99,7 +99,7 @@ try {
       await trigger.click();
       await page.locator('#mlos-workspace-menu').waitFor({ state: 'visible' });
     };
-    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: 'Collapse navigation', exact: true }).click(); } else await page.keyboard.press('Escape'); };
+    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? 'Admin tools' : 'Collapse navigation', exact: true }).click(); } else await page.keyboard.press('Escape'); };
     // Phone pin buttons are temporarily hidden by design. Seed/toggle the existing
     // persisted preference in the test harness; real pin clicks remain tested above 700px.
     const togglePinForNavigationTest = async key => {
@@ -259,8 +259,13 @@ try {
     }
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true, includeHidden: true });
-    await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
-    assert.deepEqual(await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams', 'Master Admin']);
+    const adminEntry = page.getByRole('navigation', { name: 'Account navigation', exact: true, includeHidden: true }).getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true });
+    const enterAdmin = async () => {
+      if (!(await page.locator('.mlos-account').evaluate(node => node.open))) await activate(page.getByLabel('Account menu', { exact: true }));
+      await activate(adminEntry);
+    };
+    await adminEntry.waitFor({ state: 'attached' });
+    assert.deepEqual(await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams']);
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
 
     assert.equal(await page.locator('[data-subject]').count(), 19);
@@ -401,7 +406,7 @@ try {
     await activate(page.getByLabel('Account menu', { exact: true }));
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
     await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
-    await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+    await adminEntry.waitFor({ state: 'attached' });
     if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
     await page.waitForFunction(() => location.hash === '#research');
@@ -411,16 +416,23 @@ try {
     await page.waitForFunction(() => location.hash === '');
     await openTools();
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Overview');
-    await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }));
+    await enterAdmin();
     await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor();
     await page.locator('#owner-home').waitFor();
     await settleAdmin();
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['overview']);
     assert.match(await page.locator('#owner-home').innerText(), /Urgent actions/);
     assert.equal(await page.locator('#owner-home form').count(), 0);
+    if (width <= 700) {
+      await openTools();
+      await page.setViewportSize({ width: 820, height });
+      await page.locator('.mlos-admin-toolbar [data-workspace-menu="admin"]').waitFor();
+      assert.equal(await page.locator('.mlos-admin-toolbar [data-workspace-menu="admin"]').evaluate(node => document.activeElement === node), true, 'Admin phone rotation returns focus to its local trigger');
+      await page.setViewportSize({ width, height });
+    }
     assert.equal(await page.locator('aside').count(), width <= 700 ? 1 : 0, 'only phone navigation reserves an aside');
     assert.equal(await page.locator('header').count(), 1, 'only one shared Admin header');
-    assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).getAttribute('aria-current'), 'page');
+    assert.equal(await adminEntry.getAttribute('aria-current'), 'page');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').getAttribute('href'), '/web/admin.html');
@@ -471,14 +483,13 @@ try {
     await activate(page.locator('#mlos-local-nav details[data-group="admin:content"] > summary'));
     assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:overview"]').getAttribute('open'), '', 'Admin groups expand independently');
     // Admin Content shares its landing URL with Content Intake. Keep one link,
-    // but still allow a shortcut pin and accessible collapsed flyout.
+    // without exposing an Admin shortcut pin in learner workspaces.
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').count(), 1);
-    assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 1);
-    await togglePinForNavigationTest('admin:content');
-    assert.equal(await page.locator('[data-group="admin:content"]').count(), 1, 'a pinned group never duplicates the local Admin group');
-    assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').getAttribute('aria-pressed'), 'true');
-    await togglePinForNavigationTest('admin:content');
-    assert.equal(await page.locator('nav[aria-label="Pinned shortcuts"] [data-group="admin:content"]').count(), 0, 'unpin removes this Admin shortcut, preserving other pins');
+    assert.equal(await page.locator('#mlos-local-nav [data-pin="admin:content"]').count(), 0);
+    // Legacy Admin pins remain stored, but can never surface in learner menus.
+    await page.evaluate(() => { const p = JSON.parse(localStorage.getItem('mlos-navigation-v1')); window.dispatchEvent(new CustomEvent('mlos:preferences', { detail: { prefs: { ...p, pins: [...p.pins, 'admin:content', 'admin:operations'] } } })); });
+    await openTools();
+    assert.equal(await page.locator('[data-group="admin:content"]').count(), 1);
     await closeTools();
     await openTools();
 
@@ -515,7 +526,7 @@ try {
     await page.goBack();
     await page.waitForFunction(() => location.hash === '#owner-users' && !document.getElementById('owner-users').hidden);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Back retains the owner workspace');
-    await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }));
+    await enterAdmin();
     await page.waitForFunction(() => location.hash === '' && scrollY < 100);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview navigation retains owner drafts');
     await activate(page.locator('#owner-home').getByRole('link', { name: 'Content Snapshot →', exact: true }));
@@ -537,7 +548,7 @@ try {
       // Intake and the three review entry points are separate authorized tools.
       for (const destination of ['/web/content-import.html', '/web/review.html', '/web/review.html?workspace=references', '/web/review.html?workspace=rights']) {
         await go(origin + destination);
-        await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+        await adminEntry.waitFor({ state: 'attached' });
         assert.deepEqual(await page.evaluate(() => ({ palette: document.documentElement.dataset.palette, theme: document.documentElement.dataset.appearance, overflow: document.documentElement.scrollWidth > innerWidth })), { palette, theme, overflow: false }, destination);
       }
       await go(origin + '/web/admin.html');
@@ -549,14 +560,14 @@ try {
     if (name === layouts[0][0]) {
       accessStatus = 503; await reload();
       await page.getByRole('heading', { name: 'Admin access unavailable', exact: true }).waitFor();
-      assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).count(), 0);
+      assert.equal(await adminEntry.count(), 0);
       accessStatus = 200; projectionUnavailable = true;
       if (width <= 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
       await activate(page.locator('[data-action="reload"]'));
       await settleAdmin();
       await go(origin + '/web/admin.html#research-gate');
       await page.getByRole('heading', { name: 'Admin data unavailable', exact: true }).waitFor();
-      await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+      await adminEntry.waitFor({ state: 'attached' });
       projectionUnavailable = false; await activate(page.locator('[data-action="reload"]'));
       await page.locator('#owner-console').waitFor({ state: 'attached' });
       await page.locator('#owner-features-state').getByText('No feature gates are registered.', { exact: true }).waitFor({ state: 'attached' });
@@ -565,7 +576,7 @@ try {
       accessStatus = 403; await reload();
       await page.getByRole('heading', { name: 'Admin access only.', exact: true }).waitFor();
       assert.equal(await page.locator('#owner-console').count(), 0);
-      assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).count(), 0);
+      assert.equal(await adminEntry.count(), 0);
       accessStatus = 200;
       dashboardUnavailable = true;
       const beforeOutage = dashboardReads;
@@ -589,7 +600,17 @@ try {
     }
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
-    await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+    await page.getByLabel('Import manifest JSON', { exact: true }).fill('Unsent synthetic intake draft');
+    await openTools();
+    const intakeGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
+    if (!(await intakeGroup.evaluate(node => node.open))) await activate(intakeGroup.locator(':scope > summary'));
+    await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html#medical-relationships"]'));
+    await page.waitForFunction(() => location.hash === '#medical-relationships');
+    assert.equal(await page.getByLabel('Import manifest JSON', { exact: true }).inputValue(), 'Unsent synthetic intake draft', 'Relationship shortcut preserves the intake document');
+    await page.goBack();
+    await page.waitForFunction(() => location.hash === '');
+    assert.equal(await page.getByLabel('Import manifest JSON', { exact: true }).inputValue(), 'Unsent synthetic intake draft');
+    await adminEntry.waitFor({ state: 'attached' });
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
       if (width > 700) assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:content"]').getAttribute('data-active'), 'true');
       await openTools();
@@ -599,7 +620,7 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/content-import.html"]').getAttribute('aria-current'), 'page');
     await activate(page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]'));
     await page.waitForURL('**/web/review?workspace=references');
-    await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+    await adminEntry.waitFor({ state: 'attached' });
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) {
       if (width > 700) assert.equal(await page.locator('#mlos-local-nav details[data-group="admin:content"]').getAttribute('data-active'), 'true');
       await openTools();
@@ -608,13 +629,16 @@ try {
     if (!(await reviewGroup.evaluate(node => node.open))) await activate(reviewGroup.locator(':scope > summary'));
     assert.equal(await page.locator('#mlos-local-nav a[href="/web/review.html?workspace=references"]').getAttribute('aria-current'), 'page');
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Study', exact: true }));
-    await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).waitFor({ state: 'attached' });
+    await adminEntry.waitFor({ state: 'attached' });
+    await openTools();
+    assert.equal(await page.locator('#mlos-local-nav [data-group^="admin:"],nav[aria-label="Pinned shortcuts"] [data-group^="admin:"]').count(), 0, 'Admin controls never leak into Study');
+    await closeTools();
     await activate(page.getByLabel('Account menu', { exact: true }));
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
     await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
     admin = false; await reload(); await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
     await page.waitForFunction(() => document.querySelector('#mlos-navigation') && !document.querySelector('[data-master="admin"]'));
-    assert.equal(await mainNav.getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true }).count(), 0);
+    assert.equal(await adminEntry.count(), 0);
     await go(origin + '/web/library.html?view=notes&subject=medicine&system=respiratory');
     await page.getByRole('heading', { name: 'Synthetic source note', exact: true }).waitFor();
     await page.getByRole('tab', { name: 'Questions', exact: true }).click();
