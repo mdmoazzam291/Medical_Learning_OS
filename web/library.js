@@ -61,7 +61,7 @@ root.addEventListener('click',async event=>{
 });
 root.addEventListener('click',event=>{
   const link=event.target.closest('.canonical-note-outline a[href^="#"]');
-  if(!link)return;
+  if(!link||typeof link.getAttribute!=='function')return;
   const id=link.getAttribute('href').slice(1),section=root.querySelector('[id="'+id+'"]');
   if(!section)return;
   event.preventDefault();
