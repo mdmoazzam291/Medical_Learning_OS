@@ -15,6 +15,6 @@ export async function request(path, body, retry = true) {
     if (refreshed?.accessToken && refreshed.accessToken !== session.accessToken) return request(path,body,false);
   }
   const data = await response.json();
-  if (!response.ok) throw Object.assign(new Error(data.error || 'Request failed. Try again.'), { code: response.status === 401 ? 'authentication_required' : 'request_failed' });
+  if (!response.ok) throw Object.assign(new Error(data.error || 'Request failed. Try again.'), { code: response.status === 401 ? 'authentication_required' : typeof data.error === 'string' && /^[a-z][a-z0-9_]{0,100}$/.test(data.error) ? data.error : 'request_failed', status: response.status });
   return data;
 }

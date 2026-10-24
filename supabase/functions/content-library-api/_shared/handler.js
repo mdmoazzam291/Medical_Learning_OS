@@ -1,3 +1,4 @@
+import { readAdminWorkflowSummary } from '../../../../src/domain/admin-workflow.js';
 import preparationCurriculumDefault from '../../../../data/preparation-curriculum.js';
 import { preparationContext } from '../../../../src/domain/preparation-pathways.js';
 import { selectConcise } from '../../../../src/domain/question-intelligence.js';
@@ -29,7 +30,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         const raw=await req.text();if(new TextEncoder().encode(raw).length>maximum)fail(413,'body_too_large');
         try{return JSON.parse(raw);}catch{fail(400,'invalid_json');}
       };
-      const requireAdmin=async()=>{const data=await checked(admin.rpc('content_admin_status_v1',{p_user:user.id}));if(data?.isAdmin!==true)fail(403,'content_admin_required');};
+      const requireAdmin=async()=>{const data=await checked(admin.rpc('content_admin_status_v1',{p_user:user.id}));if(data?.isAdmin!==true)fail(403,'content_admin_required');return data;};
       if(req.method==='GET'&&path==='/library'){
         const snapshot=await checked(admin.rpc('content_library_snapshot_v1',{p_learner:user.id}));
         return reply(200,{...projectLibrary(snapshot),preparation:preparationContext(preparationCurriculum,user.user_metadata?.mlos_preparation_profile)});
@@ -54,6 +55,15 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         const result=await checked(admin.rpc(variants===undefined?'study_start_session':'study_start_library_session_v2',{p_learner:user.id,p_id:proposedId,p_ids:ids,p_started:new Date().toISOString(),...(variants===undefined?{}:{p_variants:variants})}));
         if(result?.error||!result?.id)fail(409,'study_session_unavailable');
         return reply(200,{sessionId:result.id,resumedExisting:result.id!==proposedId});
+      }
+      if(path==='/admin-workflow'){
+        if(req.method!=='GET')fail(405,'method_not_allowed');
+        await requireAdmin();
+        const {data,error}=await admin.rpc('admin_workflow_summary_v1',{p_actor:user.id});
+        if(error?.message?.includes('content_admin_required'))fail(403,'content_admin_required');
+        const summary=error?null:readAdminWorkflowSummary(data);
+        if(!summary)fail(503,'admin_workflow_unavailable');
+        return reply(200,summary);
       }
       if(path==='/relationships'||path.startsWith('/relationships/')){
         await requireAdmin();
@@ -91,7 +101,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         fail(404,'not_found');
       }
       if(!path.startsWith('/imports'))fail(404,'not_found');
-      await requireAdmin();
+      const authority=await requireAdmin();
       if(req.method==='GET'&&path==='/imports')return reply(200,{contractId:'content-library-inbox-v1',imports:await checked(admin.from('content_library_imports').select('import_id,digest,status,created_at').order('created_at',{ascending:false}).limit(100))});
       if(req.method==='POST'&&path==='/imports'){
         const input=await body();fields(input,['manifest']);
@@ -108,7 +118,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         const sourceIds=new Set([...row.manifest.questions,...row.manifest.notes].flatMap(x=>x.sourceIds));
         const sources=[...catalog.body.sources,...row.manifest.sources.map(x=>({...x,rights:{status:'unknown',evidence:x.evidence}}))].filter((x,i,all)=>sourceIds.has(x.sourceId)&&all.findIndex(y=>y.sourceId===x.sourceId)===i);
         const duplicateTargets=row.manifest.questions.flatMap(candidate=>catalog.body.questions.filter(q=>questionSignature(q)===questionSignature(candidate)).map(q=>({candidateId:candidate.questionId,canonicalQuestion:q})));
-        return reply(200,{...row,sources,duplicateTargets});
+        return reply(200,{...row,sources,duplicateTargets,reviewKinds:Array.isArray(authority.reviewKinds)?authority.reviewKinds:null});
       }
       if(req.method==='POST'&&detail[2]){
         const input=await body(65536);fields(input,['digest','rightsDecisions','reviewNotes','attested']);

@@ -1,3 +1,5 @@
+import { request as libraryRequest } from '/web/content-library-client.js';
+import { readAdminWorkflowSummary } from '/src/domain/admin-workflow.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudOwner } from '/src/adapters/cloud-owner.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -14,6 +16,9 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&a
 let loading = false;
 let lastDashboard = null;
 let latestAlerts = null;
+let latestWorkflow = null;
+let workflowGeneration = 0;
+let workflowLoading = false;
 let failedMain = null;
 
 function announce(message) {
@@ -134,8 +139,8 @@ function learnerDetailMarkup(payload) {
   return `<div class="owner-learner-detail" data-learner-id="${escape(learner.id || '')}"><div class="section-heading"><div><span class="eyebrow">LEARNER ADMINISTRATION</span><h3>${escape(learner.email || learner.id || 'Learner')}</h3><p>${escape(learner.id || '')}</p></div><div>${learner.betaActive === true ? '<span class="badge">BETA ACTIVE</span>' : '<span class="badge">STANDARD ACCESS</span>'} ${learner.isSuspended === true ? '<span class="badge">SUSPENDED</span>' : '<span class="badge">AUTH ACTIVE</span>'}</div></div><div class="owner-metrics">${metric('Beta until', learner.betaActive ? dateTime(learner.betaAccessUntil) : 'None')}${metric('Suspended until', learner.isSuspended ? dateTime(learner.bannedUntil) : 'No')}${metric('Last sign-in', dateTime(learner.lastSignInAt))}</div>${actions}<h4>Immutable audit history</h4>${history}</div>`;
 }
 
-function actionInboxMarkup(dashboard, alerts = null) {
-  const state = buildAdminActionInbox(dashboard, { alerts });
+function actionInboxMarkup(dashboard, alerts = null, workflow = latestWorkflow) {
+  const state = buildAdminActionInbox(dashboard, { alerts, workflow });
   const rows = state.actions.map(item => '<li class="owner-action-row"><div><strong>' + escape(item.label) +
     '</strong><p class="muted">' + escape(item.detail) + '</p></div><a class="secondary action-link" href="' +
     escape(item.href) + '">Inspect' + (item.count === null ? '' : ' (' + number(item.count) + ')') +
@@ -146,13 +151,13 @@ function actionInboxMarkup(dashboard, alerts = null) {
   return '<div class="section-heading"><div><span class="eyebrow">ACTION INBOX · READ ONLY</span><h2>What needs attention?</h2><p>Prioritized signals from authoritative owner counts and provider alert records. No action approves or publishes material.</p></div></div>' +
     (rows ? '<ul class="owner-action-inbox-list">' + rows + '</ul>'
       : '<p class="muted">No actionable issues were reported in the available evidence. This is not a system-wide all-clear.</p>') +
-    evidence + '<p class="muted">Dashboard evidence: ' + escape(dateTime(state.asOf)) + '. Refresh to check for newer signals.</p>';
+    evidence + '<p>Draft counts: ' + escape(dateTime(workflow?.asOf)) + '. <button type="button" class="secondary" data-admin-workflow-refresh' + (workflowLoading ? ' disabled' : '') + '>Refresh pending work</button></p><p class="muted">Dashboard evidence: ' + escape(dateTime(state.asOf)) + '. Refresh to check for newer signals.</p>';
 }
 function refreshActionInbox() {
   const panel = app?.querySelector('#admin-actions');
   if (panel && lastDashboard) panel.innerHTML = actionInboxMarkup(lastDashboard, latestAlerts);
   const summary = app?.querySelector('#owner-home');
-  if (summary && lastDashboard) summary.innerHTML = overviewMarkup(lastDashboard, latestAlerts);
+  if (summary && lastDashboard) summary.innerHTML = overviewMarkup(lastDashboard, latestAlerts, latestWorkflow);
 }
 
 const INTEGRITY_LABELS = {
@@ -343,7 +348,7 @@ function dashboardMarkup(data) {
   const temporary = data?.reviewAuthority?.temporary === true;
 
   return `<section id="owner-console" class="owner-console" aria-label="Medretica owner console">
-    <section id="owner-home" class="panel" data-admin-panel="overview" hidden>${overviewMarkup(data, latestAlerts)}</section>
+    <section id="owner-home" class="panel" data-admin-panel="overview" hidden>${overviewMarkup(data, latestAlerts, latestWorkflow)}</section>
     <section id="admin-actions" class="panel" data-admin-panel="actions" hidden>${actionInboxMarkup(data, latestAlerts)}</section>
     <section id="owner-overview" class="panel owner-hero" data-admin-panel="snapshot" hidden>
       <div class="section-heading"><div><span class="eyebrow">MEDRETICA OWNER</span><h2>Platform control tower</h2><p>Operational visibility and controlled owner actions. Authorization is server-side; every learner mutation is audited.</p></div><span class="badge">OWNER ONLY</span></div>
@@ -416,6 +421,22 @@ function mountDashboard(data) {
   window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
 }
 
+async function refreshWorkflow(main = app?.querySelector('.workspace main#main')) {
+  if (!main) return;
+  const generation = ++workflowGeneration;
+  latestWorkflow = null; workflowLoading = true; refreshActionInbox();
+  try {
+    const value = await libraryRequest('/admin-workflow');
+    if (generation === workflowGeneration && app.querySelector('.workspace main#main') === main)
+      latestWorkflow = readAdminWorkflowSummary(value);
+  } catch { /* Unknown counts remain visible alongside independently loaded owner data. */ }
+  finally {
+    if (generation === workflowGeneration && app.querySelector('.workspace main#main') === main) {
+      workflowLoading = false; refreshActionInbox();
+    }
+  }
+}
+
 async function enhance() {
   if (loading || app?.querySelector('#owner-console')) return;
   const main = app?.querySelector('.workspace main#main');
@@ -431,7 +452,9 @@ async function enhance() {
     app.dataset.ownerState = 'loaded';
     failedMain = null;
     latestAlerts = null;
+    latestWorkflow = null;
     lastDashboard = dashboard; mountDashboard(dashboard);
+    void refreshWorkflow(main);
   } catch (error) {
     if (app.querySelector('.workspace main#main') === main) {
       failedMain = main;
@@ -455,6 +478,7 @@ async function showLearner(learnerId) {
 }
 
 app?.addEventListener('click', event => {
+  if (event.target.closest('[data-admin-workflow-refresh]')) { void refreshWorkflow(); return; }
   if (event.target.closest('[data-owner-dashboard-retry]')) { failedMain = null; enhance(); return; }
   if (event.target.closest('[data-owner-integrity-run]')) { runContentIntegrity(); return; }
   if (event.target.closest('[data-owner-source-watch-run]')) { runSourceWatch(); return; }
