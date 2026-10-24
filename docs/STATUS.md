@@ -1,3 +1,7 @@
+## Saved-attempt review continuation PR324 — 25 October 2026
+
+PR324 supersedes closed PR322, preserving main90aaacdc and the released PR321 learner-content fallback. Combined1484Node tests/check/build pass on exact source0e59653. Fresh Foundation40142407864 is queued; responsive hosted acceptance, runtime deployment and website release are pending. Original text review is implemented; archived-retired authorization and non-original/media history remain unfinished. All content and learner data stay in Supabase.
+
 ## Published learner-content fallback — production release verified
 - Checked 25 October 2026 IST. Owner fix PR #321 merged as `c264eb1bfcd23e3158760ff721d7979fc3148181`. Foundation run 40141314085 passed Node/check, Chromium and native WebKit; Cloudflare production web/heartbeat builds succeeded. Supabase `study-api` v53 ACTIVE includes the no-mapping fallback; exact ten-file bundle audited. Catalog v446, 6 published questions and 6 published notes unchanged. No clinical review/rights/learner writes or migration. Real authenticated production learner acceptance and served-asset equality remain unverified. See [release receipt](releases/2026-10-25-learner-content-visibility-release.md). Follow up with normal learner Library/Study Now/Notes/Graph acceptance and approved exam requirements.
 
