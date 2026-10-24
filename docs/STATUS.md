@@ -1,3 +1,7 @@
+## Saved-attempt review released —25October2026
+
+PR324 merged asa2a1436 after1484Node/check/build and hosted Chromium/WebKit success. API v54 exact11-file deployment verified; real anonymous review request401/no-store. Production webd09a5406 and heartbeatda870b92 succeeded. Home→Recent Activity→Review saved attempt now opens eligible original-text history; retired content remains denied and results unchanged. Assets403 prevented byte-equality verification; genuine signed-in production acceptance remains separate. Archive authorization, non-original/media history and email sender setup remain unfinished. See release receipt and latest handoff.
+
 ## Saved-attempt review continuation PR324 — 25 October 2026
 
 PR324 supersedes closed PR322, preserving main90aaacdc and the released PR321 learner-content fallback. Combined1484Node tests/check/build pass on exact source0e59653. Fresh Foundation40142407864 is queued; responsive hosted acceptance, runtime deployment and website release are pending. Original text review is implemented; archived-retired authorization and non-original/media history remain unfinished. All content and learner data stay in Supabase.
