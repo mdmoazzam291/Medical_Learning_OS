@@ -1,5 +1,9 @@
 # Decision log
 
+## ADR-130 — Responsive Admin destination placement
+
+Accepted owner clarification on 24 October 2026: Master Admin itself belongs in the top master row on tablet/iPad and desktop; phone/narrow split entry remains in the avatar. This supersedes only the all-device avatar placement in ADR-129. Keep one Admin navigation entry per responsive layout, show it only after server-confirmed authority, and keep Admin tool menus and legacy Admin pins out of learner contextual menus. Wide Admin is a destination link without a tool disclosure; its existing local Tools menu stays inside Admin pages. No learner feature or authority-model change.
+
 ## ADR-129 — Admin entry and tools remain separate from learner navigation
 
 Accepted owner direction, 24 October 2026: remove Admin from the global top navigation; change only Master Admin entry/tools and fix Admin controls leaking into other masters. Supersedes the Admin placement portion of ADR-111/113 and the earlier five-link header description.

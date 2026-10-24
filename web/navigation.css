@@ -304,6 +304,7 @@
 /* Admin tools belong to their workspace, below the shared learner header. */
 .mlos-admin-toolbar{position:fixed;top:56px;left:0;right:0;z-index:26;display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px;margin:0;padding:4px 16px;background:var(--surface);border-bottom:1px solid var(--line);color:var(--ink);font-size:13px}
 .mlos-admin-toolbar>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mlos-header-top .mlos-master-item>a[data-master="admin"]{border-radius:14px}
 .mlos-admin-toolbar button{display:flex;align-items:center;gap:8px;flex-shrink:0;min-height:44px;padding:8px 12px;background:var(--sidebar);color:var(--ink);border:1px solid var(--line);border-radius:12px}
 .mlos-app[data-admin-workspace="true"],.mlos-app[data-admin-workspace="true"][data-navigation-layout="top"]{padding-top:108px}
 .mlos-app[data-admin-workspace="true"] [id],.mlos-app[data-admin-workspace="true"] #admin-app [id]{scroll-margin-top:124px}

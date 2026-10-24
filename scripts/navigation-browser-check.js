@@ -259,13 +259,13 @@ try {
     }
     await page.getByRole('heading', { name: 'Subjects & Topics', exact: true }).waitFor();
     const mainNav = page.getByRole('navigation', { name: 'Main navigation', exact: true, includeHidden: true });
-    const adminEntry = page.getByRole('navigation', { name: 'Account navigation', exact: true, includeHidden: true }).getByRole('link', { includeHidden: true, name: 'Master Admin', exact: true });
+    const adminEntry = page.locator('#mlos-navigation a[data-master="admin"]');
     const enterAdmin = async () => {
-      if (!(await page.locator('.mlos-account').evaluate(node => node.open))) await activate(page.getByLabel('Account menu', { exact: true }));
+      if (await adminEntry.evaluate(node => Boolean(node.closest('.mlos-account'))) && !(await page.locator('.mlos-account').evaluate(node => node.open))) await activate(page.getByLabel('Account menu', { exact: true }));
       await activate(adminEntry);
     };
     await adminEntry.waitFor({ state: 'attached' });
-    assert.deepEqual(await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), ['Home', 'Study', 'Library', 'Exams']);
+    assert.deepEqual(await mainNav.getByRole('link', { includeHidden: true }).evaluateAll(links => links.map(l => l.getAttribute('aria-label'))), width <= 700 ? ['Home', 'Study', 'Library', 'Exams'] : ['Home', 'Study', 'Library', 'Exams', 'Master Admin']);
     assert.equal(await page.evaluate(() => document.body.dataset.rail), 'collapsed');
 
     assert.equal(await page.locator('[data-subject]').count(), 19);
