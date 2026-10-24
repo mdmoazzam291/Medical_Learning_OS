@@ -91,7 +91,7 @@ test('Admin sidebar uses five nested groups and preserves genuine destinations',
   const { navigationFor, routeIdentity, changePreference, validatePreferences } = requireNav();
   const groups = navigationFor('admin', { isAdmin: true });
   assert.deepEqual(groups.map(x => x.id), ['overview', 'content', 'learners', 'research', 'operations']);
-  assert.deepEqual(groups.find(x => x.id === 'content').children.map(x => x.id), ['intake','snapshot','integrity','source-watch','review','references','rights']);
+  assert.deepEqual(groups.find(x => x.id === 'content').children.map(x => x.id), ['intake','relationships','snapshot','integrity','source-watch','review','references','rights']);
   assert.ok(groups.every(x => x.children.length > 0));
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-users'), { master: 'admin', section: 'learners' });
   assert.deepEqual(routeIdentity('/web/admin.html', '', '#owner-infrastructure-alerts'), { master: 'admin', section: 'operations' });

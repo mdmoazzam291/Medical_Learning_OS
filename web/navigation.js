@@ -16,16 +16,17 @@ let searchQuery = (new URLSearchParams(location.search).get('search') || '').sli
 let accessRead = 0;
 let lastAdminTarget = null, lastAdminHash = '';
 function restoreAdminTarget(event) {
-  if (!isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html') { lastAdminTarget = null; lastAdminHash = ''; return; }
+  const page = canonicalPagePath(location.pathname);
+  if (!isAdmin || !['/web/admin.html', '/web/content-import.html'].includes(page)) { lastAdminTarget = null; lastAdminHash = ''; return; }
   if (!location.hash && event?.detail?.explicit === true) {
     const main = document.getElementById('main');
-    if (main?.closest('#admin-app')) main.scrollIntoView({ block: 'start' });
+    if (page === '/web/content-import.html' || main?.closest('#admin-app')) main?.scrollIntoView({ block: 'start' });
     lastAdminTarget = null; lastAdminHash = ''; return;
   }
-  const allowed = location.hash && navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + location.hash);
+  const allowed = location.hash && navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === page + location.hash);
   if (!allowed) { lastAdminTarget = null; lastAdminHash = ''; return; }
   const target = document.getElementById(location.hash.slice(1));
-  if (!target?.closest('#admin-app') || (target === lastAdminTarget && location.hash === lastAdminHash && event?.detail?.layoutChanged !== true && event?.detail?.explicit !== true)) return;
+  if (!target || (page === '/web/admin.html' && !target.closest('#admin-app')) || (target === lastAdminTarget && location.hash === lastAdminHash && event?.detail?.layoutChanged !== true && event?.detail?.explicit !== true)) return;
   target.scrollIntoView({ block: 'start' });
   lastAdminTarget = target; lastAdminHash = location.hash;
 }
@@ -40,6 +41,7 @@ function applyAppearance() {
   document.body.dataset.rail = phone && expanded() ? 'expanded' : 'collapsed';
   document.body.dataset.drawer = phone && drawerOpen ? 'open' : 'closed';
   document.body.dataset.navigationLayout = phone ? 'phone' : 'top';
+  document.body.dataset.adminWorkspace = identity.master === 'admin' && isAdmin && Boolean(navigationAuth.currentUser()) ? 'true' : 'false';
   document.body.dataset.navigationMemory = store.persistence;
   document.body.dataset.publicNavigation = isPublicGuestNavigation(Boolean(navigationAuth.currentUser()), location.pathname + location.search) ? 'true' : 'false';
 }
@@ -131,10 +133,11 @@ function openWorkspaceMenu(master, trigger) {
   menu.querySelector('a,button,summary')?.focus();
 }
 function navigateAdminLink(anchor, event) {
-  if (!anchor || !isAdmin || canonicalPagePath(location.pathname) !== '/web/admin.html' || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || (event.button !== undefined && event.button !== 0)) return;
+  const page = canonicalPagePath(location.pathname);
+  if (!anchor || !isAdmin || !['/web/admin.html', '/web/content-import.html'].includes(page) || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || (event.button !== undefined && event.button !== 0)) return;
   const target = new URL(anchor.href, location.origin);
-  const registered = !target.hash || navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === '/web/admin.html' + target.hash);
-  if (target.origin !== location.origin || canonicalPagePath(target.pathname) !== '/web/admin.html' || target.search !== location.search || !registered) return;
+  const registered = !target.hash || navigationFor('admin', { isAdmin }).flatMap(row => [row, ...row.children]).some(row => row.href === page + target.hash);
+  if (target.origin !== location.origin || canonicalPagePath(target.pathname) !== page || target.search !== location.search || !registered) return;
   event.preventDefault();
   if (location.hash !== target.hash) {
     history.pushState(null, '', location.pathname + location.search + target.hash);
@@ -266,7 +269,8 @@ window.addEventListener('mlos:preferences', event => { const next = event.detail
 window.addEventListener('resize', () => {
   const next = innerWidth <= 1050, nextPhone = innerWidth <= 700;
   if (next === compact && nextPhone === phone) { closeWorkspaceMenu(true); return; }
-  const returnMaster = workspaceMaster, returnFocus = Boolean(workspaceOpener);
+  const adminDrawer = phone && drawerOpen && identity.master === 'admin' && isAdmin;
+  const returnMaster = workspaceMaster || (adminDrawer ? 'admin' : null), returnFocus = Boolean(workspaceOpener) || adminDrawer;
   closeWorkspaceMenu();
   compact = next; phone = nextPhone; drawerOpen = false;
   render(returnFocus ? phone ? '[data-rail]' : returnMaster === 'account' ? '.mlos-account summary' : '[data-workspace-menu="' + returnMaster + '"]' : undefined);

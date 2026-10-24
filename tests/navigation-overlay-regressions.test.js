@@ -291,9 +291,40 @@ test('tablet portrait and landscape retain all top workspace links', () => {
     const h = open({ width });
     h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
     const header = h.shell.innerHTML.split('</header>')[0];
-    for (const master of ['home', 'study', 'library', 'exams', 'admin']) {
+    for (const master of ['home', 'study', 'library', 'exams']) {
       assert.ok(header.includes('data-master="' + master + '"'), width + ': visible ' + master + ' workspace');
       assert.ok(header.includes('data-workspace-menu="' + master + '"'), width + ': ' + master + ' disclosure');
     }
   }
+});
+
+test('rotating an open Admin phone drawer restores focus to its new local trigger', () => {
+  const h = open({ width: 390 }); let focused = 0;
+  h.location.pathname = '/web/admin'; h.location.search = '';
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } });
+  h.windowHandlers.hashchange();
+  h.input.focus = () => { focused++; };
+  h.shellHandlers.click({ target: { closest: () => ({ dataset: {}, hasAttribute: name => name === 'data-rail' }) } });
+  assert.equal(h.body.dataset.drawer, 'open');
+  focused = 0;
+  h.context.innerWidth = 820; h.windowHandlers.resize();
+  assert.equal(h.body.dataset.drawer, 'closed');
+  assert.match(h.shell.innerHTML, /data-workspace-menu="admin"/);
+  assert.equal(focused, 1);
+});
+test('clean intake relationship navigation preserves the document and browser history', () => {
+  const h = open(); let prevented = false, entries = 0;
+  h.location.pathname = '/web/content-import'; h.location.search = ''; h.location.hash = ''; h.location.origin = 'https://example.invalid';
+  h.context.history = { pushState(_state, _title, href) { entries++; const url = new URL(href, h.location.origin); h.location.pathname = url.pathname; h.location.search = url.search; h.location.hash = url.hash; } };
+  h.windowHandlers['mlos:access']({ detail: { isAdmin: true } }); h.windowHandlers.hashchange();
+  const anchor = { href: 'https://example.invalid/web/content-import.html#medical-relationships' };
+  h.shellHandlers.click({ target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(entries, 1);
+  assert.equal(h.location.pathname, '/web/content-import');
+  assert.equal(h.location.hash, '#medical-relationships');
+  prevented = false;
+  h.shellHandlers.click({ ctrlKey: true, target: { closest: selector => selector === 'a' ? anchor : null }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, false, 'Modified clicks retain normal browser behavior');
+  assert.equal(entries, 1);
 });

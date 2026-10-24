@@ -1,5 +1,11 @@
 # Decision log
 
+## ADR-129 — Admin entry and tools remain separate from learner navigation
+
+Accepted owner direction, 24 October 2026: remove Admin from the global top navigation; change only Master Admin entry/tools and fix Admin controls leaking into other masters. Supersedes the Admin placement portion of ADR-111/113 and the earlier five-link header description.
+
+Master Admin is a single server-authorized entry in the avatar menu. Home, Study, Library and Exams remain the global learner masters. Admin pages use a local tools trigger over their existing five groups; legacy saved Admin pins do not appear in learner menus. Other learner pins and preferences remain intact. Medical, References and Rights authority stays separate and server-enforced. The existing medical relationship destination is exposed only within Admin; in-page navigation must preserve drafts and history. This is interface isolation, not proof of a backend privilege leak or authority to publish clinical content.
+
 ## ADR-125 — One responsive website with a shared-backend PWA
 **Status:** Owner-approved future direction, 21 October 2026; implementation planned.
 

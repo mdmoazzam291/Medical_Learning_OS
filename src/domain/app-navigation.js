@@ -57,6 +57,7 @@ const SECTIONS = {
     ]),
     item('content', 'Content & Quality', 'book', '/web/content-import.html', [
       item('intake', 'Content Intake', 'book', '/web/content-import.html'),
+      item('relationships', 'Medical Relationships', 'graph', '/web/content-import.html#medical-relationships'),
       item('snapshot', 'Content Snapshot', 'graph', '/web/admin.html#owner-content'),
       item('integrity', 'Catalog Integrity', 'graph', '/web/admin.html#owner-integrity'),
       item('source-watch', 'Source Change Watch', 'reference', '/web/admin.html#owner-source-watch'),

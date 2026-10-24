@@ -1,5 +1,7 @@
 # Final tablet and desktop navigation / appearance contract
 
+Admin placement update, 24 October 2026 (ADR-129): Master Admin is entered from the authorized avatar menu, not the global top navigation. Its tools use a local Admin toolbar within Admin pages. Legacy Admin pins stay out of learner contextual menus. This supersedes only earlier Admin placement descriptions; Home/Study/Library/Exams, appearance and other learner behavior remain unchanged.
+
 Accepted owner decision: 2026-10-14, Asia/Kolkata.
 Status: PR #233 released; owner-requested portrait/landscape parity and clearer Glass refinement released in PR #235.
 Owner confirmed implementation, palette-following Glass and opaque reading surfaces on 2026-10-14 (Q1/Q2/Q3). Owner subsequently approved the plan and direct execution.

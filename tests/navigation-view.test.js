@@ -9,18 +9,19 @@ test('phone navigation uses one workspace menu and hides the closed sidebar', ()
   assert.match(header, /class="mlos-mobile-menu"/);
   assert.match(header, /aria-label="Expand navigation"/);
   assert.match(header, /<span>Study<\/span>/);
-  assert.doesNotMatch(header, /data-master=/);
+  assert.doesNotMatch(header.split('class="mlos-account"')[0], /data-master=/);
   assert.match(html, /<aside[^>]* hidden/);
   assert.equal((html.match(/aria-label="Main navigation"/g) || []).length, 1);
   assert.equal((html.match(/data-rail/g) || []).length, 1);
-  assert.match(html.split('<aside')[1], /data-master="admin"/);
+  assert.doesNotMatch(html.split('<aside')[1], /data-master="admin"/);
+  assert.match(html, /aria-label="Account navigation"[\s\S]*data-master="admin"/);
   assert.doesNotMatch(markup({ phone: true, prefs: {} }), /data-master="admin"/);
   const opened = markup({ phone: true, master: 'study', prefs: { expanded: true } });
   assert.doesNotMatch(opened, /<aside[^>]* hidden/);
   assert.match(opened, /aria-label="Collapse navigation"/);
   assert.match(opened, /More study tools/);
 });
-test('the header moves Account to the avatar and gates the fifth Master Admin workspace', () => {
+test('the header keeps four learner masters and moves authorized Admin to the avatar', () => {
   const html = markup({ master: 'library', section: 'subjects', prefs: {} });
   assert.match(html, /aria-label="Main navigation"/);
   assert.equal((html.split('</nav>')[0].match(/data-master=/g) || []).length, 4);
@@ -29,11 +30,11 @@ test('the header moves Account to the avatar and gates the fifth Master Admin wo
   assert.ok(!html.split('</nav>')[0].includes('Admin'));
   const granted = markup({ master: 'admin', section: 'overview', prefs: { expanded: true }, isAdmin: true });
   const nav = granted.split('</nav>')[0];
-  assert.equal((nav.match(/data-master=/g) || []).length, 5);
+  assert.equal((nav.match(/data-master=/g) || []).length, 4);
   assert.doesNotMatch(nav, /data-master="account"/);
-  assert.match(nav, /Master Admin/);
+  assert.doesNotMatch(nav, /Master Admin/);
   assert.match(granted, /aria-label="Account menu"/);
-  assert.match(nav, /data-master="admin"[^>]*aria-current="page"/);
+  assert.match(granted, /data-master="admin"[^>]*aria-current="page"/);
 });
 test('an expanded panel nests independent subject and reference disclosures in their parents', () => {
   const html = markup({ master: 'library', section: 'subjects', prefs: { expanded: true, groups: ['library:subjects', 'library:subjects:index', 'library:references'] } });
@@ -68,7 +69,7 @@ test('admin tools appear only with verified access', () => {
   assert.ok(granted.includes('href="/web/review.html"'));
 });
 
-test('Admin expanded sidebar renders a single destination and a working pin for every group', () => {
+test('Admin expanded menu renders single destinations without cross-workspace pin actions', () => {
   const allGroups = ['overview', 'content', 'learners', 'research', 'operations'];
   const html = markup({
     master: 'admin', section: 'content', isAdmin: true,
@@ -77,8 +78,8 @@ test('Admin expanded sidebar renders a single destination and a working pin for 
   });
   const local = html.split('<nav id="mlos-local-nav"')[1].split('</nav>')[0];
   for (const key of allGroups) {
-    assert.equal((local.match(new RegExp('data-pin="admin:' + key + '"', 'g')) || []).length, 1,
-      key + ' must remain pinnable without a redundant Open link');
+    assert.equal((local.match(new RegExp('data-pin="admin:' + key + '"', 'g')) || []).length, 0,
+      key + ' must not offer a pin that exposes Admin tools in learner menus');
   }
   for (const href of [
     '/web/content-import.html', '/web/admin.html#owner-users',
@@ -92,7 +93,7 @@ test('Admin expanded sidebar renders a single destination and a working pin for 
   assert.ok(!local.includes('Open Content &amp; Quality'));
 });
 
-test('collapsed Admin flyouts avoid duplicate parent links while retaining pin and close actions', () => {
+test('collapsed Admin flyouts avoid duplicate parent links and preserve close actions', () => {
   const { flyoutMarkup } = view;
   const { navigationFor, validatePreferences } = model;
   const rows = navigationFor('admin', { isAdmin: true });
@@ -100,7 +101,7 @@ test('collapsed Admin flyouts avoid duplicate parent links while retaining pin a
   for (const group of ['content', 'learners', 'research', 'operations']) {
     const row = rows.find(x => x.id === group);
     const flyout = flyoutMarkup(row, 'admin', prefs, row.href);
-    assert.match(flyout, new RegExp('data-pin="admin:' + group + '"'));
+    assert.doesNotMatch(flyout, new RegExp('data-pin="admin:' + group + '"'));
     assert.match(flyout, /data-close-flyout/);
     assert.match(flyout, /class="mlos-flyout-title"/);
     assert.equal(flyout.split('href="' + row.href + '"').length - 1, 1,
@@ -170,7 +171,7 @@ test('cross-workspace pins never repeat an existing local destination', () => {
 test('larger screens expose separate workspace links and disclosures without a sidebar', () => {
   const html = markup({ master: 'library', section: 'notes', isAdmin: true });
   assert.doesNotMatch(html, /<aside/);
-  for (const id of ['home', 'study', 'library', 'exams', 'admin']) {
+  for (const id of ['home', 'study', 'library', 'exams']) {
     assert.match(html, new RegExp('data-master="' + id + '"'));
     assert.match(html, new RegExp('data-workspace-menu="' + id + '"'));
   }
