@@ -7,6 +7,14 @@
 - Initial CI check failed on two older medical-graph integration assertions expecting unmapped to hide published graph context. Those assertions were updated on the same feature branch to retain published context only for valid profiles. Follow-up CI is not yet confirmed here. Production web and `study-api` deployment and genuine signed-in acceptance remain pending; existing sessions and approved mapped scopes retain old behavior.
 - Exact next: verify PR #321 full Node/check, Chromium and WebKit; review diff; merge only if green; deploy coupled web + study-api; inspect live API and route with genuine learner credentials when available. Unrelated PR #318 remains untouched.
 
+## Saved-attempt review UI — 25 October 2026
+
+PR322 now includes Recent Activity review links and read-only exact-version question/result/explanation display. URL preserves attempt/page across reload/return; failures and restrictions preserve activity with no protected content.1482Node tests/check/build pass. Hosted responsive/Chromium/WebKit flow and deployment acceptance pending. All retired versions remain denied; archive authorization and non-original/media retrieval remain open. No database or production runtime changed in this follow-up.
+
+## Protected attempt review backend — 25 October 2026
+
+PR322 saves the first learner-owned historical review boundary on codea38e22b. Exact still-published original-text prompts and stored receipts can be retrieved independently of session closure; retired/rights-restricted/missing content stays redacted. Final1476Node tests/check/build pass; hosted CI and deployment pending. No UI or archived-retired authorization is claimed; frozen non-original/media retrieval remains open. No production database or learner records changed. See latest handoff and the scoped plan.
+
 ## Scheduled retention acceptance — 25 October 2026
 
 Natural04:15IST monitor execution persisted normal capacity:22,047,891bytes against500,000,000 operating budget. Delivery now diagnoses missing configuration. R2 correctly remains degraded because no main storage audit exists; repaired its manual-only workflow with monthly read-only inventory and scoped main-file-change triggers. Eight guard tests and1465Node/check/build pass. Hosted repaired CI and audit execution pending; sender and withdrawal-aware historical retrieval remain open. Supabase remains authoritative.
