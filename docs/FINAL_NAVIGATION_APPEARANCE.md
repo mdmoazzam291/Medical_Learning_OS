@@ -1,5 +1,7 @@
 # Final tablet and desktop navigation / appearance contract
 
+Responsive Admin update, 24 October 2026 (ADR-130): authorized Master Admin is a destination in the tablet/iPad/desktop top row above700px; phone/narrow split entry stays in the avatar. Keep one entry per layout, no Admin tool disclosure on learner menus, and the local Tools menu on Admin pages. This supersedes only all-device avatar placement below.
+
 Admin placement update, 24 October 2026 (ADR-129): Master Admin is entered from the authorized avatar menu, not the global top navigation. Its tools use a local Admin toolbar within Admin pages. Legacy Admin pins stay out of learner contextual menus. This supersedes only earlier Admin placement descriptions; Home/Study/Library/Exams, appearance and other learner behavior remain unchanged.
 
 Accepted owner decision: 2026-10-14, Asia/Kolkata.

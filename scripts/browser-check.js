@@ -367,7 +367,7 @@ try {
   await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
   await page.waitForFunction(() => /2\s*Due reviews/.test(document.querySelector('.metrics')?.innerText || ''));
   assert.match(await page.locator('.metrics').innerText(), /2\s*Due reviews/);
-  await page.getByRole('navigation', { name: 'Account navigation', exact: true, includeHidden: true }).getByRole('link', { name: 'Master Admin', exact: true, includeHidden: true }).waitFor({ state: 'attached' });
+  await page.locator('#mlos-navigation a[data-master="admin"]').waitFor({ state: 'attached' });
 
   for (const [name, width, height] of [['phone', 390, 844], ['tablet', 820, 1180], ['desktop', 1440, 1000]]) {
     await page.setViewportSize({ width, height });

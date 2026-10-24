@@ -21,7 +21,7 @@ test('phone navigation uses one workspace menu and hides the closed sidebar', ()
   assert.match(opened, /aria-label="Collapse navigation"/);
   assert.match(opened, /More study tools/);
 });
-test('the header keeps four learner masters and moves authorized Admin to the avatar', () => {
+test('the wide header keeps four learner masters and an authorized Admin destination', () => {
   const html = markup({ master: 'library', section: 'subjects', prefs: {} });
   assert.match(html, /aria-label="Main navigation"/);
   assert.equal((html.split('</nav>')[0].match(/data-master=/g) || []).length, 4);
@@ -30,9 +30,9 @@ test('the header keeps four learner masters and moves authorized Admin to the av
   assert.ok(!html.split('</nav>')[0].includes('Admin'));
   const granted = markup({ master: 'admin', section: 'overview', prefs: { expanded: true }, isAdmin: true });
   const nav = granted.split('</nav>')[0];
-  assert.equal((nav.match(/data-master=/g) || []).length, 4);
+  assert.equal((nav.match(/data-master=/g) || []).length, 5);
   assert.doesNotMatch(nav, /data-master="account"/);
-  assert.doesNotMatch(nav, /Master Admin/);
+  assert.match(nav, /Master Admin/);
   assert.match(granted, /aria-label="Account menu"/);
   assert.match(granted, /data-master="admin"[^>]*aria-current="page"/);
 });

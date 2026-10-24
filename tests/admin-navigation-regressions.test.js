@@ -96,15 +96,16 @@ test('Admin retains its identity and all five local tool groups', () => {
   assert.deepEqual(navigationFor('admin', { isAdmin: true }).map(row => row.id), ['overview', 'content', 'learners', 'research', 'operations']);
 });
 
-test('authorized Admin entry belongs only to the avatar, never the global learner masters', () => {
+test('authorized Admin entry follows top-row tablet/desktop and phone-avatar placement', () => {
   for (const phone of [false, true]) {
     const html = navigationMarkup({ signedIn: true, phone, master: 'study', section: 'practice', isAdmin: true });
     const main = html.match(/<nav[^>]*aria-label="Main navigation"[^>]*>([\s\S]*?)<\/nav>/)[1];
-    assert.deepEqual([...main.matchAll(/data-master="([^"]+)"/g)].map(m => m[1]), ['home', 'study', 'library', 'exams']);
+    assert.deepEqual([...main.matchAll(/data-master="([^"]+)"/g)].map(m => m[1]), phone ? ['home', 'study', 'library', 'exams'] : ['home', 'study', 'library', 'exams', 'admin']);
     const avatar = html.match(/<nav[^>]*aria-label="Account navigation"[^>]*>([\s\S]*?)<\/nav>/)[1];
-    assert.equal((avatar.match(/data-master="admin"/g) || []).length, 1);
-    assert.match(avatar, /href="\/web\/admin\.html"/);
-    assert.doesNotMatch(main, /admin|Admin/);
+    assert.equal((avatar.match(/data-master="admin"/g) || []).length, phone ? 1 : 0);
+    assert.equal((html.match(/data-master="admin"/g) || []).length, 1);
+    assert.doesNotMatch(main, /data-workspace-menu="admin"/, 'A destination entry must not leak Admin tool menus');
+    if (phone) { assert.match(avatar, /href="\/web\/admin\.html"/); assert.doesNotMatch(main, /admin|Admin/); }
   }
 });
 test('legacy Admin pins cannot expose Admin tool groups inside learner menus', () => {
@@ -121,7 +122,8 @@ test('Admin pages have a local tools trigger outside the global header on every 
   for (const phone of [false, true]) {
     const html = navigationMarkup({ signedIn: true, phone, master: 'admin', section: 'content', isAdmin: true });
     const header = html.split('</header>')[0];
-    assert.doesNotMatch(header.replace(/<details class="mlos-account">[\s\S]*/, ''), /Master Admin|data-workspace-menu="admin"/);
+    assert.doesNotMatch(header, /data-workspace-menu="admin"/);
+    if (phone) assert.doesNotMatch(header.replace(/<details class="mlos-account">[\s\S]*/, ''), /Master Admin/);
     assert.match(html.split('</header>')[1], /aria-label="Admin tools"/);
     assert.equal((html.match(/class="mlos-admin-toolbar"/g) || []).length, 1);
     if (phone) assert.equal((html.match(/data-rail/g) || []).length, 1, 'Only the local Admin trigger opens its drawer');
