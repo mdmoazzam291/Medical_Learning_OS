@@ -1,6 +1,6 @@
 # Admin Navigation Isolation Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Move authorized Admin entry to the avatar and confine Admin tools to Admin workspaces.
 
@@ -32,10 +32,12 @@
 - [x] Run node --test tests/admin-navigation-regressions.test.js and observe missing isolation/entry failures.
 - [x] Implement rendering filters, avatar entry and local Admin toolbar. Remove only the redundant Admin intake navigation row and add its existing relationship anchor to Admin tools.
 - [x] Update existing browser journeys to enter Admin through the avatar; assert no Admin controls in learner menus and preserve draft/history/denial checks.
-- [ ] Run focused tests, npm test, npm run check, npm run build:pages and diff whitespace verification; expected zero failures.
-- [ ] Save code/docs checkpoint remotely before hosted CI. Run existing Chromium/WebKit journeys and independent review; repair reproduced failures with RED-to-GREEN evidence.
-- [ ] Merge/release authorized scoped repair after checks; verify actual delivered source and public denial, record production authentication limits and final handoff.
+- [x] Run focused tests, npm test, npm run check, npm run build:pages and diff whitespace verification; expected zero failures.
+- [x] Save code/docs checkpoint remotely before hosted CI. Run existing Chromium/WebKit journeys and independent review; repair reproduced failures with RED-to-GREEN evidence.
+- [x] Merge/release authorized scoped repair after checks; verify actual delivered source and public denial, record production authentication limits and final handoff.
 
 ## Progress
 
 Independent review: two Important findings reproduced and fixed (intake draft/history and Admin phone rotation focus); no Critical/Minor. Full1460/1460 Node tests pass after reviewer fixes. Initial local browser launch failed because Chromium was absent; isolated pinned browser installation completed. Local navigation/hosted verification pending. No production changes yet.
+
+Final: exact-head Foundation40081311132 passed core/Chromium/WebKit; PR314 merged40f852622fce5e7c66fa9c7c41af31a4c1770559, identical tested tree. Production website and heartbeat builds SUCCESS; live guest isolation verified. No authenticated production acceptance claimed. Release receipt: docs/releases/2026-10-24-admin-navigation-isolation-release.md.
