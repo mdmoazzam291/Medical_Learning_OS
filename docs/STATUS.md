@@ -1,3 +1,7 @@
+## Saved-attempt review UI — 25 October 2026
+
+PR322 now includes Recent Activity review links and read-only exact-version question/result/explanation display. URL preserves attempt/page across reload/return; failures and restrictions preserve activity with no protected content.1482Node tests/check/build pass. Hosted responsive/Chromium/WebKit flow and deployment acceptance pending. All retired versions remain denied; archive authorization and non-original/media retrieval remain open. No database or production runtime changed in this follow-up.
+
 ## Protected attempt review backend — 25 October 2026
 
 PR322 saves the first learner-owned historical review boundary on codea38e22b. Exact still-published original-text prompts and stored receipts can be retrieved independently of session closure; retired/rights-restricted/missing content stays redacted. Final1476Node tests/check/build pass; hosted CI and deployment pending. No UI or archived-retired authorization is claimed; frozen non-original/media retrieval remains open. No production database or learner records changed. See latest handoff and the scoped plan.

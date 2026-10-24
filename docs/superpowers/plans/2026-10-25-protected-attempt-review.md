@@ -7,3 +7,7 @@ GET /attempts/:attemptId/review uses authenticated learner identity, queries one
 1. Add executable tests for ownership, closed-session independence, exact-version matching, receipt integrity, withdrawal redaction, rights checks, representation mismatch and read failures.
 2. Add a bounded read helper and wire the authenticated route plus cloud adapter method. No new storage, grants or production migration.
 3. Run focused and full tests/check/build, inspect diffs, checkpoint to a feature PR. This is backend readiness, not a deployed UI or a complete archived-version migration rehearsal.
+
+## Learner-facing follow-up
+
+Connect Recent Activity original-attempt links to the read-only endpoint. Preserve activity offset and exact attempt through URL/reload and return; render stored results without response controls. Restriction/outage keeps the activity list and hides protected content/provider diagnostics. Guest cannot query attempts. Test source escaping, unavailable states, controller reload/error/guest behavior, and real Chromium/WebKit phone/tablet/desktop/iPad flows including no writes. Archive authorization and media/non-original retrieval remain separate; production runtime deployment must precede the website release.
