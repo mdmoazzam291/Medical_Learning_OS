@@ -20,7 +20,7 @@ test('canonical formatter never treats source HTML, attribute injection or unsaf
  const payload='# <img src=x onerror="alert(1)">\n\n## <script>window.stolen=1</script>\n' +
  '<img src=x onerror="window.injected=true"> [unsafe](javascript:alert(1)) ' +
  '[legit](https://example.org/a?x=1&y=2) ' +
- '**<svg onload=alert(1)>**\n\n§§§html\n<script>attack()</script>\n§§§';
+ '**<svg onload=alert(1)>**\n\n' + String.fromCharCode(96).repeat(3) + 'html\n<script>attack()</script>\n' + String.fromCharCode(96).repeat(3);
  const r=renderCanonicalNote(payload,{idPrefix:'x" onmouseover="oops'});
  assert.doesNotMatch(r.html,/<script|<img|<svg/i);
  assert.match(r.html,/&lt;script&gt;/);
@@ -30,7 +30,7 @@ test('canonical formatter never treats source HTML, attribute injection or unsaf
  assert.doesNotMatch(r.html,/href="javascript:/);
  assert.doesNotMatch(r.html,/<[^>]*id="[^"]*" onmouseover=/);
  assert.match(renderNoteOutline(r.sections),/&lt;script&gt;/);
-}).replaceAll('§',String.fromCharCode(96));
+});
 test('content remains explicit and readable without invented facts or metadata',()=>{
  const src='## 11 Revision\nIdentify which deficits are on the same versus opposite side.\n\n1. Recall\n2. Compare\n\n> Attribution pending';
  const r=renderCanonicalNote(src);
