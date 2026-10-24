@@ -1,3 +1,7 @@
+## Retention safeguards released — 25 October 2026
+
+PR319 merged at2f1f095 after exact-head core/Chromium/WebKit success. The triggered production R2 audit40140645470 passed8guard tests and report-only inventory (2,021,528bytes;23objects;11complete snapshots). The existing monitor snapshot predates this audit; next scheduled warning clearance and post-merge Foundation remain pending. No new restore proof is claimed. All content/learner data remain in Supabase. Sender configuration and withdrawal-aware historical retrieval remain unfinished. See latest handoff.
+
 ## Scheduled retention acceptance — 25 October 2026
 
 Natural04:15IST monitor execution persisted normal capacity:22,047,891bytes against500,000,000 operating budget. Delivery now diagnoses missing configuration. R2 correctly remains degraded because no main storage audit exists; repaired its manual-only workflow with monthly read-only inventory and scoped main-file-change triggers. Eight guard tests and1465Node/check/build pass. Hosted repaired CI and audit execution pending; sender and withdrawal-aware historical retrieval remain open. Supabase remains authoritative.

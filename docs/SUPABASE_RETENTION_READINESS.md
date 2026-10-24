@@ -45,3 +45,7 @@ The hosted session API intentionally blocks retired question delivery and return
 ## Future cutover acceptance
 
 Preserve canonical question/concept/version IDs, exact old content versions and source/review/rights bindings; retain original scoring receipts and idempotency keys. Test complete export/import and historical lookup with disposable fixtures. Freeze affected writes for final synchronization, reconcile all accepted writes, and retain a tested rollback that includes target-side writes. Never restore erased pilots. Content moves must not reset learner histories or silently recalculate scores. Learner records will keep growing in Supabase after any future content move.
+
+## Release acceptance — 25 October 2026, 04:27 IST
+
+PR319 merged as `2f1f09502efbcc5cb34ee7569171612930476909` after exact-head Foundation40140111115 core, Chromium and WebKit success. Its merged tree matches the tested feature tree. Main push triggered R2 audit40140645470 successfully: eight storage-guard tests passed and report-only inventory found2,021,528bytes across23objects/11complete snapshots with no retention candidates. It reported `protected_verified_snapshot_present=false`; do not label this a new restore drill or a protected verified snapshot. The monitor's saved R2 observation still predates the audit, so warning clearance awaits natural refresh. Post-merge Foundation40140645421 was still running when inspected.
