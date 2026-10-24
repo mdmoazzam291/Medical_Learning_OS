@@ -1,3 +1,7 @@
+## Retention acceptance follow-up — 25 October 2026
+
+PR319 hosted core checks pass; Chromium found an eager accessible-name selection race in the navigation test helper. The helper now waits for either valid phone Tools control without weakening assertions or changing runtime. Local tests/check/build and full hosted browser acceptance pending. Version7 scheduled snapshots, sender configuration and withdrawal-aware historical retrieval remain separately unverified. No content or learner data moved.
+
 ## Supabase retention monitor deployed — 25 October 2026
 
 PR319 monitoring source is live as version7; exact pin readback and unauthenticated401 verified. Database-byte measurement22,047,891 is below budget. Local1465tests/check/build pass; exact-head CI and natural scheduled snapshot pending. Email remains blocked by sender configuration; full hosted historical-prompt retrieval remains unimplemented. No content, learner records, schema or credentials changed. See retention readiness and handoff.

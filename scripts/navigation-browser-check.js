@@ -89,7 +89,9 @@ try {
     const openTools = async () => {
       await page.waitForFunction(value => document.body?.dataset.navigationLayout === (value <= 700 ? 'phone' : 'top') && (value <= 700 || Boolean(document.querySelector('.mlos-header>.mlos-master-nav'))), page.viewportSize().width);
       if (page.viewportSize().width <= 700) {
-        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? 'Admin tools' : 'Expand navigation', exact: true }).click();
+        // Authorization can replace the learner shell with the Admin shell after
+        // layout readiness. Resolve the current control when it becomes actionable.
+        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: /^(Admin tools|Expand navigation)$/ }).click();
         return;
       }
       if (await page.locator('#mlos-workspace-menu').isVisible()) return;
