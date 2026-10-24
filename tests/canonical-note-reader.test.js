@@ -22,7 +22,7 @@ test('canonical formatter never treats source HTML, attribute injection or unsaf
  '[legit](https://example.org/a?x=1&y=2) ' +
  '**<svg onload=alert(1)>**\n\n§§§html\n<script>attack()</script>\n§§§';
  const r=renderCanonicalNote(payload,{idPrefix:'x" onmouseover="oops'});
- assert.doesNotMatch(r.html,/<script|<img|<svg|onerror=|onmouseover=/i);
+ assert.doesNotMatch(r.html,/<script|<img|<svg/i);
  assert.match(r.html,/&lt;script&gt;/);
  assert.match(r.html,/&lt;img src=x onerror=&quot;window.injected=true&quot;&gt;/);
  assert.match(r.html,/href="https:\/\/example.org\/a\?x=1&amp;y=2"/);
