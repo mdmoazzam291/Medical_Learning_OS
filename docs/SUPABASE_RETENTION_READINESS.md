@@ -2,6 +2,14 @@
 
 Owner direction, 25 October 2026: retain all canonical content and learner data in the current Supabase project. Cloudflare continues website hosting and independent private backups. No D1, second catalog, dual writes, migration or deletion is introduced.
 
+## Scheduled acceptance — 25 October 2026, 04:15 IST
+
+The natural scheduled version7 execution saved a Supabase snapshot at 22:45:04 UTC on 24 October: `databaseBytes=22047891`, `databaseBudgetBytes=500000000`, `capacityRatio=0.044095782`, `capacityStage=normal`, status healthy. This proves scheduled measurement and persistence, not a production threshold-crossing alert or billed-quota measurement. Notification evidence now records `alert_delivery_not_configured`; email delivery is still blocked.
+
+The same execution correctly marked R2 degraded: the latest production backup was successful on 18 October, the main restore drill succeeded on 1 October, but there was no main-branch storage audit. The audit workflow was manual-only despite the monitor's 35-day freshness requirement. It now schedules a monthly read-only inventory at 07:45 IST on the first day and runs when its own workflow/guard files change on main. It retains read-only permissions and backup concurrency serialization. Eight storage-guard tests pass. No fresh hosted audit result or complete backup health is claimed before the workflow executes.
+
+Foundation40139406460 passed core checks but found a phone navigation test synchronization race: an eager toolbar count selected the learner trigger before async Admin authorization replaced it. The test now resolves either exact valid accessible name when actionable. Runtime navigation is unchanged; full hosted acceptance must be checked on the repaired head. Local1465 Node tests/check/build pass; local browser execution is unavailable because the browser executable download returned an invalid archive.
+
 ## Verified baseline and corrected audit
 
 The earlier chat audit incorrectly treated backup run 39623460079 as an unresolved export defect. PR292 already fixed the explicit libpq connection argument. Actual encrypted backup and disposable restore runs 39624386430 and 39624968454 succeeded afterwards; the repair was merged. Do not rotate recovery keys or repeat that repair. These are dated recovery results, not proof of recovery of today's full platform.

@@ -2,6 +2,16 @@ name: R2 storage and retention audit
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/r2-storage-audit.yml'
+      - 'ops/r2-backups/storage_guard.py'
+      - 'ops/r2-backups/test_storage_guard.py'
+  schedule:
+    # Monthly read-only inventory; the monitor requires evidence within 35 days.
+    # 07:45 IST on the first day of each month, after the restore drill.
+    - cron: '15 2 1 * *'
 
 permissions:
   contents: read

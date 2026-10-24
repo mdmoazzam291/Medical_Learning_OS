@@ -1,3 +1,7 @@
+## Scheduled retention acceptance — 25 October 2026
+
+Natural04:15IST monitor execution persisted normal capacity:22,047,891bytes against500,000,000 operating budget. Delivery now diagnoses missing configuration. R2 correctly remains degraded because no main storage audit exists; repaired its manual-only workflow with monthly read-only inventory and scoped main-file-change triggers. Eight guard tests and1465Node/check/build pass. Hosted repaired CI and audit execution pending; sender and withdrawal-aware historical retrieval remain open. Supabase remains authoritative.
+
 ## Retention acceptance follow-up — 25 October 2026
 
 PR319 hosted core checks pass; Chromium found an eager accessible-name selection race in the navigation test helper. The helper now waits for either valid phone Tools control without weakening assertions or changing runtime. Local tests/check/build and full hosted browser acceptance pending. Version7 scheduled snapshots, sender configuration and withdrawal-aware historical retrieval remain separately unverified. No content or learner data moved.
