@@ -34,7 +34,7 @@ try {
       }
       if (path?.startsWith('/vault/concepts/')) {
         const concept = concepts.find(item => item.conceptId === decodeURIComponent(path.split('/').at(-1)));
-        return fulfill({ concept, canonicalNote: concept.conceptId === conceptId ? { noteVersionId, version: 1, title: 'A place to connect your knowledge', bodyMarkdown: 'Synthetic interface fixture — no clinical teaching.\n\nThe published note stays visible while personal notes and private corrections occupy their own sections.\n\nLiteral text: <script>window.fixtureInjected = true</script>', contentSha256: 'e'.repeat(64) } : null, annotations: concept.conceptId === conceptId && annotation ? [annotation] : [] });
+        return fulfill({ concept, canonicalNote: concept.conceptId === conceptId ? { noteVersionId, version: 1, title: 'A place to connect your knowledge', bodyMarkdown: '# Interface fixture\n\n## 01 Core\nSynthetic interface fixture — no clinical teaching.\n\nThe published note stays visible while personal notes and private corrections occupy their own sections.\n\n## 11 Revision\n- Review private context\n- Return to your question\n\nLiteral text: <script>window.fixtureInjected = true</script>', contentSha256: 'e'.repeat(64) } : null, annotations: concept.conceptId === conceptId && annotation ? [annotation] : [] });
       }
       if (path === '/vault/annotations' && method === 'POST') {
         const body = request.postDataJSON();
@@ -55,6 +55,12 @@ try {
     assert.equal(await page.locator('#vault-concept-browser').getAttribute('open') !== null, width > 800);
     assert.equal(await page.locator('.personal-correction-composer').getAttribute('open'), null);
     assert.equal(await page.evaluate(() => window.fixtureInjected), undefined);
+    assert.equal(await page.locator('#reviewed-note pre.vault-markdown').count(),0);
+    assert.equal(await page.locator('#reviewed-note .canonical-note-content h4').count(),2);
+    assert.equal(await page.locator('#reviewed-note .canonical-note-content li').count(),2);
+    await page.getByRole('navigation',{name:'Sections in this note'}).getByRole('link',{name:'11 Revision'}).click();
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'vault-note-'+noteVersionId+'-11-revision');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' note navigation overflow');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, name + ' overflow');
     assert.equal(await page.locator('#reviewed-note').evaluate(el => el.getBoundingClientRect().top < innerHeight), true, name + ' reviewed note starts in viewport');
     await page.getByRole('link', { name: 'My notes (0)', exact: true }).click();
