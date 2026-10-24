@@ -30,6 +30,8 @@ jobs:
           PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/question-intelligence-db-check.js
       - name: Verify protected medical relationship registry against isolated PostgreSQL
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/medical-relationship-db-check.js
+      - name: Verify complete Admin pending counts and service-only authority
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/admin-workflow-db-check.js
       - name: Verify exact access manifest against unsafe restore defaults
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/access-manifest-db-check.js
       - name: Verify recovered historical baseline and learner isolation

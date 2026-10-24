@@ -39,13 +39,13 @@ export function applyAdminWorkspace(app, hash, authorized, { focus = false } = {
 }
 const observed = value => typeof value === 'number' && Number.isSafeInteger(value) && value >= 0 ? value : '—';
 const metric = (label, value) => '<div class="owner-metric"><span>' + escapeText(label) + '</span><strong>' + escapeText(value) + '</strong></div>';
-export function overviewMarkup(dashboard, alerts = null) {
-  const inbox = buildAdminActionInbox(dashboard, { alerts });
+export function overviewMarkup(dashboard, alerts = null, workflow = null) {
+  const inbox = buildAdminActionInbox(dashboard, { alerts, workflow });
   const critical = inbox.missing.includes('infrastructure alerts') ? '—' : inbox.actions.filter(action => action.kind === 'infrastructure' && action.priority === 0).length;
   const content = dashboard?.content || {};
   return '<div class="section-heading"><div><span class="eyebrow">ADMIN OVERVIEW</span><h2>Platform at a glance</h2><p>Summary evidence and shortcuts. Open a tool to inspect details or perform an authorized action.</p></div></div>' +
     '<div class="owner-metrics">' + metric('Learners', observed(dashboard?.users?.total)) + metric('Questions', observed(content.questions)) + '</div>' +
-    '<h3>Urgent actions</h3><div class="owner-metrics">' + metric('Learner reports', observed(content.openLearnerReports)) + metric('Unresolved rights', observed(content.unresolvedRights)) + metric('Critical alerts', critical) + '</div>' +
+    '<h3>Urgent actions</h3><div class="owner-metrics">' + metric('Learner reports', observed(content.openLearnerReports)) + metric('Unresolved rights', observed(content.unresolvedRights)) + metric('Critical alerts', critical) + metric('Draft import batches', observed(workflow?.draftImportBatches)) + metric('Relationship drafts', observed(workflow?.draftRelationshipAssertions)) + '</div>' +
     (inbox.missing.length ? '<p class="muted">Not verified: ' + escapeText(inbox.missing.join(' · ')) + '. Unknown counts are shown as —.</p>' : '<p class="muted">Counts are separate signal families; they are not summed into a possibly duplicated total.</p>') +
     '<nav class="owner-summary-links" aria-label="Admin overview shortcuts">' + ['actions', 'users', 'content', 'health'].map(id => { const view = ADMIN_VIEWS.find(item => item.id === id); return '<a class="secondary action-link" href="/web/admin.html#' + view.anchor + '">' + view.label + ' →</a>'; }).join('') + '</nav>';
 }

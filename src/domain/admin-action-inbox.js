@@ -1,3 +1,4 @@
+import { readAdminWorkflowSummary } from './admin-workflow.js';
 // Read-only triage derived solely from the existing owner dashboard and alert contract.
 // Never infer medical correctness, publication eligibility, mastery or an all-clear from missing telemetry.
 const validCount = value => typeof value === 'number' && Number.isSafeInteger(value) && value >= 0 ? value : null;
@@ -6,7 +7,7 @@ const reviewKinds = [
   ['references', 'Reference review pending', '/web/review.html?workspace=references'],
   ['rights', 'Rights review pending', '/web/review.html?workspace=rights']
 ];
-export function buildAdminActionInbox(dashboard, { alerts = null } = {}) {
+export function buildAdminActionInbox(dashboard, { alerts = null, workflow = null } = {}) {
   const content = dashboard?.content || {};
   const actions = [];
   const unresolvedRights = validCount(content.unresolvedRights);
@@ -43,12 +44,19 @@ export function buildAdminActionInbox(dashboard, { alerts = null } = {}) {
       href, count
     });
   }
+  const drafts = readAdminWorkflowSummary(workflow);
+  for (const [kind, key, label, href] of [
+    ['import-draft', 'draftImportBatches', 'Import batches awaiting review', '/web/content-import.html'],
+    ['relationship-draft', 'draftRelationshipAssertions', 'Medical relationship drafts', '/web/content-import.html#medical-relationships']
+  ]) if (drafts?.[key] > 0) actions.push({kind, priority: 3, label, href, count: drafts[key],
+    detail: 'Full-history pending count. Inspect exact versions and current review blockers; a draft is not approved.'});
   actions.sort((a, b) => a.priority - b.priority || a.kind.localeCompare(b.kind));
   const missing = [
+    ...(drafts ? [] : ['import drafts', 'medical relationship drafts']),
     ...(observedAlerts ? [] : ['infrastructure alerts']),
     ...(openReports === null ? ['learner reports'] : []),
     ...(unresolvedRights === null ? ['source rights'] : []),
-    ...(reviewKinds.some(([kind]) => validCount(pending?.[kind]) !== null) ? [] : ['human-review queues'])
+    ...(reviewKinds.every(([kind]) => validCount(pending?.[kind]) !== null) ? [] : ['human-review queues'])
   ];
   return { actions, missing, asOf: dashboard?.generatedAt || null };
 }

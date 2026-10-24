@@ -11,22 +11,22 @@ test('action inbox ranks observed risks and never creates write authority', () =
   assert.equal(result.actions[0].href, '/web/admin.html#owner-infrastructure-alerts');
   assert.ok(result.actions.every(x => x.href.startsWith('/web/')));
   assert.ok(result.actions.every(x => !('approve' in x) && !('publish' in x)));
-  assert.deepEqual(result.missing, []);
+  assert.deepEqual(result.missing, ['import drafts','medical relationship drafts']);
 });
 
 test('incomplete owner telemetry never masquerades as an all-clear', () => {
   const empty = buildAdminActionInbox({ content: {} });
   assert.equal(empty.actions.length, 0);
-  assert.deepEqual(empty.missing, ['infrastructure alerts','learner reports','source rights','human-review queues']);
+  assert.deepEqual(empty.missing, ['import drafts','medical relationship drafts','infrastructure alerts','learner reports','source rights','human-review queues']);
   const measuredZero = buildAdminActionInbox({ content: { openLearnerReports: 0, unresolvedRights: 0, pendingReview: { medical: 0 } } }, { alerts: [] });
   assert.equal(measuredZero.actions.length, 0);
-  assert.deepEqual(measuredZero.missing, []);
+  assert.deepEqual(measuredZero.missing, ['import drafts','medical relationship drafts','human-review queues']);
   const missingQueues = buildAdminActionInbox({ content: { openLearnerReports: 0, unresolvedRights: 0, pendingReview: {} } }, { alerts: [] });
-  assert.deepEqual(missingQueues.missing, ['human-review queues']);
+  assert.deepEqual(missingQueues.missing, ['import drafts','medical relationship drafts','human-review queues']);
 });
 
 test('malformed count values and unknown alert statuses cannot invent issues', () => {
   const state = buildAdminActionInbox({ content: { openLearnerReports: '400', unresolvedRights: -1, pendingReview: { medical: Infinity } } }, { alerts: [{ state: 'closed', severity: 'critical' }, null] });
   assert.equal(state.actions.length, 0);
-  assert.deepEqual(state.missing, ['learner reports','source rights','human-review queues']);
+  assert.deepEqual(state.missing, ['import drafts','medical relationship drafts','learner reports','source rights','human-review queues']);
 });

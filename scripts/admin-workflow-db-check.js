@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {readFile,readdir} from 'node:fs/promises';
+const {PGlite}=await import(process.env.PGLITE_MODULE_URL||'@electric-sql/pglite');
+const db=new PGlite(),actor='11111111-1111-4111-8111-111111111111',other='22222222-2222-4222-8222-222222222222';
+try{
+ await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;
+ create table public.content_admin_account(singleton boolean primary key,admin_user_id uuid);
+ create table public.content_library_imports(import_id text primary key,status text);
+ create table public.medical_relationship_versions(relationship_version_id text primary key,relationship_id text,version integer);
+ create table public.medical_relationship_events(relationship_version_id text,action text);
+ alter table public.content_library_imports enable row level security;
+ alter table public.medical_relationship_versions enable row level security;
+ alter table public.medical_relationship_events enable row level security;
+ grant usage on schema public to anon,authenticated,service_role;
+ grant select on public.content_admin_account,public.content_library_imports,public.medical_relationship_versions,public.medical_relationship_events to service_role;`);
+ const dir=new URL('../supabase/migrations/',import.meta.url),source=await readFile(new URL('20260929032000_single_content_admin.sql',dir),'utf8');
+ const helper=source.match(/create or replace function public\.is_content_admin\([\s\S]*?as (\$[a-z_]*\$)[\s\S]*?\1;/i)?.[0];assert.ok(helper);await db.exec(helper);
+ await db.exec('revoke all on function public.is_content_admin(uuid) from public,anon,authenticated;grant execute on function public.is_content_admin(uuid) to service_role;');
+ const file=(await readdir(dir)).find(f=>f.endsWith('_admin_workflow_summary.sql'));assert.ok(file);await db.exec(await readFile(new URL(file,dir),'utf8'));
+ await db.query('insert into content_admin_account values(true,$1)',[actor]);
+ await db.exec("insert into content_library_imports select 'synthetic-import-'||n,case when n<=125 then 'draft' else 'published' end from generate_series(1,155)n;insert into medical_relationship_versions select 'synthetic-'||n||'@1','synthetic-'||n,1 from generate_series(1,130)n;");
+ await db.exec(`insert into medical_relationship_versions values('older-draft@1','older-draft',1),('older-draft@2','older-draft',2),('new-draft@1','new-draft',1),('new-draft@2','new-draft',2),('retired-correction@1','retired-correction',1),('retired-correction@2','retired-correction',2),('published@1','published',1);
+ insert into medical_relationship_events values('older-draft@2','published'),('new-draft@1','published'),('retired-correction@2','retired'),('published@1','published');`);
+ const counts=async user=>(await db.query('select public.admin_workflow_summary_v1($1) result',[user])).rows[0].result;
+ await db.exec('set role service_role');
+ const first=await counts(actor);assert.equal(first.contractId,'admin-workflow-summary-v1');assert.equal(first.draftImportBatches,125);assert.equal(first.draftRelationshipAssertions,131);assert.ok(Number.isFinite(Date.parse(first.asOf)));
+ await assert.rejects(counts(other),/content_admin_required/);await assert.rejects(counts(null),/content_admin_required/);
+ const again=await counts(actor);assert.equal(again.draftImportBatches,125);assert.equal(again.draftRelationshipAssertions,131);
+ await db.exec('reset role');
+ for(const role of ['anon','authenticated'])await assert.rejects(db.exec('set role '+role+';select public.admin_workflow_summary_v1(null)'),/permission denied/).finally(()=>db.exec('reset role'));
+ const p=(await db.query("select prosecdef,provolatile,proconfig from pg_proc where oid='public.admin_workflow_summary_v1(uuid)'::regprocedure")).rows[0];assert.equal(p.prosecdef,false);assert.equal(p.provolatile,'s');assert.ok(p.proconfig.includes('search_path=""'));
+ assert.equal((await db.query('select count(*)::int n from content_library_imports')).rows[0].n,155);
+ console.log('Admin pending-work SQL passed: full-history counts >100, latest/terminal relationship semantics, service-only invoker, actual Admin denial and read-only behavior. Synthetic component fixture only; no hosted writes.');
+}catch(error){console.error(JSON.stringify({code:error.code||null,message:error.message}));process.exitCode=1;}finally{await db.close();}
