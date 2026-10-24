@@ -1,3 +1,7 @@
+## Supabase retention monitor deployed — 25 October 2026
+
+PR319 monitoring source is live as version7; exact pin readback and unauthenticated401 verified. Database-byte measurement22,047,891 is below budget. Local1465tests/check/build pass; exact-head CI and natural scheduled snapshot pending. Email remains blocked by sender configuration; full hosted historical-prompt retrieval remains unimplemented. No content, learner records, schema or credentials changed. See retention readiness and handoff.
+
 ## Supabase retention safeguards — 25 October 2026
 
 PR319 adds capacity stages and accurate backup/notification evidence while retaining Supabase authority. Local1465Node tests/check/build pass; Python24pass/2skip. Exact-head CI and pinned monitor rollout pending. Existing encrypted backup repair was already integrated; sender configuration and safe hosted historical-prompt retrieval remain gaps. See [readiness](SUPABASE_RETENTION_READINESS.md) and latest handoff for limits and exact next action. No production data/schema/credentials changed.
