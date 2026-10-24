@@ -118,7 +118,7 @@ try {
     // reports canceled cross-origin fixture reads as access-control errors.
     const go = async url => { await page.waitForLoadState('networkidle'); await page.goto(url); };
     const reload = async () => { await page.waitForLoadState('networkidle'); await page.reload(); };
-    const writes = []; let admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false, projectionDelayed = false, dashboardUnavailable = false, dashboardReads = 0, logoutFails = false;
+    const writes = []; let attemptReviewState = "available", admin = true, selectionLibrary = library, selectedIds = null, libraryUnavailable = false, flagsUnavailable = false, alertsUnavailable = false, largeFlags = false, accessStatus = 200, projectionUnavailable = false, projectionDelayed = false, dashboardUnavailable = false, dashboardReads = 0, logoutFails = false;
     await page.route('https://iyapppmeieqhflnzslao.supabase.co/**', async route => {
       const req = route.request(), path = new URL(req.url()).pathname;
       const reply = (body, status = 200) => route.fulfill({ status, headers: { 'access-control-allow-origin': origin }, contentType: 'application/json', body: JSON.stringify(body) });
@@ -172,7 +172,11 @@ try {
       if (path.endsWith('/study-api/exam-simulator/runs/current')) return reply({ contractId: 'exam-run-view-v1', run: null });
       if (path.endsWith('/study-api/exam-simulator/test-readiness')) return reply({ error: 'internal_exam_test_forbidden' }, 403);
       if (path.endsWith('/study-api/retention-probe/consent')) return reply({ consent: null, protocol: null, activation: { active: false } });
-      if (path.endsWith('/study-api/activity')) return reply({ items: [{ questionVersionId: 'fixture-q@1', correct: false, representation: 'concise-practice', recordedAt: '2026-10-01T00:00:00Z' }], nextOffset: null });
+      if (path.endsWith('/study-api/activity')) return reply({ items: [{ questionVersionId: 'fixture-q@1', correct: false, representation: 'concise-practice', recordedAt: '2026-10-01T00:00:00Z' }, { attemptId:'fixture-attempt',questionVersionId:'fixture-q@1',correct:false,representation:'original',recordedAt:'2026-10-01T00:00:00Z' }], nextOffset:50 });
+      if (path.endsWith('/study-api/attempts/fixture-attempt/review')) {
+        if (attemptReviewState === 'error') return reply({error:'synthetic_read_failure'},503);
+        return reply({availability:attemptReviewState,attempt:{questionVersionId:'fixture-q@1',correct:false},question:attemptReviewState === 'available' ? question : null,receipt:attemptReviewState === 'available' ? {selectedOptionId:'a',answerOptionId:'b',explanation:'Saved synthetic explanation',sources:[]} : null});
+      }
       if (path.endsWith('/study-api/exam-simulator/history')) return reply({ runs: [{ runId: 'owned-run', examId: 'synthetic', status: 'completed', startedAt: '2026-10-01T00:00:00Z' }, { runId: 'cancelled-run', status: 'cancelled' }], nextOffset: null });
       if (path.endsWith('/study-api/diagnostics/mistakes')) return reply({ fingerprints: [] });
       if (path.endsWith('/study-api/exam-dna')) return reply({ concepts: [] });
@@ -673,6 +677,28 @@ try {
     if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await go(origin + '/web/workspace.html?master=home&section=recent');
     await page.getByText('Concise practice', { exact: true }).waitFor();
+    const reviewWrites = writes.length;
+    await page.getByRole('link', {name:'Load older activity',exact:true}).click();
+    await page.waitForURL('**offset=50');
+    await page.getByRole('link', {name:'Review saved attempt',exact:true}).click();
+    await page.getByRole('heading', {name:'Saved attempt review',exact:true}).waitFor();
+    await page.getByText('Saved synthetic explanation', {exact:true}).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('offset'),'50');
+    if (process.env.SCREENSHOT_DIR) await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'saved-attempt-review-' + name + '.png'),fullPage:true});
+    await reload();
+    await page.getByRole('heading', {name:'Saved attempt review',exact:true}).waitFor();
+    await page.getByRole('link', {name:'Back to saved activity',exact:true}).click();
+    await page.getByRole('link', {name:'Review saved attempt',exact:true}).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('offset'),'50');
+    assert.equal(new URL(page.url()).searchParams.has('attempt'),false);
+    for (const state of ['restricted','error']) {
+      attemptReviewState=state;
+      await go(origin + '/web/workspace.html?master=home&section=recent&offset=50&attempt=fixture-attempt');
+      await page.getByRole('heading', {name:'Review unavailable',exact:true}).waitFor();
+      assert.equal(await page.getByText('Saved synthetic explanation', {exact:true}).count(),0);
+    }
+    attemptReviewState='available';
+    assert.equal(writes.length,reviewWrites,'saved attempt review and pagination never write learning data');
     await go(origin + '/web/workspace.html?master=exams&section=autopsy');
     await page.getByRole('link', { name: 'Open GT Autopsy', exact: true }).waitFor();
     assert.equal(await page.locator('a[href*="cancelled-run"]').count(), 0);

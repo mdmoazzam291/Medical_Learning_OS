@@ -33,3 +33,14 @@ test('Preferences exposes independent surface style without obsolete sidebar cho
     assert.doesNotMatch(html, /data-preference="expanded"/);
   }
 });
+test('recent activity links exact owned attempts and preserves the page offset',()=>{
+ const html=render('recent',{activityOffset:50,items:[{attemptId:'a1',questionVersionId:'q@1',representation:'original'}],nextOffset:100});
+ assert.match(html,/attempt=a1/);assert.match(html,/offset=50/);assert.match(html,/offset=100/);assert.match(html,/Review saved attempt/);
+});
+test('saved review renders stored results and escaped original content without answer controls',()=>{
+ const html=render('recent',{items:[],activityOffset:50,attemptReview:{availability:'available',attempt:{questionVersionId:'q@1',correct:false},question:{stem:'<img onerror=bad>',options:[{optionId:'a',text:'<script>'},{optionId:'b',text:'Beta'}]},receipt:{selectedOptionId:'a',answerOptionId:'b',explanation:'<svg onload=bad>',sources:[]}}});
+ assert.match(html,/Saved attempt review/);assert.match(html,/Your answer/);assert.match(html,/Recorded correct answer/);assert.match(html,/Incorrect/);assert.match(html,/&lt;img/);assert.match(html,/&lt;svg/);assert.doesNotMatch(html,/<img|<svg|<input|<form/);assert.match(html,/offset=50/);
+});
+test('restricted or failed historical review never renders supplied prompt or answer fields',()=>{
+ for(const data of [{attemptReview:{availability:'restricted',attempt:{correct:true},question:{stem:'HIDDEN'},receipt:{explanation:'HIDDEN'}}},{attemptReviewError:true}]){const html=render('recent',{items:[],...data});assert.match(html,/Review unavailable/);assert.doesNotMatch(html,/HIDDEN/);}
+});

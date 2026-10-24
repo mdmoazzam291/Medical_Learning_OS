@@ -10,7 +10,11 @@ const auth = createSupabaseAuth(cloudConfig), cloud = createCloudStudy({ ...clou
 let data = null, loading = false, user = null;
 document.querySelector('#workspace-title').textContent = navigationFor(identity.master).find(s => s.id === identity.section)?.label || 'Your workspace';
 function render() { root.innerHTML = identity.section === 'preferences' ? preferencesContent(prefs.read(), prefs.persistence) : workspaceContent(identity.section, data || {}); }
-async function load(offset = 0) {
+function activityOffset() {
+  const value = new URLSearchParams(location.search).get('offset') || '0';
+  return /^\d{1,6}$/.test(value) && Number(value) <= 100000 ? Number(value) : 0;
+}
+async function load(offset = activityOffset()) {
   if (loading) return;
   loading = true; data = null; root.textContent = 'Loading your saved workspace…';
   try {
@@ -21,7 +25,14 @@ async function load(offset = 0) {
     const section = identity.section;
     if (section === 'preferences') data = {};
     else if (section === 'progress' || section === 'data') data = await cloud.progress();
-    else if (section === 'recent') data = await cloud.recentActivity(offset);
+    else if (section === 'recent') {
+      data = { ...await cloud.recentActivity(offset), activityOffset: offset };
+      const attemptId = new URLSearchParams(location.search).get('attempt');
+      if (attemptId) {
+        try { data.attemptReview = await cloud.attemptReview(attemptId); }
+        catch { data.attemptReviewError = true; }
+      }
+    }
     else if (section === 'revision') data = await cloud.due(50);
     else if (section === 'mistakes') data = await cloud.mistakeDiagnostics();
     else if (section === 'dna') data = await cloud.examDna();
