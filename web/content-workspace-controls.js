@@ -42,6 +42,9 @@ export function workspaceControls({root,render,navigate}) {
     if(b?.hasAttribute('data-cw-dialog-close'))root.querySelector('#cw-pane-dialog')?.close();
     if(b?.dataset.cwMore){if(b.dataset.cwMore==='inspector')inspectorLimit+=50;else if(b.dataset.cwMore==='content')contentLimit+=50;else if(b.dataset.cwMore==='concepts')explorerLimit=Math.min(1000,explorerLimit+60);else {graphLimit=Math.min(100,graphLimit+20);contentLimit=Math.max(contentLimit,graphLimit);}render();}
     const a=event.target.closest('a');
+    // In-note section anchors are handled locally by the canonical reader.
+    // Do not turn them into Library route changes or steal heading focus.
+    if(a?.matches('.canonical-note-outline a[href^="#"]'))return;
     if(a&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey&&event.button===0){const url=new URL(a.href,location.origin);if(url.origin===location.origin&&url.pathname==='/web/library.html'){event.preventDefault();const dialog=root.querySelector('#cw-pane-dialog');if(dialog?.open)dialog.close();navigate(null,url.search);root.querySelector('#cw-main')?.focus();}}
   });
   root.addEventListener('keydown',event=>{const tab=event.target.closest('[role="tab"]');if(!tab||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;const tabs=[...tab.parentNode.querySelectorAll('[role="tab"]')],i=tabs.indexOf(tab),next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(i+(event.key==='ArrowLeft'?-1:1)+tabs.length)%tabs.length;event.preventDefault();tabs[next].click();root.querySelectorAll('[role="tab"]')[next]?.focus();});
