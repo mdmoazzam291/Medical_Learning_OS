@@ -761,8 +761,9 @@ try {
       if (master.id === 'account') continue;
       if (width <= 700) continue; // phone catalog already covered by unchanged drawer and the existing route sweep
       const currentMenu = page.locator('#mlos-workspace-menu');
-      if (master.id === 'admin') { await enterAdmin(); await openTools(); }
+      if (master.id === 'admin') { await enterAdmin(); await page.getByRole('heading', { name: 'Overview', exact: true }).waitFor(); await settleAdmin(); await openTools(); }
       else await page.locator('.mlos-header [data-workspace-menu="' + master.id + '"]').click();
+      await currentMenu.locator('.mlos-workspace-heading strong').filter({ hasText: master.label + ' tools' }).waitFor();
       for (const row of flatten(navigationFor(master.id, { isAdmin: true }))) assert.ok(await currentMenu.locator('a').evaluateAll((nodes, href) => nodes.some(n => n.getAttribute('href') === href), row.href), master.id + ':' + row.id);
     }
     await closeTools();
