@@ -429,9 +429,11 @@ try {
       await page.locator('.mlos-admin-toolbar [data-workspace-menu="admin"]').waitFor();
       assert.equal(await page.locator('.mlos-admin-toolbar [data-workspace-menu="admin"]').evaluate(node => document.activeElement === node), true, 'Admin phone rotation returns focus to its local trigger');
       await page.setViewportSize({ width, height });
+      await page.waitForFunction(() => document.body.dataset.navigationLayout === 'phone' && Boolean(document.querySelector('aside')));
     }
     assert.equal(await page.locator('aside').count(), width <= 700 ? 1 : 0, 'only phone navigation reserves an aside');
     assert.equal(await page.locator('header').count(), 1, 'only one shared Admin header');
+    assert.equal(await page.locator('.mlos-admin-toolbar').evaluate(node => Math.abs(node.getBoundingClientRect().top - document.querySelector('.mlos-header').getBoundingClientRect().bottom) < 1), true, 'Admin toolbar starts directly below the global header');
     assert.equal(await adminEntry.getAttribute('aria-current'), 'page');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     await activate(page.locator('#mlos-local-nav details[data-group="admin:overview"] > summary'));
