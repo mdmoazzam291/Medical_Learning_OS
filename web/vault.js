@@ -4,6 +4,7 @@ import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 import { createVaultDrafts } from '/web/vault-drafts.js';
+import { renderCanonicalNote, renderNoteOutline } from '/web/canonical-note-reader.js';
 
 const root = document.querySelector('#vault-app');
 const notice = document.querySelector('#notice');
@@ -103,7 +104,8 @@ function canonicalSection(detail) {
   if (!note) {
     return '<section id="reviewed-note" class="panel vault-reading" aria-labelledby="reviewed-note-title"><span class="eyebrow">CANONICAL NOTE</span><h2 id="reviewed-note-title" tabindex="-1">No reviewed canonical note is published yet.</h2><p>Your personal notes are available below. Reviewed content will appear here when it is published.</p></section>';
   }
-  return '<section id="reviewed-note" class="panel vault-reading" aria-labelledby="reviewed-note-title"><span class="eyebrow">CANONICAL NOTE · VERSION ' + note.version + '</span><h2 id="reviewed-note-title" tabindex="-1">' + escape(note.title) + '</h2><pre class="vault-markdown">' + escape(note.bodyMarkdown) + '</pre><details class="vault-provenance"><summary>Published version details</summary><p class="muted">Immutable version ' + escape(note.contentSha256.slice(0, 12)) + '…</p></details></section>';
+  const rendered = renderCanonicalNote(note.bodyMarkdown, {idPrefix:'vault-note-'+note.noteVersionId});
+  return '<section id="reviewed-note" class="panel vault-reading" aria-labelledby="reviewed-note-title"><span class="eyebrow">CANONICAL NOTE · VERSION ' + note.version + '</span><h2 id="reviewed-note-title" tabindex="-1">' + escape(note.title) + '</h2><div class="canonical-note-reader">' + renderNoteOutline(rendered.sections) + rendered.html + '</div><details class="vault-provenance"><summary>Published version details</summary><p class="muted">Immutable version ' + escape(note.contentSha256.slice(0, 12)) + '…</p></details></section>';
 }
 
 function annotationCard(annotation) {
