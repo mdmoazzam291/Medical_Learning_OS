@@ -50,6 +50,12 @@ async function load(){
 }
 root.addEventListener('change',event=>{if(event.target.hasAttribute('data-session-count')){sessionCount=Number(event.target.value);remember();render();return;}const key=event.target.dataset.filter;if(key){filters[key]=event.target.value;remember(true);render();}});
 root.addEventListener('click',async event=>{
+  const noteLink=event.target.closest('.canonical-note-outline a[href^="#"]');
+  if(noteLink&&typeof noteLink.getAttribute==='function'){
+    const id=noteLink.getAttribute('href').slice(1),section=root.querySelector('[id="'+id+'"]');
+    if(section){event.preventDefault();history.replaceState(null,'',location.pathname+location.search+'#'+id);section.scrollIntoView({block:'start'});section.focus({preventScroll:true});}
+    return;
+  }
   const t=event.target.closest('button,[data-graph-question],[data-graph-note],[data-graph-concept]');if(!t)return;
   if(t.hasAttribute('data-retry'))return load();
   if(t.dataset.view){const changed=view!==t.dataset.view;({view,filters,options}=libraryRouteState(new URL(transitionContext(location.search,{view:t.dataset.view}),location.origin).search));remember(changed);render();return root.querySelector('[data-view="'+view+'"]').focus();}
@@ -58,16 +64,6 @@ root.addEventListener('click',async event=>{
   if(t.dataset.graphNote){const card=[...root.querySelectorAll('[data-note-card]')].find(c=>c.dataset.noteCard===t.dataset.graphNote);card?.focus();card?.scrollIntoView({block:'center'});return;}
   if(t.dataset.graphQuestion){const card=[...root.querySelectorAll('[data-question-card]')].find(c=>c.dataset.questionCard===t.dataset.graphQuestion);card?.focus();card?.scrollIntoView({block:'center'});return;}
   if((t.hasAttribute('data-study')||t.dataset.conciseQuestion)&&!busy){busy=true;render();try{const session=await request('/study',t.dataset.conciseQuestion?{questionVersionIds:[t.dataset.conciseQuestion],variants:{[t.dataset.conciseQuestion]:t.dataset.variant}}:{questionVersionIds:studySelection(selectWorkspace(library,{filters,view,...options}),sessionCount)});const url='/web/medical.html?resume='+encodeURIComponent(session.sessionId);if(session.resumedExisting){busy=false;render();document.querySelector('#library-status').innerHTML='You have an unfinished session. Finish it before starting this selection. <a href="'+e(url)+'">Continue unfinished session</a>';}else location.assign(url);}catch(error){busy=false;render();document.querySelector('#library-status').textContent=error.message;}}
-});
-root.addEventListener('click',event=>{
-  const link=event.target.closest('.canonical-note-outline a[href^="#"]');
-  if(!link||typeof link.getAttribute!=='function')return;
-  const id=link.getAttribute('href').slice(1),section=root.querySelector('[id="'+id+'"]');
-  if(!section)return;
-  event.preventDefault();
-  history.replaceState(null,'',location.pathname+location.search+'#'+id);
-  section.scrollIntoView({block:'start'});
-  section.focus({preventScroll:true});
 });
 root.addEventListener('keydown',event=>{if((event.target.dataset.graphQuestion||event.target.dataset.graphNote||event.target.dataset.graphConcept)&&['Enter',' '].includes(event.key)){event.preventDefault();event.target.click();}});
 const enhancements=setupLibraryWorkspaces({root,state:()=>({library,view,filters,options,busy}),change(update){if(update.sessionCount)sessionCount=update.sessionCount;if(update.building!==undefined)building=update.building;if(update.view)view=update.view;if(update.filters)filters={...filters,...update.filters};if(update.options)options={...options,...update.options};},render,remember});
