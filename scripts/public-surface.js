@@ -31,6 +31,8 @@ export const publicFiles = Object.freeze([
   'web/content-workspace-view.js',
   'web/content-workspace-controls.js',
   'web/content-workspace.css',
+  'web/canonical-note-reader.js',
+  'web/canonical-note-reader.css',
   'web/library.css',
   'web/content-import.html',
   'web/content-import.js',

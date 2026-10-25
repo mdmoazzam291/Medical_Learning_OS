@@ -3,10 +3,11 @@ import { preparationScopeMarkup } from './preparation-view.js';
 import { CONTENT_GROUPS, exploreConcepts, conceptDossier, conceptNeighborhood, transitionContext } from '../src/domain/content-workspace.js';
 import { groupReviewedNoteSections } from '../src/domain/concept-dossier-sections.js';
 import { escapeText as e } from './navigation-view.js';
+import { renderCanonicalNote, renderNoteOutline } from './canonical-note-reader.js';
 const title = value => String(value).replace(/-/g,' ').replace(/^./,c=>c.toUpperCase());
 const empty = text => '<div class="workspace-empty"><p>'+e(text)+'</p></div>';
 const href = (search, values) => e(transitionContext(search,values));
-const noteMarkup = (n,draft=false) => '<article class="panel" data-note-card="'+e(n.noteVersionId)+'" tabindex="-1"><h3>'+e(n.title)+'</h3><small>'+(draft?'Draft note · ':'Published note · ')+e(n.noteVersionId)+'</small><div class="library-note-body">'+e(n.bodyMarkdown)+'</div><a href="/web/vault.html?concept='+encodeURIComponent(n.conceptId)+'">Sources and private notes in NeuralVault</a></article>';
+const noteMarkup = (n,draft=false) => {const r=renderCanonicalNote(n.bodyMarkdown,{idPrefix:'library-note-'+n.noteVersionId});return '<article class="panel" data-note-card="'+e(n.noteVersionId)+'" tabindex="-1"><h3>'+e(n.title)+'</h3><small>'+(draft?'Draft note · ':'Published note · ')+e(n.noteVersionId)+'</small><div class="library-note-body"><div class="canonical-note-reader">'+renderNoteOutline(r.sections)+r.html+'</div></div><a href="/web/vault.html?concept='+encodeURIComponent(n.conceptId)+'">Sources and private notes in NeuralVault</a></article>';};
 const MAX_DOSSIER_EXCERPTS = 24;
 function overview(d, search, draft) {
   if (!d.concept) return '';
