@@ -84,11 +84,24 @@ begin
  v_doc:=v_draft.document;
  -- Names and aliases must not take over an existing canonical identity.
  if exists(
-   select 1 from jsonb_array_elements(v_body->'concepts') c
-   cross join lateral jsonb_array_elements_text(jsonb_build_array(c->>'label')||coalesce(c->'aliases','[]'::jsonb)) as old_name(value)
-   cross join lateral jsonb_array_elements_text(jsonb_build_array(v_doc->>'label')||v_doc->'aliases') as new_name(value)
-   where c->>'conceptId'<>v_draft.concept_id
-    and public.content_library_text(old_name.value)=public.content_library_text(new_name.value)
+   select 1 from jsonb_array_elements(v_body->'concepts') as existing(concept)
+    where existing.concept->>'conceptId' is distinct from v_draft.concept_id
+      and (
+        public.content_library_text(existing.concept->>'label') =
+          public.content_library_text(v_doc->>'label')
+        or exists(
+          select 1 from jsonb_array_elements_text(coalesce(existing.concept->'aliases','[]'::jsonb)) as prior_alias(value)
+          where public.content_library_text(prior_alias.value) = public.content_library_text(v_doc->>'label')
+        )
+        or exists(
+          select 1 from jsonb_array_elements_text(v_doc->'aliases') as incoming_alias(value)
+          where public.content_library_text(incoming_alias.value) = public.content_library_text(existing.concept->>'label')
+          or exists(
+            select 1 from jsonb_array_elements_text(coalesce(existing.concept->'aliases','[]'::jsonb)) as old_alias(value)
+            where public.content_library_text(old_alias.value) = public.content_library_text(incoming_alias.value)
+          )
+        )
+      )
  ) then raise exception 'concept_accept_identity_conflict'; end if;
  if v_draft.operation='create' then
    v_new_concepts:=(v_body->'concepts')||jsonb_build_array(jsonb_build_object(
