@@ -32,7 +32,10 @@ begin
   'questions',coalesce((select jsonb_agg(jsonb_build_object(
    'questionId',q->>'questionId','questionVersionId',q->>'questionVersionId','version',q->'version','status',q->>'status',
    'conceptLinks',coalesce(q->'conceptLinks','[]'::jsonb)||case when m.concept_links_version_id=q->>'questionVersionId' then coalesce((select jsonb_agg(l) from jsonb_array_elements(m.concept_links) l where l->>'role'<>'primary'),'[]'::jsonb) else '[]'::jsonb end,
-   'origins',coalesce(m.origins,'[]'::jsonb)||case when q->'provenance'->>'kind' in ('licensed_pyq','recalled_pyq') then jsonb_build_array(jsonb_build_object('kind','pyq','examId',trim(both '-' from regexp_replace(lower(q->'provenance'->>'exam'),'[^a-z0-9]+','-','g')),'year',q->'provenance'->'year','session','unspecified')) else '[]'::jsonb end,
+   'origins',coalesce(m.origins,'[]'::jsonb)||case when q->'provenance'->>'kind' in ('licensed_pyq','recalled_pyq') and not exists (
+    select 1 from jsonb_array_elements(coalesce(m.origins,'[]'::jsonb)) o
+    where o->>'kind'='pyq' and o->>'examId'=trim(both '-' from regexp_replace(lower(q->'provenance'->>'exam'),'[^a-z0-9]+','-','g')) and o->'year'=q->'provenance'->'year'
+   ) then jsonb_build_array(jsonb_build_object('kind','pyq','examId',trim(both '-' from regexp_replace(lower(q->'provenance'->>'exam'),'[^a-z0-9]+','-','g')),'year',q->'provenance'->'year','session','unspecified')) else '[]'::jsonb end,
    'classification',coalesce(m.classification,jsonb_build_object('subjects','[]'::jsonb,'systems','[]'::jsonb,'organs','[]'::jsonb,'domains','[]'::jsonb,'tasks','[]'::jsonb))))
    from jsonb_array_elements(c.body->'questions') q left join public.content_library_question_metadata m on m.question_id=q->>'questionId'),'[]'::jsonb),
   'notes',coalesce((select jsonb_agg(jsonb_build_object('id',n.id,'conceptId',n.concept_id,'status',n.status)) from public.neural_canonical_note_versions n),'[]'::jsonb),

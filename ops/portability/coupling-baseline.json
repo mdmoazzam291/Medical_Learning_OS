@@ -756,5 +756,21 @@
   ],
   "supabase/migrations/20261023214659_content_import_intelligence_grouping.sql": [
     "supabase"
+  ],
+  "scripts/content-coverage-browser-check.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "scripts/content-coverage-db-check.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/content-coverage.js": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028201126_admin_content_coverage_snapshots.sql": [
+    "supabase"
+  ],
+  "web/content-coverage-boot.js": [
+    "supabase"
   ]
 }
