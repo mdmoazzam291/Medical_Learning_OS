@@ -1,3 +1,8 @@
+## Private draft syllabus checklist — stacked engineering, 29 October 2026
+
+- New private, source/version-labeled proposed concept membership with immutable draft revisions, actor/canonical identity checks and zero automatic approval. Existing NEET-PG/INI-CET preparation registry stays untouched and still has zero reviewed objectives/mappings.
+- Admin Coverage Index displays draft-only checklist controls, not official syllabus completeness, learner exam readiness, or approved objective coverage. See [draft scope contract](SYLLABUS_BASELINE_DRAFTS.md). CI and hosted checks require independent verification; no deployment was performed.
+
 ## Canonical concept acceptance — draft PR #334, 29 October 2026 IST
 - Added owner-bound, version/digest-pinned canonical acceptance with immutable review receipt and Admin readback. Initial scope is **new concepts only**; existing concept revisions remain drafts until version-safe learner release. No content, learner, medical/rights or syllabus approval implied.
 - Feature branch stacked on PR #333/#332. Source tests and native CI need final exact-head verification; no migration, production API/site deployment or real Admin acceptance has occurred. See [acceptance engineering receipt](CONCEPT_ACCEPTANCE.md).
