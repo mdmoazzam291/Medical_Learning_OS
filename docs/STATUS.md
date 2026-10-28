@@ -1,3 +1,7 @@
+## Canonical concept acceptance — draft PR #334, 29 October 2026 IST
+- Added owner-bound, version/digest-pinned canonical acceptance with immutable review receipt and Admin readback. Initial scope is **new concepts only**; existing concept revisions remain drafts until version-safe learner release. No content, learner, medical/rights or syllabus approval implied.
+- Feature branch stacked on PR #333/#332. Source tests and native CI need final exact-head verification; no migration, production API/site deployment or real Admin acceptance has occurred. See [acceptance engineering receipt](CONCEPT_ACCEPTANCE.md).
+
 ## Concept draft editor — reviewed source complete, 29 October 2026 IST
 - Stacked PR333 adds zero-question concept proposals and revisions with immutable history, exact readback/idempotent retries, safe incomplete/newer typing and stale-base protection. Runtime 2af00ae693d18668a12f57cff1b319443c64eb85; see [receipt](CONCEPT_DRAFTS.md).
 - 1,511Node/check13services240locations/build118/disposable SQL and Chromium3viewport authoring/inventory checks pass. Important review findings fixed with regressions. New-branch full CI remains pending; no hosted acceptance or production deployment. Parent PR332 final CI40764606041 all jobs SUCCESS and ready for review.
