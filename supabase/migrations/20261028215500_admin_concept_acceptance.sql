@@ -78,6 +78,9 @@ begin
  if (v_draft.operation='create' and v_target is not null)
    or (v_draft.operation='revise' and (v_target is null or v_target->>'digest' is distinct from v_draft.base_digest))
  then raise exception 'concept_accept_target_changed'; end if;
+ -- Existing canonical revisions may alter learner-visible labels/classification.
+ -- Keep them as drafts until versioned learner release exists.
+ if v_draft.operation='revise' then raise exception 'concept_accept_revision_requires_release'; end if;
  v_doc:=v_draft.document;
  -- Names and aliases must not take over an existing canonical identity.
  if exists(
