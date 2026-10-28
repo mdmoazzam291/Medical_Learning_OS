@@ -1,6 +1,6 @@
 // Identity and classification acceptance is independent of medical and learner publication.
 const fail=()=>{throw new TypeError('concept_accept_invalid');};
-const uuid=x=>typeof x==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(x);
+const uuid=x=>typeof x==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(x);
 export const CONCEPT_ACCEPT_ATTESTATION='identity-and-classification-reviewed-not-medical-or-learner-release';
 export function validateConceptAcceptance(value){
  if(!value||typeof value!=='object'||Array.isArray(value)||
