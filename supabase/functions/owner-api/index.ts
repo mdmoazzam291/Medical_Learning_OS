@@ -1,3 +1,4 @@
+import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
@@ -238,6 +239,17 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path === "/concept-draft-accept") {
+      try {
+        return response(req, 200, await acceptConceptDraft({ admin, actor: authData.user.id,
+          method: req.method, params: url.searchParams,
+          input: req.method === "POST" ? await jsonBody(req, 8192) : undefined }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "concept_accept_unavailable");
+      }
     }
 
     if (path === "/concept-drafts" || path.startsWith("/concept-drafts/")) {
