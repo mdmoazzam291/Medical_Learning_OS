@@ -1,3 +1,4 @@
+import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
@@ -237,6 +238,19 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path === "/concept-drafts" || path.startsWith("/concept-drafts/")) {
+      const match = /^\/concept-drafts(?:\/([a-fA-F0-9-]{36}))?$/.exec(path);
+      if (!match) fail(404, "not_found");
+      try {
+        return response(req, 200, await conceptDraftRequest({ admin, actor: authData.user.id,
+          method: req.method, params: url.searchParams, proposalId: match[1] || null,
+          input: req.method === "POST" ? await jsonBody(req, 262144) : undefined }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "concept_draft_unavailable");
+      }
     }
 
     if (req.method === "GET" && path === "/content-coverage") {
