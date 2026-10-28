@@ -36,6 +36,9 @@ try{
  const duplicate=await save({...fresh(),document:{...fresh().document,label:'Canonical changed'}});
  await assert.rejects(accept(decision(duplicate)),/concept_accept_identity_conflict/);
  await assert.rejects(accept(decision(existingDraft)),/concept_accept_target_changed/);
+ const nowTarget=(await inspect()).concepts.find(c=>c.conceptId==='existing');
+ const safeEdit=await save({...fresh(),conceptId:nowTarget.conceptId,baseDigest:nowTarget.digest});
+ await assert.rejects(accept(decision(safeEdit)),/concept_accept_revision_requires_release/);
  await assert.rejects(accept({...decision(second),digest:'0'.repeat(64)}),/concept_accept_stale/);
  const approval=decision(second);
  const approved=await accept(approval);
