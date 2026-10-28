@@ -130,6 +130,9 @@ try{
   await syllabus.locator('[data-syllabus-status]').filter({hasText:'Saved immutable checklist draft revision 1'}).waitFor();
   assert.equal(new Set(syllabusRequests).size,1,'uncertain syllabus save must reuse request ID');
   await syllabus.getByRole('button',{name:'Check scope and objective alignment',exact:true}).click();
+  await syllabus.locator('[data-syllabus-status]').filter({hasText:/Preflight is a private review packet|Review preflight unavailable/}).waitFor({timeout:10000});
+  const observed=await syllabus.locator('[data-syllabus-status]').textContent();
+  assert.match(observed,/Preflight is a private review packet/, 'Preflight status was: '+observed);
   await syllabus.locator('[data-syllabus-review-packet]').getByText('Review required. This is not an accepted or official syllabus.',{exact:true}).waitFor();
   assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Exact reviewed curriculum-mapped concepts: 0/);
   assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Independent source review/);
