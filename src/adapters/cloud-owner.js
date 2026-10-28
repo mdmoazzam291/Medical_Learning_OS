@@ -48,6 +48,8 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     contentIntegrity() { return request('/content-integrity'); },
     conceptDrafts({proposalId = null, revision = null, offset = 0} = {}) { return request('/concept-drafts' + (proposalId ? '/' + encodeURIComponent(proposalId) + (revision ? '?revision=' + revision : '') : '?offset=' + offset)); },
     saveConceptDraft(input) { return request('/concept-drafts', {method: 'POST', body: input}); },
+    syllabusBaselineDrafts({baselineId=null,revision=null,offset=0}={}) { return request('/syllabus-baseline-drafts'+(baselineId?'/'+encodeURIComponent(baselineId)+(revision?'?revision='+revision:''):'?offset='+offset)); },
+    saveSyllabusBaselineDraft(input) { return request('/syllabus-baseline-drafts',{method:'POST',body:input}); },
     acceptConceptDraft(input) { return request('/concept-draft-accept', {method: 'POST', body: input}); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
