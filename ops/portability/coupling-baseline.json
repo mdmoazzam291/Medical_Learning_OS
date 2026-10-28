@@ -307,6 +307,9 @@
   "supabase/functions/owner-api/_shared/syllabus-review-preflight.js": [
     "supabase"
   ],
+  "supabase/functions/owner-api/_shared/syllabus-scope-reviewer-grants.js": [
+    "supabase"
+  ],
   "supabase/functions/owner-api/index.ts": [
     "cloudflare",
     "github",
@@ -323,6 +326,9 @@
     "supabase"
   ],
   "supabase/functions/review-api/_shared/runtime-access.ts": [
+    "supabase"
+  ],
+  "supabase/functions/review-api/_shared/syllabus-scope-review.js": [
     "supabase"
   ],
   "supabase/functions/review-api/index.ts": [
@@ -674,6 +680,9 @@
     "supabase"
   ],
   "supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261029012000_syllabus_independent_scope_review.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [
