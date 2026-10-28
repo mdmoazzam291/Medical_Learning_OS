@@ -27,6 +27,8 @@ try{
  assert.equal((await inspect()).total,0);
  await assert.rejects(save(fresh(),other),/content_admin_required/);
  await assert.rejects(save({...fresh(),status:'approved'}),/syllabus_baseline_invalid/);
+ await assert.rejects(save({...fresh(),document:{...doc(),scopeDeclaration:null}}),/syllabus_baseline_invalid/);
+ await assert.rejects(save({...fresh(),document:{...doc(),sourceKind:null}}),/syllabus_baseline_invalid/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['not-real']}}),/syllabus_baseline_unknown_concept/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['one','one']}}),/syllabus_baseline_invalid/);
  const empty=await save({...fresh(),document:{...doc(),conceptIds:[]}});assert.equal(empty.status,'draft');
