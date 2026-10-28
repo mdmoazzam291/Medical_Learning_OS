@@ -6,6 +6,8 @@ import {join} from 'node:path';
 import {buildPages} from './build-pages.js';
 import {publicFileSet} from './public-surface.js';
 import {coveragePage,parseCoverageFilters} from '../src/domain/content-coverage.js';
+import {alignSyllabusReviewPacket} from '../src/domain/syllabus-review-preflight.js';
+import registry from '../data/preparation-curriculum.js';
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-coverage-'));await buildPages({outputDirectory:output});
 const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
@@ -44,13 +46,13 @@ try{
    if(path.includes('/owner-api/syllabus-review-preflight/')){
      const v=syllabusVersions.at(-1);
      if(!v)return reply({error:'no_draft'},404);
-     return reply({contractId:'admin-syllabus-review-preflight-v1',baselineId:syllabusId,
+     return reply(alignSyllabusReviewPacket({contractId:'admin-syllabus-review-preflight-v1',baselineId:syllabusId,
       revision:v.revision,digest:v.digest,
       authoredCatalogVersion:v.catalogVersion,currentCatalogVersion:v.catalogVersion,
       registryVersion:'pg-preparation:foundation@1',pathwayVersionId:v.document.pathwayVersionId,
       scopeDeclaration:v.document.scopeDeclaration,sourceKind:v.document.sourceKind,
       sourceLocator:v.document.sourceLocator,sourceVersion:v.document.sourceVersion,
-      isLatest:true,members:v.document.conceptIds.map(conceptId=>({conceptId,label:'Synthetic canonical concept',exists:true}))});
+      isLatest:true,members:v.document.conceptIds.map(conceptId=>({conceptId,label:'Synthetic canonical concept',exists:true}))},registry));
    }
    if(path.endsWith('/owner-api/syllabus-baseline-drafts')){
      if(req.method()==='GET')return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft-only',
