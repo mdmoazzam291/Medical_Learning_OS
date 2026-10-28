@@ -23,22 +23,24 @@
 ### Task 1: Domain, persistence and API
 Files: create src/domain/concept-drafts.js, tests/concept-drafts.test.js, SQL migration via CLI, scripts/concept-drafts-db-check.js, supabase/functions/owner-api/_shared/concept-drafts.js and tests/concept-drafts-api.test.js; extend owner-api/index.ts.
 Interfaces: validateConceptDraft(input) validates schemaVersion/requestId/proposalId/expectedDigest/conceptId/baseDigest/document; document contains label/aliases/classification/sourceEvidence/changeReason. concept_draft_save_v1(p_actor,p_input) returns immutable receipt. concept_draft_inspect_v1(p_actor,p_proposal_id) returns draft summaries and canonical target metadata, or one exact latest draft/history. No actor/status/reviewer accepted from browser.
-- [ ] Write tests, observe missing feature failure, implement validation and API request/route validation.
-- [ ] SQL tests first: new zero-question concept, edit existing target, revision/history, same/conflicting retry, stale predecessor/base, unauthorized access, immutability and unchanged canonical catalog.
-- [ ] Implement SQL with request/proposal advisory transaction locks, full request fingerprint, canonical target digest and service-only access; run Node and disposable PostgreSQL checks to green.
+- [x] Write tests, observe missing feature failure, implement validation and API request/route validation.
+- [x] SQL tests first: new zero-question concept, edit existing target, revision/history, same/conflicting retry, stale predecessor/base, unauthorized access, immutability and unchanged canonical catalog.
+- [x] Implement SQL with request/proposal advisory transaction locks, full request fingerprint, canonical target digest and service-only access; run Node and disposable PostgreSQL checks to green.
 
 ### Task 2: Editor and browser acceptance
 Files: create web/concept-draft-editor.js, tests/concept-draft-editor.test.js, scripts/concept-drafts-browser-check.js; extend owner client, coverage boot/panel/CSS and public allowlist/CI.
 Interfaces: mountConceptDraftEditor({root,inspect,save,window}) uses existing owner methods; draft list is paginated, canonical picker bounded, per-proposal detail includes history and near-name candidates. Save/readback state is separate from inventory filters.
-- [ ] Write failing transport/render tests and actual browser scenarios before implementation.
-- [ ] Add explicit new/existing concept target selection, name/aliases/subject/system/organ/domain/task fields, provenance/change reason, draft history and save-only controls.
-- [ ] Preserve dirty input on failures, disabled controls while saving, stale response guards, request ID on retry and unsaved-changes confirmation before deliberate target replacement/unload. No optimistic Saved badge before readback.
-- [ ] Run Node tests and phone/tablet/desktop browser checks including failed save, retry, conflict, edit/history, escaping and no canonical publish writes. Keep existing inventory flow passing.
+- [x] Write failing transport/render tests and actual browser scenarios before implementation.
+- [x] Add explicit new/existing concept target selection, name/aliases/subject/system/organ/domain/task fields, provenance/change reason, draft history and save-only controls.
+- [x] Preserve dirty input on failures, disabled controls while saving, stale response guards, request ID on retry and unsaved-changes confirmation before deliberate target replacement/unload. No optimistic Saved badge before readback.
+- [x] Run Node tests and phone/tablet/desktop browser checks including failed save, retry, conflict, edit/history, escaping and no canonical publish writes. Keep existing inventory flow passing.
 
 ### Task 3: Save and review
-- [ ] Update portability/service records for new existing-provider paths; run full npm test/check/build, SQL and Chromium. Check prior PR332 native CI.
-- [ ] Fresh whole-branch review; important fixes get failing regressions and green suites.
-- [ ] Save on feat/admin-concept-drafts-20261029 stacked on PR332; update handoff/status/receipt, verify remote tree/head and CI. No merge, live migration or publication.
+- [x] Update portability/service records for new existing-provider paths; run full npm test/check/build, SQL and Chromium. Check prior PR332 native CI.
+- [x] Fresh whole-branch review; important fixes get failing regressions and green suites.
+- [x] Save on feat/admin-concept-drafts-20261029 stacked on PR332; update handoff/status/receipt, verify remote tree/head and CI. No merge, live migration or publication.
 
 ## Self-review
 This delivers concept proposal authoring only. Review acceptance, standalone-note authoring, baseline/objective activation and final release stay later increments of the accepted design. Same database, canonical identities and learner delivery are preserved. User's Next continues authorized work; execute inline without another design/plan permission pause.
+
+Receipt: ../../CONCEPT_DRAFTS.md. Native final CI and hosted release remain explicit external acceptance limits, not completed deployment.

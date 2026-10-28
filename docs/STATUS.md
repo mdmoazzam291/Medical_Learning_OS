@@ -1,6 +1,7 @@
-## Concept draft authoring — implemented on stacked feature branch, 29 October 2026 IST
-- First slice2 authoring increment adds zero-question concept proposals and edits as immutable Admin-only revisions; accepted coverage and learner delivery unchanged. Remote codee59924ae2ac4bc8ee0514e255c53cd830ee89fef stacked on PR332. No approval/publication control or canonical mutation.
-- 1511Node/check13services240locations/build118, disposable SQL and Chromium3viewport authoring/inventory checks pass. Fresh review in progress; new-branch native CI/production acceptance pending. Parent PR332 final CI40764606041 all jobs SUCCESS. No live deployment or source material ingestion.
+## Concept draft editor — reviewed source complete, 29 October 2026 IST
+- Stacked PR333 adds zero-question concept proposals and revisions with immutable history, exact readback/idempotent retries, safe incomplete/newer typing and stale-base protection. Runtime 2af00ae693d18668a12f57cff1b319443c64eb85; see [receipt](CONCEPT_DRAFTS.md).
+- 1,511Node/check13services240locations/build118/disposable SQL and Chromium3viewport authoring/inventory checks pass. Important review findings fixed with regressions. New-branch full CI remains pending; no hosted acceptance or production deployment. Parent PR332 final CI40764606041 all jobs SUCCESS and ready for review.
+- Canonical concepts, syllabus baseline, review/rights evidence and learner publication remain unchanged. This is the first authoring increment, not all slice2 or a deployed master collection.
 
 ## Admin Coverage Index — slice1 implemented, 29 October 2026 IST
 - Owner approved design PR331 and requested implementation. Feature branch feat/admin-coverage-index-20261029 / draft [PR332](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/332), remote code81d87c888d837a0605f242578c0a3aa5f67d608b. Admin inventory filters preserve empty concepts; coherent actor/registry-bound metadata snapshots, separate pending/stored counts, note relationships and scoped PYQ claims reuse canonical IDs.
