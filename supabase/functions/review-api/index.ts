@@ -328,7 +328,7 @@ Deno.serve(async (req: Request) => {
     const path = routePath(url);
 
     if(path.startsWith("/syllabus-scope-review/")){
-      const match=/^\\/syllabus-scope-review\\/([a-fA-F0-9-]{36})$/.exec(path);
+      const match=path.match(new RegExp("^/syllabus-scope-review/([a-fA-F0-9-]{36})$"));
       if(!match)fail(404,"not_found");
       if(req.method!=="GET"&&req.method!=="POST")fail(405,"method_not_allowed");
       try{
