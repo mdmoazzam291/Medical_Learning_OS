@@ -33,7 +33,13 @@ try{
  await db.exec('set role service_role');
  await assert.rejects(accept(decision(second),other),/content_admin_required/);
  await assert.rejects(accept({...decision(second),attestation:'medical approved'}),/concept_accept_invalid/);
+ const beforeCollision=(await db.query("select body->'concepts'->0->>'label' label from public.study_catalog where id=1")).rows[0].label;
+ assert.equal(beforeCollision,'Canonical changed','fixture must contain exact canonical competing label');
+ const known=await db.query("select public.content_library_text($1) as norm",['Canonical changed']);
+ assert.equal(known.rows[0].norm,'canonical changed','canonical normalizer must match label');
  const duplicate=await save({...fresh(),document:{...fresh().document,label:'Canonical changed'}});
+ const overlap=(await db.query("select count(*)::integer as n from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c where s.id=1 and lower(btrim(c->>'label'))=lower(btrim($1))",['Canonical changed'])).rows[0].n;
+ assert.equal(overlap,1,'stored canonical label must be independently visible to SQL collision query');
  await assert.rejects(accept(decision(duplicate)),/concept_accept_identity_conflict/);
  await assert.rejects(accept(decision(existingDraft)),/concept_accept_target_changed/);
  const nowTarget=(await inspect()).concepts.find(c=>c.conceptId==='existing');
