@@ -21,6 +21,9 @@ try{
  await db.query('insert into content_admin_account values($1)',[actor]);
  await db.query('insert into study_catalog values(1,4,$1)',[{concepts:[{conceptId:'one',label:'One synthetic'},{conceptId:'two',label:'Two synthetic'}],questions:[],sources:[]}]);
  await db.exec(await readFile(new URL('../supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql',import.meta.url),'utf8'));
+ const preflight=async(id,revision,user=actor)=>(await db.query('select public.syllabus_baseline_review_preflight_v1($1,$2,$3) packet',
+ [user,id,revision])).rows[0].packet;
  const save=async(value,user=actor,reg=registry)=>(await db.query('select public.syllabus_baseline_draft_save_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
  const inspect=async(id=null,revision=null,user=actor)=>(await db.query('select public.syllabus_baseline_draft_inspect_v1($1,$2,$3,0) packet',[user,id,revision])).rows[0].packet;
  await db.exec('set role service_role');
@@ -40,6 +43,16 @@ try{
  const revised={...fresh(),baselineId:first.baselineId,expectedDigest:first.digest,
  document:{...doc(),conceptIds:['one','two'],changeReason:'Revised synthetic scope after inventory audit'}};
  const second=await save(revised);assert.equal(second.revision,2);
+ const review=await preflight(first.baselineId,2);
+ assert.equal(review.contractId,'admin-syllabus-review-preflight-v1');
+ assert.equal(review.digest,second.digest);assert.equal(review.currentCatalogVersion,4);
+ assert.equal(review.isLatest,true);assert.equal(review.members.length,2);
+ assert.equal(review.members[0].label,'One synthetic');assert.equal(review.members[1].exists,true);
+ assert.equal((await preflight(first.baselineId,1)).isLatest,false);
+ assert.ok(!/answerKey|PRIVATE STEM|clinicalAnswer/.test(JSON.stringify(review)));
+ assert.equal(review.sourceKind,'historical');assert.equal(review.scopeDeclaration,'partial');
+ await assert.rejects(preflight(first.baselineId,2,other),/content_admin_required/);
+ await assert.rejects(preflight(first.baselineId,3),/syllabus_baseline_not_found/);
  assert.equal((await inspect(first.baselineId,1)).version.digest,first.digest);
  assert.equal((await inspect(first.baselineId)).history.length,2);
  await assert.rejects(save({...revised,requestId:crypto.randomUUID()}),/syllabus_baseline_stale/);
@@ -54,8 +67,14 @@ try{
   await db.exec('set role '+role);
   await assert.rejects(save(fresh()),/permission denied/);
   await assert.rejects(inspect(),/permission denied/);
+  await assert.rejects(preflight(first.baselineId,2),/permission denied/);
   await assert.rejects(db.exec('select * from content_syllabus_baseline_draft_versions'),/permission denied/);
   await db.exec('reset role');
  }
+ await db.query('update study_catalog set version=5 where id=1');
+ const changed=await preflight(first.baselineId,2);assert.equal(changed.authoredCatalogVersion,4);
+ assert.equal(changed.currentCatalogVersion,5,'changed catalog must invalidate alignment instead of silently reusing it');
+ assert.equal((await db.query('select count(*)::integer n from content_syllabus_baseline_draft_versions')).rows[0].n,3);
+ console.log('Read-only review packet PostgreSQL checks passed: exact revision, labels, actor/grants, stale catalog, zero publication and source metadata.');
  console.log('Syllabus baseline draft PostgreSQL tests passed: request replay, immutable versions, missing IDs, actor/grant isolation, catalog untouched and no activation.');
 }finally{await db.close();}
