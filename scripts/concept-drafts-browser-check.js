@@ -79,7 +79,7 @@ try{
   await root.locator('[data-concept-status]').filter({hasText:'Accepted into canonical inventory'}).waitFor();
   assert.equal(acceptRequests.length,2);assert.equal(new Set(acceptRequests).size,1);
   assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
-  assert.match(await root.textContent(),/No medical, rights or learner-publication approval/);
+  assert.match(await root.textContent(),/This does not approve medical claims, rights, questions or learner release/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')));
   if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'concept-drafts-'+name+'-'+(process.env.BROWSER_ENGINE||'chromium')+'.png'),fullPage:true});}
