@@ -304,6 +304,9 @@
   "supabase/functions/owner-api/_shared/syllabus-baseline-drafts.js": [
     "supabase"
   ],
+  "supabase/functions/owner-api/_shared/syllabus-review-preflight.js": [
+    "supabase"
+  ],
   "supabase/functions/owner-api/index.ts": [
     "cloudflare",
     "github",
@@ -668,6 +671,9 @@
     "supabase"
   ],
   "supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [
