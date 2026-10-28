@@ -1,3 +1,8 @@
+## Admin syllabus scope/objective preflight — 29 October 2026
+
+- Implemented read-only exact draft/catalog/registry aligned review packet and Admin view, without official scope approval or learner-facing targeting. A singleton Admin cannot self-certify independent syllabus review. Objective mappings reuse the existing preparation registry (currently zero approved objectives/mappings). See [review preflight](SYLLABUS_REVIEW_PREFLIGHT.md).
+- Unmerged stacked PR #336, no hosted migration/API/site deployment; exact-head test evidence must be checked before review.
+
 ## Private draft syllabus checklist — stacked engineering, 29 October 2026
 
 - New private, source/version-labeled proposed concept membership with immutable draft revisions, actor/canonical identity checks and zero automatic approval. Existing NEET-PG/INI-CET preparation registry stays untouched and still has zero reviewed objectives/mappings.
