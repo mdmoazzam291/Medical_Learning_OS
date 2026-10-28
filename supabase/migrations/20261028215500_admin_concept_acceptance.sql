@@ -85,10 +85,10 @@ begin
  -- Names and aliases must not take over an existing canonical identity.
  if exists(
    select 1 from jsonb_array_elements(v_body->'concepts') c
-   cross join lateral jsonb_array_elements_text(jsonb_build_array(c->>'label')||coalesce(c->'aliases','[]'::jsonb)) old_name
-   cross join lateral jsonb_array_elements_text(jsonb_build_array(v_doc->>'label')||v_doc->'aliases') new_name
+   cross join lateral jsonb_array_elements_text(jsonb_build_array(c->>'label')||coalesce(c->'aliases','[]'::jsonb)) as old_name(value)
+   cross join lateral jsonb_array_elements_text(jsonb_build_array(v_doc->>'label')||v_doc->'aliases') as new_name(value)
    where c->>'conceptId'<>v_draft.concept_id
-    and public.content_library_text(old_name)=public.content_library_text(new_name)
+    and public.content_library_text(old_name.value)=public.content_library_text(new_name.value)
  ) then raise exception 'concept_accept_identity_conflict'; end if;
  if v_draft.operation='create' then
    v_new_concepts:=(v_body->'concepts')||jsonb_build_array(jsonb_build_object(
