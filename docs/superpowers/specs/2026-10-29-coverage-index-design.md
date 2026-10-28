@@ -1,6 +1,6 @@
 # Medical Learning OS Coverage Index — Admin integration
 
-Status: proposed design for owner review. This document does not implement, deploy, import, approve, or publish content.
+Status: owner approved this design in chat on 29 October 2026 and requested implementation. Slice 1 is implemented on a feature branch; slices 2/3 and production release remain separate.
 
 Prepared: 29 October 2026, Asia/Kolkata. Engineering evidence: main `02e499b897b83f669d421dc80e6722a0c3901483`. Target: `docs/superpowers/specs/2026-10-29-coverage-index-design.md`.
 
