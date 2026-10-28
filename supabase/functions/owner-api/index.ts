@@ -2,6 +2,7 @@ import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { syllabusBaselineDraftRequest } from './_shared/syllabus-baseline-drafts.js';
 import { readSyllabusReviewPreflight } from './_shared/syllabus-review-preflight.js';
+import { saveSyllabusScopeReviewerGrant } from './_shared/syllabus-scope-reviewer-grants.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
@@ -241,6 +242,18 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if(path==="/syllabus-reviewer-grants"){
+      if(req.method!=="POST")fail(405,"method_not_allowed");
+      if(url.search)fail(400,"query_not_supported");
+      try{
+        return response(req,200,await saveSyllabusScopeReviewerGrant({
+          admin,actor:authData.user.id,input:await jsonBody(req,5000)}));
+      }catch(error){
+        const problem=error as {status?:number;code?:string};
+        fail(problem.status||503,problem.code||"syllabus_scope_grant_unavailable");
+      }
     }
 
     if(path.startsWith("/syllabus-review-preflight/")){
