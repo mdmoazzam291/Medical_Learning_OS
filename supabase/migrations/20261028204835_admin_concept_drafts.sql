@@ -16,10 +16,15 @@ begin raise exception 'concept_draft_immutable'; end; $$;
 create trigger concept_draft_immutable before update or delete on public.content_concept_draft_versions for each row execute function public.concept_draft_immutable_v1();
 revoke all on function public.concept_draft_immutable_v1() from public,anon,authenticated,service_role;
 
-create function public.concept_draft_target_v1(p_id text) returns jsonb language sql stable security invoker set search_path='' as $$
+create function public.concept_draft_project_target_v1(c jsonb,m jsonb) returns jsonb language sql immutable security invoker set search_path='' as $$
  select jsonb_build_object('conceptId',c->>'conceptId','label',c->>'label','aliases',coalesce(c->'aliases','[]'::jsonb),
-  'classification',coalesce(m.classification,jsonb_build_object('subjects',coalesce(c->'subjectTags','[]'::jsonb),'systems','[]'::jsonb,'organs','[]'::jsonb,'domains','[]'::jsonb,'tasks','[]'::jsonb)),
-  'digest',encode(extensions.digest(convert_to(jsonb_build_object('concept',c,'classification',m.classification)::text,'UTF8'),'sha256'),'hex'))
+  'classification',coalesce(m,jsonb_build_object('subjects',coalesce(c->'subjectTags','[]'::jsonb),'systems','[]'::jsonb,'organs','[]'::jsonb,'domains','[]'::jsonb,'tasks','[]'::jsonb)),
+  'digest',encode(extensions.digest(convert_to(jsonb_build_object('concept',c,'classification',m)::text,'UTF8'),'sha256'),'hex'));
+$$;
+revoke all on function public.concept_draft_project_target_v1(jsonb,jsonb) from public,anon,authenticated;
+grant execute on function public.concept_draft_project_target_v1(jsonb,jsonb) to service_role;
+create function public.concept_draft_target_v1(p_id text) returns jsonb language sql stable security invoker set search_path='' as $$
+ select public.concept_draft_project_target_v1(c,m.classification)
  from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c
  left join public.content_library_concept_metadata m on m.concept_id=c->>'conceptId'
  where s.id=1 and c->>'conceptId'=p_id;
@@ -37,11 +42,13 @@ begin
  if v_keys is distinct from array['baseDigest','conceptId','document','expectedDigest','proposalId','requestId','schemaVersion'] or p_input->'schemaVersion'<>'1'::jsonb then raise exception 'concept_draft_invalid'; end if;
  begin v_request:=(p_input->>'requestId')::uuid;v_proposal:=(p_input->>'proposalId')::uuid;exception when others then raise exception 'concept_draft_invalid';end;
  v_expected:=p_input->>'expectedDigest';v_concept:=p_input->>'conceptId';v_base:=p_input->>'baseDigest';v_doc:=p_input->'document';
+ if exists(select 1 from unnest(array['requestId','proposalId','conceptId','baseDigest','expectedDigest']) k where jsonb_typeof(p_input->k) not in ('string','null')) then raise exception 'concept_draft_invalid';end if;
  if v_request is null or ((v_proposal is null)<>(v_expected is null)) or (v_expected is not null and v_expected!~'^[a-f0-9]{64}$') or (v_base is not null and v_base!~'^[a-f0-9]{64}$') or (v_concept is not null and v_concept!~'^[a-zA-Z0-9:_@.\-]{1,160}$') or (v_proposal is not null and v_concept is null) or (v_proposal is null and ((v_concept is null)<>(v_base is null))) then raise exception 'concept_draft_invalid';end if;
  if jsonb_typeof(v_doc) is distinct from 'object' then raise exception 'concept_draft_invalid';end if;
  select array_agg(k order by k) into v_keys from jsonb_object_keys(v_doc) k;
  if v_keys is distinct from array['aliases','changeReason','classification','label','sourceEvidence'] or jsonb_typeof(v_doc->'label') is distinct from 'string' or char_length(btrim(v_doc->>'label')) not between 1 and 240 or jsonb_typeof(v_doc->'sourceEvidence') is distinct from 'string' or char_length(btrim(v_doc->>'sourceEvidence')) not between 1 and 4000 or jsonb_typeof(v_doc->'changeReason') is distinct from 'string' or char_length(btrim(v_doc->>'changeReason')) not between 1 and 4000 then raise exception 'concept_draft_invalid';end if;
  begin perform public.content_library_strings(v_doc->'aliases');perform public.content_library_facets(v_doc->'classification');exception when others then raise exception 'concept_draft_invalid';end;
+ if exists(select 1 from jsonb_each(v_doc->'classification') f cross join lateral jsonb_array_elements_text(f.value) x where char_length(x)>160) then raise exception 'concept_draft_invalid';end if;
  v_fingerprint:=encode(extensions.digest(convert_to(p_input::text,'UTF8'),'sha256'),'hex');
  perform pg_advisory_xact_lock(hashtextextended('concept-draft-request:'||v_request::text,0));
  select * into v_saved from public.content_concept_draft_versions where request_id=v_request;
@@ -71,7 +78,7 @@ grant execute on function public.concept_draft_save_v1(uuid,jsonb) to service_ro
 
 create function public.concept_draft_inspect_v1(p_actor uuid,p_proposal_id uuid default null,p_revision integer default null,p_offset integer default 0)
 returns jsonb language plpgsql security invoker set search_path='' as $$
-declare v_row public.content_concept_draft_versions;v_concepts jsonb;v_history jsonb;v_drafts jsonb;v_count integer;
+declare v_row public.content_concept_draft_versions;v_concepts jsonb;v_history jsonb;v_drafts jsonb;v_count integer;v_matches jsonb;
 begin
  if public.is_content_admin(p_actor) is not true then raise exception 'content_admin_required';end if;
  if p_offset not between 0 and 50000 or (p_revision is not null and p_revision not between 1 and 10000) or (p_proposal_id is null and p_revision is not null) then raise exception 'concept_draft_invalid';end if;
@@ -79,10 +86,15 @@ begin
   select * into v_row from public.content_concept_draft_versions where proposal_id=p_proposal_id and (p_revision is null or revision=p_revision) order by revision desc limit 1;
   if not found then raise exception 'concept_draft_not_found';end if;
   select coalesce(jsonb_agg(jsonb_build_object('revision',revision,'digest',digest,'recordedAt',recorded_at) order by revision desc),'[]'::jsonb) into v_history from (select revision,digest,recorded_at from public.content_concept_draft_versions where proposal_id=p_proposal_id order by revision desc limit 50) h;
-  return jsonb_build_object('contractId','admin-concept-drafts-v1','version',jsonb_build_object('proposalId',v_row.proposal_id,'revision',v_row.revision,'conceptId',v_row.concept_id,'operation',v_row.operation,'baseDigest',v_row.base_digest,'digest',v_row.digest,'document',v_row.document,'recordedAt',v_row.recorded_at),'history',v_history,'historyTruncated',(select count(*)>50 from public.content_concept_draft_versions where proposal_id=p_proposal_id));
+  select coalesce(jsonb_agg(jsonb_build_object('conceptId',c->>'conceptId','label',c->>'label')),'[]'::jsonb) into v_matches from (
+   select c from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c where s.id=1 and c->>'conceptId'<>v_row.concept_id
+   and exists(select 1 from jsonb_array_elements_text(jsonb_build_array(c->>'label')||coalesce(c->'aliases','[]'::jsonb)) n cross join lateral jsonb_array_elements_text(jsonb_build_array(v_row.document->>'label')||(v_row.document->'aliases')) d where lower(btrim(n))=lower(btrim(d))) order by c->>'conceptId' limit 20) matches;
+  return jsonb_build_object('nameMatches',v_matches,'contractId','admin-concept-drafts-v1','version',jsonb_build_object('proposalId',v_row.proposal_id,'revision',v_row.revision,'conceptId',v_row.concept_id,'operation',v_row.operation,'baseDigest',v_row.base_digest,'digest',v_row.digest,'document',v_row.document,'recordedAt',v_row.recorded_at),'isLatest',(select max(revision)=v_row.revision from public.content_concept_draft_versions where proposal_id=p_proposal_id),'history',v_history,'historyTruncated',(select count(*)>50 from public.content_concept_draft_versions where proposal_id=p_proposal_id));
  end if;
+ if not exists(select 1 from public.study_catalog where id=1) then raise exception 'concept_draft_catalog_unavailable';end if;
  if (select jsonb_array_length(body->'concepts') from public.study_catalog where id=1)>5000 then raise exception 'concept_draft_catalog_too_large';end if;
- select coalesce(jsonb_agg(public.concept_draft_target_v1(c->>'conceptId') order by c->>'conceptId'),'[]'::jsonb) into v_concepts from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c where s.id=1;
+ select coalesce(jsonb_agg(public.concept_draft_project_target_v1(c,m.classification) order by c->>'conceptId'),'[]'::jsonb) into v_concepts from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c left join public.content_library_concept_metadata m on m.concept_id=c->>'conceptId' where s.id=1;
+ if pg_column_size(v_concepts)>4000000 then raise exception 'concept_draft_catalog_too_large';end if;
  if v_concepts is null then raise exception 'concept_draft_catalog_unavailable';end if;
  select count(distinct proposal_id) into v_count from public.content_concept_draft_versions;
  select coalesce(jsonb_agg(jsonb_build_object('proposalId',proposal_id,'revision',revision,'conceptId',concept_id,'label',document->>'label','digest',digest,'recordedAt',recorded_at) order by recorded_at desc,proposal_id),'[]'::jsonb) into v_drafts

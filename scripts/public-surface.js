@@ -83,6 +83,8 @@ export const publicFiles = Object.freeze([
   'web/retention-origin.js',
   'web/review.html',
   'web/review.js',
+  'web/concept-draft-editor.js',
+  'src/domain/concept-drafts.js',
   'web/content-coverage-view.js',
   'web/content-coverage.js',
   'web/content-coverage-boot.js',

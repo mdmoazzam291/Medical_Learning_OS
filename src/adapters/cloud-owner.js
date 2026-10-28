@@ -46,6 +46,8 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
   return {
     dashboard() { return request('/dashboard'); },
     contentIntegrity() { return request('/content-integrity'); },
+    conceptDrafts({proposalId = null, revision = null, offset = 0} = {}) { return request('/concept-drafts' + (proposalId ? '/' + encodeURIComponent(proposalId) + (revision ? '?revision=' + revision : '') : '?offset=' + offset)); },
+    saveConceptDraft(input) { return request('/concept-drafts', {method: 'POST', body: input}); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
