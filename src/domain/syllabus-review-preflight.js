@@ -15,7 +15,7 @@ export function alignSyllabusReviewPacket(input,curriculum){
    typeof input.isLatest!=='boolean'||!Array.isArray(input.members)||input.members.length>2000)fail();
  const members=input.members;
  if(members.some(m=>!m||!id(m.conceptId)||typeof m.label!=='string'||
-  m.label.length>240||!m.label.trim()||typeof m.exists!=='boolean')||
+  m.label.length>240||!m.label.trim()||typeof m.exists!=='boolean'||Object.keys(m).sort().join('|')!=='conceptId|exists|label')||
   new Set(members.map(m=>m.conceptId)).size!==members.length)fail();
  const version=c.pathways.find(p=>p.pathwayVersionId===input.pathwayVersionId&&p.status==='active');
  const registryMatches=input.registryVersion===c.registryVersion;
