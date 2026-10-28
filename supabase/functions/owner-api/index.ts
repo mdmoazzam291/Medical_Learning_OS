@@ -1,6 +1,7 @@
 import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { syllabusBaselineDraftRequest } from './_shared/syllabus-baseline-drafts.js';
+import { readSyllabusReviewPreflight } from './_shared/syllabus-review-preflight.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
@@ -242,6 +243,17 @@ Deno.serve(async (req: Request) => {
       });
     }
 
+    if(path.startsWith("/syllabus-review-preflight/")){
+      const match=/^\\/syllabus-review-preflight\\/([a-fA-F0-9-]{36})$/.exec(path);
+      if(!match)fail(404,"not_found");
+      try {
+        return response(req,200,await readSyllabusReviewPreflight({
+          admin,actor:authData.user.id,method:req.method,params:url.searchParams,baselineId:match[1]}));
+      }catch(error){
+        const problem=error as {status?:number;code?:string};
+        fail(problem.status||503,problem.code||"syllabus_review_preflight_unavailable");
+      }
+    }
     if (path === "/syllabus-baseline-drafts" || path.startsWith("/syllabus-baseline-drafts/")) {
       const match=/^\\/syllabus-baseline-drafts(?:\\/([a-fA-F0-9-]{36}))?$/.exec(path);
       if(!match)fail(404,"not_found");
