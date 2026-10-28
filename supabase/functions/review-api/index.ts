@@ -1,6 +1,7 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
+import { syllabusScopeReviewRequest } from "./_shared/syllabus-scope-review.js";
 
 type Json = Record<string, unknown>;
 
@@ -325,6 +326,20 @@ Deno.serve(async (req: Request) => {
 
     const url = new URL(req.url);
     const path = routePath(url);
+
+    if(path.startsWith("/syllabus-scope-review/")){
+      const match=/^\\/syllabus-scope-review\\/([a-fA-F0-9-]{36})$/.exec(path);
+      if(!match)fail(404,"not_found");
+      if(req.method!=="GET"&&req.method!=="POST")fail(405,"method_not_allowed");
+      try{
+        return response(req,200,await syllabusScopeReviewRequest({
+          admin,reviewerId,method:req.method,baselineId:match[1],
+          params:url.searchParams,input:req.method==="POST"?await jsonBody(req,12000):undefined}));
+      }catch(error){
+        const problem=error as {status?:number;code?:string};
+        fail(problem.status||503,problem.code||"syllabus_scope_review_unavailable");
+      }
+    }
 
     if (req.method === "GET" && path === "/me") {
       if (url.search) fail(400, "query_not_supported");
