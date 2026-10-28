@@ -21,5 +21,40 @@ try{
  for(const verb of ["update public.content_concept_draft_versions set revision=revision","delete from public.content_concept_draft_versions"])await assert.rejects(db.exec(verb),/permission denied|immutable/);
  await db.exec('reset role');assert.equal((await db.query("select jsonb_array_length(body->'concepts') n from study_catalog")).rows[0].n,1);assert.equal((await db.query("select jsonb_array_length(body->'questions') n from study_catalog")).rows[0].n,0);
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(inspect(),/permission denied/);await assert.rejects(save(fresh()),/permission denied/);await assert.rejects(db.exec('select * from public.content_concept_draft_versions'),/permission denied/);await db.exec('reset role');}
+
+ // Acceptance runs only after the draft tests have confirmed that drafts alone do not write canonical records.
+ await db.exec(await readFile(new URL('../supabase/migrations/'+files.find(x=>x.endsWith('_admin_concept_acceptance.sql')),import.meta.url),'utf8'));
+ const declaration='identity-and-classification-reviewed-not-medical-or-learner-release';
+ const decision=(receipt,notes='Owner reviewed identity and classification on the synthetic concept.')=>({
+  schemaVersion:1,requestId:crypto.randomUUID(),proposalId:receipt.proposalId,
+  revision:receipt.revision,digest:receipt.digest,reviewNotes:notes,attestation:declaration
+ });
+ const accept=async(d,user=actor)=>(await db.query('select public.concept_draft_accept_v1($1,$2) receipt',[user,d])).rows[0].receipt;
+ await db.exec('set role service_role');
+ await assert.rejects(accept(decision(second),other),/content_admin_required/);
+ await assert.rejects(accept({...decision(second),attestation:'medical approved'}),/concept_accept_invalid/);
+ const duplicate=await save({...fresh(),document:{...fresh().document,label:'Canonical changed'}});
+ await assert.rejects(accept(decision(duplicate)),/concept_accept_identity_conflict/);
+ await assert.rejects(accept(decision(existingDraft)),/concept_accept_target_changed/);
+ await assert.rejects(accept({...decision(second),digest:'0'.repeat(64)}),/concept_accept_stale/);
+ const approval=decision(second);
+ const approved=await accept(approval);
+ assert.equal(approved.status,'concept_accepted');assert.equal(approved.conceptId,second.conceptId);
+ assert.deepEqual(await accept(approval),approved);
+ await assert.rejects(accept({...approval,reviewNotes:'A new conflicting attestation under the same request identifier.'}),/concept_accept_request_conflict/);
+ await assert.rejects(accept(decision(second)),/concept_already_accepted/);
+ await assert.rejects(save({...secondInput,proposalId:second.proposalId,expectedDigest:second.digest,requestId:crypto.randomUUID()}),/concept_draft_target_changed/);
+ await db.exec('reset role');
+ const final=(await db.query('select body,version from study_catalog where id=1')).rows[0];
+ assert.equal(final.body.concepts.length,2);assert.equal(final.body.questions.length,0);
+ assert.equal(final.body.concepts.find(c=>c.conceptId===approved.conceptId).label,'Revised synthetic');
+ assert.equal((await db.query('select count(*)::integer n from content_concept_acceptances')).rows[0].n,1);
+ for(const role of ['anon','authenticated']){
+   await db.exec('set role '+role);
+   await assert.rejects(accept(decision(second)),/permission denied/);
+   await assert.rejects(db.exec('select * from public.content_concept_acceptances'),/permission denied/);
+   await db.exec('reset role');
+ }
+ console.log('Concept acceptance PostgreSQL checks passed: strict attestation, exact current version, name/stale conflict, idempotence, immutable audit and no learner/question mutation.');
  console.log('Concept draft PostgreSQL checks passed: zero-question creation, immutable revisions, exact retry/readback, stale target/predecessor and browser isolation; no canonical writes.');
 }finally{await db.close();}
