@@ -38,6 +38,8 @@ try{
  const known=await db.query("select public.content_library_text($1) as norm",['Canonical changed']);
  assert.equal(known.rows[0].norm,'canonical changed','canonical normalizer must match label');
  const duplicate=await save({...fresh(),document:{...fresh().document,label:'Canonical changed'}});
+ assert.notEqual(duplicate.conceptId,'existing','new duplicate-name proposal must have a distinct canonical ID');
+ assert.equal((await inspect(duplicate.proposalId)).version.document.label,'Canonical changed','saved draft must contain exact colliding name');
  const overlap=(await db.query("select count(*)::integer as n from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c where s.id=1 and lower(btrim(c->>'label'))=lower(btrim($1))",['Canonical changed'])).rows[0].n;
  assert.equal(overlap,1,'stored canonical label must be independently visible to SQL collision query');
  await assert.rejects(accept(decision(duplicate)),/concept_accept_identity_conflict/);
