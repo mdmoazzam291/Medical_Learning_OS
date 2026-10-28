@@ -50,7 +50,9 @@ begin
     or char_length(btrim(v_doc->>'label')) not between 1 and 240
     or jsonb_typeof(v_doc->'pathwayVersionId') is distinct from 'string'
     or (v_doc->>'pathwayVersionId') !~ '^[a-zA-Z0-9:_.@-]{1,160}$'
+    or jsonb_typeof(v_doc->'sourceKind') is distinct from 'string'
     or v_doc->>'sourceKind' not in ('official','expert','historical')
+    or jsonb_typeof(v_doc->'scopeDeclaration') is distinct from 'string'
     or v_doc->>'scopeDeclaration' not in ('partial','complete-proposed')
     or jsonb_typeof(v_doc->'sourceLocator') is distinct from 'string'
     or char_length(btrim(v_doc->>'sourceLocator')) not between 8 and 2000
