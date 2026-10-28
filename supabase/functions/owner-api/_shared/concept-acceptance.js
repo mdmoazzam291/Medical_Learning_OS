@@ -8,7 +8,7 @@ export async function acceptConceptDraft({admin,actor,method,params,input}){
  if(error){
   const codes=['content_admin_required','concept_accept_not_found','concept_accept_request_conflict',
    'concept_accept_stale','concept_already_accepted','concept_accept_target_changed',
-   'concept_accept_identity_conflict','concept_accept_invalid','concept_accept_catalog_unavailable'];
+   'concept_accept_identity_conflict','concept_accept_revision_requires_release','concept_accept_invalid','concept_accept_catalog_unavailable'];
   const code=codes.find(x=>String(error.message).includes(x));
   fail(code==='content_admin_required'?403:code==='concept_accept_not_found'?404:code==='concept_accept_invalid'?400:
    code==='concept_accept_catalog_unavailable'||!code?503:409,code||'concept_accept_unavailable');
