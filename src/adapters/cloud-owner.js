@@ -51,6 +51,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     syllabusBaselineDrafts({baselineId=null,revision=null,offset=0}={}) { return request('/syllabus-baseline-drafts'+(baselineId?'/'+encodeURIComponent(baselineId)+(revision?'?revision='+revision:''):'?offset='+offset)); },
     saveSyllabusBaselineDraft(input) { return request('/syllabus-baseline-drafts',{method:'POST',body:input}); },
     syllabusReviewPreflight({baselineId,revision}) { return request('/syllabus-review-preflight/'+encodeURIComponent(baselineId)+'?revision='+encodeURIComponent(revision)); },
+    saveSyllabusReviewerGrant(input) { return request('/syllabus-reviewer-grants',{method:'POST',body:input}); },
     acceptConceptDraft(input) { return request('/concept-draft-accept', {method: 'POST', body: input}); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
