@@ -18,7 +18,7 @@ try{
  browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({headless:true});
  for(const [name,width,height] of [['phone',390,844],['tablet',820,1180],['desktop',1440,1000]]){
   const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(user=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user})),user);
-  let failure=0,slow=false,reads=0,failSave=false,failRead=false,conflict=false,denySave=false;const writes=[],requestIds=[],versions=[],receipts=new Map();
+  let failure=0,slow=false,reads=0,failSave=false,failRead=false,conflict=false,denySave=false;const writes=[],requestIds=[],versions=[],receipts=new Map(),acceptRequests=[];let accepted=null;
   const proposal='22222222-2222-4222-8222-222222222222',conceptId='C-33333333-3333-4333-8333-333333333333';
 
   await context.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
@@ -28,13 +28,18 @@ try{
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/review-api/transfer-pairs'))return reply({pairs:[]});
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:2,questions:1,sources:0},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
+   if(path.endsWith('/owner-api/concept-draft-accept')){
+    const input=req.postDataJSON();acceptRequests.push(input.requestId);
+    if(!accepted)accepted={status:'concept_accepted',proposalId:input.proposalId,revision:input.revision,draftDigest:input.digest,conceptId,canonicalDigest:'b'.repeat(64),catalogVersion:447};
+    return reply(accepted);
+   }
    if(path.endsWith('/owner-api/concept-drafts')){
     if(req.method()==='GET')return reply({contractId:'admin-concept-drafts-v1',concepts:[{conceptId:'existing',label:'Existing synthetic',aliases:[],classification,digest:'a'.repeat(64)}],drafts:versions.length?[{proposalId:proposal,conceptId,revision:versions.length,label:versions.at(-1).document.label}]:[],offset:0,nextOffset:null});
     const input=req.postDataJSON();requestIds.push(input.requestId);if(denySave)return reply({error:'synthetic_access_denial'},403);if(conflict)return reply({error:'concept_draft_stale'},409);
     if(!receipts.has(input.requestId)){const version={proposalId:proposal,conceptId,revision:versions.length+1,digest:String(versions.length+1).padStart(64,'0'),baseDigest:null,operation:'create',document:input.document,recordedAt:snapshot.asOf};versions.push(version);receipts.set(input.requestId,{proposalId:proposal,conceptId,revision:version.revision,digest:version.digest});}
     if(failSave)return reply({error:'synthetic_uncertain_save'},503);return reply(receipts.get(input.requestId));
    }
-   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false});}
+   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,canonicalDigest:accepted.canonicalDigest}:null});}
    if(path.endsWith('/owner-api/content-coverage')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow&&url.searchParams.get('search')==='Alpha')await new Promise(resolve=>setTimeout(resolve,400));return reply(coveragePage(snapshot,parseCoverageFilters(url.searchParams)));}
    if(path.includes('/owner-api/'))return reply({flags:[],alerts:[]});
    return reply({});
@@ -60,7 +65,23 @@ try{
   await root.getByLabel('Concept name',{exact:true}).fill('Direct successful write with denied readback');await root.getByLabel('Source evidence or locator',{exact:true}).fill('Synthetic locator');await root.getByLabel('Reason for this revision',{exact:true}).fill('Direct write retry regression');
   await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.locator('[data-concept-status]').filter({hasText:'Save not confirmed'}).waitFor();assert.equal(await root.getByRole('button',{name:'Retry pending save',exact:true}).count(),1);assert.equal(versions.length,1);
   failRead=false;await root.getByRole('button',{name:'Retry pending save',exact:true}).click();await root.getByText('Saved and confirmed revision 1. Accepted coverage is unchanged.',{exact:true}).waitFor();assert.equal(new Set(requestIds).size,1);assert.equal(versions.length,1);
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);assert.ok(writes.every(x=>x.endsWith('/concept-drafts')));
+  // Explicit human review cannot silently publish; ambiguous POST/readback must preserve retry identity.
+  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.locator('[data-concept-accept-form] textarea[name="reviewNotes"]').fill('Owner reviewed this synthetic identity and classification with source context.');
+  await root.locator('[data-concept-accept-form] input[name="attested"]').check();
+  failRead=403;
+  await root.getByRole('button',{name:'Accept concept identity (not publish)',exact:true}).click();
+  await root.locator('[data-concept-status]').filter({hasText:'Acceptance not confirmed'}).waitFor();
+  assert.equal(acceptRequests.length,1);
+  failRead=false;
+  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.getByRole('button',{name:'Accept concept identity (not publish)',exact:true}).click();
+  await root.locator('[data-concept-status]').filter({hasText:'Accepted into canonical inventory'}).waitFor();
+  assert.equal(acceptRequests.length,2);assert.equal(new Set(acceptRequests).size,1);
+  assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
+  assert.match(await root.textContent(),/No medical, rights or learner-publication approval/);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+  assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')));
   if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'concept-drafts-'+name+'-'+(process.env.BROWSER_ENGINE||'chromium')+'.png'),fullPage:true});}
   console.log('Concept draft browser passed:',name,process.env.BROWSER_ENGINE||'chromium');await context.close();
  }
