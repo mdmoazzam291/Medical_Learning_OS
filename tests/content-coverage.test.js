@@ -36,3 +36,13 @@ test('invalid filters and ambiguous snapshots fail rather than returning false z
  assert.throws(()=>parseCoverageFilters(new URLSearchParams('subject=medicine&subject=surgery')),/coverage_filter_invalid/);
  const s=fixture();s.questions=[q('one','a'),q('one','b')];assert.throws(()=>page(s),/coverage_snapshot_invalid/);
 });
+test('rejected note history does not block unrelated inventory or satisfy teaching availability',()=>{
+ const s=fixture();s.notes=[{id:'rejected@1',conceptId:'a',status:'rejected'},{id:'published@1',conceptId:'b',status:'published'}];const p=page(s);assert.equal(p.rows.find(r=>r.conceptId==='a').counts.noteVersions,0);assert.equal(p.rows.find(r=>r.conceptId==='b').counts.noteVersions,1);assert.equal(p.summary.noteVersions,1);
+});
+test('PYQ appearance counts obey the active exam and year without inflating unique questions',()=>{
+ const s=fixture();s.questions=[q('one','a','published',1,{origins:[{kind:'pyq',examId:'neet-pg',year:2025,session:'main'},{kind:'pyq',examId:'neet-pg',year:2025,session:'main'},{kind:'pyq',examId:'neet-pg',year:2026,session:'main'},{kind:'pyq',examId:'ini-cet',year:2026,session:'main'}]})];
+ for(const [filters,want] of [[{exam:'neet-pg',year:'2025'},1],[{exam:'neet-pg'},2],[{year:'2026'},2]]){const p=page(s,filters);assert.equal(p.rows[0].counts.pyqClaims,want);assert.equal(p.summary.pyqClaims,want);assert.equal(p.summary.questions,1);}
+});
+test('an explicit note-question link is related coverage rather than direct assessment',()=>{
+ const s=fixture();s.questions=[q('one','b')];s.notes=[{id:'note@1',conceptId:'a',status:'published'}];s.links=[{noteVersionId:'note@1',questionId:'one',relation:'explains'}];const p=page(s),a=p.rows.find(r=>r.conceptId==='a');assert.equal(a.counts.questions,0);assert.equal(a.counts.otherQuestions,1);assert.ok(!a.gaps.includes('no-questions'));assert.equal(p.summary.questions,1);
+});

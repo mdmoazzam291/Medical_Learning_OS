@@ -32,18 +32,19 @@ begin
   'questions',coalesce((select jsonb_agg(jsonb_build_object(
    'questionId',q->>'questionId','questionVersionId',q->>'questionVersionId','version',q->'version','status',q->>'status',
    'conceptLinks',coalesce(q->'conceptLinks','[]'::jsonb)||case when m.concept_links_version_id=q->>'questionVersionId' then coalesce((select jsonb_agg(l) from jsonb_array_elements(m.concept_links) l where l->>'role'<>'primary'),'[]'::jsonb) else '[]'::jsonb end,
-   'origins',coalesce(m.origins,'[]'::jsonb)||case when q->'provenance'->>'kind' in ('licensed_pyq','recalled_pyq') and not exists (
+   'origins',coalesce((select jsonb_agg(case when o->>'kind'='pyq' then jsonb_build_object('kind','pyq','examId',o->>'examId','year',o->'year','session',o->>'session') else jsonb_build_object('kind','platform','platformId',o->>'platformId') end) from jsonb_array_elements(m.origins) o),'[]'::jsonb)||case when q->'provenance'->>'kind' in ('licensed_pyq','recalled_pyq') and not exists (
     select 1 from jsonb_array_elements(coalesce(m.origins,'[]'::jsonb)) o
     where o->>'kind'='pyq' and o->>'examId'=trim(both '-' from regexp_replace(lower(q->'provenance'->>'exam'),'[^a-z0-9]+','-','g')) and o->'year'=q->'provenance'->'year'
    ) then jsonb_build_array(jsonb_build_object('kind','pyq','examId',trim(both '-' from regexp_replace(lower(q->'provenance'->>'exam'),'[^a-z0-9]+','-','g')),'year',q->'provenance'->'year','session','unspecified')) else '[]'::jsonb end,
    'classification',coalesce(m.classification,jsonb_build_object('subjects','[]'::jsonb,'systems','[]'::jsonb,'organs','[]'::jsonb,'domains','[]'::jsonb,'tasks','[]'::jsonb))))
    from jsonb_array_elements(c.body->'questions') q left join public.content_library_question_metadata m on m.question_id=q->>'questionId'),'[]'::jsonb),
   'notes',coalesce((select jsonb_agg(jsonb_build_object('id',n.id,'conceptId',n.concept_id,'status',n.status)) from public.neural_canonical_note_versions n),'[]'::jsonb),
+  'links',coalesce((select jsonb_agg(jsonb_build_object('noteVersionId',l.note_version_id,'questionId',l.question_id,'relation',l.relation)) from public.content_library_note_question_links l),'[]'::jsonb),
   'candidates',coalesce((select jsonb_agg(jsonb_build_object('importId',i.import_id,'questionId',q->>'questionId','conceptIds',coalesce((select jsonb_agg(distinct l->>'conceptId') from jsonb_array_elements(q->'conceptLinks') l),'[]'::jsonb)))
    from public.content_library_imports i cross join lateral jsonb_array_elements(i.manifest->'questions') q where i.status='draft'),'[]'::jsonb)
  ) into v_body from public.study_catalog c where c.id=1;
  if v_body is null or pg_column_size(v_body)>8000000 or exists(
-  select 1 from unnest(array['concepts','questions','notes','candidates']) k where jsonb_array_length(v_body->k)>50000
+  select 1 from unnest(array['concepts','questions','notes','candidates','links']) k where jsonb_array_length(v_body->k)>50000
  ) then raise exception 'coverage_snapshot_unavailable'; end if;
  v_id:=gen_random_uuid(); v_expires:=v_now+interval '5 minutes';
  v_body:=v_body||jsonb_build_object('snapshotId',v_id,'asOf',v_now,'expiresAt',v_expires,'registryVersion',p_registry_version);
