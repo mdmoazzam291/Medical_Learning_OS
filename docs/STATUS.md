@@ -1,3 +1,8 @@
+## Independent syllabus-scope review foundation — 29 October 2026
+
+- Backend-only scoped reviewer grant/revoke and immutable source/scope decision receipts, Auth-bound to separate user identities; no actual reviewers/grants, no official exam certification or learner release. See [reviewer governance contract](INDEPENDENT_SYLLABUS_SCOPE_REVIEW.md).
+- Stacked, unmerged PR #337 requires exact-head CI, independent security review and post-parent hosted Access/restore tests. Admin and reviewer UI for this backend is not yet provided.
+
 ## Admin syllabus scope/objective preflight — 29 October 2026
 
 - Implemented read-only exact draft/catalog/registry aligned review packet and Admin view, without official scope approval or learner-facing targeting. A singleton Admin cannot self-certify independent syllabus review. Objective mappings reuse the existing preparation registry (currently zero approved objectives/mappings). See [review preflight](SYLLABUS_REVIEW_PREFLIGHT.md).
