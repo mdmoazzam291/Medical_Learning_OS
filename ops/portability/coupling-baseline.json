@@ -772,5 +772,21 @@
   ],
   "web/content-coverage-boot.js": [
     "supabase"
+  ],
+  "scripts/approved-collection-db-check.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/approved-collection.js": [
+    "supabase"
+  ],
+  "supabase/migrations/20261029094149_admin_approved_collection_preflight.sql": [
+    "supabase"
+  ],
+  "web/approved-collection-boot.js": [
+    "supabase"
+  ],
+  "scripts/approved-collection-browser-check.js": [
+    "cloudflare",
+    "supabase"
   ]
 }

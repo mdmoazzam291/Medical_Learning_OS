@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import {readFile,readdir} from 'node:fs/promises';
+const {PGlite}=await import(process.env.PGLITE_MODULE_URL||'@electric-sql/pglite');
+const db=new PGlite(),actor='11111111-1111-4111-8111-111111111111';
+try{
+ await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;
+ create table content_admin_account(admin_user_id uuid);create function is_content_admin(uuid) returns boolean language sql stable as $$select exists(select 1 from public.content_admin_account where admin_user_id=$1)$$;
+ create table study_catalog(id int,version bigint,body jsonb);
+ create table neural_canonical_note_versions(id uuid,concept_id text,version int,status text,source_ids jsonb);
+ create table content_review_events(target_type text,target_id text,review_kind text,decision text,target_sha256 text);
+ create table source_rights_events(source_id text,source_fingerprint_sha256 text);
+ create table learner_content_issue_reports(id uuid,target_type text,target_id text);
+ create table learner_content_issue_triage_events(report_id uuid,decision text);
+ create function current_review_target_sha256(text,text) returns text language sql as $$select repeat('a',64)$$;
+ create function current_neural_note_review_target_sha256(uuid,text) returns text language sql as $$select repeat('b',64)$$;
+ create function current_source_fingerprint_sha256(text) returns text language sql as $$select repeat('c',64)$$;
+ grant usage on schema public to anon,authenticated,service_role;grant select on all tables in schema public to service_role;`);
+ await db.query('insert into content_admin_account values($1)',[actor]);
+ const q={questionId:'q',questionVersionId:'q@1',version:1,status:'published',sourceIds:['s'],stem:'PRIVATE STEM',answerOptionId:'SECRET'};
+ const catalog={questions:[q],sources:[{sourceId:'s',rights:{status:'licensed'},evidence:'PRIVATE EVIDENCE'}]};
+ await db.query('insert into study_catalog values(1,446,$1)',[catalog]);
+ await db.exec("insert into source_rights_events values('s',repeat('c',64));insert into content_review_events select 'question_version','q@1',k,'approved',repeat('a',64) from unnest(array['medical','references','rights']) k;");
+ const names=await readdir(new URL('../supabase/migrations/',import.meta.url));const migration=names.find(n=>n.endsWith('_admin_approved_collection_preflight.sql'));assert.ok(migration);
+ await db.exec(await readFile(new URL('../supabase/migrations/'+migration,import.meta.url),'utf8'));
+ const call=async (who=actor)=>(await db.query('select owner_approved_collection_preflight_v1($1) body',[who])).rows[0].body;
+ await db.exec('set role service_role');await assert.rejects(call('22222222-2222-4222-8222-222222222222'),/content_admin_required/);
+ let s=await call();assert.equal(s.rows[0].rightsCurrent,true);assert.equal(s.rows[0].gates.medical,'current');assert.doesNotMatch(JSON.stringify(s),/PRIVATE|SECRET|stem|answerOptionId|reviewer_id|target_sha256/);
+ await db.exec("reset role;update content_review_events set target_sha256=repeat('d',64) where review_kind='medical';update content_review_events set decision='rejected' where review_kind='rights';set role service_role;");
+ s=await call();assert.equal(s.rows[0].gates.medical,'stale');assert.equal(s.rows[0].gates.rights,'rejected');
+ await db.exec("reset role;delete from content_review_events where review_kind='references';insert into learner_content_issue_reports values(gen_random_uuid(),'question_version','q@1');set role service_role;");
+ s=await call();assert.equal(s.rows[0].gates.references,'missing');assert.equal(s.rows[0].openIssues,1);
+ await db.exec("reset role;update source_rights_events set source_fingerprint_sha256=repeat('d',64);set role service_role;");assert.equal((await call()).rows[0].rightsCurrent,false);
+ await db.exec('reset role');catalog.questions[0].sourceIds=['missing'];await db.query('update study_catalog set body=$1',[catalog]);await db.exec('set role service_role');assert.equal((await call()).rows[0].rightsCurrent,false);
+ await db.exec('reset role');
+ const noteId='33333333-3333-4333-8333-333333333333';
+ await db.query('insert into neural_canonical_note_versions values($1,$2,1,$3,$4)',[noteId,'concept-a','verified',['s']]);
+ await db.query("insert into learner_content_issue_reports values(gen_random_uuid(),'canonical_note',$1)",[noteId]);
+ await db.exec('set role service_role');assert.equal((await call()).rows.find(r=>r.kind==='note').openIssues,1,'note reports bind the exact note version, not its concept');await db.exec('reset role');
+ for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(call(),/permission denied/);await db.exec('reset role');}
+ assert.equal((await db.query('select version from study_catalog')).rows[0].version,446);
+ console.log('Approved collection SQL: actor/role denial, current/stale/rejected/missing gates, source drift/missing, reports, redaction and unchanged catalog passed. Fingerprint routines are fixture stubs; existing gate contracts are separately tested.');
+}finally{await db.close();}

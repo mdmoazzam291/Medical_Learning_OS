@@ -1,3 +1,4 @@
+import { readApprovedCollection } from './_shared/approved-collection.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
@@ -237,6 +238,11 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (req.method === "GET" && path === "/approved-collection") {
+      try { return response(req, 200, await readApprovedCollection({admin, actor: authData.user.id, params: url.searchParams})); }
+      catch (error) { const problem = error as {status?: number; code?: string}; fail(problem.status || 503, problem.code || "approved_collection_unavailable"); }
     }
 
     if (req.method === "GET" && path === "/content-coverage") {
