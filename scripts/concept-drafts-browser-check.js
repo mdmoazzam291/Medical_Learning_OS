@@ -22,6 +22,7 @@ try{
   const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(user=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user})),user);
   let failure=0,slow=false,reads=0,failSave=false,failRead=false,conflict=false,denySave=false;const writes=[],requestIds=[],versions=[],receipts=new Map(),acceptRequests=[];let accepted=null;
   const proposal='22222222-2222-4222-8222-222222222222',conceptId='C-33333333-3333-4333-8333-333333333333';
+
   const syllabusId='44444444-4444-4444-8444-444444444444',syllabusVersions=[],syllabusReceipts=new Map(),syllabusRequests=[];let syllabusFailSave=true;
 
   await context.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
@@ -33,7 +34,7 @@ try{
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:2,questions:1,sources:0},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
    if(path.endsWith('/owner-api/concept-draft-accept')){
     const input=req.postDataJSON();acceptRequests.push(input.requestId);
-    if(!accepted)accepted={status:'concept_accepted',proposalId:input.proposalId,revision:input.revision,draftDigest:input.digest,conceptId,canonicalDigest:'b'.repeat(64),catalogVersion:447};
+    if(!accepted)accepted={status:'concept_accepted',proposalId:input.proposalId,revision:input.revision,draftDigest:input.digest,conceptId,identityDigest:'b'.repeat(64),catalogVersionAtAcceptance:446,learnerPublished:false};
     return reply(accepted);
    }
    if(path.endsWith('/owner-api/concept-drafts')){
@@ -42,7 +43,7 @@ try{
     if(!receipts.has(input.requestId)){const version={proposalId:proposal,conceptId,revision:versions.length+1,digest:String(versions.length+1).padStart(64,'0'),baseDigest:null,operation:'create',document:input.document,recordedAt:snapshot.asOf};versions.push(version);receipts.set(input.requestId,{proposalId:proposal,conceptId,revision:version.revision,digest:version.digest});}
     if(failSave)return reply({error:'synthetic_uncertain_save'},503);return reply(receipts.get(input.requestId));
    }
-   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,canonicalDigest:accepted.canonicalDigest}:null});}
+   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,identityDigest:accepted.identityDigest,catalogVersionAtAcceptance:446,learnerPublished:false}:null});}
    if(path.includes('/owner-api/syllabus-review-preflight/')){
      const v=syllabusVersions.at(-1);
      if(!v)return reply({error:'no_draft'},404);
@@ -52,7 +53,7 @@ try{
       registryVersion:'pg-preparation:foundation@1',pathwayVersionId:v.document.pathwayVersionId,
       scopeDeclaration:v.document.scopeDeclaration,sourceKind:v.document.sourceKind,
       sourceLocator:v.document.sourceLocator,sourceVersion:v.document.sourceVersion,
-      isLatest:true,members:v.document.conceptIds.map(conceptId=>({conceptId,label:'Synthetic canonical concept',exists:true}))},registry));
+      isLatest:true,members:v.document.conceptIds.map(conceptId=>({conceptId,label:'Synthetic canonical concept',kind:'canonical',identityDigest:null,bindingMatches:true}))},registry));
    }
    if(path.endsWith('/owner-api/syllabus-baseline-drafts')){
      if(req.method()==='GET')return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft-only',
@@ -102,7 +103,7 @@ try{
   await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.locator('[data-concept-status]').filter({hasText:'Save not confirmed'}).waitFor();assert.equal(await root.getByRole('button',{name:'Retry pending save',exact:true}).count(),1);assert.equal(versions.length,1);
   failRead=false;await root.getByRole('button',{name:'Retry pending save',exact:true}).click();await root.getByText('Saved and confirmed revision 1. Accepted coverage is unchanged.',{exact:true}).waitFor();assert.equal(new Set(requestIds).size,1);assert.equal(versions.length,1);
   // Explicit human review cannot silently publish; ambiguous POST/readback must preserve retry identity.
-  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.getByText('Accept reviewed identity into private registry',{exact:true}).click();
   await root.locator('[data-concept-accept-form] textarea[name="reviewNotes"]').fill('Owner reviewed this synthetic identity and classification with source context.');
   await root.locator('[data-concept-accept-form] input[name="attested"]').check();
   failRead=403;
@@ -110,9 +111,9 @@ try{
   await root.locator('[data-concept-status]').filter({hasText:'Acceptance not confirmed'}).waitFor();
   assert.equal(acceptRequests.length,1);
   failRead=false;
-  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.getByText('Accept reviewed identity into private registry',{exact:true}).click();
   await root.getByRole('button',{name:'Accept concept identity (not publish)',exact:true}).click();
-  await root.locator('[data-concept-status]').filter({hasText:'Accepted into canonical inventory'}).waitFor();
+  await root.locator('[data-concept-status]').filter({hasText:'Identity accepted into the private Admin registry'}).waitFor();
   assert.equal(acceptRequests.length,2);assert.equal(new Set(acceptRequests).size,1);
   assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
   assert.match(await root.textContent(),/This does not approve medical claims, rights, questions or learner release/);
@@ -138,7 +139,6 @@ try{
   await syllabus.locator('[data-syllabus-review-packet]').getByText('Review required. This is not an accepted or official syllabus.',{exact:true}).waitFor();
   assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Exact reviewed curriculum-mapped concepts: 0/);
   assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Independent source review/);
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   assert.match(await syllabus.textContent(),/No medical review, objective mapping/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')||x.endsWith('/syllabus-baseline-drafts')));
