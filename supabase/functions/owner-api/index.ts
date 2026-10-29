@@ -244,7 +244,7 @@ Deno.serve(async (req: Request) => {
     }
 
     if (path === "/syllabus-baseline-drafts" || path.startsWith("/syllabus-baseline-drafts/")) {
-      const match=/^\\/syllabus-baseline-drafts(?:\\/([a-fA-F0-9-]{36}))?$/.exec(path);
+      const match=/^\/syllabus-baseline-drafts(?:\/([a-fA-F0-9-]{36}))?$/.exec(path);
       if(!match)fail(404,"not_found");
       try {
         return response(req,200,await syllabusBaselineDraftRequest({admin,actor:authData.user.id,
