@@ -27,5 +27,5 @@ test('malformed, duplicate and oversized snapshots fail rather than fabricate co
  for(const s of [snapshot([row('a'),row('a')]),snapshot([{...row('a'),gates:{medical:'approved'}}]),snapshot([{...row('a'),rightsCurrent:'true'}]),snapshot(Array.from({length:2001},(_,i)=>row('x'+i))),{rows:[]}])assert.throws(()=>approvedCollectionPage(s));
 });
 test('invalid and duplicated filters reject client authority and unbounded pages',()=>{
- for(const q of ['actor=forged','state=approved','limit=101','offset=-1','search=a&search=b'])assert.throws(()=>parseApprovedCollectionFilters(new URLSearchParams(q)));
+ for(const q of ['actor=forged','constructor=1','toString=1','state=approved','limit=101','offset=-1','search=a&search=b'])assert.throws(()=>parseApprovedCollectionFilters(new URLSearchParams(q)));
 });

@@ -5,7 +5,7 @@ const invalid=()=>{throw new Error('approved_collection_invalid');};
 export function parseApprovedCollectionFilters(params=new URLSearchParams()) {
  const out={search:'',kind:'',state:'',limit:50,offset:0};
  for(const [key,value] of params){
-  if(!(key in out)||params.getAll(key).length!==1)invalid();
+  if(!Object.hasOwn(out,key)||params.getAll(key).length!==1)invalid();
   if(key==='search'){if(value.length>160)invalid();out.search=value.trim();}
   else if(key==='kind'){if(value&&!kinds.includes(value))invalid();out.kind=value;}
   else if(key==='state'){if(value&&!['current','blocked','stored-published'].includes(value))invalid();out.state=value;}

@@ -14,10 +14,13 @@
 - Bounds: 2,000 total question/note versions, 8 MB result, 100 rows/page. Reject incomplete/oversized inputs rather than truncate. No full content, reviewer identity/notes, source evidence or learner reports leave SQL.
 
 ## Tasks
-- [ ] Domain tests RED→GREEN: exact gate states, stale/missing/rejected evidence, source rights, lifecycle, duplicate identities, separate pending/published, filtering/pagination and malformed snapshots.
-- [ ] SQL/API tests RED→GREEN: existing fingerprints, singleton actor, browser denial, source-count mismatch, source restriction/staleness, open reports, metadata-only projection and no writes. API accepts allowlisted filters only and retains server actor.
-- [ ] Admin read-only UI: focused workspace, safe markup, loading/error/zero states, search/status filters, page selection, stale request protection and no publication action. Synthetic Chromium phone/tablet/desktop acceptance.
+- [x] Domain tests RED→GREEN: exact gate states, stale/missing/rejected evidence, source rights, lifecycle, duplicate identities, separate pending/published, filtering/pagination and malformed snapshots.
+- [x] SQL/API tests RED→GREEN: existing fingerprints, singleton actor, browser denial, source-count mismatch, source restriction/staleness, open reports, metadata-only projection and no writes. API accepts allowlisted filters only and retains server actor.
+- [x] Admin read-only UI: focused workspace, safe markup, loading/error/zero states, search/status filters, page selection, stale request protection and no publication action. Synthetic Chromium phone/tablet/desktop acceptance.
 - [ ] Verify full Node/check/build, isolated SQL, browser scenarios; record actual limitations; preserve branch and open draft PR against PR332.
 
 ## Review focus
 Missing source arrays cannot count as clearance. Same-ID duplicate versions fail closed. Unavailable fingerprints cannot create green states. Content bodies/private evidence never appear in response or errors. Existing routes and current learner visibility remain unchanged.
+
+## Execution receipt
+PR339 source3fbb5125 passed hosted core/check/build/SQL and dedicated Chromium/nativeWebKit collection scenarios in Foundation40853011488. Wider suites were still running. A final allowlist audit reproduced inherited-object-key acceptance (constructor/toString) RED and changed the guard to Object.hasOwn GREEN; final source verification follows that patch. Local browser installation failed; hosted browser passes are separate evidence. Note report matching was fixed RED→GREEN to exact note UUID after independent AI review. No release or production data writes.
