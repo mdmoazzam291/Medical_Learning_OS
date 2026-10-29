@@ -371,7 +371,7 @@ function dashboardMarkup(data) {
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
     </section>
 
-    <section id="owner-approved-collection" class="panel" data-admin-panel="approved-collection" hidden aria-label="Approved Collection"><div id="owner-approved-collection-body"><p>Open Approved Collection to inspect review evidence.</p></div></section>
+    <section id="owner-approved-collection" class="panel" data-admin-panel="approved-collection" hidden aria-label="Approved Collection"><div id="owner-content-selection-body"></div><div id="owner-approved-collection-body"><p>Open Approved Collection to inspect review evidence.</p></div></section>
     <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
       <div id="owner-coverage-body"><p>Open Coverage Index to load the current inventory.</p></div>
     </section>

@@ -1,3 +1,4 @@
+import { contentSelectionRequest } from './_shared/frozen-content-selections.js';
 import { readApprovedCollection } from './_shared/approved-collection.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
@@ -238,6 +239,19 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (req.method === "GET" && path === "/content-selections") {
+      if ([...url.searchParams.keys()].length !== 1 || !url.searchParams.has("id")) fail(400,"query_not_supported");
+      try { return response(req,200,await contentSelectionRequest({admin,actor:authData.user.id,action:"read",input:{selectionId:url.searchParams.get("id")}})); }
+      catch (error) { const problem=error as {status?:number;code?:string}; fail(problem.status||503,problem.code||"content_selection_unavailable"); }
+    }
+
+    if (req.method === "POST" && ["/content-selections/preview", "/content-selections/save"].includes(path)) {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req, 32768);
+      try { return response(req, 200, await contentSelectionRequest({admin,actor:authData.user.id,action:path.endsWith("/save")?"save":"preview",input})); }
+      catch (error) { const problem = error as {status?:number;code?:string}; fail(problem.status||503,problem.code||"content_selection_unavailable"); }
     }
 
     if (req.method === "GET" && path === "/approved-collection") {
