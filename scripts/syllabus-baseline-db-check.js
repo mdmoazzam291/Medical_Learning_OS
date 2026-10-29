@@ -15,11 +15,17 @@ try{
  create table content_admin_account(admin_user_id uuid);
  create function is_content_admin(uuid) returns boolean language sql stable as $$select exists(select 1 from public.content_admin_account where admin_user_id=$1)$$;
  create table study_catalog(id int primary key,version bigint,body jsonb);
+ -- Emulates the already-private immutable acceptance ledger from parent PR334.
+ create table content_concept_acceptances(concept_id text primary key,accepted_identity_digest text not null,
+   accepted_document jsonb not null);
  create function concept_draft_immutable_v1() returns trigger language plpgsql as $$begin raise exception 'immutable'; end;$$;
  grant usage on schema public,extensions to service_role,anon,authenticated;
- grant select on public.study_catalog,public.content_admin_account to service_role;`);
+ grant select on public.study_catalog,public.content_admin_account,public.content_concept_acceptances to service_role;`);
  await db.query('insert into content_admin_account values($1)',[actor]);
  await db.query('insert into study_catalog values(1,4,$1)',[{concepts:[{conceptId:'one',label:'One synthetic'},{conceptId:'two',label:'Two synthetic'}],questions:[],sources:[]}]);
+ const privateId='C-private-new',privateDigest='b'.repeat(64);
+ await db.query('insert into content_concept_acceptances(concept_id,accepted_identity_digest,accepted_document) values($1,$2,$3)',
+  [privateId,privateDigest,{conceptId:privateId,label:'Admin-only accepted synthetic',classification:{subjects:['medicine']}}]);
  await db.exec(await readFile(new URL('../supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql',import.meta.url),'utf8'));
  const save=async(value,user=actor,reg=registry)=>(await db.query('select public.syllabus_baseline_draft_save_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
  const inspect=async(id=null,revision=null,user=actor)=>(await db.query('select public.syllabus_baseline_draft_inspect_v1($1,$2,$3,0) packet',[user,id,revision])).rows[0].packet;
@@ -30,6 +36,17 @@ try{
  await assert.rejects(save({...fresh(),document:{...doc(),scopeDeclaration:null}}),/syllabus_baseline_invalid/);
  await assert.rejects(save({...fresh(),document:{...doc(),sourceKind:null}}),/syllabus_baseline_invalid/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['not-real']}}),/syllabus_baseline_unknown_concept/);
+ const privateDraft=await save({...fresh(),document:{...doc(),conceptIds:['one',privateId]}});
+ assert.deepEqual(privateDraft.privateIdentityBindings,[{conceptId:privateId,identityDigest:privateDigest}],
+  'Admin-only acceptance must be a valid candidate checklist identity with a frozen digest');
+ const privateDetail=await inspect(privateDraft.baselineId);
+ assert.deepEqual(privateDetail.version.privateIdentityBindings,privateDraft.privateIdentityBindings,
+  'Saved private identity binding must round-trip exactly to a protected Admin readback');
+ assert.equal(privateDetail.version.catalogVersion,4,'Admin-only checklist must not mutate learner catalog');
+ const privateOnly=await save({...fresh(),document:{...doc(),conceptIds:[privateId]}});
+ assert.equal(privateOnly.privateIdentityBindings.length,1,'Proposed checklist may contain only accepted-private identities');
+ await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:[privateId,'unknown-unaccepted']}}),
+  /syllabus_baseline_unknown_concept/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['one','one']}}),/syllabus_baseline_invalid/);
  const empty=await save({...fresh(),document:{...doc(),conceptIds:[]}});assert.equal(empty.status,'draft');
  const input=fresh();const first=await save(input);assert.equal(first.revision,1);
@@ -50,6 +67,8 @@ try{
  await db.exec('reset role');
  const catalog=(await db.query('select version,body from public.study_catalog where id=1')).rows[0];
  assert.equal(catalog.version,4);assert.equal(catalog.body.concepts.length,2);
+ assert.equal(catalog.body.concepts.some(c=>c.conceptId===privateId),false,
+  'A private accepted identity must not leak into the learner-shared canonical catalog');
  for(const role of ['anon','authenticated']){
   await db.exec('set role '+role);
   await assert.rejects(save(fresh()),/permission denied/);
@@ -57,5 +76,5 @@ try{
   await assert.rejects(db.exec('select * from content_syllabus_baseline_draft_versions'),/permission denied/);
   await db.exec('reset role');
  }
- console.log('Syllabus baseline draft PostgreSQL tests passed: request replay, immutable versions, missing IDs, actor/grant isolation, catalog untouched and no activation.');
+ console.log('Syllabus baseline draft PostgreSQL tests passed: accepted-private identity bindings, immutable revisions, unknown IDs, role isolation, shared catalog unchanged, no activation.');
 }finally{await db.close();}
