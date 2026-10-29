@@ -50,5 +50,24 @@ class RestoreVerificationTests(unittest.TestCase):
             m.compare_inventory(expected, expected, {'notes', 'missing'})
 
 
+    def test_source_schema_inventory_ignores_future_unapplied_migrations(self):
+        m = self.module()
+        source_schema = '''
+CREATE TABLE public.notes (id integer);
+CREATE TABLE "public"."private_scope" (id uuid);
+CREATE TABLE public.partition_child PARTITION OF public.partition_parent FOR VALUES IN (1);
+CREATE TABLE unrelated.other (id integer);
+'''
+        self.assertEqual(m.public_schema_inventory(source_schema),
+                         {'notes', 'private_scope', 'partition_child'})
+        # A PR migration for future_scope is not in the captured live schema.
+        self.assertNotIn('future_scope', m.public_schema_inventory(source_schema))
+        for invalid in ['', 'CREATE TABLE other.notes (id integer);']:
+            with self.subTest(invalid=invalid), self.assertRaisesRegex(
+                    ValueError, 'source_schema_public_tables_missing'):
+                m.public_schema_inventory(invalid)
+
+
+
 if __name__ == '__main__':
     unittest.main()

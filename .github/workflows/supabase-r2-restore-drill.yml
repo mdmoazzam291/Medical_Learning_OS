@@ -266,7 +266,7 @@ jobs:
           fi
           echo 'Exact source public owners, grants, column privileges and defaults matched.'
           python3 ops/r2-backups/verify_restore.py \
-            "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
+            "$RUNNER_TEMP/mlos-restore/data.sql" "$RUNNER_TEMP/mlos-restore/schema.sql" "$container"
 
       - name: Remove disposable database and downloaded backup
         if: always()
