@@ -10,7 +10,7 @@ function enhance(){
  const target=app?.dataset.ownerState==='loaded'&&globalThis.mlosNavigationAdmin===true?app.querySelector('#owner-approved-collection-body'):null;
  if(mounted&&mounted!==target){dispose?.();mounted=null;dispose=null;}
  if(target&&!target.closest('[hidden]')&&target!==mounted){mounted=target;const stopCollection=mountApprovedCollection({root:target,loadPage:filters=>owner.approvedCollection(filters)});
- const stopSelection=mountContentSelection({root:app.querySelector('#owner-content-selection-body'),collectionRoot:target,revalidateSelection:id=>owner.revalidateContentSelection(id),readSelection:id=>owner.readContentSelection(id),previewSelection:items=>owner.previewContentSelection(items),freezeSelection:input=>owner.freezeContentSelection(input)});
+ const stopSelection=mountContentSelection({root:app.querySelector('#owner-content-selection-body'),collectionRoot:target,exportSelection:id=>owner.exportContentSelection(id),revalidateSelection:id=>owner.revalidateContentSelection(id),readSelection:id=>owner.readContentSelection(id),previewSelection:items=>owner.previewContentSelection(items),freezeSelection:input=>owner.freezeContentSelection(input)});
  dispose=()=>{stopSelection();stopCollection();};}
 }
 new MutationObserver(enhance).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','data-owner-state']});

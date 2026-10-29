@@ -1,3 +1,4 @@
+import {selectionInventoryExport} from '../../../../src/domain/selection-inventory-export.js';
 import {selectionRevalidation} from '../../../../src/domain/selection-revalidation.js';
 import {selectionItems,selectionSaveInput} from '../../../../src/domain/frozen-content-selections.js';
 const fail=(status,code)=>{const e=Error(code);e.status=status;e.code=code;throw e;};
@@ -12,9 +13,10 @@ function project(value,receipt=false){
 export async function contentSelectionRequest({admin,actor,action,input}){
  let args;
  try{if(action==='preview'){if(!input||Object.keys(input).length!==1)throw Error();args={items:selectionItems(input.items)};}
- else if(action==='save')args=selectionSaveInput(input);else if(['read','revalidate'].includes(action)){if(!input||Object.keys(input).length!==1||typeof input.selectionId!=='string'||!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(input.selectionId))throw Error();args=input;}else throw Error();}catch{fail(400,'content_selection_invalid');}
+ else if(action==='save')args=selectionSaveInput(input);else if(['read','revalidate','export'].includes(action)){if(!input||Object.keys(input).length!==1||typeof input.selectionId!=='string'||!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(input.selectionId))throw Error();args=input;}else throw Error();}catch{fail(400,'content_selection_invalid');}
  async function rpc(name,params){const {data,error}=await admin.rpc(name,{p_actor:actor,...params});if(error){const message=String(error.message||'');if(message.includes('content_admin_required'))fail(403,'content_admin_required');for(const code of ['content_selection_stale','content_selection_request_conflict','content_selection_item_blocked','content_selection_item_unavailable'])if(message.includes(code))fail(409,code);fail(503,'content_selection_unavailable');}return data;}
  try{
+  if(action==='export'){const frozen=project(await rpc('owner_content_selection_read_v1',{p_selection_id:args.selectionId}),true);if(frozen.selectionId!==args.selectionId)throw Error('readback');return await selectionInventoryExport(frozen);}
   if(action==='revalidate'){
    const frozen=project(await rpc('owner_content_selection_read_v1',{p_selection_id:args.selectionId}),true);
    if(frozen.selectionId!==args.selectionId)throw Error('readback');

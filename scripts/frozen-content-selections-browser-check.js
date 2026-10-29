@@ -1,3 +1,5 @@
+import {selectionInventoryExport} from '../src/domain/selection-inventory-export.js';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {mkdtemp,readFile,rm,mkdir} from 'node:fs/promises';
@@ -17,7 +19,7 @@ try{
  browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({headless:true});
  for(const [name,width,height] of [['phone',390,844],['tablet',1180,820],['desktop',1440,1000]]){
   const context=await browser.newContext({viewport:{width,height}});await context.addInitScript(user=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user})),user);
-  let failure=0,slow=false,uncertain=true,stale=false;const writes=[];let saved=null,recheck='current';
+  let failure=0,slow=false,uncertain=true,stale=false;const writes=[];let saved=null,recheck='current',exportMode='ok';
   await context.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
    const req=route.request(),url=new URL(req.url()),path=url.pathname;const reply=(data,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(data)});
    if(req.method()!=='GET')writes.push(path);
@@ -25,10 +27,11 @@ try{
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/review-api/transfer-pairs'))return reply({pairs:[]});
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:0,questions:52,sources:1},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
+   if(path.endsWith('/owner-api/content-selections/export')){if(exportMode==='outage')return reply({error:'synthetic'},503);const result=await selectionInventoryExport(saved);return reply(exportMode==='tampered'?{...result,markdown:result.markdown+'PRIVATE TAMPER'}:result);}
    if(path.endsWith('/owner-api/content-selections/revalidate'))return recheck==='outage'?reply({error:'synthetic'},503):reply({contractId:'content-selection-revalidation-v1',selectionId:saved.selectionId,frozenDigest:saved.digest,frozenCatalogVersion:446,currentDigest:recheck==='current'?saved.digest:recheck==='stale'?'b'.repeat(64):null,currentCatalogVersion:recheck==='current'?446:recheck==='stale'?447:null,checkedAt:snapshot.asOf,state:recheck,reasons:recheck==='current'?[]:[recheck==='stale'?'catalog_changed':'current_evidence_blocked'],publicationAuthority:false,releaseReadiness:'not-assessed'});
    if(path.endsWith('/owner-api/content-selections'))return saved?reply(saved):reply({error:'unknown'},404);
    if(path.endsWith('/owner-api/content-selections/preview')){const input=req.postDataJSON();const items=input.items.map(i=>{const r=snapshot.rows.find(r=>r.kind===i.kind&&r.versionId===i.versionId);return {kind:r.kind,canonicalId:r.canonicalId,versionId:r.versionId,version:r.version,reviewFingerprints:{medical:'a'.repeat(64),references:'b'.repeat(64),rights:'c'.repeat(64)}};});return reply({contractId:'content-selection-binding-v1',digest:'a'.repeat(64),catalogVersion:446,items,observedAt:snapshot.asOf,publicationAuthority:false,releaseReadiness:'not-assessed'});}
-   if(path.endsWith('/owner-api/content-selections/save')){const input=req.postDataJSON();if(stale)return reply({error:'content_selection_stale'},409);if(!saved)saved={...input,contractId:'frozen-content-selection-v1',digest:input.expectedDigest,catalogVersion:input.expectedCatalogVersion,selectionId:'88888888-8888-4888-8888-888888888888',createdAt:snapshot.asOf,observedAt:snapshot.asOf,publicationAuthority:false,releaseReadiness:'not-assessed'};else assert.equal(input.requestId,saved.requestId);if(uncertain){uncertain=false;return reply({error:'synthetic_unknown_commit'},503);}return reply(saved);}
+   if(path.endsWith('/owner-api/content-selections/save')){const input=req.postDataJSON();if(stale)return reply({error:'content_selection_stale'},409);if(!saved)saved={...input,contractId:'frozen-content-selection-v1',digest:input.expectedDigest,catalogVersion:input.expectedCatalogVersion,selectionId:'88888888-8888-4888-8888-888888888888',createdAt:snapshot.asOf,observedAt:snapshot.asOf,publicationAuthority:false,releaseReadiness:'not-assessed',items:input.items.map(i=>{const r=snapshot.rows.find(r=>r.kind===i.kind&&r.versionId===i.versionId);return {kind:r.kind,canonicalId:r.canonicalId,versionId:r.versionId,version:r.version,reviewFingerprints:{medical:'a'.repeat(64),references:'b'.repeat(64),rights:'c'.repeat(64)}};})};else assert.equal(input.requestId,saved.requestId);if(uncertain){uncertain=false;return reply({error:'synthetic_unknown_commit'},503);}return reply(saved);}
    if(path.endsWith('/owner-api/approved-collection')){if(failure)return reply({error:'synthetic'},failure);if(slow&&url.searchParams.get('search')==='synthetic')await new Promise(r=>setTimeout(r,400));return reply(approvedCollectionPage(snapshot,parseApprovedCollectionFilters(url.searchParams)));}
    return reply({flags:[],alerts:[]});
   });
@@ -49,6 +52,11 @@ try{
    else await selection.getByText(state==='current'?'Current at observation':state==='stale'?'Saved evidence is stale':'Current evidence is blocked',{exact:true}).waitFor();
    await selection.getByText('Evidence selection saved:',{exact:false}).waitFor();
   }
+  const expectedExport=await selectionInventoryExport(saved);
+  for(const [label,format] of [['Download inventory JSON','json'],['Download inventory Markdown','markdown']]){const waiting=page.waitForEvent('download');await selection.getByRole('button',{name:label,exact:true}).click();const file=await waiting;const text=await readFile(await file.path(),'utf8');assert.equal(text,format==='json'?expectedExport.json:expectedExport.markdown);assert.match(file.suggestedFilename(),/^selection-inventory-[0-9a-f-]+\.(json|md)$/);if(format==='json')assert.equal(createHash('sha256').update(text).digest('hex'),expectedExport.sha256);}
+  let unexpectedDownloads=0;page.on('download',()=>unexpectedDownloads++);
+  for(const mode of ['outage','tampered']){exportMode=mode;await selection.getByRole('button',{name:'Download inventory JSON',exact:true}).click();await selection.getByText('Inventory export could not be verified. No file was downloaded; retry with the authorized account.',{exact:true}).waitFor();}
+  assert.equal(unexpectedDownloads,0);exportMode='ok';
   await selection.getByRole('button',{name:'Clear selection',exact:true}).click();await selection.getByText('0 selected versions',{exact:true}).waitFor();
   await root.getByLabel('Select exact version synthetic@52',{exact:true}).check();await selection.getByRole('button',{name:'Preview selected evidence',exact:true}).click();await selection.getByRole('button',{name:'Freeze evidence selection',exact:true}).waitFor();
   stale=true;await selection.getByRole('button',{name:'Freeze evidence selection',exact:true}).click();await selection.getByText('Preview unavailable or evidence changed. Refresh the collection and try again.',{exact:true}).waitFor();await selection.getByRole('button',{name:'Clear selection',exact:true}).click();
