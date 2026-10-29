@@ -9,7 +9,7 @@ let mounted=null,dispose=null;
 function enhance(){
  const target=app?.dataset.ownerState==='loaded'&&globalThis.mlosNavigationAdmin===true?app.querySelector('#owner-coverage-body'):null;
  if(mounted&&mounted!==target){dispose?.();mounted=null;dispose=null;}
- if(target&&!target.closest('[hidden]')&&target!==mounted){mounted=target;const inventoryDispose=mountCoverage({root:target,loadPage:filters=>owner.contentCoverage(filters)});const editor=app.querySelector('#owner-concept-editor');const editorDispose=editor?mountConceptDraftEditor({root:editor,inspect:input=>owner.conceptDrafts(input),save:input=>owner.saveConceptDraft(input)}):null;dispose=()=>{inventoryDispose();editorDispose?.();};}
+ if(target&&!target.closest('[hidden]')&&target!==mounted){mounted=target;const inventoryDispose=mountCoverage({root:target,loadPage:filters=>owner.contentCoverage(filters)});const editor=app.querySelector('#owner-concept-editor');const editorDispose=editor?mountConceptDraftEditor({root:editor,inspect:input=>owner.conceptDrafts(input),save:input=>owner.saveConceptDraft(input),accept:input=>owner.acceptConceptDraft(input)}):null;dispose=()=>{inventoryDispose();editorDispose?.();};}
 }
 new MutationObserver(enhance).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','data-owner-state']});
 window.addEventListener('mlos:admin-ready',enhance);window.addEventListener('mlos:access',enhance);window.addEventListener('hashchange',enhance);enhance();

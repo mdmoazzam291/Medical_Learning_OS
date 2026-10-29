@@ -3,9 +3,9 @@ const {PGlite}=await import(process.env.PGLITE_MODULE_URL||'@electric-sql/pglite
 const actor='11111111-1111-4111-8111-111111111111',other='22222222-2222-4222-8222-222222222222';
 try{
  await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema extensions;create function extensions.digest(bytea,text) returns bytea language sql immutable as $$select sha256($1)$$;create table content_admin_account(admin_user_id uuid);create function is_content_admin(uuid) returns boolean language sql stable as $$select exists(select 1 from public.content_admin_account where admin_user_id=$1)$$;
- create table study_catalog(id int,version bigint,body jsonb);create table content_library_concept_metadata(concept_id text,classification jsonb);grant usage on schema public,extensions to service_role,anon,authenticated;grant select on all tables in schema public to service_role;`);
+ create table study_catalog(id int primary key,version bigint,body jsonb,updated_at timestamptz default now());create table content_library_concept_metadata(concept_id text primary key,classification jsonb);grant usage on schema public,extensions to service_role,anon,authenticated;grant select on all tables in schema public to service_role;grant update on public.study_catalog to service_role;grant insert,update on public.content_library_concept_metadata to service_role;`);
  await db.query('insert into content_admin_account values($1)',[actor]);const cls={subjects:['medicine'],systems:[],organs:[],domains:[],tasks:[]};const catalog={concepts:[{conceptId:'existing',label:'Existing synthetic',aliases:[],subjectTags:['medicine']}],questions:[],sources:[]};await db.query('insert into study_catalog values(1,1,$1)',[catalog]);
- const files=await readdir(new URL('../supabase/migrations/',import.meta.url));const content=await readFile(new URL('../supabase/migrations/20261003224909_canonical_content_library.sql',import.meta.url),'utf8');for(const name of ['content_library_fields','content_library_strings','content_library_facets']){const pattern=new RegExp('create (?:or replace )?function public\\.'+name+'\\([\\s\\S]*?as (\\$[a-z_]*\\$)[\\s\\S]*?\\1;','i');await db.exec(content.match(pattern)[0]);}
+ const files=await readdir(new URL('../supabase/migrations/',import.meta.url));const content=await readFile(new URL('../supabase/migrations/20261003224909_canonical_content_library.sql',import.meta.url),'utf8');for(const name of ['content_library_fields','content_library_strings','content_library_facets','content_library_text']){const pattern=new RegExp('create (?:or replace )?function public\\.'+name+'\\([\\s\\S]*?as (\\$[a-z_]*\\$)[\\s\\S]*?\\1;','i');await db.exec(content.match(pattern)[0]);}
  await db.exec(await readFile(new URL('../supabase/migrations/'+files.find(x=>x.endsWith('_admin_concept_drafts.sql')),import.meta.url),'utf8'));
  const inspect=async(id=null,revision=null,offset=0)=>(await db.query('select public.concept_draft_inspect_v1($1,$2,$3,$4) packet',[actor,id,revision,offset])).rows[0].packet;
  const save=async(input,user=actor)=>(await db.query('select public.concept_draft_save_v1($1,$2) receipt',[user,input])).rows[0].receipt;
@@ -21,5 +21,77 @@ try{
  for(const verb of ["update public.content_concept_draft_versions set revision=revision","delete from public.content_concept_draft_versions"])await assert.rejects(db.exec(verb),/permission denied|immutable/);
  await db.exec('reset role');assert.equal((await db.query("select jsonb_array_length(body->'concepts') n from study_catalog")).rows[0].n,1);assert.equal((await db.query("select jsonb_array_length(body->'questions') n from study_catalog")).rows[0].n,0);
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(inspect(),/permission denied/);await assert.rejects(save(fresh()),/permission denied/);await assert.rejects(db.exec('select * from public.content_concept_draft_versions'),/permission denied/);await db.exec('reset role');}
+
+ // Acceptance runs only after drafts confirm no canonical writes. Freeze the real
+ // learner-shared catalog here and assert byte-for-byte equivalence after acceptance.
+ const catalogBeforeAcceptance=(await db.query('select body,version from public.study_catalog where id=1')).rows[0];
+ await db.exec(await readFile(new URL('../supabase/migrations/'+files.find(x=>x.endsWith('_admin_concept_acceptance.sql')),import.meta.url),'utf8'));
+ const declaration='identity-and-classification-reviewed-not-medical-or-learner-release';
+ const decision=(receipt,notes='Owner reviewed identity and classification on the synthetic concept.')=>({
+  schemaVersion:1,requestId:crypto.randomUUID(),proposalId:receipt.proposalId,
+  revision:receipt.revision,digest:receipt.digest,reviewNotes:notes,attestation:declaration
+ });
+ const accept=async(d,user=actor)=>(await db.query('select public.concept_draft_accept_v1($1,$2) receipt',[user,d])).rows[0].receipt;
+ await db.exec('set role service_role');
+ await assert.rejects(accept(decision(second),other),/content_admin_required/);
+ await assert.rejects(accept({...decision(second),attestation:'medical approved'}),/concept_accept_invalid/);
+ const beforeCollision=(await db.query("select body->'concepts'->0->>'label' label from public.study_catalog where id=1")).rows[0].label;
+ assert.equal(beforeCollision,'Canonical changed','fixture must contain exact canonical competing label');
+ const known=await db.query("select public.content_library_text($1) as norm",['Canonical changed']);
+ assert.equal(known.rows[0].norm,'canonical changed','canonical normalizer must match label');
+ const duplicate=await save({...fresh(),document:{...fresh().document,label:'Canonical changed'}});
+ assert.notEqual(duplicate.conceptId,'existing','new duplicate-name proposal must have a distinct canonical ID');
+ assert.equal((await inspect(duplicate.proposalId)).version.document.label,'Canonical changed','saved draft must contain exact colliding name');
+ const overlap=(await db.query("select count(*)::integer as n from public.study_catalog s cross join lateral jsonb_array_elements(s.body->'concepts') c where s.id=1 and lower(btrim(c->>'label'))=lower(btrim($1))",['Canonical changed'])).rows[0].n;
+ assert.equal(overlap,1,'stored canonical label must be independently visible to SQL collision query');
+ await assert.rejects(accept(decision(duplicate)),/concept_accept_identity_conflict/);
+ await assert.rejects(accept(decision(existingDraft)),/concept_accept_target_changed/);
+ const nowTarget=(await inspect()).concepts.find(c=>c.conceptId==='existing');
+ const safeEdit=await save({...fresh(),conceptId:nowTarget.conceptId,baseDigest:nowTarget.digest});
+ await assert.rejects(accept(decision(safeEdit)),/concept_accept_revision_requires_release/);
+ await assert.rejects(accept({...decision(second),digest:'0'.repeat(64)}),/concept_accept_stale/);
+ const approval=decision(second);
+ const approved=await accept(approval);
+ assert.equal(approved.status,'concept_accepted');assert.equal(approved.conceptId,second.conceptId);
+ assert.equal(approved.learnerPublished,false);assert.match(approved.identityDigest,/^[a-f0-9]{64}$/);
+ assert.equal(approved.catalogVersionAtAcceptance,1,'acceptance cannot increment the learner catalog version');
+ assert.equal((await inspect(second.proposalId)).acceptance.identityDigest,approved.identityDigest);
+ assert.deepEqual(await accept(approval),approved);
+ await assert.rejects(accept({...approval,reviewNotes:'A new conflicting attestation under the same request identifier.'}),/concept_accept_request_conflict/);
+ await assert.rejects(accept(decision(second)),/concept_already_accepted/);
+ await assert.rejects(save({...secondInput,proposalId:second.proposalId,expectedDigest:second.digest,requestId:crypto.randomUUID()}),/concept_already_accepted/);
+ // The accepted identity is private: a second proposal cannot steal its name/alias.
+ const privateCollision=await save({...fresh(),document:{...fresh().document,label:'Revised synthetic'}});
+ await assert.rejects(accept(decision(privateCollision)),/concept_accept_identity_conflict/);
+ const privateAliasCollision=await save({...fresh(),document:{...fresh().document,label:'Another concept',aliases:['Revised synthetic']}});
+ await assert.rejects(accept(decision(privateAliasCollision)),/concept_accept_identity_conflict/);
+ assert.deepEqual((await inspect(second.proposalId)).acceptance,{status:'concept_accepted',
+  revision:second.revision,acceptedAt:(await inspect(second.proposalId)).acceptance.acceptedAt,
+  catalogVersionAtAcceptance:1,identityDigest:approved.identityDigest,learnerPublished:false});
+ await db.exec('reset role');
+ const final=(await db.query('select body,version from study_catalog where id=1')).rows[0];
+ assert.deepEqual(final,catalogBeforeAcceptance,
+  'Private identity acceptance must leave the entire learner-shared catalog unchanged');
+ const learnerVaultConceptIds=final.body.concepts.map(c=>c.conceptId);
+ const learnerVaultSearchHits=final.body.concepts.filter(c=>[c.label,...(c.aliases||[])].some(label=>label.toLowerCase().includes('revised synthetic')));
+ assert.equal(learnerVaultConceptIds.includes(approved.conceptId),false,'NeuralVault concept list must not expose private acceptance');
+ assert.equal(learnerVaultSearchHits.length,0,'NeuralVault search must not expose private acceptance');
+ assert.equal(final.body.concepts.length,1);assert.equal(final.body.questions.length,0);
+ assert.equal(final.version,1,'Admin identity acceptance must not advance learner catalog');
+ assert.equal(final.body.concepts.some(c=>c.conceptId===approved.conceptId),false,'Private identity must never appear in learner catalog');
+ const privateAccepted=await db.query('select accepted_document,accepted_identity_digest from content_concept_acceptances');
+ assert.equal(privateAccepted.rows.length,1);
+ assert.equal(privateAccepted.rows[0].accepted_document.label,'Revised synthetic');
+ assert.equal(privateAccepted.rows[0].accepted_identity_digest,approved.identityDigest);
+ assert.equal((await db.query('select count(*)::integer n from content_library_concept_metadata')).rows[0].n,0,
+  'Admin acceptance must not write learner-facing classification metadata');
+ for(const role of ['anon','authenticated']){
+   await db.exec('set role '+role);
+   await assert.rejects(accept(decision(second)),/permission denied/);
+   await assert.rejects(db.exec('select * from public.content_concept_acceptances'),/permission denied/);
+   await assert.rejects(db.exec('select * from public.content_concept_draft_versions'),/permission denied/);
+   await db.exec('reset role');
+ }
+ console.log('Concept acceptance PostgreSQL checks passed: private identity registry, no learner catalog/metadata change, cross-private label/alias conflicts, exact version, idempotence and role isolation.');
  console.log('Concept draft PostgreSQL checks passed: zero-question creation, immutable revisions, exact retry/readback, stale target/predecessor and browser isolation; no canonical writes.');
 }finally{await db.close();}

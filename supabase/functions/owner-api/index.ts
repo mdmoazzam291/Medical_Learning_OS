@@ -1,3 +1,4 @@
+import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
@@ -19,6 +20,7 @@ const allowedOrigins = new Set([
   "https://medical-learning-os-preview.onrender.com",
   "https://medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const edgeHealthUrl = Deno.env.get("MLOS_CLOUDFLARE_EDGE_HEALTH_URL") ??
@@ -238,6 +240,17 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path === "/concept-draft-accept") {
+      try {
+        return response(req, 200, await acceptConceptDraft({ admin, actor: authData.user.id,
+          method: req.method, params: url.searchParams,
+          input: req.method === "POST" ? await jsonBody(req, 8192) : undefined }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "concept_accept_unavailable");
+      }
     }
 
     if (path === "/concept-drafts" || path.startsWith("/concept-drafts/")) {
