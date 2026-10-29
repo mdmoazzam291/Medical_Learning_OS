@@ -5,11 +5,14 @@ import curriculum from '../../data/preparation-curriculum.js';
 import foundation from '../../data/dual-exam-syllabus-foundation.js';
 const deny=()=>{throw new TypeError('dual_exam_syllabus_foundation_invalid');};
 const unique=xs=>new Set(xs).size===xs.length;
-const id=x=>typeof x==='string'&&/^[a-z0-9][a-z0-9:.-]*$/.test(x);
+const shape=(x,keys)=>x&&typeof x==='object'&&!Array.isArray(x)&&
+ Object.keys(x).sort().join('|')===[...keys].sort().join('|');
+const id=x=>typeof x==='string'&&/^[a-z0-9][a-z0-9:.@-]*$/.test(x);
 const text=x=>typeof x==='string'&&x.trim().length>0&&x.length<=240;
 const array=x=>Array.isArray(x);
 export function validateDualExamSyllabusFoundation(input,registry=curriculum){
- if(!input||input.schemaVersion!==1||input.status!=='editorial-scaffold'||
+ if(!shape(input,['schemaVersion','foundationVersion','status','subjects','sources','scopes','conceptBindings','proposedExamObjectives','reviewedExamMappings'])||
+    input.schemaVersion!==1||input.status!=='editorial-scaffold'||
     !id(input.foundationVersion)||!array(input.subjects)||input.subjects.length!==19||
     !array(input.sources)||!array(input.scopes)||input.scopes.length!==2||
     !array(input.conceptBindings)||input.conceptBindings.length||
@@ -19,11 +22,13 @@ export function validateDualExamSyllabusFoundation(input,registry=curriculum){
  if(!unique(subjectIds))deny();
  let domainCount=0;const domainIds=[];
  for(const subject of input.subjects){
-  if(!id(subject.subjectId)||!text(subject.label)||
+  if(!shape(subject,['subjectId','label','phase','domains'])||
+     !id(subject.subjectId)||!text(subject.label)||
      !['preclinical','paraclinical','clinical'].includes(subject.phase)||
      !array(subject.domains)||subject.domains.length<2)deny();
   for(const domain of subject.domains){
-   if(!id(domain.domainId)||!domain.domainId.startsWith(subject.subjectId+':')||
+   if(!shape(domain,['domainId','label'])||
+      !id(domain.domainId)||!domain.domainId.startsWith(subject.subjectId+':')||
       !text(domain.label))deny();
    domainIds.push(domain.domainId);domainCount++;
   }
@@ -31,14 +36,16 @@ export function validateDualExamSyllabusFoundation(input,registry=curriculum){
  if(!unique(domainIds))deny();
  const sourceIds=input.sources.map(s=>s.sourceId);
  if(!unique(sourceIds)||!input.sources.length)deny();
- for(const source of input.sources)if(!id(source.sourceId)||!text(source.issuer)||
+ for(const source of input.sources)if(!shape(source,['sourceId','issuer','sourceVersion','sourceRole','url'])||
+   !id(source.sourceId)||!text(source.issuer)||
    !text(source.sourceVersion)||!text(source.sourceRole)||
    typeof source.url!=='string'||!/^https:\/\/[^\s]+$/.test(source.url))deny();
  const exams=input.scopes.map(x=>x.examId);
  if(!unique(exams)||!exams.includes('neet-pg')||!exams.includes('ini-cet'))deny();
  for(const scope of input.scopes){
   const pathway=registry?.pathways?.find(p=>p.pathwayId===scope.examId&&p.status==='active');
-  if(!pathway||scope.pathwayVersionId!==pathway.pathwayVersionId||
+  if(!shape(scope,['examId','pathwayVersionId','status','sourceIds','subjectIds','officialTopicListCertified','scopeApproved','priorityEvidenceStatus'])||
+    !pathway||scope.pathwayVersionId!==pathway.pathwayVersionId||
     scope.status!=='editorial-scaffold'||scope.officialTopicListCertified!==false||
     scope.scopeApproved!==false||scope.priorityEvidenceStatus!=='not-evaluated'||
     !array(scope.subjectIds)||scope.subjectIds.length!==subjectIds.length||

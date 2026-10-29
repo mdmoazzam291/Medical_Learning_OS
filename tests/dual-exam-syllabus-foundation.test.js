@@ -29,6 +29,8 @@ test('source register declares distinct authorities, never official topic confir
 test('invalid scope, duplicate domains, fake approvals and poisoned source are rejected',()=>{
  for(const mutation of [
    f=>{f.scopes[0].scopeApproved=true;},
+   f=>{f.scopes[0].learnerRelease=true;},
+   f=>{f.scopes[0].status='approved';},
    f=>{f.scopes[1].officialTopicListCertified=true;},
    f=>{f.scopes[0].subjectIds.pop();},
    f=>{f.scopes[1].pathwayVersionId='other:preparation@1';},
