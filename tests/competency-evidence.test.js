@@ -22,8 +22,10 @@ const example=()=>({
 });
 test('empty real ledger is honest: zero verified competency rows, no exam denominator',()=>{
  const x=competencyEvidencePreflight();
- assert.deepEqual(data.competencyProposals,[]);
- assert.equal(x.candidateRecords,0);
+ assert.equal(data.competencyProposals.length,8);
+ assert.equal(x.candidateRecords,8);
+ assert.ok(data.competencyProposals.every(x=>x.sourceVerification==='unverified'&&
+  x.sourceRights==='unreviewed'&&x.canonicalConceptId===null&&x.examHypotheses.length===0));
  assert.equal(x.sourceVerified,0);assert.equal(x.approvedObjectives,0);
  assert.equal(x.approvedExamMappings,0);assert.equal(x.officialSyllabusCertified,false);
  assert.equal(x.learnerRelease,false);assert.equal(x.coverageFraction,null);
@@ -34,7 +36,7 @@ test('one *synthetic* undergraduate competency reference supports two unverified
  const d=clone();d.competencyProposals.push(example());
  assert.equal(validateCompetencyEvidenceProposals(d).competencyProposals.length,1);
  const report=competencyEvidencePreflight(d);
- assert.equal(report.candidateRecords,1);assert.equal(report.unresolvedCanonicalIdentities,1);
+ assert.equal(report.candidateRecords,9);assert.equal(report.unresolvedCanonicalIdentities,9);
  assert.equal(report.examHypotheses['neet-pg:preparation@1'],1);
  assert.equal(report.examHypotheses['ini-cet:preparation@1'],1);
  assert.equal(report.approvedExamMappings,0);
@@ -76,6 +78,6 @@ test('a proposed canonical binding requires an exact current, externally supplie
 });
 test('source JSON contains no clinical prose, personal learner data or learner-release permissions',()=>{
  const source=JSON.stringify(data);
- assert.doesNotMatch(source,/"stem"|"answerOptionId"|"mastery"|"learnerId"|"verified"/);
+ assert.doesNotMatch(source,/"stem"|"answerOptionId"|"mastery"|"learnerId"|"rawText"/);
  assert.equal(data.status,'unreviewed-candidate-ledger');
 });

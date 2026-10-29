@@ -4,6 +4,7 @@ import foundation from '../../data/dual-exam-syllabus-foundation.js';
 import ledger from '../../data/competency-evidence-proposals.json' with {type:'json'};
 import curriculum from '../../data/preparation-curriculum.js';
 import {validateDualExamSyllabusFoundation} from './dual-exam-syllabus-foundation.js';
+import {validateNmcRightsRegister,nmcCitationOnlyPreflight} from './nmc-cbme-rights.js';
 const fail=()=>{throw new TypeError('competency_evidence_invalid');};
 const shape=(v,keys)=>v&&typeof v==='object'&&!Array.isArray(v)&&
  Object.keys(v).sort().join('|')===[...keys].sort().join('|');
@@ -18,6 +19,9 @@ export function validateCompetencyEvidenceProposals(input,{
  canonicalIdentityDigests=null,catalogVersion=null
 }={}){
  const base=validateDualExamSyllabusFoundation(foundationRegistry,preparationRegistry);
+ const protectedSource=validateNmcRightsRegister().sourceRecords.find(s=>s.sourceId==='nmc-cbme-2024');
+ if(!protectedSource||protectedSource.rightsMode!=='citation_only'||
+    protectedSource.publicRedistributionAllowed!==false)fail();
  if(!shape(input,['schemaVersion','ledgerVersion','foundationVersion','status','scope','competencyProposals'])||
     input.schemaVersion!==1||input.ledgerVersion!=='mbbs-competency-evidence:draft@1'||
     input.foundationVersion!==base.foundationVersion||input.status!=='unreviewed-candidate-ledger'||
@@ -38,7 +42,7 @@ export function validateCompetencyEvidenceProposals(input,{
      !Number.isSafeInteger(row.documentPage)||row.documentPage<1||row.documentPage>10000||
      !code(row.competencyCode)||!bySubject.has(row.subjectId)||
      !bySubject.get(row.subjectId).domains.some(d=>d.domainId===row.moduleId)||
-     !text(row.analystSummary,12,320)||
+     !text(row.analystSummary,12,160)||
      row.sourceRights!=='unreviewed'||row.sourceVerification!=='unverified'||
      !Array.isArray(row.examHypotheses)||row.examHypotheses.length>2)fail();
   if(row.canonicalConceptId===null){
@@ -75,12 +79,16 @@ export function competencyEvidencePreflight(input=ledger,options={}){
   ledgerVersion:d.ledgerVersion,foundationVersion:d.foundationVersion,
   candidateRecords:total,unresolvedCanonicalIdentities:unresolved,
   examHypotheses,sourceVerified:0,sourceRightsApproved:0,
+  rightsStatus:nmcCitationOnlyPreflight().sources.find(s=>s.sourceId==='nmc-cbme-2024').rightsMode,
+  copyrightProtected:true,documentBytesVerified:false,sourceFullTextReuseAllowed:false,
   approvedObjectives:0,approvedExamMappings:0,
   officialSyllabusCertified:false,coverageFraction:null,
   readinessInferred:false,learnerRelease:false,
   blockers:[
    'source-pages-and-competency-codes-require-human-verification',
    'source-rights-review-required',
+   'copyright-protected-nmc-citation-only',
+   'mirrored-pdf-text-found-but-visual-page-not-verified',
    'canonical-concept-identity-acceptance-separate',
    'independent-exam-scope-review-required',
    'no-approved-objective-mapping',
