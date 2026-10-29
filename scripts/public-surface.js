@@ -83,6 +83,8 @@ export const publicFiles = Object.freeze([
   'web/retention-origin.js',
   'web/review.html',
   'web/review.js',
+  'web/content-selection.js',
+  'src/domain/frozen-content-selections.js',
   'web/approved-collection-view.js',
   'web/approved-collection.js',
   'web/approved-collection-boot.js',

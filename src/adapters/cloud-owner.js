@@ -48,6 +48,9 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     contentIntegrity() { return request('/content-integrity'); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     approvedCollection(filters = {}) { return request('/approved-collection?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
+    previewContentSelection(items) { return request('/content-selections/preview', {method:'POST',body:{items}}); },
+    freezeContentSelection(input) { return request('/content-selections/save', {method:'POST',body:input}); },
+    readContentSelection(id) { return request('/content-selections?id='+encodeURIComponent(id)); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {

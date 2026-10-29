@@ -788,5 +788,18 @@
   "scripts/approved-collection-browser-check.js": [
     "cloudflare",
     "supabase"
+  ],
+  "scripts/frozen-content-selections-db-check.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/frozen-content-selections.js": [
+    "supabase"
+  ],
+  "supabase/migrations/20261029095728_frozen_content_selections.sql": [
+    "supabase"
+  ],
+  "scripts/frozen-content-selections-browser-check.js": [
+    "cloudflare",
+    "supabase"
   ]
 }
