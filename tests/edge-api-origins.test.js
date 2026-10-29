@@ -5,10 +5,12 @@ import { stripTypeScriptTypes } from 'node:module';
 import { runInNewContext } from 'node:vm';
 
 const cloudflare = 'https://medical-learning-os-web.medicalos.workers.dev';
+const conceptPreview = 'https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev';
+const identityPreview = 'https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev';
 const render = 'https://medical-learning-os-preview.onrender.com';
 
 // Execute the real handlers with external services stubbed. No learner data is read or written.
-for (const name of ['study-api', 'review-api', 'retention-probe-api']) {
+for (const name of ['study-api', 'review-api', 'retention-probe-api', 'owner-api']) {
   const source = readFileSync(new URL(`../supabase/functions/${name}/index.ts`, import.meta.url), 'utf8');
   const script = stripTypeScriptTypes(source.replace(/^import\s[\s\S]*?;\s*$/gm, ''), { mode: 'transform' });
   let handler;
@@ -29,7 +31,7 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api']) {
   }));
 
   test(`${name}: deployed learner origins pass preflight`, async () => {
-    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000']) {
+    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000', ...(['owner-api', 'review-api'].includes(name) ? [conceptPreview, identityPreview] : [])]) {
       const response = await request(origin);
       assert.equal(response.status, 200);
       assert.equal(response.headers.get('Access-Control-Allow-Origin'), origin);
@@ -39,7 +41,7 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api']) {
   });
 
   test(`${name}: unrelated and lookalike origins remain denied`, async () => {
-    for (const origin of ['https://example.invalid', `${cloudflare}.evil.example`, 'https://other.medicalos.workers.dev', cloudflare.replace('https:', 'http:')]) {
+    for (const origin of ['https://example.invalid', `${cloudflare}.evil.example`, 'https://other.medicalos.workers.dev', cloudflare.replace('https:', 'http:'), `${conceptPreview}.evil.example`, `${identityPreview}.evil.example`, conceptPreview.replace('https:', 'http:')]) {
       const response = await request(origin);
       assert.equal(response.status, 403);
       assert.equal(response.headers.get('Access-Control-Allow-Origin'), null);
@@ -49,9 +51,9 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api']) {
 
   test(`${name}: Cloudflare origin does not bypass user authentication`, async () => {
     for (const authorization of [undefined, 'Bearer invalid-token']) {
-      const response = await request(cloudflare, 'GET', authorization);
+      const response = await request(['owner-api', 'review-api'].includes(name) ? conceptPreview : cloudflare, 'GET', authorization);
       assert.equal(response.status, 401);
-      assert.equal(response.headers.get('Access-Control-Allow-Origin'), cloudflare);
+      assert.equal(response.headers.get('Access-Control-Allow-Origin'), ['owner-api', 'review-api'].includes(name) ? conceptPreview : cloudflare);
       assert.deepEqual(await response.json(), { error: 'unauthorized' });
     }
   });
