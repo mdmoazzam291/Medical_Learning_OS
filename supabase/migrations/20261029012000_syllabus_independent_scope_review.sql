@@ -200,6 +200,10 @@ begin
    raise exception 'syllabus_scope_review_request_conflict';end if;
  else
   perform pg_advisory_xact_lock(hashtextextended('syllabus-scope-decision:'||v_baseline::text||':'||v_revision::text,0));
+  -- Serialize new decisions with concurrent grant/revoke events for this same
+  -- reviewer and baseline; a completed revocation cannot race an approval.
+  perform pg_advisory_xact_lock(hashtextextended(
+    'syllabus-scope-grant:'||v_baseline::text||':'||p_reviewer::text,0));
   select * into v_grant from public.content_syllabus_reviewer_grant_events
     where baseline_id=v_baseline and reviewer_id=p_reviewer order by event_id desc limit 1;
   if not found or v_grant.action<>'grant' then raise exception 'syllabus_scope_reviewer_not_authorized';end if;
