@@ -15,24 +15,37 @@ export function alignSyllabusReviewPacket(input,curriculum){
    typeof input.isLatest!=='boolean'||!Array.isArray(input.members)||input.members.length>2000)fail();
  const members=input.members;
  if(members.some(m=>!m||!id(m.conceptId)||typeof m.label!=='string'||
-  m.label.length>240||!m.label.trim()||typeof m.exists!=='boolean'||Object.keys(m).sort().join('|')!=='conceptId|exists|label')||
+  m.label.length>240||!m.label.trim()||
+  !['canonical','accepted-private','missing'].includes(m.kind)||
+  typeof m.bindingMatches!=='boolean'||Object.keys(m).sort().join('|')!==
+   'bindingMatches|conceptId|identityDigest|kind|label'||
+  (m.kind==='accepted-private'?!/^[a-f0-9]{64}$/.test(m.identityDigest):
+   m.identityDigest!==null))||
   new Set(members.map(m=>m.conceptId)).size!==members.length)fail();
  const version=c.pathways.find(p=>p.pathwayVersionId===input.pathwayVersionId&&p.status==='active');
  const registryMatches=input.registryVersion===c.registryVersion;
  const catalogMatches=input.authoredCatalogVersion===input.currentCatalogVersion;
- const missingCanonical=members.filter(m=>!m.exists).map(m=>m.conceptId);
+ const missingIdentity=members.filter(m=>m.kind==='missing').map(m=>m.conceptId);
+ const privateAccepted=members.filter(m=>m.kind==='accepted-private').map(m=>m.conceptId);
+ const staleBindings=members.filter(m=>!m.bindingMatches).map(m=>m.conceptId);
+ const identityResolved=Boolean(members.length&&!missingIdentity.length&&!staleBindings.length);
  const warnings=[
   ...(!input.isLatest?['historical-draft']:[]),
   ...(!catalogMatches?['catalog-changed-since-draft']:[]),
   ...(!registryMatches?['curriculum-registry-changed']:[]),
   ...(!version?['pathway-version-unavailable']:[]),
-  ...(missingCanonical.length?['canonical-ids-unavailable']:[]),
+  ...(missingIdentity.length?['proposed-concept-ids-unavailable']:[]),
+  ...(staleBindings.length?['identity-binding-stale-or-missing']:[]),
+  ...(privateAccepted.length?['private-identities-not-learner-published']:[]),
   ...(!members.length?['proposed-membership-empty']:[]),
   'independent-source-and-scope-review-required',
   'objective-authoring-and-approval-separate',
   'no-official-syllabus-completeness-attested'];
+ // Approved objective mapping comparability requires *published* canonical IDs.
+ // A verified private identity is valid for Admin draft membership, not yet
+ // authoritative for learner curriculum alignment or a syllabus denominator.
  const safe=Boolean(input.isLatest&&catalogMatches&&registryMatches&&version&&
-  members.length&&!missingCanonical.length);
+  identityResolved&&!privateAccepted.length);
  const objectivesById=new Map(c.objectives.map(x=>[x.objectiveVersionId,x]));
  const exact=new Map();
  if(safe){
@@ -43,8 +56,13 @@ export function alignSyllabusReviewPacket(input,curriculum){
     sourceKind:m.evidence.kind,sourceVersion:m.evidence.sourceVersion});
   }
  }
- const rows=members.map(m=>({conceptId:m.conceptId,label:m.label,canonicalExists:m.exists,
+ const rows=members.map(m=>({conceptId:m.conceptId,label:m.label,
+  canonicalExists:m.kind==='canonical',identityKind:m.kind,
+  privateIdentityDigest:m.kind==='accepted-private'?m.identityDigest:null,
+  identityBindingMatches:m.bindingMatches,
   exactApprovedMappings:safe?exact.get(m.conceptId)||[]:[],objectiveState:
+  !m.bindingMatches?'identity-binding-unverified':
+  m.kind==='accepted-private'?'private-identity-not-published':
   !safe?'not-evaluated':exact.has(m.conceptId)?'registry-approved-mapping':'unmapped'}));
  return {contractId:'admin-syllabus-review-packet-v1',baselineId:input.baselineId,revision:input.revision,
   digest:input.digest,scopeDeclaration:input.scopeDeclaration,sourceKind:input.sourceKind,
@@ -53,6 +71,7 @@ export function alignSyllabusReviewPacket(input,curriculum){
   authoredCatalogVersion:input.authoredCatalogVersion,currentCatalogVersion:input.currentCatalogVersion,
   status:'review-required',checklistApproved:false,officialSyllabusCertified:false,readinessInferred:false,
   coverageFraction:null,completeSyllabusFraction:null,preflightComparable:safe,
+  identityResolved,privateAcceptedConcepts:privateAccepted,missingConcepts:missingIdentity,
   proposedConcepts:members.length,exactMappedConcepts:safe?rows.filter(x=>x.exactApprovedMappings.length).length:null,
   objectiveMappingUnknown:safe?rows.filter(x=>!x.exactApprovedMappings.length).map(x=>x.conceptId):members.map(x=>x.conceptId),
   blockers:[...new Set(warnings)],rows};

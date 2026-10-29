@@ -7,6 +7,7 @@ create table public.content_syllabus_baseline_draft_versions (
  registry_version text not null,
  previous_digest text,
  document jsonb not null,
+ private_identity_bindings jsonb not null default '[]'::jsonb,
  digest text not null,
  submitted_by uuid not null,
  recorded_at timestamptz not null default now(),
@@ -26,6 +27,7 @@ returns jsonb language plpgsql security invoker set search_path='' as $$
 declare v_request uuid;v_id uuid;v_expected text;v_doc jsonb;v_digest text;
  v_fingerprint text;v_keys text[];v_revision integer;v_latest public.content_syllabus_baseline_draft_versions;
  v_saved public.content_syllabus_baseline_draft_versions;v_catalog jsonb;v_catalog_version bigint;
+ v_private_bindings jsonb;
 begin
  if public.is_content_admin(p_actor) is not true then raise exception 'content_admin_required';end if;
  if p_registry_version is null or char_length(p_registry_version)>160 or p_registry_version !~ '^[a-zA-Z0-9:_.@-]+$'
@@ -83,22 +85,39 @@ begin
    v_revision:=v_latest.revision+1;
    if v_revision>10000 then raise exception 'syllabus_baseline_invalid';end if;
   end if;
+  -- Serialize with Admin concept acceptance and catalog publication. The accepted
+  -- identity registry remains private and is never copied into learner catalog.
+  perform pg_advisory_xact_lock(hashtextextended('content-library-publication',0));
   select body,version into v_catalog,v_catalog_version from public.study_catalog where id=1;
   if v_catalog is null or jsonb_typeof(v_catalog->'concepts') is distinct from 'array'
    or jsonb_array_length(v_catalog->'concepts')>50000 then raise exception 'syllabus_baseline_catalog_unavailable';end if;
   if exists(
    select 1 from jsonb_array_elements_text(v_doc->'conceptIds') as requested(value)
     where not exists(select 1 from jsonb_array_elements(v_catalog->'concepts') c where c->>'conceptId'=requested.value)
+      and not exists(select 1 from public.content_concept_acceptances accepted
+                     where accepted.concept_id=requested.value)
   ) then raise exception 'syllabus_baseline_unknown_concept';end if;
+  -- Pin exact immutable private identities beside the proposed membership. Do not
+  -- infer an approved syllabus or learner publication from this binding.
+  select coalesce(jsonb_agg(jsonb_build_object('conceptId',a.concept_id,
+    'identityDigest',a.accepted_identity_digest) order by a.concept_id),'[]'::jsonb)
+    into v_private_bindings
+  from public.content_concept_acceptances a
+  where exists(select 1 from jsonb_array_elements_text(v_doc->'conceptIds') requested(value)
+               where requested.value=a.concept_id)
+    and not exists(select 1 from jsonb_array_elements(v_catalog->'concepts') c
+                   where c->>'conceptId'=a.concept_id);
   v_digest:=encode(extensions.digest(convert_to(jsonb_build_object('baselineId',v_id,'revision',v_revision,
-   'previous',v_expected,'catalogVersion',v_catalog_version,'registryVersion',p_registry_version,'document',v_doc)::text,'UTF8'),'sha256'),'hex');
+   'previous',v_expected,'catalogVersion',v_catalog_version,'registryVersion',p_registry_version,
+   'document',v_doc,'privateIdentityBindings',v_private_bindings)::text,'UTF8'),'sha256'),'hex');
   insert into public.content_syllabus_baseline_draft_versions(baseline_id,revision,pathway_version_id,catalog_version,
-   registry_version,previous_digest,document,digest,submitted_by,request_id,request_fingerprint)
+   registry_version,previous_digest,document,private_identity_bindings,digest,submitted_by,request_id,request_fingerprint)
   values(v_id,v_revision,v_doc->>'pathwayVersionId',v_catalog_version,p_registry_version,
-   v_expected,v_doc,v_digest,p_actor,v_request,v_fingerprint) returning * into v_saved;
+   v_expected,v_doc,v_private_bindings,v_digest,p_actor,v_request,v_fingerprint) returning * into v_saved;
  end if;
  return jsonb_build_object('baselineId',v_saved.baseline_id,'revision',v_saved.revision,'digest',v_saved.digest,
-  'catalogVersion',v_saved.catalog_version,'registryVersion',v_saved.registry_version,'recordedAt',v_saved.recorded_at,
+  'catalogVersion',v_saved.catalog_version,'registryVersion',v_saved.registry_version,
+  'privateIdentityBindings',v_saved.private_identity_bindings,'recordedAt',v_saved.recorded_at,
   'status','draft');
 end; $$;
 revoke all on function public.syllabus_baseline_draft_save_v1(uuid,text,jsonb) from public,anon,authenticated;
@@ -121,6 +140,7 @@ begin
   return jsonb_build_object('contractId','admin-syllabus-baseline-drafts-v1','status','draft','version',
    jsonb_build_object('baselineId',v_row.baseline_id,'revision',v_row.revision,'digest',v_row.digest,
     'previousDigest',v_row.previous_digest,'catalogVersion',v_row.catalog_version,'registryVersion',v_row.registry_version,
+    'privateIdentityBindings',v_row.private_identity_bindings,
     'document',v_row.document,'recordedAt',v_row.recorded_at),
    'isLatest',(select max(revision)=v_row.revision from public.content_syllabus_baseline_draft_versions where baseline_id=p_baseline_id),
    'history',v_history);

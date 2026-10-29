@@ -8,12 +8,12 @@ The existing singleton Admin may prepare a proposal, but cannot truthfully claim
 
 ## Mechanics
 
-- Read exact immutable baseline proposal ID/revision/digest and the latest-revision flag from the protected Admin-only database. Compare its pinned catalog version with the current catalog; derive only the member's canonical concept ID, label and existence flag, never question body, answer key, source text or private learner data.
+- Read the exact immutable baseline proposal ID/revision/digest and latest-revision flag from the protected Admin-only database. Compare pinned and current catalog versions. For each member, explicitly classify `canonical` (learner-visible catalog identity), `accepted-private` (Admin-only immutable acceptance), or `missing` (unknown). Private members require an exact digest match to the checklist's frozen `private_identity_bindings`. Derive only Admin-visible identity metadata; never question body, answer key, clinical source text or private learner records.
 - Bind each packet to the *exact* `data/preparation-curriculum.js` `registryVersion` and exact active `pathwayVersionId`.
 - Reuse `validatePreparationCurriculum()` and only objective versions with an explicitly `approved`, reviewer-attributed pathway mapping. Never infer objective requirements from concept tags, PYQ appearances or question counts.
-- For matching versions, label any exact mapping and enumerate proposed concept IDs with no approved mapping. Otherwise mark mapping counts unknown/not evaluated, including stale catalog, stale registry, unknown concept ID, empty proposal, historical draft or unavailable pathway.
+- Exact approved objective mappings may be compared **only when every member is a currently published canonical concept**, the immutable identity bindings are valid and all registry/catalog/revision constraints match. An accepted-private identity can be included for Admin scope review, but **does not make the checklist comparable for approved objective mapping** or expose the concept to learners. Missing IDs, stale private identity bindings, stale catalog/registry, empty/historical drafts and unavailable pathways yield unknown/not-evaluated mapping totals, never an invented zero or percentage.
 - Independently sourced complete-syllabus membership remains unverified. The packet always has `checklistApproved:false`, `officialSyllabusCertified:false`, `coverageFraction:null`, and `readinessInferred:false`.
-- Present the source locator/version, scope declaration, proposed membership count, exact mapping count only when comparable, blockers and exact objective version IDs in the existing Admin checklist UI. No accept, activate, publish or learner button is introduced.
+- Present source locator/version, scope declaration, proposed membership count, **Admin-private membership count**, distinct unknown-ID/stale-binding blockers, exact mapping totals only when comparable and exact approved objective IDs in the existing Admin checklist UI. No accept, activate, publish or learner button is introduced.
 
 ## Security and test invariants
 
@@ -30,3 +30,9 @@ Unit, API, isolated PostgreSQL and Chromium/native WebKit regressions cover exac
 5. Keep #326 rights/medical source incident as an independent release blocker for medical content.
 
 **Nothing in this PR changes the current Study Now, Digital Twin, Memory Engine or learner-facing exam targeting.**
+
+## Private identity compatibility boundary (parent PR #335)
+
+The original review packet treated every concept missing from `study_catalog` as nonexistent. This is no longer correct after PR #334 introduced the Admin-only accepted-identity registry and PR #335 allowed exact private IDs in immutable draft membership. The repaired review RPC reads the **service-only** accepted identities and verifies their digest against the saved `private_identity_bindings`, returning `kind`, `bindingMatches` and `identityDigest` only on the Admin-authorized route. No learner APIs or shared catalog are altered. The review domain reports `privateAcceptedConcepts`, `identityResolved` and explicit `private-identities-not-learner-published` blockers; objective mapping counts remain unknown until the private IDs have a separate governed learner-publication state and exact registry evidence.
+
+This private preflight must remain read-only. It is not a way to activate, certify, import or indirectly expose a medical concept. CI must validate exact private binding readback, source/role denial, non-publication and the independent preparation-registry denominator boundary.

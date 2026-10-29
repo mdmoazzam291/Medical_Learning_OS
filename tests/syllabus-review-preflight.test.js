@@ -12,7 +12,7 @@ const packet=()=>({contractId:'admin-syllabus-review-preflight-v1',
  authoredCatalogVersion:4,currentCatalogVersion:4,registryVersion:curriculum.registryVersion,
  pathwayVersionId:'neet-pg:preparation@1',scopeDeclaration:'partial',sourceKind:'historical',
  sourceLocator:'Synthetic local source',sourceVersion:'synthetic@1',isLatest:true,
- members:[{conceptId:'one',label:'Synthetic one',exists:true},{conceptId:'two',label:'Synthetic two',exists:true}]});
+ members:[{conceptId:'one',label:'Synthetic one',kind:'canonical',identityDigest:null,bindingMatches:true},{conceptId:'two',label:'Synthetic two',kind:'canonical',identityDigest:null,bindingMatches:true}]});
 test('only exact approved reviewed objective mappings count; no exam coverage or learner approval',()=>{
  const p=alignSyllabusReviewPacket(packet(),curriculum);
  assert.equal(p.status,'review-required');assert.equal(p.exactMappedConcepts,1);
@@ -22,7 +22,7 @@ test('only exact approved reviewed objective mappings count; no exam coverage or
 test('empty, stale and changed registry fail closed without inferred zero mapping or completeness',()=>{
  for(const changes of [
   {currentCatalogVersion:5},{registryVersion:'changed@3'},{isLatest:false},
-  {members:[]},{members:[{conceptId:'one',label:'Synthetic one',exists:false}]},
+  {members:[]},{members:[{conceptId:'one',label:'Identity unavailable',kind:'missing',identityDigest:null,bindingMatches:false}]},
   {pathwayVersionId:'unknown@1'}
  ]){
   const p=alignSyllabusReviewPacket({...packet(),...changes},curriculum);
@@ -32,5 +32,28 @@ test('empty, stale and changed registry fail closed without inferred zero mappin
 });
 test('invalid and duplicate canonical members or private content fields cannot enter scope packet',()=>{
  assert.throws(()=>alignSyllabusReviewPacket({...packet(),members:[packet().members[0],packet().members[0]]},curriculum),/preflight_invalid/);
- assert.throws(()=>alignSyllabusReviewPacket({...packet(),members:[{conceptId:'one',label:'one',exists:true,answerKey:'private'}]},curriculum),/preflight_invalid/);
+ assert.throws(()=>alignSyllabusReviewPacket({...packet(),members:[{conceptId:'one',label:'one',kind:'canonical',identityDigest:null,bindingMatches:true,answerKey:'private'}]},curriculum),/preflight_invalid/);
+});
+
+test('accepted-private identity is resolved for Admin review but never authorizes objective mapping or learner publication',()=>{
+ const privateDigest='b'.repeat(64);
+ const p=alignSyllabusReviewPacket({...packet(),members:[packet().members[0],{
+  conceptId:'C-private',label:'Private clinical concept',kind:'accepted-private',
+  identityDigest:privateDigest,bindingMatches:true
+ }]},curriculum);
+ assert.equal(p.identityResolved,true);assert.deepEqual(p.privateAcceptedConcepts,['C-private']);
+ assert.equal(p.preflightComparable,false);assert.equal(p.exactMappedConcepts,null);
+ assert.equal(p.rows[1].canonicalExists,false);assert.equal(p.rows[1].identityKind,'accepted-private');
+ assert.equal(p.rows[1].objectiveState,'private-identity-not-published');
+ assert.ok(p.blockers.includes('private-identities-not-learner-published'));
+ assert.equal(p.checklistApproved,false);assert.equal(p.coverageFraction,null);
+ const changed=alignSyllabusReviewPacket({...packet(),members:[{
+  conceptId:'C-private',label:'Identity unavailable',kind:'accepted-private',
+  identityDigest:privateDigest,bindingMatches:false
+ }]},curriculum);
+ assert.equal(changed.identityResolved,false);assert.equal(changed.preflightComparable,false);
+ assert.ok(changed.blockers.includes('identity-binding-stale-or-missing'));
+ assert.throws(()=>alignSyllabusReviewPacket({...packet(),members:[{
+  conceptId:'C-private',label:'Private',kind:'accepted-private',identityDigest:null,bindingMatches:true
+ }]},curriculum),/preflight_invalid/);
 });
