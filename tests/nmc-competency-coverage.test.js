@@ -15,6 +15,22 @@ test('all 19 original NMC 2024 subject counts reconcile to 2781 across three vol
  assert.equal(c.subjects.find(x=>x.subjectId==='medicine').expectedCompetencies,525);
  assert.equal(c.subjects.find(x=>x.subjectId==='anatomy').expectedCompetencies,413);
 });
+test('each source-listed subject must retain exact original source target, not compensating volume totals',()=>{
+ const published=[
+  ['anatomy','I','AN',82,413],['physiology','I','PY',12,136],
+  ['biochemistry','I','BC',14,84],['pharmacology','I','PH',10,92],
+  ['pathology','I','PA',35,182],['microbiology','I','MI',11,74],
+  ['forensic-medicine','I','FM',14,158],['community-medicine','II','CM',20,136],
+  ['medicine','II','GM',29,525],['pediatrics','II','PE',35,406],
+  ['psychiatry','II','PS',13,17],['dermatology','II','DE',15,48],
+  ['surgery','III','SU',30,133],['ophthalmology','III','OP',10,60],
+  ['ent','III','EN',4,63],['obstetrics-gynaecology','III','OG',38,141],
+  ['orthopaedics','III','OR',14,40],['anaesthesia','III','AS',11,52],
+  ['radiology','III','RT',7,21]
+ ];
+ assert.deepEqual(data.subjects.map(x=>[x.subjectId,x.volume,x.printedLegend,
+  x.expectedTopics,x.expectedCompetencies]),published);
+});
 test('current coverage is NOT complete: only 8 unverified GM references for 2781 subject-coded',()=>{
  const r=auditNmcCodedCompetencies();
  assert.equal(ledger.competencyProposals.length,8);
@@ -61,6 +77,7 @@ test('PDF transient-code extractor produces IDs/pages, no copyrighted prose',()=
  assert.equal(report.publishedCountReconciliationPassed,false);
  assert.ok(report.provisionalCandidatesMissingFromScan.length>0);
  assert.ok(report.extractedUnknownPrintedPrefixes.includes('DR7.1'));
+ assert.ok(report.extractedUnknownPrintedPrefixes.includes('RD2.11'));
  assert.equal(report.complete,false);
 });
 test('cannot launder a fabricated scan or claim verified rights/complete',()=>{

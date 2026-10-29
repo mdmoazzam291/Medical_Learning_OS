@@ -45,3 +45,9 @@ NMC's [UG Curriculum page](https://www.nmc.org.in/information-desk/for-colleges/
 **Then:** complete code IDs/page anchors and an explicit subject-by-subject missing-code register; independent source inspection and snapshot versioning; topic/competency-to-canonical graph binding after exact identity acceptance.
 
 **Later:** two separately reviewed NEET-PG/INI-CET objective-map overlays, Exam DNA historical inference and validated learner recommendations. Do not merge parent draft PRs or auto-approve.
+
+### Text-extraction discrepancy observed (30 Oct 2026)
+
+A separate read-only text extractor over the UCMS-hosted compilation found **2,626 distinct candidate tokens with the expected subject-code shapes** (not verified individual competencies), whereas the published subject totals are 2,781. The provisional text index is *not a complete source inventory*: Paediatrics has only **253 parsed PE codes vs 406 published**; General Medicine returned **529 vs 525** (extra cross-references or extraction false positives possible); Obstetrics-Gynaecology **142 vs 141**. Radiodiagnosis appeared under **RD** in extracted table content despite the printed legend **RT**; Dermatology appeared under **DR** despite printed legend **DE**. **No entire code inventory was committed or published**, and source PDF bytes remain unverified. These are diagnostic flags, not evidence of source error or permission to invent the missing codes.
+
+The competency proposal validator now **requires the printed subject legend** for every proposed code; unresolved DR/DE and RD/RT discrepancies are manual review cases, not silently accepted mappings. Its acceptance can be expanded only after source-page inspection establishes the correct edition-specific aliases. This defends against linking a Medicine code to Anatomy simply because the module ID exists.
