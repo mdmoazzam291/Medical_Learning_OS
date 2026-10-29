@@ -1,6 +1,6 @@
 # Independent syllabus-scope review: authorization and immutable receipts
 
-**Engineering state:** stacked draft PR #337 based on #336 → #335 → #334 → #333 → #332. Source only, unmerged and undeployed. No independent reviewer account has been invited, authorized or asked to approve anything.
+**Engineering state:** draft PR #337 integrated against the released `main` baseline through PR #336. Source only, unmerged and undeployed; reviewer-function deployment and independent human identity acceptance remain blocked. No independent reviewer account has been invited, authorized or asked to approve anything.
 
 ## Boundary
 

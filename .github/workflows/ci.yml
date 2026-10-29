@@ -32,6 +32,10 @@ jobs:
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/content-coverage-db-check.js
       - name: Self-test non-writing hosted concept-draft access harness
         run: node scripts/live-concept-drafts-http-check.mjs --self-test
+      - name: Verify non-writing syllabus draft negative and CORS access on deployed API
+        run: |
+          node tests/hosted-syllabus-baseline-negative.mjs --self-test
+          node tests/hosted-syllabus-baseline-negative.mjs --hosted
       - name: Verify immutable concept draft persistence
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-drafts-db-check.js
       - name: Verify immutable private syllabus checklist proposals
@@ -67,6 +71,8 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.62.1
           node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
+      - name: Verify synthetic syllabus Admin/learner acceptance UI in WebKit
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node tests/syllabus-acceptance-browser-check.js
       - name: Verify concept draft editor in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in WebKit
@@ -114,6 +120,8 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-browser" --no-audit --no-fund playwright@1.56.1
           node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify synthetic syllabus Admin/learner acceptance UI in Chromium
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node tests/syllabus-acceptance-browser-check.js
       - name: Verify concept draft editor in Chromium
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in Chromium
