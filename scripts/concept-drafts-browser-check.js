@@ -30,7 +30,7 @@ try{
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:2,questions:1,sources:0},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
    if(path.endsWith('/owner-api/concept-draft-accept')){
     const input=req.postDataJSON();acceptRequests.push(input.requestId);
-    if(!accepted)accepted={status:'concept_accepted',proposalId:input.proposalId,revision:input.revision,draftDigest:input.digest,conceptId,canonicalDigest:'b'.repeat(64),catalogVersion:447};
+    if(!accepted)accepted={status:'concept_accepted',proposalId:input.proposalId,revision:input.revision,draftDigest:input.digest,conceptId,identityDigest:'b'.repeat(64),catalogVersionAtAcceptance:446,learnerPublished:false};
     return reply(accepted);
    }
    if(path.endsWith('/owner-api/concept-drafts')){
@@ -39,7 +39,7 @@ try{
     if(!receipts.has(input.requestId)){const version={proposalId:proposal,conceptId,revision:versions.length+1,digest:String(versions.length+1).padStart(64,'0'),baseDigest:null,operation:'create',document:input.document,recordedAt:snapshot.asOf};versions.push(version);receipts.set(input.requestId,{proposalId:proposal,conceptId,revision:version.revision,digest:version.digest});}
     if(failSave)return reply({error:'synthetic_uncertain_save'},503);return reply(receipts.get(input.requestId));
    }
-   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,canonicalDigest:accepted.canonicalDigest}:null});}
+   if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,identityDigest:accepted.identityDigest,catalogVersionAtAcceptance:446,learnerPublished:false}:null});}
    if(path.endsWith('/owner-api/content-coverage')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow&&url.searchParams.get('search')==='Alpha')await new Promise(resolve=>setTimeout(resolve,400));return reply(coveragePage(snapshot,parseCoverageFilters(url.searchParams)));}
    if(path.includes('/owner-api/'))return reply({flags:[],alerts:[]});
    return reply({});
@@ -66,7 +66,7 @@ try{
   await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.locator('[data-concept-status]').filter({hasText:'Save not confirmed'}).waitFor();assert.equal(await root.getByRole('button',{name:'Retry pending save',exact:true}).count(),1);assert.equal(versions.length,1);
   failRead=false;await root.getByRole('button',{name:'Retry pending save',exact:true}).click();await root.getByText('Saved and confirmed revision 1. Accepted coverage is unchanged.',{exact:true}).waitFor();assert.equal(new Set(requestIds).size,1);assert.equal(versions.length,1);
   // Explicit human review cannot silently publish; ambiguous POST/readback must preserve retry identity.
-  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.getByText('Accept reviewed identity into private registry',{exact:true}).click();
   await root.locator('[data-concept-accept-form] textarea[name="reviewNotes"]').fill('Owner reviewed this synthetic identity and classification with source context.');
   await root.locator('[data-concept-accept-form] input[name="attested"]').check();
   failRead=403;
@@ -74,9 +74,9 @@ try{
   await root.locator('[data-concept-status]').filter({hasText:'Acceptance not confirmed'}).waitFor();
   assert.equal(acceptRequests.length,1);
   failRead=false;
-  await root.getByText('Accept reviewed concept into canonical inventory',{exact:true}).click();
+  await root.getByText('Accept reviewed identity into private registry',{exact:true}).click();
   await root.getByRole('button',{name:'Accept concept identity (not publish)',exact:true}).click();
-  await root.locator('[data-concept-status]').filter({hasText:'Accepted into canonical inventory'}).waitFor();
+  await root.locator('[data-concept-status]').filter({hasText:'Identity accepted into the private Admin registry'}).waitFor();
   assert.equal(acceptRequests.length,2);assert.equal(new Set(acceptRequests).size,1);
   assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
   assert.match(await root.textContent(),/This does not approve medical claims, rights, questions or learner release/);
