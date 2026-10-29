@@ -30,7 +30,7 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api', 'owner-api
   }));
 
   test(`${name}: deployed learner origins pass preflight`, async () => {
-    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000', ...(name === 'owner-api' ? [conceptPreview] : [])]) {
+    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000', ...(['owner-api', 'review-api'].includes(name) ? [conceptPreview] : [])]) {
       const response = await request(origin);
       assert.equal(response.status, 200);
       assert.equal(response.headers.get('Access-Control-Allow-Origin'), origin);
@@ -50,9 +50,9 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api', 'owner-api
 
   test(`${name}: Cloudflare origin does not bypass user authentication`, async () => {
     for (const authorization of [undefined, 'Bearer invalid-token']) {
-      const response = await request(name === 'owner-api' ? conceptPreview : cloudflare, 'GET', authorization);
+      const response = await request(['owner-api', 'review-api'].includes(name) ? conceptPreview : cloudflare, 'GET', authorization);
       assert.equal(response.status, 401);
-      assert.equal(response.headers.get('Access-Control-Allow-Origin'), name === 'owner-api' ? conceptPreview : cloudflare);
+      assert.equal(response.headers.get('Access-Control-Allow-Origin'), ['owner-api', 'review-api'].includes(name) ? conceptPreview : cloudflare);
       assert.deepEqual(await response.json(), { error: 'unauthorized' });
     }
   });
