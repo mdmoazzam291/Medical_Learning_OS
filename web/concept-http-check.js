@@ -1,12 +1,12 @@
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
-import { runConceptHttpAcceptance, acceptanceOrigin } from '/src/adapters/concept-http-acceptance.js';
+import { runConceptHttpAcceptance, acceptanceOrigins } from '/src/adapters/concept-http-acceptance.js';
 
 const output = document.querySelector('#results');
 const buttons = [...document.querySelectorAll('button')];
-if (location.origin !== acceptanceOrigin) {
-  output.textContent = 'Disabled: available only on the exact authorized concept preview.';
+if (!acceptanceOrigins.includes(location.origin)) {
+  output.textContent = 'Disabled: available only on an exact authorized concept preview.';
 } else {
   const auth = createSupabaseAuth(cloudConfig);
   const review = createCloudReview({...cloudConfig, auth});
@@ -18,7 +18,7 @@ if (location.origin !== acceptanceOrigin) {
       output.textContent = 'Running non-persisting checks…';
       try {
         const results = await runConceptHttpAcceptance({
-          ...cloudConfig, origin: location.origin, role: button.id,
+          ...cloudConfig, origin: location.origin, role: button.id.endsWith('admin') ? 'admin' : 'learner', suite: button.id.startsWith('accept-') ? 'acceptance' : 'drafts',
           getSession: () => auth.getSession(), getMe: () => review.me()
         });
         output.textContent = results.map(r => `PASS ${r.name}: HTTP ${r.status}`).join('\n') + '\nAll selected hosted checks passed. No draft write submitted.';

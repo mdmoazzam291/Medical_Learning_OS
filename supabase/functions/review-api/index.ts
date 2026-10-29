@@ -16,6 +16,7 @@ const allowedOrigins = new Set([
   "https://medical-learning-os-preview.onrender.com",
   "https://medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const reviewKinds = new Set(["medical", "references", "rights"]);
