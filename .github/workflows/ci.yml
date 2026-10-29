@@ -71,6 +71,8 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-webkit" --no-audit --no-fund playwright@1.62.1
           node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
+      - name: Verify synthetic syllabus Admin/learner acceptance UI in WebKit
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/test-syllabus-acceptance-browser.js
       - name: Verify concept draft editor in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in WebKit
@@ -118,6 +120,8 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-browser" --no-audit --no-fund playwright@1.56.1
           node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify synthetic syllabus Admin/learner acceptance UI in Chromium
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/test-syllabus-acceptance-browser.js
       - name: Verify concept draft editor in Chromium
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in Chromium
