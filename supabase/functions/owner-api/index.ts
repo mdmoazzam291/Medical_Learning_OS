@@ -1,6 +1,6 @@
+import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
-import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-audit.js";
@@ -18,6 +18,7 @@ const allowedOrigins = new Set([
   "http://localhost:3000",
   "https://medical-learning-os-preview.onrender.com",
   "https://medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const edgeHealthUrl = Deno.env.get("MLOS_CLOUDFLARE_EDGE_HEALTH_URL") ??
@@ -237,6 +238,19 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path === "/concept-drafts" || path.startsWith("/concept-drafts/")) {
+      const match = /^\/concept-drafts(?:\/([a-fA-F0-9-]{36}))?$/.exec(path);
+      if (!match) fail(404, "not_found");
+      try {
+        return response(req, 200, await conceptDraftRequest({ admin, actor: authData.user.id,
+          method: req.method, params: url.searchParams, proposalId: match[1] || null,
+          input: req.method === "POST" ? await jsonBody(req, 262144) : undefined }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "concept_draft_unavailable");
+      }
     }
 
     if (req.method === "GET" && path === "/content-coverage") {

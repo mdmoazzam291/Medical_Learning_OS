@@ -144,6 +144,9 @@
   "scripts/library-browser-check.js": [
     "supabase"
   ],
+  "scripts/live-concept-drafts-http-check.mjs": [
+    "supabase"
+  ],
   "scripts/navigation-browser-check.js": [
     "cloudflare",
     "github",
@@ -771,6 +774,25 @@
     "supabase"
   ],
   "web/content-coverage-boot.js": [
+    "supabase"
+  ],
+  "scripts/concept-drafts-browser-check.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "scripts/concept-drafts-db-check.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/concept-drafts.js": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028204835_admin_concept_drafts.sql": [
+    "supabase"
+  ],
+  "src/adapters/concept-http-acceptance.js": [
+    "supabase"
+  ],
+  "web/concept-http-check.js": [
     "supabase"
   ]
 }
