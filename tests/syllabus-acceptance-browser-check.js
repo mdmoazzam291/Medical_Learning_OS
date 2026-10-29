@@ -15,8 +15,8 @@ let browser;
 let total=0;
 try {
  browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({headless:true});
- for(const role of ['admin','learner','signed-out','legacy-origin']){
-  const expectedOrigin=role==='legacy-origin'?legacy:preview;
+ for(const suite of ['syllabus','preflight']) for(const role of ['admin','learner','signed-out','legacy-origin']){
+  const expectedOrigin=role==='legacy-origin'?legacy:suite==='preflight'?'https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev':preview;
   const token='synthetic-'+role+'-never-a-valid-token';
   const user={id:role==='learner'?'22222222-2222-4222-8222-222222222222':'11111111-1111-4111-8111-111111111111',email:'test@example.invalid'};
   const context=await browser.newContext({viewport:{width:390,height:844}});
@@ -48,7 +48,7 @@ try {
     assert.equal(auth,'Bearer '+token,'review role must use current synthetic session');
     return reply({isAdmin:role==='admin',reviewKinds:[]});
    }
-   if(path==='/functions/v1/owner-api/syllabus-baseline-drafts'){
+   if(path==='/functions/v1/owner-api/syllabus-baseline-drafts'||path==='/functions/v1/owner-api/syllabus-review-preflight/00000000-0000-4000-8000-000000000000'){
     ownerCalls++;
     if(method==='POST'){
       assert.equal(request.postData(),'{}','never submit a valid syllabus proposal');
@@ -57,6 +57,7 @@ try {
     if(!auth)return reply({error:'unauthorized'},401);
     assert.equal(auth,'Bearer '+token,'owner check must use current synthetic session');
     if(role==='learner')return reply({error:'content_admin_required'},403);
+    if(suite==='preflight')return reply({error:method==='POST'?'method_not_allowed':url.search==='?revision=0'?'syllabus_review_preflight_invalid':'syllabus_baseline_not_found'},method==='POST'?405:url.search==='?revision=0'?400:404);
     if(method==='POST')return reply({error:'syllabus_baseline_invalid'},400);
     return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft-only',baselines:[]});
    }
@@ -67,28 +68,28 @@ try {
   await page.goto(expectedOrigin+'/web/concept-http-check.html');
   await page.locator('#results').filter({hasText:role==='legacy-origin'?'Sign in using Account':'Sign in using Account'}).waitFor();
   if(role==='legacy-origin'){
-   assert.equal(await page.locator('#syllabus-admin').isDisabled(),true);
-   assert.equal(await page.locator('#syllabus-learner').isDisabled(),true);
+   assert.equal(await page.locator('#'+suite+'-admin').isDisabled(),true);
+   assert.equal(await page.locator('#'+suite+'-learner').isDisabled(),true);
    assert.equal(ownerCalls,0);total++;
   }else if(role==='signed-out'){
-   await page.locator('#syllabus-admin').click();
+   await page.locator('#'+suite+'-admin').click();
    await page.locator('#results').filter({hasText:'FAIL: Sign in first.'}).waitFor();
    assert.equal(ownerCalls,0);
    assert.equal(roleChecks,0);total++;
   }else{
-   const button=role==='admin'?'#syllabus-admin':'#syllabus-learner';
+   const button=role==='admin'?'#'+suite+'-admin':'#'+suite+'-learner';
    await page.locator(button).click();
    await page.locator('#results').filter({hasText:'All selected hosted checks passed.'}).waitFor();
    const output=await page.locator('#results').textContent();
    assert.match(output,/PASS anonymous GET: HTTP 401/);
    assert.match(output,/PASS anonymous invalid POST: HTTP 401/);
-   assert.match(output,role==='admin'?/PASS Admin private syllabus inventory: HTTP 200/:/PASS learner GET: HTTP 403/);
-   assert.match(output,role==='admin'?/PASS Admin invalid syllabus POST: HTTP 400/:/PASS learner invalid POST: HTTP 403/);
+   assert.match(output,role==='admin'?(suite==='preflight'?/PASS Admin missing preflight: HTTP 404/:/PASS Admin private syllabus inventory: HTTP 200/):/PASS learner GET: HTTP 403/);
+   assert.match(output,role==='admin'?(suite==='preflight'?/PASS Admin preflight write refused: HTTP 405/:/PASS Admin invalid syllabus POST: HTTP 400/):/PASS learner invalid POST: HTTP 403/);
    assert.ok(!output.includes(token)&&!output.includes(user.id),'no token or identity in report');
-   assert.equal(ownerCalls,4);assert.equal(malformedPosts,2);assert.equal(roleChecks,1);
-   assert.deepEqual(records.filter(r=>r.path.includes('syllabus-baseline-drafts')).map(r=>[r.method,r.signed]),[['GET',false],['POST',false],['GET',true],['POST',true]]);
+   assert.equal(ownerCalls,suite==='preflight'&&role==='admin'?5:4);assert.equal(malformedPosts,2);assert.equal(roleChecks,1);
+   assert.deepEqual(records.filter(r=>r.path.includes(suite==='preflight'?'syllabus-review-preflight':'syllabus-baseline-drafts')).map(r=>[r.method,r.signed]),suite==='preflight'&&role==='admin'?[['GET',false],['POST',false],['GET',true],['GET',true],['POST',true]]:[['GET',false],['POST',false],['GET',true],['POST',true]]);
    const before=ownerCalls;
-   await page.locator(role==='admin'?'#syllabus-learner':'#syllabus-admin').click();
+   await page.locator(role==='admin'?'#'+suite+'-learner':'#'+suite+'-admin').click();
    await page.locator('#results').filter({hasText:'FAIL: The signed-in account does not match the selected role.'}).waitFor();
    assert.equal(ownerCalls,before,'role mismatch must stop before endpoint calls');
    total+=2;

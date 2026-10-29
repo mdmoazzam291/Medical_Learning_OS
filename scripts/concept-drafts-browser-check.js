@@ -6,6 +6,8 @@ import {join} from 'node:path';
 import {buildPages} from './build-pages.js';
 import {publicFileSet} from './public-surface.js';
 import {coveragePage,parseCoverageFilters} from '../src/domain/content-coverage.js';
+import {alignSyllabusReviewPacket} from '../src/domain/syllabus-review-preflight.js';
+import registry from '../data/preparation-curriculum.js';
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-coverage-'));await buildPages({outputDirectory:output});
 const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
@@ -42,6 +44,17 @@ try{
     if(failSave)return reply({error:'synthetic_uncertain_save'},503);return reply(receipts.get(input.requestId));
    }
    if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,identityDigest:accepted.identityDigest,catalogVersionAtAcceptance:446,learnerPublished:false}:null});}
+   if(path.includes('/owner-api/syllabus-review-preflight/')){
+     const v=syllabusVersions.at(-1);
+     if(!v)return reply({error:'no_draft'},404);
+     return reply(alignSyllabusReviewPacket({contractId:'admin-syllabus-review-preflight-v1',baselineId:syllabusId,
+      revision:v.revision,digest:v.digest,
+      authoredCatalogVersion:v.catalogVersion,currentCatalogVersion:v.catalogVersion,
+      registryVersion:'pg-preparation:foundation@1',pathwayVersionId:v.document.pathwayVersionId,
+      scopeDeclaration:v.document.scopeDeclaration,sourceKind:v.document.sourceKind,
+      sourceLocator:v.document.sourceLocator,sourceVersion:v.document.sourceVersion,
+      isLatest:true,members:v.document.conceptIds.map(conceptId=>({conceptId,label:'Synthetic canonical concept',kind:'canonical',identityDigest:null,bindingMatches:true}))},registry));
+   }
    if(path.endsWith('/owner-api/syllabus-baseline-drafts')){
      if(req.method()==='GET')return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft-only',
        baselines:syllabusVersions.length?[{baselineId:syllabusId,label:syllabusVersions.at(-1).document.label,
@@ -119,6 +132,13 @@ try{
   await syllabus.getByRole('button',{name:'Retry pending draft save',exact:true}).click();
   await syllabus.locator('[data-syllabus-status]').filter({hasText:'Saved immutable checklist draft revision 1'}).waitFor();
   assert.equal(new Set(syllabusRequests).size,1,'uncertain syllabus save must reuse request ID');
+  await syllabus.getByRole('button',{name:'Check scope and objective alignment',exact:true}).click();
+  await syllabus.locator('[data-syllabus-status]').filter({hasText:/Preflight is a private review packet|Review preflight unavailable/}).waitFor({timeout:10000});
+  const observed=await syllabus.locator('[data-syllabus-status]').textContent();
+  assert.match(observed,/Preflight is a private review packet/, 'Preflight status was: '+observed);
+  await syllabus.locator('[data-syllabus-review-packet]').getByText('Review required. This is not an accepted or official syllabus.',{exact:true}).waitFor();
+  assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Exact reviewed curriculum-mapped concepts: 0/);
+  assert.match(await syllabus.locator('[data-syllabus-review-packet]').textContent(),/Independent source review/);
   assert.match(await syllabus.textContent(),/No medical review, objective mapping/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')||x.endsWith('/syllabus-baseline-drafts')));

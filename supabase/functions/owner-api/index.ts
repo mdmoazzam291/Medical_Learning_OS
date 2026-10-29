@@ -1,6 +1,7 @@
 import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { syllabusBaselineDraftRequest } from './_shared/syllabus-baseline-drafts.js';
+import { readSyllabusReviewPreflight } from './_shared/syllabus-review-preflight.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import { createClient } from "npm:@supabase/supabase-js@2";
@@ -23,6 +24,7 @@ const allowedOrigins = new Set([
   "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-syllabus-baseline-drafts-202-medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const edgeHealthUrl = Deno.env.get("MLOS_CLOUDFLARE_EDGE_HEALTH_URL") ??
@@ -242,6 +244,19 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path.startsWith("/syllabus-review-preflight/")) {
+      const match=/^\/syllabus-review-preflight\/([a-fA-F0-9-]{36})$/.exec(path);
+      if (!match) fail(404, "not_found");
+      try {
+        return response(req, 200, await readSyllabusReviewPreflight({
+          admin, actor: authData.user.id, method: req.method, params: url.searchParams, baselineId: match[1]
+        }));
+      } catch (error) {
+        const problem=error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "syllabus_review_preflight_unavailable");
+      }
     }
 
     if (path === "/syllabus-baseline-drafts" || path.startsWith("/syllabus-baseline-drafts/")) {

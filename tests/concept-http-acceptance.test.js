@@ -37,3 +37,20 @@ test('private syllabus checks reject older preview origins and forged inventory 
   fetchFn:async()=>new Response(JSON.stringify({contractId:'admin-concept-drafts-v1',concepts:[],drafts:[]}),{
     status:200,headers:{'Cache-Control':'no-store'}})}));
 });
+
+test('preflight uses exact preview, real role guard and only missing/invalid read-only probes',async()=>{
+ const origin='https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev';
+ for(const role of ['admin','learner']){
+  const {args,calls,secret}=fixture(role);
+  const result=await runConceptHttpAcceptance({...args,origin,suite:'preflight',fetchFn:async(url,options)=>{
+   calls.push({url,options});
+   const status=!options.headers.Authorization?401:role==='learner'?403:options.method==='POST'?405:url.endsWith('revision=0')?400:404;
+   return new Response(JSON.stringify({error:{401:'unauthorized',403:'content_admin_required',405:'method_not_allowed',400:'syllabus_review_preflight_invalid',404:'syllabus_baseline_not_found'}[status]}),{status,headers:{'Cache-Control':'no-store'}});
+  }});
+  assert.deepEqual(result.map(x=>x.status),role==='admin'?[401,401,404,400,405]:[401,401,403,403]);
+  assert.ok(calls.every(x=>x.url.startsWith(args.projectUrl+'/functions/v1/owner-api/syllabus-review-preflight/00000000-0000-4000-8000-000000000000?revision=')));
+  assert.ok(calls.filter(x=>x.options.method==='POST').every(x=>x.options.body==='{}'));
+  assert.ok(!JSON.stringify(result).includes(secret));
+  await assert.rejects(()=>runConceptHttpAcceptance({...args,suite:'preflight',origin:syllabusPreviewOrigin}));
+ }
+});

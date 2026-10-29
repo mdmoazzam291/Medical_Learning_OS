@@ -18,6 +18,7 @@ const allowedOrigins = new Set([
   "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev",
   "https://feat-admin-syllabus-baseline-drafts-202-medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const reviewKinds = new Set(["medical", "references", "rights"]);
