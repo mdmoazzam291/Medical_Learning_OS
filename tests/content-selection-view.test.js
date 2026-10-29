@@ -15,3 +15,7 @@ test('recheck shows current/stale/blocked as observations, never publish clearan
  }
  const failed=selectionMarkup({receipt,error:'revalidate'});assert.match(failed,/Current evidence could not be checked/);assert.doesNotMatch(failed,/Current at observation/);
 });
+test('saved selection export controls explicitly describe metadata-only downloads',()=>{
+ const html=selectionMarkup({receipt:{selectionId:'id',digest:'a'.repeat(64),catalogVersion:446}});assert.match(html,/Download inventory JSON/);assert.match(html,/Download inventory Markdown/);assert.match(html,/metadata only/);
+ const failed=selectionMarkup({receipt:{selectionId:'id'},error:'export'});assert.match(failed,/Inventory export could not be verified/);
+});

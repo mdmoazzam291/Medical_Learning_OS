@@ -1,17 +1,18 @@
+import {selectionInventoryExport} from '../src/domain/selection-inventory-export.js';
 import {escapeText as e} from './navigation-view.js';
 import {selectionItems} from '../src/domain/frozen-content-selections.js';
 export function selectionMarkup({items=[],preview=null,pending=null,receipt=null,validation=null,busy=false,error=null}={}){
  return '<section class="review-packet" aria-label="Frozen evidence selection"><h3>Prepare an evidence selection</h3><p>Select up to 100 exact versions with current review evidence. Freezing saves metadata only and does not publish content. Saved evidence can become stale; future release must revalidate it.</p><p>'+e(items.length)+' selected versions</p><ul>'+items.map(x=>'<li>'+e(x.kind+' · '+x.versionId)+'</li>').join('')+'</ul>'+
- (error?'<p role="alert">'+(error==='revalidate'?'Current evidence could not be checked. The saved receipt is unchanged; retry the recheck.':error==='read'?'Saved selection could not be loaded. Retry with the authorized account.':error==='save'?'Save or readback was not confirmed. Retry the same request; do not start a replacement.':'Preview unavailable or evidence changed. Refresh the collection and try again.')+'</p>':'')+
+ (error?'<p role="alert">'+(error==='export'?'Inventory export could not be verified. No file was downloaded; retry with the authorized account.':error==='revalidate'?'Current evidence could not be checked. The saved receipt is unchanged; retry the recheck.':error==='read'?'Saved selection could not be loaded. Retry with the authorized account.':error==='save'?'Save or readback was not confirmed. Retry the same request; do not start a replacement.':'Preview unavailable or evidence changed. Refresh the collection and try again.')+'</p>':'')+
  (busy?'<p role="status">Checking selection…</p>':'')+
  (receipt?'<p role="status">Evidence selection saved: <strong>'+e(receipt.selectionId)+'</strong></p><p>Digest '+e(receipt.digest)+' · catalog v'+e(receipt.catalogVersion)+'</p><p>Snapshot only. Release readiness remains not assessed.</p>':'')+
  (validation&&!busy&&!error?'<div data-selection-revalidation role="status"><strong>'+e(validation.state==='current'?'Current at observation':validation.state==='stale'?'Saved evidence is stale':'Current evidence is blocked')+'</strong><p>Checked '+e(validation.checkedAt)+' · '+e(validation.reasons.join(' · '))+'</p><p>This is not release authorization.</p></div>':'')+
- (!busy&&receipt?'<button type="button" data-selection-revalidate>Recheck saved evidence</button>':'')+
+ (!busy&&receipt?'<button type="button" data-selection-revalidate>Recheck saved evidence</button><p>Downloads contain frozen metadata only; no clinical bodies or ingestion authority.</p><button type="button" class="secondary" data-selection-export="json">Download inventory JSON</button> <button type="button" class="secondary" data-selection-export="markdown">Download inventory Markdown</button>':'')+
  (preview&&!receipt?'<p>Preview digest '+e(preview.digest)+' · catalog v'+e(preview.catalogVersion)+'</p>':'')+
  (!busy&&error==='read'?'<button type="button" data-selection-reopen>Retry saved selection</button>':'')+
  (!busy?(pending?'<button type="button" data-selection-freeze>Retry same selection save</button>':(items.length&&!receipt?'<button type="button" data-selection-preview>Preview selected evidence</button> ':'')+(preview&&!receipt?'<button type="button" data-selection-freeze>Freeze evidence selection</button> ':'')+(items.length?'<button class="secondary" type="button" data-selection-clear>Clear selection</button>':'')):'')+'</section>';
 }
-export function mountContentSelection({root,collectionRoot,previewSelection,freezeSelection,readSelection,revalidateSelection,window:win=window,uuid=()=>crypto.randomUUID()}){
+export function mountContentSelection({root,collectionRoot,previewSelection,freezeSelection,readSelection,revalidateSelection,exportSelection,download,window:win=window,uuid=()=>crypto.randomUUID()}){
  const selected=new Map();let preview=null,pending=null,receipt=null,validation=null,busy=false,error=null,generation=0,disposed=false;
  const items=()=>[...selected.values()];
  const saveLocation=id=>{const url=new URL(win.location.href);url.searchParams.delete('cs_id');if(id)url.searchParams.set('cs_id',id);win.history.replaceState(null,'',url);};
@@ -23,6 +24,16 @@ export function mountContentSelection({root,collectionRoot,previewSelection,free
   generation++;validation=null;preview=null;receipt=null;error=null;saveLocation(null);render();
  }
  async function click(event){const b=event.target.closest('button');if(!b||busy)return;if(b.hasAttribute('data-selection-reopen')){reopen();return;}
+  if(b.hasAttribute('data-selection-export')&&receipt&&exportSelection){
+   const format=b.dataset.selectionExport;if(!['json','markdown'].includes(format))return;
+   const current=++generation,saved=receipt;busy=true;error=null;validation=null;render();
+   try{const value=await exportSelection(saved.selectionId);const expected=await selectionInventoryExport(saved);if(disposed||current!==generation)return;
+    if(value?.contractId!=='selection-inventory-export-v1'||value.selectionId!==saved.selectionId||value.publicationAuthority!==false||value.inventoryOnly!==true||value.ingestionReady!==false||value.json!==expected.json||value.markdown!==expected.markdown||value.sha256!==expected.sha256)throw Error('export');
+    const text=format==='json'?expected.json:expected.markdown,filename='selection-inventory-'+saved.selectionId+(format==='json'?'.json':'.md');
+    if(download)download({text,filename,format});else{const url=URL.createObjectURL(new Blob([text],{type:format==='json'?'application/json;charset=utf-8':'text/markdown;charset=utf-8'}));const a=root.ownerDocument.createElement('a');a.href=url;a.download=filename;root.ownerDocument.body.append(a);a.click();a.remove();win.setTimeout(()=>URL.revokeObjectURL(url),1000);}
+   }catch{if(!disposed&&current===generation)error='export';}
+   finally{if(!disposed&&current===generation){busy=false;render();}}return;
+  }
   if(b.hasAttribute('data-selection-revalidate')&&receipt&&revalidateSelection){
    const current=++generation,saved=receipt;busy=true;error=null;validation=null;render();
    try{const value=await revalidateSelection(saved.selectionId);if(disposed||current!==generation)return;

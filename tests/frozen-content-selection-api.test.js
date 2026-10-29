@@ -28,3 +28,8 @@ test('read-only revalidation detects current, stale and blocked evidence; provid
   assert.deepEqual(calls,['owner_content_selection_read_v1','owner_content_selection_preview_v1']);
  }
 });
+test('inventory export reads only the exact authorized receipt and omits private fields',async()=>{
+ const receipt={...preview,contractId:'frozen-content-selection-v1',selectionId:id,requestId:id,createdAt:preview.observedAt,privateEvidence:'PRIVATE'};
+ const calls=[];const result=await contentSelectionRequest({admin:{async rpc(name){calls.push(name);return {data:receipt};}},actor,action:'export',input:{selectionId:id}});
+ assert.deepEqual(calls,['owner_content_selection_read_v1']);assert.equal(result.manifest.ingestionReady,false);assert.equal(result.selectionId,id);assert.doesNotMatch(result.json+result.markdown,/PRIVATE/);
+});
