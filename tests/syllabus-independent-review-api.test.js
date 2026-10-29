@@ -20,7 +20,8 @@ test('reviewer route allows exact scoped read, requires verified actor for decis
  const calls=[];
  const admin={async rpc(name,args){calls.push({name,args});return name.includes('inspect')?
   {data:{contractId:'syllabus-scope-review-target-v1',baselineId:bid,revision:2,reviewerId:reviewer,
-   officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false},error:null}:
+   officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false,
+   privateIdentityVerified:true,privateIdentities:[],document:{conceptIds:['one']},canReview:true},error:null}:
   {data:{contractId:'syllabus-scope-review-receipt-v1',decisionId:owner,
    baselineId:bid,revision:2,draftDigest:'a'.repeat(64),reviewerId:reviewer,
    decision:'changes-required',receiptDigest:'c'.repeat(64),scopeReviewOnly:true,
@@ -46,4 +47,22 @@ test('reviewer errors do not leak SQL, revoked grants get 403, stale decisions c
  syllabusScopeReviewRequest({admin:{async rpc(){return{error:{message}};}},reviewerId:reviewer,
  method:'POST',baselineId:bid,params:new URLSearchParams(),input:decision()}),
  e=>e.status===status&&!e.message.includes('secret'));
+});
+
+test('scoped reviewer packets reject private identity substitutions and missing digest validation',async()=>{
+ const basic={contractId:'syllabus-scope-review-target-v1',baselineId:bid,revision:2,
+  reviewerId:reviewer,officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false,
+  canReview:true,privateIdentityVerified:true,document:{conceptIds:['C-private']},
+  privateIdentities:[{conceptId:'C-private',identityDigest:'d'.repeat(64),identity:{
+   conceptId:'C-private',label:'Frozen private meaning',aliases:[],classification:{subjects:['medicine']}}}]};
+ const call=async packet=>syllabusScopeReviewRequest({admin:{async rpc(){return{data:packet,error:null};}},
+  reviewerId:reviewer,method:'GET',baselineId:bid,params:new URLSearchParams('revision=2')});
+ assert.equal((await call(basic)).privateIdentities[0].identity.label,'Frozen private meaning');
+ for(const bad of [
+  {...basic,privateIdentityVerified:false,canReview:true},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],conceptId:'C-other'}]},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],identityDigest:'bad'}]},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],identity:{...basic.privateIdentities[0].identity,conceptId:'C-other'}}]},
+  {...basic,privateIdentities:[basic.privateIdentities[0],basic.privateIdentities[0]]}
+ ])await assert.rejects(call(bad),e=>e.status===503);
 });
