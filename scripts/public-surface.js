@@ -1,4 +1,7 @@
 export const publicFiles = Object.freeze([
+  'web/concept-http-check.html',
+  'web/concept-http-check.js',
+  'src/adapters/concept-http-acceptance.js',
   '94df2900a699a7c8797e515d868f2010.txt',
   'sitemap.xml',
   'robots.txt',

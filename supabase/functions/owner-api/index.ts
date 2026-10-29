@@ -2,7 +2,6 @@ import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { readContentCoverage } from './_shared/content-coverage.js';
 import preparationCurriculum from '../../../data/preparation-curriculum.js';
-import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-audit.js";
@@ -20,6 +19,7 @@ const allowedOrigins = new Set([
   "http://localhost:3000",
   "https://medical-learning-os-preview.onrender.com",
   "https://medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const edgeHealthUrl = Deno.env.get("MLOS_CLOUDFLARE_EDGE_HEALTH_URL") ??
