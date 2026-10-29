@@ -8,7 +8,7 @@ const sqlPacket={
  authoredCatalogVersion:2,currentCatalogVersion:2,registryVersion:'pg-preparation:foundation@1',
  pathwayVersionId:'neet-pg:preparation@1',scopeDeclaration:'partial',sourceKind:'historical',
  sourceLocator:'Synthetic source only',sourceVersion:'synthetic@1',isLatest:true,
- members:[{conceptId:'one',label:'Synthetic',exists:true}]};
+ members:[{conceptId:'one',label:'Synthetic',kind:'canonical',identityDigest:null,bindingMatches:true}]};
 test('Admin actor is server-bound; empty curriculum never invents approved objectives or syllabus percentage',async()=>{
  let args;
  const value=await readSyllabusReviewPreflight({admin:{async rpc(name,input){args={name,input};return{data:sqlPacket,error:null};}},
@@ -33,6 +33,6 @@ test('SQL errors are normalized and malformed/released packets fail closed',asyn
  await assert.rejects(readSyllabusReviewPreflight({admin:{async rpc(){return{error:{message}};}},actor,method:'GET',params,baselineId:id}),
  e=>e.status===expected&&!e.message.includes('secret'));
  }
- await assert.rejects(readSyllabusReviewPreflight({admin:{async rpc(){return{data:{...sqlPacket,members:[{conceptId:'one',label:'Synthetic',exists:true,answerKey:'private'}]},error:null};}},actor,method:'GET',params,baselineId:id}),
+ await assert.rejects(readSyllabusReviewPreflight({admin:{async rpc(){return{data:{...sqlPacket,members:[{conceptId:'one',label:'Synthetic',kind:'canonical',identityDigest:null,bindingMatches:true,answerKey:'private'}]},error:null};}},actor,method:'GET',params,baselineId:id}),
  e=>e.status===503);
 });
