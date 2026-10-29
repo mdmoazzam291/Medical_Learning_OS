@@ -61,7 +61,7 @@ test('forged subject counts, edition and source reuse rights reject closed',()=>
 test('PDF transient-code extractor produces IDs/pages, no copyrighted prose',()=>{
  const txt=[
   'GM1.1 Short sample phrase AN 2.3 without exporting source descriptions.\\nGM 1.2\\nCM1.10',
-  'GM1.1 more text\\nDR7.1\\nRT 2.11\\nGM1.10'
+  'GM1.1 more text\\nDR7.1\\nRD 2.11\\nGM1.10'
  ].map(p=>p.replaceAll('\\n','\n'));
  const s=extractNmcCodeIndex(txt,'a'.repeat(64));
  validateNmcCodeIndex(s);
