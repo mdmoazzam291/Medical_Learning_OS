@@ -47,6 +47,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     dashboard() { return request('/dashboard'); },
     contentIntegrity() { return request('/content-integrity'); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
+    approvedCollection(filters = {}) { return request('/approved-collection?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {
