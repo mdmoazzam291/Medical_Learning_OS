@@ -49,6 +49,35 @@ export async function verifyNegativeSurface(fetchFn = fetch) {
   return scenarios.length;
 }
 
+// Verify the actual Cloudflare preview is reachable, and that both deployed
+// APIs answer only the exact review-page Origin. No user session is involved.
+export async function verifyPreviewSurface(fetchFn = fetch) {
+  const origin = 'https://feat-admin-syllabus-baseline-drafts-202-medical-learning-os-web.medicalos.workers.dev';
+  const page = await fetchFn(origin + '/web/concept-http-check.html', {
+    method: 'GET', cache: 'no-store', signal: AbortSignal.timeout(12000)
+  });
+  assert.equal(page.status, 200, 'exact Cloudflare syllabus preview HTTP');
+  const html = await page.text();
+  assert.match(html, /id="syllabus-admin"/, 'Admin syllabus button deployed');
+  assert.match(html, /id="syllabus-learner"/, 'learner syllabus button deployed');
+  for (const route of ['owner-api/syllabus-baseline-drafts', 'review-api/me']) {
+    const endpoint = cloudConfig.projectUrl + '/functions/v1/' + route;
+    const response = await fetchFn(endpoint, {
+      method: 'OPTIONS',
+      headers: {
+        apikey: cloudConfig.publishableKey,
+        Origin: origin,
+        'Access-Control-Request-Method': 'GET',
+        'Access-Control-Request-Headers': 'authorization, apikey, content-type'
+      },
+      signal: AbortSignal.timeout(12000)
+    });
+    assert.equal(response.status, 200, route + ': preflight status');
+    assert.equal(response.headers.get('access-control-allow-origin'), origin, route + ': exact CORS origin');
+  }
+  return 3;
+}
+
 async function main() {
   if (process.argv[2] === '--self-test') {
     const fakeFetch = async (_url, options) => {
@@ -68,7 +97,8 @@ async function main() {
     console.log('PASS: five simulated negative/CORS contracts and transport failure detection');
   } else if (process.argv[2] === '--hosted') {
     const checks = await verifyNegativeSurface();
-    console.log('PASS: ' + checks + ' REAL hosted negative/CORS checks; no authenticated role or write tested');
+    const preview = await verifyPreviewSurface();
+    console.log('PASS: ' + checks + ' real negative/CORS cases and ' + preview + ' preview/origin checks; no authenticated role or write tested');
   } else {
     throw new Error('Use --self-test or --hosted');
   }
