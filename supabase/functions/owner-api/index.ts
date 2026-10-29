@@ -1,3 +1,5 @@
+import { readContentCoverage } from './_shared/content-coverage.js';
+import preparationCurriculum from '../../../data/preparation-curriculum.js';
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
@@ -235,6 +237,16 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (req.method === "GET" && path === "/content-coverage") {
+      try {
+        return response(req, 200, await readContentCoverage({ admin, actor: authData.user.id,
+          params: url.searchParams, registryVersion: preparationCurriculum.registryVersion }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "coverage_snapshot_unavailable");
+      }
     }
 
     if (req.method === "GET" && path === "/content-integrity") {

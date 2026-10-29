@@ -371,6 +371,10 @@ function dashboardMarkup(data) {
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
     </section>
 
+    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
+      <div id="owner-coverage-body"><p>Open Coverage Index to load the current inventory.</p></div>
+    </section>
+
     <section id="owner-integrity" class="panel" data-admin-panel="integrity" hidden aria-label="Catalog integrity audit">
       <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog-wide integrity</h2><p>Scan canonical question versions, PYQ metadata, sources and linked NeuralVault notes. Diagnostic only, never a publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
       <div id="owner-integrity-results" role="status" aria-live="polite"><p class="muted">No audit has been run in this session.</p></div>

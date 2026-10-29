@@ -46,6 +46,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
   return {
     dashboard() { return request('/dashboard'); },
     contentIntegrity() { return request('/content-integrity'); },
+    contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {
