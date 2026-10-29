@@ -11,6 +11,23 @@ IDENT = r'"?([a-zA-Z_][a-zA-Z_0-9]*)"?'
 COPY = re.compile(r'^COPY ' + IDENT + r'\.' + IDENT + r' \(([^)]+)\) FROM stdin;$')
 
 
+# The source backup's schema is authoritative. A PR may contain migrations
+# not yet applied to the production database that produced this snapshot.
+PUBLIC_TABLE = re.compile(
+    r'^\s*CREATE\s+(?:UNLOGGED\s+)?TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?'
+    r'(?:"public"|public)\.(?:"([^"]+)"|([a-zA-Z_][a-zA-Z_0-9]*))'
+    r'(?=\s*(?:\(|PARTITION\s+OF))', re.I | re.M
+)
+
+
+def public_schema_inventory(source_schema):
+    tables = {quoted or plain for quoted, plain in PUBLIC_TABLE.findall(source_schema)}
+    if not tables:
+        raise ValueError('source_schema_public_tables_missing')
+    return tables
+
+
+
 def fingerprint(rows):
     hashes = sorted(hashlib.sha256(row.encode('utf-8')).digest() for row in rows)
     return {'rows': len(hashes), 'sha256': hashlib.sha256(b''.join(hashes)).hexdigest()}
@@ -54,7 +71,7 @@ def compare_inventory(expected, actual, required_public):
         raise ValueError('table_data_mismatch')
 
 
-def verify(data_path, migrations, container):
+def verify(data_path, schema_path, container):
     if container != 'supabase_db_mlos-local-restore':
         raise ValueError('disposable_target_required')
 
@@ -68,9 +85,7 @@ def verify(data_path, migrations, container):
 
     with Path(data_path).open(encoding='utf-8') as source:
         expected = copy_inventory(line.rstrip('\n') for line in source)
-    required = set()
-    for path in Path(migrations).glob('*.sql'):
-        required.update(re.findall(r'create\s+table\s+(?:if\s+not\s+exists\s+)?public\.(\w+)', path.read_text(), re.I))
+    required = public_schema_inventory(Path(schema_path).read_text(encoding='utf-8'))
     actual_tables = set(json.loads(query("select coalesce(json_agg(c.relname),'[]'::json) from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname='public' and c.relkind in ('r','p')")))
     if actual_tables != required:
         raise ValueError('restored_schema_coverage_mismatch')

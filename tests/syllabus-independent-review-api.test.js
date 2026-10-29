@@ -1,0 +1,93 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {saveSyllabusScopeReviewerGrant} from '../supabase/functions/owner-api/_shared/syllabus-scope-reviewer-grants.js';
+import {syllabusScopeReviewRequest} from '../supabase/functions/review-api/_shared/syllabus-scope-review.js';
+const owner='11111111-1111-4111-8111-111111111111',reviewer='33333333-3333-4333-8333-333333333333';
+const bid='22222222-2222-4222-8222-222222222222';
+const grant=()=>({requestId:owner,baselineId:bid,reviewerUserId:reviewer,action:'grant',reason:'Independent review of this synthetic syllabus proposal'});
+const decision=()=>({requestId:owner,baselineId:bid,revision:2,digest:'a'.repeat(64),
+ decision:'changes-required',evidenceLocator:'Synthetic source rights dossier',evidenceSha256:'b'.repeat(64),
+ note:'This synthetic proposed syllabus scope requires correction.',
+ attestationVersion:'independent-syllabus-scope-review-v1'});
+test('owner grants are actor-bound, authenticated and cannot override scope or review outcome',async()=>{
+ let args,authLookups=0;const r=await saveSyllabusScopeReviewerGrant({actor:owner,input:grant(),admin:{auth:{admin:{async getUserById(id){authLookups++;assert.equal(id,reviewer);return{data:{user:{id}},error:null};}}},async rpc(name,input){args={name,input};return{data:{contractId:'syllabus-scope-grant-event-v1',baselineId:bid,
+ reviewerUserId:reviewer,action:'grant',learnerRelease:false},error:null};}}});
+ assert.equal(args.name,'syllabus_scope_reviewer_grant_v1');assert.equal(args.input.p_actor,owner);
+ assert.equal(r.learnerRelease,false);assert.equal(authLookups,1);
+ await assert.rejects(saveSyllabusScopeReviewerGrant({actor:owner,input:{...grant(),isAdmin:true},
+ admin:{async rpc(){throw Error('called');}}}),e=>e.status===400);
+});
+test('reviewer route allows exact scoped read, requires verified actor for decision and rejects forged fields',async()=>{
+ const calls=[];
+ const admin={async rpc(name,args){calls.push({name,args});return name.includes('inspect')?
+  {data:{contractId:'syllabus-scope-review-target-v1',baselineId:bid,revision:2,reviewerId:reviewer,
+   officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false,
+   privateIdentityVerified:true,privateIdentities:[],document:{conceptIds:['one']},canReview:true},error:null}:
+  {data:{contractId:'syllabus-scope-review-receipt-v1',decisionId:owner,
+   baselineId:bid,revision:2,draftDigest:'a'.repeat(64),reviewerId:reviewer,
+   decision:'changes-required',receiptDigest:'c'.repeat(64),scopeReviewOnly:true,
+   officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false},error:null};}};
+ await syllabusScopeReviewRequest({admin,reviewerId:reviewer,method:'GET',baselineId:bid,
+  params:new URLSearchParams('revision=2')});
+ const receipt=await syllabusScopeReviewRequest({admin,reviewerId:reviewer,method:'POST',baselineId:bid,
+  params:new URLSearchParams(),input:decision()});
+ assert.equal(receipt.learnerRelease,false);assert.equal(calls[0].args.p_reviewer,reviewer);
+ assert.equal(calls[1].args.p_registry_version,'pg-preparation:foundation@1');
+ assert.equal(calls[1].args.p_reviewer,reviewer);
+ for(const p of [{input:{...decision(),reviewerId:owner}},
+ {input:{...decision(),approval:'official'}},
+ {input:{...decision(),evidenceSha256:'bad'}},{params:new URLSearchParams('actor=forged')},
+ {baselineId:'notuuid'}])
+ await assert.rejects(syllabusScopeReviewRequest({admin,reviewerId:reviewer,method:'POST',baselineId:bid,
+  params:new URLSearchParams(),input:decision(),...p}),e=>e.status===400);
+ assert.equal(calls.length,2);
+});
+test('reviewer errors do not leak SQL, revoked grants get 403, stale decisions conflict',async()=>{
+ for(const [message,status] of [['syllabus_scope_reviewer_not_authorized',403],
+ ['syllabus_scope_review_stale',409],['unexpected auth secret',503]])await assert.rejects(
+ syllabusScopeReviewRequest({admin:{async rpc(){return{error:{message}};}},reviewerId:reviewer,
+ method:'POST',baselineId:bid,params:new URLSearchParams(),input:decision()}),
+ e=>e.status===status&&!e.message.includes('secret'));
+});
+
+test('scoped reviewer packets reject private identity substitutions and missing digest validation',async()=>{
+ const basic={contractId:'syllabus-scope-review-target-v1',baselineId:bid,revision:2,
+  reviewerId:reviewer,officialSyllabusCertified:false,curriculumActivated:false,learnerRelease:false,
+  canReview:true,privateIdentityVerified:true,document:{conceptIds:['C-private']},
+  privateIdentities:[{conceptId:'C-private',identityDigest:'d'.repeat(64),identity:{
+   conceptId:'C-private',label:'Frozen private meaning',aliases:[],classification:{subjects:['medicine']}}}]};
+ const call=async packet=>syllabusScopeReviewRequest({admin:{async rpc(){return{data:packet,error:null};}},
+  reviewerId:reviewer,method:'GET',baselineId:bid,params:new URLSearchParams('revision=2')});
+ assert.equal((await call(basic)).privateIdentities[0].identity.label,'Frozen private meaning');
+ for(const bad of [
+  {...basic,privateIdentityVerified:false,canReview:true},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],conceptId:'C-other'}]},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],identityDigest:'bad'}]},
+  {...basic,privateIdentities:[{...basic.privateIdentities[0],identity:{...basic.privateIdentities[0].identity,conceptId:'C-other'}}]},
+  {...basic,privateIdentities:[basic.privateIdentities[0],basic.privateIdentities[0]]}
+ ])await assert.rejects(call(bad),e=>e.status===503);
+});
+
+test('reviewer grant checks trusted Supabase Auth Admin identity, not auth.users SQL privileges',async()=>{
+ let databaseWrites=0;
+ const makeAdmin=lookup=>({auth:{admin:{getUserById:lookup}},
+  async rpc(){databaseWrites++;return{data:{contractId:'syllabus-scope-grant-event-v1',
+   baselineId:bid,reviewerUserId:reviewer,action:'grant',learnerRelease:false},error:null};}});
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:null,error:{status:404,code:'user_not_found'}}))}),
+  e=>e.status===400&&e.code==='syllabus_scope_reviewer_unknown');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:null,error:{status:503}}))}),
+  e=>e.status===503&&e.code==='syllabus_scope_reviewer_lookup_unavailable');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:{user:{id:owner}},error:null}))}),
+  e=>e.status===400&&e.code==='syllabus_scope_reviewer_unknown');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:{rpc:async()=>{databaseWrites++;throw Error('should not run');}}}),
+  e=>e.status===503&&e.code==='syllabus_scope_reviewer_lookup_unavailable');
+ assert.equal(databaseWrites,0,'No SQL grant may be recorded without verified Auth identity');
+ // Revocation remains possible after the Auth user has been removed.
+ const revoke=await saveSyllabusScopeReviewerGrant({actor:owner,input:{...grant(),action:'revoke'},
+  admin:{async rpc(){return{data:{contractId:'syllabus-scope-grant-event-v1',
+   baselineId:bid,reviewerUserId:reviewer,action:'revoke',learnerRelease:false},error:null};}}});
+ assert.equal(revoke.action,'revoke');
+});
