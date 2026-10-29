@@ -8,6 +8,7 @@ const cloudflare = 'https://medical-learning-os-web.medicalos.workers.dev';
 const conceptPreview = 'https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev';
 const identityPreview = 'https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev';
 const syllabusPreview = 'https://feat-admin-syllabus-baseline-drafts-202-medical-learning-os-web.medicalos.workers.dev';
+const preflightPreview = 'https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev';
 const render = 'https://medical-learning-os-preview.onrender.com';
 
 // Execute the real handlers with external services stubbed. No learner data is read or written.
@@ -32,7 +33,7 @@ for (const name of ['study-api', 'review-api', 'retention-probe-api', 'owner-api
   }));
 
   test(`${name}: deployed learner origins pass preflight`, async () => {
-    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000', ...(['owner-api', 'review-api'].includes(name) ? [conceptPreview, identityPreview, syllabusPreview] : [])]) {
+    for (const origin of [cloudflare, render, 'http://127.0.0.1:3000', ...(['owner-api', 'review-api'].includes(name) ? [conceptPreview, identityPreview, syllabusPreview, preflightPreview] : [])]) {
       const response = await request(origin);
       assert.equal(response.status, 200);
       assert.equal(response.headers.get('Access-Control-Allow-Origin'), origin);
