@@ -89,6 +89,8 @@ export const publicFiles = Object.freeze([
   'web/concept-draft-editor.js',
   'web/syllabus-baseline-editor.js',
   'src/domain/syllabus-baseline-drafts.js',
+  'data/dual-exam-syllabus-foundation.js',
+  'src/domain/dual-exam-syllabus-foundation.js',
   'src/domain/concept-drafts.js',
   'src/domain/concept-acceptance.js',
   'web/content-coverage-view.js',
