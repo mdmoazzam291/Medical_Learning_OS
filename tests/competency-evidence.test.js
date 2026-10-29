@@ -20,7 +20,7 @@ const example=()=>({
    rationale:'Synthetic unverified proposal for testing only.'}
  ]
 });
-test('empty real ledger is honest: zero verified competency rows, no exam denominator',()=>{
+test('restricted pilot ledger is honest: zero verified rows or exam denominator',()=>{
  const x=competencyEvidencePreflight();
  assert.equal(data.competencyProposals.length,8);
  assert.equal(x.candidateRecords,8);
@@ -34,7 +34,7 @@ test('empty real ledger is honest: zero verified competency rows, no exam denomi
 });
 test('one *synthetic* undergraduate competency reference supports two unverified exam hypotheses',()=>{
  const d=clone();d.competencyProposals.push(example());
- assert.equal(validateCompetencyEvidenceProposals(d).competencyProposals.length,1);
+ assert.equal(validateCompetencyEvidenceProposals(d).competencyProposals.length,9);
  const report=competencyEvidencePreflight(d);
  assert.equal(report.candidateRecords,9);assert.equal(report.unresolvedCanonicalIdentities,9);
  assert.equal(report.examHypotheses['neet-pg:preparation@1'],1);
