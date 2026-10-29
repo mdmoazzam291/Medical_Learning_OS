@@ -15,7 +15,7 @@ const examIds=new Set(['neet-pg','ini-cet']);
 const unique=xs=>new Set(xs).size===xs.length;
 export function validateCompetencyEvidenceProposals(input,{
  foundationRegistry=foundation,preparationRegistry=curriculum,
- canonicalConceptIds=null,catalogVersion=null
+ canonicalIdentityDigests=null,catalogVersion=null
 }={}){
  const base=validateDualExamSyllabusFoundation(foundationRegistry,preparationRegistry);
  if(!shape(input,['schemaVersion','ledgerVersion','foundationVersion','status','scope','competencyProposals'])||
@@ -27,12 +27,12 @@ export function validateCompetencyEvidenceProposals(input,{
  const registeredSources=new Set(base.sources.map(s=>s.sourceId));
  const registeredPaths=new Set(preparationRegistry.pathways.filter(p=>p.status==='active')
   .map(p=>p.pathwayVersionId));
- const known=canonicalConceptIds==null?null:new Set(canonicalConceptIds);
+ const known=canonicalIdentityDigests==null?null:canonicalIdentityDigests;
  const keys=[];
  for(const row of input.competencyProposals){
   if(!shape(row,['sourceId','sourceVersion','sourceLocator','documentPage','competencyCode',
      'subjectId','moduleId','analystSummary','sourceRights','sourceVerification',
-     'canonicalConceptId','authoredCatalogVersion','examHypotheses']))fail();
+     'canonicalConceptId','canonicalIdentityDigest','authoredCatalogVersion','examHypotheses']))fail();
   if(!registeredSources.has(row.sourceId)||row.sourceId!=='nmc-cbme-2024'||
      row.sourceVersion!=='2024-09-12'||!text(row.sourceLocator,12,500)||
      !Number.isSafeInteger(row.documentPage)||row.documentPage<1||row.documentPage>10000||
@@ -42,8 +42,10 @@ export function validateCompetencyEvidenceProposals(input,{
      row.sourceRights!=='unreviewed'||row.sourceVerification!=='unverified'||
      !Array.isArray(row.examHypotheses)||row.examHypotheses.length>2)fail();
   if(row.canonicalConceptId===null){
-   if(row.authoredCatalogVersion!==null)fail();
-  }else if(!id(row.canonicalConceptId)||!known||!known.has(row.canonicalConceptId)||
+   if(row.authoredCatalogVersion!==null||row.canonicalIdentityDigest!==null)fail();
+  }else if(!id(row.canonicalConceptId)||!sha(row.canonicalIdentityDigest)||
+      !known||typeof known!=='object'||Array.isArray(known)||
+      known[row.canonicalConceptId]!==row.canonicalIdentityDigest||
       !Number.isSafeInteger(catalogVersion)||catalogVersion<0||
       row.authoredCatalogVersion!==catalogVersion)fail();
   const exams=[];

@@ -12,7 +12,7 @@ const example=()=>({
  moduleId:foundation.subjects.find(s=>s.subjectId==='medicine').domains[0].domainId,
  analystSummary:'Synthetic demonstration of identifying a competency code; not a medical fact.',
  sourceRights:'unreviewed',sourceVerification:'unverified',
- canonicalConceptId:null,authoredCatalogVersion:null,
+ canonicalConceptId:null,canonicalIdentityDigest:null,authoredCatalogVersion:null,
  examHypotheses:[
   {pathwayVersionId:'neet-pg:preparation@1',basis:'editorial-hypothesis',status:'unverified',
    rationale:'Synthetic unverified proposal for testing only.'},
@@ -50,7 +50,8 @@ test('rejects fabricated source approval, copied fields, duplicate codes and unk
   r=>r.examHypotheses[0].rationale='no',
   r=>r.examHypotheses[1].pathwayVersionId='neet-pg:preparation@1',
   r=>r.authoredCatalogVersion=446,
-  r=>r.canonicalConceptId='invented-identity'
+  r=>r.canonicalConceptId='invented-identity',
+  r=>r.canonicalIdentityDigest='a'.repeat(64)
  ];
  for(const mutate of mutations){
   const d=clone(),row=example();mutate(row);d.competencyProposals.push(row);
@@ -61,13 +62,16 @@ test('rejects fabricated source approval, copied fields, duplicate codes and unk
 });
 test('a proposed canonical binding requires an exact current, externally supplied identity snapshot',()=>{
  const d=clone(),row=example();
- row.canonicalConceptId='concept-real';row.authoredCatalogVersion=446;
+ row.canonicalConceptId='concept-real';row.canonicalIdentityDigest='c'.repeat(64);row.authoredCatalogVersion=446;
  d.competencyProposals=[row];
- for(const opts of [{}, {canonicalConceptIds:['concept-real'],catalogVersion:447},
-  {canonicalConceptIds:['different'],catalogVersion:446}])
+ for(const opts of [{}, {canonicalIdentityDigests:{'concept-real':'c'.repeat(64)},catalogVersion:447},
+  {canonicalIdentityDigests:{different:'c'.repeat(64)},catalogVersion:446}])
   assert.throws(()=>validateCompetencyEvidenceProposals(d,opts),/competency_evidence_invalid/);
+ assert.throws(()=>validateCompetencyEvidenceProposals(d,{
+  canonicalIdentityDigests:{'concept-real':'d'.repeat(64)},catalogVersion:446
+ }),/competency_evidence_invalid/);
  assert.equal(validateCompetencyEvidenceProposals(d,{
-  canonicalConceptIds:['concept-real'],catalogVersion:446
+  canonicalIdentityDigests:{'concept-real':'c'.repeat(64)},catalogVersion:446
  }).competencyProposals[0].canonicalConceptId,'concept-real');
 });
 test('source JSON contains no clinical prose, personal learner data or learner-release permissions',()=>{
