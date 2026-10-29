@@ -2,6 +2,21 @@ import {validateScopeReviewerGrant} from '../../../../src/domain/syllabus-indepe
 const fail=(status,code)=>{throw Object.assign(new Error(code),{status,code});};
 export async function saveSyllabusScopeReviewerGrant({admin,actor,input}){
  let payload;try{payload=validateScopeReviewerGrant(input);}catch{fail(400,'syllabus_scope_grant_invalid');}
+ // Production service_role cannot SELECT auth.users. Verify an actual existing
+ // Supabase Auth identity using the server-only Admin API, not an SQL grant.
+ // Revocation must still work even if the reviewer account was deleted.
+ if(payload.action==='grant'){
+  let identity;
+  try{identity=await admin.auth.admin.getUserById(payload.reviewerUserId);}
+  catch{fail(503,'syllabus_scope_reviewer_lookup_unavailable');}
+  if(identity?.error){
+   if(identity.error.status===404||identity.error.code==='user_not_found')
+    fail(400,'syllabus_scope_reviewer_unknown');
+   fail(503,'syllabus_scope_reviewer_lookup_unavailable');
+  }
+  if(identity?.data?.user?.id!==payload.reviewerUserId)
+   fail(400,'syllabus_scope_reviewer_unknown');
+ }
  const {data,error}=await admin.rpc('syllabus_scope_reviewer_grant_v1',{p_actor:actor,p_input:payload});
  if(error){
   const codes=['content_admin_required','syllabus_baseline_not_found','syllabus_scope_self_review_blocked',

@@ -21,7 +21,7 @@ try{
  create table content_concept_acceptances(concept_id text primary key,accepted_identity_digest text not null,
    accepted_document jsonb not null);
  create function concept_draft_immutable_v1() returns trigger language plpgsql as $$begin raise exception 'immutable'; end;$$;
- grant usage on schema public,extensions,auth to service_role;grant select on auth.users to service_role;
+ grant usage on schema public,extensions to service_role;
  grant usage on schema public,extensions to anon,authenticated;
  grant select on public.study_catalog,public.content_admin_account,public.content_concept_acceptances to service_role;`);
  await db.query('insert into content_admin_account values($1)',[actor]);
@@ -31,7 +31,7 @@ try{
   [privateId,privateDigest,{conceptId:privateId,label:'Admin-only accepted synthetic',aliases:[],classification:{subjects:['medicine']}}]);
  await db.exec(await readFile(new URL('../supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql',import.meta.url),'utf8'));
- await db.exec(await readFile(new URL('../supabase/migrations/20261029012000_syllabus_independent_scope_review.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/20261030020000_syllabus_independent_scope_review.sql',import.meta.url),'utf8'));
  const grant=async(value,user=actor)=>(await db.query('select public.syllabus_scope_reviewer_grant_v1($1,$2) receipt',[user,value])).rows[0].receipt;
  const target=async(baseline,revision,user=reviewer)=>(await db.query('select public.syllabus_scope_review_inspect_v1($1,$2,$3) receipt',[user,baseline,revision])).rows[0].receipt;
  const decide=async(value,user=reviewer,reg=registry)=>(await db.query('select public.syllabus_scope_review_decide_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
@@ -40,6 +40,8 @@ try{
  const save=async(value,user=actor,reg=registry)=>(await db.query('select public.syllabus_baseline_draft_save_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
  const inspect=async(id=null,revision=null,user=actor)=>(await db.query('select public.syllabus_baseline_draft_inspect_v1($1,$2,$3,0) packet',[user,id,revision])).rows[0].packet;
  await db.exec('set role service_role');
+ await assert.rejects(db.query('select id from auth.users'),/permission denied/,
+  'Regression: production service_role cannot SELECT auth.users');
  assert.equal((await inspect()).total,0);
  await assert.rejects(save(fresh(),other),/content_admin_required/);
  await assert.rejects(save({...fresh(),status:'approved'}),/syllabus_baseline_invalid/);
@@ -125,8 +127,8 @@ try{
  await assert.rejects(grant({...grantInput,reviewerUserId:actor}),/syllabus_scope_grant_invalid/);
  await assert.rejects(grant(grantInput,other),/content_admin_required/);
  await assert.rejects(target(first.baselineId,2),/syllabus_scope_reviewer_not_authorized/);
- await assert.rejects(grant({...grantInput,reviewerUserId:'55555555-5555-4555-8555-555555555555',
- requestId:crypto.randomUUID()}),/syllabus_scope_reviewer_unknown/);
+ // Unknown Auth users are rejected by the server-only Owner API Auth Admin lookup.
+ // This service-role SQL fixture must NOT acquire direct Auth users SELECT.
  const grantReceipt=await grant(grantInput);assert.equal(grantReceipt.action,'grant');
  assert.deepEqual(await grant(grantInput),grantReceipt);
  await assert.rejects(grant({...grantInput,reason:'Different evidence under same request'}),/syllabus_scope_grant_request_conflict/);

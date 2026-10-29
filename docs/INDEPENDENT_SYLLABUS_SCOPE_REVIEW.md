@@ -22,7 +22,13 @@ The repository includes domain input validation, API actor/permission tests and 
 
 Before approval, review SQL and API code independently, especially role scoping, Auth membership, cross-account access denial, concurrent grant/revocation and request retries. Real hosted session tests and backup/restore rehearsal must be completed after parent migration deploys. The Admin grant and reviewer decision APIs are the backend foundation; a small, protected grant/reviewer UI, evidence upload/verifiable hash and institutional reviewer governance remain later increments. Granting a different user ID alone cannot prove institutional independence or professional competence.
 
-**No migration was run in production and no actual reviewer grant or scope decision was recorded.** Clinical rights issue #326 is unaffected.
+**No migration was run in production and no actual reviewer grant or scope decision was recorded.**
+
+## Production Auth permission compatibility repair (30 October 2026)
+
+A read-only live permission probe confirmed `service_role` does **not** have `SELECT` privilege on `auth.users`. An earlier disposable SQL fixture incorrectly granted that privilege and hid a guaranteed production failure in grant validation. The corrected Owner API checks reviewer existence server-side with `admin.auth.admin.getUserById()` before new grant requests, fails closed if Auth is unavailable, and allows revocation even if the reviewer account has been deleted. The service-role SQL grant RPC no longer queries Auth tables. The synthetic PostgreSQL fixture explicitly denies direct Auth table reads, and the API tests cover an existing user, unknown user, mismatched user ID, Auth outage, and revocation. This check proves account existence, **not** professional independence or consent; reviewers must still be separately authorized by the owner before any real grant.
+
+The integration migration file is ordered **after** the applied production preflight migration: `20261030020000_syllabus_independent_scope_review.sql` (the earlier `20261029012000` filename was stacked before the actual release). No applied migration has been renamed or rewritten. Clinical rights issue #326 is unaffected.
 
 ## Reviewer-scoped private identity repair — 29 October 2026
 

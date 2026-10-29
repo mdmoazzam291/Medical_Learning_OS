@@ -9,10 +9,10 @@ const decision=()=>({requestId:owner,baselineId:bid,revision:2,digest:'a'.repeat
  note:'This synthetic proposed syllabus scope requires correction.',
  attestationVersion:'independent-syllabus-scope-review-v1'});
 test('owner grants are actor-bound, authenticated and cannot override scope or review outcome',async()=>{
- let args;const r=await saveSyllabusScopeReviewerGrant({actor:owner,input:grant(),admin:{async rpc(name,input){args={name,input};return{data:{contractId:'syllabus-scope-grant-event-v1',baselineId:bid,
+ let args,authLookups=0;const r=await saveSyllabusScopeReviewerGrant({actor:owner,input:grant(),admin:{auth:{admin:{async getUserById(id){authLookups++;assert.equal(id,reviewer);return{data:{user:{id}},error:null};}}},async rpc(name,input){args={name,input};return{data:{contractId:'syllabus-scope-grant-event-v1',baselineId:bid,
  reviewerUserId:reviewer,action:'grant',learnerRelease:false},error:null};}}});
  assert.equal(args.name,'syllabus_scope_reviewer_grant_v1');assert.equal(args.input.p_actor,owner);
- assert.equal(r.learnerRelease,false);
+ assert.equal(r.learnerRelease,false);assert.equal(authLookups,1);
  await assert.rejects(saveSyllabusScopeReviewerGrant({actor:owner,input:{...grant(),isAdmin:true},
  admin:{async rpc(){throw Error('called');}}}),e=>e.status===400);
 });
@@ -65,4 +65,29 @@ test('scoped reviewer packets reject private identity substitutions and missing 
   {...basic,privateIdentities:[{...basic.privateIdentities[0],identity:{...basic.privateIdentities[0].identity,conceptId:'C-other'}}]},
   {...basic,privateIdentities:[basic.privateIdentities[0],basic.privateIdentities[0]]}
  ])await assert.rejects(call(bad),e=>e.status===503);
+});
+
+test('reviewer grant checks trusted Supabase Auth Admin identity, not auth.users SQL privileges',async()=>{
+ let databaseWrites=0;
+ const makeAdmin=lookup=>({auth:{admin:{getUserById:lookup}},
+  async rpc(){databaseWrites++;return{data:{contractId:'syllabus-scope-grant-event-v1',
+   baselineId:bid,reviewerUserId:reviewer,action:'grant',learnerRelease:false},error:null};}});
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:null,error:{status:404,code:'user_not_found'}}))}),
+  e=>e.status===400&&e.code==='syllabus_scope_reviewer_unknown');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:null,error:{status:503}}))}),
+  e=>e.status===503&&e.code==='syllabus_scope_reviewer_lookup_unavailable');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:makeAdmin(async()=>({data:{user:{id:owner}},error:null}))}),
+  e=>e.status===400&&e.code==='syllabus_scope_reviewer_unknown');
+ await assert.rejects(saveSyllabusScopeReviewerGrant({
+  actor:owner,input:grant(),admin:{rpc:async()=>{databaseWrites++;throw Error('should not run');}}}),
+  e=>e.status===503&&e.code==='syllabus_scope_reviewer_lookup_unavailable');
+ assert.equal(databaseWrites,0,'No SQL grant may be recorded without verified Auth identity');
+ // Revocation remains possible after the Auth user has been removed.
+ const revoke=await saveSyllabusScopeReviewerGrant({actor:owner,input:{...grant(),action:'revoke'},
+  admin:{async rpc(){return{data:{contractId:'syllabus-scope-grant-event-v1',
+   baselineId:bid,reviewerUserId:reviewer,action:'revoke',learnerRelease:false},error:null};}}});
+ assert.equal(revoke.action,'revoke');
 });

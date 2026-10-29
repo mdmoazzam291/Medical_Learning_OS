@@ -80,7 +80,7 @@ begin
    where baseline_id=v_baseline order by revision asc limit 1;
   if not found then raise exception 'syllabus_baseline_not_found';end if;
   if v_author=v_reviewer then raise exception 'syllabus_scope_self_review_blocked';end if;
-  if not exists(select 1 from auth.users where id=v_reviewer) then raise exception 'syllabus_scope_reviewer_unknown';end if;
+  -- Supabase Auth user existence is checked by the trusted Owner API with\n  -- auth.admin.getUserById before this service-only RPC. Do not grant\n  -- service_role direct SELECT on auth.users (not available in production).
   select action into v_latest from public.content_syllabus_reviewer_grant_events
    where baseline_id=v_baseline and reviewer_id=v_reviewer order by event_id desc limit 1;
   if v_action='grant' and v_latest='grant' or v_action='revoke' and v_latest is distinct from 'grant'

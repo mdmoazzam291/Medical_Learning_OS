@@ -6,7 +6,7 @@ on:
       - '.github/workflows/supabase-r2-restore-drill.yml'
       - 'supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql'
       - 'supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql'
-      - 'supabase/migrations/20261029012000_syllabus_independent_scope_review.sql'
+      - 'supabase/migrations/20261030020000_syllabus_independent_scope_review.sql'
       - 'ops/r2-backups/verify_restore.py'
       - 'ops/r2-backups/test_verify_restore.py'
       - '.github/workflows/supabase-r2-backup.yml'
