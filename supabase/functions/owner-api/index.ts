@@ -241,9 +241,9 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    if (req.method === "GET" && path === "/content-selections") {
+    if (req.method === "GET" && ["/content-selections","/content-selections/revalidate"].includes(path)) {
       if ([...url.searchParams.keys()].length !== 1 || !url.searchParams.has("id")) fail(400,"query_not_supported");
-      try { return response(req,200,await contentSelectionRequest({admin,actor:authData.user.id,action:"read",input:{selectionId:url.searchParams.get("id")}})); }
+      try { return response(req,200,await contentSelectionRequest({admin,actor:authData.user.id,action:path.endsWith("/revalidate")?"revalidate":"read",input:{selectionId:url.searchParams.get("id")}})); }
       catch (error) { const problem=error as {status?:number;code?:string}; fail(problem.status||503,problem.code||"content_selection_unavailable"); }
     }
 

@@ -19,3 +19,12 @@ test('saved receipt can be reopened but readback mismatch cannot claim success',
  const read=await contentSelectionRequest({admin:{async rpc(){return {data:receipt};}},actor,action:'read',input:{selectionId:id}});assert.equal(read.selectionId,id);
  let calls=0;await assert.rejects(contentSelectionRequest({admin:{async rpc(){calls++;return {data:calls===1?receipt:{...receipt,digest:'b'.repeat(64)}};}},actor,action:'save',input:{items:[{kind:'question',versionId:'q@1'}],requestId:id,expectedDigest:preview.digest,expectedCatalogVersion:446}}),e=>e.status===503);
 });
+test('read-only revalidation detects current, stale and blocked evidence; provider failure is not clearance',async()=>{
+ const receipt={...preview,contractId:'frozen-content-selection-v1',selectionId:id,requestId:id,createdAt:preview.observedAt};
+ for(const mode of ['current','stale','blocked','outage']){
+  const calls=[];const admin={async rpc(name){calls.push(name);if(name.includes('_read_'))return {data:receipt};return mode==='blocked'?{error:{message:'content_selection_item_blocked'}}:mode==='outage'?{error:{message:'PRIVATE'}}:{data:mode==='stale'?{...preview,catalogVersion:447,digest:'b'.repeat(64)}:preview};}};
+  const request=contentSelectionRequest({admin,actor,action:'revalidate',input:{selectionId:id}});
+  if(mode==='outage')await assert.rejects(request,e=>e.status===503);else assert.equal((await request).state,mode);
+  assert.deepEqual(calls,['owner_content_selection_read_v1','owner_content_selection_preview_v1']);
+ }
+});
