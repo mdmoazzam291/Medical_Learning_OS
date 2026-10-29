@@ -1,73 +1,15 @@
 // Editorial navigation scaffold, not a licensed syllabus extract or approved exam scope.
 // These shared domain headings are organizational seeds, NOT NMC competency IDs,
 // source-verified topic requirements, canonical medical concepts, or exam priorities.
-const rows=[
- ['anatomy','Anatomy','preclinical',[
-  ['gross','Gross and regional anatomy'],['neuro','Neuroanatomy'],['embryology','Embryology'],
-  ['histology','Histology'],['clinical','Applied and imaging anatomy']]],
- ['physiology','Physiology','preclinical',[
-  ['cellular','Cellular and general physiology'],['blood','Blood and body fluids'],['cardiorespiratory','Cardiovascular and respiratory physiology'],
-  ['renal','Renal physiology'],['gastrointestinal','Gastrointestinal physiology'],['neuro','Neurophysiology'],
-  ['endocrine','Endocrine and reproductive physiology']]],
- ['biochemistry','Biochemistry','preclinical',[
-  ['metabolism','Metabolism and energetics'],['enzymes','Enzymes and regulation'],['molecular','Molecular biology and genetics'],
-  ['nutrition','Nutrition and vitamins'],['clinical','Clinical biochemistry']]],
- ['pathology','Pathology','paraclinical',[
-  ['general','General pathology'],['systemic','Systemic pathology'],['hematology','Hematopathology'],
-  ['neoplasia','Neoplasia'],['laboratory','Laboratory and molecular pathology']]],
- ['pharmacology','Pharmacology','paraclinical',[
-  ['general','General pharmacology'],['autonomic','Autonomic pharmacology'],['systems','Systemic pharmacology'],
-  ['antimicrobials','Antimicrobials and chemotherapy'],['adverse','Adverse effects and toxicology']]],
- ['microbiology','Microbiology','paraclinical',[
-  ['general','General microbiology and immunity'],['bacteriology','Bacteriology'],['virology','Virology'],
-  ['mycology','Mycology'],['parasitology','Parasitology'],['infection-control','Infection prevention and diagnostic microbiology']]],
- ['forensic','Forensic Medicine and Toxicology','paraclinical',[
-  ['medicolegal','Medical jurisprudence and documentation'],['injury','Forensic injury and death investigation'],
-  ['toxicology','Toxicology'],['ethics','Ethics and professional responsibilities']]],
- ['community','Community Medicine','paraclinical',[
-  ['epidemiology','Epidemiology'],['biostatistics','Biostatistics and research methods'],['prevention','Prevention and screening'],
-  ['public-programmes','Public health programmes'],['environment','Environmental and occupational health'],
-  ['health-systems','Health systems and population health']]],
- ['medicine','General Medicine','clinical',[
-  ['cardiology','Cardiology'],['respiratory','Respiratory medicine'],['neurology','Neurology'],
-  ['gastroenterology','Gastroenterology and hepatology'],['nephrology','Nephrology'],['endocrine','Endocrinology'],
-  ['infectious','Infectious diseases'],['hematology','Hematology'],['rheumatology','Rheumatology'],
-  ['emergency','Acute and emergency medicine']]],
- ['surgery','General Surgery','clinical',[
-  ['principles','General and perioperative surgery'],['abdomen','Abdominal and gastrointestinal surgery'],
-  ['trauma','Trauma and surgical emergencies'],['urology','Urology'],['endocrine','Endocrine and breast surgery'],
-  ['vascular','Vascular surgery']]],
- ['obgyn','Obstetrics and Gynaecology','clinical',[
-  ['antenatal','Antenatal and maternal care'],['intrapartum','Intrapartum care'],['postpartum','Postpartum care'],
-  ['gynecology','Gynaecological conditions'],['reproduction','Reproductive health and contraception']]],
- ['pediatrics','Paediatrics','clinical',[
-  ['growth','Growth and development'],['neonatology','Neonatology'],['nutrition','Paediatric nutrition and prevention'],
-  ['general','Paediatric medical conditions'],['emergencies','Paediatric emergencies']]],
- ['ent','Otorhinolaryngology','clinical',[
-  ['ear','Ear and hearing'],['nose','Nose and paranasal sinuses'],['throat','Throat and larynx'],
-  ['head-neck','Head and neck disorders']]],
- ['ophthalmology','Ophthalmology','clinical',[
-  ['optics','Ocular anatomy and optics'],['anterior','Anterior segment and lens'],['retina','Retina and vitreous'],
-  ['glaucoma','Glaucoma'],['neuro','Neuro-ophthalmology and ocular emergencies']]],
- ['orthopedics','Orthopaedics','clinical',[
-  ['trauma','Fractures and trauma'],['joints','Joint disorders'],['spine','Spine disorders'],
-  ['pediatric','Paediatric orthopaedics'],['bone','Bone diseases and tumours']]],
- ['dermatology','Dermatology and Venereology','clinical',[
-  ['inflammatory','Inflammatory dermatoses'],['infection','Skin infections and infestations'],
-  ['systemic','Skin manifestations of systemic disease'],['venereology','Sexually transmitted infections']]],
- ['psychiatry','Psychiatry','clinical',[
-  ['assessment','Psychiatric assessment'],['mood','Mood disorders'],['psychotic','Psychotic disorders'],
-  ['anxiety','Anxiety and related disorders'],['substance','Substance use disorders'],
-  ['sleep','Sleep and behavioural disorders']]],
- ['anesthesia','Anaesthesiology','clinical',[
-  ['airway','Airway and ventilation'],['agents','Anaesthetic drugs'],['monitoring','Perioperative monitoring'],
-  ['critical','Resuscitation and critical care'],['pain','Pain management']]],
- ['radiology','Radiodiagnosis','clinical',[
-  ['principles','Imaging principles and safety'],['chest','Thoracic imaging'],['abdomen','Abdominal imaging'],
-  ['neuro','Neuroimaging'],['musculoskeletal','Musculoskeletal imaging']]]
-];
-const subjects=rows.map(([subjectId,label,phase,domains])=>({
- subjectId,label,phase,domains:domains.map(([key,name])=>({domainId:subjectId+':'+key,label:name}))
+import {SUBJECT_INDEX} from '../src/domain/subject-index.js';
+// Derive ALL subject/module identifiers from the single owner-approved navigation
+// blueprint. No alternate 19-subject tree, module names or concept ontology.
+const preclinical=new Set(['anatomy','physiology','biochemistry']);
+const paraclinical=new Set(['pathology','pharmacology','microbiology','forensic-medicine','community-medicine']);
+const subjects=SUBJECT_INDEX.map(s=>({
+ subjectId:s.id,label:s.label,
+ phase:preclinical.has(s.id)?'preclinical':paraclinical.has(s.id)?'paraclinical':'clinical',
+ domains:s.modules.map(m=>({domainId:s.id+':'+m.id,label:m.label}))
 }));
 const ids=subjects.map(s=>s.subjectId);
 export default {

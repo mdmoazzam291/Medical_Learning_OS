@@ -3,6 +3,7 @@
 // learner recommendation through this module.
 import curriculum from '../../data/preparation-curriculum.js';
 import foundation from '../../data/dual-exam-syllabus-foundation.js';
+import {SUBJECT_INDEX} from './subject-index.js';
 const deny=()=>{throw new TypeError('dual_exam_syllabus_foundation_invalid');};
 const unique=xs=>new Set(xs).size===xs.length;
 const shape=(x,keys)=>x&&typeof x==='object'&&!Array.isArray(x)&&
@@ -34,6 +35,19 @@ export function validateDualExamSyllabusFoundation(input,registry=curriculum){
   }
  }
  if(!unique(domainIds))deny();
+ // The owner-approved subject/module index is the only canonical navigation
+ // taxonomy. Any duplicate or drifted parallel syllabus tree fails closed.
+ if(input.subjects.length!==SUBJECT_INDEX.length)deny();
+ for(let i=0;i<SUBJECT_INDEX.length;i++){
+  const subject=input.subjects[i],canonical=SUBJECT_INDEX[i];
+  if(subject.subjectId!==canonical.id||subject.label!==canonical.label||
+     subject.domains.length!==canonical.modules.length)deny();
+  for(let j=0;j<canonical.modules.length;j++){
+   const module=canonical.modules[j],domain=subject.domains[j];
+   if(domain.domainId!==canonical.id+':'+module.id||domain.label!==module.label)deny();
+  }
+ }
+
  const sourceIds=input.sources.map(s=>s.sourceId);
  if(!unique(sourceIds)||!input.sources.length)deny();
  for(const source of input.sources)if(!shape(source,['sourceId','issuer','sourceVersion','sourceRole','url'])||

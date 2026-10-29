@@ -6,7 +6,7 @@
 
 One **Medical Knowledge Graph**, one shared MBBS subject/domain navigation scaffold, and **two exam-specific scope overlays** using the existing pathway IDs `neet-pg:preparation@1` and `ini-cet:preparation@1`. Do not duplicate notes, concepts, mastery state, or spaced-repetition schedules across exams. Reuse the existing private Admin Syllabus Checklist for source-backed, versioned candidate membership. Do not add another authoritative syllabus writer.
 
-The static `data/dual-exam-syllabus-foundation.js` records 19 familiar **editorial subject buckets** and coarse navigational domains, not a complete official exam syllabus or verbatim CBME competence list. They are navigation candidates, not canonical concept IDs. The 2024 NMC CBME guideline is an undergraduate competency reference (implemented for MBBS batch 2024-25 onward); it does **not** individually certify NEET-PG 2027 or INI-CET 2027 topic inclusion or weightage.
+The static `data/dual-exam-syllabus-foundation.js` records 19 owner-approved **editorial subject buckets** and 76 existing navigation modules (derived, not copied), not a complete official exam syllabus or verbatim CBME competence list. They are navigation candidates, not canonical concept IDs. The 2024 NMC CBME guideline is an undergraduate competency reference (implemented for MBBS batch 2024-25 onward); it does **not** individually certify NEET-PG 2027 or INI-CET 2027 topic inclusion or weightage.
 
 ## External sources, claims and limitations
 
@@ -19,7 +19,7 @@ Always use provenance on each real proposed concept or objective: **authority â†
 
 ## Repository artifacts
 
-- `data/dual-exam-syllabus-foundation.js`: single shared editorial subject+domain scaffold; 2 separately sourced pathway overlays; empty concept/objective/mapping bindings by design.
+- `data/dual-exam-syllabus-foundation.js`: single shared subject+module projection derived directly from `src/domain/subject-index.js`; 2 separately sourced pathway overlays; empty concept/objective/mapping bindings by design.
 - `src/domain/dual-exam-syllabus-foundation.js`: fail-closed schema and pathway validations, no automatic activation or coverage fraction.
 - `web/syllabus-baseline-editor.js`: **Admin-only read-only summary** in the existing Coverage Index â†’ Proposed syllabus checklist. Existing authoring and immutable revision workflow remain unchanged.
 - `tests/dual-exam-syllabus-foundation.test.js`: subject/domain uniqueness, exam pathway binding, no fake approvals, no target leakage to Study Now or learner content.

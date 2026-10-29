@@ -2,13 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import foundation from '../data/dual-exam-syllabus-foundation.js';
 import curriculum from '../data/preparation-curriculum.js';
+import {SUBJECT_INDEX} from '../src/domain/subject-index.js';
 import {validateDualExamSyllabusFoundation,dualExamSyllabusOverview} from '../src/domain/dual-exam-syllabus-foundation.js';
 import {syllabusBaselineForm} from '../web/syllabus-baseline-editor.js';
 const clone=()=>structuredClone(foundation);
 test('both exam overlays reuse exactly one unique subject and domain scaffold',()=>{
  const d=validateDualExamSyllabusFoundation(clone(),curriculum),o=dualExamSyllabusOverview(d,curriculum);
  assert.equal(o.sharedSubjects.length,19);
- assert.ok(o.domainCount>80,'Broad editorial domains should be visible, not fabricated competencies');
+ assert.equal(o.domainCount,76,'Reuse the owner-approved module index, do not invent a second domain taxonomy');
+ assert.deepEqual(d.subjects.map(s=>s.subjectId),SUBJECT_INDEX.map(s=>s.id));
+ assert.deepEqual(d.subjects.flatMap(s=>s.domains.map(v=>v.domainId)),
+   SUBJECT_INDEX.flatMap(s=>s.modules.map(m=>s.id+':'+m.id)));
+
  assert.deepEqual(o.scopes.map(x=>x.examId),['neet-pg','ini-cet']);
  assert.deepEqual(d.scopes.map(x=>x.pathwayVersionId),curriculum.pathways.map(x=>x.pathwayVersionId));
  assert.ok(d.scopes.every(s=>s.subjectIds.length===19));
@@ -30,6 +35,7 @@ test('invalid scope, duplicate domains, fake approvals and poisoned source are r
  for(const mutation of [
    f=>{f.scopes[0].scopeApproved=true;},
    f=>{f.scopes[0].learnerRelease=true;},
+   f=>{f.subjects[0].domains[0].label='Unreviewed duplicate heading';},
    f=>{f.scopes[0].status='approved';},
    f=>{f.scopes[1].officialTopicListCertified=true;},
    f=>{f.scopes[0].subjectIds.pop();},
