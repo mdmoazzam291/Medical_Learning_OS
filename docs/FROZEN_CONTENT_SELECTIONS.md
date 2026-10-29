@@ -15,3 +15,11 @@ Migration20261029095728_frozen_content_selections.sql was generated with the exi
 ## Verification
 
 Focused domain/API/view and isolated SQL tests run before saving the source. SQL crypto/fingerprint routines are explicit fixture stubs, not independent cryptographic or production fingerprint acceptance. Existing gate suites remain authoritative for those functions. Synthetic Chromium/nativeWebKit scenarios exercise cross-page selection, preview, uncertain-save retry with stable request, reload/retrieval and stale-save recovery. Read actual PR/CI status before claiming browser completion. No real account provisioning, clinical attestation, migration, deployment, merge or learner publication performed.
+
+## Recheck saved evidence
+
+The read-only GET /content-selections/revalidate?id=UUID loads the actor-bound immutable receipt, asks the existing preview RPC to re-evaluate only those exact versions, and compares catalog version, canonical/version identities, review fingerprints and binding digest. It returns current-at-observation, stale with reasons, or blocked by current evidence. Unexpected/provider/malformed/authorization failures remain errors, never clearance. No receipt, review row, catalog or learner data is changed. No new migration is needed.
+
+Admin uses Recheck saved evidence on a saved or reopened receipt. Any older positive result is removed while a new check is pending, after failure, and when the selection changes or unmounts. A current observation is explicitly not release authorization; external governance holds and publication330 remain separate. Rechecking does not make a saved receipt mutable or generate new human approval. There is no automatic background recheck or launch trigger.
+
+Local domain/API/view and full1,526Node/check/build passed for the revalidation increment. The separate readonly AI review found no confirmed Important/Critical defect and independently passed the10focused cases. Responsive current/stale/blocked/outage scenarios were added to the existing Chromium/nativeWebKit selection journey. The local SQL fixture rerun could not launch because its temporary PGlite dependency was no longer present; no SQL or schema was changed in this increment. Hosted SQL/browser checks remain CI evidence, not assumed passes. Actual hosted Auth, concurrency and production release remain unverified.

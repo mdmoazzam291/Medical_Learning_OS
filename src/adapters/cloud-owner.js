@@ -51,6 +51,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     previewContentSelection(items) { return request('/content-selections/preview', {method:'POST',body:{items}}); },
     freezeContentSelection(input) { return request('/content-selections/save', {method:'POST',body:input}); },
     readContentSelection(id) { return request('/content-selections?id='+encodeURIComponent(id)); },
+    revalidateContentSelection(id) { return request('/content-selections/revalidate?id='+encodeURIComponent(id)); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {
