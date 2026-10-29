@@ -32,6 +32,10 @@ jobs:
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/content-coverage-db-check.js
       - name: Self-test non-writing hosted concept-draft access harness
         run: node scripts/live-concept-drafts-http-check.mjs --self-test
+      - name: Verify non-writing syllabus draft negative and CORS access on deployed API
+        run: |
+          node tests/hosted-syllabus-baseline-negative.mjs --self-test
+          node tests/hosted-syllabus-baseline-negative.mjs --hosted
       - name: Verify immutable concept draft persistence
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-drafts-db-check.js
       - name: Verify immutable private syllabus checklist proposals
