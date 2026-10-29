@@ -25,8 +25,8 @@ export function syllabusBaselineForm(s={}){
  '<label>Source edition or version<input name="sourceVersion" maxlength="240" required value="'+e(d.sourceVersion)+'"></label>'+
  '<label>Declared checklist scope<select name="scopeDeclaration">'+
  option('partial','Partial proposed scope',d.scopeDeclaration)+option('complete-proposed','Proposed complete (not verified)',d.scopeDeclaration)+'</select></label>'+
- '<label>Existing canonical concept IDs (one per line)<textarea name="conceptIds" rows="5" spellcheck="false">'+e(d.conceptIds.join('\n'))+'</textarea></label>'+
- '<p class="muted">Use exact canonical concept IDs from the Coverage Index. Unaccepted concept proposals and unknown IDs cannot enter checklist membership. Empty is allowed as a draft, not a denominator.</p>'+
+ '<label>Canonical or Admin-private accepted concept IDs (one per line)<textarea name="conceptIds" rows="5" spellcheck="false">'+e(d.conceptIds.join('\n'))+'</textarea></label>'+
+ '<p class="muted">Use published canonical IDs or immutable Admin-accepted private IDs. Draft-only/unaccepted IDs are rejected. A private identity remains invisible to learners and cannot establish an approved syllabus denominator.</p>'+
  '<label>Reason for proposal or revision<textarea name="changeReason" maxlength="2000" required rows="2">'+e(d.changeReason)+'</textarea></label></fieldset>'+
  '<button type="submit"'+(s.pending?' formnovalidate':'')+(disabled||readonly?' disabled':'')+'>'+
  (s.pending?'Retry pending draft save':'Save checklist draft')+'</button></form>'+
