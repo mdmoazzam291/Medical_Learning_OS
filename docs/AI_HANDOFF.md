@@ -1,3 +1,8 @@
+## Exact candidate origin authorized — 29 October 2026 IST
+- Owner explicitly approved only https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev for Owner API acceptance. Added this exact origin, no wildcard; Auth/runtime/singleton Admin checks unchanged. Direct preview works without Cloudflare dashboard sign-in; before change its OPTIONS returned403 origin_not_allowed.
+- Real-handler origin regression now includes Owner API and verifies exact preview preflight, unrelated/lookalike/HTTP origin rejection and missing/invalid-token401. Twelve focused cases pass. Full test/check and new hosted CI tracked separately; do not infer deployment from source checkpoint.
+- Prior Owner APIv8 complete12-file bundle retained as rollback; candidate differs only in entrypoint origin line. Backend deployment/readback and live preflight pending at this source checkpoint. Current app session learner; candidate session signed out. PR333 remains unmerged; no clinical/learner/canonical writes.
+
 ## Fresh deployed-schema recovery proof — 29 October 2026 IST
 - Backup40893708167/job123517004526 SUCCESS on main13b3c8c; uploaded and size-verified supabase/2026/10/29/20261029T143958Z. Live service-only privilege audit passed before dump.
 - Isolated restore40894417921/job123519531797 SUCCESS on PR333 exact9b87c294; selected that archive/run40893708167, freshness/checksums/source passed, restored exact public access metadata/data/encrypted Vault and cleanup passed. Snapshot job skipped. Restore workflow and verifier byte-unchanged from main; feature branch supplies deployed draft migration to exact-table inventory. No production restore or provider failover.
