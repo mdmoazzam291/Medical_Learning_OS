@@ -3,7 +3,9 @@ import {escapeText as e} from './navigation-view.js';
 import {validateBaselineDraft} from '../src/domain/syllabus-baseline-drafts.js';
 const blank=()=>({label:'',pathwayVersionId:registry.pathways.find(p=>p.status==='active')?.pathwayVersionId||'',
  sourceKind:'historical',sourceLocator:'',sourceVersion:'',scopeDeclaration:'partial',conceptIds:[],changeReason:''});
-const signature=d=>JSON.stringify(d);
+// JSONB may reorder object keys; compare all fields while retaining array order.
+const signature=d=>Array.isArray(d)?'['+d.map(signature).join(',')+']':
+ d&&typeof d==='object'?'{'+Object.keys(d).sort().map(k=>JSON.stringify(k)+':'+signature(d[k])).join(',')+'}':JSON.stringify(d);
 const reviewPacketMarkup=p=>!p?'':(
  '<section class="review-packet" data-syllabus-review-packet aria-label="Syllabus review readiness">'+
  '<h3>Scope and objective review preflight</h3>'+
