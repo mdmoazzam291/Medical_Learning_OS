@@ -372,7 +372,7 @@ function dashboardMarkup(data) {
     </section>
 
     <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
-      <div id="owner-coverage-body"><p>Open Coverage Index to load the current inventory.</p></div><section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section>
+      <div id="owner-coverage-body"><p>Open Coverage Index to load the current inventory.</p></div><section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section><section id="owner-syllabus-baselines" class="concept-editor" aria-label="Syllabus baseline draft editor"></section>
     </section>
 
     <section id="owner-integrity" class="panel" data-admin-panel="integrity" hidden aria-label="Catalog integrity audit">

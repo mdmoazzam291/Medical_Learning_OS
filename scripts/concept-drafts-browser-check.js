@@ -21,6 +21,8 @@ try{
   let failure=0,slow=false,reads=0,failSave=false,failRead=false,conflict=false,denySave=false;const writes=[],requestIds=[],versions=[],receipts=new Map(),acceptRequests=[];let accepted=null;
   const proposal='22222222-2222-4222-8222-222222222222',conceptId='C-33333333-3333-4333-8333-333333333333';
 
+  const syllabusId='44444444-4444-4444-8444-444444444444',syllabusVersions=[],syllabusReceipts=new Map(),syllabusRequests=[];let syllabusFailSave=true;
+
   await context.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
    const req=route.request(),url=new URL(req.url()),path=url.pathname;const reply=(data,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(data)});
    if(req.method()!=='GET')writes.push(path);
@@ -40,6 +42,28 @@ try{
     if(failSave)return reply({error:'synthetic_uncertain_save'},503);return reply(receipts.get(input.requestId));
    }
    if(path.includes('/owner-api/concept-drafts/')){if(failRead)return reply({error:'synthetic_readback_failure'},Number(failRead)||503);const revision=Number(url.searchParams.get('revision')||versions.length);return reply({contractId:'admin-concept-drafts-v1',version:versions[revision-1],isLatest:revision===versions.length,history:versions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse(),historyTruncated:false,acceptance:accepted?{status:'concept_accepted',revision:accepted.revision,identityDigest:accepted.identityDigest,catalogVersionAtAcceptance:446,learnerPublished:false}:null});}
+   if(path.endsWith('/owner-api/syllabus-baseline-drafts')){
+     if(req.method()==='GET')return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft-only',
+       baselines:syllabusVersions.length?[{baselineId:syllabusId,label:syllabusVersions.at(-1).document.label,
+        pathwayVersionId:'neet-pg:preparation@1',revision:syllabusVersions.length,conceptCount:syllabusVersions.at(-1).document.conceptIds.length}]:[],
+       offset:0,nextOffset:null,total:syllabusVersions.length?1:0});
+     const input=req.postDataJSON();syllabusRequests.push(input.requestId);
+     if(!syllabusReceipts.has(input.requestId)){
+       const v={baselineId:syllabusId,revision:syllabusVersions.length+1,
+         digest:String(syllabusVersions.length+1).padStart(64,'b'),catalogVersion:446,
+         registryVersion:'pg-preparation:foundation@1',document:Object.fromEntries(Object.entries(input.document).reverse()),recordedAt:snapshot.asOf};
+       syllabusVersions.push(v);syllabusReceipts.set(input.requestId,{baselineId:syllabusId,revision:v.revision,digest:v.digest,
+        catalogVersion:446,registryVersion:v.registryVersion,status:'draft'});
+     }
+     if(syllabusFailSave)return reply({error:'synthetic_unconfirmed'},503);
+     return reply(syllabusReceipts.get(input.requestId));
+   }
+   if(path.includes('/owner-api/syllabus-baseline-drafts/')){
+     const revision=Number(url.searchParams.get('revision')||syllabusVersions.length);
+     return reply({contractId:'admin-syllabus-baseline-drafts-v1',status:'draft',
+      version:syllabusVersions[revision-1],isLatest:revision===syllabusVersions.length,
+      history:syllabusVersions.map(v=>({revision:v.revision,digest:v.digest,recordedAt:v.recordedAt})).reverse()});
+   }
    if(path.endsWith('/owner-api/content-coverage')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow&&url.searchParams.get('search')==='Alpha')await new Promise(resolve=>setTimeout(resolve,400));return reply(coveragePage(snapshot,parseCoverageFilters(url.searchParams)));}
    if(path.includes('/owner-api/'))return reply({flags:[],alerts:[]});
    return reply({});
@@ -80,8 +104,24 @@ try{
   assert.equal(acceptRequests.length,2);assert.equal(new Set(acceptRequests).size,1);
   assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
   assert.match(await root.textContent(),/This does not approve medical claims, rights, questions or learner release/);
+  // Independent private syllabus draft editor must survive an uncertain write and retry exactly once.
+  const syllabus=page.locator('#owner-syllabus-baselines');
+  await syllabus.getByText('Draft list loaded. No active syllabus baseline.',{exact:true}).waitFor();
+  await syllabus.locator('input[name="label"]').fill('Synthetic proposed partial scope');
+  await syllabus.locator('textarea[name="sourceLocator"]').fill('Synthetic source, chapter 1');
+  await syllabus.locator('input[name="sourceVersion"]').fill('fixture@1');
+  await syllabus.locator('textarea[name="conceptIds"]').fill('existing');
+  await syllabus.locator('textarea[name="changeReason"]').fill('Review synthetic scope identity');
+  await syllabus.getByRole('button',{name:'Save checklist draft',exact:true}).click();
+  await syllabus.locator('[data-syllabus-status]').filter({hasText:'Draft save not confirmed'}).waitFor();
+  assert.equal(syllabusVersions.length,1);
+  syllabusFailSave=false;
+  await syllabus.getByRole('button',{name:'Retry pending draft save',exact:true}).click();
+  await syllabus.locator('[data-syllabus-status]').filter({hasText:'Saved immutable checklist draft revision 1'}).waitFor();
+  assert.equal(new Set(syllabusRequests).size,1,'uncertain syllabus save must reuse request ID');
+  assert.match(await syllabus.textContent(),/No medical review, objective mapping/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
-  assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')));
+  assert.ok(writes.every(x=>x.endsWith('/concept-drafts')||x.endsWith('/concept-draft-accept')||x.endsWith('/syllabus-baseline-drafts')));
   if(process.env.SCREENSHOT_DIR){await mkdir(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'concept-drafts-'+name+'-'+(process.env.BROWSER_ENGINE||'chromium')+'.png'),fullPage:true});}
   console.log('Concept draft browser passed:',name,process.env.BROWSER_ENGINE||'chromium');await context.close();
  }
