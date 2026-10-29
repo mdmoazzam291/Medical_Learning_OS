@@ -22,7 +22,9 @@ try{
  await db.exec('reset role');assert.equal((await db.query("select jsonb_array_length(body->'concepts') n from study_catalog")).rows[0].n,1);assert.equal((await db.query("select jsonb_array_length(body->'questions') n from study_catalog")).rows[0].n,0);
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(inspect(),/permission denied/);await assert.rejects(save(fresh()),/permission denied/);await assert.rejects(db.exec('select * from public.content_concept_draft_versions'),/permission denied/);await db.exec('reset role');}
 
- // Acceptance runs only after the draft tests have confirmed that drafts alone do not write canonical records.
+ // Acceptance runs only after drafts confirm no canonical writes. Freeze the real
+ // learner-shared catalog here and assert byte-for-byte equivalence after acceptance.
+ const catalogBeforeAcceptance=(await db.query('select body,version from public.study_catalog where id=1')).rows[0];
  await db.exec(await readFile(new URL('../supabase/migrations/'+files.find(x=>x.endsWith('_admin_concept_acceptance.sql')),import.meta.url),'utf8'));
  const declaration='identity-and-classification-reviewed-not-medical-or-learner-release';
  const decision=(receipt,notes='Owner reviewed identity and classification on the synthetic concept.')=>({
@@ -68,6 +70,12 @@ try{
   catalogVersionAtAcceptance:1,identityDigest:approved.identityDigest,learnerPublished:false});
  await db.exec('reset role');
  const final=(await db.query('select body,version from study_catalog where id=1')).rows[0];
+ assert.deepEqual(final,catalogBeforeAcceptance,
+  'Private identity acceptance must leave the entire learner-shared catalog unchanged');
+ const learnerVaultConceptIds=final.body.concepts.map(c=>c.conceptId);
+ const learnerVaultSearchHits=final.body.concepts.filter(c=>[c.label,...(c.aliases||[])].some(label=>label.toLowerCase().includes('revised synthetic')));
+ assert.equal(learnerVaultConceptIds.includes(approved.conceptId),false,'NeuralVault concept list must not expose private acceptance');
+ assert.equal(learnerVaultSearchHits.length,0,'NeuralVault search must not expose private acceptance');
  assert.equal(final.body.concepts.length,1);assert.equal(final.body.questions.length,0);
  assert.equal(final.version,1,'Admin identity acceptance must not advance learner catalog');
  assert.equal(final.body.concepts.some(c=>c.conceptId===approved.conceptId),false,'Private identity must never appear in learner catalog');
