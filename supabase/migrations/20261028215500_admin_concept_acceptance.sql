@@ -139,14 +139,14 @@ grant execute on function public.concept_draft_accept_v1(uuid,jsonb) to service_
 -- learner catalog. A previously successful request-id replay is still handled by
 -- concept_draft_save_v1 before INSERT; an attempted new revision is rejected here.
 create function public.concept_draft_reject_post_acceptance_v1()
-returns trigger language plpgsql security invoker set search_path='' as $
+returns trigger language plpgsql security invoker set search_path='' as $$
 begin
  if exists(select 1 from public.content_concept_acceptances
            where proposal_id=new.proposal_id) then
    raise exception 'concept_already_accepted';
  end if;
  return new;
-end; $;
+end; $$;
 revoke all on function public.concept_draft_reject_post_acceptance_v1() from public,anon,authenticated;
 create trigger content_concept_drafts_no_post_acceptance
  before insert on public.content_concept_draft_versions
