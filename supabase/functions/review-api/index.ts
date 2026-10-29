@@ -1,4 +1,3 @@
-import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { syllabusScopeReviewRequest } from "./_shared/syllabus-scope-review.js";
@@ -17,6 +16,8 @@ const allowedOrigins = new Set([
   "http://localhost:3000",
   "https://medical-learning-os-preview.onrender.com",
   "https://medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-drafts-20261029-medical-learning-os-web.medicalos.workers.dev",
+  "https://feat-admin-concept-acceptance-20261029-medical-learning-os-web.medicalos.workers.dev",
   ...configuredOrigins
 ]);
 const reviewKinds = new Set(["medical", "references", "rights"]);
