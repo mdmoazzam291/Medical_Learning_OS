@@ -98,7 +98,8 @@ grant execute on function public.syllabus_scope_reviewer_grant_v1(uuid,jsonb) to
 create function public.syllabus_scope_review_inspect_v1(p_reviewer uuid,p_baseline_id uuid,p_revision integer)
 returns jsonb language plpgsql security invoker set search_path='' as $$
 declare v_event public.content_syllabus_reviewer_grant_events;v_draft public.content_syllabus_baseline_draft_versions;
- v_author uuid;v_latest int;v_decision public.content_syllabus_scope_decisions;v_catalog_version bigint;
+ v_author uuid;v_latest int;v_decision public.content_syllabus_scope_decisions;
+ v_catalog_version bigint;v_catalog jsonb;v_private jsonb;v_private_valid boolean;
 begin
  if p_reviewer is null or p_baseline_id is null or p_revision not between 1 and 10000
  then raise exception 'syllabus_scope_review_invalid';end if;
@@ -110,14 +111,50 @@ begin
  if not found then raise exception 'syllabus_baseline_not_found';end if;
  if v_draft.submitted_by=p_reviewer then raise exception 'syllabus_scope_self_review_blocked';end if;
  select max(revision) into v_latest from public.content_syllabus_baseline_draft_versions where baseline_id=p_baseline_id;
- select version into v_catalog_version from public.study_catalog where id=1;
+ select body,version into v_catalog,v_catalog_version from public.study_catalog where id=1;
+ if v_catalog is null or jsonb_typeof(v_catalog->'concepts') is distinct from 'array'
+ then raise exception 'syllabus_scope_review_stale';end if;
+ -- A reviewer may evaluate only exact, immutable identities in this baseline:
+ -- canonical IDs must be present in the shared catalog; private IDs must have
+ -- an exact frozen binding to an accepted (but learner-unpublished) identity.
+ select not exists(
+  select 1 from jsonb_array_elements_text(v_draft.document->'conceptIds') requested(concept_id)
+  where not exists(select 1 from jsonb_array_elements(v_catalog->'concepts') catalog(concept)
+                   where catalog.concept->>'conceptId'=requested.concept_id)
+    and not exists(
+      select 1 from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb)) pinned(value)
+      join public.content_concept_acceptances accepted
+        on accepted.concept_id=pinned.value->>'conceptId'
+       and accepted.accepted_identity_digest=pinned.value->>'identityDigest'
+       and accepted.accepted_document->>'conceptId'=accepted.concept_id
+      where accepted.concept_id=requested.concept_id)
+ ) and not exists(
+  select 1 from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb)) pinned(value)
+  where not exists(select 1 from jsonb_array_elements_text(v_draft.document->'conceptIds') requested(value)
+                   where requested.value=pinned.value->>'conceptId')
+     or not exists(select 1 from public.content_concept_acceptances accepted
+                   where accepted.concept_id=pinned.value->>'conceptId'
+                     and accepted.accepted_identity_digest=pinned.value->>'identityDigest'
+                     and accepted.accepted_document->>'conceptId'=accepted.concept_id)
+ ) into v_private_valid;
+ -- Only scoped, grant-authorized reviewer can receive frozen private identities.
+ select coalesce(jsonb_agg(jsonb_build_object('conceptId',accepted.concept_id,
+  'identityDigest',accepted.accepted_identity_digest,
+  'identity',accepted.accepted_document) order by accepted.concept_id),'[]'::jsonb)
+ into v_private
+ from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb)) pinned(value)
+ join public.content_concept_acceptances accepted
+   on accepted.concept_id=pinned.value->>'conceptId'
+  and accepted.accepted_identity_digest=pinned.value->>'identityDigest';
  select * into v_decision from public.content_syllabus_scope_decisions where baseline_id=p_baseline_id and revision=p_revision;
  return jsonb_build_object('contractId','syllabus-scope-review-target-v1','baselineId',v_draft.baseline_id,
   'revision',v_draft.revision,'digest',v_draft.digest,'authorId',v_draft.submitted_by,
   'registryVersion',v_draft.registry_version,'catalogVersion',v_draft.catalog_version,
   'currentCatalogVersion',v_catalog_version,'isLatest',v_latest=v_draft.revision,
   'pathwayVersionId',v_draft.pathway_version_id,'document',v_draft.document,'reviewerId',p_reviewer,
-  'canReview',v_latest=v_draft.revision and v_draft.catalog_version=v_catalog_version and v_decision.decision_id is null,
+  'privateIdentities',v_private,'privateIdentityVerified',v_private_valid,
+  'canReview',v_latest=v_draft.revision and v_draft.catalog_version=v_catalog_version
+    and v_private_valid and v_decision.decision_id is null,
   'existingDecision',case when v_decision.decision_id is null then null else jsonb_build_object(
    'decisionId',v_decision.decision_id,'decision',v_decision.decision,'receiptDigest',v_decision.receipt_digest,
    'recordedAt',v_decision.recorded_at) end,
@@ -130,7 +167,8 @@ create function public.syllabus_scope_review_decide_v1(p_reviewer uuid,p_registr
 returns jsonb language plpgsql security invoker set search_path='' as $$
 declare v_request uuid;v_baseline uuid;v_revision integer;v_keys text[];v_fingerprint text;
  v_draft public.content_syllabus_baseline_draft_versions;v_saved public.content_syllabus_scope_decisions;
- v_grant public.content_syllabus_reviewer_grant_events;v_catalog_version bigint;v_latest integer;v_receipt text;
+ v_grant public.content_syllabus_reviewer_grant_events;v_catalog_version bigint;
+ v_catalog jsonb;v_private_valid boolean;v_latest integer;v_receipt text;
 begin
  if jsonb_typeof(p_input) is distinct from 'object' or pg_column_size(p_input)>12000 then raise exception 'syllabus_scope_review_invalid';end if;
  select array_agg(k order by k) into v_keys from jsonb_object_keys(p_input) k;
@@ -170,13 +208,41 @@ begin
   if not found then raise exception 'syllabus_baseline_not_found';end if;
   if v_draft.submitted_by=p_reviewer then raise exception 'syllabus_scope_self_review_blocked';end if;
   select max(revision) into v_latest from public.content_syllabus_baseline_draft_versions where baseline_id=v_baseline;
-  select version into v_catalog_version from public.study_catalog where id=1;
+  perform pg_advisory_xact_lock(hashtextextended('content-library-publication',0));
+  select body,version into v_catalog,v_catalog_version from public.study_catalog where id=1;
+  if v_catalog is null or jsonb_typeof(v_catalog->'concepts') is distinct from 'array'
+  then raise exception 'syllabus_scope_review_stale';end if;
+ -- A reviewer may evaluate only exact, immutable identities in this baseline:
+ -- canonical IDs must be present in the shared catalog; private IDs must have
+ -- an exact frozen binding to an accepted (but learner-unpublished) identity.
+ select not exists(
+  select 1 from jsonb_array_elements_text(v_draft.document->'conceptIds') requested(concept_id)
+  where not exists(select 1 from jsonb_array_elements(v_catalog->'concepts') catalog(concept)
+                   where catalog.concept->>'conceptId'=requested.concept_id)
+    and not exists(
+      select 1 from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb)) pinned(value)
+      join public.content_concept_acceptances accepted
+        on accepted.concept_id=pinned.value->>'conceptId'
+       and accepted.accepted_identity_digest=pinned.value->>'identityDigest'
+       and accepted.accepted_document->>'conceptId'=accepted.concept_id
+      where accepted.concept_id=requested.concept_id)
+ ) and not exists(
+  select 1 from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb)) pinned(value)
+  where not exists(select 1 from jsonb_array_elements_text(v_draft.document->'conceptIds') requested(value)
+                   where requested.value=pinned.value->>'conceptId')
+     or not exists(select 1 from public.content_concept_acceptances accepted
+                   where accepted.concept_id=pinned.value->>'conceptId'
+                     and accepted.accepted_identity_digest=pinned.value->>'identityDigest'
+                     and accepted.accepted_document->>'conceptId'=accepted.concept_id)
+ ) into v_private_valid;
   if v_latest<>v_revision or v_draft.digest<>p_input->>'digest'
      or v_catalog_version is distinct from v_draft.catalog_version
      or v_draft.registry_version is distinct from p_registry_version
   then raise exception 'syllabus_scope_review_stale';end if;
   if jsonb_array_length(v_draft.document->'conceptIds')=0 and p_input->>'decision'='scope-reviewed'
   then raise exception 'syllabus_scope_review_empty';end if;
+  if p_input->>'decision'='scope-reviewed' and not v_private_valid
+  then raise exception 'syllabus_scope_private_identity_unverified';end if;
   if exists(select 1 from public.content_syllabus_scope_decisions
    where baseline_id=v_baseline and revision=v_revision)
   then raise exception 'syllabus_scope_review_already_recorded';end if;
