@@ -10,13 +10,14 @@ const reviewPacketMarkup=p=>!p?'':(
  '<p role="status">Review required. This is not an accepted or official syllabus.</p>'+
  '<p>Source: '+e(p.sourceKind)+' · '+e(p.sourceVersion)+' · '+e(p.sourceLocator)+'</p>'+
  '<p>Pathway: '+e(p.pathwayVersionId)+' · Declared scope: '+e(p.scopeDeclaration)+'</p>'+
- '<p>Proposed canonical concepts: '+e(p.proposedConcepts)+' · Exact reviewed curriculum-mapped concepts: '+
+ '<p>Proposed concept identities: '+e(p.proposedConcepts)+' · Admin-private (not learner-published): '+
+ e(p.privateAcceptedConcepts.length)+' · Exact reviewed curriculum-mapped concepts: '+
  e(p.exactMappedConcepts==null?'Not evaluated':p.exactMappedConcepts)+'</p>'+
  '<p>Current catalog v'+e(p.currentCatalogVersion)+' · proposal v'+e(p.authoredCatalogVersion)+
  ' · Preparation Registry '+e(p.registryVersion)+'</p>'+
  '<p>Review blockers: '+e(p.blockers.join(', '))+'</p>'+
  '<details><summary>Exact objective mapping by proposed concept</summary><ul>'+
- p.rows.slice(0,100).map(r=>'<li>'+e(r.label)+' ('+e(r.conceptId)+'): '+e(r.objectiveState)+
+ p.rows.slice(0,100).map(r=>'<li>'+e(r.label)+' ('+e(r.conceptId)+', '+e(r.identityKind)+'): '+e(r.objectiveState)+
  (r.exactApprovedMappings.length?' — '+e(r.exactApprovedMappings.map(o=>o.objectiveVersionId+' ['+o.task+'/'+o.depth+']').join(', ')):'')+'</li>').join('')+
  '</ul>'+(p.rows.length>100?'<p>Showing first 100 of '+e(p.rows.length)+' proposed concepts. Source packet retains all IDs.</p>':'')+
  '</details><p>Coverage percentage: not established. Independent source review and named curriculum mapping approval are still required.</p>'+
@@ -44,8 +45,8 @@ export function syllabusBaselineForm(s={}){
  '<label>Source edition or version<input name="sourceVersion" maxlength="240" required value="'+e(d.sourceVersion)+'"></label>'+
  '<label>Declared checklist scope<select name="scopeDeclaration">'+
  option('partial','Partial proposed scope',d.scopeDeclaration)+option('complete-proposed','Proposed complete (not verified)',d.scopeDeclaration)+'</select></label>'+
- '<label>Existing canonical concept IDs (one per line)<textarea name="conceptIds" rows="5" spellcheck="false">'+e(d.conceptIds.join('\n'))+'</textarea></label>'+
- '<p class="muted">Use exact canonical concept IDs from the Coverage Index. Unaccepted concept proposals and unknown IDs cannot enter checklist membership. Empty is allowed as a draft, not a denominator.</p>'+
+ '<label>Canonical or Admin-private accepted concept IDs (one per line)<textarea name="conceptIds" rows="5" spellcheck="false">'+e(d.conceptIds.join('\n'))+'</textarea></label>'+
+ '<p class="muted">Use published canonical IDs or immutable Admin-accepted private IDs. Draft-only/unaccepted IDs are rejected. Private identities remain invisible to learners and cannot establish an approved syllabus denominator.</p>'+
  '<label>Reason for proposal or revision<textarea name="changeReason" maxlength="2000" required rows="2">'+e(d.changeReason)+'</textarea></label></fieldset>'+
  '<button type="submit"'+(s.pending?' formnovalidate':'')+(disabled||readonly?' disabled':'')+'>'+
  (s.pending?'Retry pending draft save':'Save checklist draft')+'</button></form>'+
