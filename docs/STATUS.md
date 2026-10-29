@@ -3,9 +3,10 @@
 - New private, source/version-labeled proposed concept membership with immutable draft revisions, actor/canonical identity checks and zero automatic approval. Existing NEET-PG/INI-CET preparation registry stays untouched and still has zero reviewed objectives/mappings.
 - Admin Coverage Index displays draft-only checklist controls, not official syllabus completeness, learner exam readiness, or approved objective coverage. See [draft scope contract](SYLLABUS_BASELINE_DRAFTS.md). CI and hosted checks require independent verification; no deployment was performed.
 
-## Canonical concept acceptance — draft PR #334, 29 October 2026 IST
-- Added owner-bound, version/digest-pinned canonical acceptance with immutable review receipt and Admin readback. Initial scope is **new concepts only**; existing concept revisions remain drafts until version-safe learner release. No content, learner, medical/rights or syllabus approval implied.
-- Feature branch stacked on PR #333/#332. Source tests and native CI need final exact-head verification; no migration, production API/site deployment or real Admin acceptance has occurred. See [acceptance engineering receipt](CONCEPT_ACCEPTANCE.md).
+## PR332 released; next unit PR333 — 29 October 2026 IST
+- Codex completed staged332 rollout after owner requested integration instead of more features. PR332 merged13b3c8c; website production8f70c0a6 SUCCESS; Owner APIv7 exact10-file source and migration20261029111344/hash verified. Real Admin Coverage Index and existing integrity/dashboard acceptance passed; catalog446/digest and review/rights counts unchanged. See releases/2026-10-29-admin-coverage-index-release.md and issue338 for exact evidence/limits.
+- No other feature PR merged/deployed. Parent333 is now based on main13b3c8c; effective24-file concept-only increment inspected, no duplicated coverage migration. This docs checkpoint changes no333runtime source. Reverify fresh exact-head CI before its staged migration/API/frontend rollout. No new feature development; preserve326/330 and the later341/342 sibling stack.
+- Main332 core and dedicated Chromium/nativeWebKit steps passed; broader main suites were running at checkpoint. Genuine learner-account HTTP denial, physical iPad and dashboard rollback controls remain unverified. CLI asset byte equality failed403/timeouts but real browser feature and API are verified. No clinical/source approval or learner/content mutation.
 
 ## Concept draft editor — reviewed source complete, 29 October 2026 IST
 - Stacked PR333 adds zero-question concept proposals and revisions with immutable history, exact readback/idempotent retries, safe incomplete/newer typing and stale-base protection. Runtime 2af00ae693d18668a12f57cff1b319443c64eb85; see [receipt](CONCEPT_DRAFTS.md).

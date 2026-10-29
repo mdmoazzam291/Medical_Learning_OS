@@ -34,3 +34,28 @@ Do not merge or deploy through this engineering receipt. After explicit release 
 
 Reviewer exclusions were retained deliberately: production operations and material/clinical acceptance are separate work; volume/concurrency/restore acceptance is unclaimed; source tests and browser execution are by the implementer rather than a second independent run. The cost is that this source branch is not a hosted acceptance or approved syllabus. No source material, Drive governance, learner data or production setting was changed.
 
+
+
+## Live release-gate reconciliation — 29 October 2026
+
+The initial engineering receipt above describes the earlier feature-branch state. **The authoritative later state is:** PR #332 was merged and Cloudflare-deployed; PR #333 remains open/unmerged, while its SQL migration (`20261029113205_admin_concept_drafts`) and Owner API v8 have already been deployed. The migration statement is byte-exact with the PR SQL, and all 12 Owner API files matched the then-current runtime sources. Do **not** reapply or redeploy merely because earlier paragraphs say this was pending.
+
+Production rollback-only PostgreSQL smoke tests passed Admin draft save, idempotent retry, exact revision readback, wrong actor denial, conflicting request rejection, immutable history, and unchanged canonical catalog. A separate post-rollback read proved zero saved proposals/revisions and unchanged catalog v446 (10 concepts and 6 questions). These tests **do not** prove hosted HTTP, session/CORS, browser UX, production backup restore or clinical approval.
+
+### Safe hosted access verification (no content writes)
+
+The branch includes `scripts/live-concept-drafts-http-check.mjs`. Run its offline self-test first:
+
+```bash
+node scripts/live-concept-drafts-http-check.mjs --self-test
+```
+
+For real HTTP acceptance, run the script from a **trusted local session** with these environment variables supplied securely: `MLOS_SUPABASE_URL` (project HTTPS origin), `MLOS_PUBLISHABLE_KEY` (public publishable key only), `MLOS_ADMIN_ACCESS_TOKEN` (current signed-in Admin JWT), `MLOS_LEARNER_ACCESS_TOKEN` (current signed-in **non-Admin** learner JWT), and optionally `MLOS_SITE_ORIGIN` (the exact deployed site's HTTPS origin to verify CORS). Never put access tokens in Git, issues, PR comments, CI logs, screenshots or chat messages; do not use service-role keys. Use short-lived tokens and dispose of them after the check. Run:
+
+```bash
+node scripts/live-concept-drafts-http-check.mjs
+```
+
+Seven checks require actual network responses, not mocked status: anonymous GET/POST 401, real learner GET/POST 403, Admin inventory 200 with the correct contract, Admin missing draft 404, and Admin invalid POST 400. GET responses must be `no-store`, and optional origin checking must match CORS. **All POSTs deliberately have invalid bodies or no credentials, so they persist no draft.** The offline self-test uses mock responses and is not evidence of live acceptance. A DNS or transport error is inconclusive, not an API denial.
+
+Still required before merging: real signed-in Admin browser navigation and a source-authorized draft save/retry/GET readback (not synthetic persistent medical material), learner-account denial, recovery/rollback readiness, exact-head CI, and Cloudflare production build confirmation after merge. Keep the #326 rights/provenance and #330 learner-publication boundaries intact.

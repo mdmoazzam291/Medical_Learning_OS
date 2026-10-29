@@ -16,9 +16,9 @@ export function conceptDraftForm(state={}){
   '<label>Source evidence or locator<textarea aria-label="Source evidence or locator" name="sourceEvidence" maxlength="4000" rows="3" required>'+e(d.sourceEvidence)+'</textarea></label><label>Reason for this revision<textarea aria-label="Reason for this revision" name="changeReason" maxlength="4000" rows="2" required>'+e(d.changeReason)+'</textarea></label></fieldset>'+
   '<button type="submit"'+(state.pending?' formnovalidate':'')+(locked||readonly?' disabled':'')+'>'+e(state.pending?'Retry pending save':'Save concept draft')+'</button></form>'+
   (readonly?'<p>Historical revision: read-only. Open the latest revision to continue editing.</p>':'')+
-  (state.nameMatches?.length?'<aside><strong>Name or alias matches to inspect</strong><p>'+state.nameMatches.map(c=>e(c.label+' · '+c.conceptId)).join('<br>')+'</p><p>No concepts were merged.</p></aside>':'')+(state.accepted?'<p role="status">Accepted canonical concept '+e(state.conceptId)+' · classification only. This does not approve medical claims, rights, questions or learner release.</p>':
+  (state.nameMatches?.length?'<aside><strong>Name or alias matches to inspect</strong><p>'+state.nameMatches.map(c=>e(c.label+' · '+c.conceptId)).join('<br>')+'</p><p>No concepts were merged.</p></aside>':'')+(state.accepted?'<p role="status">Admin-private accepted identity '+e(state.conceptId)+' · classification only. This does not approve medical claims, rights, questions or learner release.</p>':
   state.proposalId&&state.operation!=='revise'&&!state.readOnly&&!state.dirty&&!state.busy&&!state.pending?
-   '<details><summary>Accept reviewed concept into canonical inventory</summary><p>Check name, aliases, meaning and classification against the supplied source. This does not publish any learning content or certify a syllabus.</p>'+
+   '<details><summary>Accept reviewed identity into private registry</summary><p>Check name, aliases, meaning and classification against the supplied source. This only records a private accepted identity. It does not modify the learner catalog, publish learning content or certify a syllabus.</p>'+
    '<form data-concept-accept-form><label>Identity/classification review evidence<textarea name="reviewNotes" minlength="20" maxlength="4000" rows="3" required'+(state.acceptancePending?' readonly':'')+'>'+e(state.acceptanceNotes||'')+'</textarea></label>'+
    '<label><input type="checkbox" name="attested" required'+(state.acceptanceConfirmed?' checked':'')+'> I checked concept identity and classification. No medical, rights or learner-publication approval is implied.</label>'+
    '<button type="submit">Accept concept identity (not publish)</button></form></details>':'')+
@@ -67,14 +67,14 @@ export function mountConceptDraftEditor({root,inspect,save,accept=async()=>{thro
    const receipt=await accept(acceptPending);
    if(receipt?.status!=='concept_accepted'||receipt.proposalId!==acceptPending.proposalId||
      receipt.revision!==acceptPending.revision||receipt.draftDigest!==acceptPending.digest||
-     receipt.conceptId!==state.conceptId)throw Error('acceptance_receipt_mismatch');
+     receipt.conceptId!==state.conceptId||receipt.learnerPublished!==false||!receipt.identityDigest)throw Error('acceptance_receipt_mismatch');
    const packet=await inspect({proposalId:state.proposalId,revision:state.revision});
    if(disposed||g!==generation)return;
    if(packet?.acceptance?.status!=='concept_accepted'||packet.acceptance.revision!==receipt.revision||
-     packet.acceptance.canonicalDigest!==receipt.canonicalDigest)throw Error('acceptance_readback_mismatch');
+     packet.acceptance.identityDigest!==receipt.identityDigest||packet.acceptance.learnerPublished!==false)throw Error('acceptance_readback_mismatch');
    acceptPending=null;
    state={...state,accepted:true,readOnly:true,dirty:false,status:
-    'Accepted into canonical inventory. Learner content, medical review, rights and syllabus approval remain unchanged.'};
+    'Identity accepted into the private Admin registry. Learner catalog and content remain unchanged; medical, rights and syllabus approval are separate.'};
   }catch{if(!disposed&&g===generation)state.status=
    'Acceptance not confirmed. Review fields are preserved; retry reuses the original request. No learner publication was attempted.';}
   finally{if(!disposed&&g===generation){state.busy=false;render();}}
