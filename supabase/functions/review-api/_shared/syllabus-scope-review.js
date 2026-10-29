@@ -4,7 +4,8 @@ const fail=(status,code)=>{throw Object.assign(new Error(code),{status,code});};
 const uuid=v=>typeof v==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(v);
 const known=['syllabus_scope_reviewer_not_authorized','syllabus_scope_self_review_blocked','syllabus_baseline_not_found',
  'syllabus_scope_review_stale','syllabus_scope_review_request_conflict','syllabus_scope_review_already_recorded',
- 'syllabus_scope_review_empty','syllabus_scope_review_invalid'];
+ 'syllabus_scope_review_empty','syllabus_scope_private_identity_unverified',
+ 'syllabus_scope_review_invalid'];
 function err(error){
  const code=known.find(x=>String(error?.message||'').includes(x));
  fail(code?.includes('not_authorized')||code==='syllabus_scope_self_review_blocked'?403:
@@ -22,7 +23,18 @@ export async function syllabusScopeReviewRequest({admin,reviewerId,method,baseli
    if(error)err(error);
    if(data?.contractId!=='syllabus-scope-review-target-v1'||data.baselineId!==baselineId||
      data.reviewerId!==reviewerId||data.officialSyllabusCertified!==false||
-     data.curriculumActivated!==false||data.learnerRelease!==false)fail(503,'syllabus_scope_review_unavailable');
+     data.curriculumActivated!==false||data.learnerRelease!==false||
+     typeof data.privateIdentityVerified!=='boolean'||!Array.isArray(data.privateIdentities)||
+     !Array.isArray(data.document?.conceptIds)||data.document.conceptIds.length>2000||
+     (data.privateIdentityVerified===false&&data.canReview!==false)||
+     data.privateIdentities.some(item=>!item||typeof item.conceptId!=='string'||
+       !data.document.conceptIds.includes(item.conceptId)||
+       !/^[a-f0-9]{64}$/.test(item.identityDigest)||
+       item.identity?.conceptId!==item.conceptId||
+       typeof item.identity?.label!=='string'||!Array.isArray(item.identity?.aliases)||
+       !item.identity?.classification)||
+     new Set(data.privateIdentities.map(item=>item.conceptId)).size!==data.privateIdentities.length)
+     fail(503,'syllabus_scope_review_unavailable');
    return data;
  }
  if(params.size)fail(400,'syllabus_scope_review_invalid');
