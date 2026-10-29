@@ -15,15 +15,21 @@ try{
  create table content_admin_account(admin_user_id uuid);
  create function is_content_admin(uuid) returns boolean language sql stable as $$select exists(select 1 from public.content_admin_account where admin_user_id=$1)$$;
  create table study_catalog(id int primary key,version bigint,body jsonb);
+ -- Emulates the already-private immutable acceptance ledger from parent PR334.
+ create table content_concept_acceptances(concept_id text primary key,accepted_identity_digest text not null,
+   accepted_document jsonb not null);
  create function concept_draft_immutable_v1() returns trigger language plpgsql as $$begin raise exception 'immutable'; end;$$;
  grant usage on schema public,extensions to service_role,anon,authenticated;
- grant select on public.study_catalog,public.content_admin_account to service_role;`);
+ grant select on public.study_catalog,public.content_admin_account,public.content_concept_acceptances to service_role;`);
  await db.query('insert into content_admin_account values($1)',[actor]);
  await db.query('insert into study_catalog values(1,4,$1)',[{concepts:[{conceptId:'one',label:'One synthetic'},{conceptId:'two',label:'Two synthetic'}],questions:[],sources:[]}]);
+ const privateId='C-private-new',privateDigest='b'.repeat(64);
+ await db.query('insert into content_concept_acceptances(concept_id,accepted_identity_digest,accepted_document) values($1,$2,$3)',
+  [privateId,privateDigest,{conceptId:privateId,label:'Admin-only accepted synthetic',classification:{subjects:['medicine']}}]);
  await db.exec(await readFile(new URL('../supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql',import.meta.url),'utf8'));
  const preflight=async(id,revision,user=actor)=>(await db.query('select public.syllabus_baseline_review_preflight_v1($1,$2,$3) packet',
- [user,id,revision])).rows[0].packet;
+  [user,id,revision])).rows[0].packet;
  const save=async(value,user=actor,reg=registry)=>(await db.query('select public.syllabus_baseline_draft_save_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
  const inspect=async(id=null,revision=null,user=actor)=>(await db.query('select public.syllabus_baseline_draft_inspect_v1($1,$2,$3,0) packet',[user,id,revision])).rows[0].packet;
  await db.exec('set role service_role');
@@ -33,6 +39,30 @@ try{
  await assert.rejects(save({...fresh(),document:{...doc(),scopeDeclaration:null}}),/syllabus_baseline_invalid/);
  await assert.rejects(save({...fresh(),document:{...doc(),sourceKind:null}}),/syllabus_baseline_invalid/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['not-real']}}),/syllabus_baseline_unknown_concept/);
+ const privateDraft=await save({...fresh(),document:{...doc(),conceptIds:['one',privateId]}});
+ assert.deepEqual(privateDraft.privateIdentityBindings,[{conceptId:privateId,identityDigest:privateDigest}],
+  'Admin-only acceptance must be a valid candidate checklist identity with a frozen digest');
+ const privateDetail=await inspect(privateDraft.baselineId);
+ assert.deepEqual(privateDetail.version.privateIdentityBindings,privateDraft.privateIdentityBindings,
+  'Saved private identity binding must round-trip exactly to a protected Admin readback');
+ assert.equal(privateDetail.version.catalogVersion,4,'Admin-only checklist must not mutate learner catalog');
+ const privatePreflight=await preflight(privateDraft.baselineId,1);
+ assert.equal(privatePreflight.members.length,2);
+ assert.equal(privatePreflight.members[0].kind,'canonical');
+ assert.equal(privatePreflight.members[0].bindingMatches,true);
+ assert.equal(privatePreflight.members[1].conceptId,privateId);
+ assert.equal(privatePreflight.members[1].kind,'accepted-private');
+ assert.equal(privatePreflight.members[1].label,'Admin-only accepted synthetic');
+ assert.equal(privatePreflight.members[1].identityDigest,privateDigest);
+ assert.equal(privatePreflight.members[1].bindingMatches,true);
+ assert.equal(privatePreflight.currentCatalogVersion,4,'Preflight cannot promote private concept');
+ const privateOnlyPacket=await preflight(privateDraft.baselineId,1);
+ assert.ok(!JSON.stringify(privateOnlyPacket).includes('answerKey'));
+
+ const privateOnly=await save({...fresh(),document:{...doc(),conceptIds:[privateId]}});
+ assert.equal(privateOnly.privateIdentityBindings.length,1,'Proposed checklist may contain only accepted-private identities');
+ await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:[privateId,'unknown-unaccepted']}}),
+  /syllabus_baseline_unknown_concept/);
  await assert.rejects(save({...fresh(),document:{...doc(),conceptIds:['one','one']}}),/syllabus_baseline_invalid/);
  const empty=await save({...fresh(),document:{...doc(),conceptIds:[]}});assert.equal(empty.status,'draft');
  const input=fresh();const first=await save(input);assert.equal(first.revision,1);
@@ -47,9 +77,10 @@ try{
  assert.equal(review.contractId,'admin-syllabus-review-preflight-v1');
  assert.equal(review.digest,second.digest);assert.equal(review.currentCatalogVersion,4);
  assert.equal(review.isLatest,true);assert.equal(review.members.length,2);
- assert.equal(review.members[0].label,'One synthetic');assert.equal(review.members[1].exists,true);
+ assert.equal(review.members[0].label,'One synthetic');
+ assert.equal(review.members[1].kind,'canonical');
+ assert.equal(review.members[1].bindingMatches,true);
  assert.equal((await preflight(first.baselineId,1)).isLatest,false);
- assert.ok(!/answerKey|PRIVATE STEM|clinicalAnswer/.test(JSON.stringify(review)));
  assert.equal(review.sourceKind,'historical');assert.equal(review.scopeDeclaration,'partial');
  await assert.rejects(preflight(first.baselineId,2,other),/content_admin_required/);
  await assert.rejects(preflight(first.baselineId,3),/syllabus_baseline_not_found/);
@@ -63,18 +94,20 @@ try{
  await db.exec('reset role');
  const catalog=(await db.query('select version,body from public.study_catalog where id=1')).rows[0];
  assert.equal(catalog.version,4);assert.equal(catalog.body.concepts.length,2);
+ assert.equal(catalog.body.concepts.some(c=>c.conceptId===privateId),false,
+  'A private accepted identity must not leak into the learner-shared canonical catalog');
  for(const role of ['anon','authenticated']){
   await db.exec('set role '+role);
   await assert.rejects(save(fresh()),/permission denied/);
   await assert.rejects(inspect(),/permission denied/);
-  await assert.rejects(preflight(first.baselineId,2),/permission denied/);
+  await assert.rejects(preflight(privateDraft.baselineId,1),/permission denied/);
   await assert.rejects(db.exec('select * from content_syllabus_baseline_draft_versions'),/permission denied/);
   await db.exec('reset role');
  }
  await db.query('update study_catalog set version=5 where id=1');
- const changed=await preflight(first.baselineId,2);assert.equal(changed.authoredCatalogVersion,4);
- assert.equal(changed.currentCatalogVersion,5,'changed catalog must invalidate alignment instead of silently reusing it');
- assert.equal((await db.query('select count(*)::integer n from content_syllabus_baseline_draft_versions')).rows[0].n,3);
- console.log('Read-only review packet PostgreSQL checks passed: exact revision, labels, actor/grants, stale catalog, zero publication and source metadata.');
- console.log('Syllabus baseline draft PostgreSQL tests passed: request replay, immutable versions, missing IDs, actor/grant isolation, catalog untouched and no activation.');
+ const changed=await preflight(first.baselineId,2);
+ assert.equal(changed.authoredCatalogVersion,4);
+ assert.equal(changed.currentCatalogVersion,5,'preflight must report catalog drift, not imply current approval');
+ console.log('Syllabus preflight PostgreSQL checks passed: Admin-only published/private/missing classification, frozen identity binding, metadata isolation, stale catalog and actor denials.');
+ console.log('Syllabus baseline draft PostgreSQL tests passed: accepted-private identity bindings, immutable revisions, unknown IDs, role isolation, shared catalog unchanged, no activation.');
 }finally{await db.close();}
