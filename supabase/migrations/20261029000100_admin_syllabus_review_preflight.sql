@@ -20,11 +20,36 @@ begin
  then raise exception 'syllabus_baseline_catalog_unavailable';end if;
  select coalesce(jsonb_object_agg(c->>'conceptId',c->>'label'),'{}'::jsonb)
   into v_canonical_labels from jsonb_array_elements(v_body->'concepts') c;
- select coalesce(jsonb_agg(jsonb_build_object('conceptId',m.concept_id,
-   'label',coalesce(v_canonical_labels->>m.concept_id,'Not in current canonical catalog'),
-   'exists',v_canonical_labels ? m.concept_id) order by m.position),'[]'::jsonb)
-  into v_members
-  from jsonb_array_elements_text(v_draft.document->'conceptIds') with ordinality m(concept_id,position);
+ -- The Admin-only private acceptance registry is intentionally separate from the
+ -- learner-shared canonical catalog. Check frozen private bindings per exact draft.
+ select coalesce(jsonb_agg(jsonb_build_object(
+   'conceptId',m.concept_id,
+   'label',case when v_canonical_labels ? m.concept_id
+     then v_canonical_labels->>m.concept_id
+     when a.concept_id is not null and pinned.identity_digest=a.accepted_identity_digest
+     then a.accepted_document->>'label'
+     else 'Identity unavailable' end,
+   'kind',case when v_canonical_labels ? m.concept_id then 'canonical'
+     when a.concept_id is not null then 'accepted-private' else 'missing' end,
+   'identityDigest',case when a.concept_id is not null and not (v_canonical_labels ? m.concept_id)
+     then a.accepted_identity_digest else null end,
+   'bindingMatches',case when v_canonical_labels ? m.concept_id
+     then pinned.identity_digest is null
+     when a.concept_id is not null
+     then pinned.identity_digest is not null and pinned.identity_digest=a.accepted_identity_digest
+     else false end
+   ) order by m.position),'[]'::jsonb) into v_members
+ from jsonb_array_elements_text(v_draft.document->'conceptIds')
+   with ordinality m(concept_id,position)
+ left join public.content_concept_acceptances a
+   on a.concept_id=m.concept_id
+ left join lateral (
+   select entry.value->>'identityDigest' as identity_digest
+   from jsonb_array_elements(coalesce(v_draft.private_identity_bindings,'[]'::jsonb))
+     as entry(value)
+   where entry.value->>'conceptId'=m.concept_id
+   limit 1
+ ) pinned on true;
  return jsonb_build_object(
   'contractId','admin-syllabus-review-preflight-v1','baselineId',v_draft.baseline_id,
   'revision',v_draft.revision,'digest',v_draft.digest,
