@@ -51,7 +51,7 @@ try{
      if(!syllabusReceipts.has(input.requestId)){
        const v={baselineId:syllabusId,revision:syllabusVersions.length+1,
          digest:String(syllabusVersions.length+1).padStart(64,'b'),catalogVersion:446,
-         registryVersion:'pg-preparation:foundation@1',document:input.document,recordedAt:snapshot.asOf};
+         registryVersion:'pg-preparation:foundation@1',document:Object.fromEntries(Object.entries(input.document).reverse()),recordedAt:snapshot.asOf};
        syllabusVersions.push(v);syllabusReceipts.set(input.requestId,{baselineId:syllabusId,revision:v.revision,digest:v.digest,
         catalogVersion:446,registryVersion:v.registryVersion,status:'draft'});
      }
