@@ -51,21 +51,39 @@ try{
  const approval=decision(second);
  const approved=await accept(approval);
  assert.equal(approved.status,'concept_accepted');assert.equal(approved.conceptId,second.conceptId);
+ assert.equal(approved.learnerPublished,false);assert.match(approved.identityDigest,/^[a-f0-9]{64}$/);
+ assert.equal(approved.catalogVersionAtAcceptance,1,'acceptance cannot increment the learner catalog version');
+ assert.equal((await inspect(second.proposalId)).acceptance.identityDigest,approved.identityDigest);
  assert.deepEqual(await accept(approval),approved);
  await assert.rejects(accept({...approval,reviewNotes:'A new conflicting attestation under the same request identifier.'}),/concept_accept_request_conflict/);
  await assert.rejects(accept(decision(second)),/concept_already_accepted/);
- await assert.rejects(save({...secondInput,proposalId:second.proposalId,expectedDigest:second.digest,requestId:crypto.randomUUID()}),/concept_draft_target_changed/);
+ await assert.rejects(save({...secondInput,proposalId:second.proposalId,expectedDigest:second.digest,requestId:crypto.randomUUID()}),/concept_already_accepted/);
+ // The accepted identity is private: a second proposal cannot steal its name/alias.
+ const privateCollision=await save({...fresh(),document:{...fresh().document,label:'Revised synthetic'}});
+ await assert.rejects(accept(decision(privateCollision)),/concept_accept_identity_conflict/);
+ const privateAliasCollision=await save({...fresh(),document:{...fresh().document,label:'Another concept',aliases:['Revised synthetic']}});
+ await assert.rejects(accept(decision(privateAliasCollision)),/concept_accept_identity_conflict/);
+ assert.deepEqual((await inspect(second.proposalId)).acceptance,{status:'concept_accepted',
+  revision:second.revision,acceptedAt:(await inspect(second.proposalId)).acceptance.acceptedAt,
+  catalogVersionAtAcceptance:1,identityDigest:approved.identityDigest,learnerPublished:false});
  await db.exec('reset role');
  const final=(await db.query('select body,version from study_catalog where id=1')).rows[0];
- assert.equal(final.body.concepts.length,2);assert.equal(final.body.questions.length,0);
- assert.equal(final.body.concepts.find(c=>c.conceptId===approved.conceptId).label,'Revised synthetic');
- assert.equal((await db.query('select count(*)::integer n from content_concept_acceptances')).rows[0].n,1);
+ assert.equal(final.body.concepts.length,1);assert.equal(final.body.questions.length,0);
+ assert.equal(final.version,1,'Admin identity acceptance must not advance learner catalog');
+ assert.equal(final.body.concepts.some(c=>c.conceptId===approved.conceptId),false,'Private identity must never appear in learner catalog');
+ const privateAccepted=await db.query('select accepted_document,accepted_identity_digest from content_concept_acceptances');
+ assert.equal(privateAccepted.rows.length,1);
+ assert.equal(privateAccepted.rows[0].accepted_document.label,'Revised synthetic');
+ assert.equal(privateAccepted.rows[0].accepted_identity_digest,approved.identityDigest);
+ assert.equal((await db.query('select count(*)::integer n from content_library_concept_metadata')).rows[0].n,0,
+  'Admin acceptance must not write learner-facing classification metadata');
  for(const role of ['anon','authenticated']){
    await db.exec('set role '+role);
    await assert.rejects(accept(decision(second)),/permission denied/);
    await assert.rejects(db.exec('select * from public.content_concept_acceptances'),/permission denied/);
+   await assert.rejects(db.exec('select * from public.content_concept_draft_versions'),/permission denied/);
    await db.exec('reset role');
  }
- console.log('Concept acceptance PostgreSQL checks passed: strict attestation, exact current version, name/stale conflict, idempotence, immutable audit and no learner/question mutation.');
+ console.log('Concept acceptance PostgreSQL checks passed: private identity registry, no learner catalog/metadata change, cross-private label/alias conflicts, exact version, idempotence and role isolation.');
  console.log('Concept draft PostgreSQL checks passed: zero-question creation, immutable revisions, exact retry/readback, stale target/predecessor and browser isolation; no canonical writes.');
 }finally{await db.close();}
