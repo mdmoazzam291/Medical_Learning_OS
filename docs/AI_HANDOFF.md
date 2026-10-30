@@ -1,3 +1,10 @@
+## Geometry extraction and method comparison —30 October2026 IST
+- Resumed PR3460cd243c4a464bb068f3d510814f4a54ee93d3829. Geometry scan263defining pages produced2634identifier candidates (2627standard+7nonstandard),253empty/492header-unclassified regions.7known malformed/wrapped-token assertions PASS.
+- Stored opaque page receipts and method comparison; detailed raw column extraction remains transient,not full-corpus export. All263page hashes/counts/disabled flags validated.
+- PyMuPDF strict-line/geometry standard-ID multisets match260/263pages. DifferencesPDF172wrappedBC14.24,352PS2.1*footnote,445malformedOR2.2.9truncation explained. Not independent source review or no-omission proof.
+- Added NMC_RAW_CODECELL_CHECKPOINT.md,nmc-codecell-page-receipts.json,nmc-codecell-method-comparison.json. No runtime tests/fresh CI claim.
+- Next:classify ambiguous empty/header regions and uncoded rows visually,then freeze reviewable row inventory under rights constraints. No approval/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## Source adjudication packet —30 October2026 IST
 - Resumed PR3463a8653bbf2808bf10a36f9f449098cd88a8b45de. Added NMC_SOURCE_ADJUDICATION_PACKET.md and22case machine-readable packet bound to frozen evidence/source hashes.
 - Cases retain observations,pages,proposals andnull decisions; no reviewer assigned. Identity adjudication distinct from clinical,rights,exam/release approval. Runtime import/enforcement not implemented.
