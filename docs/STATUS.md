@@ -1,3 +1,11 @@
+## Offline source-row contract implemented —30 October2026 IST
+- Checked at 2026-10-30T17:30:55.253282+00:00. Codex resumed PR346 from3128dacc82b66a81b3083d6ba19608f5ed0a0a6c in isolated detached worktree. Added pure source-row request validator/receipt matcher and8test groups; existing PR337baseline schema/endpoints unchanged.
+- TDD rejecting placeholder failed2positive tests,then focused6PASS. Fresh reviewer found no concrete defect; added missing-receipt/accessor/hidden-field/boundary tests. Final npm test1575PASS/0FAIL; npm run checkPASS (13services/250coupling locations).
+- Request exact-shape/UUID/version/hash/slug/note constraints; all4source dispositions. Receipt binds every request field/reviewer/server metadata and requires all approval flags false. Matching does NOT authenticate receipt origin,grant,independence,freshness or source bytes.
+- Added plan and SOURCE_ROW_REVIEW_CONTRACT.md. No imports/provider/dependency/runtime app wiring,SQL/API/Auth changes,real grant/decision or production actions. Hosted CI on new head not yet verified.
+- Next:canonical private evidence package/digest and trusted persistence design before hosted source-row review. Genuine reviewer and rights/storage handling remain unresolved. No syllabus/content approval or learner activation. Ownership released after saved checkpoint.
+
+
 ## Exact-row review workflow design —30 October2026 IST
 - Resumed PR346f6687965afb6c1da043028476a44c98ea39ee4c3. Inspected PR337doc/domain validator at641c094579e6bce752621a954322bf9258814b79; existing strict baseline payload cannot accept row-case decisions.
 - Added docs/NMC_EXACT_ROW_REVIEW_WORKFLOW.md:agent-proposed separate typed source-row attestation reusing Auth/runtime/review infrastructure,not repurposing scope-reviewed.
