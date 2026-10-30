@@ -42,7 +42,7 @@ async function hashCase(claim,options){
 export async function digestSourceRowCase(claim,options){
   return hashCase(captureCase(claim),options);
 }
-export async function digestSourceRowPackage(value,options){
+export function captureSourceRowPackage(value){
   exact(value,['packageId','packageVersion','cases']);
   if(typeof value.packageId!=='string'||!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(value.packageId)||!version(value.packageVersion))fail();
   dataArray(value.cases,10000);
@@ -50,6 +50,10 @@ export async function digestSourceRowPackage(value,options){
   const packageId=value.packageId,packageVersion=value.packageVersion,claims=value.cases.map(captureCase);
   if(new Set(claims.map(c=>c.caseId)).size!==claims.length)fail();
   claims.sort((a,b)=>a.caseId<b.caseId?-1:a.caseId>b.caseId?1:0);
+  return {packageId,packageVersion,cases:claims};
+}
+export async function digestSourceRowPackage(value,options){
+  const {packageId,packageVersion,cases:claims}=captureSourceRowPackage(value);
   const cases=[];
   for(const claim of claims)cases.push(await hashCase(claim,options));
   const manifest={contractId:'source-row-package-evidence-v1',integrityProfile:DEFAULT_INTEGRITY_PROFILE,

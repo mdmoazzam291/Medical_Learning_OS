@@ -1,3 +1,11 @@
+## Offline exact package/case/source resolution —31 October 2026 IST
+- Checked at 2026-10-30T22:25:47.426Z. Codex resumed draft PR #346 at 089986085057d77704d36dd0f586f7f67b1dad1c; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-exact-resolution worktree, one writer.
+- Added resolveSourceEvidenceCase: all exact package/case versions and digests required, full package rehash, selected case source hash/edition derivation, scalar frozen source-only result with bytesVerified:false and learnerRelease:false. No latest fallback or source override.
+- Extracted existing synchronous strict captureSourceRowPackage for reuse; digest domains/inputs unchanged. Original malformed arrays/descriptors rejected before cloning; both resolver inputs captured before await.
+- TDD rejecting placeholder failed positive paths; final focused14PASS (six resolver/eight prior digest groups). Full npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS. Fresh read-only review found no concrete defect.
+- Offline self-consistent metadata may resolve without trusted origin/current access. No source-byte verification, rights/grants, storage, schema or API enforcement. Hosted new-head CI unverified.
+- Next: persistence schema/authorization design and disposable transaction adapter conformance, including exact revision/source retrieval, real cross-account denial, withdrawal and recovery. Genuine reviewer/source rights remain unresolved. No source upload, clinical/rights/exam approval, learner activation, merge or production deployment. Ownership released at checkpoint.
+
 ## Synthetic staging transaction conformance —31 October 2026 IST
 - Checked at 2026-10-30T22:16:43.092Z. Codex resumed draft PR #346 at d2eb6b20bbd8606416b19af4b800ca782b02aed4; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-staging-transactions worktree, one writer.
 - Added reusable test-only driver harness, in-memory executable model and 10 transaction scenarios: exact retries, request/revision conflicts, precommit rollback, lost response, readback unavailable/tampered, concurrent identical/conflicting calls and authority recheck. Six negative controls prove detection.
