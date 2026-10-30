@@ -1,3 +1,9 @@
+## Per-subject reconciliation snapshot —30 October2026 IST
+- Resumed PR346c2612636aa1ee21fa915d9e9f603e4437c96b926. Added NMC_SUBJECT_RECONCILIATION.md and evidence-bound19subject snapshot.
+-2634appearances/2631distinct raw tokens/3GMrepeats;14count matches,5disagreements. Net-150 versus2781=PE-153+GM4+OG1-SU1-OP1,not150verified missing requirements.
+- No normalization approvals orPS9.2count subtraction; effective amended denominator unknown. Aggregate snapshot only,not exported fullraw corpus.
+-19/2781/2634/2631/3/14/5/delta validation PASS. No runtime tests/fresh CI claim. Next:cross-file evidence validation and current PR346scope/status reconciliation. No source/medical/rights approval,ingestion,merge/deploy/activation; ownership released at checkpoint.
+
 ## Ambiguous code-column region triage —30 October2026 IST
 - Resumed PR346fa8a50d24c790b27c28bbc5ba4779a1729fcc18e. Added NMC_AMBIGUOUS_REGION_TRIAGE.md and253region metadata.
 -492text regions match heading families. Empty-code regions classify159mergedheadings/59emptybands/6headers/29body continuations. Visually inspected all29bodyregions in5sheets; no clearly new uncoded requirement identified there.
