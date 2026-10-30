@@ -1,3 +1,10 @@
+## Malformed-cell visual checkpoint —30 October2026 IST
+- Resumed PR346 f71e9a88ce33fa00afe93cb567330f10246c1a0b. Inspected8 official pages plus prior OR page. Added9-record metadata anomaly register and NMC_MALFORMED_CELL_ADJUDICATION.md.
+- BC strict82 shortfall explained by prefixless14.1 and wrappedBC14.24 physical rows; topic counts84. PA extra-dot,FM colon,MI missing suffix,AS malformed token andOR malformed cell confirmed. Proposed corrections remain unapproved, not automatically applied.
+- SU26.2 defining row absent at visible26.1->26.3 jump. OP topic counts59 versus headline60: no missing code invented.
+- Metadata validation9 unique IDs/page bounds/hash binding/false activation and JSON round-trip PASS; no runtime changes/tests rerun, fresh CI unverified. No approvals/ingestion/merge/deploy/learner activation.
+- Next: consolidate raw-row/code identity inventory and unresolved adjudications; supplementary/later amendment audit. Independent review pending. Ownership released after saved checkpoint.
+
 ## Remaining subjects and prefix register —30 October2026 IST
 - Resumed PR346 head81869be726cb79f866f306c47073a42f51527474. Added NMC_REMAINING_SUBJECT_REGISTER.md:19-subject strict extraction observations, page ranges, malformed cells and targeted visual evidence.
 - DR/RD defining sections conflict with DE/RT contents legends. Preserved raw observations, no global aliases applied. PA.29.1,FM2:12,ASS.4,split MI/BC tokens and malformed OR2. 2.9 explain candidate parser gaps; proposed identities remain adjudication work.
