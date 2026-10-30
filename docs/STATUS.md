@@ -1,3 +1,9 @@
+## FAP and electives requirement enumeration —30 October2026 IST
+- Resumed PR346f41ec37d25cb6f7413b9049a55c1c400b7e9d6a6. Added FAP_ELECTIVE_ENUMERATION.md and metadata register.
+- FAP17phase targets/10report headings/11image-table competency rows indexed separately. PDF68-70 text-empty does not mean requirement-empty. No additive38 or deduplicated denominator claimed.
+- Official2024PDF32 resolves electives2x15days/1month versus legacy2x4weeks;PDF37 learner participation/time/logbook/75% requirements distinguished from institution guidance.
+-17/10/11/4metadata uniqueness/page/hash/disabled checks PASS. Documentation-only, no runtime tests/fresh CI claim. Next:ECE/skills requirements versus examples,then overlap reconciliation/independent review. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## Foundation45 outcomes and nested scope —30 October2026 IST
 - Resumed PR346a1d4b5e5a528e845a2c4dde7290fbf425154ad06. Added FOUNDATION_SUPPLEMENT_ENUMERATION.md and metadata register.
 - Visually enumerated45top-level2019FC outcomes (10/9/6/15/5) and8nested disability entries underFC4.5;2024 applicability unresolved, no additive53 claim.
