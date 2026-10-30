@@ -1,3 +1,10 @@
+## Offline staging request and receipt bindings —31 October 2026 IST
+- Checked at 2026-10-30T22:11:43.748763+00:00. Codex resumed draft PR #346 at 2023fd1ba8165b1c379bab5b9e9672e49e430288 in isolated mlos-staging-request worktree; one writer.
+- Added source-evidence-staging.js: exact request preparation, server-recomputable canonical claims/package/request fingerprints, pre-await snapshots and receipt shape/binding/checksum matcher. No storage, API or trusted authority implemented.
+- TDD rejecting placeholder failed positive paths. Hidden/custom-prototype candidate arrays and malformed receipt inherited getter hazards reproduced RED, fixed by pre-copy ordinary-tree checks, then focused 8PASS. Fresh read-only review found no further concrete defect. Final npm test 1,599PASS/0FAIL; npm run check PASS (13 services/250 coupling locations); git diff --check PASS.
+- Canonical candidate limit 16 MiB after parsing; transport must cap before parsing. A self-consistent forged receipt passes checksum matching by design; origin/durability/current permissions must be established by future trusted adapter.
+- Next: fault-injectable transaction-port conformance harness for atomic metadata staging, exact retry/conflict/uncertain readback, then separately reviewed persistence/schema/API work. Rights and genuine reviewer unresolved. No source upload, grants, clinical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
 ## Metadata staging transaction and exact-resolution design —31 October 2026 IST
 - Checked at 2026-10-30T22:04:55.793493+00:00. Codex resumed draft PR #346 at 9eb5354b400fc8908608d9b958f5d941c6ad44ff; remote main remains 91a11aff41048984b039fd269a2a0a9ddc3d99da. One writer; isolated mlos-staging-contract worktree.
 - Added SOURCE_EVIDENCE_STAGING_PORT.md: trusted principal/current authority, request fingerprint/immutable revision uniqueness, atomic metadata writes, exact retries, uncertain commit recovery and durable digest readback. Resolves selected case/source within exact package, including multi-source packages.
