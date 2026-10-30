@@ -1,3 +1,8 @@
+## Remaining subjects and prefix register —30 October2026 IST
+- Resumed PR346 head81869be726cb79f866f306c47073a42f51527474. Added NMC_REMAINING_SUBJECT_REGISTER.md:19-subject strict extraction observations, page ranges, malformed cells and targeted visual evidence.
+- DR/RD defining sections conflict with DE/RT contents legends. Preserved raw observations, no global aliases applied. PA.29.1,FM2:12,ASS.4,split MI/BC tokens and malformed OR2. 2.9 explain candidate parser gaps; proposed identities remain adjudication work.
+- Exact totals are not source approval. No runtime changes/tests required; no fresh CI claimed. No content ingestion, approval, merge/deploy or learner activation. Next: visual malformed-cell adjudication and BC/SU/OP gap tracing, then metadata normalization decisions and focused parser tests if justified. Ownership released at saved checkpoint.
+
 ## Medicine and OBGYN defining-table reconciliation — 30 October 2026 IST
 - Checked2026-10-30T11:17:58Z. Codex resumed PR346 head50ccb65aa55b10595ba2f352bfb0b9218d557213; no competing head observed.
 - GM529 unique defining tokens/532 occurrences versus headline525 and topic-header sum531. Visually confirmed GM9.8,GM14.1,GM14.2 printed repeats; GM8.9 numbering gap; topic9 header21/observed17; topic27 header15/observed18. Do not fabricate or remove codes.
