@@ -1,3 +1,11 @@
+## Canonical source-row evidence digests —30 October2026 IST
+- Checked at 2026-10-30T17:37:54.212505+00:00. Resumed PR346aef95af7ccef8fa1c1ca5c1aa3f8176885145c44. Added offline source-row-evidence.js using existing canonical-integrity JCS/SHA256; distinct appearance/case/package domains,strict shapes and deterministic sorted packages.
+- TDD placeholder4positive failures observed; focused8PASS. Final npm test1583PASS/0FAIL; npm run checkPASS (13services/250coupling locations). Read-only review found no concrete defect.
+- Captures all caller claims/package values before asynchronous hashing; rejects duplicates,sparse/custom/accessor data and malformed hashes/locators. Independent SHA oracle and offline review-request interoperability verified.
+- Added SOURCE_ROW_EVIDENCE_DIGESTS.md and implementation plan. Hashes bind supplied metadata,not true source bytes,authority,reviewer independence,freshness or clinical/rights approval. No live NMC package generated or corpus uploaded.
+- Next:private evidence package persistence/import boundaries and exact-source access/rights design before protected API integration. Hosted new-head CI pending; no DB/API/grants/source approval/merge/deploy/learner activation. Ownership released at saved checkpoint.
+
+
 ## Offline source-row contract implemented —30 October2026 IST
 - Checked at 2026-10-30T17:30:55.253282+00:00. Codex resumed PR346 from3128dacc82b66a81b3083d6ba19608f5ed0a0a6c in isolated detached worktree. Added pure source-row request validator/receipt matcher and8test groups; existing PR337baseline schema/endpoints unchanged.
 - TDD rejecting placeholder failed2positive tests,then focused6PASS. Fresh reviewer found no concrete defect; added missing-receipt/accessor/hidden-field/boundary tests. Final npm test1575PASS/0FAIL; npm run checkPASS (13services/250coupling locations).
