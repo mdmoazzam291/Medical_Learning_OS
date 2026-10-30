@@ -1,3 +1,9 @@
+## Unified1031-page scope matrix —30 October2026 IST
+- Resumed PR3466a3828cf5dff0600d6cfe5524ca6c2c2521bc669. Added NMC_SOURCE_COVERAGE_MATRIX.md and12document/1031page disposition checklist; updated unified queue.
+- Every retrieved page has provisional category,pending review and no approved exclusion.263subject table pages included. Retrieved set not certified exhaustive.
+- New explicit gap:volume introductory frameworksPDF75-107/242-268/371-402 may differ from opening2024goals; compare instead of silently deduplicate.
+-12/1031uniqueness/contiguity/hash/263membership/disabled flags PASS; documentation-only/no runtime tests/fresh CI claim. Next:exact volume-global comparison and additional goal locators. No approval/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## National/institutional/subject goals —30 October2026 IST
 - Resumed PR346563ee64bc900f7a33129c235129b2052c38b59f3. Added NMC_GOAL_LOCATORS.md and source-bound185subject-goal items across19sections plus5national/11institutional/8nested locators.
 - Preserved hierarchical/overlapping role summaries; no additive full-coverage denominator. Updated global-subject-goals queue to extracted_review_pending,completed=false.
