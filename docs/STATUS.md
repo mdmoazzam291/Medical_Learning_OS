@@ -1,3 +1,11 @@
+## Metadata staging transaction and exact-resolution design —31 October 2026 IST
+- Checked at 2026-10-30T22:04:55.793493+00:00. Codex resumed draft PR #346 at 9eb5354b400fc8908608d9b958f5d941c6ad44ff; remote main remains 91a11aff41048984b039fd269a2a0a9ddc3d99da. One writer; isolated mlos-staging-contract worktree.
+- Added SOURCE_EVIDENCE_STAGING_PORT.md: trusted principal/current authority, request fingerprint/immutable revision uniqueness, atomic metadata writes, exact retries, uncertain commit recovery and durable digest readback. Resolves selected case/source within exact package, including multi-source packages.
+- Clarified staged access state versus unapproved editorial status. Proposed receipt conveys metadata staging only. No source bytes, protected text, schema/API/storage implementation or service changes.
+- Documentation-only: runtime tests not rerun; prior 1,591-test result belongs to 9eb5354. Document checked against existing digest/access contracts; git diff --check recorded below. No new hosted CI claim.
+- Next: strict offline staging request/fingerprint/receipt contract and synthetic tests, then fault-injected transaction-port harness before persistence/API wiring. Rights and genuine independent review remain unresolved. No grants, ingestion, clinical/rights/exam approval, merge or production deployment. Ownership released at checkpoint.
+
+
 ## Offline private-evidence staging/access policy —30 October2026 IST
 - Checked at 2026-10-30T17:46:47.692898+00:00. Resumed PR346b954eb9bd367f05c20ae877ccb201f9a2fd24730 in isolated worktree. Added evaluateSourceEvidenceAccess and8test groups; no app/Auth/storage adapter wiring.
 - TDD rejecting placeholder failed3positive paths; final focused8PASS. Full npm test1591PASS/0FAIL; npm run checkPASS(13services/250coupling locations). Read-only review found no concrete defect under trusted-server-context assumption.
