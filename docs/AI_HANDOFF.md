@@ -1,3 +1,9 @@
+## National/institutional/subject goals —30 October2026 IST
+- Resumed PR346563ee64bc900f7a33129c235129b2052c38b59f3. Added NMC_GOAL_LOCATORS.md and source-bound185subject-goal items across19sections plus5national/11institutional/8nested locators.
+- Preserved hierarchical/overlapping role summaries; no additive full-coverage denominator. Updated global-subject-goals queue to extracted_review_pending,completed=false.
+-19/185uniqueness/5/11/8hierarchy/page/hash/disabled checks PASS. Text extraction plus selected-page visual inspection,not whole-source review. No runtime tests/fresh CI claim.
+- Next:unified source-coverage matrix with extracted/reviewed/mapped states and unresolved no-omission page dispositions. Independent review/canonical/exam approvals remain open. No ingestion/approval/merge/deploy/activation; ownership released after saved checkpoint.
+
 ## Pandemic competency appearances —30 October2026 IST
 - Resumed PR3468553658645584b3cd360de42cdeb1db440e342f6. Added PANDEMIC_COMPETENCY_ENUMERATION.md and source-bound17module/47row metadata.
 -3nested subcompetencies and5teaching objectives distinct; similar3.1/3.2/3.3 parent cluster not merged. Standard subject-code token scan found0inPDF11-79,not proof no overlap. Historical appended legal referencesPDF80-113 separated.
