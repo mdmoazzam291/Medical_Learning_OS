@@ -1,3 +1,10 @@
+## Medicine and OBGYN defining-table reconciliation — 30 October 2026 IST
+- Checked2026-10-30T11:17:58Z. Codex resumed PR346 head50ccb65aa55b10595ba2f352bfb0b9218d557213; no competing head observed.
+- GM529 unique defining tokens/532 occurrences versus headline525 and topic-header sum531. Visually confirmed GM9.8,GM14.1,GM14.2 printed repeats; GM8.9 numbering gap; topic9 header21/observed17; topic27 header15/observed18. Do not fabricate or remove codes.
+- OG142 unique defining tokens and topic-header sum142 versus headline141. Wrapped Topic33 count05 requires multiline handling. No cross-reference false positive or arbitrary extra identified.
+- Added NMC_MEDICINE_OBGYN_RECONCILIATION.md with exact source/pages, arithmetic, inspection limits. Documentation-only, no runtime tests rerun; fresh CI unverified. No protected prose, approvals, runtime changes, merge/deploy or learner activation.
+- Next: remaining subject defining-range counts and DR/DE,RD/RT alias inspection; then metadata discrepancy ledger and amendment/supplement audit. Independent review pending; ownership released at checkpoint.
+
 ## Official NMC source recovery — 30 October 2026 IST
 - Codex resumed PR346 from584b398a3122907f84607f4893f0676214f591ce; no competing head observed. Recovered official current /rules-regulation-nmc/33/file and /34/file downloads, actual hashes recorded in NMC_OFFICIAL_SOURCE_RECOVERY.md.
 - Official467-page base contains a blank page2; all465 shifted subsequent pages have identical normalized extracted text to mirror. All22 PE defining pages render pixel-identically. PE253/32 versus heading406/35 is confirmed in official-host source, still unresolved.
