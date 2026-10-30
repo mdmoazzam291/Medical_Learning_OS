@@ -1,3 +1,9 @@
+## Global IMG and unified review queue —30 October2026 IST
+- Resumed PR3465ceb4d164504398872c2afece94924810be83421. Added NMC_GLOBAL_SUPPORT_REVIEW_QUEUE.md and machine-readable register.
+- Global section6 has40top-level bullets across7roles; compound subclauses and subject/other goal overlap pending.17pandemic module openings located; module objective enumeration incomplete.
+- Remaining support docs classified as assessment/alignment/logbook/online guidance,not presumed new competency lists.13open queue items consolidate inventory,adjudication,mapping,rights,review,exam/release dependencies.
+-7/40/17/13metadata uniqueness/ranges/hash/disabled checks PASS; no runtime tests/fresh CI claim. Next:pandemic objective rows and edition-specific subject references,then remaining global/subject goals. No source approval/ingestion/merge/deploy/activation; ownership released after checkpoint.
+
 ## ECE/skills requirement classification —30 October2026 IST
 - Resumed PR34674cee40597d21269fe507f2402fffb3376da2725. Added ECE_SKILLS_SCOPE_CLASSIFICATION.md and metadata register.
 -2024ECE5objective locators/3elements separate from2019 repeats,6sample lessons,observation guides and example questions. Skills evidence/process requirements separate from lab/faculty guidance and6task examples.
