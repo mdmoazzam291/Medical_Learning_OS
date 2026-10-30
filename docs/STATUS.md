@@ -1,3 +1,9 @@
+## Exact-row review workflow design —30 October2026 IST
+- Resumed PR346f6687965afb6c1da043028476a44c98ea39ee4c3. Inspected PR337doc/domain validator at641c094579e6bce752621a954322bf9258814b79; existing strict baseline payload cannot accept row-case decisions.
+- Added docs/NMC_EXACT_ROW_REVIEW_WORKFLOW.md:agent-proposed separate typed source-row attestation reusing Auth/runtime/review infrastructure,not repurposing scope-reviewed.
+- Design covers source/physical/logical/decision identities,version/digest binding,consent/independence,target grants,revocation,retry,immutability,privacy,recovery and separate clinical/rights/exam/release gates. No implementation or runtime tests claimed.
+- Next:design authorization then pure source-row contract/receipt validation and tests; private evidence rights/storage and genuine reviewer remain unresolved. No runtime changes,endpoint,migration,grants/messages,approval,ingestion,merge/deploy/activation. Ownership released at checkpoint.
+
 ## Cross-file evidence validation and PR refresh —30 October2026 IST
 - Resumed PR34682e8af39ab4d6e9002e9b8cc2afed032995faf81.21cross-file checks PASS on that exact evidence commit:source hashes,263page/1031page counts,subject arithmetic,AETCOM targets,foundation/FAP/pandemic/goals,22null decisions,13open queue items and disabled eligibility.
 - Added docs/evidence/nmc-crossfile-validation.json with exact input blob hashes; metadata consistency only,not clinical review or runtime CI.
