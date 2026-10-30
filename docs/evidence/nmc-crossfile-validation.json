@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-evidence-crossfile-validation",
+  "validatedCommit": "82e8af39ab4d6e9002e9b8cc2afed032995faf81",
+  "checks": [
+    {
+      "name": "subject19",
+      "pass": true
+    },
+    {
+      "name": "source_pair",
+      "pass": true
+    },
+    {
+      "name": "appearances",
+      "pass": true
+    },
+    {
+      "name": "raw_distinct",
+      "pass": true
+    },
+    {
+      "name": "headline_delta",
+      "pass": true
+    },
+    {
+      "name": "pages263",
+      "pass": true
+    },
+    {
+      "name": "comparison_partition",
+      "pass": true
+    },
+    {
+      "name": "empty_region253",
+      "pass": true
+    },
+    {
+      "name": "header492",
+      "pass": true
+    },
+    {
+      "name": "triage_counts",
+      "pass": true
+    },
+    {
+      "name": "decisions_pending22",
+      "pass": true
+    },
+    {
+      "name": "queue13",
+      "pass": true
+    },
+    {
+      "name": "source_pages1031",
+      "pass": true
+    },
+    {
+      "name": "all_pages_pending",
+      "pass": true
+    },
+    {
+      "name": "aetcom_module27",
+      "pass": true
+    },
+    {
+      "name": "aetcom_targets54",
+      "pass": true
+    },
+    {
+      "name": "foundation45nested8",
+      "pass": true
+    },
+    {
+      "name": "fap17report10table11",
+      "pass": true
+    },
+    {
+      "name": "pandemic47",
+      "pass": true
+    },
+    {
+      "name": "subject_goals185",
+      "pass": true
+    },
+    {
+      "name": "eligibility_disabled",
+      "pass": true
+    }
+  ],
+  "passed": 21,
+  "failed": [],
+  "scope": "Metadata arithmetic/source binding/reference consistency only; no clinical validation or runtime CI result.",
+  "evidenceFiles": [
+    {
+      "path": "docs/evidence/nmc-subject-reconciliation-snapshot.json",
+      "gitBlobSha": "f2a398a3eafb2ccb693d8ba1b839af2db4782cd3"
+    },
+    {
+      "path": "docs/evidence/nmc-codecell-page-receipts.json",
+      "gitBlobSha": "e279afeadc493ffcb6092d028448560b862793ac"
+    },
+    {
+      "path": "docs/evidence/nmc-codecell-method-comparison.json",
+      "gitBlobSha": "e2775b266d3786fbdd8c5f3d7f945c83bb577d7e"
+    },
+    {
+      "path": "docs/evidence/nmc-ambiguous-region-triage.json",
+      "gitBlobSha": "820d8094469bd4e24fa8e0867142c4134245e304"
+    },
+    {
+      "path": "docs/evidence/nmc-source-adjudication-packet.json",
+      "gitBlobSha": "ad98e027601f83ed940a6873075710947e568dcc"
+    },
+    {
+      "path": "docs/evidence/nmc-global-support-review-queue.json",
+      "gitBlobSha": "6800a6a82f869c80e8ada3aef98ba162fc9d2b90"
+    },
+    {
+      "path": "docs/evidence/nmc-source-page-dispositions.json",
+      "gitBlobSha": "46982e86c775aa8b6894316ff9384b505800f3df"
+    },
+    {
+      "path": "docs/evidence/aetcom-module-appendix-bridge.json",
+      "gitBlobSha": "31502ed3c134260906c5901828fd02cf487b792e"
+    },
+    {
+      "path": "docs/evidence/aetcom-2018-enumeration.json",
+      "gitBlobSha": "e00f0847bc25fde1d21ef3dd1b448e66fe588656"
+    },
+    {
+      "path": "docs/evidence/nmc-supplement-requirement-enumeration.json",
+      "gitBlobSha": "e9916514fb205ef0a4bd521727b7fdf2a9b48dcb"
+    },
+    {
+      "path": "docs/evidence/fap-elective-requirements.json",
+      "gitBlobSha": "c08ed517463ae1b7b8d6d99795f597b2417aa5d2"
+    },
+    {
+      "path": "docs/evidence/pandemic-competency-appearances.json",
+      "gitBlobSha": "962d0ec7ad497a830985f5d9b1caf2dd2047ef9d"
+    },
+    {
+      "path": "docs/evidence/nmc-2024-goal-locators.json",
+      "gitBlobSha": "c5f1a7c27beb4d1d963a6c4c3ff1a3bad5e61c96"
+    }
+  ]
+}

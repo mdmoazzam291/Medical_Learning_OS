@@ -1,3 +1,9 @@
+## Cross-file evidence validation and PR refresh —30 October2026 IST
+- Resumed PR34682e8af39ab4d6e9002e9b8cc2afed032995faf81.21cross-file checks PASS on that exact evidence commit:source hashes,263page/1031page counts,subject arithmetic,AETCOM targets,foundation/FAP/pandemic/goals,22null decisions,13open queue items and disabled eligibility.
+- Added docs/evidence/nmc-crossfile-validation.json with exact input blob hashes; metadata consistency only,not clinical review or runtime CI.
+- Refreshing stale PR346description:official source bytes now retrieved;2634appearances/2631rawtokens and14matches/5disagreements replace obsolete8-row-only audit wording while distinguishing unchanged8unverified app proposal records.
+- No runtime changes/tests rerun/fresh CI claim. Next:address actual source/rights/reviewer gates and durable exact-row review import design,not additional count-only summaries. Keep draft/stacked/unmerged. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## Per-subject reconciliation snapshot —30 October2026 IST
 - Resumed PR346c2612636aa1ee21fa915d9e9f603e4437c96b926. Added NMC_SUBJECT_RECONCILIATION.md and evidence-bound19subject snapshot.
 -2634appearances/2631distinct raw tokens/3GMrepeats;14count matches,5disagreements. Net-150 versus2781=PE-153+GM4+OG1-SU1-OP1,not150verified missing requirements.
