@@ -1,3 +1,9 @@
+## AETCOM numbered entries and modules —30 October2026 IST
+- Resumed PR346b6c876522c065bf4c8a7edb03141a5268d11cc0c. Added AETCOM_ENUMERATION.md and docs/evidence/aetcom-2018-enumeration.json.
+- Appendix87-91 enumerates1-54 (39core/15desirable);14 extra appearances on92-93 provisionally match existing numbered entries. Row37 core/noncore conflict and16/17 semantic similarity remain unresolved; do not claim68 unique requirements.
+-27 learning-module IDs align with2024 Annexure1 reference set; no automatic module->competency or subject overlap approval. Local locators explicitly not NMC codes.
+-54/14/27 uniqueness/count/reference-set checks PASS. Metadata only, no runtime tests rerun/fresh CI claim. No source prose, approval, ingestion, merge/deploy/activation. Next: candidate module/competency/subject overlap mapping with exact-source review. Ownership released after saved checkpoint.
+
 ## Supplementary source retrieval and scope audit —30 October2026 IST
 - Resumed PR3466a5032c735320df215c2c1706dd5f3db71343040. Downloaded10 official supplementary PDFs; exact hashes/sizes/pages recorded in docs/evidence/nmc-supplement-sources.json. Parsed10PDFs; no protected PDFs/prose committed.
 - Visually checked AETCOM appendix declaration39core/15desirable,2024 annexure index and foundation2weeks/80hours. Separate modules/competencies/subject overlaps and legacy cohort applicability. Supplements not fully enumerated.
