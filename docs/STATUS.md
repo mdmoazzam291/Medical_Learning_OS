@@ -1,3 +1,9 @@
+## Paediatrics mirror-section investigation — 30 October 2026 IST
+- Checked at 2026-10-30T11:07:37Z. Codex resumed PR346 at c3d7a1e0c787f61ac3fca95bd3ceda87b36542ae; current main91a11aff41048984b039fd269a2a0a9ddc3d99da. Prior handoff released ownership; no remote agent tasks launched.
+- Re-downloaded mirror with identical SHA256; rendered/inspected all22 PE pages in contact sheets plus full-page endpoint/transition. Observed253 candidates and32 topics versus printed406/35. This is a mirror source anomaly, not evidence153 official requirements are missing. Preserved denominator and unverified state.
+- Added docs/NMC_PAEDIATRICS_SOURCE_ANOMALY.md with provenance, two count aggregations, inspection limits and next acceptance steps. No runtime files or source descriptions changed; runtime/browser tests not rerun for documentation-only checkpoint. Fresh CI not yet verified.
+- Next exact action: recover official revised source/clarification and compare PE section, then classify GM/OG extras and remaining aliases. Keep PR346 draft and issue345 unresolved. No ingestion, syllabus approval, merge, deploy or learner activation. Ownership released for continuation after saved checkpoint.
+
 ## Dual-exam syllabus proposal and mirror source investigation — 30 October 2026 IST
 - Owner requested a practical proposal and continued necessary source work. Codex resumed PR346 branch feat/nmc-complete-competency-audit-20261030, code head 5df017dcaae9ea8f07e7cb98e9170900c03743c9. Remote main observed 91a11aff41048984b039fd269a2a0a9ddc3d99da. No competing writer observed; no remote tasks launched.
 - Added docs/NMC_DUAL_EXAM_ADVANCEMENT_PROPOSAL.md: separate source completeness, exact concept/assessment mapping and exam-specific learner activation gates; scoped claims, supplements, rights, uncertainty, invalidation and partial-pilot prerequisites. Proposed policy only; no runtime enforcement claimed.
