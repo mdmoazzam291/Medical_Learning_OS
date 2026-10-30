@@ -1,3 +1,10 @@
+## Synthetic staging transaction conformance —31 October 2026 IST
+- Checked at 2026-10-30T22:16:43.092Z. Codex resumed draft PR #346 at d2eb6b20bbd8606416b19af4b800ca782b02aed4; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-staging-transactions worktree, one writer.
+- Added reusable test-only driver harness, in-memory executable model and 10 transaction scenarios: exact retries, request/revision conflicts, precommit rollback, lost response, readback unavailable/tampered, concurrent identical/conflicting calls and authority recheck. Six negative controls prove detection.
+- TDD rejecting model failed ten positive paths. Reviewer reproduced missing authoritative stored-claim verification; new regression observed RED then GREEN after independent stored package/request/receipt checks. No other concrete finding. Final focused16PASS; npm test1,615PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS.
+- Model is test-only memory, not production/durable persistence, Auth, rights enforcement or database concurrency acceptance. A single simulated precommit fault/deny toggle does not certify every SQL boundary or authority transition. No actual adapter has run this harness.
+- Next: exact-package/case/source resolution contract and offline negative tests, then separately reviewed schema/authorization and disposable real adapter conformance. Source rights/genuine reviewer remain unresolved. No source upload, grants, clinical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
 ## Offline staging request and receipt bindings —31 October 2026 IST
 - Checked at 2026-10-30T22:11:43.748763+00:00. Codex resumed draft PR #346 at 2023fd1ba8165b1c379bab5b9e9672e49e430288 in isolated mlos-staging-request worktree; one writer.
 - Added source-evidence-staging.js: exact request preparation, server-recomputable canonical claims/package/request fingerprints, pre-await snapshots and receipt shape/binding/checksum matcher. No storage, API or trusted authority implemented.
