@@ -1,3 +1,9 @@
+## Supplementary source retrieval and scope audit —30 October2026 IST
+- Resumed PR3466a5032c735320df215c2c1706dd5f3db71343040. Downloaded10 official supplementary PDFs; exact hashes/sizes/pages recorded in docs/evidence/nmc-supplement-sources.json. Parsed10PDFs; no protected PDFs/prose committed.
+- Visually checked AETCOM appendix declaration39core/15desirable,2024 annexure index and foundation2weeks/80hours. Separate modules/competencies/subject overlaps and legacy cohort applicability. Supplements not fully enumerated.
+- Recorded embedded family adoption/alignment/AETCOM scopes; research infrastructure/admission disability policies not automatically clinical competencies. Targeted later-amendment searches are nonexhaustive; no absence claim.
+-10source metadata/unique IDs/hash/page checks PASS. Documentation-only, no runtime tests rerun/fresh CI claimed; no approval/ingestion/merge/deploy/activation. Next: exact AETCOM appendix/module enumeration and2024 overlap/applicability, then other supplements/later notices. Ownership released after saved checkpoint.
+
 ## Consolidated extraction inventory —30 October2026 IST
 - Resumed PR34614bb3ba51d36738dc30ae415d340cf5c7dc06510. Added docs/evidence/nmc-2024-consolidated-inventory.json and NMC_CONSOLIDATED_INVENTORY.md.
 -19 subjects/263 defining-table pages/2624 strict distinct candidates; per-page counts and ordered-code hashes, exact source pair hashes,9 anomaly links and3 unapplied October amendments consolidated. Published base2781 retained; no effective denominator inferred.
