@@ -1,3 +1,11 @@
+## Private evidence database/authorization design —31 October 2026 IST
+- Checked at 2026-10-30T22:35:48.706Z. Codex resumed draft PR #346 at 767f9bfe08e1411a2c384aed77ccdf259ec7782c; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-schema-design worktree, one writer.
+- Added SOURCE_EVIDENCE_DATABASE_DESIGN.md specifying immutable canonical bytes/revisions/cases/request receipts, append-only policy/grant/access history, exact composite bindings and lexical UUID handling; JSONB projections cannot replace JCS digest bytes.
+- Reuses existing server-only SECURITY INVOKER pattern, explicit ACL/RLS, verified actor delegation and deny-by-default authority. First adapter owner-only; full package operations check rights for every source. No automatic baseline-grant reuse or publication authority.
+- Serializing all relevant authority writers and protected operations is an explicit unimplemented requirement. Separate postcommit readback and current-access check precede accepted staging; unknown commit outcomes reconcile with same request.
+- Design-only: git diff --check PASS; source/docs inspection and fresh read-only design review found no blocker for disposable prototype. No runtime tests rerun; prior1,621 result belongs to767f9bf. Official security/functions docs and HTML changelog consulted; no live project/version/config verified.
+- Next: disposable-only schema/RPC prototype and database checks for owner staging/exact readback, then actual driver conformance and authority/restore acceptance before API wiring. No SQL migration/schema write, grants, source upload, medical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
 ## Offline exact package/case/source resolution —31 October 2026 IST
 - Checked at 2026-10-30T22:25:47.426Z. Codex resumed draft PR #346 at 089986085057d77704d36dd0f586f7f67b1dad1c; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-exact-resolution worktree, one writer.
 - Added resolveSourceEvidenceCase: all exact package/case versions and digests required, full package rehash, selected case source hash/edition derivation, scalar frozen source-only result with bytesVerified:false and learnerRelease:false. No latest fallback or source override.
