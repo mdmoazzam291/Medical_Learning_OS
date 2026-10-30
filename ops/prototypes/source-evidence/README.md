@@ -26,6 +26,26 @@ The private writers serialize inside the embedded instance; no real multi-connec
 
 Fault injection is intentionally callable only in this disposable fixture and must never enter a production API. SQL returns committed, not accepted. No hosted migration, real grant/source upload, production RLS/Auth assurance or learner publication follows.
 
-Next: a disposable driver for the existing transaction conformance harness with real transaction/readback fault handling. Keep hosted migrations/API wiring/reviewer grants/source bytes disabled until authorization, concurrency and recovery requirements pass.
+The disposable driver below now runs the existing transaction conformance harness against SQL records. Keep hosted migrations/API wiring/reviewer grants/source bytes disabled until remaining authorization, concurrency and recovery requirements pass.
 
 Primary references consulted for this increment: [RFC8785](https://www.rfc-editor.org/rfc/rfc8785) and [PostgreSQL JSON functions](https://www.postgresql.org/docs/current/functions-json.html). No new SQL extension/service is introduced.
+
+## SQL transaction conformance driver
+
+Run the reusable transaction harness against real disposable SQL tables/functions:
+
+```sh
+PGLITE_MODULE_URL=file:///absolute/scratch/tooling/node_modules/@electric-sql/pglite/dist/index.js node scripts/source-evidence-sql-conformance.js
+```
+
+`scripts/lib/source-evidence-sql-driver.js` creates/closes a fresh in-memory database per scenario. It captures and validates the candidate before asynchronous work, recomputes the canonical envelope, stages through SQL and returns accepted only after a separate protected SQL readback plus independent JavaScript package/receipt checks. `inspect()` queries committed revisions, requests and events; it does not keep a parallel success-state mirror. The harness independently rehashes inspected claims and checks request/receipt bindings. Inspection projects the fixed lower-case UUID fixtures used by this harness; it is not a generic export or client endpoint.
+
+The driver passes all ten existing scenarios: exact retry, request/revision conflicts, atomic precommit failure, lost acknowledgement, unavailable/tampered readback, overlapping identical/conflicting calls and authority recheck. Three deliberately broken wrappers must be rejected: accepting uncertain outcomes, accepting corrupted readback and reporting inconsistent stored claims. Each wrapper closes its database through the harness finally block.
+
+Fault distinctions matter: before-commit injects an actual SQL exception after case insertion and verifies no committed revision/request/event; the standalone SQL probe separately checks four write-boundary rollbacks, including package records. After-commit and readback-unavailable simulate failed delivery after a successful SQL statement, rather than killing a server or demonstrating a real network outage. Readback-tampered alters the returned candidate projection, not the stored SQL records; retry reads unchanged records. These deterministic faults prove driver's fail-closed status/receipt handling, not crash durability.
+
+A promise queue serializes this driver's single embedded connection, including the privileged fixture deny writer. Overlapping Promise.all calls therefore test request convergence through this driver, not independent PostgreSQL connection locking or a production revoke race. No hosted Auth session, production authority path, export/restore, deployed adapter, source bytes or reviewer grant is added. Unknown SQL outcomes return uncertain; integrity/denial results expose no receipt. Malformed pre-SQL candidates return invalid without writes. The fixture administrative role never escapes through its public driver surface; it only seeds fixed synthetic authority/policy and appends the test deny event.
+
+Next: extend reusable acceptance coverage for metadata withdrawal and postcommit current-access denial, then consistent disposable export/restore and true multi-connection acceptance before hosted adapter/API consideration. These are still private prototypes, not production migration candidates.
+
+Lifecycle regression checks start staging and immediately close the driver, including two concurrent close callers. Preparation/hashing, SQL and readback all belong to the tracked queue; close waits for the entire in-flight operation, and repeated close calls share its completion. New staging after close rejects. These paths were observed failing before their fixes.
