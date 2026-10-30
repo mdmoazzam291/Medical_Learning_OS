@@ -1,3 +1,9 @@
+## Private source-evidence persistence/access proposal —30 October2026 IST
+- Resumed PR3466ace6d3a84ea247183e7f74992bf32700b8c46f6. Read portability/service/content/archive contracts. Existing ArchivePort is interface only,not live reviewer storage; Drive original ownership and app review-metadata authority retained.
+- Added NMC_PRIVATE_EVIDENCE_STORAGE_ACCESS.md:metadata-first exact private package staging;raw PDFs remain official-source references until rights/retention/display resolved. Future authorized archives require implemented adapter/readback/recovery,not public/static links.
+- Design addresses immutable metadata/idempotency/partial failures,typed source-row grants,authenticated delivery/revocation limits,no-store,rights withdrawal,retention/backup/restore/provider exit. No service/coupling register changed for proposal.
+- Design-only: no runtime tests or implementation completion claimed. Next:pure fail-closed staging/access contract and tests,then separately reviewed persistence/API work. No upload,provisioning,grants/messages,rights/clinical/syllabus approval,merge/deploy/activation. Ownership released at checkpoint.
+
 ## Canonical source-row evidence digests —30 October2026 IST
 - Checked at 2026-10-30T17:37:54.212505+00:00. Resumed PR346aef95af7ccef8fa1c1ca5c1aa3f8176885145c44. Added offline source-row-evidence.js using existing canonical-integrity JCS/SHA256; distinct appearance/case/package domains,strict shapes and deterministic sorted packages.
 - TDD placeholder4positive failures observed; focused8PASS. Final npm test1583PASS/0FAIL; npm run checkPASS (13services/250coupling locations). Read-only review found no concrete defect.
