@@ -1,3 +1,9 @@
+## Consolidated extraction inventory —30 October2026 IST
+- Resumed PR34614bb3ba51d36738dc30ae415d340cf5c7dc06510. Added docs/evidence/nmc-2024-consolidated-inventory.json and NMC_CONSOLIDATED_INVENTORY.md.
+-19 subjects/263 defining-table pages/2624 strict distinct candidates; per-page counts and ordered-code hashes, exact source pair hashes,9 anomaly links and3 unapplied October amendments consolidated. Published base2781 retained; no effective denominator inferred.
+- Metadata validation19 subjects/263 unique pages/count sums/anomaly links/fail-closed eligibility PASS. Documentation/evidence only; no runtime tests rerun or fresh CI claimed.
+- Not a complete raw-row/code manifest or approved curriculum. Supplements/later amendments and independent adjudication remain pending. Next: source manifest and explicit page scopes for supplements/later notices. No ingestion/approval/merge/deploy/activation; ownership released at checkpoint.
+
 ## Malformed-cell visual checkpoint —30 October2026 IST
 - Resumed PR346 f71e9a88ce33fa00afe93cb567330f10246c1a0b. Inspected8 official pages plus prior OR page. Added9-record metadata anomaly register and NMC_MALFORMED_CELL_ADJUDICATION.md.
 - BC strict82 shortfall explained by prefixless14.1 and wrappedBC14.24 physical rows; topic counts84. PA extra-dot,FM colon,MI missing suffix,AS malformed token andOR malformed cell confirmed. Proposed corrections remain unapproved, not automatically applied.
