@@ -69,6 +69,9 @@ begin
  if evidence_probe.exact(r,array['contractId','receiptId','requestId','actorId','packageId','packageVersion','packageDigest','requestFingerprint','recordedAt','sourceReviewOnly','clinicalApproved','rightsApproved','examScopeApproved','learnerRelease','receiptDigest']) is not true
  or evidence_probe.text_match(r->'receiptId','^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$') is not true
  or evidence_probe.text_match(r->'receiptDigest',hex) is not true or evidence_probe.valid_utc(r->'recordedAt') is not true then raise exception 'evidence_invalid';end if;
+ if c->'packageId' is distinct from b->'packageId' or c->'packageVersion' is distinct from b->'packageVersion' or r->>'contractId' is distinct from 'source-evidence-staging-receipt-v1' or r->'sourceReviewOnly' is distinct from 'true'::jsonb then raise exception 'evidence_invalid';end if;
+ foreach uid in array array['requestId','actorId','packageId','packageVersion','packageDigest','requestFingerprint'] loop if r->uid is distinct from b->uid then raise exception 'evidence_invalid';end if;end loop;
+ foreach uid in array array['clinicalApproved','rightsApproved','examScopeApproved','learnerRelease'] loop if r->uid is distinct from 'false'::jsonb then raise exception 'evidence_invalid';end if;end loop;
 end;$$;
 
 create function evidence_probe.guard(p_actor uuid,p_candidate jsonb)
@@ -87,6 +90,8 @@ begin
  if p_actor is null or octet_length(p_candidate)>16777216 or jsonb_typeof(c->'cases') is distinct from 'array' then raise exception 'evidence_invalid';end if;
  if jsonb_array_length(c->'cases') not between 1 and 10000 then raise exception 'evidence_invalid';end if;
  perform evidence_probe.validate(c,p_binding,r);
+ perform evidence_probe.validate_digests(p_candidate,p_manifest,p_binding,p_receipt_payload,p_receipt);
+ p_candidate:=evidence_probe.domain_canonical(evidence_probe.ordered_package(c));
  perform evidence_probe.guard(p_actor,c);
  pid:=(p_binding->>'packageId')::uuid;v:=(p_binding->>'packageVersion')::int;rid:=(p_binding->>'requestId')::uuid;dg:=p_binding->>'packageDigest';
  if p_binding->>'actorId' is distinct from p_actor::text or v not between 1 and 1000000 or dg !~ '^[a-f0-9]{64}$'
@@ -111,6 +116,7 @@ begin
   select * into rev from evidence_probe.revisions where package_id=pid and version=v;
   if rev.owner<>p_actor then raise exception 'evidence_denied';end if;
   if rev.candidate<>p_candidate or rev.manifest<>p_manifest then raise exception 'evidence_conflict';end if;
+  perform evidence_probe.readback(p_actor,pid,v,dg,rid);
   return jsonb_build_object('status','committed','receipt',old.receipt::jsonb);
  end if;
  select * into rev from evidence_probe.revisions where package_id=pid and version=v;
@@ -132,14 +138,23 @@ begin
 end;$$;
 create function evidence_probe.readback(p_actor uuid,p_package uuid,p_version int,p_digest text,p_request uuid)
 returns jsonb language plpgsql security invoker set search_path='' as $$
-declare rev evidence_probe.revisions;req evidence_probe.requests;
+declare rev evidence_probe.revisions;req evidence_probe.requests;r jsonb;b jsonb;k text;
 begin
  perform pg_advisory_xact_lock(730031);
- select * into rev from evidence_probe.revisions where package_id=p_package and version=p_version and digest=p_digest and owner=p_actor;
+ select * into rev from evidence_probe.revisions where package_id=p_package and version=p_version and digest=p_digest and owner=p_actor and exists(select 1 from evidence_probe.packages where package_id=p_package and owner=p_actor);
  if not found then raise exception 'evidence_denied';end if;
+ if (rev.candidate::jsonb->>'packageId')::uuid is distinct from rev.package_id or rev.candidate::jsonb->'packageVersion' is distinct from to_jsonb(rev.version) or not exists(select 1 from evidence_probe.packages where package_id=p_package and lexical_id=rev.candidate::jsonb->>'packageId') then raise exception 'evidence_invalid';end if;
  perform evidence_probe.guard(p_actor,rev.candidate::jsonb);
  select * into req from evidence_probe.requests where actor=p_actor and request_id=p_request and package_id=p_package and version=p_version and digest=p_digest;
  if not found then raise exception 'evidence_denied';end if;
+ r:=req.receipt::jsonb;b:='{}'::jsonb;
+ foreach k in array array['requestId','actorId','packageId','packageVersion','packageDigest','requestFingerprint'] loop b:=b||jsonb_build_object(k,r->k);end loop;
+ perform evidence_probe.validate(rev.candidate::jsonb,b,r);
+ perform evidence_probe.validate_digests(rev.candidate,rev.manifest,b,evidence_probe.domain_canonical(r-'receiptDigest'),req.receipt);
+ if (b->>'requestId')::uuid is distinct from req.request_id or b->>'actorId' is distinct from p_actor::text or b->>'packageId' is distinct from rev.candidate::jsonb->>'packageId' or b->'packageVersion' is distinct from to_jsonb(rev.version) or b->>'packageDigest' is distinct from rev.digest or b->>'requestFingerprint' is distinct from req.fingerprint then raise exception 'evidence_invalid';end if;
+ if (select count(*) from evidence_probe.cases where package_id=p_package and version=p_version)<>jsonb_array_length(rev.candidate::jsonb->'cases') or exists(
+ select 1 from evidence_probe.cases stored where stored.package_id=p_package and stored.version=p_version and not exists(
+ select 1 from jsonb_array_elements(rev.candidate::jsonb->'cases') q where q->>'caseId'=stored.case_id and q=stored.claim)) then raise exception 'evidence_invalid';end if;
  return jsonb_build_object('candidate',rev.candidate,'manifest',rev.manifest,'receipt',req.receipt);
 end;$$;
 create function evidence_probe.immutable() returns trigger language plpgsql set search_path='' as $$begin raise exception 'evidence_immutable';end;$$;

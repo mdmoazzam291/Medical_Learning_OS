@@ -20,12 +20,32 @@ const stage=async(e,fault=null)=>(await db.query('select evidence_probe.stage($1
 try{
  await db.exec('create role anon;create role authenticated;create role service_role bypassrls;');
  await db.exec(await readFile(new URL('../ops/prototypes/source-evidence/schema.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../ops/prototypes/source-evidence/digests.sql',import.meta.url),'utf8'));
  await db.query('select evidence_probe.set_authority($1,true)',[actor]);
  await db.exec("select evidence_probe.set_source_policy(repeat('a',64),'synthetic',true);select evidence_probe.set_source_policy(repeat('d',64),'synthetic',true)");
  await db.exec('set role service_role');
+ const forged=await envelope(candidate()),altered=structuredClone(forged.p);altered.cases[0].appearance.rawCellSha256='e'.repeat(64);forged.args[1]=canonicalize(altered);
+ await assert.rejects(stage(forged),/evidence_invalid/);
  const e=await envelope(candidate()),first=await stage(e);assert.equal(first.status,'committed');
  assert.equal(await matchesSourceEvidenceStagingReceipt(first.receipt,e.b),true);
  assert.deepEqual(await stage(e),first);
+ assert.deepEqual(await stage(await envelope({...e.p,cases:e.p.cases.toReversed()},e.b.requestId)),first,'case order does not change exact retry receipt');
+ for(const value of [{z:null,a:[true,false,0,1000000000],text:'quote" and slash\\'},['a-a','a.a','a0','a:a','a_a'],{b:1,a:0}])assert.equal((await db.query('select evidence_probe.domain_canonical($1::jsonb) c',[JSON.stringify(value)])).rows[0].c,canonicalize(value));
+ for(const value of ['nonASCII-é','line\nfeed',-1,1.5,1000000001])await assert.rejects(db.query('select evidence_probe.domain_canonical($1::jsonb)',[JSON.stringify(value)]),/evidence_invalid/);
+ assert.equal((await db.query("select evidence_probe.domain_canonical('1.00'::jsonb) c")).rows[0].c,'1');
+ const relations=['unresolved','proposed-normalization','distinct-appearance','candidate-equivalence','partial','nested'];
+ for(let i=0;i<12;i++){
+  const p=candidate();p.packageVersion=i===11?1000000:i+1;p.cases[0].caseId=['a-a','a.a','a0','a:a','a_a','aa'][i%6];p.cases[0].caseVersion=i===11?1000000:i+1;
+  p.cases[0].appearance={...p.cases[0].appearance,pdfPage:i+1,rowOrdinal:1000000,rotation:[0,90,180,270][i%4],bboxMilliPoints:[0,1,1000000000,999999999]};p.cases[0].interpretation={...p.cases[0].interpretation,proposedIdentity:i%2?'BC14.24':null,relation:relations[i%6]};
+  const v=await envelope(p),derived=(await db.query('select evidence_probe.derived_manifest($1::jsonb) m',[canonicalize(p)])).rows[0].m;
+  assert.equal(canonicalize(derived),v.args[2]);assert.equal((await db.query('select evidence_probe.domain_hash($1::jsonb) h',[derived])).rows[0].h,v.b.packageDigest);await stage(v);
+ }
+ const wrongFingerprint=await envelope(candidate());wrongFingerprint.args[3]={...wrongFingerprint.b,requestFingerprint:'f'.repeat(64)};
+ const {receiptDigest:discarded,...wrongPayload}=wrongFingerprint.receipt;wrongPayload.requestFingerprint='f'.repeat(64);wrongFingerprint.args[4]=canonicalize(wrongPayload);wrongFingerprint.args[5]=canonicalize({...wrongPayload,receiptDigest:(await digestCanonical(wrongPayload)).digestHex});await assert.rejects(stage(wrongFingerprint),/evidence_invalid/);
+ const forgedManifest=await envelope(candidate()),fm=JSON.parse(forgedManifest.args[2]);fm.cases[0].appearanceEvidenceDigest='f'.repeat(64);
+ const digest=(await digestCanonical(fm)).digestHex;forgedManifest.args[2]=canonicalize(fm);forgedManifest.args[3]={...forgedManifest.b,packageDigest:digest};
+ const {receiptDigest:discard,...payloadManifest}=forgedManifest.receipt;payloadManifest.packageDigest=digest;forgedManifest.args[4]=canonicalize(payloadManifest);forgedManifest.args[5]=canonicalize({...payloadManifest,receiptDigest:(await digestCanonical(payloadManifest)).digestHex});await assert.rejects(stage(forgedManifest),/evidence_invalid/);
+ const noncanonical=await envelope(candidate());noncanonical.args[1]+=' ';await assert.rejects(stage(noncanonical),/evidence_invalid/);
  const badManifest={...e,args:[...e.args]};badManifest.args[2]+=' ';await assert.rejects(stage(badManifest),/evidence_invalid/);
  const badReceipt={...e,args:[...e.args]};badReceipt.args[4]+=' ';await assert.rejects(stage(badReceipt),/evidence_invalid/);
  const approved={...e.receipt,clinicalApproved:true};delete approved.receiptDigest;
@@ -44,6 +64,19 @@ try{
  const aliasPackage={...candidate(),packageId:'a1111111-1111-4111-8111-111111111111'};await stage(await envelope(aliasPackage));await assert.rejects(stage(await envelope({...aliasPackage,packageId:aliasPackage.packageId.toUpperCase()})),/evidence_conflict/);
  const missingPolicy=candidate();missingPolicy.cases[0].sourceSha256='f'.repeat(64);await assert.rejects(stage(await envelope(missingPolicy)),/evidence_denied/);
  const inspect=async(e,user=actor)=>(await db.query('select evidence_probe.readback($1,$2,$3,$4,$5) result',[user,e.b.packageId,e.b.packageVersion,e.b.packageDigest,e.b.requestId])).rows[0].result;
+ for(const change of [{clinicalApproved:true},{contractId:'wrong'},{sourceReviewOnly:false}]){
+  const badStored=await envelope(e.p),{receiptDigest:oldChecksum,...base}=badStored.receipt,payload={...base,...change};
+  const receipt=canonicalize({...payload,receiptDigest:(await digestCanonical(payload)).digestHex});
+  await db.query('insert into evidence_probe.requests values($1,$2,$3,$4,$5,$6,$7)',[actor,badStored.b.requestId,badStored.b.requestFingerprint,badStored.b.packageId,1,badStored.b.packageDigest,receipt]);
+  await assert.rejects(inspect(badStored),/evidence_invalid/);await assert.rejects(stage(badStored),/evidence_invalid/);
+ }
+ const alien=await envelope(candidate()),physical=crypto.randomUUID();
+ await db.query('insert into evidence_probe.packages values($1,$2,$3)',[physical,physical,actor]);
+ await db.query('insert into evidence_probe.revisions values($1,1,$2,$3,$4,$5)',[physical,alien.b.packageDigest,actor,alien.args[1],alien.args[2]]);
+ for(const q of alien.p.cases)await db.query('insert into evidence_probe.cases values($1,1,$2,$3)',[physical,q.caseId,q]);
+ await db.query('insert into evidence_probe.requests values($1,$2,$3,$4,1,$5,$6)',[actor,alien.b.requestId,alien.b.requestFingerprint,physical,alien.b.packageDigest,alien.args[5]]);
+ await assert.rejects(inspect({...alien,b:{...alien.b,packageId:physical}}),/evidence_invalid/);
+ await assert.rejects(db.query('select evidence_probe.validate($1::jsonb,$2::jsonb,$3::jsonb)',[{...e.p,packageVersion:2},e.b,e.receipt]),/evidence_invalid/);
  const stored=await inspect(e),saved=JSON.parse(stored.candidate),manifest=await digestSourceRowPackage(saved);
  assert.equal(manifest.packageDigest,e.b.packageDigest);assert.equal(stored.manifest,e.args[2]);assert.deepEqual(JSON.parse(stored.receipt),first.receipt);
  const selected=manifest.cases[1];const resolved=await resolveSourceEvidenceCase(saved,{packageId:manifest.packageId,packageVersion:manifest.packageVersion,packageDigest:manifest.packageDigest,caseId:selected.caseId,caseVersion:selected.caseVersion,caseDigest:selected.caseDigest,appearanceEvidenceDigest:selected.appearanceEvidenceDigest});
@@ -68,6 +101,9 @@ try{
   assert.equal((await db.query('select count(*)::int n from evidence_probe.events where request_id=$1',[v.b.requestId])).rows[0].n,0);
   await stage(v);
  }
+ const corruptProjection=await envelope(candidate());await stage(corruptProjection);
+ await db.query('insert into evidence_probe.cases values($1,$2,$3,$4)',[corruptProjection.b.packageId,1,'unexpected',corruptProjection.p.cases[0]]);
+ await assert.rejects(inspect(corruptProjection),/evidence_invalid/);
  await assert.rejects(db.exec('update evidence_probe.revisions set digest=digest'),/permission denied/);
  for(const role of ['anon','authenticated']){
   await db.exec(`reset role;set role ${role}`);
@@ -89,5 +125,5 @@ try{
  await assert.rejects(db.exec('update evidence_probe.authority set enabled=true'),/evidence_immutable/);
  await assert.rejects(db.exec('delete from evidence_probe.source_policy'),/evidence_immutable/);
  await assert.rejects(db.exec('update evidence_probe.packages set owner=owner'),/evidence_immutable/);
- console.log('Disposable evidence SQL checks passed: canonical readback/mixed-source binding, exact retry, request/revision conflicts, historical exact reads, 4 write-boundary rollbacks, SQL shape/receipt validation, immutable package and authority/policy history, role isolation and latest-state denial.');
+ console.log('Disposable evidence SQL checks passed: canonical readback/mixed-source binding, exact retry, request/revision conflicts, historical exact reads, 4 write-boundary rollbacks, restricted SQL/JS digest parity and forged-binding rejection, SQL shape/receipt validation, immutable package and authority/policy history, role isolation and latest-state denial.');
 }finally{await db.close();}
