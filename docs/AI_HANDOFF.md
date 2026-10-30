@@ -1,3 +1,9 @@
+## Pandemic competency appearances —30 October2026 IST
+- Resumed PR3468553658645584b3cd360de42cdeb1db440e342f6. Added PANDEMIC_COMPETENCY_ENUMERATION.md and source-bound17module/47row metadata.
+-3nested subcompetencies and5teaching objectives distinct; similar3.1/3.2/3.3 parent cluster not merged. Standard subject-code token scan found0inPDF11-79,not proof no overlap. Historical appended legal referencesPDF80-113 separated.
+- Corrected colon-sensitive extraction and one verification-command syntax error;17table-heading checks PASS.17/47uniqueness/pages/hash/disabled metadata PASS; no runtime tests/fresh CI claim.
+- Next:national/institutional and subject-goal prose enumeration,then full scope reconciliation and independent review. No source approval/ingestion/merge/deploy/activation; ownership released after saved checkpoint.
+
 ## Global IMG and unified review queue —30 October2026 IST
 - Resumed PR3465ceb4d164504398872c2afece94924810be83421. Added NMC_GLOBAL_SUPPORT_REVIEW_QUEUE.md and machine-readable register.
 - Global section6 has40top-level bullets across7roles; compound subclauses and subject/other goal overlap pending.17pandemic module openings located; module objective enumeration incomplete.
