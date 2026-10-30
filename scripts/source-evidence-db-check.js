@@ -20,8 +20,8 @@ const stage=async(e,fault=null)=>(await db.query('select evidence_probe.stage($1
 try{
  await db.exec('create role anon;create role authenticated;create role service_role bypassrls;');
  await db.exec(await readFile(new URL('../ops/prototypes/source-evidence/schema.sql',import.meta.url),'utf8'));
- await db.query('insert into evidence_probe.authority values($1,true)',[actor]);
- await db.exec("insert into evidence_probe.source_policy values(repeat('a',64),'synthetic',true),(repeat('d',64),'synthetic',true)");
+ await db.query('select evidence_probe.set_authority($1,true)',[actor]);
+ await db.exec("select evidence_probe.set_source_policy(repeat('a',64),'synthetic',true);select evidence_probe.set_source_policy(repeat('d',64),'synthetic',true)");
  await db.exec('set role service_role');
  const e=await envelope(candidate()),first=await stage(e);assert.equal(first.status,'committed');
  assert.equal(await matchesSourceEvidenceStagingReceipt(first.receipt,e.b),true);
@@ -30,6 +30,19 @@ try{
  const badReceipt={...e,args:[...e.args]};badReceipt.args[4]+=' ';await assert.rejects(stage(badReceipt),/evidence_invalid/);
  const approved={...e.receipt,clinicalApproved:true};delete approved.receiptDigest;
  const payload=canonicalize(approved),badApproval={...e,args:[...e.args]};badApproval.args[4]=payload;badApproval.args[5]=canonicalize({...approved,receiptDigest:(await digestCanonical(approved)).digestHex});await assert.rejects(stage(badApproval),/evidence_invalid/);
+ // Rehash malformed receipts so checksum failure cannot hide schema-validation gaps.
+ for(const mutate of [r=>({...r,extra:true}),r=>{const x={...r};delete x.recordedAt;return x;},r=>({...r,receiptId:'bad'}),r=>({...r,recordedAt:'2026-02-30T00:00:00.000Z'}),r=>({...r,recordedAt:'2026-10-31T00:00:00Z'}),r=>({...r,recordedAt:null})]){
+  const {receiptDigest:ignored,...base}=e.receipt,payload=mutate(base),bad={...e,args:[...e.args]};bad.args[4]=canonicalize(payload);bad.args[5]=canonicalize({...payload,receiptDigest:(await digestCanonical(payload)).digestHex});await assert.rejects(stage(bad),/evidence_invalid/);
+ }
+ for(const mutate of [p=>({...p,extra:1}),p=>({...p,cases:p.cases.map(x=>({...x,caseVersion:0}))}),p=>({...p,cases:[{...p.cases[0],appearance:{...p.cases[0].appearance,bboxMilliPoints:[0,0,0,1]}}]}),p=>({...p,cases:[{...p.cases[0],interpretation:{...p.cases[0].interpretation,relation:'approved'}}]}),p=>({...p,cases:[p.cases[0],p.cases[0]]}),p=>({...p,cases:[{...p.cases[0],sourceEdition:null}]})]){
+  const bad={...e,args:[...e.args]};bad.args[1]=canonicalize(mutate(structuredClone(e.p)));await assert.rejects(stage(bad),/evidence_invalid/);
+ }
+ for(const key of Object.keys(e.receipt).filter(k=>k!=='receiptDigest')){
+  const payload={...e.receipt};delete payload.receiptDigest;delete payload[key];const bad={...e,args:[...e.args]};bad.args[4]=canonicalize(payload);bad.args[5]=canonicalize({...payload,receiptDigest:(await digestCanonical(payload)).digestHex});await assert.rejects(stage(bad),/evidence_invalid/);
+ }
+ for(const [utc,valid] of [['0000-02-29T00:00:00.000Z',true],['2000-02-29T23:59:59.999Z',true],['1900-02-29T00:00:00.000Z',false],['2026-01-01T24:00:00.000Z',false]])assert.equal((await db.query('select evidence_probe.valid_utc($1::jsonb) v',[JSON.stringify(utc)])).rows[0].v,valid);
+ const aliasPackage={...candidate(),packageId:'a1111111-1111-4111-8111-111111111111'};await stage(await envelope(aliasPackage));await assert.rejects(stage(await envelope({...aliasPackage,packageId:aliasPackage.packageId.toUpperCase()})),/evidence_conflict/);
+ const missingPolicy=candidate();missingPolicy.cases[0].sourceSha256='f'.repeat(64);await assert.rejects(stage(await envelope(missingPolicy)),/evidence_denied/);
  const inspect=async(e,user=actor)=>(await db.query('select evidence_probe.readback($1,$2,$3,$4,$5) result',[user,e.b.packageId,e.b.packageVersion,e.b.packageDigest,e.b.requestId])).rows[0].result;
  const stored=await inspect(e),saved=JSON.parse(stored.candidate),manifest=await digestSourceRowPackage(saved);
  assert.equal(manifest.packageDigest,e.b.packageDigest);assert.equal(stored.manifest,e.args[2]);assert.deepEqual(JSON.parse(stored.receipt),first.receipt);
@@ -44,14 +57,14 @@ try{
  await assert.rejects(inspect(e,other),/evidence_denied/);
  await assert.rejects(stage({...e,args:[other,...e.args.slice(1)]}),/evidence_denied/);
  // A second enabled owner must still be isolated from another owner's package.
- await db.exec('reset role');await db.query('insert into evidence_probe.authority values($1,true)',[other]);await db.exec('set role service_role');
+ await db.exec('reset role');await db.query('select evidence_probe.set_authority($1,true)',[other]);await db.exec('set role service_role');
  await assert.rejects(inspect(e,other),/evidence_denied/);
  await assert.rejects(stage(await envelope(e.p,e.b.requestId,other)),/evidence_denied/);
  await assert.rejects(stage(await envelope(e.p,crypto.randomUUID(),other)),/evidence_denied/);
  await assert.rejects(stage(await envelope({...e.p,packageVersion:3},crypto.randomUUID(),other)),/evidence_denied/);
  for(const fault of ['after-revision','after-cases','after-request','after-event']){
   const v=await envelope(candidate());await assert.rejects(stage(v,fault),/injected_failure/);
-  for(const table of ['revisions','cases','requests'])assert.equal((await db.query(`select count(*)::int n from evidence_probe.${table} where package_id=$1`,[v.b.packageId])).rows[0].n,0);
+  for(const table of ['packages','revisions','cases','requests'])assert.equal((await db.query(`select count(*)::int n from evidence_probe.${table} where package_id=$1`,[v.b.packageId])).rows[0].n,0);
   assert.equal((await db.query('select count(*)::int n from evidence_probe.events where request_id=$1',[v.b.requestId])).rows[0].n,0);
   await stage(v);
  }
@@ -63,9 +76,18 @@ try{
   await assert.rejects(inspect(e),/permission denied/);
  }
  await db.exec('reset role');
- await db.exec("update evidence_probe.source_policy set allowed=false where hash=repeat('d',64)");await db.exec('set role service_role');
+ await db.exec("select evidence_probe.set_source_policy(repeat('d',64),'synthetic',false)");await db.exec('set role service_role');
  await assert.rejects(stage(e),/evidence_denied/);await assert.rejects(inspect(e),/evidence_denied/);
- await db.exec("reset role;update evidence_probe.source_policy set allowed=true;update evidence_probe.authority set enabled=false;set role service_role");
+ await db.exec("reset role;select evidence_probe.set_source_policy(repeat('d',64),'synthetic',true);set role service_role");assert.deepEqual(await stage(e),first);
+ await db.exec("reset role;select evidence_probe.set_authority('11111111-1111-4111-8111-111111111111',false);set role service_role");
  await assert.rejects(stage(e),/evidence_denied/);await assert.rejects(inspect(e),/evidence_denied/);
- console.log('Disposable evidence SQL checks passed: canonical readback/mixed-source binding, exact retry, request/revision conflicts, historical exact reads, 4 write-boundary rollbacks, role isolation, source-policy and authority denial.');
+ await assert.rejects(db.query('select evidence_probe.set_authority($1,true)',[actor]),/permission denied/);
+ await assert.rejects(db.exec("select evidence_probe.set_source_policy(repeat('d',64),'synthetic',true)"),/permission denied/);
+ await db.exec('reset role');
+ assert.equal((await db.query('select count(*)::int n from evidence_probe.authority where actor=$1',[actor])).rows[0].n,2);
+ assert.equal((await db.query("select count(*)::int n from evidence_probe.source_policy where hash=repeat('d',64)")).rows[0].n,3);
+ await assert.rejects(db.exec('update evidence_probe.authority set enabled=true'),/evidence_immutable/);
+ await assert.rejects(db.exec('delete from evidence_probe.source_policy'),/evidence_immutable/);
+ await assert.rejects(db.exec('update evidence_probe.packages set owner=owner'),/evidence_immutable/);
+ console.log('Disposable evidence SQL checks passed: canonical readback/mixed-source binding, exact retry, request/revision conflicts, historical exact reads, 4 write-boundary rollbacks, SQL shape/receipt validation, immutable package and authority/policy history, role isolation and latest-state denial.');
 }finally{await db.close();}
