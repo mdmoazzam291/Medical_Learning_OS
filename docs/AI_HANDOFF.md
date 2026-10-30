@@ -1,3 +1,9 @@
+## Source adjudication packet —30 October2026 IST
+- Resumed PR3463a8653bbf2808bf10a36f9f449098cd88a8b45de. Added NMC_SOURCE_ADJUDICATION_PACKET.md and22case machine-readable packet bound to frozen evidence/source hashes.
+- Cases retain observations,pages,proposals andnull decisions; no reviewer assigned. Identity adjudication distinct from clinical,rights,exam/release approval. Runtime import/enforcement not implemented.
+-22unique IDs/source references/pages/hash/null-decision/disabled validation PASS. Documentation-only/no runtime tests/fresh CI claim.
+- Next:raw defining-row inventory including malformed/uncoded rows under rights constraints,not another summary-only checkpoint. Source completeness and independent adjudication remain open. No permission grants/messages/approval/ingestion/merge/deploy/activation. Ownership released at saved checkpoint.
+
 ## Volume-global structural comparison —30 October2026 IST
 - Resumed PR346a9548cae11c5a219d82b311cde24414a73b23b29. Added NMC_VOLUME_FRAMEWORK_COMPARISON.md and metadata; queue structural_comparison_review_pending.
 -3volume sets35numbered competencies/5roles versus opening40bullets/7roles. Two split/combined clauses plus7additional-role bullets explain count structure,not approved semantic identity.

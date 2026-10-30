@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-adjudication-packet",
+  "status": "prepared_not_reviewed",
+  "evidenceCommit": "3a8653bbf2808bf10a36f9f449098cd88a8b45de",
+  "sourceRights": "citation_only",
+  "sources": {
+    "base2024": {
+      "url": "https://nmc.org.in/rules-regulation-nmc/33/file",
+      "sha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+      "pages": 467
+    },
+    "clarification2024": {
+      "url": "https://nmc.org.in/rules-regulation-nmc/34/file",
+      "sha256": "62a60b29a1fd5a97f2fcac4a1c3761286f2dac2c371e76047f5ea8cbccb13db0",
+      "pages": 4
+    },
+    "aetcom2018": {
+      "url": "https://nmc.org.in/storage/new/AETCOM_book.pdf",
+      "sha256": "f752cfe4ef694f60f89f7e709a29c4d8167672928dd248dfb9bd34414bc13766",
+      "pages": 94
+    }
+  },
+  "cases": [
+    {
+      "id": "bc-prefix-omitted",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        169
+      ],
+      "observation": "prefix omitted in defining cell",
+      "observedToken": "14.1",
+      "proposedResolution": "Preserve raw token; consider proposed identity BC14.1 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "bc-wrapped",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        172
+      ],
+      "observation": "same-cell code wraps across two lines",
+      "observedToken": "BC\\n14.24",
+      "proposedResolution": "Preserve raw token; consider proposed identity BC14.24 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "pa-extra-dot",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        200
+      ],
+      "observation": "extra separator before topic number",
+      "observedToken": "PA.29.1",
+      "proposedResolution": "Preserve raw token; consider proposed identity PA29.1 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "fm-colon",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        217
+      ],
+      "observation": "colon separator",
+      "observedToken": "FM2:12",
+      "proposedResolution": "Preserve raw token; consider proposed identity FM2.12 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "mi-suffix-absent",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        212
+      ],
+      "observation": "suffix absent; proposed identity inferred from defining-row order and topic count",
+      "observedToken": "MI 8.",
+      "proposedResolution": "Preserve raw token; consider proposed identity MI8.3 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "as-topic-malformed",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        454
+      ],
+      "observation": "printed malformed topic token; proposed identity inferred from AS5.3/AS5.5 context",
+      "observedToken": "ASS.4",
+      "proposedResolution": "Preserve raw token; consider proposed identity AS5.4 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "or-malformed-cell",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        445
+      ],
+      "observation": "malformed repeated topic segment; strict regex incorrectly reads OR2.2",
+      "observedToken": "OR2. 2.9",
+      "proposedResolution": "Preserve raw token; consider proposed identity OR2.9 after adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "su-numbering-gap",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        409
+      ],
+      "observation": "no SU26.2 defining row located; topic header4 but3 observed rows",
+      "observedToken": "SU26.1 -> SU26.3",
+      "proposedResolution": "Preserve source gap/count conflict; do not invent or discard a requirement",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "op-headline-total",
+      "kind": "identifier_or_count",
+      "source": "base2024",
+      "pdfPages": [
+        414
+      ],
+      "observation": "10 topic-header counts and observed IDs both total59; do not invent a60th row",
+      "observedToken": "heading60; topic sum59",
+      "proposedResolution": "Preserve source gap/count conflict; do not invent or discard a requirement",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "pe-headline",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        259,
+        329,
+        350
+      ],
+      "observation": "253 observed candidate codes/32 topics versus headline406/35",
+      "proposedResolution": "Record exact observed rows and unresolved source total; obtain source-supported interpretation",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "gm-headline",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        281,
+        297,
+        304,
+        321,
+        323
+      ],
+      "observation": "529 distinct codes versus525 subject heading;topic headers531;three repeated rows",
+      "proposedResolution": "Keep distinct counts and repetition evidence; no arbitrary trimming",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "og-headline",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        427,
+        439,
+        442
+      ],
+      "observation": "142 distinct codes and summed topic counts versus141 heading",
+      "proposedResolution": "Retain142observed records; flag headline discrepancy pending adjudication",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "gm-gap",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        295
+      ],
+      "observation": "GM8.8 jumps toGM8.10; no definingGM8.9 located",
+      "proposedResolution": "Retain gap without fabricated description or assumed deletion",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "gm-topic-counts",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        296,
+        297,
+        321,
+        323
+      ],
+      "observation": "Topic9 header21/17unique;topic27 header15/18unique",
+      "proposedResolution": "Review defining row set against each published topic total",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "dr-prefix",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        247,
+        355,
+        356
+      ],
+      "observation": "ContentsDE versus defining sectionDR",
+      "proposedResolution": "Propose edition-specificDRsource identity and separateDElegend discrepancy",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "rd-prefix",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        248,
+        457
+      ],
+      "observation": "ContentsRT versus defining rowsRD",
+      "proposedResolution": "Propose edition-specificRDsource identity; do not globally rename other editions",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "institutional-fragment",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        252
+      ],
+      "observation": "VolumeII iteml continues unfinished itemk",
+      "proposedResolution": "Preserve raw labels; propose one combined logical goal without deleting provenance",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "global-granularity",
+      "kind": "source_adjudication",
+      "source": "base2024",
+      "pdfPages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        88,
+        89
+      ],
+      "observation": "40opening bullets/7roles versus35volume codes/5roles",
+      "proposedResolution": "Review two combined/split clauses and7additional-role bullets separately",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "aetcom-class",
+      "kind": "source_adjudication",
+      "source": "aetcom2018",
+      "pdfPages": [
+        87,
+        90,
+        92
+      ],
+      "observation": "Number37core but repeated under desirable/noncore",
+      "proposedResolution": "Keep conflicting declarations and repeated appearance link pending review",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "aetcom-similarity",
+      "kind": "source_adjudication",
+      "source": "aetcom2018",
+      "pdfPages": [
+        88
+      ],
+      "observation": "Number16/17closely overlapping",
+      "proposedResolution": "Preserve distinct source rows; decide equivalent/partial/distinct through semantic review",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "aetcom-partial",
+      "kind": "source_adjudication",
+      "source": "aetcom2018",
+      "pdfPages": [
+        79,
+        90
+      ],
+      "observation": "Module4.8 second objective only partially relates toappendix35",
+      "proposedResolution": "Retain partial link rather than force same-competency relation",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    },
+    {
+      "id": "amendment-effects",
+      "kind": "source_adjudication",
+      "source": "clarification2024",
+      "pdfPages": [
+        3
+      ],
+      "observation": "PS9.2deletion;PY9.1/PE6.4replacement",
+      "proposedResolution": "Bind effective state toexact amendment; preserve historical identity and rights",
+      "decision": null,
+      "status": "pending",
+      "releaseEffect": "blocks_affected_identity_or_completeness_claim"
+    }
+  ],
+  "reviewContract": {
+    "reviewerAssigned": false,
+    "requiredDecisionFields": [
+      "caseId",
+      "caseVersionDigest",
+      "sourceSha256",
+      "disposition",
+      "rationale",
+      "reviewerVerifiedIdentity",
+      "reviewedAt",
+      "qualificationAndScope",
+      "unresolvedQuestions"
+    ],
+    "allowedDispositions": [
+      "accept_proposed_resolution",
+      "reject_proposed_resolution",
+      "request_primary_source_clarification",
+      "retain_unresolved"
+    ],
+    "decisionRights": "Source identity adjudication does not grant reproduction rights,clinical approval,exam scope approval or learner release.",
+    "changedEvidenceInvalidatesAffectedDecisions": true,
+    "runtimeDecisionImportImplemented": false
+  },
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "clinicalApproval": false,
+    "rightsApproval": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  }
+}
