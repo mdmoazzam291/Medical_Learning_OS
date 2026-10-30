@@ -1,3 +1,9 @@
+## Official NMC source recovery — 30 October 2026 IST
+- Codex resumed PR346 from584b398a3122907f84607f4893f0676214f591ce; no competing head observed. Recovered official current /rules-regulation-nmc/33/file and /34/file downloads, actual hashes recorded in NMC_OFFICIAL_SOURCE_RECOVERY.md.
+- Official467-page base contains a blank page2; all465 shifted subsequent pages have identical normalized extracted text to mirror. All22 PE defining pages render pixel-identically. PE253/32 versus heading406/35 is confirmed in official-host source, still unresolved.
+- October clarification PDF3 changes PE6.4/PY9.1 and deletes PS9.2; base2781 is not an automatically valid amended denominator. No copied descriptions or fabricated missing rows.
+- Documentation-only: no runtime tests rerun; fresh CI unverified. No approvals, ingestion, merge, deployment or learner activation. Next exact action: classify GM/OG extra tokens from defining tables, then remaining subject aliases and supplements/later amendments. Independent review pending. Ownership released at checkpoint.
+
 ## Paediatrics mirror-section investigation — 30 October 2026 IST
 - Checked at 2026-10-30T11:07:37Z. Codex resumed PR346 at c3d7a1e0c787f61ac3fca95bd3ceda87b36542ae; current main91a11aff41048984b039fd269a2a0a9ddc3d99da. Prior handoff released ownership; no remote agent tasks launched.
 - Re-downloaded mirror with identical SHA256; rendered/inspected all22 PE pages in contact sheets plus full-page endpoint/transition. Observed253 candidates and32 topics versus printed406/35. This is a mirror source anomaly, not evidence153 official requirements are missing. Preserved denominator and unverified state.
