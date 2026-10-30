@@ -1,3 +1,11 @@
+## Offline private-evidence staging/access policy —30 October2026 IST
+- Checked at 2026-10-30T17:46:47.692898+00:00. Resumed PR346b954eb9bd367f05c20ae877ccb201f9a2fd24730 in isolated worktree. Added evaluateSourceEvidenceAccess and8test groups; no app/Auth/storage adapter wiring.
+- TDD rejecting placeholder failed3positive paths; final focused8PASS. Full npm test1591PASS/0FAIL; npm run checkPASS(13services/250coupling locations). Read-only review found no concrete defect under trusted-server-context assumption.
+- Exact typed package grant/version/digest and author exclusion; metadata rights/runtime/account state; byte reads need staged state,retention/display permission and matching verified byte hashes. Withdrawn/stale/revoked/malformed cases denied; no publication authority.
+- Context must be server-derived and current; evaluator does not authenticate,verify rights/source bytes,bind actualsource to package,serialize races or persist decisions. Added SOURCE_EVIDENCE_ACCESS_CONTRACT.md and plan. No live reviewer or evidence uploaded.
+- Next:trusted metadata staging port/transaction contract and source-package resolution before any protected API wiring. Hosted new-head CI pending. No migrations,grants,review decisions,clinical/rights/syllabus approval,merge/deploy/activation. Ownership released at checkpoint.
+
+
 ## Private source-evidence persistence/access proposal —30 October2026 IST
 - Resumed PR3466ace6d3a84ea247183e7f74992bf32700b8c46f6. Read portability/service/content/archive contracts. Existing ArchivePort is interface only,not live reviewer storage; Drive original ownership and app review-metadata authority retained.
 - Added NMC_PRIVATE_EVIDENCE_STORAGE_ACCESS.md:metadata-first exact private package staging;raw PDFs remain official-source references until rights/retention/display resolved. Future authorized archives require implemented adapter/readback/recovery,not public/static links.
