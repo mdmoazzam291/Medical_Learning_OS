@@ -1,3 +1,9 @@
+## Volume-global structural comparison —30 October2026 IST
+- Resumed PR346a9548cae11c5a219d82b311cde24414a73b23b29. Added NMC_VOLUME_FRAMEWORK_COMPARISON.md and metadata; queue structural_comparison_review_pending.
+-3volume sets35numbered competencies/5roles versus opening40bullets/7roles. Two split/combined clauses plus7additional-role bullets explain count structure,not approved semantic identity.
+- VolumeII institutional(l) onPDF252 visibly continues(k); preserved likely formatting anomaly unnormalized. Text-comparison boundary artifacts not clinical discrepancies.
+-3x35sets/count vectors/40=35-2+7/page/hash/disabled checks PASS; no runtime tests/fresh CI claim. Next:review-ready anomaly decision packet and raw-row no-omission work. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## Unified1031-page scope matrix —30 October2026 IST
 - Resumed PR3466a3828cf5dff0600d6cfe5524ca6c2c2521bc669. Added NMC_SOURCE_COVERAGE_MATRIX.md and12document/1031page disposition checklist; updated unified queue.
 - Every retrieved page has provisional category,pending review and no approved exclusion.263subject table pages included. Retrieved set not certified exhaustive.
