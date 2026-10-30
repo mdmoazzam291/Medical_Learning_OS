@@ -112,6 +112,18 @@ try{
   await assert.rejects(inspect(e),/permission denied/);
  }
  await db.exec('reset role');
+ await db.exec('set role service_role');
+ const withdrawn=await envelope(candidate());await stage(withdrawn);
+ await assert.rejects(db.query('select evidence_probe.withdraw_metadata($1,$2,$3,$4)',[actor,withdrawn.b.packageId,1,withdrawn.b.packageDigest]),/permission denied/);
+ await db.exec('reset role');
+ await assert.rejects(db.query('select evidence_probe.withdraw_metadata($1,$2,$3,$4)',[other,withdrawn.b.packageId,1,withdrawn.b.packageDigest]),/evidence_denied/);
+ await assert.rejects(db.query('select evidence_probe.withdraw_metadata($1,$2,$3,$4)',[actor,withdrawn.b.packageId,1,'f'.repeat(64)]),/evidence_denied/);
+ await db.query('select evidence_probe.withdraw_metadata($1,$2,$3,$4)',[actor,withdrawn.b.packageId,1,withdrawn.b.packageDigest]);
+ await assert.rejects(db.exec('delete from evidence_probe.withdrawals'),/evidence_immutable/);
+ await db.exec('set role service_role');
+ await assert.rejects(stage(withdrawn),/evidence_denied/);await assert.rejects(inspect(withdrawn),/evidence_denied/);
+ await stage(await envelope({...withdrawn.p,packageVersion:2}));
+ await db.exec('reset role');
  await db.exec("select evidence_probe.set_source_policy(repeat('d',64),'synthetic',false)");await db.exec('set role service_role');
  await assert.rejects(stage(e),/evidence_denied/);await assert.rejects(inspect(e),/evidence_denied/);
  await db.exec("reset role;select evidence_probe.set_source_policy(repeat('d',64),'synthetic',true);set role service_role");assert.deepEqual(await stage(e),first);

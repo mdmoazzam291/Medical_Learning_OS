@@ -8,7 +8,15 @@ create table evidence_probe.packages(package_id uuid primary key,lexical_id text
 create table evidence_probe.revisions(package_id uuid,version int,digest text not null,owner uuid not null,candidate text not null,manifest text not null,primary key(package_id,version),unique(package_id,version,digest),foreign key(package_id) references evidence_probe.packages);
 create table evidence_probe.cases(package_id uuid,version int,case_id text,claim jsonb not null,primary key(package_id,version,case_id),foreign key(package_id,version) references evidence_probe.revisions);
 create table evidence_probe.requests(actor uuid,request_id uuid,fingerprint text not null,package_id uuid,version int,digest text,receipt text not null,primary key(actor,request_id),foreign key(package_id,version,digest) references evidence_probe.revisions(package_id,version,digest));
-create table evidence_probe.events(id bigint generated always as identity primary key,actor uuid,request_id uuid,foreign key(actor,request_id) references evidence_probe.requests);
+create table evidence_probe.events(id bigint generated always as identity primary key check(id>0),actor uuid not null,request_id uuid not null,unique(actor,request_id),foreign key(actor,request_id) references evidence_probe.requests);
+create table evidence_probe.withdrawals(package_id uuid,version int,digest text,actor uuid not null,recorded_by text not null default current_user,recorded_at timestamptz not null default now(),primary key(package_id,version,digest),foreign key(package_id,version,digest) references evidence_probe.revisions(package_id,version,digest));
+create function evidence_probe.withdraw_metadata(p_actor uuid,p_package uuid,p_version int,p_digest text) returns void language plpgsql security invoker set search_path='' as $$
+begin
+ perform pg_advisory_xact_lock(730031);
+ if (select enabled from evidence_probe.authority where actor=p_actor order by version desc limit 1) is not true or not exists(
+ select 1 from evidence_probe.revisions r join evidence_probe.packages p using(package_id) where r.package_id=p_package and r.version=p_version and r.digest=p_digest and p.owner=p_actor and r.owner=p_actor) then raise exception 'evidence_denied';end if;
+ insert into evidence_probe.withdrawals(package_id,version,digest,actor) values(p_package,p_version,p_digest,p_actor) on conflict do nothing;
+end;$$;
 create function evidence_probe.set_authority(p_actor uuid,p_enabled boolean) returns void language plpgsql security invoker set search_path='' as $$
 begin
  perform pg_advisory_xact_lock(730031);
@@ -78,6 +86,7 @@ create function evidence_probe.guard(p_actor uuid,p_candidate jsonb)
 returns void language plpgsql security invoker set search_path='' as $$
 begin
  if (select enabled from evidence_probe.authority where actor=p_actor order by version desc limit 1) is not true then raise exception 'evidence_denied';end if;
+ if exists(select 1 from evidence_probe.withdrawals where package_id=(p_candidate->>'packageId')::uuid and version=(p_candidate->>'packageVersion')::int) then raise exception 'evidence_denied';end if;
  if exists(select 1 from jsonb_array_elements(p_candidate->'cases') c where not exists(
   select 1 from evidence_probe.source_policy s where s.hash=c->>'sourceSha256' and s.edition=c->>'sourceEdition' and s.allowed and s.version=(select max(t.version) from evidence_probe.source_policy t where t.hash=s.hash and t.edition=s.edition))) then raise exception 'evidence_denied';end if;
 end;$$;
@@ -159,7 +168,7 @@ begin
 end;$$;
 create function evidence_probe.immutable() returns trigger language plpgsql set search_path='' as $$begin raise exception 'evidence_immutable';end;$$;
 do $$declare t text;begin
- foreach t in array array['authority','source_policy','packages','revisions','cases','requests','events'] loop
+ foreach t in array array['authority','source_policy','packages','revisions','cases','requests','events','withdrawals'] loop
  execute format('alter table evidence_probe.%I enable row level security',t);
  execute format('revoke all on evidence_probe.%I from public,anon,authenticated,service_role',t);
  execute format('grant select on evidence_probe.%I to service_role',t);
@@ -168,7 +177,7 @@ do $$declare t text;begin
  execute format('grant insert on evidence_probe.%I to service_role',t);
  execute format('create trigger immutable before update or delete on evidence_probe.%I for each row execute function evidence_probe.immutable()',t);
  end loop;
- foreach t in array array['authority','source_policy'] loop
+ foreach t in array array['authority','source_policy','withdrawals'] loop
  execute format('create trigger immutable before update or delete on evidence_probe.%I for each row execute function evidence_probe.immutable()',t);
  end loop;
 end;$$;

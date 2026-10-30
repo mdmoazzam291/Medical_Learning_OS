@@ -1,5 +1,6 @@
 // Test-only disposable SQL driver. Never accepts a hosted database or URL.
 import {readFile} from 'node:fs/promises';
+import {exportSourceEvidenceSnapshot,restoreSourceEvidenceSnapshot} from './source-evidence-sql-snapshot.js';
 import {canonicalize,digestCanonical} from '../../src/domain/canonical-integrity.js';
 import {captureSourceRowPackage,digestSourceRowPackage} from '../../src/domain/source-row-evidence.js';
 import {prepareSourceEvidenceStagingRequest,matchesSourceEvidenceStagingReceipt} from '../../src/domain/source-evidence-staging.js';
@@ -11,16 +12,21 @@ function capture(candidate){
  const p=captureSourceRowPackage({packageId:c.packageId,packageVersion:c.packageVersion,cases:c.cases});
  return {...p,requestId:c.requestId,expectedPackageDigest:c.expectedPackageDigest};
 }
-export async function createSourceEvidenceSqlDriver({PGlite}){
+export async function createSourceEvidenceSqlDriver({PGlite,snapshot,expectedSnapshotDigest}){
  const db=new PGlite();let queue=Promise.resolve(),fault=null,closed=false,closing=null;
  const schedule=fn=>{const task=queue.then(fn);queue=task.catch(()=>{});return task;};
  try{
   await db.exec('create role anon;create role authenticated;create role service_role bypassrls;');
   for(const file of ['schema.sql','digests.sql'])await db.exec(await readFile(new URL(`../../ops/prototypes/source-evidence/${file}`,import.meta.url),'utf8'));
+  if(snapshot!==undefined)await restoreSourceEvidenceSnapshot(db,snapshot,expectedSnapshotDigest);
+  else{
   await db.query('select evidence_probe.set_authority($1,true)',[owner]);
   await db.query('select evidence_probe.set_source_policy($1,$2,true)',['a'.repeat(64),'synthetic-2026']);
+  }
   await db.exec('set role service_role');
  }catch(error){await db.close();throw error;}
+ const govern=async(fn)=>{await db.exec('reset role');try{return await fn();}finally{await db.exec('set role service_role');}};
+ const withdraw=async b=>govern(()=>db.query('select evidence_probe.withdraw_metadata($1,$2,$3,$4)',[owner,b.packageId,b.packageVersion,b.packageDigest]));
  return {
   async stageMetadata(candidate,actorId){
    if(closed)throw new Error('driver closed');
@@ -49,6 +55,9 @@ export async function createSourceEvidenceSqlDriver({PGlite}){
     }
     // Deliberate delivery faults after actual SQL commit; no accepted receipt escapes.
     if(['after-commit','readback-unavailable'].includes(injected))return {status:'uncertain'};
+    if(injected==='deny-before-readback')await govern(()=>db.query('select evidence_probe.set_authority($1,false)',[owner]));
+    if(injected==='metadata-deny-before-readback')await govern(()=>db.query('select evidence_probe.set_source_policy($1,$2,false)',['a'.repeat(64),'synthetic-2026']));
+    if(injected==='withdraw-before-readback')await withdraw(b);
     let stored;
     try{
      stored=(await db.query('select evidence_probe.readback($1,$2,$3,$4,$5) result',[actorId,b.packageId,b.packageVersion,b.packageDigest,b.requestId])).rows[0].result;
@@ -75,8 +84,32 @@ export async function createSourceEvidenceSqlDriver({PGlite}){
     return {binding:{...request.binding,packageId:r.package_id,packageVersion:r.version,packageDigest:r.digest},candidate:{...p,requestId:request.binding.requestId,expectedPackageDigest:r.digest}};
    }),events};
   });},
+  exportSnapshot(){return schedule(()=>exportSourceEvidenceSnapshot(db));},
+  checkBrowserIsolation(){return schedule(async()=>{
+   const result={};
+   for(const role of ['anon','authenticated']){
+    await db.exec('reset role;set role '+role);
+    result[role]=true;
+    try{
+     for(const sql of ['select * from evidence_probe.revisions','select evidence_probe.readback(null,null,null,null,null)']){
+      try{await db.exec(sql);result[role]=false;}catch(error){if(!/permission denied/.test(error.message))result[role]=false;}
+     }
+    }finally{await db.exec('reset role;set role service_role');}
+   }
+   return result;
+  });},
+  withdraw(binding){const b=JSON.parse(canonicalize(binding));return schedule(()=>withdraw(b));},
+  withdrawalHistory(){return schedule(async()=>(await db.query('select package_id::text,version,digest,actor::text,recorded_at::text from evidence_probe.withdrawals order by package_id,version')).rows);},
+  readMetadata(candidate,actorId){
+   const c=capture(candidate);
+   return schedule(async()=>{
+    const b=await prepareSourceEvidenceStagingRequest(c,actorId);
+    try{await db.query('select evidence_probe.readback($1,$2,$3,$4,$5)',[actorId,b.packageId,b.packageVersion,b.packageDigest,b.requestId]);return {status:'allowed'};}
+    catch(error){if(error.message==='evidence_denied')return {status:'denied'};throw error;}
+   });
+  },
   inject(point){
-   if(!['before-commit','after-commit','readback-unavailable','readback-tampered'].includes(point))throw new TypeError('unknown fault');fault=point;
+   if(!['before-commit','after-commit','readback-unavailable','readback-tampered','deny-before-readback','metadata-deny-before-readback','withdraw-before-readback'].includes(point))throw new TypeError('unknown fault');fault=point;
   },
   deny(){return schedule(async()=>{
    await db.exec('reset role');
