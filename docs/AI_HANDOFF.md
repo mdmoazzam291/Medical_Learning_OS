@@ -1,3 +1,8 @@
+## AETCOM candidate module/appendix bridge —30 October2026 IST
+- Resumed PR34627201e77920a9b7352b8f5a77895fc8f9f4e635f. Added AETCOM_CANDIDATE_BRIDGE.md and machine-readable27-module bridge with44 candidate links/28 distinct appendix targets; unlinked numbers explicit.
+-2024 subject-paper blueprint inspected; subject assignment is not subject-code equivalence.4.8->35 partial relationship preserved; no canonical mappings or source approval.
+- Metadata uniqueness/target ranges/partitions/source hashes/fail-closed flags PASS; documentation-only no runtime tests/fresh CI claim. No ingestion/approval/merge/deploy/activation. Next: remaining supplementary requirement/page inventories and independent candidate adjudication. Ownership released at checkpoint.
+
 ## AETCOM numbered entries and modules —30 October2026 IST
 - Resumed PR346b6c876522c065bf4c8a7edb03141a5268d11cc0c. Added AETCOM_ENUMERATION.md and docs/evidence/aetcom-2018-enumeration.json.
 - Appendix87-91 enumerates1-54 (39core/15desirable);14 extra appearances on92-93 provisionally match existing numbered entries. Row37 core/noncore conflict and16/17 semantic similarity remain unresolved; do not claim68 unique requirements.
