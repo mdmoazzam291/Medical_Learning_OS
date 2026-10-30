@@ -1,3 +1,9 @@
+## ECE/skills requirement classification —30 October2026 IST
+- Resumed PR34674cee40597d21269fe507f2402fffb3376da2725. Added ECE_SKILLS_SCOPE_CLASSIFICATION.md and metadata register.
+-2024ECE5objective locators/3elements separate from2019 repeats,6sample lessons,observation guides and example questions. Skills evidence/process requirements separate from lab/faculty guidance and6task examples.
+- Explicit AETCOM2.1 reuse and2019subject-code references retained; no auto IM->GM or same-number semantic equivalence. MCQ evidence not practical certification.
+- Metadata5/3/3/6counts/hash/disabled checks PASS. No runtime changes/tests/fresh CI claim; no source approval/ingestion/merge/deploy/activation. Next:global IMG and remaining support-module scopes,then unified review queue. Ownership released at checkpoint.
+
 ## FAP and electives requirement enumeration —30 October2026 IST
 - Resumed PR346f41ec37d25cb6f7413b9049a55c1c400b7e9d6a6. Added FAP_ELECTIVE_ENUMERATION.md and metadata register.
 - FAP17phase targets/10report headings/11image-table competency rows indexed separately. PDF68-70 text-empty does not mean requirement-empty. No additive38 or deduplicated denominator claimed.
