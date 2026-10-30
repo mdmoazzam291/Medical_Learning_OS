@@ -1,3 +1,9 @@
+## Ambiguous code-column region triage —30 October2026 IST
+- Resumed PR346fa8a50d24c790b27c28bbc5ba4779a1729fcc18e. Added NMC_AMBIGUOUS_REGION_TRIAGE.md and253region metadata.
+-492text regions match heading families. Empty-code regions classify159mergedheadings/59emptybands/6headers/29body continuations. Visually inspected all29bodyregions in5sheets; no clearly new uncoded requirement identified there.
+- Preceding-row links remainprovisional,not approved exclusions or independent signoff. No full-corpus no-omission claim.
+-253/category sums/29links/hash/page/disabled checks PASS. No runtime tests/fresh CI claim. Next:per-subject appearance/distinct/raw-normalized reconciliation and frozen reviewer snapshot. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
 ## Geometry extraction and method comparison —30 October2026 IST
 - Resumed PR3460cd243c4a464bb068f3d510814f4a54ee93d3829. Geometry scan263defining pages produced2634identifier candidates (2627standard+7nonstandard),253empty/492header-unclassified regions.7known malformed/wrapped-token assertions PASS.
 - Stored opaque page receipts and method comparison; detailed raw column extraction remains transient,not full-corpus export. All263page hashes/counts/disabled flags validated.
