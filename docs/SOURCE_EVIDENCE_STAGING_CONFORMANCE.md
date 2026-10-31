@@ -1,0 +1,18 @@
+# Synthetic metadata staging transaction conformance
+
+`tests/helpers/source-evidence-staging-conformance.js` exports `stagingScenarios` and `runStagingScenario(name, createDriver)`. Each invocation creates an isolated disposable driver and closes it in finally. Synthetic hashes/locators contain no curriculum text or real reviewer identity.
+
+Driver protocol (test instrumentation, never a browser API):
+
+- `stageMetadata(candidate, actorId)` returns `{status, receipt?}`. Status is accepted, conflict, aborted, uncertain, integrity-failure or denied. Accepted receipts must match the existing staging binding/checksum contract. The actor UUID is a synthetic fixture; a real adapter's driver must map it to authenticated server sessions.
+- `inspect()` returns privileged authoritative test state `{revisions, requests, events}` as detached arrays. Request records expose binding and receipt for exact reconciliation assertions. A real adapter must inspect actual committed backing records, not reconstruct these from a successful return value or a separate mirror.
+- `inject(point)` arms one deterministic fault: before-commit, after-commit, readback-unavailable or readback-tampered. A live adapter driver must place faults at actual transaction/readback boundaries. Throwing only in a client wrapper cannot demonstrate rollback.
+- `deny()` changes the current staging authority before a retry. `close()` cleans up only this scenario's disposable state.
+
+Ten scenarios check exact receipt retry/no extra records; changed request and same-revision digest conflicts/no overwrite; precommit failure with no visible records; committed lost-response/unavailable readback reconciliation using original request; corrupted readback denial; concurrent identical and conflicting calls; and fresh denial on retry. Non-accepted uncertain/integrity/denied results expose no receipt. Concurrency calls overlap via Promise.all; the memory model serializes them with a promise queue. This does not demonstrate database multi-connection concurrency.
+
+`source-evidence-staging-model.js` is a test-only executable model with copy/commit state, original request receipts and canonical readback checks. It is not an application storage adapter, durable journal, auth system or rights checker. Five deliberate mutations prove the harness rejects duplicate retry receipts, partial writes, false acceptance after lost acknowledgement, tampered readback acceptance and skipped authority recheck. A sixth negative control supplies inconsistent authoritative stored claims. The harness independently recomputes stored revision digests, request fingerprints and receipt bindings after each scenario, rather than trusting a successful return. Their failures are expected assertions, not silently ignored production errors.
+
+Coverage remains bounded: before-commit is one simulated fault boundary, not a fault at each future SQL statement. No actual database crash/durability, isolation/RLS, hostile actor, owner/author transitions, withdrawal event, source-byte streaming, export/restore or exact multi-source case resolution is implemented or certified. A single deny toggle is not proof of all rights/runtime/account/revocation transitions. Further adapter scenarios must cover those explicitly. No real adapter has run this harness.
+
+Next: exact-package/case/source resolution contract and offline negative tests, then separately reviewed persistence schema/authorization and a disposable adapter driver executing these scenarios against real transactions. Preserve the metadata-only rights constraints and all independent review/publication gates.
