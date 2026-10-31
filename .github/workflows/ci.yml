@@ -162,7 +162,10 @@ jobs:
           export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
           export MLOS_LOCAL_AUTH_PROBE_URL=http://127.0.0.1:54321
           export MLOS_LOCAL_AUTH_PROBE_PUBLISHABLE_KEY="$KEY"
-          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/@supabase/supabase-js/dist/module/index.js"
+          # Resolve via the pinned package's public export, not an unstable
+          # distribution-internal path. The shim lives inside the temp package.
+          printf '%s\\n' "export { createClient } from '@supabase/supabase-js';" > "$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
+          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
           node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-check.mjs"
       - name: Destroy disposable local Auth containers and test identities
         if: always()
