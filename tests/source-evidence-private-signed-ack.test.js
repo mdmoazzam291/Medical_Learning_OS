@@ -111,6 +111,13 @@ test('public-key pinning rejects incorrect or unsupported key configuration',asy
  const valid=signed();
  const lookup=makeLookup(async()=>valid,untrustedKey);
  assert.equal(await lookup(task),null);
+ // Both accepted public representations must work. Private trust anchors do not.
+ const pem=publicKey.export({type:'spki',format:'pem'});
+ assert.equal((await makeLookup(async()=>valid,pem)(task))?.status,'durable');
+ assert.throws(()=>makeLookup(async()=>valid,privateKey),
+  /private_signed_ack_configuration_invalid/);
+ assert.throws(()=>makeLookup(async()=>valid,privateKey.export({type:'pkcs8',format:'pem'})),
+  /private_signed_ack_configuration_invalid/);
  const {publicKey:rsaKey}=generateKeyPairSync('rsa',{modulusLength:2048});
  assert.throws(()=>makeLookup(async()=>valid,rsaKey),/private_signed_ack_configuration_invalid/);
  assert.throws(()=>makeLookup(async()=>valid,'not a key'),/private_signed_ack_configuration_invalid/);
