@@ -38,7 +38,7 @@ async function main(){
   if(out?.error)throw Error('local_auth_probe_signup_cleanup_failed');
  }
  phase='provider_protocol';
- const result=await runIsolatedAuthProviderProbe({...config,createClient});
+ const result=await runIsolatedAuthProviderProbe({...config,createClient,onPhase:p=>{phase='protocol_'+p;}});
  process.stdout.write(JSON.stringify({...result,environment:'disposable_local_gotrue'})+'\n');
 }
 try{await main();}
