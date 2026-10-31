@@ -1,3 +1,10 @@
+## 2026-10-31 — Real disposable GoTrue Auth acceptance PASS
+
+- CI run [41192900215](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41192900215): **actual local GoTrue `auth-local-gotrue` job PASS**, using migration-free GitHub Actions Docker stack, pinned Supabase CLI and SDK, generated test-only identities, and post-job `stop --no-backup` cleanup. No hosted Auth identities or provider settings accessed.
+- Two independent sessions of the same user and another user isolated; refresh retained session ID; local and global signout rejected the appropriate refresh tokens, other account unaffected, tampered JWT rejected. Access JWTs were rejected after signout by the **local GoTrue** `/user` endpoint in this run; that observation is not a hosted or universal guarantee.
+- Corrected SDK `AuthSessionMissingError` ambiguity by testing bounded, exact-host network `/auth/v1/user` responses separately for signed-out and tampered access tokens. Corrected wire parsing of `{code:403,error_code:"session_not_found"}` and added negative tests for ambiguous transport, unexpected values, malformed responses and inconsistent fields.
+- Remaining **NOT VERIFIED**: actual hosted Supabase session lifecycle, MFA challenges, genuinely expired signed JWT, real managed-Auth row-lock privilege feasibility, hosted network-to-direct-PG credential assurance and production approval. Draft PR #346 unmerged, gateway default OFF, no medical/content rights, source-evidence publication, or learner activation. This is a local integration milestone, not deployment sign-off.
+
 ## 2026-10-31 — Auth probe trusted-client and cleanup hardening
 
 - The earlier PR #346 CI run `41184092379` is **fully green** (core, Chromium, WebKit, PostgreSQL17.6/18.6), confirming the previous isolated acceptance-runner increment.
