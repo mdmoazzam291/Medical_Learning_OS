@@ -107,13 +107,13 @@ try{
  provider='offline';assert.deepEqual(await probe.reserveIntent(awaiting),{status:'denied'});
  provider='valid';
  assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[awaiting.requestId])).rows[0].n,0);
- provider='revoked';assert.deepEqual(await probe.markDelivered(awaiting),{status:'denied'});provider='valid';
+ provider='revoked';assert.deepEqual(await probe.reserveIntent(awaiting),{status:'denied'});provider='valid';
  // Known private revocation wins even while synthetic Auth still recognizes JWT.
  await controller.query('select evidence_private.control($1,false,0)',[actor]);
- assert.deepEqual(await probe.markDelivered(awaiting),{status:'denied'});
- assert.equal((await inspector.query('select delivered_at is null as unmarked from evidence_private.receipts where request_id=$1',[awaiting.requestId])).rows[0].unmarked,true);
+ assert.deepEqual(await probe.reserveIntent(awaiting),{status:'denied'});
+ assert.equal((await inspector.query('select not exists(select 1 from evidence_private.delivery_attempts where request_id=$1) as unmarked',[awaiting.requestId])).rows[0].unmarked,true);
  await controller.query('select evidence_private.control($1,true,60)',[actor]);
- assert.deepEqual(await probe.markDelivered(awaiting),{status:'denied'});
+ assert.deepEqual(await probe.reserveIntent(awaiting),{status:'denied'});
  assert.deepEqual(await probe.stage(awaiting),{status:'conflict'});
  assert.deepEqual(await probe.stage(input()),{status:'staged'});
  console.log('Private authority PASS: provider outage/rejection fail closed, epoch rollback-denial, stale receipt replay forbidden, idempotence.');
@@ -136,7 +136,7 @@ try{
  await blockedBy(inspector,writerPid,racerPid);
  await racer.query('commit');
  assert.equal((await revokePromise).error,undefined);
- assert.deepEqual(await probe.markDelivered(raced),{status:'denied'});
+ assert.deepEqual(await probe.reserveIntent(raced),{status:'denied'});
  assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[raced.requestId])).rows[0].n,0);
  console.log('Private authority PASS: writer-first and evidence-first row-lock ordering, denied delivery after revoke.');
  // Rollback of private revocation cannot erase committed staged receipt.
@@ -145,7 +145,14 @@ try{
  await writer.query('begin');
  await writer.query('select evidence_private.control($1,false,0)',[actor]);
  await writer.query('rollback');
- assert.deepEqual(await probe.markDelivered(rolled),{status:'marked-delivered'});
+ const resumed=await probe.reserveIntent(rolled);assert.equal(resumed.status,'intent-recorded');
+ await gateway.query('select evidence_private.mark_uncertain($1,$2)',[rolled.requestId,resumed.attemptId]);
+ assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[rolled.requestId])).rows[0].status,'uncertain');
+ assert.deepEqual(await probe.reserveIntent(rolled),{status:'reconciliation-required'});
+ availableAck=false;
+ assert.deepEqual(await reconciler.reconcile({requestId:rolled.requestId,attemptId:resumed.attemptId,digest}),{status:'reconciliation-required'});
+ availableAck=true;
+ assert.deepEqual(await reconciler.reconcile({requestId:rolled.requestId,attemptId:resumed.attemptId,digest}),{status:'acknowledgement-recorded'});
  // Expired MLOS lease denies even with a still positive network Auth verdict.
  await controller.query('select evidence_private.control($1,true,1)',[actor]);
  await pause(1250);
