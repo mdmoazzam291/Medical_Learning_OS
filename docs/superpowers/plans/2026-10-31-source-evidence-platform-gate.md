@@ -14,10 +14,13 @@ No production migration/API/session/grant/rights changes. Auth tables contain on
 Missing/wrong-user sessions; suspension/deletion; Admin != package owner; revoked old session vs valid new session retry; feature default off and browser denial.
 
 ### Task 1
-- [ ] Write positive wrapper behavior tests with rejecting SQL placeholder and observe RED.
-- [ ] Add test-only platform_guard/stage_session/readback_session wrappers and feature gate.
-- [ ] Test actual repository runtime/Admin definitions against synthetic Auth/session changes, owner transfer, policy/withdrawal and postcommit deny.
-- [ ] Write exact owner-only HTTP/RPC proposal and remaining acceptance gates.
-- [ ] Run disposable script, full tests/check, read-only review; add isolated CI verification; checkpoint PR346.
+- [x] Write positive wrapper behavior tests with rejecting SQL placeholder and observe RED.
+- [x] Add test-only platform_guard/stage_session/readback_session wrappers and feature gate.
+- [x] Test actual repository runtime/Admin definitions against synthetic Auth/session changes, owner transfer, policy/withdrawal and postcommit deny.
+- [x] Write exact owner-only HTTP/RPC proposal and remaining acceptance gates.
+- [x] Run disposable script, full tests/check, read-only review; add isolated CI verification; checkpoint PR346.
 
 Review note: service_role raw probe/table privileges intentionally remain for existing disposable checks. Wrapper-only default-off is not a global backend boundary. Added explicit proposal/README release limitation; no hosted privilege plan or API readiness claim.
+
+
+Verification: implementationce3c63f0bbee3d29627843d490d6dfad31b5e2d2, Foundation run41173028054/job124454806451 SUCCESS. Platform fixture, previous native races/WAL/restore/negative controls passed. Local full1,625PASS/0FAIL; repository checks13services/251reviewedcoupling. One explicit new script/Auth-SQL dependency recorded, not automatic baseline refresh. No live Auth or production capability claim.
