@@ -14,11 +14,34 @@ function run(binary,args,options){
 export async function startDisposableNativePostgres({postgres}){
  const root=await mkdtemp(join(tmpdir(),'mlos-native-pg-')),native=join(root,'native'),data=join(root,'data'),socket=join(root,'socket');
  const identity=process.getuid?.()===0?{uid:65534,gid:65534}:{};
- let server,closing;const stopped=()=>!server||server.exitCode!==null||server.signalCode!==null;
+ let server,options,closing,restarting;
+ const stopped=child=>!child||child.exitCode!==null||child.signalCode!==null;
+ async function waitStopped(child){
+  const deadline=Date.now()+10000;while(!stopped(child)&&Date.now()<deadline)await pause(25);
+  if(!stopped(child))throw new Error('native_server_stop_timeout');
+ }
+ async function launch(){
+  const child=spawn(join(native,'bin','postgres'),['-D',data,'-k',socket,'-p','55432','-c','listen_addresses=','-c','log_min_messages=log'],options);
+  server=child;let log='',spawnError;child.on('error',e=>{spawnError=e;});
+  for(const stream of [child.stdout,child.stderr])stream.on('data',b=>{log=(log+b).slice(-12000);});
+  const deadline=Date.now()+10000;
+  while(Date.now()<deadline){
+   if(spawnError||stopped(child))throw new Error('native_server_failed: '+(spawnError?.message||log));
+   if(log.includes('database system is ready to accept connections')){
+    await access(join(socket,'.s.PGSQL.55432'));return log;
+   }
+   await pause(25);
+  }
+  throw new Error('native_server_ready_timeout: '+log);
+ }
+ async function stopServer(mode){
+  if(stopped(server))return;
+  await run(join(native,'bin','pg_ctl'),['-D',data,'-m',mode,'-w','-t','10','stop'],options);
+  await waitStopped(server);
+ }
  async function cleanup(){
-  if(server&&!stopped()){
-   server.kill('SIGTERM');const deadline=Date.now()+5000;while(!stopped()&&Date.now()<deadline)await pause(25);
-   if(!stopped()){server.kill('SIGKILL');while(!stopped())await pause(25);}
+  if(!stopped(server)){
+   try{await stopServer('fast');}catch{await stopServer('immediate');}
   }
   await rm(root,{recursive:true,force:true});
  }
@@ -29,17 +52,20 @@ export async function startDisposableNativePostgres({postgres}){
    try{await chown(root,identity.uid,identity.gid);await chown(socket,identity.uid,identity.gid);}
    catch(error){if(['EINVAL','EPERM'].includes(error.code))throw new Error('native_postgres_requires_non_root_runner');throw error;}
   }
-  const options={cwd:root,...identity,env:{PATH:process.env.PATH,LANG:'C',LC_ALL:'C',LD_LIBRARY_PATH:join(native,'lib')},stdio:['ignore','pipe','pipe']};
+  options={cwd:root,...identity,env:{PATH:process.env.PATH,LANG:'C',LC_ALL:'C',LD_LIBRARY_PATH:join(native,'lib')},stdio:['ignore','pipe','pipe']};
   await run(join(native,'bin','initdb'),['-D',data,'-A','trust','-U','postgres','--no-locale','--encoding=UTF8'],options);
-  server=spawn(join(native,'bin','postgres'),['-D',data,'-k',socket,'-p','55432','-c','listen_addresses=','-c','log_min_messages=warning'],options);
-  server.on('error',()=>{});
-  let log='';for(const stream of [server.stdout,server.stderr])stream.on('data',b=>{log=(log+b).slice(-4000);});
-  const deadline=Date.now()+10000;
-  while(Date.now()<deadline){
-   if(stopped())throw new Error('native_server_failed: '+log);
-   try{await access(join(socket,'.s.PGSQL.55432'));break;}catch{await pause(25);}
-  }
-  await access(join(socket,'.s.PGSQL.55432'));
-  return {root,config:{host:socket,port:55432,user:'postgres',database:'postgres',connectionTimeoutMillis:5000},stop(){if(!closing)closing=cleanup();return closing;}};
+  await launch();
+  return {
+   root,config:{host:socket,port:55432,user:'postgres',database:'postgres',connectionTimeoutMillis:5000},
+   crashAndRestart(){
+    if(closing)throw new Error('native_server_closing');
+    if(!restarting)restarting=(async()=>{
+     const previousPid=server.pid;await stopServer('immediate');const recoveryLog=await launch();
+     return {mode:'immediate',previousPid,newPid:server.pid,recoveryLog};
+    })().finally(()=>{restarting=null;});
+    return restarting;
+   },
+   stop(){if(!closing)closing=(async()=>{if(restarting)await restarting.catch(()=>{});await cleanup();})();return closing;}
+  };
  }catch(error){await cleanup();throw error;}
 }

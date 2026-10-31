@@ -1,3 +1,10 @@
+## Native immediate recovery implementation — CI pending —31 October2026 IST
+- Checked at 2026-10-31T05:16:41.323Z. Test-first commit95b2378250bdc11bfa129aabc80137e787545787 observed expected RED in run41171677157/job124450852230: immediate restart hook required; cleanupPASS. One writer, mlos-evidence-crash-auth.
+- Implemented pg_ctl immediate shutdown/same-directory restart, readiness/recovery logs and bounded controlled cleanup. Native test covers fsync/synchronous_commit/full_page_writes, committed/uncommitted state, original/lost-delivery receipt, account/policy/withdrawal denial and native postcrash restore/ACL. Native GREEN result pending.
+- Audited existing owner-api/session/SQL Admin boundaries; added4 actual runtime-helper tests with synthetic RPC/tokens. Confirms separate verified actor/session binding and fail-closed lookup, not live Auth or exact package/reviewer authority. No API wiring.
+- Static read-only review no blocker. Local npm test1,625PASS/0FAIL and npm run checkPASS13services/250coupling. Local native launch still blocked by UID0 namespace; isolated CI provides required execution.
+- Next inspect native CI, fix any failure and persist exact result; no power-loss or production storage certification. No migration/real sessions/grants/source bytes/clinical/rights/exam/learner activation or production changes. Ownership retained pending CI.
+
 ## Native crash acceptance test-first checkpoint —31 October2026 IST
 - Checked at 2026-10-31T05:12:33.777Z. Resumed PR346329887d25ca6988767397f51ed494664ee1b3705; one writer in mlos-evidence-crash-auth.
 - Added native crash test for synchronous durability flags, acknowledged receipts, explicit uncommitted transaction, account/policy/withdrawal denial and postcrash restore. Native helper restart hook deliberately not implemented yet; CI must observe the missing-hook assertion before implementation.

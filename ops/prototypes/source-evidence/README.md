@@ -81,3 +81,15 @@ For a suitable non-root Linux host, install pinned verification packages in temp
 
 
 Native execution verified: implementation commit 37de68c9178ba9de1db4cfb51447e6c1d60cf90b, Foundation run https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41171036865, job evidence-native-postgres (124448843962), SUCCESS. Logs confirm PostgreSQL18.6, three distinct backend PIDs, all seven race/rollback orderings, exact native restore digest/receipt/withdrawal/browser ACL parity and cleanup. The omit-locks control failed specifically with advisory_barrier_not_observed, and its cleanup also passed. This records the native job only; unrelated workflow jobs and later documentation-head CI must be checked separately.
+
+## Immediate-shutdown/WAL recovery acceptance
+
+scripts/source-evidence-pg-crash-recovery.js uses the same private native cluster helper. It asserts fsync, synchronous_commit and full_page_writes are on, stages acknowledged and simulated-lost-delivery commits, persists metadata withdrawal/source-policy/account denial, and leaves a separate transaction uncommitted. The restart hook uses pg_ctl immediate shutdown, waits for the server to stop, then starts the same data directory and waits for its ready log. It does not kill arbitrary processes or bypass PostgreSQL root restrictions.
+
+Acceptance requires a changed postmaster PID and explicit interrupted/automatic-recovery log evidence. The committed eight-table payload digest must survive exactly, the uncommitted package/cases/request/event must be absent, accepted/lost-delivery retries must return original receipts, denied records must remain denied, and a fresh postcrash native restore must retain receipt/history/ACL parity. Client error events are expected during immediate shutdown; all old and new clients are closed in cleanup.
+
+This is process-crash/WAL replay acceptance, not a hardware/OS power-loss, disk-controller or production replication certificate. Simulated lost application delivery is not an actual network interruption. No real Auth sessions or hosted tables are used. The initial native test-first checkpoint95b2378 failed at the expected missing-hook assertion in run41171677157/job124450852230 and still confirmed cleanup; the implementation result must be checked separately.
+
+Primary reference: [PostgreSQL server shutdown](https://www.postgresql.org/docs/current/server-shutdown.html) documents that immediate mode omits normal shutdown and requires WAL replay. [WAL reliability](https://www.postgresql.org/docs/current/wal-reliability.html) explains storage/hardware limits beyond this fixture.
+
+Current server session compatibility is audited in docs/SOURCE_EVIDENCE_SESSION_COMPATIBILITY.md. Existing verified identity/live-session/singleton-Admin gates are useful boundaries, but are not exact package/source permission, shared-writer revocation or independent reviewer authority. Four actual helper behavior tests use synthetic tokens/RPC fixtures and do not certify live Auth.
