@@ -15,7 +15,16 @@ async function connect(user='postgres'){
 const stage=(c,e)=>c.query('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args).then(r=>r.rows[0].r);
 const read=(c,e)=>c.query('select evidence_probe.readback_session($1,$2,$3,$4,$5,$6) r',[f.owner,f.session,e.b.packageId,e.b.packageVersion,e.b.packageDigest,e.b.requestId]).then(r=>r.rows[0].r);
 try{
- const g=await connect();await installPlatformFixture({exec:s=>g.query(s),query:(...a)=>g.query(...a)},{capability:true});
+ const g=await connect();
+ const expectedVersion=process.env.EXPECTED_NATIVE_PG_VERSION;
+ if(expectedVersion){
+  assert.match(expectedVersion,/^1[5-9]\\.[0-9]+$/,'version guard requires a major.minor target');
+  const serverVersion=Number((await g.query("select current_setting('server_version_num')::int as n")).rows[0].n);
+  const actualVersion=`${Math.floor(serverVersion/10000)}.${serverVersion%10000}`;
+  assert.equal(actualVersion,expectedVersion,'native PostgreSQL fixture does not match pinned expected version');
+  console.log('Authority native PostgreSQL version PASS: '+actualVersion);
+ }
+ await installPlatformFixture({exec:s=>g.query(s),query:(...a)=>g.query(...a)},{capability:true});
  let overlay=await readFile(new URL('../ops/prototypes/source-evidence/authority-row-locks.sql',import.meta.url),'utf8');if(weak)overlay=overlay.replaceAll(' for share;',' for key share;');await g.query(overlay);
  await g.query('update evidence_probe.platform_feature set enabled=true');
  assert.equal((await g.query("select count(*)::int n from pg_trigger where not tgisinternal and tgrelid in ('auth.users'::regclass,'auth.sessions'::regclass,'public.content_admin_account'::regclass,'evidence_probe.platform_feature'::regclass)")).rows[0].n,0);
