@@ -46,8 +46,13 @@ async function rotate(client,refreshToken){
 async function revokedRefresh(createClient,refreshToken){
  try{
   const result=await createClient().auth.refreshSession({refresh_token:refreshToken});
-  return !!result?.error||!result?.data?.session;
- }catch{return true;}
+  // An outage, timeout, thrown SDK error or malformed response is NOT
+  // evidence of revocation. Only provider-originated Auth API denial is.
+  const error=result?.error;
+  return !result?.data?.session&&
+    (error?.code==='refresh_token_not_found'||error?.code==='refresh_token_already_used')&&
+    [400,401,422].includes(error?.status);
+ }catch{return false;}
 }
 async function logout(client,scope){
  const result=await client.auth.signOut({scope});
