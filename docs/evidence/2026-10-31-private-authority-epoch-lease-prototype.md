@@ -1,3 +1,5 @@
+> **Historical note (31 October 2026):** The original `delivered_at`/ `markDelivered` experiment documented below has now been superseded **within the disposable prototype** by separate `delivery_attempts`, one-shot `reserve_intent`, `mark_uncertain`, confirmer-only `inspect_intent` and `record_ack`. See [delivery-intent reconciliation](2026-10-31-private-delivery-intent-reconciliation.md). Historical native results remain valid for the earlier fixture, but their `delivered_at` wording does **not** describe the current file or prove actual external delivery. Both designs remain default-OFF test artifacts.
+
 # MLOS-owned private authority — epoch, lease and receipt prototype (31 October 2026)
 
 **Result: DISPOSABLE NATIVE POSTGRESQL 17.6 AND 18.6 ACCEPTANCE PASS. Production authority and provider-revocation guarantees remain NOT ESTABLISHED.**
