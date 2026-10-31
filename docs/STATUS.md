@@ -1,3 +1,10 @@
+## 2026-10-31 — PostgreSQL 17.6 disposable row-lock proof complete
+
+- PR #346 now runs both native PG18.6 legacy conformance and a separately installed exact PostgreSQL **17.6** `evidence-native-postgres17` job (package 17.6.0-beta.15); the actual server version is asserted inside the original concurrency harness before fixture setup. No changes to production PostgreSQL or Auth.
+- Exact implementation head `7034fe5def1fbc85694860e46c882499b491cac7`; Foundation run `41181017264`, PG17 job `124478302267` **SUCCESS**. Native logs: 10 plain-writer/reader order cases, transaction rollback/no-orphan/retry, other-user independence, expected `40P01` deadlock victim rollback/retry, and correct unsafe-key-share rejection/cleanup.
+- Engine-version compatibility completed, **provider Auth semantics still blocked**: live GoTrue role ownership, cleanup, refresh, MFA, token revocation, cascade, managed ACLs and a real restricted gateway remain unverified. Never transplant disposable policies to `auth`. See `docs/evidence/2026-10-31-hosted-auth-readonly-compatibility.md`.
+- Remaining Foundation jobs and documentation-head exact CI must be inspected separately before any engineering release. Draft stacked PRs unmerged; no hosted secrets, routes, SQL changes, NMC approvals, source bytes, or learner publication.
+
 ## 2026-10-31 — Live Supabase Auth schema compatibility: read-only audit, hosted gate blocked
 
 - Checked active Medical Learning OS Supabase **read-only metadata only**: project healthy, PostgreSQL 17.6 vs disposable native Postgres 18.6; `auth.users`/`auth.sessions` owned by `supabase_auth_admin`, RLS on, zero policies; session→user hard-delete cascade; Admin→user delete restriction. Actual session has `not_after`, `refreshed_at`, `aal` fields with provider-specific semantics. No Auth rows/user identities or tokens fetched.
