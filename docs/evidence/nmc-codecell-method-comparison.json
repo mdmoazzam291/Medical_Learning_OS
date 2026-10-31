@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "method": "PyMuPDF line-start strict token multiset versus geometry full-cell standard token multiset; not the earlier pdftotext receipt method.",
+  "pagesCompared": 263,
+  "matchingPages": 260,
+  "disagreements": [
+    {
+      "pdfPage": 172,
+      "geometryOnly": "BC14.24",
+      "reason": "wrapped_cell_recovered"
+    },
+    {
+      "pdfPage": 352,
+      "strictOnly": "PS2.1",
+      "reason": "geometry_preserves_star_in_nonstandard_PS2.1*cell"
+    },
+    {
+      "pdfPage": 445,
+      "strictOnly": "OR2.2",
+      "reason": "strict_prefix_match_truncates_malformed_OR2.2.9cell"
+    }
+  ],
+  "independentlyReviewed": false,
+  "noOmissionCertified": false,
+  "note": "This follow-up comparison matches260/263pages for standard identifiers. Three differences are explained by known wrap/footnote/malformed-prefix behavior. Shared failures remain possible; agreement does not certify all source rows."
+}

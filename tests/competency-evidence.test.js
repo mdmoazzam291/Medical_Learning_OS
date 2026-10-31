@@ -7,8 +7,8 @@ import {validateCompetencyEvidenceProposals,competencyEvidencePreflight}
 const clone=()=>structuredClone(data);
 const example=()=>({
  sourceId:'nmc-cbme-2024',sourceVersion:'2024-09-12',
- sourceLocator:'Synthetic NMC-style document, Volume II, PDF p. 9, code ZZ1.2',
- documentPage:9,competencyCode:'ZZ1.2',subjectId:'medicine',
+ sourceLocator:'Synthetic NMC-style document, Volume II, PDF p. 9, code GM98.1',
+ documentPage:9,competencyCode:'GM98.1',subjectId:'medicine',
  moduleId:foundation.subjects.find(s=>s.subjectId==='medicine').domains[0].domainId,
  analystSummary:'Synthetic demonstration of identifying a competency code; not a medical fact.',
  sourceRights:'unreviewed',sourceVerification:'unverified',
@@ -46,7 +46,8 @@ test('rejects fabricated source approval, copied fields, duplicate codes and unk
   r=>r.sourceRights='approved',r=>r.sourceVerification='verified',
   r=>r.officialSyllabusCertified=true,r=>r.competencyCode='UNKNOWN',
   r=>r.documentPage=null,r=>r.sourceLocator='',r=>r.moduleId='invented',
-  r=>r.subjectId='orthopedic',r=>r.sourceId='aiims-inicet-2027',
+  r=>r.subjectId='orthopedic',
+  r=>{r.subjectId='anatomy';r.moduleId='anatomy:gross-regional-anatomy';},r=>r.sourceId='aiims-inicet-2027',
   r=>r.examHypotheses[0].status='approved',
   r=>r.examHypotheses[0].basis='official',
   r=>r.examHypotheses[0].rationale='no',
