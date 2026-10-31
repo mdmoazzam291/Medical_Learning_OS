@@ -172,7 +172,7 @@ jobs:
           CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
           cd "$RUNNER_TEMP/mlos-auth-stack"
           STATUS="$("$CLI" status -o env)"
-          DB_URL="$(printf '%s\\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\\1/p' | head -1)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
           if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]]; then
             echo "LOCAL_AUTH_CATALOG_NOT_ACCEPTED: local database address unavailable"
             exit 1
