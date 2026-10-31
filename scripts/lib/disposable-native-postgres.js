@@ -65,13 +65,13 @@ export async function startDisposableNativePostgres({postgres,tls=false}){
     '-subj','/CN=MLOS Disposable Test CA','-keyout',caKey,'-out',caCrt],{cwd:root,env:process.env});
    await run('openssl',['req','-newkey','rsa:2048','-sha256','-nodes',
     '-subj','/CN=localhost','-keyout',serverKey,'-out',csr],{cwd:root,env:process.env});
-   await writeFile(ext,'subjectAltName=DNS:localhost,IP:127.0.0.1\\nextendedKeyUsage=serverAuth\\n');
+   await writeFile(ext,'subjectAltName=DNS:localhost,IP:127.0.0.1\nextendedKeyUsage=serverAuth\n');
    await run('openssl',['x509','-req','-in',csr,'-CA',caCrt,'-CAkey',caKey,
     '-CAcreateserial','-out',serverCrt,'-days','1','-sha256','-extfile',ext],{cwd:root,env:process.env});
    if(identity.uid!==undefined){await chown(serverKey,identity.uid,identity.gid);await chown(serverCrt,identity.uid,identity.gid);}
    await chmod(serverKey,0o600);
    await writeFile(join(data,'pg_hba.conf'),
-    'local all all trust\\nhostssl all all 127.0.0.1/32 scram-sha-256\\nhostnossl all all 127.0.0.1/32 reject\\nhost all all 0.0.0.0/0 reject\\nhost all all ::/0 reject\\n');
+    'local all all trust\nhostssl all all 127.0.0.1/32 scram-sha-256\nhostnossl all all 127.0.0.1/32 reject\nhost all all 0.0.0.0/0 reject\nhost all all ::/0 reject\n');
   }
   await launch();
   return {
