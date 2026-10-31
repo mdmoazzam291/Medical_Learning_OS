@@ -109,7 +109,7 @@ export async function runLocalGoTrueWriterRace({
   return Object.freeze({
    status:'local_gotrue_writer_race_observed',
    environment:'disposable_local_gotrue',
-   authSessionsModifiedByProbe:false,
+   directAuthTableDmlByHarness:false,
    signout:results.signout,refresh:results.refresh,
    bothProviderOperationsWaitedForShare:
     results.signout.providerWaitedForShare&&results.refresh.providerWaitedForShare,
