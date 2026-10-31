@@ -99,7 +99,7 @@ end;$$;
 create function evidence_private.key_record_ack(
  p_request uuid,p_attempt uuid,p_digest text,p_ack_digest text,
  p_provider text,p_recipient text,p_key text,p_epoch bigint)
-returns jsonb language plpgsql security definer set search_path='' as $
+returns jsonb language plpgsql security definer set search_path='' as $mlos_ack$
 declare old evidence_private.provider_signing_trust;
 begin
  if not evidence_private.key_valid(p_provider,p_recipient,p_key) or
@@ -113,7 +113,7 @@ begin
  -- A matching key remains authorized until this entire call commits.
  -- Delegate to the original immutable request/attempt/digest/ack audit.
  return evidence_private.record_ack(p_request,p_attempt,p_digest,p_ack_digest);
-end;$;
+end;$mlos_ack$;
 reset role;
 revoke all on table evidence_private.provider_signing_trust,evidence_private.retired_signing_keys from public;
 revoke all on function evidence_private.key_valid(text,text,text),
