@@ -232,6 +232,85 @@ try{
   [ordered.requestId])).rows[0].status,'acknowledged');
  await fail(confirmer.query(lockedAck,[ordered.requestId,orderedAttempt.attemptId,
   digest,ackDigest,providerId,recipientId,fourthKey,7]),/private_denied/);
+
+ // The key registry must survive the same real immediate-shutdown/WAL replay
+ // used for delivery intent. A transaction that proposes new key authority
+ // but never commits MUST NOT resurrect or install any signing key.
+ for(const setting of ['fsync','synchronous_commit','full_page_writes'])
+  assert.equal((await inspector.query('show '+setting)).rows[0][setting],'on');
+ const fifthPair=generateKeyPairSync('ed25519'),fifthKey=fingerprint(fifthPair.publicKey);
+ await controller.query('begin');
+ assert.equal((await controller.query(enroll,[providerId,recipientId,fifthKey]))
+  .rows[0].epoch,'9');
+ const crash=await server.crashAndRestart();
+ assert.equal(crash.mode,'immediate');
+ assert.notEqual(crash.previousPid,crash.newPid);
+ assert.match(crash.recoveryLog,/database system was interrupted|not properly shut down/);
+ assert.match(crash.recoveryLog,/automatic recovery|redo starts/);
+ await Promise.allSettled(clients.map(c=>c.end()));
+ const afterAdmin=await connect();
+ const afterController=await connect('evidence_private_key_controller');
+ const afterReader=await connect('evidence_private_key_reader');
+ const afterGateway=await connect('evidence_private_gateway');
+ const afterConfirmer=await connect('evidence_private_confirmer');
+ assert.equal((await afterAdmin.query('select pg_is_in_recovery() r')).rows[0].r,false);
+ const afterTrust=createSourceEvidencePrivateKeyTrustReader({
+  query:(sql,args)=>afterReader.query(sql,args)
+ });
+ assert.deepEqual(await afterTrust({providerId,recipientId,keySha256:fourthKey}),
+  {providerId,recipientId,keySha256:fourthKey,epoch:8,enabled:false});
+ assert.equal(await afterTrust({providerId,recipientId,keySha256:fifthKey}),null);
+ for(const retired of [firstKey,secondKey,thirdKey]){
+  assert.equal(await afterTrust({providerId,recipientId,keySha256:retired}),null);
+  await fail(afterController.query(enroll,[providerId,recipientId,retired]),
+   /private_conflict/);
+ }
+ assert.equal((await afterAdmin.query(
+  'select count(*)::int n from evidence_private.retired_signing_keys where provider_id=$1 and recipient_id=$2',
+  [providerId,recipientId])).rows[0].n,3);
+ for(const [req,id,state,hash] of [
+  [original.requestId,intent.attemptId,'acknowledged',true],
+  [later.requestId,laterIntent.attemptId,'intent',false],
+  [ordered.requestId,orderedAttempt.attemptId,'acknowledged',true]
+ ]){
+  const row=(await afterAdmin.query(
+   'select attempt_id,status,ack_digest from evidence_private.delivery_attempts where request_id=$1',
+   [req])).rows[0];
+  assert.equal(row.attempt_id,id);
+  assert.equal(row.status,state);
+  assert.equal(row.ack_digest===null,!hash);
+ }
+ await fail(afterConfirmer.query(rawAck,[later.requestId,laterIntent.attemptId,
+  digest,ackDigest]),/permission denied/);
+ await fail(afterConfirmer.query(lockedAck,[later.requestId,laterIntent.attemptId,
+  digest,ackDigest,providerId,recipientId,fourthKey,8]),/private_denied/);
+ await fail(afterGateway.query('select * from evidence_private.provider_signing_trust'),
+  /permission denied/);
+ await fail(afterReader.query('select * from evidence_private.delivery_attempts'),
+  /permission denied/);
+ // A fresh, explicit controller decision may introduce an entirely NEW key;
+ // neither the crashed, uncommitted proposal nor retired keys are trusted.
+ assert.equal((await afterController.query(enroll,[providerId,recipientId,fifthKey]))
+  .rows[0].epoch,'9');
+ const afterProof=createSourceEvidencePrivateAuthorityPrototype({
+  getUser:async()=>({data:{user:{id:actor}},error:null}),
+  expectedIssuer:issuer,query:(sql,args)=>afterGateway.query(sql,args)
+ });
+ const recoveredRequest={requestId:randomUUID(),accessToken:token,digest};
+ assert.deepEqual(await afterProof.stage(recoveredRequest),{status:'staged'});
+ const freshAttempt=await afterProof.reserveIntent(recoveredRequest);
+ assert.equal(freshAttempt.status,'intent-recorded');
+ const afterAck=createSourceEvidencePrivateTrustLockedAckReconciler({
+  fetchSignedReceipt:async target=>providerAck(target,fifthPair.privateKey),
+  trustedPublicKey:fifthPair.publicKey,providerId,recipientId,
+  getTrustState:afterTrust,query:(sql,args)=>afterConfirmer.query(sql,args)
+ });
+ assert.deepEqual(await afterAck.reconcile({
+  requestId:recoveredRequest.requestId,attemptId:freshAttempt.attemptId,digest
+ }),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await afterProof.reserveIntent(recoveredRequest),
+  {status:'reconciliation-required'});
+ console.log('Private key WAL recovery PASS: revoked epoch and retired fingerprints survive, uncommitted key rotation rolls back, acknowledged/intent attempts persist, restart retains ACLs and explicit new-key evidence flow.');
  console.log('Private key atomic ack PASS: revoked-before-commit rejected, ack-first row-lock blocks revocation until commit, raw audit bypass denied.');
  console.log('Private provider key trust PASS: restricted roles, retired-key guard, epoch rotation, midflight revoke, real SQL row-lock ordering, signed acknowledgement without redispatch.');
 }finally{
