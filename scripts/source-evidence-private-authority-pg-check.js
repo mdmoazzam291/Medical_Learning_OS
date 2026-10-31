@@ -45,11 +45,12 @@ async function blockedBy(inspector,waiter,blocker){
 }
 let failure;
 try{
- const admin=await connect(),controller=await connect('evidence_private_controller');
- const gateway=await connect('evidence_private_gateway'),racer=await connect('evidence_private_gateway');
- const inspector=await connect(),writer=await connect('evidence_private_controller');
+ const admin=await connect();
  const schema=await readFile(new URL('../ops/prototypes/source-evidence/private-authority.sql',import.meta.url),'utf8');
  await admin.query(schema);
+ const controller=await connect('evidence_private_controller');
+ const gateway=await connect('evidence_private_gateway'),racer=await connect('evidence_private_gateway');
+ const inspector=await connect(),writer=await connect('evidence_private_controller');
  const n=Number((await admin.query("select current_setting('server_version_num')::int as n")).rows[0].n);
  if(process.env.EXPECTED_NATIVE_PG_VERSION){
   const actual=Math.floor(n/10000)+'.'+n%10000;
@@ -102,10 +103,9 @@ try{
  await writer.query('begin');
  await writer.query('select evidence_private.control($1,false,0)',[actor]);
  const pending=input();
- const stagePromise=outcome(racer.query(stageSql,[actor,session,pending.requestId,digest]));
- const blocker=(await inspector.query('select pg_backend_pid() as p')).rows[0].p;assert.ok(blocker);
  const writerPid=(await writer.query('select pg_backend_pid() as p')).rows[0].p;
  const racerPid=(await racer.query('select pg_backend_pid() as p')).rows[0].p;
+ const stagePromise=outcome(racer.query(stageSql,[actor,session,pending.requestId,digest]));
  await blockedBy(inspector,racerPid,writerPid);
  await writer.query('commit');
  assert.equal((await stagePromise).error?.message,'private_denied');
