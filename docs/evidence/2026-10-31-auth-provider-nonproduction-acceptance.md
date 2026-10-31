@@ -61,3 +61,17 @@ References (official, reviewed 31 October 2026):
 - https://supabase.com/docs/guides/auth/sessions
 - https://supabase.com/docs/reference/javascript/auth-getuser
 - https://supabase.com/docs/reference/javascript/auth-refreshsession
+
+
+## Acceptance-runner safety hardening — 31 October 2026
+
+A security review of the *test runner itself* found two ways a real provider test could otherwise be falsely accepted or pointed at the wrong environment:
+
+- **Direct-import safety:** the original command-line entry validated nonproduction project and account requirements, but a caller invoking the exported `runIsolatedAuthProviderProbe` directly did not. The core function now performs the full opt-in, project-ref, exact URL and test-identity preflight **before any client creation**, irrespective of which entry point invokes it. The CLI passes the complete validated configuration. Successful Auth-issued JWTs must also have a network-verified subject, an issuer equal to the explicitly selected sandbox `URL + /auth/v1`, and `aud='authenticated'` for the initial and refreshed sessions. The claims are inspected only after the provider verifies the user. A different issuer or audience fails closed and cleans up the test sessions.
+- **Revocation-evidence safety:** a refresh attempt that threw a network error or returned no session had previously been counted as a revoked refresh token. Now **only** a provider Auth API error with `code=refresh_token_not_found` or `refresh_token_already_used`, and HTTP status 400, 401 or 422, counts. A timeout, request failure, network outage, unknown response code, malformed SDK response or unexpected exception is **inconclusive and causes test failure**, never a revocation pass. This is a strict test-acceptance policy, not a claim that those are the only possible legitimate provider errors.
+
+The mock suite includes direct-function attempts to bypass production/legacy project guards (asserting zero clients created), cross-project issuer, wrong audience, cleanup, network exception and timeout negative controls. All values are synthetic. If a future SDK/provider version supplies a new well-documented revocation error, update the allowlist only with independent source verification and a regression test; do not widen it to catch-all errors.
+
+These tests establish a stricter *protocol*, not real Auth behavior, production safety certification or a hosted entitlement. No real provider environment was created and no tokens were issued.
+
+Official references: https://supabase.com/docs/guides/auth/jwt-fields and https://supabase.com/docs/guides/auth/debugging/error-codes.
