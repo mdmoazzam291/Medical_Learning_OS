@@ -237,3 +237,59 @@ test('getter-backed stored intent lookup cannot trigger another acknowledgement'
  assert.equal(writes,1);
  assert.equal(lookups,0);
 });
+
+test('provider re-verification cannot swap a previously checked SQL attempt ID',async()=>{
+ const original='55555555-5555-4555-8555-555555555555';
+ const changed='66666666-6666-4666-8666-666666666666';
+ const sqlReceipt={status:'intent-recorded',attemptId:original};
+ let networkCalls=0;
+ const proto=createSourceEvidencePrivateAuthorityPrototype({
+  expectedIssuer:issuer,
+  getUser:async()=>{
+   networkCalls++;
+   if(networkCalls===2)sqlReceipt.attemptId=changed;
+   return {data:{user:{id:actor}},error:null};
+  },
+  query:async()=>({rows:[{r:sqlReceipt}]})
+ });
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'intent-recorded',attemptId:original});
+ assert.equal(networkCalls,2);
+});
+
+test('SQL staging/reservation receipts reject accessors and unexpected fields',async()=>{
+ let authCalls=0;
+ const malicious={status:'intent-recorded'};
+ Object.defineProperty(malicious,'attemptId',{enumerable:true,get(){
+  throw Error('never execute untrusted receipt accessors');
+ }});
+ for(const [operation,receipt] of [
+  ['reserveIntent',malicious],
+  ['reserveIntent',{status:'intent-recorded',attemptId:attempt,extra:true}],
+  ['reserveIntent',{status:'reconciliation-required',attemptId:attempt}],
+  ['stage',{status:'staged',unexpected:'data'}],
+  ['stage',{status:'intent-recorded'}]
+ ]){
+  const proto=createSourceEvidencePrivateAuthorityPrototype({
+   expectedIssuer:issuer,
+   getUser:async()=>{authCalls++;return {data:{user:{id:actor}},error:null};},
+   query:async()=>({rows:[{r:receipt}]})
+  });
+  assert.deepEqual(await proto[operation](input()),{status:'uncertain'});
+ }
+ assert.equal(authCalls,5);
+});
+
+test('SQL receipt getter-backed status cannot masquerade as staging success',async()=>{
+ let statusReads=0;
+ const receipt={};
+ Object.defineProperty(receipt,'status',{enumerable:true,get(){
+  statusReads++;return 'staged';
+ }});
+ const proto=createSourceEvidencePrivateAuthorityPrototype({
+  expectedIssuer:issuer,
+  getUser:async()=>({data:{user:{id:actor}},error:null}),
+  query:async()=>({rows:[{r:receipt}]})
+ });
+ assert.deepEqual(await proto.stage(input()),{status:'uncertain'});
+ assert.equal(statusReads,0);
+});
