@@ -195,3 +195,45 @@ test('unknown, malformed or unavailable intent lookup cannot manufacture an ackn
   assert.equal(lookups,0);
  }
 });
+
+test('getter-backed reconciliation input fails before provider lookup or SQL',async()=>{
+ let lookups=0,writes=0;
+ const task={requestId:request,attemptId:attempt};
+ Object.defineProperty(task,'digest',{enumerable:true,get(){return 'a'.repeat(64);}});
+ const rec=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async()=>{lookups++;return null;},
+  query:async()=>{writes++;return null;}
+ });
+ assert.deepEqual(await rec.reconcile(task),{status:'invalid'});
+ assert.equal(lookups,0);
+ assert.equal(writes,0);
+});
+
+test('getter-backed provider acknowledgement cannot change its digest after validation',async()=>{
+ let writes=0,reads=0;
+ const task={requestId:request,attemptId:attempt,digest:'a'.repeat(64)};
+ const receipt={...task,status:'durable'};
+ Object.defineProperty(receipt,'ackDigest',{enumerable:true,get(){
+  return ++reads===1?'b'.repeat(64):'c'.repeat(64);
+ }});
+ const rec=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async()=>receipt,
+  query:async()=>{writes++;return {rows:[{r:{status:'acknowledgement-recorded'}}]};}
+ });
+ assert.deepEqual(await rec.reconcile(task),{status:'denied'});
+ assert.equal(reads,0);
+ assert.equal(writes,0);
+});
+
+test('getter-backed stored intent lookup cannot trigger another acknowledgement',async()=>{
+ let lookups=0,writes=0;
+ const found={status:'intent-found',state:'uncertain'};
+ Object.defineProperty(found,'attemptId',{enumerable:true,get(){return attempt;}});
+ const rec=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async()=>{lookups++;return null;},
+  query:async sql=>{writes++;assert.ok(sql.includes('inspect_intent('));return {rows:[{r:found}]};}
+ });
+ assert.deepEqual(await rec.recover({requestId:request,digest:'a'.repeat(64)}),{status:'uncertain'});
+ assert.equal(writes,1);
+ assert.equal(lookups,0);
+});
