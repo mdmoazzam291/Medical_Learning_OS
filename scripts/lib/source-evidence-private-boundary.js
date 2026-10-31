@@ -7,6 +7,7 @@ const attestationSql=`select session_user::text as login_role, current_user::tex
  rolcanlogin, rolbypassrls, rolsuper from pg_catalog.pg_roles
  where rolname=current_user`;
 const rejected=()=>new Error('evidence_private_database_unavailable');
+const gateDecisions=new Set(['evidence_denied','evidence_platform_denied','evidence_conflict','evidence_invalid']);
 
 // Match the network Auth API's {data:{user},error} result. It must NOT be
 // replaced with getSession, a locally decoded token or caller-provided claims.
@@ -32,7 +33,7 @@ export function createSourceEvidencePrivateQuery({createClient}){
  return async function query(sql,args){
   const length=sql===stageSql?7:sql===readbackSql?6:0;
   if(!length||!Array.isArray(args)||args.length!==length)throw rejected();
-  let client;
+  let client,gatedStatement=false;
   try{
    client=createClient();
    if(!client||typeof client.connect!=='function'||typeof client.query!=='function'||typeof client.end!=='function')throw rejected();
@@ -45,8 +46,12 @@ export function createSourceEvidencePrivateQuery({createClient}){
       ||row.rolcanlogin!==true||row.rolbypassrls!==false||row.rolsuper!==false)throw rejected();
    // This is exactly one SQL statement in a fresh connection. Never wrap in
    // a caller-controlled BEGIN or silently downgrade to a privileged role.
+   gatedStatement=true;
    return await client.query(sql,args);
-  }catch{
+  }catch(error){
+   // Only domain decisions from an attested gated statement may propagate.
+   // Role attestation, connection, timeout and unexpected SQL errors stay opaque.
+   if(gatedStatement&&gateDecisions.has(error?.message))throw new Error(error.message);
    throw rejected();
   }finally{
    if(client&&typeof client.end==='function')await client.end().catch(()=>{});
