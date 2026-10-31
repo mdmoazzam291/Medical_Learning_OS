@@ -37,6 +37,47 @@ export function validateNonproductionAuthProbeConfig({url,projectRef,confirmatio
 const rejectedAccessCodes=new Set([
  'bad_jwt','session_not_found','session_expired','user_not_found','user_banned'
 ]);
+// Auth SDK may convert a server-side session_not_found reply into a
+// client-side AuthSessionMissingError. A direct, bounded /user request is
+// required for post-logout JWT *observation*, never for login authority.
+// The target URL is the validated sandbox origin; redirects and unknown
+// responses fail rather than being counted as revoked or accepted.
+export function createIsolatedAuthAccessObserver({
+ url,projectRef,confirmation,accountA,accountB,apiKey,fetchImpl=fetch
+}){
+ validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
+ if(typeof apiKey!=='string'||!apiKey.startsWith('sb_publishable_')||
+    apiKey.length>400||typeof fetchImpl!=='function')throw new Error('auth_probe_isolation_not_established');
+ return async function observeAccess(token){
+  if(typeof token!=='string'||!token||token.length>16384)throw reject();
+  let response;
+  try{
+   response=await fetchImpl(url+'/auth/v1/user',{
+    method:'GET',redirect:'error',cache:'no-store',
+    headers:{apikey:apiKey,authorization:'Bearer '+token,accept:'application/json'},
+    signal:AbortSignal.timeout(7000)
+   });
+  }catch{throw reject();}
+  if(!Number.isInteger(response?.status)||
+     !response.headers?.get('content-type')?.toLowerCase().includes('application/json'))throw reject();
+  let data;
+  try{
+   const body=await response.text();
+   if(body.length>16384)throw reject();
+   data=JSON.parse(body);
+  }catch{throw reject();}
+  if(response.status===200){
+   const id=data?.id;
+   if(typeof id!=='string'||!uuid.test(id))throw reject();
+   return id.toLowerCase();
+  }
+  if([400,401,403,422].includes(response.status)&&
+     ['bad_jwt','session_not_found','session_expired','user_not_found','user_banned'].includes(data?.code)&&
+     data?.id==null)return null;
+  throw reject();
+ };
+}
+
 async function observedUser(client,token,onDiagnostic){
  let result;
  try{result=await client.auth.getUser(token);}catch{
@@ -110,11 +151,12 @@ function verifiedClaims(token,id,url){
     claim.issuer!==url+'/auth/v1'||claim.audience!=='authenticated')throw reject();
  return claim;
 }
-export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,confirmation,accountA,accountB,onPhase}){
+export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,confirmation,accountA,accountB,onPhase,observeAccess}){
  // Mandatory even when this function is invoked directly rather than via the CLI.
  // Do not allocate a client until the exact sandbox target and identities pass.
  validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
  if(typeof createClient!=='function')throw new Error('auth_probe_isolation_not_established');
+ if(observeAccess!=null&&typeof observeAccess!=='function')throw new Error('auth_probe_isolation_not_established');
  const a1=boundClient(createClient,url),a2=boundClient(createClient,url),b=boundClient(createClient,url),verifier=boundClient(createClient,url);
  if([a1,a2,b,verifier].some(c=>!c?.auth||typeof c.auth.getUser!=='function'))throw reject();
  let signedA1=false,signedA2=false,signedB=false;
@@ -140,8 +182,9 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
   if(typeof onPhase==='function')onPhase('local_revocation');
   if(!await revokedRefresh(createClient,renewed.refresh_token,url))throw reject();
   if(typeof onPhase==='function')onPhase('local_access_observation');
-  const oldLocalJwtRecognized=await observedUser(verifier,renewed.access_token,
-   label=>onPhase?.('local_access_'+label))===id1;
+  const oldLocalJwtRecognized=(observeAccess?
+   await observeAccess(renewed.access_token):
+   await observedUser(verifier,renewed.access_token,label=>onPhase?.('local_access_'+label)))===id1;
   if(typeof onPhase==='function')onPhase('other_session_after_local_signout');
   if(await observedUser(verifier,second.access_token,
    label=>onPhase?.('other_session_'+label))!==id1)throw reject();
@@ -150,14 +193,15 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
   if(typeof onPhase==='function')onPhase('global_revocation');
   if(!await revokedRefresh(createClient,second.refresh_token,url))throw reject();
   if(typeof onPhase==='function')onPhase('global_access_observation');
-  const oldGlobalJwtRecognized=await observedUser(verifier,second.access_token,
-   label=>onPhase?.('global_access_'+label))===id1;
+  const oldGlobalJwtRecognized=(observeAccess?
+   await observeAccess(second.access_token):
+   await observedUser(verifier,second.access_token,label=>onPhase?.('global_access_'+label)))===id1;
   if(await observedUser(verifier,other.access_token)!==idB)throw reject();
   if(typeof onPhase==='function')onPhase('tamper_rejection');
   const forged=renewed.access_token.split('.');
   forged[1]=Buffer.from(JSON.stringify({...JSON.parse(Buffer.from(forged[1],'base64url').toString('utf8')),sub:idB})).toString('base64url');
-  if(await observedUser(verifier,forged.join('.'),
-   label=>onPhase?.('tamper_'+label))!==null)throw reject();
+  if((observeAccess?await observeAccess(forged.join('.')):
+   await observedUser(verifier,forged.join('.'),label=>onPhase?.('tamper_'+label)))!==null)throw reject();
   return Object.freeze({
    status:'observed_nonproduction_provider',
    separateUsersAndSessions:true,refreshPreservedSession:true,
