@@ -1,3 +1,10 @@
+## 2026-10-31 — Retained expired Auth session guard (disposable only)
+
+- Identified a gap in existing `public.learner_runtime_access_v1` (migration `20261003153000_owner_operations_v3.sql`): the function's `session_active` field means row existence, not proof that provider-managed session lifetime/expiry is valid. Managed `auth.sessions` has a `not_after` column; it may retain expired sessions, and Auth access JWTs can survive sign-out until their own expiration.
+- Hardened **only** `ops/prototypes/source-evidence/authority-row-locks.sql`: disposable `not_after` field and `FOR SHARE` guarded `clock_timestamp()` deadline check; expired retained rows must deny owner-only evidence operations even when the network verifier still returns a user identity. No real Auth schema/RLS/credentials/API/runtime migration modified.
+- Added PGlite probe denial/acceptance for past/future/null deadlines; native PG17.6/PG18.6 now exercise sixth authority mutation (expiry) in both writer/evidence-first directions, plus stage/readback denial on a retained expired row and end-to-end synthetic `getUser` still accepting a JWT while SQL denies staging with no new request. Verify exact-head workflow before claiming passed.
+- **Not a provider signout/refresh/MFA acceptance:** nullable deadline, time-box/inactivity semantics and safe provider-supported read/lock privilege still need nonproduction genuine Auth verification. Existing live `learner_runtime_access_v1` is unchanged, production stays default-off and PR #346 remains draft. Detailed limitations in `docs/SOURCE_EVIDENCE_GATEWAY_DEPLOYMENT_GATES.md`.
+
 ## 2026-10-31 — Private Auth token and direct-login adapters implemented (offline only)
 
 - Added `scripts/lib/source-evidence-private-boundary.js` for provider `getUser(token)` response-only verified UUID extraction, and direct `evidence_gateway` SQL query closure. The latter permits exactly two private functions, creates/ends fresh client connections, verifies actual login/current role and forbids broad RLS-bypass/superuser clients or arbitrary SQL.
