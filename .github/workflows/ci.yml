@@ -120,6 +120,58 @@ jobs:
           fi
           grep -F "advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-native-negative.log"
           grep -F "Native fixture cleanup PASS" "$RUNNER_TEMP/mlos-native-negative.log"
+  auth-local-gotrue:
+    # Real but disposable Auth/GoTrue: never connects to a hosted project.
+    # Restrict the extra Docker work to this draft evidence PR only.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 346 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned isolated Auth development tooling
+        run: npm install --prefix "$RUNNER_TEMP/mlos-auth-tools" --no-audit --no-fund supabase@2.120.0 @supabase/supabase-js@2.118.0
+      - name: Verify CLI flags and initialize migration-free local sandbox
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          "$CLI" --version
+          "$CLI" start --help > /dev/null
+          mkdir -p "$RUNNER_TEMP/mlos-auth-stack"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          "$CLI" init
+          # No repository migrations, no account login, no remote link.
+      - name: Start minimum isolated local Auth services
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - name: Verify genuine local GoTrue identity, refresh and sign-out behavior
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          STATUS="$("$CLI" status -o env)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_AUTH_PROBE_NOT_ACCEPTED: missing local publishable key"
+            exit 1
+          fi
+          export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_AUTH_PROBE_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_AUTH_PROBE_PUBLISHABLE_KEY="$KEY"
+          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/@supabase/supabase-js/dist/module/index.js"
+          node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-check.mjs"
+      - name: Destroy disposable local Auth containers and test identities
+        if: always()
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          if [[ -x "$CLI" && -d "$RUNNER_TEMP/mlos-auth-stack/supabase" ]]; then
+            cd "$RUNNER_TEMP/mlos-auth-stack"
+            "$CLI" stop --no-backup
+          fi
   evidence-native-postgres17:
     # Isolated major/minor-parity proof; no hosted connection.
     runs-on: ubuntu-24.04
