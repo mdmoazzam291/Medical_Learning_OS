@@ -5,7 +5,7 @@
     "github"
   ],
   ".github/workflows/ci.yml": [
-    "github"
+    "supabase"
   ],
   ".github/workflows/content-inbox.yml": [
     "github",
@@ -211,6 +211,9 @@
   ],
   "scripts/serve.js": [
     "sentry",
+    "supabase"
+  ],
+  "scripts/source-evidence-auth-local-check.mjs": [
     "supabase"
   ],
   "scripts/source-evidence-auth-nonprod-check.mjs": [
