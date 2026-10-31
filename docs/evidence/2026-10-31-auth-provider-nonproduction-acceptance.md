@@ -1,6 +1,6 @@
 # Isolated Auth provider acceptance — opt-in test protocol
 
-**State (31 October 2026): IMPLEMENTED AS A TEST RUNNER, NOT RUN AGAINST A REAL PROVIDER.** The active MLOS hosted project currently has no development branches. None was created in this work. No learner accounts, credentials, projects, Auth settings, MFA factors, or production SQL were changed.
+**State (31 October 2026): REAL LOCAL GOTRUE ACCEPTANCE PASSED; HOSTED AUTH NOT RUN.** The active MLOS hosted project currently has no development branches. None was created in this work. No hosted learner accounts, hosted credentials, projects, Auth settings, MFA factors, or production SQL were changed. All runtime test identities were generated inside disposable local CI containers.
 
 ## What is actually proved and what is not
 
@@ -84,3 +84,23 @@ Official references: https://supabase.com/docs/guides/auth/jwt-fields and https:
 The refresh revocation test now also requires a response classified as `AuthApiError`, not merely a forged client-side `code/status` tuple. Network failures, timeouts, malformed responses and client-generated errors continue to fail acceptance. When a supposedly revoked refresh token **unexpectedly succeeds**, the probe attempts immediate `signOut({scope:'local'})` on that newly authenticated *test* client before rejecting the whole run; otherwise it could leave an untracked refreshed sandbox session active. This cleanup is best effort and cannot guarantee revocation if the test provider itself is broken; the operator must inspect and decommission disposable test identities after every run, even a failed one. Separate mocked negative tests cover mismatched client URLs and client-generated errors.
 
 **Trust limitation:** checking the SDK's `supabaseUrl` catches accidental factory misconfiguration; it does not authenticate a malicious factory that fabricates the property or intercepts the network. The factory/installed pinned SDK remains trusted code. This is still an offline protocol, never a production Auth approval, credential permission, or live-provider security proof. See official SDK initialization and Auth errors documentation for the supported client property/error model.
+
+
+## Verified local GoTrue integration — 31 October 2026
+
+**Evidence:** Foundation run [41192900215](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41192900215), six-job workflow; its `auth-local-gotrue` job completed **successfully**. Local GoTrue services started via pinned Supabase CLI `2.120.0` and SDK `@supabase/supabase-js@2.118.0` on an ephemeral GitHub Actions runner, and `supabase stop --no-backup` succeeded. The run used a publishable key local to the disposable stack and generated two random password/email pairs; no hosted user, credential or data was read or modified. The local runner prints no user IDs, access tokens or passwords.
+
+The actual protocol reported:
+
+- `separateUsersAndSessions: true`: two independent sessions of A and one of B with distinct session IDs and network-verified subjects.
+- `refreshPreservedSession: true`: refresh retained the session identity.
+- `localAndGlobalRefreshRevocation: true`: local logout of A1 and global logout of A2 each prevented refresh using the relevant rotated/final token, without affecting B.
+- `otherAccountUnaffected: true`, `tamperedSignatureRejected: true`.
+- `oldLocalJwtRecognized: false`, `oldGlobalJwtRecognized: false`: the **local GoTrue /user endpoint** rejected those issued access JWTs after sign-out; this is an observed behavior on the tested local version, **not** a universal access-JWT invalidation guarantee. Official Supabase guidance warns that issued JWTs can remain cryptographically valid until expiry.
+- The three observed assurance levels were `aal1`. Real MFA challenge, correctly signed expired JWT, hosted session limits and protected database authority all remain `not_exercised`. The report explicitly has `deployApproved: false`.
+
+**Root-cause and correction sequence:** the SDK returns `AuthSessionMissingError` after sign-out, so its classification cannot alone prove a server rejection. The acceptance harness now separately performs a bounded, no-redirect `GET <validated-origin>/auth/v1/user` using a fresh client-side access token with the test publishable key. Success requires a valid network user UUID. Rejection requires one of the exact Auth provider error identifiers under `error_code` with a permitted HTTP status, never a transport error or empty response. The GoTrue response may include **both** numeric HTTP `code: 403` and string Auth identifier `error_code: "session_not_found"`; these are different fields, not conflicting Auth codes. It rejects contradictory *string* identifiers, mismatched numeric HTTP status, malformed JSON, unexpected error codes, redirects, timeout and non-JSON responses. SDK network identity verification remains in place for the initial valid sessions; direct endpoint checks supply only the post-sign-out and tampered-token observations. The offline tests cover all the relevant success, failure, and conflict shapes.
+
+This **removes the blocked local provider behavioral acceptance**, not the remaining hosted authority gates. Local Docker does not reproduce hosted Auth role ownership, service routing, hosted session settings, user policy, managed-session lock ordering or restricted PostgreSQL credential access. No live source-evidence gateway, NMC completeness, source rights, medical review, learner evidence ingestion or content publication is authorized by this result.
+
+Official background: https://supabase.com/docs/guides/auth/debugging/error-codes and https://supabase.com/docs/guides/auth/signout.
