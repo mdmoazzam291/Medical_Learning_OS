@@ -37,17 +37,26 @@ export function validateNonproductionAuthProbeConfig({url,projectRef,confirmatio
 const rejectedAccessCodes=new Set([
  'bad_jwt','session_not_found','session_expired','user_not_found','user_banned'
 ]);
-async function observedUser(client,token){
+async function observedUser(client,token,onDiagnostic){
  let result;
- try{result=await client.auth.getUser(token);}catch{throw reject();}
+ try{result=await client.auth.getUser(token);}catch{
+  onDiagnostic?.('transport_exception');throw reject();
+ }
  if(result?.error){
   const e=result.error;
+  // Diagnostics are fixed labels; never log e.message, an identity or JWT.
+  const safeCode=['bad_jwt','session_not_found','session_expired','user_not_found',
+   'user_banned','invalid_credentials','invalid_token','jwt_expired','unknown_error']
+   .includes(e.code)?e.code:'unrecognized_code';
+  onDiagnostic?.(e.name==='AuthApiError'?'provider_'+safeCode:'nonprovider_error');
   if(result?.data?.user!=null||e.name!=='AuthApiError'||
      !rejectedAccessCodes.has(e.code)||![400,401,403,422].includes(e.status))throw reject();
   return null;
  }
  const id=result?.data?.user?.id;
- if(typeof id!=='string'||!uuid.test(id))throw reject();
+ if(typeof id!=='string'||!uuid.test(id)){
+  onDiagnostic?.('malformed_success');throw reject();
+ }
  return id.toLowerCase();
 }
 async function login(client,account){
@@ -128,19 +137,24 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
   if(typeof onPhase==='function')onPhase('local_revocation');
   if(!await revokedRefresh(createClient,renewed.refresh_token,url))throw reject();
   if(typeof onPhase==='function')onPhase('local_access_observation');
-  const oldLocalJwtRecognized=await observedUser(verifier,renewed.access_token)===id1;
-  if(await observedUser(verifier,second.access_token)!==id1)throw reject();
+  const oldLocalJwtRecognized=await observedUser(verifier,renewed.access_token,
+   label=>onPhase?.('local_access_'+label))===id1;
+  if(typeof onPhase==='function')onPhase('other_session_after_local_signout');
+  if(await observedUser(verifier,second.access_token,
+   label=>onPhase?.('other_session_'+label))!==id1)throw reject();
   if(typeof onPhase==='function')onPhase('global_signout');
   await logout(a2,'global');signedA2=false;
   if(typeof onPhase==='function')onPhase('global_revocation');
   if(!await revokedRefresh(createClient,second.refresh_token,url))throw reject();
   if(typeof onPhase==='function')onPhase('global_access_observation');
-  const oldGlobalJwtRecognized=await observedUser(verifier,second.access_token)===id1;
+  const oldGlobalJwtRecognized=await observedUser(verifier,second.access_token,
+   label=>onPhase?.('global_access_'+label))===id1;
   if(await observedUser(verifier,other.access_token)!==idB)throw reject();
   if(typeof onPhase==='function')onPhase('tamper_rejection');
   const forged=renewed.access_token.split('.');
   forged[1]=Buffer.from(JSON.stringify({...JSON.parse(Buffer.from(forged[1],'base64url').toString('utf8')),sub:idB})).toString('base64url');
-  if(await observedUser(verifier,forged.join('.'))!==null)throw reject();
+  if(await observedUser(verifier,forged.join('.'),
+   label=>onPhase?.('tamper_'+label))!==null)throw reject();
   return Object.freeze({
    status:'observed_nonproduction_provider',
    separateUsersAndSessions:true,refreshPreservedSession:true,
