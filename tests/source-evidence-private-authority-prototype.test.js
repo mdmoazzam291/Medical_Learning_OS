@@ -142,3 +142,56 @@ test('reconciler uncertain commit and conflicting ack are never reported as comp
   assert.deepEqual(await reconcile.reconcile(task),{status:expected});
  }
 });
+
+test('internal recover reads a committed attempt ID without returning it or initiating another dispatch',async()=>{
+ const sql=[],proof=[];
+ const reconciler=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async x=>{
+   proof.push(x);
+   return {...x,ackDigest:'b'.repeat(64),status:'durable'};
+  },
+  query:async (statement,args)=>{
+   sql.push(statement);
+   if(statement.includes('inspect_intent(')){
+    assert.deepEqual(args,[request,'a'.repeat(64)]);
+    return {rows:[{r:{status:'intent-found',attemptId:attempt,state:'uncertain'}}]};
+   }
+   assert.equal(statement,'select evidence_private.record_ack($1,$2,$3,$4) as r');
+   assert.deepEqual(args,[request,attempt,'a'.repeat(64),'b'.repeat(64)]);
+   return {rows:[{r:{status:'acknowledgement-recorded'}}]};
+  }
+ });
+ const result=await reconciler.recover({requestId:request,digest:'a'.repeat(64)});
+ assert.deepEqual(result,{status:'acknowledgement-recorded'});
+ assert.deepEqual(proof,[{requestId:request,attemptId:attempt,digest:'a'.repeat(64)}]);
+ assert.equal(sql.length,2);
+ assert.ok(!JSON.stringify(result).includes(attempt));
+ assert.deepEqual(await reconciler.recover({requestId:request,digest:'bad'}),{status:'invalid'});
+ assert.equal(sql.length,2);
+});
+test('unknown, malformed or unavailable intent lookup cannot manufacture an acknowledgement',async()=>{
+ for(const [observed,expected] of [
+  [{status:'no-intent'},'reconciliation-required'],
+  [{status:'intent-found',attemptId:'wrong-id',state:'intent'},'uncertain'],
+  [{status:'intent-found',attemptId:attempt,state:'delivered'},'uncertain'],
+  [null,'uncertain']
+ ]){
+  let lookups=0,queries=0;
+  const reconciler=createSourceEvidencePrivateAckReconciler({
+   lookupDurableAck:async()=>{lookups++;throw Error('must not be called');},
+   query:async()=>{queries++;return {rows:[{r:observed}]};}
+  });
+  assert.deepEqual(await reconciler.recover({requestId:request,digest:'a'.repeat(64)}),{status:expected});
+  assert.equal(queries,1);assert.equal(lookups,0);
+ }
+ for(const error of ['private_denied','private_invalid','socket_lost']){
+  let lookups=0;
+  const reconciler=createSourceEvidencePrivateAckReconciler({
+   lookupDurableAck:async()=>{lookups++;},
+   query:async()=>{throw Error(error);}
+  });
+  assert.deepEqual(await reconciler.recover({requestId:request,digest:'a'.repeat(64)}),
+   {status:error==='private_denied'?'denied':error==='private_invalid'?'invalid':'uncertain'});
+  assert.equal(lookups,0);
+ }
+});
