@@ -51,7 +51,8 @@ try{
   assert.equal((await g.query('select count(*)::int n from evidence_probe.events where request_id=$1',[e.b.requestId])).rows[0].n,n,'events');
  }
  const mutations=[
-  ['session deletion','delete from auth.sessions where id=$1',[f.session],()=>g.query('insert into auth.sessions values($1,$2)',[f.session,f.owner])],
+  ['session deletion','delete from auth.sessions where id=$1',[f.session],()=>g.query('insert into auth.sessions(id,user_id) values($1,$2)',[f.session,f.owner])],
+  ['retained session expiry',"update auth.sessions set not_after=now()-interval '1 hour' where id=$1",[f.session],()=>g.query('update auth.sessions set not_after=null where id=$1',[f.session])],
   ['account suspension',"update auth.users set banned_until=now()+interval '1 hour' where id=$1",[f.owner],()=>g.query('update auth.users set banned_until=null where id=$1',[f.owner])],
   ['account deletion flag','update auth.users set deleted_at=now() where id=$1',[f.owner],()=>g.query('update auth.users set deleted_at=null where id=$1',[f.owner])],
   ['Admin transfer','update public.content_admin_account set admin_user_id=$1',[f.other],()=>g.query('update public.content_admin_account set admin_user_id=$1',[f.owner])],
@@ -67,6 +68,15 @@ try{
  const broadQuery=createSourceEvidencePrivateQuery({createClient:()=>new Client({...server.config,user:'postgres'})});
  await assert.rejects(broadQuery('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args),/evidence_private_database_unavailable/);
  console.log('Private query adapter PASS: fresh direct narrow login, two exact calls, broad-login denial and canonical readback.');
+ await g.query("update auth.sessions set not_after=now()-interval '1 minute' where id=$1",[f.session]);
+ assert.equal((await g.query('select count(*)::int n from auth.sessions where id=$1',[f.session])).rows[0].n,1);
+ await assert.rejects(stage(a,e),/evidence_platform_denied/);
+ await assert.rejects(read(b,e),/evidence_platform_denied/);
+ await g.query("update auth.sessions set not_after=now()+interval '1 hour' where id=$1",[f.session]);
+ assert.equal((await stage(a,e)).status,'committed');
+ await g.query('update auth.sessions set not_after=null where id=$1',[f.session]);
+ assert.equal((await stage(a,e)).status,'committed');
+ console.log('Authority retained session expiry PASS: expired retained row denied, future/null deadline accepted.');
  for(const [label,sql,args,restore] of mutations){
   await w.query('begin');await w.query(sql,args);
   assert.equal((await g.query("select count(*)::int n from pg_locks where pid=$1 and locktype='advisory'",[wp])).rows[0].n,0);
