@@ -8,13 +8,14 @@ import {platformFixture as f} from '../scripts/lib/source-evidence-platform-fixt
 const token=(actor=f.owner,session=f.session)=>'e30.'+Buffer.from(JSON.stringify({sub:actor,session_id:session})).toString('base64url')+'.synthetic';
 const candidate=e=>({...e.p,requestId:e.b.requestId,expectedPackageDigest:e.b.packageDigest});
 const row={login_role:'evidence_gateway',active_role:'evidence_gateway',rolcanlogin:true,rolbypassrls:false,rolsuper:false};
-function connection(events,{login='evidence_gateway',identity=row,failSql=false,readback}={}){
+function connection(events,{login='evidence_gateway',identity=row,failSql=false,decision,readback}={}){
  const client={
   connectionParameters:{user:login},
   async connect(){events.push('connect');},
   async query(sql,args){events.push({sql,args});
    if(failSql)throw Error('private-password-internal-error');
    if(sql.includes('pg_catalog.pg_roles'))return {rows:[identity]};
+   if(decision&&sql.startsWith('select evidence_probe.'))throw Error(decision);
    if(sql.startsWith('select evidence_probe.stage_session('))return {rows:[{r:{status:'committed'}}]};
    if(sql.startsWith('select evidence_probe.readback_session('))return {rows:[{r:readback}]};
    throw Error('unexpected statement');
@@ -71,6 +72,22 @@ test('private query refuses broad role, role switching, bypass RLS, SQL failure 
   assert.equal(calls.filter(x=>x==='end').length,1);
   assert.equal(calls.filter(x=>typeof x==='object'&&x.sql.includes('evidence_probe.stage_session(')).length,scenario.failSql?0:0);
  }
+});
+
+test('attested SQL passes only recognized gate decisions; other SQL errors stay uncertain',async()=>{
+ const allowed=['evidence_denied','evidence_platform_denied','evidence_conflict','evidence_invalid'];
+ const sql='select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',args=[1,2,3,4,5,6,7];
+ for(const message of [...allowed,'sensitive-postgres-internal-error']){
+  const events=[],query=createSourceEvidencePrivateQuery({createClient:()=>connection(events,{decision:message})});
+  await assert.rejects(query(sql,args),e=>{
+   assert.equal(e.message,allowed.includes(message)?message:'evidence_private_database_unavailable');
+   return true;
+  });
+  assert.equal(events.filter(x=>x==='end').length,1);
+ }
+ const events=[],query=createSourceEvidencePrivateQuery({createClient:()=>connection(events,{identity:null,decision:'evidence_platform_denied'})});
+ await assert.rejects(query(sql,args),e=>e.message==='evidence_private_database_unavailable');
+ assert.equal(events.filter(x=>x==='end').length,1);
 });
 
 test('owner delegation can use getUser response plus privately attested SQL without exposing token',async()=>{
