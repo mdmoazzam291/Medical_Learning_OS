@@ -159,6 +159,9 @@
     "cloudflare",
     "supabase"
   ],
+  "scripts/lib/source-evidence-auth-catalog-probe.js": [
+    "supabase"
+  ],
   "scripts/lib/source-evidence-auth-provider-probe.js": [
     "supabase"
   ],
@@ -212,6 +215,9 @@
   ],
   "scripts/serve.js": [
     "sentry",
+    "supabase"
+  ],
+  "scripts/source-evidence-auth-local-catalog-check.mjs": [
     "supabase"
   ],
   "scripts/source-evidence-auth-local-check.mjs": [
@@ -714,6 +720,9 @@
     "supabase"
   ],
   "supabase/verification/service-boundary-audit.sql": [
+    "supabase"
+  ],
+  "tests/source-evidence-auth-catalog-probe.test.js": [
     "supabase"
   ],
   "web/account.html": [
