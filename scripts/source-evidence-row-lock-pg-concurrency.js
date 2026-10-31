@@ -18,7 +18,7 @@ try{
  const g=await connect();
  const expectedVersion=process.env.EXPECTED_NATIVE_PG_VERSION;
  if(expectedVersion){
-  assert.match(expectedVersion,/^1[5-9]\\.[0-9]+$/,'version guard requires a major.minor target');
+  assert.match(expectedVersion,/^1[5-9]\.[0-9]+$/,'version guard requires a major.minor target');
   const serverVersion=Number((await g.query("select current_setting('server_version_num')::int as n")).rows[0].n);
   const actualVersion=`${Math.floor(serverVersion/10000)}.${serverVersion%10000}`;
   assert.equal(actualVersion,expectedVersion,'native PostgreSQL fixture does not match pinned expected version');
