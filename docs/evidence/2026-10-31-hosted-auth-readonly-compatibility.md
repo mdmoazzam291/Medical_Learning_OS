@@ -79,3 +79,13 @@ Reference documents:
 - Existing `docs/SOURCE_EVIDENCE_GATEWAY_DEPLOYMENT_GATES.md` and draft PR #346.
 
 **Non-authority:** this report makes no rights, clinical, curriculum, learner visibility, GitHub merge or deployment approval. The full CBME source-adjudication work remains incomplete.
+
+## PostgreSQL 17.6 disposable acceptance — 31 October 2026
+
+**Implemented and verified**, but not hosted-provider acceptance. Draft PR #346 commit `7034fe5def1fbc85694860e46c882499b491cac7` adds a separately isolated `evidence-native-postgres17` GitHub Actions job running `@embedded-postgres/linux-x64@17.6.0-beta.15` plus `pg@8.22.0`. The existing concurrency harness now supports an opt-in `EXPECTED_NATIVE_PG_VERSION=17.6` assertion against the actual server's `server_version_num` before fixture setup, with its original PostgreSQL 18 test left intact.
+
+[Exact-head Foundation run 41181017264](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41181017264), `evidence-native-postgres17` job `124478302267`: **SUCCESS**. Logs explicitly report `Authority native PostgreSQL version PASS: 17.6`, five writer-first and five evidence-first plain authority mutations, rollback/no-orphan and same-request reconciliation, unrelated-user independence, inverse-order `40P01` victim rollback and retry, and fixture cleanup. The intentionally unsafe `--key-share` run failed with `row_authority_barrier_not_observed` as required; the workflow explicitly validated expected failure and cleanup. This does **not** mean the positive test failed.
+
+**Boundary:** same PostgreSQL version and representative synthetic schema, **not** the live Supabase `auth.users`, `auth.sessions`, actual `supabase_auth_admin` ownership, provider-managed policies/credentials, real session TTL/MFA/cleanup/refresh, or production mutation ordering. The prior discrepancy `PG18-only test` is resolved at the engine-version layer. Provider/Auth semantics remain a blocker. Do not deploy `authority-row-locks.sql` into Supabase or grant locking access on managed Auth tables. No production writes or confidential material used.
+
+**Next:** determine whether Supabase supports a restricted, provider-compatible nonproduction authorization boundary that can reconcile provider Auth operations without mutating managed Auth ACLs. Real token handling and credential lifecycle require independent approval and nonproduction isolated identities; continue treating the gateway as disabled.
