@@ -98,7 +98,7 @@ function verifiedClaims(token,id,url){
     claim.issuer!==url+'/auth/v1'||claim.audience!=='authenticated')throw reject();
  return claim;
 }
-export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,confirmation,accountA,accountB}){
+export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,confirmation,accountA,accountB,onPhase}){
  // Mandatory even when this function is invoked directly rather than via the CLI.
  // Do not allocate a client until the exact sandbox target and identities pass.
  validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
@@ -107,25 +107,37 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
  if([a1,a2,b,verifier].some(c=>!c?.auth||typeof c.auth.getUser!=='function'))throw reject();
  let signedA1=false,signedA2=false,signedB=false;
  try{
+  if(typeof onPhase==='function')onPhase('login_a1');
   const first=await login(a1,accountA);signedA1=true;
+  if(typeof onPhase==='function')onPhase('login_a2');
   const second=await login(a2,accountA);signedA2=true;
+  if(typeof onPhase==='function')onPhase('login_b');
   const other=await login(b,accountB);signedB=true;
+  if(typeof onPhase==='function')onPhase('verify_initial');
   const [id1,id2,idB]=await Promise.all([observedUser(verifier,first.access_token),observedUser(verifier,second.access_token),observedUser(verifier,other.access_token)]);
   if(!id1||id1!==id2||!idB||id1===idB)throw reject();
   const c1=verifiedClaims(first.access_token,id1,url),c2=verifiedClaims(second.access_token,id1,url),cB=verifiedClaims(other.access_token,idB,url);
   if(new Set([c1.session,c2.session,cB.session]).size!==3)throw reject();
+  if(typeof onPhase==='function')onPhase('refresh');
   const renewed=await rotate(a1,first.refresh_token);
   if(await observedUser(verifier,renewed.access_token)!==id1)throw reject();
   const cRenew=verifiedClaims(renewed.access_token,id1,url);
   if(cRenew.session!==c1.session)throw reject();
+  if(typeof onPhase==='function')onPhase('local_signout');
   await logout(a1,'local');signedA1=false;
+  if(typeof onPhase==='function')onPhase('local_revocation');
   if(!await revokedRefresh(createClient,renewed.refresh_token,url))throw reject();
+  if(typeof onPhase==='function')onPhase('local_access_observation');
   const oldLocalJwtRecognized=await observedUser(verifier,renewed.access_token)===id1;
   if(await observedUser(verifier,second.access_token)!==id1)throw reject();
+  if(typeof onPhase==='function')onPhase('global_signout');
   await logout(a2,'global');signedA2=false;
+  if(typeof onPhase==='function')onPhase('global_revocation');
   if(!await revokedRefresh(createClient,second.refresh_token,url))throw reject();
+  if(typeof onPhase==='function')onPhase('global_access_observation');
   const oldGlobalJwtRecognized=await observedUser(verifier,second.access_token)===id1;
   if(await observedUser(verifier,other.access_token)!==idB)throw reject();
+  if(typeof onPhase==='function')onPhase('tamper_rejection');
   const forged=renewed.access_token.split('.');
   forged[1]=Buffer.from(JSON.stringify({...JSON.parse(Buffer.from(forged[1],'base64url').toString('utf8')),sub:idB})).toString('base64url');
   if(await observedUser(verifier,forged.join('.'))!==null)throw reject();
