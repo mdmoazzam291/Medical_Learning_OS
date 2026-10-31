@@ -1,3 +1,10 @@
+## 2026-10-31 — MLOS-owned private authority epoch/lease gate: native prototype PASS
+
+- [Foundation run 41198683455](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41198683455): real disposable PostgreSQL **17.6 and 18.6 jobs passed** the separate `evidence_private` schema and network-verifier-adapter experiment. It uses zero managed Auth tables; separate no-login owner, narrowly executable gateway and controller fixture roles, and exact `stage`/`deliver` functions. All roles remain disposable local trust accounts, not hosted or deployable credentials.
+- Evidence: positive provider-verification callback is required before and after each SQL action; offline/rejected tokens fail closed. Controller revocation increments a MLOS epoch; old receipts remain unavailable after reactivation; expired leases deny; replayed requests are idempotent/conflict-bound; writer-first/evidence-first row locks serialize changes; rollback leaves no unexpected delivery; native temporary clusters are destroyed.
+- **Limits:** mocked provider verdicts do **not** prove real GoTrue revocation freshness. The SQL `delivered_at` is an experimental attempted-delivery marker, not actual payload distribution, and a postcommit provider rejection can leave it set. External provider decisions and internal DB transaction remain non-atomic. No TLS/private runtime connector, provider feed, production migration, source rights or learner activation.
+- Decision: prototype only, gateway OFF, PR #346 DRAFT. Detailed report: `docs/evidence/2026-10-31-private-authority-epoch-lease-prototype.md`. Next priority: delivery-intent acknowledgement/reconciliation under uncertain commit and provider change.
+
 ## 2026-10-31 — Real disposable GoTrue session-writer race: sign-out blocked, refresh unblocked
 
 - [Foundation run #41197278066](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41197278066), `auth-local-gotrue` job PASS. Real local GoTrue sign-out **waited** on `auth.sessions` `FOR SHARE` and then removed the test session row; refresh of an independently generated active test session **did not wait**, completed, and preserved its row.
