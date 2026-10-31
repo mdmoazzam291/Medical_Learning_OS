@@ -180,3 +180,25 @@ test('signed-out access observations do not convert provider outages into false 
   );
  }
 });
+
+test('genuine local GoTrue target is allowed only at exact loopback origin and opt-in',()=>{
+ const local={...setup,url:'http://127.0.0.1:54321',
+  projectRef:'local-gotrue-only',confirmation:'ISOLATED_LOCAL_GOTRUE_TEST_STACK'};
+ assert.equal(validateNonproductionAuthProbeConfig(local).url,local.url);
+ for(const bad of [
+  {...local,url:'http://localhost:54321'},
+  {...local,url:'http://127.0.0.1:54322'},
+  {...local,url:'http://0.0.0.0:54321'},
+  {...local,url:'https://127.0.0.1:54321'},
+  {...local,url:'https://iyapppmeieqhflnzslao.supabase.co'},
+  {...local,confirmation:'ISOLATED_NONPRODUCTION_TEST_ACCOUNTS'},
+  {...local,projectRef:'iyapppmeieqhflnzslao'},
+  {...local,accountB:userA},
+ ]){
+  let called=0;
+  assert.throws(()=>validateNonproductionAuthProbeConfig(bad),/isolation_not_established/);
+  await assert.rejects(runIsolatedAuthProviderProbe({...bad,createClient:()=>{called++;throw Error('must_not_call');}}),
+   /auth_probe_isolation_not_established/);
+  assert.equal(called,0,'no SDK client for invalid local target');
+ }
+});
