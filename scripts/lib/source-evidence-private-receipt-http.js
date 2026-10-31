@@ -75,8 +75,13 @@ async function readBoundedJson(response,signal){
   return signal.aborted?null:parsed;
  }catch{return null;}
  finally{
-  // Cancellation may also never settle; do not exceed the same deadline.
-  try{await bounded(()=>reader.cancel(),signal);}catch{}
+  // Always INVOKE cancel, even if the deadline has already fired. Do not
+  // await an uncooperative stream past the deadline; consume late rejection.
+  try{
+   const cancellation=Promise.resolve(reader.cancel());
+   cancellation.catch(()=>{});
+   if(!signal.aborted)await bounded(()=>cancellation,signal);
+  }catch{}
  }
 }
 /**
