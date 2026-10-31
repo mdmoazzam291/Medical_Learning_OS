@@ -148,3 +148,61 @@ test('simulated lost commit response: new reconciler verifies same signed receip
  assert.deepEqual(await restarted.recover({requestId,digest}),{status:'acknowledgement-recorded'});
  assert.equal(receiptLookups,2);assert.equal(inspections,1);assert.equal(acks,2);
 });
+
+test('deadline bounds credential retrieval even when credential store ignores abort',async()=>{
+ let network=0,reads=0;
+ const transport=create(async()=>{network++;return json(receipt);},{
+  timeoutMs:500,getCredential:async()=>{
+   reads++;return new Promise(()=>{});
+  }
+ });
+ const started=Date.now();
+ assert.equal(await transport(task),null);
+ assert.ok(Date.now()-started>=400);
+ assert.ok(Date.now()-started<3000);
+ assert.equal(reads,1);assert.equal(network,0);
+});
+
+test('deadline bounds a fetch implementation that ignores cancellation and never retries',async()=>{
+ let fetches=0;
+ const transport=create(async(url,request)=>{
+  fetches++;assert.equal(request.redirect,'error');assert.equal(request.signal.aborted,false);
+  return new Promise(()=>{});
+ },{timeoutMs:500});
+ const started=Date.now();
+ assert.equal(await transport(task),null);
+ assert.ok(Date.now()-started>=400);
+ assert.ok(Date.now()-started<3000);
+ assert.equal(fetches,1);
+});
+
+test('deadline bounds a hung streaming body read and uncooperative stream cancellation',async()=>{
+ let fetches=0,reads=0,cancels=0;
+ const transport=create(async()=>{
+  fetches++;
+  return {
+   status:200,headers:{get:()=> 'application/json'},
+   body:{getReader:()=>({
+    read:()=>{reads++;return new Promise(()=>{});},
+    cancel:()=>{cancels++;return new Promise(()=>{});}
+   })}
+  };
+ },{timeoutMs:500});
+ const started=Date.now();
+ assert.equal(await transport(task),null);
+ assert.ok(Date.now()-started>=400);
+ assert.ok(Date.now()-started<3000);
+ assert.equal(fetches,1);assert.equal(reads,1);assert.equal(cancels,1);
+});
+
+test('a late credential result after deadline cannot start a request',async()=>{
+ let release,network=0;
+ const tokenPromise=new Promise(resolve=>{release=resolve;});
+ const transport=create(async()=>{network++;return json(receipt);},{
+  timeoutMs:500,getCredential:()=>tokenPromise
+ });
+ assert.equal(await transport(task),null);
+ release(token);
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(network,0);
+});
