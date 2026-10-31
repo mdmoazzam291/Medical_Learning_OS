@@ -25,10 +25,12 @@ Interface: createSourceEvidenceOwnerDelegation({verifyUser,query}) -> stage({acc
 Files: scripts/source-evidence-delegation-db-check.js; CI evidence-native-postgres step; prototype README/proposal; handoff/status.
 - [x] Write disposable real gateway-role stage/readback/retry tests, postcommit revoked session and lost-delivery reconciliation, byte/receipt corruption rejection and opaque error checks.
 - [x] Run local PGlite proof; full npm test/check/diff; read-only whole-increment review and regression fix if needed.
-- [ ] Checkpoint to existing draft feature branch; inspect exact CI native/core results, record tested commit and unresolved production trust/provider Auth gates.
+- [x] Checkpoint to existing draft feature branch; inspect exact CI native/core results, record tested commit and unresolved production trust/provider Auth gates.
 
 Ruling: existing repeated Next/direct execution authorization applies to this bounded prototype; no new design approval/production write is inferred. Execute inline; one final read-only reviewer.
 
 ## Execution evidence
 
 Rejecting placeholder observed RED on positive/status paths; initial6focused tests GREEN, then8with concurrent identity and target snapshot coverage. Local SQL integration passes default-off, exact stage/readback/retry, foreign/unverified denial, corrupt canonical bytes, lost-delivery and unavailable-readback reconciliation, postcommit session denial/fresh same-owner session. npm test1,633PASS/0FAIL; npm run checkPASS13services/252locations. Final read-only review found no blocker; suggested unavailable-readback case added and passes. Native/core checkpoint CI pending.
+
+Implementation50884283d891d97593d63b85b0d784f8a4c794b7: Foundation run41179228740/native job124473017762 SUCCESS. Exact9source/config readbacks match. SQL delegation integration, existing native login/platform races, omitted-lock controls, snapshot and WAL recovery all pass. Final evidence documentation is separate; core/browser/WebKit still running when native inspected. Trusted query autocommit completion is an explicit connector requirement, not inferred from SQL status.

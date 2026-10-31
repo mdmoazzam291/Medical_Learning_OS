@@ -12,6 +12,8 @@ The prototype closure accepts trusted verifier and query callbacks only at serve
 
 These are code-level controls inside the trusted server. A compromised query/verifier or stolen gateway credential can supply the real owner's actor/session parameters. The database does not cryptographically authenticate delegated parameters. Keep the credential in a private server secret boundary, restrict its process/network use, use authenticated transport, and audit rotation/revocation without logging tokens. Stronger protection from server compromise requires a separate signed-delegation/key/issuer design; no such protection is claimed.
 
+The trusted query callback must execute each fixed statement in its own autocommit transaction and resolve only after commit acknowledgement. Do not inject a client in an open caller-managed transaction: SQL returning committed inside that transaction is not proof of durable commit. A generic callback cannot establish this property by itself; the current PGlite integration uses autocommit. A real connector must prove statement completion, pool/session cleanup, rollback and lost-acknowledgement behavior before acceptance.
+
 The offline verifier map in scripts/source-evidence-delegation-db-check.js is synthetic, not a token signature/expiry/issuer/audience/MFA test. Unit callback tests prove delegation sequencing. Actual Auth SDK/client setup, connector lifetime/pooling/transaction semantics and safe provisioned secret names remain implementation work.
 
 ## Provider Auth ordering strategy
