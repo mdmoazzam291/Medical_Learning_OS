@@ -1,3 +1,11 @@
+## 2026-10-31 — Private Auth token and direct-login adapters implemented (offline only)
+
+- Added `scripts/lib/source-evidence-private-boundary.js` for provider `getUser(token)` response-only verified UUID extraction, and direct `evidence_gateway` SQL query closure. The latter permits exactly two private functions, creates/ends fresh client connections, verifies actual login/current role and forbids broad RLS-bypass/superuser clients or arbitrary SQL.
+- Added `tests/source-evidence-private-boundary.test.js` coverage for response errors and malformed IDs, exact forwarded tokens, private role/downgrade denial, argument/SQL rejection, paired Auth/delegation/SQL path, post-commit revoked identity withholding. These use **synthetic network verification** only.
+- Added real native disposable `pg` driver use of the two statements and broad-login denial to existing PostgreSQL **17.6** and **18.6** concurrent authorization suites. Implementation head `f5365dbf1671089845f9f131e6ae6e3f85c37ba2`; [Foundation run 41181858402](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41181858402) verified native17, native18 and check SUCCESS at inspected point; browser/WebKit still running.
+- Deployment remains blocked for real managed Auth state transitions, genuine token/expiry/MFA/refresh behavior, provisioned narrow private credentials, TLS/autocommit/restore and independent source/rights review. No live login, hosted schema/API change, credential, rights or learner action. See `docs/SOURCE_EVIDENCE_GATEWAY_DEPLOYMENT_GATES.md`.
+- Next: design a provider-supported nonproduction genuine-session acceptance protocol and document precise minimal-privilege credential provisioning/rotation before any hosted integration; existing reviewer/source gates unchanged.
+
 ## 2026-10-31 — PostgreSQL 17.6 disposable row-lock proof complete
 
 - PR #346 now runs both native PG18.6 legacy conformance and a separately installed exact PostgreSQL **17.6** `evidence-native-postgres17` job (package 17.6.0-beta.15); the actual server version is asserted inside the original concurrency harness before fixture setup. No changes to production PostgreSQL or Auth.
