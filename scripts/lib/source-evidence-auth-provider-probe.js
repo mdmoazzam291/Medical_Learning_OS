@@ -74,8 +74,12 @@ export function createIsolatedAuthAccessObserver({
   }
   // GoTrue's wire-level error identifier is error_code. Some adapters
   // expose code instead; never trust conflicting fields or error messages.
-  if(data?.error_code!=null&&data?.code!=null&&data.error_code!==data.code)throw reject();
-  const serverCode=data?.error_code??data?.code;
+  // GoTrue may return {code:403,error_code:"session_not_found"}.
+  // Numeric code is the HTTP status, not a second Auth error identifier.
+  if(data?.error_code!=null&&typeof data?.code==='string'&&data.error_code!==data.code)throw reject();
+  if(data?.code!=null&&typeof data.code==='number'&&data.code!==response.status)throw reject();
+  const serverCode=typeof data?.error_code==='string'?data.error_code:
+    typeof data?.code==='string'?data.code:null;
   const safeCode=['bad_jwt','session_not_found','session_expired','user_not_found',
    'user_banned','invalid_credentials','invalid_token','jwt_expired']
    .includes(serverCode)?serverCode:'unrecognized_code';
