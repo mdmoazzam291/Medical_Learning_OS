@@ -28,12 +28,14 @@ export function validateNmcCodeIndex(v){
  v.schemaVersion!==1||!/^[0-9a-f]{64}$/.test(v.documentSha256)||
  v.extractionMethod!=='pdftotext-local-unreviewed'||v.rightsMode!=='citation_only'||
  v.sourceContentStored!==false||!Number.isInteger(v.pagesParsed)||v.pagesParsed<1||
- !Array.isArray(v.codes)||v.codes.length>10000)throw new TypeError('nmc_code_index_invalid');
+ v.pagesParsed>2000||!Array.isArray(v.codes)||v.codes.length>10000)
+ throw new TypeError('nmc_code_index_invalid');
  const seen=new Set();
  for(const row of v.codes){
   if(!exact(row,['code','pages'])||!valid(row.code)||seen.has(row.code)||
-     !Array.isArray(row.pages)||!row.pages.length||
-     row.pages.some(p=>!Number.isInteger(p)||p<1||p>v.pagesParsed))
+     !Array.isArray(row.pages)||!row.pages.length||row.pages.length>500||
+     row.pages.some((p,i)=>!Number.isInteger(p)||p<1||p>v.pagesParsed||
+      (i>0&&p<=row.pages[i-1])))
    throw new TypeError('nmc_code_index_invalid');
   seen.add(row.code);
  }
