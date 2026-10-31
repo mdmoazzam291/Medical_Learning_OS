@@ -48,7 +48,10 @@ async function observedUser(client,token,onDiagnostic){
   const safeCode=['bad_jwt','session_not_found','session_expired','user_not_found',
    'user_banned','invalid_credentials','invalid_token','jwt_expired','unknown_error']
    .includes(e.code)?e.code:'unrecognized_code';
-  onDiagnostic?.(e.name==='AuthApiError'?'provider_'+safeCode:'nonprovider_error');
+  const nonproviderName=['AuthSessionMissingError','AuthRetryableFetchError','AuthUnknownError',
+   'AuthInvalidTokenResponseError','AuthError','AuthWeakPasswordError','AuthImplicitGrantRedirectError']
+   .includes(e.name)?e.name:'unrecognized_error_class';
+  onDiagnostic?.(e.name==='AuthApiError'?'provider_'+safeCode:'nonprovider_'+nonproviderName);
   if(result?.data?.user!=null||e.name!=='AuthApiError'||
      !rejectedAccessCodes.has(e.code)||![400,401,403,422].includes(e.status))throw reject();
   return null;
