@@ -1,3 +1,11 @@
+## Native PostgreSQL race harness — CI execution pending —31 October 2026 IST
+- Checked at 2026-10-31T05:03:11.660Z. Codex resumed draft PR #346 at 1cfbc87036d865b50eaf6eff05aae133f768dd0c; isolated mlos-evidence-postgres-races worktree, one writer.
+- Added native private-cluster helper and independent-client tests for identical/conflicting retries, both withdrawal orderings, authority/policy waits, rollback waiter and native snapshot recovery/ACL parity. PID/pg_locks barriers required; omit-locks negative control must fail named barrier and clean up.
+- Local actual binary PostgreSQL18.6 verified; installed only scratch tooling @embedded-postgres/linux-x6418.6.0-beta.19 and pg8.22.0, no app dependency. Native launch blocked by namespace UID0-only mapping: nobody chown EINVAL; user namespace denied. No root-check bypass or OS user creation attempted. Temp native copy removed.
+- Static read-only review found no concrete blocker. Local npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); syntax/diff checksPASS. Native race/negative-control execution NOT verified yet.
+- Added isolated evidence-native-postgres job to existing Foundation CI using non-root Ubuntu24.04, temporary tooling, no secrets/hosted URLs. This checkpoint triggers required runner verification; next inspect exact-head job logs and fix failures before native success claims.
+- No production migration/API/source bytes/reviewer grants/clinical/rights/exam/learner activation or hosted DB changes. Existing production Auth/authority compatibility and crash-durability remain unverified. Ownership retained while CI pending.
+
 ## Batch: withdrawal, postcommit denial and disposable recovery —31 October 2026 IST
 - Checked at 2026-10-30T23:27:05.473Z. Codex resumed draft PR #346 at 4c81e0fc1bd57fa48dca9f06eb6bde31d3fd5fca; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-withdraw-restore worktree, one writer. Owner asked for multiple next tasks in one run.
 - Completed three linked disposable slices: exact immutable metadata withdrawal (wrong owner/digest deny, retry/read deny, other version unaffected); account/policy/withdrawal changes after actual commit before protected readback (denied without receipt, committed audit retained); complete8-table consistent snapshots and fresh transactional restore without allow-seeding.
