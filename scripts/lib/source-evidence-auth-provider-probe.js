@@ -9,7 +9,7 @@ function decode(token){
   if(pieces.length!==3||pieces.some(x=>!x||!/^[\w-]+$/.test(x)))return null;
   const payload=JSON.parse(Buffer.from(pieces[1],'base64url').toString('utf8'));
   if(!uuid.test(payload.sub)||!uuid.test(payload.session_id)||!Number.isSafeInteger(payload.exp))return null;
-  return {sub:payload.sub.toLowerCase(),session:payload.session_id.toLowerCase(),exp:payload.exp,aal:payload.aal==='aal2'?'aal2':payload.aal==='aal1'?'aal1':'unknown'};
+  return {sub:payload.sub.toLowerCase(),session:payload.session_id.toLowerCase(),exp:payload.exp,issuer:payload.iss,audience:payload.aud,aal:payload.aal==='aal2'?'aal2':payload.aal==='aal1'?'aal1':'unknown'};
  }catch{return null;}
 }
 function validateAccount(account){
@@ -53,14 +53,17 @@ async function logout(client,scope){
  const result=await client.auth.signOut({scope});
  if(result?.error)throw reject();
 }
-function verifiedClaims(token,id){
+function verifiedClaims(token,id,url){
  const claim=decode(token);
- if(!claim||claim.sub!==id||claim.exp<=Math.floor(Date.now()/1000))throw reject();
+ if(!claim||claim.sub!==id||claim.exp<=Math.floor(Date.now()/1000)||
+    claim.issuer!==url+'/auth/v1'||claim.audience!=='authenticated')throw reject();
  return claim;
 }
-export async function runIsolatedAuthProviderProbe({createClient,accountA,accountB}){
- if(typeof createClient!=='function'||!validateAccount(accountA)||!validateAccount(accountB)||
-   accountA.email.toLowerCase()===accountB.email.toLowerCase())throw new Error('auth_probe_isolation_not_established');
+export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,confirmation,accountA,accountB}){
+ // Mandatory even when this function is invoked directly rather than via the CLI.
+ // Do not allocate a client until the exact sandbox target and identities pass.
+ validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
+ if(typeof createClient!=='function')throw new Error('auth_probe_isolation_not_established');
  const a1=createClient(),a2=createClient(),b=createClient(),verifier=createClient();
  if([a1,a2,b,verifier].some(c=>!c?.auth||typeof c.auth.getUser!=='function'))throw reject();
  let signedA1=false,signedA2=false,signedB=false;
@@ -70,11 +73,11 @@ export async function runIsolatedAuthProviderProbe({createClient,accountA,accoun
   const other=await login(b,accountB);signedB=true;
   const [id1,id2,idB]=await Promise.all([safeUser(verifier,first.access_token),safeUser(verifier,second.access_token),safeUser(verifier,other.access_token)]);
   if(!id1||id1!==id2||!idB||id1===idB)throw reject();
-  const c1=verifiedClaims(first.access_token,id1),c2=verifiedClaims(second.access_token,id1),cB=verifiedClaims(other.access_token,idB);
+  const c1=verifiedClaims(first.access_token,id1,url),c2=verifiedClaims(second.access_token,id1,url),cB=verifiedClaims(other.access_token,idB,url);
   if(new Set([c1.session,c2.session,cB.session]).size!==3)throw reject();
   const renewed=await rotate(a1,first.refresh_token);
   if(await safeUser(verifier,renewed.access_token)!==id1)throw reject();
-  const cRenew=verifiedClaims(renewed.access_token,id1);
+  const cRenew=verifiedClaims(renewed.access_token,id1,url);
   if(cRenew.session!==c1.session)throw reject();
   await logout(a1,'local');signedA1=false;
   if(!await revokedRefresh(createClient,renewed.refresh_token))throw reject();
