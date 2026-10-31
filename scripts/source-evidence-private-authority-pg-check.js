@@ -184,11 +184,27 @@ try{
  assert.equal((await secondary).value?.rows[0]?.r?.status,'reconciliation-required');
  assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[concurrent.requestId])).rows[0].n,1);
  console.log('Private authority delivery ledger PASS: postcommit provider denial preserves unresolved intent, concurrent requests create one attempt, retries never redispatch.');
+ // Database acknowledgement commit succeeds but transport loses the
+ // result: the caller sees uncertainty; a trusted re-query reconciles once.
+ const lostResponse=input();assert.deepEqual(await probe.stage(lostResponse),{status:'staged'});
+ const reserved=await probe.reserveIntent(lostResponse);assert.equal(reserved.status,'intent-recorded');
+ const lostTarget={requestId:lostResponse.requestId,attemptId:reserved.attemptId,digest};
+ const lostAck=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async ({requestId,attemptId,digest:dg})=>({
+   requestId,attemptId,digest:dg,ackDigest:changedDigest,status:'durable'
+  }),
+  query:async (sql,args)=>{await confirmer.query(sql,args);throw Error('commit_ack_lost');}
+ });
+ assert.deepEqual(await lostAck.reconcile(lostTarget),{status:'uncertain'});
+ assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[lostResponse.requestId])).rows[0].status,'acknowledged');
+ assert.deepEqual(await reconciler.reconcile(lostTarget),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await probe.reserveIntent(lostResponse),{status:'reconciliation-required'});
+ console.log('Private authority acknowledgement PASS: committed acknowledgement with lost response reconciles idempotently without dispatch retry.');
  // Expired MLOS lease denies even with a still positive network Auth verdict.
  await controller.query('select evidence_private.control($1,true,1)',[actor]);
  await pause(1250);
  assert.deepEqual(await probe.stage(input()),{status:'denied'});
- assert.equal((await inspector.query("select count(*)::int n from evidence_private.delivery_attempts where status='acknowledged'")).rows[0].n,2);
+ assert.equal((await inspector.query("select count(*)::int n from evidence_private.delivery_attempts where status='acknowledged'")).rows[0].n,3);
  console.log('Private authority PASS: rollback, bounded private lease expiry and intent/uncertain/ack records, no automatic redispatch.');
 }catch(error){throw error;}
 finally{
