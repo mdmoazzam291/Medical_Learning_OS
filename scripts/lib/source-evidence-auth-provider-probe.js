@@ -43,7 +43,7 @@ const rejectedAccessCodes=new Set([
 // The target URL is the validated sandbox origin; redirects and unknown
 // responses fail rather than being counted as revoked or accepted.
 export function createIsolatedAuthAccessObserver({
- url,projectRef,confirmation,accountA,accountB,apiKey,fetchImpl=fetch
+ url,projectRef,confirmation,accountA,accountB,apiKey,fetchImpl=fetch,onDiagnostic
 }){
  validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
  if(typeof apiKey!=='string'||!apiKey.startsWith('sb_publishable_')||
@@ -58,17 +58,29 @@ export function createIsolatedAuthAccessObserver({
     signal:AbortSignal.timeout(7000)
    });
   }catch{throw reject();}
-  if(!Number.isInteger(response?.status)||
-     !response.headers?.get('content-type')?.toLowerCase().includes('application/json'))throw reject();
+  const safeStatus=[200,400,401,403,404,422,429,500,502,503].includes(response?.status)?response.status:'other';
+  onDiagnostic?.('http_status_'+safeStatus);
+  const ct=response?.headers?.get('content-type')?.toLowerCase();
+  if(!Number.isInteger(response?.status)||!ct?.includes('application/json')){
+   onDiagnostic?.('invalid_content_type');throw reject();
+  }
   let data;
   try{
    const body=await response.text();
    if(body.length>16384)throw reject();
    data=JSON.parse(body);
-  }catch{throw reject();}
+  }catch{
+   onDiagnostic?.('invalid_json_body');throw reject();
+  }
+  const safeCode=['bad_jwt','session_not_found','session_expired','user_not_found',
+   'user_banned','invalid_credentials','invalid_token','jwt_expired']
+   .includes(data?.code)?data.code:'unrecognized_code';
+  if(response.status!==200)onDiagnostic?.('http_code_'+safeCode);
   if(response.status===200){
    const id=data?.id;
-   if(typeof id!=='string'||!uuid.test(id))throw reject();
+   if(typeof id!=='string'||!uuid.test(id)){
+    onDiagnostic?.('invalid_success_id');throw reject();
+   }
    return id.toLowerCase();
   }
   if([400,401,403,422].includes(response.status)&&
