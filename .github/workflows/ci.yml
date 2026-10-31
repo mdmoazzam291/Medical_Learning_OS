@@ -145,8 +145,8 @@ jobs:
           grep -F "Native fixture cleanup PASS" "$RUNNER_TEMP/mlos-native-negative.log"
   auth-local-gotrue:
     # Real but disposable Auth/GoTrue: never connects to a hosted project.
-    # Restrict the extra Docker work to this draft evidence PR only.
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 346 }}
+    # Restrict disposable Docker Auth work to the original draft and its isolated security split.
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 346 || github.event.pull_request.number == 350) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
