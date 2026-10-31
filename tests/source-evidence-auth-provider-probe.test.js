@@ -18,7 +18,7 @@ test('nonproduction guard blocks both actual project refs and misleading test se
   {...setup,accountB:{email:userB.email,password:'short'}}
  ])assert.throws(()=>validateNonproductionAuthProbeConfig(value),/auth_probe_isolation_not_established/);
 });
-function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false}={}){
+function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false,revokedRefreshNetworkError=false,revokedRefreshTimeout=false}={}){
  const actor={ [userA.email]:'11111111-1111-4111-8111-111111111111',[userB.email]:'22222222-2222-4222-8222-222222222222'};
  const sessions=new Map(),tokens=new Map();let serial=0;const actions=[];
  function mint(session){
@@ -45,7 +45,11 @@ function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=
    },
    async refreshSession({refresh_token}){
     const s=[...sessions.values()].find(x=>x.refresh===refresh_token&&!x.revoked);
-    if(!s)return {data:null,error:{message:'refresh rejected'}};
+    if(!s){
+     if(revokedRefreshNetworkError)throw Error('failed to fetch');
+     if(revokedRefreshTimeout)return {data:null,error:{message:'upstream timed out',code:'request_timeout',status:504}};
+     return {data:null,error:{message:'refresh rejected',code:'refresh_token_not_found',status:400}};
+    }
     activeId=s.id;actions.push('refresh');return {data:{session:mint(s)},error:null};
    },
    async signOut({scope}){
@@ -121,5 +125,16 @@ test('JWT issuer and authenticated audience must match the explicitly selected s
   const fake=mockProvider(bad);
   await assert.rejects(runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),/auth_provider_probe_failed/);
   assert.equal(fake.actions.filter(x=>x==='logout:local').length,3,'all test sessions cleaned on claim mismatch');
+ }
+});
+
+test('network failure or timeout is never mistaken for proven refresh-token revocation',async()=>{
+ for(const mode of [{revokedRefreshNetworkError:true},{revokedRefreshTimeout:true}]){
+  const fake=mockProvider(mode);
+  await assert.rejects(
+   runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),
+   error=>error.message==='auth_provider_probe_failed'
+  );
+  assert.ok(fake.actions.includes('logout:local'));
  }
 });
