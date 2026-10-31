@@ -72,9 +72,13 @@ export function createIsolatedAuthAccessObserver({
   }catch{
    onDiagnostic?.('invalid_json_body');throw reject();
   }
+  // GoTrue's wire-level error identifier is error_code. Some adapters
+  // expose code instead; never trust conflicting fields or error messages.
+  if(data?.error_code!=null&&data?.code!=null&&data.error_code!==data.code)throw reject();
+  const serverCode=data?.error_code??data?.code;
   const safeCode=['bad_jwt','session_not_found','session_expired','user_not_found',
    'user_banned','invalid_credentials','invalid_token','jwt_expired']
-   .includes(data?.code)?data.code:'unrecognized_code';
+   .includes(serverCode)?serverCode:'unrecognized_code';
   if(response.status!==200)onDiagnostic?.('http_code_'+safeCode);
   if(response.status===200){
    const id=data?.id;
@@ -84,7 +88,7 @@ export function createIsolatedAuthAccessObserver({
    return id.toLowerCase();
   }
   if([400,401,403,422].includes(response.status)&&
-     ['bad_jwt','session_not_found','session_expired','user_not_found','user_banned'].includes(data?.code)&&
+     ['bad_jwt','session_not_found','session_expired','user_not_found','user_banned'].includes(serverCode)&&
      data?.id==null)return null;
   throw reject();
  };
