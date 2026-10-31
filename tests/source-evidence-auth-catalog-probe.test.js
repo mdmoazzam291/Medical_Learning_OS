@@ -17,7 +17,16 @@ function fixture({mutate}={}){
  {rolname:'supabase_auth_admin',rolcanlogin:true,rolbypassrls:true,rolsuper:false},
  {rolname:'service_role',rolcanlogin:false,rolbypassrls:true,rolsuper:false}
  ];
- if(mutate)mutate({relations,columns,roles});
+ const privileges=['anon','authenticated','service_role','supabase_auth_admin'].flatMap(roleName=>
+  ['sessions','users'].map(tableName=>({
+   role_name:roleName,table_name:tableName,
+   schema_usage:roleName!=='anon',table_select:roleName==='supabase_auth_admin',
+   id_select:roleName==='supabase_auth_admin',
+   id_update:roleName==='supabase_auth_admin',
+   user_id_select:tableName==='sessions'?roleName==='supabase_auth_admin':null,
+   not_after_select:tableName==='sessions'?roleName==='supabase_auth_admin':null
+  })));
+ if(mutate)mutate({relations,columns,roles,privileges});
  let ended=false,connected=false;
  return {sql,get ended(){return ended;},createClient(){
   return {async connect(){connected=true;},
@@ -28,10 +37,22 @@ function fixture({mutate}={}){
     if(q.includes("transaction_read_only"))return {rows:[{server_version_num:170006,read_only:'on'}]};
     if(q.includes('pg_catalog.pg_policy'))return {rows:relations};
     if(q.includes('pg_catalog.pg_attribute'))return {rows:columns};
+    if(q.includes('pg_catalog.has_schema_privilege'))return {rows:privileges};
     if(q.includes('pg_catalog.pg_roles'))return {rows:roles};
     throw Error('unexpected SQL');
    },async end(){ended=true;}};
  }};
+}
+function privilegesFixture(){
+ return ['anon','authenticated','service_role','supabase_auth_admin'].flatMap(role=>
+  ['sessions','users'].map(table=>[
+   role+'_'+table,{
+    schemaUsage:role!=='anon',tableSelect:role==='supabase_auth_admin',
+    idSelect:role==='supabase_auth_admin',idUpdate:role==='supabase_auth_admin',
+    ...(table==='sessions'?{userIdSelect:role==='supabase_auth_admin',
+      notAfterSelect:role==='supabase_auth_admin'}:{})
+   }
+  ]));
 }
 test('local database target accepts only exact loopback credential and explicit local confirmation',()=>{
  assert.deepEqual(validateLocalAuthCatalogTarget(target),{host:'127.0.0.1',port:54322,database:'postgres'});
@@ -57,12 +78,14 @@ test('real-schema catalog read uses a single read-only transaction and emits no 
   serverMajor:17,authOwner:'supabase_auth_admin',authRlsEnabled:true,
   policyCounts:{users:0,sessions:0},userTriggerCounts:{users:0,sessions:0},
   sessionHasNotAfter:true,serviceRoleBypassesRls:true,restrictedGatewayAbsent:true,
+  existingRoleAuthPrivilegeMatrix:Object.fromEntries(privilegesFixture()),
+  restrictedGatewaySessionAccess:'not_demonstrated',
   providerWriterLocks:'not_tested',restrictedAuthAclGrants:'not_tested',
   hostedAuthority:'not_tested',deployApproved:false
  });
  assert.equal(fake.sql[0],'begin read only');
  assert.equal(fake.sql.at(-1),'rollback');
- assert.equal(fake.sql.length,6);
+ assert.equal(fake.sql.length,7);
  assert.ok(fake.sql.slice(1,-1).every(q=>/^select /i.test(q)));
  assert.ok(fake.sql.every(q=>!/(auth\.sessions\s+(where|for|limit)|auth\.users\s+(where|for|limit)|insert\s+into|create\s+role|grant\s+|alter\s+table)/i.test(q)));
  assert.equal(fake.ended,true);
@@ -72,7 +95,11 @@ test('missing Auth columns, unexpected ownership and pre-existing privileged gat
  for(const mutate of [
   ({columns})=>columns.splice(columns.findIndex(x=>x.column_name==='not_after'),1),
   ({relations})=>relations[0].owner_name='postgres',
-  ({roles})=>roles.push({rolname:'evidence_gateway',rolcanlogin:true,rolbypassrls:true})
+  ({roles})=>roles.push({rolname:'evidence_gateway',rolcanlogin:true,rolbypassrls:true}),
+  ({privileges})=>privileges.pop(),
+  ({privileges})=>privileges[0].id_update=null,
+  ({privileges})=>privileges[0].role_name='postgres',
+  ({privileges})=>privileges.push({...privileges[0]} )
  ]){
   const fake=fixture({mutate});
   await assert.rejects(runLocalAuthCatalogProbe({...target,createClient:fake.createClient}),/local_auth_catalog_not_accepted/);
@@ -85,4 +112,18 @@ test('invalid local target never allocates a database client',async()=>{
  await assert.rejects(runLocalAuthCatalogProbe({...target,databaseUrl:'postgresql://postgres:secret@prod.supabase.co:5432/postgres',
   createClient:()=>{called++;return {};}}),/local_auth_catalog_not_accepted/);
  assert.equal(called,0);
+});
+
+test('catalog ACL matrix is informational: even a reported grant cannot imply usable Auth row authority',async()=>{
+ const fake=fixture({mutate:({privileges})=>{
+  const row=privileges.find(p=>p.role_name==='authenticated'&&p.table_name==='sessions');
+  row.schema_usage=true;row.table_select=true;row.id_select=true;row.id_update=true;
+  row.user_id_select=true;row.not_after_select=true;
+ }});
+ const out=await runLocalAuthCatalogProbe({...target,createClient:fake.createClient});
+ assert.equal(out.existingRoleAuthPrivilegeMatrix.authenticated_sessions.idUpdate,true);
+ assert.equal(out.restrictedGatewaySessionAccess,'not_demonstrated',
+  'even a table/column grant is not proof of RLS access, writer ordering or login');
+ assert.equal(out.deployApproved,false);
+ assert.equal(fake.ended,true);
 });
