@@ -126,8 +126,9 @@ try{
    ssl:{ca:base.ca,rejectUnauthorized:true}})
  })(stageSql,[actor,session,randomUUID(),digest]),/private_tls_gateway_not_accepted/);
  console.log('Private TLS PASS: plaintext, wrong password/CA/hostname/role, cross-role grants and arbitrary SQL rejected.');
- const archive=join(server.root,'private-schema.dump'),bin=join(server.root,'native','bin');
- const env={...process.env,LD_LIBRARY_PATH:join(server.root,'native','lib')};
+ const archive=join(server.root,'private-schema.dump'),bin=process.env.PG_CLIENT_BIN_DIR;
+ if(bin!=='/usr/lib/postgresql/18/bin')throw Error('disposable_pg_client_not_accepted');
+ const env={...process.env};
  await execFile(join(bin,'pg_dump'),['-h',server.config.host,'-p','55432','-U','postgres',
   '-d','postgres','-n','evidence_private','-F','c','-f',archive],{env,timeout:15000});
  // Disable generic CONNECT before the restored fixture is published. The
