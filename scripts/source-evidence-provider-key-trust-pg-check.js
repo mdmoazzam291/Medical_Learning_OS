@@ -197,6 +197,42 @@ try{
   [later.requestId])).rows[0].status,'intent');
  await fail(confirmer.query(lockedAck,[later.requestId,laterIntent.attemptId,
   digest,ackDigest,providerId,recipientId,thirdKey,5]),/private_denied/);
+ // Conversely, when acknowledgement acquires FOR SHARE first, a revocation
+ // MUST wait for that audit transaction to commit. Its approval is valid only
+ // at that transaction's ordering point, not after the later revocation.
+ const fourthPair=generateKeyPairSync('ed25519'),fourthKey=fingerprint(fourthPair.publicKey);
+ assert.equal((await controller.query(enroll,[providerId,recipientId,fourthKey]))
+  .rows[0].epoch,'7');
+ const ordered={requestId:randomUUID(),accessToken:token,digest};
+ assert.deepEqual(await proof.stage(ordered),{status:'staged'});
+ const orderedAttempt=await proof.reserveIntent(ordered);
+ assert.equal(orderedAttempt.status,'intent-recorded');
+ await confirmer.query('begin');
+ assert.equal((await confirmer.query(lockedAck,[ordered.requestId,orderedAttempt.attemptId,
+  digest,ackDigest,providerId,recipientId,fourthKey,7])).rows[0].r.status,
+  'acknowledgement-recorded');
+ const confirmerPid=(await confirmer.query('select pg_backend_pid() p')).rows[0].p;
+ const controllerPid=(await controller.query('select pg_backend_pid() p')).rows[0].p;
+ const outcome=p=>p.then(value=>({value}),error=>({error}));
+ const revokeWaiting=outcome(controller.query(revoke,[providerId,recipientId]));
+ let writerBlocked=false;
+ for(let i=0;i<90;i++){
+  const blocking=(await inspector.query('select pg_catalog.pg_blocking_pids($1) p',
+   [controllerPid])).rows[0].p;
+  if(blocking.includes(confirmerPid)){writerBlocked=true;break;}
+  await new Promise(resolve=>setTimeout(resolve,20));
+ }
+ assert.equal(writerBlocked,true,'private_key_ack_commit_barrier_not_observed');
+ await confirmer.query('commit');
+ const afterRevoke=await revokeWaiting;
+ assert.equal(afterRevoke.error,undefined);
+ assert.equal(afterRevoke.value.rows[0].epoch,'8');
+ assert.equal((await inspector.query(
+  'select status from evidence_private.delivery_attempts where request_id=$1',
+  [ordered.requestId])).rows[0].status,'acknowledged');
+ await fail(confirmer.query(lockedAck,[ordered.requestId,orderedAttempt.attemptId,
+  digest,ackDigest,providerId,recipientId,fourthKey,7]),/private_denied/);
+ console.log('Private key atomic ack PASS: revoked-before-commit rejected, ack-first row-lock blocks revocation until commit, raw audit bypass denied.');
  console.log('Private provider key trust PASS: restricted roles, retired-key guard, epoch rotation, midflight revoke, real SQL row-lock ordering, signed acknowledgement without redispatch.');
 }finally{
  await Promise.allSettled(clients.map(c=>c.query('rollback')));
