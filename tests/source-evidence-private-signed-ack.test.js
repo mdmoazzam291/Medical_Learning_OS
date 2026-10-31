@@ -60,7 +60,11 @@ test('provider/recipient, request binding, claimed status, timestamp and detache
  const valid=signed();
  const signedWrongRecipient=signed({recipientId:'different.queue'});
  const signedWrongProvider=signed({providerId:'different-provider'});
- const corruptedSignature={...valid,signature:valid.signature.slice(0,-2)+'AA'};
+ // Flip a guaranteed different base64url character. Replacing the suffix
+ // with 'AA' was nondeterministic: a real signature can already end in AA.
+ const corruptedSignature={...valid,signature:
+  (valid.signature[0]==='A'?'B':'A')+valid.signature.slice(1)};
+ assert.notEqual(corruptedSignature.signature,valid.signature);
  const bad=[
   {...valid,requestId:'66666666-6666-4666-8666-666666666666'},
   {...valid,attemptId:'66666666-6666-4666-8666-666666666666'},
