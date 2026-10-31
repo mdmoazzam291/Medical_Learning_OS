@@ -1,7 +1,7 @@
 // Real GoTrue acceptance against a disposable, loopback-only local CLI stack.
 // Manual opt-in. This file never calls a hosted project or stores login data.
 import {randomBytes} from 'node:crypto';
-import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe} from './lib/source-evidence-auth-provider-probe.js';
+import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe,createIsolatedAuthAccessObserver} from './lib/source-evidence-auth-provider-probe.js';
 
 const URL='http://127.0.0.1:54321';
 const REF='local-gotrue-only';
@@ -38,7 +38,8 @@ async function main(){
   if(out?.error)throw Error('local_auth_probe_signup_cleanup_failed');
  }
  phase='provider_protocol';
- const result=await runIsolatedAuthProviderProbe({...config,createClient,onPhase:p=>{phase='protocol_'+p;}});
+ const observeAccess=createIsolatedAuthAccessObserver({...config,apiKey:key});
+ const result=await runIsolatedAuthProviderProbe({...config,createClient,observeAccess,onPhase:p=>{phase='protocol_'+p;}});
  process.stdout.write(JSON.stringify({...result,environment:'disposable_local_gotrue'})+'\n');
 }
 try{await main();}
