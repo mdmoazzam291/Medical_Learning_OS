@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createSourceEvidencePrivateAuthorityPrototype} from '../scripts/lib/source-evidence-private-authority-prototype.js';
+import {createSourceEvidencePrivateAuthorityPrototype,createSourceEvidencePrivateAckReconciler} from '../scripts/lib/source-evidence-private-authority-prototype.js';
 const actor='11111111-1111-4111-8111-111111111111';
 const other='22222222-2222-4222-8222-222222222222';
 const sid='33333333-3333-4333-8333-333333333333';
@@ -12,21 +12,22 @@ const tokenFor=(sub=actor,session_id=sid,extras={})=>
  exp:Math.floor(Date.now()/1000)+3600,...extras
  })).toString('base64url')+'.fixture';
 const token=tokenFor();
+const attempt='55555555-5555-4555-8555-555555555555';
 const input=(accessToken=token)=>({accessToken,requestId:request,digest:'a'.repeat(64)});
 test('network Auth verification precedes SQL, exact fixed statement binds authenticated identity',async()=>{
  const calls=[],queries=[];
  const proto=createSourceEvidencePrivateAuthorityPrototype({
   getUser:async t=>{calls.push(t);return {data:{user:{id:actor}},error:null};},
   query:async(sql,args)=>{queries.push({sql,args});return {rows:[{r:{
-   status:sql.includes('.stage(')?'staged':'delivered'
+   status:sql.includes('.stage(')?'staged':'intent-recorded',...(sql.includes('.stage(')?{}:{attemptId:attempt})
   }}]};},expectedIssuer:issuer
  });
  assert.deepEqual(await proto.stage(input()),{status:'staged'});
- assert.deepEqual(await proto.markDelivered(input()),{status:'marked-delivered'});
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'intent-recorded',attemptId:attempt});
  assert.equal(calls.length,4);
  assert.equal(queries.length,2);
  assert.equal(queries[0].sql,'select evidence_private.stage($1,$2,$3,$4) as r');
- assert.equal(queries[1].sql,'select evidence_private.deliver($1,$2,$3,$4) as r');
+ assert.equal(queries[1].sql,'select evidence_private.reserve_intent($1,$2,$3,$4) as r');
  for(const q of queries)assert.deepEqual(q.args,[actor,sid,request,'a'.repeat(64)]);
  assert.ok(queries.every(q=>!q.args.includes(token)));
 });
@@ -55,7 +56,7 @@ test('invalid forged token, expired claim, wrong session, outages, uncertain SQL
  mode='offline';
  assert.deepEqual(await proto.stage(input()),{status:'denied'});
  mode='denied';
- assert.deepEqual(await proto.markDelivered(input()),{status:'denied'});
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'denied'});
  assert.equal(queries,0);
  mode='database_down';
  assert.deepEqual(await proto.stage(input()),{status:'uncertain'});
@@ -67,9 +68,9 @@ test('postcommit provider failure suppresses positive result despite a recorded 
   expectedIssuer:issuer,
   getUser:async()=>++verifyCount===1?{data:{user:{id:actor}},error:null}:
    {data:{user:null},error:{code:'session_not_found'}},
-  query:async()=>{queries++;return {rows:[{r:{status:'delivered'}}]};}
+  query:async()=>{queries++;return {rows:[{r:{status:'intent-recorded',attemptId:attempt}}]};}
  });
- assert.deepEqual(await proto.markDelivered(input()),{status:'denied'});
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'denied'});
  assert.equal(queries,1);
  assert.equal(verifyCount,2);
 });
@@ -84,5 +85,60 @@ test('internal SQL denial and conflict statuses remain bounded, never expose mes
    query:async()=>{throw Error(error);}
   });
   assert.deepEqual(await proto.stage(input()),{status});
+ }
+});
+
+test('repeated reservation never redispatches and cannot expose an attempt identifier',async()=>{
+ let count=0;
+ const proto=createSourceEvidencePrivateAuthorityPrototype({
+  getUser:async()=>({data:{user:{id:actor}},error:null}),
+  expectedIssuer:issuer,
+  query:async()=>({rows:[{r:++count===1?{status:'intent-recorded',attemptId:attempt}:
+   {status:'reconciliation-required'}}]})
+ });
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'intent-recorded',attemptId:attempt});
+ assert.deepEqual(await proto.reserveIntent(input()),{status:'reconciliation-required'});
+ assert.equal(count,2);
+});
+test('trusted durable-ack reconciler rejects mismatches and never infers delivery',async()=>{
+ let lookups=0,queries=0,mode='missing';
+ const reconcile=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async ({requestId,attemptId,digest})=>{
+   lookups++;
+   if(mode==='offline')throw Error('timeout');
+   if(mode==='missing')return null;
+   return {requestId,attemptId,digest,ackDigest:'b'.repeat(64),
+    status:mode==='wrong'?'pending':'durable'};
+  },
+  query:async(sql,args)=>{
+   queries++;
+   assert.equal(sql,'select evidence_private.record_ack($1,$2,$3,$4) as r');
+   assert.deepEqual(args,[request,attempt,'a'.repeat(64),'b'.repeat(64)]);
+   return {rows:[{r:{status:'acknowledgement-recorded'}}]};
+  }
+ });
+ const task={requestId:request,attemptId:attempt,digest:'a'.repeat(64)};
+ assert.deepEqual(await reconcile.reconcile(task),{status:'reconciliation-required'});
+ mode='offline';assert.deepEqual(await reconcile.reconcile(task),{status:'reconciliation-required'});
+ mode='wrong';assert.deepEqual(await reconcile.reconcile(task),{status:'denied'});
+ assert.equal(queries,0);
+ mode='durable';assert.deepEqual(await reconcile.reconcile(task),{status:'acknowledgement-recorded'});
+ assert.equal(queries,1);assert.equal(lookups,4);
+ for(const invalid of [
+  {...task,token}, {...task,ackDigest:'b'.repeat(64)},
+  {...task,requestId:'bad'}, {...task,digest:'a'}
+ ])assert.deepEqual(await reconcile.reconcile(invalid),{status:'invalid'});
+ assert.equal(queries,1);
+});
+test('reconciler uncertain commit and conflicting ack are never reported as completed',async()=>{
+ const task={requestId:request,attemptId:attempt,digest:'a'.repeat(64)};
+ for(const [message,expected] of [
+  ['socket gone','uncertain'],['private_conflict','conflict'],['private_denied','denied']
+ ]){
+  const reconcile=createSourceEvidencePrivateAckReconciler({
+   lookupDurableAck:async()=>({...task,ackDigest:'b'.repeat(64),status:'durable'}),
+   query:async()=>{throw Error(message);}
+  });
+  assert.deepEqual(await reconcile.reconcile(task),{status:expected});
  }
 });
