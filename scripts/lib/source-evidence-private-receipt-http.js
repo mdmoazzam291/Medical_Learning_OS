@@ -57,14 +57,14 @@ async function readBoundedJson(response,signal){
      response?.headers?.get?.('content-type')??''))return null;
  const reader=response?.body?.getReader?.();
  if(!reader)return null;
- let size=0;const chunks=[];
+ let size=0,finished=false;const chunks=[];
  try{
   while(true){
    if(signal.aborted)return null;
    const item=await bounded(()=>reader.read(),signal);
    if(!item)return null;
    const {done,value}=item;
-   if(done)break;
+   if(done){finished=true;break;}
    if(!(value instanceof Uint8Array)||value.byteLength===0)return null;
    size+=value.byteLength;
    if(size>maxBytes)return null;
@@ -75,13 +75,12 @@ async function readBoundedJson(response,signal){
   return signal.aborted?null:parsed;
  }catch{return null;}
  finally{
-  // Always INVOKE cancel, even if the deadline has already fired. Do not
-  // await an uncooperative stream past the deadline; consume late rejection.
-  try{
-   const cancellation=Promise.resolve(reader.cancel());
-   cancellation.catch(()=>{});
-   if(!signal.aborted)await bounded(()=>cancellation,signal);
-  }catch{}
+  // Completed streams need no cancellation. For partial/aborted reads signal
+  // cancellation but do NOT await it: a hung cancel must never delay a result
+  // or cause a previously decided success to arrive after the deadline.
+  if(!finished){
+   try{Promise.resolve(reader.cancel()).catch(()=>{});}catch{}
+  }
  }
 }
 /**
