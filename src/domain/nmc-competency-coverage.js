@@ -5,6 +5,7 @@ import ledger from '../../data/competency-evidence-proposals.json' with {type:'j
 import {SUBJECT_INDEX} from './subject-index.js';
 import {validateCompetencyEvidenceProposals} from './competency-evidence.js';
 import {validateNmcRightsRegister} from './nmc-cbme-rights.js';
+import {validateNmcCodeIndex} from './nmc-code-extraction.js';
 const fail=()=>{throw new TypeError('nmc_competency_coverage_invalid');};
 const exact=(x,keys)=>x&&typeof x==='object'&&!Array.isArray(x)&&
  Object.keys(x).sort().join('|')===[...keys].sort().join('|');
@@ -63,6 +64,9 @@ export function auditNmcCodedCompetencies({counts=expected,proposals=ledger,scan
  });
  let scanEvidence=null,unmatchedInScan=[],extraFromScan=[],ambiguousScanPrefixes=[];
  if(scan!==null){
+  // Reuse the scanner's canonical page-index contract. An imported JSON file
+  // may be untrusted and must not bypass unique, ordered and bounded locators.
+  try{validateNmcCodeIndex(scan);}catch{fail();}
   if(!exact(scan,['schemaVersion','documentSha256','extractionMethod','pagesParsed',
     'codes','rightsMode','sourceContentStored'])||
    scan.schemaVersion!==1||typeof scan.documentSha256!=='string'||
