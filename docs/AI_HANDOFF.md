@@ -1,3 +1,12 @@
+## 2026-10-31 — Offline verified owner delegation checkpoint
+
+- Owner Codex /root; checked31October2026 IST. Resumed draft PR346, feature feat/nmc-complete-competency-audit-20261030 from05ab3be211af36d5caef49176e620efc4838aece in isolated mlos-evidence-delegation; main91a11aff41048984b039fd269a2a0a9ddc3d99da. One writer; no production changes.
+- Added test-only private verifier-to-gateway closure: exact token/candidate or token/target inputs, no caller actor/session/verified overrides; snapshots before awaits; verified ID/session bound locally; fixed gated SQL only; reverify after commit and independently rehash canonical package/manifest/request/original receipt before accepted/available. Unknown delivery returns uncertain without receipt; errors sanitized.
+- Rejecting placeholder positive/status tests observed RED, then8focusedPASS. Actual PGlite0.5.13 gateway-role integration PASS for default-off, original receipt retry, foreign/unverified denial, corrupted readback, lost delivery and unavailable postcommit readback reconciliation, revoked-session denial/new same-owner session original audit. Verifier is a synthetic exact-token map: no actual JWT signature/expiry/provider Auth test claimed.
+- Full npm test1,633PASS/0FAIL; npm run checkPASS13services/252couplings; final script syntax/diffPASS. Read-only review found no blocker; missing postcommit unavailable-readback integration case added and passed. CI step added; native/core exact checkpoint CI pending.
+- Deployment-gates design preserves existing authentic getUser ordering, describes dedicated direct-login credential isolation and representative provider row-lock investigation; no real credential, HTTP handler, migration/Auth trigger, source rights/reviewer/clinical/exam/learner approval. Existing broad service_role, trusted verifier/query and stolen gateway credential can still impersonate; production routing/provider Auth mutation/restore/HTTP controls unresolved.
+- Next: inspect checkpoint CI and record evidence; then test representative provider account/session/Admin/feature row-lock protocol without global Auth triggers, before any hosted implementation. No secrets or protected source bytes in git. Ownership retained until evidence checkpoint.
+
 ## 2026-10-31 — Narrow gateway and platform ordering verified
 
 - Checked 2026-10-31 05:50 UTC; owner Codex /root; draft PR346, branch feat/nmc-complete-competency-audit-20261030. Tested implementation acbec7548b0a1f0dcc807d567d0a946ff4a25e5e, exact 10 implementation/config file readbacks verified after push. Base unchanged.
