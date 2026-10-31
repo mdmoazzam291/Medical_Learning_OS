@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe} from '../scripts/lib/source-evidence-auth-provider-probe.js';
+import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe,createIsolatedAuthAccessObserver} from '../scripts/lib/source-evidence-auth-provider-probe.js';
 const userA={email:'first+mlos-probe-owner@example.org',password:'test-only-password-very-long'};
 const userB={email:'second+mlos-probe-reviewer@example.org',password:'test-only-password-different'};
 const liveProject='iyapppmeieqhflnzslao',legacyProject='ueuguguoladoqvtxkumt',nonprod='aaaaaaaaaaaaaaaaaaaa';
@@ -201,4 +201,57 @@ test('genuine local GoTrue target is allowed only at exact loopback origin and o
    /auth_probe_isolation_not_established/);
   assert.equal(called,0,'no SDK client for invalid local target');
  }
+});
+
+function response(status,value,{contentType='application/json'}={}){
+ return {status,headers:{get:name=>name==='content-type'?contentType:null},
+  async text(){return typeof value==='string'?value:JSON.stringify(value);}};
+}
+test('direct /user observer only accepts bounded sandbox provider responses',async()=>{
+ const seen=[];
+ const observed=createIsolatedAuthAccessObserver({...setup,
+  apiKey:'sb_publishable_dummy-local-sandbox',
+  fetchImpl:async(url,options)=>{
+   seen.push({url,options});
+   return response(200,{id:'11111111-1111-4111-8111-111111111111'});
+  }
+ });
+ assert.equal(await observed('e30.e30.sig'),'11111111-1111-4111-8111-111111111111');
+ assert.equal(seen.length,1);
+ assert.equal(seen[0].url,setup.url+'/auth/v1/user');
+ assert.equal(seen[0].options.redirect,'error');
+ assert.equal(seen[0].options.headers.authorization,'Bearer e30.e30.sig');
+ assert.equal(seen[0].options.headers.apikey,'sb_publishable_dummy-local-sandbox');
+ for(const [status,body] of [
+  [401,{code:'bad_jwt'}],[403,{code:'session_not_found'}],[422,{code:'session_expired'}]
+ ]){
+  const probe=createIsolatedAuthAccessObserver({...setup,apiKey:'sb_publishable_dummy-local-sandbox',
+   fetchImpl:async()=>response(status,body)});
+  assert.equal(await probe('e30.e30.sig'),null);
+ }
+});
+test('direct /user observer denies unavailable network, malformed response and ambiguous client/provider errors',async()=>{
+ for(const stub of [
+  async()=>{throw Error('offline');},
+  async()=>response(401,{message:'unauthorized'}),
+  async()=>response(500,{code:'bad_jwt'}),
+  async()=>response(401,{code:'invalid_credentials'}),
+  async()=>response(401,{code:'session_not_found',id:'11111111-1111-4111-8111-111111111111'}),
+  async()=>response(200,{id:'not-uuid'}),
+  async()=>response(200,{id:'11111111-1111-4111-8111-111111111111'},{contentType:'text/html'}),
+  async()=>response(403,'not-json'),
+  async()=>response(200,'x'.repeat(17000)),
+ ]){
+  const probe=createIsolatedAuthAccessObserver({...setup,apiKey:'sb_publishable_dummy-local-sandbox',fetchImpl:stub});
+  await assert.rejects(probe('e30.e30.sig'),/auth_provider_probe_failed/);
+ }
+ let requests=0;
+ assert.throws(()=>createIsolatedAuthAccessObserver({...setup,
+  url:'https://iyapppmeieqhflnzslao.supabase.co',
+  apiKey:'sb_publishable_dummy-local-sandbox',fetchImpl:async()=>{requests++;}}),
+  /auth_probe_isolation_not_established/);
+ assert.throws(()=>createIsolatedAuthAccessObserver({...setup,
+  apiKey:'sb_secret_danger',fetchImpl:async()=>{requests++;}}),
+  /auth_probe_isolation_not_established/);
+ assert.equal(requests,0);
 });
