@@ -1,5 +1,5 @@
 -- DISPOSABLE NATIVE POSTGRES OVERLAY ONLY. Apply after private-authority.sql.
--- Never run on hosted Supabase. Separate credentials from the subject gateway,
+-- Never run on any hosted or production database. Separate credentials from the subject gateway,
 -- confirmer and MLOS subject controller. Trust ownership remains unproven.
 create role evidence_private_key_controller login noinherit nosuperuser nocreatedb nocreaterole nobypassrls;
 create role evidence_private_key_reader login noinherit nosuperuser nocreatedb nocreaterole nobypassrls;
