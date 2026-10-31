@@ -4,7 +4,8 @@ import {createSourceEvidenceVerifiedUser} from './source-evidence-private-bounda
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[1-8][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
 const hex=/^[a-f0-9]{64}$/;
 const stageSql='select evidence_private.stage($1,$2,$3,$4) as r';
-const deliverSql='select evidence_private.deliver($1,$2,$3,$4) as r';
+const intentSql='select evidence_private.reserve_intent($1,$2,$3,$4) as r';
+const ackSql='select evidence_private.record_ack($1,$2,$3,$4) as r';
 const result=status=>Object.freeze({status});
 function capture(value){
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
@@ -44,7 +45,7 @@ export function createSourceEvidencePrivateAuthorityPrototype({getUser,query,exp
  async function run(kind,input){
   const captured=capture(input);if(!captured)return result('invalid');
   const id=await identity(captured.token);if(!id)return result('denied');
-  const sql=kind==='stage'?stageSql:deliverSql;
+  const sql=kind==='stage'?stageSql:intentSql;
   let r;
   try{
    r=(await query(sql,[id.actor,id.session,captured.request,captured.digest]))?.rows?.[0]?.r;
@@ -54,15 +55,56 @@ export function createSourceEvidencePrivateAuthorityPrototype({getUser,query,exp
    if(error?.message==='private_invalid')return result('invalid');
    return result('uncertain');
   }
-  if(r?.status!==(kind==='stage'?'staged':'delivered'))return result('uncertain');
+  const expected=kind==='stage'?'staged':'intent-recorded';
+  if(kind==='reserve'&&r?.status==='reconciliation-required')return result('reconciliation-required');
+  if(r?.status!==expected)return result('uncertain');
+  if(kind==='reserve'&&!uuid.test(r.attemptId))return result('uncertain');
   // A new provider verification before returning prevents replay of a cached
   // provider success. It does NOT make provider state atomic with SQL commit.
   const again=await identity(captured.token);
   if(!again||again.actor!==id.actor||again.session!==id.session)return result('denied');
-  return result(kind==='stage'?'staged':'marked-delivered');
+  return kind==='stage'?result('staged'):Object.freeze({status:'intent-recorded',attemptId:r.attemptId.toLowerCase()});
  }
  return Object.freeze({
   stage:input=>run('stage',input),
-  markDelivered:input=>run('deliver',input)
+  reserveIntent:input=>run('reserve',input)
  });
+}
+
+/**
+ * INTERNAL RECONCILIATION ONLY: a trusted outbound-delivery adapter must
+ * query its independent durable receipt using the exact one-shot attempt ID.
+ * This prototype never sends content or accepts a browser supplied ack.
+ * The DB audit mark records the confirmer's assertion, not physical delivery.
+ */
+export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query}){
+ if(typeof lookupDurableAck!=='function'||typeof query!=='function')
+  throw new TypeError('private_ack_reconciler_config_invalid');
+ return Object.freeze({async reconcile(value){
+  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
+     Reflect.ownKeys(value).length!==3||
+     !['requestId','attemptId','digest'].every(k=>Object.hasOwn(value,k))||
+     !uuid.test(value.requestId)||!uuid.test(value.attemptId)||!hex.test(value.digest))return result('invalid');
+  const request=value.requestId.toLowerCase(),attempt=value.attemptId.toLowerCase(),digest=value.digest;
+  let receipt;
+  try{receipt=await lookupDurableAck(Object.freeze({requestId:request,attemptId:attempt,digest}));}
+  catch{return result('reconciliation-required');}
+  // A positive is possible ONLY after the trusted adapter returns an exact
+  // durable correlation; no optimistic/time-based inferences or SDK success.
+  if(receipt==null)return result('reconciliation-required');
+  if(!receipt||typeof receipt!=='object'||Object.getPrototypeOf(receipt)!==Object.prototype||
+     Reflect.ownKeys(receipt).length!==5||
+     !['requestId','attemptId','digest','ackDigest','status'].every(k=>Object.hasOwn(receipt,k))||
+     receipt.status!=='durable'||receipt.requestId!==request||receipt.attemptId!==attempt||
+     receipt.digest!==digest||!hex.test(receipt.ackDigest))return result('denied');
+  try{
+   const out=(await query(ackSql,[request,attempt,digest,receipt.ackDigest]))?.rows?.[0]?.r;
+   return out?.status==='acknowledgement-recorded'?result('acknowledgement-recorded'):result('uncertain');
+  }catch(error){
+   if(error?.message==='private_denied')return result('denied');
+   if(error?.message==='private_conflict')return result('conflict');
+   if(error?.message==='private_invalid')return result('invalid');
+   return result('uncertain');
+  }
+ }});
 }
