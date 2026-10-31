@@ -181,6 +181,24 @@ jobs:
           export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
           export MLOS_LOCAL_AUTH_PG_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/pg/esm/index.mjs"
           node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-catalog-check.mjs"
+      - name: Measure real GoTrue session writers against disposable FOR SHARE
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          STATUS="$("$CLI" status -o env)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]] || [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_AUTH_WRITER_RACE_NOT_ACCEPTED: no disposable credentials"
+            exit 1
+          fi
+          export MLOS_LOCAL_AUTH_DB_URL="$DB_URL"
+          export MLOS_LOCAL_AUTH_PROBE_PUBLISHABLE_KEY="$KEY"
+          export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_AUTH_PROBE_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_AUTH_PG_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/pg/esm/index.mjs"
+          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
+          timeout --signal=TERM 50s node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-writer-race-check.mjs"
       - name: Destroy disposable local Auth containers and test identities
         if: always()
         run: |
