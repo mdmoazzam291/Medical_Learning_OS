@@ -1,3 +1,11 @@
+
+
+## 2026-10-31 — Real local GoTrue Auth catalog compatibility PASS
+
+- [Foundation run 41194293134](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41194293134) passed the disposable provider Auth test **and** a separately connected read-only PostgreSQL system-catalog probe. Local PostgreSQL major 17; `auth.users`/`auth.sessions` owned by `supabase_auth_admin`, RLS enabled and zero user-added policies/triggers; `not_after` present, `service_role` bypasses RLS, proposed narrow roles absent.
+- Fixed loopback-only database target validation, fixed catalog SQL, read-only transaction and cleanup. Negative tests deny production host/port, malformed target, incorrect owner/column, dangerous preexisting gateway role, unknown SQL and missing opt-in. Output has no credentials or Auth user/session rows.
+- This does NOT demonstrate least-privilege grants to managed Auth tables, GoTrue writer locking, hosted provider acceptance, TLS/secret rotation or publishing rights. PR #346 remains draft/unmerged, gateway disabled.
+- Details: `docs/evidence/2026-10-31-local-gotrue-auth-catalog-compatibility.md`.
 ## 2026-10-31 — Real disposable GoTrue Auth acceptance PASS
 
 - CI run [41192900215](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41192900215): **actual local GoTrue `auth-local-gotrue` job PASS**, using migration-free GitHub Actions Docker stack, pinned Supabase CLI and SDK, generated test-only identities, and post-job `stop --no-backup` cleanup. No hosted Auth identities or provider settings accessed.
