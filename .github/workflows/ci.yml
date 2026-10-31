@@ -68,6 +68,14 @@ jobs:
           node-version: '24'
       - name: Install isolated native PostgreSQL verification tools
         run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg" --no-audit --no-fund @embedded-postgres/linux-x64@18.6.0-beta.19 pg@8.22.0
+      - name: Install official PostgreSQL 18 clients for disposable backup/restore verification
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main" | sudo tee /etc/apt/sources.list.d/mlos-pgdg.list > /dev/null
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends postgresql-client-18
+          /usr/lib/postgresql/18/bin/pg_dump --version
       - name: Verify disposable current-session owner evidence gate
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-evidence-platform" --no-audit --no-fund @electric-sql/pglite@0.5.13
@@ -112,6 +120,7 @@ jobs:
         run: node scripts/source-evidence-private-authority-pg-check.js
       - name: Verify isolated TLS/SCRAM gateway and private restore ACL safety on PostgreSQL 18
         env:
+          PG_CLIENT_BIN_DIR: /usr/lib/postgresql/18/bin
           EXPECTED_NATIVE_PG_VERSION: '18.6'
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
@@ -230,6 +239,14 @@ jobs:
           node-version: '24'
       - name: Install pinned PostgreSQL 17.6 private fixture
         run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg17" --no-audit --no-fund @embedded-postgres/linux-x64@17.6.0-beta.15 pg@8.22.0
+      - name: Install official PostgreSQL 18 clients for disposable backup/restore verification
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main" | sudo tee /etc/apt/sources.list.d/mlos-pgdg.list > /dev/null
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends postgresql-client-18
+          /usr/lib/postgresql/18/bin/pg_dump --version
       - name: Verify 17.6 row-lock races, rollback, deadlock recovery and negative control
         env:
           EXPECTED_NATIVE_PG_VERSION: '17.6'
@@ -246,6 +263,7 @@ jobs:
           grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row17-negative.log"
       - name: Verify private TLS/SCRAM gateway and restore ACL negative controls on PostgreSQL 17.6
         env:
+          PG_CLIENT_BIN_DIR: /usr/lib/postgresql/18/bin
           EXPECTED_NATIVE_PG_VERSION: '17.6'
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
