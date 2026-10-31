@@ -116,7 +116,24 @@
     "cashfree",
     "cloudflare"
   ],
+  "scripts/concept-drafts-browser-check.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "scripts/concept-drafts-db-check.js": [
+    "supabase"
+  ],
   "scripts/confidence-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/content-coverage-browser-check.js": [
+    "cloudflare",
+    "supabase"
+  ],
+  "scripts/content-coverage-db-check.js": [
+    "supabase"
+  ],
+  "scripts/content-workspace-browser-check.js": [
     "supabase"
   ],
   "scripts/correction-browser-check.js": [
@@ -141,15 +158,27 @@
     "cloudflare",
     "supabase"
   ],
+  "scripts/lib/source-evidence-platform-fixture.js": [
+    "supabase"
+  ],
   "scripts/library-browser-check.js": [
     "supabase"
   ],
   "scripts/live-concept-drafts-http-check.mjs": [
     "supabase"
   ],
+  "scripts/medical-relationship-browser-check.js": [
+    "supabase"
+  ],
+  "scripts/medical-relationship-db-check.js": [
+    "supabase"
+  ],
   "scripts/navigation-browser-check.js": [
     "cloudflare",
     "github",
+    "supabase"
+  ],
+  "scripts/preparation-browser-check.js": [
     "supabase"
   ],
   "scripts/privacy-scope-db-check.js": [
@@ -163,9 +192,6 @@
   ],
   "scripts/public-surface.js": [
     "sentry",
-    "supabase"
-  ],
-  "scripts/preparation-browser-check.js": [
     "supabase"
   ],
   "scripts/question-intelligence-db-check.js": [
@@ -182,6 +208,9 @@
   ],
   "scripts/serve.js": [
     "sentry",
+    "supabase"
+  ],
+  "scripts/source-evidence-platform-db-check.js": [
     "supabase"
   ],
   "scripts/stage-content-inbox.js": [
@@ -222,6 +251,9 @@
     "supabase"
   ],
   "src/adapters/cloud-study.js": [
+    "supabase"
+  ],
+  "src/adapters/concept-http-acceptance.js": [
     "supabase"
   ],
   "src/adapters/error-monitoring.js": [
@@ -267,6 +299,15 @@
   ],
   "supabase/functions/learner-experiment-api/index.ts": [
     "render",
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/concept-acceptance.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/concept-drafts.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/content-coverage.js": [
     "supabase"
   ],
   "supabase/functions/owner-api/_shared/runtime-access.ts": [
@@ -626,6 +667,27 @@
   "supabase/migrations/20261021041935_explicit_service_read_grants.sql": [
     "supabase"
   ],
+  "supabase/migrations/20261023091436_medical_relationship_registry.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261023214659_content_import_intelligence_grouping.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028201126_admin_content_coverage_snapshots.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028204835_admin_concept_drafts.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028215500_admin_concept_acceptance.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql": [
+    "supabase"
+  ],
   "supabase/verification/connected-learning-pilot.sql": [
     "supabase"
   ],
@@ -663,6 +725,12 @@
     "supabase"
   ],
   "web/cloud-config.js": [
+    "supabase"
+  ],
+  "web/concept-http-check.js": [
+    "supabase"
+  ],
+  "web/content-coverage-boot.js": [
     "supabase"
   ],
   "web/content-library-client.js": [
@@ -753,70 +821,5 @@
   "wrangler.jsonc": [
     "cloudflare",
     "render"
-  ],
-  "scripts/content-workspace-browser-check.js": [
-    "supabase"
-  ],
-  "supabase/migrations/20261023091436_medical_relationship_registry.sql": [
-    "supabase"
-  ],
-  "scripts/medical-relationship-db-check.js": [
-    "supabase"
-  ],
-  "scripts/medical-relationship-browser-check.js": [
-    "supabase"
-  ],
-  "supabase/migrations/20261023214659_content_import_intelligence_grouping.sql": [
-    "supabase"
-  ],
-  "scripts/content-coverage-browser-check.js": [
-    "cloudflare",
-    "supabase"
-  ],
-  "scripts/content-coverage-db-check.js": [
-    "supabase"
-  ],
-  "supabase/functions/owner-api/_shared/content-coverage.js": [
-    "supabase"
-  ],
-  "supabase/migrations/20261028201126_admin_content_coverage_snapshots.sql": [
-    "supabase"
-  ],
-  "web/content-coverage-boot.js": [
-    "supabase"
-  ],
-  "scripts/concept-drafts-browser-check.js": [
-    "cloudflare",
-    "supabase"
-  ],
-  "scripts/concept-drafts-db-check.js": [
-    "supabase"
-  ],
-  "supabase/functions/owner-api/_shared/concept-drafts.js": [
-    "supabase"
-  ],
-  "supabase/migrations/20261028204835_admin_concept_drafts.sql": [
-    "supabase"
-  ],
-  "src/adapters/concept-http-acceptance.js": [
-    "supabase"
-  ],
-  "web/concept-http-check.js": [
-    "supabase"
-  ],
-  "supabase/functions/owner-api/_shared/concept-acceptance.js": [
-    "supabase"
-  ],
-  "supabase/migrations/20261028215500_admin_concept_acceptance.sql": [
-    "supabase"
-  ],
-  "supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql": [
-    "supabase"
-  ],
-  "supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql": [
-    "supabase"
-  ],
-  "scripts/source-evidence-platform-db-check.js": [
-    "supabase"
   ]
 }

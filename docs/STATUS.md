@@ -1,3 +1,12 @@
+## 2026-10-31 — Narrow fixture gateway capability checkpoint
+
+- Owner: Codex /root; draft PR346; branch feat/nmc-complete-competency-audit-20261030, parent cebd691f71b64dbc82dab240a3ac8107919da7dd. Checked 2026-10-31 UTC.
+- Added dedicated non-inheriting gateway login with only stage/readback entry points; private non-login/non-bypass executor owns exactly two empty-search-path definer bridges with explicit table/RLS/helper allowlists. Raw service_role remains broad for earlier unrelated probes; actual production credential routing is unresolved.
+- TDD invoker placeholder failed permission denied for platform_guard; bridge passes disposable PGlite0.5.13 staging, raw table/helper/governor/role switching denial, feature/session retry denial, catalog owner/definer/search-path/role/schema checks. Original embedded superuser session cannot prove login-level SET SESSION AUTHORIZATION denial; native script uses actual gateway logins.
+- Added synthetic-only Auth/session/Admin/feature mutation triggers and native real-PID/pg_locks races (plain revocation/suspension/feature/Admin writes first; stage first), plus omit-trigger negative control. Native CI pending at this checkpoint; local UID0-only container cannot run initdb as mapped non-root user. No native result claimed yet.
+- Reviewed shared SQL-definition fixture adds one Supabase coupling location:13services/252locations. No dependencies or hosted changes. Review added definer catalog assertions and idle-client error handling. Full npm test/check currently running; final evidence followup required.
+- No production migration/API/Auth trigger, credential, source material, grant, clinical/rights/exam approval or learner release. Coarse synthetic Auth locks are not a production design. Next: inspect exact checkpoint native CI, fix any failures, finish existing checks and record evidence.
+
 ## Owner-only platform compatibility verified, hosted adapter remains proposal —31 October2026 IST
 - Checked at 2026-10-31T05:35:24.158Z. Implementationce3c63f0bbee3d29627843d490d6dfad31b5e2d2; Foundation run41173028054/job124454806451 SUCCESS, exact logs inspected. Follow-up records results only.
 - Completed concrete owner-only HTTP/RPC proposal plus disposable session-gated wrappers using exact repository runtime/Admin SQL definitions on synthetic Auth/session tables. Default-off wrapper capability; no hosted route or real platform mutation.
