@@ -18,6 +18,8 @@ const ackSql='select evidence_private.record_ack($1,$2,$3,$4) as r';
 const outcome=p=>p.then(value=>({value}),error=>({error}));
 async function connect(user='postgres'){
  const c=new Client({...server.config,user,connectionTimeoutMillis:5000,statement_timeout:8000});
+ // Immediate-shutdown fixtures deliberately sever active PG sockets.
+ c.on('error',()=>{});
  await c.connect();clients.push(c);return c;
 }
 const jwt=(sub=actor,sid=session)=>'e30.'+Buffer.from(JSON.stringify({
@@ -213,6 +215,76 @@ try{
  assert.deepEqual(await probe.stage(input()),{status:'denied'});
  assert.equal((await inspector.query("select count(*)::int n from evidence_private.delivery_attempts where status='acknowledged'")).rows[0].n,3);
  console.log('Private authority PASS: rollback, bounded private lease expiry and intent/uncertain/ack records, no automatic redispatch.');
+ // WAL recovery for the PRIVATE ledger, separate from the earlier evidence_probe
+ // crash drill. A transaction intentionally remains open when PostgreSQL
+ // receives immediate shutdown: its uncommitted attempt must not survive.
+ for(const setting of ['fsync','synchronous_commit','full_page_writes'])
+  assert.equal((await inspector.query('show '+setting)).rows[0][setting],'on');
+ await controller.query('select evidence_private.control($1,true,600)',[actor]);
+ const crashPending=input(),crashAcknowledged=input(),crashUncommitted=input();
+ for(const task of [crashPending,crashAcknowledged,crashUncommitted])
+  assert.deepEqual(await probe.stage(task),{status:'staged'});
+ const pendingIntent=await probe.reserveIntent(crashPending);
+ assert.equal(pendingIntent.status,'intent-recorded');
+ await gateway.query('select evidence_private.mark_uncertain($1,$2)',
+  [crashPending.requestId,pendingIntent.attemptId]);
+ const acknowledgedIntent=await probe.reserveIntent(crashAcknowledged);
+ assert.equal(acknowledgedIntent.status,'intent-recorded');
+ assert.equal((await confirmer.query(ackSql,[
+  crashAcknowledged.requestId,acknowledgedIntent.attemptId,digest,changedDigest
+ ])).rows[0].r.status,'acknowledgement-recorded');
+ await gateway.query('begin');
+ const uncommitted=(await gateway.query(intentSql,[
+  actor,session,crashUncommitted.requestId,digest
+ ])).rows[0].r;
+ assert.equal(uncommitted.status,'intent-recorded');
+ assert.equal(typeof server.crashAndRestart,'function');
+ const crash=await server.crashAndRestart();
+ assert.equal(crash.mode,'immediate');
+ assert.notEqual(crash.previousPid,crash.newPid);
+ assert.match(crash.recoveryLog,/database system was interrupted|not properly shut down/);
+ assert.match(crash.recoveryLog,/automatic recovery|redo starts/);
+ await Promise.allSettled(clients.map(c=>c.end()));
+ const afterAdmin=await connect(),afterGateway=await connect('evidence_private_gateway'),
+  afterConfirmer=await connect('evidence_private_confirmer'),
+  afterController=await connect('evidence_private_controller');
+ assert.equal((await afterAdmin.query('select pg_is_in_recovery() as r')).rows[0].r,false);
+ const inspectSql='select evidence_private.inspect_intent($1,$2) as r';
+ const pendingAfter=(await afterConfirmer.query(inspectSql,[crashPending.requestId,digest])).rows[0].r;
+ assert.deepEqual(pendingAfter,{
+  status:'intent-found',attemptId:pendingIntent.attemptId,state:'uncertain'
+ });
+ const acknowledgedAfter=(await afterConfirmer.query(inspectSql,[crashAcknowledged.requestId,digest])).rows[0].r;
+ assert.deepEqual(acknowledgedAfter,{
+  status:'intent-found',attemptId:acknowledgedIntent.attemptId,state:'acknowledged'
+ });
+ assert.deepEqual((await afterConfirmer.query(inspectSql,[
+  crashUncommitted.requestId,digest
+ ])).rows[0].r,{status:'no-intent'});
+ assert.equal((await afterAdmin.query(
+  'select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',
+  [crashUncommitted.requestId])).rows[0].n,0);
+ const afterProbe=createSourceEvidencePrivateAuthorityPrototype({
+  getUser,expectedIssuer:issuer,query:(sql,args)=>afterGateway.query(sql,args)
+ });
+ assert.deepEqual(await afterProbe.reserveIntent(crashPending),{status:'reconciliation-required'});
+ assert.deepEqual(await afterProbe.reserveIntent(crashAcknowledged),{status:'reconciliation-required'});
+ const unknownAck=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async()=>null,query:(sql,args)=>afterConfirmer.query(sql,args)
+ });
+ assert.deepEqual(await unknownAck.recover({requestId:crashPending.requestId,digest}),
+  {status:'reconciliation-required'});
+ assert.equal((await afterConfirmer.query(ackSql,[
+  crashAcknowledged.requestId,acknowledgedIntent.attemptId,digest,changedDigest
+ ])).rows[0].r.status,'acknowledgement-recorded');
+ await assert.rejects(afterGateway.query('select * from evidence_private.delivery_attempts'),
+  /permission denied/);
+ await afterController.query('select evidence_private.control($1,false,0)',[actor]);
+ assert.deepEqual(await afterProbe.reserveIntent(crashPending),{status:'denied'});
+ assert.equal((await afterConfirmer.query(ackSql,[
+  crashAcknowledged.requestId,acknowledgedIntent.attemptId,digest,changedDigest
+ ])).rows[0].r.status,'acknowledgement-recorded');
+ console.log('Private authority WAL recovery PASS: committed uncertain/acknowledged attempts persist, uncommitted reservation rolls back, exact attempts remain one-shot, private revocation and ACLs survive, no redispatch.');
 }catch(error){throw error;}
 finally{
  await Promise.allSettled(clients.map(c=>c.query('rollback')));
