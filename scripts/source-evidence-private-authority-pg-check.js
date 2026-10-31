@@ -201,6 +201,8 @@ try{
  });
  assert.deepEqual(await lostAck.reconcile(lostTarget),{status:'uncertain'});
  assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[lostResponse.requestId])).rows[0].status,'acknowledged');
+ // An independent durable acknowledgement becomes visible on reconciliation.
+ availableAck=true;
  assert.deepEqual(await reconciler.recover({requestId:lostResponse.requestId,digest}),{status:'acknowledgement-recorded'});
  assert.deepEqual(await reconciler.recover({requestId:lostResponse.requestId,digest:changedDigest}),{status:'denied'});
  assert.deepEqual(await probe.reserveIntent(lostResponse),{status:'reconciliation-required'});
