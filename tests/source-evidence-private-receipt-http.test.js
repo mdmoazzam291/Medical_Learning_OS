@@ -88,7 +88,7 @@ test('outage, redirect, invalid responses and overlarge bodies never become dura
   new Response(JSON.stringify(receipt),{status:302,headers:{
    location:'https://evil.example/v1/receipts/lookup',
    'content-type':'application/json'}}),
-  new Response(JSON.stringify(receipt),{status:204}),
+  new Response(null,{status:204}),
   new Response(JSON.stringify(receipt),{status:200,headers:{'content-type':'text/plain'}}),
   new Response('x'.repeat(9000),{status:200,headers:{'content-type':'application/json'}}),
   new Response(new Uint8Array([255]),{status:200,headers:{'content-type':'application/json'}}),
