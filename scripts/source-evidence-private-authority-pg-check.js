@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
 import {startDisposableNativePostgres} from './lib/disposable-native-postgres.js';
-import {createSourceEvidencePrivateAuthorityPrototype} from './lib/source-evidence-private-authority-prototype.js';
+import {createSourceEvidencePrivateAuthorityPrototype,createSourceEvidencePrivateAckReconciler} from './lib/source-evidence-private-authority-prototype.js';
 const {postgres}=await import(process.env.NATIVE_PG_MODULE_URL||'@embedded-postgres/linux-x64');
 const {Client}=await import(process.env.PG_MODULE_URL||'pg');
 const server=await startDisposableNativePostgres({postgres}),clients=[];
@@ -13,7 +13,8 @@ const session='33333333-3333-4333-8333-333333333333';
 const digest='a'.repeat(64),changedDigest='b'.repeat(64);
 const issuer='http://127.0.0.1:54321/auth/v1';
 const stageSql='select evidence_private.stage($1,$2,$3,$4) as r';
-const deliverSql='select evidence_private.deliver($1,$2,$3,$4) as r';
+const intentSql='select evidence_private.reserve_intent($1,$2,$3,$4) as r';
+const ackSql='select evidence_private.record_ack($1,$2,$3,$4) as r';
 const outcome=p=>p.then(value=>({value}),error=>({error}));
 async function connect(user='postgres'){
  const c=new Client({...server.config,user,connectionTimeoutMillis:5000,statement_timeout:8000});
@@ -43,7 +44,6 @@ async function blockedBy(inspector,waiter,blocker){
  }
  throw Error('private_authority_row_barrier_not_observed');
 }
-let failure;
 try{
  const admin=await connect();
  const schema=await readFile(new URL('../ops/prototypes/source-evidence/private-authority.sql',import.meta.url),'utf8');
@@ -51,20 +51,23 @@ try{
  const controller=await connect('evidence_private_controller');
  const gateway=await connect('evidence_private_gateway'),racer=await connect('evidence_private_gateway');
  const inspector=await connect(),writer=await connect('evidence_private_controller');
+ const confirmer=await connect('evidence_private_confirmer');
  const n=Number((await admin.query("select current_setting('server_version_num')::int as n")).rows[0].n);
  if(process.env.EXPECTED_NATIVE_PG_VERSION){
   const actual=Math.floor(n/10000)+'.'+n%10000;
   assert.equal(actual,process.env.EXPECTED_NATIVE_PG_VERSION);
  }
  assert.equal((await inspector.query("select to_regclass('auth.sessions') is null as absent")).rows[0].absent,true);
- for(const role of [gateway,controller]){
-  for(const sql of ['select * from evidence_private.subjects','select * from evidence_private.receipts',
+ for(const role of [gateway,controller,confirmer]){
+  for(const sql of ['select * from evidence_private.subjects','select * from evidence_private.receipts','select * from evidence_private.delivery_attempts',
    'set role evidence_private_owner','select evidence_private.require_active($1)']){
    await assert.rejects(role.query(sql,sql.includes('$1')?[actor]:[]),/permission denied|cannot set role/);
   }
  }
  await assert.rejects(gateway.query('select evidence_private.control($1,true,60)',[actor]),/permission denied/);
  await assert.rejects(controller.query(stageSql,[actor,session,randomUUID(),digest]),/permission denied/);
+ await assert.rejects(gateway.query(ackSql,[randomUUID(),randomUUID(),digest,changedDigest]),/permission denied/);
+ await assert.rejects(confirmer.query(intentSql,[actor,session,randomUUID(),digest]),/permission denied/);
  await controller.query('select evidence_private.control($1,true,60)',[actor]);
  const probe=createSourceEvidencePrivateAuthorityPrototype({
   getUser,expectedIssuer:issuer,query:(sql,args)=>gateway.query(sql,args)
@@ -73,10 +76,25 @@ try{
  assert.deepEqual(await probe.stage(first),{status:'staged'});
  assert.deepEqual(await probe.stage(first),{status:'staged'});
  assert.deepEqual(await probe.stage(input(first.requestId,token,changedDigest)),{status:'conflict'});
- assert.deepEqual(await probe.markDelivered(first),{status:'marked-delivered'});
- assert.deepEqual(await probe.markDelivered(first),{status:'marked-delivered'});
+ const intent=await probe.reserveIntent(first);
+ assert.equal(intent.status,'intent-recorded');assert.ok(/^[a-f0-9-]{36}$/.test(intent.attemptId));
+ assert.deepEqual(await probe.reserveIntent(first),{status:'reconciliation-required'});
+ let availableAck=false;
+ const reconciler=createSourceEvidencePrivateAckReconciler({
+  lookupDurableAck:async ({requestId,attemptId,digest:dg})=>availableAck?{
+   requestId,attemptId,digest:dg,ackDigest:changedDigest,status:'durable'
+  }:null,
+  query:(sql,args)=>confirmer.query(sql,args)
+ });
+ const target={requestId:first.requestId,attemptId:intent.attemptId,digest};
+ assert.deepEqual(await reconciler.reconcile(target),{status:'reconciliation-required'});
+ availableAck=true;
+ assert.deepEqual(await reconciler.reconcile(target),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await reconciler.reconcile(target),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await reconciler.reconcile({...target,attemptId:randomUUID()}),{status:'denied'});
+ await assert.rejects(confirmer.query(ackSql,[first.requestId,intent.attemptId,digest,digest]),/private_conflict/);
  assert.equal((await inspector.query('select count(*)::int as n from evidence_private.receipts')).rows[0].n,1);
- assert.equal((await inspector.query('select delivered_at is not null as marked from evidence_private.receipts where request_id=$1',[first.requestId])).rows[0].marked,true);
+ assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[first.requestId])).rows[0].status,'acknowledged');
  const forged=jwt(other,session);
  assert.deepEqual(await probe.stage(input(randomUUID(),forged)),{status:'denied'});
  const beforeOutage=(await inspector.query('select count(*)::int as n from evidence_private.receipts')).rows[0].n;
@@ -86,9 +104,9 @@ try{
  assert.equal((await inspector.query('select count(*)::int as n from evidence_private.receipts')).rows[0].n,beforeOutage);
  provider='valid';
  const awaiting=input();assert.deepEqual(await probe.stage(awaiting),{status:'staged'});
- provider='offline';assert.deepEqual(await probe.markDelivered(awaiting),{status:'denied'});
+ provider='offline';assert.deepEqual(await probe.reserveIntent(awaiting),{status:'denied'});
  provider='valid';
- assert.equal((await inspector.query('select delivered_at is null as unmarked from evidence_private.receipts where request_id=$1',[awaiting.requestId])).rows[0].unmarked,true);
+ assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[awaiting.requestId])).rows[0].n,0);
  provider='revoked';assert.deepEqual(await probe.markDelivered(awaiting),{status:'denied'});provider='valid';
  // Known private revocation wins even while synthetic Auth still recognizes JWT.
  await controller.query('select evidence_private.control($1,false,0)',[actor]);
@@ -119,7 +137,7 @@ try{
  await racer.query('commit');
  assert.equal((await revokePromise).error,undefined);
  assert.deepEqual(await probe.markDelivered(raced),{status:'denied'});
- assert.equal((await inspector.query('select delivered_at is null as unmarked from evidence_private.receipts where request_id=$1',[raced.requestId])).rows[0].unmarked,true);
+ assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[raced.requestId])).rows[0].n,0);
  console.log('Private authority PASS: writer-first and evidence-first row-lock ordering, denied delivery after revoke.');
  // Rollback of private revocation cannot erase committed staged receipt.
  await controller.query('select evidence_private.control($1,true,60)',[actor]);
@@ -132,9 +150,9 @@ try{
  await controller.query('select evidence_private.control($1,true,1)',[actor]);
  await pause(1250);
  assert.deepEqual(await probe.stage(input()),{status:'denied'});
- assert.equal((await inspector.query("select count(*)::int n from evidence_private.receipts where delivered_at is not null")).rows[0].n,2);
- console.log('Private authority PASS: rollback, bounded private lease expiry and immutable receipt audit.');
-} catch(error){failure=error;throw error;}
+ assert.equal((await inspector.query("select count(*)::int n from evidence_private.delivery_attempts where status='acknowledged'")).rows[0].n,2);
+ console.log('Private authority PASS: rollback, bounded private lease expiry and intent/uncertain/ack records, no automatic redispatch.');
+}catch(error){throw error;}
 finally{
  await Promise.allSettled(clients.map(c=>c.query('rollback')));
  await Promise.allSettled(clients.map(c=>c.end()));
