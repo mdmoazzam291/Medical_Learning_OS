@@ -104,6 +104,12 @@ jobs:
           fi
           grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row-negative.log"
           grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row-negative.log"
+      - name: Verify private MLOS-owned authority gate and revocation races on PostgreSQL 18
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+          EXPECTED_NATIVE_PG_VERSION: '18.6'
+        run: node scripts/source-evidence-private-authority-pg-check.js
       - name: Verify native immediate-shutdown WAL recovery and denied state
         env:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
@@ -232,6 +238,12 @@ jobs:
           grep -F "Authority native PostgreSQL version PASS: 17.6" "$RUNNER_TEMP/mlos-row17-negative.log"
           grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row17-negative.log"
           grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row17-negative.log"
+      - name: Verify MLOS-owned private epoch/receipt gate under PostgreSQL 17.6
+        env:
+          EXPECTED_NATIVE_PG_VERSION: '17.6'
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
+        run: node scripts/source-evidence-private-authority-pg-check.js
 
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
