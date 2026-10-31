@@ -92,3 +92,22 @@ test('cannot launder a fabricated scan or claim verified rights/complete',()=>{
  ]){const s=structuredClone(real);mutation(s);
    assert.throws(()=>auditNmcCodedCompetencies({scan:s}),/nmc_competency_coverage_invalid/);}
 });
+
+test('untrusted extracted-code imports reject duplicate, unordered or unbounded page locations',()=>{
+ const valid=extractNmcCodeIndex(['GM1.1','GM1.1'],'c'.repeat(64));
+ assert.deepEqual(valid.codes[0].pages,[1,2]);
+ for(const mutation of [
+  s=>{s.codes[0].pages=[1,1];},
+  s=>{s.codes[0].pages=[2,1];},
+  s=>{s.pagesParsed=2001;},
+  s=>{s.pagesParsed=501;s.codes[0].pages=Array.from({length:501},(_,i)=>i+1);}
+ ]){
+  const s=structuredClone(valid);mutation(s);
+  assert.throws(()=>validateNmcCodeIndex(s),/nmc_code_index_invalid/);
+  assert.throws(()=>auditNmcCodedCompetencies({scan:s}),
+   /nmc_competency_coverage_invalid/);
+ }
+ const accepted=validateNmcCodeIndex(valid);
+ assert.deepEqual(accepted,valid);
+ assert.equal(auditNmcCodedCompetencies({scan:valid}).complete,false);
+});
