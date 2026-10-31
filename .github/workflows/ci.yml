@@ -120,6 +120,32 @@ jobs:
           fi
           grep -F "advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-native-negative.log"
           grep -F "Native fixture cleanup PASS" "$RUNNER_TEMP/mlos-native-negative.log"
+  evidence-native-postgres17:
+    # Isolated major/minor-parity proof; never connects to hosted Supabase.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned PostgreSQL 17.6 private fixture
+        run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg17" --no-audit --no-fund @embedded-postgres/linux-x64@17.6.0-beta.15 pg@8.22.0
+      - name: Verify 17.6 row-lock races, rollback, deadlock recovery and negative control
+        env:
+          EXPECTED_NATIVE_PG_VERSION: '17.6'
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/source-evidence-row-lock-pg-concurrency.js
+          if node scripts/source-evidence-row-lock-pg-concurrency.js --key-share > "$RUNNER_TEMP/mlos-row17-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-row17-negative.log"
+            exit 1
+          fi
+          grep -F "Authority native PostgreSQL version PASS: 17.6" "$RUNNER_TEMP/mlos-row17-negative.log"
+          grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row17-negative.log"
+          grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row17-negative.log"
+
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
     runs-on: macos-latest
