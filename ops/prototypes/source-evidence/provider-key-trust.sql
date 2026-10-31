@@ -93,6 +93,27 @@ begin
   'keySha256',old.key_sha256,'epoch',old.epoch,'enabled',old.enabled
  );
 end;$$;
+-- A guarded, single-transaction acknowledgement. Key revocation/rotation
+-- updates the SAME row, blocked by FOR SHARE until this statement commits.
+-- External signature verification and provider ownership remain separate gates.
+create function evidence_private.key_record_ack(
+ p_request uuid,p_attempt uuid,p_digest text,p_ack_digest text,
+ p_provider text,p_recipient text,p_key text,p_epoch bigint)
+returns jsonb language plpgsql security definer set search_path='' as $
+declare old evidence_private.provider_signing_trust;
+begin
+ if not evidence_private.key_valid(p_provider,p_recipient,p_key) or
+ p_epoch is null or p_epoch<1 or p_epoch>9007199254740991
+ then raise exception 'private_invalid';end if;
+ select * into old from evidence_private.provider_signing_trust
+ where provider_id=p_provider and recipient_id=p_recipient for share;
+ if not found or old.enabled is distinct from true or
+ old.key_sha256<>p_key or old.epoch<>p_epoch
+ then raise exception 'private_denied';end if;
+ -- A matching key remains authorized until this entire call commits.
+ -- Delegate to the original immutable request/attempt/digest/ack audit.
+ return evidence_private.record_ack(p_request,p_attempt,p_digest,p_ack_digest);
+end;$;
 reset role;
 revoke all on table evidence_private.provider_signing_trust,evidence_private.retired_signing_keys from public;
 revoke all on function evidence_private.key_valid(text,text,text),
@@ -103,4 +124,12 @@ grant usage on schema evidence_private to evidence_private_key_controller,eviden
 grant execute on function evidence_private.key_enroll(text,text,text),
  evidence_private.key_revoke(text,text) to evidence_private_key_controller;
 grant execute on function evidence_private.key_state(text,text,text) to evidence_private_key_reader;
+-- Critical: the old four-argument audit bypass MUST be inaccessible to the
+-- confirmer once the guarded overlay is installed.
+revoke execute on function evidence_private.record_ack(uuid,uuid,text,text)
+ from evidence_private_confirmer;
+revoke all on function evidence_private.key_record_ack(
+ uuid,uuid,text,text,text,text,text,bigint) from public;
+grant execute on function evidence_private.key_record_ack(
+ uuid,uuid,text,text,text,text,text,bigint) to evidence_private_confirmer;
 -- No table SELECT/UPDATE/DELETE/INSERT to either login, the gateway, or confirmer.
