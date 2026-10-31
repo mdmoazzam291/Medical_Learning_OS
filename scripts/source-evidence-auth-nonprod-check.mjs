@@ -1,4 +1,4 @@
-// Manual-only opt-in, isolated test accounts. Never called by CI or production runtime.
+// Manual-only Supabase Auth acceptance probe; opt-in, isolated test accounts. Never called by CI or production runtime.
 // Requires an externally installed, pinned server-side SDK module; no app dependency.
 import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe} from './lib/source-evidence-auth-provider-probe.js';
 
