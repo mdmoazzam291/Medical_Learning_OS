@@ -1,3 +1,11 @@
+## 2026-10-31 — Narrow gateway and platform ordering verified
+
+- Checked 2026-10-31 05:50 UTC; owner Codex /root; draft PR346, branch feat/nmc-complete-competency-audit-20261030. Tested implementation acbec7548b0a1f0dcc807d567d0a946ff4a25e5e, exact 10 implementation/config file readbacks verified after push. Base unchanged.
+- Foundation run41174062255, evidence-native-postgres job124457846742 SUCCESS. Real evidence_gateway login rejects SET ROLE executor/service and SET SESSION AUTHORIZATION postgres; five native platform races PASS (plain session deletion, account suspension, feature disable, Admin transfer before retry/readback; stage before queued session revocation). Real independent PIDs/advisory waits observed; audit retained/later delivery denied. Omit-trigger negative control fails platform_advisory_barrier_not_observed and cleans up. Earlier native seven races, snapshot/ACL and immediate/WAL crash-recovery checks also PASS in same job.
+- Local npm test1,625PASS/0FAIL; npm run checkPASS13services/252coupling locations; PGlite0.5.13 capability+previous platform checksPASS; deliberately postgres-owned bridge rejected by catalog negative control; whitespacePASS. Read-only reviewer found no gateway bypass; catalog assertions and idle-client error handling suggestions implemented before tested commit.
+- This followup updates documentation/plan only. Core/browser/WebKit CI still in progress when recorded; neither full workflow nor this documentation head is claimed fully green.
+- No hosted API/credential/Auth trigger/migration or learner release. Existing service_role remains broad; real verified-token delegation/production narrow-role routing, provider-specific Auth lock/latency/restore compatibility and independent reviewer governance remain gates. Global synthetic mutation triggers must not be transplanted into real Auth tables. Next: design least-privilege hosted gateway credential/delegation boundary and provider Auth ordering strategy before any hosted handler, preserving default-off behavior.
+
 ## 2026-10-31 — Narrow fixture gateway capability checkpoint
 
 - Owner: Codex /root; draft PR346; branch feat/nmc-complete-competency-audit-20261030, parent cebd691f71b64dbc82dab240a3ac8107919da7dd. Checked 2026-10-31 UTC.

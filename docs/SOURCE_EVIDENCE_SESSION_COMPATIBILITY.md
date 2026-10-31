@@ -27,3 +27,9 @@ The compatibility test executes the existing runtime helper with synthetic token
 Next: a concrete owner-only hosted-adapter proposal mapping these existing boundaries to exact evidence authorization, with disposable platform/Auth fixtures first. Current source-rights and independent-reviewer gates remain unresolved; no learner activation.
 
 Verification: four helper behavior tests and full local suite1,625PASS/0FAIL at implementationcf4c33d. Static read-only review found no blocker in this audit. Native fixture CI success does not close the hosted identity/package/reviewer authorization gaps listed above.
+
+## Disposable narrow-role extension (2026-10-31)
+
+The capability overlay removes the gateway's direct raw-helper/table path in the fixture. A non-login/non-bypass executor owns only the two gated entry points with an empty search path, explicit RLS policies and helper grants. Tests inspect catalog ownership as well as denial behavior. Actual gateway login connections are required for the native session-authorization escalation proof; changing authorization inside an embedded session originally authenticated as superuser is insufficient.
+
+Synthetic Auth/session/Admin/feature mutation triggers demonstrate a possible ordering protocol for plain writes against the gated evidence transaction. Their global lock and simplified schema are fixture-only. Production provider Auth writers still do not participate in this prototype protocol, and no production credential has been mapped to the narrow role. Existing service_role retains raw probe access. This extension does not authorize a hosted route or establish provider-session integration readiness.
