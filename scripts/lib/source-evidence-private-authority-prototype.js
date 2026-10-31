@@ -8,6 +8,22 @@ const intentSql='select evidence_private.reserve_intent($1,$2,$3,$4) as r';
 const ackSql='select evidence_private.record_ack($1,$2,$3,$4) as r';
 const lookupSql='select evidence_private.inspect_intent($1,$2) as r';
 const result=status=>Object.freeze({status});
+// Snapshot only own enumerable data properties before any async boundary.
+ // Re-reading getters or provider-owned mutable objects would break the
+ // exact request/acknowledgement correlation this prototype requires.
+function snapshotFields(value,keys){
+ try{
+  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
+     Reflect.ownKeys(value).length!==keys.length)return null;
+  const snapshot=Object.create(null);
+  for(const key of keys){
+   const descriptor=Object.getOwnPropertyDescriptor(value,key);
+   if(!descriptor?.enumerable||!Object.hasOwn(descriptor,'value'))return null;
+   snapshot[key]=descriptor.value;
+  }
+  return snapshot;
+ }catch{return null;}
+}
 function capture(value){
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
     Reflect.ownKeys(value).length!==3||
@@ -82,24 +98,24 @@ export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query
  if(typeof lookupDurableAck!=='function'||typeof query!=='function')
   throw new TypeError('private_ack_reconciler_config_invalid');
  const api={async reconcile(value){
-  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
-     Reflect.ownKeys(value).length!==3||
-     !['requestId','attemptId','digest'].every(k=>Object.hasOwn(value,k))||
-     !uuid.test(value.requestId)||!uuid.test(value.attemptId)||!hex.test(value.digest))return result('invalid');
-  const request=value.requestId.toLowerCase(),attempt=value.attemptId.toLowerCase(),digest=value.digest;
+  const captured=snapshotFields(value,['requestId','attemptId','digest']);
+  if(!captured||typeof captured.requestId!=='string'||typeof captured.attemptId!=='string'||
+     typeof captured.digest!=='string'||!uuid.test(captured.requestId)||
+     !uuid.test(captured.attemptId)||!hex.test(captured.digest))return result('invalid');
+  const request=captured.requestId.toLowerCase(),attempt=captured.attemptId.toLowerCase(),
+   digest=captured.digest;
   let receipt;
   try{receipt=await lookupDurableAck(Object.freeze({requestId:request,attemptId:attempt,digest}));}
   catch{return result('reconciliation-required');}
   // A positive is possible ONLY after the trusted adapter returns an exact
   // durable correlation; no optimistic/time-based inferences or SDK success.
   if(receipt==null)return result('reconciliation-required');
-  if(!receipt||typeof receipt!=='object'||Object.getPrototypeOf(receipt)!==Object.prototype||
-     Reflect.ownKeys(receipt).length!==5||
-     !['requestId','attemptId','digest','ackDigest','status'].every(k=>Object.hasOwn(receipt,k))||
-     receipt.status!=='durable'||receipt.requestId!==request||receipt.attemptId!==attempt||
-     receipt.digest!==digest||!hex.test(receipt.ackDigest))return result('denied');
+  const proof=snapshotFields(receipt,['requestId','attemptId','digest','ackDigest','status']);
+  if(!proof||proof.status!=='durable'||proof.requestId!==request||
+     proof.attemptId!==attempt||proof.digest!==digest||
+     typeof proof.ackDigest!=='string'||!hex.test(proof.ackDigest))return result('denied');
   try{
-   const out=(await query(ackSql,[request,attempt,digest,receipt.ackDigest]))?.rows?.[0]?.r;
+   const out=(await query(ackSql,[request,attempt,digest,proof.ackDigest]))?.rows?.[0]?.r;
    return out?.status==='acknowledgement-recorded'?result('acknowledgement-recorded'):result('uncertain');
   }catch(error){
    if(error?.message==='private_denied')return result('denied');
@@ -112,11 +128,11 @@ export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query
   // Recovery is internal to the trusted confirmer and returns no attempt ID.
   // It never creates or replays a dispatch. Lost commit responses cannot
   // force a new one-shot attempt.
-  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
-     Reflect.ownKeys(value).length!==2||
-     !['requestId','digest'].every(k=>Object.hasOwn(value,k))||
-     !uuid.test(value.requestId)||!hex.test(value.digest))return result('invalid');
-  const request=value.requestId.toLowerCase(),digest=value.digest;
+  const captured=snapshotFields(value,['requestId','digest']);
+  if(!captured||typeof captured.requestId!=='string'||
+     typeof captured.digest!=='string'||!uuid.test(captured.requestId)||
+     !hex.test(captured.digest))return result('invalid');
+  const request=captured.requestId.toLowerCase(),digest=captured.digest;
   let found;
   try{found=(await query(lookupSql,[request,digest]))?.rows?.[0]?.r;}
   catch(error){
@@ -124,10 +140,12 @@ export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query
    if(error?.message==='private_invalid')return result('invalid');
    return result('uncertain');
   }
-  if(found?.status==='no-intent')return result('reconciliation-required');
-  if(found?.status!=='intent-found'||!uuid.test(found.attemptId)||
-    !['intent','uncertain','acknowledged'].includes(found.state))return result('uncertain');
-  return api.reconcile({requestId:request,attemptId:found.attemptId.toLowerCase(),digest});
+  if(snapshotFields(found,['status'])?.status==='no-intent')return result('reconciliation-required');
+  const intent=snapshotFields(found,['status','attemptId','state']);
+  if(!intent||intent.status!=='intent-found'||typeof intent.attemptId!=='string'||
+     !uuid.test(intent.attemptId)||
+     !['intent','uncertain','acknowledged'].includes(intent.state))return result('uncertain');
+  return api.reconcile({requestId:request,attemptId:intent.attemptId.toLowerCase(),digest});
  }
  };
  return Object.freeze(api);
