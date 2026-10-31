@@ -19,10 +19,15 @@ function validateAccount(account){
 }
 export function validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB}){
  const knownProjects=new Set(['iyapppmeieqhflnzslao','ueuguguoladoqvtxkumt']);
- if(confirmation!=='ISOLATED_NONPRODUCTION_TEST_ACCOUNTS'||
-    typeof projectRef!=='string'||!/^[a-z0-9]{20}$/.test(projectRef)||knownProjects.has(projectRef)||
-    url!==`https://${projectRef}.supabase.co`||
-    !validateAccount(accountA)||!validateAccount(accountB)||
+ const hosted=confirmation==='ISOLATED_NONPRODUCTION_TEST_ACCOUNTS'&&
+   typeof projectRef==='string'&&/^[a-z0-9]{20}$/.test(projectRef)&&
+   !knownProjects.has(projectRef)&&url===`https://${projectRef}.supabase.co`;
+ // Standalone CLI GoTrue is reachable only through an exact loopback origin.
+ // This cannot be triggered with a public hostname, remote project ref, or
+ // a hosted confirmation string.
+ const local=confirmation==='ISOLATED_LOCAL_GOTRUE_TEST_STACK'&&
+   projectRef==='local-gotrue-only'&&url==='http://127.0.0.1:54321';
+ if((!hosted&&!local)||!validateAccount(accountA)||!validateAccount(accountB)||
     accountA.email.toLowerCase()===accountB.email.toLowerCase())throw new Error('auth_probe_isolation_not_established');
  return Object.freeze({url,projectRef});
 }
