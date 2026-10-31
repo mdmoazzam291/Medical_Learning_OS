@@ -18,7 +18,7 @@ test('nonproduction guard blocks both actual project refs and misleading test se
   {...setup,accountB:{email:userB.email,password:'short'}}
  ])assert.throws(()=>validateNonproductionAuthProbeConfig(value),/auth_probe_isolation_not_established/);
 });
-function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false,revokedRefreshNetworkError=false,revokedRefreshTimeout=false}={}){
+function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false,revokedRefreshNetworkError=false,revokedRefreshTimeout=false,forgedProviderErrorClass=false,wrongClientUrl=false}={}){
  const actor={ [userA.email]:'11111111-1111-4111-8111-111111111111',[userB.email]:'22222222-2222-4222-8222-222222222222'};
  const sessions=new Map(),tokens=new Map();let serial=0;const actions=[];
  function mint(session){
@@ -30,7 +30,7 @@ function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=
  }
  return {actions,createClient(){
   let activeId=null;
-  return {auth:{
+  return {supabaseUrl:wrongClientUrl?'https://iyapppmeieqhflnzslao.supabase.co':setup.url,auth:{
    async signInWithPassword({email,password}){
     const account=email===userA.email?userA:email===userB.email?userB:null;
     if(!account||account.password!==password)return {data:null,error:{message:'invalid'}};
@@ -48,7 +48,7 @@ function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=
     if(!s){
      if(revokedRefreshNetworkError)throw Error('failed to fetch');
      if(revokedRefreshTimeout)return {data:null,error:{message:'upstream timed out',code:'request_timeout',status:504}};
-     return {data:null,error:{message:'refresh rejected',code:'refresh_token_not_found',status:400}};
+     return {data:null,error:{name:forgedProviderErrorClass?'AuthRetryableFetchError':'AuthApiError',message:'refresh rejected',code:'refresh_token_not_found',status:400}};
     }
     activeId=s.id;actions.push('refresh');return {data:{session:mint(s)},error:null};
    },
@@ -137,4 +137,21 @@ test('network failure or timeout is never mistaken for proven refresh-token revo
   );
   assert.ok(fake.actions.includes('logout:local'));
  }
+});
+
+test('refuses an SDK client configured for a different Auth endpoint before sign-in',async()=>{
+ const fake=mockProvider({wrongClientUrl:true});
+ await assert.rejects(
+  runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),
+  error=>error.message==='auth_provider_probe_failed'
+ );
+ assert.equal(fake.actions.length,0,'no login, logout or other remote operation');
+});
+test('does not trust client error codes pretending to be a provider API denial',async()=>{
+ const fake=mockProvider({forgedProviderErrorClass:true});
+ await assert.rejects(
+  runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),
+  error=>error.message==='auth_provider_probe_failed'
+ );
+ assert.ok(fake.actions.includes('logout:local'));
 });
