@@ -1,3 +1,10 @@
+## 2026-10-31 — Real disposable GoTrue session-writer race: sign-out blocked, refresh unblocked
+
+- [Foundation run #41197278066](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41197278066), `auth-local-gotrue` job PASS. Real local GoTrue sign-out **waited** on `auth.sessions` `FOR SHARE` and then removed the test session row; refresh of an independently generated active test session **did not wait**, completed, and preserved its row.
+- This is a **negative boundary finding**, not a global security incident: one tested refresh operation did not serialize on the locked session row. No general provider-lifecycle atomicity can be claimed. Observer uses a disposable PostgreSQL administrator to lock only test session IDs; no managed Auth ACL, table, role, trigger or data changed by test SQL.
+- Previously proven live-local privileges still block a supported narrow app login. Therefore **do not enable or deploy evidence gateway**; no bypass via `service_role`, privileged owner or installed Auth policies. Detailed reproducible evidence: `docs/evidence/2026-10-31-local-gotrue-session-writer-races.md`.
+- Next design slice: private owned authority / invalidation freshness gate without managed-Auth writes, with explicit failure semantics, followed by disposable race/receipt reconciliation tests. No hosted provider/user change, clinical, rights or learner release approval.
+
 ## 2026-10-31 — Real local GoTrue Auth table privilege feasibility: BLOCKED
 
 - [Foundation #41196030994](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41196030994) `auth-local-gotrue` **PASS**: catalog-only privilege matrix confirmed `anon`, `authenticated`, and `service_role` each have `auth` schema USAGE but **no direct SELECT or id UPDATE** on `auth.users` or `auth.sessions`; they cannot be assumed to provide the proposed `FOR SHARE` row-lock boundary. The provider-owned `supabase_auth_admin` does have those privileges but is not a valid restricted app login.
