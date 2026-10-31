@@ -34,6 +34,23 @@ function pinnedEndpoint(value){
   return url.href;
  }catch{return null;}
 }
+// Settle on deadline even when injected credential, fetch, or stream
+// implementations ignore AbortSignal. Late rejections are consumed.
+async function bounded(call,signal){
+ if(signal.aborted)return null;
+ return new Promise(resolve=>{
+  let settled=false;
+  const finish=value=>{
+   if(settled)return;
+   settled=true;signal.removeEventListener('abort',aborted);resolve(value);
+  };
+  const aborted=()=>finish(null);
+  signal.addEventListener('abort',aborted,{once:true});
+  try{Promise.resolve(call()).then(finish,()=>finish(null));}
+  catch{finish(null);}
+  if(signal.aborted)aborted();
+ });
+}
 async function readBoundedJson(response,signal){
  if(response?.status!==200||
     !/^application\/json(?:\s*;\s*charset=utf-8)?$/i.test(
@@ -44,7 +61,9 @@ async function readBoundedJson(response,signal){
  try{
   while(true){
    if(signal.aborted)return null;
-   const {done,value}=await reader.read();
+   const item=await bounded(()=>reader.read(),signal);
+   if(!item)return null;
+   const {done,value}=item;
    if(done)break;
    if(!(value instanceof Uint8Array)||value.byteLength===0)return null;
    size+=value.byteLength;
@@ -52,9 +71,13 @@ async function readBoundedJson(response,signal){
    chunks.push(value);
   }
   if(size===0)return null;
-  return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Buffer.concat(chunks)));
+  const parsed=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Buffer.concat(chunks)));
+  return signal.aborted?null:parsed;
  }catch{return null;}
- finally{try{await reader.cancel();}catch{}}
+ finally{
+  // Cancellation may also never settle; do not exceed the same deadline.
+  try{await bounded(()=>reader.cancel(),signal);}catch{}
+ }
 }
 /**
  * Strict, one-shot read-only lookup protocol. POST is retrieval-only by
@@ -72,14 +95,14 @@ export function createSourceEvidencePrivateReceiptHttpLookup({
  return async function fetchSignedReceipt(value){
   const req=snapshotRequest(value);
   if(!req)return null;
-  let credential;
-  try{credential=await getCredential();}
-  catch{return null;}
-  if(typeof credential!=='string'||credential.length<16||credential.length>4096||
-     !/^[\x21-\x7e]+$/.test(credential))return null;
-  const signal=AbortSignal.timeout(timeoutMs);
+  const controller=new AbortController(),signal=controller.signal;
+  // A referenced timer keeps the deadline real even in an otherwise idle test.
+  const deadline=setTimeout(()=>controller.abort(),timeoutMs);
   try{
-   const response=await fetchImpl(url,{
+   const credential=await bounded(()=>getCredential(),signal);
+   if(signal.aborted||typeof credential!=='string'||credential.length<16||
+      credential.length>4096||!/^[\x21-\x7e]+$/.test(credential))return null;
+   const response=await bounded(()=>fetchImpl(url,{
     method:'POST',redirect:'error',credentials:'omit',cache:'no-store',
     referrerPolicy:'no-referrer',signal,
     headers:Object.freeze({
@@ -87,9 +110,11 @@ export function createSourceEvidencePrivateReceiptHttpLookup({
      'accept':'application/json','content-type':'application/json'
     }),
     body:JSON.stringify({requestId:req.requestId,attemptId:req.attemptId,digest:req.digest})
-   });
-   // One HTTP lookup; no retry after network, status or parse ambiguity.
+   }),signal);
+   if(!response||signal.aborted)return null;
+   // No second request after a timeout, connection loss, or parse ambiguity.
    return await readBoundedJson(response,signal);
   }catch{return null;}
+  finally{clearTimeout(deadline);}
  };
 }
