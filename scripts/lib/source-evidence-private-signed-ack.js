@@ -64,7 +64,7 @@ export function createSourceEvidenceSignedAckLookup({
    if(trustedPublicKey.type!=='public')throw new TypeError('private_key_not_allowed');
    key=trustedPublicKey;
   }else if(typeof trustedPublicKey==='string'&&
-     /^-----BEGIN PUBLIC KEY-----\\r?\\n/.test(trustedPublicKey)){
+     /^-----BEGIN PUBLIC KEY-----\r?\n/.test(trustedPublicKey)){
    key=createPublicKey(trustedPublicKey);
   }else throw new TypeError('unsupported_key_format');
  }catch{throw new TypeError('private_signed_ack_configuration_invalid');}
