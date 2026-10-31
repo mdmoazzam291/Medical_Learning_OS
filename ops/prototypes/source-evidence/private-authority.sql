@@ -141,6 +141,21 @@ begin
  end if;
  return pg_catalog.jsonb_build_object('status','acknowledgement-recorded');
 end;$$;
+-- Trusted confirmer-only lookup for a commit response lost *before*
+-- the gateway saw its generated attempt ID. Never enables dispatch.
+create function evidence_private.inspect_intent(p_request uuid,p_digest text)
+returns jsonb language plpgsql security definer set search_path='' as $$
+declare original evidence_private.receipts;old evidence_private.delivery_attempts;
+begin
+ if p_request is null or p_digest is null or p_digest !~ '^[a-f0-9]{64}$'
+ then raise exception 'private_invalid';end if;
+ select * into original from evidence_private.receipts where request_id=p_request;
+ if not found or original.digest<>p_digest then raise exception 'private_denied';end if;
+ select * into old from evidence_private.delivery_attempts where request_id=p_request;
+ if not found then return pg_catalog.jsonb_build_object('status','no-intent');end if;
+ return pg_catalog.jsonb_build_object('status','intent-found',
+  'attemptId',old.attempt_id,'state',old.status);
+end;$$;
 reset role;
 revoke all on all tables in schema evidence_private from public;
 revoke all on all functions in schema evidence_private from public;
@@ -149,6 +164,7 @@ grant execute on function evidence_private.control(uuid,boolean,int) to evidence
 grant execute on function evidence_private.stage(uuid,uuid,uuid,text),
  evidence_private.reserve_intent(uuid,uuid,uuid,text),
  evidence_private.mark_uncertain(uuid,uuid) to evidence_private_gateway;
-grant execute on function evidence_private.record_ack(uuid,uuid,text,text) to evidence_private_confirmer;
+grant execute on function evidence_private.record_ack(uuid,uuid,text,text),
+ evidence_private.inspect_intent(uuid,text) to evidence_private_confirmer;
 -- The private state, receipts, intent attempts and internal guard have no direct gateway/confirmer ACLs.
 -- IMPORTANT: record_ack is an audit assertion by a trusted confirmer, NOT proof of external content transfer.
