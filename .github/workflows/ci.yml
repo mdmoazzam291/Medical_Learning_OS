@@ -121,7 +121,7 @@ jobs:
           grep -F "advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-native-negative.log"
           grep -F "Native fixture cleanup PASS" "$RUNNER_TEMP/mlos-native-negative.log"
   evidence-native-postgres17:
-    # Isolated major/minor-parity proof; never connects to hosted Supabase.
+    # Isolated major/minor-parity proof; no hosted connection.
     runs-on: ubuntu-24.04
     timeout-minutes: 6
     steps:
