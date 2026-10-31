@@ -18,7 +18,7 @@ async function main(){
     !e.MLOS_AUTH_PROBE_SDK_MODULE_URL.startsWith('file:///'))throw Error('auth_probe_isolation_not_established');
  const sdk=await import(e.MLOS_AUTH_PROBE_SDK_MODULE_URL);
  if(typeof sdk.createClient!=='function')throw Error('auth_probe_dependency_invalid');
- const createClient=()=>sdk.createClient(url,key,{
+ const createClient=(verifiedUrl)=>sdk.createClient(verifiedUrl,key,{
   auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}
  });
  const report=await runIsolatedAuthProviderProbe({createClient,...cfg});
