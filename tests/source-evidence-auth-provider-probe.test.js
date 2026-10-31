@@ -181,7 +181,7 @@ test('signed-out access observations do not convert provider outages into false 
  }
 });
 
-test('genuine local GoTrue target is allowed only at exact loopback origin and opt-in',()=>{
+test('genuine local GoTrue target is allowed only at exact loopback origin and opt-in',async()=>{
  const local={...setup,url:'http://127.0.0.1:54321',
   projectRef:'local-gotrue-only',confirmation:'ISOLATED_LOCAL_GOTRUE_TEST_STACK'};
  assert.equal(validateNonproductionAuthProbeConfig(local).url,local.url);
