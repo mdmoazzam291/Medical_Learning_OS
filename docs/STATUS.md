@@ -1,3 +1,9 @@
+## 2026-10-31 — Real local GoTrue Auth table privilege feasibility: BLOCKED
+
+- [Foundation #41196030994](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41196030994) `auth-local-gotrue` **PASS**: catalog-only privilege matrix confirmed `anon`, `authenticated`, and `service_role` each have `auth` schema USAGE but **no direct SELECT or id UPDATE** on `auth.users` or `auth.sessions`; they cannot be assumed to provide the proposed `FOR SHARE` row-lock boundary. The provider-owned `supabase_auth_admin` does have those privileges but is not a valid restricted app login.
+- This is a disposable local GoTrue observation only. The test did not query/lock Auth rows, modify any provider managed tables, create roles/grants/policies, or touch hosted accounts/data.
+- **Decision:** as-is narrow Auth-row locking is **blocked**. No service-role or owner credential fallback; investigate supported provider Auth ACL guarantees, else design a private authority with explicit revocation-freshness requirements. Neither is deployment-approved. Details: `docs/evidence/2026-10-31-local-gotrue-auth-privilege-feasibility.md`. Draft PR #346, gateway OFF.
+
 
 
 ## 2026-10-31 — Real local GoTrue Auth catalog compatibility PASS
