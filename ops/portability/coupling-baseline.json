@@ -217,9 +217,6 @@
     "sentry",
     "supabase"
   ],
-  "scripts/source-evidence-auth-local-catalog-check.mjs": [
-    "supabase"
-  ],
   "scripts/source-evidence-auth-local-check.mjs": [
     "supabase"
   ],
@@ -720,9 +717,6 @@
     "supabase"
   ],
   "supabase/verification/service-boundary-audit.sql": [
-    "supabase"
-  ],
-  "tests/source-evidence-auth-catalog-probe.test.js": [
     "supabase"
   ],
   "web/account.html": [
