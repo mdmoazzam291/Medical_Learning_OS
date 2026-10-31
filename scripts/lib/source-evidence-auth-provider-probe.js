@@ -26,12 +26,24 @@ export function validateNonproductionAuthProbeConfig({url,projectRef,confirmatio
     accountA.email.toLowerCase()===accountB.email.toLowerCase())throw new Error('auth_probe_isolation_not_established');
  return Object.freeze({url,projectRef});
 }
-async function safeUser(client,token){
- try{
-  const result=await client.auth.getUser(token);
-  const id=result?.error==null?result?.data?.user?.id:null;
-  return typeof id==='string'&&uuid.test(id)?id.toLowerCase():null;
- }catch{return null;}
+// A rejected credential is evidence only if Auth itself explicitly rejects it.
+// Transport errors, malformed SDK responses and timeouts are inconclusive and
+// must fail this acceptance run rather than masquerade as a rejected JWT.
+const rejectedAccessCodes=new Set([
+ 'bad_jwt','session_not_found','session_expired','user_not_found','user_banned'
+]);
+async function observedUser(client,token){
+ let result;
+ try{result=await client.auth.getUser(token);}catch{throw reject();}
+ if(result?.error){
+  const e=result.error;
+  if(result?.data?.user!=null||e.name!=='AuthApiError'||
+     !rejectedAccessCodes.has(e.code)||![400,401,403,422].includes(e.status))throw reject();
+  return null;
+ }
+ const id=result?.data?.user?.id;
+ if(typeof id!=='string'||!uuid.test(id))throw reject();
+ return id.toLowerCase();
 }
 async function login(client,account){
  const result=await client.auth.signInWithPassword({email:account.email,password:account.password});
@@ -93,25 +105,25 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
   const first=await login(a1,accountA);signedA1=true;
   const second=await login(a2,accountA);signedA2=true;
   const other=await login(b,accountB);signedB=true;
-  const [id1,id2,idB]=await Promise.all([safeUser(verifier,first.access_token),safeUser(verifier,second.access_token),safeUser(verifier,other.access_token)]);
+  const [id1,id2,idB]=await Promise.all([observedUser(verifier,first.access_token),observedUser(verifier,second.access_token),observedUser(verifier,other.access_token)]);
   if(!id1||id1!==id2||!idB||id1===idB)throw reject();
   const c1=verifiedClaims(first.access_token,id1,url),c2=verifiedClaims(second.access_token,id1,url),cB=verifiedClaims(other.access_token,idB,url);
   if(new Set([c1.session,c2.session,cB.session]).size!==3)throw reject();
   const renewed=await rotate(a1,first.refresh_token);
-  if(await safeUser(verifier,renewed.access_token)!==id1)throw reject();
+  if(await observedUser(verifier,renewed.access_token)!==id1)throw reject();
   const cRenew=verifiedClaims(renewed.access_token,id1,url);
   if(cRenew.session!==c1.session)throw reject();
   await logout(a1,'local');signedA1=false;
   if(!await revokedRefresh(createClient,renewed.refresh_token,url))throw reject();
-  const oldLocalJwtRecognized=await safeUser(verifier,renewed.access_token)===id1;
-  if(await safeUser(verifier,second.access_token)!==id1)throw reject();
+  const oldLocalJwtRecognized=await observedUser(verifier,renewed.access_token)===id1;
+  if(await observedUser(verifier,second.access_token)!==id1)throw reject();
   await logout(a2,'global');signedA2=false;
   if(!await revokedRefresh(createClient,second.refresh_token,url))throw reject();
-  const oldGlobalJwtRecognized=await safeUser(verifier,second.access_token)===id1;
-  if(await safeUser(verifier,other.access_token)!==idB)throw reject();
+  const oldGlobalJwtRecognized=await observedUser(verifier,second.access_token)===id1;
+  if(await observedUser(verifier,other.access_token)!==idB)throw reject();
   const forged=renewed.access_token.split('.');
   forged[1]=Buffer.from(JSON.stringify({...JSON.parse(Buffer.from(forged[1],'base64url').toString('utf8')),sub:idB})).toString('base64url');
-  if(await safeUser(verifier,forged.join('.'))!==null)throw reject();
+  if(await observedUser(verifier,forged.join('.'))!==null)throw reject();
   return Object.freeze({
    status:'observed_nonproduction_provider',
    separateUsersAndSessions:true,refreshPreservedSession:true,
