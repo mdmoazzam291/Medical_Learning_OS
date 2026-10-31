@@ -223,7 +223,7 @@ test('direct /user observer only accepts bounded sandbox provider responses',asy
  assert.equal(seen[0].options.headers.authorization,'Bearer e30.e30.sig');
  assert.equal(seen[0].options.headers.apikey,'sb_publishable_dummy-local-sandbox');
  for(const [status,body] of [
-  [401,{error_code:'bad_jwt'}],[403,{error_code:'session_not_found'}],[422,{error_code:'session_expired'}],[403,{code:'session_not_found'}]
+  [401,{code:401,error_code:'bad_jwt'}],[403,{code:403,error_code:'session_not_found'}],[422,{error_code:'session_expired'}],[403,{code:'session_not_found'}]
  ]){
   const probe=createIsolatedAuthAccessObserver({...setup,apiKey:'sb_publishable_dummy-local-sandbox',
    fetchImpl:async()=>response(status,body)});
@@ -237,6 +237,7 @@ test('direct /user observer denies unavailable network, malformed response and a
   async()=>response(500,{code:'bad_jwt'}),
   async()=>response(401,{code:'invalid_credentials'}),
   async()=>response(403,{error_code:'session_not_found',code:'bad_jwt'}),
+  async()=>response(403,{error_code:'session_not_found',code:401}),
   async()=>response(403,{error_code:'unexpected_failure'}),
   async()=>response(401,{code:'session_not_found',id:'11111111-1111-4111-8111-111111111111'}),
   async()=>response(200,{id:'not-uuid'}),
