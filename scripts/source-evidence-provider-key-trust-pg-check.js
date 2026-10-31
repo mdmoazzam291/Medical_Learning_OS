@@ -6,7 +6,8 @@ import {createHash,generateKeyPairSync,sign,randomUUID} from 'node:crypto';
 import {startDisposableNativePostgres} from './lib/disposable-native-postgres.js';
 import {createSourceEvidencePrivateKeyTrustReader} from './lib/source-evidence-private-key-trust-reader.js';
 import {createSourceEvidenceTrustGatedAckLookup} from './lib/source-evidence-private-trust-gated-ack.js';
-import {createSourceEvidencePrivateAckReconciler,createSourceEvidencePrivateAuthorityPrototype} from './lib/source-evidence-private-authority-prototype.js';
+import {createSourceEvidencePrivateAuthorityPrototype} from './lib/source-evidence-private-authority-prototype.js';
+import {createSourceEvidencePrivateTrustLockedAckReconciler} from './lib/source-evidence-private-trust-locked-ack.js';
 const {postgres}=await import(process.env.NATIVE_PG_MODULE_URL||'@embedded-postgres/linux-x64');
 const {Client}=await import(process.env.PG_MODULE_URL||'pg');
 const server=await startDisposableNativePostgres({postgres}),clients=[];
@@ -72,6 +73,14 @@ try{
  const readTrust=createSourceEvidencePrivateKeyTrustReader({
   query:(sql,args)=>reader.query(sql,args)
  });
+ const rawAck='select evidence_private.record_ack($1,$2,$3,$4) as r';
+ const lockedAck='select evidence_private.key_record_ack($1,$2,$3,$4,$5,$6,$7,$8) as r';
+ await fail(confirmer.query(rawAck,[randomUUID(),randomUUID(),digest,ackDigest]),
+  /permission denied/);
+ await fail(gateway.query(lockedAck,[randomUUID(),randomUUID(),digest,ackDigest,
+  providerId,recipientId,firstKey,1]),/permission denied/);
+ await fail(reader.query(lockedAck,[randomUUID(),randomUUID(),digest,ackDigest,
+  providerId,recipientId,firstKey,1]),/permission denied/);
  const selector=Object.freeze({providerId,recipientId,keySha256:firstKey});
  assert.equal(await readTrust(selector),null);
  let fetches=0;
@@ -110,11 +119,9 @@ try{
  let release;
  const held=new Promise(resolve=>{release=resolve;});
  let writes=0;
- const gated=getLookup(publicKey,privateKey,async t=>{
-  started();await held;return providerAck(t,privateKey);
- });
- const reconciler=createSourceEvidencePrivateAckReconciler({
-  lookupDurableAck:gated,
+ const reconciler=createSourceEvidencePrivateTrustLockedAckReconciler({
+  fetchSignedReceipt:async t=>{started();await held;return providerAck(t,privateKey);},
+  trustedPublicKey:publicKey,providerId,recipientId,getTrustState:readTrust,
   query:async(sql,args)=>{writes++;return confirmer.query(sql,args);}
  });
  const pending=reconciler.reconcile(ackTarget);
@@ -131,8 +138,10 @@ try{
  assert.equal(await readTrust(selector),null);
  assert.equal((await getLookup(publicKey,privateKey)(ackTarget)),null);
  const newLookup=getLookup(nextPublicKey,nextPrivateKey);
- const accepted=createSourceEvidencePrivateAckReconciler({
-  lookupDurableAck:newLookup,query:(sql,args)=>confirmer.query(sql,args)
+ const accepted=createSourceEvidencePrivateTrustLockedAckReconciler({
+  fetchSignedReceipt:async t=>providerAck(t,nextPrivateKey),
+  trustedPublicKey:nextPublicKey,providerId,recipientId,getTrustState:readTrust,
+  query:(sql,args)=>confirmer.query(sql,args)
  });
  assert.deepEqual(await accepted.reconcile(ackTarget),{status:'acknowledgement-recorded'});
  assert.deepEqual(await proof.reserveIntent(original),{status:'reconciliation-required'});
@@ -154,6 +163,40 @@ try{
  assert.equal(observed,true,'private_key_trust_row_barrier_not_observed');
  assert.deepEqual(await blocked,{providerId,recipientId,keySha256:secondKey,epoch:4,enabled:false});
  assert.equal(await newLookup(ackTarget),null);
+ await fail(confirmer.query(rawAck,[original.requestId,intent.attemptId,digest,
+  ackDigest]),/permission denied/);
+ // Distinct new request and active key: revoke right after the THIRD trust
+ // read (the one immediately preceding key_record_ack). The SQL guard must
+ // reject and leave the one-shot attempt unresolved.
+ const thirdKeyPair=generateKeyPairSync('ed25519');
+ const thirdKey=fingerprint(thirdKeyPair.publicKey);
+ assert.equal((await controller.query(enroll,[providerId,recipientId,thirdKey]))
+  .rows[0].epoch,'5');
+ const later={requestId:randomUUID(),accessToken:token,digest};
+ assert.deepEqual(await proof.stage(later),{status:'staged'});
+ const laterIntent=await proof.reserveIntent(later);
+ const laterTarget={requestId:later.requestId,attemptId:laterIntent.attemptId,digest};
+ let trustReads=0,guardedWrites=0;
+ const snapshotThenRevoke=async selector=>{
+  const authority=await readTrust(selector);
+  if(++trustReads===3)
+   await controller.query(revoke,[providerId,recipientId]);
+  return authority;
+ };
+ const late=createSourceEvidencePrivateTrustLockedAckReconciler({
+  fetchSignedReceipt:async t=>providerAck(t,thirdKeyPair.privateKey),
+  trustedPublicKey:thirdKeyPair.publicKey,providerId,recipientId,
+  getTrustState:snapshotThenRevoke,
+  query:(sql,args)=>{guardedWrites++;return confirmer.query(sql,args);}
+ });
+ assert.deepEqual(await late.reconcile(laterTarget),{status:'denied'});
+ assert.equal(trustReads,3);
+ assert.equal(guardedWrites,1);
+ assert.equal((await inspector.query(
+  'select status from evidence_private.delivery_attempts where request_id=$1',
+  [later.requestId])).rows[0].status,'intent');
+ await fail(confirmer.query(lockedAck,[later.requestId,laterIntent.attemptId,
+  digest,ackDigest,providerId,recipientId,thirdKey,5]),/private_denied/);
  console.log('Private provider key trust PASS: restricted roles, retired-key guard, epoch rotation, midflight revoke, real SQL row-lock ordering, signed acknowledgement without redispatch.');
 }finally{
  await Promise.allSettled(clients.map(c=>c.query('rollback')));
