@@ -1,10 +1,13 @@
 -- Disposable row-lock investigation only. No provider Auth trigger or migration.
 create role evidence_authority_locker nologin noinherit nosuperuser nocreatedb nocreaterole nobypassrls;
+-- Extend only this disposable stand-in to match the hosted session expiry column.
+-- NEVER apply this file or its role/policy grants to managed Auth tables.
+alter table auth.sessions add column not_after timestamptz;
 grant usage on schema auth,public,evidence_probe to evidence_authority_locker;
 -- PostgreSQL row locking needs UPDATE privilege on at least one column.
 -- Locking also consults UPDATE USING; WITH CHECK(false) prohibits actual writes.
 grant select(id),update(id) on auth.users to evidence_authority_locker;
-grant select(id,user_id),update(id) on auth.sessions to evidence_authority_locker;
+grant select(id,user_id,not_after),update(id) on auth.sessions to evidence_authority_locker;
 grant select(singleton),update(singleton) on public.content_admin_account,evidence_probe.platform_feature to evidence_authority_locker;
 alter table auth.users enable row level security;
 alter table auth.sessions enable row level security;
@@ -22,7 +25,12 @@ returns void language plpgsql security definer set search_path='' as $$begin
  if p_actor is null or p_session is null then raise exception 'evidence_platform_denied';end if;
  perform id from auth.users where id=p_actor for share;
  if not found then raise exception 'evidence_platform_denied';end if;
- perform id from auth.sessions where id=p_session and user_id=p_actor for share;
+ -- A session row can survive its configured expiry. Use wall-clock time
+ -- rather than transaction-start now(), particularly after lock waits.
+ perform id from auth.sessions
+ where id=p_session and user_id=p_actor
+   and (not_after is null or not_after > pg_catalog.clock_timestamp())
+ for share;
  if not found then raise exception 'evidence_platform_denied';end if;
  perform singleton from public.content_admin_account where singleton=true for share;
  if not found then raise exception 'evidence_platform_denied';end if;
