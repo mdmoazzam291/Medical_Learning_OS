@@ -4,6 +4,8 @@ import {readFile,access} from 'node:fs/promises';
 import {installPlatformFixture,platformFixture as f} from './lib/source-evidence-platform-fixture.js';
 import {capabilityEnvelope} from './lib/source-evidence-capability-envelope.js';
 import {createSourceEvidencePrivateQuery} from './lib/source-evidence-private-boundary.js';
+import {createSourceEvidenceVerifiedUser} from './lib/source-evidence-private-boundary.js';
+import {createSourceEvidenceOwnerDelegation} from './lib/source-evidence-owner-delegation.js';
 import {startDisposableNativePostgres} from './lib/disposable-native-postgres.js';
 const {postgres}=await import(process.env.NATIVE_PG_MODULE_URL||'@embedded-postgres/linux-x64');
 const {Client}=await import(process.env.PG_MODULE_URL||'pg');
@@ -68,12 +70,24 @@ try{
  const broadQuery=createSourceEvidencePrivateQuery({createClient:()=>new Client({...server.config,user:'postgres'})});
  await assert.rejects(broadQuery('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args),/evidence_private_database_unavailable/);
  console.log('Private query adapter PASS: fresh direct narrow login, two exact calls, broad-login denial and canonical readback.');
+ // Simulate Supabase's documented still-valid access JWT after session expiry.
+ // This verifier intentionally continues to return an authentic user identity.
+ const retainedToken='e30.'+Buffer.from(JSON.stringify({sub:f.owner,session_id:f.session})).toString('base64url')+'.synthetic';
+ const verifyUser=createSourceEvidenceVerifiedUser({getUser:async token=>token===retainedToken?{data:{user:{id:f.owner}},error:null}:{data:{user:null},error:{message:'invalid'}}});
+ const delegation=createSourceEvidenceOwnerDelegation({verifyUser,query:privateQuery});
+ const retainedCandidate=await capabilityEnvelope();
+ const retainedInput={accessToken:retainedToken,candidate:{...retainedCandidate.p,requestId:retainedCandidate.b.requestId,expectedPackageDigest:retainedCandidate.b.packageDigest}};
+ const retainedTarget={accessToken:retainedToken,target:{packageId:e.b.packageId,packageVersion:e.b.packageVersion,packageDigest:e.b.packageDigest,requestId:e.b.requestId}};
  await g.query("update auth.sessions set not_after=now()-interval '1 minute' where id=$1",[f.session]);
  assert.equal((await g.query('select count(*)::int n from auth.sessions where id=$1',[f.session])).rows[0].n,1);
  await assert.rejects(stage(a,e),/evidence_platform_denied/);
  await assert.rejects(read(b,e),/evidence_platform_denied/);
+ assert.deepEqual(await delegation.stage(retainedInput),{status:'denied'});
+ assert.deepEqual(await delegation.readback(retainedTarget),{status:'denied'});
+ assert.equal((await g.query('select count(*)::int n from evidence_probe.requests where request_id=$1',[retainedCandidate.b.requestId])).rows[0].n,0);
  await g.query("update auth.sessions set not_after=now()+interval '1 hour' where id=$1",[f.session]);
  assert.equal((await stage(a,e)).status,'committed');
+ assert.equal((await delegation.stage(retainedInput)).status,'accepted');
  await g.query('update auth.sessions set not_after=null where id=$1',[f.session]);
  assert.equal((await stage(a,e)).status,'committed');
  console.log('Authority retained session expiry PASS: expired retained row denied, future/null deadline accepted.');
