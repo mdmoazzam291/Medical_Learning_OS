@@ -68,6 +68,7 @@ try{
  await assert.rejects(controller.query(stageSql,[actor,session,randomUUID(),digest]),/permission denied/);
  await assert.rejects(gateway.query(ackSql,[randomUUID(),randomUUID(),digest,changedDigest]),/permission denied/);
  await assert.rejects(confirmer.query(intentSql,[actor,session,randomUUID(),digest]),/permission denied/);
+ await assert.rejects(gateway.query('select evidence_private.inspect_intent($1,$2) as r',[randomUUID(),digest]),/permission denied/);
  await controller.query('select evidence_private.control($1,true,60)',[actor]);
  const probe=createSourceEvidencePrivateAuthorityPrototype({
   getUser,expectedIssuer:issuer,query:(sql,args)=>gateway.query(sql,args)
@@ -169,6 +170,9 @@ try{
  assert.equal(verificationCount,2);
  assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[ambiguous.requestId])).rows[0].status,'intent');
  assert.deepEqual(await probe.reserveIntent(ambiguous),{status:'reconciliation-required'});
+ availableAck=false;
+ assert.deepEqual(await reconciler.recover({requestId:ambiguous.requestId,digest}),{status:'reconciliation-required'});
+ assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[ambiguous.requestId])).rows[0].status,'intent');
  // Concurrent reservations: exactly one one-shot attempt, other caller
  // awaits the receipt row and receives only a reconciliation status.
  const concurrent=input();
@@ -197,7 +201,8 @@ try{
  });
  assert.deepEqual(await lostAck.reconcile(lostTarget),{status:'uncertain'});
  assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[lostResponse.requestId])).rows[0].status,'acknowledged');
- assert.deepEqual(await reconciler.reconcile(lostTarget),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await reconciler.recover({requestId:lostResponse.requestId,digest}),{status:'acknowledgement-recorded'});
+ assert.deepEqual(await reconciler.recover({requestId:lostResponse.requestId,digest:changedDigest}),{status:'denied'});
  assert.deepEqual(await probe.reserveIntent(lostResponse),{status:'reconciliation-required'});
  console.log('Private authority acknowledgement PASS: committed acknowledgement with lost response reconciles idempotently without dispatch retry.');
  // Expired MLOS lease denies even with a still positive network Auth verdict.
