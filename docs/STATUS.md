@@ -1,3 +1,10 @@
+## 2026-10-31 — Private delivery-intent ledger replaces misleading delivery marker
+
+- **Implemented in disposable private authority fixture only:** removed `receipts.delivered_at` and `deliver()`; added `delivery_attempts` one-shot `intent`/`uncertain`/`acknowledged` records, `reserve_intent()`, `mark_uncertain()`, and separate confirmer-only `inspect_intent()` and `record_ack()` RPCs. No hosted migrations or real outbound endpoint.
+- Source adapter now exposes `reserveIntent` and a **separate internal** `createSourceEvidencePrivateAckReconciler` with exact durable acknowledgement correlation. Never labels a SQL commit as actual learner delivery. No automatic retry after an ambiguous attempt.
+- Disposable native PG17/18 and unit tests exercise simultaneous reservations, provider denial after intent commit, lost acknowledgement response, unknown attempt ID recovery, wrong proof/role, idempotent acknowledgement, revoked epochs and private lease expiry. **Only mark final exact-head CI as passed after checking current run**.
+- The durable acknowledgement provider in tests is a synthetic callback. No real transport/signature, approved credential, provider revocation atomicity, copyright or medical reviewer authorization exists. Evidence gateway remains OFF and PR #346 DRAFT/unmerged. Design and limits: `docs/evidence/2026-10-31-private-delivery-intent-reconciliation.md`.
+
 ## 2026-10-31 — MLOS-owned private authority epoch/lease gate: native prototype PASS
 
 - [Foundation run 41198683455](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41198683455): real disposable PostgreSQL **17.6 and 18.6 jobs passed** the separate `evidence_private` schema and network-verifier-adapter experiment. It uses zero managed Auth tables; separate no-login owner, narrowly executable gateway and controller fixture roles, and exact `stage`/`deliver` functions. All roles remain disposable local trust accounts, not hosted or deployable credentials.
