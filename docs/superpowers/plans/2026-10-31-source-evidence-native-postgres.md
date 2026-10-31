@@ -14,13 +14,16 @@ Never accept a database URL. TCP disabled; private temporary cluster/socket; clo
 Missing lock falsely passing overlap tests; stale state after lock wait; rollback orphan writes; accepting receipt before actual commit; cleanup leaks. Real pg_locks observations, known negative control and final cleanup checks cover these.
 
 ### Task 1: Native fixture and deterministic races
-- [ ] Build disposable server helper and independent-client check script.
-- [ ] Observe barrier failure with in-memory SQL mutation omitting advisory locks; run checked-in SQL and verify blocked independent clients and actual commit order.
-- [ ] Test identical/conflicting requests, withdrawal first, stage first, authority/policy first and rollback releasing a waiter.
+- [x] Build disposable server helper and independent-client check script.
+- [x] Observe barrier failure with in-memory SQL mutation omitting advisory locks; run checked-in SQL and verify blocked independent clients and actual commit order.
+- [x] Test identical/conflicting requests, withdrawal first, stage first, authority/policy first and rollback releasing a waiter.
 
 ### Task 2: Native recovery and final verification
-- [ ] Export native database, restore into a fresh native database using existing audited helper, compare exact digest/receipt and preserve withdrawals/ACL.
-- [ ] Run prior probes plus npm test/check, fresh read-only review and cleanup confirmation.
-- [ ] Update README/handoff/status and persist PR346 feature checkpoint, with hosted Auth/production/current-platform gaps explicit.
+- [x] Export native database, restore into a fresh native database using existing audited helper, compare exact digest/receipt and preserve withdrawals/ACL.
+- [x] Run prior probes plus npm test/check, fresh read-only review and cleanup confirmation.
+- [x] Update README/handoff/status and persist PR346 feature checkpoint, with hosted Auth/production/current-platform gaps explicit.
 
 Execution ruling: local namespace maps only UID0; nobody chown fails EINVAL and user namespace creation is denied. Do not bypass PostgreSQL's root refusal. Run native check on existing GitHub Actions non-root Ubuntu runner via isolated test-only job. Local syntax/full-suite checks remain useful but cannot certify native races.
+
+
+Execution evidence: local UID restriction handled without bypass. Native CI implementation37de68c, run41171036865/job124448843962 SUCCESS: PostgreSQL18.6, three backend PIDs, seven deterministic real lock races/rollback schedules, native recovery/ACL, expected omit-locks barrier failure and both cleanup paths. Local npm test1621PASS/0FAIL; checkPASS13services/250coupling. Read-only static review found no blocker; hosted Auth and crash durability remain unverified.
