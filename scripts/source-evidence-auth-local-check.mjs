@@ -38,7 +38,8 @@ async function main(){
   if(out?.error)throw Error('local_auth_probe_signup_cleanup_failed');
  }
  phase='provider_protocol';
- const observeAccess=createIsolatedAuthAccessObserver({...config,apiKey:key});
+ const observeAccess=createIsolatedAuthAccessObserver({...config,apiKey:key,
+  onDiagnostic:label=>{phase='provider_access_'+label;}});
  const result=await runIsolatedAuthProviderProbe({...config,createClient,observeAccess,onPhase:p=>{phase='protocol_'+p;}});
  process.stdout.write(JSON.stringify({...result,environment:'disposable_local_gotrue'})+'\n');
 }
