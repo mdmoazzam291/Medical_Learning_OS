@@ -72,15 +72,23 @@ export function createSourceEvidencePrivateAuthorityPrototype({getUser,query,exp
    if(error?.message==='private_invalid')return result('invalid');
    return result('uncertain');
   }
+  // A database driver is a trust boundary too. Snapshot the complete returned
+  // data shape before calling Auth again, rather than re-reading a getter or a
+  // mutable driver result after an await. An unknown/malformed shape fails closed.
+  const row=kind==='stage'?snapshotFields(r,['status']):
+    snapshotFields(r,['status','attemptId'])??snapshotFields(r,['status']);
+  if(kind==='reserve'&&row?.status==='reconciliation-required'&&
+     !Object.hasOwn(row,'attemptId'))return result('reconciliation-required');
   const expected=kind==='stage'?'staged':'intent-recorded';
-  if(kind==='reserve'&&r?.status==='reconciliation-required')return result('reconciliation-required');
-  if(r?.status!==expected)return result('uncertain');
-  if(kind==='reserve'&&!uuid.test(r.attemptId))return result('uncertain');
+  if(!row||row.status!==expected)return result('uncertain');
+  if(kind==='reserve'&&(typeof row.attemptId!=='string'||!uuid.test(row.attemptId)))
+    return result('uncertain');
   // A new provider verification before returning prevents replay of a cached
   // provider success. It does NOT make provider state atomic with SQL commit.
   const again=await identity(captured.token);
   if(!again||again.actor!==id.actor||again.session!==id.session)return result('denied');
-  return kind==='stage'?result('staged'):Object.freeze({status:'intent-recorded',attemptId:r.attemptId.toLowerCase()});
+  return kind==='stage'?result('staged'):
+    Object.freeze({status:'intent-recorded',attemptId:row.attemptId.toLowerCase()});
  }
  return Object.freeze({
   stage:input=>run('stage',input),
