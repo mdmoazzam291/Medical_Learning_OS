@@ -5,6 +5,7 @@ import ledger from '../../data/competency-evidence-proposals.json' with {type:'j
 import curriculum from '../../data/preparation-curriculum.js';
 import {validateDualExamSyllabusFoundation} from './dual-exam-syllabus-foundation.js';
 import {validateNmcRightsRegister,nmcCitationOnlyPreflight} from './nmc-cbme-rights.js';
+import subjectTargets from '../../data/nmc-2024-competency-counts.json' with {type:'json'};
 const fail=()=>{throw new TypeError('competency_evidence_invalid');};
 const shape=(v,keys)=>v&&typeof v==='object'&&!Array.isArray(v)&&
  Object.keys(v).sort().join('|')===[...keys].sort().join('|');
@@ -28,6 +29,7 @@ export function validateCompetencyEvidenceProposals(input,{
     input.scope!=='NEET-PG and INI-CET proposals, NOT approved syllabus'||
     !Array.isArray(input.competencyProposals)||input.competencyProposals.length>2000)fail();
  const bySubject=new Map(base.subjects.map(s=>[s.subjectId,s]));
+ const sourceLegends=new Map(subjectTargets.subjects.map(s=>[s.subjectId,s.printedLegend]));
  const registeredSources=new Set(base.sources.map(s=>s.sourceId));
  const registeredPaths=new Set(preparationRegistry.pathways.filter(p=>p.status==='active')
   .map(p=>p.pathwayVersionId));
@@ -41,6 +43,8 @@ export function validateCompetencyEvidenceProposals(input,{
      row.sourceVersion!=='2024-09-12'||!text(row.sourceLocator,12,500)||
      !Number.isSafeInteger(row.documentPage)||row.documentPage<1||row.documentPage>10000||
      !code(row.competencyCode)||!bySubject.has(row.subjectId)||
+     !sourceLegends.has(row.subjectId)||
+     row.competencyCode.match(/^[A-Z]+/)[0]!==sourceLegends.get(row.subjectId)||
      !bySubject.get(row.subjectId).domains.some(d=>d.domainId===row.moduleId)||
      !text(row.analystSummary,12,160)||
      row.sourceRights!=='unreviewed'||row.sourceVerification!=='unverified'||

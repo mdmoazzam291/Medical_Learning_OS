@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-per-subject-reconciliation-review-snapshot",
+  "status": "frozen_candidate_not_approved",
+  "evidenceCommit": "c2612636aa1ee21fa915d9e9f603e4437c96b926",
+  "sourceRights": "citation_only",
+  "baseSourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "evidenceFiles": [
+    {
+      "path": "data/nmc-2024-competency-counts.json",
+      "gitBlobSha": "783aa0f070a1bc3e37a31badb66e0dcadbc0bbfa"
+    },
+    {
+      "path": "docs/evidence/nmc-codecell-page-receipts.json",
+      "gitBlobSha": "e279afeadc493ffcb6092d028448560b862793ac"
+    },
+    {
+      "path": "docs/evidence/nmc-source-adjudication-packet.json",
+      "gitBlobSha": "ad98e027601f83ed940a6873075710947e568dcc"
+    }
+  ],
+  "subjects": [
+    {
+      "subjectId": "anatomy",
+      "publishedBaseSummary": 413,
+      "identifierAppearances": 413,
+      "distinctWhitespaceStrippedRawTokens": 413,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "physiology",
+      "publishedBaseSummary": 136,
+      "identifierAppearances": 136,
+      "distinctWhitespaceStrippedRawTokens": 136,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "biochemistry",
+      "publishedBaseSummary": 84,
+      "identifierAppearances": 84,
+      "distinctWhitespaceStrippedRawTokens": 84,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "pharmacology",
+      "publishedBaseSummary": 92,
+      "identifierAppearances": 92,
+      "distinctWhitespaceStrippedRawTokens": 92,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "pathology",
+      "publishedBaseSummary": 182,
+      "identifierAppearances": 182,
+      "distinctWhitespaceStrippedRawTokens": 182,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "microbiology",
+      "publishedBaseSummary": 74,
+      "identifierAppearances": 74,
+      "distinctWhitespaceStrippedRawTokens": 74,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "forensic-medicine",
+      "publishedBaseSummary": 158,
+      "identifierAppearances": 158,
+      "distinctWhitespaceStrippedRawTokens": 158,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "community-medicine",
+      "publishedBaseSummary": 136,
+      "identifierAppearances": 136,
+      "distinctWhitespaceStrippedRawTokens": 136,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "medicine",
+      "publishedBaseSummary": 525,
+      "identifierAppearances": 532,
+      "distinctWhitespaceStrippedRawTokens": 529,
+      "repeatedAppearances": 3,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 4,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "pediatrics",
+      "publishedBaseSummary": 406,
+      "identifierAppearances": 253,
+      "distinctWhitespaceStrippedRawTokens": 253,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": -153,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "psychiatry",
+      "publishedBaseSummary": 17,
+      "identifierAppearances": 17,
+      "distinctWhitespaceStrippedRawTokens": 17,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "dermatology",
+      "publishedBaseSummary": 48,
+      "identifierAppearances": 48,
+      "distinctWhitespaceStrippedRawTokens": 48,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "surgery",
+      "publishedBaseSummary": 133,
+      "identifierAppearances": 132,
+      "distinctWhitespaceStrippedRawTokens": 132,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": -1,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "ophthalmology",
+      "publishedBaseSummary": 60,
+      "identifierAppearances": 59,
+      "distinctWhitespaceStrippedRawTokens": 59,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": -1,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "ent",
+      "publishedBaseSummary": 63,
+      "identifierAppearances": 63,
+      "distinctWhitespaceStrippedRawTokens": 63,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "obstetrics-gynaecology",
+      "publishedBaseSummary": 141,
+      "identifierAppearances": 142,
+      "distinctWhitespaceStrippedRawTokens": 142,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 1,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "orthopaedics",
+      "publishedBaseSummary": 40,
+      "identifierAppearances": 40,
+      "distinctWhitespaceStrippedRawTokens": 40,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "anaesthesia",
+      "publishedBaseSummary": 52,
+      "identifierAppearances": 52,
+      "distinctWhitespaceStrippedRawTokens": 52,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 1,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    },
+    {
+      "subjectId": "radiology",
+      "publishedBaseSummary": 21,
+      "identifierAppearances": 21,
+      "distinctWhitespaceStrippedRawTokens": 21,
+      "repeatedAppearances": 0,
+      "nonstandardCells": 0,
+      "differenceFromPublished": 0,
+      "normalizationApproved": false,
+      "independentlyReviewed": false
+    }
+  ],
+  "totals": {
+    "publishedBaseSummary": 2781,
+    "identifierAppearances": 2634,
+    "distinctRawTokens": 2631,
+    "repeatedAppearances": 3,
+    "netDifferenceFromPublished": -150,
+    "subjectsWithCountMatch": 14
+  },
+  "duplicateRawTokens": [
+    {
+      "code": "GM9.8",
+      "pdfPage": 297,
+      "appearances": 2
+    },
+    {
+      "code": "GM14.1",
+      "pdfPage": 304,
+      "appearances": 2
+    },
+    {
+      "code": "GM14.2",
+      "pdfPage": 304,
+      "appearances": 2
+    }
+  ],
+  "normalizationPolicy": {
+    "rawTokensRetained": true,
+    "proposalsApplied": false,
+    "semanticIdentityInferred": false
+  },
+  "amendmentPolicy": {
+    "PS9_2Deletion": "pending_review_application_not_subtracted_from_base_observations",
+    "PY9_1_PE6_4": "replacement_wording_references_no_count_change_inferred",
+    "effectiveAmendedDenominator": null
+  },
+  "limits": [
+    "Raw token count is not semantic competency identity count.",
+    "14subject count matches are not source approval or no-omission proof.",
+    "150net discrepancy is not150verified missing competencies.",
+    "Detailed raw corpus remains transient;fixed snapshot freezes aggregate evidence only.",
+    "Supplementary/global counts are not added to base denominator."
+  ],
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "sourceApproval": false,
+    "clinicalApproval": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  }
+}

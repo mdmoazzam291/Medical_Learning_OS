@@ -1,0 +1,13 @@
+# Offline exact package/case/source resolution
+
+`resolveSourceEvidenceCase(packageCandidate, selection, options)` validates and snapshots both inputs before asynchronous hashing. Package uses the existing exact {packageId,packageVersion,cases} source-row contract. Selection requires exactly packageId, packageVersion, packageDigest, caseId, caseVersion, caseDigest and appearanceEvidenceDigest, with the same UUID/version/slug/SHA constraints as existing evidence contracts. Missing, extra, malformed, inherited, hidden or accessor properties fail closed by rejection.
+
+The resolver first matches package ID/version, recomputes all case/appearance digests and the entire manifest, then matches the selected case's ID/version/digests. There is no latest-version fallback, case-ID-only lookup or caller-supplied source override. Even a changed sibling invalidates an old package digest. Packages may contain several sources: sourceSha256 and sourceEdition come from the selected captured claim, never the first source or an unrelated verification flag.
+
+Result is a frozen scalar projection of the seven exact selection fields plus sourceSha256, sourceEdition, bytesVerified:false, sourceReviewOnly:true and learnerRelease:false. No claims, descriptions, source bytes, URL, permissions or clinical/rights/exam approval are returned. Input case ordering does not affect the canonical manifest.
+
+`captureSourceRowPackage(value)` is extracted from the existing package digest path and exported for synchronous reuse. It validates original strict shapes before copying, rejects duplicate IDs and returns a detached sorted package snapshot. Its return is mutable caller-owned data; it confers no immutable-store or authority guarantee. Existing package digest format and domains are unchanged. The resolver keeps its captured data private across await.
+
+This is an offline integrity helper, not an authorization boundary. Self-consistent caller-created metadata can resolve successfully. A trusted server must retrieve the exact immutable revision from authoritative persistence, verify origin, resolve current withdrawal/runtime/account/rights/grants under serialization and enforce scoped projections. An old revision can still resolve mathematically; that says nothing about current permission or curriculum applicability. Source hash metadata does not verify actual PDF bytes or entitlement to retain/display them. Transport size limits and database readback are separate adapter requirements.
+
+Next: persistence schema/authorization design and disposable transaction adapter conformance, including exact revision/source retrieval, real cross-account denial, withdrawal and recovery. No storage/API/schema deployment, source upload or reviewer grant is implemented here.

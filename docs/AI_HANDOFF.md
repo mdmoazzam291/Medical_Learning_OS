@@ -1,3 +1,357 @@
+## 2026-10-31 — Authority row-lock investigation checkpoint, native CI pending
+
+- Owner Codex /root; checked31October2026 IST. Draft PR346/feature feat/nmc-complete-competency-audit-20261030; resumed023d0307c8aaceab39d64a0735123996e17be513 in isolated mlos-evidence-row-locks. Main91a11aff41048984b039fd269a2a0a9ddc3d99da unchanged. One writer; no production scope.
+- Added separate disposable authority-row-locks overlay: exact account→session→Admin→feature FOR SHARE before existing evidence metadata advisory lock; unchanged runtime/Admin checks. READ COMMITTED only; missing rows deny. No synthetic authority mutation triggers installed in this fixture.
+- Dedicated non-login/non-bypass locker owns one private empty-path lock-only definer; executor invokes, gateway cannot call/assume/read Auth. Minimal SELECT/UPDATE-column grants plus RLS UPDATE USING(true) WITH CHECK(false) permit locks but prohibit actual writes. Initial positive placeholder failed; further positive exposed required UPDATE-policy visibility; final PGlite0.5.13 behavior/ACL/catalog/write-denial/isolation checksPASS.
+- Native independent-login test written for five plain mutation types in both commit orders, row/transaction blocking PID chains, no writer advisory locks/triggers, rollback/no-orphan reconciliation, unrelated-user independence, inverse writer lock-order40P01 atomicity/retry. --key-share weaker-lock negative control must fail barrier+cleanup. Local native execution remains blocked by UID0-only namespace; no native result claimed until CI.
+- Full npm test1,633PASS/0FAIL; npm run checkPASS13services/252couplings; syntax/diffPASS. Fresh read-only review found no blocker; native proof pending. No dependency/provider marker change. CI configured to run local overlay proof/native positive/weaker-lock negative control.
+- Minimal authority fields are not provider Auth expiry/refresh/MFA/cleanup/cascade acceptance; account hard deletion is restricted by Admin FK, soft-deletion flag is not cascade proof. No deadlock-free claim. No hosted migration/role/trigger/route/credential/source bytes/rights/reviewer/clinical/exam/learner release. Next inspect exact native CI, fix any failures, record evidence and retain hosted gates. Ownership retained while pending.
+
+## 2026-10-31 — Offline owner delegation verified, hosted connector remains gated
+
+- Checked31October2026 12:36IST; owner Codex /root; draft PR346/feature feat/nmc-complete-competency-audit-20261030. Implementation50884283d891d97593d63b85b0d784f8a4c794b7 exact9source/config readbacks verified. This followup is documentation only; no runtime wiring.
+- Foundation run41179228740, evidence-native-postgres job124473017762 SUCCESS; exact logs inspected. Four delegation SQL groups PASS: feature/default-off and original stage/readback/retry receipt, foreign/unverified denial; corrupt readback withholding and lost-delivery reconciliation; unavailable postcommit readback uncertain then reconciliation; revoked session denies after commit and fresh same-owner session reconciles original audit. Prior narrow capability, real-login native races, omitted-trigger/lock negative controls, snapshot/ACL and immediate/WAL recovery also PASS with cleanup.
+- Local8focused testsPASS; full npm test1,633PASS/0FAIL; npm run check13services/252locationsPASS; syntax/diffPASS. Rejecting placeholder positive/status failures observed before implementation. Fresh read-only review found no blocker; its unavailable-readback coverage suggestion was implemented and passes.
+- Core/browser/WebKit CI still in progress at recording; no complete Foundation or final-documentation-head CI claim. No frontend or product runtime file changed.
+- Trusted verifier/query and stolen gateway credential remain capable of impersonation; synthetic verifier map does not implement real token signature/expiry/issuer/MFA. Dedicated direct-login credential routing, authenticated connector transport and query autocommit/commit-ack semantics remain gates; SQL status inside an open outer transaction is insufficient. Existing broad service_role unchanged. No production route/migration/Auth trigger/credential/source bytes/rights/reviewer/clinical/exam/learner release.
+- Next bounded task: representative row-lock authorization protocol that does not require global triggers on provider Auth; prove plain session/account/Admin/feature writer ordering and rollback/deadlock behavior before proposing any hosted connector. Restore must separately reconcile Auth/Admin/feature/roles. Ownership released at saved evidence checkpoint.
+
+## 2026-10-31 — Offline verified owner delegation checkpoint
+
+- Owner Codex /root; checked31October2026 IST. Resumed draft PR346, feature feat/nmc-complete-competency-audit-20261030 from05ab3be211af36d5caef49176e620efc4838aece in isolated mlos-evidence-delegation; main91a11aff41048984b039fd269a2a0a9ddc3d99da. One writer; no production changes.
+- Added test-only private verifier-to-gateway closure: exact token/candidate or token/target inputs, no caller actor/session/verified overrides; snapshots before awaits; verified ID/session bound locally; fixed gated SQL only; reverify after commit and independently rehash canonical package/manifest/request/original receipt before accepted/available. Unknown delivery returns uncertain without receipt; errors sanitized.
+- Rejecting placeholder positive/status tests observed RED, then8focusedPASS. Actual PGlite0.5.13 gateway-role integration PASS for default-off, original receipt retry, foreign/unverified denial, corrupted readback, lost delivery and unavailable postcommit readback reconciliation, revoked-session denial/new same-owner session original audit. Verifier is a synthetic exact-token map: no actual JWT signature/expiry/provider Auth test claimed.
+- Full npm test1,633PASS/0FAIL; npm run checkPASS13services/252couplings; final script syntax/diffPASS. Read-only review found no blocker; missing postcommit unavailable-readback integration case added and passed. CI step added; native/core exact checkpoint CI pending.
+- Deployment-gates design preserves existing authentic getUser ordering, describes dedicated direct-login credential isolation and representative provider row-lock investigation; no real credential, HTTP handler, migration/Auth trigger, source rights/reviewer/clinical/exam/learner approval. Existing broad service_role, trusted verifier/query and stolen gateway credential can still impersonate; production routing/provider Auth mutation/restore/HTTP controls unresolved.
+- Next: inspect checkpoint CI and record evidence; then test representative provider account/session/Admin/feature row-lock protocol without global Auth triggers, before any hosted implementation. No secrets or protected source bytes in git. Ownership retained until evidence checkpoint.
+
+## 2026-10-31 — Narrow gateway and platform ordering verified
+
+- Checked 2026-10-31 05:50 UTC; owner Codex /root; draft PR346, branch feat/nmc-complete-competency-audit-20261030. Tested implementation acbec7548b0a1f0dcc807d567d0a946ff4a25e5e, exact 10 implementation/config file readbacks verified after push. Base unchanged.
+- Foundation run41174062255, evidence-native-postgres job124457846742 SUCCESS. Real evidence_gateway login rejects SET ROLE executor/service and SET SESSION AUTHORIZATION postgres; five native platform races PASS (plain session deletion, account suspension, feature disable, Admin transfer before retry/readback; stage before queued session revocation). Real independent PIDs/advisory waits observed; audit retained/later delivery denied. Omit-trigger negative control fails platform_advisory_barrier_not_observed and cleans up. Earlier native seven races, snapshot/ACL and immediate/WAL crash-recovery checks also PASS in same job.
+- Local npm test1,625PASS/0FAIL; npm run checkPASS13services/252coupling locations; PGlite0.5.13 capability+previous platform checksPASS; deliberately postgres-owned bridge rejected by catalog negative control; whitespacePASS. Read-only reviewer found no gateway bypass; catalog assertions and idle-client error handling suggestions implemented before tested commit.
+- This followup updates documentation/plan only. Core/browser/WebKit CI still in progress when recorded; neither full workflow nor this documentation head is claimed fully green.
+- No hosted API/credential/Auth trigger/migration or learner release. Existing service_role remains broad; real verified-token delegation/production narrow-role routing, provider-specific Auth lock/latency/restore compatibility and independent reviewer governance remain gates. Global synthetic mutation triggers must not be transplanted into real Auth tables. Next: design least-privilege hosted gateway credential/delegation boundary and provider Auth ordering strategy before any hosted handler, preserving default-off behavior.
+
+## 2026-10-31 — Narrow fixture gateway capability checkpoint
+
+- Owner: Codex /root; draft PR346; branch feat/nmc-complete-competency-audit-20261030, parent cebd691f71b64dbc82dab240a3ac8107919da7dd. Checked 2026-10-31 UTC.
+- Added dedicated non-inheriting gateway login with only stage/readback entry points; private non-login/non-bypass executor owns exactly two empty-search-path definer bridges with explicit table/RLS/helper allowlists. Raw service_role remains broad for earlier unrelated probes; actual production credential routing is unresolved.
+- TDD invoker placeholder failed permission denied for platform_guard; bridge passes disposable PGlite0.5.13 staging, raw table/helper/governor/role switching denial, feature/session retry denial, catalog owner/definer/search-path/role/schema checks. Original embedded superuser session cannot prove login-level SET SESSION AUTHORIZATION denial; native script uses actual gateway logins.
+- Added synthetic-only Auth/session/Admin/feature mutation triggers and native real-PID/pg_locks races (plain revocation/suspension/feature/Admin writes first; stage first), plus omit-trigger negative control. Native CI pending at this checkpoint; local UID0-only container cannot run initdb as mapped non-root user. No native result claimed yet.
+- Reviewed shared SQL-definition fixture adds one Supabase coupling location:13services/252locations. No dependencies or hosted changes. Review added definer catalog assertions and idle-client error handling. Full npm test/check currently running; final evidence followup required.
+- No production migration/API/Auth trigger, credential, source material, grant, clinical/rights/exam approval or learner release. Coarse synthetic Auth locks are not a production design. Next: inspect exact checkpoint native CI, fix any failures, finish existing checks and record evidence.
+
+## Owner-only platform compatibility verified, hosted adapter remains proposal —31 October2026 IST
+- Checked at 2026-10-31T05:35:24.158Z. Implementationce3c63f0bbee3d29627843d490d6dfad31b5e2d2; Foundation run41173028054/job124454806451 SUCCESS, exact logs inspected. Follow-up records results only.
+- Completed concrete owner-only HTTP/RPC proposal plus disposable session-gated wrappers using exact repository runtime/Admin SQL definitions on synthetic Auth/session tables. Default-off wrapper capability; no hosted route or real platform mutation.
+- Local/CI fixture PASS for valid owner, missing/foreign/revoked/new-session retry, suspension/deletion, missing runtime result, Admin change without package transfer, policy/withdrawal/postcommit off, and browser/backend feature-row ACL. Previous native races/WAL/recovery/negative controls also PASS.
+- Review limitation explicit: trusted service_role retains raw low-level RPC/table privileges; wrapper gates are not an enforceable database-wide backend capability. Production privilege/delegation plan, real token/Auth behavior, exact source permission and real Auth-writer serialization still block exposure. Eight-table evidence snapshot excludes Auth/Admin/platform-feature state.
+- Local npm test1,625PASS/0FAIL; npm run checkPASS13services/251coupling. One new script/Auth SQL dependency reviewed/registered with ownership/export/restore gaps; no new provider/app dependency. Foundation check job SUCCESS atce3c63f; browser/WebKit in progress when inspected. Later docs-head CI separate.
+- Next: resolve concrete server capability/privilege boundary and prove current account/session/source-policy revocation ordering with disposable platform fixtures before any migration/owner-api handler. Source rights/genuine independent review still unresolved. No production migration, real sessions/grants/source bytes/clinical/exam/learner activation or deployment. Ownership released at checkpoint.
+
+## Owner-only platform/session fixture — CI pending —31 October2026 IST
+- Checked at 2026-10-31T05:32:38.898Z. Resumed draft PR3466d17b238a41fefdf8784fe6aa5e0460cf35e79c8; isolated mlos-evidence-platform-gate, one writer.
+- Added owner-only adapter proposal (not route) and disposable platform-gate.sql/script. Loads exact existing repository runtime/Admin SQL definitions against synthetic Auth/session/Admin tables; wrapper feature defaults off. Positive placeholder failure observed before wrapper implementation.
+- Local fixture PASS: valid owner, missing/foreign/revoked sessions, new same-owner session idempotency, suspension/deletion, NULL runtime result, current Admin transfer without package transfer, metadata/withdrawal/postcommit off and browser/backend ACL.
+- Review boundary documented: service_role still has raw lower-level probe/table privileges, so wrapper feature-off is not a database-wide backend capability boundary. No hosted privilege readiness claimed; current real Auth writers do not share prototype lock and eight-table evidence snapshots omit Auth/Admin/feature data.
+- Full npm test1,625PASS/0FAIL. Initial check flagged new script/Auth-SQL coupling; reviewed exactly one path, updated service ownership/export/restore gaps and explicit baseline, then npm run checkPASS13services/251coupling. No new provider/app dependency.
+- Added isolated platform fixture CI step with temporary PGlite0.5.13 tooling. Next inspect exact-head job/core results, record evidence and leave production APIs disabled. No real sessions/rights/reviewer grants/source bytes/clinical/exam/learner activation or production changes. Ownership retained while CI pending.
+
+## Immediate WAL recovery verified and session boundary audited —31 October2026 IST
+- Checked at 2026-10-31T05:19:02.321Z. Implementationcf4c33deb2af91afeceba064168ffc916547aeff; Foundation run41171957291/job124451684840 evidence-native-postgres SUCCESS, exact logs inspected. This checkpoint records results only.
+- Test-first RED verified at95b2378/run41171677157/job124450852230: missing restart hook assertion, cleanupPASS. Controlled pg_ctl immediate stop/same-directory restart implemented; native GREEN verifies distinct postmaster, interrupted/automatic recovery logs and fsync/synchronous_commit/full_page_writes on.
+- Acknowledged committed8-table payload/receipts preserved; explicit open transaction package/cases/request/event absent after recovery. Simulated lost application delivery retries original receipt. Metadata withdrawal, source-policy and account denials persist. Native postcrash restore exact digest/receipt/denial/browser ACL and cleanup PASS. Original seven races and omitted-lock negative control also PASS.
+- Audited actual repository owner-api getUser -> runtime session/account -> singleton Admin boundary. Four actual runtime helper tests confirm separately supplied actor/session binding, malformed claim denial and unavailable lookup denial. Package ownership/source rights/shared-writer current revocation and genuine independent reviewer authority are NOT supplied by singleton Admin/session checks; documented blockers, no live Auth claim or route wiring.
+- Local npm test1,625PASS/0FAIL; npm run checkPASS13services/250coupling; static read-only review no blocker. Foundation check job also SUCCESS atcf4c33d; browser/WebKit in progress when inspected. Later documentation-head CI not claimed complete.
+- Next: concrete owner-only evidence adapter proposal with exact package/source authority and disposable platform/session fixtures, keeping hosted exposure disabled until real authorization/rights acceptance. Process-crash/WAL replay is not physical power-loss/hardware durability certification. No production migration, real sessions/reviewer grants/source bytes/clinical/rights/exam/learner activation or deployment. Ownership released at saved checkpoint.
+
+## Native immediate recovery implementation — CI pending —31 October2026 IST
+- Checked at 2026-10-31T05:16:41.323Z. Test-first commit95b2378250bdc11bfa129aabc80137e787545787 observed expected RED in run41171677157/job124450852230: immediate restart hook required; cleanupPASS. One writer, mlos-evidence-crash-auth.
+- Implemented pg_ctl immediate shutdown/same-directory restart, readiness/recovery logs and bounded controlled cleanup. Native test covers fsync/synchronous_commit/full_page_writes, committed/uncommitted state, original/lost-delivery receipt, account/policy/withdrawal denial and native postcrash restore/ACL. Native GREEN result pending.
+- Audited existing owner-api/session/SQL Admin boundaries; added4 actual runtime-helper tests with synthetic RPC/tokens. Confirms separate verified actor/session binding and fail-closed lookup, not live Auth or exact package/reviewer authority. No API wiring.
+- Static read-only review no blocker. Local npm test1,625PASS/0FAIL and npm run checkPASS13services/250coupling. Local native launch still blocked by UID0 namespace; isolated CI provides required execution.
+- Next inspect native CI, fix any failure and persist exact result; no power-loss or production storage certification. No migration/real sessions/grants/source bytes/clinical/rights/exam/learner activation or production changes. Ownership retained pending CI.
+
+## Native crash acceptance test-first checkpoint —31 October2026 IST
+- Checked at 2026-10-31T05:12:33.777Z. Resumed PR346329887d25ca6988767397f51ed494664ee1b3705; one writer in mlos-evidence-crash-auth.
+- Added native crash test for synchronous durability flags, acknowledged receipts, explicit uncommitted transaction, account/policy/withdrawal denial and postcrash restore. Native helper restart hook deliberately not implemented yet; CI must observe the missing-hook assertion before implementation.
+- Isolated native CI step added, no hosted URL/credentials/app dependencies. Local syntax/check stage; native run requires non-root CI because local UID mapping only root.
+- Next inspect expected CI failure, implement controlled pg_ctl immediate shutdown/restart (not power-loss certification), verify WAL replay and all postconditions, then finish current owner-api/session compatibility audit. Work in progress, no crash success claim.
+- No hosted migration/API/source-byte/reviewer/clinical/rights/exam/learner release or production changes. Ownership retained during CI.
+
+## Native PostgreSQL independent-connection acceptance verified —31 October 2026 IST
+- Checked at 2026-10-31T05:05:34.059Z. Implementation commit37de68c9178ba9de1db4cfb51447e6c1d60cf90b on draft PR #346. Foundation run41171036865/job124448843962 evidence-native-postgres SUCCESS; exact job logs inspected. This follow-up records results only, without changing tested code/workflow.
+- Actual PostgreSQL18.6 on non-root Ubuntu24.04 verified three distinct backend PIDs. Seven real lock/wait/commit schedules PASS: identical request convergence, conflicting payload, withdrawal first, stage first, authority denial, policy denial and rollback releasing waiter. pg_locks/pg_blocking_pids barriers required.
+- Native8-table snapshot recovery PASS with exact payload digest/original receipt/withdrawal denial/browser ACL parity. Omitted advisory-lock fixture negative control failed specifically advisory_barrier_not_observed; normal and negative runs both confirmed clients/server/temp cluster cleanup.
+- Local root-only namespace restriction remains factual, not a bypass: native startup requires mapped non-root identity. Isolated CI provided valid execution, no hosted database or credentials. No app dependency, OS user creation or workspace permission changes.
+- Local npm test1,621PASS/0FAIL; npm run checkPASS(13services/250coupling); static read-only review no blocker. Foundation check job also SUCCESS at implementation37de68c; browser/WebKit still running when inspected. Later documentation-head CI not claimed verified.
+- Next: current production authority/session compatibility and crash/restart durability acceptance before hosted adapter/API design. Real source rights/genuine independent reviewer remain unresolved. No production migration, source bytes/reviewer grants/clinical/rights/exam/learner activation or deployment. Ownership released at saved checkpoint.
+
+## Native PostgreSQL race harness — CI execution pending —31 October 2026 IST
+- Checked at 2026-10-31T05:03:11.660Z. Codex resumed draft PR #346 at 1cfbc87036d865b50eaf6eff05aae133f768dd0c; isolated mlos-evidence-postgres-races worktree, one writer.
+- Added native private-cluster helper and independent-client tests for identical/conflicting retries, both withdrawal orderings, authority/policy waits, rollback waiter and native snapshot recovery/ACL parity. PID/pg_locks barriers required; omit-locks negative control must fail named barrier and clean up.
+- Local actual binary PostgreSQL18.6 verified; installed only scratch tooling @embedded-postgres/linux-x6418.6.0-beta.19 and pg8.22.0, no app dependency. Native launch blocked by namespace UID0-only mapping: nobody chown EINVAL; user namespace denied. No root-check bypass or OS user creation attempted. Temp native copy removed.
+- Static read-only review found no concrete blocker. Local npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); syntax/diff checksPASS. Native race/negative-control execution NOT verified yet.
+- Added isolated evidence-native-postgres job to existing Foundation CI using non-root Ubuntu24.04, temporary tooling, no secrets/hosted URLs. This checkpoint triggers required runner verification; next inspect exact-head job logs and fix failures before native success claims.
+- No production migration/API/source bytes/reviewer grants/clinical/rights/exam/learner activation or hosted DB changes. Existing production Auth/authority compatibility and crash-durability remain unverified. Ownership retained while CI pending.
+
+## Batch: withdrawal, postcommit denial and disposable recovery —31 October 2026 IST
+- Checked at 2026-10-30T23:27:05.473Z. Codex resumed draft PR #346 at 4c81e0fc1bd57fa48dca9f06eb6bde31d3fd5fca; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-withdraw-restore worktree, one writer. Owner asked for multiple next tasks in one run.
+- Completed three linked disposable slices: exact immutable metadata withdrawal (wrong owner/digest deny, retry/read deny, other version unaffected); account/policy/withdrawal changes after actual commit before protected readback (denied without receipt, committed audit retained); complete8-table consistent snapshots and fresh transactional restore without allow-seeding.
+- Snapshot expected digest must be retained separately; checksum is not origin proof. Restore audits canonical/physical bindings, policy/authority history, request/event and withdrawal integrity without requiring current allow. Allowed/account-denied/policy-denied/withdrawn states round-trip to identical payload digests; original receipt/ACL/denied behavior preserved. Postrestore writes/identity continuation, corruption/omission, pinned removal of withdrawal, injected import rollback/all8tables, nonempty target refusal and source changes after capture tested.
+- TDD missing withdrawal/snapshot behavior failed before implementation; reviewer reproduced orphan null-bound audit events. Negative restore regression RED then GREEN after non-null/positive/unique event constraints and every-event audit. One SQL ACL test initially ran under admin fixture role; corrected role setup and reran PASS, no permission defect.
+- Final recovery script PASS; previous SQL conformance10 scenarios/3 broken controls/lifecycle PASS; extended SQL probe PASS. Full npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS.
+- Snapshot tests are synthetic/in-memory only, not production backup coverage. Expected digest cannot establish completeness if caller trusts attacker-selected history. Singleconnection shared-lock schedules do not prove real multi-connection/crash behavior; current external revocations after snapshot need reconciliation.
+- Next: real PostgreSQL multi-connection transaction/withdrawal races and disposable recovery validation against current production authority/Auth boundaries before any hosted adapter/API proposal. Rights/genuine reviewer remain unresolved. No migration/app dependency/hosted data/source bytes/reviewer grants/clinical/rights/exam/learner activation or production changes. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Disposable SQL staging transaction conformance —31 October 2026 IST
+- Checked at 2026-10-30T23:10:02.304Z. Codex resumed draft PR #346 at 0a9fd7feb87fb89319ac1002ca6ab706200f9539; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-sql-conformance worktree, one writer.
+- Added test-only SQL driver and standalone scripts/source-evidence-sql-conformance.js. Fresh PGlite0.5.13 per scenario; actual SQL stage/readback, independent JS hash/receipt checks, inspect queries committed rows without a mirror.
+- Existing10 scenarios PASS against SQL: retry, request/revision conflicts, precommit rollback, lost acknowledgement, unavailable/tampered readback, overlapping identical/conflicting calls and authority recheck.3 broken-driver controls rejected false acceptance/inconsistent inspected claims.
+- TDD rejecting driver positive path RED. Read-only reviewer found close could finish before async hashing joined queue; lifecycle regression RED then GREEN after entire preparation/SQL/readback was queued. Concurrent close RED then GREEN via shared completion promise; new staging after close rejects. Final SQL conformance/lifecycle PASS and previous standalone SQL probe PASS.
+- Final clean npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS. Driver uses one embedded connection/promise queue; simulated postcommit delivery faults and ephemeral tampered readback are not actual network/crash or independent-connection acceptance.
+- Next: metadata withdrawal and postcommit current-access denial acceptance, then consistent disposable export/restore and true multi-connection checks before any hosted adapter/API. No migration/dependency/hosted Auth or production authority integration, source bytes/reviewer grants, clinical/rights/exam/learner activation or production changes. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Restricted-domain SQL evidence digest derivation —31 October 2026 IST
+- Checked at 2026-10-30T22:55:03.907Z. Codex resumed draft PR #346 at e45473ca253ad72bcf26c66ea6f17b4cfb16d16d; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-db-digests worktree, one writer.
+- Added disposable digests.sql: ASCII printable keys/strings and integer0..1e9 canonical subset, independent appearance/case/manifest/profile/claims/request/receipt hash derivation and canonical-byte comparison. Not a general Unicode/floating-point RFC8785 serializer. Existing domain/JS validation remains mandatory.
+- Normalized stored case order so reversed-array exact retry preserves original receipt. Readback recomputes stored digests and binds actual package/revision/request keys plus per-case projections.
+- TDD forged well-shaped claim accepted before derivation RED, rejected GREEN. Author-found case-projection gap RED/GREEN. Reviewer found stored receipt-flag/contract and physical package-binding holes; regression assertions added and shared validation/readback/exact-retry checks fixed in one pass.
+- Disposable PGlite0.5.13 script PASS:12 JS oracle packages across relations/rotations/null/limits, helper serializer/boundaries, forged claim/manifest/fingerprint, noncanonical bytes, corrupt stored receipts/projections and wrong physical revision key. Final npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS.
+- Next: implement disposable SQL driver for existing transaction conformance harness, including lost acknowledgement/unavailable readback and exact retry/current denial mapping. General serializer certification, hosted Auth/production authority integration, multi-connection/crash durability and export/restore remain unverified. No migration/API/reviewer grant/source bytes/clinical/rights/exam/learner activation or production changes. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Disposable SQL validation and immutable authority history —31 October 2026 IST
+- Checked at 2026-10-30T22:47:22.907Z. Codex resumed draft PR #346 at 07713bdd15574cd100e1ca3a66830dc7d35b1d63; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-db-parity worktree, one writer.
+- Prototype now validates exact package/case/appearance/interpretation and receipt/binding shapes, scalar limits and canonical UTC date form; receipt negative tests recompute hashes so schema gaps cannot hide behind checksum failure. Added immutable package owner/lexical ID and append-only authority/source policy versions.
+- Private administrative fixture writers share staging/readback lock; latest history governs access, no historical-allow bypass. Backend/browser cannot mutate history or invoke authority writers. No production authority integration inferred.
+- TDD rehashed malformed receipt acceptance observed RED, fixed GREEN; history writer missing-function RED then GREEN. Disposable PGlite0.5.13 script PASS for schema/date/history/latest-deny/package alias/ACL and prior rollback checks. Full npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS.
+- Fresh read-only review found no concrete SQL blocker within reduced prototype scope; corrected stale README statements. No hosted Auth, multi-connection/crash durability, real rights or restore acceptance.
+- Next: SQL/domain canonical digest derivation parity (JCS/case/appearance/manifest/request), then disposable real transaction-driver conformance. Existing JS canonical validation remains mandatory; this is schema validation progress, not full SQL digest parity. No migration/API/reviewer grant/source-byte/clinical/rights/exam/learner activation or production changes. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Disposable owner-only evidence SQL prototype —31 October 2026 IST
+- Checked at 2026-10-30T22:41:50.338Z. Codex resumed draft PR #346 at 2d19d3a489835a8e12d30a2ca9d56fa3378ea425; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-db-prototype worktree, one writer.
+- Added ops/prototypes/source-evidence/schema.sql (NOT migration), standalone scripts/source-evidence-db-check.js and README/plan. Uses fresh disposable PGlite0.5.13 installed only in external scratch tooling; no app dependency or hosted URL.
+- SQL prototype stores canonical revision/manifest bytes, case projections, request receipts/events; server-only invoker functions and exact owner readback. Returns committed, not accepted. Existing JS JCS validation/digest recomputation remains mandatory.
+- TDD placeholder positive commit failed. Disposable checks PASS: canonical readback/mixed-source resolution, exact retry/conflicts/history, byte and approval tamper, four write-boundary rollbacks, anon/authenticated ACL denial, two enabled owner isolation, source-policy/authority denial. Reviewer identified missing enabled-second-owner coverage; added and reran PASS. No remaining concrete blocker within documented reduced scope.
+- Full npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); final script syntax/diff checksPASS. No real adapter conformance, hosted Auth/RLS, multi-connection/crash durability or export/restore claim.
+- Next: tighten disposable SQL/domain envelope parity and immutable package/authority lifecycle, then actual disposable transaction driver conformance. SQL does not independently validate every domain schema/JCS/case derivation; fixture authority/policies mutate sequentially without shared serialized writer protocol. No migrations/API/reviewer grants/source bytes or production writes. Rights/genuine reviewer unresolved; hosted new-head CI unverified; ownership released at checkpoint.
+
+## Private evidence database/authorization design —31 October 2026 IST
+- Checked at 2026-10-30T22:35:48.706Z. Codex resumed draft PR #346 at 767f9bfe08e1411a2c384aed77ccdf259ec7782c; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-evidence-schema-design worktree, one writer.
+- Added SOURCE_EVIDENCE_DATABASE_DESIGN.md specifying immutable canonical bytes/revisions/cases/request receipts, append-only policy/grant/access history, exact composite bindings and lexical UUID handling; JSONB projections cannot replace JCS digest bytes.
+- Reuses existing server-only SECURITY INVOKER pattern, explicit ACL/RLS, verified actor delegation and deny-by-default authority. First adapter owner-only; full package operations check rights for every source. No automatic baseline-grant reuse or publication authority.
+- Serializing all relevant authority writers and protected operations is an explicit unimplemented requirement. Separate postcommit readback and current-access check precede accepted staging; unknown commit outcomes reconcile with same request.
+- Design-only: git diff --check PASS; source/docs inspection and fresh read-only design review found no blocker for disposable prototype. No runtime tests rerun; prior1,621 result belongs to767f9bf. Official security/functions docs and HTML changelog consulted; no live project/version/config verified.
+- Next: disposable-only schema/RPC prototype and database checks for owner staging/exact readback, then actual driver conformance and authority/restore acceptance before API wiring. No SQL migration/schema write, grants, source upload, medical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Offline exact package/case/source resolution —31 October 2026 IST
+- Checked at 2026-10-30T22:25:47.426Z. Codex resumed draft PR #346 at 089986085057d77704d36dd0f586f7f67b1dad1c; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-exact-resolution worktree, one writer.
+- Added resolveSourceEvidenceCase: all exact package/case versions and digests required, full package rehash, selected case source hash/edition derivation, scalar frozen source-only result with bytesVerified:false and learnerRelease:false. No latest fallback or source override.
+- Extracted existing synchronous strict captureSourceRowPackage for reuse; digest domains/inputs unchanged. Original malformed arrays/descriptors rejected before cloning; both resolver inputs captured before await.
+- TDD rejecting placeholder failed positive paths; final focused14PASS (six resolver/eight prior digest groups). Full npm test1,621PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS. Fresh read-only review found no concrete defect.
+- Offline self-consistent metadata may resolve without trusted origin/current access. No source-byte verification, rights/grants, storage, schema or API enforcement. Hosted new-head CI unverified.
+- Next: persistence schema/authorization design and disposable transaction adapter conformance, including exact revision/source retrieval, real cross-account denial, withdrawal and recovery. Genuine reviewer/source rights remain unresolved. No source upload, clinical/rights/exam approval, learner activation, merge or production deployment. Ownership released at checkpoint.
+
+## Synthetic staging transaction conformance —31 October 2026 IST
+- Checked at 2026-10-30T22:16:43.092Z. Codex resumed draft PR #346 at d2eb6b20bbd8606416b19af4b800ca782b02aed4; main 91a11aff41048984b039fd269a2a0a9ddc3d99da. Isolated mlos-staging-transactions worktree, one writer.
+- Added reusable test-only driver harness, in-memory executable model and 10 transaction scenarios: exact retries, request/revision conflicts, precommit rollback, lost response, readback unavailable/tampered, concurrent identical/conflicting calls and authority recheck. Six negative controls prove detection.
+- TDD rejecting model failed ten positive paths. Reviewer reproduced missing authoritative stored-claim verification; new regression observed RED then GREEN after independent stored package/request/receipt checks. No other concrete finding. Final focused16PASS; npm test1,615PASS/0FAIL; npm run checkPASS(13 services/250 coupling locations); git diff --checkPASS.
+- Model is test-only memory, not production/durable persistence, Auth, rights enforcement or database concurrency acceptance. A single simulated precommit fault/deny toggle does not certify every SQL boundary or authority transition. No actual adapter has run this harness.
+- Next: exact-package/case/source resolution contract and offline negative tests, then separately reviewed schema/authorization and disposable real adapter conformance. Source rights/genuine reviewer remain unresolved. No source upload, grants, clinical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Offline staging request and receipt bindings —31 October 2026 IST
+- Checked at 2026-10-30T22:11:43.748763+00:00. Codex resumed draft PR #346 at 2023fd1ba8165b1c379bab5b9e9672e49e430288 in isolated mlos-staging-request worktree; one writer.
+- Added source-evidence-staging.js: exact request preparation, server-recomputable canonical claims/package/request fingerprints, pre-await snapshots and receipt shape/binding/checksum matcher. No storage, API or trusted authority implemented.
+- TDD rejecting placeholder failed positive paths. Hidden/custom-prototype candidate arrays and malformed receipt inherited getter hazards reproduced RED, fixed by pre-copy ordinary-tree checks, then focused 8PASS. Fresh read-only review found no further concrete defect. Final npm test 1,599PASS/0FAIL; npm run check PASS (13 services/250 coupling locations); git diff --check PASS.
+- Canonical candidate limit 16 MiB after parsing; transport must cap before parsing. A self-consistent forged receipt passes checksum matching by design; origin/durability/current permissions must be established by future trusted adapter.
+- Next: fault-injectable transaction-port conformance harness for atomic metadata staging, exact retry/conflict/uncertain readback, then separately reviewed persistence/schema/API work. Rights and genuine reviewer unresolved. No source upload, grants, clinical/rights/exam approval, learner activation, merge or production deployment. Hosted new-head CI unverified; ownership released at checkpoint.
+
+## Metadata staging transaction and exact-resolution design —31 October 2026 IST
+- Checked at 2026-10-30T22:04:55.793493+00:00. Codex resumed draft PR #346 at 9eb5354b400fc8908608d9b958f5d941c6ad44ff; remote main remains 91a11aff41048984b039fd269a2a0a9ddc3d99da. One writer; isolated mlos-staging-contract worktree.
+- Added SOURCE_EVIDENCE_STAGING_PORT.md: trusted principal/current authority, request fingerprint/immutable revision uniqueness, atomic metadata writes, exact retries, uncertain commit recovery and durable digest readback. Resolves selected case/source within exact package, including multi-source packages.
+- Clarified staged access state versus unapproved editorial status. Proposed receipt conveys metadata staging only. No source bytes, protected text, schema/API/storage implementation or service changes.
+- Documentation-only: runtime tests not rerun; prior 1,591-test result belongs to 9eb5354. Document checked against existing digest/access contracts; git diff --check recorded below. No new hosted CI claim.
+- Next: strict offline staging request/fingerprint/receipt contract and synthetic tests, then fault-injected transaction-port harness before persistence/API wiring. Rights and genuine independent review remain unresolved. No grants, ingestion, clinical/rights/exam approval, merge or production deployment. Ownership released at checkpoint.
+
+
+## Offline private-evidence staging/access policy —30 October2026 IST
+- Checked at 2026-10-30T17:46:47.692898+00:00. Resumed PR346b954eb9bd367f05c20ae877ccb201f9a2fd24730 in isolated worktree. Added evaluateSourceEvidenceAccess and8test groups; no app/Auth/storage adapter wiring.
+- TDD rejecting placeholder failed3positive paths; final focused8PASS. Full npm test1591PASS/0FAIL; npm run checkPASS(13services/250coupling locations). Read-only review found no concrete defect under trusted-server-context assumption.
+- Exact typed package grant/version/digest and author exclusion; metadata rights/runtime/account state; byte reads need staged state,retention/display permission and matching verified byte hashes. Withdrawn/stale/revoked/malformed cases denied; no publication authority.
+- Context must be server-derived and current; evaluator does not authenticate,verify rights/source bytes,bind actualsource to package,serialize races or persist decisions. Added SOURCE_EVIDENCE_ACCESS_CONTRACT.md and plan. No live reviewer or evidence uploaded.
+- Next:trusted metadata staging port/transaction contract and source-package resolution before any protected API wiring. Hosted new-head CI pending. No migrations,grants,review decisions,clinical/rights/syllabus approval,merge/deploy/activation. Ownership released at checkpoint.
+
+
+## Private source-evidence persistence/access proposal —30 October2026 IST
+- Resumed PR3466ace6d3a84ea247183e7f74992bf32700b8c46f6. Read portability/service/content/archive contracts. Existing ArchivePort is interface only,not live reviewer storage; Drive original ownership and app review-metadata authority retained.
+- Added NMC_PRIVATE_EVIDENCE_STORAGE_ACCESS.md:metadata-first exact private package staging;raw PDFs remain official-source references until rights/retention/display resolved. Future authorized archives require implemented adapter/readback/recovery,not public/static links.
+- Design addresses immutable metadata/idempotency/partial failures,typed source-row grants,authenticated delivery/revocation limits,no-store,rights withdrawal,retention/backup/restore/provider exit. No service/coupling register changed for proposal.
+- Design-only: no runtime tests or implementation completion claimed. Next:pure fail-closed staging/access contract and tests,then separately reviewed persistence/API work. No upload,provisioning,grants/messages,rights/clinical/syllabus approval,merge/deploy/activation. Ownership released at checkpoint.
+
+## Canonical source-row evidence digests —30 October2026 IST
+- Checked at 2026-10-30T17:37:54.212505+00:00. Resumed PR346aef95af7ccef8fa1c1ca5c1aa3f8176885145c44. Added offline source-row-evidence.js using existing canonical-integrity JCS/SHA256; distinct appearance/case/package domains,strict shapes and deterministic sorted packages.
+- TDD placeholder4positive failures observed; focused8PASS. Final npm test1583PASS/0FAIL; npm run checkPASS (13services/250coupling locations). Read-only review found no concrete defect.
+- Captures all caller claims/package values before asynchronous hashing; rejects duplicates,sparse/custom/accessor data and malformed hashes/locators. Independent SHA oracle and offline review-request interoperability verified.
+- Added SOURCE_ROW_EVIDENCE_DIGESTS.md and implementation plan. Hashes bind supplied metadata,not true source bytes,authority,reviewer independence,freshness or clinical/rights approval. No live NMC package generated or corpus uploaded.
+- Next:private evidence package persistence/import boundaries and exact-source access/rights design before protected API integration. Hosted new-head CI pending; no DB/API/grants/source approval/merge/deploy/learner activation. Ownership released at saved checkpoint.
+
+
+## Offline source-row contract implemented —30 October2026 IST
+- Checked at 2026-10-30T17:30:55.253282+00:00. Codex resumed PR346 from3128dacc82b66a81b3083d6ba19608f5ed0a0a6c in isolated detached worktree. Added pure source-row request validator/receipt matcher and8test groups; existing PR337baseline schema/endpoints unchanged.
+- TDD rejecting placeholder failed2positive tests,then focused6PASS. Fresh reviewer found no concrete defect; added missing-receipt/accessor/hidden-field/boundary tests. Final npm test1575PASS/0FAIL; npm run checkPASS (13services/250coupling locations).
+- Request exact-shape/UUID/version/hash/slug/note constraints; all4source dispositions. Receipt binds every request field/reviewer/server metadata and requires all approval flags false. Matching does NOT authenticate receipt origin,grant,independence,freshness or source bytes.
+- Added plan and SOURCE_ROW_REVIEW_CONTRACT.md. No imports/provider/dependency/runtime app wiring,SQL/API/Auth changes,real grant/decision or production actions. Hosted CI on new head not yet verified.
+- Next:canonical private evidence package/digest and trusted persistence design before hosted source-row review. Genuine reviewer and rights/storage handling remain unresolved. No syllabus/content approval or learner activation. Ownership released after saved checkpoint.
+
+
+## Exact-row review workflow design —30 October2026 IST
+- Resumed PR346f6687965afb6c1da043028476a44c98ea39ee4c3. Inspected PR337doc/domain validator at641c094579e6bce752621a954322bf9258814b79; existing strict baseline payload cannot accept row-case decisions.
+- Added docs/NMC_EXACT_ROW_REVIEW_WORKFLOW.md:agent-proposed separate typed source-row attestation reusing Auth/runtime/review infrastructure,not repurposing scope-reviewed.
+- Design covers source/physical/logical/decision identities,version/digest binding,consent/independence,target grants,revocation,retry,immutability,privacy,recovery and separate clinical/rights/exam/release gates. No implementation or runtime tests claimed.
+- Next:design authorization then pure source-row contract/receipt validation and tests; private evidence rights/storage and genuine reviewer remain unresolved. No runtime changes,endpoint,migration,grants/messages,approval,ingestion,merge/deploy/activation. Ownership released at checkpoint.
+
+## Cross-file evidence validation and PR refresh —30 October2026 IST
+- Resumed PR34682e8af39ab4d6e9002e9b8cc2afed032995faf81.21cross-file checks PASS on that exact evidence commit:source hashes,263page/1031page counts,subject arithmetic,AETCOM targets,foundation/FAP/pandemic/goals,22null decisions,13open queue items and disabled eligibility.
+- Added docs/evidence/nmc-crossfile-validation.json with exact input blob hashes; metadata consistency only,not clinical review or runtime CI.
+- Refreshing stale PR346description:official source bytes now retrieved;2634appearances/2631rawtokens and14matches/5disagreements replace obsolete8-row-only audit wording while distinguishing unchanged8unverified app proposal records.
+- No runtime changes/tests rerun/fresh CI claim. Next:address actual source/rights/reviewer gates and durable exact-row review import design,not additional count-only summaries. Keep draft/stacked/unmerged. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## Per-subject reconciliation snapshot —30 October2026 IST
+- Resumed PR346c2612636aa1ee21fa915d9e9f603e4437c96b926. Added NMC_SUBJECT_RECONCILIATION.md and evidence-bound19subject snapshot.
+-2634appearances/2631distinct raw tokens/3GMrepeats;14count matches,5disagreements. Net-150 versus2781=PE-153+GM4+OG1-SU1-OP1,not150verified missing requirements.
+- No normalization approvals orPS9.2count subtraction; effective amended denominator unknown. Aggregate snapshot only,not exported fullraw corpus.
+-19/2781/2634/2631/3/14/5/delta validation PASS. No runtime tests/fresh CI claim. Next:cross-file evidence validation and current PR346scope/status reconciliation. No source/medical/rights approval,ingestion,merge/deploy/activation; ownership released at checkpoint.
+
+## Ambiguous code-column region triage —30 October2026 IST
+- Resumed PR346fa8a50d24c790b27c28bbc5ba4779a1729fcc18e. Added NMC_AMBIGUOUS_REGION_TRIAGE.md and253region metadata.
+-492text regions match heading families. Empty-code regions classify159mergedheadings/59emptybands/6headers/29body continuations. Visually inspected all29bodyregions in5sheets; no clearly new uncoded requirement identified there.
+- Preceding-row links remainprovisional,not approved exclusions or independent signoff. No full-corpus no-omission claim.
+-253/category sums/29links/hash/page/disabled checks PASS. No runtime tests/fresh CI claim. Next:per-subject appearance/distinct/raw-normalized reconciliation and frozen reviewer snapshot. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## Geometry extraction and method comparison —30 October2026 IST
+- Resumed PR3460cd243c4a464bb068f3d510814f4a54ee93d3829. Geometry scan263defining pages produced2634identifier candidates (2627standard+7nonstandard),253empty/492header-unclassified regions.7known malformed/wrapped-token assertions PASS.
+- Stored opaque page receipts and method comparison; detailed raw column extraction remains transient,not full-corpus export. All263page hashes/counts/disabled flags validated.
+- PyMuPDF strict-line/geometry standard-ID multisets match260/263pages. DifferencesPDF172wrappedBC14.24,352PS2.1*footnote,445malformedOR2.2.9truncation explained. Not independent source review or no-omission proof.
+- Added NMC_RAW_CODECELL_CHECKPOINT.md,nmc-codecell-page-receipts.json,nmc-codecell-method-comparison.json. No runtime tests/fresh CI claim.
+- Next:classify ambiguous empty/header regions and uncoded rows visually,then freeze reviewable row inventory under rights constraints. No approval/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## Source adjudication packet —30 October2026 IST
+- Resumed PR3463a8653bbf2808bf10a36f9f449098cd88a8b45de. Added NMC_SOURCE_ADJUDICATION_PACKET.md and22case machine-readable packet bound to frozen evidence/source hashes.
+- Cases retain observations,pages,proposals andnull decisions; no reviewer assigned. Identity adjudication distinct from clinical,rights,exam/release approval. Runtime import/enforcement not implemented.
+-22unique IDs/source references/pages/hash/null-decision/disabled validation PASS. Documentation-only/no runtime tests/fresh CI claim.
+- Next:raw defining-row inventory including malformed/uncoded rows under rights constraints,not another summary-only checkpoint. Source completeness and independent adjudication remain open. No permission grants/messages/approval/ingestion/merge/deploy/activation. Ownership released at saved checkpoint.
+
+## Volume-global structural comparison —30 October2026 IST
+- Resumed PR346a9548cae11c5a219d82b311cde24414a73b23b29. Added NMC_VOLUME_FRAMEWORK_COMPARISON.md and metadata; queue structural_comparison_review_pending.
+-3volume sets35numbered competencies/5roles versus opening40bullets/7roles. Two split/combined clauses plus7additional-role bullets explain count structure,not approved semantic identity.
+- VolumeII institutional(l) onPDF252 visibly continues(k); preserved likely formatting anomaly unnormalized. Text-comparison boundary artifacts not clinical discrepancies.
+-3x35sets/count vectors/40=35-2+7/page/hash/disabled checks PASS; no runtime tests/fresh CI claim. Next:review-ready anomaly decision packet and raw-row no-omission work. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## Unified1031-page scope matrix —30 October2026 IST
+- Resumed PR3466a3828cf5dff0600d6cfe5524ca6c2c2521bc669. Added NMC_SOURCE_COVERAGE_MATRIX.md and12document/1031page disposition checklist; updated unified queue.
+- Every retrieved page has provisional category,pending review and no approved exclusion.263subject table pages included. Retrieved set not certified exhaustive.
+- New explicit gap:volume introductory frameworksPDF75-107/242-268/371-402 may differ from opening2024goals; compare instead of silently deduplicate.
+-12/1031uniqueness/contiguity/hash/263membership/disabled flags PASS; documentation-only/no runtime tests/fresh CI claim. Next:exact volume-global comparison and additional goal locators. No approval/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## National/institutional/subject goals —30 October2026 IST
+- Resumed PR346563ee64bc900f7a33129c235129b2052c38b59f3. Added NMC_GOAL_LOCATORS.md and source-bound185subject-goal items across19sections plus5national/11institutional/8nested locators.
+- Preserved hierarchical/overlapping role summaries; no additive full-coverage denominator. Updated global-subject-goals queue to extracted_review_pending,completed=false.
+-19/185uniqueness/5/11/8hierarchy/page/hash/disabled checks PASS. Text extraction plus selected-page visual inspection,not whole-source review. No runtime tests/fresh CI claim.
+- Next:unified source-coverage matrix with extracted/reviewed/mapped states and unresolved no-omission page dispositions. Independent review/canonical/exam approvals remain open. No ingestion/approval/merge/deploy/activation; ownership released after saved checkpoint.
+
+## Pandemic competency appearances —30 October2026 IST
+- Resumed PR3468553658645584b3cd360de42cdeb1db440e342f6. Added PANDEMIC_COMPETENCY_ENUMERATION.md and source-bound17module/47row metadata.
+-3nested subcompetencies and5teaching objectives distinct; similar3.1/3.2/3.3 parent cluster not merged. Standard subject-code token scan found0inPDF11-79,not proof no overlap. Historical appended legal referencesPDF80-113 separated.
+- Corrected colon-sensitive extraction and one verification-command syntax error;17table-heading checks PASS.17/47uniqueness/pages/hash/disabled metadata PASS; no runtime tests/fresh CI claim.
+- Next:national/institutional and subject-goal prose enumeration,then full scope reconciliation and independent review. No source approval/ingestion/merge/deploy/activation; ownership released after saved checkpoint.
+
+## Global IMG and unified review queue —30 October2026 IST
+- Resumed PR3465ceb4d164504398872c2afece94924810be83421. Added NMC_GLOBAL_SUPPORT_REVIEW_QUEUE.md and machine-readable register.
+- Global section6 has40top-level bullets across7roles; compound subclauses and subject/other goal overlap pending.17pandemic module openings located; module objective enumeration incomplete.
+- Remaining support docs classified as assessment/alignment/logbook/online guidance,not presumed new competency lists.13open queue items consolidate inventory,adjudication,mapping,rights,review,exam/release dependencies.
+-7/40/17/13metadata uniqueness/ranges/hash/disabled checks PASS; no runtime tests/fresh CI claim. Next:pandemic objective rows and edition-specific subject references,then remaining global/subject goals. No source approval/ingestion/merge/deploy/activation; ownership released after checkpoint.
+
+## ECE/skills requirement classification —30 October2026 IST
+- Resumed PR34674cee40597d21269fe507f2402fffb3376da2725. Added ECE_SKILLS_SCOPE_CLASSIFICATION.md and metadata register.
+-2024ECE5objective locators/3elements separate from2019 repeats,6sample lessons,observation guides and example questions. Skills evidence/process requirements separate from lab/faculty guidance and6task examples.
+- Explicit AETCOM2.1 reuse and2019subject-code references retained; no auto IM->GM or same-number semantic equivalence. MCQ evidence not practical certification.
+- Metadata5/3/3/6counts/hash/disabled checks PASS. No runtime changes/tests/fresh CI claim; no source approval/ingestion/merge/deploy/activation. Next:global IMG and remaining support-module scopes,then unified review queue. Ownership released at checkpoint.
+
+## FAP and electives requirement enumeration —30 October2026 IST
+- Resumed PR346f41ec37d25cb6f7413b9049a55c1c400b7e9d6a6. Added FAP_ELECTIVE_ENUMERATION.md and metadata register.
+- FAP17phase targets/10report headings/11image-table competency rows indexed separately. PDF68-70 text-empty does not mean requirement-empty. No additive38 or deduplicated denominator claimed.
+- Official2024PDF32 resolves electives2x15days/1month versus legacy2x4weeks;PDF37 learner participation/time/logbook/75% requirements distinguished from institution guidance.
+-17/10/11/4metadata uniqueness/page/hash/disabled checks PASS. Documentation-only, no runtime tests/fresh CI claim. Next:ECE/skills requirements versus examples,then overlap reconciliation/independent review. No approvals/ingestion/merge/deploy/activation; ownership released at checkpoint.
+
+## Foundation45 outcomes and nested scope —30 October2026 IST
+- Resumed PR346a1d4b5e5a528e845a2c4dde7290fbf425154ad06. Added FOUNDATION_SUPPLEMENT_ENUMERATION.md and metadata register.
+- Visually enumerated45top-level2019FC outcomes (10/9/6/15/5) and8nested disability entries underFC4.5;2024 applicability unresolved, no additive53 claim.
+- Classified ECE6sample modules and skills6example modules; not extra universal competencies. Electives/FAP full learner requirements still pending.
+-45unique IDs/8nested/6+6 examples/source hashes/disabled flags PASS. Local workspace briefly disconnected then recovered; no lost repo checkpoint. Documentation-only/no runtime tests or fresh CI claim. Next:FAP targets and elective learner obligations, then ECE/skills classification and independent review. No approval/ingestion/merge/deploy/activation. Ownership released at checkpoint.
+
+## AETCOM candidate module/appendix bridge —30 October2026 IST
+- Resumed PR34627201e77920a9b7352b8f5a77895fc8f9f4e635f. Added AETCOM_CANDIDATE_BRIDGE.md and machine-readable27-module bridge with44 candidate links/28 distinct appendix targets; unlinked numbers explicit.
+-2024 subject-paper blueprint inspected; subject assignment is not subject-code equivalence.4.8->35 partial relationship preserved; no canonical mappings or source approval.
+- Metadata uniqueness/target ranges/partitions/source hashes/fail-closed flags PASS; documentation-only no runtime tests/fresh CI claim. No ingestion/approval/merge/deploy/activation. Next: remaining supplementary requirement/page inventories and independent candidate adjudication. Ownership released at checkpoint.
+
+## AETCOM numbered entries and modules —30 October2026 IST
+- Resumed PR346b6c876522c065bf4c8a7edb03141a5268d11cc0c. Added AETCOM_ENUMERATION.md and docs/evidence/aetcom-2018-enumeration.json.
+- Appendix87-91 enumerates1-54 (39core/15desirable);14 extra appearances on92-93 provisionally match existing numbered entries. Row37 core/noncore conflict and16/17 semantic similarity remain unresolved; do not claim68 unique requirements.
+-27 learning-module IDs align with2024 Annexure1 reference set; no automatic module->competency or subject overlap approval. Local locators explicitly not NMC codes.
+-54/14/27 uniqueness/count/reference-set checks PASS. Metadata only, no runtime tests rerun/fresh CI claim. No source prose, approval, ingestion, merge/deploy/activation. Next: candidate module/competency/subject overlap mapping with exact-source review. Ownership released after saved checkpoint.
+
+## Supplementary source retrieval and scope audit —30 October2026 IST
+- Resumed PR3466a5032c735320df215c2c1706dd5f3db71343040. Downloaded10 official supplementary PDFs; exact hashes/sizes/pages recorded in docs/evidence/nmc-supplement-sources.json. Parsed10PDFs; no protected PDFs/prose committed.
+- Visually checked AETCOM appendix declaration39core/15desirable,2024 annexure index and foundation2weeks/80hours. Separate modules/competencies/subject overlaps and legacy cohort applicability. Supplements not fully enumerated.
+- Recorded embedded family adoption/alignment/AETCOM scopes; research infrastructure/admission disability policies not automatically clinical competencies. Targeted later-amendment searches are nonexhaustive; no absence claim.
+-10source metadata/unique IDs/hash/page checks PASS. Documentation-only, no runtime tests rerun/fresh CI claimed; no approval/ingestion/merge/deploy/activation. Next: exact AETCOM appendix/module enumeration and2024 overlap/applicability, then other supplements/later notices. Ownership released after saved checkpoint.
+
+## Consolidated extraction inventory —30 October2026 IST
+- Resumed PR34614bb3ba51d36738dc30ae415d340cf5c7dc06510. Added docs/evidence/nmc-2024-consolidated-inventory.json and NMC_CONSOLIDATED_INVENTORY.md.
+-19 subjects/263 defining-table pages/2624 strict distinct candidates; per-page counts and ordered-code hashes, exact source pair hashes,9 anomaly links and3 unapplied October amendments consolidated. Published base2781 retained; no effective denominator inferred.
+- Metadata validation19 subjects/263 unique pages/count sums/anomaly links/fail-closed eligibility PASS. Documentation/evidence only; no runtime tests rerun or fresh CI claimed.
+- Not a complete raw-row/code manifest or approved curriculum. Supplements/later amendments and independent adjudication remain pending. Next: source manifest and explicit page scopes for supplements/later notices. No ingestion/approval/merge/deploy/activation; ownership released at checkpoint.
+
+## Malformed-cell visual checkpoint —30 October2026 IST
+- Resumed PR346 f71e9a88ce33fa00afe93cb567330f10246c1a0b. Inspected8 official pages plus prior OR page. Added9-record metadata anomaly register and NMC_MALFORMED_CELL_ADJUDICATION.md.
+- BC strict82 shortfall explained by prefixless14.1 and wrappedBC14.24 physical rows; topic counts84. PA extra-dot,FM colon,MI missing suffix,AS malformed token andOR malformed cell confirmed. Proposed corrections remain unapproved, not automatically applied.
+- SU26.2 defining row absent at visible26.1->26.3 jump. OP topic counts59 versus headline60: no missing code invented.
+- Metadata validation9 unique IDs/page bounds/hash binding/false activation and JSON round-trip PASS; no runtime changes/tests rerun, fresh CI unverified. No approvals/ingestion/merge/deploy/learner activation.
+- Next: consolidate raw-row/code identity inventory and unresolved adjudications; supplementary/later amendment audit. Independent review pending. Ownership released after saved checkpoint.
+
+## Remaining subjects and prefix register —30 October2026 IST
+- Resumed PR346 head81869be726cb79f866f306c47073a42f51527474. Added NMC_REMAINING_SUBJECT_REGISTER.md:19-subject strict extraction observations, page ranges, malformed cells and targeted visual evidence.
+- DR/RD defining sections conflict with DE/RT contents legends. Preserved raw observations, no global aliases applied. PA.29.1,FM2:12,ASS.4,split MI/BC tokens and malformed OR2. 2.9 explain candidate parser gaps; proposed identities remain adjudication work.
+- Exact totals are not source approval. No runtime changes/tests required; no fresh CI claimed. No content ingestion, approval, merge/deploy or learner activation. Next: visual malformed-cell adjudication and BC/SU/OP gap tracing, then metadata normalization decisions and focused parser tests if justified. Ownership released at saved checkpoint.
+
+## Medicine and OBGYN defining-table reconciliation — 30 October 2026 IST
+- Checked2026-10-30T11:17:58Z. Codex resumed PR346 head50ccb65aa55b10595ba2f352bfb0b9218d557213; no competing head observed.
+- GM529 unique defining tokens/532 occurrences versus headline525 and topic-header sum531. Visually confirmed GM9.8,GM14.1,GM14.2 printed repeats; GM8.9 numbering gap; topic9 header21/observed17; topic27 header15/observed18. Do not fabricate or remove codes.
+- OG142 unique defining tokens and topic-header sum142 versus headline141. Wrapped Topic33 count05 requires multiline handling. No cross-reference false positive or arbitrary extra identified.
+- Added NMC_MEDICINE_OBGYN_RECONCILIATION.md with exact source/pages, arithmetic, inspection limits. Documentation-only, no runtime tests rerun; fresh CI unverified. No protected prose, approvals, runtime changes, merge/deploy or learner activation.
+- Next: remaining subject defining-range counts and DR/DE,RD/RT alias inspection; then metadata discrepancy ledger and amendment/supplement audit. Independent review pending; ownership released at checkpoint.
+
+## Official NMC source recovery — 30 October 2026 IST
+- Codex resumed PR346 from584b398a3122907f84607f4893f0676214f591ce; no competing head observed. Recovered official current /rules-regulation-nmc/33/file and /34/file downloads, actual hashes recorded in NMC_OFFICIAL_SOURCE_RECOVERY.md.
+- Official467-page base contains a blank page2; all465 shifted subsequent pages have identical normalized extracted text to mirror. All22 PE defining pages render pixel-identically. PE253/32 versus heading406/35 is confirmed in official-host source, still unresolved.
+- October clarification PDF3 changes PE6.4/PY9.1 and deletes PS9.2; base2781 is not an automatically valid amended denominator. No copied descriptions or fabricated missing rows.
+- Documentation-only: no runtime tests rerun; fresh CI unverified. No approvals, ingestion, merge, deployment or learner activation. Next exact action: classify GM/OG extra tokens from defining tables, then remaining subject aliases and supplements/later amendments. Independent review pending. Ownership released at checkpoint.
+
+## Paediatrics mirror-section investigation — 30 October 2026 IST
+- Checked at 2026-10-30T11:07:37Z. Codex resumed PR346 at c3d7a1e0c787f61ac3fca95bd3ceda87b36542ae; current main91a11aff41048984b039fd269a2a0a9ddc3d99da. Prior handoff released ownership; no remote agent tasks launched.
+- Re-downloaded mirror with identical SHA256; rendered/inspected all22 PE pages in contact sheets plus full-page endpoint/transition. Observed253 candidates and32 topics versus printed406/35. This is a mirror source anomaly, not evidence153 official requirements are missing. Preserved denominator and unverified state.
+- Added docs/NMC_PAEDIATRICS_SOURCE_ANOMALY.md with provenance, two count aggregations, inspection limits and next acceptance steps. No runtime files or source descriptions changed; runtime/browser tests not rerun for documentation-only checkpoint. Fresh CI not yet verified.
+- Next exact action: recover official revised source/clarification and compare PE section, then classify GM/OG extras and remaining aliases. Keep PR346 draft and issue345 unresolved. No ingestion, syllabus approval, merge, deploy or learner activation. Ownership released for continuation after saved checkpoint.
+
+## Dual-exam syllabus proposal and mirror source investigation — 30 October 2026 IST
+- Owner requested a practical proposal and continued necessary source work. Codex resumed PR346 branch feat/nmc-complete-competency-audit-20261030, code head 5df017dcaae9ea8f07e7cb98e9170900c03743c9. Remote main observed 91a11aff41048984b039fd269a2a0a9ddc3d99da. No competing writer observed; no remote tasks launched.
+- Added docs/NMC_DUAL_EXAM_ADVANCEMENT_PROPOSAL.md: separate source completeness, exact concept/assessment mapping and exam-specific learner activation gates; scoped claims, supplements, rights, uncertainty, invalidation and partial-pilot prerequisites. Proposed policy only; no runtime enforcement claimed.
+- Downloaded 466-page institutional mirror; actual bytes SHA256 9bb9e28bd33f0bb6c00ee04bce8095da9f61086f0b2f917ded6daefc16d41db4. Rendered/inspected PDF257-259 (printed17-19) confirming volume totals; PDF280 confirms GM1.1-GM1.8 at printed40, correcting earlier chat locator. Mirror is not authenticated official bytes or independent human review.
+- Local metadata scan reproduced2626 candidate tokens, PE253 vs published406, GM529 vs525 and OG142 vs141. All discrepancies remain unresolved; no inferred missing codes or full protected corpus committed. Official direct/compendium retrieval returned404. Only provenance and investigation metadata saved.
+- Existing code head core/Chromium/WebKit/Cloudflare all SUCCESS. This documentation checkpoint needs its own CI; no runtime tests rerun because no runtime files changed. Content source verification, rights and genuine independent review remain pending; no ledger approvals, exam certification, merge, deployment or learner activation.
+- Next exact action: recover official revised source/clarification via current NMC index; establish mirror parity, then reconcile Paediatrics defining rows page-by-page and GM/OG extra tokens, followed by subject aliases/shortfalls and supplementary inventories. Keep issue345 open, PR337 and stacked343/344/346 draft; preserve326/330. Ownership released for resume after checkpoint.
+
 ## PR336 read-only backend staged; genuine-role checker ready — 30 October 2026 IST
 - Codex confirmed PR335 main Foundation40945216341 and PR336733edf3 Foundation40945763427 completed SUCCESS. Applied reviewed additive admin_syllabus_review_preflight migration; RPC security invoker and service-only EXECUTE verified (anon/authenticated denied). No draft or learner writes.
 - Owner API15 ACTIVE,19/19 exact source files; Review31 ACTIVE,2/2 exact source files. Preserved verify_jwt=false because both existing handlers verify Auth/runtime internally; no weakening. Owner adds reviewed read-only route/dependencies; both APIs add only exact first-party336preview origin https://feat-admin-syllabus-review-preflight-20-medical-learning-os-web.medicalos.workers.dev. PriorOwner13 andReview30 retained in session as rollback reference.

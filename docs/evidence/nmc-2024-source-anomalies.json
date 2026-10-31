@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-anomaly-investigation",
+  "edition": "2024-09-12",
+  "sourceUrl": "https://nmc.org.in/rules-regulation-nmc/33/file",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "sourceRights": "citation_only",
+  "clinicalApproval": false,
+  "learnerEligible": false,
+  "method": "Targeted AI-assisted visual inspection; proposed identity is not NMC correction or human review.",
+  "records": [
+    {
+      "id": "bc-prefix-omitted",
+      "subject": "biochemistry",
+      "pdfPage": 169,
+      "printedPage": 95,
+      "observedToken": "14.1",
+      "proposedCode": "BC14.1",
+      "finding": "prefix omitted in defining cell",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "bc-wrapped",
+      "subject": "biochemistry",
+      "pdfPage": 172,
+      "printedPage": 98,
+      "observedToken": "BC\\n14.24",
+      "proposedCode": "BC14.24",
+      "finding": "same-cell code wraps across two lines",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "pa-extra-dot",
+      "subject": "pathology",
+      "pdfPage": 200,
+      "printedPage": 126,
+      "observedToken": "PA.29.1",
+      "proposedCode": "PA29.1",
+      "finding": "extra separator before topic number",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "fm-colon",
+      "subject": "forensic-medicine",
+      "pdfPage": 217,
+      "printedPage": 143,
+      "observedToken": "FM2:12",
+      "proposedCode": "FM2.12",
+      "finding": "colon separator",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "mi-suffix-absent",
+      "subject": "microbiology",
+      "pdfPage": 212,
+      "printedPage": 138,
+      "observedToken": "MI 8.",
+      "proposedCode": "MI8.3",
+      "finding": "suffix absent; proposed identity inferred from defining-row order and topic count",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "as-topic-malformed",
+      "subject": "anaesthesia",
+      "pdfPage": 454,
+      "printedPage": 84,
+      "observedToken": "ASS.4",
+      "proposedCode": "AS5.4",
+      "finding": "printed malformed topic token; proposed identity inferred from AS5.3/AS5.5 context",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "or-malformed-cell",
+      "subject": "orthopaedics",
+      "pdfPage": 445,
+      "printedPage": 75,
+      "observedToken": "OR2. 2.9",
+      "proposedCode": "OR2.9",
+      "finding": "malformed repeated topic segment; strict regex incorrectly reads OR2.2",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "su-numbering-gap",
+      "subject": "surgery",
+      "pdfPage": 409,
+      "printedPage": 39,
+      "observedToken": "SU26.1 -> SU26.3",
+      "proposedCode": null,
+      "finding": "no SU26.2 defining row located; topic header4 but3 observed rows",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    },
+    {
+      "id": "op-headline-total",
+      "subject": "ophthalmology",
+      "pdfPage": 414,
+      "printedPage": 44,
+      "observedToken": "heading60; topic sum59",
+      "proposedCode": null,
+      "finding": "10 topic-header counts and observed IDs both total59; do not invent a60th row",
+      "status": "source_observed_pending_independent_adjudication",
+      "normalizationApplied": false
+    }
+  ]
+}

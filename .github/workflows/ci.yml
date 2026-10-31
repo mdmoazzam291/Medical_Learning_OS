@@ -58,6 +58,193 @@ jobs:
           path: dist-pages/
           if-no-files-found: error
           retention-days: 7
+  evidence-native-postgres:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated native PostgreSQL verification tools
+        run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg" --no-audit --no-fund @embedded-postgres/linux-x64@18.6.0-beta.19 pg@8.22.0
+      - name: Verify disposable current-session owner evidence gate
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-evidence-platform" --no-audit --no-fund @electric-sql/pglite@0.5.13
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-platform-db-check.js
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-capability-db-check.js
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-delegation-db-check.js
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-row-lock-db-check.js
+      - name: Verify native independent-connection races and recovery
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: node scripts/source-evidence-pg-concurrency.js
+      - name: Verify narrow login capability and plain platform mutation ordering
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/source-evidence-platform-pg-concurrency.js
+          if node scripts/source-evidence-platform-pg-concurrency.js --omit-auth-locks > "$RUNNER_TEMP/mlos-platform-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-platform-negative.log"
+            exit 1
+          fi
+          grep -F "platform_advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-platform-negative.log"
+          grep -F "Native platform fixture cleanup PASS" "$RUNNER_TEMP/mlos-platform-negative.log"
+      - name: Verify authority row locks without Auth mutation hooks
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/source-evidence-row-lock-pg-concurrency.js
+          if node scripts/source-evidence-row-lock-pg-concurrency.js --key-share > "$RUNNER_TEMP/mlos-row-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-row-negative.log"
+            exit 1
+          fi
+          grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row-negative.log"
+          grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row-negative.log"
+      - name: Verify private MLOS-owned authority gate and revocation races on PostgreSQL 18
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+          EXPECTED_NATIVE_PG_VERSION: '18.6'
+        run: node scripts/source-evidence-private-authority-pg-check.js
+      - name: Verify native immediate-shutdown WAL recovery and denied state
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: node scripts/source-evidence-pg-crash-recovery.js
+      - name: Prove barrier test rejects SQL with advisory locks omitted
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: |
+          if node scripts/source-evidence-pg-concurrency.js --omit-locks > "$RUNNER_TEMP/mlos-native-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-native-negative.log"
+            exit 1
+          fi
+          grep -F "advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-native-negative.log"
+          grep -F "Native fixture cleanup PASS" "$RUNNER_TEMP/mlos-native-negative.log"
+  auth-local-gotrue:
+    # Real but disposable Auth/GoTrue: never connects to a hosted project.
+    # Restrict the extra Docker work to this draft evidence PR only.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 346 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned isolated Auth development tooling
+        run: npm install --prefix "$RUNNER_TEMP/mlos-auth-tools" --no-audit --no-fund supabase@2.120.0 @supabase/supabase-js@2.118.0 pg@8.22.0
+      - name: Verify CLI flags and initialize migration-free local sandbox
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          "$CLI" --version
+          "$CLI" start --help > /dev/null
+          mkdir -p "$RUNNER_TEMP/mlos-auth-stack"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          "$CLI" init
+          # No repository migrations, no account login, no remote link.
+      - name: Start minimum isolated local Auth services
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - name: Verify genuine local GoTrue identity, refresh and sign-out behavior
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          STATUS="$("$CLI" status -o env)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_AUTH_PROBE_NOT_ACCEPTED: missing local publishable key"
+            exit 1
+          fi
+          export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_AUTH_PROBE_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_AUTH_PROBE_PUBLISHABLE_KEY="$KEY"
+          # Resolve via the pinned package's public export, not an unstable
+          # distribution-internal path. The shim lives inside the temp package.
+          echo "export { createClient } from '@supabase/supabase-js';" > "$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
+          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
+          node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-check.mjs"
+      - name: Inspect actual local GoTrue PostgreSQL Auth catalog read-only
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          STATUS="$("$CLI" status -o env)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]]; then
+            echo "LOCAL_AUTH_CATALOG_NOT_ACCEPTED: local database address unavailable"
+            exit 1
+          fi
+          export MLOS_LOCAL_AUTH_DB_URL="$DB_URL"
+          export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_AUTH_PG_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/pg/esm/index.mjs"
+          node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-catalog-check.mjs"
+      - name: Measure real GoTrue session writers against disposable FOR SHARE
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-stack"
+          STATUS="$("$CLI" status -o env)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]] || [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_AUTH_WRITER_RACE_NOT_ACCEPTED: no disposable credentials"
+            exit 1
+          fi
+          export MLOS_LOCAL_AUTH_DB_URL="$DB_URL"
+          export MLOS_LOCAL_AUTH_PROBE_PUBLISHABLE_KEY="$KEY"
+          export MLOS_LOCAL_AUTH_PROBE_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_AUTH_PROBE_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_AUTH_PG_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/node_modules/pg/esm/index.mjs"
+          export MLOS_LOCAL_AUTH_PROBE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-auth-tools/probe-sdk.mjs"
+          timeout --signal=TERM 50s node "$GITHUB_WORKSPACE/scripts/source-evidence-auth-local-writer-race-check.mjs"
+      - name: Destroy disposable local Auth containers and test identities
+        if: always()
+        run: |
+          CLI="$RUNNER_TEMP/mlos-auth-tools/node_modules/.bin/supabase"
+          if [[ -x "$CLI" && -d "$RUNNER_TEMP/mlos-auth-stack/supabase" ]]; then
+            cd "$RUNNER_TEMP/mlos-auth-stack"
+            "$CLI" stop --no-backup
+          fi
+  evidence-native-postgres17:
+    # Isolated major/minor-parity proof; no hosted connection.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned PostgreSQL 17.6 private fixture
+        run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg17" --no-audit --no-fund @embedded-postgres/linux-x64@17.6.0-beta.15 pg@8.22.0
+      - name: Verify 17.6 row-lock races, rollback, deadlock recovery and negative control
+        env:
+          EXPECTED_NATIVE_PG_VERSION: '17.6'
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/source-evidence-row-lock-pg-concurrency.js
+          if node scripts/source-evidence-row-lock-pg-concurrency.js --key-share > "$RUNNER_TEMP/mlos-row17-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-row17-negative.log"
+            exit 1
+          fi
+          grep -F "Authority native PostgreSQL version PASS: 17.6" "$RUNNER_TEMP/mlos-row17-negative.log"
+          grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row17-negative.log"
+          grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row17-negative.log"
+      - name: Verify MLOS-owned private epoch/receipt gate under PostgreSQL 17.6
+        env:
+          EXPECTED_NATIVE_PG_VERSION: '17.6'
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
+        run: node scripts/source-evidence-private-authority-pg-check.js
+
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
     runs-on: macos-latest

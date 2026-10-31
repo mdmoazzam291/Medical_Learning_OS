@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "kind": "volume-global-framework-comparison",
+  "status": "structural_comparison_pending_independent_review",
+  "sourceRights": "citation_only",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "opening": {
+    "pdfRange": [
+      7,
+      11
+    ],
+    "roles": 7,
+    "topLevelBullets": 40
+  },
+  "volumes": [
+    {
+      "volume": "I",
+      "pdfRange": [
+        86,
+        89
+      ],
+      "roles": 5,
+      "numberedCompetencies": 35,
+      "sourceCodes": [
+        "3.1.1",
+        "3.1.2",
+        "3.1.3",
+        "3.1.4",
+        "3.1.5",
+        "3.1.6",
+        "3.1.7",
+        "3.1.8",
+        "3.1.9",
+        "3.1.10",
+        "3.1.11",
+        "3.1.12",
+        "3.1.13",
+        "3.1.14",
+        "3.1.15",
+        "3.2.1",
+        "3.2.2",
+        "3.2.3",
+        "3.2.4",
+        "3.2.5",
+        "3.2.6",
+        "3.3.1",
+        "3.3.2",
+        "3.3.3",
+        "3.3.4",
+        "3.4.1",
+        "3.4.2",
+        "3.4.3",
+        "3.4.4",
+        "3.4.5",
+        "3.5.1",
+        "3.5.2",
+        "3.5.3",
+        "3.5.4",
+        "3.5.5"
+      ],
+      "nationalGoalCount": 5,
+      "institutionalSourceLabels": "a-k",
+      "roleFrameworkEquivalentApproved": false
+    },
+    {
+      "volume": "II",
+      "pdfRange": [
+        253,
+        257
+      ],
+      "roles": 5,
+      "numberedCompetencies": 35,
+      "sourceCodes": [
+        "3.1.1",
+        "3.1.2",
+        "3.1.3",
+        "3.1.4",
+        "3.1.5",
+        "3.1.6",
+        "3.1.7",
+        "3.1.8",
+        "3.1.9",
+        "3.1.10",
+        "3.1.11",
+        "3.1.12",
+        "3.1.13",
+        "3.1.14",
+        "3.1.15",
+        "3.2.1",
+        "3.2.2",
+        "3.2.3",
+        "3.2.4",
+        "3.2.5",
+        "3.2.6",
+        "3.3.1",
+        "3.3.2",
+        "3.3.3",
+        "3.3.4",
+        "3.4.1",
+        "3.4.2",
+        "3.4.3",
+        "3.4.4",
+        "3.4.5",
+        "3.5.1",
+        "3.5.2",
+        "3.5.3",
+        "3.5.4",
+        "3.5.5"
+      ],
+      "nationalGoalCount": 5,
+      "institutionalSourceLabels": "a-l",
+      "roleFrameworkEquivalentApproved": false
+    },
+    {
+      "volume": "III",
+      "pdfRange": [
+        382,
+        385
+      ],
+      "roles": 5,
+      "numberedCompetencies": 35,
+      "sourceCodes": [
+        "3.1.1",
+        "3.1.2",
+        "3.1.3",
+        "3.1.4",
+        "3.1.5",
+        "3.1.6",
+        "3.1.7",
+        "3.1.8",
+        "3.1.9",
+        "3.1.10",
+        "3.1.11",
+        "3.1.12",
+        "3.1.13",
+        "3.1.14",
+        "3.1.15",
+        "3.2.1",
+        "3.2.2",
+        "3.2.3",
+        "3.2.4",
+        "3.2.5",
+        "3.2.6",
+        "3.3.1",
+        "3.3.2",
+        "3.3.3",
+        "3.3.4",
+        "3.4.1",
+        "3.4.2",
+        "3.4.3",
+        "3.4.4",
+        "3.4.5",
+        "3.5.1",
+        "3.5.2",
+        "3.5.3",
+        "3.5.4",
+        "3.5.5"
+      ],
+      "nationalGoalCount": 5,
+      "institutionalSourceLabels": "a-k",
+      "roleFrameworkEquivalentApproved": false
+    }
+  ],
+  "candidateRelationships": [
+    {
+      "opening": "img2024:team-leader:bullet2",
+      "volumeCodes": [
+        "3.2.2",
+        "3.2.3"
+      ],
+      "relation": "one_bullet_combines_two_numbered_requirements"
+    },
+    {
+      "opening": "img2024:lifelong-learner:bullet3",
+      "volumeCodes": [
+        "3.4.3",
+        "3.4.4"
+      ],
+      "relation": "one_bullet_combines_two_numbered_requirements"
+    }
+  ],
+  "additionalOpeningRoles": [
+    {
+      "role": "critical-thinker",
+      "bullets": 4,
+      "pdfPage": 11
+    },
+    {
+      "role": "researcher",
+      "bullets": 3,
+      "pdfPage": 11
+    }
+  ],
+  "volume2InstitutionalAnomaly": {
+    "pdfPage": 252,
+    "observedLabels": [
+      "k",
+      "l"
+    ],
+    "candidateInterpretation": "l_is_continuation_fragment_of_k",
+    "normalizationApplied": false,
+    "independentlyReviewed": false
+  },
+  "comparisonLimits": [
+    "Equal35-code sets do not establish exact semantic identity across volumes.",
+    "National/institutional matching label counts do not prove semantic equivalence.",
+    "No additive40+35*3 denominator.",
+    "Opening2024role scope is not silently reduced to five roles.",
+    "VolumeII institutional fragment requires exact-version adjudication."
+  ],
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  }
+}
