@@ -1,3 +1,10 @@
+## 2026-10-31 — Live Supabase Auth schema compatibility: read-only audit, hosted gate blocked
+
+- Checked active Medical Learning OS Supabase **read-only metadata only**: project healthy, PostgreSQL 17.6 vs disposable native Postgres 18.6; `auth.users`/`auth.sessions` owned by `supabase_auth_admin`, RLS on, zero policies; session→user hard-delete cascade; Admin→user delete restriction. Actual session has `not_after`, `refreshed_at`, `aal` fields with provider-specific semantics. No Auth rows/user identities or tokens fetched.
+- Live `service_role` is broad with BYPASSRLS; `evidence_gateway`/`evidence_executor`/`evidence_authority_locker` not provisioned. Supabase's documented session expiry cleanup means row presence alone is not active-session authority. Security advisor no-policy informational notices must not be automatically "repaired" by adding exposed access.
+- New `docs/evidence/2026-10-31-hosted-auth-readonly-compatibility.md` records exact catalog evidence, read-only rerun queries, release blockers and safer verification path; `docs/SOURCE_EVIDENCE_GATEWAY_DEPLOYMENT_GATES.md` reconciled. PR #346 remains stacked/DRAFT, no deployment; do not install synthetic Auth policies/role privileges or broad service-role fallback.
+- **Next priority:** PostgreSQL 17-specific disposable protocol proof and an independently reviewed provider-supported Auth/credential approach, followed by nonproduction authentic-token/session/race acceptance. Real hosted token verifier, owner-only credential, rights/reviewer, HTTP, restore and source verification remain blocked. No production SQL mutations, API/Edge/Auth changes, learner content or exams affected.
+
 ## 2026-10-31 — Authority row-lock investigation checkpoint, native CI pending
 
 - Owner Codex /root; checked31October2026 IST. Draft PR346/feature feat/nmc-complete-competency-audit-20261030; resumed023d0307c8aaceab39d64a0735123996e17be513 in isolated mlos-evidence-row-locks. Main91a11aff41048984b039fd269a2a0a9ddc3d99da unchanged. One writer; no production scope.
