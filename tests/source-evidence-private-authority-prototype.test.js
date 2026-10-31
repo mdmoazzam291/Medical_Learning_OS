@@ -293,3 +293,24 @@ test('SQL receipt getter-backed status cannot masquerade as staging success',asy
  assert.deepEqual(await proto.stage(input()),{status:'uncertain'});
  assert.equal(statusReads,0);
 });
+
+test('malformed or accessor-backed acknowledgement SQL receipts never report completion',async()=>{
+ const task={requestId:request,attemptId:attempt,digest:'a'.repeat(64)};
+ let statusReads=0;
+ const accessor={};
+ Object.defineProperty(accessor,'status',{enumerable:true,get(){
+  statusReads++;return 'acknowledgement-recorded';
+ }});
+ const invalid=[accessor,{status:'acknowledgement-recorded',unexpected:1},
+  {status:'not-committed'},null];
+ for(const sqlReceipt of invalid){
+  let queries=0;
+  const rec=createSourceEvidencePrivateAckReconciler({
+   lookupDurableAck:async()=>({...task,ackDigest:'b'.repeat(64),status:'durable'}),
+   query:async()=>{queries++;return {rows:[{r:sqlReceipt}]};}
+  });
+  assert.deepEqual(await rec.reconcile(task),{status:'uncertain'});
+  assert.equal(queries,1);
+ }
+ assert.equal(statusReads,0);
+});
