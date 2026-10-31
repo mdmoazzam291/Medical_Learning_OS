@@ -1,3 +1,11 @@
+## 2026-10-31 — Provider Auth nonproduction acceptance runner prepared (not executed live)
+
+- Verified previous exact-head Foundation run `41182662804` fully green (check, native PG17/18, Chromium and WebKit). Disposable retained-session expiry proof remains separate from genuine managed provider semantics.
+- Read-only branch inventory of active MLOS project: zero development branches. **No hosted branch/project/account created**; no Auth secrets/credentials or production operations changed.
+- Added a manual opt-in real-provider acceptance protocol: `scripts/lib/source-evidence-auth-provider-probe.js`, CLI `scripts/source-evidence-auth-nonprod-check.mjs`, and synthetic negative tests `tests/source-evidence-auth-provider-probe.test.js`. Config refuses known production/legacy project references, non-HTTPS/nonmatching endpoint, missing opt-in, and accounts not tagged `+mlos-probe-`. Requires a separately installed/private SDK and publishable key only, not broad service role. No live test executes in CI.
+- The protocol checks network-verified identities, two simultaneous sessions on one account plus other-user isolation, refresh-session ID continuity, local/global logout refresh-token denial, and JWT payload tampering. Records whether old access JWT remains accepted rather than claiming immediate invalidation. Report excludes identities, tokens, passwords. **MFA, genuinely expired signed tokens, server-side session authority and managed transaction race remain untested.**
+- `docs/evidence/2026-10-31-auth-provider-nonproduction-acceptance.md` records operator procedure, isolation and all remaining provider/credential/clinical/rights release gates. CI for this increment must be checked separately. PR #346 draft/unmerged/default-off; no learner activation.
+
 ## 2026-10-31 — Retained expired Auth session guard (disposable only)
 
 - Identified a gap in existing `public.learner_runtime_access_v1` (migration `20261003153000_owner_operations_v3.sql`): the function's `session_active` field means row existence, not proof that provider-managed session lifetime/expiry is valid. Managed `auth.sessions` has a `not_after` column; it may retain expired sessions, and Auth access JWTs can survive sign-out until their own expiration.
