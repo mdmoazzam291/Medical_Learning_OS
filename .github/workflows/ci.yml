@@ -117,7 +117,9 @@ jobs:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
           EXPECTED_NATIVE_PG_VERSION: '18.6'
-        run: node scripts/source-evidence-private-authority-pg-check.js
+        run: |
+          node scripts/source-evidence-private-authority-pg-check.js
+          node scripts/source-evidence-provider-key-trust-pg-check.js
       - name: Verify isolated TLS/SCRAM gateway and private restore ACL safety on PostgreSQL 18
         env:
           PG_CLIENT_BIN_DIR: /usr/lib/postgresql/18/bin
@@ -273,7 +275,9 @@ jobs:
           EXPECTED_NATIVE_PG_VERSION: '17.6'
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/@embedded-postgres/linux-x64/dist/index.js
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg17/node_modules/pg/esm/index.mjs
-        run: node scripts/source-evidence-private-authority-pg-check.js
+        run: |
+          node scripts/source-evidence-private-authority-pg-check.js
+          node scripts/source-evidence-provider-key-trust-pg-check.js
 
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
