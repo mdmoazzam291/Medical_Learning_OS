@@ -21,7 +21,7 @@ function snapshot(value,keys){
   return out;
  }catch{return null;}
 }
-function keyFingerprint(trustedPublicKey){
+export function sourceEvidenceKeyFingerprint(trustedPublicKey){
  try{
   let key;
   if(trustedPublicKey instanceof KeyObject){
@@ -50,7 +50,7 @@ export function createSourceEvidenceTrustGatedAckLookup({
  const lookup=createSourceEvidenceSignedAckLookup({
   fetchSignedReceipt,trustedPublicKey,providerId,recipientId
  });
- const keySha256=keyFingerprint(trustedPublicKey);
+ const keySha256=sourceEvidenceKeyFingerprint(trustedPublicKey);
  if(!keySha256)throw new TypeError('private_receipt_trust_configuration_invalid');
  const selector=Object.freeze({providerId,recipientId,keySha256});
  async function currentEpoch(){
