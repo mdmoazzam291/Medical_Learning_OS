@@ -75,3 +75,12 @@ The mock suite includes direct-function attempts to bypass production/legacy pro
 These tests establish a stricter *protocol*, not real Auth behavior, production safety certification or a hosted entitlement. No real provider environment was created and no tokens were issued.
 
 Official references: https://supabase.com/docs/guides/auth/jwt-fields and https://supabase.com/docs/guides/auth/debugging/error-codes.
+
+
+## SDK-origin attestation and orphan-session cleanup
+
+**Additional isolated-runner hardening (31 October 2026).** The genuine-provider test accepts an injected SDK client factory; until now an inadvertently misconfigured factory could return a client pointing at the wrong project despite correct CLI environment variables. The core runner now passes its exact validated test URL to the factory and requires every resulting client to expose `supabaseUrl` exactly equal to that URL before any login or other Auth API operation. The manual CLI uses that exact passed URL. Mock controls check that a client claiming the known live endpoint is rejected before login.
+
+The refresh revocation test now also requires a response classified as `AuthApiError`, not merely a forged client-side `code/status` tuple. Network failures, timeouts, malformed responses and client-generated errors continue to fail acceptance. When a supposedly revoked refresh token **unexpectedly succeeds**, the probe attempts immediate `signOut({scope:'local'})` on that newly authenticated *test* client before rejecting the whole run; otherwise it could leave an untracked refreshed sandbox session active. This cleanup is best effort and cannot guarantee revocation if the test provider itself is broken; the operator must inspect and decommission disposable test identities after every run, even a failed one. Separate mocked negative tests cover mismatched client URLs and client-generated errors.
+
+**Trust limitation:** checking the SDK's `supabaseUrl` catches accidental factory misconfiguration; it does not authenticate a malicious factory that fabricates the property or intercepts the network. The factory/installed pinned SDK remains trusted code. This is still an offline protocol, never a production Auth approval, credential permission, or live-provider security proof. See official SDK initialization and Auth errors documentation for the supported client property/error model.
