@@ -21,7 +21,7 @@ async function main(){
  const createClient=()=>sdk.createClient(url,key,{
   auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}
  });
- const report=await runIsolatedAuthProviderProbe({createClient,accountA:cfg.accountA,accountB:cfg.accountB});
+ const report=await runIsolatedAuthProviderProbe({createClient,...cfg});
  process.stdout.write(JSON.stringify(report)+'\n');
 }
 try{await main();}
