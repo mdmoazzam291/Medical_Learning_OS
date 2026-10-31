@@ -1,3 +1,11 @@
+## 2026-10-31 — Auth probe trusted-client and cleanup hardening
+
+- The earlier PR #346 CI run `41184092379` is **fully green** (core, Chromium, WebKit, PostgreSQL17.6/18.6), confirming the previous isolated acceptance-runner increment.
+- Latest Auth-probe code now requires an exact SDK client `supabaseUrl` match to the previously validated sandbox URL before sign-in; every client factory receives this canonical URL. The probe refuses test clients mistakenly constructed with the live project host. The SDK factory is still trusted code; a spoofed client object is not a production security boundary.
+- Refresh-token revocation proof now accepts only verified provider `AuthApiError` classifications with allowlisted codes/status, not client-generated errors. If a supposedly revoked refresh token succeeds, the newly authenticated disposable session receives a best-effort local logout before failure; cleanup cannot compensate for a defective provider.
+- Added offline negative tests for wrong SDK host and misleading client-side Auth errors, and updated `docs/evidence/2026-10-31-auth-provider-nonproduction-acceptance.md`. Genuine sandbox provider operations, MFA, signed expired token and hosted DB Auth authority remain **unrun**.
+- No live provider project/account, migration, role, HTTP route, source rights or learner release change; PR #346 remains draft/unmerged with gateway disabled. Latest-head CI must still pass after commits.
+
 ## 2026-10-31 — Provider Auth nonproduction acceptance runner prepared (not executed live)
 
 - Verified previous exact-head Foundation run `41182662804` fully green (check, native PG17/18, Chromium and WebKit). Disposable retained-session expiry proof remains separate from genuine managed provider semantics.
