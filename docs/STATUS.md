@@ -1,3 +1,10 @@
+## 2026-10-31 — Disposable TLS/SCRAM gateway and pg_dump/restore ACL negative controls: PASS
+
+- [Foundation run 41214779035](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41214779035): real PostgreSQL **17.6 and 18.6** isolated jobs PASS. Pinned embedded servers run localhost-only TLS with disposable CA and SCRAM; official PG18 `pg_dump`/`pg_restore` clients perform real private-schema restore in a second disposable database. No hosted Supabase, learner or provider-managed Auth data/permissions touched.
+- A strict `evidence_private_gateway` connector verifies encrypted+authorized TLS and `pg_stat_ssl`, login/current role and no superuser/RLS-bypass, then permits only fixed stage/intent RPCs. Plaintext, bad password/CA/hostname, role substitution, direct table read, arbitrary SQL and cross-role RPCs are rejected. Standalone negative unit tests cover fail-closed allocation, result and cleanup.
+- Restore procedure quarantines the database from gateway CONNECT, confirms restricted role and function manifest, **forcibly invalidates restored enabled epochs/leases before allowing access**, then proves stale-request denial. Privilege-drift injections (receipt SELECT and controller EXECUTE) cause audit failure. A naive restore of an enabled old lease would be unsafe; live restore isolation needs separate proof.
+- Detailed evidence: `docs/evidence/2026-10-31-disposable-private-tls-restore-security.md`. **Not deployed:** no production TLS trust, rotation, private runtime, provider revocation atomicity, true external acknowledgement, rights/clinical publication, PR merge or learner release. Gateway OFF, PR #346 DRAFT.
+
 ## 2026-10-31 — Private delivery-intent ledger replaces misleading delivery marker
 
 - **Implemented in disposable private authority fixture only:** removed `receipts.delivered_at` and `deliver()`; added `delivery_attempts` one-shot `intent`/`uncertain`/`acknowledged` records, `reserve_intent()`, `mark_uncertain()`, and separate confirmer-only `inspect_intent()` and `record_ack()` RPCs. No hosted migrations or real outbound endpoint.
