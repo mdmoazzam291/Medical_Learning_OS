@@ -70,7 +70,7 @@ try{
  const broadQuery=createSourceEvidencePrivateQuery({createClient:()=>new Client({...server.config,user:'postgres'})});
  await assert.rejects(broadQuery('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args),/evidence_private_database_unavailable/);
  console.log('Private query adapter PASS: fresh direct narrow login, two exact calls, broad-login denial and canonical readback.');
- // Simulate Supabase's documented still-valid access JWT after session expiry.
+ // Simulate a provider-documented still-valid access JWT after session expiry.
  // This verifier intentionally continues to return an authentic user identity.
  const retainedToken='e30.'+Buffer.from(JSON.stringify({sub:f.owner,session_id:f.session})).toString('base64url')+'.synthetic';
  const verifyUser=createSourceEvidenceVerifiedUser({getUser:async token=>token===retainedToken?{data:{user:{id:f.owner}},error:null}:{data:{user:null},error:{message:'invalid'}}});
