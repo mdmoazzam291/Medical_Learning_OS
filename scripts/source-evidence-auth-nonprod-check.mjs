@@ -1,6 +1,6 @@
 // Manual-only Supabase Auth acceptance probe; opt-in, isolated test accounts. Never called by CI or production runtime.
 // Requires an externally installed, pinned server-side SDK module; no app dependency.
-import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe} from './lib/source-evidence-auth-provider-probe.js';
+import {validateNonproductionAuthProbeConfig,runIsolatedAuthProviderProbe,createIsolatedAuthAccessObserver} from './lib/source-evidence-auth-provider-probe.js';
 
 async function main(){
  const e=process.env;
@@ -21,7 +21,8 @@ async function main(){
  const createClient=(verifiedUrl)=>sdk.createClient(verifiedUrl,key,{
   auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}
  });
- const report=await runIsolatedAuthProviderProbe({createClient,...cfg});
+ const observeAccess=createIsolatedAuthAccessObserver({...cfg,apiKey:key});
+ const report=await runIsolatedAuthProviderProbe({createClient,observeAccess,...cfg});
  process.stdout.write(JSON.stringify(report)+'\n');
 }
 try{await main();}
