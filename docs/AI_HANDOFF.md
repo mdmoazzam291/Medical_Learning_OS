@@ -1,3 +1,10 @@
+## Native crash acceptance test-first checkpoint —31 October2026 IST
+- Checked at 2026-10-31T05:12:33.777Z. Resumed PR346329887d25ca6988767397f51ed494664ee1b3705; one writer in mlos-evidence-crash-auth.
+- Added native crash test for synchronous durability flags, acknowledged receipts, explicit uncommitted transaction, account/policy/withdrawal denial and postcrash restore. Native helper restart hook deliberately not implemented yet; CI must observe the missing-hook assertion before implementation.
+- Isolated native CI step added, no hosted URL/credentials/app dependencies. Local syntax/check stage; native run requires non-root CI because local UID mapping only root.
+- Next inspect expected CI failure, implement controlled pg_ctl immediate shutdown/restart (not power-loss certification), verify WAL replay and all postconditions, then finish current owner-api/session compatibility audit. Work in progress, no crash success claim.
+- No hosted migration/API/source-byte/reviewer/clinical/rights/exam/learner release or production changes. Ownership retained during CI.
+
 ## Native PostgreSQL independent-connection acceptance verified —31 October 2026 IST
 - Checked at 2026-10-31T05:05:34.059Z. Implementation commit37de68c9178ba9de1db4cfb51447e6c1d60cf90b on draft PR #346. Foundation run41171036865/job124448843962 evidence-native-postgres SUCCESS; exact job logs inspected. This follow-up records results only, without changing tested code/workflow.
 - Actual PostgreSQL18.6 on non-root Ubuntu24.04 verified three distinct backend PIDs. Seven real lock/wait/commit schedules PASS: identical request convergence, conflicting payload, withdrawal first, stage first, authority denial, policy denial and rollback releasing waiter. pg_locks/pg_blocking_pids barriers required.

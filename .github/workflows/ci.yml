@@ -73,6 +73,11 @@ jobs:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
         run: node scripts/source-evidence-pg-concurrency.js
+      - name: Verify native immediate-shutdown WAL recovery and denied state
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: node scripts/source-evidence-pg-crash-recovery.js
       - name: Prove barrier test rejects SQL with advisory locks omitted
         env:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
