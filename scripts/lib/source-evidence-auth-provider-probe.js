@@ -43,15 +43,32 @@ async function rotate(client,refreshToken){
  if(result?.error||!result?.data?.session?.access_token||!result?.data?.session?.refresh_token)throw reject();
  return result.data.session;
 }
-async function revokedRefresh(createClient,refreshToken){
+function boundClient(factory,url){
+ const client=factory(url);
+ // Real SDK exposes this constructor-bound property at runtime. A test-only
+ // mock must expose it too; no uninspectable fallback client is permitted.
+ if(client?.supabaseUrl!==url||!client.auth||
+    typeof client.auth.getUser!=='function'||typeof client.auth.refreshSession!=='function'||
+    typeof client.auth.signOut!=='function')throw reject();
+ return client;
+}
+async function revokedRefresh(createClient,refreshToken,url){
+ let client;
  try{
-  const result=await createClient().auth.refreshSession({refresh_token:refreshToken});
+  client=boundClient(createClient,url);
+  const result=await client.auth.refreshSession({refresh_token:refreshToken});
+  if(result?.data?.session){
+   // Unexpected successful refresh: close the newly authenticated disposable
+   // session before rejecting the whole acceptance run.
+   try{await client.auth.signOut({scope:'local'});}catch{}
+   return false;
+  }
   // An outage, timeout, thrown SDK error or malformed response is NOT
-  // evidence of revocation. Only provider-originated Auth API denial is.
+  // evidence of revocation. Require a real AuthApiError classification.
   const error=result?.error;
-  return !result?.data?.session&&
-    (error?.code==='refresh_token_not_found'||error?.code==='refresh_token_already_used')&&
-    [400,401,422].includes(error?.status);
+  return error?.name==='AuthApiError'&&
+    (error.code==='refresh_token_not_found'||error.code==='refresh_token_already_used')&&
+    [400,401,422].includes(error.status);
  }catch{return false;}
 }
 async function logout(client,scope){
@@ -69,7 +86,7 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
  // Do not allocate a client until the exact sandbox target and identities pass.
  validateNonproductionAuthProbeConfig({url,projectRef,confirmation,accountA,accountB});
  if(typeof createClient!=='function')throw new Error('auth_probe_isolation_not_established');
- const a1=createClient(),a2=createClient(),b=createClient(),verifier=createClient();
+ const a1=boundClient(createClient,url),a2=boundClient(createClient,url),b=boundClient(createClient,url),verifier=boundClient(createClient,url);
  if([a1,a2,b,verifier].some(c=>!c?.auth||typeof c.auth.getUser!=='function'))throw reject();
  let signedA1=false,signedA2=false,signedB=false;
  try{
@@ -85,11 +102,11 @@ export async function runIsolatedAuthProviderProbe({createClient,url,projectRef,
   const cRenew=verifiedClaims(renewed.access_token,id1,url);
   if(cRenew.session!==c1.session)throw reject();
   await logout(a1,'local');signedA1=false;
-  if(!await revokedRefresh(createClient,renewed.refresh_token))throw reject();
+  if(!await revokedRefresh(createClient,renewed.refresh_token,url))throw reject();
   const oldLocalJwtRecognized=await safeUser(verifier,renewed.access_token)===id1;
   if(await safeUser(verifier,second.access_token)!==id1)throw reject();
   await logout(a2,'global');signedA2=false;
-  if(!await revokedRefresh(createClient,second.refresh_token))throw reject();
+  if(!await revokedRefresh(createClient,second.refresh_token,url))throw reject();
   const oldGlobalJwtRecognized=await safeUser(verifier,second.access_token)===id1;
   if(await safeUser(verifier,other.access_token)!==idB)throw reject();
   const forged=renewed.access_token.split('.');
