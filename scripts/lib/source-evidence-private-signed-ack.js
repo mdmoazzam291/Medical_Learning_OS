@@ -2,7 +2,7 @@
 // provider's durable-ack assertions. NO REAL PROVIDER/TRANSPORT IS CONNECTED.
 // A signature proves the configured key signed the assertion, NOT that the key
 // belongs to a provider or that content reached the intended human recipient.
-import {createHash,createPublicKey,verify as verifySignature} from 'node:crypto';
+import {KeyObject,createHash,createPublicKey,verify as verifySignature} from 'node:crypto';
 
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[1-8][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
 const hex=/^[a-f0-9]{64}$/;
@@ -56,9 +56,19 @@ export function createSourceEvidenceSignedAckLookup({
     !identifier.test(recipientId))
   throw new TypeError('private_signed_ack_configuration_invalid');
  let key;
- try{key=createPublicKey(trustedPublicKey);}
- catch{throw new TypeError('private_signed_ack_configuration_invalid');}
- if(key.asymmetricKeyType!=='ed25519')
+ try{
+  // Node's createPublicKey() does NOT accept an already-public KeyObject.
+  // Accept only a pinned public KeyObject or a public PEM, never private key
+  // material disguised as an input to the trust configuration.
+  if(trustedPublicKey instanceof KeyObject){
+   if(trustedPublicKey.type!=='public')throw new TypeError('private_key_not_allowed');
+   key=trustedPublicKey;
+  }else if(typeof trustedPublicKey==='string'&&
+     /^-----BEGIN PUBLIC KEY-----\\r?\\n/.test(trustedPublicKey)){
+   key=createPublicKey(trustedPublicKey);
+  }else throw new TypeError('unsupported_key_format');
+ }catch{throw new TypeError('private_signed_ack_configuration_invalid');}
+ if(key.type!=='public'||key.asymmetricKeyType!=='ed25519')
   throw new TypeError('private_signed_ack_configuration_invalid');
 
  return async function lookupDurableAck(value){
