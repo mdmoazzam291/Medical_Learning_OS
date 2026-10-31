@@ -34,3 +34,9 @@ Alternative: retain serializing writers behind an explicitly governed private au
 - Independent permission/rights/reviewer governance review. These receipts grant no clinical, rights, exam or learner-release authority.
 
 Reference: official [getUser documentation](https://supabase.com/docs/reference/javascript/auth-getuser) checked31October2026 states it contacts Auth and returns authentic user data. Repository owner-api verifies before the existing runtime helper decodes session_id; the prototype preserves that order without changing product runtime. Changelog checked: TLS cipher deprecation and PostgreSQL patch-version notices affect future connector/deployment validation, not this offline JS API.
+
+## Disposable row-lock investigation —31 October2026
+
+The separate authority-row-locks overlay exercises FOR SHARE on exact synthetic account/session/Admin/feature rows before metadata locking, without installing authority mutation triggers. READ COMMITTED only. A non-login, non-bypass private owner receives the minimal UPDATE-column privilege and UPDATE USING visibility required for locking, with WITH CHECK(false) to reject actual writes; gateway/executor receive no direct Auth table privileges. Exact existing runtime/Admin function bodies remain unchanged.
+
+This is a representative minimal-schema protocol. Real provider session expiry/refresh/cleanup/MFA/cascade schema and writer lock order remain gates. Inverse writer order is deliberately tested for PostgreSQL deadlock victim rollback and same-request reconciliation; success does not mean deadlock-free. Admin hard deletion is restricted by the existing foreign key and is not demonstrated by the soft-deletion flag scenario. No production policy/role/trigger/function has been applied.

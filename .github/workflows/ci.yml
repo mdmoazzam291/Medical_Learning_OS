@@ -74,6 +74,7 @@ jobs:
           PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-platform-db-check.js
           PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-capability-db-check.js
           PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-delegation-db-check.js
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-row-lock-db-check.js
       - name: Verify native independent-connection races and recovery
         env:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
@@ -91,6 +92,18 @@ jobs:
           fi
           grep -F "platform_advisory_barrier_not_observed" "$RUNNER_TEMP/mlos-platform-negative.log"
           grep -F "Native platform fixture cleanup PASS" "$RUNNER_TEMP/mlos-platform-negative.log"
+      - name: Verify authority row locks without Auth mutation hooks
+        env:
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/source-evidence-row-lock-pg-concurrency.js
+          if node scripts/source-evidence-row-lock-pg-concurrency.js --key-share > "$RUNNER_TEMP/mlos-row-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-row-negative.log"
+            exit 1
+          fi
+          grep -F "row_authority_barrier_not_observed" "$RUNNER_TEMP/mlos-row-negative.log"
+          grep -F "Authority row fixture cleanup PASS" "$RUNNER_TEMP/mlos-row-negative.log"
       - name: Verify native immediate-shutdown WAL recovery and denied state
         env:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js
