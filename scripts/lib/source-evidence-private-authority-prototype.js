@@ -6,6 +6,7 @@ const hex=/^[a-f0-9]{64}$/;
 const stageSql='select evidence_private.stage($1,$2,$3,$4) as r';
 const intentSql='select evidence_private.reserve_intent($1,$2,$3,$4) as r';
 const ackSql='select evidence_private.record_ack($1,$2,$3,$4) as r';
+const lookupSql='select evidence_private.inspect_intent($1,$2) as r';
 const result=status=>Object.freeze({status});
 function capture(value){
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
@@ -80,7 +81,7 @@ export function createSourceEvidencePrivateAuthorityPrototype({getUser,query,exp
 export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query}){
  if(typeof lookupDurableAck!=='function'||typeof query!=='function')
   throw new TypeError('private_ack_reconciler_config_invalid');
- return Object.freeze({async reconcile(value){
+ const api={async reconcile(value){
   if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
      Reflect.ownKeys(value).length!==3||
      !['requestId','attemptId','digest'].every(k=>Object.hasOwn(value,k))||
@@ -106,5 +107,28 @@ export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query
    if(error?.message==='private_invalid')return result('invalid');
    return result('uncertain');
   }
- }});
+ },
+ async recover(value){
+  // Recovery is internal to the trusted confirmer and returns no attempt ID.
+  // It never creates or replays a dispatch. Lost commit responses cannot
+  // force a new one-shot attempt.
+  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||
+     Reflect.ownKeys(value).length!==2||
+     !['requestId','digest'].every(k=>Object.hasOwn(value,k))||
+     !uuid.test(value.requestId)||!hex.test(value.digest))return result('invalid');
+  const request=value.requestId.toLowerCase(),digest=value.digest;
+  let found;
+  try{found=(await query(lookupSql,[request,digest]))?.rows?.[0]?.r;}
+  catch(error){
+   if(error?.message==='private_denied')return result('denied');
+   if(error?.message==='private_invalid')return result('invalid');
+   return result('uncertain');
+  }
+  if(found?.status==='no-intent')return result('reconciliation-required');
+  if(found?.status!=='intent-found'||!uuid.test(found.attemptId)||
+    !['intent','uncertain','acknowledged'].includes(found.state))return result('uncertain');
+  return api.reconcile({requestId:request,attemptId:found.attemptId.toLowerCase(),digest});
+ }
+ };
+ return Object.freeze(api);
 }
