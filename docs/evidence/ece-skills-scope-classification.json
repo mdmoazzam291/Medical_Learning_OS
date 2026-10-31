@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "kind": "ece-skills-scope-classification",
+  "status": "unreviewed_source_classification",
+  "sourceRights": "citation_only",
+  "sources": {
+    "ece2019": "8683513a6ed3ec1f1e8feefafddae7756b4ca918e082b158adfcdb6b3c125545",
+    "skills2019": "3e267665af122cb7fd238151d73516e278eb800464836f0b19a6ee660dec0c4e",
+    "base2024": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c"
+  },
+  "ece": {
+    "learnerObjectiveLocators": [
+      {
+        "localId": "ece2024:objective1",
+        "source": "base2024",
+        "pdfPage": 36,
+        "legacyCounterparts": {
+          "pdfPages": [
+            10,
+            11
+          ],
+          "relation": "edition_specific_candidate_continuity_not_automatic_equivalence"
+        }
+      },
+      {
+        "localId": "ece2024:objective2",
+        "source": "base2024",
+        "pdfPage": 36,
+        "legacyCounterparts": {
+          "pdfPages": [
+            10,
+            11
+          ],
+          "relation": "edition_specific_candidate_continuity_not_automatic_equivalence"
+        }
+      },
+      {
+        "localId": "ece2024:objective3",
+        "source": "base2024",
+        "pdfPage": 36,
+        "legacyCounterparts": {
+          "pdfPages": [
+            10,
+            11
+          ],
+          "relation": "edition_specific_candidate_continuity_not_automatic_equivalence"
+        }
+      },
+      {
+        "localId": "ece2024:objective4",
+        "source": "base2024",
+        "pdfPage": 36,
+        "legacyCounterparts": {
+          "pdfPages": [
+            10,
+            11
+          ],
+          "relation": "edition_specific_candidate_continuity_not_automatic_equivalence"
+        }
+      },
+      {
+        "localId": "ece2024:objective5",
+        "source": "base2024",
+        "pdfPage": 36,
+        "legacyCounterparts": {
+          "pdfPages": [
+            10,
+            11
+          ],
+          "relation": "edition_specific_candidate_continuity_not_automatic_equivalence"
+        }
+      }
+    ],
+    "deliveryElements": [
+      {
+        "localId": "ece2024:element1",
+        "pdfPage": 36
+      },
+      {
+        "localId": "ece2024:element2",
+        "pdfPage": 36
+      },
+      {
+        "localId": "ece2024:element3",
+        "pdfPage": 37
+      }
+    ],
+    "legacyActivityRecord": {
+      "pdfPage": 13,
+      "kind": "record_and_periodic_formative_assessment"
+    },
+    "facultyGuidancePages": [
+      9,
+      12,
+      14,
+      15
+    ],
+    "annexureClassification": [
+      {
+        "annexure": "I",
+        "pdfPages": [
+          18,
+          19
+        ],
+        "kind": "example_contexts_and_outcomes"
+      },
+      {
+        "annexure": "II",
+        "pdfPages": [
+          20
+        ],
+        "kind": "observation_guide_examples"
+      },
+      {
+        "annexure": "III",
+        "pdfRange": [
+          21,
+          40
+        ],
+        "kind": "six_sample_lessons"
+      },
+      {
+        "annexure": "IV",
+        "pdfPages": [
+          41,
+          42
+        ],
+        "kind": "humanities_example"
+      },
+      {
+        "annexure": "V",
+        "pdfPages": [
+          43,
+          44
+        ],
+        "kind": "sample_assessment_questions"
+      }
+    ],
+    "effectiveUniqueRequirementCount": null
+  },
+  "skills": {
+    "learnerEvidenceNeeds": [
+      {
+        "localId": "skills2019:biosafety-prerequisite",
+        "pdfPage": 21,
+        "kind": "training_prerequisite"
+      },
+      {
+        "localId": "skills2019:phase-progress",
+        "pdfPage": 17,
+        "kind": "phase_specific_observed_skill_progression"
+      },
+      {
+        "localId": "skills2019:certification-record",
+        "pdfPages": [
+          17,
+          24
+        ],
+        "kind": "verified_performance_and_logbook_evidence"
+      }
+    ],
+    "reusedAetcom": {
+      "pdfPages": [
+        22,
+        23
+      ],
+      "moduleId": "2.1",
+      "relation": "reproduced_example_not_new_competency"
+    },
+    "institutionalGuidance": {
+      "pdfPages": [
+        24,
+        55,
+        56
+      ],
+      "kind": "lab_capacity_and_faculty_program_obligations"
+    },
+    "sampleModuleRanges": [
+      [
+        31,
+        33
+      ],
+      [
+        34,
+        36
+      ],
+      [
+        37,
+        41
+      ],
+      [
+        42,
+        47
+      ],
+      [
+        48,
+        50
+      ],
+      [
+        51,
+        53
+      ]
+    ],
+    "legacyReferencePolicy": "Retain2019IDs; no IM->GM or identical-number semantic equivalence inferred across editions.",
+    "physicalSkillEvidence": "MCQ evidence alone is insufficient for observed procedural competence",
+    "effectiveUniqueRequirementCount": null
+  },
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  }
+}

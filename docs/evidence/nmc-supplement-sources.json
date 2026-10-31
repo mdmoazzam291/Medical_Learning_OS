@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-supplement-source-manifest",
+  "checkedDate": "2026-10-30",
+  "indexUrl": "https://nmc.org.in/page/information-desk-for-colleges-ug-curriculum",
+  "sourceRights": "citation_only",
+  "status": "source_retrieval_complete_requirement_enumeration_incomplete",
+  "documents": [
+    {
+      "id": "aetcom",
+      "url": "https://nmc.org.in/storage/new/AETCOM_book.pdf",
+      "sha256": "f752cfe4ef694f60f89f7e709a29c4d8167672928dd248dfb9bd34414bc13766",
+      "bytes": 813459,
+      "pages": 94,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "foundation",
+      "url": "https://nmc.org.in/storage/new/FOUNDATION-COURSE-MBBS-17.07.2019.pdf",
+      "sha256": "616c6ebe7dd47a631aa7b984488136fc71827a7f7b6a11382b89b34e76386504",
+      "bytes": 817884,
+      "pages": 64,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "ece",
+      "url": "https://nmc.org.in/storage/new/Early_Clinical_Exposure-MBBS-07.08.2019.pdf",
+      "sha256": "8683513a6ed3ec1f1e8feefafddae7756b4ca918e082b158adfcdb6b3c125545",
+      "bytes": 589318,
+      "pages": 44,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "assessment",
+      "url": "https://nmc.org.in/storage/new/Module_Competence_based_02.09.2019.pdf",
+      "sha256": "a0bfd45c9424d90b254605fc118b9c630681e7d455f37c41a3c1239d3e7e384c",
+      "bytes": 836659,
+      "pages": 36,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "alignment",
+      "url": "https://nmc.org.in/storage/new/Alignment-and-Integration_03.10.2019.pdf",
+      "sha256": "e5cf0a04271ee77f126ee2d991509b6a3481019eda81c3206abda6fa46eb07c9",
+      "bytes": 1430319,
+      "pages": 34,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "skills",
+      "url": "https://nmc.org.in/storage/new/Skill-Module_23.12.2019.pdf",
+      "sha256": "3e267665af122cb7fd238151d73516e278eb800464836f0b19a6ee660dec0c4e",
+      "bytes": 797321,
+      "pages": 56,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "logbook",
+      "url": "https://nmc.org.in/storage/new/Logbook-Guidelines_17.01.2020.pdf",
+      "sha256": "8fa1280d3efa18d9f621d84e69f294dd2a3fa960b3c9425865ea10df7917010f",
+      "bytes": 563095,
+      "pages": 32,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "electives",
+      "url": "https://nmc.org.in/storage/new/Electives-Module-20-05-2020.pdf",
+      "sha256": "a7fb3507e3c76fae9e2be017e4ee589c994c4c05aafaeeed2a9ecd0a22d85cb4",
+      "bytes": 685815,
+      "pages": 30,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "pandemic",
+      "url": "https://nmc.org.in/storage/new/Pandemic-MGT-Module-UG.pdf",
+      "sha256": "49e2541ca0cfb1c9bc12cb2b7f59d8e3c11c06db7c1e457f747c43f77024e984",
+      "bytes": 966165,
+      "pages": 113,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    },
+    {
+      "id": "online-learning",
+      "url": "https://nmc.org.in/storage/new/Module-8-Online-learning-and-assessment-17-11-20-version-final-for-uploading-converted.pdf",
+      "sha256": "cf1e82b77aca65c3e4f8b3c6bdee048120616722dc01a78f520984c4dc313c35",
+      "bytes": 983393,
+      "pages": 57,
+      "editionApplicability": "pending_per_cohort_review",
+      "requirementsEnumerated": false,
+      "independentReview": false
+    }
+  ],
+  "embeddedScopes": [
+    {
+      "scope": "IMG global roles and competencies",
+      "source": "base2024",
+      "pdfRange": [
+        3,
+        9
+      ],
+      "rangeStatus": "candidate_scope_requires_boundary_review"
+    },
+    {
+      "scope": "AETCOM governance",
+      "source": "base2024",
+      "pdfRange": [
+        49,
+        50
+      ],
+      "rangeStatus": "annexure1"
+    },
+    {
+      "scope": "foundation course",
+      "source": "base2024",
+      "pdfRange": [
+        54,
+        54
+      ],
+      "rangeStatus": "visually_inspected_annexure4",
+      "observedWeeks": 2,
+      "observedHours": 80
+    },
+    {
+      "scope": "phase alignment",
+      "source": "base2024",
+      "pdfRange": [
+        63,
+        64
+      ],
+      "rangeStatus": "annexures10_11"
+    },
+    {
+      "scope": "family adoption",
+      "source": "base2024",
+      "pdfRange": [
+        65,
+        71
+      ],
+      "rangeStatus": "annexure12_with_logbook_candidate_boundary"
+    },
+    {
+      "scope": "research facilities",
+      "source": "base2024",
+      "pdfRange": [
+        72,
+        73
+      ],
+      "rangeStatus": "draft_infrastructure_guidelines_not_automatically_learner_competencies"
+    },
+    {
+      "scope": "disability admission guidance",
+      "source": "base2024",
+      "pdfRange": [
+        74,
+        74
+      ],
+      "rangeStatus": "admission_scope_distinct_from_clinical_disability_competencies"
+    }
+  ],
+  "aetcom": {
+    "documentId": "aetcom",
+    "sourceDeclaredCore": 39,
+    "sourceDeclaredDesirable": 15,
+    "sourceDeclaredTotal": 54,
+    "declarationPdfPage": 87,
+    "appendixScopeCandidate": [
+      87,
+      93
+    ],
+    "exactRowsReviewed": false,
+    "overlapWithSubjectCodesReviewed": false,
+    "approvedDenominator": null
+  },
+  "laterAmendmentSearch": {
+    "complete": false,
+    "knownAppliedSourceReferences": [
+      "2024-10-10 clarification"
+    ],
+    "queries": [
+      "site:nmc.org.in CBME curriculum 2024 2025 2026 corrigendum amendment disability competencies",
+      "site:nmc.org.in CBME 2025 competencies",
+      "site:nmc.org.in CBME 2026 curriculum amendment"
+    ],
+    "indexesChecked": [
+      "https://nmc.org.in/page/rules-regulations-rules-regulations-nmc",
+      "https://www.nmc.org.in/information-desk/all-news/"
+    ],
+    "findings": [
+      "2025/2026 UGMSR amendments are institution standards and must not automatically change competency scope",
+      "2026 PwBD admission assessment notices require separate scope classification",
+      "Search/index retrieval is not an exhaustive later-notice audit"
+    ]
+  },
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  }
+}

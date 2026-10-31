@@ -1,0 +1,1700 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-consolidated-extraction-checkpoint",
+  "edition": "2024-09-12-with-2024-10-10-amendment-references",
+  "status": "unreviewed_incomplete",
+  "sourceRights": "citation_only",
+  "sources": [
+    {
+      "id": "base",
+      "url": "https://nmc.org.in/rules-regulation-nmc/33/file",
+      "sha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+      "pages": 467
+    },
+    {
+      "id": "clarification",
+      "url": "https://nmc.org.in/rules-regulation-nmc/34/file",
+      "sha256": "62a60b29a1fd5a97f2fcac4a1c3761286f2dac2c371e76047f5ea8cbccb13db0",
+      "pages": 4
+    }
+  ],
+  "method": {
+    "extractor": "pdftotext -layout",
+    "matcher": "line-start subject prefix + optional whitespace + digits + optional whitespace + dot + optional whitespace + digits; word boundary",
+    "digest": "SHA256 UTF-8 newline-joined whitespace-stripped matching IDs in page order, plus trailing newline; empty page hashes newline",
+    "normalizationApplied": false,
+    "fullVisualReview": false,
+    "independentReview": false
+  },
+  "publishedBaseSummaryTotal": 2781,
+  "strictDistinctCandidateTotal": 2624,
+  "definingPagesScanned": 263,
+  "subjects": [
+    {
+      "prefix": "AN",
+      "pdfRange": [
+        108,
+        148
+      ],
+      "strictUnique": 413,
+      "strictOccurrences": 413,
+      "pages": [
+        {
+          "pdfPage": 108,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "3ef14ed225a276c4fffbdfc757a4f8708941b527deb944285749b11066ab6b10"
+        },
+        {
+          "pdfPage": 109,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "1c34c10ef13d4244bd37ea71b94b9aef30a0b0b99ce8ed5225c77e3d9d05574b"
+        },
+        {
+          "pdfPage": 110,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "d3987946537959a2118be8dc552f9570479a3af7e5d92aef8373751f524f407e"
+        },
+        {
+          "pdfPage": 111,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "755f49e7ad8b2ae6cd8c09ef80865e2e239c8e50d9f48acdf2bdfeb975d4ba15"
+        },
+        {
+          "pdfPage": 112,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "92db69208a6ff1f516dcd4edf6220d9f0aee610e54d42fcbd19e60769a014aca"
+        },
+        {
+          "pdfPage": 113,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "24d6901889029314d8d782e890a4a74526026a093b7bb043698c9a0025f8465e"
+        },
+        {
+          "pdfPage": 114,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "342815f7b69410eaae5ba6a6430d02a7224ac76da24cb179389bf0ea1e985b35"
+        },
+        {
+          "pdfPage": 115,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "8533b23450b9fc73240405e9199b8a231df1fda174b3b269c1064f86a2f21a71"
+        },
+        {
+          "pdfPage": 116,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "95b872626e86e0131f14b849309b8fab056460d6d49c9b9859e367c6a5e996d1"
+        },
+        {
+          "pdfPage": 117,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "13d550977201f27fd4c18359c83585474751e9952defc1722b4346c71eccf0f6"
+        },
+        {
+          "pdfPage": 118,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "b014260cf34c7d41e37fbbcf83b6097105908db9cf02be4507982622105a7d08"
+        },
+        {
+          "pdfPage": 119,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "6b25fa4291658b9ce77ab3422c1418eb8377c5fe9486249a2d2227d10d1c59a3"
+        },
+        {
+          "pdfPage": 120,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "de48b570c9ef8d945783a8aa677fb64ff81a39dc8e14ae1edd2fededff0c4a71"
+        },
+        {
+          "pdfPage": 121,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "0c9ad586bd34198aa4a81f5a78a742154faf3f9b6f40c7dd7f094db79e5e4125"
+        },
+        {
+          "pdfPage": 122,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "dde74b4432b747f811cef4ae011f2f0263d91b5b06c0593f2345fcc53b500f5c"
+        },
+        {
+          "pdfPage": 123,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "cbfd4aed44155333ad14f8e0e17203f6668520eb2178305316e1e7541e60fa19"
+        },
+        {
+          "pdfPage": 124,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "cb81e53f9f42611a63286dc1e0b80ea828b332dbbda0681f884a18ea16e57b64"
+        },
+        {
+          "pdfPage": 125,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "e2d3c74afcb7e5f67918a5982a57de175a772a7b02050a51228133c48877b28e"
+        },
+        {
+          "pdfPage": 126,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "35c8feeafc0e54c017dac41c196cad45d5d298715ddf5a7698c26c219ee4fa59"
+        },
+        {
+          "pdfPage": 127,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "b26f06f7ad7b875e65f8f03226538a6b0594f44bf9ac54e39df6e0e5a94b1f82"
+        },
+        {
+          "pdfPage": 128,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "f8181667cabf0a4af409c456d6b5b3b7a43ec1165d945081e53e4e938d293bdc"
+        },
+        {
+          "pdfPage": 129,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "d543ea76c07f0968dd5ed1a8d5f03360cfef8c8aec6710ea0aa15ab086741ebf"
+        },
+        {
+          "pdfPage": 130,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "974d9878697c27806a649390c8dbf613872c7c8d81059689a61508765533148a"
+        },
+        {
+          "pdfPage": 131,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "c4c6a596aa2208e5734781911ed791b750998563699816b1f7e29320815bdc97"
+        },
+        {
+          "pdfPage": 132,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "0b8d5d88be8d65d1ebfc9c9f4b21c70c6ea13a3733eda1e624eef0f5d5818f54"
+        },
+        {
+          "pdfPage": 133,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "64c68fd0983dcc5f5f4b9299680360b90e33da964c685919255b8c3e29f5558b"
+        },
+        {
+          "pdfPage": 134,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "3c106d0ff1268f1b3cf8f0247ae66951f4f0d782b0287d0c0311ed6a70885d4d"
+        },
+        {
+          "pdfPage": 135,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "602d2b9ee20a84fe31ea0c5d650d7e5d4e143dac0b424d40e7d3d6dd27969391"
+        },
+        {
+          "pdfPage": 136,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "99c7913a6de0319c10484ebf574c0e71f9783212f5c64cf3857448722a43c3ff"
+        },
+        {
+          "pdfPage": 137,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "496dac5db39dd916a9053bfcef76905fd5221b1b4350410fb9373e69ee65adae"
+        },
+        {
+          "pdfPage": 138,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "afcb4bc4ab1407d689b41054d009fba7649a7fc276db1f3f83079ec4684c6582"
+        },
+        {
+          "pdfPage": 139,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "be1e511edc430116b9f3b676e25cf212bb90cf3c6b64ab1acfa41e3ba87c0ce6"
+        },
+        {
+          "pdfPage": 140,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "85072b2f6281f9b4e595005d77c93d4d7103f88d494c46598355555ffd8de229"
+        },
+        {
+          "pdfPage": 141,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "34faeb33dcddbb1d43a3155faf6c75529da9690be316a216d492a8323a187f2f"
+        },
+        {
+          "pdfPage": 142,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "cdb0462d56c6dbce922146888185cf648b21454ba38ed98d0a32ddf63c5dee38"
+        },
+        {
+          "pdfPage": 143,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "0f10c3ae8d0502d042730ecc0bbd5c95bac102781f5b37812f88e06f886965e4"
+        },
+        {
+          "pdfPage": 144,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "ee3ea02aeb60ee0077c5f8cc6f748bd0a172f3990785078d2d8cadfafb507a8f"
+        },
+        {
+          "pdfPage": 145,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "02c38141609e79780b47e84136a11f5e4350aa7a4f5f38a5968003723a4cb7af"
+        },
+        {
+          "pdfPage": 146,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "97fe4941080bda0416be7f0c4c8236ad25a5f4de492bb5db07920749af5cfd86"
+        },
+        {
+          "pdfPage": 147,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "8ef2110215dfe468b9dca88c8ce824a5d4b1f3ce72d14f4837f99bdb04b327a0"
+        },
+        {
+          "pdfPage": 148,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "4f0e38607fc3d58be31865ba03142f236f0eee2ca8c1988d26dcd5dfade6e718"
+        }
+      ],
+      "subjectId": "anatomy",
+      "publishedBaseCount": 413,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "PY",
+      "pdfRange": [
+        150,
+        160
+      ],
+      "strictUnique": 136,
+      "strictOccurrences": 136,
+      "pages": [
+        {
+          "pdfPage": 150,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "31647510c6c8c8ce76c4208c0d6c4f609d1899e4770c452e3680396c1b0548fc"
+        },
+        {
+          "pdfPage": 151,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "18646af253e6d3bcb07e075e478179b9f5dc5c2332c3b061b46f34fff04c0679"
+        },
+        {
+          "pdfPage": 152,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "9bfa36866b6f4049b2c725d877d5064856ef65d2f776fe91ac01e10ca8f3927f"
+        },
+        {
+          "pdfPage": 153,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "c42bee6ea3cb63120be730ae596049cef12dd0cfe2d460318467d772b484b243"
+        },
+        {
+          "pdfPage": 154,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "a6626e0570fc968cb218c6699b1f1e08e2c6919f0ac8ebf1ffc777a2a9a7531d"
+        },
+        {
+          "pdfPage": 155,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "52b041df26a06098a95c4853bb2ebf73b6f35a9aae8f8141c1d39090260d4767"
+        },
+        {
+          "pdfPage": 156,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "f895078569cac81d68fee747f6dde68bffee02e51984fc50617351bc7bd15a7c"
+        },
+        {
+          "pdfPage": 157,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "63a10b5fd737bf1972541e04a8d25c6ec19f1a07b585f09dfca1bdfe0bb67b9c"
+        },
+        {
+          "pdfPage": 158,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "50230ab49031015c735300f78dacfedcc959d5d159c2318ad98780eaeaed5f8e"
+        },
+        {
+          "pdfPage": 159,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "e46a94db1c14aef8408284fa4586190b769340a5114b3ab7fa494be191b5067e"
+        },
+        {
+          "pdfPage": 160,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "8dd7b2b5946ecdb2d2e54c2420cf46b17cc90614aaf1314232a6e9d41d051e54"
+        }
+      ],
+      "subjectId": "physiology",
+      "publishedBaseCount": 136,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "BC",
+      "pdfRange": [
+        162,
+        172
+      ],
+      "strictUnique": 82,
+      "strictOccurrences": 82,
+      "pages": [
+        {
+          "pdfPage": 162,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "6ca083747d92f74dd7bf42705b702b9b3a6d957cb5ae750934beff7320782e2a"
+        },
+        {
+          "pdfPage": 163,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "2f37825189d3f280af6f1c8bf2504abc528ef2a055b18e308fc7eab2390d1332"
+        },
+        {
+          "pdfPage": 164,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "b28afec43d636799c6a79ffb28fb186a14718d34841d68c21100dbc594881179"
+        },
+        {
+          "pdfPage": 165,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "5766efc39e50a0e19df08d7cb4383551704e88a7f0334111a4966c60edf78325"
+        },
+        {
+          "pdfPage": 166,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "f5f3f1760e37e5cc38fbc3c1488683079a9d8d658276b9f2f6b4e83cdbb516a6"
+        },
+        {
+          "pdfPage": 167,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "c1eb2025d78aeac30817b9ea9f22c41b248a0043cf06c66cf991c2b042588e09"
+        },
+        {
+          "pdfPage": 168,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "918e94acf005def04a01d0ee24f4e9617eee9801ff60dc942068ec5d576d4129"
+        },
+        {
+          "pdfPage": 169,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "7bbfa9c22f9bfa4bffd55cbd0f513f8ff200c7c19e19daecac60a834159c3090"
+        },
+        {
+          "pdfPage": 170,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "b3483013c72d465700876c44ef375ad6a1bd10577721f363135a8cf59a7365f7"
+        },
+        {
+          "pdfPage": 171,
+          "strictOccurrences": 2,
+          "codeSequenceSha256": "895ce4ceb8bea292b3807c7e8bc515262b0d21f5c4bcd5ee87ab79a974e6740e"
+        },
+        {
+          "pdfPage": 172,
+          "strictOccurrences": 3,
+          "codeSequenceSha256": "4423bb339db749929892437ae0ce70111f922ba9c8ef6ab05de9f396a1241cbe"
+        }
+      ],
+      "subjectId": "biochemistry",
+      "publishedBaseCount": 84,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "bc-prefix-omitted",
+        "bc-wrapped"
+      ]
+    },
+    {
+      "prefix": "PH",
+      "pdfRange": [
+        174,
+        185
+      ],
+      "strictUnique": 92,
+      "strictOccurrences": 92,
+      "pages": [
+        {
+          "pdfPage": 174,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "90e661e05813d6101563bbcb682f39a203d6e8d6d0d13352d0cb816c4be6bbfc"
+        },
+        {
+          "pdfPage": 175,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "d9289da743ba1458f2dd68a636a9f231993d740ae2d937803e5015ca3c41b971"
+        },
+        {
+          "pdfPage": 176,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "8ea1446b79d2af84a6488e729e3f3fc5021f16fcd99620c68556b7f58e022900"
+        },
+        {
+          "pdfPage": 177,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "e38e6b1a6a73acbd9f46e4ad93a856c11cd1f17255c8970c01865a6576b1ffa6"
+        },
+        {
+          "pdfPage": 178,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "03c7e305f126ebb70451c6ce52869f7057548d8da72be7a702660c63c486b189"
+        },
+        {
+          "pdfPage": 179,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "0cf1f24211bb81a9d7ff9873ef8bd3921e9b45acac69ea03f00e2ffd45b0972c"
+        },
+        {
+          "pdfPage": 180,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "6ec6d21ba19958312127d3a02480679dd0e175c87868055cdf3b497d2c74c5ba"
+        },
+        {
+          "pdfPage": 181,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "5231a23c782de699b058d3644da0271d4065a3308b137e3987f71b6401b4b092"
+        },
+        {
+          "pdfPage": 182,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "7ee0da4f37c8bed376e2cc2e73f222911f0827ef3643b18f1c40ef13ecc6f5ac"
+        },
+        {
+          "pdfPage": 183,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "1167893bbfa268d7108d7b650b7fd60b806f90ab088cc9308a92abaf623608ef"
+        },
+        {
+          "pdfPage": 184,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "5a1714ff3724a8d7f2e25449a73a013c52dc7e0d87b511f5a6340115dfa3bdcb"
+        },
+        {
+          "pdfPage": 185,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "9e35ecc1d4dbe70170215389148f3ac332a38c6d754faeaf16084d49159f0b87"
+        }
+      ],
+      "subjectId": "pharmacology",
+      "publishedBaseCount": 92,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "PA",
+      "pdfRange": [
+        187,
+        204
+      ],
+      "strictUnique": 181,
+      "strictOccurrences": 181,
+      "pages": [
+        {
+          "pdfPage": 187,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "6b02b47506c24f2037b30c95544565d64fd9e626454ce6ccc7e5f31eee3a722a"
+        },
+        {
+          "pdfPage": 188,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "9020c7dd641764562ecfda2d3ad051c4a01751468284bcc9bd1ce129aa6750cf"
+        },
+        {
+          "pdfPage": 189,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "415b09dc5f3cc664d4740dbbce8f3e9e90286b16e4ac674234534e617544ecbf"
+        },
+        {
+          "pdfPage": 190,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "53bdb2f789f30e5a66aec4012ec612f0ceade7f249e447d06e0bbb7702808961"
+        },
+        {
+          "pdfPage": 191,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "ed6e3bbfdd48a03037e31f4a708b04736af019e413ddc39e31e04b9f6d63e4c0"
+        },
+        {
+          "pdfPage": 192,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "f7913f3bc4c567a6408e3511b8ef16f404c875c6a299d8316b84465c4fa5a591"
+        },
+        {
+          "pdfPage": 193,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "915e1e5e379177d72ea2b081f38de9d5dace482665bc5308055ac395716e25fd"
+        },
+        {
+          "pdfPage": 194,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "054c32a1fbecf322a4363b072a44e6a12c2bf589a1212bc3777ad56cecfdd426"
+        },
+        {
+          "pdfPage": 195,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "dca8deeae148b559f3d90db025396e4b3b154487d48761a7467ae1ab55761fde"
+        },
+        {
+          "pdfPage": 196,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "9377ef85f1fccc1b8c9cf78b08989f4255ee6587b5f8dc4f51cb70fc1881ecd5"
+        },
+        {
+          "pdfPage": 197,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "a39869b2e6070b666e0633b1c8297091c8f7249200de32280ce3e554ed0b84e0"
+        },
+        {
+          "pdfPage": 198,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "998665650f713cfcac151422906004368395295ed7043fac32f8e379c119e8fb"
+        },
+        {
+          "pdfPage": 199,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "5bad91c9a7f58393db1646a63102ad42cff3c50f47fe1ebb5ac27910c96e738f"
+        },
+        {
+          "pdfPage": 200,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "df83166d658e1170328aa55e8179aa2c77ea5317db96b638c37021fd7f80b5c6"
+        },
+        {
+          "pdfPage": 201,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "56eeb5d52b9f814b7ce674d1290ba5f857c20ed380bfbb0b14650e2c70a994a8"
+        },
+        {
+          "pdfPage": 202,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "e7304effc0fdda189f2121de17dac4fe5849bfa5d0fc98951de0eab4e68ef9a6"
+        },
+        {
+          "pdfPage": 203,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "b070eaa6b62ea9d0dff3d8905329e3dfa761b2f419232724f6535e84a4e374b6"
+        },
+        {
+          "pdfPage": 204,
+          "strictOccurrences": 1,
+          "codeSequenceSha256": "07c47764f280923c992da657506606bf38152cb573801acda3c998e4948a7434"
+        }
+      ],
+      "subjectId": "pathology",
+      "publishedBaseCount": 182,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "pa-extra-dot"
+      ]
+    },
+    {
+      "prefix": "MI",
+      "pdfRange": [
+        206,
+        213
+      ],
+      "strictUnique": 73,
+      "strictOccurrences": 73,
+      "pages": [
+        {
+          "pdfPage": 206,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "b6a1acf938b016e19eaa5d4201bf3e02ba00c6396e925f2f8dce0c9c18b3185c"
+        },
+        {
+          "pdfPage": 207,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "7567511317a61514a4c9cf39e52aa39da36fd3acfe2f55a40ccad18ea6dc648c"
+        },
+        {
+          "pdfPage": 208,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "7da53048f32da0db8389f548a48062cc27bb57f3ccac9f4e0dd9ac4d243d0fbb"
+        },
+        {
+          "pdfPage": 209,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "ed209f3913c540fbee90899941c92871df69086ec62b1901916ed7200abb622f"
+        },
+        {
+          "pdfPage": 210,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "ce1522efb262e8e9be8fda656781922d0cd04f592f8a242e745d4290daac21ce"
+        },
+        {
+          "pdfPage": 211,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "a1508c7831cb8fb862a5bdc77660aedd21f8526aea82a47c6c9aaf487def78a5"
+        },
+        {
+          "pdfPage": 212,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "3aa0e21577de957a3f68fcbab0c0fcf952ecce1fdb710337797c049938d421ad"
+        },
+        {
+          "pdfPage": 213,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "32de313e6eb4fc27d38692161231160baa1637671cb1c7d4f3a9aa53be928880"
+        }
+      ],
+      "subjectId": "microbiology",
+      "publishedBaseCount": 74,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "mi-suffix-absent"
+      ]
+    },
+    {
+      "prefix": "FM",
+      "pdfRange": [
+        215,
+        234
+      ],
+      "strictUnique": 157,
+      "strictOccurrences": 157,
+      "pages": [
+        {
+          "pdfPage": 215,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "dabc5465ffe115d56282f9a5f8ef442b26780bf32d9dee8d7c7b513c58f69e8d"
+        },
+        {
+          "pdfPage": 216,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "6b9d359435a2cd0c93919a833d671803d1afb88254ece5dee7b171374806bfec"
+        },
+        {
+          "pdfPage": 217,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "3c49f6caea65465ad4becdf1a4263edbb081022caeadc58290bd5d661e4a8000"
+        },
+        {
+          "pdfPage": 218,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "78290e23dc84c931efc3106569a510f34ede3d49692ba138f5075bafaff1c918"
+        },
+        {
+          "pdfPage": 219,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "8e636714bbd6dc09f61ced1bca7a7508ce01bc1b3a3819babcd22583ff106631"
+        },
+        {
+          "pdfPage": 220,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "3aab44594a903b19627c1ee5445f8c36856a3c5e159b3b0df86e860b9a0876fc"
+        },
+        {
+          "pdfPage": 221,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "ddc4e8397b528d243666692df0b0d57101cedbec965873145471a904174a5559"
+        },
+        {
+          "pdfPage": 222,
+          "strictOccurrences": 4,
+          "codeSequenceSha256": "143b7c5498343b3acc948d6f5488869dba8055ecd585a120e857f6bee2a58073"
+        },
+        {
+          "pdfPage": 223,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "0bbc72045528285b13c0f0221b251ff86dc14e7d87843c2dd2b07e35c8ec1b33"
+        },
+        {
+          "pdfPage": 224,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "8dbdc74255b5e410f619bdf38a9865edb3236af9a6421f111b89fc488b215f50"
+        },
+        {
+          "pdfPage": 225,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "4df7ca206fcf37116af86dd7882d8b890165c1c5d25caf46b6ca43e86a7c0155"
+        },
+        {
+          "pdfPage": 226,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "7b6a11174505fa67147e45e7f5150a7f64855539563b0c0c6904a057ae16aa33"
+        },
+        {
+          "pdfPage": 227,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "12cd0f0e9a9bab9a1ca9fd2ab5b4d4d6bd262ef30f946322747de0f954ed33ca"
+        },
+        {
+          "pdfPage": 228,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "3656c96472256ef7b5160988d9a5789b930269ac853aedd2af9cada34eca75e9"
+        },
+        {
+          "pdfPage": 229,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "ab99f10b3e3454c7df317d54405b76d8659b2fbe5572208923f1d9cdb99b53c9"
+        },
+        {
+          "pdfPage": 230,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "965cb28dfa4e7e95fdf43b0015183967c198d65309bccee8b61516ca733fa8a7"
+        },
+        {
+          "pdfPage": 231,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "a5df7abd941e01a84c4284efdcd414e469b0c8224eddc7a9ff11d96d0be7bbde"
+        },
+        {
+          "pdfPage": 232,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "7e4663348f10e57ccfc81c519880fa1f321bcdadcb60fe5cb45d680b4e01d357"
+        },
+        {
+          "pdfPage": 233,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "97d26eb4c6cc3dfd742e3cd60bebf8599552d61c87c144535b083531b49ab2eb"
+        },
+        {
+          "pdfPage": 234,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "e083655656095508231ff4f4489a7e28b0ea1790e92109377d4af4a20a2c3870"
+        }
+      ],
+      "subjectId": "forensic-medicine",
+      "publishedBaseCount": 158,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "fm-colon"
+      ]
+    },
+    {
+      "prefix": "CM",
+      "pdfRange": [
+        269,
+        279
+      ],
+      "strictUnique": 136,
+      "strictOccurrences": 136,
+      "pages": [
+        {
+          "pdfPage": 269,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "8775b29f5dd0dc08c5b91d92683c0baee77e783fc8ec24c4841af6a0a525ddc4"
+        },
+        {
+          "pdfPage": 270,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "f74be4e47b7979631c62dafd085893bae96e0a944940968b9bef61a8c9269fdb"
+        },
+        {
+          "pdfPage": 271,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "de2da88fd7dc5a7d1fc4a2df2ea63b69183f33ee92a434400da388a4b7c0bfef"
+        },
+        {
+          "pdfPage": 272,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "b35762a3091654b6607c437199e99462600cd2518c1d72f7b0c854dece4df7f6"
+        },
+        {
+          "pdfPage": 273,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "81a9927ee59a935257122483812b1472745c5447f1f3e705b8fe31f64318af1a"
+        },
+        {
+          "pdfPage": 274,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "0cc4eb7b90c9872138f3e597680a3e70a1eceb57fc2d0e16ee97afa1c1630ea2"
+        },
+        {
+          "pdfPage": 275,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "e8c35f811a00cb778f41ab814d917f994222d0d2eb9e514293a148b246f064d7"
+        },
+        {
+          "pdfPage": 276,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "9b12643428524d2cb9b807457d2daeb975715a6f01e1b97236497b063038875b"
+        },
+        {
+          "pdfPage": 277,
+          "strictOccurrences": 15,
+          "codeSequenceSha256": "11628bd58929ceaa81df46d68afb3c2ce20f78c2e916a8946658ae1b79125ae1"
+        },
+        {
+          "pdfPage": 278,
+          "strictOccurrences": 15,
+          "codeSequenceSha256": "fc02a7b727a76e46c3e9d61c1dd02e3db63763fc68ea4eb77295a1caa67c449b"
+        },
+        {
+          "pdfPage": 279,
+          "strictOccurrences": 15,
+          "codeSequenceSha256": "4040059a036c576942747c5a70409e0e929f542c7b704c50aab21718f61d7890"
+        }
+      ],
+      "subjectId": "community-medicine",
+      "publishedBaseCount": 136,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "GM",
+      "pdfRange": [
+        281,
+        327
+      ],
+      "strictUnique": 529,
+      "strictOccurrences": 532,
+      "pages": [
+        {
+          "pdfPage": 281,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "fe03d6ae7fbf1fdc1171e8b567afcdbf004ab29531a2ec5bfacf88b2e1df6468"
+        },
+        {
+          "pdfPage": 282,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "676f20197dacf71a3f1296ef731a1ef80f2dd619644f69b9b743c0db4497a6c1"
+        },
+        {
+          "pdfPage": 283,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "b0e52ce2e76452792f791a90649fa453e23adef01887517c7b7cc6a7664b3759"
+        },
+        {
+          "pdfPage": 284,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "4d50d866bb777c83f68727dc08ad02aae4821ce99a72208d41087fb5d78a4914"
+        },
+        {
+          "pdfPage": 285,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "e8f992dbfbfb2debf2f51fdf6b440fbcf1d2c5c26f0d1cc43e46b7b5c4072036"
+        },
+        {
+          "pdfPage": 286,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "1399813ae4f93faa1e651ea4adc2e51ef970ec5acea4aa709c92c61bfb8dbd6d"
+        },
+        {
+          "pdfPage": 287,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "1dc9908aaf797ec82bc14edd5bfa687ae7e64d9704540c3ff98d54484acee86b"
+        },
+        {
+          "pdfPage": 288,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "673a597e00245f05d63182b1d7582b885791b9a7bfa24243458dbdb0e98f01bc"
+        },
+        {
+          "pdfPage": 289,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "37fdc3753a0404c95cf2b870e2ce7d3ef27b44440b4e58f110cc92e76da36e8e"
+        },
+        {
+          "pdfPage": 290,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "aeb964d33c37219abca52c05d7480d529c9a2f33107e5e16b73372b902a9b984"
+        },
+        {
+          "pdfPage": 291,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "c0e33f09fdf7132155f99b7d3a1e8b0040f2f5d6e870ae7e005d0f811c6e54f3"
+        },
+        {
+          "pdfPage": 292,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "7e774cee8f0df9ab19e7b2d2ff5eca0a4bcdf0b35cb12b607b2948ba8e57bb3a"
+        },
+        {
+          "pdfPage": 293,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "7c4e9af9578ea3f88d69ba763c079ff513c80dddd8eb69741592020f79452ff0"
+        },
+        {
+          "pdfPage": 294,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "5aae2625592e130a504fdc31941fce269578deb64c7a7a77884ccebc6f26f872"
+        },
+        {
+          "pdfPage": 295,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "2a15679a7efedc84a1e274aa182408693356b7d89438c01987159eb6f4a3ba6b"
+        },
+        {
+          "pdfPage": 296,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "8f47a66c283106c1927860e26299553fca9e0f7e37a272de3b419c7f72bb6db1"
+        },
+        {
+          "pdfPage": 297,
+          "strictOccurrences": 15,
+          "codeSequenceSha256": "c1c4735f0fc0269184ddd1b76629e86676241ddeab49e51f129f43b80ef8fbfa"
+        },
+        {
+          "pdfPage": 298,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "e9a5dbff3048721a226866d7bc9ab55ad572b9d6f00ddc7b89929c2346c7c1df"
+        },
+        {
+          "pdfPage": 299,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "c31d6ba2064bf3e9af9b293693ab2c1072e15b4d62b01cabc5fb689153965135"
+        },
+        {
+          "pdfPage": 300,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "75eb10f5efc4b2053bfe53047a3cf8d9a38179310566f6b40bf3a7638ea7c26b"
+        },
+        {
+          "pdfPage": 301,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "c15397ccba3560a3fad8c784c4fe0f38ba885c01cbe74941097aaaefd81897b3"
+        },
+        {
+          "pdfPage": 302,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "fea907edd6c8300f170f572908fc7a0046c1d652d876724d6cc7648b8efe0286"
+        },
+        {
+          "pdfPage": 303,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "ff42de7465a7795db9a5457ca7635f5f441662fdd38a8794c9420551cd5bc5ac"
+        },
+        {
+          "pdfPage": 304,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "5da529371c81626798e34c0595b753a5b5796b85d45882fcd41328133243a004"
+        },
+        {
+          "pdfPage": 305,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "52cafcb615e9691d04f29cc4b9890d23717cf7c301a0f934a4f93ec437edde54"
+        },
+        {
+          "pdfPage": 306,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "f379fa68ba1ec39036ffb474366ec25d8f98c631a4c87bf27e7b7a10943342c5"
+        },
+        {
+          "pdfPage": 307,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "24b44626759ccc8b666febf1650a316d0753d3da037baa134fe09b3ffe2bdfd5"
+        },
+        {
+          "pdfPage": 308,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "3588817b208788e7b28372bcee66823d2515ec885e4ac1333d84166dbdc763cd"
+        },
+        {
+          "pdfPage": 309,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "407db672b3497f93eda4380753e14d02a8952f54edb5aae12d17226afe22b8c8"
+        },
+        {
+          "pdfPage": 310,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "14e767e80c22fc8d31590191a25e8d6069f6f5bf754b9ab6125469f8840042e5"
+        },
+        {
+          "pdfPage": 311,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "bd50db40bb4817cc3e865cec76441582133d18557cec497090eec66240f74e12"
+        },
+        {
+          "pdfPage": 312,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "2bdd6f42e0e272fcb55e0fcd1271178d3fb04309db639da0da7abca2e4a9633c"
+        },
+        {
+          "pdfPage": 313,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "06a086e47565c278702731f609aa9eceadac5cd9694a97f83b5f953156d60e72"
+        },
+        {
+          "pdfPage": 314,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "7dc5f93071b2e975c7b270ea482f36d87c87185f630c530ceb621b6cfac9c791"
+        },
+        {
+          "pdfPage": 315,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "8abbe682670d21d7d8569c1e6c3806810eca566265bb0d755652243b3ba267ee"
+        },
+        {
+          "pdfPage": 316,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "88b72ee5f2ee24e55825cda09fbd7892840bc1aa3ecb60dbefb00c77b83eea1e"
+        },
+        {
+          "pdfPage": 317,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "d30130d6ff10f993dfc50e7b64e2bac3e481f1379d8b9a7e8cd1da3fa2aac5bf"
+        },
+        {
+          "pdfPage": 318,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "5d1c352d7857eddd289e6466bfdcd5523e69eedf137dc5b9ebbca54318e322f0"
+        },
+        {
+          "pdfPage": 319,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "c57b527f04c4885433577b5e2f72028ed9c49ecf6cdc307e9d2dcbaa91b454fc"
+        },
+        {
+          "pdfPage": 320,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "fdca16e1c727bb57e2cf81a48a10df321db53de92bc892e345a713e88698bb0e"
+        },
+        {
+          "pdfPage": 321,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "7bc1f1f49ec2cdcd6d0c3b5dcbd63a30fa018a0d7eab1083b9a02d74570a1537"
+        },
+        {
+          "pdfPage": 322,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "99b7fe7daf082e511e4584c0cc28b532c61d01df910157364e9c8960f5638dd3"
+        },
+        {
+          "pdfPage": 323,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "5f66c64c84b6e0eafa5e3996c96a49389789c3006b5b7fda3a961ff08a0b15d2"
+        },
+        {
+          "pdfPage": 324,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "2d8624021ea99e40a6276a0d7c2473ba0d4d09a926caea54bbfd30e30774fdcf"
+        },
+        {
+          "pdfPage": 325,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "5354dd0c8aa160aa5fa1cb79f23afc37529297dc657171c171af49503fe02e2b"
+        },
+        {
+          "pdfPage": 326,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "bde324cca14b0bbc3a02a941aaa621c7e9554117285273c5951a0e839872f754"
+        },
+        {
+          "pdfPage": 327,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "9fd709ca18cf24607db582fc81d99e2402c4ebc0f483f24d628258d2e2dcf9dc"
+        }
+      ],
+      "subjectId": "medicine",
+      "publishedBaseCount": 525,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "PE",
+      "pdfRange": [
+        329,
+        350
+      ],
+      "strictUnique": 253,
+      "strictOccurrences": 253,
+      "pages": [
+        {
+          "pdfPage": 329,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "1a254f61444b85c4d6d6076712934acec2542541c73c9de7415ab246458e1105"
+        },
+        {
+          "pdfPage": 330,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "fa5be002892eea62617ab886ea42e72bcc775f38c4decc915241d7682821bd32"
+        },
+        {
+          "pdfPage": 331,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "e4491c525d6afa56f188a41ca5781d6e571d16e2440a1739bfd91461d086afcc"
+        },
+        {
+          "pdfPage": 332,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "b8d2688124678581282ae79ebd9c79cbee51c9f09e61589e92f6d325884a5747"
+        },
+        {
+          "pdfPage": 333,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "295a627066e2c56a0fe91166c372a680ec5e7c0543f502ec68a6c6e18482163c"
+        },
+        {
+          "pdfPage": 334,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "04a645d58c42d3dcf1967146fe210a758cd53bb0cfb364d04869f6510b86bf15"
+        },
+        {
+          "pdfPage": 335,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "81a6b1f62c5aeacb4ee0583f0e604ae946e445822c4bcffefc797edd81f425a6"
+        },
+        {
+          "pdfPage": 336,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "6bae0512aaa3c359405725687e1b27f0c640eb852bf3963604ff3b41c28f9517"
+        },
+        {
+          "pdfPage": 337,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "440fa6eb9ddb7e69a7cdca6cbfa9030daaff4298639e5f0623e63284d3ef71e0"
+        },
+        {
+          "pdfPage": 338,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "a67d5e567dd4eae32006ccffcf2d661f9aba687fa27c1d5a7ef15d681e3f3173"
+        },
+        {
+          "pdfPage": 339,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "397cde5dfbe419479974ac00400b2a1975e594165aeb206af18916fd9e6c0022"
+        },
+        {
+          "pdfPage": 340,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "9026473e5f957c1bcda190dd49a71ab9e50aededf5be53413fc50b03ef78de70"
+        },
+        {
+          "pdfPage": 341,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "fd367099bc0b80f9fb9d738d59ffeab1a067e5deebbe4952996584073ca6a27b"
+        },
+        {
+          "pdfPage": 342,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "ce06f18cc23f3c7b3757738e67599f8649f7da3db4991eaa91ee17ff1bbdeb6a"
+        },
+        {
+          "pdfPage": 343,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "9ce37a66c0f35d73d007bebd27aa6c354f2493c68433d0bcb569d11498347629"
+        },
+        {
+          "pdfPage": 344,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "6762b7bb6ffbb9a8b08c1946f9f4bbb02051e1f1864fa02b2d2308bbb39d1ec7"
+        },
+        {
+          "pdfPage": 345,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "6a947732617541a3de21c1f10f313f1a483c87ed1d5a80224e04b2c8ed328107"
+        },
+        {
+          "pdfPage": 346,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "6e651bd0f41795abd848ebcfc2700c6e9b3ff4fed1d950e0c1d68bfb20dc9d18"
+        },
+        {
+          "pdfPage": 347,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "84661694faa3be4b8fe80873a48a7f6da6ea6c96c2a8d730eeb8f735a362d217"
+        },
+        {
+          "pdfPage": 348,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "b76f241e2362b361f2807dad08b9f2294b8e2e18f38aeb0db744f61aec9b0dfd"
+        },
+        {
+          "pdfPage": 349,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "6881b7b813bf56aeab98a117aff22f8f2cb371705b4135d85ebeed364663823b"
+        },
+        {
+          "pdfPage": 350,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "41bd015ecce36c04641279c36cfc5e4673b1c1938428663079092e70eb1eb47b"
+        }
+      ],
+      "subjectId": "pediatrics",
+      "publishedBaseCount": 406,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "PS",
+      "pdfRange": [
+        352,
+        354
+      ],
+      "strictUnique": 17,
+      "strictOccurrences": 17,
+      "pages": [
+        {
+          "pdfPage": 352,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "3175f325a81b61eec3573f723a9064ff8b7163079f34e61fc6bc95c778ee5e9f"
+        },
+        {
+          "pdfPage": 353,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "04a952b01fb020ef6a063f31d4fa4db984cc6508fad97753a730faad17833220"
+        },
+        {
+          "pdfPage": 354,
+          "strictOccurrences": 2,
+          "codeSequenceSha256": "7c01c7478b2ed7f87e9da002ad968c31abd4350bd987c15303c5f039dfbb98b7"
+        }
+      ],
+      "subjectId": "psychiatry",
+      "publishedBaseCount": 17,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "DR",
+      "pdfRange": [
+        356,
+        362
+      ],
+      "strictUnique": 48,
+      "strictOccurrences": 48,
+      "pages": [
+        {
+          "pdfPage": 356,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "4f85c4546e7f2d937d4b6d1da68a0195fcbaa7a5ebb2817509db563cece99119"
+        },
+        {
+          "pdfPage": 357,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "e8b0ec4e572dfbd2ec2f73899a5b622696b3cb56d9c0ea065d1ffa4c6ca54cdb"
+        },
+        {
+          "pdfPage": 358,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "8c7aaa3c07ea985ecc7df819116720a30cbf74b1a8a060ba57baa962a0b7d55f"
+        },
+        {
+          "pdfPage": 359,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "d679cd14fc27777f56f5625252c47bfc765f9a53466739c628d7c6bf5095fe54"
+        },
+        {
+          "pdfPage": 360,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "abed1202e7a808de02b763624b2a94a8414a73b95ee49afa23469719306bc6b8"
+        },
+        {
+          "pdfPage": 361,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "fe5479033e60f90ce37b15fe3cfe61ce86e1fd1b64052c9ac0a231c2db073b55"
+        },
+        {
+          "pdfPage": 362,
+          "strictOccurrences": 1,
+          "codeSequenceSha256": "42f4893c0eb7b1aa1336b7fc3b36c80fe7a65374b827e015d1d2543297732724"
+        }
+      ],
+      "subjectId": "dermatology",
+      "publishedBaseCount": 48,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "SU",
+      "pdfRange": [
+        403,
+        412
+      ],
+      "strictUnique": 132,
+      "strictOccurrences": 132,
+      "pages": [
+        {
+          "pdfPage": 403,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "e71c9baabb03cc9c6b88b536db53cc275707acb326375e3fb959e617baa17c05"
+        },
+        {
+          "pdfPage": 404,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "4d16435843dfa88fe370eb3d6b40ac7798be8b664eb5664861b1ca3b3f54ad48"
+        },
+        {
+          "pdfPage": 405,
+          "strictOccurrences": 15,
+          "codeSequenceSha256": "5687696fc52345a998b84abcc07034b8b37ef2bc1b67d9a1e9cf5725fc02851b"
+        },
+        {
+          "pdfPage": 406,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "5f5f154eca0c4d4b832ebdff70ab65a7deeb794bc46b94f61ea025cfeae36fd6"
+        },
+        {
+          "pdfPage": 407,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "5ce4891333f5746cb184c2047388f82317f53e96781ec16e7915f4d2e30e0853"
+        },
+        {
+          "pdfPage": 408,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "d386ad8e45f0107eab37985552c9882d93080b819fb608c1bb421c84e28ce9c9"
+        },
+        {
+          "pdfPage": 409,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "18fb208fc4aec8ec011187dec175c9cde3b241c3f082bd0c7a84466f597347bd"
+        },
+        {
+          "pdfPage": 410,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "8ec7b50d4754bc409512f34aa0714a5d6ae8bb31c601a071b87321aaf2cb152e"
+        },
+        {
+          "pdfPage": 411,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "3da366e5df9e99080ca2b3f62116370bf19e6ea7c283689cfec5a86b9223bac0"
+        },
+        {
+          "pdfPage": 412,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "0d3b51d9885a30513a62d704f0040012aa5c189b46fd88bf0ffa8fec0bd472b4"
+        }
+      ],
+      "subjectId": "surgery",
+      "publishedBaseCount": 133,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "su-numbering-gap"
+      ]
+    },
+    {
+      "prefix": "OP",
+      "pdfRange": [
+        414,
+        418
+      ],
+      "strictUnique": 59,
+      "strictOccurrences": 59,
+      "pages": [
+        {
+          "pdfPage": 414,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "8f976d3cd8cde7c8fc982d7f75155caa9daf7ad761a972ce8904a0a95f203695"
+        },
+        {
+          "pdfPage": 415,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "bb62cdf6624582dd778385dc1d3785d8eba34d6920116b2696f0a86eaefb15be"
+        },
+        {
+          "pdfPage": 416,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "71d7cb04715d895e9269571c6af391d7f0f85722e8647d168ef7d68ce5986783"
+        },
+        {
+          "pdfPage": 417,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "093e672ff8cb0fd07b978886e6b5f6870ecb2bc606541342e6d97587f6cb89fc"
+        },
+        {
+          "pdfPage": 418,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "9af820b9679e065304ff159ee5cfe1aadeb91d46af998b2ae00ae455230371c2"
+        }
+      ],
+      "subjectId": "ophthalmology",
+      "publishedBaseCount": 60,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "op-headline-total"
+      ]
+    },
+    {
+      "prefix": "EN",
+      "pdfRange": [
+        420,
+        425
+      ],
+      "strictUnique": 63,
+      "strictOccurrences": 63,
+      "pages": [
+        {
+          "pdfPage": 420,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "44bff0a89cfe06eedb9586055a6c2022614207f84e3560ed12c9da8d9cace998"
+        },
+        {
+          "pdfPage": 421,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "d0e54ca90b90c19b89a692cd979627845bb80076a7e86ae9bf0fac6a9d0ef891"
+        },
+        {
+          "pdfPage": 422,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "befa6761f968620dea6840cfff132acb5555795762118efb2b24469dcb650c6c"
+        },
+        {
+          "pdfPage": 423,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "3c7f05f13f15a29fe1a3abe34900db898eddaa9fb2dfac12a6c78922b20a0432"
+        },
+        {
+          "pdfPage": 424,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "b10ba424738216f204836e97dbc0236c94ad00bc41b0ae4fa17ac2f042a2b39b"
+        },
+        {
+          "pdfPage": 425,
+          "strictOccurrences": 12,
+          "codeSequenceSha256": "a5b570082187c23288928f3d33bbe5ce61eaee51309e1526342f5415e3a1f870"
+        }
+      ],
+      "subjectId": "ent",
+      "publishedBaseCount": 63,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "OG",
+      "pdfRange": [
+        427,
+        442
+      ],
+      "strictUnique": 142,
+      "strictOccurrences": 142,
+      "pages": [
+        {
+          "pdfPage": 427,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "1b86cb3bb2dcb1644c20dfc2d14a014bcfdf331819b93877e6f791dd57ed5bd3"
+        },
+        {
+          "pdfPage": 428,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "edc2f2d13438b6d73e8b3e6fd1a0d85e5d28f12e8448a2bfdd071584cefc248d"
+        },
+        {
+          "pdfPage": 429,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "f8131ffaea90377ae138fffdca61c7919475af4f0865e9b850532bd4c463d63e"
+        },
+        {
+          "pdfPage": 430,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "79f4e8c88a178fcab2c511a9e99c43e8217d325cb0ba9063a19e211320021da2"
+        },
+        {
+          "pdfPage": 431,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "d5d244303021e9c7b58c446a00565e91d3e78220f5e60e4b5b6086e92d940ad6"
+        },
+        {
+          "pdfPage": 432,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "636b0bb5ee8fd235aee8220d3aab4fb340e133f5e852d879082610f23e2d1f53"
+        },
+        {
+          "pdfPage": 433,
+          "strictOccurrences": 6,
+          "codeSequenceSha256": "5ed88d9af8b4b22f214717cd13e1ab0416c2209f0d26c87a3905b53229eacc11"
+        },
+        {
+          "pdfPage": 434,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "e7c6d7365d30223b6296b58399f479b187c3d2629d074b94635ee2d8e8beadd0"
+        },
+        {
+          "pdfPage": 435,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "ff8dfc1b38cedcd5435ea408aea5cbbe39ace2eca768bf621eb70144df9af37e"
+        },
+        {
+          "pdfPage": 436,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "53029717f842f6a670249e01030d81d89844573840b47581abd91d0d333dbe9f"
+        },
+        {
+          "pdfPage": 437,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "262de825552cf574947277c8281255a1a76d7af0b380cc216a49a6f6b1d0523f"
+        },
+        {
+          "pdfPage": 438,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "bced26751fea72e48e63931b03f86a3bbc956f3f8116b1a8dafe219711e274de"
+        },
+        {
+          "pdfPage": 439,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "4ee38ce935e5233a9c6879e4bd2ef9c3bff74ed5ad371113585646280aa52bae"
+        },
+        {
+          "pdfPage": 440,
+          "strictOccurrences": 10,
+          "codeSequenceSha256": "7989436cf4096f386b4b0690797d3d0c5cac47efc983811702b5d64fa8eab7db"
+        },
+        {
+          "pdfPage": 441,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "b85f464b30380e293a22c42b17bd2e80cbada2dd226d5343d72f17e4e6460d29"
+        },
+        {
+          "pdfPage": 442,
+          "strictOccurrences": 13,
+          "codeSequenceSha256": "f68a8eba2f598ce3ef3ca3c11bb2160040f44f2aa7cb0ef1594c75d34a3ca3e9"
+        }
+      ],
+      "subjectId": "obstetrics-gynaecology",
+      "publishedBaseCount": 141,
+      "sourceVerified": false,
+      "anomalyIds": []
+    },
+    {
+      "prefix": "OR",
+      "pdfRange": [
+        444,
+        450
+      ],
+      "strictUnique": 39,
+      "strictOccurrences": 40,
+      "pages": [
+        {
+          "pdfPage": 444,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "75810ffbecee35171501d0b3bf6bf7d9d2ed67a1234faa19cb17c123bfeb9d74"
+        },
+        {
+          "pdfPage": 445,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "fa9be54283e110474c7c05917f49c327c793fe1a669a859ee095f0d47ce96da9"
+        },
+        {
+          "pdfPage": 446,
+          "strictOccurrences": 7,
+          "codeSequenceSha256": "0aa43268ff8ba4cff601e4b6f089ee7c2906ed275cffd6683cc585ab19022dff"
+        },
+        {
+          "pdfPage": 447,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "af32bef0f5c79ef9d25240997e138b546ce7d622de99c4f460443697d23a29da"
+        },
+        {
+          "pdfPage": 448,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "604b07ae4a62d2c89248fae857baf1f8429f839dce96e72e94311552551e7625"
+        },
+        {
+          "pdfPage": 449,
+          "strictOccurrences": 3,
+          "codeSequenceSha256": "6d07800d4918bbd5ca46ca3ae57813d9837a2b11a0737aa2d7617845e94a3a88"
+        },
+        {
+          "pdfPage": 450,
+          "strictOccurrences": 5,
+          "codeSequenceSha256": "95d302676081e7f73cdda53a664c5397f594a5d319d824e17ec2520c8bfb91ef"
+        }
+      ],
+      "subjectId": "orthopaedics",
+      "publishedBaseCount": 40,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "or-malformed-cell"
+      ]
+    },
+    {
+      "prefix": "AS",
+      "pdfRange": [
+        452,
+        456
+      ],
+      "strictUnique": 51,
+      "strictOccurrences": 51,
+      "pages": [
+        {
+          "pdfPage": 452,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "83a057e2650ac4e30a8502f628c0a0b9b3b473cff017259d929b1d3bdce98d4d"
+        },
+        {
+          "pdfPage": 453,
+          "strictOccurrences": 11,
+          "codeSequenceSha256": "a739e299c27ec960ca089125f04dff37711b6a7ff4143054c11c6428bf7e8828"
+        },
+        {
+          "pdfPage": 454,
+          "strictOccurrences": 14,
+          "codeSequenceSha256": "4159e7c728131839fae4e9d29858a017c9fc93ae0f27efdfe0e048743523258e"
+        },
+        {
+          "pdfPage": 455,
+          "strictOccurrences": 16,
+          "codeSequenceSha256": "711cbcc63a04b465e3751d6ffcfa02eb10b796dfcb44ccf94b6ddb4ae9114b2b"
+        },
+        {
+          "pdfPage": 456,
+          "strictOccurrences": 1,
+          "codeSequenceSha256": "97415bcb8b7451ef64868d526611c272a40e874456830c3ed1837a1b139508f4"
+        }
+      ],
+      "subjectId": "anaesthesia",
+      "publishedBaseCount": 52,
+      "sourceVerified": false,
+      "anomalyIds": [
+        "as-topic-malformed"
+      ]
+    },
+    {
+      "prefix": "RD",
+      "pdfRange": [
+        457,
+        459
+      ],
+      "strictUnique": 21,
+      "strictOccurrences": 21,
+      "pages": [
+        {
+          "pdfPage": 457,
+          "strictOccurrences": 4,
+          "codeSequenceSha256": "e869c433dd707d6e0ec6b2e3704fef2de2f47c8c34ee9835d96d94a699af62b4"
+        },
+        {
+          "pdfPage": 458,
+          "strictOccurrences": 9,
+          "codeSequenceSha256": "763fc3e56a63f2bb8dafa850bbb9db241b91d7c2103440f1a51d7bfd2213fbdc"
+        },
+        {
+          "pdfPage": 459,
+          "strictOccurrences": 8,
+          "codeSequenceSha256": "5f9051f8f1515c9dfda9e0a94639385690448ed55407cb6374e071396c5737ba"
+        }
+      ],
+      "subjectId": "radiology",
+      "publishedBaseCount": 21,
+      "sourceVerified": false,
+      "anomalyIds": []
+    }
+  ],
+  "amendments": [
+    {
+      "code": "PS9.2",
+      "operation": "delete",
+      "source": "clarification",
+      "pdfPage": 3,
+      "appliedToInventory": false
+    },
+    {
+      "code": "PY9.1",
+      "operation": "replace_wording",
+      "source": "clarification",
+      "pdfPage": 3,
+      "appliedToInventory": false
+    },
+    {
+      "code": "PE6.4",
+      "operation": "replace_wording",
+      "source": "clarification",
+      "pdfPage": 3,
+      "appliedToInventory": false
+    }
+  ],
+  "supplements": {
+    "enumerated": false,
+    "denominator": null,
+    "requiredScopes": [
+      "IMG global requirements",
+      "AETCOM",
+      "foundation course",
+      "early clinical exposure",
+      "skills and certifiable procedures",
+      "electives",
+      "family adoption",
+      "appendices and later amendments"
+    ]
+  },
+  "eligibility": {
+    "completeCoverageClaim": false,
+    "clinicalApproval": false,
+    "examScopeApproval": false,
+    "learnerActivation": false
+  },
+  "notes": [
+    "No full code corpus or source descriptions stored here.",
+    "Page counts/checksums identify extraction observations, not reviewed source rows.",
+    "Nine malformed-cell anomalies linked; PE/GM/OG headline discrepancies additionally documented in dedicated receipts.",
+    "Do not subtract PS9.2 and claim an effective denominator without exact source reconciliation."
+  ]
+}
