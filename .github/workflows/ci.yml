@@ -68,6 +68,10 @@ jobs:
           node-version: '24'
       - name: Install isolated native PostgreSQL verification tools
         run: npm install --prefix "$RUNNER_TEMP/mlos-native-pg" --no-audit --no-fund @embedded-postgres/linux-x64@18.6.0-beta.19 pg@8.22.0
+      - name: Verify disposable current-session owner evidence gate
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-evidence-platform" --no-audit --no-fund @electric-sql/pglite@0.5.13
+          PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-evidence-platform/node_modules/@electric-sql/pglite/dist/index.js" node scripts/source-evidence-platform-db-check.js
       - name: Verify native independent-connection races and recovery
         env:
           NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-native-pg/node_modules/@embedded-postgres/linux-x64/dist/index.js

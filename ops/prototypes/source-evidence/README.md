@@ -96,3 +96,13 @@ Current server session compatibility is audited in docs/SOURCE_EVIDENCE_SESSION_
 
 
 Verified immediate-recovery implementation: cf4c33deb2af91afeceba064168ffc916547aeff, [Foundation run41171957291](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41171957291), evidence-native-postgres job124451684840 SUCCESS. The job passed original races/negative control plus unclean WAL recovery, committed/uncommitted receipt/state checks, denial persistence, postcrash native restore/browser ACL and cleanup. Local full suite now1,625PASS/0FAIL (including4 actual runtime-helper compatibility tests); repository checks passed13services/250coupling. This is the native job result at that implementation; later documentation-only CI and unrelated browser/WebKit jobs are separate.
+
+## Owner session/platform compatibility fixture
+
+platform-gate.sql and scripts/source-evidence-platform-db-check.js compose the exact repository runtime-session and singleton-Admin function definitions with the private evidence prototype. Synthetic Auth tables contain only fixture UUIDs/current-state fields. The feature row defaults off; browser roles cannot invoke the wrappers or read it, and the backend role cannot enable it.
+
+With externally pinned PGlite0.5.13, run the platform script using the same PGLITE_MODULE_URL prefix. It tests missing/foreign/revoked sessions, a new same-owner session retrying the original receipt, account suspension/deletion, runtime lookup failure, current Admin change without package transfer, metadata withdrawal and postcommit feature denial. The Foundation evidence-native-postgres job installs this isolated test tool separately and runs the script.
+
+This is current SQL-component compatibility in a disposable fixture, not live Auth/token verification or a deployed owner route. Auth/session/Admin/feature fixture data is outside the eight-table evidence snapshot and must never be mistaken for full platform recovery coverage. Actual Auth writers do not share the prototype lock automatically. SOURCE_EVIDENCE_OWNER_ADAPTER_PROPOSAL.md records the owner-only request/gate/retry contract and remaining blockers; production exposure stays disabled.
+
+Platform boundary limitation: the trusted fixture backend still has raw stage/readback and INSERT privileges for lower-level probes, so it can bypass the wrapper-only session/Admin/feature gate. Default-off is not a database-wide backend restriction. This fixture grant set is not a production privilege plan; real route delegation and any narrower capability/privileged bridge need separate review. Browser denial and inability to update the feature row do not prove an uncompromised backend capability boundary.

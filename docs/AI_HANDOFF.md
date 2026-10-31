@@ -1,3 +1,11 @@
+## Owner-only platform/session fixture — CI pending —31 October2026 IST
+- Checked at 2026-10-31T05:32:38.898Z. Resumed draft PR3466d17b238a41fefdf8784fe6aa5e0460cf35e79c8; isolated mlos-evidence-platform-gate, one writer.
+- Added owner-only adapter proposal (not route) and disposable platform-gate.sql/script. Loads exact existing repository runtime/Admin SQL definitions against synthetic Auth/session/Admin tables; wrapper feature defaults off. Positive placeholder failure observed before wrapper implementation.
+- Local fixture PASS: valid owner, missing/foreign/revoked sessions, new same-owner session idempotency, suspension/deletion, NULL runtime result, current Admin transfer without package transfer, metadata/withdrawal/postcommit off and browser/backend ACL.
+- Review boundary documented: service_role still has raw lower-level probe/table privileges, so wrapper feature-off is not a database-wide backend capability boundary. No hosted privilege readiness claimed; current real Auth writers do not share prototype lock and eight-table evidence snapshots omit Auth/Admin/feature data.
+- Full npm test1,625PASS/0FAIL. Initial check flagged new script/Auth-SQL coupling; reviewed exactly one path, updated service ownership/export/restore gaps and explicit baseline, then npm run checkPASS13services/251coupling. No new provider/app dependency.
+- Added isolated platform fixture CI step with temporary PGlite0.5.13 tooling. Next inspect exact-head job/core results, record evidence and leave production APIs disabled. No real sessions/rights/reviewer grants/source bytes/clinical/exam/learner activation or production changes. Ownership retained while CI pending.
+
 ## Immediate WAL recovery verified and session boundary audited —31 October2026 IST
 - Checked at 2026-10-31T05:19:02.321Z. Implementationcf4c33deb2af91afeceba064168ffc916547aeff; Foundation run41171957291/job124451684840 evidence-native-postgres SUCCESS, exact logs inspected. This checkpoint records results only.
 - Test-first RED verified at95b2378/run41171677157/job124450852230: missing restart hook assertion, cleanupPASS. Controlled pg_ctl immediate stop/same-directory restart implemented; native GREEN verifies distinct postmaster, interrupted/automatic recovery logs and fsync/synchronous_commit/full_page_writes on.
