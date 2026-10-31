@@ -18,7 +18,7 @@ test('nonproduction guard blocks both actual project refs and misleading test se
   {...setup,accountB:{email:userB.email,password:'short'}}
  ])assert.throws(()=>validateNonproductionAuthProbeConfig(value),/auth_probe_isolation_not_established/);
 });
-function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false,revokedRefreshNetworkError=false,revokedRefreshTimeout=false,forgedProviderErrorClass=false,wrongClientUrl=false}={}){
+function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=false,wrongIssuer=false,wrongAudience=false,revokedRefreshNetworkError=false,revokedRefreshTimeout=false,forgedProviderErrorClass=false,wrongClientUrl=false,getUserTransportOn=null,getUserClientErrorOn=null}={}){
  const actor={ [userA.email]:'11111111-1111-4111-8111-111111111111',[userB.email]:'22222222-2222-4222-8222-222222222222'};
  const sessions=new Map(),tokens=new Map();let serial=0;const actions=[];
  function mint(session){
@@ -40,7 +40,12 @@ function mockProvider({brokenGlobal=false,brokenLocal=false,invalidAfterSignOut=
    },
    async getUser(token){
     const sid=tokens.get(token),s=sessions.get(sid);
-    if(!s||(invalidAfterSignOut&&s.revoked))return {data:{user:null},error:{message:'invalid'}};
+    const phase=!s?'forged':s.revoked?'afterSignOut':'active';
+    if(getUserTransportOn===phase)throw Error('transient-provider-network-outage');
+    if(getUserClientErrorOn===phase)return {data:{user:null},error:{name:'AuthRetryableFetchError',code:'bad_jwt',status:401}};
+    if(!s||(invalidAfterSignOut&&s.revoked))return {
+     data:{user:null},error:{name:'AuthApiError',code:!s?'bad_jwt':'session_not_found',status:401}
+    };
     return {data:{user:{id:s.user}},error:null};
    },
    async refreshSession({refresh_token}){
@@ -154,4 +159,24 @@ test('does not trust client error codes pretending to be a provider API denial',
   error=>error.message==='auth_provider_probe_failed'
  );
  assert.ok(fake.actions.includes('logout:local'));
+});
+
+test('forged-token proof does not pass when getUser is offline or yields a client error',async()=>{
+ for(const config of [{getUserTransportOn:'forged'},{getUserClientErrorOn:'forged'}]){
+  const fake=mockProvider(config);
+  await assert.rejects(
+   runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),
+   error=>error.message==='auth_provider_probe_failed'
+  );
+  assert.ok(fake.actions.includes('logout:local'),'remaining disposable session is closed');
+ }
+});
+test('signed-out access observations do not convert provider outages into false rejections',async()=>{
+ for(const config of [{getUserTransportOn:'afterSignOut'},{getUserClientErrorOn:'afterSignOut'}]){
+  const fake=mockProvider(config);
+  await assert.rejects(
+   runIsolatedAuthProviderProbe({...setup,createClient:fake.createClient}),
+   error=>error.message==='auth_provider_probe_failed'
+  );
+ }
 });
