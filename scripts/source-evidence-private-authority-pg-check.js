@@ -153,6 +153,37 @@ try{
  assert.deepEqual(await reconciler.reconcile({requestId:rolled.requestId,attemptId:resumed.attemptId,digest}),{status:'reconciliation-required'});
  availableAck=true;
  assert.deepEqual(await reconciler.reconcile({requestId:rolled.requestId,attemptId:resumed.attemptId,digest}),{status:'acknowledgement-recorded'});
+ // Post-SQL provider denial: committed intent remains unresolved, never
+ // silently retried or labelled acknowledged after the caller was denied.
+ const ambiguous=input();
+ assert.deepEqual(await probe.stage(ambiguous),{status:'staged'});
+ let verificationCount=0;
+ const lostAckProbe=createSourceEvidencePrivateAuthorityPrototype({
+  expectedIssuer:issuer,
+  getUser:async()=>++verificationCount===1?
+    {data:{user:{id:actor}},error:null}:
+    {data:{user:null},error:{code:'session_not_found'}},
+  query:(sql,args)=>gateway.query(sql,args)
+ });
+ assert.deepEqual(await lostAckProbe.reserveIntent(ambiguous),{status:'denied'});
+ assert.equal(verificationCount,2);
+ assert.equal((await inspector.query('select status from evidence_private.delivery_attempts where request_id=$1',[ambiguous.requestId])).rows[0].status,'intent');
+ assert.deepEqual(await probe.reserveIntent(ambiguous),{status:'reconciliation-required'});
+ // Concurrent reservations: exactly one one-shot attempt, other caller
+ // awaits the receipt row and receives only a reconciliation status.
+ const concurrent=input();
+ assert.deepEqual(await probe.stage(concurrent),{status:'staged'});
+ const gatewayPid=(await gateway.query('select pg_backend_pid() as p')).rows[0].p;
+ const racerPid2=(await racer.query('select pg_backend_pid() as p')).rows[0].p;
+ await gateway.query('begin');
+ const primary=(await gateway.query(intentSql,[actor,session,concurrent.requestId,digest])).rows[0].r;
+ assert.equal(primary.status,'intent-recorded');
+ const secondary=outcome(racer.query(intentSql,[actor,session,concurrent.requestId,digest]));
+ await blockedBy(inspector,racerPid2,gatewayPid);
+ await gateway.query('commit');
+ assert.equal((await secondary).value?.rows[0]?.r?.status,'reconciliation-required');
+ assert.equal((await inspector.query('select count(*)::int n from evidence_private.delivery_attempts where request_id=$1',[concurrent.requestId])).rows[0].n,1);
+ console.log('Private authority delivery ledger PASS: postcommit provider denial preserves unresolved intent, concurrent requests create one attempt, retries never redispatch.');
  // Expired MLOS lease denies even with a still positive network Auth verdict.
  await controller.query('select evidence_private.control($1,true,1)',[actor]);
  await pause(1250);
