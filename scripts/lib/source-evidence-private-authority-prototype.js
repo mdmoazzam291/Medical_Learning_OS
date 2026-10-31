@@ -124,7 +124,9 @@ export function createSourceEvidencePrivateAckReconciler({lookupDurableAck,query
      typeof proof.ackDigest!=='string'||!hex.test(proof.ackDigest))return result('denied');
   try{
    const out=(await query(ackSql,[request,attempt,digest,proof.ackDigest]))?.rows?.[0]?.r;
-   return out?.status==='acknowledgement-recorded'?result('acknowledgement-recorded'):result('uncertain');
+   const committed=snapshotFields(out,['status']);
+   return committed?.status==='acknowledgement-recorded'?
+    result('acknowledgement-recorded'):result('uncertain');
   }catch(error){
    if(error?.message==='private_denied')return result('denied');
    if(error?.message==='private_conflict')return result('conflict');
