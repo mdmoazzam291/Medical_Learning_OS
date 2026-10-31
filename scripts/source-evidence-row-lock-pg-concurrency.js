@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import {installPlatformFixture,platformFixture as f} from './lib/source-evidence-platform-fixture.js';
 import {capabilityEnvelope} from './lib/source-evidence-capability-envelope.js';
+import {createSourceEvidencePrivateQuery} from './lib/source-evidence-private-boundary.js';
 import {startDisposableNativePostgres} from './lib/disposable-native-postgres.js';
 const {postgres}=await import(process.env.NATIVE_PG_MODULE_URL||'@embedded-postgres/linux-x64');
 const {Client}=await import(process.env.PG_MODULE_URL||'pg');
@@ -57,6 +58,15 @@ try{
   ['feature disable','update evidence_probe.platform_feature set enabled=false',[],()=>g.query('update evidence_probe.platform_feature set enabled=true')]
  ];
  const e=await capabilityEnvelope();assert.equal((await stage(a,e)).status,'committed');
+ // Live-independent proof: a new direct-login connection for each fixed SQL
+ // statement, refusing postgres as a replacement for the narrow identity.
+ const privateQuery=createSourceEvidencePrivateQuery({createClient:()=>new Client({...server.config,user:'evidence_gateway'})});
+ assert.equal((await privateQuery('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args)).rows[0].r.status,'committed');
+ const guardedRead=await privateQuery('select evidence_probe.readback_session($1,$2,$3,$4,$5,$6) r',[f.owner,f.session,e.b.packageId,e.b.packageVersion,e.b.packageDigest,e.b.requestId]);
+ assert.equal(JSON.parse(guardedRead.rows[0].r.receipt).requestId,e.b.requestId);
+ const broadQuery=createSourceEvidencePrivateQuery({createClient:()=>new Client({...server.config,user:'postgres'})});
+ await assert.rejects(broadQuery('select evidence_probe.stage_session($1,$2,$3,$4,$5,$6,$7) r',e.args),/evidence_private_database_unavailable/);
+ console.log('Private query adapter PASS: fresh direct narrow login, two exact calls, broad-login denial and canonical readback.');
  for(const [label,sql,args,restore] of mutations){
   await w.query('begin');await w.query(sql,args);
   assert.equal((await g.query("select count(*)::int n from pg_locks where pid=$1 and locktype='advisory'",[wp])).rows[0].n,0);
