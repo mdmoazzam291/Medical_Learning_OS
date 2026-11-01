@@ -35,7 +35,7 @@ function scenario({create,signIn,probe,del,verify,begin,associate,clear}={}){
   clear:async()=>{steps.push('journal-clear');if(clear)await clear();}
  };
  const adapters={
-  create:async user=>{steps.push('create');assert.equal(user.email,EMAIL);assert.equal(user.password,PASSWORD);return create?create():{userId:USER};},
+  create:async user=>{steps.push('create');if(user.email!==EMAIL||user.password!==PASSWORD)steps.push('synthetic-identity-mismatch');return create?create():{userId:USER};},
   signIn:async user=>{steps.push('signin');assert.equal(user.email,EMAIL);return signIn?signIn():{userId:USER,token:token()};},
   authProbe:async(t,u,s)=>{steps.push('hosted-readonly-auth-probe');assert.equal(t,token());assert.equal(u,USER);assert.equal(s,SESSION);return probe?probe():{reason:'staging-auth-getuser-readonly-pass',hostedJwtReadOnlyEvidence:true};},
   delete:async id=>{steps.push('delete');assert.equal(id,USER);return del?del():true;},
