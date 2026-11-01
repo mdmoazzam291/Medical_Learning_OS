@@ -491,3 +491,35 @@ jobs:
             cd "$RUNNER_TEMP/mlos-atomic-stack"
             "$CLI" stop --no-backup
           fi
+
+  internal-review-security-gate:
+    # One fail-closed review signal. Never treats skipped/cancelled as a pass.
+    # This is a CI evidence gate, NOT a source-review or deployment approval.
+    if: ${{ always() && github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-') }}
+    needs:
+      - check
+      - browser
+      - webkit
+      - internal-review-native-postgres
+      - internal-review-real-gotrue-jwt-atomic
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    steps:
+      - name: Require cumulative source-review security tests to pass
+        env:
+          CORE_RESULT: ${{ needs.check.result }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+          WEBKIT_RESULT: ${{ needs.webkit.result }}
+          NATIVE_PG_RESULT: ${{ needs.internal-review-native-postgres.result }}
+          GOTRUE_RESULT: ${{ needs.internal-review-real-gotrue-jwt-atomic.result }}
+        run: |
+          set -euo pipefail
+          for result in "$CORE_RESULT" "$BROWSER_RESULT" "$WEBKIT_RESULT" "$NATIVE_PG_RESULT" "$GOTRUE_RESULT"; do
+            if [[ "$result" != success ]]; then
+              echo "internal_review_security_evidence_incomplete"
+              exit 1
+            fi
+          done
+          echo "internal_review_local_security_ci_pass_no_hosted_write_or_release_approval"
