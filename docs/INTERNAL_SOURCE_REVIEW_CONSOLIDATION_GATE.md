@@ -171,3 +171,26 @@ using #374 as a cumulative local-security evidence base. They do not
 create a hosted staging user, verify hosted reviewer receipt readback,
 or prove hosted concurrency, JWT signout atomicity, clinical/source
 rights or production readiness.
+
+## Maintainable cumulative security CI — 2026-11-02
+
+The earlier implementation selected expensive security jobs by exact PR
+numbers, which caused them to silently skip on subsequent draft heads.
+That approach has now been replaced for the **native PG17/18 race** and
+**disposable local GoTrue JWT/owned-revocation** jobs with a GitHub
+`pull_request` plus `test/internal-review-` head-branch prefix gate,
+retaining historical numbered PR cases. The same family gate covers
+the isolated staging SDK compatibility and public-only hosted Auth
+negative checks in the standard `check` job. The local GoTrue job's
+shell selector consumes `github.head_ref` through a quoted environment
+variable, **not** untrusted inline shell interpolation.
+
+The most recent previous PR #374 exact-head workflow
+[41337424294](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41337424294)
+completed successfully for `check`, `browser`, `webkit`, PG17,
+PG18 and local GoTrue. That success covered **disposable local tests**.
+A green run for this branch-prefix improvement must be verified
+separately after it completes; nonmatching branches still need a
+deliberate security-testing policy before integration. No hosted Auth
+admin credentials, persistent staging account, source-review migration,
+merge or deployment are authorized.
