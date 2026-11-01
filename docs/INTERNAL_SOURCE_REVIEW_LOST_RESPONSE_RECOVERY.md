@@ -53,7 +53,7 @@ downstream release flags are always false.
   previously committed event. A separate current-token protected readback
   reconstructs a receipt candidate with the same decision/grant ID and
   proves no second event is written. A foreign valid JWT cannot read it.
-- PR #364 alone opts in to the existing isolated local GoTrue CI acceptance.
+- PR #364 adds one opt-in to the existing isolated local GoTrue CI acceptance (alongside PRs #361 and #362).
   It uses synthetic temporary identities and a disposable test database,
   not the actual MLOS Supabase project.
 
