@@ -66,8 +66,10 @@ begin
   then raise exception 'internal_review_invalid';end if;
  end loop;
  if q->>'targetType'<>'source-row-case' or
-    q->>'requestId' !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' or
-    q->>'packageId' !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' or
+    char_length(q->>'requestId')<>36 or
+    char_length(q->>'packageId')<>36 or
+    (q->>'requestId')::uuid::text<>lower(q->>'requestId') or
+    (q->>'packageId')::uuid::text<>lower(q->>'packageId') or
     q->>'caseId' !~ '^[a-z0-9][a-z0-9._:-]{0,127}$' or
     position('..' in q->>'caseId')>0 or
     q->>'attestationVersion'<>'source-row-review-v1' or
@@ -109,6 +111,8 @@ begin
   c.appearance_evidence_digest<>q->>'appearanceEvidenceDigest' or
   c.source_sha256<>q->>'sourceSha256'
  then raise exception 'internal_review_denied';end if;
+exception when invalid_text_representation then
+ raise exception 'internal_review_invalid';
 end;$$;
 
 create function evidence_internal.record_review(p_actor uuid,q jsonb,p_grant uuid)
