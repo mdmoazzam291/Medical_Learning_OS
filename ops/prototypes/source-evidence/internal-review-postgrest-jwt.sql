@@ -4,10 +4,10 @@
 -- NEVER expose a direct SQL connection, service-role actor RPC or this fixture.
 create schema auth;
 create function auth.uid() returns uuid language sql stable set search_path='' as $$
- select nullif(pg_catalog.current_setting('request.jwt.claim.sub',true),'')::uuid
+ select (nullif(pg_catalog.current_setting('request.jwt.claims',true),'')::jsonb->>'sub')::uuid
 $$;
 create function auth.session_id() returns uuid language sql stable set search_path='' as $$
- select nullif(pg_catalog.current_setting('request.jwt.claim.session_id',true),'')::uuid
+ select (nullif(pg_catalog.current_setting('request.jwt.claims',true),'')::jsonb->>'session_id')::uuid
 $$;
 
 create schema evidence_api;
