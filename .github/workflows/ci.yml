@@ -24,14 +24,14 @@ jobs:
       - run: npm run build:pages
       - run: npm test
       - name: Verify exact real staging SDK API offline (PR #374, no credentials)
-        if: github.event_name == 'pull_request' && github.event.pull_request.number == 374
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-')
         run: |
           mkdir -p "$RUNNER_TEMP/mlos-staging-sdk"
           cp ops/staging-auth-sdk/package.json ops/staging-auth-sdk/package-lock.json "$RUNNER_TEMP/mlos-staging-sdk/"
           npm ci --prefix "$RUNNER_TEMP/mlos-staging-sdk" --no-audit --no-fund --ignore-scripts
           node scripts/internal-source-review-staging-sdk-offline-check.mjs "$RUNNER_TEMP/mlos-staging-sdk"
       - name: Verify hosted staging Auth rejects anonymous and forged JWTs (no credentials)
-        if: github.event_name == 'pull_request' && github.event.pull_request.number == 374
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-')
         run: node scripts/internal-source-review-staging-hosted-auth-negative.mjs --read-only-hosted-negative
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
@@ -244,7 +244,7 @@ jobs:
 
   internal-review-native-postgres:
     # Explicitly test both valid lock/commit orders. No hosted database.
-    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 355 || github.event.pull_request.number == 374) }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 355 || startsWith(github.head_ref, 'test/internal-review-')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     permissions:
@@ -439,7 +439,7 @@ jobs:
   internal-review-real-gotrue-jwt-atomic:
     # Test-only local Auth-issued JWT via PostgREST + real session row.
     # Never connect to a hosted project or migrate a real database.
-    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364 || github.event.pull_request.number == 366 || github.event.pull_request.number == 367 || github.event.pull_request.number == 368 || github.event.pull_request.number == 374) }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364 || github.event.pull_request.number == 366 || github.event.pull_request.number == 367 || github.event.pull_request.number == 368 || startsWith(github.head_ref, 'test/internal-review-')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
@@ -476,7 +476,7 @@ jobs:
           export MLOS_LOCAL_ATOMIC_KEY="$KEY"
           export MLOS_LOCAL_ATOMIC_SDK="file://$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
           export MLOS_LOCAL_ATOMIC_PG="file://$RUNNER_TEMP/mlos-atomic-review/node_modules/pg/esm/index.mjs"
-          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" || "${{ github.event.pull_request.number }}" == "374" ]]; then
+          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" || "${{ github.head_ref }}" == test/internal-review-* ]]; then
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-owned-revocation-check.mjs"
           else
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
