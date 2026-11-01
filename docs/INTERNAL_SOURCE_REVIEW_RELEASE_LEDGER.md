@@ -335,3 +335,16 @@ verify that hosted Auth admin POST/DELETE supports this exact transport**:
 no hosted creation, login, deletion or real JWT acceptance was run.
 The compatibility gate must be resolved in trusted staging before live
 account creation. CI success on the draft is never production approval.
+
+### 2026-11-01 — documented SDK replaces unverified raw Auth-admin requests
+
+Draft #374 now uses an adapter based on official `supabase-js` server
+Auth Admin `createUser/getUserById/deleteUser` methods and a separate
+publishable-key password-session client, with no session persistence or
+refresh. Operator execution requires an exact reviewed SDK version
+(`2.118.0`) in a trusted environment; missing/wrong package fails
+before account creation. Offline SDK-shaped mocks exercise account
+ownership, sign-in, deletion and error-as-success denial. **No hosted
+Admin write, real signed JWT, actual deletion or cleanup was run.**
+Auth admin hosted acceptance and a safe operator secret store remain
+release blockers; all source-review and learner release permissions OFF.
