@@ -54,6 +54,8 @@ test('never expose raw source-review bearer credentials to GitHub pull-request C
  assert.ok(!ci.includes('STAGING_SYNTHETIC_CREATE_AND_DELETE'));
  assert.match(lifecycle,/--create-and-delete/);
  assert.ok(!lifecycle.includes("Authorization:'Bearer '+secret"));
- assert.match(lifecycle,/headers:\{apikey,'Cache-Control':'no-store'/);
+ assert.match(lifecycle,/makeSupabaseSdkStagingAdapters/);
+ assert.match(lifecycle,/admin\.auth\.admin\.deleteUser\(userId\)/);
+ assert.doesNotMatch(lifecycle,/\/auth\/v1\/admin\/users/);
  assert.ok(!ci.includes('internal-source-review-staging-test-identity-lifecycle.mjs --create-and-delete'));
 });
