@@ -477,3 +477,16 @@ This is a **local operator filesystem guard only** with a documented
 path-based unlink race limitation: it does not prove hosted staging
 signed-JWT acceptance, revocation atomicity or reviewer authority.
 Production/clinical/rights release remains blocked.
+
+### 2026-11-02 — bind cleanup token evidence to verified synthetic session
+
+A security review identified a false-cleanup risk in the operator
+runner: an unverified/foreign JWT could be carried forward into the
+post-deletion rejection check, allowing rejection of the wrong bearer
+to be counted as session evidence. The retained token is now assigned
+only after exact user-ID/JWT subject equality **and successful hosted
+Auth getUser validation**. If either fails, independent account
+deletion can still be checked, but the journal is retained for manual
+session reconciliation and no `postDeletionAuthTokenRejected`
+claim is made. Regression tests cover foreign, malformed and
+Auth-probe-failed tokens. Release permissions remain all OFF.
