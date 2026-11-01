@@ -55,6 +55,8 @@ export function overviewMarkup(dashboard, alerts = null) {
 // Warnings are derived from metadata checks, not legally or medically verified evidence.
 const EVIDENCE_WARNING_LABELS = Object.freeze({
   note_contains_unresolved_review_language: 'Published note still says draft or unapproved',
+  published_note_evidence_incomplete: 'Published note title, body or provenance unavailable for this check',
+  source_rights_status_unresolved: 'Source rights status is unknown or not recorded',
   permission_claim_conflicts_with_evidence: 'Source permission claim conflicts with its recorded evidence',
   public_domain_claim_lacks_rights_evidence: 'Public-domain claim has no recorded supporting evidence'
 });
