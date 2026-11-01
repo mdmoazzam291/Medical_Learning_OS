@@ -72,6 +72,7 @@ test('reviewer independence, account identity and grant must all be current',asy
   c=>{c.evidenceAccess.grant.independenceVerified=false;},
   c=>{c.evidenceAccess.grant.consentVerified=false;},
   c=>{c.evidenceAccess.rights.metadataAllowed=false;},
+  c=>{c.evidenceAccess.source.expectedSha256=hex('e');},
   c=>{c.evidenceAccess.grant.packageDigest=hex('d');},
   c=>{c.caseGrant.active=false;},
   c=>{c.caseGrant.revoked=true;},
