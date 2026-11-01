@@ -29,7 +29,7 @@ const encoded=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
 const token=()=>encoded({alg:'HS256',typ:'JWT'})+'.'+
  encoded({iss:ORIGIN+'/auth/v1',aud:'authenticated',role:'authenticated',
   sub:USER,session_id:SESSION,exp:Math.floor(Date.now()/1000)+3600})+'.'+'a'.repeat(45);
-function scenario({audit,create,signIn,probe,own,del,verify,begin,associate,clear}={}){
+function scenario({audit,create,signIn,probe,own,del,verify,tokenDenial,begin,associate,clear}={}){
  const steps=[];
  const journal={
   begin:async email=>{steps.push('journal-begin');assert.equal(email,EMAIL);if(begin)await begin();},
@@ -43,7 +43,8 @@ function scenario({audit,create,signIn,probe,own,del,verify,begin,associate,clea
   authProbe:async(t,u,s)=>{steps.push('hosted-readonly-auth-probe');assert.equal(t,token());assert.equal(u,USER);assert.equal(s,SESSION);return probe?probe():{reason:'staging-auth-getuser-readonly-pass',hostedJwtReadOnlyEvidence:true};},
   verifyOwned:async(id,email)=>{steps.push('verify-owned');assert.equal(id,USER);assert.equal(email,EMAIL);return own?own():true;},
   delete:async id=>{steps.push('delete');assert.equal(id,USER);return del?del():true;},
-  isDeleted:async id=>{steps.push('verify-deleted');assert.equal(id,USER);return verify?verify():true;}
+  isDeleted:async id=>{steps.push('verify-deleted');assert.equal(id,USER);return verify?verify():true;},
+  verifyTokenDenied:async t=>{steps.push('verify-token-rejected');assert.equal(t,token());return tokenDenial?tokenDenial():true;}
  };
  const run=()=>runStagingSyntheticIdentityLifecycle({
   settings:settings(),policy:policy(),adapters,journal,makeIdentity:identity
@@ -65,10 +66,11 @@ test('all steps including privileged admin deletion and independent verification
  const {run,steps}=scenario();
  const result=await run();
  assert.deepEqual(steps,['audit-empty','journal-begin','create','journal-associate',
-  'signin','hosted-readonly-auth-probe','verify-owned','delete','verify-deleted','journal-clear']);
+  'signin','hosted-readonly-auth-probe','verify-owned','delete','verify-deleted','verify-token-rejected','journal-clear']);
  assert.equal(result.reason,'staging-auth-test-deleted');
  assert.equal(result.hostedSignedJwtEvidence,true);
  assert.equal(result.syntheticAccountDeletionVerified,true);
+ assert.equal(result.postDeletionAuthTokenRejected,true);
  assert.equal(result.requiresManualReconciliation,false);
  noAuthority(result);
 });
@@ -120,14 +122,16 @@ test('creation response lost leaves journal with no auto-retry, manual cleanup r
  assert.deepEqual(steps,['audit-empty','journal-begin','create']);
  noAuthority(out);
 });
-test('signup succeeded but sign-in fails -> user is still deleted and deletion checked',async()=>{
+test('signup succeeded but sign-in fails -> user is deleted but session cleanup needs reconciliation',async()=>{
  const {run,steps}=scenario({signIn:()=>{throw Error('password grant failed');}});
  const out=await run();
- assert.equal(out.reason,'staging-auth-failed-identity-deleted');
+ assert.equal(out.reason,'staging-deleted-session-unverified-reconcile-journal');
  assert.equal(out.hostedSignedJwtEvidence,false);
  assert.equal(out.syntheticAccountDeletionVerified,true);
+ assert.equal(out.postDeletionAuthTokenRejected,false);
+ assert.equal(out.requiresManualReconciliation,true);
  assert.deepEqual(steps,['audit-empty','journal-begin','create','journal-associate',
-  'signin','verify-owned','delete','verify-deleted','journal-clear']);
+  'signin','verify-owned','delete','verify-deleted']);
  noAuthority(out);
 });
 test('forged session, foreign JWT or rejected probe leads to immediate deletion',async()=>{
@@ -143,6 +147,19 @@ test('forged session, foreign JWT or rejected probe leads to immediate deletion'
   assert.equal(out.syntheticAccountDeletionVerified,true);
   assert.equal(out.hostedSignedJwtEvidence,false);
   assert.equal(steps.at(-1),'journal-clear');
+  noAuthority(out);
+ }
+});
+test('deleted account with unverified token rejection keeps journal for human reconciliation',async()=>{
+ for(const tokenDenial of [()=>false,()=>{throw Error('transport failure');}]){
+  const {run,steps}=scenario({tokenDenial});
+  const out=await run();
+  assert.equal(out.reason,'staging-deleted-token-rejection-unverified-reconcile-journal');
+  assert.equal(out.syntheticAccountDeletionVerified,true);
+  assert.equal(out.postDeletionAuthTokenRejected,false);
+  assert.equal(out.requiresManualReconciliation,true);
+  assert.deepEqual(steps.slice(-4),['verify-owned','delete','verify-deleted','verify-token-rejected']);
+  assert.ok(!steps.includes('journal-clear'));
   noAuthority(out);
  }
 });
@@ -194,6 +211,8 @@ test('journal associated before token sign-in; no Auth data is ever written into
  assert.match(source,/file:\/\/|https:\/\//);
  assert.match(source,/--create-and-delete/);
  assert.match(source,/admin\.deleteUser\(userId\)/);
+ assert.match(source,/async verifyTokenDenied\(token\)/);
+ assert.match(source,/postDeletionAuthTokenRejected/);
  assert.match(source,/error\?\.status===404/);
  assert.match(source,/email_confirm:true/);
  assert.match(source,/app_metadata:\{mlos_staging_synthetic:true\}/);
@@ -336,6 +355,28 @@ test('SDK preflight only accepts an empty, verified first page of Auth users',as
    key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:client);
   const found=await a.auditEmpty();
   assert.equal(found,Array.isArray(ans.data?.users)&&ans.data.users.length===0&&!ans.error);
+ }
+});
+test('SDK post-deletion bearer check requires 401/403 and uses only GET against pinned staging Auth',async()=>{
+ const E=settings(),P=policy();
+ for(const status of [200,201,400,401,403,404,429,500]){
+  const captured=[];
+  const server={auth:{admin:{
+   listUsers:async()=>({data:{users:[]},error:null}),
+   createUser:async()=>({data:{user:null},error:null}),
+   getUserById:async()=>({data:{user:null},error:{status:404}}),
+   deleteUser:async()=>({data:{},error:null})
+  }}};
+  const client={auth:{signInWithPassword:async()=>({data:null,error:{status:401}})}};
+  const adapters=makeSupabaseSdkStagingAdapters(E,P,
+   (_url,key)=>key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:client,
+   async(url,opts)=>{captured.push({url,opts});return {status};});
+  assert.equal(await adapters.verifyTokenDenied(token()),status===401||status===403);
+  assert.equal(captured.length,1);
+  assert.equal(captured[0].url,ORIGIN+'/auth/v1/user');
+  assert.equal(captured[0].opts.method,'GET');
+  assert.equal(captured[0].opts.headers.apikey,E.MLOS_STAGING_PUBLISHABLE_KEY);
+  assert.equal(captured[0].opts.headers.Authorization,'Bearer '+token());
  }
 });
 test('SDK rejects wrong project before client initialization and fails closed on absent synthetic marker',async()=>{
