@@ -35,11 +35,16 @@ test('missing hosted Auth/JWT, concurrency, review authority and rights evidence
  for(const k of [
   'managedStagingAuthenticatedJwt','managedStagingSyntheticIdentityLifecycle',
   'managedStagingTwoConnectionRevocation','providerLogoutAtomicity',
-  'hostedAdminSecretCompatibility','qualifiedReviewerAuthorization',
+  'qualifiedReviewerAuthorization',
   'immutableProtectedReceipt'
  ]){
   assert.ok(['NOT_EXECUTED','NOT_PROVEN','NOT_VERIFIED'].includes(e[k]),k);
  }
+});
+test('official SDK is mocked but live hosted Auth admin operations remain unverified',async()=>{
+ const e=(await gate()).evidence;
+ assert.equal(e.hostedAdminSecretCompatibility,
+  'DOCUMENTED_SDK_INTERFACE_TESTED_WITH_MOCKS_HOSTED_UNVERIFIED');
 });
 test('never expose raw source-review bearer credentials to GitHub pull-request CI',async()=>{
  const ci=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
