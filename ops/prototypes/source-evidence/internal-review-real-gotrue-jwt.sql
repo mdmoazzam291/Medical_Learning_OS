@@ -39,6 +39,15 @@ create function evidence_internal.local_grant_for_review(p_actor uuid,q jsonb)
 returns uuid language plpgsql security definer set search_path='' as $$
 declare grant_id uuid;n integer;
 begin
+ -- All reviewer decisions lock session -> exact package -> exact grant.
+ -- Revocation writers must lock package before grant as well, preventing
+ -- reversed-lock deadlocks and making revocation's ordering observable.
+ perform 1 from evidence_internal.packages p
+ where p.package_id=(q->>'packageId')::uuid
+  and p.version=(q->>'packageVersion')::integer
+  and p.digest=q->>'packageDigest'
+ for update;
+ if not found then raise exception 'internal_review_grant_denied';end if;
  select count(*) into n from evidence_internal.grants g
  where g.reviewer_id=p_actor and g.package_id=(q->>'packageId')::uuid
   and g.version=(q->>'packageVersion')::integer
@@ -67,7 +76,8 @@ begin
  actor:=evidence_internal.assert_live_gotrue_local_user();
  gid:=evidence_internal.local_grant_for_review(actor,q);
  -- Deterministic race barrier for one synthetic request only; never deploy.
- if q->>'requestId'='88888888-8888-4888-8888-888888888888'
+ if q->>'requestId' in ('88888888-8888-4888-8888-888888888888',
+                       '77777777-7777-4777-8777-777777777777')
  then perform pg_catalog.pg_sleep(1.7);end if;
  return evidence_internal.record_review(actor,q,gid);
 end;$$;
