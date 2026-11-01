@@ -67,7 +67,8 @@ begin
  actor:=evidence_internal.assert_live_gotrue_local_user();
  gid:=evidence_internal.local_grant_for_review(actor,q);
  -- Deterministic race barrier for one synthetic request only; never deploy.
- if q->>'requestId'='88888888-8888-4888-8888-888888888888'
+ if q->>'requestId' in ('88888888-8888-4888-8888-888888888888',
+                       '77777777-7777-4777-8777-777777777777')
  then perform pg_catalog.pg_sleep(1.7);end if;
  return evidence_internal.record_review(actor,q,gid);
 end;$$;
