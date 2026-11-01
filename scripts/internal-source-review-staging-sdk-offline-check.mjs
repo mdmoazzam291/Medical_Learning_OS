@@ -44,7 +44,7 @@ async function main(){
  };
  const policy=JSON.parse(await readFile(new URL('../ops/prototypes/source-evidence/internal-review-staging-policy.json',import.meta.url),'utf8'));
  const adapters=makeSupabaseSdkStagingAdapters(settings,policy,wrapped,failNetwork);
- for(const name of ['create','signIn','authProbe','verifyOwned','delete','isDeleted'])
+ for(const name of ['auditEmpty','create','signIn','authProbe','verifyOwned','delete','isDeleted'])
   assert.equal(typeof adapters[name],'function',name);
  assert.equal(factoryCalls,2,'must construct exactly separate admin/public clients');
  assert.deepEqual(events,[],'SDK construction must not make network requests');
