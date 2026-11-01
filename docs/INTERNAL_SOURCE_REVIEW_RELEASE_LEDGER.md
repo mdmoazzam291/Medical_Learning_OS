@@ -251,3 +251,28 @@ provider-session, concurrent-transaction, immutable receipt or rights
 authority. Exact executed SQL and limitations:
 `docs/INTERNAL_SOURCE_REVIEW_STAGING_RLS_READBACK.md`.
 Source-review writes/publication remain OFF. PR #372 is draft and stacked.
+
+
+## 2026-11-01 — staging signed-JWT read-only verification harness (#373)
+
+A staging-identity-pinned, no-write `GET /auth/v1/user` test harness is
+now draft code with mocked-HTTP security unit tests. It consumes an
+**existing**, independently provisioned staging test JWT; it cannot
+create/log in/delete an Auth user, refresh/logout a session or reach
+source-review write endpoints. Every result keeps production/staging
+review-write, migration, publication and rights approval **false**.
+
+**Real managed staging Auth JWT positive test NOT RUN** because no
+authorized signed-in staging test session was provided. Remote Auth
+acceptance is not to be fabricated from a simulated SQL-editor claim.
+
+Limited advisory-lock probes against two staging PostgreSQL backend PIDs
+did not observe confirmed overlapping lock contention; the contender
+acquired the lock. Consequently there is **no hosted two-connection
+review-versus-revocation race proof**. The project remained healthy,
+with no public application tables or applied migrations after testing.
+
+See `docs/INTERNAL_SOURCE_REVIEW_STAGING_SIGNED_JWT_READONLY.md`.
+Provision approved synthetic Auth credentials and separately reviewed
+hosted readback/race harness before any further write-bearing acceptance.
+PR #373 is draft; all source-review release gates remain OFF.
