@@ -8,6 +8,7 @@ export const publicFiles = Object.freeze([
   'src/domain/app-navigation.js',
   'src/domain/admin-action-inbox.js',
   'src/domain/catalog-integrity-audit.js',
+  'src/domain/publication-evidence-warnings.js',
   'src/domain/operational-recovery.js',
   'src/domain/subject-index.js',
   'web/auth-return.js',
