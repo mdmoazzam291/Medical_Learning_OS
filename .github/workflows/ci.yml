@@ -274,3 +274,46 @@ jobs:
           EXPECTED_NATIVE_PG_MAJOR: ${{ matrix.pgmajor }}
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-internal-review-native/node_modules/pg/lib/index.js
         run: node scripts/internal-source-review-native-races.js
+
+  internal-review-bound-identity-native:
+    # Synthetic dedicated PostgreSQL logins only; not hosted MLOS Auth.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 356 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        pgmajor: ['17', '18']
+    services:
+      postgres:
+        image: postgres:${{ matrix.pgmajor }}
+        env:
+          POSTGRES_PASSWORD: synthetic-local-review-only
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated PostgreSQL driver
+        run: npm install --prefix "$RUNNER_TEMP/mlos-internal-identity" --no-audit --no-fund pg@8.14.1
+      - name: Verify session-bound reviewer identity and append-only revocations
+        env:
+          PGHOST: 127.0.0.1
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: synthetic-local-review-only
+          PGDATABASE: postgres
+          EXPECTED_NATIVE_PG_MAJOR: ${{ matrix.pgmajor }}
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-internal-identity/node_modules/pg/lib/index.js
+        run: node scripts/internal-source-review-bound-identity-check.js
