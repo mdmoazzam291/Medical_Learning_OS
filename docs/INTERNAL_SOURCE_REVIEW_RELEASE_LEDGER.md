@@ -358,3 +358,16 @@ contract test. This is a verified improvement beyond mocked SDK replies.
 **It is not a hosted user creation, signed-JWT validation or deletion test.**
 A full transitive dependency lockfile is still outstanding before a
 trusted operator run. Source-review and learner release gates remain OFF.
+
+### 2026-11-01 — staging Auth SDK transitive lockfile prepared (#374)
+
+The isolated `ops/staging-auth-sdk` package and full npm v3 lockfile
+were captured from a successful credential-free CI dependency resolution,
+validated for exact `@supabase/supabase-js@2.118.0`, and committed.
+Ten package-tree entries are locked to npm registry URLs and SHA-512
+integrity checks. The code now imports the SDK from this isolated
+operator-only package tree; CI copies both files to a disposable
+directory and runs `npm ci --ignore-scripts` before the offline SDK
+interface probe. The root learner package remains unchanged.
+This lockfile is **build reproducibility evidence only**: no hosted
+Auth users, staging writes, review grants or production releases.
