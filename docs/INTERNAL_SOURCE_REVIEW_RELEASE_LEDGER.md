@@ -182,3 +182,28 @@ The prior #368 local Auth `getUser` experiment does not prove provider
 signout and the application DB write are atomic. All real reviewer
 writes and review UI remain OFF until independent reviewed staging
 acceptance and explicit owner release approval.
+
+
+## 2026-11-01 — approved isolated staging *identity*, baseline verified (#370)
+
+The owner explicitly authorized creation of `medical_learning_os_staging`
+in Medical ORG, Mumbai. Supabase quoted **$0/month** for project creation
+and returned a confirmation ID required by its API. Creation succeeded:
+project ref `vwtdwafjrraptrgeshzt` is `ACTIVE_HEALTHY` and distinct
+from production `iyapppmeieqhflnzslao` and excluded inactive legacy
+`ueuguguoladoqvtxkumt`.
+
+Read-only staging evidence: PostgreSQL 17.11, no application migration
+history, no public tables, no security-advisor lints on the empty project.
+The `auth.sessions` catalog table exists, but authenticated and
+service_role have no direct SELECT/UPDATE privileges. No user/session
+data selected and **no migrations or test SQL writes performed**.
+The project ref is now pinned in staging policy as a **metadata candidate
+only**; every runtime, SQL, hosted Auth acceptance and release permission
+remains false. See
+`docs/INTERNAL_SOURCE_REVIEW_STAGING_BASELINE_20261101.md`.
+
+Staging build/hosted Auth/SQL validation, review grant authority, source
+rights and production release remain independent, **unapproved** gates.
+Do not copy production identities or data into staging. All internal review
+PRs remain draft and unmerged.
