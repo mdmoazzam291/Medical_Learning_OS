@@ -1,5 +1,14 @@
 # Decision log
 
+## ADR-134 — Internal Admin source review replaces optional external evidence delivery
+**Status:** Owner-approved 1 November 2026. Internal review first; external provider delivery deferred.
+
+Use the existing MLOS-owned Admin source/rights/medical review workflows and canonical source-row evidence contracts for reviewing source metadata. **Do not** integrate an external durable receipt provider, create external credentials, enable the private gateway, or merge the experimental provider/security PR #350 based on offline receipt tests. External delivery would require a separately evidenced outside recipient, specific need, independently verified provider identity/key semantics and a new owner authorization. Defer release blocker #347 as not planned for this internal architecture.
+
+Start with a detached, strictly version-and-digest-bound internal candidate list and request preflight; do not infer adjudicated counts or source approval. Later server integration must prove authenticated target-scoped, independent reviewer grants; exact source version/current rights; immutable and idempotent transactional human-review events; grant-revocation serialization; source/rights/clinical/exam-scope review separation and manual learner publication gates. A matching SHA/receipt shape does not authenticate a reviewer or authorize publication. No hosted migration or Admin UI release is approved by this ADR.
+
+See `docs/INTERNAL_SOURCE_ROW_REVIEW.md` and the existing `docs/SOURCE_ROW_REVIEW_CONTRACT.md`.
+
 ## ADR-131 — Unmapped preparation goals show published general practice, not false exam coverage
 
 Accepted owner repair request 25 October 2026: When all selected preparation pathways lack approved requirements, the default Library goal view and newly generated Study Now sessions may use the already-published catalog as **explicitly unmapped general practice**. Learners must see that neither NEET-PG nor INI-CET exam suitability has been reviewed. Never derive approved exam requirements from PYQ origin, topics or user metadata. Keep invalid profiles fail-closed, Needed foundations without approved prerequisites empty, and restore exact-version approved scope as soon as a selected pathway has mapped requirements. This is an availability/display fallback, not content publication, clinical approval, learner-model inference or exam eligibility.
