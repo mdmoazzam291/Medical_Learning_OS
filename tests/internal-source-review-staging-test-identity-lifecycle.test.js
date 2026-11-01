@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdtemp,stat,symlink,unlink,chmod,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {makeJournal,makeSupabaseSdkStagingAdapters,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
+import {makeJournal,makeSupabaseSdkStagingAdapters,checkStagingSyntheticOperatorPreflight,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
  from '../scripts/internal-source-review-staging-test-identity-lifecycle.mjs';
 
 const STAGING='vwtdwafjrraptrgeshzt',ORIGIN='https://'+STAGING+'.supabase.co';
@@ -430,4 +430,62 @@ test('SDK user lookup error 401 or an empty success response NEVER counts as ver
    key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:{auth:{signInWithPassword:async()=>({})}});
   assert.equal(await adapters.isDeleted(USER),false);
  }
+});
+
+test('operator preflight verifies private empty journal directory and hosted empty Auth users without any writes',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-op-preflight-'));
+ const path=join(dir,'recovery.jsonl');
+ try{
+  const E={...settings(),MLOS_STAGING_IDENTITY_JOURNAL:path};
+  const calls=[];
+  const good=await checkStagingSyntheticOperatorPreflight({
+   settings:E,policy:policy(),adapters:{auditEmpty:async()=>{calls.push('read-only-list');return true;}}
+  });
+  assert.equal(good.reason,'staging-operator-readonly-preflight-passed');
+  assert.equal(good.operatorEnvironmentPreflightReady,true);
+  assert.equal(good.hostedSignedJwtEvidence,false);
+  assert.equal(good.syntheticAccountDeletionVerified,false);
+  assert.equal(good.sourceReviewWriteApproved,false);
+  assert.equal(good.productionReleaseApproved,false);
+  assert.equal(good.learnerPublicationApproved,false);
+  assert.equal(Object.isFrozen(good),true);
+  assert.deepEqual(calls,['read-only-list']);
+  await assert.rejects(stat(path),{code:'ENOENT'});
+  // An unresolved recovery marker MUST block all future creates, without
+  // clearing, reading or modifying the marker and without hitting Auth.
+  await makeJournal(path).begin(EMAIL);
+  const original=await readFile(path,'utf8');
+  const blocked=await checkStagingSyntheticOperatorPreflight({
+   settings:E,policy:policy(),adapters:{auditEmpty:async()=>{throw Error('must not call hosted Auth');}}
+  });
+  assert.equal(blocked.reason,'staging-operator-existing-recovery-journal');
+  assert.equal(blocked.operatorEnvironmentPreflightReady,false);
+  assert.equal(await readFile(path,'utf8'),original);
+ }finally{await rm(dir,{recursive:true,force:true});}
+});
+test('operator preflight blocks nonprivate directory, wrong project and unavailable or nonempty hosted inventory',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-op-preflight-negative-'));
+ const path=join(dir,'journal.jsonl'),E={...settings(),MLOS_STAGING_IDENTITY_JOURNAL:path};
+ try{
+  for(const auditEmpty of [async()=>false,async()=>null,async()=>{throw Error('network');}]){
+   const blocked=await checkStagingSyntheticOperatorPreflight({
+    settings:E,policy:policy(),adapters:{auditEmpty}
+   });
+   assert.equal(blocked.operatorEnvironmentPreflightReady,false);
+   assert.match(blocked.reason,/inventory-not-empty-or-unverified|inventory-unavailable/);
+   assert.equal(blocked.productionReleaseApproved,false);
+   await assert.rejects(stat(path),{code:'ENOENT'});
+  }
+  const denied=await checkStagingSyntheticOperatorPreflight({
+   settings:{...E,MLOS_STAGING_REF:'iyapppmeieqhflnzslao'},
+   policy:policy(),adapters:{auditEmpty:async()=>{throw Error('must not query');}}
+  });
+  assert.equal(denied.reason,'staging-operator-preflight-isolation-denied');
+  await chmod(dir,0o755);
+  const insecure=await checkStagingSyntheticOperatorPreflight({
+   settings:E,policy:policy(),adapters:{auditEmpty:async()=>{throw Error('must not query');}}
+  });
+  assert.equal(insecure.reason,'staging-operator-private-journal-directory-required');
+  await chmod(dir,0o700);
+ }finally{await rm(dir,{recursive:true,force:true});}
 });
