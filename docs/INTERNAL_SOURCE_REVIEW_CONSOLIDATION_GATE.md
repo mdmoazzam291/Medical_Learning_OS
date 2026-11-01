@@ -73,8 +73,8 @@ separate publishable-key client. Both disable session persistence and
 auto-refresh. The operator runner refuses to load a missing or mismatched
 pinned SDK version (`2.118.0`). This removes custom API-key transport
 assumptions, but **does not prove the hosted Admin calls succeed**. No
-real Auth user has been created. The SDK version and lockfile must be
-installed and independently reviewed in a trusted local test environment,
+real Auth user has been created. The isolated SDK package and lockfile must be
+installed via `npm ci` and independently reviewed in a trusted operator test environment,
 never a PR workflow.
 
 **Owner/operator must confirm the currently supported Auth admin
@@ -137,5 +137,7 @@ actual library without credentials, verifies private/public Auth client
 construction and required SDK methods, and blocks outbound requests.
 This resolves the earlier mocked-only *interface* uncertainty. It does
 **not** prove hosted Admin API access or real JWT/session/deletion safety.
-Transitive dependencies are not yet covered by a committed npm lockfile;
-no production or staging secrets may be added to CI.
+A complete staging-only npm lockfile is committed under
+`ops/staging-auth-sdk`; the CI offline SDK test installs it via
+`npm ci` in a temporary runner directory. No production or staging
+secrets may be added to CI.
