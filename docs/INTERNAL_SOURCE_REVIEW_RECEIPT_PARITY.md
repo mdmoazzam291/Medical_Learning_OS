@@ -16,7 +16,7 @@ because a JSON response has a plausible `decisionId`.
 - `projectInternalSourceRowReceipt(event,request,reviewerId)`: validates the
   *exact* 11-field event, canonical nested request, expected reviewer, decision
   and scoped grant identities, timestamp and all four prohibited release flags.
-  It generates the established 20-field receipt with an explicit
+  It generates the established 24-field receipt with an explicit
   SHA-256/JCS digest of the validated event payload (not a SQL-stored digest).
 - `compareInternalSourceRowReviewEvents(writeEvent,readbackEvent,request,reviewerId)`:
   confirms an independent caller-supplied readback has identical canonical
