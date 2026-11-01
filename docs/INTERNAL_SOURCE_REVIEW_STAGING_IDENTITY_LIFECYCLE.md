@@ -22,7 +22,7 @@ key kept solely in the process environment or trusted secret store.
 Only when every environment identity/credential/journal guard passes and
 `--create-and-delete` is explicitly set, the runner:
 
-1. Creates a **local 0600 exclusive** recovery journal *outside the repo*
+1. Creates a **local 0600 exclusive, append-only** recovery journal *outside the repo*
    **before** contacting the Auth admin API. The journal contains only
    a randomly generated synthetic email marker, staging project ref,
    and (when known) the new test UUID; **no password, JWT or key**.
@@ -35,10 +35,16 @@ Only when every environment identity/credential/journal guard passes and
    as **untrusted input** to discover the new session UUID, then runs
    #373's Auth-server positive and anonymous/tampered negative
    **GET /auth/v1/user** checks.
-4. In all cases where a definite created user ID is available,
-   requests hosted Auth admin account deletion and **independently**
+4. **Before** attempting deletion, requests hosted Auth admin GET by UUID
+   and requires the exact random synthetic email and trusted
+   `app_metadata.mlos_staging_synthetic:true` marker. If this independent
+   ownership check fails, **no delete is attempted** and the recovery
+   journal is retained for manual review. With proven ownership, requests
+   hosted Auth admin account deletion and **independently**
    requires `GET /auth/v1/admin/users/{uuid}` to return 404.
-   Only after verified deletion is the local recovery journal removed.
+   Only after verified deletion is the local recovery journal removed. The
+   creation journal's original pre-create marker is never overwritten;
+   the created UUID is added as an append-only, fsynced entry.
 5. Prints **status codes/booleans only**; no email, password, JWT,
    secret key, user ID, session ID, provider response body or stack.
    Any uncertain create/delete leaves a recovery journal and an
