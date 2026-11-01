@@ -3,6 +3,13 @@
 **2026-11-01 · Draft #374 stacked on #373.**
 **CODE PREPARED; NOT executed against managed staging.**
 
+**New compatibility gate:** As of this audit, the raw-HTTP route using
+new opaque API keys for hosted Auth admin create/delete is **NOT verified**.
+Do not run live creation until the provider-supported Auth admin client
+and transport are independently confirmed. See
+`docs/INTERNAL_SOURCE_REVIEW_CONSOLIDATION_GATE.md`.
+
+
 ## Objective and method
 
 The previously implemented #373 read-only hosted signed-JWT probe needs
@@ -18,6 +25,10 @@ The operator must use a trusted isolated machine (NOT a pull-request
 workflow), project `vwtdwafjrraptrgeshzt` only, a staging-only
 `sb_publishable_...` key and a staging-only `sb_secret_...` Auth admin
 key kept solely in the process environment or trusted secret store.
+These API keys are **not JWT bearer tokens**; the raw adapter now sends
+an `apikey` header only. This transport may still be rejected by Auth
+admin POST/DELETE and must be verified against current provider support
+before attempting the test.
 
 Only when every environment identity/credential/journal guard passes and
 `--create-and-delete` is explicitly set, the runner:
