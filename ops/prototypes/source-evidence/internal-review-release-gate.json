@@ -45,7 +45,9 @@
     "providerLogoutAtomicity": "NOT_PROVEN",
     "hostedAdminSecretCompatibility": "PINNED_REAL_SDK_OFFLINE_CONTRACT_PASSED_HOSTED_UNVERIFIED",
     "qualifiedReviewerAuthorization": "NOT_VERIFIED",
-    "immutableProtectedReceipt": "NOT_VERIFIED"
+    "immutableProtectedReceipt": "NOT_VERIFIED",
+    "managedStagingAnonymousAuthDenial": "HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01",
+    "managedStagingForgedJwtDenial": "HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01"
   },
   "permissions": {
     "hostedStagingAuthCreateDeleteApproved": false,
@@ -60,7 +62,7 @@
   },
   "requiredNext": {
     "immediate": "Operator reviews the committed ops/staging-auth-sdk package and lockfile, installs it via npm ci in a trusted nonproduction environment, verifies staging-only secret scope and unresolved journal status, then requests explicit authorization for a synthetic hosted Auth create/getUser/delete run. Never put secrets in PR CI.",
-    "then": "One genuine staging signed-JWT Auth test with full deletion verification, followed by reviewed hosted signed-JWT receipt boundary and synchronized two-connection revocation test.",
+    "then": "Host a trusted, authorized staging-only synthetic Auth identity lifecycle and independently verify delete/cleanup, then establish protected reviewer readback and managed two-connection revocation. Hosted anonymous/forged JWT denial ALREADY passed but is not signed-user acceptance.",
     "release": "Owner-reviewed integration/CI, independent security signoff, real reviewer qualification, clinical/rights/exam approvals, explicit production deployment authorization."
   }
 }
