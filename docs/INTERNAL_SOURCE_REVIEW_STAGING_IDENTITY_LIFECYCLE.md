@@ -3,10 +3,13 @@
 **2026-11-01 · Draft #374 stacked on #373.**
 **CODE PREPARED; NOT executed against managed staging.**
 
-**New compatibility gate:** As of this audit, the raw-HTTP route using
-new opaque API keys for hosted Auth admin create/delete is **NOT verified**.
-Do not run live creation until the provider-supported Auth admin client
-and transport are independently confirmed. See
+**Updated supported interface:** The raw-HTTP Auth admin adapter has now
+been replaced by Supabase's documented server-side JavaScript SDK methods
+(`auth.admin.createUser`, `getUserById`, `deleteUser` and
+`auth.signInWithPassword`). These are exercised through mocked
+SDK-shaped responses, **not** a hosted Admin API acceptance test.
+No live creation is authorized until the operator approves an isolated
+staging run, ensures cleanup, and verifies the secret is staging-only. See
 `docs/INTERNAL_SOURCE_REVIEW_CONSOLIDATION_GATE.md`.
 
 
@@ -25,10 +28,13 @@ The operator must use a trusted isolated machine (NOT a pull-request
 workflow), project `vwtdwafjrraptrgeshzt` only, a staging-only
 `sb_publishable_...` key and a staging-only `sb_secret_...` Auth admin
 key kept solely in the process environment or trusted secret store.
-These API keys are **not JWT bearer tokens**; the raw adapter now sends
-an `apikey` header only. This transport may still be rejected by Auth
-admin POST/DELETE and must be verified against current provider support
-before attempting the test.
+These API keys are **not JWT bearer tokens**. The SDK handles their
+HTTP transport; no custom Authorization bearer construction remains.
+Run from an isolated trusted Node environment with an exact-reviewed
+`@supabase/supabase-js@2.118.0` installation (and lockfile), verified
+in `node_modules` before account creation. No SDK is bundled in this
+repository's production dependency list, and missing/wrong versions
+**fail closed**. Actual hosted behavior must still be verified.
 
 Only when every environment identity/credential/journal guard passes and
 `--create-and-delete` is explicitly set, the runner:
@@ -117,7 +123,7 @@ Offline deterministic adapter tests exercise:
   migration and learner-release authorization flag false.
 
 **No real managed-staging Auth user was created, deleted or authenticated
-during this PR**; the script's network adapter, Auth admin payloads and
+during this PR**; the SDK adapter, hosted Admin calls and
 `sb_secret_` acceptance on the hosted service require a separately
 authorized operator-run verification. Earlier managed SQL-RLS tests
 remain separate evidence and do not supply a genuine JWT.
