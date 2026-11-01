@@ -154,3 +154,20 @@ PostgREST until expiry; production authorization must independently
 require an authoritative current server-owned session/grant check at
 the moment of sensitive review decision. The provider signout vs DB
 transaction gap stays BLOCKED, even after successful synthetic cleanup.
+
+## Cumulative native regression gate on draft #374
+
+The existing specialized CI jobs were conditional on earlier PR numbers;
+they were consequently reported as **skipped** on later security-stack
+heads, even with green generic Node/browser/WebKit jobs. Draft #374 now
+explicitly reruns both **isolated native PostgreSQL 17/18 transaction
+race tests** and the **disposable local Supabase GoTrue JWT/PostgREST
+owned-revocation test** on its exact head. The latter is restricted to
+loopback `127.0.0.1:54321`, checks the local database URL, and destroys
+the disposable stack with `stop --no-backup`.
+
+These tests must be individually **successful, not skipped**, before
+using #374 as a cumulative local-security evidence base. They do not
+create a hosted staging user, verify hosted reviewer receipt readback,
+or prove hosted concurrency, JWT signout atomicity, clinical/source
+rights or production readiness.
