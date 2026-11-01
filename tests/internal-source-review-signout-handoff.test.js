@@ -65,6 +65,10 @@ test('invalid token, forged identity and malformed accessor never revoke or sign
  const r=await handoff(hostile)(token);
  assert.equal(r.reason,'identity-unverified');
  assert.equal(read,false);
+ const poisoned=new Proxy(verified(),{getPrototypeOf(){throw Error('proxy trap');}});
+ const blocked=await handoff(poisoned)(token);
+ assert.equal(blocked.reason,'identity-unverified');
+ noTrust(blocked);
  assert.equal(calls,0);
 });
 test('provider signout still attempted once if owned revocation is ambiguous or denied',async()=>{
