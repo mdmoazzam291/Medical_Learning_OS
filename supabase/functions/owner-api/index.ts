@@ -325,11 +325,16 @@ Deno.serve(async (req: Request) => {
       // Prevent a heavy catalog blob from exhausting an edge worker. No partial "healthy" report.
       if (JSON.stringify(first.body).length > 8_000_000) fail(503, "integrity_snapshot_too_large");
       const [notes, links, questionMetadata, conceptMetadata] = await Promise.all([
-        bounded("neural_canonical_note_versions", "id,concept_id,status,source_ids,supersedes_id"),
+        // The advisory warning scanner needs actual title/body/provenance.
+        // Prior metadata-only selection incorrectly implied these fields had been inspected.
+        bounded("neural_canonical_note_versions", "id,concept_id,status,source_ids,supersedes_id,title,body_markdown,provenance"),
         bounded("content_library_note_question_links", "note_version_id,question_id,relation"),
         bounded("content_library_question_metadata", "question_id,origins,concept_links_version_id"),
         bounded("content_library_concept_metadata", "concept_id")
       ]);
+      // Inspect note text only inside this owner-authenticated server boundary;
+      // do not return it in the report or silently accept an oversized partial scan.
+      if (JSON.stringify(notes).length > 6_000_000) fail(503, "integrity_note_evidence_too_large");
       const confirmation = await admin.from("study_catalog").select("version,updated_at").eq("id", 1).single();
       if (confirmation.error || !confirmation.data ||
         confirmation.data.version !== first.version || confirmation.data.updated_at !== first.updated_at) {
