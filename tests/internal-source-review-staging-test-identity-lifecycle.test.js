@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdtemp,stat,symlink,unlink,chmod,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {makeJournal,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
+import {makeJournal,makeSupabaseSdkStagingAdapters,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
  from '../scripts/internal-source-review-staging-test-identity-lifecycle.mjs';
 
 const STAGING='vwtdwafjrraptrgeshzt',ORIGIN='https://'+STAGING+'.supabase.co';
@@ -179,13 +179,16 @@ test('journal associated before token sign-in; no Auth data is ever written into
  assert.match(source,/journal\.clear\(\)/);
  assert.match(source,/file:\/\/|https:\/\//);
  assert.match(source,/--create-and-delete/);
- assert.match(source,/method:'DELETE'/);
- assert.match(source,/r\.status===404/);
+ assert.match(source,/admin\.deleteUser\(userId\)/);
+ assert.match(source,/error\?\.status===404/);
  assert.match(source,/email_confirm:true/);
  assert.match(source,/app_metadata:\{mlos_staging_synthetic:true\}/);
  assert.doesNotMatch(source,/\/rest\/v1\/rpc\//);
  assert.ok(!source.includes("Authorization:'Bearer '+secret"));
- assert.match(source,/headers:\{apikey,'Cache-Control':'no-store'/);
+ assert.match(source,/admin\.createUser\(/);
+ assert.match(source,/client\.auth\.signInWithPassword\(/);
+ assert.match(source,/sdkManifest\.version!=='2\.118\.0'/);
+ assert.doesNotMatch(source,/\/auth\/v1\/admin\/users/);
  assert.doesNotMatch(source,/auth\.sessions/);
 });
 
@@ -232,4 +235,107 @@ test('journal rejects final symlink, absent file, and broadened file permissions
   await assert.rejects(journal.associate(EMAIL,USER),/permissions_invalid/);
   assert.equal(await readFile(location,'utf8'),before,'unsafe journal not modified');
  }finally{await rm(dir,{recursive:true,force:true});}
+});
+
+test('official SDK adapter checks exact staging and calls admin create/read/delete with separate public password signin',async()=>{
+ const calls=[],P=policy(),E=settings();
+ const state={exists:true};
+ const user={id:USER,email:EMAIL,app_metadata:{mlos_staging_synthetic:true}};
+ const admin={
+  createUser:async payload=>{
+   calls.push('create');
+   assert.equal(payload.email,EMAIL);
+   assert.equal(payload.password,PASSWORD);
+   assert.equal(payload.email_confirm,true);
+   assert.equal(payload.app_metadata.mlos_staging_synthetic,true);
+   return {data:{user},error:null};
+  },
+  getUserById:async uid=>{
+   calls.push('read-owned');
+   assert.equal(uid,USER);
+   return state.exists?{data:{user},error:null}:
+    {data:{user:null},error:{status:404}};
+  },
+  deleteUser:async uid=>{
+   calls.push('delete');
+   assert.equal(uid,USER);
+   state.exists=false;
+   return {data:{},error:null};
+  }
+ };
+ const createClient=(url,key,options)=>{
+  calls.push('init');
+  assert.equal(url,ORIGIN);
+  assert.equal(options.auth.persistSession,false);
+  assert.equal(options.auth.autoRefreshToken,false);
+  assert.equal(options.auth.detectSessionInUrl,false);
+  if(key===E.MLOS_STAGING_ADMIN_SECRET_KEY)return {auth:{admin}};
+  assert.equal(key,E.MLOS_STAGING_PUBLISHABLE_KEY);
+  return {auth:{signInWithPassword:async credentials=>{
+   calls.push('signin');
+   assert.equal(credentials.email,EMAIL);
+   assert.equal(credentials.password,PASSWORD);
+   return {data:{user,session:{access_token:token()}},error:null};
+  }}};
+ };
+ let req=0;
+ const fetcher=async(url,opts)=>{
+  req++;
+  assert.equal(url,ORIGIN+'/auth/v1/user');
+  assert.equal(opts.method,'GET');
+  return req===1?{status:200,async json(){return {id:USER};}}:
+   {status:401,async json(){return {};}};
+ };
+ const adapters=makeSupabaseSdkStagingAdapters(E,P,createClient,fetcher);
+ const created=await adapters.create(identity());
+ assert.equal(created.userId,USER);
+ const signed=await adapters.signIn(identity());
+ assert.equal(signed.userId,USER);
+ const probe=await adapters.authProbe(signed.token,USER,SESSION);
+ assert.equal(probe.reason,'staging-auth-getuser-readonly-pass');
+ assert.equal(req,3);
+ assert.equal(await adapters.verifyOwned(USER,EMAIL),true);
+ assert.equal(await adapters.delete(USER),true);
+ assert.equal(await adapters.isDeleted(USER),true);
+ assert.deepEqual(calls,['init','init','create','signin','read-owned','delete','read-owned']);
+});
+test('SDK rejects wrong project before client initialization and fails closed on absent synthetic marker',async()=>{
+ const E=settings(),P=policy();
+ let creates=0;
+ assert.throws(()=>makeSupabaseSdkStagingAdapters(
+  {...E,MLOS_STAGING_REF:'iyapppmeieqhflnzslao'},P,
+  ()=>{creates++;return {};}),
+ /staging-sdk-target-denied/);
+ assert.equal(creates,0);
+ const idObj={id:USER,email:EMAIL,app_metadata:{}};
+ const server={auth:{admin:{
+  createUser:async()=>({data:{user:idObj},error:null}),
+  getUserById:async()=>({data:{user:idObj},error:null}),
+  deleteUser:async()=>({error:{status:403}})
+ }}};
+ const client={auth:{signInWithPassword:async()=>({data:null,error:{status:401}})}};
+ const adapters=makeSupabaseSdkStagingAdapters(E,P,(_url,key)=>
+  key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:client);
+ await assert.rejects(()=>adapters.create(identity()),/identity-unverified/);
+ assert.equal(await adapters.verifyOwned(USER,EMAIL),false);
+ assert.equal(await adapters.delete(USER),false);
+ assert.equal(await adapters.isDeleted(USER),false);
+});
+test('SDK user lookup error 401 or an empty success response NEVER counts as verified deletion',async()=>{
+ const E=settings(),P=policy();
+ for(const answer of [
+  {data:{user:null},error:{status:401}},
+  {data:{user:null},error:{status:403}},
+  {data:{user:null},error:{status:500}},
+  {data:{user:null},error:null}
+ ]){
+  const server={auth:{admin:{
+   createUser:async()=>({data:{user:null},error:null}),
+   getUserById:async()=>answer,
+   deleteUser:async()=>({data:{},error:null})
+  }}};
+  const adapters=makeSupabaseSdkStagingAdapters(E,P,(_url,key)=>
+   key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:{auth:{signInWithPassword:async()=>({})}});
+  assert.equal(await adapters.isDeleted(USER),false);
+ }
 });
