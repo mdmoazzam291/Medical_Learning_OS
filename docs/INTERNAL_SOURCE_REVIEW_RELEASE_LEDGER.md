@@ -301,3 +301,17 @@ Never run an admin secret in untrusted PR CI or browser. No production
 Auth/DB, migration, medical source data, review UI, rights/clinical
 approval or learner publication changed. The review PR stack remains
 draft/unmerged. #350 external provider stays OFF.
+
+### 2026-11-01 — #374 pre-run cleanup hardening
+
+The draft staging identity lifecycle now retains its original local 0600
+pre-create marker using an append-only, fsynced journal, rejecting final
+symlinks and widened permissions. After account creation, the operator
+runner must additionally confirm the *exact* synthetic account UUID,
+random email marker and server-controlled app metadata through Auth admin
+GET before it will issue irreversible account DELETE. If the ownership
+check fails, no deletion is attempted and manual reconciliation is
+required. Tests exercise real temporary filesystem durability and mocked
+administrative identity checking. This remains **offline code only**;
+no hosted staging Auth user has been created or deleted. No production
+source-review or learner release approval.
