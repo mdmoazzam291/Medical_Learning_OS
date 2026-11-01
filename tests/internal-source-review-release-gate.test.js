@@ -137,3 +137,26 @@ test('internal-review branch family reruns isolated native race and local GoTrue
  assert.doesNotMatch(gotrue,/vwtdwafjrraptrgeshzt/);
  assert.doesNotMatch(native,/vwtdwafjrraptrgeshzt/);
 });
+
+test('aggregate CI security signal fails closed if required jobs are skipped, failed or cancelled',async()=>{
+ const ci=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
+ const block=ci.match(/\n  internal-review-security-gate:\n([\s\S]*?)(?=\n  [a-z][a-z0-9_-]*:\n|$)/)?.[1];
+ assert.ok(block,'internal-review security aggregate job must exist');
+ assert.match(block,/always\(\)/);
+ assert.match(block,/startsWith\(github\.head_ref, 'test\/internal-review-'\)/);
+ assert.match(block,/github\.event_name == 'pull_request'/);
+ assert.match(block,/contents: read/);
+ assert.match(block,/needs:\s*\n\s*- check\s*\n\s*- browser\s*\n\s*- webkit\s*\n\s*- internal-review-native-postgres\s*\n\s*- internal-review-real-gotrue-jwt-atomic/);
+ for(const [name,job] of [
+  ['CORE_RESULT','check'],['BROWSER_RESULT','browser'],
+  ['WEBKIT_RESULT','webkit'],['NATIVE_PG_RESULT','internal-review-native-postgres'],
+  ['GOTRUE_RESULT','internal-review-real-gotrue-jwt-atomic']
+ ]){
+  assert.ok(block.includes(name+': '+'$'+'{{ needs.'+job+'.result }}'),
+   'result of '+job+' must be checked');
+  assert.ok(block.includes('"$'+name+'"'),'result '+name+' must be included in gate');
+ }
+ assert.match(block,/if \[\[ "\$result" != success \]\]; then/);
+ assert.match(block,/exit 1/);
+ assert.doesNotMatch(block,/continue-on-error|approval: true|DEPLOY|sb_secret_|service_role/i);
+});
