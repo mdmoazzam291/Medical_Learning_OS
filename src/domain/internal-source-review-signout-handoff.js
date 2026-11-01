@@ -10,10 +10,12 @@ const uuid=value=>typeof value==='string'&&
 const tokenOK=value=>typeof value==='string'&&
  value.length>=16&&value.length<=8192&&!/\s/.test(value);
 const ownData=(obj,key)=>{
- if(!obj||typeof obj!=='object'||Array.isArray(obj)||
-  ![Object.prototype,null].includes(Object.getPrototypeOf(obj)))return undefined;
- const d=Object.getOwnPropertyDescriptor(obj,key);
- return d?.enumerable&&Object.hasOwn(d,'value')?d.value:undefined;
+ try{
+  if(!obj||typeof obj!=='object'||Array.isArray(obj)||
+   ![Object.prototype,null].includes(Object.getPrototypeOf(obj)))return undefined;
+  const d=Object.getOwnPropertyDescriptor(obj,key);
+  return d?.enumerable&&Object.hasOwn(d,'value')?d.value:undefined;
+ }catch{return undefined;}
 };
 const outcome=(reason,owned=false,provider=false)=>Object.freeze({
  ready:false,reason,
