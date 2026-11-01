@@ -6,7 +6,7 @@
 // signout, even when app revocation is uncertain (do not strand the user).
 // Never report review access closed from either acknowledgement alone.
 const uuid=value=>typeof value==='string'&&
- /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(value);
+ /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(value);
 const tokenOK=value=>typeof value==='string'&&
  value.length>=16&&value.length<=8192&&!/\s/.test(value);
 const ownData=(obj,key)=>{
