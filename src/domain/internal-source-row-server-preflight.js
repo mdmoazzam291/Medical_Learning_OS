@@ -1,6 +1,6 @@
 // REVIEW-ONLY server orchestration contract. Not a deployed endpoint or
 // authentication implementation. Wire ONLY from the existing review-api's
-// verified Supabase auth.getUser(token), checkRuntimeAccess and a trusted
+// verified identity-provider getUser(token), checkRuntimeAccess and a trusted
 // server-only evidence/grant loader; never pass a browser-supplied principal.
 import {validateSourceRowReviewRequest} from './source-row-review.js';
 import {assessInternalSourceRowReviewEligibility} from './internal-source-row-eligibility.js';
@@ -13,6 +13,12 @@ const denied=reason=>Object.freeze({
  clinicalApproved:false,rightsApproved:false,examScopeApproved:false,
  learnerRelease:false
 });
+const ownData=(value,key)=>{
+ if(!value||typeof value!=='object'||
+    ![Object.prototype,null].includes(Object.getPrototypeOf(value)))return undefined;
+ const descriptor=Object.getOwnPropertyDescriptor(value,key);
+ return descriptor&&Object.hasOwn(descriptor,'value')?descriptor.value:undefined;
+};
 const accepted=(reviewerId)=>Object.freeze({
  eligible:true,reason:'server-preflight-only',reviewerId,
  sessionChecked:true,reviewerAuthenticated:true,
@@ -82,8 +88,8 @@ export function createInternalSourceRowServerPreflight({
    const context=evidence.context;
    // Do not silently replace a mismatched actor in the loaded records:
    // fail closed if the supposedly authoritative service disagrees.
-   if(context?.actorId!==actorId||
-      context?.evidenceAccess?.actorId!==actorId)
+   if(ownData(context,'actorId')!==actorId||
+      ownData(ownData(context,'evidenceAccess'),'actorId')!==actorId)
     return denied('principal-binding-mismatch');
    const outcome=await assessInternalSourceRowReviewEligibility(
     evidence.packageCandidate,evidence.expectedDigest,captured,context
