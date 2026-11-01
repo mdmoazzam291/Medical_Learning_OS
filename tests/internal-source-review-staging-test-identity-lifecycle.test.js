@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
-import {runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
+import {readFile,mkdtemp,stat,symlink,unlink,chmod,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {makeJournal,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
  from '../scripts/internal-source-review-staging-test-identity-lifecycle.mjs';
 
 const STAGING='vwtdwafjrraptrgeshzt',ORIGIN='https://'+STAGING+'.supabase.co';
@@ -169,4 +171,49 @@ test('journal associated before token sign-in; no Auth data is ever written into
  assert.match(source,/app_metadata:\{mlos_staging_synthetic:true\}/);
  assert.doesNotMatch(source,/\/rest\/v1\/rpc\//);
  assert.doesNotMatch(source,/auth\.sessions/);
+});
+
+test('actual restricted journal appends without destroying original pre-create recovery marker',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-staging-journal-test-'));
+ const location=join(dir,'recovery.jsonl');
+ try{
+  const journal=makeJournal(location);
+  await journal.begin(EMAIL);
+  const first=await readFile(location,'utf8');
+  const initial=JSON.parse(first.trim());
+  assert.equal(initial.event,'pre-create');
+  assert.equal(initial.userId,undefined);
+  assert.equal(initial.email,EMAIL);
+  assert.equal((await stat(location)).mode&0o777,0o600);
+  await assert.rejects(journal.begin(EMAIL),{code:'EEXIST'});
+  await journal.associate(EMAIL,USER);
+  const contents=await readFile(location,'utf8');
+  assert.ok(contents.startsWith(first),'created UUID append must preserve original marker');
+  const entries=contents.trim().split('\n').map(v=>JSON.parse(v));
+  assert.equal(entries.length,2);
+  assert.equal(entries[1].event,'created');
+  assert.equal(entries[1].userId,USER);
+  assert.equal(entries[1].email,EMAIL);
+  assert.ok(!contents.includes(PASSWORD),'must not persist token/password');
+  await journal.clear();
+  await assert.rejects(stat(location),{code:'ENOENT'});
+ }finally{await rm(dir,{recursive:true,force:true});}
+});
+test('journal rejects final symlink, absent file, and broadened file permissions',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-staging-journal-hardening-'));
+ const location=join(dir,'recovery.jsonl');
+ const target=join(dir,'unrelated');
+ try{
+  await symlink(target,location);
+  await assert.rejects(makeJournal(location).begin(EMAIL));
+  await assert.rejects(makeJournal(location).associate(EMAIL,USER));
+  await unlink(location);
+  await assert.rejects(makeJournal(location).associate(EMAIL,USER),{code:'ENOENT'});
+  const journal=makeJournal(location);
+  await journal.begin(EMAIL);
+  const before=await readFile(location,'utf8');
+  await chmod(location,0o644);
+  await assert.rejects(journal.associate(EMAIL,USER),/permissions_invalid/);
+  assert.equal(await readFile(location,'utf8'),before,'unsafe journal not modified');
+ }finally{await rm(dir,{recursive:true,force:true});}
 });
