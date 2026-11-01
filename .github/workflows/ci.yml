@@ -376,3 +376,52 @@ jobs:
       - name: Dispose gateway even if test fails
         if: always()
         run: docker rm -f mlos-postgrest-review || true
+
+  internal-review-real-local-gotrue:
+    # Disposable loopback Auth session + internal review commit, no hosted environment.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 360 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated pinned local Auth tools
+        run: npm install --prefix "$RUNNER_TEMP/mlos-internal-gotrue" --no-audit --no-fund supabase@2.120.0 @supabase/supabase-js@2.118.0 pg@8.22.0
+      - name: Start migration-free, loopback-only Auth stack
+        run: |
+          CLI="$RUNNER_TEMP/mlos-internal-gotrue/node_modules/.bin/supabase"
+          mkdir -p "$RUNNER_TEMP/mlos-auth-review-stack"
+          cd "$RUNNER_TEMP/mlos-auth-review-stack"
+          "$CLI" init
+          "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - name: Test provider session lock against internal decision commit and sign-out
+        run: |
+          CLI="$RUNNER_TEMP/mlos-internal-gotrue/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-auth-review-stack"
+          STATUS="$("$CLI" status -o env)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]] || [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_SOURCE_REVIEW_AUTH_NOT_ACCEPTED: exact disposable DB/Auth configuration missing"
+            exit 1
+          fi
+          echo "export { createClient } from '@supabase/supabase-js';" > "$RUNNER_TEMP/mlos-internal-gotrue/review-sdk.mjs"
+          export MLOS_LOCAL_REVIEW_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_REVIEW_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_REVIEW_DB_URL="$DB_URL"
+          export MLOS_LOCAL_REVIEW_KEY="$KEY"
+          export MLOS_LOCAL_REVIEW_SDK="file://$RUNNER_TEMP/mlos-internal-gotrue/review-sdk.mjs"
+          export MLOS_LOCAL_REVIEW_PG="file://$RUNNER_TEMP/mlos-internal-gotrue/node_modules/pg/esm/index.mjs"
+          node "$GITHUB_WORKSPACE/scripts/internal-source-review-local-gotrue-check.mjs"
+      - name: Destroy local Auth stack, identities and unbacked DB
+        if: always()
+        run: |
+          CLI="$RUNNER_TEMP/mlos-internal-gotrue/node_modules/.bin/supabase"
+          if [[ -x "$CLI" && -d "$RUNNER_TEMP/mlos-auth-review-stack/supabase" ]]; then
+            cd "$RUNNER_TEMP/mlos-auth-review-stack"
+            "$CLI" stop --no-backup
+          fi
