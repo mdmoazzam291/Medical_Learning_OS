@@ -130,3 +130,29 @@ test('malformed provenance warning scan is unavailable rather than falsely repor
   assert.equal(r.publicationEvidenceScan.warningCount,null);
   assert.equal(r.publicationEvidenceScan.approvalGranted,false);
 });
+
+
+test('owner API selects the exact note evidence fields required by warning scan, not just IDs',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const owner=readFileSync(new URL('../supabase/functions/owner-api/index.ts',import.meta.url),'utf8');
+  const range=owner.split('if (req.method === "GET" && path === "/content-integrity")')[1]?.split('if ((req.method === "GET" && path === "/source-watch")')[0];
+  assert.ok(range,'owner-only bounded content-integrity route must exist');
+  assert.match(range,/bounded\("neural_canonical_note_versions", "id,concept_id,status,source_ids,supersedes_id,title,body_markdown,provenance"\)/);
+  assert.match(range,/JSON\.stringify\(notes\)\.length > 6_000_000/);
+  assert.match(range,/integrity_catalog_changed_retry/);
+  assert.match(range,/auditCanonicalCatalog/);
+  assert.doesNotMatch(range,/return response\(req, 200, (?:notes|first\.body)/);
+});
+
+test('read-only catalog audit warns when historical published note text cannot be checked',()=>{
+  const x=base();
+  x.catalog.concepts=[c]; x.catalog.sources=[s]; x.catalog.questions=[q('q1')];
+  x.notes=[{id:'note-1',concept_id:'c1',status:'published',source_ids:['s1']}];
+  x.links=[{note_version_id:'note-1',question_id:'q1'}];
+  const r=auditCanonicalCatalog(x);
+  assert.equal(r.publicationEvidenceScan.status,'complete');
+  assert.ok(r.publicationEvidenceScan.warnings.some(w=>w.code==='published_note_evidence_incomplete'));
+  assert.ok(r.publicationEvidenceScan.warnings.some(w=>w.code==='source_rights_status_unresolved'));
+  assert.equal(r.publicationEvidenceScan.approvalGranted,false);
+  assert.equal(r.rightsVerified,false);
+});
