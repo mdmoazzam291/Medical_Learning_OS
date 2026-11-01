@@ -398,3 +398,16 @@ This is positive evidence for **negative Auth boundary behavior only**,
 not proof of a genuine signed JWT, protected receipt, correct reviewer
 authority, managed concurrency, or provider session invalidation.
 Production source-review and learner publication remain blocked.
+
+### 2026-11-01 — staging cleanup token-rejection gate (#374)
+
+A local security audit caught an overclaim: Auth Admin deletion and
+HTTP 404 for the user **do not invalidate an existing access JWT**.
+The synthetic staging operator now requires a separate post-deletion
+`GET /auth/v1/user` rejection (401/403) for the issued test bearer
+token. A missing token after an attempted sign-in, accepted post-delete
+token or transport error retains the 0600 recovery journal with a
+reconciliation-required status. The returned token-denial boolean is
+**Auth endpoint evidence only**, never proof of PostgREST JWT rejection
+or provider signout atomicity. This is draft **offline implementation**;
+no hosted Auth user was created/deleted. Production release gate OFF.
