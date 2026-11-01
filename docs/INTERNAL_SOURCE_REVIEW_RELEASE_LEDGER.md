@@ -371,3 +371,16 @@ directory and runs `npm ci --ignore-scripts` before the offline SDK
 interface probe. The root learner package remains unchanged.
 This lockfile is **build reproducibility evidence only**: no hosted
 Auth users, staging writes, review grants or production releases.
+
+### 2026-11-01 — staging Auth inventory preflight before synthetic creation (#374)
+
+Read-only managed staging inventory was independently checked:
+`auth.users=0`, `auth.sessions=0`, `public tables=0`, and applied
+migrations `=0` in project `vwtdwafjrraptrgeshzt`. The draft
+synthetic Auth lifecycle now requires a successful **empty** hosted
+`auth.admin.listUsers` preflight before journal creation or any
+Auth admin write. Unexpected users or unverified inventory block the
+operator test. This is a point-in-time managed DB observation plus
+**offline** SDK/mock code; no hosted Auth account was created or
+deleted. Staging reviewer-grant authority and production source review
+remain blocked.
