@@ -46,6 +46,20 @@ test('official SDK is mocked but live hosted Auth admin operations remain unveri
  assert.equal(e.hostedAdminSecretCompatibility,
   'PINNED_REAL_SDK_OFFLINE_CONTRACT_PASSED_HOSTED_UNVERIFIED');
 });
+test('hosted staging anonymous and forged JWT denials do not grant reviewer or release authority',async()=>{
+ const g=await gate(),e=g.evidence;
+ assert.equal(e.managedStagingAnonymousAuthDenial,
+  'HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01');
+ assert.equal(e.managedStagingForgedJwtDenial,
+  'HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01');
+ assert.equal(e.managedStagingAuthenticatedJwt,'NOT_EXECUTED');
+ assert.equal(g.permissions.hostedStagingAuthCreateDeleteApproved,false);
+ assert.equal(g.permissions.productionSourceReviewWritesApproved,false);
+ const ci=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
+ assert.match(ci,/Verify hosted staging Auth rejects anonymous and forged JWTs/);
+ assert.match(ci,/--read-only-hosted-negative/);
+ assert.doesNotMatch(ci,/MLOS_STAGING_ADMIN_SECRET_KEY/);
+});
 test('never expose raw source-review bearer credentials to GitHub pull-request CI',async()=>{
  const ci=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
  const lifecycle=await readFile(new URL('../scripts/internal-source-review-staging-test-identity-lifecycle.mjs',import.meta.url),'utf8');
