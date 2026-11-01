@@ -59,3 +59,20 @@ test('never expose raw source-review bearer credentials to GitHub pull-request C
  assert.doesNotMatch(lifecycle,/\/auth\/v1\/admin\/users/);
  assert.ok(!ci.includes('internal-source-review-staging-test-identity-lifecycle.mjs --create-and-delete'));
 });
+
+test('pinned real-SDK offline CI gate cannot inject secrets or execute Auth writes',async()=>{
+ const workflow=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
+ const script=await readFile(new URL('../scripts/internal-source-review-staging-sdk-offline-check.mjs',import.meta.url),'utf8');
+ assert.match(workflow,/Verify exact real staging SDK API offline/);
+ assert.match(workflow,/github\.event\.pull_request\.number == 374/);
+ assert.match(workflow,/npm install --prefix "\$RUNNER_TEMP\/mlos-staging-sdk"/);
+ assert.match(workflow,/@supabase\/supabase-js@2\.118\.0/);
+ assert.match(workflow,/--ignore-scripts/);
+ assert.match(script,/const EXPECTED_SDK='2\.118\.0'/);
+ assert.match(script,/makeSupabaseSdkStagingAdapters/);
+ assert.match(script,/failNetwork=async/);
+ assert.doesNotMatch(script,/MLOS_STAGING_TEST_ACCESS_TOKEN/);
+ assert.doesNotMatch(script,/process\.env\.MLOS_STAGING_ADMIN_SECRET_KEY/);
+ assert.doesNotMatch(script,/auth\.admin\.(?:createUser|deleteUser)\s*\(/);
+ assert.doesNotMatch(workflow,/\$\{\{\s*secrets\.MLOS_STAGING/);
+});
