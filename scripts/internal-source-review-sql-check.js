@@ -62,6 +62,15 @@ try{
  await fail(run(reviewer,{...request,caseDigest:hash('d')}));
  await fail(run(reviewer,{...request,disposition:'publish-now'}));
  await fail(run(reviewer,{...request,requestId:'not-uuid'}));
+ const verify=await db.query(`select
+  ($1::jsonb->>'requestId') !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' as bad_request,
+  ($1::jsonb->>'packageId') !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' as bad_package,
+  ($1::jsonb->>'caseId') !~ '^[a-z0-9][a-z0-9._:-]{0,127}$' as bad_case,
+  ($1::jsonb->>'disposition')<>all(array['accept-proposed-interpretation','reject-proposed-interpretation','request-primary-clarification','retain-unresolved']) as bad_disposition,
+  char_length($1::jsonb->>'rationale') not between 24 and 4000 as bad_rationale,
+  ($1::jsonb->>'packageDigest') !~ '^[a-f0-9]{64}$' as bad_digest,
+  ($1::jsonb->>'sourceSha256') !~ '^[a-f0-9]{64}$' as bad_source`,[JSON.stringify(request)]);
+ console.log('PREWRITE_VALIDATOR_DIAGNOSTIC',JSON.stringify(verify.rows[0]));
  const first=await run(reviewer);
  assert.equal(first.contractId,'internal-source-row-decision-event-v1');
  assert.equal(first.reviewerId,reviewer);
