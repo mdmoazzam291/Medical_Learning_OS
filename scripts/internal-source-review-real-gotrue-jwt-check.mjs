@@ -197,6 +197,98 @@ try{
  assert.equal((await db.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,2);
  console.log('Local GoTrue current-grant denial PASS: new valid session cannot reuse revoked source-review grant');
 
+ // Genuine PostgREST-authenticated JWTs and independent PostgreSQL revoker
+ // connection exercise both serializable grant-revocation commit orders.
+ // This revoker is a disposable fixture administrator, NOT a production
+ // grant-issuer authorization policy.
+ const revoker=new Client({connectionString:dbUrl,connectionTimeoutMillis:5000,
+  statement_timeout:12000,query_timeout:12000});
+ await revoker.connect();
+ let revokerTx=false;
+ const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+ async function observe(label,query,args=[]){
+  for(let k=0;k<110;k++){
+   const out=(await db.query(query,args)).rows[0];
+   if(out?.seen===true)return;
+   await pause(20);
+  }
+  throw Error('local_review_grant_race_barrier_not_observed_'+label);
+ }
+ const revokeIdB='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+ const revokeIdA='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+ const packageLock='select package_id from evidence_internal.packages where package_id=$1 and version=1 and digest=$2 for update';
+ const grantLock='select grant_event_id from evidence_internal.grants where grant_event_id=$1 for update';
+ const pendingReviewSql="select exists(select 1 from pg_catalog.pg_stat_activity a where a.pid<>pg_catalog.pg_backend_pid() and a.wait_event='PgSleep' and a.query like '%mlos_internal_source_review_local_v1%') as seen";
+ const blockedReviewerSql="select exists(select 1 from pg_catalog.pg_stat_activity a where a.pid<>pg_catalog.pg_backend_pid() and a.wait_event_type='Lock' and a.query like '%mlos_internal_source_review_local_v1%' and pg_catalog.pg_blocking_pids(a.pid) @> array[$1]::integer[]) as seen";
+ const blockedRevokerSql="select pg_catalog.pg_blocking_pids($1) @> array[$2]::integer[] as seen";
+ try{
+  const revokerPid=(await revoker.query('select pg_catalog.pg_backend_pid() p')).rows[0].p;
+  // Decision-first: reviewer B has a distinct, independently scoped grant.
+  // The source-review RPC locks package and grant, then sleeps inside the
+  // uncommitted transaction while the admin revocation tries that same lock.
+  await db.query('insert into evidence_internal.grants values($1,$2,$3,1,$4,$5,true,true,true,true)',
+   [revokeIdB,b.user,id,q.packageDigest,q.caseId]);
+  await db.query('insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
+   [revokeIdB,'granted']);
+  const reviewB={...q,requestId:'77777777-7777-4777-8777-777777777777'};
+  const pendingB=call('mlos_internal_source_review_local_v1',b.token,{q:reviewB});
+  await observe('review_first_lock',pendingReviewSql);
+  const reviewPid=(await db.query(
+   "select pid from pg_catalog.pg_stat_activity where wait_event='PgSleep' and query like '%mlos_internal_source_review_local_v1%' order by pid limit 1"
+  )).rows[0]?.pid;
+  assert.ok(Number.isInteger(reviewPid),'expected signed-JWT reviewer DB backend');
+  await revoker.query('begin');revokerTx=true;
+  const waitingRevoke=revoker.query(packageLock,[id,q.packageDigest]);
+  await observe('revoker_waiting_for_decision',blockedRevokerSql,[revokerPid,reviewPid]);
+  const recordedB=await pendingB;
+  requireAccepted(recordedB,'review transaction precedes independent grant revocation');
+  assert.equal(recordedB.body.reviewerId,b.user);
+  assert.equal(recordedB.body.grantEventId,revokeIdB);
+  await waitingRevoke;
+  await revoker.query(grantLock,[revokeIdB]);
+  await revoker.query('insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
+   [revokeIdB,'revoked']);
+  await revoker.query('commit');revokerTx=false;
+  requireDenied(await call('mlos_internal_source_read_local_v1',b.token,
+   {p_request:reviewB.requestId}),'decision-first revoked grant must deny read');
+  requireDenied(await call('mlos_internal_source_review_local_v1',b.token,
+   {q:{...q,requestId:'66666666-6666-4666-8666-666666666666'}}),'decision-first revoked grant must deny write');
+  assert.equal((await db.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,3);
+  console.log('Local GoTrue reviewer grant DECISION-FIRST PASS: PostgreSQL locks revocation until immutable review commits');
+
+  // Revoke-first: separately grant reviewer A the distinct exact case-b, then
+  // commit revocation while the real signed-JWT request is blocked on the
+  // package row. The eventual attempt must fail without an event.
+  await db.query('insert into evidence_internal.cases values($1,1,$2,$3,1,$4,$5,$6)',
+   [id,q.packageDigest,'case-b',q.caseDigest,q.appearanceEvidenceDigest,q.sourceSha256]);
+  await db.query('insert into evidence_internal.grants values($1,$2,$3,1,$4,$5,true,true,true,true)',
+   [revokeIdA,a.user,id,q.packageDigest,'case-b']);
+  await db.query('insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
+   [revokeIdA,'granted']);
+  await revoker.query('begin');revokerTx=true;
+  await revoker.query(packageLock,[id,q.packageDigest]);
+  await revoker.query(grantLock,[revokeIdA]);
+  await revoker.query('insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
+   [revokeIdA,'revoked']);
+  const blockedA={...q,caseId:'case-b',requestId:'cccccccc-cccc-4ccc-8ccc-cccccccccccc'};
+  const pendingA=call('mlos_internal_source_review_local_v1',newToken,{q:blockedA});
+  await observe('review_waiting_for_revoke',blockedReviewerSql,[revokerPid]);
+  await revoker.query('commit');revokerTx=false;
+  const deniedA=await pendingA;
+  requireDenied(deniedA,'revocation-first signed-JWT review must fail');
+  assert.equal((await db.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,3);
+  await assert.rejects(db.query(
+   "update evidence_internal.local_grant_history set transition='granted'"),
+   /internal_review_immutable/);
+  await assert.rejects(db.query("delete from evidence_internal.local_grant_history"),
+   /internal_review_immutable/);
+  console.log('Local GoTrue reviewer grant REVOKE-FIRST PASS: signed-JWT request blocked, denied after commit, no extra event');
+ }finally{
+  if(revokerTx)try{await revoker.query('rollback');}catch{}
+  await revoker.end();
+ }
+
+
 }finally{
  if(signedA)try{await authA.auth.signOut({scope:'local'});}catch{}
  if(signedB)try{await authB.auth.signOut({scope:'local'});}catch{}
