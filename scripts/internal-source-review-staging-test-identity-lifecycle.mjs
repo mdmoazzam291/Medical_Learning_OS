@@ -5,8 +5,8 @@
 // identity email/UUID (0600) to allow manual recovery after interruption.
 import {randomBytes} from 'node:crypto';
 import {constants as fsFlags} from 'node:fs';
-import {open,readFile,unlink} from 'node:fs/promises';
-import {isAbsolute,relative,sep} from 'node:path';
+import {open,readFile,unlink,lstat} from 'node:fs/promises';
+import {dirname,isAbsolute,relative,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
 import {probeStagingAuthGetUser} from './internal-source-review-staging-auth-getuser-probe.mjs';
@@ -58,6 +58,49 @@ export function validateStagingIdentityLifecycleSettings(env,policy){
    publicKey!==adminKey;
  }catch{return false;}
 }
+// Read-only operator preflight. It does not create users, sessions, journals,
+// review grants, receipts, tables or migrations. The static staging scope,
+// exclusive-journal location and hosted empty-user inventory must ALL hold.
+export async function checkStagingSyntheticOperatorPreflight({settings,policy,adapters}){
+ const outcome=(reason,ready=false)=>Object.freeze({
+  reason,operatorEnvironmentPreflightReady:ready,
+  hostedSignedJwtEvidence:false,syntheticAccountDeletionVerified:false,
+  sourceReviewWriteApproved:false,productionReleaseApproved:false,
+  learnerPublicationApproved:false,testOnly:true
+ });
+ if(!validateStagingIdentityLifecycleSettings(settings,policy))
+  return outcome('staging-operator-preflight-isolation-denied');
+ const journalPath=settings.MLOS_STAGING_IDENTITY_JOURNAL;
+ try{
+  const uid=typeof process.getuid==='function'?process.getuid():null;
+  const parent=await lstat(dirname(journalPath));
+  // A private, unsymlinked parent prevents accidental disclosure of the
+  // email/UUID recovery log, even when the journal itself is chmod 0600.
+  if(!parent.isDirectory()||parent.isSymbolicLink()||
+     (parent.mode&0o077)!==0||
+     uid===null||parent.uid!==uid)
+   return outcome('staging-operator-private-journal-directory-required');
+  try{
+   await lstat(journalPath);
+   return outcome('staging-operator-existing-recovery-journal');
+  }catch(error){
+   if(error?.code!=='ENOENT')
+    return outcome('staging-operator-journal-state-unverified');
+  }
+ }catch{
+  return outcome('staging-operator-private-journal-directory-unverified');
+ }
+ if(typeof adapters?.auditEmpty!=='function')
+  return outcome('staging-operator-inventory-adapter-missing');
+ try{
+  if((await adapters.auditEmpty())!==true)
+   return outcome('staging-operator-hosted-inventory-not-empty-or-unverified');
+ }catch{
+  return outcome('staging-operator-hosted-inventory-unavailable');
+ }
+ return outcome('staging-operator-readonly-preflight-passed',true);
+}
+
 function identityEmail(){
  return 'mlos-source-review-stage-'+randomBytes(18).toString('hex')+'@example.invalid';
 }
@@ -298,7 +341,7 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  return result(authVerified?'staging-auth-test-deleted':'staging-auth-failed-identity-deleted',
   authVerified,true,false,true);
 }
-async function main(){
+async function main(mode){
  const policy=JSON.parse(await readFile(
   new URL('../ops/prototypes/source-evidence/internal-review-staging-policy.json',import.meta.url),'utf8'));
  if(!validateStagingIdentityLifecycleSettings(process.env,policy)){
@@ -316,9 +359,21 @@ async function main(){
  const sdkRequire=createRequire(
   new URL('../ops/staging-auth-sdk/package.json',import.meta.url));
  const {createClient}=sdkRequire('@supabase/supabase-js');
+ const adapters=makeSupabaseSdkStagingAdapters(process.env,policy,createClient,fetch);
+ const preflight=await checkStagingSyntheticOperatorPreflight({
+  settings:process.env,policy,adapters
+ });
+ if(mode==='--preflight'){
+  console.log(JSON.stringify(preflight));
+  if(!preflight.operatorEnvironmentPreflightReady)process.exitCode=1;
+  return;
+ }
+ if(!preflight.operatorEnvironmentPreflightReady){
+  console.log(JSON.stringify(preflight));
+  process.exitCode=1;return;
+ }
  const result=await runStagingSyntheticIdentityLifecycle({
-  settings:process.env,policy,
-  adapters:makeSupabaseSdkStagingAdapters(process.env,policy,createClient,fetch),
+  settings:process.env,policy,adapters,
   journal:makeJournal(process.env.MLOS_STAGING_IDENTITY_JOURNAL)
  });
  console.log(JSON.stringify(result));
@@ -327,11 +382,11 @@ async function main(){
   process.exitCode=1;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
- if(process.argv.length!==3||process.argv[2]!=='--create-and-delete'){
+ if(process.argv.length!==3||!['--preflight','--create-and-delete'].includes(process.argv[2])){
   console.error('staging_synthetic_lifecycle_explicit_flag_required');
   process.exitCode=1;
  }else{
-  main().catch(()=>{
+  main(process.argv[2]).catch(()=>{
    console.error('staging_synthetic_lifecycle_failed_closed');
    process.exitCode=1;
   });
