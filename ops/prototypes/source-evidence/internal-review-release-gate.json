@@ -59,7 +59,7 @@
     "learnerPublicationApproved": false
   },
   "requiredNext": {
-    "immediate": "Lock transitive dependencies, verify a staging-only secret in a trusted operator environment, then run a single authorized synthetic Auth create/getUser/delete test with recovery journal and cleanup attestation. No secrets in CI.",
+    "immediate": "Operator reviews the committed ops/staging-auth-sdk package and lockfile, installs it via npm ci in a trusted nonproduction environment, verifies staging-only secret scope and unresolved journal status, then requests explicit authorization for a synthetic hosted Auth create/getUser/delete run. Never put secrets in PR CI.",
     "then": "One genuine staging signed-JWT Auth test with full deletion verification, followed by reviewed hosted signed-JWT receipt boundary and synchronized two-connection revocation test.",
     "release": "Owner-reviewed integration/CI, independent security signoff, real reviewer qualification, clinical/rights/exam approvals, explicit production deployment authorization."
   }
