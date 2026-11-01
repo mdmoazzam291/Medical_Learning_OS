@@ -23,6 +23,16 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify exact real staging SDK API offline (PR #374, no credentials)
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-')
+        run: |
+          mkdir -p "$RUNNER_TEMP/mlos-staging-sdk"
+          cp ops/staging-auth-sdk/package.json ops/staging-auth-sdk/package-lock.json "$RUNNER_TEMP/mlos-staging-sdk/"
+          npm ci --prefix "$RUNNER_TEMP/mlos-staging-sdk" --no-audit --no-fund --ignore-scripts
+          node scripts/internal-source-review-staging-sdk-offline-check.mjs "$RUNNER_TEMP/mlos-staging-sdk"
+      - name: Verify hosted staging Auth rejects anonymous and forged JWTs (no credentials)
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-')
+        run: node scripts/internal-source-review-staging-hosted-auth-negative.mjs --read-only-hosted-negative
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |
@@ -234,7 +244,7 @@ jobs:
 
   internal-review-native-postgres:
     # Explicitly test both valid lock/commit orders. No hosted database.
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 355 }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 355 || startsWith(github.head_ref, 'test/internal-review-')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     permissions:
@@ -429,7 +439,7 @@ jobs:
   internal-review-real-gotrue-jwt-atomic:
     # Test-only local Auth-issued JWT via PostgREST + real session row.
     # Never connect to a hosted project or migrate a real database.
-    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364 || github.event.pull_request.number == 366 || github.event.pull_request.number == 367 || github.event.pull_request.number == 368) }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364 || github.event.pull_request.number == 366 || github.event.pull_request.number == 367 || github.event.pull_request.number == 368 || startsWith(github.head_ref, 'test/internal-review-')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
@@ -449,6 +459,8 @@ jobs:
           "$CLI" init
           "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
       - name: Prove verified user JWT, active session, grant and immutable event within one transaction
+        env:
+          MLOS_CI_HEAD_REF: ${{ github.head_ref }}
         run: |
           CLI="$RUNNER_TEMP/mlos-atomic-review/node_modules/.bin/supabase"
           cd "$RUNNER_TEMP/mlos-atomic-stack"
@@ -466,7 +478,7 @@ jobs:
           export MLOS_LOCAL_ATOMIC_KEY="$KEY"
           export MLOS_LOCAL_ATOMIC_SDK="file://$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
           export MLOS_LOCAL_ATOMIC_PG="file://$RUNNER_TEMP/mlos-atomic-review/node_modules/pg/esm/index.mjs"
-          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" ]]; then
+          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" || "$MLOS_CI_HEAD_REF" == test/internal-review-* ]]; then
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-owned-revocation-check.mjs"
           else
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
@@ -479,3 +491,35 @@ jobs:
             cd "$RUNNER_TEMP/mlos-atomic-stack"
             "$CLI" stop --no-backup
           fi
+
+  internal-review-security-gate:
+    # One fail-closed review signal. Never treats skipped/cancelled as a pass.
+    # This is a CI evidence gate, NOT a source-review or deployment approval.
+    if: ${{ always() && github.event_name == 'pull_request' && startsWith(github.head_ref, 'test/internal-review-') }}
+    needs:
+      - check
+      - browser
+      - webkit
+      - internal-review-native-postgres
+      - internal-review-real-gotrue-jwt-atomic
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    steps:
+      - name: Require cumulative source-review security tests to pass
+        env:
+          CORE_RESULT: ${{ needs.check.result }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+          WEBKIT_RESULT: ${{ needs.webkit.result }}
+          NATIVE_PG_RESULT: ${{ needs.internal-review-native-postgres.result }}
+          GOTRUE_RESULT: ${{ needs.internal-review-real-gotrue-jwt-atomic.result }}
+        run: |
+          set -euo pipefail
+          for result in "$CORE_RESULT" "$BROWSER_RESULT" "$WEBKIT_RESULT" "$NATIVE_PG_RESULT" "$GOTRUE_RESULT"; do
+            if [[ "$result" != success ]]; then
+              echo "internal_review_security_evidence_incomplete"
+              exit 1
+            fi
+          done
+          echo "internal_review_local_security_ci_pass_no_hosted_write_or_release_approval"

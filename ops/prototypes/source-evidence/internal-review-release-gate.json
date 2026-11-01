@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "purpose": "ADR-134 internal source-row review",
+  "verifiedDate": "2026-11-01",
+  "releaseState": "BLOCKED_REVIEW_ONLY",
+  "productionProjectRef": "iyapppmeieqhflnzslao",
+  "stagingProjectRef": "vwtdwafjrraptrgeshzt",
+  "excludedLegacyProjectRef": "ueuguguoladoqvtxkumt",
+  "externalProvider": {
+    "pullRequest": 350,
+    "enabled": false,
+    "approval": "DEFERRED"
+  },
+  "draftStack": [
+    352,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374
+  ],
+  "latestDraft": 374,
+  "evidence": {
+    "localGoTrueSignedJwt": "TESTED_DISPOSABLE_LOCAL_ONLY",
+    "managedStagingRls": "TESTED_ROLLBACK_SYNTHETIC_CLAIMS_ONLY",
+    "managedStagingAuthenticatedJwt": "NOT_EXECUTED",
+    "managedStagingSyntheticIdentityLifecycle": "NOT_EXECUTED",
+    "managedStagingTwoConnectionRevocation": "NOT_PROVEN",
+    "providerLogoutAtomicity": "NOT_PROVEN",
+    "hostedAdminSecretCompatibility": "PINNED_REAL_SDK_OFFLINE_CONTRACT_PASSED_HOSTED_UNVERIFIED",
+    "qualifiedReviewerAuthorization": "NOT_VERIFIED",
+    "immutableProtectedReceipt": "NOT_VERIFIED",
+    "managedStagingAnonymousAuthDenial": "HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01",
+    "managedStagingForgedJwtDenial": "HOSTED_STAGING_PUBLIC_KEY_GET_DENIED_CI_2026_11_01"
+  },
+  "permissions": {
+    "hostedStagingAuthCreateDeleteApproved": false,
+    "hostedStagingReviewRpcsApproved": false,
+    "hostedStagingMigrationApproved": false,
+    "productionSourceReviewWritesApproved": false,
+    "mergeApproved": false,
+    "deploymentApproved": false,
+    "clinicalApproved": false,
+    "rightsApproved": false,
+    "learnerPublicationApproved": false
+  },
+  "requiredNext": {
+    "immediate": "Operator reviews the committed ops/staging-auth-sdk package and lockfile, installs it via npm ci in a trusted nonproduction environment, verifies staging-only secret scope and unresolved journal status, then requests explicit authorization for a synthetic hosted Auth create/getUser/delete run. Never put secrets in PR CI.",
+    "then": "Host a trusted, authorized staging-only synthetic Auth identity lifecycle and independently verify delete/cleanup, then establish protected reviewer readback and managed two-connection revocation. Hosted anonymous/forged JWT denial ALREADY passed but is not signed-user acceptance.",
+    "release": "Owner-reviewed integration/CI, independent security signoff, real reviewer qualification, clinical/rights/exam approvals, explicit production deployment authorization."
+  }
+}

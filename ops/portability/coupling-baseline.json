@@ -84,6 +84,12 @@
   "ops/r2-backups/verify_restore.py": [
     "supabase"
   ],
+  "ops/staging-auth-sdk/package-lock.json": [
+    "supabase"
+  ],
+  "ops/staging-auth-sdk/package.json": [
+    "supabase"
+  ],
   "render.yaml": [
     "render"
   ],
@@ -165,6 +171,15 @@
     "supabase"
   ],
   "scripts/internal-source-review-staging-auth-getuser-probe.mjs": [
+    "supabase"
+  ],
+  "scripts/internal-source-review-staging-hosted-auth-negative.mjs": [
+    "supabase"
+  ],
+  "scripts/internal-source-review-staging-sdk-offline-check.mjs": [
+    "supabase"
+  ],
+  "scripts/internal-source-review-staging-test-identity-lifecycle.mjs": [
     "supabase"
   ],
   "scripts/learner-report-triage-browser-check.js": [

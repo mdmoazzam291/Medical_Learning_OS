@@ -1,0 +1,297 @@
+# ADR-134 — Staging synthetic Auth account creation, verification, and removal
+
+**2026-11-01 · Draft #374 stacked on #373.**
+**CODE PREPARED; NOT executed against managed staging.**
+
+**Updated supported interface:** The raw-HTTP Auth admin adapter has now
+been replaced by Supabase's documented server-side JavaScript SDK methods
+(`auth.admin.createUser`, `getUserById`, `deleteUser` and
+`auth.signInWithPassword`). These are exercised through mocked
+SDK-shaped responses, **not** a hosted Admin API acceptance test.
+No live creation is authorized until the operator approves an isolated
+staging run, ensures cleanup, and verifies the secret is staging-only. See
+`docs/INTERNAL_SOURCE_REVIEW_CONSOLIDATION_GATE.md`.
+
+
+## Objective and method
+
+The previously implemented #373 read-only hosted signed-JWT probe needs
+a genuine staging-issued bearer token. The connected Supabase management
+tools currently do not offer privileged Auth user creation/deletion.
+**Do not insert manually into provider-managed `auth.users`, use a real
+reviewer, disable email verification globally, or copy production users.**
+
+This draft adds an **explicit opt-in** test-only lifecycle runner:
+`scripts/internal-source-review-staging-test-identity-lifecycle.mjs`.
+
+The operator must use a trusted isolated machine (NOT a pull-request
+workflow), project `vwtdwafjrraptrgeshzt` only, a staging-only
+`sb_publishable_...` key and a staging-only `sb_secret_...` Auth admin
+key kept solely in the process environment or trusted secret store.
+These API keys are **not JWT bearer tokens**. The SDK handles their
+HTTP transport; no custom Authorization bearer construction remains.
+Run from an isolated trusted Node environment with an exact-reviewed
+`@supabase/supabase-js@2.118.0` installation (and lockfile), verified
+in `node_modules` before account creation. No SDK is bundled in this
+repository's production dependency list, and missing/wrong versions
+**fail closed**. Actual hosted behavior must still be verified.
+
+Only when every environment identity/credential/journal guard passes and
+`--create-and-delete` is explicitly set, the runner:
+
+1. Creates a **local 0600 exclusive, append-only** recovery journal *outside the repo*
+   **before** contacting the Auth admin API. The journal contains only
+   a randomly generated synthetic email marker, staging project ref,
+   and (when known) the new test UUID; **no password, JWT or key**.
+2. Calls hosted staging admin Auth to create **one** random, unprivileged
+   synthetic account using email confirmation on creation
+   (`email_confirm:true`, no outgoing confirmation message).
+   The generated email ends in `@example.invalid`, with a 36-hex
+   random marker. A random password is never persisted.
+3. Obtains a real staging token by password sign-in, parses its claims
+   as **untrusted input** to discover the new session UUID, then runs
+   #373's Auth-server positive and anonymous/tampered negative
+   **GET /auth/v1/user** checks.
+4. **Before** attempting deletion, requests hosted Auth admin GET by UUID
+   and requires the exact random synthetic email and trusted
+   `app_metadata.mlos_staging_synthetic:true` marker. If this independent
+   ownership check fails, **no delete is attempted** and the recovery
+   journal is retained for manual review. With proven ownership, requests
+   hosted Auth admin account deletion and **independently**
+   requires `GET /auth/v1/admin/users/{uuid}` to return 404.
+   Only after verified deletion is the local recovery journal removed. The
+   creation journal's original pre-create marker is never overwritten;
+   the created UUID is added as an append-only, fsynced entry.
+5. Prints **status codes/booleans only**; no email, password, JWT,
+   secret key, user ID, session ID, provider response body or stack.
+   Any uncertain create/delete leaves a recovery journal and an
+   explicit manual-reconciliation outcome. Creation and ambiguous
+   write operations are **never automatically retried**.
+
+## Manual activation contract — NOT CI
+
+Use only a separately secured local/ops environment with ephemeral
+staging-only API keys and a writable, private directory **outside the
+GitHub checkout**. Environment fields:
+
+| Name | Value |
+| --- | --- |
+| `MLOS_STAGING_IDENTITY_CONFIRM` | `STAGING_SYNTHETIC_CREATE_AND_DELETE` |
+| `MLOS_STAGING_REF` | `vwtdwafjrraptrgeshzt` |
+| `MLOS_STAGING_URL` | `https://vwtdwafjrraptrgeshzt.supabase.co` |
+| `MLOS_STAGING_PUBLISHABLE_KEY` | Staging publishable key, **not production** |
+| `MLOS_STAGING_ADMIN_SECRET_KEY` | Staging-only server Auth key, NEVER in Git |
+| `MLOS_STAGING_IDENTITY_JOURNAL` | Absolute private journal path, outside repo |
+
+Run the script only with
+`node scripts/internal-source-review-staging-test-identity-lifecycle.mjs --create-and-delete`.
+
+**Operator must check the actual key belongs to staging** in Supabase
+dashboard and must guarantee no shared production keys. Key-prefix and
+hostname checks are useful guards but cannot prove a key's project binding
+before sending it; treat the environment and its owner as trusted.
+No credentials can be supplied to ChatGPT or ordinary PR CI for this step.
+
+### Recovery before starting another test
+
+If an existing journal file is present, **do not rerun creation**. The
+runner's exclusive-create call will refuse to overwrite the journal.
+In the staging Auth admin interface, find the exact email marker in that
+private journal, confirm its `mlos_staging_synthetic` app metadata and
+creation timing, delete that **exact** synthetic user if present, then
+verify the user no longer exists. Never bulk-delete or delete by guessed
+UUID/email. Only after independently verified deletion should the
+operator remove the journal and consider another run. If creation was
+ambiguous, absence must be verified in Auth admin as well.
+
+The script does **not** provide crash-atomic cross-service cleanup and
+does not automatically sweep an uncertain creation. Even successfully
+deleting a user does **not** necessarily instantly invalidate all
+previously issued JWTs accepted by PostgREST. A successful `getUser`
+test is still a preflight snapshot, not a database-commit authorization
+guarantee.
+
+## Actual evidence and limitations
+
+Offline deterministic adapter tests exercise:
+- Exact staging target, secret class, opt-in and journal location;
+- journal creation before user provision, sign-in and read-only Auth
+  checks; successful verified deletion and journal cleanup;
+- create response lost, sign-in/auth failure, unverified deletion,
+  journal failure, and failure with no unsafe auto-retry;
+- frozen/redacted result with every source-review, clinical, rights,
+  migration and learner-release authorization flag false.
+
+**No real managed-staging Auth user was created, deleted or authenticated
+during this PR**; the SDK adapter, hosted Admin calls and
+`sb_secret_` acceptance on the hosted service require a separately
+authorized operator-run verification. Earlier managed SQL-RLS tests
+remain separate evidence and do not supply a genuine JWT.
+
+Existing #371–#373 tests and drafts are unmerged. Production source
+review, reviewer grant authority, `Review → Live` and external provider
+#350 remain OFF. Two-connection managed concurrency and Auth signout
+atomicity remain unresolved.
+
+## Pre-create Auth inventory safety gate (2026-11-01)
+
+Before creating the synthetic identity or even opening the cleanup journal,
+the trusted staging-only SDK admin client calls
+`auth.admin.listUsers({page:1, perPage:2})`. The operation must succeed
+and return an empty user array. A nonempty response, missing results,
+permissions failure or network error **stops before any new account is
+created**. Only a project known to be empty is used for this isolated
+acceptance; it is not a production account deletion or database reset.
+No user identifiers, email addresses or credentials are logged.
+
+A separate read-only project-specific SQL inspection showed **zero**
+staging `auth.users`, `auth.sessions`, public tables and migrations
+on 2026-11-01. This is a point-in-time observation, not a guarantee
+that a later operator run starts empty. The SDK rechecks immediately
+before an operator-initiated create. All hosted Auth lifecycle operations
+remain unexecuted until a trusted operator with staging-only
+credentials performs them and verifies cleanup.
+
+## Real SDK offline compatibility verification (2026-11-01)
+
+The draft PR #374 exact-SDK CI check installed `@supabase/supabase-js@2.118.0`
+into an ephemeral GitHub runner directory. **Credential-free** verification
+using the actual library (not only injected mocks) passed: createClient
+exposed Auth Admin methods, the runner could construct separate private
+and public clients, both disabled persistence and refresh, and zero hosted
+requests were issued on initialization. Production and staging accounts
+were not contacted by the contract test.
+
+**Update:** `ops/staging-auth-sdk/package.json` and `package-lock.json`
+now contain the entire private SDK dependency tree, with npm registry
+resolution URLs and package integrity hashes. CI's ephemeral staging-only
+SDK contract test now runs `npm ci` from that committed lock; no
+staging secrets or JWTs are supplied to CI. The operator-run version
+check remains fail-closed if the reviewed SDK isn't installed.
+
+**Trusted operator installation:** after reviewing the repo contents and
+ensuring the working directory is private, run
+`npm ci --prefix ops/staging-auth-sdk --ignore-scripts --no-audit --no-fund`
+from repository root. Then, **only with separate staged test approval**, 
+provide the staging-only settings listed above from a trusted secret
+store, ensure no cleanup journal from a previous run remains unresolved,
+and deliberately invoke the lifecycle with `--create-and-delete`.
+No credentials are to be placed in GitHub CI. A committed lock does not
+establish live hosted Auth acceptance, cleanup or signout atomicity.
+
+## Real hosted Auth negative checks (2026-11-01)
+
+GitHub Foundation checks for draft #374 ran a credential-free
+`GET https://vwtdwafjrraptrgeshzt.supabase.co/auth/v1/user` against
+the **real hosted staging service** using its active public
+`sb_publishable_` key. The endpoint returned an authorization denial
+(HTTP 401 or 403) for a request **without any bearer JWT**, and another
+authorization denial (HTTP 401 or 403) for a **syntactically JWT-shaped
+forgery** with an invented signature. The new CI step succeeded.
+
+These tests make **no Auth Admin API requests**, create no accounts,
+perform no migrations and supply no real user credentials. The public
+key is intentionally non-secret but is pinned to staging and is not a
+reviewer grant. This verification does **not** prove positive hosted
+signed-JWT login, receipt RLS readback, a managed two-connection
+revocation race, or deletion/short-lived token consistency. Those
+separate release gates remain blocked.
+
+## Post-deletion token liveness — independent gate (2026-11-01)
+
+Supabase explicitly warns that **deleting a user does not necessarily
+invalidate the already issued access JWT**. The operator runner now
+retains the synthetic access token only in process memory until cleanup.
+After the exact synthetic account is confirmed deleted by Auth Admin GET
+404, it makes one more credential-free-to-repository, signed-token
+`GET /auth/v1/user` against the pinned staging service using the
+original synthetic bearer token and the public staging key. Only an
+HTTP **401 or 403** verifies the narrower fact that **Auth's user
+endpoint currently denies that token**. Any unexpected 200, 400,
+404, 429, 5xx or network failure remains unverified and retains the
+private recovery journal for manual reconciliation.
+
+If sign-in was attempted but no access token was returned, even a
+successfully deleted synthetic user leaves **session liveness unknown**;
+this also retains the journal. There is no automatic retry and no
+production operation. A successful Auth rejection **does not** prove a
+JWT signature is invalid to PostgREST, RLS, or other services while the
+JWT is unexpired; atomic signout and the reviewer-grant transaction
+remain blocked. The new result field `postDeletionAuthTokenRejected`
+is narrow, does not enable review writes or learner publication, and
+is tested using injected non-network adapters.
+
+Provider reference: https://supabase.com/docs/guides/auth/managing-user-data
+
+## Mandatory operator read-only preflight (2026-11-02)
+
+The operator runner now accepts `--preflight` in addition to
+`--create-and-delete`. Both paths require the exact pinned staging
+project, dedicated secret key, public key, approved policy and locked
+SDK version. Before an Auth **write**, the runner checks:
+
+- The absolute recovery-journal parent is a **non-symlink directory**
+  owned by the running Unix user, with no group or other permissions
+  (e.g. a `0700` private directory **outside the repository**).
+- **No existing journal file**, including an unresolved earlier run.
+  Existence blocks even a staging inventory request and never triggers
+  automatic cleanup or deletion.
+- Read-only `auth.admin.listUsers` succeeds for the **pinned staging**
+  host and returns an empty first page; missing results, unexpected
+  accounts or network errors block the run.
+
+From a trusted operator host, after installing the committed isolated
+`ops/staging-auth-sdk` dependency tree using `npm ci`, set the
+staging-only environment variables documented above and run:
+
+`node scripts/internal-source-review-staging-test-identity-lifecycle.mjs --preflight`
+
+The preflight prints only fixed, non-secret reason codes and boolean
+release flags. It **does not generate a synthetic identity, write a
+journal, create Auth users or sessions, grant review access, or
+migrate data**. A successful preflight is **not** owner consent to
+run `--create-and-delete`; that remains separately approval-gated.
+
+The write command rechecks preflight and repeats the hosted empty-user
+inventory check immediately before beginning its exclusive recovery
+journal. Even this cannot guarantee no concurrent outside writer;
+operator isolation remains a prerequisite. Tests use a private
+throwaway local filesystem and mocked Auth adapter; **no live hosted
+Admin key or synthetic account was used** in this change.
+
+## Recovery-journal file identity hardening (2026-11-02)
+
+The operator journal now retains the original file's device, inode and
+owner from the **exclusive create**. Subsequent UUID association and
+cleanup require that the file at the journal path is still the same
+regular, single-link `0600` file; any replacement, permission drift,
+symlink substitution, or missing path fails closed. An independent
+journal instance **cannot adopt or clear** a prior interrupted run.
+Tests cover alternate file replacement, symlink substitution, loosened
+permissions and disappearance before cleanup. The original or swapped
+journal evidence is retained for manual inspection, never silently
+adopted as a completed cleanup.
+
+**Limitation:** Node path-based unlink and file-stat are not a single
+atomic filesystem operation. The required private user-owned `0700`
+parent directory, trusted single operator, and no concurrent same-user
+writer are therefore mandatory; these checks reduce accidental
+replacement but do not eliminate a same-user time-of-check/time-of-use
+race. A successful local journal unlink is still **not proof** of hosted
+Auth token invalidation, source rights, or production readiness.
+
+## Synthetic-token ownership proof before post-delete reconciliation
+
+A decoded JWT `sub` or a successful password sign-in response is not
+sufficient to establish that a bearer belongs to the test identity.
+The runner retains a bearer for post-deletion Auth rejection **only
+after** the sign-in user ID and JWT subject match the exact synthetic
+account **and** the hosted Auth server positively verifies that
+session. If the token is malformed, belongs to another account,
+or the hosted Auth probe fails, account deletion is still attempted
+only after independent synthetic ownership verification, but the
+recovery journal remains and the session outcome is marked
+unverified. Rejection of an unrelated/bogus token is never counted as
+proof that the synthetic account's session was invalidated.
+
+This is offline test coverage, not a hosted positive JWT test.

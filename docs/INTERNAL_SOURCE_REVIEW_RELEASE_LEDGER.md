@@ -276,3 +276,217 @@ See `docs/INTERNAL_SOURCE_REVIEW_STAGING_SIGNED_JWT_READONLY.md`.
 Provision approved synthetic Auth credentials and separately reviewed
 hosted readback/race harness before any further write-bearing acceptance.
 PR #373 is draft; all source-review release gates remain OFF.
+
+
+## 2026-11-01 — disposable hosted staging test identity cleanup contract (#374)
+
+Draft #374 implements **operator-only code**, not executed on hosted Auth:
+a strictly pinned staging synthetic Auth user creation / signed JWT read-only
+verification / admin deletion lifecycle. It requires explicit opt-in and
+**staging-only** publishable/admin secret keys, and creates an exclusive,
+0600 local cleanup journal *before* calling Auth admin. Every known
+created identity is deleted and the absence rechecked; an ambiguous
+create/delete or interrupted lifecycle leaves manual-reconciliation
+evidence instead of claiming cleanup. No tokens, passwords, user IDs,
+emails or provider response bodies appear in result logs or Git.
+
+Mock-adapter tests cover success, identity spoofing, sign-in failure,
+ambiguous create/delete, journal failure and all release-deny flags.
+**No actual hosted staging Auth user, signed JWT or cleanup was tested**,
+and hosted reviewer readback/race gates are still blocked. Detailed
+controls and operator cleanup:
+`docs/INTERNAL_SOURCE_REVIEW_STAGING_IDENTITY_LIFECYCLE.md`.
+
+Never run an admin secret in untrusted PR CI or browser. No production
+Auth/DB, migration, medical source data, review UI, rights/clinical
+approval or learner publication changed. The review PR stack remains
+draft/unmerged. #350 external provider stays OFF.
+
+### 2026-11-01 — #374 pre-run cleanup hardening
+
+The draft staging identity lifecycle now retains its original local 0600
+pre-create marker using an append-only, fsynced journal, rejecting final
+symlinks and widened permissions. After account creation, the operator
+runner must additionally confirm the *exact* synthetic account UUID,
+random email marker and server-controlled app metadata through Auth admin
+GET before it will issue irreversible account DELETE. If the ownership
+check fails, no deletion is attempted and manual reconciliation is
+required. Tests exercise real temporary filesystem durability and mocked
+administrative identity checking. This remains **offline code only**;
+no hosted staging Auth user has been created or deleted. No production
+source-review or learner release approval.
+
+
+## 2026-11-01 — source-review draft consolidation gate and Auth key compatibility
+
+A live GitHub review confirmed a stack of 22 open draft source-review
+PRs: #352 and #354–#374. Issue #353 is **not a PR**; external provider
+#350 remains OFF. No draft was merged or deployed. A machine-readable
+**BLOCKED_REVIEW_ONLY** gate now lists the exact chain, staging/production
+isolation, real versus simulated tests and all permissions held false.
+See `docs/INTERNAL_SOURCE_REVIEW_CONSOLIDATION_GATE.md` and
+`ops/prototypes/source-evidence/internal-review-release-gate.json`.
+
+A provider-documentation audit identified that `sb_secret_...` and
+`sb_publishable_...` keys are opaque API keys, not JWT bearer tokens.
+The #374 raw Auth request adapter was corrected to send `apikey` rather
+than synthetic `Authorization: Bearer sb_secret_...`. **This does not
+verify that hosted Auth admin POST/DELETE supports this exact transport**:
+no hosted creation, login, deletion or real JWT acceptance was run.
+The compatibility gate must be resolved in trusted staging before live
+account creation. CI success on the draft is never production approval.
+
+### 2026-11-01 — documented SDK replaces unverified raw Auth-admin requests
+
+Draft #374 now uses an adapter based on official `supabase-js` server
+Auth Admin `createUser/getUserById/deleteUser` methods and a separate
+publishable-key password-session client, with no session persistence or
+refresh. Operator execution requires an exact reviewed SDK version
+(`2.118.0`) in a trusted environment; missing/wrong package fails
+before account creation. Offline SDK-shaped mocks exercise account
+ownership, sign-in, deletion and error-as-success denial. **No hosted
+Admin write, real signed JWT, actual deletion or cleanup was run.**
+Auth admin hosted acceptance and a safe operator secret store remain
+release blockers; all source-review and learner release permissions OFF.
+
+### 2026-11-01 — pinned real Supabase SDK offline contract passed (#374)
+
+The actual `supabase-js@2.118.0` SDK was installed ephemerally in
+credential-free GitHub CI; its Auth Admin/public client APIs and their
+no-persistence configuration passed a live-library, **offline** factory
+contract test. This is a verified improvement beyond mocked SDK replies.
+**It is not a hosted user creation, signed-JWT validation or deletion test.**
+A full transitive dependency lockfile is still outstanding before a
+trusted operator run. Source-review and learner release gates remain OFF.
+
+### 2026-11-01 — staging Auth SDK transitive lockfile prepared (#374)
+
+The isolated `ops/staging-auth-sdk` package and full npm v3 lockfile
+were captured from a successful credential-free CI dependency resolution,
+validated for exact `@supabase/supabase-js@2.118.0`, and committed.
+Ten package-tree entries are locked to npm registry URLs and SHA-512
+integrity checks. The code now imports the SDK from this isolated
+operator-only package tree; CI copies both files to a disposable
+directory and runs `npm ci --ignore-scripts` before the offline SDK
+interface probe. The root learner package remains unchanged.
+This lockfile is **build reproducibility evidence only**: no hosted
+Auth users, staging writes, review grants or production releases.
+
+### 2026-11-01 — staging Auth inventory preflight before synthetic creation (#374)
+
+Read-only managed staging inventory was independently checked:
+`auth.users=0`, `auth.sessions=0`, `public tables=0`, and applied
+migrations `=0` in project `vwtdwafjrraptrgeshzt`. The draft
+synthetic Auth lifecycle now requires a successful **empty** hosted
+`auth.admin.listUsers` preflight before journal creation or any
+Auth admin write. Unexpected users or unverified inventory block the
+operator test. This is a point-in-time managed DB observation plus
+**offline** SDK/mock code; no hosted Auth account was created or
+deleted. Staging reviewer-grant authority and production source review
+remain blocked.
+
+### 2026-11-01 — actual hosted staging negative Auth acceptance (#374)
+
+The Foundation checks workflow successfully executed the public-only
+`internal-source-review-staging-hosted-auth-negative.mjs` against the
+actual managed staging Auth endpoint. **Anonymous GET** and
+**forged-JWT GET** were both denied (accepted rejection status 401/403).
+It used a public staging publishable key, no existing Auth user,
+no credential secret, and **no writes**. Local tests additionally
+assert deny-by-default on 200/400/404/429/500/transport failures.
+This is positive evidence for **negative Auth boundary behavior only**,
+not proof of a genuine signed JWT, protected receipt, correct reviewer
+authority, managed concurrency, or provider session invalidation.
+Production source-review and learner publication remain blocked.
+
+### 2026-11-01 — staging cleanup token-rejection gate (#374)
+
+A local security audit caught an overclaim: Auth Admin deletion and
+HTTP 404 for the user **do not invalidate an existing access JWT**.
+The synthetic staging operator now requires a separate post-deletion
+`GET /auth/v1/user` rejection (401/403) for the issued test bearer
+token. A missing token after an attempted sign-in, accepted post-delete
+token or transport error retains the 0600 recovery journal with a
+reconciliation-required status. The returned token-denial boolean is
+**Auth endpoint evidence only**, never proof of PostgREST JWT rejection
+or provider signout atomicity. This is draft **offline implementation**;
+no hosted Auth user was created/deleted. Production release gate OFF.
+
+### 2026-11-02 — native cumulative security CI now included on #374
+
+The `internal-review-native-postgres` (PG17 and PG18) and
+`internal-review-real-gotrue-jwt-atomic` (disposable local Auth-issued
+JWT and owned grant revocation) jobs are now selected for draft PR #374,
+where they previously skipped due to hardcoded prior PR numbers. These
+are **local non-production services only**. Exact-head passing job
+results must be checked before claiming local security regression
+coverage. This CI change neither supplies hosted secrets nor changes
+staging/production databases. Hosted signed-JWT reviewer acceptance
+and managed staging concurrency remain unverified.
+
+### 2026-11-02 — exact-number CI security testing replaced with branch-family gate
+
+The latest earlier #374 run `41337424294` completed successfully
+for browser, WebKit, generic check, both PG17/18 native race tests and
+the loopback-only local GoTrue JWT/owned-revocation test. For future
+internal-review branches, the expensive local PG17/18 and GoTrue jobs
+are now gated by the branch prefix `test/internal-review-` (plus
+historical numbered PRs), replacing a brittle `PR == 374` gate.
+The local shell obtains the branch name through `MLOS_CI_HEAD_REF`
+rather than interpolating an untrusted branch string directly in the
+script. Staging SDK contract and public-only hosted Auth negative tests
+also use the branch-family gate. **No new hosted JWT positive evidence**
+or production approval is implied; the new exact-head CI should be
+checked separately.
+
+### 2026-11-02 — fail-closed aggregate security CI check
+
+The latest previously verified draft #374 run (41343219755) passed
+all six individual core/browser/WebKit/PG17/PG18/local-GoTrue jobs.
+An additional branch-family `internal-review-security-gate` now requires
+each requisite job outcome to be **success**, rejecting skipped,
+failed or cancelled prerequisites. It runs with `always()`, depends
+on the completed matrix PostgreSQL job, and carries no credential or
+release rights. Exact-head CI evidence must independently verify the
+new aggregate job before it is claimed as passing. Hosted staging
+identity/receipt and production release remain blocked.
+
+### 2026-11-02 — mandatory no-write operator preflight (#374)
+
+The staging synthetic identity runner now exposes `--preflight`
+and requires the same check before `--create-and-delete`:
+exact project/policy/key class, isolated SDK, user-owned private
+unsymlinked journal parent, **absence of unresolved recovery log**,
+and a read-only empty staged Auth inventory. An existing recovery
+journal blocks the operator even if current hosted inventory appears
+empty. Preflight produces only static non-secret result booleans and
+cannot approve review rights or publication. Offline fixture tests
+cover success, extant journal, non-private directory, incorrect
+project, nonempty/unavailable Auth and no unexpected writes. The
+credentialed hosted acceptance trial remains unexecuted and must
+be separately authorized by the owner.
+
+### 2026-11-02 — reject swapped/altered staging cleanup journal (#374)
+
+The recovery journal is now inode/device/owner-bound to the original
+exclusive-create descriptor. Append and cleanup reject a renamed or
+replaced file, symlink, wrong mode, missing file or a fresh journal
+object attempting to take over a prior run. Local fixture tests verify
+recovery evidence is not silently removed on detected substitution.
+This is a **local operator filesystem guard only** with a documented
+path-based unlink race limitation: it does not prove hosted staging
+signed-JWT acceptance, revocation atomicity or reviewer authority.
+Production/clinical/rights release remains blocked.
+
+### 2026-11-02 — bind cleanup token evidence to verified synthetic session
+
+A security review identified a false-cleanup risk in the operator
+runner: an unverified/foreign JWT could be carried forward into the
+post-deletion rejection check, allowing rejection of the wrong bearer
+to be counted as session evidence. The retained token is now assigned
+only after exact user-ID/JWT subject equality **and successful hosted
+Auth getUser validation**. If either fails, independent account
+deletion can still be checked, but the journal is retained for manual
+session reconciliation and no `postDeletionAuthTokenRejected`
+claim is made. Regression tests cover foreign, malformed and
+Auth-probe-failed tokens. Release permissions remain all OFF.
