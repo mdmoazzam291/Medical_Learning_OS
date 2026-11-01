@@ -450,3 +450,18 @@ on the completed matrix PostgreSQL job, and carries no credential or
 release rights. Exact-head CI evidence must independently verify the
 new aggregate job before it is claimed as passing. Hosted staging
 identity/receipt and production release remain blocked.
+
+### 2026-11-02 — mandatory no-write operator preflight (#374)
+
+The staging synthetic identity runner now exposes `--preflight`
+and requires the same check before `--create-and-delete`:
+exact project/policy/key class, isolated SDK, user-owned private
+unsymlinked journal parent, **absence of unresolved recovery log**,
+and a read-only empty staged Auth inventory. An existing recovery
+journal blocks the operator even if current hosted inventory appears
+empty. Preflight produces only static non-secret result booleans and
+cannot approve review rights or publication. Offline fixture tests
+cover success, extant journal, non-private directory, incorrect
+project, nonempty/unavailable Auth and no unexpected writes. The
+credentialed hosted acceptance trial remains unexecuted and must
+be separately authorized by the owner.
