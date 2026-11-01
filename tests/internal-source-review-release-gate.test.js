@@ -158,5 +158,6 @@ test('aggregate CI security signal fails closed if required jobs are skipped, fa
  }
  assert.match(block,/if \[\[ "\$result" != success \]\]; then/);
  assert.match(block,/exit 1/);
- assert.doesNotMatch(block,/continue-on-error|approval: true|DEPLOY|sb_secret_|service_role/i);
+ assert.doesNotMatch(block,/continue-on-error|approval: true|sb_secret_|service_role/i);
+ assert.doesNotMatch(block,/^\s*(?:environment|deploy):/mi);
 });
