@@ -276,3 +276,28 @@ See `docs/INTERNAL_SOURCE_REVIEW_STAGING_SIGNED_JWT_READONLY.md`.
 Provision approved synthetic Auth credentials and separately reviewed
 hosted readback/race harness before any further write-bearing acceptance.
 PR #373 is draft; all source-review release gates remain OFF.
+
+
+## 2026-11-01 — disposable hosted staging test identity cleanup contract (#374)
+
+Draft #374 implements **operator-only code**, not executed on hosted Auth:
+a strictly pinned staging synthetic Auth user creation / signed JWT read-only
+verification / admin deletion lifecycle. It requires explicit opt-in and
+**staging-only** publishable/admin secret keys, and creates an exclusive,
+0600 local cleanup journal *before* calling Auth admin. Every known
+created identity is deleted and the absence rechecked; an ambiguous
+create/delete or interrupted lifecycle leaves manual-reconciliation
+evidence instead of claiming cleanup. No tokens, passwords, user IDs,
+emails or provider response bodies appear in result logs or Git.
+
+Mock-adapter tests cover success, identity spoofing, sign-in failure,
+ambiguous create/delete, journal failure and all release-deny flags.
+**No actual hosted staging Auth user, signed JWT or cleanup was tested**,
+and hosted reviewer readback/race gates are still blocked. Detailed
+controls and operator cleanup:
+`docs/INTERNAL_SOURCE_REVIEW_STAGING_IDENTITY_LIFECYCLE.md`.
+
+Never run an admin secret in untrusted PR CI or browser. No production
+Auth/DB, migration, medical source data, review UI, rights/clinical
+approval or learner publication changed. The review PR stack remains
+draft/unmerged. #350 external provider stays OFF.
