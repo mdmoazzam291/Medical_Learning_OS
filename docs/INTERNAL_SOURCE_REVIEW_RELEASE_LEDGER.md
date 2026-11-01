@@ -411,3 +411,15 @@ reconciliation-required status. The returned token-denial boolean is
 **Auth endpoint evidence only**, never proof of PostgREST JWT rejection
 or provider signout atomicity. This is draft **offline implementation**;
 no hosted Auth user was created/deleted. Production release gate OFF.
+
+### 2026-11-02 — native cumulative security CI now included on #374
+
+The `internal-review-native-postgres` (PG17 and PG18) and
+`internal-review-real-gotrue-jwt-atomic` (disposable local Auth-issued
+JWT and owned grant revocation) jobs are now selected for draft PR #374,
+where they previously skipped due to hardcoded prior PR numbers. These
+are **local non-production services only**. Exact-head passing job
+results must be checked before claiming local security regression
+coverage. This CI change neither supplies hosted secrets nor changes
+staging/production databases. Hosted signed-JWT reviewer acceptance
+and managed staging concurrency remain unverified.
