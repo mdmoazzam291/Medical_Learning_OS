@@ -141,3 +141,16 @@ A complete staging-only npm lockfile is committed under
 `ops/staging-auth-sdk`; the CI offline SDK test installs it via
 `npm ci` in a temporary runner directory. No production or staging
 secrets may be added to CI.
+
+## Staging test-user cleanup limitation — 2026-11-01
+
+Deleting a synthetic Supabase Auth user is **not equivalent** to global
+access-token revocation. Draft #374 now requires distinct evidence for
+(1) the test user's absence in hosted Auth Admin and (2) the original
+JWT's rejection by `GET /auth/v1/user`. Failure or uncertainty in (2)
+leaves the recovery journal and the test incompletely reconciled.
+Neither is proof that a previously issued signed JWT is rejected by
+PostgREST until expiry; production authorization must independently
+require an authoritative current server-owned session/grant check at
+the moment of sensitive review decision. The provider signout vs DB
+transaction gap stays BLOCKED, even after successful synthetic cleanup.
