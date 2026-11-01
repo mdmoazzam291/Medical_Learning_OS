@@ -117,3 +117,25 @@ Next release prerequisite: dedicated authorized staging, supported current
 provider-session semantics, least-privilege review-grant governance,
 qualifications/rights, persisted trusted receipt and disaster recovery.
 All current source-review PRs remain draft/unmerged.
+
+
+## 2026-11-01 — provider-only signout gap and app-first coordination (#367)
+
+Draft #367 adds a **deliberate negative** to the disposable signed-JWT
+acceptance: provider-only signout may leave a previously issued JWT usable
+against an MLOS-owned review-session gate if the app revocation has not
+occurred. This must be recorded as an exposure, **not** proof of security.
+
+It also adds a provider-neutral, test-only app-first source-review signout
+handoff that requests MLOS-owned revocation before Supabase local signout,
+continues signout despite ambiguous app failure, does not auto-retry a
+potentially committed revoke, and preserves explicit unresolved status.
+No callback can assert real provider-session invalidation or authorized
+source-review completion.
+
+See `docs/INTERNAL_SOURCE_REVIEW_SIGNOUT_COORDINATION.md`. Provider-only
+logout, token lifetime and cross-service atomicity are still unresolved.
+Real source-review writes remain **blocked**. Separate staging, owner-risk
+decision, qualified grant issuers, authoritative source rights and
+independent security acceptance are required before any real API,
+migration or learner publication.

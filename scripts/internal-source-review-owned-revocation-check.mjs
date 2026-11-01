@@ -4,6 +4,7 @@
 import assert from 'node:assert/strict';
 import {randomBytes} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
+import {createInternalSourceReviewSignoutHandoff} from '../src/domain/internal-source-review-signout-handoff.js';
 const env=process.env,origin='http://127.0.0.1:54321';
 if(env.MLOS_LOCAL_ATOMIC_CONFIRM!=='ISOLATED_LOCAL_GOTRUE_TEST_STACK'||
  env.MLOS_LOCAL_ATOMIC_URL!==origin||
@@ -223,6 +224,80 @@ try{
   'post-revocation stale signed JWT blocked by MLOS gate');
  console.log('Owned session revocation-first race PASS: app gate denies previously signed JWT');
  console.log('IMPORTANT NON-CLAIM: provider-only signout is NOT synchronized with app-owned session rows');
+
+ // CRITICAL NEGATIVE REGRESSION: a provider-only logout removes GoTrue's
+ // session, but an already-issued signed JWT may still be accepted by
+ // PostgREST while our application-owned reviewer session remains active.
+ // This test intentionally shows this gap; it is NOT a passing security gate.
+ const providerOnlyLogin=await authA.auth.signInWithPassword(accountA);
+ if(providerOnlyLogin.error||!providerOnlyLogin.data?.session?.access_token)
+  throw Error('owned_provider_only_login_failed');
+ const providerOnlyToken=providerOnlyLogin.data.session.access_token;
+ const providerOnlySid=await tokenSession(providerOnlyToken,a.user);
+ await admin.query('insert into evidence_internal.owned_reviewer_sessions values($1,$2,true)',
+  [a.user,providerOnlySid]);
+ const providerOnlyLogout=await authA.auth.signOut({scope:'local'});
+ if(providerOnlyLogout.error)throw Error('owned_provider_only_logout_failed');
+ const providerOnlyRequest=request('case-d','99999999-9999-4999-8999-999999999999');
+ const staleBearer=await call('mlos_owned_source_review_local_v1',
+  providerOnlyToken,{q:providerOnlyRequest});
+ accepted(staleBearer,'expected provider-only signout JWT gap in disposable fixture');
+ assert.equal(await count(),4,'provider-only logout leaves dangerous app-review JWT window');
+ await admin.query('select evidence_internal.revoke_owned_reviewer_session($1,$2)',
+  [a.user,providerOnlySid]);
+ denied(await call('mlos_owned_source_read_local_v1',
+  providerOnlyToken,{p_request:providerOnlyRequest.requestId}),
+  'app-owned revocation closes provider-only signed-out bearer access');
+ console.log('EXPECTED RISK REPRODUCED: provider-only signout left signed JWT usable until app-owned revoke');
+
+ // First-party mitigation contract: revoke MLOS-owned reviewer access BEFORE
+ // requesting the normal provider-local signout. The SQL helper is privileged
+ // solely in this disposable test; no real release/issuer is established.
+ const coordinatedLogin=await authA.auth.signInWithPassword(accountA);
+ if(coordinatedLogin.error||!coordinatedLogin.data?.session?.access_token)
+  throw Error('owned_coordinated_login_failed');
+ const coordinatedToken=coordinatedLogin.data.session.access_token;
+ const coordinatedSid=await tokenSession(coordinatedToken,a.user);
+ await admin.query('insert into evidence_internal.owned_reviewer_sessions values($1,$2,true)',
+  [a.user,coordinatedSid]);
+ const handoffSteps=[];
+ const handoff=createInternalSourceReviewSignoutHandoff({
+  async verifyIdentity(t){
+   handoffSteps.push('verify-identity');
+   const result=await authA.auth.getUser(t);
+   if(result.error||result.data?.user?.id!==a.user)
+    throw Error('owned_coordinated_user_unverified');
+   return {verified:true,userId:a.user,sessionId:await tokenSession(t,a.user)};
+  },
+  async revokeOwnedSessionAsUser(t){
+   handoffSteps.push('revoke-owned');
+   assert.equal(t,coordinatedToken);
+   // The admin fixture emulates an authorized private server revoker.
+   // Never allow client-provided actor/session SQL args in production.
+   await admin.query('select evidence_internal.revoke_owned_reviewer_session($1,$2)',
+    [a.user,coordinatedSid]);
+   return {revoked:true,userId:a.user,sessionId:coordinatedSid};
+  },
+  async providerSignOutLocal(t){
+   handoffSteps.push('provider-local');
+   assert.equal(t,coordinatedToken);
+   const out=await authA.auth.signOut({scope:'local'});
+   return {error:out.error,scope:'local'};
+  }
+ });
+ const signedOut=await handoff(coordinatedToken);
+ assert.deepEqual(handoffSteps,['verify-identity','revoke-owned','provider-local']);
+ assert.equal(signedOut.bothStepsAcknowledged,true);
+ assert.equal(signedOut.reviewAccessVerifiedDenied,false);
+ assert.equal(signedOut.providerSessionEndedVerified,false);
+ assert.equal(signedOut.transactionVerified,false);
+ assert.equal(signedOut.ready,false);
+ denied(await call('mlos_owned_source_review_local_v1',coordinatedToken,{
+  q:request('case-d','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa')
+ }),'app-first signout leaves no source review despite stale signed JWT');
+ assert.equal(await count(),4);
+ console.log('Owned-first signout PASS: app revocation precedes provider logout; JWT denied by app gate');
+
 } finally {
  if(held)try{await revoker.query('rollback');}catch{}
  if(revokerConnected)await revoker.end().catch(()=>{});
