@@ -1,4 +1,5 @@
 import { questionSignature, questionAnswer } from './content-library.js';
+import { inspectPublicationEvidenceWarnings } from './publication-evidence-warnings.js';
 
 // Server-side, read-only structural checks. Do not use this to decide clinical
 // accuracy, rights ownership, or whether content should be published.
@@ -130,6 +131,23 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
       record('missing_note_predecessor', 'warning', 'note', id, [note.supersedes_id]);
     }
   }
+  // Owner-only, advisory audit. Do not infer rights or clinician approval from
+  // warning absence. A failed scan reports UNKNOWN, not an empty/green result.
+  let publicationEvidenceScan;
+  try {
+    const advice = inspectPublicationEvidenceWarnings({notes, sources: catalog.sources});
+    publicationEvidenceScan = {
+      status: 'complete', warningCount: advice.warnings.length,
+      warnings: advice.warnings.slice(0, MAX_FINDINGS),
+      truncated: advice.warnings.length > MAX_FINDINGS,
+      approvalGranted: false, publicationDecision: 'not_evaluated'
+    };
+  } catch {
+    publicationEvidenceScan = {
+      status: 'unavailable', warningCount: null, warnings: [],
+      truncated: null, approvalGranted: false, publicationDecision: 'not_evaluated'
+    };
+  }
   const totals = {
     questions: catalog.questions.length, publishedQuestions: publishedQuestions.length,
     concepts: catalog.concepts.length, sources: catalog.sources.length,
@@ -142,7 +160,7 @@ export function auditCanonicalCatalog({ catalog, notes, links, questionMetadata,
   const displayedFindings = findings.slice(0, MAX_FINDINGS);
   return {
     contractId: 'owner-catalog-integrity-v1',
-    catalogVersion, totals,
+    catalogVersion, totals, publicationEvidenceScan,
     findingCount, byCode: Object.fromEntries(Object.entries(byCode).sort(([a], [b]) => a.localeCompare(b))),
     findings: displayedFindings, findingsTruncated: findingCount > displayedFindings.length,
     scanComplete: true, evidenceScope: 'structural_only',
