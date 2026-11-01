@@ -154,6 +154,14 @@ function liveAdapters(env,fetcher){
     requiresExplicitOwnerApproval:true
    },fetcher);
   },
+  async verifyOwned(userId,email){
+   const r=await response(fetcher,'/auth/v1/admin/users/'+userId,secret,secret);
+   if(r.status!==200)return false;
+   const body=await r.json();
+   const user=prop(body,'user')??body;
+   return prop(user,'id')===userId&&prop(user,'email')===email&&
+    prop(prop(user,'app_metadata'),'mlos_staging_synthetic')===true;
+  },
   async delete(userId){
    const r=await response(fetcher,'/auth/v1/admin/users/'+userId,secret,secret,{method:'DELETE'});
    return r.status>=200&&r.status<300;
@@ -177,10 +185,10 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  if(!validateStagingIdentityLifecycleSettings(settings,policy))
   return result('staging-lifecycle-not-authorized');
  if(!adapters||!journal||
-  ['create','signIn','authProbe','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
+  ['create','signIn','authProbe','verifyOwned','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
   ['begin','associate','clear'].some(k=>typeof journal[k]!=='function'))
   return result('staging-lifecycle-dependencies-invalid');
- let credentials,createdId=null,recorded=false,authVerified=false,createResponseReceived=false;
+ let credentials,createdId=null,syntheticEmail=null,recorded=false,authVerified=false,createResponseReceived=false;
  try{
   credentials=typeof makeIdentity==='function'?makeIdentity():
    {email:identityEmail(),password:secretPassword()};
@@ -189,6 +197,7 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
    typeof credentials.password!=='string'||credentials.password.length<32||
    credentials.password.length>256)
    return result('staging-lifecycle-identity-invalid');
+  syntheticEmail=credentials.email;
   await journal.begin(credentials.email);recorded=true;
   const created=await adapters.create(credentials);
   createResponseReceived=true;
@@ -218,6 +227,13 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  if(!id(createdId))return result(createResponseReceived
   ?'staging-create-identity-unverified-'+(createdId===null?'missing':typeof createdId==='string'?'invalid-string':typeof createdId)+'-reconcile-journal'
   :'staging-create-ambiguous-reconcile-journal',false,false,true);
+ // Never delete a user solely because create() claimed a UUID. Re-read that
+ // exact user via hosted Auth admin and prove the random marker and trusted
+ // app_metadata flag before the irreversible delete operation.
+ let owned=false;
+ try{owned=(await adapters.verifyOwned(createdId,syntheticEmail))===true;}catch{}
+ if(!owned)return result('staging-owned-identity-unverified-reconcile-journal',
+  authVerified,false,true);
  let deleted=false;
  try{
   const requestAck=await adapters.delete(createdId);
