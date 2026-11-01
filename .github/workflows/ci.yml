@@ -429,7 +429,7 @@ jobs:
   internal-review-real-gotrue-jwt-atomic:
     # Test-only local Auth-issued JWT via PostgREST + real session row.
     # Never connect to a hosted project or migrate a real database.
-    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364) }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364 || github.event.pull_request.number == 366) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
@@ -466,7 +466,11 @@ jobs:
           export MLOS_LOCAL_ATOMIC_KEY="$KEY"
           export MLOS_LOCAL_ATOMIC_SDK="file://$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
           export MLOS_LOCAL_ATOMIC_PG="file://$RUNNER_TEMP/mlos-atomic-review/node_modules/pg/esm/index.mjs"
-          node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
+          if [[ "${{ github.event.pull_request.number }}" == "366" ]]; then
+            node "$GITHUB_WORKSPACE/scripts/internal-source-review-owned-revocation-check.mjs"
+          else
+            node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
+          fi
       - name: Destroy synthetic Auth project and unbacked database
         if: always()
         run: |

@@ -94,3 +94,26 @@ supported current-session verification strategy; provider signout atomicity
 remains **unproven**. Provision or explicitly identify staging before further
 hosted acceptance. No PR in the internal source-review stack is approved for
 merge or deployment by this metadata inspection.
+
+
+## 2026-11-01 — application-owned revocation test-only continuation (#366)
+
+The blocked provider-owned `auth.sessions` lock path is **not** a proposed
+production dependency. Draft #366 adds disposable SQL and real local
+GoTrue/PostgREST tests where **MLOS-owned** reviewer session and exact-grant
+rows are locked for review/revocation, with commit ordering and protected
+readback. No managed DB or hosted endpoint has been changed.
+
+**In-scope proof (subject to exact-head CI):** app-issued review-session
+revocation and scoped grant revocation can serialize with a signed-JWT
+review decision using application-owned rows. These are separate operations
+from Supabase Auth signout, which has no demonstrated atomic coupling to
+the app-owned gate. A still-valid access token may outlive provider signout
+unless independently invalidated or checked. This limitation blocks real
+source-review authorization.
+
+Read `docs/INTERNAL_SOURCE_REVIEW_OWNED_REVOCATION_ACCEPTANCE.md`.
+Next release prerequisite: dedicated authorized staging, supported current
+provider-session semantics, least-privilege review-grant governance,
+qualifications/rights, persisted trusted receipt and disaster recovery.
+All current source-review PRs remain draft/unmerged.
