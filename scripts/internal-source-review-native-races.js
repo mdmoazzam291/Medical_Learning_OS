@@ -4,7 +4,9 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
-const {Client}=await import(process.env.PG_MODULE_URL||'pg');
+const pgModule=await import(process.env.PG_MODULE_URL||'pg');
+const Client=pgModule.Client??pgModule.default?.Client;
+if(typeof Client!=='function')throw new TypeError('native_postgres_client_unavailable');
 const creds={
  host:process.env.PGHOST||'127.0.0.1',port:Number(process.env.PGPORT||5432),
  user:process.env.PGUSER||'postgres',password:process.env.PGPASSWORD,
