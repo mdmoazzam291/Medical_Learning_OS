@@ -114,3 +114,23 @@ test('isolated operator SDK dependency tree is private, complete, integrity-lock
  assert.match(script,/ops\/staging-auth-sdk\/package\.json/);
  assert.doesNotMatch(script,/await import\('@supabase\/supabase-js'\)/);
 });
+
+test('PR #374 reruns isolated native race and real local GoTrue JWT checks without hosted secrets',async()=>{
+ const ci=await readFile(new URL('../.github/workflows/ci.yml',import.meta.url),'utf8');
+ const native=ci.match(/  internal-review-native-postgres:\n([\s\S]*?)(?=\n  [a-z][a-z0-9_-]*:\n|$)/)?.[1];
+ const gotrue=ci.match(/  internal-review-real-gotrue-jwt-atomic:\n([\s\S]*?)(?=\n  [a-z][a-z0-9_-]*:\n|$)/)?.[1];
+ assert.ok(native,'native race job must remain present');
+ assert.ok(gotrue,'local GoTrue JWT job must remain present');
+ assert.match(native,/github\.event\.pull_request\.number == 374/);
+ assert.match(native,/pgmajor: \['17', '18'\]/);
+ assert.match(native,/scripts\/internal-source-review-native-races\.js/);
+ assert.match(gotrue,/github\.event\.pull_request\.number == 374/);
+ assert.match(gotrue,/MLOS_LOCAL_ATOMIC_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK/);
+ assert.match(gotrue,/MLOS_LOCAL_ATOMIC_URL=http:\/\/127\.0\.0\.1:54321/);
+ assert.match(gotrue,/scripts\/internal-source-review-owned-revocation-check\.mjs/);
+ assert.match(gotrue,/--no-backup/);
+ assert.doesNotMatch(native,/MLOS_STAGING_ADMIN_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY/);
+ assert.doesNotMatch(gotrue,/MLOS_STAGING_ADMIN_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY/);
+ assert.doesNotMatch(gotrue,/vwtdwafjrraptrgeshzt/);
+ assert.doesNotMatch(native,/vwtdwafjrraptrgeshzt/);
+});
