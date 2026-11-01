@@ -320,7 +320,7 @@ jobs:
 
   internal-review-jwt-postgrest-native:
     # Official PostgREST verifies synthetic JWTs, with ephemeral PG17/18 only.
-    # Not connected to hosted Supabase/Auth or production source evidence.
+    # Not connected to hosted identity systems or production source evidence.
     if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 359 }}
     runs-on: ubuntu-24.04
     timeout-minutes: 14
