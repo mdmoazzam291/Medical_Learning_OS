@@ -77,6 +77,7 @@ export async function assessInternalSourceRowReviewEligibility(packageCandidate,
      'qualificationVerified','independenceVerified'].every(k=>typeof g[k]==='boolean')||
     !g.active||g.revoked||!g.consentVerified||!g.qualificationVerified||
     !g.independenceVerified)return deny('case-grant-denied');
+ if(a.source.expectedSha256!==q.sourceSha256)return deny('source-binding-denied');
  if(a.currentPackage.status!=='staged')return deny('not-staged');
  const permitted=evaluateSourceEvidenceAccess({
   action:'read-metadata',packageId:q.packageId,
