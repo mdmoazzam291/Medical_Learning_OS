@@ -133,8 +133,8 @@ export function makeJournal(path){
     fsFlags.O_CREAT|fsFlags.O_EXCL|fsFlags.O_WRONLY|fsFlags.O_NOFOLLOW,0o600);
    try{
     const stat=await handle.stat();
-    if(!exactOwned(stat))
-     throw Error('staging_identity_journal_identity_changed');
+    if(!stat.isFile()||stat.nlink!==1||(stat.mode&0o777)!==0o600)
+     throw Error('staging_identity_journal_permissions_invalid');
     ownedFile={dev:stat.dev,ino:stat.ino,uid:stat.uid};
     await handle.writeFile(JSON.stringify({
      kind:'mlos-staging-synthetic-v1',event:'pre-create',projectRef:REF,email
@@ -148,8 +148,8 @@ export function makeJournal(path){
    const handle=await open(path,fsFlags.O_WRONLY|fsFlags.O_APPEND|fsFlags.O_NOFOLLOW);
    try{
     const stat=await handle.stat();
-    if(!stat.isFile()||stat.nlink!==1||(stat.mode&0o777)!==0o600)
-     throw Error('staging_identity_journal_permissions_invalid');
+    if(!exactOwned(stat))
+     throw Error('staging_identity_journal_identity_changed');
     await handle.writeFile(JSON.stringify({
      kind:'mlos-staging-synthetic-v1',event:'created',
      projectRef:REF,email,userId
