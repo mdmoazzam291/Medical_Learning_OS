@@ -1,6 +1,6 @@
--- DISPOSABLE SQL TEST PROTOTYPE. Do NOT apply as a Supabase migration.
+-- DISPOSABLE SQL TEST PROTOTYPE. Do NOT apply as a hosted database migration.
 -- Gateway role is an independently authenticated SERVER fixture, not a
--- user session. No SQL function here verifies Supabase Auth or real reviewers.
+-- user session. No SQL function here verifies external identity-provider sessions or real reviewers.
 create schema evidence_internal;
 revoke all on schema evidence_internal from public,anon,authenticated;
 create role evidence_internal_gateway nologin;
