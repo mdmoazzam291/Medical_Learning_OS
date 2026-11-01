@@ -128,3 +128,14 @@ privileged browser or SQL workaround.
 supported staging Auth lifecycle and signed JWT; later — secured
 readback/concurrency; release — human security/rights/clinical approval.
 No source-review writes or learner-facing publication are approved.
+
+## 2026-11-01 — actual SDK contract CI evidence
+
+Draft #374's pinned real-SDK **offline** contract check passed in
+GitHub Actions with `@supabase/supabase-js@2.118.0`. It imports the
+actual library without credentials, verifies private/public Auth client
+construction and required SDK methods, and blocks outbound requests.
+This resolves the earlier mocked-only *interface* uncertainty. It does
+**not** prove hosted Admin API access or real JWT/session/deletion safety.
+Transitive dependencies are not yet covered by a committed npm lockfile;
+no production or staging secrets may be added to CI.
