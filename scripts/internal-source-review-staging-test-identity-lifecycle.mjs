@@ -8,6 +8,7 @@ import {constants as fsFlags} from 'node:fs';
 import {open,readFile,unlink} from 'node:fs/promises';
 import {isAbsolute,relative,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {createRequire} from 'node:module';
 import {probeStagingAuthGetUser} from './internal-source-review-staging-auth-getuser-probe.mjs';
 
 const REF='vwtdwafjrraptrgeshzt';
@@ -255,10 +256,14 @@ async function main(){
  // Fail before any write if the reviewed SDK version is absent/mismatched.
  // Operator installs the exact package and lockfile in a trusted environment.
  const sdkManifest=JSON.parse(await readFile(
-  new URL('../node_modules/@supabase/supabase-js/package.json',import.meta.url),'utf8'));
+  new URL('../ops/staging-auth-sdk/node_modules/@supabase/supabase-js/package.json',import.meta.url),'utf8'));
  if(sdkManifest.version!=='2.118.0')
   throw Error('staging_sdk_version_not_reviewed');
- const {createClient}=await import('@supabase/supabase-js');
+ // Load only from the isolated, npm-ci-installed operator package tree.
+ // The main learner app stays free of staging administrative packages.
+ const sdkRequire=createRequire(
+  new URL('../ops/staging-auth-sdk/package.json',import.meta.url));
+ const {createClient}=sdkRequire('@supabase/supabase-js');
  const result=await runStagingSyntheticIdentityLifecycle({
   settings:process.env,policy,
   adapters:makeSupabaseSdkStagingAdapters(process.env,policy,createClient,fetch),
