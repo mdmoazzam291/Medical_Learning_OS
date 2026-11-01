@@ -108,7 +108,8 @@ export function makeJournal(path){
 // The provider-supported server-side supabase-js Auth API takes opaque
 // sb_secret_ keys safely. Do not implement raw HTTP Admin POST/DELETE with
 // unverified header semantics, and do not persist the user session.
-export function makeSupabaseSdkStagingAdapters(env,createClient,fetcher=fetch){
+export function makeSupabaseSdkStagingAdapters(env,policy,createClient,fetcher=fetch){
+ if(!validateStagingIdentityLifecycleSettings(env,policy))throw Error('staging-sdk-target-denied');
  if(typeof createClient!=='function')throw Error('trusted-sdk-unavailable');
  const options={auth:{autoRefreshToken:false,persistSession:false,detectSessionInUrl:false}};
  const admin=createClient(ORIGIN,env.MLOS_STAGING_ADMIN_SECRET_KEY,options);
@@ -260,7 +261,7 @@ async function main(){
  const {createClient}=await import('@supabase/supabase-js');
  const result=await runStagingSyntheticIdentityLifecycle({
   settings:process.env,policy,
-  adapters:makeSupabaseSdkStagingAdapters(process.env,createClient,fetch),
+  adapters:makeSupabaseSdkStagingAdapters(process.env,policy,createClient,fetch),
   journal:makeJournal(process.env.MLOS_STAGING_IDENTITY_JOURNAL)
  });
  console.log(JSON.stringify(result));
