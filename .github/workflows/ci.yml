@@ -317,3 +317,62 @@ jobs:
           EXPECTED_NATIVE_PG_MAJOR: ${{ matrix.pgmajor }}
           PG_MODULE_URL: file://${{ runner.temp }}/mlos-internal-identity/node_modules/pg/lib/index.js
         run: node scripts/internal-source-review-bound-identity-check.js
+
+  internal-review-jwt-postgrest-native:
+    # Official PostgREST verifies synthetic JWTs, with ephemeral PG17/18 only.
+    # Not connected to hosted identity systems or production source evidence.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 359 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        pgmajor: ['17', '18']
+    services:
+      postgres:
+        image: postgres:${{ matrix.pgmajor }}
+        env:
+          POSTGRES_PASSWORD: synthetic-local-review-only
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 12
+    env:
+      PGPASSWORD: synthetic-local-review-only
+      REVIEW_TEST_JWT_SECRET: synthetic-local-only-review-jwt-secret-2026
+      REVIEW_TEST_API: http://127.0.0.1:3030
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated SQL client
+        run: npm install --prefix "$RUNNER_TEMP/mlos-postgrest-review" --no-audit --no-fund pg@8.14.1
+      - name: Seed synthetic role, grant, session and package fixtures
+        env:
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-postgrest-review/node_modules/pg/lib/index.js
+        run: REVIEW_SETUP_ONLY=1 node scripts/internal-source-review-postgrest-jwt-check.js
+      - name: Start official verified-JWT PostgREST gateway
+        run: |
+          docker run -d --rm --name mlos-postgrest-review --network host \
+            -e PGRST_SERVER_PORT=3030 \
+            -e PGRST_DB_URI=postgres://authenticator:synthetic-only-authenticator@127.0.0.1:5432/postgres \
+            -e PGRST_DB_SCHEMAS=evidence_api \
+            -e PGRST_DB_ANON_ROLE=anon \
+            -e PGRST_JWT_AUD=mlos-source-review-fixture \
+            -e PGRST_JWT_SECRET="$REVIEW_TEST_JWT_SECRET" \
+            postgrest/postgrest:v14.18
+      - name: Verify signed-JWT actor and current session/grant in database transaction
+        env:
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-postgrest-review/node_modules/pg/lib/index.js
+        run: REVIEW_SKIP_SETUP=1 node scripts/internal-source-review-postgrest-jwt-check.js
+      - name: Dispose gateway even if test fails
+        if: always()
+        run: docker rm -f mlos-postgrest-review || true
