@@ -143,8 +143,19 @@ and public clients, both disabled persistence and refresh, and zero hosted
 requests were issued on initialization. Production and staging accounts
 were not contacted by the contract test.
 
-**Limitation:** the temporary install pins the top-level package version
-but does not yet commit a fully resolved transitive-dependency lockfile.
-The operator-run version check also remains fail-closed when the package
-is not installed in its trusted execution environment. A reviewed lock
-and actual hosted Auth acceptance are independent next gates.
+**Update:** `ops/staging-auth-sdk/package.json` and `package-lock.json`
+now contain the entire private SDK dependency tree, with npm registry
+resolution URLs and package integrity hashes. CI's ephemeral staging-only
+SDK contract test now runs `npm ci` from that committed lock; no
+staging secrets or JWTs are supplied to CI. The operator-run version
+check remains fail-closed if the reviewed SDK isn't installed.
+
+**Trusted operator installation:** after reviewing the repo contents and
+ensuring the working directory is private, run
+`npm ci --prefix ops/staging-auth-sdk --ignore-scripts --no-audit --no-fund`
+from repository root. Then, **only with separate staged test approval**, 
+provide the staging-only settings listed above from a trusted secret
+store, ensure no cleanup journal from a previous run remains unresolved,
+and deliberately invoke the lifecycle with `--create-and-delete`.
+No credentials are to be placed in GitHub CI. A committed lock does not
+establish live hosted Auth acceptance, cleanup or signout atomicity.
