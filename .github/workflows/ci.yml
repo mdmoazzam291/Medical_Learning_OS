@@ -23,6 +23,11 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify exact real staging SDK API offline (PR #374, no credentials)
+        if: github.event_name == 'pull_request' && github.event.pull_request.number == 374
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mlos-staging-sdk" --no-audit --no-fund --ignore-scripts --save-exact @supabase/supabase-js@2.118.0
+          node scripts/internal-source-review-staging-sdk-offline-check.mjs "$RUNNER_TEMP/mlos-staging-sdk"
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |
