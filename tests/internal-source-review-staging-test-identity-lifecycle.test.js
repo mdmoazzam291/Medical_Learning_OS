@@ -184,6 +184,8 @@ test('journal associated before token sign-in; no Auth data is ever written into
  assert.match(source,/email_confirm:true/);
  assert.match(source,/app_metadata:\{mlos_staging_synthetic:true\}/);
  assert.doesNotMatch(source,/\/rest\/v1\/rpc\//);
+ assert.ok(!source.includes("Authorization:'Bearer '+secret"));
+ assert.match(source,/headers:\{apikey,'Cache-Control':'no-store'/);
  assert.doesNotMatch(source,/auth\.sessions/);
 });
 
