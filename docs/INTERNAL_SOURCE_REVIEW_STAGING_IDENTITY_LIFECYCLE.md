@@ -196,3 +196,29 @@ reviewer grant. This verification does **not** prove positive hosted
 signed-JWT login, receipt RLS readback, a managed two-connection
 revocation race, or deletion/short-lived token consistency. Those
 separate release gates remain blocked.
+
+## Post-deletion token liveness — independent gate (2026-11-01)
+
+Supabase explicitly warns that **deleting a user does not necessarily
+invalidate the already issued access JWT**. The operator runner now
+retains the synthetic access token only in process memory until cleanup.
+After the exact synthetic account is confirmed deleted by Auth Admin GET
+404, it makes one more credential-free-to-repository, signed-token
+`GET /auth/v1/user` against the pinned staging service using the
+original synthetic bearer token and the public staging key. Only an
+HTTP **401 or 403** verifies the narrower fact that **Auth's user
+endpoint currently denies that token**. Any unexpected 200, 400,
+404, 429, 5xx or network failure remains unverified and retains the
+private recovery journal for manual reconciliation.
+
+If sign-in was attempted but no access token was returned, even a
+successfully deleted synthetic user leaves **session liveness unknown**;
+this also retains the journal. There is no automatic retry and no
+production operation. A successful Auth rejection **does not** prove a
+JWT signature is invalid to PostgREST, RLS, or other services while the
+JWT is unexpired; atomic signout and the reviewer-grant transaction
+remain blocked. The new result field `postDeletionAuthTokenRejected`
+is narrow, does not enable review writes or learner publication, and
+is tested using injected non-network adapters.
+
+Provider reference: https://supabase.com/docs/guides/auth/managing-user-data
