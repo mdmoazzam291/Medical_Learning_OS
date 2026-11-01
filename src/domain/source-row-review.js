@@ -12,6 +12,12 @@ const invalid = () => { throw new TypeError('source_row_review_invalid'); };
 const uuid = v => typeof v === 'string' && /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(v);
 const digest = v => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
 const version = v => Number.isSafeInteger(v) && v >= 1 && v <= 1000000;
+ // Unicode-aware lower bound on meaningful rationale characters; format
+ // characters/whitespace do not satisfy the evidence-review minimum. Preserve
+ // Unicode prose as written (including Indic scripts and combining marks).
+const rationaleValid = v => typeof v === 'string' && v.length <= 4000 &&
+   !/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u202A-\u202E\u2066-\u2069]/u.test(v) &&
+   [...v.replace(/[\p{White_Space}\p{Default_Ignorable_Code_Point}]/gu, '')].length >= 24;
 function exactRecord(v, fields) {
   if (!v || typeof v !== 'object' || ![Object.prototype,null].includes(Object.getPrototypeOf(v))) invalid();
   const keys = Reflect.ownKeys(v);
@@ -27,8 +33,7 @@ export function validateSourceRowReviewRequest(v) {
     !version(v.packageVersion) || !version(v.caseVersion) ||
     typeof v.caseId !== 'string' || !/^[a-z0-9][a-z0-9._:-]{0,127}$/.test(v.caseId) || v.caseId.includes('..') ||
     !['packageDigest','caseDigest','sourceSha256','appearanceEvidenceDigest'].every(k=>digest(v[k])) ||
-    !DISPOSITIONS.has(v.disposition) || typeof v.rationale !== 'string' ||
-    v.rationale.trim().length < 24 || v.rationale.length > 4000 ||
+    !DISPOSITIONS.has(v.disposition) || !rationaleValid(v.rationale) ||
     v.attestationVersion !== 'source-row-review-v1') invalid();
   return structuredClone(v);
 }
