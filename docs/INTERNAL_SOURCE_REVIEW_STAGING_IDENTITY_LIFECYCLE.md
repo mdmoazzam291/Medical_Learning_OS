@@ -133,6 +133,25 @@ review, reviewer grant authority, `Review → Live` and external provider
 #350 remain OFF. Two-connection managed concurrency and Auth signout
 atomicity remain unresolved.
 
+## Pre-create Auth inventory safety gate (2026-11-01)
+
+Before creating the synthetic identity or even opening the cleanup journal,
+the trusted staging-only SDK admin client calls
+`auth.admin.listUsers({page:1, perPage:2})`. The operation must succeed
+and return an empty user array. A nonempty response, missing results,
+permissions failure or network error **stops before any new account is
+created**. Only a project known to be empty is used for this isolated
+acceptance; it is not a production account deletion or database reset.
+No user identifiers, email addresses or credentials are logged.
+
+A separate read-only project-specific SQL inspection showed **zero**
+staging `auth.users`, `auth.sessions`, public tables and migrations
+on 2026-11-01. This is a point-in-time observation, not a guarantee
+that a later operator run starts empty. The SDK rechecks immediately
+before an operator-initiated create. All hosted Auth lifecycle operations
+remain unexecuted until a trusted operator with staging-only
+credentials performs them and verifies cleanup.
+
 ## Real SDK offline compatibility verification (2026-11-01)
 
 The draft PR #374 exact-SDK CI check installed `@supabase/supabase-js@2.118.0`
