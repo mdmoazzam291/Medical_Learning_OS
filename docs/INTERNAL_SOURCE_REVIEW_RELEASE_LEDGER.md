@@ -139,3 +139,23 @@ Real source-review writes remain **blocked**. Separate staging, owner-risk
 decision, qualified grant issuers, authoritative source rights and
 independent security acceptance are required before any real API,
 migration or learner publication.
+
+
+## 2026-11-01 — Auth-server liveness recheck counterexample (#368)
+
+Draft #368 adds a locally signed JWT experiment on top of #367:
+`getUser(originalToken)` before and after a genuine `local` provider
+signout, compared against a still-signed JWT accepted by the disposable
+PostgREST-only application session gate. This separates fresh remote
+session lookup from JWT-signature-only acceptance.
+
+**Test acceptance is scoped to disposable GoTrue** and is not a supported
+managed Auth session/DB atomicity guarantee. Even a fresh `getUser`
+preflight can become stale before a review write commits, so it must not
+weaken the existing **no production source-review writes** rule. No
+hosted SQL, credentials, grant issuance, author permissions, source rights,
+learner-facing features or external provider changed.
+
+See `docs/INTERNAL_SOURCE_REVIEW_GOTRUE_SESSION_RECHECK.md`.
+Independent authorized staging and security/rights/clinical sign-off remain
+required. #368 remains draft and stacked until separately approved.
