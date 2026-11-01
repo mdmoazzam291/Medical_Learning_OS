@@ -308,15 +308,17 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   const signed=await adapters.signIn(credentials);
   const token=prop(signed,'token');
   const sessionInfo=session(token);
-  // Only a well-formed staged-session JWT is usable for a post-delete
-  // bearer-denial check. Malformed/ambiguous sign-in remains unreconciled.
-  issuedToken=token;
   if(prop(signed,'userId')!==createdId||sessionInfo.userId!==createdId)
    throw Error('staging-signed-user-mismatch');
   const probe=await adapters.authProbe(token,createdId,sessionInfo.sessionId);
   if(prop(probe,'reason')!=='staging-auth-getuser-readonly-pass'||
    prop(probe,'hostedJwtReadOnlyEvidence')!==true)
    throw Error('staging-hosted-getuser-not-confirmed');
+  // Only a genuinely Auth-verified bearer for the exact synthetic user
+  // can prove post-deletion token rejection. A foreign, malformed or
+  // previously rejected token must NOT close the recovery journal merely
+  // because a later GET rejects it as expected.
+  issuedToken=token;
   authVerified=true;
  }catch{/* do not expose passwords, JWTs, email, ids or provider errors */}
  finally{
