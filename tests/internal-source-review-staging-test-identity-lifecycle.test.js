@@ -134,7 +134,7 @@ test('signup succeeded but sign-in fails -> user is deleted but session cleanup 
   'signin','verify-owned','delete','verify-deleted']);
  noAuthority(out);
 });
-test('forged session, foreign JWT or rejected probe leads to immediate deletion',async()=>{
+test('unverified synthetic sessions never clear the recovery journal',async()=>{
  for(const variants of [
   {signIn:()=>({userId:'33333333-3333-4333-8333-333333333333',token:token()})},
   {signIn:()=>({userId:USER,token:'not a signed token'})},
@@ -143,20 +143,13 @@ test('forged session, foreign JWT or rejected probe leads to immediate deletion'
  ]){
   const {run,steps}=scenario(variants);
   const out=await run();
-  const invalidToken=typeof variants.signIn==='function' &&
-   variants.signIn().token==='not a signed token';
-  if(invalidToken){
-   assert.equal(out.reason,'staging-deleted-session-unverified-reconcile-journal');
-   assert.equal(out.requiresManualReconciliation,true);
-   assert.equal(out.postDeletionAuthTokenRejected,false);
-   assert.ok(!steps.includes('journal-clear'));
-  }else{
-   assert.equal(out.reason,'staging-auth-failed-identity-deleted');
-   assert.equal(out.postDeletionAuthTokenRejected,true);
-   assert.equal(steps.at(-1),'journal-clear');
-  }
+  assert.equal(out.reason,'staging-deleted-session-unverified-reconcile-journal');
   assert.equal(out.syntheticAccountDeletionVerified,true);
+  assert.equal(out.requiresManualReconciliation,true);
   assert.equal(out.hostedSignedJwtEvidence,false);
+  assert.equal(out.postDeletionAuthTokenRejected,false);
+  assert.ok(!steps.includes('verify-token-rejected'));
+  assert.ok(!steps.includes('journal-clear'));
   noAuthority(out);
  }
 });
