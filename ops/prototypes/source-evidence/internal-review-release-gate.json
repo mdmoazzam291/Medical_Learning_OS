@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "purpose": "ADR-134 internal source-row review",
+  "verifiedDate": "2026-11-01",
+  "releaseState": "BLOCKED_REVIEW_ONLY",
+  "productionProjectRef": "iyapppmeieqhflnzslao",
+  "stagingProjectRef": "vwtdwafjrraptrgeshzt",
+  "excludedLegacyProjectRef": "ueuguguoladoqvtxkumt",
+  "externalProvider": {
+    "pullRequest": 350,
+    "enabled": false,
+    "approval": "DEFERRED"
+  },
+  "draftStack": [
+    352,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374
+  ],
+  "latestDraft": 374,
+  "evidence": {
+    "localGoTrueSignedJwt": "TESTED_DISPOSABLE_LOCAL_ONLY",
+    "managedStagingRls": "TESTED_ROLLBACK_SYNTHETIC_CLAIMS_ONLY",
+    "managedStagingAuthenticatedJwt": "NOT_EXECUTED",
+    "managedStagingSyntheticIdentityLifecycle": "NOT_EXECUTED",
+    "managedStagingTwoConnectionRevocation": "NOT_PROVEN",
+    "providerLogoutAtomicity": "NOT_PROVEN",
+    "hostedAdminSecretCompatibility": "NOT_VERIFIED",
+    "qualifiedReviewerAuthorization": "NOT_VERIFIED",
+    "immutableProtectedReceipt": "NOT_VERIFIED"
+  },
+  "permissions": {
+    "hostedStagingAuthCreateDeleteApproved": false,
+    "hostedStagingReviewRpcsApproved": false,
+    "hostedStagingMigrationApproved": false,
+    "productionSourceReviewWritesApproved": false,
+    "mergeApproved": false,
+    "deploymentApproved": false,
+    "clinicalApproved": false,
+    "rightsApproved": false,
+    "learnerPublicationApproved": false
+  },
+  "requiredNext": {
+    "immediate": "Confirm provider-supported hosted Auth-admin key transport and a trusted staging-only test execution environment, without secrets in PR CI.",
+    "then": "One genuine staging signed-JWT Auth test with full deletion verification, followed by reviewed hosted signed-JWT receipt boundary and synchronized two-connection revocation test.",
+    "release": "Owner-reviewed integration/CI, independent security signoff, real reviewer qualification, clinical/rights/exam approvals, explicit production deployment authorization."
+  }
+}
