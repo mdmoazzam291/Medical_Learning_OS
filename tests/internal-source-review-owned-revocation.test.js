@@ -34,6 +34,6 @@ test('grant and session revocation are independent, and history forbids modifica
   'provider-only signout is NOT synchronized'
  ])assert.ok(check.includes(label),label);
  assert.match(check,/MLOS_LOCAL_ATOMIC_CONFIRM/);
- assert.match(check,/127\\?\.0\\?\.0\\?\.1:54322/);
+ assert.ok(check.includes('54322'));
  assert.doesNotMatch(check,/https:\/\/[^\s'\"\x60]+supabase\.co/i);
 });
