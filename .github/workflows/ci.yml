@@ -28,6 +28,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/mlos-staging-sdk" --no-audit --no-fund --ignore-scripts --save-exact @supabase/supabase-js@2.118.0
           node scripts/internal-source-review-staging-sdk-offline-check.mjs "$RUNNER_TEMP/mlos-staging-sdk"
+          node -e 'const fs=require("node:fs");const root=process.env.RUNNER_TEMP+"/mlos-staging-sdk/"; const payload={pkg:fs.readFileSync(root+"package.json","utf8"),lock:fs.readFileSync(root+"package-lock.json","utf8")}; console.log("MLOS_STAGING_LOCK_EXPORT_BEGIN"+Buffer.from(JSON.stringify(payload)).toString("base64")+"MLOS_STAGING_LOCK_EXPORT_END")'
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |
