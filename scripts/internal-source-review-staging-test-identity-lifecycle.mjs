@@ -13,7 +13,7 @@ const REF='vwtdwafjrraptrgeshzt';
 const ORIGIN='https://vwtdwafjrraptrgeshzt.supabase.co';
 const PROD='iyapppmeieqhflnzslao';
 const LEGACY='ueuguguoladoqvtxkumt';
-const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const id=v=>typeof v==='string'&&UUID.test(v);
 const result=(reason,auth=false,clean=false,reconcile=false)=>Object.freeze({
  reason,hostedSignedJwtEvidence:auth,syntheticAccountDeletionVerified:clean,
