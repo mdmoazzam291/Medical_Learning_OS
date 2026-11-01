@@ -65,8 +65,9 @@ test('pinned real-SDK offline CI gate cannot inject secrets or execute Auth writ
  const script=await readFile(new URL('../scripts/internal-source-review-staging-sdk-offline-check.mjs',import.meta.url),'utf8');
  assert.match(workflow,/Verify exact real staging SDK API offline/);
  assert.match(workflow,/github\.event\.pull_request\.number == 374/);
- assert.match(workflow,/npm install --prefix "\$RUNNER_TEMP\/mlos-staging-sdk"/);
- assert.match(workflow,/@supabase\/supabase-js@2\.118\.0/);
+ assert.match(workflow,/npm ci --prefix "\$RUNNER_TEMP\/mlos-staging-sdk"/);
+ assert.match(workflow,/cp ops\/staging-auth-sdk\/package.json ops\/staging-auth-sdk\/package-lock.json/);
+ assert.doesNotMatch(workflow,/MLOS_STAGING_LOCK_EXPORT_BEGIN/);
  assert.match(workflow,/--ignore-scripts/);
  assert.match(script,/const EXPECTED_SDK='2\.118\.0'/);
  assert.match(script,/makeSupabaseSdkStagingAdapters/);
@@ -75,4 +76,27 @@ test('pinned real-SDK offline CI gate cannot inject secrets or execute Auth writ
  assert.doesNotMatch(script,/process\.env\.MLOS_STAGING_ADMIN_SECRET_KEY/);
  assert.doesNotMatch(script,/auth\.admin\.(?:createUser|deleteUser)\s*\(/);
  assert.doesNotMatch(workflow,/\$\{\{\s*secrets\.MLOS_STAGING/);
+});
+
+test('isolated operator SDK dependency tree is private, complete, integrity-locked and registry-scoped',async()=>{
+ const pkg=JSON.parse(await readFile(new URL('../ops/staging-auth-sdk/package.json',import.meta.url),'utf8'));
+ const lock=JSON.parse(await readFile(new URL('../ops/staging-auth-sdk/package-lock.json',import.meta.url),'utf8'));
+ assert.equal(pkg.private,true);
+ assert.equal(pkg.name,'mlos-staging-sdk');
+ assert.equal(pkg.dependencies['@supabase/supabase-js'],'2.118.0');
+ assert.equal(lock.lockfileVersion,3);
+ assert.equal(lock.name,pkg.name);
+ assert.deepEqual(lock.packages[''].dependencies,pkg.dependencies);
+ const nodes=Object.entries(lock.packages).filter(([key])=>key!=='');
+ assert.ok(nodes.length>=5,'must include transitive lock entries');
+ for(const [name,entry] of nodes){
+  assert.ok(/^https:\/\/registry\.npmjs\.org\//.test(entry.resolved),name);
+  assert.ok(/^sha512-[A-Za-z0-9+/=]+$/.test(entry.integrity),name);
+  assert.ok(typeof entry.version==='string' && entry.version.length>0,name);
+ }
+ const script=await readFile(new URL('../scripts/internal-source-review-staging-test-identity-lifecycle.mjs',import.meta.url),'utf8');
+ assert.match(script,/ops\/staging-auth-sdk\/node_modules\/@supabase\/supabase-js\/package\.json/);
+ assert.match(script,/createRequire\(/);
+ assert.match(script,/ops\/staging-auth-sdk\/package\.json/);
+ assert.doesNotMatch(script,/await import\('@supabase\/supabase-js'\)/);
 });
