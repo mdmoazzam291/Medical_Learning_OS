@@ -99,5 +99,5 @@ export function publicationEvidenceMarkup(scan) {
     (rows.length ? '<div class="owner-table-wrap"><table class="owner-table"><thead><tr><th>Type</th><th>Exact ID</th><th>Review needed</th></tr></thead><tbody>' +
       rows.join('') + '</tbody></table></div>' : '') +
     (scan.truncated || count > rows.length ? '<p class="muted">Only a sample of warnings is shown. Inspect the complete evidence independently.</p>' : '') +
-    '<p class="muted"><strong>Next action:</strong> Open Content Review, check rights and references, obtain the authorized medical decision, then use the existing Review → Live gate only when every requirement is independently satisfied.</p></section>';
+    '<p class="muted"><strong>Next action:</strong> <a href="/web/review.html">Open Content Review</a> to check rights and references and obtain the authorized medical decision. Use the existing Review → Live gate only when every requirement is independently satisfied.</p></section>';
 }
