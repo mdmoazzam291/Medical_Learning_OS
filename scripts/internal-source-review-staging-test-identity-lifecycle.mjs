@@ -119,6 +119,12 @@ function session(token){
  return {userId:claims.sub,sessionId:claims.session_id};
 }
 export function makeJournal(path){
+ // Bind writes and unlink to the exact inode created by this invocation.
+ // A new journal object cannot adopt/clear a prior interrupted run.
+ let ownedFile=null;
+ const exactOwned=stat=>ownedFile&&stat.isFile()&&stat.nlink===1&&
+  (stat.mode&0o777)===0o600&&stat.dev===ownedFile.dev&&
+  stat.ino===ownedFile.ino&&stat.uid===ownedFile.uid;
  return {
   async begin(email){
    // Exclusive create avoids overwriting a recovery file from an interrupted
@@ -126,6 +132,10 @@ export function makeJournal(path){
    const handle=await open(path,
     fsFlags.O_CREAT|fsFlags.O_EXCL|fsFlags.O_WRONLY|fsFlags.O_NOFOLLOW,0o600);
    try{
+    const stat=await handle.stat();
+    if(!exactOwned(stat))
+     throw Error('staging_identity_journal_identity_changed');
+    ownedFile={dev:stat.dev,ino:stat.ino,uid:stat.uid};
     await handle.writeFile(JSON.stringify({
      kind:'mlos-staging-synthetic-v1',event:'pre-create',projectRef:REF,email
     })+'\n');
@@ -147,7 +157,16 @@ export function makeJournal(path){
     await handle.sync();
    }finally{await handle.close();}
   },
-  async clear(){await unlink(path);}
+  async clear(){
+   // Path-based unlink is not inode-atomic. The trusted private 0700
+   // parent remains mandatory; refuse any detected replacement, mode
+   // change or stale journal object before removing recovery evidence.
+   if(!ownedFile)throw Error('staging_identity_journal_not_owned');
+   const stat=await lstat(path);
+   if(!exactOwned(stat))throw Error('staging_identity_journal_identity_changed');
+   await unlink(path);
+   ownedFile=null;
+  }
  };
 }
 // The provider-supported server-side supabase-js Auth API takes opaque
