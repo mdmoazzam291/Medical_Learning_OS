@@ -7,7 +7,7 @@ const plain=x=>!!x&&typeof x==='object'&&!Array.isArray(x)&&(Object.getPrototype
 const read=(x,k)=>plain(x)&&Object.prototype.hasOwnProperty.call(x,k)?x[k]:undefined;
 const str=x=>{if(x==null)return '';if(typeof x!=='string'||x.length>MAX_TEXT)throw TypeError('preflight_text_invalid');return x};
 const id=(x,keys)=>{const v=keys.map(k=>read(x,k)).find(y=>typeof y==='string'&&y.trim());if(!v||v.length>200||!/^[A-Za-z0-9][A-Za-z0-9_.:@-]*$/.test(v))throw TypeError('preflight_identifier_invalid');return v};
-const DRAFT=/\[\s*(?:review\s+draft|draft\s+for\s+review)\s*\]|\bunapproved\s+(?:ai[-\s]*assisted\s+)?review\s+draft\b|\bnot\s+human[-\s]*approved\b|\bpending\s+(?:medical|references?|rights|human)\s+review\b/i;
+const DRAFT=/\[\s*(?:review\s+draft|draft\s+for\s+review)\s*\]|\bunapproved\s+(?:ai[-\s]*assisted\s+)?review\s+draft\b|\bnot\s+human[-\s]*approved\b|\bpending\s+(?:medical|references?|rights|human)\s+review\b|\breview\s+pending\b/i;
 const PENDING=/\b(?:not\s+human[-\s]*approved|review\s+pending|unapproved\s+(?:ai[-\s]*assisted\s+)?review\s+draft|rights\s+not\s+(?:verified|confirmed))\b/i;
 const UNCERTAIN=/\b(?:unknown\s+(?:copyright|rights|licen[cs]e|reuse\s+permission)|(?:copyright|rights|licen[cs]e|reuse\s+permission)(?:\s+status)?\s+(?:is\s+|are\s+)?(?:unknown|unverified|pending|not\s+(?:verified|confirmed|cleared))|permission\s+(?:is\s+)?(?:pending|unknown|not\s+(?:verified|confirmed|granted))|reuse\s+(?:not\s+(?:authorized|cleared|verified)|pending))\b/i;
 const PERMISSIVE=new Set(['owned','licensed','public_domain']);
