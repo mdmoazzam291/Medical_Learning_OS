@@ -348,3 +348,13 @@ ownership, sign-in, deletion and error-as-success denial. **No hosted
 Admin write, real signed JWT, actual deletion or cleanup was run.**
 Auth admin hosted acceptance and a safe operator secret store remain
 release blockers; all source-review and learner release permissions OFF.
+
+### 2026-11-01 — pinned real Supabase SDK offline contract passed (#374)
+
+The actual `supabase-js@2.118.0` SDK was installed ephemerally in
+credential-free GitHub CI; its Auth Admin/public client APIs and their
+no-persistence configuration passed a live-library, **offline** factory
+contract test. This is a verified improvement beyond mocked SDK replies.
+**It is not a hosted user creation, signed-JWT validation or deletion test.**
+A full transitive dependency lockfile is still outstanding before a
+trusted operator run. Source-review and learner release gates remain OFF.
