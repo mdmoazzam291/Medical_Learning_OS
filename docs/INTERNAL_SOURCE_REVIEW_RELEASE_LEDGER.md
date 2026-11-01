@@ -39,3 +39,34 @@ All five review PRs are **separate, stacked and unmerged**, with no live content
 - **Deferred:** experimental external evidence delivery/#350. Avoid optional infrastructure without an identified outside recipient.
 
 **Do not merge/deploy just because CI is green.** This ledger, the CI and the isolated prototypes are engineering evidence, not credentials, approved rights, authenticated humans or completed learner functionality.
+
+
+## 1 November 2026 — stacked security continuation (#358–#364)
+
+**This section supersedes the earlier “five PRs” count, not the earlier
+unmerged/deployment prohibitions.** Each PR remains stacked, DRAFT and separate
+from the production `main` branch.
+
+| PR | Added verified or proposed engineering boundary | Release authority |
+| --- | --- | --- |
+| #358 | Strict offline canonical event/receipt contract handoff; no verified origin | None |
+| #359 | Disposable signed-JWT PostgREST and synthetic session verification | None |
+| #360 | Disposable local GoTrue-owned session/sign-out lock ordering | None |
+| #361 | Same-transaction actual local GoTrue JWT/session, scoped grant and immutable event | None |
+| #362 | Native exact-grant revocation races in both transaction orders, synthetic revoker | None |
+| #363 | JCS/SHA-256 projected canonical receipt and event/readback shape parity; cannot prove persisted origin | None |
+| #364 | Original-request-ID-only recovery after lost response; one protected read, zero writes, never auto-resubmit | None |
+
+The proposed #364 isolated local GoTrue acceptance asserts that a receipt
+candidate can be reconstructed from the previously committed event without a
+second write; foreign JWTs must be denied. Its exact-head CI results must be
+checked separately. Prior CI results on earlier heads are not a substitute.
+
+**Next blocking gate:** authenticate and audit a least-privileged current-session
+and exact-scoped-grant readback implementation on an explicitly isolated
+nonproduction managed Supabase environment, or design a formally supported
+revocation-status bridge when `auth.sessions` locks are unavailable. Define
+authoritative digest persistence and idempotency recovery/restore semantics.
+Independent security, source rights, qualified reviewer evidence and explicit
+owner release authorization are still required before any migration, merging
+the stacked PRs, Admin UI action, learner publication or provider integration.
