@@ -7,7 +7,7 @@ const policyPath=new URL('../ops/prototypes/source-evidence/internal-review-stag
 const policy=async()=>JSON.parse(await readFile(policyPath,'utf8'));
 const productionRef='iyapppmeieqhflnzslao';
 const legacyRef='ueuguguoladoqvtxkumt';
-const stagingRef='s'.repeat(20);
+const stagingRef='vwtdwafjrraptrgeshzt';
 const org='ltvogluubibhqvtxbegg';
 const production=()=>({
  id:productionRef,ref:productionRef,name:'medical_learning_os',
@@ -30,25 +30,25 @@ const denied=result=>{
   'productionSourceReviewApproved','reviewerGrantAuthorityVerified','learnerRelease'])
   assert.equal(result[field],false,field);
 };
-test('policy permanently pins the actual production target, forbids legacy, and has no approved staging',async()=>{
+test('policy pins independent approved staging identity and protects production and legacy',async()=>{
  const p=await policy();
  assert.equal(p.productionProjectRef,productionRef);
  assert.equal(p.productionProjectName,'medical_learning_os');
  assert.ok(p.excludedLegacyProjectRefs.includes(legacyRef));
- assert.equal(p.approvedStagingProjectRef,null);
+ assert.equal(p.approvedStagingProjectRef,stagingRef);
  assert.equal(p.requiresExplicitOwnerApproval,true);
  assert.equal(p.purpose,'internal-source-row-review-auth-acceptance');
 });
-test('current provider inventory has no approved MLOS staging target',async()=>{
+test('old two-project inventory no longer satisfies the approved staging identity',async()=>{
  const r=assessInternalReviewStagingTarget(await policy(),inventory(production(),legacy()));
- assert.equal(r.reason,'no-owner-approved-staging-target');
+ assert.equal(r.reason,'approved-staging-target-not-found');
  assert.equal(r.isolatedStagingMetadataMatched,false);
  denied(r);
 });
-test('a new staging project discovered by the provider does not self-approve',async()=>{
+test('observed new staging metadata matches only as a candidate, never as write authority',async()=>{
  const r=assessInternalReviewStagingTarget(await policy(),inventory(production(),legacy(),staging()));
- assert.equal(r.reason,'no-owner-approved-staging-target');
- assert.equal(r.isolatedStagingMetadataMatched,false);
+ assert.equal(r.reason,'isolated-staging-metadata-candidate-only');
+ assert.equal(r.isolatedStagingMetadataMatched,true);
  denied(r);
 });
 test('production or legacy cannot be selected as staging, even if a policy edit tries',async()=>{
@@ -60,14 +60,14 @@ test('production or legacy cannot be selected as staging, even if a policy edit 
  }
 });
 test('a separately approved active staging metadata candidate is still NOT a permission to touch data',async()=>{
- const p={...await policy(),approvedStagingProjectRef:stagingRef};
+ const p=await policy();
  const r=assessInternalReviewStagingTarget(p,inventory(production(),legacy(),staging()));
  assert.equal(r.reason,'isolated-staging-metadata-candidate-only');
  assert.equal(r.isolatedStagingMetadataMatched,true);
  denied(r);
 });
 test('an approved staging ref fails on mismatch, inactive status, wrong organization and absence',async()=>{
- const p={...await policy(),approvedStagingProjectRef:stagingRef};
+ const p=await policy();
  const bad=[
   [production(),legacy()],
   [production(),{...staging(),name:'medical_learning_os'}],
@@ -85,7 +85,7 @@ test('an approved staging ref fails on mismatch, inactive status, wrong organiza
  }
 });
 test('missing, inactive or relabeled production identity blocks before staging inspection',async()=>{
- const p={...await policy(),approvedStagingProjectRef:stagingRef};
+ const p=await policy();
  for(const options of [
   [staging()],
   [{...production(),status:'INACTIVE'},staging()],
@@ -127,7 +127,7 @@ test('unexpected policy keys, fake approval types and dangerous object prototype
   const r=assessInternalReviewStagingTarget(mutated,inventory(production(),legacy()));
   // A modified production pin is not trusted against the observed inventory.
   assert.ok(['invalid-or-untrusted-metadata','production-identity-unverified',
-   'no-owner-approved-staging-target'].includes(r.reason),r.reason);
+   'approved-staging-target-not-found'].includes(r.reason),r.reason);
   denied(r);
  }
 });
