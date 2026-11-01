@@ -4,7 +4,8 @@
 // All secrets/tokens live in process memory; journal contains ONLY the test
 // identity email/UUID (0600) to allow manual recovery after interruption.
 import {randomBytes} from 'node:crypto';
-import {open,readFile,writeFile,unlink} from 'node:fs/promises';
+import {constants as fsFlags} from 'node:fs';
+import {open,readFile,unlink} from 'node:fs/promises';
 import {isAbsolute,relative,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {probeStagingAuthGetUser} from './internal-source-review-staging-auth-getuser-probe.mjs';
@@ -72,20 +73,34 @@ function session(token){
   claims.exp<Math.floor(Date.now()/1000)+30)throw Error('invalid-claims');
  return {userId:claims.sub,sessionId:claims.session_id};
 }
-function makeJournal(path){
+export function makeJournal(path){
  return {
   async begin(email){
-   const handle=await open(path,'wx',0o600);
+   // Exclusive create avoids overwriting a recovery file from an interrupted
+   // prior run; O_NOFOLLOW rejects a final-component symlink.
+   const handle=await open(path,
+    fsFlags.O_CREAT|fsFlags.O_EXCL|fsFlags.O_WRONLY|fsFlags.O_NOFOLLOW,0o600);
    try{
-    await handle.writeFile(JSON.stringify({kind:'mlos-staging-synthetic-v1',projectRef:REF,email,userId:null})+'\n');
+    await handle.writeFile(JSON.stringify({
+     kind:'mlos-staging-synthetic-v1',event:'pre-create',projectRef:REF,email
+    })+'\n');
     await handle.sync();
    }finally{await handle.close();}
   },
   async associate(email,userId){
-   // Sensitive journal remains local and must not contain tokens/passwords.
-   await writeFile(path,JSON.stringify({
-    kind:'mlos-staging-synthetic-v1',projectRef:REF,email,userId
-   })+'\n',{mode:0o600,flag:'w'});
+   // Append-only, never truncate the original pre-create recovery marker.
+   // No O_CREAT: missing/replaced journal is an error, not a new file.
+   const handle=await open(path,fsFlags.O_WRONLY|fsFlags.O_APPEND|fsFlags.O_NOFOLLOW);
+   try{
+    const stat=await handle.stat();
+    if(!stat.isFile()||stat.nlink!==1||(stat.mode&0o777)!==0o600)
+     throw Error('staging_identity_journal_permissions_invalid');
+    await handle.writeFile(JSON.stringify({
+     kind:'mlos-staging-synthetic-v1',event:'created',
+     projectRef:REF,email,userId
+    })+'\n');
+    await handle.sync();
+   }finally{await handle.close();}
   },
   async clear(){await unlink(path);}
  };
