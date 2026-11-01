@@ -279,3 +279,19 @@ writer are therefore mandatory; these checks reduce accidental
 replacement but do not eliminate a same-user time-of-check/time-of-use
 race. A successful local journal unlink is still **not proof** of hosted
 Auth token invalidation, source rights, or production readiness.
+
+## Synthetic-token ownership proof before post-delete reconciliation
+
+A decoded JWT `sub` or a successful password sign-in response is not
+sufficient to establish that a bearer belongs to the test identity.
+The runner retains a bearer for post-deletion Auth rejection **only
+after** the sign-in user ID and JWT subject match the exact synthetic
+account **and** the hosted Auth server positively verifies that
+session. If the token is malformed, belongs to another account,
+or the hosted Auth probe fails, account deletion is still attempted
+only after independent synthetic ownership verification, but the
+recovery journal remains and the session outcome is marked
+unverified. Rejection of an unrelated/bogus token is never counted as
+proof that the synthetic account's session was invalidated.
+
+This is offline test coverage, not a hosted positive JWT test.
