@@ -30,6 +30,9 @@ jobs:
           cp ops/staging-auth-sdk/package.json ops/staging-auth-sdk/package-lock.json "$RUNNER_TEMP/mlos-staging-sdk/"
           npm ci --prefix "$RUNNER_TEMP/mlos-staging-sdk" --no-audit --no-fund --ignore-scripts
           node scripts/internal-source-review-staging-sdk-offline-check.mjs "$RUNNER_TEMP/mlos-staging-sdk"
+      - name: Verify hosted staging Auth rejects anonymous and forged JWTs (no credentials)
+        if: github.event_name == 'pull_request' && github.event.pull_request.number == 374
+        run: node scripts/internal-source-review-staging-hosted-auth-negative.mjs --read-only-hosted-negative
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |
