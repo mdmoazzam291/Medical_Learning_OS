@@ -229,3 +229,25 @@ limitations in
 `docs/INTERNAL_SOURCE_REVIEW_MANAGED_STAGING_ROLLBACK_SMOKE.md`.
 All internal source-review PRs remain draft, provider #350 OFF,
 and production Review → Live disabled.
+
+
+## 2026-11-01 — managed staging synthetic role/RLS protected receipt (#372)
+
+Against authorized staging `vwtdwafjrraptrgeshzt`, a rollback-only SQL
+editor transaction tested temporary, app-owned reviewer-session, grant and
+receipt tables as PostgreSQL role `authenticated`, with **fabricated**
+request JWT claim GUCs (NOT genuinely signed GoTrue tokens).
+
+Verified: no claims 0 receipts; exact reviewer A/B identities each read
+only their own 1/2 receipt; mismatched session 0; application-owned session
+A revocation removed A readback; application-owned grant B revocation
+removed B readback; anon SELECT denied and authenticated receipt
+INSERT/UPDATE/DELETE not granted. Independent post-rollback inspection
+confirmed **zero public tables, zero migrations**. No permanent objects,
+real Auth users or production changes.
+
+This establishes hosted **RLS policy behavior only**, not signed-token,
+provider-session, concurrent-transaction, immutable receipt or rights
+authority. Exact executed SQL and limitations:
+`docs/INTERNAL_SOURCE_REVIEW_STAGING_RLS_READBACK.md`.
+Source-review writes/publication remain OFF. PR #372 is draft and stacked.
