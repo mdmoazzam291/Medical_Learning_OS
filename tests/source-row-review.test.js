@@ -77,3 +77,28 @@ test('valid limits are accepted and malformed reviewer or timestamp is rejected'
   assert.equal(matchesSourceRowReviewReceipt(receipt(request()),request(),'bad'),false);
   assert.equal(matchesSourceRowReviewReceipt({...receipt(request()),recordedAt:null},request(),reviewer),false);
 });
+
+test('source review rationale requires visible characters and rejects dangerous controls', () => {
+  const malformed = [
+    '\u200b'.repeat(24), // zero-width space
+    ('a'.repeat(23)+'\u200b'.repeat(20)),
+    ('a'.repeat(12)+'\u2060'.repeat(30)+' '.repeat(100)),
+    ('x'.repeat(24)+'\u202e'), // directional override
+    ('x'.repeat(24)+'\u2066'), // directional isolate
+    ('x'.repeat(24)+'\u0000'),
+    ('x'.repeat(24)+'\u000b')
+  ];
+  for (const rationale of malformed) {
+    assert.throws(() => validateSourceRowReviewRequest({...request(), rationale}),
+      /source_row_review_invalid/);
+    assert.equal(matchesSourceRowReviewReceipt(
+      receipt({...request(), rationale}),request(),reviewer),false);
+  }
+  // Normal multilingual prose remains valid; spaces and Indic joiners may
+  // appear in the source note but cannot inflate the minimum visible count.
+  const rationale='स्रोत पृष्ठ पर संबंधित पहचान की पुनः स्वतंत्र जाँच आवश्यक है।';
+  const accepted=validateSourceRowReviewRequest({...request(),rationale});
+  assert.equal(accepted.rationale,rationale);
+  assert.equal(matchesSourceRowReviewReceipt(
+    receipt({...request(),rationale}),{...request(),rationale},reviewer),true);
+});
