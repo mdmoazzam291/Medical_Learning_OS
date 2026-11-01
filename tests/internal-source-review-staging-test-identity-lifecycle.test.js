@@ -29,7 +29,7 @@ const encoded=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
 const token=()=>encoded({alg:'HS256',typ:'JWT'})+'.'+
  encoded({iss:ORIGIN+'/auth/v1',aud:'authenticated',role:'authenticated',
   sub:USER,session_id:SESSION,exp:Math.floor(Date.now()/1000)+3600})+'.'+'a'.repeat(45);
-function scenario({create,signIn,probe,own,del,verify,begin,associate,clear}={}){
+function scenario({audit,create,signIn,probe,own,del,verify,begin,associate,clear}={}){
  const steps=[];
  const journal={
   begin:async email=>{steps.push('journal-begin');assert.equal(email,EMAIL);if(begin)await begin();},
@@ -37,6 +37,7 @@ function scenario({create,signIn,probe,own,del,verify,begin,associate,clear}={})
   clear:async()=>{steps.push('journal-clear');if(clear)await clear();}
  };
  const adapters={
+  auditEmpty:async()=>{steps.push('audit-empty');return audit?audit():true;},
   create:async user=>{steps.push('create');if(user.email!==EMAIL||user.password!==PASSWORD)steps.push('synthetic-identity-mismatch');return create?create():{userId:USER};},
   signIn:async user=>{steps.push('signin');assert.equal(user.email,EMAIL);return signIn?signIn():{userId:USER,token:token()};},
   authProbe:async(t,u,s)=>{steps.push('hosted-readonly-auth-probe');assert.equal(t,token());assert.equal(u,USER);assert.equal(s,SESSION);return probe?probe():{reason:'staging-auth-getuser-readonly-pass',hostedJwtReadOnlyEvidence:true};},
@@ -63,7 +64,7 @@ function noAuthority(out){
 test('all steps including privileged admin deletion and independent verification happen exactly once',async()=>{
  const {run,steps}=scenario();
  const result=await run();
- assert.deepEqual(steps,['journal-begin','create','journal-associate',
+ assert.deepEqual(steps,['audit-empty','journal-begin','create','journal-associate',
   'signin','hosted-readonly-auth-probe','verify-owned','delete','verify-deleted','journal-clear']);
  assert.equal(result.reason,'staging-auth-test-deleted');
  assert.equal(result.hostedSignedJwtEvidence,true);
@@ -97,13 +98,26 @@ test('unconfigured, production, legacy, publishable-as-admin or repository journ
   {...p,requiresExplicitOwnerApproval:false}
  ])assert.equal(validateStagingIdentityLifecycleSettings(input,bad),false);
 });
+test('hosted Auth inventory must be verified empty before journal or account creation',async()=>{
+ for(const outcome of [()=>false,()=>null,()=>{throw Error('admin listUsers unavailable');}]){
+  const {run,steps}=scenario({audit:outcome});
+  const result=await run();
+  assert.equal(result.syntheticAccountDeletionVerified,false);
+  assert.equal(result.hostedSignedJwtEvidence,false);
+  assert.equal(result.reason,outcome.toString().includes('throw')
+   ?'staging-auth-inventory-unavailable'
+   :'staging-auth-inventory-not-empty-or-unverified');
+  assert.deepEqual(steps,['audit-empty']);
+  noAuthority(result);
+ }
+});
 test('creation response lost leaves journal with no auto-retry, manual cleanup required',async()=>{
  const {run,steps}=scenario({create:()=>{throw Error('server may have created user');}});
  const out=await run();
  assert.equal(out.reason,'staging-create-ambiguous-reconcile-journal');
  assert.equal(out.requiresManualReconciliation,true);
  assert.equal(out.syntheticAccountDeletionVerified,false);
- assert.deepEqual(steps,['journal-begin','create']);
+ assert.deepEqual(steps,['audit-empty','journal-begin','create']);
  noAuthority(out);
 });
 test('signup succeeded but sign-in fails -> user is still deleted and deletion checked',async()=>{
@@ -112,7 +126,7 @@ test('signup succeeded but sign-in fails -> user is still deleted and deletion c
  assert.equal(out.reason,'staging-auth-failed-identity-deleted');
  assert.equal(out.hostedSignedJwtEvidence,false);
  assert.equal(out.syntheticAccountDeletionVerified,true);
- assert.deepEqual(steps,['journal-begin','create','journal-associate',
+ assert.deepEqual(steps,['audit-empty','journal-begin','create','journal-associate',
   'signin','verify-owned','delete','verify-deleted','journal-clear']);
  noAuthority(out);
 });
@@ -163,7 +177,7 @@ test('journal failure refuses creation; cleanup journal unlink failure is distin
  const a=scenario({begin:()=>{throw Error('journal not writable');}});
  const noJournal=await a.run();
  assert.equal(noJournal.reason,'staging-lifecycle-journal-unavailable');
- assert.deepEqual(a.steps,['journal-begin']);
+ assert.deepEqual(a.steps,['audit-empty','journal-begin']);
  noAuthority(noJournal);
  const b=scenario({clear:()=>{throw Error('disk failure');}});
  const cleanup=await b.run();
@@ -242,6 +256,7 @@ test('official SDK adapter checks exact staging and calls admin create/read/dele
  const state={exists:true};
  const user={id:USER,email:EMAIL,app_metadata:{mlos_staging_synthetic:true}};
  const admin={
+  listUsers:async()=>({data:{users:[]},error:null}),
   createUser:async payload=>{
    calls.push('create');
    assert.equal(payload.email,EMAIL);
@@ -299,6 +314,30 @@ test('official SDK adapter checks exact staging and calls admin create/read/dele
  assert.equal(await adapters.isDeleted(USER),true);
  assert.deepEqual(calls,['init','init','create','signin','read-owned','delete','read-owned']);
 });
+test('SDK preflight only accepts an empty, verified first page of Auth users',async()=>{
+ const E=settings(),P=policy();
+ for(const ans of [
+  {data:{users:[]},error:null},
+  {data:{users:[{id:USER}]},error:null},
+  {data:{},error:null},
+  {data:null,error:{status:403}}
+ ]){
+  const server={auth:{admin:{
+   listUsers:async opts=>{
+    assert.deepEqual(opts,{page:1,perPage:2});
+    return ans;
+   },
+   createUser:async()=>{throw Error('unexpected write');},
+   getUserById:async()=>({data:{user:null},error:{status:404}}),
+   deleteUser:async()=>{throw Error('unexpected write');}
+  }}};
+  const client={auth:{signInWithPassword:async()=>{throw Error('unexpected signin');}}};
+  const a=makeSupabaseSdkStagingAdapters(E,P,(_url,key)=>
+   key===E.MLOS_STAGING_ADMIN_SECRET_KEY?server:client);
+  const found=await a.auditEmpty();
+  assert.equal(found,Array.isArray(ans.data?.users)&&ans.data.users.length===0&&!ans.error);
+ }
+});
 test('SDK rejects wrong project before client initialization and fails closed on absent synthetic marker',async()=>{
  const E=settings(),P=policy();
  let creates=0;
@@ -309,6 +348,7 @@ test('SDK rejects wrong project before client initialization and fails closed on
  assert.equal(creates,0);
  const idObj={id:USER,email:EMAIL,app_metadata:{}};
  const server={auth:{admin:{
+  listUsers:async()=>({data:{users:[]},error:null}),
   createUser:async()=>({data:{user:idObj},error:null}),
   getUserById:async()=>({data:{user:idObj},error:null}),
   deleteUser:async()=>({error:{status:403}})
@@ -330,6 +370,7 @@ test('SDK user lookup error 401 or an empty success response NEVER counts as ver
   {data:{user:null},error:null}
  ]){
   const server={auth:{admin:{
+   listUsers:async()=>({data:{users:[]},error:null}),
    createUser:async()=>({data:{user:null},error:null}),
    getUserById:async()=>answer,
    deleteUser:async()=>({data:{},error:null})
