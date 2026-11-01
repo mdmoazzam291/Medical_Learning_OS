@@ -70,3 +70,27 @@ authoritative digest persistence and idempotency recovery/restore semantics.
 Independent security, source rights, qualified reviewer evidence and explicit
 owner release authorization are still required before any migration, merging
 the stacked PRs, Admin UI action, learner publication or provider integration.
+
+
+## 2026-11-01 — managed Auth permission inventory (draft #365)
+
+A catalog-only SQL SELECT on the **active** MLOS managed Supabase project
+(PostgreSQL 17.6) confirmed `auth.sessions` exists, but both `authenticated`
+and `service_role` lack direct SELECT/UPDATE privileges on that table. The
+list of connected projects showed **no separately designated MLOS staging
+project**. No identity/session/learner rows were read, and no SQL writes,
+privilege grants, migrations or deployments were performed.
+
+Repeatable exact catalog query: `scripts/internal-source-review-managed-auth-capabilities.sql`.
+Offline fail-closed assessment and tests: `scripts/internal-source-review-managed-auth-capabilities.mjs`
+and `tests/internal-source-review-managed-auth-capabilities.test.js`.
+Source and architectural decision:
+`docs/INTERNAL_SOURCE_REVIEW_MANAGED_AUTH_CAPABILITY_AUDIT.md`.
+
+**Revised recommendation:** Do NOT copy the #361/#362 test-only
+`auth.sessions FOR SHARE` provider-row lock into managed production. Use
+application-owned reviewer grant/revocation serialization with a separately
+supported current-session verification strategy; provider signout atomicity
+remains **unproven**. Provision or explicitly identify staging before further
+hosted acceptance. No PR in the internal source-review stack is approved for
+merge or deployment by this metadata inspection.
