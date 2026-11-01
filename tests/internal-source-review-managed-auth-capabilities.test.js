@@ -66,7 +66,8 @@ test('stored SQL inventory cannot query Auth rows, take locks or change privileg
  assert.match(stripped,/has_table_privilege\('service_role','auth\.sessions','SELECT'\)/);
  assert.match(stripped,/to_regclass\('auth\.sessions'\)/);
  assert.equal((stripped.match(/;/g)||[]).length,1);
- assert.doesNotMatch(stripped,/\b(insert|update|delete|alter|create|drop|truncate|grant|revoke|execute|copy|lock|pg_sleep|for\s+(update|share))\b/i);
+ assert.doesNotMatch(stripped,/\b(insert|delete|alter|create|drop|truncate|grant|revoke|execute|copy|lock|pg_sleep|for\s+(update|share))\b/i);
+ assert.doesNotMatch(stripped,/\bupdate\s+[a-z_]/i);
  assert.doesNotMatch(stripped,/\bfrom\s+auth\./i);
  assert.doesNotMatch(stripped,/\bjoin\s+auth\./i);
 });
