@@ -348,7 +348,6 @@ jobs:
       PGPASSWORD: synthetic-local-review-only
       REVIEW_TEST_JWT_SECRET: synthetic-local-only-review-jwt-secret-2026
       REVIEW_TEST_API: http://127.0.0.1:3030
-      PG_MODULE_URL: file://${{ runner.temp }}/mlos-postgrest-review/node_modules/pg/lib/index.js
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -357,6 +356,8 @@ jobs:
       - name: Install isolated SQL client
         run: npm install --prefix "$RUNNER_TEMP/mlos-postgrest-review" --no-audit --no-fund pg@8.14.1
       - name: Seed synthetic role, grant, session and package fixtures
+        env:
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-postgrest-review/node_modules/pg/lib/index.js
         run: REVIEW_SETUP_ONLY=1 node scripts/internal-source-review-postgrest-jwt-check.js
       - name: Start official verified-JWT PostgREST gateway
         run: |
@@ -369,6 +370,8 @@ jobs:
             -e PGRST_JWT_SECRET="$REVIEW_TEST_JWT_SECRET" \
             postgrest/postgrest:v14.18
       - name: Verify signed-JWT actor and current session/grant in database transaction
+        env:
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-postgrest-review/node_modules/pg/lib/index.js
         run: REVIEW_SKIP_SETUP=1 node scripts/internal-source-review-postgrest-jwt-check.js
       - name: Dispose gateway even if test fails
         if: always()
