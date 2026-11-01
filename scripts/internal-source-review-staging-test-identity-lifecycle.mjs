@@ -200,7 +200,9 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   credentials=null;
  }
  if(!recorded)return result('staging-lifecycle-journal-unavailable');
- if(!id(createdId))return result(createResponseReceived?'staging-create-identity-unverified-reconcile-journal':'staging-create-ambiguous-reconcile-journal',false,false,true);
+ if(!id(createdId))return result(createResponseReceived
+  ?'staging-create-identity-unverified-'+(createdId===null?'missing':typeof createdId==='string'?'invalid-string':typeof createdId)+'-reconcile-journal'
+  :'staging-create-ambiguous-reconcile-journal',false,false,true);
  let deleted=false;
  try{
   const requestAck=await adapters.delete(createdId);
