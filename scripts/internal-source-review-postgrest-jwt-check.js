@@ -56,6 +56,7 @@ async function ready(){
 }
 await admin.connect();
 try{
+ if(process.env.REVIEW_SKIP_SETUP!=='1'){
  await admin.query("create role anon nologin;create role authenticated nologin;create role service_role nologin;");
  await admin.query("create role authenticator login noinherit password 'synthetic-only-authenticator';");
  await admin.query('grant anon,authenticated to authenticator');
@@ -69,6 +70,8 @@ try{
  await admin.query('insert into evidence_internal.grant_history(grant_event_id,transition) values($1,$2)',[grant,'granted']);
  await admin.query('insert into evidence_internal.sessions(session_id,reviewer_id,active) values($1,$2,true)',[sid,actor]);
  console.log('Fixture DB ready: auth role/privileges, isolated source/qualified grants, current sessions');
+ }
+ if(process.env.REVIEW_SETUP_ONLY!=='1'){
  await ready();
  const signed=issue();
  await denied(await rpc('record_source_review',null,{q}),'anonymous');
@@ -110,4 +113,5 @@ try{
  await assert.rejects(admin.query("update evidence_internal.grant_history set transition='granted'"),/internal_review_immutable/);
  await assert.rejects(admin.query('delete from evidence_internal.grant_history'),/internal_review_immutable/);
  console.log('PostgREST current-state revocation PASS: immutable history retained; revocation denies read and write');
+ }
 }finally{await admin.end();}
