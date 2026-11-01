@@ -429,7 +429,7 @@ jobs:
   internal-review-real-gotrue-jwt-atomic:
     # Test-only local Auth-issued JWT via PostgREST + real session row.
     # Never connect to a hosted project or migrate a real database.
-    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362) }}
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 361 || github.event.pull_request.number == 362 || github.event.pull_request.number == 364) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
