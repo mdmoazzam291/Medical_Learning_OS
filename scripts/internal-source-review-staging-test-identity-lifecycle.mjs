@@ -245,8 +245,10 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   signinAttempted=true;
   const signed=await adapters.signIn(credentials);
   const token=prop(signed,'token');
-  if(typeof token==='string'&&token.length>0)issuedToken=token;
   const sessionInfo=session(token);
+  // Only a well-formed staged-session JWT is usable for a post-delete
+  // bearer-denial check. Malformed/ambiguous sign-in remains unreconciled.
+  issuedToken=token;
   if(prop(signed,'userId')!==createdId||sessionInfo.userId!==createdId)
    throw Error('staging-signed-user-mismatch');
   const probe=await adapters.authProbe(token,createdId,sessionInfo.sessionId);
