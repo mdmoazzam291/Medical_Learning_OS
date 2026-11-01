@@ -132,3 +132,19 @@ Existing #371–#373 tests and drafts are unmerged. Production source
 review, reviewer grant authority, `Review → Live` and external provider
 #350 remain OFF. Two-connection managed concurrency and Auth signout
 atomicity remain unresolved.
+
+## Real SDK offline compatibility verification (2026-11-01)
+
+The draft PR #374 exact-SDK CI check installed `@supabase/supabase-js@2.118.0`
+into an ephemeral GitHub runner directory. **Credential-free** verification
+using the actual library (not only injected mocks) passed: createClient
+exposed Auth Admin methods, the runner could construct separate private
+and public clients, both disabled persistence and refresh, and zero hosted
+requests were issued on initialization. Production and staging accounts
+were not contacted by the contract test.
+
+**Limitation:** the temporary install pins the top-level package version
+but does not yet commit a fully resolved transitive-dependency lockfile.
+The operator-run version check also remains fail-closed when the package
+is not installed in its trusted execution environment. A reviewed lock
+and actual hosted Auth acceptance are independent next gates.
