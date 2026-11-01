@@ -16,11 +16,23 @@ async function captured(snapshot,expected){
  const {snapshotDigest,...body}=s;if((await digestCanonical(body)).digestHex!==snapshotDigest)fail();return s;
 }
 export async function exportSourceEvidenceSnapshot(db){
- await db.exec('begin isolation level repeatable read');
+ // Read Committed acquires a fresh statement snapshot *after* the lock wait.
+ // Repeatable Read would freeze at the first advisory-lock SELECT and could
+ // omit a writer that committed while export was waiting for that lock.
+ await db.exec('begin isolation level read committed');
  try{
   await db.exec('select pg_advisory_xact_lock(730031)');
-  const tables={};
-  for(const [name,order] of Object.entries(tableOrder))tables[name]=(await db.query('select coalesce(jsonb_agg(to_jsonb(t) order by '+order+"),'[]'::jsonb)::text data from evidence_probe."+name+' t')).rows[0].data;
+  // All eight tables share ONE post-lock MVCC statement snapshot, even if a
+  // separate privileged writer is not yet governed by this advisory lock.
+  // Fixed identifiers/order expressions only; never interpolate user input.
+  const columns=Object.entries(tableOrder).map(([name,order])=>
+   "(select coalesce(jsonb_agg(to_jsonb(t) order by "+order+
+    "),'[]'::jsonb)::text from evidence_probe."+name+" t) as "+name);
+  const row=(await db.query('select '+columns.join(', '))).rows[0];
+  const tables={};for(const name of Object.keys(tableOrder)){
+   if(typeof row?.[name]!=='string')fail();
+   tables[name]=row[name];
+  }
   await db.exec('commit');
   const body={formatVersion:1,tables:Object.freeze(tables)};
   return Object.freeze({...body,snapshotDigest:(await digestCanonical(body)).digestHex});
