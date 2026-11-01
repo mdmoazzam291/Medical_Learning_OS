@@ -222,3 +222,39 @@ is narrow, does not enable review writes or learner publication, and
 is tested using injected non-network adapters.
 
 Provider reference: https://supabase.com/docs/guides/auth/managing-user-data
+
+## Mandatory operator read-only preflight (2026-11-02)
+
+The operator runner now accepts `--preflight` in addition to
+`--create-and-delete`. Both paths require the exact pinned staging
+project, dedicated secret key, public key, approved policy and locked
+SDK version. Before an Auth **write**, the runner checks:
+
+- The absolute recovery-journal parent is a **non-symlink directory**
+  owned by the running Unix user, with no group or other permissions
+  (e.g. a `0700` private directory **outside the repository**).
+- **No existing journal file**, including an unresolved earlier run.
+  Existence blocks even a staging inventory request and never triggers
+  automatic cleanup or deletion.
+- Read-only `auth.admin.listUsers` succeeds for the **pinned staging**
+  host and returns an empty first page; missing results, unexpected
+  accounts or network errors block the run.
+
+From a trusted operator host, after installing the committed isolated
+`ops/staging-auth-sdk` dependency tree using `npm ci`, set the
+staging-only environment variables documented above and run:
+
+`node scripts/internal-source-review-staging-test-identity-lifecycle.mjs --preflight`
+
+The preflight prints only fixed, non-secret reason codes and boolean
+release flags. It **does not generate a synthetic identity, write a
+journal, create Auth users or sessions, grant review access, or
+migrate data**. A successful preflight is **not** owner consent to
+run `--create-and-delete`; that remains separately approval-gated.
+
+The write command rechecks preflight and repeats the hosted empty-user
+inventory check immediately before beginning its exclusive recovery
+journal. Even this cannot guarantee no concurrent outside writer;
+operator isolation remains a prerequisite. Tests use a private
+throwaway local filesystem and mocked Auth adapter; **no live hosted
+Admin key or synthetic account was used** in this change.
