@@ -275,7 +275,7 @@ test('journal rejects final symlink, absent file, and broadened file permissions
   await journal.begin(EMAIL);
   const before=await readFile(location,'utf8');
   await chmod(location,0o644);
-  await assert.rejects(journal.associate(EMAIL,USER),/permissions_invalid/);
+  await assert.rejects(journal.associate(EMAIL,USER),/identity_changed/);
   assert.equal(await readFile(location,'utf8'),before,'unsafe journal not modified');
  }finally{await rm(dir,{recursive:true,force:true});}
 });
