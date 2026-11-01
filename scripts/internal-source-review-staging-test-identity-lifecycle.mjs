@@ -17,8 +17,9 @@ const PROD='iyapppmeieqhflnzslao';
 const LEGACY='ueuguguoladoqvtxkumt';
 const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const id=v=>typeof v==='string'&&UUID.test(v);
-const result=(reason,auth=false,clean=false,reconcile=false)=>Object.freeze({
+const result=(reason,auth=false,clean=false,reconcile=false,tokenDenied=false)=>Object.freeze({
  reason,hostedSignedJwtEvidence:auth,syntheticAccountDeletionVerified:clean,
+ postDeletionAuthTokenRejected:tokenDenied,
  requiresManualReconciliation:reconcile, testOnly:true,
  noProductionAccess:true,readOnlyProbeOnly:true,
  productionSourceReviewApproved:false,stagingReviewWriteApproved:false,
@@ -179,6 +180,21 @@ export function makeSupabaseSdkStagingAdapters(env,policy,createClient,fetcher=f
    // Only documented not-found status is accepted. Network/server errors
    // or an unexpected empty response never prove a user was deleted.
    return error?.status===404&&!prop(data,'user');
+  },
+  async verifyTokenDenied(token){
+   // Auth GET denial after deletion is a separate observed fact from the
+   // deleted account. It does NOT prove PostgREST rejects an unexpired JWT.
+   if(typeof token!=='string'||token.length<150||token.length>8192)
+    return false;
+   try{
+    const r=await fetcher(ORIGIN+'/auth/v1/user',{
+     method:'GET',redirect:'error',cache:'no-store',
+     signal:AbortSignal.timeout(10000),
+     headers:{apikey:pub,'Cache-Control':'no-store',
+      Authorization:'Bearer '+token}
+    });
+    return r?.status===401||r?.status===403;
+   }catch{return false;}
   }
  };
 }
@@ -194,7 +210,7 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  if(!validateStagingIdentityLifecycleSettings(settings,policy))
   return result('staging-lifecycle-not-authorized');
  if(!adapters||!journal||
-  ['auditEmpty','create','signIn','authProbe','verifyOwned','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
+  ['auditEmpty','create','signIn','authProbe','verifyOwned','delete','isDeleted','verifyTokenDenied'].some(k=>typeof adapters[k]!=='function')||
   ['begin','associate','clear'].some(k=>typeof journal[k]!=='function'))
   return result('staging-lifecycle-dependencies-invalid');
  // Read-only hosted Auth inventory gate before generating identity, creating
@@ -205,7 +221,8 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  }catch{
   return result('staging-auth-inventory-unavailable');
  }
- let credentials,createdId=null,syntheticEmail=null,recorded=false,authVerified=false,createResponseReceived=false;
+ let credentials,createdId=null,syntheticEmail=null,issuedToken=null,
+  signinAttempted=false,recorded=false,authVerified=false,createResponseReceived=false;
  try{
   credentials=typeof makeIdentity==='function'?makeIdentity():
    {email:identityEmail(),password:secretPassword()};
@@ -225,8 +242,10 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   createdId=descriptor?.enumerable&&Object.hasOwn(descriptor,'value')?descriptor.value:null;
   if(!id(createdId))throw Error('unknown-new-user-id');
   await journal.associate(credentials.email,createdId);
+  signinAttempted=true;
   const signed=await adapters.signIn(credentials);
   const token=prop(signed,'token');
+  if(typeof token==='string'&&token.length>0)issuedToken=token;
   const sessionInfo=session(token);
   if(prop(signed,'userId')!==createdId||sessionInfo.userId!==createdId)
    throw Error('staging-signed-user-mismatch');
@@ -258,10 +277,24 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   deleted=(requestAck===true)&&await adapters.isDeleted(createdId)===true;
  }catch{/* deletion uncertain: leave secure journal for operator */}
  if(!deleted)return result('staging-deletion-unverified-reconcile-journal',authVerified,false,true);
+ // The admin 404 only proves the user record was deleted. Supabase may
+ // continue to accept access JWTs until their expiration. Verify the
+ // Auth-server endpoint independently; never infer token revocation.
+ if(!issuedToken){
+  return result(signinAttempted
+   ?'staging-deleted-session-unverified-reconcile-journal'
+   :'staging-deleted-no-session-evidence-reconcile-journal',
+   authVerified,true,true,false);
+ }
+ let tokenDenied=false;
+ try{tokenDenied=await adapters.verifyTokenDenied(issuedToken)===true;}catch{}
+ issuedToken=null;
+ if(!tokenDenied)return result('staging-deleted-token-rejection-unverified-reconcile-journal',
+  authVerified,true,true,false);
  try{await journal.clear();}
- catch{return result('staging-deleted-journal-cleanup-needed',authVerified,true,true);}
+ catch{return result('staging-deleted-journal-cleanup-needed',authVerified,true,true,true);}
  return result(authVerified?'staging-auth-test-deleted':'staging-auth-failed-identity-deleted',
-  authVerified,true,false);
+  authVerified,true,false,true);
 }
 async function main(){
  const policy=JSON.parse(await readFile(
