@@ -143,10 +143,20 @@ test('forged session, foreign JWT or rejected probe leads to immediate deletion'
  ]){
   const {run,steps}=scenario(variants);
   const out=await run();
-  assert.equal(out.reason,'staging-auth-failed-identity-deleted');
+  const invalidToken=typeof variants.signIn==='function' &&
+   variants.signIn().token==='not a signed token';
+  if(invalidToken){
+   assert.equal(out.reason,'staging-deleted-session-unverified-reconcile-journal');
+   assert.equal(out.requiresManualReconciliation,true);
+   assert.equal(out.postDeletionAuthTokenRejected,false);
+   assert.ok(!steps.includes('journal-clear'));
+  }else{
+   assert.equal(out.reason,'staging-auth-failed-identity-deleted');
+   assert.equal(out.postDeletionAuthTokenRejected,true);
+   assert.equal(steps.at(-1),'journal-clear');
+  }
   assert.equal(out.syntheticAccountDeletionVerified,true);
   assert.equal(out.hostedSignedJwtEvidence,false);
-  assert.equal(steps.at(-1),'journal-clear');
   noAuthority(out);
  }
 });
