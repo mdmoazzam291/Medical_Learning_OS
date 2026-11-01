@@ -129,7 +129,7 @@ test('internal-review branch family reruns isolated native race and local GoTrue
  assert.match(gotrue,/MLOS_LOCAL_ATOMIC_URL=http:\/\/127\.0\.0\.1:54321/);
  assert.match(gotrue,/scripts\/internal-source-review-owned-revocation-check\.mjs/);
  assert.match(gotrue,/--no-backup/);
- assert.match(gotrue,/MLOS_CI_HEAD_REF: \\$\{\{ github\.head_ref \}\}/);
+ assert.match(gotrue,/MLOS_CI_HEAD_REF: \$\{\{ github\.head_ref \}\}/);
  assert.match(gotrue,/\"\$MLOS_CI_HEAD_REF\" == test\/internal-review-\*/);
  assert.doesNotMatch(gotrue,/\[\[.*\$\{\{ github\.head_ref \}\}/);
  assert.doesNotMatch(native,/MLOS_STAGING_ADMIN_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY/);
