@@ -423,3 +423,18 @@ results must be checked before claiming local security regression
 coverage. This CI change neither supplies hosted secrets nor changes
 staging/production databases. Hosted signed-JWT reviewer acceptance
 and managed staging concurrency remain unverified.
+
+### 2026-11-02 — exact-number CI security testing replaced with branch-family gate
+
+The latest earlier #374 run `41337424294` completed successfully
+for browser, WebKit, generic check, both PG17/18 native race tests and
+the loopback-only local GoTrue JWT/owned-revocation test. For future
+internal-review branches, the expensive local PG17/18 and GoTrue jobs
+are now gated by the branch prefix `test/internal-review-` (plus
+historical numbered PRs), replacing a brittle `PR == 374` gate.
+The local shell obtains the branch name through `MLOS_CI_HEAD_REF`
+rather than interpolating an untrusted branch string directly in the
+script. Staging SDK contract and public-only hosted Auth negative tests
+also use the branch-family gate. **No new hosted JWT positive evidence**
+or production approval is implied; the new exact-head CI should be
+checked separately.
