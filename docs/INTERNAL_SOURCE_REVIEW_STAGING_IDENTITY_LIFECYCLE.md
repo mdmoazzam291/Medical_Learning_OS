@@ -178,3 +178,21 @@ store, ensure no cleanup journal from a previous run remains unresolved,
 and deliberately invoke the lifecycle with `--create-and-delete`.
 No credentials are to be placed in GitHub CI. A committed lock does not
 establish live hosted Auth acceptance, cleanup or signout atomicity.
+
+## Real hosted Auth negative checks (2026-11-01)
+
+GitHub Foundation checks for draft #374 ran a credential-free
+`GET https://vwtdwafjrraptrgeshzt.supabase.co/auth/v1/user` against
+the **real hosted staging service** using its active public
+`sb_publishable_` key. The endpoint returned an authorization denial
+(HTTP 401 or 403) for a request **without any bearer JWT**, and another
+authorization denial (HTTP 401 or 403) for a **syntactically JWT-shaped
+forgery** with an invented signature. The new CI step succeeded.
+
+These tests make **no Auth Admin API requests**, create no accounts,
+perform no migrations and supply no real user credentials. The public
+key is intentionally non-secret but is pinned to staging and is not a
+reviewer grant. This verification does **not** prove positive hosted
+signed-JWT login, receipt RLS readback, a managed two-connection
+revocation race, or deletion/short-lived token consistency. Those
+separate release gates remain blocked.
