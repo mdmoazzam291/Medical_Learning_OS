@@ -190,3 +190,25 @@ jobs:
           path: ${{ runner.temp }}/mlos-screenshots
           if-no-files-found: ignore
           retention-days: 7
+
+  evidence-foundation-pglite:
+    # Offline snapshot/schema tests only; do not connect to hosted databases.
+    if: ${{ github.event_name == 'pull_request' && (github.event.pull_request.number == 349 || github.event.pull_request.number == 350) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated embedded PostgreSQL engine
+        run: npm install --prefix "$RUNNER_TEMP/mlos-evidence-foundation" --no-audit --no-fund @electric-sql/pglite@0.5.13
+      - name: Verify source-evidence SQL binding, conformance and snapshot recovery
+        env:
+          PGLITE_MODULE_URL: file://${{ runner.temp }}/mlos-evidence-foundation/node_modules/@electric-sql/pglite/dist/index.js
+        run: |
+          node scripts/source-evidence-db-check.js
+          node scripts/source-evidence-sql-conformance.js
+          node scripts/source-evidence-recovery-check.js
