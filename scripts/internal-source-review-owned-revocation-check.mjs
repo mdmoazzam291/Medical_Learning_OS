@@ -236,8 +236,20 @@ try{
  const providerOnlySid=await tokenSession(providerOnlyToken,a.user);
  await admin.query('insert into evidence_internal.owned_reviewer_sessions values($1,$2,true)',
   [a.user,providerOnlySid]);
+ // A genuine server-side Auth getUser call succeeds before signout, but that
+ // response cannot be carried forward as transaction-time authorization.
+ const userBeforeSignout=await authA.auth.getUser(providerOnlyToken);
+ assert.equal(userBeforeSignout.error,null);
+ assert.equal(userBeforeSignout.data.user.id,a.user);
  const providerOnlyLogout=await authA.auth.signOut({scope:'local'});
  if(providerOnlyLogout.error)throw Error('owned_provider_only_logout_failed');
+ const userAfterSignout=await authA.auth.getUser(providerOnlyToken);
+ // Supabase's server-side guide recommends getUser for current session
+ // confirmation, unlike local getClaims JWT signature validation. Empirically
+ // verify this on the real disposable Auth stack instead of assuming it.
+ assert.ok(userAfterSignout.error||!userAfterSignout.data?.user,
+  'real GoTrue getUser must not certify a signed-out provider session');
+ console.log('Local GoTrue getUser session recheck PASS: current before logout, rejected after logout');
  const providerOnlyRequest=request('case-d','99999999-9999-4999-8999-999999999999');
  const staleBearer=await call('mlos_owned_source_review_local_v1',
   providerOnlyToken,{q:providerOnlyRequest});
