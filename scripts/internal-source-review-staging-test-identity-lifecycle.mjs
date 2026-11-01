@@ -105,42 +105,37 @@ export function makeJournal(path){
   async clear(){await unlink(path);}
  };
 }
-// Opaque sb_publishable_/sb_secret_ keys are API keys, NOT user JWTs.
-// Never send them as Authorization: Bearer. Gateway compatibility for
-// hosted Admin POST/DELETE is NOT established by these offline tests.
-async function response(fetcher,path,apikey,{method='GET',body}={}){
- const url=ORIGIN+path;
- const res=await fetcher(url,{
-  method,redirect:'error',cache:'no-store',signal:AbortSignal.timeout(12000),
-  headers:{apikey,'Cache-Control':'no-store',
-   ...(body?{'Content-Type':'application/json'}:{})},
-  ...(body?{body:JSON.stringify(body)}:{})
- });
- if(!res||!Number.isInteger(res.status))throw Error('bad-hosted-response');
- return res;
-}
-function liveAdapters(env,fetcher){
- const secret=env.MLOS_STAGING_ADMIN_SECRET_KEY,pub=env.MLOS_STAGING_PUBLISHABLE_KEY;
+// The provider-supported server-side supabase-js Auth API takes opaque
+// sb_secret_ keys safely. Do not implement raw HTTP Admin POST/DELETE with
+// unverified header semantics, and do not persist the user session.
+export function makeSupabaseSdkStagingAdapters(env,createClient,fetcher=fetch){
+ if(typeof createClient!=='function')throw Error('trusted-sdk-unavailable');
+ const options={auth:{autoRefreshToken:false,persistSession:false,detectSessionInUrl:false}};
+ const admin=createClient(ORIGIN,env.MLOS_STAGING_ADMIN_SECRET_KEY,options);
+ const client=createClient(ORIGIN,env.MLOS_STAGING_PUBLISHABLE_KEY,options);
+ if(!admin?.auth?.admin||!client?.auth)throw Error('trusted-sdk-invalid');
+ const required=['createUser','getUserById','deleteUser'];
+ if(required.some(name=>typeof admin.auth.admin[name]!=='function')||
+  typeof client.auth.signInWithPassword!=='function')
+  throw Error('trusted-sdk-admin-interface-invalid');
+ const pub=env.MLOS_STAGING_PUBLISHABLE_KEY;
  return {
   async create({email,password}){
-   const r=await response(fetcher,'/auth/v1/admin/users',secret,{
-    method:'POST',body:{email,password,email_confirm:true,
-     app_metadata:{mlos_staging_synthetic:true}}
+   const {data,error}=await admin.auth.admin.createUser({
+    email,password,email_confirm:true,
+    app_metadata:{mlos_staging_synthetic:true}
    });
-   if(r.status!==200&&r.status!==201)throw Error('create-not-confirmed');
-   const body=await r.json();
-   const u=prop(body,'user')??body;
-   const found=prop(u,'id');
-   if(!id(found)||prop(u,'email')!==email)throw Error('create-identity-unverified');
-   return {userId:found};
+   if(error)throw Error('sdk-create-failed');
+   const user=prop(data,'user');
+   if(!id(prop(user,'id'))||prop(user,'email')!==email||
+    prop(prop(user,'app_metadata'),'mlos_staging_synthetic')!==true)
+    throw Error('sdk-created-identity-unverified');
+   return {userId:user.id};
   },
   async signIn({email,password}){
-   const r=await response(fetcher,'/auth/v1/token?grant_type=password',pub,{
-    method:'POST',body:{email,password}
-   });
-   if(r.status!==200)throw Error('signin-not-confirmed');
-   const body=await r.json();
-   return {token:prop(body,'access_token'),userId:prop(prop(body,'user'),'id')};
+   const {data,error}=await client.auth.signInWithPassword({email,password});
+   if(error)throw Error('sdk-signin-failed');
+   return {token:prop(prop(data,'session'),'access_token'),userId:prop(prop(data,'user'),'id')};
   },
   async authProbe(token,userId,sessionId){
    return probeStagingAuthGetUser({
@@ -158,21 +153,21 @@ function liveAdapters(env,fetcher){
    },fetcher);
   },
   async verifyOwned(userId,email){
-   const r=await response(fetcher,'/auth/v1/admin/users/'+userId,secret);
-   if(r.status!==200)return false;
-   const body=await r.json();
-   const user=prop(body,'user')??body;
+   const {data,error}=await admin.auth.admin.getUserById(userId);
+   if(error)return false;
+   const user=prop(data,'user');
    return prop(user,'id')===userId&&prop(user,'email')===email&&
     prop(prop(user,'app_metadata'),'mlos_staging_synthetic')===true;
   },
   async delete(userId){
-   const r=await response(fetcher,'/auth/v1/admin/users/'+userId,secret,{method:'DELETE'});
-   return r.status>=200&&r.status<300;
+   const {error}=await admin.auth.admin.deleteUser(userId);
+   return !error;
   },
   async isDeleted(userId){
-   const r=await response(fetcher,'/auth/v1/admin/users/'+userId,secret);
-   // Do not treat HTTP 401/403, network failures or malformed data as deletion.
-   return r.status===404;
+   const {data,error}=await admin.auth.admin.getUserById(userId);
+   // Only documented not-found status is accepted. Network/server errors
+   // or an unexpected empty response never prove a user was deleted.
+   return error?.status===404&&!prop(data,'user');
   }
  };
 }
@@ -256,9 +251,16 @@ async function main(){
   console.error('staging_synthetic_lifecycle_isolation_denied');
   process.exitCode=1;return;
  }
+ // Fail before any write if the reviewed SDK version is absent/mismatched.
+ // Operator installs the exact package and lockfile in a trusted environment.
+ const sdkManifest=JSON.parse(await readFile(
+  new URL('../node_modules/@supabase/supabase-js/package.json',import.meta.url),'utf8'));
+ if(sdkManifest.version!=='2.118.0')
+  throw Error('staging_sdk_version_not_reviewed');
+ const {createClient}=await import('@supabase/supabase-js');
  const result=await runStagingSyntheticIdentityLifecycle({
   settings:process.env,policy,
-  adapters:liveAdapters(process.env,fetch),
+  adapters:makeSupabaseSdkStagingAdapters(process.env,createClient,fetch),
   journal:makeJournal(process.env.MLOS_STAGING_IDENTITY_JOURNAL)
  });
  console.log(JSON.stringify(result));
