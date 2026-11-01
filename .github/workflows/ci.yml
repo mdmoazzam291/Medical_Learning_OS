@@ -212,3 +212,22 @@ jobs:
           node scripts/source-evidence-db-check.js
           node scripts/source-evidence-sql-conformance.js
           node scripts/source-evidence-recovery-check.js
+
+  internal-source-review-pglite:
+    # Synthetic internal reviewer/SQL role acceptance ONLY; no hosted DB.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 354 }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated embedded PostgreSQL
+        run: npm install --prefix "$RUNNER_TEMP/mlos-internal-review" --no-audit --no-fund @electric-sql/pglite@0.5.13
+      - name: Verify isolated immutable internal review decisions and role denial
+        env:
+          PGLITE_MODULE_URL: file://${{ runner.temp }}/mlos-internal-review/node_modules/@electric-sql/pglite/dist/index.js
+        run: node scripts/internal-source-review-sql-check.js
