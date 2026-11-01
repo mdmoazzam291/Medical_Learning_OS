@@ -22,6 +22,10 @@ export function inspectPublicationEvidenceWarnings({notes=[],sources=[],inspectD
     const status=str(read(n,'status')).toLowerCase(),title=str(read(n,'title')),body=str(read(n,'bodyMarkdown')??read(n,'body_markdown'));
     const provenance=read(n,'provenance');if(provenance!==undefined&&!plain(provenance))throw TypeError('preflight_provenance_invalid');
     const evidence=str(read(provenance,'evidence'));
+    // A partially selected or legacy published note is not a clean scan: the
+    // wording and provenance cannot be inspected unless every field is present.
+    if(status==='published'&&(!title.trim()||!body.trim()||!evidence.trim()))
+      emit('note',target,'published_note_evidence_incomplete');
     if((inspectDrafts||status==='published')&&(DRAFT.test(title)||DRAFT.test(body)||PENDING.test(evidence)))emit('note',target,'note_contains_unresolved_review_language');
   }
   for(const s of sources){
@@ -31,6 +35,7 @@ export function inspectPublicationEvidenceWarnings({notes=[],sources=[],inspectD
     const rights=read(s,'rights');if(rights!==undefined&&!plain(rights))throw TypeError('preflight_rights_invalid');
     const status=str(read(rights,'status')??read(s,'rightsStatus')??read(s,'rights_status')).toLowerCase();
     const evidence=str(read(rights,'evidence')??read(s,'rightsEvidence')??read(s,'rights_evidence')??read(s,'evidence'));
+    if(!status||status==='unknown')emit('source',target,'source_rights_status_unresolved');
     if(PERMISSIVE.has(status)&&UNCERTAIN.test(evidence))emit('source',target,'permission_claim_conflicts_with_evidence');
     if(status==='public_domain'&&!evidence.trim())emit('source',target,'public_domain_claim_lacks_rights_evidence');
   }
