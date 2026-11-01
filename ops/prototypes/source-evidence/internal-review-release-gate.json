@@ -43,7 +43,7 @@
     "managedStagingSyntheticIdentityLifecycle": "NOT_EXECUTED",
     "managedStagingTwoConnectionRevocation": "NOT_PROVEN",
     "providerLogoutAtomicity": "NOT_PROVEN",
-    "hostedAdminSecretCompatibility": "NOT_VERIFIED",
+    "hostedAdminSecretCompatibility": "DOCUMENTED_SDK_INTERFACE_TESTED_WITH_MOCKS_HOSTED_UNVERIFIED",
     "qualifiedReviewerAuthorization": "NOT_VERIFIED",
     "immutableProtectedReceipt": "NOT_VERIFIED"
   },
@@ -59,7 +59,7 @@
     "learnerPublicationApproved": false
   },
   "requiredNext": {
-    "immediate": "Confirm provider-supported hosted Auth-admin key transport and a trusted staging-only test execution environment, without secrets in PR CI.",
+    "immediate": "Review a pinned supabase-js SDK + lockfile in a trusted staging-only environment and verify hosted Admin create/read/delete with explicit operator authorization; never send staging secrets into PR CI.",
     "then": "One genuine staging signed-JWT Auth test with full deletion verification, followed by reviewed hosted signed-JWT receipt boundary and synchronized two-connection revocation test.",
     "release": "Owner-reviewed integration/CI, independent security signoff, real reviewer qualification, clinical/rights/exam approvals, explicit production deployment authorization."
   }
