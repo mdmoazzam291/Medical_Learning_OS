@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@supabase/supabase-js": "2.118.0"
-  }
+  },
+  "name": "mlos-staging-sdk",
+  "private": true,
+  "description": "Isolated operator-only synthetic staging Auth test dependency; never bundle into learner app"
 }
