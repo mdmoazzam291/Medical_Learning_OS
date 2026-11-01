@@ -207,3 +207,25 @@ Staging build/hosted Auth/SQL validation, review grant authority, source
 rights and production release remain independent, **unapproved** gates.
 Do not copy production identities or data into staging. All internal review
 PRs remain draft and unmerged.
+
+
+## 2026-11-01 — first managed staging PostgreSQL rollback acceptance (#371)
+
+Two synthetic SQL transactions were executed **only** against approved
+staging project `vwtdwafjrraptrgeshzt` (PostgreSQL 17.11).
+Temporary session/grant/receipt rows, application-owned row locks,
+synthetic revoke, and duplicate request-ID deduplication completed.
+After explicit `ROLLBACK`, an independent read-only inspection
+confirmed zero public tables/migrations and no permanent test objects.
+No GoTrue users, Auth row reads, public RPCs, production access or
+production schema/data modifications occurred.
+
+**Limited proof:** single managed-Postgres transaction only; no real
+concurrent grant race, no signed JWT/PostgREST on managed staging,
+no immutable receipt proof or payload fingerprint comparison, and no
+provider logout/DB atomicity. The experiment is NOT source-review
+authorization or release approval. Reproducible rollback-only SQL and
+limitations in
+`docs/INTERNAL_SOURCE_REVIEW_MANAGED_STAGING_ROLLBACK_SMOKE.md`.
+All internal source-review PRs remain draft, provider #350 OFF,
+and production Review → Live disabled.
