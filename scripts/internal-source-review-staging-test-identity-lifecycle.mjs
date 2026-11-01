@@ -177,7 +177,11 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   await journal.begin(credentials.email);recorded=true;
   const created=await adapters.create(credentials);
   createResponseReceived=true;
-  createdId=prop(created,'userId');
+  // Trusted adapter returns a normalized own-data property. Descriptors
+  // avoid invoking accessors and accept cross-realm plain response records.
+  const descriptor=created&&typeof created==='object'&&!Array.isArray(created)
+   ?Object.getOwnPropertyDescriptor(created,'userId'):null;
+  createdId=descriptor?.enumerable&&Object.hasOwn(descriptor,'value')?descriptor.value:null;
   if(!id(createdId))throw Error('unknown-new-user-id');
   await journal.associate(credentials.email,createdId);
   const signed=await adapters.signIn(credentials);
