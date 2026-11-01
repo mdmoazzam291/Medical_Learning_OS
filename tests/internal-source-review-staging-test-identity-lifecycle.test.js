@@ -29,7 +29,7 @@ const encoded=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
 const token=()=>encoded({alg:'HS256',typ:'JWT'})+'.'+
  encoded({iss:ORIGIN+'/auth/v1',aud:'authenticated',role:'authenticated',
   sub:USER,session_id:SESSION,exp:Math.floor(Date.now()/1000)+3600})+'.'+'a'.repeat(45);
-function scenario({create,signIn,probe,del,verify,begin,associate,clear}={}){
+function scenario({create,signIn,probe,own,del,verify,begin,associate,clear}={}){
  const steps=[];
  const journal={
   begin:async email=>{steps.push('journal-begin');assert.equal(email,EMAIL);if(begin)await begin();},
@@ -40,6 +40,7 @@ function scenario({create,signIn,probe,del,verify,begin,associate,clear}={}){
   create:async user=>{steps.push('create');if(user.email!==EMAIL||user.password!==PASSWORD)steps.push('synthetic-identity-mismatch');return create?create():{userId:USER};},
   signIn:async user=>{steps.push('signin');assert.equal(user.email,EMAIL);return signIn?signIn():{userId:USER,token:token()};},
   authProbe:async(t,u,s)=>{steps.push('hosted-readonly-auth-probe');assert.equal(t,token());assert.equal(u,USER);assert.equal(s,SESSION);return probe?probe():{reason:'staging-auth-getuser-readonly-pass',hostedJwtReadOnlyEvidence:true};},
+  verifyOwned:async(id,email)=>{steps.push('verify-owned');assert.equal(id,USER);assert.equal(email,EMAIL);return own?own():true;},
   delete:async id=>{steps.push('delete');assert.equal(id,USER);return del?del():true;},
   isDeleted:async id=>{steps.push('verify-deleted');assert.equal(id,USER);return verify?verify():true;}
  };
@@ -63,7 +64,7 @@ test('all steps including privileged admin deletion and independent verification
  const {run,steps}=scenario();
  const result=await run();
  assert.deepEqual(steps,['journal-begin','create','journal-associate',
-  'signin','hosted-readonly-auth-probe','delete','verify-deleted','journal-clear']);
+  'signin','hosted-readonly-auth-probe','verify-owned','delete','verify-deleted','journal-clear']);
  assert.equal(result.reason,'staging-auth-test-deleted');
  assert.equal(result.hostedSignedJwtEvidence,true);
  assert.equal(result.syntheticAccountDeletionVerified,true);
@@ -112,7 +113,7 @@ test('signup succeeded but sign-in fails -> user is still deleted and deletion c
  assert.equal(out.hostedSignedJwtEvidence,false);
  assert.equal(out.syntheticAccountDeletionVerified,true);
  assert.deepEqual(steps,['journal-begin','create','journal-associate',
-  'signin','delete','verify-deleted','journal-clear']);
+  'signin','verify-owned','delete','verify-deleted','journal-clear']);
  noAuthority(out);
 });
 test('forged session, foreign JWT or rejected probe leads to immediate deletion',async()=>{
@@ -128,6 +129,19 @@ test('forged session, foreign JWT or rejected probe leads to immediate deletion'
   assert.equal(out.syntheticAccountDeletionVerified,true);
   assert.equal(out.hostedSignedJwtEvidence,false);
   assert.equal(steps.at(-1),'journal-clear');
+  noAuthority(out);
+ }
+});
+test('a user is never deleted unless Auth admin confirms exact staging synthetic ownership',async()=>{
+ for(const own of [()=>false,()=>{throw Error('admin identity lookup failed');}]){
+  const {run,steps}=scenario({own});
+  const out=await run();
+  assert.equal(out.reason,'staging-owned-identity-unverified-reconcile-journal');
+  assert.equal(out.syntheticAccountDeletionVerified,false);
+  assert.equal(out.requiresManualReconciliation,true);
+  assert.ok(steps.includes('verify-owned'));
+  assert.ok(!steps.includes('delete'));
+  assert.ok(!steps.includes('journal-clear'));
   noAuthority(out);
  }
 });
