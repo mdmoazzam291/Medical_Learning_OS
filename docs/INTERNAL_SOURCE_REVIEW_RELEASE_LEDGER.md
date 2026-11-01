@@ -159,3 +159,26 @@ learner-facing features or external provider changed.
 See `docs/INTERNAL_SOURCE_REVIEW_GOTRUE_SESSION_RECHECK.md`.
 Independent authorized staging and security/rights/clinical sign-off remain
 required. #368 remains draft and stacked until separately approved.
+
+
+## 2026-11-01 — staging environment identity quarantine (#369)
+
+The linked Supabase project list was rechecked: only active
+`medical_learning_os` and inactive legacy `NEETPG2027`; **no separate
+approved staging project exists**. Draft #369 adds a purely offline,
+fail-closed project-selection classifier, pins both existing environment
+identities, and leaves the required staging ref `null`. It blocks
+production/legacy misselection, inactive candidates, wrong organization,
+duplicate or forged metadata and accidental approval by project-name match.
+
+Even a matching future staging target remains **metadata candidate only**:
+no hosted SQL, Auth/security acceptance, production review, migration or
+learner release permission is granted by the classifier. Reference:
+`docs/INTERNAL_SOURCE_REVIEW_STAGING_TARGET_GATE.md`.
+Explicit separate staging creation/approval and current-session
+security testing are still outstanding; do not revive the old project.
+
+The prior #368 local Auth `getUser` experiment does not prove provider
+signout and the application DB write are atomic. All real reviewer
+writes and review UI remain OFF until independent reviewed staging
+acceptance and explicit owner release approval.
