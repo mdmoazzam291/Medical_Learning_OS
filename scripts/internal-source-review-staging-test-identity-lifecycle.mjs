@@ -116,12 +116,21 @@ export function makeSupabaseSdkStagingAdapters(env,policy,createClient,fetcher=f
  const admin=createClient(ORIGIN,env.MLOS_STAGING_ADMIN_SECRET_KEY,options);
  const client=createClient(ORIGIN,env.MLOS_STAGING_PUBLISHABLE_KEY,options);
  if(!admin?.auth?.admin||!client?.auth)throw Error('trusted-sdk-invalid');
- const required=['createUser','getUserById','deleteUser'];
+ const required=['createUser','getUserById','deleteUser','listUsers'];
  if(required.some(name=>typeof admin.auth.admin[name]!=='function')||
   typeof client.auth.signInWithPassword!=='function')
   throw Error('trusted-sdk-admin-interface-invalid');
  const pub=env.MLOS_STAGING_PUBLISHABLE_KEY;
  return {
+  async auditEmpty(){
+   // A fresh, isolated staging environment is required. Refuse even one
+   // existing Auth account; do not page through or log account identities.
+   // Unexpected users could indicate that the supplied secret is scoped to
+   // the wrong project, or that an earlier test was not cleaned up.
+   const {data,error}=await admin.auth.admin.listUsers({page:1,perPage:2});
+   if(error||!Array.isArray(prop(data,'users')))return false;
+   return data.users.length===0;
+  },
   async create({email,password}){
    const {data,error}=await admin.auth.admin.createUser({
     email,password,email_confirm:true,
@@ -185,9 +194,17 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
  if(!validateStagingIdentityLifecycleSettings(settings,policy))
   return result('staging-lifecycle-not-authorized');
  if(!adapters||!journal||
-  ['create','signIn','authProbe','verifyOwned','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
+  ['auditEmpty','create','signIn','authProbe','verifyOwned','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
   ['begin','associate','clear'].some(k=>typeof journal[k]!=='function'))
   return result('staging-lifecycle-dependencies-invalid');
+ // Read-only hosted Auth inventory gate before generating identity, creating
+ // the local journal, or making any external write. No user data is logged.
+ try{
+  if((await adapters.auditEmpty())!==true)
+   return result('staging-auth-inventory-not-empty-or-unverified');
+ }catch{
+  return result('staging-auth-inventory-unavailable');
+ }
  let credentials,createdId=null,syntheticEmail=null,recorded=false,authVerified=false,createResponseReceived=false;
  try{
   credentials=typeof makeIdentity==='function'?makeIdentity():
