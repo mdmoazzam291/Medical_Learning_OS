@@ -8,6 +8,7 @@ const POLICY_KEYS=Object.freeze([
  'requiredStagingProjectName','requiresExplicitOwnerApproval'
 ]);
 const REF=/^[a-z0-9]{20}$/;
+const ref=value=>typeof value==='string'&&REF.test(value);
 const verdict=(reason,isolated=false)=>Object.freeze({
  reason,metadataOnly:true,
  isolatedStagingMetadataMatched:isolated,
@@ -41,14 +42,14 @@ function readPolicy(value){
  const p=record(value,POLICY_KEYS);
  if(p.schemaVersion!==1||
   p.purpose!=='internal-source-row-review-auth-acceptance'||
-  !REF.test(p.productionProjectRef)||
+  !ref(p.productionProjectRef)||
   p.productionProjectName!=='medical_learning_os'||
   p.requiredStagingProjectName!=='medical_learning_os_staging'||
   p.requiresExplicitOwnerApproval!==true||
-  (p.approvedStagingProjectRef!==null&&!REF.test(p.approvedStagingProjectRef))||
+  (p.approvedStagingProjectRef!==null&&!ref(p.approvedStagingProjectRef))||
   !Array.isArray(p.excludedLegacyProjectRefs)||
   p.excludedLegacyProjectRefs.length<1||p.excludedLegacyProjectRefs.length>10||
-  p.excludedLegacyProjectRefs.some(ref=>!REF.test(ref))||
+  p.excludedLegacyProjectRefs.some(ref=>!ref(ref))||
   new Set(p.excludedLegacyProjectRefs).size!==p.excludedLegacyProjectRefs.length||
   p.excludedLegacyProjectRefs.includes(p.productionProjectRef))
   throw new TypeError('staging_policy_invalid');
@@ -61,9 +62,9 @@ function readPolicy(value){
 const PROJECT_FIELDS=['id','ref','name','organization_id','status'];
 function projectMetadata(source){
  const p=record(source,PROJECT_FIELDS,false);
- if(!REF.test(p.id)||p.id!==p.ref||
+ if(!ref(p.id)||p.id!==p.ref||
   typeof p.name!=='string'||p.name.length<1||p.name.length>128||
-  !REF.test(p.organization_id)||
+  !ref(p.organization_id)||
   typeof p.status!=='string'||!['ACTIVE_HEALTHY','INACTIVE','PAUSED','COMING_UP','UNKNOWN'].includes(p.status))
   throw new TypeError('staging_inventory_invalid');
  return p;
