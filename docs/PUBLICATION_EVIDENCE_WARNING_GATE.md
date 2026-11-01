@@ -13,6 +13,24 @@ Issue [#326](https://github.com/mdmoazzam291/Medical_Learning_OS/issues/326) doc
 - The scan returns `approvalGranted: false`, `publicationDecision: 'not_evaluated'` even with zero findings. If malformed data prevents scanning, status is `unavailable` and `warningCount: null`, never a fabricated green zero.
 - Synthetic unit/integration regressions cover six-note-style draft phrases, unapproved provenance, public-domain/owned/licensed contradiction, absent public-domain evidence, benign clinical “pending” language, deterministic metadata ordering, no sensitive text leakage and malformed/duplicate identifiers.
 
+## Simple Admin workflow (one screen, three independent checks)
+
+| Admin question | What to check | Meaning of success |
+| --- | --- | --- |
+| **1. Permission — may we use it?** | Source ownership/license, exact material type (ordinary citation versus copied passage, recalled MCQ, commercial screenshot), allowed display scope, and recorded source-rights decision. | The qualified, authorized decision covers the **exact source version and use**. A publicly downloadable file is not automatically public-domain content. |
+| **2. Medical accuracy — is it correct?** | Exact question/note version, answer and explanation, current clinical guidance and applicable limitations, reviewed by an authorized qualified clinician. | Real reviewer disposition with identity, reason, version binding and timestamp. A previous generic approval sentence is not independent clinical evidence. |
+| **3. References — does the source support it?** | Actual cited passage/page/edition/version, accurate interpretation, and whether the source applies to the claim. | Exact-version References review is documented, distinct from source permission and medical correctness. |
+
+**Workflow:** Import privately → show all three checks in existing Content Review → record genuine independent human decisions in the existing review system → confirm exact-version evidence is still current → use the existing **Review → Live** publication action. If any check is pending, unknown, contradicted or withdrawn, it stays **Not verified/Needs review**, not “ready.” No extra approval type, reviewer impersonation, reviewer record reconstruction or second content-review system is needed.
+
+**Current UI increment:** In owner-only **Catalog Integrity**, click **Run read-only audit** to see “Before publishing: three checks” plus metadata-only warnings with exact IDs and clear explanations. This view **does not implement a Verified state**, because the existing read-only scan has no authority to authenticate clinician/reference/rights decisions. No warnings means “no matching phrases,” **not** rights cleared. If the API is old/malformed, it displays unavailable rather than green. The Admin must open existing Content Review for decisions; nothing is published or changed by the scan.
+
+### Core6 triage in the simplest terms
+
+- **8 sources:** inspect the evidence for actual reuse permissions, starting with any commercial recall screenshots; record authorized source-specific rights decisions, not assumed public-domain labels.
+- **6 published notes + 6 linked questions:** independently check their exact medical content and references, as well as rights implications for copied material.
+- **Owner release decision:** preserve the current versions and learner history; decide via authorized governance whether to retain or withdraw existing publication while review is pending. If remediated, create six *new* reviewed note versions rather than erasing old history.
+
 ## Known limitations
 
 This is **not** a legal classifier, human reviewer, credential verifier, publication gate, or source-rights database reconciliation. It does not inspect independent `source_rights_events`, the actual publisher license, commercial screenshots, reviewer qualifications, source-byte reuse, PDF pages, claim accuracy, the current content catalog, or private learner notes. Heuristic phrases can be missed or yield false positives. A source status of `citation_only` must still not be used as permission to reproduce passages.
