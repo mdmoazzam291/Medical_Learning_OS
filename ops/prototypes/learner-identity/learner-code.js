@@ -1,7 +1,7 @@
 /**
  * Learner Code v1: OFFLINE DOMAIN FOUNDATION, NOT A LIVE ACCOUNT ENDPOINT.
  *
- * The canonical key is always Supabase auth.users.id. A Learner Code is only
+ * The canonical key remains the existing Auth user UUID. A Learner Code is only
  * a human-readable reference; never a login, authorization, or recovery proof.
  * Before deployment, the persistence boundary needs a separately reviewed,
  * private schema, authenticated server handler and managed-RLS acceptance.
