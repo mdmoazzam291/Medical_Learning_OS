@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile,mkdtemp,stat,symlink,unlink,chmod,rm} from 'node:fs/promises';
+import {readFile,writeFile,mkdtemp,stat,symlink,unlink,chmod,rename,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {makeJournal,makeSupabaseSdkStagingAdapters,checkStagingSyntheticOperatorPreflight,runStagingSyntheticIdentityLifecycle,validateStagingIdentityLifecycleSettings}
@@ -277,6 +277,45 @@ test('journal rejects final symlink, absent file, and broadened file permissions
   await chmod(location,0o644);
   await assert.rejects(journal.associate(EMAIL,USER),/permissions_invalid/);
   assert.equal(await readFile(location,'utf8'),before,'unsafe journal not modified');
+ }finally{await rm(dir,{recursive:true,force:true});}
+});
+
+test('journal cleanup never adopts or unlinks a swapped recovery file',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-staging-journal-swap-'));
+ const path=join(dir,'recovery.jsonl'),saved=join(dir,'original.jsonl');
+ try{
+  const journal=makeJournal(path);
+  await journal.begin(EMAIL);
+  const original=await readFile(path,'utf8');
+  // A separate object must never clear recovery evidence from another run.
+  await assert.rejects(makeJournal(path).clear(),/not_owned/);
+  assert.equal(await readFile(path,'utf8'),original);
+  await rename(path,saved);
+  await writeFile(path,'replacement-recovery\n',{mode:0o600,flag:'wx'});
+  await assert.rejects(journal.associate(EMAIL,USER),/identity_changed/);
+  await assert.rejects(journal.clear(),/identity_changed/);
+  assert.equal(await readFile(path,'utf8'),'replacement-recovery\n');
+  assert.equal(await readFile(saved,'utf8'),original);
+  // A symlink in place of the journal must not be cleared either.
+  await unlink(path);
+  await symlink(saved,path);
+  await assert.rejects(journal.clear(),/identity_changed/);
+  assert.equal(await readFile(saved,'utf8'),original);
+ }finally{await rm(dir,{recursive:true,force:true});}
+});
+test('journal cleanup refuses broadened file permissions and missing original file',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'mlos-staging-journal-clearmode-'));
+ const path=join(dir,'recovery.jsonl');
+ try{
+  const journal=makeJournal(path);
+  await journal.begin(EMAIL);
+  await chmod(path,0o644);
+  await assert.rejects(journal.clear(),/identity_changed/);
+  assert.equal((await stat(path)).mode&0o777,0o644);
+  await chmod(path,0o600);
+  await journal.associate(EMAIL,USER);
+  await unlink(path);
+  await assert.rejects(journal.clear(),{code:'ENOENT'});
  }finally{await rm(dir,{recursive:true,force:true});}
 });
 
