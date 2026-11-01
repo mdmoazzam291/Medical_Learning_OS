@@ -315,3 +315,23 @@ required. Tests exercise real temporary filesystem durability and mocked
 administrative identity checking. This remains **offline code only**;
 no hosted staging Auth user has been created or deleted. No production
 source-review or learner release approval.
+
+
+## 2026-11-01 — source-review draft consolidation gate and Auth key compatibility
+
+A live GitHub review confirmed a stack of 22 open draft source-review
+PRs: #352 and #354–#374. Issue #353 is **not a PR**; external provider
+#350 remains OFF. No draft was merged or deployed. A machine-readable
+**BLOCKED_REVIEW_ONLY** gate now lists the exact chain, staging/production
+isolation, real versus simulated tests and all permissions held false.
+See `docs/INTERNAL_SOURCE_REVIEW_CONSOLIDATION_GATE.md` and
+`ops/prototypes/source-evidence/internal-review-release-gate.json`.
+
+A provider-documentation audit identified that `sb_secret_...` and
+`sb_publishable_...` keys are opaque API keys, not JWT bearer tokens.
+The #374 raw Auth request adapter was corrected to send `apikey` rather
+than synthetic `Authorization: Bearer sb_secret_...`. **This does not
+verify that hosted Auth admin POST/DELETE supports this exact transport**:
+no hosted creation, login, deletion or real JWT acceptance was run.
+The compatibility gate must be resolved in trusted staging before live
+account creation. CI success on the draft is never production approval.
