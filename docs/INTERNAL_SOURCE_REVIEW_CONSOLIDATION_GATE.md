@@ -66,12 +66,16 @@ as bearer JWTs; see the current official API-key documentation:
 - https://supabase.com/docs/guides/getting-started/api-keys
 - https://supabase.com/docs/guides/functions/auth-headers
 
-Draft #374's raw HTTP adapter has therefore been changed to place
-these keys in the `apikey` header without manufacturing a JWT bearer
-token. **This is a safety correction, not proof that hosted Auth admin
-POST/DELETE supports the key-only route.** A provider report exists
-of Auth admin POST behaving differently from GET using a new secret key:
-https://github.com/supabase/supabase/issues/48288
+Draft #374's raw HTTP Auth admin adapter has been **replaced** with the
+official server-side `@supabase/supabase-js` Admin methods:
+`createUser`, `getUserById`, `deleteUser`. Password sign-in uses a
+separate publishable-key client. Both disable session persistence and
+auto-refresh. The operator runner refuses to load a missing or mismatched
+pinned SDK version (`2.118.0`). This removes custom API-key transport
+assumptions, but **does not prove the hosted Admin calls succeed**. No
+real Auth user has been created. The SDK version and lockfile must be
+installed and independently reviewed in a trusted local test environment,
+never a PR workflow.
 
 **Owner/operator must confirm the currently supported Auth admin
 transport before any account creation attempt.** If the selected
