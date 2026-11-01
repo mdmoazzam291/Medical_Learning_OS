@@ -384,3 +384,17 @@ operator test. This is a point-in-time managed DB observation plus
 **offline** SDK/mock code; no hosted Auth account was created or
 deleted. Staging reviewer-grant authority and production source review
 remain blocked.
+
+### 2026-11-01 — actual hosted staging negative Auth acceptance (#374)
+
+The Foundation checks workflow successfully executed the public-only
+`internal-source-review-staging-hosted-auth-negative.mjs` against the
+actual managed staging Auth endpoint. **Anonymous GET** and
+**forged-JWT GET** were both denied (accepted rejection status 401/403).
+It used a public staging publishable key, no existing Auth user,
+no credential secret, and **no writes**. Local tests additionally
+assert deny-by-default on 200/400/404/429/500/transport failures.
+This is positive evidence for **negative Auth boundary behavior only**,
+not proof of a genuine signed JWT, protected receipt, correct reviewer
+authority, managed concurrency, or provider session invalidation.
+Production source-review and learner publication remain blocked.
