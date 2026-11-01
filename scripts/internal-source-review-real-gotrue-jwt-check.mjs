@@ -61,11 +61,11 @@ function requireDenied(r,label){
 function requireAccepted(r,label){
  assert.ok(r.status>=200&&r.status<300,label+': not accepted ('+r.status+')');
 }
-async function ready(){
+async function ready(token){
  // PostgREST must reload the newly added test-only RPC schema.
  for(let i=0;i<60;i++){
-  const res=await call('mlos_internal_source_review_local_v1',null,{q});
-  if(res.status!==404)return;
+  const res=await call('mlos_internal_source_review_local_v1',token,{q:{}});
+  if(res.status!==404||res.body?.code!=='PGRST202')return;
   await now();
  }
  throw Error('local_postgrest_test_function_not_visible');
@@ -94,8 +94,9 @@ async function getTestUser(client,account){
 }
 let signedA=false,signedB=false,connected=false;
 try{
- const a=await getTestUser(authA,account('a'));signedA=true;
- const b=await getTestUser(authB,account('b'));signedB=true;
+ const accountA=account('a'),accountB=account('b');
+ const a=await getTestUser(authA,accountA);signedA=true;
+ const b=await getTestUser(authB,accountB);signedB=true;
  assert.notEqual(a.user,b.user);assert.notEqual(a.session,b.session);
  await db.connect();connected=true;
  await db.query(await readFile(
@@ -111,7 +112,7 @@ try{
  await db.query('insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
   [grantId,'granted']);
  await db.query("select pg_catalog.pg_notify('pgrst','reload schema')");
- await ready();
+ await ready(a.token);
 
  requireDenied(await call('mlos_internal_source_review_local_v1',null,{q}),'anonymous');
  const pieces=a.token.split('.');
@@ -178,13 +179,24 @@ try{
  assert.equal(count,2);
  console.log('Local GoTrue signed-JWT signout race PASS: actual session lock serialized, review committed before logout, later reads/writes denied');
 
- // Current grant journal still has independent effect with a new session.
- const renewed=await authA.auth.signInWithPassword(account('a'));
- // Intentional: signup password above is random and not persisted here; skip
- // any accidental re-login with a newly generated, incorrect password.
- if(!renewed.error)throw Error('unexpected_test_account_password_reuse');
+ // A separate newly authenticated session is legitimate, but an exact
+ // source-review grant revocation must deny it (independent of signout).
+ const renewed=await authA.auth.signInWithPassword(accountA);
+ if(renewed.error||!renewed.data?.session?.access_token)
+  throw Error('real_gotrue_local_relogin_denied');
+ signedA=true;
+ const newToken=renewed.data.session.access_token;
+ assert.notEqual(jwtSession(newToken,a.user),a.session);
+ await db.query(
+  'insert into evidence_internal.local_grant_history(grant_event_id,transition) values($1,$2)',
+  [grantId,'revoked']);
+ requireDenied(await call('mlos_internal_source_read_local_v1',newToken,
+  {p_request:q.requestId}),'revoked exact reviewer grant read');
+ requireDenied(await call('mlos_internal_source_review_local_v1',newToken,
+  {q:{...q,requestId:'99999999-9999-4999-8999-999999999999'}}),'revoked exact reviewer grant write');
  assert.equal((await db.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,2);
- console.log('Local GoTrue combined acceptance PASS: no session, identity, or content data retained');
+ console.log('Local GoTrue current-grant denial PASS: new valid session cannot reuse revoked source-review grant');
+
 }finally{
  if(signedA)try{await authA.auth.signOut({scope:'local'});}catch{}
  if(signedB)try{await authB.auth.signOut({scope:'local'});}catch{}
