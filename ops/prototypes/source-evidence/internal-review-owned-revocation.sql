@@ -130,7 +130,8 @@ begin
  actor:=evidence_internal.assert_owned_reviewer_session();
  gid:=evidence_internal.owned_scoped_grant(actor,q);
  -- One request sleep is LOCAL ONLY, to observe actual PostgreSQL lock races.
- if q->>'requestId'='66666666-6666-4666-8666-666666666666'
+ if q->>'requestId' in ('66666666-6666-4666-8666-666666666666',
+  '77777777-7777-4777-8777-777777777777')
  then perform pg_catalog.pg_sleep(1.4);end if;
  return evidence_internal.record_review(actor,q,gid);
 end;$$;
