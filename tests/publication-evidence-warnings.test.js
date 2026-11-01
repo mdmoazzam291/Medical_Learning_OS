@@ -62,7 +62,7 @@ test('unknown or absent source-rights status is an explicit warning, not green',
 
 test('full published note fields are read for draft phrases and no original content is returned',()=>{
   const text='Body has REVIEW PENDING but the title is legitimate; do not publish protected language';
-  const r=inspect({notes:[note({body_markdown:text,provenance:{evidence:'Not human-approved'}})]});
+  const r=inspect({notes:[note({body_markdown:text,provenance:{evidence:'Original content, no decision claimed'}})]});
   assert.equal(r.warnings.length,1);
   assert.equal(r.warnings[0].code,'note_contains_unresolved_review_language');
   assert.ok(!JSON.stringify(r).includes(text));
