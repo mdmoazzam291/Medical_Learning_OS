@@ -133,7 +133,7 @@ test('network, response parser, hostile policy or identity properties fail close
  const net=await probeStagingAuthGetUser(env(),policy(),async()=>{throw Error('sensitive-token-and-key');});
  assert.equal(net.reason,'staging-auth-request-unavailable');
  closed(net);
- const parser=await probeStagingAuthGetUser(env(),policy(),async()=>response(200,null));
+ const parser=await probeStagingAuthGetUser(env(),policy(),async()=>({status:200,async json(){throw Error('invalid hosted response');}}));
  assert.equal(parser.reason,'staging-auth-request-unavailable');
  closed(parser);
  let getterCalled=false;
