@@ -49,3 +49,55 @@ export function overviewMarkup(dashboard, alerts = null) {
     (inbox.missing.length ? '<p class="muted">Not verified: ' + escapeText(inbox.missing.join(' · ')) + '. Unknown counts are shown as —.</p>' : '<p class="muted">Counts are separate signal families; they are not summed into a possibly duplicated total.</p>') +
     '<nav class="owner-summary-links" aria-label="Admin overview shortcuts">' + ['actions', 'users', 'content', 'health'].map(id => { const view = ADMIN_VIEWS.find(item => item.id === id); return '<a class="secondary action-link" href="/web/admin.html#' + view.anchor + '">' + view.label + ' →</a>'; }).join('') + '</nav>';
 }
+
+
+// Owner-only audit presentation, not a content-approval or publication flow.
+// Warnings are derived from metadata checks, not legally or medically verified evidence.
+const EVIDENCE_WARNING_LABELS = Object.freeze({
+  note_contains_unresolved_review_language: 'Published note still says draft or unapproved',
+  permission_claim_conflicts_with_evidence: 'Source permission claim conflicts with its recorded evidence',
+  public_domain_claim_lacks_rights_evidence: 'Public-domain claim has no recorded supporting evidence'
+});
+const trustCheck = (title, question, required) =>
+  '<li><strong>' + escapeText(title) + '</strong><span>' + escapeText(question) +
+  '</span><small>' + escapeText(required) + '</small></li>';
+
+export function publicationEvidenceMarkup(scan) {
+  const intro = '<section class="owner-status-block" aria-label="Three content checks">' +
+    '<h3>Before publishing: three checks</h3>' +
+    '<ol class="owner-trust-checks">' +
+    trustCheck('1. Permission', 'May we legally reuse this material?', 'Source ownership, licence or permitted-use evidence') +
+    trustCheck('2. Medical accuracy', 'Is the clinical content correct?', 'Qualified review of the exact question or note') +
+    trustCheck('3. References', 'Does the citation support the claim?', 'Verified source and relevant passage') +
+    '</ol>' +
+    '<p class="muted">These checks remain separate human decisions. The audit below flags possible problems only; it never grants approval or publishes content.</p>';
+  // An older or malformed owner response must never be shown as an empty scan.
+  const complete = scan?.status === 'complete' &&
+    scan.approvalGranted === false && scan.publicationDecision === 'not_evaluated' &&
+    Number.isSafeInteger(scan.warningCount) && scan.warningCount >= 0 &&
+    Array.isArray(scan.warnings) &&
+    scan.warnings.length <= 120 && scan.warnings.length <= scan.warningCount &&
+    typeof scan.truncated === 'boolean';
+  if (!complete) {
+    return intro + '<p><strong>Evidence warning scan unavailable.</strong> Nothing is verified. Re-run after the owner API has been updated; continue independent review.</p></section>';
+  }
+  const rows = scan.warnings.map(item => {
+    if (!item || !['note', 'source'].includes(item.scope) ||
+        typeof item.targetId !== 'string' || typeof item.code !== 'string' ||
+        item.action !== 'independent_human_review_required') return null;
+    return '<tr><td>' + escapeText(item.scope === 'note' ? 'Note' : 'Source') +
+      '</td><td><code>' + escapeText(item.targetId) + '</code></td><td>' +
+      escapeText(EVIDENCE_WARNING_LABELS[item.code] || 'Inspect this warning with a qualified reviewer') + '</td></tr>';
+  });
+  if (rows.some(row => row === null)) {
+    return intro + '<p><strong>Evidence warning scan malformed.</strong> Review status is unknown; no clean result can be claimed.</p></section>';
+  }
+  const count = scan.warningCount;
+  return intro +
+    (count ? '<p><strong>' + escapeText(count) + ' possible content-review problems detected.</strong> Inspect exact versions and independent evidence.</p>'
+      : '<p><strong>No matching warning phrases found.</strong> Source permissions, clinical correctness and references are still unverified by this scan.</p>') +
+    (rows.length ? '<div class="owner-table-wrap"><table class="owner-table"><thead><tr><th>Type</th><th>Exact ID</th><th>Review needed</th></tr></thead><tbody>' +
+      rows.join('') + '</tbody></table></div>' : '') +
+    (scan.truncated || count > rows.length ? '<p class="muted">Only a sample of warnings is shown. Inspect the complete evidence independently.</p>' : '') +
+    '<p class="muted"><strong>Next action:</strong> Open Content Review, check rights and references, obtain the authorized medical decision, then use the existing Review → Live gate only when every requirement is independently satisfied.</p></section>';
+}
