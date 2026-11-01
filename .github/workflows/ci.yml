@@ -459,6 +459,8 @@ jobs:
           "$CLI" init
           "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
       - name: Prove verified user JWT, active session, grant and immutable event within one transaction
+        env:
+          MLOS_CI_HEAD_REF: ${{ github.head_ref }}
         run: |
           CLI="$RUNNER_TEMP/mlos-atomic-review/node_modules/.bin/supabase"
           cd "$RUNNER_TEMP/mlos-atomic-stack"
@@ -476,7 +478,7 @@ jobs:
           export MLOS_LOCAL_ATOMIC_KEY="$KEY"
           export MLOS_LOCAL_ATOMIC_SDK="file://$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
           export MLOS_LOCAL_ATOMIC_PG="file://$RUNNER_TEMP/mlos-atomic-review/node_modules/pg/esm/index.mjs"
-          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" || "${{ github.head_ref }}" == test/internal-review-* ]]; then
+          if [[ "${{ github.event.pull_request.number }}" == "366" || "${{ github.event.pull_request.number }}" == "367" || "${{ github.event.pull_request.number }}" == "368" || "$MLOS_CI_HEAD_REF" == test/internal-review-* ]]; then
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-owned-revocation-check.mjs"
           else
             node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
