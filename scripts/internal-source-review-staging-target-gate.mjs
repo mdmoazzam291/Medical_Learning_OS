@@ -49,7 +49,7 @@ function readPolicy(value){
   (p.approvedStagingProjectRef!==null&&!ref(p.approvedStagingProjectRef))||
   !Array.isArray(p.excludedLegacyProjectRefs)||
   p.excludedLegacyProjectRefs.length<1||p.excludedLegacyProjectRefs.length>10||
-  p.excludedLegacyProjectRefs.some(ref=>!ref(ref))||
+  p.excludedLegacyProjectRefs.some(value=>!ref(value))||
   new Set(p.excludedLegacyProjectRefs).size!==p.excludedLegacyProjectRefs.length||
   p.excludedLegacyProjectRefs.includes(p.productionProjectRef))
   throw new TypeError('staging_policy_invalid');
