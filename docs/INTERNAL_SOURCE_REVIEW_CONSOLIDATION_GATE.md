@@ -194,3 +194,21 @@ separately after it completes; nonmatching branches still need a
 deliberate security-testing policy before integration. No hosted Auth
 admin credentials, persistent staging account, source-review migration,
 merge or deployment are authorized.
+
+## Aggregate CI evidence gate — 2026-11-02
+
+An `internal-review-security-gate` job now uses GitHub `needs`
+results to require `success` from **all five**: core `check`,
+Chromium `browser`, `webkit`, both matrix instances of
+`internal-review-native-postgres`, and the disposable local
+`internal-review-real-gotrue-jwt-atomic` test. The job is restricted
+to pull requests from `test/internal-review-` branches and uses
+`always()` so a skipped/failed/cancelled dependency cannot silently
+turn the aggregate result green. No secrets or source-review writes
+are supplied to the gate.
+
+The aggregate is **local regression evidence**, not permission to
+merge, deploy, publish, or approve clinical/source rights. A green
+aggregate does not establish actual hosted staging signed JWT
+authentication, reviewer-receipt readback, managed concurrency,
+or provider-only signout atomicity.
