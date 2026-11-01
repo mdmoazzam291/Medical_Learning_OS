@@ -46,3 +46,24 @@ test('malformed and duplicate IDs fail closed rather than falsely return zero',(
   assert.throws(()=>inspect({sources:[{sourceId:'a',rights:{status:'public_domain',evidence:32}}]}),/text_invalid/);
   assert.throws(()=>inspect({notes:[{noteVersionId:'x',status:'published',title:'x',provenance:'invalid'}]}),/provenance_invalid/);
 });
+
+
+test('published note missing text or provenance cannot be presented as zero-warning clean',()=>{
+  const r=inspect({notes:[{noteVersionId:'v1',status:'published'}]});
+  assert.deepEqual(r.warnings.map(w=>w.code),['published_note_evidence_incomplete']);
+  assert.equal(r.approvalGranted,false);
+});
+
+test('unknown or absent source-rights status is an explicit warning, not green',()=>{
+  const r=inspect({sources:[{sourceId:'a',rights:{status:'unknown',evidence:'Under review'}},{sourceId:'b'}]});
+  assert.deepEqual(r.warnings.map(w=>w.code),['source_rights_status_unresolved','source_rights_status_unresolved']);
+  assert.equal(r.publicationDecision,'not_evaluated');
+});
+
+test('full published note fields are read for draft phrases and no original content is returned',()=>{
+  const text='Body has REVIEW PENDING but the title is legitimate; do not publish protected language';
+  const r=inspect({notes:[note({body_markdown:text,provenance:{evidence:'Not human-approved'}})]});
+  assert.equal(r.warnings.length,1);
+  assert.equal(r.warnings[0].code,'note_contains_unresolved_review_language');
+  assert.ok(!JSON.stringify(r).includes(text));
+});
