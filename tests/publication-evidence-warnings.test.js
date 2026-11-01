@@ -67,3 +67,10 @@ test('full published note fields are read for draft phrases and no original cont
   assert.equal(r.warnings[0].code,'note_contains_unresolved_review_language');
   assert.ok(!JSON.stringify(r).includes(text));
 });
+
+
+test('Core6-style permission and reviewer decisions still pending contradict public-domain clearance',()=>{
+  const r=inspect({sources:[source({rights:{status:'public_domain',evidence:'Permission/reviewer decisions were pending on this source'}})]});
+  assert.deepEqual(r.warnings.map(w=>w.code),['permission_claim_conflicts_with_evidence']);
+  assert.equal(r.approvalGranted,false);
+});
