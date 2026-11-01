@@ -120,6 +120,7 @@ jobs:
         run: |
           node scripts/source-evidence-private-authority-pg-check.js
           node scripts/source-evidence-provider-key-trust-pg-check.js
+          node scripts/source-evidence-native-snapshot-pg-check.js
       - name: Verify isolated TLS/SCRAM gateway and private restore ACL safety on PostgreSQL 18
         env:
           PG_CLIENT_BIN_DIR: /usr/lib/postgresql/18/bin
@@ -278,6 +279,7 @@ jobs:
         run: |
           node scripts/source-evidence-private-authority-pg-check.js
           node scripts/source-evidence-provider-key-trust-pg-check.js
+          node scripts/source-evidence-native-snapshot-pg-check.js
 
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
