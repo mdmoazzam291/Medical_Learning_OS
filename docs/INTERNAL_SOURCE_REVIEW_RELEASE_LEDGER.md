@@ -438,3 +438,15 @@ script. Staging SDK contract and public-only hosted Auth negative tests
 also use the branch-family gate. **No new hosted JWT positive evidence**
 or production approval is implied; the new exact-head CI should be
 checked separately.
+
+### 2026-11-02 — fail-closed aggregate security CI check
+
+The latest previously verified draft #374 run (41343219755) passed
+all six individual core/browser/WebKit/PG17/PG18/local-GoTrue jobs.
+An additional branch-family `internal-review-security-gate` now requires
+each requisite job outcome to be **success**, rejecting skipped,
+failed or cancelled prerequisites. It runs with `always()`, depends
+on the completed matrix PostgreSQL job, and carries no credential or
+release rights. Exact-head CI evidence must independently verify the
+new aggregate job before it is claimed as passing. Hosted staging
+identity/receipt and production release remain blocked.
