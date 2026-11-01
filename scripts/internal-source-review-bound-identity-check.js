@@ -121,6 +121,27 @@ try{
  assert.deepEqual((await admin.query('select transition from evidence_internal.grant_events order by event_id')).rows.map(r=>r.transition),
   ['granted','revoked']);
  console.log('Bound reviewer decision-first revocation PASS: lock order and append-only journal');
+
+ // Revocation first: a new grant is revoked while the governor holds the
+ // package lock; a competing bound reviewer must wait then reject. A revoked
+ // grant ID cannot be resurrected by adding a second 'granted' journal row.
+ const grant2='88888888-8888-4888-8888-888888888888';
+ await admin.query('insert into evidence_internal.grants values($1,$2,$3,1,$4,$5,true,true,true,true)',
+  [grant2,reviewerA,owner,digest,'case-a']);
+ await admin.query('insert into evidence_internal.grant_events(grant_event_id,transition) values($1,$2)',
+  [grant2,'granted']);
+ await governor.query('begin');
+ await governor.query('select evidence_internal.revoke_bound_grant($1)',[grant2]);
+ const blockedRequest={...request,requestId:'99999999-9999-4999-8999-999999999999'};
+ const deniedPending=assert.rejects(a.query(write,[JSON.stringify(blockedRequest),grant2]),/internal_review_denied/);
+ await waitForBlock(observer,aPid,governorPid);
+ await governor.query('commit');
+ await deniedPending;
+ await assert.rejects(admin.query('insert into evidence_internal.grant_events(grant_event_id,transition) values($1,$2)',
+  [grant2,'granted']),/duplicate key value violates unique constraint/);
+ assert.equal((await admin.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,2);
+ console.log('Bound reviewer revoke-first PASS: blocked transaction denied without decision');
+
 }finally{
  await Promise.allSettled(clients.map(c=>c.query('rollback')));
  await Promise.allSettled(clients.map(c=>c.end()));
