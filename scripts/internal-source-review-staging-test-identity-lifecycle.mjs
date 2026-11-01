@@ -5,7 +5,7 @@
 // identity email/UUID (0600) to allow manual recovery after interruption.
 import {randomBytes} from 'node:crypto';
 import {open,readFile,writeFile,unlink} from 'node:fs/promises';
-import {isAbsolute} from 'node:path';
+import {isAbsolute,relative,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {probeStagingAuthGetUser} from './internal-source-review-staging-auth-getuser-probe.mjs';
 
@@ -51,6 +51,7 @@ export function validateStagingIdentityLifecycleSettings(env,policy){
    typeof adminKey==='string'&&/^sb_secret_[a-zA-Z0-9_-]{12,}$/.test(adminKey)&&adminKey.length<257&&
    typeof journal==='string'&&isAbsolute(journal)&&journal.length<1024&&
    !journal.includes('\0')&&!journal.startsWith('/mnt/data/')&&
+   (()=>{const rel=relative(process.cwd(),journal);return rel==='..'||rel.startsWith('..'+sep);})()&&
    publicKey!==adminKey;
  }catch{return false;}
 }
