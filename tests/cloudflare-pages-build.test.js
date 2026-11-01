@@ -79,3 +79,31 @@ test('Render static server and Pages build share the same public-surface contrac
   assert.match(server, /import \{ publicFileSet \} from '\.\/public-surface\.js';/);
   assert.match(server, /publicFileSet\.has\(path\)/);
 });
+
+test('private source evidence, source review and signer material cannot enter public bundle', () => {
+  // Build-pages copies precisely publicFiles; reject future accidental widening
+  // even if a developer edits that allowlist intentionally or by mistake.
+  const denied = [
+    /^ops\/prototypes\/source-evidence\//,
+    /^scripts\/(?:lib\/)?source-evidence-/,
+    /^src\/domain\/(?:source-evidence-|source-row-)/,
+    /^tests\/source-(?:evidence|row)-/,
+    /^docs\/(?:evidence\/|SOURCE_EVIDENCE_|SOURCE_ROW_|reviews\/)/,
+    /^data\/nmc-2024-/,
+    /^docs\/NMC_/
+  ];
+  for (const path of publicFiles) {
+    assert.equal(denied.some(rule => rule.test(path)), false,
+      `Private review artifact must not enter learner Pages: ${path}`);
+  }
+  for (const path of [
+    'ops/prototypes/source-evidence/private-authority.sql',
+    'ops/prototypes/source-evidence/provider-key-trust.sql',
+    'scripts/lib/source-evidence-private-signed-ack.js',
+    'scripts/lib/source-evidence-private-receipt-http.js',
+    'docs/evidence/2026-10-31-private-delivery-intent-reconciliation.md',
+    'data/nmc-2024-competency-counts.json'
+  ]) {
+    assert.equal(publicFileSet.has(path), false, `Private file exposed: ${path}`);
+  }
+});
