@@ -465,3 +465,15 @@ cover success, extant journal, non-private directory, incorrect
 project, nonempty/unavailable Auth and no unexpected writes. The
 credentialed hosted acceptance trial remains unexecuted and must
 be separately authorized by the owner.
+
+### 2026-11-02 — reject swapped/altered staging cleanup journal (#374)
+
+The recovery journal is now inode/device/owner-bound to the original
+exclusive-create descriptor. Append and cleanup reject a renamed or
+replaced file, symlink, wrong mode, missing file or a fresh journal
+object attempting to take over a prior run. Local fixture tests verify
+recovery evidence is not silently removed on detected substitution.
+This is a **local operator filesystem guard only** with a documented
+path-based unlink race limitation: it does not prove hosted staging
+signed-JWT acceptance, revocation atomicity or reviewer authority.
+Production/clinical/rights release remains blocked.
