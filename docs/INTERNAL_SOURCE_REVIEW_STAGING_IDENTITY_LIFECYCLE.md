@@ -258,3 +258,24 @@ journal. Even this cannot guarantee no concurrent outside writer;
 operator isolation remains a prerequisite. Tests use a private
 throwaway local filesystem and mocked Auth adapter; **no live hosted
 Admin key or synthetic account was used** in this change.
+
+## Recovery-journal file identity hardening (2026-11-02)
+
+The operator journal now retains the original file's device, inode and
+owner from the **exclusive create**. Subsequent UUID association and
+cleanup require that the file at the journal path is still the same
+regular, single-link `0600` file; any replacement, permission drift,
+symlink substitution, or missing path fails closed. An independent
+journal instance **cannot adopt or clear** a prior interrupted run.
+Tests cover alternate file replacement, symlink substitution, loosened
+permissions and disappearance before cleanup. The original or swapped
+journal evidence is retained for manual inspection, never silently
+adopted as a completed cleanup.
+
+**Limitation:** Node path-based unlink and file-stat are not a single
+atomic filesystem operation. The required private user-owned `0700`
+parent directory, trusted single operator, and no concurrent same-user
+writer are therefore mandatory; these checks reduce accidental
+replacement but do not eliminate a same-user time-of-check/time-of-use
+race. A successful local journal unlink is still **not proof** of hosted
+Auth token invalidation, source rights, or production readiness.
