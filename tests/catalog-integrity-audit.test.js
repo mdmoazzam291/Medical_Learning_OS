@@ -100,3 +100,33 @@ test('owner endpoint requires verified authorization before reading full catalog
   assert.match(src,/integrity_catalog_changed_retry/);
   assert.doesNotMatch(src,/path === "\/content-integrity"[\s\S]*?return response\(req, 200, first\.body\)/);
 });
+
+
+test('owner-only integrity response includes advisory Core6-style review/rights warnings, no protected content',()=>{
+  const x=base();
+  x.catalog.concepts=[c];
+  x.catalog.sources=[{...s,rights:{status:'public_domain',evidence:'Commercial recall screenshots have unknown rights - private source notes'}}];
+  x.catalog.questions=[q('q1')];
+  x.notes=[{id:'note-1',concept_id:'c1',status:'published',title:'Case summary [review draft]',body_markdown:'UNAPPROVED AI-ASSISTED REVIEW DRAFT with private full material',provenance:{evidence:'Not human-approved'},source_ids:['s1']}];
+  x.links=[{note_version_id:'note-1',question_id:'q1'}];
+  const r=auditCanonicalCatalog(x);
+  assert.equal(r.publicationEvidenceScan.status,'complete');
+  assert.equal(r.publicationEvidenceScan.warningCount,2);
+  assert.deepEqual(r.publicationEvidenceScan.warnings.map(w=>w.code).sort(),[
+    'note_contains_unresolved_review_language','permission_claim_conflicts_with_evidence'
+  ]);
+  assert.equal(r.publicationEvidenceScan.approvalGranted,false);
+  assert.equal(r.publicationEvidenceScan.publicationDecision,'not_evaluated');
+  assert.equal(r.rightsVerified,false);
+  assert.ok(!JSON.stringify(r).includes('private full material'));
+  assert.ok(!JSON.stringify(r).includes('private source notes'));
+});
+
+test('malformed provenance warning scan is unavailable rather than falsely reporting zero',()=>{
+  const x=base();x.catalog.concepts=[c];x.catalog.sources=[s];x.catalog.questions=[q('q1')];
+  x.notes=[{id:'note-1',concept_id:'c1',status:'published',title:'Synthetic',provenance:'malformed'}];
+  const r=auditCanonicalCatalog(x);
+  assert.equal(r.publicationEvidenceScan.status,'unavailable');
+  assert.equal(r.publicationEvidenceScan.warningCount,null);
+  assert.equal(r.publicationEvidenceScan.approvalGranted,false);
+});
