@@ -3,6 +3,7 @@
 import assert from 'node:assert/strict';
 import {randomBytes} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
+import {createInternalSourceRowReadbackRecovery} from '../src/domain/internal-source-row-readback-recovery.js';
 
 const env=process.env,origin='http://127.0.0.1:54321';
 const dbUrl=env.MLOS_LOCAL_ATOMIC_DB_URL;
@@ -146,6 +147,41 @@ try{
  requireDenied(await call('mlos_internal_source_review_local_v1',a.token,
   {q:{...q,rationale:q.rationale+' changed'}}),'changed retry conflicts');
  console.log('Local GoTrue signed-JWT transaction PASS: current true session, scoped grant, idempotent event and protected readback');
+
+ // Simulate application loss of the prior HTTP write response: recovery is
+ // handed only the original request, not first.body/repeat.body. It can only
+ // read via the *current signed user* and must not submit another decision.
+ const recover=createInternalSourceRowReadbackRecovery({
+  async preflight(t,original){
+   const verified=await authA.auth.getUser(t);
+   if(verified.error||verified.data?.user?.id!==a.user||
+      original.requestId!==q.requestId)throw Error('local_recovery_identity_denied');
+   // Shape-only preflight fixture: real current grants/session MUST be
+   // checked by the protected DB read, not inferred from this response.
+   return {eligible:true,reviewerId:a.user,sessionChecked:true,
+    reviewerAuthenticated:true,reviewerGrantVerified:false,
+    decisionRecorded:false};
+  },
+  async readAsUser(t,requestId){
+   const response=await call('mlos_internal_source_read_local_v1',t,{p_request:requestId});
+   if(response.status<200||response.status>=300)throw Error('local_protected_read_denied');
+   return response.body;
+  }
+ });
+ const recovered=await recover(a.token,q);
+ assert.equal(recovered.readbackShapeMatched,true);
+ assert.equal(recovered.candidateReceipt.decisionId,first.body.decisionId);
+ assert.equal(recovered.candidateReceipt.grantEventId,grantId);
+ assert.equal(recovered.candidateReceipt.reviewerId,a.user);
+ assert.equal(recovered.safeToResubmit,false);
+ assert.equal(recovered.writeAttempted,false);
+ assert.equal(recovered.decisionRecorded,false);
+ assert.equal(recovered.transactionVerified,false);
+ assert.equal((await db.query('select count(*)::int n from evidence_internal.decisions')).rows[0].n,1);
+ requireDenied(await call('mlos_internal_source_read_local_v1',b.token,
+  {p_request:q.requestId}),'foreign JWT cannot recover another reviewer event');
+ console.log('Local GoTrue ambiguous-write recovery PASS: separate protected read, original request binding, no re-submit');
+
 
  // This race-only request sleeps after the function has FOR SHARE locked
  // auth.sessions. A genuine local GoTrue signout must wait to delete row.
