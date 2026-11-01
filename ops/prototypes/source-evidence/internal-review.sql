@@ -59,8 +59,10 @@ begin
  or exists(select 1 from jsonb_object_keys(q) x where x<>all(expected))
  then raise exception 'internal_review_invalid';end if;
  foreach k in array expected loop
-  if jsonb_typeof(q->k) is distinct from
-   case when k in ('packageVersion','caseVersion') then 'number' else 'string' end
+  if (k in ('packageVersion','caseVersion') and
+      jsonb_typeof(q->k) is distinct from 'number') or
+     (k not in ('packageVersion','caseVersion') and
+      jsonb_typeof(q->k) is distinct from 'string')
   then raise exception 'internal_review_invalid';end if;
  end loop;
  if q->>'targetType'<>'source-row-case' or
