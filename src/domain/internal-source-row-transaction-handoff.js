@@ -14,7 +14,8 @@ const deny=reason=>Object.freeze({
 });
 const uuid=v=>typeof v==='string'&&
  /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(v);
-const cleanPreflight=v=>{
+// Parses a preflight-only result; never treats caller-provided fields as proof of authorization.
+export const parseInternalSourceReviewPreflight=v=>{
  try{
   if(!v||typeof v!=='object'||
      ![Object.prototype,null].includes(Object.getPrototypeOf(v)))return null;
@@ -54,7 +55,7 @@ export function createInternalSourceRowTransactionHandoff({preflight,commitAsUse
   if(typeof token!=='string'||token.length<16||token.length>8192||/\s/.test(token))
    return deny('invalid-token');
   let expectedReviewerId;
-  try{expectedReviewerId=cleanPreflight(await preflight(token,Object.freeze(q)));}
+  try{expectedReviewerId=parseInternalSourceReviewPreflight(await preflight(token,Object.freeze(q)));}
   catch{return deny('preflight-unavailable');}
   if(!expectedReviewerId)return deny('review-not-eligible');
 
