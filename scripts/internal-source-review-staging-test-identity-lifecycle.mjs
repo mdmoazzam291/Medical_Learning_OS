@@ -165,7 +165,7 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   ['create','signIn','authProbe','delete','isDeleted'].some(k=>typeof adapters[k]!=='function')||
   ['begin','associate','clear'].some(k=>typeof journal[k]!=='function'))
   return result('staging-lifecycle-dependencies-invalid');
- let credentials,createdId=null,recorded=false,authVerified=false,reason='provision-unconfirmed';
+ let credentials,createdId=null,recorded=false,authVerified=false,createResponseReceived=false;
  try{
   credentials=typeof makeIdentity==='function'?makeIdentity():
    {email:identityEmail(),password:secretPassword()};
@@ -176,6 +176,7 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
    return result('staging-lifecycle-identity-invalid');
   await journal.begin(credentials.email);recorded=true;
   const created=await adapters.create(credentials);
+  createResponseReceived=true;
   createdId=prop(created,'userId');
   if(!id(createdId))throw Error('unknown-new-user-id');
   await journal.associate(credentials.email,createdId);
@@ -188,14 +189,14 @@ export async function runStagingSyntheticIdentityLifecycle({settings,policy,adap
   if(prop(probe,'reason')!=='staging-auth-getuser-readonly-pass'||
    prop(probe,'hostedJwtReadOnlyEvidence')!==true)
    throw Error('staging-hosted-getuser-not-confirmed');
-  authVerified=true;reason='hosted-auth-probe-passed-cleanup-required';
+  authVerified=true;
  }catch{/* do not expose passwords, JWTs, email, ids or provider errors */}
  finally{
   // No credential/token value goes into result or GitHub logs.
   credentials=null;
  }
  if(!recorded)return result('staging-lifecycle-journal-unavailable');
- if(!id(createdId))return result('staging-create-ambiguous-reconcile-journal',false,false,true);
+ if(!id(createdId))return result(createResponseReceived?'staging-create-identity-unverified-reconcile-journal':'staging-create-ambiguous-reconcile-journal',false,false,true);
  let deleted=false;
  try{
   const requestAck=await adapters.delete(createdId);
