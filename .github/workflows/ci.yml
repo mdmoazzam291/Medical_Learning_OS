@@ -425,3 +425,53 @@ jobs:
             cd "$RUNNER_TEMP/mlos-auth-review-stack"
             "$CLI" stop --no-backup
           fi
+
+  internal-review-real-gotrue-jwt-atomic:
+    # Test-only local Auth-issued JWT via PostgREST + real session row.
+    # Never connect to a hosted project or migrate a real database.
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.number == 361 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned isolated Auth SDK and database tools
+        run: npm install --prefix "$RUNNER_TEMP/mlos-atomic-review" --no-audit --no-fund supabase@2.120.0 @supabase/supabase-js@2.118.0 pg@8.22.0
+      - name: Start migration-free local identity and database services
+        run: |
+          CLI="$RUNNER_TEMP/mlos-atomic-review/node_modules/.bin/supabase"
+          mkdir -p "$RUNNER_TEMP/mlos-atomic-stack"
+          cd "$RUNNER_TEMP/mlos-atomic-stack"
+          "$CLI" init
+          "$CLI" start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - name: Prove verified user JWT, active session, grant and immutable event within one transaction
+        run: |
+          CLI="$RUNNER_TEMP/mlos-atomic-review/node_modules/.bin/supabase"
+          cd "$RUNNER_TEMP/mlos-atomic-stack"
+          STATUS="$("$CLI" status -o env)"
+          DB_URL="$(printf '%s\n' "$STATUS" | sed -nE 's/^DB_URL="?([^"]+)"?$/\1/p' | head -1)"
+          KEY="$(printf '%s\n' "$STATUS" | sed -nE 's/^PUBLISHABLE_KEY="?([^"]+)"?$/\1/p' | head -1)"
+          if [[ "$DB_URL" != postgresql://postgres:*@127.0.0.1:54322/postgres && "$DB_URL" != postgres://postgres:*@127.0.0.1:54322/postgres ]] || [[ "$KEY" != sb_publishable_* ]]; then
+            echo "LOCAL_ATOMIC_REVIEW_AUTH_NOT_ACCEPTED: no disposable Auth or DB"
+            exit 1
+          fi
+          echo "export { createClient } from '@supabase/supabase-js';" > "$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
+          export MLOS_LOCAL_ATOMIC_CONFIRM=ISOLATED_LOCAL_GOTRUE_TEST_STACK
+          export MLOS_LOCAL_ATOMIC_URL=http://127.0.0.1:54321
+          export MLOS_LOCAL_ATOMIC_DB_URL="$DB_URL"
+          export MLOS_LOCAL_ATOMIC_KEY="$KEY"
+          export MLOS_LOCAL_ATOMIC_SDK="file://$RUNNER_TEMP/mlos-atomic-review/review-sdk.mjs"
+          export MLOS_LOCAL_ATOMIC_PG="file://$RUNNER_TEMP/mlos-atomic-review/node_modules/pg/esm/index.mjs"
+          node "$GITHUB_WORKSPACE/scripts/internal-source-review-real-gotrue-jwt-check.mjs"
+      - name: Destroy synthetic Auth project and unbacked database
+        if: always()
+        run: |
+          CLI="$RUNNER_TEMP/mlos-atomic-review/node_modules/.bin/supabase"
+          if [[ -x "$CLI" && -d "$RUNNER_TEMP/mlos-atomic-stack/supabase" ]]; then
+            cd "$RUNNER_TEMP/mlos-atomic-stack"
+            "$CLI" stop --no-backup
+          fi
