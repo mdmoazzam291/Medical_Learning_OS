@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-11-02T12:31:22.731717+00:00",
+  "scope": "public_PWA_HTTPS_preview_browser_observation",
+  "pr": 380,
+  "preview_commit": "36bacd91c78de2ef04c189f13ded22da008b4dbf",
+  "implementation_commit": "ad3e0c56671d7679500fd2084e4ea5e3bb66c434",
+  "provider_deployment_id": "42ef6163-2ef6-43f1-8279-ca72b508f37f",
+  "provider_evidence": "https://github.com/mdmoazzam291/Medical_Learning_OS/pull/380#issuecomment-6576826807",
+  "browser_verified_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/",
+  "checks": {
+    "homepage_rendered": true,
+    "head_manifest_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/web/manifest.webmanifest",
+    "apple_standalone": "yes",
+    "theme_color": "#244A3A",
+    "manifest_browser_rendered": true,
+    "manifest_id": "/",
+    "manifest_start_url": "/",
+    "manifest_scope": "/",
+    "manifest_display": "standalone",
+    "icon_192": {
+      "complete": true,
+      "width": 192,
+      "height": 192
+    },
+    "icon_512": {
+      "complete": true,
+      "width": 512,
+      "height": 512
+    },
+    "edge_health": {
+      "ok": true,
+      "service": "medical-learning-os-edge",
+      "origin": "preview-backend-disabled.invalid"
+    }
+  },
+  "http_client_result": {
+    "status": 403,
+    "body": "error code: 1010",
+    "headers_and_byte_equality_verified": false,
+    "application_failure_inferred": false
+  },
+  "frontend_backend_note": "Frontend retains existing production Supabase public configuration; disabled edge proxy is not full backend isolation. No sign-in, signup or backend acceptance test performed.",
+  "physical_install_verified": false,
+  "standalone_session_verified": false,
+  "offline_verified": false,
+  "production_changed": false,
+  "auth_or_learner_writes": false
+}
