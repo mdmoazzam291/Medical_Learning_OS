@@ -8,6 +8,8 @@ The custom archive preserves exact UUID/code/format/microsecond timestamps, owne
 
 A mismatched SHA256 pin and pre-existing mapping table reject before restore. A genuine missing-Auth FK restore failure rolls back the table creation and all imported mappings while preserving the target Auth fixture. Restore uses `--single-transaction --exit-on-error`; private temporary archive is mode0600 and removed with the cluster. The injected column-only browser grant must fail audit. Disabling that audit must fail the negative control, and CI requires both the named rejection failure and cleanup marker.
 
+A separate [process-crash fixture](LEARNER_CODE_NATIVE_CRASH_FIXTURE.md) checks native WAL recovery of committed and uncommitted mapping writes; it does not expand this archive fixture into full-platform restore certification.
+
 ## Limits
 
 This is same-major table-only disposable recovery using client18, not managed Auth or full-platform recovery certification. Global roles share one disposable cluster, target Auth data is synthetic, runtime code is separately installed, and the locally computed expected hash is a fixture integrity check rather than provenance attestation. No rolegraph/default-schema/extension/TLS/encryption/concurrent-write/crash/managed provider lifecycle/retention/no-reuse acceptance is established. Do not use this fixture as an operational restore procedure or permission to restore staging or production.

@@ -17,7 +17,7 @@ Committed writes after checkpoint survive WAL replay; uncommitted write disappea
 Files: create scripts/learner-code-native-crash.js; modify .github/workflows/ci.yml and reviewed portability register/baseline; add receipt and handoff/status.
 Consumes: startDisposableNativePostgres({postgres}) -> config, crashAndRestart(), stop(); allocateLearnerCode({authUserId,storage,randomBytes}).
 Produces: deterministic PASS markers and skip-crash negative requiring learner_crash_recovery_not_observed plus cleanup.
-- [ ] Add native test assertions for interrupted/WAL recovery, persisted rows, lost-response reconciliation, rollback, fresh allocation and ACL/unique constraints. The fixture itself is the integration test; no production implementation change.
-- [ ] Add --skip-crash negative; CI must prove intended observation failure and cleanup, then positive recovery on both versions. No claim of local native GREEN.
-- [ ] Run local syntax/diff, full npm test and check. Inspect exact remote native logs; fix genuine failures; require final review and all5sourceCIjobs.
-- [ ] Save scope/limits, tested source/run, checked time, next external gate and owner release to receipt/status/handoff with expected-SHA branch update and remote readback.
+- [x] Add native test assertions for interrupted/WAL recovery, persisted rows, lost-response reconciliation, rollback, fresh allocation and ACL/unique constraints. The fixture itself is the integration test; no production implementation change.
+- [x] Add --skip-crash negative; CI must prove intended observation failure and cleanup, then positive recovery on both versions. No claim of local native GREEN.
+- [x] Run local syntax/diff, full npm test and check. Inspect exact remote native logs; fix genuine failures; require final review and all5sourceCIjobs.
+- [x] Save scope/limits, tested source/run, checked time, next external gate and owner release to receipt/status/handoff with expected-SHA branch update and remote readback.
