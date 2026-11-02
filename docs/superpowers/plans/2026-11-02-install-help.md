@@ -29,3 +29,5 @@ Interface: /web/install.html (canonical hosted /web/install) serves script-free 
 Pre-flight: one task; no shared task interfaces.
 
 Validation: RED missing normal guide/menu; GREEN focused17/full1557/check13services250couplings/normal128/public36 builds. Fresh review13testsPASS; browser assertion-order finding corrected. Exact sourceCI and final evidence pending.
+
+CI correction: source1d29507 Chromium guide/previewPASS, later public-navigation exact-label assertion retained pre-feature menu; update only expected labels to include InstallMedretica. Physical/media-emulation proof remains excluded.

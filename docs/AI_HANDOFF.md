@@ -1,3 +1,8 @@
+## 2 November 2026 — Install-help browser-contract correction
+
+- Checked 2026-11-02T13:59:18.793702+00:00; owner root, PR380, source1d295077d5cf355b180316f576ae4a2ca635a18e. Exact source Foundation41457314004 coreSUCCESS; Chromium's newguide and publicpreview stepsPASS, later existing public-navigation checkFAIL because its exact menu labels still expected onlyExploreMedretica/Preferences. Added install link is intended; update this single stale browser expectation toincludeInstallMedretica, preserving everyother assertion. WebKit finalresult and correctedsourceCI pending. No product/runtime change in correction.
+- Livebrowser canonical/web/install shows newembedded-browser troubleshooting, headingInstallMedreticaPreview,0scripts/0forms,rootHomelink andsame manifest. Providerreceipt attribution tolatestsource notyetconfirmed; priorcomment stillshowedbcd0eec, so no newdeploymentIDclaim. Physicalinstall/standalone/authenticatedreopen remainmanual; production unchanged. Next inspect completedoldrun, save correction and requireall3newsourceCIjobsSUCCESS before acceptance.
+
 ## 2 November 2026 — Discoverable installation help checkpoint
 
 - Checked 2026-11-02T13:55:06.347229+00:00; owner root, PR380 branch feat/pwa-install-foundation-20261102, parent bcd0eec81808ef49e33f2134aa46c67fa3875c8d; main remains91a11aff41048984b039fd269a2a0a9ddc3d99da. Owner requests necessary standalone PWA improvements; resume existing install branch, preserve separate379identity work.
