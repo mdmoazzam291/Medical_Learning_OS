@@ -1,3 +1,9 @@
+## NMC frozen metadata review package — 3 November 2026
+
+Implemented local build/verify utility in ops/nmc/review_package.py. Frozen package binds 3,369 candidate regions, 22 pending cases and 1,031 pending page dispositions across 12 retrieved sources to four exact artifact hashes. Digest 33e909bf00da24525545d7308cc59d8124af4961eec928e2130120e89a5c60e1. Two builds identical; 32 Python tests, checked-in package verification and repository check pass. Independent review caught type-insensitive equality; canonical comparison and mutation regression fixed it, reviewer confirmed no remaining blockers.
+
+No source-PDF authentication, exact-row adjudication, trusted reviewer identity/receipt ingestion, private evidence access, canonical/exam bindings or release is implemented by this local utility. All decisions remain null; source scope and clinical/rights/exam approvals remain unresolved. Case links cover 45 source pages; only 16 cases have defining-region-page links, six remain checklist-only evidence. The NMC foundation remains incomplete and not production-deployed. Fresh hosted CI for this package implementation is not yet verified. See NMC_EXACT_ROW_REVIEW_WORKFLOW.md and docs/evidence/2026-11-03-nmc-review-package-verification.json.
+
 ## NMC follow-up — 3 November 2026
 
 Resumed PR #382 from df207fd7. Closed all previously deferred scanner boundary/CLI failure-path tests; 20 Python tests and repository check pass. Added reproducible, pinned-source empty-region diagnostic: all 320 v1 empty regions are located; 132 have word boxes intersecting the column but omitted by the centre rule, 188 have no column intersections. Two actual-source runs and independent engineering rebuild match exactly (artifact SHA 9695cb32192aca7b85e7ae0a0a1a92c919a90f4c938c9ee99434479d3142dba0). No actionable review findings.

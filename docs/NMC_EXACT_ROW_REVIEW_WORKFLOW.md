@@ -1,5 +1,5 @@
 # Exact-row source review workflow proposal
-Date:2026-10-30. Status:DESIGN PROPOSAL ONLY; no new endpoint,SQL,grant,receipt importer or UI implemented.
+Date:2026-10-30. Status: hosted review remains DESIGN PROPOSAL ONLY. A local metadata package build/verify utility was implemented on 3 November 2026; no new endpoint, SQL, grant, receipt importer or UI is implemented.
 Basis:PR346 evidence at f6687965afb6c1da043028476a44c98ea39ee4c3; inspected PR337 at641c094579e6bce752621a954322bf9258814b79.
 
 ## Problem and recommended approach
@@ -51,3 +51,19 @@ No production behavior or passing automated implementation tests claimed.
 ## Current blockers and next work
 Durable exact-row package still needs approved private-storage/rights handling; current Git receipts are aggregate and detailed raw extraction is transient. Reviewer recruitment remains deferred. This design therefore cannot honestly claim a working row-review system.
 Next implementation unit,after design authorization: pure provider-independent source-row claim/receipt contract and meaningful fail-closed tests; no cloud deployment or reviewer grants. Then protected persistence/API extension using existing portability/recovery rules.
+
+## Implemented local package preparation — 3 November 2026
+
+`ops/nmc/review_package.py` now builds and verifies a frozen, unreviewed metadata package. `docs/evidence/nmc-unreviewed-review-package-v1.json` binds four exact artifact byte hashes: defining-region inventory, source-case packet, page-disposition checklist and empty-region diagnostic. It covers 3,369 candidate regions, 22 pending cases, and 12 retrieved documents with 1,031 pending page dispositions. The source table joins AETCOM aliases by exact SHA-256, without changing original source IDs or applicability decisions.
+
+```sh
+python3 ops/nmc/review_package.py verify docs/evidence/nmc-unreviewed-review-package-v1.json
+python3 ops/nmc/review_package.py build /private/new-package.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+The package digest is SHA-256 of UTF-8 canonical JSON (sorted keys, compact separators, non-ASCII unescaped) over the package without `packageDigest`. Input JSON rejects duplicate keys and nonfinite constants. Every input byte hash is included, so even formatting changes invalidate the old package. Verification compares canonical serialized JSON, preserving boolean/integer/float distinctions. Region identities and page sequence digests are recomputed, source/page bounds are checked, all pending checklist pages must be present exactly once, and case decisions/eligibility cannot be enabled through this builder. New evidence requires a new package digest and preserved prior package; do not reuse old review statements.
+
+The freezer validates structural consistency and integrity against current repository inputs. It does not authenticate PDF bytes itself, accept/sign reviewer decisions, assign exact region interpretations, verify reviewer identity or rights, certify page scope, implement private evidence access, or exercise the future hosted review contract. Case-to-region associations remain page-level candidate links; they are not adjudicated exact-row claims. Pages outside the defining-region inventory remain bound through the pending checklist, without invented row evidence. The earlier source-PDF hash verification is separate evidence.
+
+Validation: 32 NMC Python tests pass, including checked-in package freshness and mutation tests for altered source/case/geometry, missing/duplicate pages or cases, stale diagnostic references, unauthorized approval values, duplicate JSON keys and type substitution. Repository check passes (13 services, 250 coupling locations). Two builds were byte-identical; package digest `33e909bf00da24525545d7308cc59d8124af4961eec928e2130120e89a5c60e1`. Independent engineering review found and verified the fix for type-insensitive comparison; final code review had no remaining blockers. Engineering review is not source adjudication.
