@@ -52,3 +52,7 @@ A separate native PostgreSQL17.6/18.6 CI fixture uses independent service-role l
 The 2 November hosted runtime required a bounded empty-body stream guard for POST/ensure; accepting only req.body===null rejects valid bodyless HTTP POSTs on this runtime. No content-type or payload is accepted; a first read must immediately prove stream completion or fail within2seconds. Real negative ensure now reaches token verification and denies401. See the staging API receipt; positive Auth acceptance remains open.
 
 Current stagingv3 pins top-level SDK2.118.0 to the reviewed operator manifest/lock, with exact3file readback/nine hosted negatives/zero rows. This is not full transitive Node/Edge parity or genuine signed-in acceptance. See [pin receipt](releases/2026-11-02-learner-identity-sdk-pin.md); v2 receipt is historical.
+
+## Disposable native archive recovery
+
+The [native recovery receipt](LEARNER_CODE_NATIVE_RECOVERY_FIXTURE.md) records actual table-only pg_dump/pg_restore tests on PostgreSQL17.6/18.6, exact mapping and access-control parity, failure rollback, negative column-ACL control and cleanup. This adds no managed Auth/full-platform recovery, real signed-in acceptance, retention/no-reuse approval or production release authority.

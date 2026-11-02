@@ -1,5 +1,7 @@
 # Learner mapping logical recovery fixture
 
+The later [native archive fixture](LEARNER_CODE_NATIVE_RECOVERY_FIXTURE.md) adds actual disposable pg_dump/pg_restore coverage. The JSON-specific evidence and limitations below remain unchanged.
+
 2 November2026. Disposable test only. No staging/production database, backup bytes or actual learner identities accessed.
 
 `scripts/learner-code-recovery-check.js` creates its own fresh in-memory SQL instances from the exact repository mapping migration and runtime-access parity definition. It exports two synthetic mapping rows (UUID,code,format_version,created_at) as a bounded JSON text fixture, computes SHA256, and requires a separately supplied expected digest to import. A hash calculated from an untrusted file is not proof of origin; a real operator must independently establish the trusted pin. This script is not a production restore utility or pg_dump/pg_restore acceptance.
