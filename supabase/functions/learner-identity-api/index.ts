@@ -60,7 +60,10 @@ Deno.serve(async (req: Request) => {
     if (url.search) fail(400, "query_not_supported");
     if (!((req.method === "GET" && path === "/me") ||
       (req.method === "POST" && path === "/ensure"))) fail(404, "not_found");
-    if (req.method === "POST" && (await req.text()).length) fail(400, "body_not_supported");
+    // No request payload is accepted. Reject a body stream without reading it
+    // to avoid accidental unbounded memory usage on malformed requests.
+    if (req.method === "POST" && (req.body !== null || req.headers.has("content-type")))
+      fail(400, "body_not_supported");
 
     const authorization = req.headers.get("authorization") ?? "";
     if (!authorization.startsWith("Bearer ")) fail(401, "unauthorized");
