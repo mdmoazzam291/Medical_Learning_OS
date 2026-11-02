@@ -1,3 +1,9 @@
+## NMC follow-up — 3 November 2026
+
+Resumed PR #382 from df207fd7. Closed all previously deferred scanner boundary/CLI failure-path tests; 20 Python tests and repository check pass. Added reproducible, pinned-source empty-region diagnostic: all 320 v1 empty regions are located; 132 have word boxes intersecting the column but omitted by the centre rule, 188 have no column intersections. Two actual-source runs and independent engineering rebuild match exactly (artifact SHA 9695cb32192aca7b85e7ae0a0a1a92c919a90f4c938c9ee99434479d3142dba0). No actionable review findings.
+
+No v1 inventory, scanner or application runtime change; no source prose exported. All 320 decisions remain null and eligibility false. Does not resolve 67 legacy category differences, five subject count discrepancies or 22 source adjudication cases. Foundation remains incomplete and not production-deployed. Fresh hosted CI for this follow-up is not yet verified; prior exact-source green CI is separately recorded. See docs/evidence/2026-11-03-nmc-empty-region-verification.json and inventory runbook.
+
 ## NMC foundation checkpoint — 2 November 2026
 
 Not fully prepared or deployed to production. Draft PR #382 stacks on isolated audit #348 and adds a reproducible metadata-only scanner: 263 selected pages, 3,369 regions, 2,634 identifier candidates. Source commit 6193fa9d passed CI run 41502715659 (core, Chromium, WebKit), 1,568 Node tests and 13 Python tests. Fresh official source downloads match recorded hashes; two scans and an independent engineering rebuild match.

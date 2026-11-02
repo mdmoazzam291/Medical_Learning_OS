@@ -24,3 +24,5 @@ All current scanner flags remain false. PWA #380, Account #381 and learner-ident
 
 
 Exact source commit `6193fa9d4b136955f7088380ebd280bafde48fdd` is saved in draft PR #382. [CI run 41502715659](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41502715659) passed core, Chromium and WebKit jobs. This includes 1,568 Node tests and 13 scanner tests. The final follow-up changes documentation and evidence only.
+
+On 3 November, the follow-up closed the deferred scanner failure-path tests and added an exact-source diagnostic for all 320 v1 empty regions (132 with intersecting words omitted by the centre rule; 188 without column intersections). No source decision, coverage certification or production status changed. See the diagnostic section in the inventory runbook.

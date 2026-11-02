@@ -1,0 +1,41 @@
+{
+  "kind": "nmc-empty-region-diagnostic-verification",
+  "baseCommit": "df207fd78032951575fb3f8aa2cbf78481a2dcfa",
+  "pullRequest": 382,
+  "pythonTestsPassed": 20,
+  "repositoryCheck": {
+    "passed": true,
+    "services": 13,
+    "couplingLocations": 250
+  },
+  "diagnostic": {
+    "regions": 320,
+    "withIntersectionWords": 132,
+    "withoutIntersectionWords": 188,
+    "uniqueRegionIds": 320,
+    "bytes": 135169,
+    "sha256": "9695cb32192aca7b85e7ae0a0a1a92c919a90f4c938c9ee99434479d3142dba0",
+    "actualRunsByteIdentical": 2,
+    "independentRebuildMatches": true
+  },
+  "previouslyDeferredTestsNowCovered": [
+    "single-boundary",
+    "duplicate-only boundary",
+    "CLI engine version mismatch",
+    "CLI actual page mismatch",
+    "CLI existing output preservation"
+  ],
+  "syntheticCliEngineStubbed": true,
+  "independentReview": "no actionable findings",
+  "v1InventoryUnchanged": true,
+  "scannerUnchanged": true,
+  "runtimeUnchanged": true,
+  "freshHostedCi": "not yet verified for this checkpoint",
+  "fullNodeAndBrowserSuitesRerunLocally": false,
+  "sourceDecisionsMade": 0,
+  "sourceApproval": false,
+  "clinicalApproval": false,
+  "noOmissionCertified": false,
+  "learnerActivation": false,
+  "productionDeployed": false
+}

@@ -56,3 +56,15 @@ Fresh downloads of both official source URLs during this pass match the recorded
 
 
 Exact source commit `6193fa9d4b136955f7088380ebd280bafde48fdd` is saved in draft PR #382. [CI run 41502715659](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/41502715659) passed core, Chromium and WebKit jobs. This includes 1,568 Node tests and 13 scanner tests. The final follow-up changes documentation and evidence only.
+
+## Empty-region selection diagnostic — 3 November 2026
+
+`ops/nmc/audit_empty_regions.py` audits every one of the 320 v1 empty regions against the exact source PDF. It keeps v1 unchanged and compares its centre-based word selection with positive horizontal word-box intersection within the same vertical midpoint band. This is a selection diagnostic, not OCR, visual blank-cell certification, semantic classification or exclusion approval.
+
+```sh
+python3 ops/nmc/audit_empty_regions.py /private/nmc-official.pdf /private/empty-audit.json
+```
+
+Two actual-source runs are byte-identical. The checked-in metadata-only `docs/evidence/nmc-empty-region-selection-diagnostic-v1.json` binds all 320 unique region IDs to the existing inventory hash and source hash. It records 132 regions with intersecting words omitted by the centre rule and 188 without column-intersecting words. Row-band counts and hashes preserve evidence of text elsewhere across each band without exporting the source words. All decisions remain null and eligibility flags false. The 132 observations do not resolve the 67 legacy category-difference pages or change competency totals. The 188 observations do not prove visually blank cells or safe exclusions.
+
+The formerly deferred single-boundary/duplicate-only cases and direct CLI version mismatch, actual page-count mismatch and existing-output preservation paths now have dedicated tests. CLI tests use a synthetic PDF and stub engine; actual-source repeatability is verified separately. The Python suite now contains 20 passing tests. These additional tests do not retroactively change the earlier 13-test CI receipt.

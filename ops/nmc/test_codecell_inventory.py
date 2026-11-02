@@ -1,7 +1,13 @@
 import copy
 import hashlib
 import unittest
-from codecell_inventory import build_inventory
+import json
+from pathlib import Path
+import sys
+import tempfile
+from types import SimpleNamespace
+from unittest.mock import patch
+from codecell_inventory import build_inventory, main
 
 SHA='a'*64
 
@@ -46,8 +52,51 @@ class InventoryTests(unittest.TestCase):
    with self.subTest(bad=bad):
     with self.assertRaises(ValueError):build_inventory(manifest(),SHA,2,g)
  def test_empty_missing_or_duplicate_boundaries_fail_closed(self):
-  g=geometry();g[1]['rectangles']=[]
-  with self.assertRaises(ValueError):build_inventory(manifest(),SHA,2,g)
+  for borders in [[], [[10,20,80,20.6]], [[10,20,80,20.6]] * 3]:
+   g=geometry();g[1]['rectangles']=borders
+   with self.subTest(borders=borders):
+    with self.assertRaisesRegex(ValueError,'nmc_column_boundaries_missing'):
+     build_inventory(manifest(),SHA,2,g)
+
+class CliFailureTests(unittest.TestCase):
+ def invoke(self, folder, engine, existing=False):
+  pdf=folder/'source.pdf';pdf.write_bytes(b'%PDF-synthetic-test-only')
+  m=manifest();m['sourceSha256']=hashlib.sha256(pdf.read_bytes()).hexdigest()
+  source_manifest=folder/'manifest.json';source_manifest.write_text(json.dumps(m))
+  output=folder/'output.json'
+  if existing:output.write_text('preserve-existing-receipt')
+  argv=['codecell_inventory',str(pdf),str(output),'--manifest',str(source_manifest),'--expected-pages','2']
+  with patch.object(sys,'argv',argv),patch.dict(sys.modules,{'fitz':engine}):
+   main()
+ def test_wrong_engine_version_fails_before_pdf_open_or_output(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   folder=Path(tmp)
+   with self.assertRaisesRegex(ValueError,'nmc_pymupdf_version_must_be_1_26_6'):
+    self.invoke(folder,SimpleNamespace(VersionBind='0.0.0'))
+   self.assertFalse((folder/'output.json').exists())
+ def test_actual_page_mismatch_fails_before_page_access_or_output(self):
+  class Document:
+   def __enter__(self):return self
+   def __exit__(self,*args):pass
+   def __len__(self):return 3
+  with tempfile.TemporaryDirectory() as tmp:
+   folder=Path(tmp)
+   engine=SimpleNamespace(VersionBind='1.26.6',open=lambda **kwargs:Document())
+   with self.assertRaisesRegex(ValueError,'nmc_pdf_page_count_mismatch'):
+    self.invoke(folder,engine)
+   self.assertFalse((folder/'output.json').exists())
+ def test_existing_output_is_preserved(self):
+  class Document:
+   def __enter__(self):return self
+   def __exit__(self,*args):pass
+   def __len__(self):return 2
+   def __getitem__(self,index):return SimpleNamespace(rotation_matrix=1,get_drawings=lambda:[],get_text=lambda _:[])
+  with tempfile.TemporaryDirectory() as tmp:
+   folder=Path(tmp)
+   engine=SimpleNamespace(VersionBind='1.26.6',VersionFitz='synthetic',open=lambda **kwargs:Document())
+   with patch('codecell_inventory.build_inventory',return_value={'synthetic':True}):
+    with self.assertRaises(FileExistsError):self.invoke(folder,engine,existing=True)
+   self.assertEqual((folder/'output.json').read_text(),'preserve-existing-receipt')
 
 class StrictInputTests(unittest.TestCase):
  def test_schema_numbers_cannot_be_boolean_or_float(self):
