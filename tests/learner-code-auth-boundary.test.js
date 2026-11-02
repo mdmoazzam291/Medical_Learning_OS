@@ -12,6 +12,8 @@ test('runtime API only accepts self GET or POST ensure after validated Auth and 
   assert.match(handler,/req.method === "POST" && path === "\/ensure"/);
   assert.match(handler,/auth\.getUser\(token\)/);
   assert.match(handler,/checkRuntimeAccess\(admin, token, authUserId\)/);
+  assert.match(handler,/runtime\?\.reason === "runtime_access_unavailable"/);
+  assert.match(handler,/fail\(503, "identity_session_check_unavailable"\)/);
   assert.match(handler,/runtime\?\.allowed !== true/);
   assert.match(handler,/origin_not_allowed/);
   assert.match(handler,/url\.search\) fail\(400, "query_not_supported"\)/);
