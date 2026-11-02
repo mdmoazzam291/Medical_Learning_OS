@@ -38,3 +38,20 @@ The source-specific level-column threshold is x >= 510 to separate level markers
 Two actual AETCOM runs and an independent engineering rerun are byte-identical: 34,656 bytes, SHA-256 e413a8baa908f0cbe697b45d3929be1ffcfa3bc13e1ae156258d0770d8ae58ff. All 52 NMC Python tests and repository checks pass. Independent review verified the class declaration and exact-match counts; no actionable findings. Fresh hosted CI for this implementation is not yet verified.
 
 This advances the appendix enumeration but does not reconcile module-body appearances, 2024 governance/cohort applicability, subject overlaps, clinical equivalence, rights or exam overlays. The existing AETCOM source cases and frozen review package remain unchanged and pending. No source approval, learner activation or production deployment.
+
+## AETCOM module-to-appendix exact comparison — 3 November 2026
+
+`ops/nmc/aetcom_modules.py` scans PDF 1–86 of the pinned legacy AETCOM source, selecting line-start module headings on pages that also contain a competency-addressed heading. It locates 44 candidate physical regions across 27 module headings. Inline references to other modules cannot select the module identity. Multiple or duplicate selected headings fail closed. This is a primary-table detection method, not proof of exhaustive module requirement coverage.
+
+`docs/evidence/nmc-aetcom-module-appendix-comparison-v1.json` binds these appearances to the exact source hash and appendix artifact hash e413a8baa908f0cbe697b45d3929be1ffcfa3bc13e1ae156258d0770d8ae58ff. Eight module appearances exactly match numbered appendix text after whitespace collapse; all eight also share their displayed level markers. Six correspond to source-declared core entries and two to source-declared desirable entries. These are text/metadata observations, not approved clinical equivalence or mappings. Thirty-six appearances have no exact match under this method; they must not be called missing, additional unique or semantically unrelated.
+
+Raw reconstruction hashes/coordinates/source IDs remain separate from comparison digests. Match projections preserve appendix source class and whether displayed levels match, including disagreements if encountered; they do not overwrite either appearance. No source wording, full code corpus or PDF bytes are exported.
+
+```sh
+python3 ops/nmc/aetcom_modules.py /private/AETCOM_book.pdf /private/aetcom-module-comparison.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+Two actual-source runs and independent engineering rerun match byte-for-byte: 26,614 bytes, SHA-256 07bdd20188acaacae5546bd969379d10fa32f09943e99fc7fbb426673bdabaf0. All 56 NMC Python tests and repository checks pass; review found no actionable findings. Four new tests cover module-heading binding, no assumed table without its heading, ambiguous headings and preservation of classification/level disagreement. Fresh hosted CI for this implementation is not yet verified.
+
+Partial/differently worded appearances, nested objectives, module/appendix/subject semantic overlap and 2024 cohort applicability remain unresolved. Existing source cases, frozen review package, learner runtime and disabled eligibility are unchanged. No source/clinical/rights/exam approval, unique denominator, ingestion or deployment.
