@@ -1,3 +1,9 @@
+## NMC legacy AETCOM appendix audit — 3 November 2026
+
+Pinned-source extractor freezes 54 numbered and 14 additional unnumbered appearances. Source declaration of 39 core/15 desirable retained. Nine additional appearances exactly match numbered text after whitespace collapse: core 37 and desirable 41–47/53; five unmatched are not certified unique. Classification conflict retained; no silent class correction or deduplication. Pages 90/92 visually inspected.
+
+All 52 NMC tests/repository checks pass; two runs and independent engineering source rebuild exact (SHA e413a8baa908f0cbe697b45d3929be1ffcfa3bc13e1ae156258d0770d8ae58ff; 34,656 bytes). Shared helper default pandemic extraction matches checked-in artifact byte-for-byte. Review found no actionable issue. Fresh hosted CI not yet verified. Existing cases/frozen package/runtime and disabled eligibility unchanged. Appendix/module overlap, clinical equivalence and current applicability remain open. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-aetcom-appendix-verification.json.
+
 ## NMC pandemic explicit nested items — 3 November 2026
 
 Located eight explicit nested appearances in legacy pandemic Modules 3.2/3.3: one unnumbered subcompetency, five numbered learning objectives across pages 45–46, two numbered subcompetencies on page 50. Added reproducible text-offset/hash locators and conservative dotted-code regex scan across all 17 candidate module ranges/69 pages (zero matches; no semantic absence claim).
