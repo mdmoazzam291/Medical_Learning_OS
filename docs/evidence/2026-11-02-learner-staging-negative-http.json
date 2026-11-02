@@ -1,0 +1,119 @@
+{
+  "observed_at": "2026-11-02T07:35:00.020248Z",
+  "scope": "isolated_staging_negative_http_only",
+  "project_id": "vwtdwafjrraptrgeshzt",
+  "function": "learner-identity-api",
+  "version": 2,
+  "bundle_sha256": "4e2f9fb3f5df264b9832ca68257e582cab441c609bea7647c47a541966dcd881",
+  "source_commit": "63cbba64975ece41471f3f88b67e4fc46fb71d65",
+  "exact_deployed_files": 3,
+  "platform_verify_jwt": false,
+  "authentication": "Handler verifies exact bearer via getUser and current runtime session before storage; repeats runtime check before delivery",
+  "results": [
+    {
+      "case": "anonymous GET",
+      "status": 401,
+      "expected": 401,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "forged GET",
+      "status": 401,
+      "expected": 401,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "forged empty ensure",
+      "status": 401,
+      "expected": 401,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "foreign origin",
+      "status": 403,
+      "expected": 403,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "supplied payload",
+      "status": 400,
+      "expected": 400,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "target query",
+      "status": 400,
+      "expected": 400,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "unknown route",
+      "status": 404,
+      "expected": 404,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "preflight",
+      "status": 200,
+      "expected": 200,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "binary payload without content-type",
+      "status": 400,
+      "expected": 400,
+      "handlerErrorMatches": true,
+      "privateResponse": true,
+      "cors": true,
+      "pass": true
+    }
+  ],
+  "passed": 9,
+  "total": 9,
+  "postcheck": {
+    "observed_at": "2026-11-02 07:38:32.805023+00",
+    "auth_users": 0,
+    "auth_sessions": 0,
+    "issued_codes": 0
+  },
+  "genuine_signed_in_auth_acceptance": false,
+  "production_changed": false,
+  "preflightHeadersVerified": true,
+  "last_verified_at": "2026-11-02 07:38:32.805023+00",
+  "ci": {
+    "source_commit": "63cbba64975ece41471f3f88b67e4fc46fb71d65",
+    "foundation_run": 41407126752,
+    "jobs": [
+      "core",
+      "Chromium",
+      "WebKit",
+      "PostgreSQL17.6",
+      "PostgreSQL18.6"
+    ],
+    "all_success": true
+  }
+}
