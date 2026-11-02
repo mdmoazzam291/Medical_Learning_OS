@@ -45,12 +45,14 @@
         "R2_"
       ],
       "data": "Static delivery, edge fallback, separate heartbeat/sandbox workers, private R2 backups, DNS and server-side bindings.",
-      "boundary": "cloudflare/, wrangler*.jsonc, ops/cloudflare-heartbeat and S3 backup transport. Keep the web, heartbeat and sandbox applications distinct.",
+      "boundary": "cloudflare/, wrangler*.jsonc, ops/cloudflare-heartbeat and S3 backup transport. Keep the web, heartbeat and sandbox applications distinct. Explicit public-only PWA preview build excludes application/cloud-config JavaScript and account forms, denies script/connect/form actions, and is selected only for the named PWA branch or explicit non-main flag; production and other controlled preview profiles stay unchanged.",
       "export": "Build static bundle from exact commit; export routes/DNS/cron/binding metadata; inventory/copy R2 object bytes, keys and metadata through S3-compatible tools. Secrets recreated privately.",
       "restore": "Serve static bundle with matching rewrites/security headers, reimplement Worker handlers and schedules, copy object inventory with checksums, then validate domain/TLS/CORS/OAuth redirects.",
       "gaps": "No complete current account/DNS/config export or second independently controlled backup verified. Inventory any future D1/KV/Durable Object/Queue/Vectorize state before use; none is inferred from Cloudflare hosting. PR292 maina094349 has green Foundation but live UI/build verification is blocked: public asset403 and secure dashboard login403. No provider/security settings changed; deployment is unverified. Relationship registry main4c6f377 website build64fda0cd-f124-43a4-99f5-b4fe2cb1111e and heartbeat buildcd07dc94-7160-4097-8261-a925f916155f are successful; changed public HTML/controller readback matches exactly. Earlier PR292 asset403 is historical, not the current release result.",
       "references": [
         "wrangler.jsonc",
+        "scripts/public-install-preview.js",
+        "docs/PUBLIC_INSTALL_PREVIEW.md",
         "wrangler.cashfree-sandbox.jsonc",
         "ops/cloudflare-heartbeat/wrangler.jsonc",
         "ops/r2-backups/README.md"

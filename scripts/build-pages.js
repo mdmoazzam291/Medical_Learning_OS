@@ -2,6 +2,7 @@ import { copyFile, mkdir, rm, stat, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { publicFiles } from './public-surface.js';
+import { buildPublicInstallPreview } from './public-install-preview.js';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const defaultOutput = join(repoRoot, 'dist-pages');
@@ -25,7 +26,14 @@ async function copyPublicFile(relativePath, outputDirectory) {
   await copyFile(source, destination);
 }
 
-export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTPUT || defaultOutput } = {}) {
+export function publicPreviewForBuild(env = {}) {
+  const mode = env.MLOS_PAGES_PUBLIC_PREVIEW;
+  if (mode !== undefined && mode !== '' && mode !== '0' && mode !== '1') throw Error('invalid_public_preview_mode');
+  if (env.WORKERS_CI_BRANCH === 'main' && mode === '1') throw Error('public_preview_forbidden_on_production_branch');
+  return env.WORKERS_CI_BRANCH === 'feat/pwa-install-foundation-20261102' || mode === '1';
+}
+
+export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTPUT || defaultOutput, publicPreview = false } = {}) {
   const output = resolve(outputDirectory);
   if (output === repoRoot || repoRoot.startsWith(`${output}/`)) {
     throw new Error('Refusing unsafe Pages output path');
@@ -33,6 +41,8 @@ export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTP
 
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
+
+  if (publicPreview) return buildPublicInstallPreview({ repoRoot, output, publicFiles });
 
   for (const relativePath of publicFiles) {
     await copyPublicFile(relativePath, output);
@@ -47,6 +57,6 @@ export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTP
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const result = await buildPages();
+  const result = await buildPages({ publicPreview: publicPreviewForBuild(process.env) });
   console.log(`Cloudflare Pages bundle ready: ${result.outputDirectory} (${result.fileCount} files)`);
 }
