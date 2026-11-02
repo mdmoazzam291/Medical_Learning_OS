@@ -1,0 +1,47 @@
+{
+  "kind": "nmc-local-review-package-verification",
+  "baseCommit": "5c8d66bd7c0f511bf4168a6b2cc45f3fb274eff3",
+  "basePullRequest": 382,
+  "packageDigest": "33e909bf00da24525545d7308cc59d8124af4961eec928e2130120e89a5c60e1",
+  "artifactSha256": "15eb8648d96a04bb247f931fbd7a944d73e228bdddbeb205641b421a54449c50",
+  "artifactBytes": 9081,
+  "counts": {
+    "documents": 12,
+    "pendingPages": 1031,
+    "regions": 3369,
+    "pendingCases": 22
+  },
+  "tests": {
+    "pythonPassed": 32,
+    "repositoryCheckPassed": true,
+    "services": 13,
+    "couplingLocations": 250,
+    "byteIdenticalPackageBuilds": 2,
+    "checkedInPackageVerified": true
+  },
+  "review": {
+    "finding": "P2 type-insensitive Python equality permitted boolean/int/float substitutions",
+    "resolution": "canonical serialized comparison and dedicated mutation regression test",
+    "resolvedVerifiedIndependently": true,
+    "remainingBlockersInReviewedCode": 0,
+    "reviewedTestCount": 31,
+    "additionalCheckedInFreshnessTestPassed": true
+  },
+  "caseEvidence": {
+    "sourcePageLinks": 45,
+    "casesWithDefiningRegionPageLinks": 16,
+    "casesWithoutDefiningRegionPageLinks": 6,
+    "linksAreAdjudicatedExactRows": false
+  },
+  "sourcePdfsFetchedByBuilder": false,
+  "applicationRuntimeChanged": false,
+  "trustedAttestationsImplemented": false,
+  "noOmissionCertified": false,
+  "sourceApproval": false,
+  "clinicalApproval": false,
+  "rightsApproval": false,
+  "examScopeApproval": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified for this package implementation"
+}
