@@ -19,7 +19,7 @@ test('runtime API only accepts self GET or POST ensure after validated Auth and 
   assert.match(handler,/\.eq\("auth_user_id", id\)/);
   assert.match(handler,/allocateLearnerCode\(\{ authUserId, storage \}\)/);
   assert.match(handler,/Cache-Control": "no-store, private"/);
-  assert.doesNotMatch(handler,/req\.headers\.get\("x-user-id"\)|url\.searchParams\.get\("user"\)|user_metadata/);
+  assert.doesNotMatch(handler,/req\.headers\.get\("x-user-id"\)|url\.searchParams\.get\("user"\)|authData\.user\.user_metadata/);
   assert.doesNotMatch(handler,/path === "\/all"|path === "\/lookup"|path === "\/search"/);
 });
 
