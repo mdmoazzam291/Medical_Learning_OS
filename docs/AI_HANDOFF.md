@@ -1,3 +1,11 @@
+## 2 November2026 — Isolated staging learner API v1 deployed; empty-POST repair checkpoint
+
+- Owner Codex /root; PR379 resumedbc76f6c78a87647342fb7550886e4a81a91f9e36. Target ONLY vwtdwafjrraptrgeshzt medical_learning_os_staging. Preflight: both migrations present,0users/0sessions/0codes/no existingfunctions; anon/authenticated mappingSELECTdenied,serviceINSERTallowed,UPDATEdenied.
+- Deployed exact3reviewed files (byte-equal to testedde8a4827) as learner-identity-api ACTIVEv1/id88390be8-e75a-4242-90b3-d51c775929b7, bundleSHA25671e67839eee5b26bc8d52707036b62d14018a937584076442169e2589ec7cf5a. Platformverify_jwt=false because body authenticates actualgetUser(token) plus current runtime checks before privileged access; no anonymous allocation path. Exact3file deployed readbackPASS. No productionchange.
+- Actual hosted negative requests7of8passed: anonymous/forgedGET401,foreignOrigin403,payload400,query400,unknown404,preflight200; private/no-store errors. Forged bodylessensurePOSTreturned400instead401, exposing empty transport body stream rejection. No users/sessions/codes created; postchecksall0.
+- Actual-handler empty-stream regressionRED400vs200; repair accepts only proven streamend, rejects any chunk/contenttype beforeAuth/storage,2second read deadline/cancel, no buffering/req.text. Payload/stall testsPASS; focused13/full1,572testsPASS; check13services255couplingsPASS; diffPASS. Final read-only reviewer found no blocker. No dependency or migration change.
+- New repair not yet deployed at this checkpoint; exact-headCIpending. Next deploy reviewed repairedsource to stagingv2, re-read source, repeat8hosted negatives and0row checks, save exact evidence. Priorv1bundle retained as rollback. Genuine signedJWT/two-user/rights/clinical/reviewer acceptance unexecuted; no synthetic hosted account or code issuance/publication/production approval inferred.
+
 ## 2 November2026 — Both audit repairs accepted by full code-head CI
 
 - Owner Codex /root. Learner379code de8a4827d8669aa0d6f22bebacfee0c94bcdbb63/41404147987 all5jobsSUCCESS; publication376code0392476ee660592c7f3a1b1fcee09396d25cea31/41404306561 all3jobsSUCCESS. Seven learner behavior tests, full1569suite; publication31focused/full1572suite; bothchecksPASS. No unaddressed concrete reviewer finding remains in this bounded increment.

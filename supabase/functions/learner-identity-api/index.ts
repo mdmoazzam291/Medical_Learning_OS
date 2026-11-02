@@ -49,6 +49,29 @@ function routePath(url: URL) {
   return "/" + (index >= 0 ? parts.slice(index + 1) : parts).join("/");
 }
 
+// The hosted runtime may represent an HTTP Content-Length:0 POST as a stream.
+// Accept only end-of-stream, never buffer text/JSON, and bound the first read.
+async function rejectRequestPayload(req: Request) {
+  if (req.headers.has("content-type")) fail(400, "body_not_supported");
+  if (req.body !== null) {
+    const reader = req.body.getReader();
+    let deadline: ReturnType<typeof setTimeout> | undefined;
+    try {
+      const first = await Promise.race([
+        reader.read(),
+        new Promise<never>((_, reject) => {
+          deadline = setTimeout(() => reject(new ApiError(400, "body_not_supported")), 2000);
+        })
+      ]);
+      if (!first.done || first.value?.byteLength) fail(400, "body_not_supported");
+    } finally {
+      clearTimeout(deadline);
+      void reader.cancel().catch(() => {});
+      try { reader.releaseLock(); } catch { /* pending read is cancelled above */ }
+    }
+  }
+}
+
 async function requireRuntimeAccess(admin: any, token: string, authUserId: string) {
     const runtime = await checkRuntimeAccess(admin, token, authUserId);
     if (runtime?.reason === "account_suspended") fail(403, "account_suspended");
@@ -72,10 +95,8 @@ Deno.serve(async (req: Request) => {
     if (url.search) fail(400, "query_not_supported");
     if (!((req.method === "GET" && path === "/me") ||
       (req.method === "POST" && path === "/ensure"))) fail(404, "not_found");
-    // No request payload is accepted. Reject a body stream without reading it
-    // to avoid accidental unbounded memory usage on malformed requests.
-    if (req.method === "POST" && (req.body !== null || req.headers.has("content-type")))
-      fail(400, "body_not_supported");
+    // No payload is accepted; a proven empty hosted body stream is valid.
+    if (req.method === "POST") await rejectRequestPayload(req);
 
     const authorization = req.headers.get("authorization") ?? "";
     if (!authorization.startsWith("Bearer ")) fail(401, "unauthorized");

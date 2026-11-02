@@ -13,11 +13,11 @@ function harness({rejectToken=false,outage=false,suspend=false,revokeDuringRead=
  const env={SUPABASE_URL:'https://example.invalid',SUPABASE_ANON_KEY:'public-fixture',SUPABASE_SERVICE_ROLE_KEY:'private-fixture'};
  const table={select(){return this;},eq(k,id){assert.equal(k,'auth_user_id');calls.reads.push(id);return this;},async maybeSingle(){if(revokeDuringRead)revoked=true;if(outageDuringRead)storageOutage=true;return {data:badRow?{auth_user_id:other,learner_code:code}:stored,error:null};},async insert(row){calls.inserts.push(row);stored=row;if(revokeDuringInsert)revoked=true;if(lostWrite)return {error:{code:'connection_lost',message:'private-fixture token SQL secret'}};return {error:null};}};
  const createClient=(url,key)=>({auth:{async getUser(t){calls.auth.push(t);return {data:{user:rejectToken?null:{id:owner}},error:rejectToken?{message:'secret'}:null};}},async rpc(name,args){calls.runtime.push({name,args});return (outage||storageOutage)?{data:null,error:{message:'secret'}}:{data:{allowed:!revoked&&!suspend,reason:suspend?'account_suspended':revoked?'session_inactive':'allowed'},error:null};},from(name){assert.equal(key,'private-fixture');assert.equal(name,'learner_reference_codes');return table;}});
- const context=vm.createContext({Request,Response,URL,TextEncoder,atob,crypto,createClient,allocateLearnerCode,normalizeLearnerCode,Deno:{env:{get:k=>env[k]},serve:fn=>{handler=fn;}}});
+ const context=vm.createContext({Request,Response,URL,TextEncoder,atob,crypto,setTimeout,clearTimeout,createClient,allocateLearnerCode,normalizeLearnerCode,Deno:{env:{get:k=>env[k]},serve:fn=>{handler=fn;}}});
  vm.runInContext(runtime+'\n'+source,context);
  async function request(path='/me',{method='GET',auth=true,origin='http://localhost:3000',body}={}){
   const headers={origin};if(auth)headers.authorization='Bearer '+token;
-  const r=await handler(new Request('https://example.invalid/functions/v1/learner-identity-api'+path,{method,headers,...(body===undefined?{}:{body})}));return {status:r.status,body:await r.json(),cache:r.headers.get('cache-control')};
+  const r=await handler(new Request('https://example.invalid/functions/v1/learner-identity-api'+path,{method,headers,...(body===undefined?{}:{body,...(body instanceof ReadableStream?{duplex:'half'}:{})})}));return {status:r.status,body:await r.json(),cache:r.headers.get('cache-control')};
  }
  return {calls,request,get stored(){return stored;}};
 }
@@ -50,4 +50,18 @@ test('session revocation after ensure insert withholds code while preserving per
 
 test('session check outage after stored code readback withholds code as unavailable',async()=>{
  const h=harness({outageDuringRead:true,assigned:true}),r=await h.request();assert.equal(r.status,503);assert.equal(r.body.error,'identity_session_check_unavailable');assert.equal(r.body.learnerCode,undefined);
+});
+
+test('hosted-style empty POST body stream permits ensure after Auth',async()=>{
+ const h=harness();const body=new ReadableStream({start(c){c.close();}});
+ const r=await h.request('/ensure',{method:'POST',body});assert.equal(r.status,200);assert.equal(r.body.status,'assigned');assert.equal(h.calls.inserts.length,1);
+});
+test('first nonempty chunk of a streamed body rejects before Auth or storage',async()=>{
+ const h=harness();const body=new ReadableStream({start(c){c.enqueue(new TextEncoder().encode('{'));c.close();}});
+ const r=await h.request('/ensure',{method:'POST',body});assert.equal(r.status,400);assert.equal(r.body.error,'body_not_supported');assert.equal(h.calls.auth.length,0);assert.equal(h.calls.inserts.length,0);
+});
+
+test('stalled POST body is cancelled and rejected within the read deadline',{timeout:5000},async()=>{
+ let cancelled=false;const h=harness();const body=new ReadableStream({cancel(){cancelled=true;}});
+ const r=await h.request('/ensure',{method:'POST',body});assert.equal(r.status,400);assert.equal(cancelled,true);assert.equal(h.calls.auth.length,0);assert.equal(h.calls.inserts.length,0);
 });
