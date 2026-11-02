@@ -52,6 +52,8 @@ jobs:
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/data-api-grants-db-check.js
       - name: Verify private learner-code mapping on isolated PostgreSQL
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/learner-reference-code-db-check.js
+      - name: Verify session RPC parity with production contract in isolated PostgreSQL
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/learner-runtime-access-parity-db-check.js
       - run: npm run demo
       - name: Preserve allowlisted static preview bundle
         uses: actions/upload-artifact@v4
