@@ -28,15 +28,15 @@
 - The SQL does not include a signup trigger, force a learner-data backfill, change `auth.users`, or alter any learner FK. Existing accounts can enroll lazily. Service roles cannot UPDATE/DELETE or rotate codes.
 - Auth account deletion cascades the mapping; **permanent no-reuse after deletion is not yet guaranteed**. If the owner requires absolute never-reassign, implement a privacy-reviewed minimal tombstone/taken-code registry before release. Current code collisions are extremely unlikely but the design must not misstate this distinction.
 
-### Required staging verification (not completed by repository CI)
+### Remaining staging verification (managed schema migration is recorded; hosted Auth acceptance pending)
 
-- Confirm no SQL conflicts with existing staging migration versions; generate/reconcile the migration ledger under the supported Supabase CLI, **not** by claiming a filename equals an applied migration.
+- The managed staging ledger now records **`20261102033205 learner_reference_codes`** for the source file `20261102084000_learner_reference_codes.sql`. Preserve the exact provider/source association during later integration; do not rewrite applied history.
 - Obtain independent role/security review of public-schema service-only privileges, root-key exposure, rollback, audit and retention policy; release only into isolated staging first.
-- Apply migration in staging and audit `information_schema.table_privileges`, `pg_class.relrowsecurity`, `pg_policies`, anonymous/authenticated blocked access, service-only INSERT/SELECT, two concurrent DB clients and unique collision behavior.
+- The staging schema/grant/RLS readback already passed (see receipt). Still required: controlled live two-client uniqueness/collision tests and actual bearer-token denied-access checks.
 - Deploy `learner-identity-api` **to staging only** after the migration, with existing Auth/runtime-access RPCs available, current exact allowed-origin list, and tested managed JWT/session verification. Real self-only, other-learner, revoked-session, suspended-account, no-signin and bad-origin probes require controlled synthetic accounts and proper cleanup.
 - Review Edge logs for accidental codes/secrets; run staged reload/recovery tests; record hosted acceptance receipt and backout procedure. Nothing is approved or deployed by this document.
 - Only after staging and explicit release approval, implement copyable Account → Learner ID UX. Do not imply a code exists before actual server readback.
 
 ## Rollback / operational safety
 
-This PR is **additive code only**. There is no database write, service deployment or assignment during GitHub CI. If a later staging API deployment fails, disable the endpoint without deleting mapping/history. For database schema rollback, first export/migrate all issued mappings and obtain privacy/owner approval; automatic dropping would lose identity references. Production data and current canonical UUIDs remain untouched.
+This PR is an **additive source change** and the separate **staging schema migration was applied** via the managed Supabase tool. GitHub CI itself does not write hosted data. No Edge API deployment or actual code assignment has occurred. If a later staging API deployment fails, disable the endpoint without deleting mapping/history. For database schema rollback, first export/migrate all issued mappings and obtain privacy/owner approval; automatic dropping would lose identity references. Production data and current canonical UUIDs remain untouched.
