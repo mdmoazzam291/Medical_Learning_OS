@@ -14,3 +14,7 @@ Pandemic booklet has17 module-opening candidates with source locators. Module co
 Validation:7roles/40unique global locators,17unique pandemic module IDs,13unique open queue IDs,valid page ranges/source hashes and disabled eligibility. No runtime code changed/tests rerun; fresh CI not verified.
 No source descriptions/PDFs exported,no approvals,ingestion,merge/deploy or learner activation.
 Next concrete action: enumerate17pandemic modules' objective/competency row locators and inherited subject-code references,then finish remaining global/subject-goal scope. This is source work the agent can perform; independent human adjudication stays a separate prerequisite.
+
+## 3 November primary pandemic-table follow-up
+
+The 17 module-opening candidates now have reproducible primary-table region locators: 45 physical candidate regions containing 47 level anchors. Page 65 has one merged cell with three anchors; no artificial row split. See `NMC_PANDEMIC_REGION_INVENTORY.md`. This does not complete nested-objective or subject-reference enumeration and does not close the unified source/applicability queue.

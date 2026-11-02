@@ -1,3 +1,9 @@
+## NMC supplementary pandemic primary tables — 3 November 2026
+
+Pinned-source extractor now locates primary competency tables in all 17 candidate modules: 45 physical regions with 47 level anchors. Page 65 merged cell preserves three anchors in one region; no invented internal boundaries. Two final runs byte-identical; 43 Python tests and repository checks pass. Independent engineering rebuild/review found no actionable issue before additive engine metadata. Source wording/PDFs not exported.
+
+This does not enumerate nested objectives/inherited references or approve 2024 applicability, overlap or unique counts. Existing queue stays open, decisions/eligibility remain disabled, runtime/inventory/frozen package unchanged. PR #383 source 9763d361 now all three jobs green in run 41523519914; this follow-up CI not yet verified. See NMC_PANDEMIC_REGION_INVENTORY.md and docs/evidence/2026-11-03-nmc-pandemic-region-verification.json.
+
 ## NMC five-subject source investigation — 3 November 2026
 
 Agent performed actual-source investigation across 100 selected defining pages, reconstructing and checking all 1,118 identifier-appearance raw-cell digests. New metadata-only topic audit script and evidence localize Medicine Topics 8/9/27; confirm Ophthalmology topic counts sum to observed 59 against headline 60; retain malformed Paediatrics Topic 21, unnumbered OBGYN header and missing numbered Surgery 24/27 header evidence. Official pages 409/414/339 visually inspected; not full visual review. No identifiers or totals invented/corrected.
