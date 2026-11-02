@@ -1666,3 +1666,11 @@ Owner approved the integrated Coverage Index design on 29 October 2026 and reque
 
 ## ADR-133 — Concept proposals do not mutate accepted coverage
 The owner continued the accepted Coverage Index authoring direction on29October2026. New concepts and edits can be saved without questions as immutable Admin-only proposals. Stable IDs, server actor/time, request fingerprints, exact predecessor/canonical-base binding and confirmed readback preserve history and retry safety. No concept acceptance or clinical/source approval follows from a save. The canonical catalog, syllabus denominator and learner delivery remain unchanged until later genuinely reviewed activation. See CONCEPT_DRAFTS.md.
+
+## 2 November2026 — Public-only install preview profile (PR380)
+
+Under continuous next-task authorization, remediate the observed live frontend configuration in the PWA preview with a dedicated build artifact rather than changes to production Auth adapters or broader API origin grants. Exact PWA branch builds select public-only mode; explicit non-main local builds may opt in. Main explicit flag rejects, ordinary production and existing controlled-review builds retain normal behavior. Exclude application/config/data scripts, replace protected HTML with notices, retain static public/install assets and deny script/connect/form actions in CSP. This does not establish every branch's isolation, backend authorization, genuine signed-in or device-install acceptance. Verify source/artifact/both browser engines and actual published notice before using the preview for public install checks.
+
+## 2 November2026 — Distinguishable install-preview identity and manual guide (PR380)
+
+Generate the guide only in the public profile and label installed preview metadata Medretica Preview/M. Preview. Keep normal production naming, sourceHTML/auth, root identity and icons unchanged. Use static official-source instructions and manual checks rather than install prompts, device detection or inferred acceptance. No result storage or account workflow is introduced; physical-device verification remains pending.

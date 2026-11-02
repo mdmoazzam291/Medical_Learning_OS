@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-02T14:33:18.119607+00:00",
+  "source": "Owner-supplied iPhone screen recording reviewed in this chat; video/images not copied into repository",
+  "recording_duration_seconds": 39.766667,
+  "installed_target": "Medretica Preview on feature-preview origin",
+  "observed": [
+    "Add to Home Screen dialog with M. Preview name",
+    "Open as Web App toggle enabled",
+    "Home Screen icon installed and launched",
+    "Preview homepage opens without ordinary browser address/navigation controls",
+    "Portrait scrolling and installation-guide navigation"
+  ],
+  "acceptance": {
+    "iphone_preview_install": "visually observed",
+    "iphone_preview_initial_standalone_launch": "visually observed",
+    "guide_navigation": "visually observed",
+    "landscape_rotation": "not verified",
+    "close_and_reopen": "not verified",
+    "authenticated_session": "not verified",
+    "offline": "not supported or verified",
+    "other_operating_systems": "not verified"
+  },
+  "identified_issues": [
+    "Excess inherited top spacing in headerless public preview",
+    "Account-entry CTA and onboarding copy conflict with account-disabled preview"
+  ],
+  "production_release": false,
+  "privacy": "No personal contact names, wallpaper, account data, video bytes or screenshots included"
+}

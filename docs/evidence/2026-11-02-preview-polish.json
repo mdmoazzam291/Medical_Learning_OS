@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-11-02T17:06:46.181294+00:00",
+  "source_commit": "2bfa1974d85da366e70ae2d92d43d537803e8f39",
+  "pr": 380,
+  "workflow_run": 41463083751,
+  "jobs": {
+    "core": {
+      "id": 125336840177,
+      "conclusion": "success"
+    },
+    "chromium": {
+      "id": 125336840734,
+      "conclusion": "success"
+    },
+    "webkit": {
+      "id": 125336840839,
+      "conclusion": "success"
+    }
+  },
+  "tests": {
+    "full": 1558,
+    "focused": 18,
+    "independent_review": 14,
+    "review_findings": []
+  },
+  "builds": {
+    "normal_files": 128,
+    "public_preview_files": 37,
+    "check": "pass",
+    "portability_services": 13,
+    "coupling_locations": 250
+  },
+  "browser_ci": {
+    "viewports": [
+      [
+        390,
+        1000
+      ],
+      [
+        820,
+        390
+      ],
+      [
+        820,
+        1000
+      ],
+      [
+        1440,
+        1000
+      ]
+    ],
+    "content_gap_range_px": [
+      0,
+      32
+    ],
+    "no_horizontal_overflow": true,
+    "no_account_entry_links": true,
+    "no_scripts_forms_config_or_external_requests": true,
+    "both_engines": "pass"
+  },
+  "preview_deployment": {
+    "id": "4ac579fd-4048-4480-aacb-3b1ea33d65fd",
+    "commit": "2bfa1974d85da366e70ae2d92d43d537803e8f39",
+    "provider_build": "success",
+    "provider_deploy": "success"
+  },
+  "live_browser": {
+    "guide_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/web/install",
+    "homepage_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/",
+    "viewport": [
+      1363,
+      936
+    ],
+    "guide_gap_before_px": 67,
+    "guide_gap_after_px": 16,
+    "homepage_gap_px": 16,
+    "account_entry_links": 0,
+    "scripts": 0,
+    "forms": 0,
+    "horizontal_overflow": false,
+    "installation_checklist_observed": true
+  },
+  "physical_observation": "2026-11-02-iphone-preview-install-observation.json",
+  "limits": [
+    "Physical iPhone preview installation and initial portrait standalone launch visually observed from owner recording only",
+    "Physical rotation/close-and-reopen and other operating systems unverified",
+    "Authenticated installed-session acceptance unverified",
+    "No offline support or sync acceptance",
+    "No production publication or merge",
+    "Live HTTP headers and byte equality unverified"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-11-02T13:15:05.570945+00:00",
+  "scope": "public_preview_install_guide_browser_observation",
+  "source_commit": "ebd944e83cdf1179c275a36ce777790e853d1cee",
+  "deployment_id": "56f15cea-2bd2-423f-ad68-b640257e15a3",
+  "provider_receipt": "https://github.com/mdmoazzam291/Medical_Learning_OS/pull/380#issuecomment-6576826807",
+  "verified_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/web/install",
+  "guide_visible": true,
+  "guide_sections": [
+    "iPhone or iPad \u00b7 Safari",
+    "Android \u00b7 Chrome",
+    "Desktop \u00b7 Chrome",
+    "Check on your device"
+  ],
+  "head_identity": {
+    "apple_title": "Medretica Preview",
+    "application_name": "Medretica Preview"
+  },
+  "manifest_identity": {
+    "name": "Medretica Preview",
+    "short_name": "M. Preview",
+    "id": "/",
+    "start_url": "/",
+    "scope": "/"
+  },
+  "scripts": 0,
+  "forms": 0,
+  "physical_install_verified": false,
+  "standalone_session_verified": false,
+  "offline_verified": false,
+  "auth_or_backend_operation_performed": false,
+  "production_changed": false,
+  "source_ci_run": 41450741334,
+  "source_ci_result": "all_three_jobs_success",
+  "local_tests": 1555,
+  "normal_build_files": 127,
+  "public_build_files": 36,
+  "both_engine_guide_checks": "passed_three_viewports_each"
+}

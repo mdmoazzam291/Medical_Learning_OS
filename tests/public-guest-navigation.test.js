@@ -16,12 +16,12 @@ test('signed-out visitors get public destinations instead of private workspace t
   }
 });
 
-test('public menu has one information destination plus Preferences', () => {
+test('public menu offers information, installation help and Preferences', () => {
   for (const phone of [false,true]) for (const currentHref of ['/','/web/services#how-it-works','/web/account']) {
     const html=navigationMarkup({signedIn:false,phone,currentHref});
     const menu=html.match(/<nav aria-label="Public menu">(.*?)<\/nav>/s)?.[1];
     assert.ok(menu);
-    assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match=>match[1]), ['/web/services.html','/web/workspace.html?master=account&amp;section=preferences']);
+    assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match=>match[1]), ['/web/services.html','/web/install.html','/web/workspace.html?master=account&amp;section=preferences']);
     assert.equal((menu.match(/>Explore Medretica</g)||[]).length,1);
   }
 });
@@ -40,6 +40,8 @@ test('sign-in form, benefits and preview implementation stay unchanged', async (
   for(const [path,sha256] of Object.entries(files)) {
     const [file,fragment]=path.split('#');
     let content=await readFile(new URL('../'+file,import.meta.url),'utf8');
+    // Permit only the reviewed install metadata at the end of head; freeze every other byte.
+    if(file==='web/account.html') content=content.replace('<link rel="manifest" href="/web/manifest.webmanifest"><meta name="theme-color" content="#244A3A"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"></head>','</head>');
     // Freeze public sign-in content; authenticated Account may gain preparation controls.
     if(fragment==='signedOut') content=content.slice(content.indexOf('function signedOut() {'),content.indexOf('\nfunction retentionPilotPanel()'));
     assert.equal(createHash('sha256').update(content).digest('hex'),sha256,path);

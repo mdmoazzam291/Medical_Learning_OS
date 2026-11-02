@@ -45,7 +45,7 @@ try {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), String(width));
       await page.getByLabel('Open public menu',{exact:true}).click();
       assert.ok(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link',{name:'Preferences',exact:true}).isVisible());
-      assert.deepEqual(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link').allTextContents(),['Explore Medretica','Preferences']);
+      assert.deepEqual(await page.getByRole('navigation',{name:'Public menu',exact:true}).getByRole('link').allTextContents(),['Explore Medretica','Install Medretica','Preferences']);
       assert.equal(await page.getByRole('navigation',{name:'Public navigation',exact:true}).getByRole('link').count(),width>1050?1:0);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'open menu overflows '+width);
       await page.keyboard.press('Escape');

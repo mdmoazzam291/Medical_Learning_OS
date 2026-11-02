@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-11-02T14:10:32.762574+00:00",
+  "source_commit": "dd82ad3e8dd7850c994ec582e33a0881a4396252",
+  "runtime_commit": "1d295077d5cf355b180316f576ae4a2ca635a18e",
+  "pr": 380,
+  "workflow_run": 41457816652,
+  "jobs": {
+    "core": {
+      "id": 125319244587,
+      "conclusion": "success"
+    },
+    "chromium": {
+      "id": 125319244134,
+      "conclusion": "success"
+    },
+    "webkit": {
+      "id": 125319244528,
+      "conclusion": "success"
+    }
+  },
+  "local": {
+    "full_tests": 1557,
+    "focused_tests": 17,
+    "check": "pass",
+    "portability_services": 13,
+    "coupling_locations": 250,
+    "normal_build_files": 128,
+    "public_build_files": 36
+  },
+  "review": {
+    "independent_tests": 13,
+    "finding": "preview browser assertions must precede Home navigation",
+    "resolution": "corrected before source checkpoint"
+  },
+  "ci_correction": {
+    "prior_run": 41457314004,
+    "failure": "older browser exact-menu expectation omitted intended Install Medretica link",
+    "resolution": "expected menu list corrected; all three final source jobs pass"
+  },
+  "preview": {
+    "provider_deployment": "3f0c7bda-20b5-4798-8bc4-850e07f3df67",
+    "commit": "dd82ad3e8dd7850c994ec582e33a0881a4396252",
+    "provider_build": "success",
+    "provider_deploy": "success",
+    "observed_guide_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/web/install",
+    "heading": "Install Medretica Preview",
+    "scripts": 0,
+    "forms": 0,
+    "home_href": "/",
+    "manifest_href": "/web/manifest.webmanifest",
+    "new_troubleshooting_observed": true
+  },
+  "limits": [
+    "No physical OS installation or standalone acceptance",
+    "No authenticated installed-app session acceptance",
+    "No offline support or sync",
+    "No production release or merge",
+    "Live HTTP headers and byte equality not verified"
+  ]
+}
