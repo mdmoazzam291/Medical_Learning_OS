@@ -40,3 +40,11 @@
 ## Rollback / operational safety
 
 This PR is an **additive source change** and the separate **staging schema migration was applied** via the managed Supabase tool. GitHub CI itself does not write hosted data. No Edge API deployment or actual code assignment has occurred. If a later staging API deployment fails, disable the endpoint without deleting mapping/history. For database schema rollback, first export/migrate all issued mappings and obtain privacy/owner approval; automatic dropping would lose identity references. Production data and current canonical UUIDs remain untouched.
+
+## 2 November continuation audit: delivery freshness and native proof
+
+The handler now repeats the current runtime session check after GET readback or POST persisted allocation, immediately before returning a code/status. A session revoked during I/O receives a denied response; a mapping already committed is retained for same-account reconciliation. A final-check dependency outage returns503 without a code. These checks reduce the exposure window; they do not make provider Auth and SQL writes atomic or invalidate a response already delivered.
+
+New behavioral tests execute the actual TypeScript handler and runtime helper using isolated trusted Auth/storage callbacks. They prove route/body/origin/session failure handling, verified self-only IDs, corrupted cross-user readback rejection, uncertain-write sanitization and post-I/O denial. They are not genuine hosted JWT/SDK acceptance.
+
+A separate native PostgreSQL17.6/18.6 CI fixture uses independent service-role login connections, actual unique-index waits/blocking PIDs and the source migration. It tests same-user convergence, different-user code collision retry, rollback and committed lost-response reconciliation; a removed-UUID-uniqueness negative control must fail the barrier and clean up. This is major-version fixture evidence, not managed staging17.11 acceptance. No signup, real code issuance, provider Auth update or deployment occurs in this audit.

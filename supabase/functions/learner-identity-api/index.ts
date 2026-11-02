@@ -49,6 +49,18 @@ function routePath(url: URL) {
   return "/" + (index >= 0 ? parts.slice(index + 1) : parts).join("/");
 }
 
+async function requireRuntimeAccess(admin: any, token: string, authUserId: string) {
+    const runtime = await checkRuntimeAccess(admin, token, authUserId);
+    if (runtime?.reason === "account_suspended") fail(403, "account_suspended");
+    // A missing/failed session-validation RPC is a backend dependency outage,
+    // not evidence that the signed-in user lacked permission. Fail closed as
+    // unavailable and do not query or allocate a learner code.
+    if (runtime?.reason === "runtime_access_unavailable")
+      fail(503, "identity_session_check_unavailable");
+    if (runtime?.allowed !== true) fail(403, "runtime_access_denied");
+
+}
+
 Deno.serve(async (req: Request) => {
   try {
     const origin = req.headers.get("origin");
@@ -84,14 +96,7 @@ Deno.serve(async (req: Request) => {
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
-    const runtime = await checkRuntimeAccess(admin, token, authUserId);
-    if (runtime?.reason === "account_suspended") fail(403, "account_suspended");
-    // A missing/failed session-validation RPC is a backend dependency outage,
-    // not evidence that the signed-in user lacked permission. Fail closed as
-    // unavailable and do not query or allocate a learner code.
-    if (runtime?.reason === "runtime_access_unavailable")
-      fail(503, "identity_session_check_unavailable");
-    if (runtime?.allowed !== true) fail(403, "runtime_access_denied");
+    await requireRuntimeAccess(admin, token, authUserId);
 
     const table = admin.from("learner_reference_codes");
     const storage = {
@@ -123,6 +128,8 @@ Deno.serve(async (req: Request) => {
           normalizeLearnerCode(entry.learnerCode) !== entry.learnerCode)) {
         fail(503, "learner_code_readback_invalid");
       }
+      // A session may be revoked while storage readback was in flight.
+      await requireRuntimeAccess(admin, token, authUserId);
       return result(req, 200, {
         contractId: "learner-identity-self-v1",
         learnerCode: entry?.learnerCode ?? null,
@@ -136,6 +143,8 @@ Deno.serve(async (req: Request) => {
     } catch {
       fail(503, "learner_code_allocation_unavailable");
     }
+    // Keep a committed mapping, but withhold delivery after current denial.
+    await requireRuntimeAccess(admin, token, authUserId);
     return result(req, 200, {
       contractId: "learner-identity-self-v1",
       learnerCode: assigned.learnerCode,
