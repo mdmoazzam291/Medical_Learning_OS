@@ -178,3 +178,12 @@
 .guest-page{max-width:940px;margin:0 auto;padding-top:28px}.guest-page .page-heading{margin:18px 0 24px}.guest-page h1{max-width:24ch}.guest-page .page-heading p{max-width:65ch}.guest-card{max-width:760px}.guest-card h2{font-size:1.25rem}.guest-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0 24px}.guest-actions .action-link{margin-top:0;min-height:44px;display:inline-flex;align-items:center}.guest-card ul{padding-left:20px;line-height:1.7}.guest-card li{margin:10px 0}.guest-availability{border-top:1px solid var(--line);padding-top:18px;font-size:.82rem;color:var(--muted)}
 @media(min-width:800px) and (max-width:1050px){.public-home .hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px}.public-home .session-card{padding:20px}}
 @media(max-width:700px){.guest-page{padding-top:20px}.guest-page h1{font-size:1.9rem}.guest-actions{gap:10px}}
+
+/* Compact authenticated Account summary; sign-in and other workspace metrics stay unchanged. */
+#account-app .account-record-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}
+#account-app .account-record-metrics>div{min-width:0;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+#account-app .account-record-metrics strong{display:block;font-size:clamp(1.2rem,2.4vw,1.8rem);overflow-wrap:anywhere;margin-bottom:6px}
+#account-app .account-record-metrics span{display:block;font-size:.78rem;line-height:1.4;overflow-wrap:anywhere}
+#account-app .account-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0;overflow:visible}
+#account-app .account-shortcuts a{display:flex;align-items:center;justify-content:center;min-height:44px;min-width:0;margin:0;text-align:center;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:700px){#account-app .account-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}#account-app .account-record-metrics>div{padding:10px 8px}}

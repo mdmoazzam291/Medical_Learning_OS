@@ -412,6 +412,29 @@ try {
     await activate(page.getByLabel('Account menu', { exact: true }));
     await activate(page.getByRole('navigation', { name: 'Account navigation', exact: true }).getByRole('link', { name: 'Profile', exact: true }));
     await page.getByRole('heading', { name: 'Your Medretica account.', exact: true }).waitFor();
+    // Actual fixture-authenticated Account layout, isolated from sign-in and other metrics.
+    await page.locator('.account-record-metrics').waitFor();
+    for(const accountWidth of width<=700?[320,width]:[width]){
+      await page.setViewportSize({width:accountWidth,height});
+    const accountLayout = await page.evaluate(() => {
+      const rect = node => { const r=node.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}; };
+      return {metrics:[...document.querySelectorAll('.account-record-metrics>div')].map(rect),shortcuts:[...document.querySelectorAll('nav[aria-label="Account shortcuts"] a')].map(rect),overflow:document.documentElement.scrollWidth>innerWidth};
+    });
+    assert.equal(accountLayout.metrics.length,3);assert.equal(accountLayout.shortcuts.length,4);
+    assert.ok(accountLayout.metrics.every(r=>Math.abs(r.y-accountLayout.metrics[0].y)<1),'Account metrics share one row');
+    assert.ok(accountLayout.metrics.every(r=>Math.abs(r.width-accountLayout.metrics[0].width)<1),'Account metric tiles have equal widths');
+    assert.ok(accountLayout.shortcuts.every(r=>r.height>=44));assert.equal(accountLayout.overflow,false);
+    assert.ok(Math.abs(accountLayout.shortcuts[0].y-accountLayout.shortcuts[1].y)<1);
+    if(accountWidth<=700){assert.ok(accountLayout.shortcuts[2].y>accountLayout.shortcuts[0].y);assert.ok(Math.abs(accountLayout.shortcuts[2].y-accountLayout.shortcuts[3].y)<1);}
+    else assert.ok(accountLayout.shortcuts.every(r=>Math.abs(r.y-accountLayout.shortcuts[0].y)<1));
+    // Large observed counts must wrap inside their tiles rather than widening the page.
+    await page.locator('.account-record-metrics strong').first().evaluate(node=>{node.dataset.originalCount=node.textContent;node.textContent='123456789012345';});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    await page.locator('.account-record-metrics strong').first().evaluate(node=>{node.textContent=node.dataset.originalCount;delete node.dataset.originalCount;});
+
+    }
+    await page.setViewportSize({width,height});
+    if(process.env.SCREENSHOT_DIR)await page.screenshot({path:join(process.env.SCREENSHOT_DIR,'account-summary-'+engine+'-'+name+'.png'),fullPage:false});
     await adminEntry.waitFor({ state: 'attached' });
     if (width > 1050 && await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await activate(page.locator('#mlos-local-nav a[href="/web/account.html#research"]'));
