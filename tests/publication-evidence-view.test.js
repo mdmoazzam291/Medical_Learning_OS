@@ -77,3 +77,12 @@ test('owner audit is wired to the existing screen with no new route, mutation or
   assert.match(source,/data-owner-integrity-run/);
   assert.match(css,/grid-template-columns:repeat\(auto-fit,/);
 });
+
+test('inconsistent warning count and truncation never display an empty or complete scan',()=>{
+  const warning={scope:'source',targetId:'SRC-1',code:'source_rights_status_unresolved',action:'independent_human_review_required'};
+  for(const bad of [scan({truncated:true}),scan({warningCount:2,warnings:[warning],truncated:false}),scan({warningCount:1,warnings:[warning],truncated:true})]){
+    const html=publicationEvidenceMarkup(bad);
+    assert.match(html,/scan unavailable/);
+    assert.doesNotMatch(html,/No matching warning phrases found|possible content-review problems detected/);
+  }
+});

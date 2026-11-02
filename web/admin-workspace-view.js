@@ -79,7 +79,8 @@ export function publicationEvidenceMarkup(scan) {
     Number.isSafeInteger(scan.warningCount) && scan.warningCount >= 0 &&
     Array.isArray(scan.warnings) &&
     scan.warnings.length <= 120 && scan.warnings.length <= scan.warningCount &&
-    typeof scan.truncated === 'boolean';
+    typeof scan.truncated === 'boolean' &&
+    scan.truncated === (scan.warningCount > scan.warnings.length);
   if (!complete) {
     return intro + '<p><strong>Evidence warning scan unavailable.</strong> Nothing is verified. Re-run after the owner API has been updated; continue independent review.</p></section>';
   }
