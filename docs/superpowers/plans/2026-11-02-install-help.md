@@ -23,11 +23,13 @@ Interface: /web/install.html (canonical hosted /web/install) serves script-free 
 - [x] Add tests for normal build guide, manifest/head metadata, no scripts/forms, Home route, both guest/signed-in menu access and profile separation. Run for expected missing-guide failure.
 - [x] Implement static guide/menu links and preview troubleshooting; preserve all account routes and install identity.
 - [x] Extend actual built-bundle browser checks across three widths and guide/Home navigation, without treating browser rendering as OS installation proof.
-- [ ] Run focused tests, full npm test, npm run check and both build profiles; review changes independently, save source checkpoint and inspect exact source CI.
-- [ ] Update STATUS/AI_HANDOFF with source, verification limits and physical-device next action; persist and read back remote files.
+- [x] Run focused tests, full npm test, npm run check and both build profiles; review changes independently, save source checkpoint and inspect exact source CI.
+- [x] Update STATUS/AI_HANDOFF with source, verification limits and physical-device next action; persist and read back remote files.
 
 Pre-flight: one task; no shared task interfaces.
 
 Validation: RED missing normal guide/menu; GREEN focused17/full1557/check13services250couplings/normal128/public36 builds. Fresh review13testsPASS; browser assertion-order finding corrected. Exact sourceCI and final evidence pending.
 
 CI correction: source1d29507 Chromium guide/previewPASS, later public-navigation exact-label assertion retained pre-feature menu; update only expected labels to include InstallMedretica. Physical/media-emulation proof remains excluded.
+
+Complete: correctedsource dd82ad3 / Foundation41457816652 all3SUCCESS; core1557tests/normal128build, both-engine guide/publicpreview/publicmenu/fullnavigation PASS. Cloudflarepreview3f0c7bda build/deploySUCCESS andguideobserved; physicalinstall/authenticatedreopen pending. Evidence-only checkpoint CI separate. No unresolved review findings or deferred minors.
