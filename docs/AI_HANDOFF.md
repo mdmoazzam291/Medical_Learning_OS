@@ -1,3 +1,9 @@
+## NMC AETCOM remaining-variant AI triage — 3 November 2026
+
+All 14 remaining appearances now have explicit provisional proposals: 12 candidate expression variants, 1 terminology conflict, 1 scope/action difference. References bind source/appendix physical IDs, pages, body hashes, exact prior artifact hashes and per-case digests. These are AI source-investigation proposals, not accepted clinical equivalence or 14 new distinct defects. Original 22-case packet remains unchanged/pending.
+
+All 65 NMC tests and validator pass (14 proposals, zero approved decisions). Metadata packet 10,826 bytes; SHA 3659b498f775efc755fa66250e22493422c64cb53d5d90b11b8c2d42dce20c20. Fresh hosted CI not yet verified. No mapping, source correction, rights/exam/applicability approval, runtime change or learner activation. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-aetcom-variant-triage-verification.json.
+
 ## NMC AETCOM formatting investigation — 3 November 2026
 
 Pinned-source list-marker diagnostic reconstructs and verifies all 112 prior body hashes. Removing only leading list numbers and collapsing whitespace accounts for 22 previously unmatched module appearances: 30 formatting matches total, original eight preserved, 14 unmatched. Original physical identities/artifacts unchanged. No spelling, punctuation, clinical words, negation or internal-number normalization. Literal partial-word scan is zero in 44 selected statements, without semantic absence claim.
