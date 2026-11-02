@@ -86,6 +86,11 @@ Deno.serve(async (req: Request) => {
     });
     const runtime = await checkRuntimeAccess(admin, token, authUserId);
     if (runtime?.reason === "account_suspended") fail(403, "account_suspended");
+    // A missing/failed session-validation RPC is a backend dependency outage,
+    // not evidence that the signed-in user lacked permission. Fail closed as
+    // unavailable and do not query or allocate a learner code.
+    if (runtime?.reason === "runtime_access_unavailable")
+      fail(503, "identity_session_check_unavailable");
     if (runtime?.allowed !== true) fail(403, "runtime_access_denied");
 
     const table = admin.from("learner_reference_codes");
