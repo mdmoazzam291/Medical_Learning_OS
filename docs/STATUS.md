@@ -1,3 +1,9 @@
+## 2 November2026 — Both audit repairs accepted by full code-head CI
+
+- Owner Codex /root. Learner379code de8a4827d8669aa0d6f22bebacfee0c94bcdbb63/41404147987 all5jobsSUCCESS; publication376code0392476ee660592c7f3a1b1fcee09396d25cea31/41404306561 all3jobsSUCCESS. Seven learner behavior tests, full1569suite; publication31focused/full1572suite; bothchecksPASS. No unaddressed concrete reviewer finding remains in this bounded increment.
+- Completed Core6 metadata-only inventory and human worksheet on376evidence694ebbf830a6ed5b12641b97240e63e841778193: catalog446,6note versions,6exact linked question versions,8sourceIDs/fingerprints,6edges. All Rights/Medical/References decisions still pending. Reads only, no clinical/source/learner writes or secret retrieval. Corrected stale374metadata and confirmed375CI without clearing human merge gates.
+- This final audit record is docs-only; its own CI is separate. No deployment, account creation/code issuance, production change, merge or human approval. Completed bounded engineering audit; unresolved22NMCadjudications, qualified source/clinical/reference decisions, genuine hostedJWT/two-user/revocation acceptance and explicit rollout cannot be inferred from tests. Next work uses current scopedPRs, not archived346or deferredexternal350. Owner released; no background mutating job retained.
+
 ## 2 November2026 — Learner delivery audit verified; Core6 inventory enumerated read-only
 
 - Owner Codex /root; tested379implementation de8a4827d8669aa0d6f22bebacfee0c94bcdbb63. Foundation41404147987 completed all five jobsSUCCESS: core, Chromium, WebKit, nativePG17.6+18.6. Exact implementation source readbacks verified. This followup is documentation/evidence only.

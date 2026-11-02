@@ -35,3 +35,7 @@ Exact repair commits and current CI receipts are recorded in the latest branch h
 ## Read-only completion of missing Core6 inventory
 
 Production catalog metadata was inspected with SELECT only at2026-11-02T07:13:13.609571Z: catalog446 unchanged,6original published v1 notes,6linked published question-version IDs and8source IDs enumerated. The prior worksheet's six unknown question/source slots are now filled in376, with a metadata-only receipt; all decisions remain pending. Stored note hashes were observed, not independently recomputed; question/source JSONB-record hashes are snapshot fingerprints, not JCS/domain canonical or source-byte verification. No note/stem/answer/explanation/source excerpt, author/learner identity or credentials retrieved. All8sources still store public_domain, an unverified historical claim, not a rights determination.
+
+## Final repair-head CI evidence
+
+Learner identity implementationde8a4827d8669aa0d6f22bebacfee0c94bcdbb63: Foundation41404147987 all5jobsSUCCESS(core,Chromium,WebKit,nativePG17.6,nativePG18.6). Publication warning implementation0392476ee660592c7f3a1b1fcee09396d25cea31: Foundation41404306561 all3jobsSUCCESS(core,Chromium,WebKit). Later evidence-only documentation heads need separateCI; neither run is a hostedAuth/human approval. Local suites1569and1572testsPASS, checks13services255and250locationsPASS.
