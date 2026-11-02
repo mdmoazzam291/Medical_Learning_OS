@@ -1,3 +1,12 @@
+## 2 November2026 — Exact SDK top-level pin verified and stagingv3 active
+
+- OwnerCodex/root; tested379source8bc1ada00763372f72489049a7cdb919f6d5574e. Foundation41415880983 ALL5jobsSUCCESS(core,Chromium,WebKit,PG17.6,PG18.6). Focused14/full1581tests/check13services259locationsPASS, read-only review no concrete issue; exact3committed/deployed source filesmatch.
+- EdgeSDK now exact2.118.0 matching reviewedoperator manifest/lock; moving@2guard failedRED thenGREEN. Npmregistry metadata confirms version; read-only isolated operatorlock audit0known advisories, manifest/lock unchanged. These are top-level/advisory assertions only: complete Node/Edge dependency/runtime parity/security certification not established.
+- Only stagingvwtdwafjrraptrgeshzt learner-identity-api ACTIVEv3, providerbundle42d1b5d8a07a8f55581815fb7c7150fe4ad9c0b22196b14e6f1ff24ab26e742d; mandatorygetUser/current-session/self-only/no-store/boundedbody guards unchanged, platformverify_jwt=false preserved with ownAuth checks. All9actualhostednegative/CORS/preflightcasesPASS. Postcheck2026-11-02T08:51:18.40852Z:0users/0sessions/0codes. No testidentity or code issuance, production/UIdeploy/schema/role/source/reviewer/clinical/rights approval or merge.
+- SDKreceipt/evidence/current staging contract/portability state updated; older v2receipt historical. Movingv2@2source cannot be treated as deterministicrollback; stop positive tests on regression and require independently reviewed exact-pinned recovery bundle. No binaryrollback acceptance claimed.
+- Exact new source-headCIverified; final evidence/register-only commitCIseparate. Prior recovery2427b42/41413855437 and operatorprobe2ae24e2/41410474045 ALL5jobsSUCCESS too; those remain logical/callback fixtures, not managed/fullbackup or real signedJWT proof. GenuineoperatorAuth/two-user/revoked/suspended/cleanup/retention/no-reuse/human source/medical/reviewer gates remainunverified.
+- Next necessary external gate still requires trusted operator environment/owned temporary accounts/private recovery journals; management connector lacks Authadmincreate/delete and secretcredentials unavailable. No key/JWT extraction intochat/Git; do not bypass viaAuthSQL or privilegedproxy. No background mutating job retained. Owner released at checkpoint.
+
 ## 2 November2026 — Staging SDK top-level version pin checkpoint
 
 - OwnerCodex/root; resumed3792427b422ae09bb6ad67d9df848f227845b102505 in isolated mlos-identity-sdk-pin. Previous recoveryCI41413855437 independently verifiedALL5jobsSUCCESS; genuine operatorAuth still blocked.

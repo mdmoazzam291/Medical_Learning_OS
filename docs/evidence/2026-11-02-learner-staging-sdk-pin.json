@@ -1,0 +1,132 @@
+{
+  "scope": "isolated_staging_sdk_top_level_pin",
+  "source_commit": "8bc1ada00763372f72489049a7cdb919f6d5574e",
+  "sdk_version": "2.118.0",
+  "node_edge_transitive_parity_verified": false,
+  "project_id": "vwtdwafjrraptrgeshzt",
+  "function": "learner-identity-api",
+  "version": 3,
+  "bundle_sha256": "42d1b5d8a07a8f55581815fb7c7150fe4ad9c0b22196b14e6f1ff24ab26e742d",
+  "deployed_source_files_match": 3,
+  "negative_http": {
+    "results": [
+      {
+        "case": "anonymous GET",
+        "status": 401,
+        "expected": 401,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "forged GET",
+        "status": 401,
+        "expected": 401,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "forged empty ensure",
+        "status": 401,
+        "expected": 401,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "foreign Origin",
+        "status": 403,
+        "expected": 403,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "JSON payload",
+        "status": 400,
+        "expected": 400,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "binary payload",
+        "status": 400,
+        "expected": 400,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "target query",
+        "status": 400,
+        "expected": 400,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "unknown route",
+        "status": 404,
+        "expected": 404,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      },
+      {
+        "case": "preflight",
+        "status": 200,
+        "expected": 200,
+        "errorMatches": true,
+        "privateResponse": true,
+        "cors": true,
+        "preflight": true,
+        "pass": true
+      }
+    ],
+    "passed": 9,
+    "total": 9
+  },
+  "postcheck": {
+    "observed_at": "2026-11-02 08:51:18.40852+00",
+    "auth_users": 0,
+    "auth_sessions": 0,
+    "issued_codes": 0
+  },
+  "genuine_signed_in_auth_acceptance": false,
+  "production_changed": false,
+  "operator_lock_advisory_audit": {
+    "known_vulnerabilities": 0,
+    "edge_dependency_graph_audited": false,
+    "scope": "npm audit --package-lock-only for isolated operator lock; not a security certificate"
+  },
+  "ci": {
+    "source_commit": "8bc1ada00763372f72489049a7cdb919f6d5574e",
+    "foundation_run": 41415880983,
+    "all_five_jobs_success": true,
+    "scope": [
+      "core",
+      "Chromium",
+      "WebKit",
+      "PostgreSQL17.6",
+      "PostgreSQL18.6"
+    ]
+  }
+}
