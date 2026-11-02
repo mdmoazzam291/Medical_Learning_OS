@@ -1,6 +1,6 @@
 # Learner identity — private mapping and self endpoint (PR #379)
 
-**Status:** draft implementation for isolated validation, **not yet deployed to Supabase**. This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
+**Status:** managed **staging schema applied**, API **not deployed**; production unchanged. See [staging schema receipt](releases/2026-11-02-learner-code-staging-schema.md). The required `learner_runtime_access_v1(uuid,uuid)` RPC is absent from staging and must be restored from reviewed runtime-access migrations before authenticated end-to-end acceptance. This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
 
 ## Source implementation
 
