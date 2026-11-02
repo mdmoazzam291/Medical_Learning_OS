@@ -1,0 +1,210 @@
+{
+  "scope": "read_only_core6_metadata_no_approval",
+  "humanApprovalGranted": false,
+  "questionAndSourceFingerprintProfile": "SHA-256 of PostgreSQL JSONB record text UTF-8; snapshot comparison only, not JCS/domain canonical digest or source-byte verification",
+  "noteFingerprintProfile": "Stored content_sha256 field observed, not independently recomputed",
+  "observed_at": "2026-11-02T07:13:13.609571+00:00",
+  "note_metadata": [
+    {
+      "id": "1406298d-2dd2-4e83-a72e-d5748195dce2",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-d90381e63b295d5c9e164c6ce51c3c64",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-DM-NALOXONE-b1303f15"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "9ee48bf10837fd07cb0992aa025f97b51b7be160de1ad36812cd6f24a9c65f46"
+    },
+    {
+      "id": "7656021e-10ce-4366-ae98-78fa3b19d200",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-1a3ea578f395534bbe33812b04f36ff3",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-NLM-MARFAN"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "6e352e79d3414d51a1c8ddf2f339f3ef0aa8af63e77f8a7bb947a5bb6cbd7254"
+    },
+    {
+      "id": "accaa555-2be9-44f7-929f-55cd7f3d37a3",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-6a4c4e05142b55c88c91cc94efd474b9",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-AHA-AORTA-2022"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "fff5ac078a2a86374a9c5149eed8e15da7e3801c8a1546e1e9205796242a6c4a"
+    },
+    {
+      "id": "b1a1bcf5-4d51-4033-97d1-d26367cb4ed2",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-101d60e987915f6fa8175c469a265f79",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-NLM-MESH-D018437"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "c5e389ffa0a8c2cfd6690f8d3558ae7112c3b17c3d593d048112fe39558acf5e"
+    },
+    {
+      "id": "cd1d1661-7f7d-4886-ab64-c865028f23d3",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-d4d3cbaf2b4f521c8e53901bf7fb0729",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-NLM-OTC",
+        "REF-GR-OTC-NBK154378"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "d1f5ffaa082c8148315d1ca3a0023812c9bafb93bea879ce6445ccfc6c1430b4"
+    },
+    {
+      "id": "f5c6013c-d62b-425d-bd8b-7523907c443c",
+      "status": "published",
+      "version": 1,
+      "concept_id": "C-b81755276de754e594fa98d87592b9d9",
+      "source_ids": [
+        "SRC-be6ce72162b7a18d92bf",
+        "REF-CDC-CFR-L3S3"
+      ],
+      "published_at": "2026-10-23T22:05:34.985227+00:00",
+      "content_sha256": "b0752624c2ef340c93ae4c02c2867980cb410f423d9130ce7d4d9bea5309f220"
+    }
+  ],
+  "catalog_version": 446,
+  "source_metadata": [
+    {
+      "version": "2022; accessed 2026-10-24",
+      "source_id": "REF-AHA-AORTA-2022",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "b918a02b33befce37c20480e082df5cb2d691203af45b1e03837b05ec1b45d3a"
+    },
+    {
+      "version": "Archived lesson 3 section 3; accessed 2026-10-24",
+      "source_id": "REF-CDC-CFR-L3S3",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "be908fd4fca723ec98a91228183175f880c0354b1adda963f57e0f06d9493da2"
+    },
+    {
+      "version": "setid:b1303f15-c48b-a44d-b28a-72f370094e02; accessed 2026-10-24",
+      "source_id": "REF-DM-NALOXONE-b1303f15",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "a34da7a2cd449c51c40b300299bbf6df2486ffc16ac32d71b1da79650c3af2a0"
+    },
+    {
+      "version": "indexed excerpts accessed 2026-10-24",
+      "source_id": "REF-GR-OTC-NBK154378",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "f4f4a66c1dfc1037064879a28972e225930fda5530aede0017666631f317a5ed"
+    },
+    {
+      "version": "accessed 2026-10-24",
+      "source_id": "REF-NLM-MARFAN",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "f3219b1772c31b1bfc0d10bb517f53a6e13ac0b188645573239f7b4658029f67"
+    },
+    {
+      "version": "MeSH 2026; accessed 2026-10-24",
+      "source_id": "REF-NLM-MESH-D018437",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "0a2263dce37c9226d4ff9661fafb66d7ff49507041cac9191ef431088a7451f6"
+    },
+    {
+      "version": "accessed 2026-10-24",
+      "source_id": "REF-NLM-OTC",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "77c0059ef7179d9cc342b510358599f085dafb246899e06bd82e8ecb0376be23"
+    },
+    {
+      "version": "sha256:be6ce72162b7a18d92bf0a2e821261e7ce8b44374cdadd467393a63618f91d1b",
+      "source_id": "SRC-be6ce72162b7a18d92bf",
+      "rights_status": "public_domain",
+      "jsonb_record_sha256": "36a081243e14aaf409dca49cf75af0d8941940ac328a98955517b6a9ae8330e0"
+    }
+  ],
+  "question_metadata": [
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-38941e7ca54ca59b2882",
+      "jsonb_record_sha256": "73e3962e11f27cc6addfeafe154ba4ba58ab24c6ab52e44a6820ca8489f06b30",
+      "question_version_id": "Q-38941e7ca54ca59b2882@1"
+    },
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-467605f7db6bcd36ea4c",
+      "jsonb_record_sha256": "f33146630eec93f4c55ade52bf6eee98882308d4f94eb0ba21263e7e96f6ca70",
+      "question_version_id": "Q-467605f7db6bcd36ea4c@1"
+    },
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-8e473691761d87c98b08",
+      "jsonb_record_sha256": "8ce827b901d339e3ba931cea5f33c59b9bed5ca209b6fe5773b54b1180f718cb",
+      "question_version_id": "Q-8e473691761d87c98b08@1"
+    },
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-a625bf5ef324eb626f77",
+      "jsonb_record_sha256": "654b81886c007ffa98cd12ed4f74a5e8891a96f4338e253ed27d196e3cb00387",
+      "question_version_id": "Q-a625bf5ef324eb626f77@1"
+    },
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-deca3e2b2fe91cbc5d37",
+      "jsonb_record_sha256": "984133dbf7beefa4a1061e73f5411da9cf57e97a924ee38f5abc7480444b28a1",
+      "question_version_id": "Q-deca3e2b2fe91cbc5d37@1"
+    },
+    {
+      "status": "published",
+      "version": 1,
+      "question_id": "Q-fc64d829499fde015469",
+      "jsonb_record_sha256": "07c821f328e7e7a20caf9963ccf8d0c5d695effdeeb6e5ba9d2b469ca7215740",
+      "question_version_id": "Q-fc64d829499fde015469@1"
+    }
+  ],
+  "catalog_updated_at": "2026-10-23T22:05:34.985227+00:00",
+  "note_question_links": [
+    {
+      "relation": "explains",
+      "question_id": "Q-fc64d829499fde015469",
+      "note_version_id": "1406298d-2dd2-4e83-a72e-d5748195dce2"
+    },
+    {
+      "relation": "explains",
+      "question_id": "Q-38941e7ca54ca59b2882",
+      "note_version_id": "7656021e-10ce-4366-ae98-78fa3b19d200"
+    },
+    {
+      "relation": "explains",
+      "question_id": "Q-8e473691761d87c98b08",
+      "note_version_id": "accaa555-2be9-44f7-929f-55cd7f3d37a3"
+    },
+    {
+      "relation": "explains",
+      "question_id": "Q-deca3e2b2fe91cbc5d37",
+      "note_version_id": "b1a1bcf5-4d51-4033-97d1-d26367cb4ed2"
+    },
+    {
+      "relation": "explains",
+      "question_id": "Q-a625bf5ef324eb626f77",
+      "note_version_id": "cd1d1661-7f7d-4886-ab64-c865028f23d3"
+    },
+    {
+      "relation": "explains",
+      "question_id": "Q-467605f7db6bcd36ea4c",
+      "note_version_id": "f5c6013c-d62b-425d-bd8b-7523907c443c"
+    }
+  ]
+}

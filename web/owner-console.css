@@ -20,3 +20,9 @@
 @media(max-width:560px){.owner-source-form{padding:12px}.owner-source-form button{width:100%}}
 .mlos-app #admin-app [hidden]{display:none!important}
 .owner-summary-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:20px}
+
+/* Compact three-question owner-only review guide; adapts to narrow mobile and iPad panels. */
+.owner-trust-checks{list-style:none;margin:12px 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
+.owner-trust-checks li{display:grid;align-content:start;gap:5px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.owner-trust-checks span{line-height:1.45}
+.owner-trust-checks small{color:var(--muted);line-height:1.45}

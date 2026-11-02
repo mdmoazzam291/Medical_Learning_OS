@@ -4,7 +4,7 @@ import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 import { buildAdminActionInbox } from '/src/domain/admin-action-inbox.js';
 import { summarizeRecoveryEvidence } from '/src/domain/operational-recovery.js';
-import { overviewMarkup } from '/web/admin-workspace-view.js';
+import { overviewMarkup, publicationEvidenceMarkup } from '/web/admin-workspace-view.js';
 
 const app = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
@@ -200,6 +200,7 @@ function integrityMarkup(report) {
     (rows ? '<div class="owner-table-wrap"><table class="owner-table"><thead><tr><th>Severity</th><th>Finding</th><th>Entity</th><th>ID</th><th>Related IDs</th></tr></thead><tbody>' +
       rows + '</tbody></table></div>' : '') +
     (report.findingsTruncated ? '<p class="muted">Only the first finding samples are shown. Totals include the complete bounded scan.</p>' : '') +
+    publicationEvidenceMarkup(report.publicationEvidenceScan) +
     '<p class="muted">Snapshot limitation: catalog version is rechecked, but metadata and note tables are read separately, not in one database transaction. A changing catalog should be re-audited. Clinical correctness, source licensing and semantic duplicates still require independent human review.</p>';
 }
 async function runContentIntegrity() {
@@ -376,7 +377,7 @@ function dashboardMarkup(data) {
     </section>
 
     <section id="owner-integrity" class="panel" data-admin-panel="integrity" hidden aria-label="Catalog integrity audit">
-      <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog-wide integrity</h2><p>Scan canonical question versions, PYQ metadata, sources and linked NeuralVault notes. Diagnostic only, never a publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
+      <div class="section-heading"><div><span class="eyebrow">CONTENT &amp; KNOWLEDGE GRAPH</span><h2>Catalog integrity &amp; content checks</h2><p>Read-only structural audit plus simple permission, medical-accuracy and reference-review guidance. No publication or deletion action.</p></div><button class="secondary" type="button" data-owner-integrity-run>Run read-only audit</button></div>
       <div id="owner-integrity-results" role="status" aria-live="polite"><p class="muted">No audit has been run in this session.</p></div>
     </section>
 
