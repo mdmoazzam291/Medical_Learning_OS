@@ -8,9 +8,9 @@ Root cause: one catch wraps both JWT claim parsing and awaited admin.rpc. Existi
 
 - [x] Reproduce actual handler before any mapping access and after readback/commit with thrown RPC errors, asserting503, withheld code, no initial reads/writes and preserved committed row.
 - [x] Add direct helper tests pinning invalid/missing claim behavior/noRPC and returned/thrown dependency failures; split parse and RPC catches without changing allow/deny or scope. Existing caller learner-experiment-api retains its current HTTP mapping; no experimental route change/deploy.
-- [ ] Run focused/full/check/diff, independent final review, checkpoint exact source then inspect all5CIjobs. Do not infer real hosted exception/positiveJWT acceptance from callbacks.
-- [ ] Deploy only exact reviewed learner-identity staging bundle if verified and existing scoped staging access remains available; inspect source parity/repeat hosted negative HTTP checks and read-only zero-row postcheck. No Auth accounts/codes/production/release/human approvals. Otherwise record candidate-only limit honestly.
-- [ ] Persist exact source/test/run/deployed version or explicit unrun state, handoff/status and next genuine operator gate using expected-SHA update and remote readback.
+- [x] Run focused/full/check/diff, independent final review, checkpoint exact source then inspect all5CIjobs. Do not infer real hosted exception/positiveJWT acceptance from callbacks.
+- [x] Deploy only exact reviewed learner-identity staging bundle if verified and existing scoped staging access remains available; inspect source parity/repeat hosted negative HTTP checks and read-only zero-row postcheck. No Auth accounts/codes/production/release/human approvals. Otherwise record candidate-only limit honestly.
+- [x] Persist exact source/test/run/deployed version or explicit unrun state, handoff/status and next genuine operator gate using expected-SHA update and remote readback.
 
 No new package/provider; one new reviewed script coupling path and existing CI provider association for exact-SDK transport verification. existing shared helper is consumed by identity and learner-experiment sources. Production bundles remain untouched. This is error classification, no auto-retry or authorization relaxation; do not report an unexecuted hosted transport fault as observed.
 

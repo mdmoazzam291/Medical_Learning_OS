@@ -1,6 +1,6 @@
 # Learner identity — private mapping and self endpoint (PR #379)
 
-**Status:** managed **staging schema applied**, API **deployed only to isolated staging v3**; production unchanged. See [staging schema receipt](releases/2026-11-02-learner-code-staging-schema.md). The exact production `learner_runtime_access_v1(uuid,uuid)` definition is now restored **to staging only**, with equal installed-function digest and server-only privileges ([parity receipt](releases/2026-11-02-learner-runtime-session-parity.md)); genuine signed-in Edge acceptance is **still unverified**; nine hosted negative checks passed ([staging API receipt](releases/2026-11-02-learner-identity-staging-api.md)). This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
+**Status:** managed **staging schema applied**, API **deployed only to isolated staging v4**; production unchanged. See [staging schema receipt](releases/2026-11-02-learner-code-staging-schema.md). The exact production `learner_runtime_access_v1(uuid,uuid)` definition is now restored **to staging only**, with equal installed-function digest and server-only privileges ([parity receipt](releases/2026-11-02-learner-runtime-session-parity.md)); genuine signed-in Edge acceptance is **still unverified**; nine hosted negative checks passed ([current staging API receipt](releases/2026-11-02-learner-runtime-outage-classification.md)). This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
 
 ## Source implementation
 
@@ -56,3 +56,7 @@ Current stagingv3 pins top-level SDK2.118.0 to the reviewed operator manifest/lo
 ## Disposable native archive recovery
 
 The [native recovery receipt](LEARNER_CODE_NATIVE_RECOVERY_FIXTURE.md) records actual table-only pg_dump/pg_restore tests on PostgreSQL17.6/18.6, exact mapping and access-control parity, failure rollback, negative column-ACL control and cleanup. This adds no managed Auth/full-platform recovery, real signed-in acceptance, retention/no-reuse approval or production release authority.
+
+## Session dependency exception handling
+
+The shared runtime checker separates malformed session claims from failed RPC execution. Both returned and thrown dependency failures deny access; the self identity API returns503 for unavailable session validation. An initial failure prevents mapping access, and a final failure withholds delivery while preserving a committed mapping. See the [staging v4 repair receipt](releases/2026-11-02-learner-runtime-outage-classification.md). No application retry, account authority or genuine signed-in acceptance follows from these tests.

@@ -1,5 +1,7 @@
 # Staging learner identity SDK top-level pin
 
+Historical v3 pin receipt. The later [v4 session-RPC repair](2026-11-02-learner-runtime-outage-classification.md) supersedes the current-deployment statements below; its SDK remains2.118.0.
+
 2 November2026. Isolated staging only, no production target or Auth identity/data mutation.
 
 The Edge handler previously imported `npm:@supabase/supabase-js@2`, while the reviewed operator manifest and lock pinned2.118.0. npm registry metadata confirmed2.118.0 availability. A new guard failed on the moving import, then passed after changing the Edge import to exact2.118.0. It also checks exact-semver syntax and the operator lock entry. No root/app dependency added; operator package/lock unchanged.
