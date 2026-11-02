@@ -72,3 +72,29 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 Metadata output: `docs/evidence/nmc-aetcom-list-marker-comparison-v1.json`. Two actual runs are byte-identical: 20,871 bytes, SHA-256 a702c6eb223a0ae8ee463a75021708f44c8299777bd6ab23e0aa98ffa6e30e89. All 60 NMC tests and repository checks pass. Tests explicitly preserve decimals, internal numbers, punctuation, spelling and negation. Fresh hosted CI for this implementation is not yet verified. No source wording, source correction, semantic approval, applicability decision, canonical mapping, learner activation or deployment.
 
 Independent engineering review reproduced the list-marker diagnostic byte-for-byte, confirmed all old exact target IDs remain present and every new match has an actual removed module list marker, and found no actionable issue. This review does not approve source or clinical equivalence.
+
+## Provisional triage of the 14 remaining variants — 3 November 2026
+
+`docs/evidence/nmc-aetcom-variant-triage-v1.json` now records a provisional AI proposal for every one of the 14 appearances left unmatched by the formatting diagnostic. Each source and candidate appendix reference carries its physical ID, page and body hash; each case has a canonical digest. Exact byte hashes bind the module, appendix and formatting artifacts. These are detailed proposals overlapping the existing source-adjudication work, not 14 certified additional defects or decisions to add blindly to the original 22-case denominator.
+
+| Provisional category | Appearances | Meaning of proposal |
+|---|---:|---|
+| Orthographic variant | 5 | Spelling/hyphenation warrants comparison; equivalence remains unapproved |
+| Punctuation variant | 2 | Separation/punctuation differs; no source rewrite |
+| Conjunction variant | 2 | Connecting wording differs; retain both source statements |
+| Grammatical variant | 3 | Inflection/terminal punctuation differs; no automatic equivalence |
+| Terminology conflict | 1 | Module 2.2 and appendix entry 3 use differing terminology; retain conflict |
+| Scope/action difference | 1 | Module 4.8 wording does not simply repeat the candidate appendix action; entries 35/40 are alternatives for investigation, not a merged mapping |
+
+Thus 12 are candidate expression variants and two require explicit terminology or action/scope analysis. This is AI interpretation of the inspected source statements. It is not a clinical judgment that all 12 are equivalent, that either source should be corrected, or that the last statement is a new requirement. A candidate list is neither an accepted canonical relationship nor a claim that every possible relationship was considered.
+
+`ops/nmc/validate_variant_triage.py` checks the packet against current repository artifacts: complete/unique coverage of the 14 unmatched appearances, exact source/target references, case digests, pending/null decisions and strictly false approval/eligibility values. It rejects stale artifact bytes, edited cases, missing/duplicate sources, fabricated target numbers and numeric substitutes for boolean flags. Hashes bind evidence; they do not authenticate an AI actor, confer source authority or validate clinical meaning. This utility is not an approval importer or an extension of the trusted hosted review API.
+
+```sh
+python3 ops/nmc/validate_variant_triage.py
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+The metadata-only packet is 10,826 bytes, SHA-256 3659b498f775efc755fa66250e22493422c64cb53d5d90b11b8c2d42dce20c20. All 65 NMC tests pass and the validator reports 14 proposals, zero approved decisions. Fresh hosted CI for this implementation is not yet verified. Original source records, frozen package and learner runtime remain unchanged. All source/clinical/rights/exam/applicability and completeness decisions remain pending.
+
+Independent engineering review reconstructed and hash-verified every referenced source/appendix body, found the proposals plausible and reported no actionable findings. Categories describe the dominant difference; some pairs also contain capitalization, spacing or punctuation changes. Integrity validation and AI plausibility review do not establish clinical equivalence. Repository checks pass (13 services, 250 coupling locations).
