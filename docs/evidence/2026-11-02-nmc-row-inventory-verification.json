@@ -1,0 +1,45 @@
+{
+  "kind": "nmc-row-inventory-engineering-verification",
+  "sourceCommit": "6193fa9d4b136955f7088380ebd280bafde48fdd",
+  "pullRequest": 382,
+  "workflowRun": 41502715659,
+  "checks": {
+    "nodeTestsPassed": 1568,
+    "pythonTestsPassed": 13,
+    "servicesChecked": 13,
+    "couplingLocations": 250,
+    "buildFiles": 126,
+    "actualPdfRunsByteIdentical": 2,
+    "independentEngineeringRebuildExact": true
+  },
+  "inventory": {
+    "pages": 263,
+    "regions": 3369,
+    "identifierCandidates": 2634,
+    "categoryDifferencePages": 67,
+    "sha256": "3a8f4ead4e470e991512b10a54f3c5595913ec5e37a73176346dfd56466790c0"
+  },
+  "freshOfficialSourceHashesMatch": true,
+  "boundarySensitivityApplied": false,
+  "remainingGates": [
+    "Five subject count discrepancies",
+    "22 overlapping source adjudication cases",
+    "Supplementary/global coverage and later amendment applicability",
+    "Qualified source/clinical, rights and exam mapping decisions",
+    "Canonical concept bindings, integration and authorized production release"
+  ],
+  "deferredTests": [
+    "single-boundary and duplicate-only cases",
+    "direct CLI version mismatch, page mismatch and exclusive output negative paths"
+  ],
+  "noOmissionCertified": false,
+  "clinicalApproval": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "workflowConclusions": {
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "kind": "nmc-boundary-tolerance-sensitivity-unreviewed",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "trialClusterTolerancePoints": 0.25,
+  "totals": {
+    "standard": 2627,
+    "nonstandard": 7,
+    "empty": 330,
+    "header": 415,
+    "regions": 3379,
+    "identifierCandidates": 2634
+  },
+  "categoryDifferencePages": 61,
+  "thinRegions": [
+    {
+      "pdfPage": 162,
+      "bbox": [
+        58.7,
+        124.5,
+        108.5,
+        124.89
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 187,
+      "bbox": [
+        51.5,
+        124.5,
+        105.6,
+        124.89
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 206,
+      "bbox": [
+        51.9,
+        122.7,
+        108.8,
+        123.09
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 215,
+      "bbox": [
+        45.5,
+        228.3,
+        95.2,
+        228.69
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 269,
+      "bbox": [
+        40.1,
+        107.1,
+        98.6,
+        107.61
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 329,
+      "bbox": [
+        51.3,
+        132.42,
+        103.1,
+        132.93
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 403,
+      "bbox": [
+        45.0,
+        124.56,
+        101.7,
+        125.07
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 427,
+      "bbox": [
+        49.1,
+        126.6,
+        103.1,
+        127.11
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 444,
+      "bbox": [
+        49.1,
+        242.64,
+        103.1,
+        243.15
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pdfPage": 452,
+      "bbox": [
+        46.7,
+        254.04,
+        98.1,
+        254.55
+      ],
+      "kind": "empty",
+      "rawCellSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "remainingTotalRegionDifferencePages": [],
+  "sourceApproval": false,
+  "noOmissionCertified": false,
+  "appliedToVersion1": false,
+  "interpretation": "Changing only boundary clustering from 1.0 to 0.25 points restores 10 thin no-selected-word bands and historical total 3379. This is a sensitivity control, not proof of identical historical segmentation or approved source exclusion.",
+  "version1InventoryUnchanged": true
+}

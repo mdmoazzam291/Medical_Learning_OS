@@ -1,3 +1,9 @@
+## NMC foundation checkpoint — 2 November 2026
+
+Not fully prepared or deployed to production. Draft PR #382 stacks on isolated audit #348 and adds a reproducible metadata-only scanner: 263 selected pages, 3,369 regions, 2,634 identifier candidates. Source commit 6193fa9d passed CI run 41502715659 (core, Chromium, WebKit), 1,568 Node tests and 13 Python tests. Fresh official source downloads match recorded hashes; two scans and an independent engineering rebuild match.
+
+Version 1 retains 67 category-difference pages. A separate tolerance diagnostic explains the ten-region total difference as thin no-selected-word bands without approving exclusions. Five subject count discrepancies, 22 undecided source cases, supplementary/amendment reconciliation, genuine qualified source/clinical/rights/exam decisions and canonical bindings remain. No production merge, source approval, no-omission certification or learner activation. Optional direct CLI and single/duplicate-boundary negative tests are deferred. See docs/NMC_FOUNDATION_READINESS.md and docs/evidence/2026-11-02-nmc-row-inventory-verification.json.
+
 ## 2 November 2026 — NMC foundation status and repeatable region inventory checkpoint
 
 - Checked 2026-11-02T18:36:04.516535+00:00; owner root, newfollow-upbranch feat/nmc-row-inventory-20261102 fromNMCreview348head71ca1d0dec126a7f5075cf28a962be20c5cb087c; notmain. Currentmain91a11aff contains noNMCfoundationregistry/scaffold release. PR343/344/348 remainopen drafts;349mergedonlyinto344featurebranch. Sourceaudit2634identifierappearances/published2781notverifieddenominator,22casesundecided;8app proposalsunverified,0approvedsource/rights/canonical/exam mappings;existingprepregistry2activepathways/0objectives/mappings/artifacts.
