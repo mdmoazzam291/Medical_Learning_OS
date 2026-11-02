@@ -2,7 +2,7 @@
 
 ## Cross-device website and installable PWA — owner-approved direction, 2026-10-21
 
-**Status: install/launch metadata implemented on a feature branch; physical-device installation and all offline/sync work remain pending.** Maintain one responsive website, strengthen its installable Progressive Web App (PWA) experience, and use the same backend across phones, tablets and desktop computers. This extends M03 (learner application/access) and M14 (operations/reliability); it does not reopen completed milestones or create a separate learning system.
+**Status: install/launch metadata implemented on a feature branch; owner-recorded iPhone preview installation and initial standalone launch observed. Further device/session acceptance and all offline/sync work remain pending.** Maintain one responsive website, strengthen its installable Progressive Web App (PWA) experience, and use the same backend across phones, tablets and desktop computers. This extends M03 (learner application/access) and M14 (operations/reliability); it does not reopen completed milestones or create a separate learning system.
 
 - Keep one shared responsive interface and canonical backend for accounts, content versions, learner evidence and derived learning state. Preserve provider-independent domain logic and existing review/access controls.
 - Improve installation and standalone launch on supported browsers, then add explicitly scoped offline study with durable local queues and incremental synchronization. Cache only content the learner may access; do not assume protected answers or private records are safe to include in public static assets.

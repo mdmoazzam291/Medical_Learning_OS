@@ -40,3 +40,17 @@ test('installation guidance keeps normal and preview identities and account capa
   const production=JSON.parse(await readFile(join(normal,'web/manifest.webmanifest'),'utf8'));assert.equal(production.name,'Medretica');assert.equal(production.short_name,'Medretica');
  }finally{await rm(out,{recursive:true,force:true});await rm(normal,{recursive:true,force:true});}
 });
+
+test('installed preview replaces account-entry prompts and uses its own compact layout without changing normal app',async()=>{
+ const out=await mkdtemp(join(tmpdir(),'preview-polish-')),normal=await mkdtemp(join(tmpdir(),'preview-normal-'));
+ try{
+  await pages.buildPages({outputDirectory:out,publicPreview:true});await pages.buildPages({outputDirectory:normal});
+  const home=await readFile(join(out,'index.html'),'utf8');
+  assert.doesNotMatch(home,/href="\/web\/account(?:\.html)?(?:["?#])|Create an account or sign in|Sign in \/ create account/);
+  assert.match(home,/Check your installation/);
+  for(const path of (await files(out)).filter(x=>x.endsWith('.html'))){const html=await readFile(join(out,path),'utf8');assert.match(html,/<body\b[^>]*class="[^"]*\bmlos-install-preview\b/,path);assert.match(html,/href="\/web\/install-preview.css"/,path);}
+  const css=await readFile(join(out,'web/install-preview.css'),'utf8');assert.match(css,/\.mlos-install-preview \.account-page/);
+  const app=await readFile(join(normal,'index.html'),'utf8');assert.match(app,/Sign in \/ create account/);assert.doesNotMatch(app,/install-preview.css|mlos-install-preview/);
+  assert.ok(!(await files(normal)).includes('web/install-preview.css'));
+ }finally{await rm(out,{recursive:true,force:true});await rm(normal,{recursive:true,force:true});}
+});

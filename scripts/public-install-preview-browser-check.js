@@ -17,8 +17,8 @@ const server=createServer(async(req,res)=>{
 await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port;
 const browser=await engines[process.env.BROWSER_ENGINE||'chromium'].launch({headless:true});
 try{
- for(const width of [390,820,1440]){
-  const context=await browser.newContext({viewport:{width,height:1000}}),external=[];
+ for(const [width,height] of [[390,1000],[820,390],[820,1000],[1440,1000]]){
+  const context=await browser.newContext({viewport:{width,height}}),external=[];
   await context.route('**/*',route=>{if(new URL(route.request().url()).origin!==origin){external.push('external_request');return route.abort();}return route.continue();});
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
   for(const path of ['/','/web/install.html','/web/account.html#access_token=synthetic-not-a-token','/web/workspace.html','/oauth/consent']){
@@ -31,6 +31,15 @@ try{
     assert.ok(await page.getByRole('heading',{name:'If installation is missing',exact:true}).isVisible());
    }
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'public page should not clip horizontally');
+   assert.equal(await page.locator('a[href^="/web/account"]').count(),0,'preview must not advertise account entry');
+   if(path==='/'||path==='/web/install.html'){
+    const gap=await page.evaluate(()=>{
+     const banner=document.querySelector('body>[aria-label="Public preview"]');
+     const content=document.querySelector('.page-heading')||document.querySelector('main>.panel');
+     return content.getBoundingClientRect().top-banner.getBoundingClientRect().bottom;
+    });
+    assert.ok(gap>=0&&gap<=32,'preview content gap: '+gap);
+   }
    assert.equal(await page.locator('script').count(),0);assert.equal(await page.locator('form,input[type=password]').count(),0);
    assert.equal(await page.locator('link[rel=manifest]').getAttribute('href'),'/web/manifest.webmanifest');
    if(path==='/web/install.html'){
@@ -43,5 +52,5 @@ try{
   assert.equal((await context.request.get(origin+'/web/account.js')).status(),404);
   assert.deepEqual(external,[]);assert.deepEqual(errors,[]);await context.close();
  }
- console.log('Public install preview PASS:3viewports,static notices,no scripts/forms/cloudconfig or external browser requests; production profile separate.');
+ console.log('Public install preview PASS:4viewports,static notices,no scripts/forms/cloudconfig or external browser requests; production profile separate.');
 }finally{await browser.close();await new Promise(r=>server.close(r));await rm(directory,{recursive:true,force:true});}
