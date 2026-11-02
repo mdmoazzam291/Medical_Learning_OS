@@ -2,13 +2,15 @@
 
 ## Cross-device website and installable PWA — owner-approved direction, 2026-10-21
 
-**Status: PLANNED; future implementation.** Maintain one responsive website, strengthen its installable Progressive Web App (PWA) experience, and use the same backend across phones, tablets and desktop computers. This extends M03 (learner application/access) and M14 (operations/reliability); it does not reopen completed milestones or create a separate learning system.
+**Status: install/launch metadata implemented on a feature branch; physical-device installation and all offline/sync work remain pending.** Maintain one responsive website, strengthen its installable Progressive Web App (PWA) experience, and use the same backend across phones, tablets and desktop computers. This extends M03 (learner application/access) and M14 (operations/reliability); it does not reopen completed milestones or create a separate learning system.
 
 - Keep one shared responsive interface and canonical backend for accounts, content versions, learner evidence and derived learning state. Preserve provider-independent domain logic and existing review/access controls.
 - Improve installation and standalone launch on supported browsers, then add explicitly scoped offline study with durable local queues and incremental synchronization. Cache only content the learner may access; do not assume protected answers or private records are safe to include in public static assets.
 - Preserve exact question/event versions, idempotent retries, account isolation and resumable sessions. Expose pending/failed sync honestly and handle reconnection, storage eviction and account changes without losing or duplicating answers.
 - Apply updates at safe study boundaries; avoid forced reloads during an answer or exam. Keep old clients compatible while updates roll out.
 - Verify phone, tablet and desktop layouts; installation, offline recovery, synchronization and updates on iPhone/iPad Safari, Android and desktop browsers. Document unsupported capabilities rather than promising identical browser behavior.
+
+First slice: stable root app identity/start route, standalone display, same-origin manifest, existing-brand192/512icons, Apple metadata and safe static MIME/allowlist. See `docs/PWA_INSTALL_FOUNDATION.md`. This is source/bundle verification, not a live or physical-device installation claim.
 
 **Exit evidence:** a supported device can install and reopen the app; the same account retrieves synchronized history across devices; supported offline answers survive restart and reconnect exactly once; account switching does not expose another learner's cache; an update preserves an in-progress session. Measure failures, transferred bytes and sync reliability before expanding scope.
 

@@ -40,6 +40,8 @@ test('sign-in form, benefits and preview implementation stay unchanged', async (
   for(const [path,sha256] of Object.entries(files)) {
     const [file,fragment]=path.split('#');
     let content=await readFile(new URL('../'+file,import.meta.url),'utf8');
+    // Permit only the reviewed install metadata at the end of head; freeze every other byte.
+    if(file==='web/account.html') content=content.replace('<link rel="manifest" href="/web/manifest.webmanifest"><meta name="theme-color" content="#244A3A"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"></head>','</head>');
     // Freeze public sign-in content; authenticated Account may gain preparation controls.
     if(fragment==='signedOut') content=content.slice(content.indexOf('function signedOut() {'),content.indexOf('\nfunction retentionPilotPanel()'));
     assert.equal(createHash('sha256').update(content).digest('hex'),sha256,path);

@@ -18,7 +18,7 @@ const server = createServer(async (req, res) => {
   const cleanFile = path.replace(/\/$/, '').slice(1) + '.html';
   const file = path === '/' ? 'web/index.html' : publicFileSet.has(path.slice(1)) ? path.slice(1) : publicFileSet.has(cleanFile) ? cleanFile : path.slice(1);
   if (!publicFileSet.has(file)) { res.writeHead(404); return res.end(); }
-  try { res.writeHead(200, { ...headers, 'Content-Type': file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.png') ? 'image/png' : 'text/javascript' }); res.end(await readFile(join(directory, file))); }
+  try { res.writeHead(200, { ...headers, 'Content-Type': file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.png') ? 'image/png' : file.endsWith('.webmanifest') ? 'application/manifest+json' : 'text/javascript' }); res.end(await readFile(join(directory, file))); }
   catch { res.writeHead(404); res.end(); }
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -51,6 +51,32 @@ try {
       const response = await page.request.get(origin + '/web/' + file);
       assert.equal(response.status(), 200, file + ' must ship in the production bundle');
     }
+    await page.goto(origin + '/');
+    const install = await page.evaluate(async () => {
+      const link = document.querySelector('link[rel="manifest"]');
+      const response = await fetch(link.href), manifest = await response.json();
+      const icons = [];
+      for (const icon of manifest.icons) {
+        const image = new Image(); image.src = new URL(icon.src, link.href).href; await image.decode();
+        icons.push([image.naturalWidth, image.naturalHeight]);
+      }
+      return { href: link.pathname || new URL(link.href).pathname, status: response.status, type: response.headers.get('content-type'), manifest, icons,
+        apple: document.querySelector('meta[name="apple-mobile-web-app-capable"]')?.content,
+        serviceWorkers: await navigator.serviceWorker.getRegistrations().then(rows => rows.length) };
+    });
+    assert.equal(install.href, '/web/manifest.webmanifest'); assert.equal(install.status, 200);
+    assert.match(install.type, /application\/manifest\+json/);
+    assert.deepEqual([install.manifest.id, install.manifest.start_url, install.manifest.scope], ['/', '/', '/']);
+    assert.equal(install.manifest.display, 'standalone'); assert.equal(install.apple, 'yes');
+    assert.deepEqual(install.icons, [[192, 192], [512, 512]]); assert.equal(install.serviceWorkers, 0);
+    if ((process.env.BROWSER_ENGINE || 'chromium') === 'chromium') {
+      const session = await context.newCDPSession(page);
+      const parsed = await session.send('Page.getAppManifest');
+      assert.ok(parsed.url.endsWith('/web/manifest.webmanifest'));
+      assert.equal(parsed.errors.filter(error => error.critical).length, 0, JSON.stringify(parsed.errors));
+      assert.equal(JSON.parse(parsed.data).name, 'Medretica'); await session.detach();
+    }
+    checks++;
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
     for (const palette of ['sage_precision', 'lavender_precision']) for (const appearance of ['light', 'dark']) {
       await page.getByLabel('Colour palette', { exact: true }).selectOption(palette);
