@@ -48,6 +48,7 @@ export const publicFiles = Object.freeze([
   'src/domain/content-library.js',
   'src/domain/intake-integrity-report.js',
   'src/domain/question-intelligence.js',
+  'web/install.html',
   'web/services.html',
   'web/contact.html',
   'web/refunds.html',

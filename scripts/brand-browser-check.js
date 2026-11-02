@@ -77,6 +77,16 @@ try {
       assert.equal(JSON.parse(parsed.data).name, 'Medretica'); await session.detach();
     }
     checks++;
+    // Follow the real guest menu into script-free guidance and back without browser Back.
+    await page.goto(origin + '/');
+    await page.getByLabel('Open public menu', { exact: true }).click();
+    await page.getByRole('link', { name: 'Install Medretica', exact: true }).click();
+    await page.getByRole('heading', { name: 'Install Medretica', exact: true }).waitFor();
+    assert.equal(await page.locator('script,form').count(), 0);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    assert.ok(await page.getByRole('link', { name: 'Open Medretica Home →', exact: true }).isVisible());
+    await page.getByRole('link', { name: 'Open Medretica Home →', exact: true }).click();
+    await page.locator('.mlos-header').waitFor();
     await page.goto(origin + '/web/workspace.html?master=account&section=preferences');
     for (const palette of ['sage_precision', 'lavender_precision']) for (const appearance of ['light', 'dark']) {
       await page.getByLabel('Colour palette', { exact: true }).selectOption(palette);
@@ -105,6 +115,7 @@ try {
         const prefs = JSON.parse(localStorage.getItem('mlos-navigation-v1'));
         document.getElementById('mlos-navigation').innerHTML = navigationMarkup({ master: admin ? 'admin' : 'home', section: '', prefs, isAdmin: admin, signedIn: true, phone: innerWidth <= 700 });
       }, isAdmin);
+      assert.equal(await page.locator('.mlos-account-menu a[href="/web/install.html"]').count(), 1);
       const paint = await page.evaluate(brandPaint);
       assert.deepEqual(paint.main, paint.accent); assert.ok(paint.contrast >= 3); checks++;
     }

@@ -16,12 +16,12 @@ test('signed-out visitors get public destinations instead of private workspace t
   }
 });
 
-test('public menu has one information destination plus Preferences', () => {
+test('public menu offers information, installation help and Preferences', () => {
   for (const phone of [false,true]) for (const currentHref of ['/','/web/services#how-it-works','/web/account']) {
     const html=navigationMarkup({signedIn:false,phone,currentHref});
     const menu=html.match(/<nav aria-label="Public menu">(.*?)<\/nav>/s)?.[1];
     assert.ok(menu);
-    assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match=>match[1]), ['/web/services.html','/web/workspace.html?master=account&amp;section=preferences']);
+    assert.deepEqual([...menu.matchAll(/href="([^"]+)"/g)].map(match=>match[1]), ['/web/services.html','/web/install.html','/web/workspace.html?master=account&amp;section=preferences']);
     assert.equal((menu.match(/>Explore Medretica</g)||[]).length,1);
   }
 });

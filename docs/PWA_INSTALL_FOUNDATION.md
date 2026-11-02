@@ -29,3 +29,7 @@ The [public build profile](PUBLIC_INSTALL_PREVIEW.md) removes the install previe
 The public-only profile source83fc2c2 and its published preview now pass all3Foundationjobs plus live public-notice/no-script/no-form observations. See PUBLIC_INSTALL_PREVIEW.md and its machine evidence for current mode. This supersedes the prior normal-bundle preview warning for this PWA branch only; production and other controlled previews are unchanged.
 
 A preview-only /web/install.html guide now makes the manual device check discoverable. Public install naming identifies Medretica Preview, while normal production name remains Medretica. The guide does not certify a physical installation or session; see PUBLIC_INSTALL_PREVIEW.md.
+
+## Discoverable normal-app installation help — 2 November 2026
+
+The normal build now includes script-free `/web/install.html` and guest/signed-in menu links labelled Install Medretica. An explicit Home link supports standalone use without browser Back. It explains embedded-browser limitations, installed-app sign-in caveats and recovery without clearing local state. The separate public preview keeps its own account-free guide and Medretica Preview identity. Normal output is now128files; public preview remains36. No install prompt, offline cache or forced refresh is added. Physical installation and authenticated lifecycle remain separate pending checks.

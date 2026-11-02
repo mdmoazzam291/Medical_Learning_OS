@@ -26,10 +26,17 @@ try{
    await page.goto(origin+(path==='/oauth/consent'?'/web/oauth-consent.html':path));
    assert.ok(await page.getByText('Public preview',{exact:true}).first().isVisible());
    assert.ok(await page.getByRole('link',{name:'Installation guide →',exact:true}).first().isVisible());
-   if(path==='/web/install.html')assert.ok(await page.getByRole('heading',{name:'Install Medretica Preview',exact:true}).isVisible());
+   if(path==='/web/install.html'){
+    assert.ok(await page.getByRole('heading',{name:'Install Medretica Preview',exact:true}).isVisible());
+    assert.ok(await page.getByRole('heading',{name:'If installation is missing',exact:true}).isVisible());
+   }
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'public page should not clip horizontally');
    assert.equal(await page.locator('script').count(),0);assert.equal(await page.locator('form,input[type=password]').count(),0);
    assert.equal(await page.locator('link[rel=manifest]').getAttribute('href'),'/web/manifest.webmanifest');
+   if(path==='/web/install.html'){
+    await page.getByRole('link',{name:'Open the preview homepage →',exact:true}).click();
+    assert.equal(new URL(page.url()).pathname,'/');
+   }
   }
   const manifest=await context.request.get(origin+'/web/manifest.webmanifest');assert.equal(manifest.status(),200);const identity=await manifest.json();assert.equal(identity.start_url,'/');assert.equal(identity.name,'Medretica Preview');
   assert.equal((await context.request.get(origin+'/web/cloud-config.js')).status(),404);
