@@ -1,0 +1,37 @@
+{
+  "kind": "nmc-pandemic-explicit-nested-verification",
+  "baseCommit": "fe8eaf7d5267dcf9bfae31eecd15736a11170d21",
+  "basePullRequest": 385,
+  "sourcePagesScanned": 69,
+  "moduleRangesScanned": 17,
+  "nestedAppearances": 8,
+  "module32": {
+    "unnumberedSubcompetencies": 1,
+    "numberedLearningObjectives": 5,
+    "pages": [
+      45,
+      46
+    ]
+  },
+  "module33": {
+    "numberedSubcompetencies": 2,
+    "pages": [
+      50
+    ]
+  },
+  "standardDottedReferenceMatches": 0,
+  "semanticReferenceAbsenceEstablished": false,
+  "artifactBytes": 11576,
+  "artifactSha256": "1101579a2fb261324e5177790ee5d08c84c4bc7386e4113c350d2e46a240735e",
+  "actualRunsByteIdentical": 2,
+  "independentRebuildExact": true,
+  "independentBodyHashAndOffsetChecksPassed": 8,
+  "review": "no actionable findings",
+  "pythonTestsPassed": 48,
+  "repositoryCheckPassed": true,
+  "allObjectivesEnumerated": false,
+  "effective2024ApplicabilityApproved": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}

@@ -18,3 +18,5 @@ Next concrete action: enumerate17pandemic modules' objective/competency row loca
 ## 3 November primary pandemic-table follow-up
 
 The 17 module-opening candidates now have reproducible primary-table region locators: 45 physical candidate regions containing 47 level anchors. Page 65 has one merged cell with three anchors; no artificial row split. See `NMC_PANDEMIC_REGION_INVENTORY.md`. This does not complete nested-objective or subject-reference enumeration and does not close the unified source/applicability queue.
+
+The next follow-up locates eight explicitly headed nested appearances in Modules 3.2/3.3 across pages 45–46/50 and records a conservative zero-match standard dotted-code scan across PDF 11–79. Explicit-section coverage is partial; semantic subject references, overlap and applicability remain open. See the nested-item section of `NMC_PANDEMIC_REGION_INVENTORY.md`.
