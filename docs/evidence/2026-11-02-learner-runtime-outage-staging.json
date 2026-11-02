@@ -1,0 +1,115 @@
+{
+  "observed_at": "2026-11-02T11:44:59.846828+00:00",
+  "scope": "isolated_staging_negative_http_only",
+  "project_id": "vwtdwafjrraptrgeshzt",
+  "function": "learner-identity-api",
+  "results": [
+    {
+      "case": "anonymous GET",
+      "status": 401,
+      "expected": 401,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "forged GET",
+      "status": 401,
+      "expected": 401,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "forged empty ensure",
+      "status": 401,
+      "expected": 401,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "foreign origin",
+      "status": 403,
+      "expected": 403,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "JSON payload",
+      "status": 400,
+      "expected": 400,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "binary payload",
+      "status": 400,
+      "expected": 400,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "target query",
+      "status": 400,
+      "expected": 400,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "unknown route",
+      "status": 404,
+      "expected": 404,
+      "error_matches": true,
+      "private_response": true,
+      "cors": true,
+      "pass": true
+    },
+    {
+      "case": "preflight",
+      "status": 200,
+      "expected": 200,
+      "error_matches": true,
+      "private_response": null,
+      "cors": true,
+      "pass": true
+    }
+  ],
+  "genuine_signed_in_run": false,
+  "hosted_rpc_fault_injected": false,
+  "source_commit": "2d1ad972579ed52c5359e8f41a398e65b47245ac",
+  "version": 4,
+  "bundle_sha256": "4214bd0c73126b4537345687f1f59a4d303959bc96d5a4d3635ad71424867b6b",
+  "exact_deployed_files": 3,
+  "platform_verify_jwt": false,
+  "ci_run": 41434806577,
+  "all_five_source_jobs": "success",
+  "handler_helper_tests": 13,
+  "full_tests": 1584,
+  "local_checks": {
+    "services": 13,
+    "coupling_locations": 262,
+    "result": "pass"
+  },
+  "postcheck": {
+    "checked_at": "2026-11-02T11:45:12.041549Z",
+    "auth_users": 0,
+    "auth_sessions": 0,
+    "learner_codes": 0
+  },
+  "production_changed": false,
+  "learner_experiment_deployed": false,
+  "cleanup_acceptance": false,
+  "positive_jwt_acceptance": false
+}

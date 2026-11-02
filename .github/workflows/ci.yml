@@ -23,6 +23,12 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify pinned identity SDK stops ambiguous writes without replay
+        run: |
+          mkdir -p "$RUNNER_TEMP/mlos-identity-sdk"
+          cp ops/staging-auth-sdk/package.json ops/staging-auth-sdk/package-lock.json "$RUNNER_TEMP/mlos-identity-sdk/"
+          npm ci --prefix "$RUNNER_TEMP/mlos-identity-sdk" --ignore-scripts --no-audit --no-fund
+          SUPABASE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-identity-sdk/node_modules/@supabase/supabase-js/dist/index.mjs" node scripts/learner-identity-sdk-transport-check.js
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |
@@ -50,6 +56,12 @@ jobs:
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/privacy-scope-db-check.js
       - name: Verify explicit Data API grants without automatic defaults
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/data-api-grants-db-check.js
+      - name: Verify private learner-code mapping on isolated PostgreSQL
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/learner-reference-code-db-check.js
+      - name: Verify disposable learner mapping logical recovery and denied-state parity
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/learner-code-recovery-check.js
+      - name: Verify session RPC parity with production contract in isolated PostgreSQL
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/learner-runtime-access-parity-db-check.js
       - run: npm run demo
       - name: Preserve allowlisted static preview bundle
         uses: actions/upload-artifact@v4
@@ -58,6 +70,70 @@ jobs:
           path: dist-pages/
           if-no-files-found: error
           retention-days: 7
+  learner-code-native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        include:
+          - package: 17.6.0-beta.15
+            expected: '17.6'
+          - package: 18.6.0-beta.19
+            expected: '18.6'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install isolated pinned native learner-code verification tools
+        run: npm install --prefix "$RUNNER_TEMP/mlos-learner-native" --no-audit --no-fund @embedded-postgres/linux-x64@${{ matrix.package }} pg@8.22.0
+      - name: Install official archive clients for disposable mapping recovery
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main" | sudo tee /etc/apt/sources.list.d/mlos-pgdg.list > /dev/null
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends postgresql-client-18
+      - name: Verify independent connection uniqueness, collision, rollback and reconciliation
+        env:
+          EXPECTED_NATIVE_PG_VERSION: ${{ matrix.expected }}
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/pg/esm/index.mjs
+        run: |
+          node scripts/learner-code-native-concurrency.js
+          if node scripts/learner-code-native-concurrency.js --omit-user-uniqueness > "$RUNNER_TEMP/mlos-learner-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-learner-negative.log"
+            exit 1
+          fi
+          grep -F "learner_unique_barrier_not_observed" "$RUNNER_TEMP/mlos-learner-negative.log"
+          grep -F "Learner native fixture cleanup PASS" "$RUNNER_TEMP/mlos-learner-negative.log"
+      - name: Verify actual mapping archive recovery, isolation and rollback
+        env:
+          EXPECTED_NATIVE_PG_VERSION: ${{ matrix.expected }}
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/pg/esm/index.mjs
+          PG_CLIENT_BIN: /usr/lib/postgresql/18/bin
+        run: |
+          node scripts/learner-code-native-backup.js
+          if node scripts/learner-code-native-backup.js --omit-column-acl-audit > "$RUNNER_TEMP/mlos-mapping-archive-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
+            exit 1
+          fi
+          grep -F "native_column_acl_rejection_not_observed" "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
+          grep -F "Native mapping archive cleanup PASS" "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
+      - name: Verify learner mapping durability through actual crash recovery
+        env:
+          EXPECTED_NATIVE_PG_VERSION: ${{ matrix.expected }}
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/pg/esm/index.mjs
+        run: |
+          if node scripts/learner-code-native-crash.js --skip-crash > "$RUNNER_TEMP/mlos-learner-crash-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-learner-crash-negative.log"
+            exit 1
+          fi
+          grep -F "learner_crash_recovery_not_observed" "$RUNNER_TEMP/mlos-learner-crash-negative.log"
+          grep -F "Learner crash fixture cleanup PASS" "$RUNNER_TEMP/mlos-learner-crash-negative.log"
+          node scripts/learner-code-native-crash.js
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
     runs-on: macos-latest
