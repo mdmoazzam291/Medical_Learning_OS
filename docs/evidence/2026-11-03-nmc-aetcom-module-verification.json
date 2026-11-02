@@ -1,0 +1,52 @@
+{
+  "kind": "nmc-aetcom-module-comparison-verification",
+  "baseCommit": "75ac220592ca61f324dd87c7290e5ff1a940c5fa",
+  "basePullRequest": 387,
+  "sourcePdfRangeScanned": [
+    1,
+    86
+  ],
+  "detectedModuleHeadings": 27,
+  "candidateRegionAppearances": 44,
+  "withExactAppendixMatch": 8,
+  "withoutExactAppendixMatch": 36,
+  "matchedCoreAppearances": 6,
+  "matchedDesirableAppearances": 2,
+  "matchedDisplayedLevelDisagreements": 0,
+  "artifactBytes": 26614,
+  "artifactSha256": "07bdd20188acaacae5546bd969379d10fa32f09943e99fc7fbb426673bdabaf0",
+  "actualRunsByteIdentical": 2,
+  "independentActualRebuildExact": true,
+  "pythonTestsPassed": 56,
+  "repositoryCheckPassed": true,
+  "review": "no actionable findings",
+  "semanticMappingApproved": false,
+  "allModuleRequirementsEnumerated": false,
+  "effective2024ApplicabilityApproved": false,
+  "uniqueRequirementCount": null,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified",
+  "earlierCiAllJobsPassed": [
+    {
+      "pr": 384,
+      "commit": "325d10c95d77f077b613ed6234d42d10782b0c1d",
+      "run": 41524966287
+    },
+    {
+      "pr": 385,
+      "commit": "fe8eaf7d5267dcf9bfae31eecd15736a11170d21",
+      "run": 41525926154
+    },
+    {
+      "pr": 386,
+      "commit": "9c353bc6d04cb4ec05143f97d609571d64b51435",
+      "run": 41526692541
+    },
+    {
+      "pr": 387,
+      "commit": "75ac220592ca61f324dd87c7290e5ff1a940c5fa",
+      "run": 41527508087
+    }
+  ]
+}

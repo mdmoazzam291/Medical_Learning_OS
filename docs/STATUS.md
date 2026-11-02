@@ -1,3 +1,11 @@
+CI checkpoint: PRs #384–#387 now have core, Chromium and WebKit jobs passed on their respective exact source commits. Those runs do not certify the new module-comparison implementation.
+
+## NMC AETCOM module-to-appendix comparison — 3 November 2026
+
+Located 44 candidate primary-table appearances across 27 module headings in legacy source PDF 1–86. Eight exact whitespace-collapsed appendix matches (six core/two desirable by source declaration); all eight displayed level labels agree. Thirty-six unmatched appearances remain unresolved, not missing or additional unique competencies. No semantic mapping or current applicability approval.
+
+Two actual runs and independent rebuild byte-identical (26,614 bytes; SHA 07bdd20188acaacae5546bd969379d10fa32f09943e99fc7fbb426673bdabaf0). All 56 NMC tests/repository check pass; review found no actionable findings. Fresh hosted CI not yet verified. Source cases, frozen package, learner runtime and disabled eligibility unchanged. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-aetcom-module-verification.json.
+
 ## NMC legacy AETCOM appendix audit — 3 November 2026
 
 Pinned-source extractor freezes 54 numbered and 14 additional unnumbered appearances. Source declaration of 39 core/15 desirable retained. Nine additional appearances exactly match numbered text after whitespace collapse: core 37 and desirable 41–47/53; five unmatched are not certified unique. Classification conflict retained; no silent class correction or deduplication. Pages 90/92 visually inspected.
