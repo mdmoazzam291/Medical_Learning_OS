@@ -1,6 +1,6 @@
 # Learner identity — private mapping and self endpoint (PR #379)
 
-**Status:** managed **staging schema applied**, API **not deployed**; production unchanged. See [staging schema receipt](releases/2026-11-02-learner-code-staging-schema.md). The required `learner_runtime_access_v1(uuid,uuid)` RPC is absent from staging and must be restored from reviewed runtime-access migrations before authenticated end-to-end acceptance. This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
+**Status:** managed **staging schema applied**, API **not deployed**; production unchanged. See [staging schema receipt](releases/2026-11-02-learner-code-staging-schema.md). The exact production `learner_runtime_access_v1(uuid,uuid)` definition is now restored **to staging only**, with equal installed-function digest and server-only privileges ([parity receipt](releases/2026-11-02-learner-runtime-session-parity.md)); authenticated Edge acceptance is **still unverified**. This is stacked on the Learner Code proposal (#377) and offline algorithm (#378); it does not require or affect Core6 medical content rights.
 
 ## Source implementation
 
@@ -33,7 +33,7 @@
 - The managed staging ledger now records **`20261102033205 learner_reference_codes`** for the source file `20261102084000_learner_reference_codes.sql`. Preserve the exact provider/source association during later integration; do not rewrite applied history.
 - Obtain independent role/security review of public-schema service-only privileges, root-key exposure, rollback, audit and retention policy; release only into isolated staging first.
 - The staging schema/grant/RLS readback already passed (see receipt). Still required: controlled live two-client uniqueness/collision tests and actual bearer-token denied-access checks.
-- Deploy `learner-identity-api` **to staging only** after the migration, with existing Auth/runtime-access RPCs available, current exact allowed-origin list, and tested managed JWT/session verification. Real self-only, other-learner, revoked-session, suspended-account, no-signin and bad-origin probes require controlled synthetic accounts and proper cleanup.
+- The required session RPC was restored verbatim from the production contract **in staging**. Deploy `learner-identity-api` **to staging only** with its imported module dependencies, current exact allowed-origin list, and independently tested managed JWT/session verification. Real self-only, other-learner, revoked-session, suspended-account, no-signin and bad-origin probes require controlled synthetic accounts and proper cleanup.
 - Review Edge logs for accidental codes/secrets; run staged reload/recovery tests; record hosted acceptance receipt and backout procedure. Nothing is approved or deployed by this document.
 - Only after staging and explicit release approval, implement copyable Account → Learner ID UX. Do not imply a code exists before actual server readback.
 
