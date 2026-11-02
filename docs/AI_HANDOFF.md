@@ -1,3 +1,9 @@
+## NMC five-subject source investigation — 3 November 2026
+
+Agent performed actual-source investigation across 100 selected defining pages, reconstructing and checking all 1,118 identifier-appearance raw-cell digests. New metadata-only topic audit script and evidence localize Medicine Topics 8/9/27; confirm Ophthalmology topic counts sum to observed 59 against headline 60; retain malformed Paediatrics Topic 21, unnumbered OBGYN header and missing numbered Surgery 24/27 header evidence. Official pages 409/414/339 visually inspected; not full visual review. No identifiers or totals invented/corrected.
+
+Two runs and independent engineering rerun byte-identical (43,833 bytes; SHA 60516bfb17e9f035531f5f161da7ab56f2cf19196b42c10ee13a5c097d016e6a). All 38 Python tests and repository check pass; no actionable review findings. PR #382 source 5c8d66bd: all three CI jobs now green in run 41522409052. Current follow-up hosted CI not yet verified. Frozen review package, source-case decisions, region inventory and learner runtime unchanged. Foundation remains incomplete/not production-deployed. See NMC_FIVE_SUBJECT_TOPIC_AUDIT.md and evidence/2026-11-03-nmc-topic-source-verification.json.
+
 ## NMC frozen metadata review package — 3 November 2026
 
 Implemented local build/verify utility in ops/nmc/review_package.py. Frozen package binds 3,369 candidate regions, 22 pending cases and 1,031 pending page dispositions across 12 retrieved sources to four exact artifact hashes. Digest 33e909bf00da24525545d7308cc59d8124af4961eec928e2130120e89a5c60e1. Two builds identical; 32 Python tests, checked-in package verification and repository check pass. Independent review caught type-insensitive equality; canonical comparison and mutation regression fixed it, reviewer confirmed no remaining blockers.

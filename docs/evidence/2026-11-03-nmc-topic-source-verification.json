@@ -1,0 +1,43 @@
+{
+  "kind": "nmc-five-subject-source-investigation-verification",
+  "baseCommit": "9763d361eea4e298082c0c8f43462b9d0fe714bc",
+  "basePullRequest": 383,
+  "sourcePagesScanned": 100,
+  "identifierAppearancesReconstructedAndHashed": 1118,
+  "artifactBytes": 43833,
+  "artifactSha256": "60516bfb17e9f035531f5f161da7ab56f2cf19196b42c10ee13a5c097d016e6a",
+  "actualRunsByteIdentical": 2,
+  "independentActualSourceRebuildExact": true,
+  "pythonTestsPassed": 38,
+  "newHeaderParserTests": 6,
+  "repositoryCheck": {
+    "passed": true,
+    "services": 13,
+    "couplingLocations": 250
+  },
+  "review": "no actionable findings",
+  "visuallyInspectedOfficialPages": [
+    409,
+    414,
+    339
+  ],
+  "allSourcePagesVisuallyReviewed": false,
+  "parent382Ci": {
+    "sourceCommit": "5c8d66bd7c0f511bf4168a6b2cc45f3fb274eff3",
+    "runId": 41522409052,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "freshHostedCiForThisImplementation": "not yet verified",
+  "v1InventoryChanged": false,
+  "frozenReviewPackageChanged": false,
+  "sourceDecisionsMade": 0,
+  "sourceApproval": false,
+  "clinicalApproval": false,
+  "rightsApproval": false,
+  "examScopeApproval": false,
+  "noOmissionCertified": false,
+  "learnerActivation": false,
+  "productionDeployed": false
+}
