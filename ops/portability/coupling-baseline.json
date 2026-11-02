@@ -83,6 +83,12 @@
   "ops/r2-backups/verify_restore.py": [
     "supabase"
   ],
+  "ops/staging-auth-sdk/package-lock.json": [
+    "supabase"
+  ],
+  "ops/staging-auth-sdk/package.json": [
+    "supabase"
+  ],
   "ops/staging/learner-identity/runtime-access-parity.sql": [
     "supabase"
   ],
@@ -155,6 +161,9 @@
     "supabase"
   ],
   "scripts/learner-code-native-concurrency.js": [
+    "supabase"
+  ],
+  "scripts/learner-identity-staging-acceptance.mjs": [
     "supabase"
   ],
   "scripts/learner-reference-code-db-check.js": [
