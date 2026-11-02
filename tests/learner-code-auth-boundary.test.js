@@ -42,3 +42,12 @@ test('identity API and offline secret key do not join public static surface',()=
   assert.match(ci,/Verify private learner-code mapping on isolated PostgreSQL/);
   assert.match(ci,/scripts\/learner-reference-code-db-check\.js/);
 });
+
+test('Edge and operator verification SDK use the same exact reviewed version',()=>{
+  const operator=JSON.parse(readFileSync(new URL('../ops/staging-auth-sdk/package.json',import.meta.url),'utf8'));
+  const lock=JSON.parse(readFileSync(new URL('../ops/staging-auth-sdk/package-lock.json',import.meta.url),'utf8'));
+  const version=operator.dependencies['@supabase/supabase-js'];
+  assert.match(version,/^\d+\.\d+\.\d+$/);
+  assert.equal(lock.packages['node_modules/@supabase/supabase-js'].version,version);
+  assert.ok(handler.includes('from "npm:@supabase/supabase-js@'+version+'"'),'Edge must not drift from reviewed operator SDK');
+});

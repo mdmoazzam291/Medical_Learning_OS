@@ -1,3 +1,10 @@
+## 2 November2026 — Staging SDK top-level version pin checkpoint
+
+- OwnerCodex/root; resumed3792427b422ae09bb6ad67d9df848f227845b102505 in isolated mlos-identity-sdk-pin. Previous recoveryCI41413855437 independently verifiedALL5jobsSUCCESS; genuine operatorAuth still blocked.
+- Found Edge import moving npm:@supabase/supabase-js@2 while operator manifest/lock pins2.118.0. npmregistry metadata confirms2.118.0 exists. Added source-version guard (RED before repair), pinnedEdge2.118.0, verified manifest/lock/exactimport alignmentGREEN. Comment now states isolated staging candidate. No runtime authorization/route/schema/data change intended.
+- Focused14/full1,581testsPASS; npmcheck13services259couplingsPASS; diffPASS; read-only review found no issue. Same top-level version is NOT proof of identical Node/Edge transitive trees or real signedJWT behavior. No newdependency/provider/rootpackage introduced.
+- Existing stagingAPIv2/bundle4e2f9fb3f5df264b9832ca68257e582cab441c609bea7647c47a541966dcd881 captured as backout. Next deploy exact3sourcefiles to isolatedvwtdwafjrraptrgeshzt only after checkpoint, inspect version/sourceparity and repeat9real hosted negative/CORS cases +0users/sessions/codes. Preserve verify_jwt=false because handler owngetUser/currentruntime checks unchanged. New sourceCIpending; no production/UIdeploy/Auth account or code issuance, merge, rights/medical/reviewer release approval. Owner retained for staging verification.
+
 ## 2 November2026 — Disposable learner mapping logical recovery added
 
 - Owner Codex/root; resumed3792ae24e22c3cf35dd120e5ad3f0f9c4b45e1ec0e6 in isolated mlos-identity-recovery. Selected unblocked engineering gap while live operatorAuthcredentials remain absent. Prior probeCI41410474045 independently verified ALL5jobsSUCCESS; this does not clear genuine hosted identity/cleanup gates.

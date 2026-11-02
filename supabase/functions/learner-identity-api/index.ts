@@ -1,9 +1,9 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
-import { createClient } from "npm:@supabase/supabase-js@2";
+import { createClient } from "npm:@supabase/supabase-js@2.118.0";
 import { allocateLearnerCode, normalizeLearnerCode } from "../../../ops/prototypes/learner-identity/learner-code.js";
 import { checkRuntimeAccess } from "../learner-experiment-api/_shared/runtime-access.ts";
 
-// Not deployed by the draft PR. Canonical identity is still the Auth user UUID.
+// Isolated staging candidate; canonical identity is still the Auth user UUID.
 // This endpoint cannot locate, list or mutate another learner's identity.
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
