@@ -23,7 +23,8 @@ try {
   const rpc=(await db.query("select prosecdef,provolatile,proconfig from pg_proc where oid='public.learner_runtime_access_v1(uuid,uuid)'::regprocedure")).rows[0];
   assert.equal(rpc.prosecdef,true);
   assert.equal(rpc.provolatile,'s');
-  assert.ok(rpc.proconfig.includes('search_path='));
+  assert.ok(Array.isArray(rpc.proconfig) && rpc.proconfig.some(value => /^search_path=/.test(value)),
+    'function must pin an explicit search_path');
   for(const role of ['anon','authenticated']){
     const allowed=(await db.query('select has_function_privilege($1,$2,$3) as ok',[role,'public.learner_runtime_access_v1(uuid,uuid)','EXECUTE'])).rows[0].ok;
     assert.equal(allowed,false,role+' must not execute privileged runtime check');
