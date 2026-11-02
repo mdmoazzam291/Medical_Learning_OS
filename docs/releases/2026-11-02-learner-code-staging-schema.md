@@ -1,3 +1,5 @@
+> **Subsequent verified update, 2026-11-02:** The missing session-validation RPC was later restored to the isolated staging database from the production-equivalent definition. Its installed PostgreSQL function digest and service-only execution privileges now match production. Read the [subsequent parity receipt](2026-11-02-learner-runtime-session-parity.md). The original table-only observations below are retained as historical evidence; authenticated Edge acceptance remains unverified.
+
 # Learner Code v1 — isolated staging database migration receipt
 
 **Date:** 2026-11-02 · **Project:** `medical_learning_os_staging` (Supabase project `vwtdwafjrraptrgeshzt`, ap-south-1) · **Production:** untouched.
