@@ -28,3 +28,15 @@ test('preview selection is exact and cannot silently change main or controlled r
  assert.throws(()=>select({WORKERS_CI_BRANCH:'main',MLOS_PAGES_PUBLIC_PREVIEW:'1'}),/production/);
  assert.throws(()=>select({MLOS_PAGES_PUBLIC_PREVIEW:'yes'}),/invalid/);
 });
+test('installation guide and preview app identity stay confined to the public artifact',async()=>{
+ const out=await mkdtemp(join(tmpdir(),'mlos-preview-guide-')),normal=await mkdtemp(join(tmpdir(),'mlos-normal-guide-'));
+ try{
+  await pages.buildPages({outputDirectory:out,publicPreview:true});
+  const guide=await readFile(join(out,'web/install.html'),'utf8');assert.match(guide,/<h1>Install Medretica Preview<\/h1>/);assert.doesNotMatch(guide,/<script\b|<form\b|type=["']password/i);
+  const root=await readFile(join(out,'index.html'),'utf8');assert.match(root,/href="\/web\/install.html"/);
+  const preview=JSON.parse(await readFile(join(out,'web/manifest.webmanifest'),'utf8'));assert.equal(preview.name,'Medretica Preview');assert.equal(preview.short_name,'M. Preview');assert.equal(preview.id,'/');assert.equal(preview.start_url,'/');
+  assert.match(guide,/<meta name="apple-mobile-web-app-title" content="Medretica Preview">/);
+  await pages.buildPages({outputDirectory:normal});assert.ok(!(await files(normal)).includes('web/install.html'));
+  const production=JSON.parse(await readFile(join(normal,'web/manifest.webmanifest'),'utf8'));assert.equal(production.name,'Medretica');assert.equal(production.short_name,'Medretica');
+ }finally{await rm(out,{recursive:true,force:true});await rm(normal,{recursive:true,force:true});}
+});

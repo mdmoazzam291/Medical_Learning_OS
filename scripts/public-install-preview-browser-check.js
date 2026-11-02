@@ -21,14 +21,17 @@ try{
   const context=await browser.newContext({viewport:{width,height:1000}}),external=[];
   await context.route('**/*',route=>{if(new URL(route.request().url()).origin!==origin){external.push('external_request');return route.abort();}return route.continue();});
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
-  for(const path of ['/','/web/account.html#access_token=synthetic-not-a-token','/web/workspace.html','/oauth/consent']){
+  for(const path of ['/','/web/install.html','/web/account.html#access_token=synthetic-not-a-token','/web/workspace.html','/oauth/consent']){
    // The plain local server uses the same generated OAuth notice through its static path.
    await page.goto(origin+(path==='/oauth/consent'?'/web/oauth-consent.html':path));
    assert.ok(await page.getByText('Public preview',{exact:true}).first().isVisible());
+   assert.ok(await page.getByRole('link',{name:'Installation guide →',exact:true}).first().isVisible());
+   if(path==='/web/install.html')assert.ok(await page.getByRole('heading',{name:'Install Medretica Preview',exact:true}).isVisible());
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'public page should not clip horizontally');
    assert.equal(await page.locator('script').count(),0);assert.equal(await page.locator('form,input[type=password]').count(),0);
    assert.equal(await page.locator('link[rel=manifest]').getAttribute('href'),'/web/manifest.webmanifest');
   }
-  const manifest=await context.request.get(origin+'/web/manifest.webmanifest');assert.equal(manifest.status(),200);assert.equal((await manifest.json()).start_url,'/');
+  const manifest=await context.request.get(origin+'/web/manifest.webmanifest');assert.equal(manifest.status(),200);const identity=await manifest.json();assert.equal(identity.start_url,'/');assert.equal(identity.name,'Medretica Preview');
   assert.equal((await context.request.get(origin+'/web/cloud-config.js')).status(),404);
   assert.equal((await context.request.get(origin+'/web/account.js')).status(),404);
   assert.deepEqual(external,[]);assert.deepEqual(errors,[]);await context.close();

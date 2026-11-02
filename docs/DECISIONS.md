@@ -1670,3 +1670,7 @@ The owner continued the accepted Coverage Index authoring direction on29October2
 ## 2 November2026 — Public-only install preview profile (PR380)
 
 Under continuous next-task authorization, remediate the observed live frontend configuration in the PWA preview with a dedicated build artifact rather than changes to production Auth adapters or broader API origin grants. Exact PWA branch builds select public-only mode; explicit non-main local builds may opt in. Main explicit flag rejects, ordinary production and existing controlled-review builds retain normal behavior. Exclude application/config/data scripts, replace protected HTML with notices, retain static public/install assets and deny script/connect/form actions in CSP. This does not establish every branch's isolation, backend authorization, genuine signed-in or device-install acceptance. Verify source/artifact/both browser engines and actual published notice before using the preview for public install checks.
+
+## 2 November2026 — Distinguishable install-preview identity and manual guide (PR380)
+
+Generate the guide only in the public profile and label installed preview metadata Medretica Preview/M. Preview. Keep normal production naming, sourceHTML/auth, root identity and icons unchanged. Use static official-source instructions and manual checks rather than install prompts, device detection or inferred acceptance. No result storage or account workflow is introduced; physical-device verification remains pending.
