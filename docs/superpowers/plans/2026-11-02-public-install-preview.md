@@ -11,7 +11,7 @@ Public profile contains only static landing/policy/contact pages, existing CSS/b
 - [x] Write failing artifact/selection tests: absent config/JS/forms, safe protected-route notices, manifest retained, restrictive CSP, explicit root-copy/production preservation, mode selection/main guard.
 - [x] Implement focused preview module/build dispatch, leaving sourceHTML/auth/production output unchanged.
 - [x] Add both-engine browser check for actual public artifact, visible notice, zero scripts/forms/password inputs/external requests, navigation and icon/manifest availability. Test no auth callback processing.
-- [ ] Local focused/full/check/build, final fresh review, save source/PR/checkpoint and inspect exact3CI/browser results. Resolve actual failures.
-- [ ] Observe published branch preview notice/account notice and absence of client config through browser as available; record exact source/deployment, scope/limits and owner release. No realAuth/deviceinstall/production/merge approval.
+- [x] Local focused/full/check/build, final fresh review, save source/PR/checkpoint and inspect exact3CI/browser results. Resolve actual failures.
+- [x] Observe published branch preview notice/account notice and absence of client config through browser as available; record exact source/deployment, scope/limits and owner release. No realAuth/deviceinstall/production/merge approval.
 
 No application package/provider, live API allowlist, schema or production deployment. This profile hardens this PWA preview only, not all existing feature branches or standalone backend security. Do not claim authenticated staging acceptance.

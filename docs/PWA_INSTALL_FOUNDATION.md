@@ -1,6 +1,6 @@
 # PWA install and launch foundation
 
-This implements the first slice of the owner-approved21October website/PWA roadmap on a separate feature branch from main91a11aff. It does not depend on the separate learner-identity staging gate and does not merge or deploy this branch.
+This implements the first slice of the owner-approved21October website/PWA roadmap on a separate feature branch from main91a11aff. It does not depend on the separate learner-identity staging gate. No production merge or deployment is performed; the existing pipeline publishes feature previews.
 
 The same-origin `/web/manifest.webmanifest` gives Medretica stable app id `/`, launch `/`, scope `/` and standalone display. Root launch uses existing signed-in/signed-out routing; it does not persist an account, token, current Admin URL or return query in install metadata. Orientation is unconstrained so existing responsive portrait/landscape behavior remains available. All21servedHTMLentries statically link the same manifest before application scripts. Existing180Apple artwork is retained, with Apple standalone/defaultstatusbar metadata.192/512PNGicons use the exact approved favicon SVG geometry in its static light Sage/white colors, purposeany; no maskable suitability is claimed.
 
@@ -21,3 +21,9 @@ Cloudflare's PR380 receipt announces successful preview deployment42ef6163-2ef6-
 The separate HTTP client received403/error1010 on the announced hosts before completing checks. Browser rendering succeeded without access-control changes. Actual HTTPS headers and byte equality were not verified; previous local/built-bundle MIME/byte tests remain separate evidence. No application defect or outage was inferred. The evidence commit36bacd91 Foundation41443788490 also completedSUCCESS.
 
 Use the preview for public installation/launch checks only. Actual iPhone/iPad Share→Add to Home Screen and other OS installation, standalone/rootlaunch, session persistence and authenticated lifecycle remain pending. The branch alias tracks later updates; the recorded provider deployment/commit identifies this observation. See [preview evidence](evidence/2026-11-02-pwa-https-preview.json). No manual deployment, merge, production change, security relaxation or backend write was performed by this verification; the existing preview pipeline may rebuild the evidence commit.
+
+## Public-only preview hardening follow-up
+
+The [public build profile](PUBLIC_INSTALL_PREVIEW.md) removes the install preview's direct account/data capability. It selects only this PWA branch (or an explicit non-main build flag), ships35staticfiles without application/config JS, gives account/OAuth/study routes noninteractive notices, and uses a script/connect/form-denying CSP. Default production output stays127files. The prior36bacd9 browser observation above is historical; require the new visible public notice before treating a published preview as public-only. Authenticated staging and OS install/session acceptance remain separate.
+
+The public-only profile source83fc2c2 and its published preview now pass all3Foundationjobs plus live public-notice/no-script/no-form observations. See PUBLIC_INSTALL_PREVIEW.md and its machine evidence for current mode. This supersedes the prior normal-bundle preview warning for this PWA branch only; production and other controlled previews are unchanged.
