@@ -1,0 +1,43 @@
+{
+  "kind": "nmc-aetcom-appendix-verification",
+  "baseCommit": "9c353bc6d04cb4ec05143f97d609571d64b51435",
+  "basePullRequest": 386,
+  "numberedAppearances": 54,
+  "coreByLegacySourceDeclaration": 39,
+  "desirableByLegacySourceDeclaration": 15,
+  "additionalUnnumberedAppearances": 14,
+  "exactWhitespaceCollapsedMatches": 9,
+  "matchToCoreNumber": [
+    37
+  ],
+  "matchesToDesirableNumbers": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    53
+  ],
+  "unmatchedAdditionalAppearances": 5,
+  "artifactBytes": 34656,
+  "artifactSha256": "e413a8baa908f0cbe697b45d3929be1ffcfa3bc13e1ae156258d0770d8ae58ff",
+  "twoActualRunsByteIdentical": true,
+  "independentActualRebuildExact": true,
+  "pythonTestsPassed": 52,
+  "repositoryCheckPassed": true,
+  "checkedInPandemicArtifactDefaultRerunByteIdentical": true,
+  "visuallyInspectedPages": [
+    90,
+    92
+  ],
+  "review": "no actionable findings",
+  "clinicalEquivalenceAdjudicated": false,
+  "uniqueRequirementCount": null,
+  "effective2024ApplicabilityApproved": false,
+  "sourceDecisionsMade": 0,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}

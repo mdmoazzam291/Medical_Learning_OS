@@ -11,9 +11,9 @@ from codecell_inventory import ELIGIBILITY, canonical, digest, raw_cell
 METHOD = 'pandemic-level-anchored-rows-v1'
 
 
-def scan_rows(words, rectangles, source_sha, module, page):
+def scan_rows(words, rectangles, source_sha, module, page, minimum_level_x=400):
     borders = [r for r in rectangles if 0 <= r[3] - r[1] <= 2 and r[2] - r[0] >= 200]
-    levels = [w for w in words if w[0] >= 400 and w[4] in {'K', 'KH', 'SH', 'S', 'P'}]
+    levels = [w for w in words if w[0] >= minimum_level_x and w[4] in {'K', 'KH', 'SH', 'S', 'P'}]
     result, seen, anchors = [], {}, set()
     for level in sorted(levels, key=lambda w: (w[1], w[0])):
         centre = (level[1] + level[3]) / 2
