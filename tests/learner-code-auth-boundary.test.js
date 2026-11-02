@@ -15,7 +15,8 @@ test('runtime API only accepts self GET or POST ensure after validated Auth and 
   assert.match(handler,/runtime\?\.allowed !== true/);
   assert.match(handler,/origin_not_allowed/);
   assert.match(handler,/url\.search\) fail\(400, "query_not_supported"\)/);
-  assert.match(handler,/await req\.text\(\)/);
+  assert.match(handler,/req\.body !== null/);
+  assert.doesNotMatch(handler,/await req\.text\(\)/);
   assert.match(handler,/\.eq\("auth_user_id", id\)/);
   assert.match(handler,/allocateLearnerCode\(\{ authUserId, storage \}\)/);
   assert.match(handler,/Cache-Control": "no-store, private"/);
