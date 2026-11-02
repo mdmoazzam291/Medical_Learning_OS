@@ -5,7 +5,8 @@
     "github"
   ],
   ".github/workflows/ci.yml": [
-    "github"
+    "github",
+    "supabase"
   ],
   ".github/workflows/content-inbox.yml": [
     "github",
@@ -170,6 +171,9 @@
     "supabase"
   ],
   "scripts/learner-code-recovery-check.js": [
+    "supabase"
+  ],
+  "scripts/learner-identity-sdk-transport-check.js": [
     "supabase"
   ],
   "scripts/learner-identity-staging-acceptance.mjs": [

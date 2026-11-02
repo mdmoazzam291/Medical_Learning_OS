@@ -23,6 +23,12 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify pinned identity SDK stops ambiguous writes without replay
+        run: |
+          mkdir -p "$RUNNER_TEMP/mlos-identity-sdk"
+          cp ops/staging-auth-sdk/package.json ops/staging-auth-sdk/package-lock.json "$RUNNER_TEMP/mlos-identity-sdk/"
+          npm ci --prefix "$RUNNER_TEMP/mlos-identity-sdk" --ignore-scripts --no-audit --no-fund
+          SUPABASE_SDK_MODULE_URL="file://$RUNNER_TEMP/mlos-identity-sdk/node_modules/@supabase/supabase-js/dist/index.mjs" node scripts/learner-identity-sdk-transport-check.js
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |

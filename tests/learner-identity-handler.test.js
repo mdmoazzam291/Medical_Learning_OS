@@ -8,11 +8,11 @@ const owner='11111111-1111-4111-8111-111111111111',other='22222222-2222-4222-822
 const token='e30.'+Buffer.from(JSON.stringify({sub:other,session_id:session})).toString('base64url')+'.synthetic';
 const source=stripTypeScriptTypes(readFileSync(new URL('../supabase/functions/learner-identity-api/index.ts',import.meta.url),'utf8').replace(/^import .*;\r?\n/gm,''),{mode:'transform'});
 const runtime=stripTypeScriptTypes(readFileSync(new URL('../supabase/functions/learner-experiment-api/_shared/runtime-access.ts',import.meta.url),'utf8').replace('export async function','async function'),{mode:'transform'});
-function harness({rejectToken=false,outage=false,suspend=false,revokeDuringRead=false,revokeDuringInsert=false,badRow=false,lostWrite=false,assigned=false,outageDuringRead=false}={}){
+function harness({rejectToken=false,outage=false,suspend=false,revokeDuringRead=false,revokeDuringInsert=false,badRow=false,lostWrite=false,assigned=false,outageDuringRead=false,throwRuntime=false,throwRuntimeAfter=0}={}){
  const calls={auth:[],runtime:[],reads:[],inserts:[]};let handler,revoked=false,storageOutage=false,stored=assigned?{auth_user_id:owner,learner_code:code}:null;
  const env={SUPABASE_URL:'https://example.invalid',SUPABASE_ANON_KEY:'public-fixture',SUPABASE_SERVICE_ROLE_KEY:'private-fixture'};
  const table={select(){return this;},eq(k,id){assert.equal(k,'auth_user_id');calls.reads.push(id);return this;},async maybeSingle(){if(revokeDuringRead)revoked=true;if(outageDuringRead)storageOutage=true;return {data:badRow?{auth_user_id:other,learner_code:code}:stored,error:null};},async insert(row){calls.inserts.push(row);stored=row;if(revokeDuringInsert)revoked=true;if(lostWrite)return {error:{code:'connection_lost',message:'private-fixture token SQL secret'}};return {error:null};}};
- const createClient=(url,key)=>({auth:{async getUser(t){calls.auth.push(t);return {data:{user:rejectToken?null:{id:owner}},error:rejectToken?{message:'secret'}:null};}},async rpc(name,args){calls.runtime.push({name,args});return (outage||storageOutage)?{data:null,error:{message:'secret'}}:{data:{allowed:!revoked&&!suspend,reason:suspend?'account_suspended':revoked?'session_inactive':'allowed'},error:null};},from(name){assert.equal(key,'private-fixture');assert.equal(name,'learner_reference_codes');return table;}});
+ const createClient=(url,key)=>({auth:{async getUser(t){calls.auth.push(t);return {data:{user:rejectToken?null:{id:owner}},error:rejectToken?{message:'secret'}:null};}},async rpc(name,args){calls.runtime.push({name,args});if(throwRuntime&&calls.runtime.length>throwRuntimeAfter)throw Error('private-fixture transport secret '+token);return (outage||storageOutage)?{data:null,error:{message:'secret'}}:{data:{allowed:!revoked&&!suspend,reason:suspend?'account_suspended':revoked?'session_inactive':'allowed'},error:null};},from(name){assert.equal(key,'private-fixture');assert.equal(name,'learner_reference_codes');return table;}});
  const context=vm.createContext({Request,Response,URL,TextEncoder,atob,crypto,setTimeout,clearTimeout,createClient,allocateLearnerCode,normalizeLearnerCode,Deno:{env:{get:k=>env[k]},serve:fn=>{handler=fn;}}});
  vm.runInContext(runtime+'\n'+source,context);
  async function request(path='/me',{method='GET',auth=true,origin='http://localhost:3000',body}={}){
@@ -64,4 +64,28 @@ test('first nonempty chunk of a streamed body rejects before Auth or storage',as
 test('stalled POST body is cancelled and rejected within the read deadline',{timeout:5000},async()=>{
  let cancelled=false;const h=harness();const body=new ReadableStream({cancel(){cancelled=true;}});
  const r=await h.request('/ensure',{method:'POST',body});assert.equal(r.status,400);assert.equal(cancelled,true);assert.equal(h.calls.auth.length,0);assert.equal(h.calls.inserts.length,0);
+});
+
+
+test('thrown runtime RPC failure is unavailable before mapping access on GET and POST',async()=>{
+ for(const [path,method] of [['/me','GET'],['/ensure','POST']]){
+  const h=harness({throwRuntime:true}),r=await h.request(path,{method});assert.equal(r.status,503);assert.equal(r.body.error,'identity_session_check_unavailable');assert.equal(r.cache,'no-store, private');assert.equal(h.calls.reads.length,0);assert.equal(h.calls.inserts.length,0);assert.equal(r.body.learnerCode,undefined);assert.ok(!JSON.stringify(r).includes('private-fixture'));assert.ok(!JSON.stringify(r).includes(token));
+ }
+});
+test('thrown final runtime RPC failure withholds stored or newly committed code as unavailable',async()=>{
+ for(const [path,method,assigned] of [['/me','GET',true],['/ensure','POST',false]]){
+  const h=harness({throwRuntime:true,throwRuntimeAfter:1,assigned}),r=await h.request(path,{method});assert.equal(r.status,503);assert.equal(r.body.error,'identity_session_check_unavailable');assert.equal(r.body.learnerCode,undefined);assert.ok(h.stored);assert.equal(h.calls.inserts.length,method==='POST'?1:0);assert.equal(h.calls.runtime.length,2);assert.ok(!JSON.stringify(r).includes('private-fixture'));
+ }
+});
+
+test('runtime checker distinguishes invalid claims from unavailable RPC without leaking errors',async()=>{
+ const check=vm.runInNewContext(runtime+';checkRuntimeAccess',{atob});let calls=0;
+ const admin={async rpc(){calls++;throw Error('private-fixture transport secret');}};
+ for(const [input,reason] of [['not-a-token','session_claim_missing'],['e30.!.synthetic','session_claim_invalid'],['e30.'+Buffer.from('{}').toString('base64url')+'.synthetic','session_claim_missing']]){
+  const result=await check(admin,input,owner);assert.equal(result.allowed,false);assert.equal(result.reason,reason);
+ }
+ assert.equal(calls,0);
+ for(const rpc of [async()=>{throw Error('private-fixture transport secret');},async()=>({data:null,error:{message:'private-fixture'}}),async()=>undefined]){
+  const result=await check({rpc},token,owner);assert.equal(result.allowed,false);assert.equal(result.reason,'runtime_access_unavailable');assert.ok(!JSON.stringify(result).includes('private-fixture'));
+ }
 });
