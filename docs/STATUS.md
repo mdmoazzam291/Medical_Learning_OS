@@ -1,3 +1,9 @@
+## NMC pandemic explicit nested items — 3 November 2026
+
+Located eight explicit nested appearances in legacy pandemic Modules 3.2/3.3: one unnumbered subcompetency, five numbered learning objectives across pages 45–46, two numbered subcompetencies on page 50. Added reproducible text-offset/hash locators and conservative dotted-code regex scan across all 17 candidate module ranges/69 pages (zero matches; no semantic absence claim).
+
+Two actual runs and independent rebuild exact (artifact SHA 1101579a2fb261324e5177790ee5d08c84c4bc7386e4113c350d2e46a240735e; 11,576 bytes). Reviewer independently checks all eight offset/body hashes. All 48 NMC tests and repository check pass; no actionable review findings. Fresh hosted CI not yet verified. No exhaustive objective/reference, 2024 applicability, source approval, unique-competency, runtime or deployment claim. Existing queue remains open. See NMC_PANDEMIC_REGION_INVENTORY.md and docs/evidence/2026-11-03-nmc-pandemic-nested-verification.json.
+
 ## NMC supplementary pandemic primary tables — 3 November 2026
 
 Pinned-source extractor now locates primary competency tables in all 17 candidate modules: 45 physical regions with 47 level anchors. Page 65 merged cell preserves three anchors in one region; no invented internal boundaries. Two final runs byte-identical; 43 Python tests and repository checks pass. Independent engineering rebuild/review found no actionable issue before additive engine metadata. Source wording/PDFs not exported.

@@ -24,3 +24,17 @@ Two final runs are byte-identical: 16,857 bytes, SHA-256 `440fc52a161b11594f73eb
 ## Remaining scope
 
 Nested subcompetencies, learning objectives and inherited subject-code references are not enumerated by this script. Case examples, teaching/assessment instructions, reading lists and legal annexures are not automatically classified as learner competencies or approved exclusions. Later-edition/cohort applicability, overlap with base CBME/AETCOM and effective unique totals remain unapproved. All eligibility flags remain false; the existing queue stays open. No source decision, canonical/exam mapping, registry ingestion, learner activation or deployment.
+
+## Explicit nested-item and reference scan — 3 November 2026
+
+`ops/nmc/pandemic_nested.py` now searches all 17 candidate module ranges (69 pages, PDF 11–79) for explicitly headed subcompetencies and learning objectives. It locates eight appearances: Module 3.2 has one unnumbered subcompetency and five numbered objectives on pages 45–46; Module 3.3 has two numbered subcompetencies on page 50. These are source-nested appearances, not eight additional unique competencies or approved parent-child relations.
+
+`docs/evidence/nmc-pandemic-explicit-nested-locators-v1.json` stores page-text digests, Unicode character spans within PyMuPDF plain page text, body hashes and source-bound appearance IDs. Leading numeric page folios are replaced with equal-length whitespace while preserving newlines; pages join with a single newline. Offsets refer to the original page strings, not PDF byte offsets or rendered coordinates. Body hashes follow this explicit reconstruction method, not a claim of original source bytes. Section search stops at the next explicit nested heading or teaching/case/assessment/resource heading; numbered sequences must start at one and be contiguous. Items lacking those recognized headings remain outside this method.
+
+A conservative uppercase subject-code regex found zero standard dotted references in these 69 pages. This does not establish absence of differently formatted references or semantic relationships. Subject overlap and inherited mappings remain unapproved; no zero-obligation or full-objective-enumeration claim is made. The earlier statement that nested objectives were wholly unenumerated is superseded only for these explicitly detected sections. Other nested requirements and objectives may remain.
+
+```sh
+python3 ops/nmc/pandemic_nested.py /private/Pandemic-MGT-Module-UG.pdf /private/nested-items.json
+```
+
+Two actual-source runs and independent engineering rerun are byte-identical: 11,576 bytes, SHA-256 `1101579a2fb261324e5177790ee5d08c84c4bc7386e4113c350d2e46a240735e`. Reviewer independently reconstructed all eight body hashes from the recorded offsets after folio normalization and verified bounds. All 48 NMC tests and repository checks pass. Output contains metadata and hashes only. Fresh hosted CI for this implementation is not yet verified; no source approval, eligibility, learner runtime, frozen package or deployment change.
