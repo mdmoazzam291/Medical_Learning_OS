@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-11-02T17:23:09.237505+00:00",
+  "source_commit": "8d7100fc9c60b8165d99b1578dec940c7b127630",
+  "pr": 380,
+  "workflow_run": 41488981446,
+  "jobs": {
+    "core": {
+      "id": 125427168607,
+      "conclusion": "success"
+    },
+    "chromium": {
+      "id": 125427167887,
+      "conclusion": "success"
+    },
+    "webkit": {
+      "id": 125427168583,
+      "conclusion": "success"
+    }
+  },
+  "local": {
+    "focused_tests": 19,
+    "full_tests": 1559,
+    "check": "pass",
+    "normal_files": 129,
+    "public_preview_files": 38,
+    "services": 13,
+    "coupling_locations": 250
+  },
+  "independent_review": {
+    "tests_passed": 7,
+    "actionable_findings": []
+  },
+  "browser_ci": {
+    "normal_guide": [
+      "compact panel top<=32px",
+      "all guide links height>=44px",
+      "Android section anchor lands in viewport",
+      "Home route works",
+      "820x390 landscape no horizontal overflow"
+    ],
+    "preview_guide": [
+      "same44px link and anchor behavior",
+      "gap0..32px",
+      "4viewport geometry/isolation",
+      "no scripts/forms/config/external requests"
+    ],
+    "full_navigation": "pass in both engines"
+  },
+  "deployment": {
+    "id": "66692718-ad51-4ef9-8e7e-4331bb4387c8",
+    "commit": "8d7100fc9c60b8165d99b1578dec940c7b127630",
+    "build": "success",
+    "deploy": "success"
+  },
+  "live_browser": {
+    "guide_url": "https://feat-pwa-install-foundation-20261102-medical-learning-os-web.medicalos.workers.dev/web/install",
+    "section_links": 5,
+    "minimum_guide_link_height_px": 44,
+    "scripts": 0,
+    "forms": 0,
+    "horizontal_overflow": false,
+    "android_hash": "#install-android",
+    "android_heading_top_px": 15.609375,
+    "explicit_home_navigation": "observed root return"
+  },
+  "limits": [
+    "Normal build verified through CI, not production publication",
+    "Physical rotation/close-and-reopen/other operating systems not verified",
+    "Authenticated installed-app sessions not verified",
+    "Recorded iPhone preview install/initial portrait standalone launch remains separate prior observation",
+    "No offline/sync acceptance",
+    "Live HTTP headers/byte equality unverified"
+  ]
+}
