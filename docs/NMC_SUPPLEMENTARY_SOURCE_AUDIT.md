@@ -98,3 +98,22 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 The metadata-only packet is 10,826 bytes, SHA-256 3659b498f775efc755fa66250e22493422c64cb53d5d90b11b8c2d42dce20c20. All 65 NMC tests pass and the validator reports 14 proposals, zero approved decisions. Fresh hosted CI for this implementation is not yet verified. Original source records, frozen package and learner runtime remain unchanged. All source/clinical/rights/exam/applicability and completeness decisions remain pending.
 
 Independent engineering review reconstructed and hash-verified every referenced source/appendix body, found the proposals plausible and reported no actionable findings. Categories describe the dominant difference; some pairs also contain capitalization, spacing or punctuation changes. Integrity validation and AI plausibility review do not establish clinical equivalence. Repository checks pass (13 services, 250 coupling locations).
+
+## Legacy Foundation Course physical rows and edition boundary — 3 November 2026
+
+`ops/nmc/foundation_regions.py` now reproduces the exact 64-page 2019 source's defining table on PDF 16–18: 45 top-level appearances grouped 10/9/6/15/5. The nested disability table on PDF 54–55 contains eight further physical appearances. These nested source appearances are not automatically eight additional unique requirements. Candidate parent links resolve to the physical legacy parent appearance rather than a canonical Medical Knowledge Graph identity. Clinical parent mapping remains unapproved.
+
+Metadata receipt `docs/evidence/nmc-foundation-legacy-regions-v1.json` stores coordinates, body/appearance digests, code-reconstruction hashes and source nesting candidates, without exporting the source code corpus or body wording. Code hashes use whitespace-stripped source-code reconstruction for enumeration comparison; they are not hashes of original PDF bytes or approved logical identities. Every reconstructed source code and page matches the older candidate enumeration. That parity does not certify clinical meaning, exhaustive source scope or current applicability.
+
+The source-specific level-column geometry is explicit: top-level x >= 490/gap < 100 points, nested x >= 470/gap < 130. The wider nested table initially failed closed under the older layout setting; its explicit override preserves all eight rows. The shared helper's original defaults are unchanged. Fresh actual-source reruns of the existing pandemic and AETCOM appendix extractors match their checked-in artifacts byte-for-byte.
+
+Two Foundation runs and independent engineering source rerun match exactly: 23,785 bytes, SHA-256 07a774f5043aec3b0db3c0fc8d2bcd10e2a374b4753060448e91aae4c7dd3711. Reviewer independently reconstructed all 53 body/appearance hashes, checked source codes/pages and parent references, and found no actionable findings. All 69 NMC Python tests pass; repository checks pass (13 services, 250 coupling locations). Fresh hosted CI for this implementation is not yet verified.
+
+```sh
+python3 ops/nmc/foundation_regions.py /private/FOUNDATION-COURSE-MBBS-17.07.2019.pdf /private/foundation-regions.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+Separately, `docs/evidence/nmc-foundation-edition-boundary-v1.json` binds exact text spans in the official 2024 base PDF, page 54 (printed52), to the two-week Foundation Course heading and total 80 teaching hours. The base SHA-256 remains aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c. Both numeric observations were checked in actual source text; the receipt contains offsets/digests rather than copied text. This records a 2024-source constraint and does not carry legacy outcomes into 2024, settle cohort applicability, or establish a cross-edition outcome mapping.
+
+The remaining Foundation Course work includes detailed-module/appendix overlap, other nested goals and source-version applicability. No new effective denominator, source approval, rights/exam acceptance, canonical ingestion, learner activation or deployment. The frozen source-review package and its pending decisions remain unchanged.
