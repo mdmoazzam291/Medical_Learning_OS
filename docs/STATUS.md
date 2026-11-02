@@ -1,3 +1,9 @@
+## NMC legacy Foundation Course source rows — 3 November 2026
+
+Reproduced 45 top-level source appearances (groups 10/9/6/15/5) and 8 nested disability appearances. All 53 source-code/page references match existing candidate enumeration; reviewer independently checks body/appearance hashes and parent pointers. Codes remain hashed; clinical parent mapping/applicability not approved. Separate official 2024 page 54 text-span receipt verifies 2 weeks/80 hours without carrying older outcomes forward.
+
+Two source runs and independent rebuild exact (23,785 bytes; SHA 07a774f5043aec3b0db3c0fc8d2bcd10e2a374b4753060448e91aae4c7dd3711). All 69 NMC tests/repository checks pass; no actionable review findings. Explicit wider nested layout setting; old helper defaults and actual pandemic/AETCOM artifacts byte-identical. Fresh hosted CI not yet verified. No ingestion, accepted semantic/rights/exam decisions, unique count or learner activation. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-foundation-region-verification.json.
+
 ## NMC AETCOM remaining-variant AI triage — 3 November 2026
 
 All 14 remaining appearances now have explicit provisional proposals: 12 candidate expression variants, 1 terminology conflict, 1 scope/action difference. References bind source/appendix physical IDs, pages, body hashes, exact prior artifact hashes and per-case digests. These are AI source-investigation proposals, not accepted clinical equivalence or 14 new distinct defects. Original 22-case packet remains unchanged/pending.
