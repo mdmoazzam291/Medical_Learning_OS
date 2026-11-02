@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-11-02T18:13:04.471720+00:00",
+  "source_commit": "a79875ce4c54e74933557806b6b9c695e30e7378",
+  "base": "91a11aff41048984b039fd269a2a0a9ddc3d99da",
+  "branch": "feat/account-summary-compact-20261102",
+  "pr": 381,
+  "workflow_run": 41495221724,
+  "jobs": {
+    "core": {
+      "id": 125448274138,
+      "conclusion": "success"
+    },
+    "chromium": {
+      "id": 125448274166,
+      "conclusion": "success"
+    },
+    "webkit": {
+      "id": 125448274158,
+      "conclusion": "success"
+    }
+  },
+  "tests": {
+    "baseline": 1548,
+    "full": 1550,
+    "focused": 16,
+    "independent_review": 14,
+    "review_findings": [],
+    "check": "pass",
+    "build_files": 124,
+    "portability_services": 13,
+    "coupling_locations": 250
+  },
+  "browser_acceptance": {
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "fixture_authentication_only": true,
+    "minimum_tested_width": 320,
+    "metric_tiles": 3,
+    "equal_metric_widths_and_single_row": true,
+    "shortcut_destinations": [
+      "/",
+      "/web/medical.html",
+      "/web/exam.html",
+      "/web/vault.html"
+    ],
+    "shortcut_columns_at_most700px": 2,
+    "shortcut_columns_above700px": 4,
+    "minimum_shortcut_height_px": 44,
+    "large_count_wrapping_no_horizontal_overflow": true,
+    "full_navigation": "pass"
+  },
+  "visual_review": {
+    "engine": "chromium",
+    "viewports": [
+      390,
+      820,
+      1440
+    ],
+    "finding": "Tiles and shortcut rows legible, aligned, no visible clipping",
+    "fixture_data_only": true,
+    "artifact": 13166098455,
+    "expires_at": "2026-11-09T18:00:27Z",
+    "images": [
+      {
+        "name": "account-summary-chromium-desktop.png",
+        "sha256": "5d1acdb193ea86a998359eafd1e7f2abd284f79d41d5fd685a7f92e32daa3770"
+      },
+      {
+        "name": "account-summary-chromium-phone.png",
+        "sha256": "0df5e51f039ea6893f33f0f65d7b5a9b554dee36fb2144e76b5750fbd1eced2d"
+      },
+      {
+        "name": "account-summary-chromium-tablet.png",
+        "sha256": "48f9eccd096431eb621467e3b6031c8382684da43c70756ffb360924ad977e64"
+      }
+    ]
+  },
+  "webkit_artifact": {
+    "id": 13167736027,
+    "expires_at": "2026-11-09T18:11:25Z",
+    "independently_visually_reviewed": false
+  },
+  "unchanged": [
+    "Auth/session/refresh/loading/projection behavior",
+    "Zero-vs-unknown metric semantics",
+    "Frozen signedOut content",
+    "Other workspace layout",
+    "PWA PR380 and identity PR379 stacks"
+  ],
+  "limits": [
+    "No production publication or merge",
+    "No real hosted authenticated-device acceptance",
+    "No physical PWA rotation/reopen/offline acceptance",
+    "Original header transition issue remains unconfirmed",
+    "Final evidence-only head CI is separate"
+  ]
+}
