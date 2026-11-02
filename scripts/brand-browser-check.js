@@ -83,6 +83,17 @@ try {
     await page.getByRole('link', { name: 'Install Medretica', exact: true }).click();
     await page.getByRole('heading', { name: 'Install Medretica', exact: true }).waitFor();
     assert.equal(await page.locator('script,form').count(), 0);
+    assert.ok(await page.locator('.install-guide>.panel').evaluate(node => node.getBoundingClientRect().top >= 0 && node.getBoundingClientRect().top <= 32));
+    for (const link of await page.locator('.install-guide a').all()) assert.ok((await link.boundingBox()).height >= 44);
+    await page.getByRole('navigation', { name: 'Installation sections', exact: true }).getByRole('link', { name: 'Android', exact: true }).click();
+    assert.equal(new URL(page.url()).hash, '#install-android');
+    assert.ok(await page.locator('#install-android').evaluate(node => node.getBoundingClientRect().top >= 0 && node.getBoundingClientRect().top < innerHeight));
+    if (width === 820) {
+      await page.setViewportSize({width:820,height:390});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      await page.setViewportSize({width,height:1000});
+    }
+
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
     assert.ok(await page.getByRole('link', { name: 'Open Medretica Home →', exact: true }).isVisible());
     await page.getByRole('link', { name: 'Open Medretica Home →', exact: true }).click();

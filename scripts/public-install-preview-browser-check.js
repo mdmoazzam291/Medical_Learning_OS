@@ -29,6 +29,13 @@ try{
    if(path==='/web/install.html'){
     assert.ok(await page.getByRole('heading',{name:'Install Medretica Preview',exact:true}).isVisible());
     assert.ok(await page.getByRole('heading',{name:'If installation is missing',exact:true}).isVisible());
+    for(const link of await page.locator('.install-guide a').all())assert.ok((await link.boundingBox()).height>=44,'guide link touch height');
+    await page.getByRole('navigation',{name:'Installation sections',exact:true}).getByRole('link',{name:'Android',exact:true}).click();
+    assert.equal(new URL(page.url()).hash,'#install-android');
+    assert.ok(await page.locator('#install-android').evaluate(node=>node.getBoundingClientRect().top>=0&&node.getBoundingClientRect().top<innerHeight));
+    // Measure the top gap at the original scroll position, before navigating Home.
+    await page.goto(origin+'/web/install.html');
+
    }
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'public page should not clip horizontally');
    assert.equal(await page.locator('a[href^="/web/account"]').count(),0,'preview must not advertise account entry');

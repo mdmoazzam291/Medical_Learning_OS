@@ -3,7 +3,7 @@ import {copyFile,mkdir,readFile,writeFile} from 'node:fs/promises';
 import {dirname,join} from 'node:path';
 import {installGuideBody} from './public-install-guide.js';
 const publicPages=new Set(['web/index.html','web/services.html','web/contact.html','web/privacy.html','web/terms.html','web/refunds.html','web/delivery.html']);
-const assets=['web/styles.css','web/navigation.css','web/public-policies.css','web/favicon.svg','web/medretica-mark.svg','web/medretica-fold.svg','web/apple-touch-icon.png','web/app-icon-192.png','web/app-icon-512.png','web/manifest.webmanifest'];
+const assets=['web/install-guide.css','web/styles.css','web/navigation.css','web/public-policies.css','web/favicon.svg','web/medretica-mark.svg','web/medretica-fold.svg','web/apple-touch-icon.png','web/app-icon-192.png','web/app-icon-512.png','web/manifest.webmanifest'];
 const banner='<aside class="panel" aria-label="Public preview"><strong>Public preview</strong> · Accounts and study data are unavailable in this build. <a class="secondary action-link" href="/web/install.html">Installation guide →</a></aside>';
 export const publicPreviewHeaders=`/*
   Cache-Control: no-store
@@ -48,7 +48,7 @@ export async function buildPublicInstallPreview({repoRoot,output,publicFiles}){
   if(path==='web/index.html')html=previewHome(html);
   await write(path,html);
  }
- await write('web/install.html',sourceHead+'<body class="mlos-install-preview">'+banner+installGuideBody+'</body></html>');
+ await write('web/install.html',sourceHead.replace('</head>','<link rel="stylesheet" href="/web/install-guide.css"></head>')+'<body class="mlos-install-preview">'+banner+installGuideBody+'</body></html>');
  for(const path of assets){
   if(path==='web/manifest.webmanifest'){
    const manifest=JSON.parse(await readFile(join(repoRoot,path),'utf8'));manifest.name='Medretica Preview';manifest.short_name='M. Preview';await write(path,JSON.stringify(manifest,null,2)+'\n');

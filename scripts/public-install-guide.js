@@ -1,8 +1,9 @@
 // Static instructions only: no platform detection, install prompt, storage or pass attestation.
-export const installGuideBody=`<main class="account-page public-home"><section class="panel">
+export const installGuideBody=`<main class="account-page public-home install-guide"><section class="panel">
 <h1>Install Medretica Preview</h1>
 <p>This is a public installation check. Accounts, study data and offline study are unavailable. Keep an internet connection.</p>
 <p><a class="secondary action-link" href="/">Open the preview homepage →</a></p>
+<nav aria-label="Installation sections"><a href="#install-apple">iPhone / iPad</a><a href="#install-android">Android</a><a href="#install-desktop">Computer</a><a href="#install-troubleshooting">Troubleshooting</a><a href="#install-checks">Checks</a></nav>
 <section aria-labelledby="install-apple"><h2 id="install-apple">iPhone or iPad · Safari</h2>
 <ol><li>Open this preview in Safari, then open the preview homepage above.</li><li>Tap Share and choose Add to Home Screen. It may be under More or additional Share actions.</li><li>If offered, turn on Open as Web App. Confirm Add, then launch the new icon from your Home Screen.</li></ol>
 <p><a href="https://support.apple.com/en-in/guide/iphone/iphea86e5236/ios" target="_blank" rel="noopener noreferrer">Apple iPhone instructions</a> · <a href="https://support.apple.com/en-gb/guide/ipad/ipad8f1f7a29/ipados" target="_blank" rel="noopener noreferrer">Apple iPad instructions</a></p></section>

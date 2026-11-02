@@ -1,0 +1,10 @@
+/* Script-free installation help in the normal app and public preview. */
+main.install-guide{padding-top:16px}
+.install-guide> .panel{margin-top:0}
+.install-guide nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.install-guide a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:8px 10px;overflow-wrap:anywhere}
+.install-guide nav a{border:1px solid var(--line);border-radius:10px;background:var(--surface);font-weight:600;text-decoration:none}
+.install-guide section[aria-labelledby]{margin-top:28px}
+.install-guide h2[id]{scroll-margin-top:16px}
+.install-guide ol{padding-left:24px;line-height:1.65}
+.install-guide li{margin:8px 0}

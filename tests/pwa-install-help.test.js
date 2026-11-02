@@ -23,3 +23,21 @@ test('guest and signed-in phone/tablet/desktop menus expose installation help',(
   const html=navigationMarkup({signedIn,phone,currentHref});assert.match(html,/<a href="\/web\/install.html">(?:[^<]*|<[^>]+>)*?Install Medretica/);
  }
 });
+
+test('normal and preview guides provide script-free section navigation and a shared touch-friendly stylesheet',async()=>{
+ const out=await mkdtemp(join(tmpdir(),'guide-sections-'));
+ try{
+  for(const publicPreview of [false,true]){
+   await buildPages({outputDirectory:out,publicPreview});
+   const html=await readFile(join(out,'web/install.html'),'utf8');
+   assert.match(html,/<nav aria-label="Installation sections">/);
+   assert.match(html,/class="[^"]*install-guide/);
+   assert.match(html,/href="\/web\/install-guide.css"/);
+   for(const id of ['install-apple','install-android','install-desktop','install-troubleshooting','install-checks']){
+    assert.ok(html.includes('href="#'+id+'"'),id);assert.ok(html.includes('id="'+id+'"'),id);
+   }
+   assert.doesNotMatch(html,/<script\b|<form\b/);
+   assert.ok((await readFile(join(out,'web/install-guide.css'),'utf8')).includes('.install-guide'));
+  }
+ }finally{await rm(out,{recursive:true,force:true});}
+});
