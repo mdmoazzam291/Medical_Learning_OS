@@ -81,6 +81,13 @@ jobs:
           node-version: '24'
       - name: Install isolated pinned native learner-code verification tools
         run: npm install --prefix "$RUNNER_TEMP/mlos-learner-native" --no-audit --no-fund @embedded-postgres/linux-x64@${{ matrix.package }} pg@8.22.0
+      - name: Install official archive clients for disposable mapping recovery
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main" | sudo tee /etc/apt/sources.list.d/mlos-pgdg.list > /dev/null
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends postgresql-client-18
       - name: Verify independent connection uniqueness, collision, rollback and reconciliation
         env:
           EXPECTED_NATIVE_PG_VERSION: ${{ matrix.expected }}
@@ -94,6 +101,20 @@ jobs:
           fi
           grep -F "learner_unique_barrier_not_observed" "$RUNNER_TEMP/mlos-learner-negative.log"
           grep -F "Learner native fixture cleanup PASS" "$RUNNER_TEMP/mlos-learner-negative.log"
+      - name: Verify actual mapping archive recovery, isolation and rollback
+        env:
+          EXPECTED_NATIVE_PG_VERSION: ${{ matrix.expected }}
+          NATIVE_PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/@embedded-postgres/linux-x64/dist/index.js
+          PG_MODULE_URL: file://${{ runner.temp }}/mlos-learner-native/node_modules/pg/esm/index.mjs
+          PG_CLIENT_BIN: /usr/lib/postgresql/18/bin
+        run: |
+          node scripts/learner-code-native-backup.js
+          if node scripts/learner-code-native-backup.js --omit-column-acl-audit > "$RUNNER_TEMP/mlos-mapping-archive-negative.log" 2>&1; then
+            cat "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
+            exit 1
+          fi
+          grep -F "native_column_acl_rejection_not_observed" "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
+          grep -F "Native mapping archive cleanup PASS" "$RUNNER_TEMP/mlos-mapping-archive-negative.log"
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
     runs-on: macos-latest

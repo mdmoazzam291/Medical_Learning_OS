@@ -1,3 +1,10 @@
+## 2 November 2026 — Native mapping archive recovery checkpoint
+
+- Owner Codex/root; parent PR379 da6dc985. Added disposable PostgreSQL 17.6/18.6 CI coverage using official client18 pg_dump/pg_restore; fixed private socket, synthetic Auth prerequisites, table-only custom archive, private file, SHA256 pin and fresh-target transaction guard.
+- Exact mapping UUID/code/format/microsecond timestamp, owner/ACL including column grants/RLS/policy/index/constraint parity, stable-code reads, old-session denial, independent browser/service connections, real uniqueness/CHECK/FK/cascade checks. Wrong-pin/existing-target rejection and missing-Auth restore rollback; omitted-column-audit negative must fail with cleanup.
+- Local 1,581 tests PASS; check 13 services/260 coupling locations PASS; syntax/diff PASS. Actual native archive CI and final read-only review pending at this checkpoint; local root-only namespace cannot initialize native PostgreSQL. Do not infer archive acceptance from logical JSON tests.
+- Table-only synthetic same-major restore, independently provisioned Auth/roles and separately reinstalled runtime function; not managed Auth/full-platform/rolegraph/extension/concurrent-write/crash/production recovery certification. No hosted mutation, identity/code issuance, source/clinical/rights/reviewer approval, merge or release. Genuine signed-in operator acceptance remains blocked. Next inspect exact checkpoint CI and resolve failures before recording native proof.
+
 ## 2 November2026 — Exact SDK top-level pin verified and stagingv3 active
 
 - OwnerCodex/root; tested379source8bc1ada00763372f72489049a7cdb919f6d5574e. Foundation41415880983 ALL5jobsSUCCESS(core,Chromium,WebKit,PG17.6,PG18.6). Focused14/full1581tests/check13services259locationsPASS, read-only review no concrete issue; exact3committed/deployed source filesmatch.
