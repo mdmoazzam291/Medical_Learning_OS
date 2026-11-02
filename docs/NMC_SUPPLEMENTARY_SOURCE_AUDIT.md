@@ -55,3 +55,20 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 Two actual-source runs and independent engineering rerun match byte-for-byte: 26,614 bytes, SHA-256 07bdd20188acaacae5546bd969379d10fa32f09943e99fc7fbb426673bdabaf0. All 56 NMC Python tests and repository checks pass; review found no actionable findings. Four new tests cover module-heading binding, no assumed table without its heading, ambiguous headings and preservation of classification/level disagreement. Fresh hosted CI for this implementation is not yet verified.
 
 Partial/differently worded appearances, nested objectives, module/appendix/subject semantic overlap and 2024 cohort applicability remain unresolved. Existing source cases, frozen review package, learner runtime and disabled eligibility are unchanged. No source/clinical/rights/exam approval, unique denominator, ingestion or deployment.
+
+## Leading-list-marker formatting investigation — 3 November 2026
+
+The previous 36 unmatched module appearances are now investigated with a narrower formatting diagnostic in `ops/nmc/aetcom_list_marker_audit.py`. It pins both prior artifacts, reconstructs and verifies all 44 module and 68 appendix body hashes against the original AETCOM PDF, and compares after removing only a leading one/two-digit list number plus dot and collapsing whitespace. Joined markers such as a number immediately followed by an uppercase word are supported; decimal forms such as 1.5 remain intact. The rule is source-context-specific, not a general clinical-text normalizer.
+
+Thirty module appearances now have exact comparison matches: the original eight are preserved and 22 previously unmatched appearances differ only by the selected formatting rule. Fourteen remain unmatched. Spelling, case, punctuation, hyphens, negation, internal numbers and medical wording are not normalized. These 30 are formatting-match observations, not approved clinical identities or unique requirements; partial/differently worded statements remain unresolved. Removed numeric markers are stored separately; physical IDs and original hashes/artifacts are unchanged.
+
+The literal word partial appears in none of the 44 selected module statements under a case-insensitive word-boundary search. This is not a search of all booklet prose and does not establish absence of partial relationships or qualifications elsewhere.
+
+```sh
+python3 ops/nmc/aetcom_list_marker_audit.py /private/AETCOM_book.pdf /private/list-marker-comparison.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+Metadata output: `docs/evidence/nmc-aetcom-list-marker-comparison-v1.json`. Two actual runs are byte-identical: 20,871 bytes, SHA-256 a702c6eb223a0ae8ee463a75021708f44c8299777bd6ab23e0aa98ffa6e30e89. All 60 NMC tests and repository checks pass. Tests explicitly preserve decimals, internal numbers, punctuation, spelling and negation. Fresh hosted CI for this implementation is not yet verified. No source wording, source correction, semantic approval, applicability decision, canonical mapping, learner activation or deployment.
+
+Independent engineering review reproduced the list-marker diagnostic byte-for-byte, confirmed all old exact target IDs remain present and every new match has an actual removed module list marker, and found no actionable issue. This review does not approve source or clinical equivalence.

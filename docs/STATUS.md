@@ -1,3 +1,9 @@
+## NMC AETCOM formatting investigation — 3 November 2026
+
+Pinned-source list-marker diagnostic reconstructs and verifies all 112 prior body hashes. Removing only leading list numbers and collapsing whitespace accounts for 22 previously unmatched module appearances: 30 formatting matches total, original eight preserved, 14 unmatched. Original physical identities/artifacts unchanged. No spelling, punctuation, clinical words, negation or internal-number normalization. Literal partial-word scan is zero in 44 selected statements, without semantic absence claim.
+
+All 60 NMC tests pass; two actual runs identical (20,871 bytes; SHA a702c6eb223a0ae8ee463a75021708f44c8299777bd6ab23e0aa98ffa6e30e89). No semantic mapping, source correction, unique requirement denominator or 2024 applicability approval. Fresh hosted CI not yet verified. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-aetcom-list-marker-verification.json.
+
 CI checkpoint: PRs #384–#387 now have core, Chromium and WebKit jobs passed on their respective exact source commits. Those runs do not certify the new module-comparison implementation.
 
 ## NMC AETCOM module-to-appendix comparison — 3 November 2026
