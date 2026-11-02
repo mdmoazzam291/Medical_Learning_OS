@@ -31,3 +31,5 @@ Guide/preview identity verified source `ebd944e83cdf1179c275a36ce777790e853d1cee
 ## Installed-preview polish — 2 November 2026
 
 Public profile now37files: a generated scopedstylesheet replaces headerless inherited top spacing, and account-entry anchors/homepage onboarding become installation guidance. Existingpolicybodyclasses andsecurity restrictions remain. Normal128file app output is unchanged. Owner-recorded iPhone preview installation and initial standalone launch are observed; rotation, close/reopen, authenticated sessions and other OS acceptance remain pending. No video or personaldevicecontent is stored inGit.
+
+Verified polish source2bfa197 / Foundation41463083751 all3SUCCESS:1,558tests,normal128/public37builds,both-engine4viewport layout/isolation and fullnavigation checksPASS. Liveguide gap67→16px/homepage16px, noaccount-entrylinks/scripts/forms. Cloudflarepreview4ac579fd-4048-4480-aacb-3b1ea33d65fd build/deploySUCCESS. [Evidence](evidence/2026-11-02-preview-polish.json). Physicaldevice limits remain as above; productionunchanged.
