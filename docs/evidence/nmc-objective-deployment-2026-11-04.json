@@ -8,7 +8,8 @@
     "deployedFiles": 25,
     "sourceByteDifferences": 0,
     "preservedVerifyJwtSetting": false,
-    "manualJwtRuntimeAdminGatesPreserved": true
+    "manualJwtRuntimeAdminGatesPreserved": true,
+    "deployedStartupAndNegativeHttpChecksPassed": true
   },
   "httpChecks": [
     {
@@ -36,11 +37,20 @@
   ],
   "browserAdminGuestGateVerified": true,
   "genuineSignedInAdminVerified": false,
-  "frontendDeployed": false,
+  "frontendDeployed": true,
   "acceptedMappings": 0,
   "clinicalApproval": false,
   "learnerActivation": false,
   "checkpointBranch": "ops/nmc-objective-release-20261104",
   "owner": "/root",
-  "unfinished": "Wait for PR410 exact-head full CI, merge frontend, verify deployed Admin gate/assets, record final handoff. Genuine signed-in Admin verification remains unavailable."
+  "unfinished": "Genuine signed-in Admin acceptance remains unverified; expand original objective/source mapping coverage after this first batch. Clinical/source approvals and learner activation remain separate.",
+  "mergedMainCommit": "d463fead8ae0c9798e4cadc661f966e114ea59da",
+  "acceptedSourceTree": "8a347b61e71d7753ebe52db6f874a495e540b4e0",
+  "exactHeadFoundationRun": 41732842311,
+  "exactHeadFoundationConclusion": "success",
+  "frontendHostingBuildId": "10fa7a7e-aaf8-4c56-be26-2ecc75849e03",
+  "frontendHostingVersionId": "821481ed-3cce-47bd-bdce-22e0edfac9eb",
+  "frontendHostingBuildConclusion": "success",
+  "productionAdminUrl": "https://medretica.com/web/admin#owner-coverage",
+  "servedAssetByteComparison": "not verified: HTTP client Cloudflare1010; browser JS navigation ERR_BLOCKED_BY_CLIENT"
 }
