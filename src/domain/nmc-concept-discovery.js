@@ -1,7 +1,12 @@
 // Name-based navigation into the published library. Never a clinical mapping,
 // content import, identity merge, mastery update or approval operation.
-const normalise=s=>s.normalize('NFKC').replace(/([a-z])([A-Z])/g,'$1 $2').toLowerCase().replaceAll('anaemia','anemia').replaceAll('&',' and ').replace(/[^a-z0-9]+/g,' ').trim();
-const generic=s=>/^(general|introduction|basics|miscellaneous|overview|principles)( |$)/.test(s);
+// Keep meaningful letters, numbers and symbols. Broad punctuation stripping
+// would wrongly equate α/β names, A+/A- or decimal/fraction identifiers.
+const normalise=s=>s.normalize('NFKC')
+ .replace(/(\p{Ll})(\p{Lu})/gu,'$1 $2').toLowerCase()
+ .replaceAll('anaemia','anemia').replaceAll('&',' and ')
+ .replace(/(?<=\p{L})-(?=\p{L})/gu,' ').replace(/\s+/g,' ').trim();
+const generic=s=>/^(general|introduction|basics|miscellaneous|overview|principles)(?:[\s:.-]|$)/.test(s);
 const validId=s=>typeof s==='string'&&s.trim().length>0&&s.length<=240;
 const fail=()=>{throw new TypeError('nmc_concept_discovery_invalid');};
 export function discoverTopicConcepts(group,library){

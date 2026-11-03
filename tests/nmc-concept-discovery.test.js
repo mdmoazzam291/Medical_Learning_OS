@@ -33,3 +33,11 @@ test('unmatched broad headings offer existing subject and full explorer navigati
  assert.deepEqual(result.matches,[]);assert.equal(result.conceptCount,1);
  assert.deepEqual(result.subjects,[{subjectId:'anatomy',conceptCount:1,url:'/web/library.html?view=overview&subject=anatomy'}]);
 });
+
+test('clinical name discovery preserves Greek letters and positive/negative symbols',()=>{
+ const library={concepts:[concept('alpha','α receptor'),concept('beta','β receptor'),concept('positive','A+'),concept('negative','A-'),concept('decimal','Variant 1.2'),concept('fraction','Variant 1/2')],questions:[],notes:[]};
+ assert.deepEqual(discoverTopicConcepts({labels:['α receptor'],allSubjects:['medicine']},library).map(c=>c.conceptId),['alpha']);
+ assert.deepEqual(discoverTopicConcepts({labels:['A+'],allSubjects:['medicine']},library).map(c=>c.conceptId),['positive']);
+ assert.deepEqual(discoverTopicConcepts({labels:['A-'],allSubjects:['medicine']},library).map(c=>c.conceptId),['negative']);
+ assert.deepEqual(discoverTopicConcepts({labels:['Variant 1.2'],allSubjects:['medicine']},library).map(c=>c.conceptId),['decimal']);
+});
