@@ -23,7 +23,7 @@
     "runId": 41630077538,
     "conclusion": "success"
   },
-  "currentHostedCi": "not_yet_run",
+  "currentHostedCi": "pending_after_documentation_checkpoint",
   "packageOneCompleted": false,
   "sourceDecisionsMade": 0,
   "learnerActivation": false,
@@ -36,5 +36,7 @@
       "path": "nmc-source-row-case-bindings-v1.json",
       "sha256": "741ae0910f8e6425e04ae2b9672ebe9a69415973dcd0f0b58c2767aec7409d9c"
     }
-  ]
+  ],
+  "implementationCommit": "327836e9f2b928a099e5e383d87dd9966e05874d",
+  "draftPullRequest": 402
 }
