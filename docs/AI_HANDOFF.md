@@ -1,3 +1,11 @@
+## Clinical name distinctions preserved — 4 November 2026
+
+Final discovery code d5f63288a5ed5eac1ee59474506adc5ecba2a139 fixes a reproduced normalization error: stripping non-ASCII characters could match alpha and beta receptor names together. The matcher now retains Unicode letters, positive/negative signs, decimal points and fraction separators while applying only the intended spelling/case/word-format normalization. Regression distinguishes alpha/beta, A+/A- and decimal/fraction identifiers. No existing concept IDs or registry data change.
+
+All1,558 Node tests and repository checks pass; extended local Chromium phone/tablet/desktop flows pass again; independent review no blockers. Prior d8e10750 run41721940553 had core and both catalogue browser steps successful while wider navigation regressions remained in progress. Fresh hosted verification is required for this final code before release. Owner root retains feat/nmc-concept-discovery-20261104 / PR409, base main92c6dbee. No409 production release yet. The measured catalog446 gap (10registered concepts/6published questions/6notes/zero exact broad-topic-name matches) is unchanged; existing subject/full concept browsing remains the practical fallback.
+
+Next: check final PR409 CI, especially both browser jobs; then release and verify only this UI increment. Do not resume supplementary audits, create aliases to force matches or treat name discovery as clinical alignment.
+
 ## Real published-content gap and subject fallback — 4 November 2026
 
 Owner Codex /root checked PR409 (head fedbb08b): full core and Chromium jobs passed; macOS WebKit remained queued in run41718976802. The user authorised checking and the next task. A read-only query of the known MLOS project found catalog version446 with10 registered canonical concepts,6 published questions and6 published notes. Comparing all registered labels/aliases against390 source topic groups gives zero exact-name matches. This is an upper-bound comparison, not a learner-specific feed or clinical alignment audit. No raw source/question/note prose, Auth identity or learner evidence was retrieved or committed. See evidence/nmc-published-concept-discovery-snapshot-2026-11-04.json.
