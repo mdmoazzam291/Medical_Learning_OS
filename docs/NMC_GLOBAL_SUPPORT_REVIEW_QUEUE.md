@@ -20,3 +20,7 @@ Next concrete action: enumerate17pandemic modules' objective/competency row loca
 The 17 module-opening candidates now have reproducible primary-table region locators: 45 physical candidate regions containing 47 level anchors. Page 65 has one merged cell with three anchors; no artificial row split. See `NMC_PANDEMIC_REGION_INVENTORY.md`. This does not complete nested-objective or subject-reference enumeration and does not close the unified source/applicability queue.
 
 The next follow-up locates eight explicitly headed nested appearances in Modules 3.2/3.3 across pages 45–46/50 and records a conservative zero-match standard dotted-code scan across PDF 11–79. Explicit-section coverage is partial; semantic subject references, overlap and applicability remain open. See the nested-item section of `NMC_PANDEMIC_REGION_INVENTORY.md`.
+
+## Skills detail progress and next source work — 3 November 2026
+
+The immutable progress delta `docs/evidence/nmc-source-queue-progress-2026-11-03-skills.json` now records 19 explicit skills objective appearances and 45 syntactic heading contexts. The original queue JSON remains unchanged to preserve existing source receipts. Outstanding work includes unlabeled Example 3 material, semantic/reference-version review, certification scope, Electives and Family Adoption detail, remaining support documents and global goals. This is a partial progress update, not closure of the overlapping original queue or new task-total arithmetic.

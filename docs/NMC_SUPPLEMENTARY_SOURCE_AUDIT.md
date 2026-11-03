@@ -151,3 +151,20 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 Two actual-source runs and an independent engineering rerun are byte-identical: 22,333 bytes, SHA-256 d61833c323f04b5f278258b5ec2463c61ff740e6ee15ea6893eed33c39f05b0a. Review independently verified all reference spans/code digests, five objective-section bodies and identities; no actionable findings. All 77 NMC Python tests and repository checks pass (13 services, 250 coupling locations). Parent PR #392 source aaca2ec3 has all three CI jobs passed in run 41585679796; fresh hosted CI for this implementation is not yet verified.
 
 The detector scans standard dotted references with optional internal whitespace. Nonstandard identifiers or implicit references can remain unseen; zero-match or absence claims are not inferred for unrecognised forms. Individual objectives, certification/assessment scope, case/task details, semantic overlap and current-edition/cohort applicability remain incomplete or unreviewed. Existing source cases, frozen package, registry and learner runtime remain unchanged; no accepted source/clinical/rights/exam approval, activation or deployment.
+
+## Skills sample objective details and heading context — 3 November 2026
+
+`ops/nmc/skills_objective_detail.py` binds the prior reference/block artifact and original source bytes, verifies all five block hashes, and locates 19 explicit objective appearances inside them. Source forms remain separate: nine bullet items, five lettered items, four Roman-numeral items and one plain statement. Each has a source character span, original marker kind/hash, local ordinal, parent-block ID, body digest and source-bound appearance ID. No objectives are invented for Example 3, where the earlier method found no explicit heading. The local ordinals are not official competency codes or a unique-requirement count.
+
+For all 45 coded-reference appearances, the utility records the nearest recognised source-heading span and its hash. Observed contexts are six competency, 28 background, one related, six relevant, three prior and one training heading. One context carries across a page boundary and is explicitly flagged. A nearest recognised heading is a syntactic observation: unrecognised or implicit headings and the statement's actual semantic role remain unreviewed. No primary/prerequisite/background relationship is accepted merely from this context.
+
+```sh
+python3 ops/nmc/skills_objective_detail.py /private/Skill-Module_23.12.2019.pdf /private/skills-detail.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+The source-specific child splitter handles explicit source markers, rejects broken letter/Roman sequences and preserves a plain statement without synthetic subdivision. The current pinned five blocks occupy single page spans; a future cross-page parent block fails closed rather than silently changing reconstruction. Body offsets are Unicode character positions in pinned PyMuPDF plain page text, not PDF byte or image coordinates. No source descriptions or code corpus are exported.
+
+Two actual runs and independent engineering rerun are byte-identical: 26,923 bytes, SHA-256 c751ead2b0afa091ef644c8d371397189c0f1f6748ea49d2b262051578f7bfa4. Review independently checked all 19 objective hashes/identities/parent bounds and 45 heading contexts, offsets and carry flags; no actionable findings. All 81 NMC Python tests and repository checks pass. Parent PR #393 source 9cf874d9 has core/Chromium/WebKit success in run 41597321585; hosted CI for this implementation is not yet verified.
+
+A separate progress delta, `docs/evidence/nmc-source-queue-progress-2026-11-03-skills.json`, binds the original unified queue and these new receipts without mutating older frozen inputs. It leaves unlabeled skills material, semantic reference roles, certification/assessment obligations, Electives, Family Adoption, support-document detail and remaining global goals open. Those items overlap earlier queue categories and must not be added blindly to a new task denominator. Existing source/clinical/rights/exam approvals, registry and learner activation remain unchanged.

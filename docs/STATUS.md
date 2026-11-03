@@ -1,3 +1,9 @@
+## NMC Skills objective and heading detail — 3 November 2026
+
+Five pinned sample blocks now yield 19 explicit objective appearances: 9 bullet/5 letter/4 Roman/1 plain, with original spans/hashes/parent IDs. All 45 coded references have nearest recognised source-heading observations; one cross-page carry flagged. No invented Example 3 objectives or accepted semantic roles. A separate hash-bound progress delta updates remaining source work without mutating original frozen queue.
+
+All 81 NMC tests/repository check pass; two runs and independent rebuild exact (26,923 bytes; SHA c751ead2b0afa091ef644c8d371397189c0f1f6748ea49d2b262051578f7bfa4). Reviewer checks 19 objective identities/parent bounds and 45 heading contexts/carry flags; no actionable findings. Parent PR #393 source 9cf874d9 all three jobs green in run 41597321585; this implementation hosted CI not yet verified. Certification scope, unlabeled material, roles, version correspondence and applicability remain unresolved. No approval, registry activation or deployment.
+
 ## NMC legacy Skills Training sample references — 3 November 2026
 
 Six sample ranges now have 45 coded-reference appearances/44 whitespace-collapsed code fingerprints and 5 explicit objective-section blocks. Prefixes including IM/PM stay as-source; no aliases or approved semantic roles. Blocks are not individual-objective counts. Example 3 lacks a detected objective heading, not necessarily objectives. No sample reference becomes a universal additional requirement.
