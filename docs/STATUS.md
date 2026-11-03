@@ -1,3 +1,13 @@
+## PR409 discovery and subject browsing released — 4 November 2026
+
+Owner explicitly authorised deployment if ready. PR409 merged as8bc2709bd74e5da3733813b5105ce4b1f2edf5b5 after full Foundation41723453458 SUCCESS on accepted head7c293cf004aa8be0087784b6c699d29d578abf43. Core, Chromium and native WebKit all passed, including six new discovery cases and viewport/account/stale-flow checks. All1,558 Node tests/check/build and independent review passed. Released main tree88c0f47a9409a47a69721da47a531df95603a145 exactly equals the accepted feature tree.
+
+Production Git deployment verified directly at https://medretica.com/web/nmc-catalogue :390 groups/2634reference appearances, Find learning material controls,GM9.8lookup, and guest sign-in return to the existing Medicine concept explorer. Source initially showed the old controls during deployment, then the new controls and revised return URL appeared. No signed-in production lookup, actual served-byte equivalence or physical-device claim. Name matches and subject browsing are navigation, not clinical/NMC alignment approval.
+
+Receipt: releases/2026-11-04-nmc-concept-discovery-release.md. This post-release documentation checkpoint remains on owned feat/nmc-concept-discovery-20261104 to avoid a production rebuild solely for receipt notes; production code is on main. No database, source rights, origin/security, canonical identity, content publication or learner evidence changes. Catalog446 observation remains10registered concepts/6published questions/6notes/zero exact broad-topic-name matches at its recorded check.
+
+Next useful work: add genuinely reviewed learning material and/or explicit versioned curriculum-to-concept relationships. Do not force source-topic name matches by inventing aliases, duplicate concepts across subjects, restore erased pilots or resume exhaustive supplement auditing as a release prerequisite. Existing canonical library remains the content owner.
+
 ## Clinical name distinctions preserved — 4 November 2026
 
 Final discovery code d5f63288a5ed5eac1ee59474506adc5ecba2a139 fixes a reproduced normalization error: stripping non-ASCII characters could match alpha and beta receptor names together. The matcher now retains Unicode letters, positive/negative signs, decimal points and fraction separators while applying only the intended spelling/case/word-format normalization. Regression distinguishes alpha/beta, A+/A- and decimal/fraction identifiers. No existing concept IDs or registry data change.
