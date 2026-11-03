@@ -1,0 +1,36 @@
+{
+  "kind": "nmc-legacy-skills-example-verification",
+  "baseCommit": "aaca2ec305b5821e4e9c3938196fff50521a949c",
+  "basePullRequest": 392,
+  "sampleScopes": 6,
+  "sourcePdfRange": [
+    31,
+    56
+  ],
+  "codedReferenceAppearances": 45,
+  "distinctWhitespaceCollapsedCodeDigests": 44,
+  "explicitObjectiveSectionBlocks": 5,
+  "individualObjectivesCount": null,
+  "artifactBytes": 22333,
+  "artifactSha256": "d61833c323f04b5f278258b5ec2463c61ff740e6ee15ea6893eed33c39f05b0a",
+  "twoActualRunsByteIdentical": true,
+  "independentActualRebuildExact": true,
+  "independentReferenceSpanChecks": 45,
+  "independentObjectiveBlockChecks": 5,
+  "pythonTestsPassed": 77,
+  "repositoryCheckPassed": true,
+  "review": "no actionable findings",
+  "parent392Ci": {
+    "commit": "aaca2ec305b5821e4e9c3938196fff50521a949c",
+    "run": 41585679796,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "legacyPrefixAliasesApplied": false,
+  "referenceSemanticRolesApproved": false,
+  "effective2024ApplicabilityApproved": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}

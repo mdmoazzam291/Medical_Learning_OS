@@ -134,3 +134,20 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 Two actual ECE runs and independent engineering rerun are byte-identical: 12,177 bytes, SHA-256 f1c67376a1f1ac12fd23e0738b853ca7d3f87b468cf0b2cde0b3b8321f57c20c. Reviewer independently reconstructed all 35 body/appearance hashes and checked character bounds; no actionable findings. All 73 NMC Python tests and repository checks pass. Fresh hosted CI for this implementation is not yet verified. Earlier PR #391 source 48dfd906 has core/Chromium/WebKit success in run 41537207424, separately.
 
 General goals, instructional/assessment material, the clinical-vignette annexure on PDF 43–44, semantic overlaps and current-edition/cohort applicability remain outside this explicit-item extraction or unreviewed. They are not approved exclusions or zero-obligation findings. The existing source case packet/frozen package and learner registry remain unchanged; no source approval, canonical/exam mapping, activation or deployment.
+
+## Legacy Skills Training example references and objective blocks — 3 November 2026
+
+`ops/nmc/skills_examples.py` reads the exact 56-page legacy Skills Training booklet, SHA-256 3e267665af122cb7fd238151d73516e278eb800464836f0b19a6ee660dec0c4e. It audits the six existing sample ranges on PDF 31–56, retaining 45 coded-reference appearances representing 44 distinct whitespace-collapsed code fingerprints. Appearances remain distinct: code repetition is not a new skill, while matching code text does not establish matching descriptions, source-version identity or clinical meaning.
+
+Reference metadata in `docs/evidence/nmc-skills-example-reference-locators-v1.json` stores page character spans, raw-span and comparison digests, source prefix and source-bound appearance IDs, without a full code corpus or source descriptions. Split first-column prefixes/codes are retained by their original text span and a separate whitespace-collapsed comparison hash. Prefixes include IM and PM as observed; no aliases or typo corrections are applied. The range-only location scope does not establish whether a reference is primary, prerequisite, related, background or assessment-linked. That role and every cross-edition mapping remain unapproved.
+
+Five explicitly headed objective sections are located as whole blocks. Lettered/bulleted clauses are deliberately not converted to an asserted individual-objective count. Example 3 has no recognised objective heading in this method; this does not establish that the example has no objectives or obligations. Sample teaching tasks and their repeated subject references are not universal additions to the NMC competency denominator.
+
+```sh
+python3 ops/nmc/skills_examples.py /private/Skill-Module_23.12.2019.pdf /private/skills-examples.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+Two actual-source runs and an independent engineering rerun are byte-identical: 22,333 bytes, SHA-256 d61833c323f04b5f278258b5ec2463c61ff740e6ee15ea6893eed33c39f05b0a. Review independently verified all reference spans/code digests, five objective-section bodies and identities; no actionable findings. All 77 NMC Python tests and repository checks pass (13 services, 250 coupling locations). Parent PR #392 source aaca2ec3 has all three CI jobs passed in run 41585679796; fresh hosted CI for this implementation is not yet verified.
+
+The detector scans standard dotted references with optional internal whitespace. Nonstandard identifiers or implicit references can remain unseen; zero-match or absence claims are not inferred for unrecognised forms. Individual objectives, certification/assessment scope, case/task details, semantic overlap and current-edition/cohort applicability remain incomplete or unreviewed. Existing source cases, frozen package, registry and learner runtime remain unchanged; no accepted source/clinical/rights/exam approval, activation or deployment.
