@@ -25,6 +25,7 @@ try{
   await page.goto(base+'/web/nmc-catalogue.html');
   await page.getByRole('status').filter({hasText:'2634 source reference appearances'}).waitFor();
   assert.equal(await page.locator('.nmc-topic').count(),20);
+  assert.ok(await page.getByRole('navigation',{name:'Workspace',exact:true}).evaluate(el=>el.getBoundingClientRect().height<70),name+' workspace links waste vertical reading space');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,name+' horizontal overflow');
   await page.getByRole('button',{name:'Next',exact:true}).click();
   assert.match(page.url(),/page=2/);
