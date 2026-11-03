@@ -1,3 +1,9 @@
+## NMC Electives/FAP source batch — 3 November 2026
+
+Located 9 legacy Electives clauses/7 base2024 bullets and 3 duration spans; preserve 2 months/2x4 weeks versus 1 month/2x15 days without cohort decision. FAP numbered prose preserved as 17 phase targets (6/5/6) plus 10 final-report items. Raw text phase labels are misleadingly ordered; source-specific spatial grouping recorded. Four embedded table images 67–70 and local OCR hashes/counts retained; image-only pages not blank, table rows unadjudicated.
+
+All 85 NMC tests/repository checks pass; two source+OCR runs and independent rebuild exact (14,579 bytes; SHA 843977966a07169b31b2535b4c7aeaef3f42cf5cede0ab732d632b8630edb6ec). Parent PR #394 source 270b7370 all three jobs green in run 41600594797; current hosted CI not yet verified. New queue delta supplements earlier open work. No cohort/clinical/rights/exam approval, registry activation or deployment. See NMC_ELECTIVES_FAP_SOURCE_AUDIT.md.
+
 ## NMC Skills objective and heading detail — 3 November 2026
 
 Five pinned sample blocks now yield 19 explicit objective appearances: 9 bullet/5 letter/4 Roman/1 plain, with original spans/hashes/parent IDs. All 45 coded references have nearest recognised source-heading observations; one cross-page carry flagged. No invented Example 3 objectives or accepted semantic roles. A separate hash-bound progress delta updates remaining source work without mutating original frozen queue.

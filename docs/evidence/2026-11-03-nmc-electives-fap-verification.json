@@ -1,0 +1,47 @@
+{
+  "kind": "nmc-electives-fap-verification",
+  "baseCommit": "270b7370218f61cf6ad44924e1386fc6be4a20f5",
+  "basePullRequest": 394,
+  "legacyClauses": 9,
+  "baseBullets": 7,
+  "durationSpans": 3,
+  "fapPhaseTargets": [
+    6,
+    5,
+    6
+  ],
+  "fapFinalReportItems": 10,
+  "imageTableAppearances": 4,
+  "localOcrCandidateWordCounts": [
+    197,
+    231,
+    288,
+    274
+  ],
+  "artifactBytes": 14579,
+  "artifactSha256": "843977966a07169b31b2535b4c7aeaef3f42cf5cede0ab732d632b8630edb6ec",
+  "twoActualRunsIncludingOcrByteIdentical": true,
+  "independentActualRebuildExact": true,
+  "pythonTestsPassed": 85,
+  "repositoryCheckPassed": true,
+  "review": "no actionable findings",
+  "visuallyInspectedPages": [
+    66,
+    67,
+    68,
+    70
+  ],
+  "parent394Ci": {
+    "commit": "270b7370218f61cf6ad44924e1386fc6be4a20f5",
+    "run": 41600594797,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "cohortApplicabilityApproved": false,
+  "fapTableRowsAdjudicated": false,
+  "allRequirementsEnumerated": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}

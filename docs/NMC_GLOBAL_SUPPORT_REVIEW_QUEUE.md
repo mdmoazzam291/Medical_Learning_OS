@@ -24,3 +24,5 @@ The next follow-up locates eight explicitly headed nested appearances in Modules
 ## Skills detail progress and next source work — 3 November 2026
 
 The immutable progress delta `docs/evidence/nmc-source-queue-progress-2026-11-03-skills.json` now records 19 explicit skills objective appearances and 45 syntactic heading contexts. The original queue JSON remains unchanged to preserve existing source receipts. Outstanding work includes unlabeled Example 3 material, semantic/reference-version review, certification scope, Electives and Family Adoption detail, remaining support documents and global goals. This is a partial progress update, not closure of the overlapping original queue or new task-total arithmetic.
+
+Electives/FAP progress now has a separate immutable delta: `docs/evidence/nmc-source-queue-progress-2026-11-03-electives-fap.json`. Edition timing differences and numbered FAP prose are located; image-table rows, logbook scope, cohort/phase applicability and remaining support/global work stay open. This supplements the Skills delta and original overlapping queue rather than replacing or closing them.
