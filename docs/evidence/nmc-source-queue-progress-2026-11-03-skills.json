@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "meaning": "progress supplement to existing overlapping queue; not a new total of distinct tasks",
+  "evidenceBindings": [
+    {
+      "path": "nmc-skills-example-reference-locators-v1.json",
+      "sha256": "d61833c323f04b5f278258b5ec2463c61ff740e6ee15ea6893eed33c39f05b0a"
+    },
+    {
+      "path": "nmc-skills-objective-reference-detail-v1.json",
+      "sha256": "c751ead2b0afa091ef644c8d371397189c0f1f6748ea49d2b262051578f7bfa4"
+    }
+  ],
+  "observedProgress": {
+    "explicitSkillObjectiveAppearances": 19,
+    "syntacticReferenceContexts": 45,
+    "semanticRolesApproved": 0
+  },
+  "openWork": [
+    {
+      "id": "skills-unlabelled-scope",
+      "scope": "Example 3 PDF37\u201341 has no recognised objective heading; inspect unlabeled task/case material",
+      "status": "open"
+    },
+    {
+      "id": "skills-reference-semantics",
+      "scope": "Review primary/prerequisite/related/background roles and cross-edition identifier correspondence",
+      "status": "open"
+    },
+    {
+      "id": "skills-certification",
+      "scope": "Enumerate certification/assessment obligations separately from teaching examples",
+      "status": "open"
+    },
+    {
+      "id": "electives-source-detail",
+      "scope": "Enumerate source requirements and reconcile legacy versus 2024 applicability",
+      "status": "open"
+    },
+    {
+      "id": "family-adoption-detail",
+      "scope": "Enumerate embedded base2024 PDF65\u201371 source requirements and overlaps",
+      "status": "open"
+    },
+    {
+      "id": "support-guidance-detail",
+      "scope": "Assess assessment/alignment/logbook/online-learning obligations without turning faculty guidance into universal competencies",
+      "status": "open"
+    },
+    {
+      "id": "global-goal-detail",
+      "scope": "Finish national/institutional/global/subject goals and cross-source overlap",
+      "status": "open"
+    }
+  ],
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

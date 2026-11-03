@@ -1,0 +1,44 @@
+{
+  "kind": "nmc-skills-objective-context-verification",
+  "baseCommit": "9cf874d9f63813cad3891600a670d8b6530f9462",
+  "basePullRequest": 393,
+  "objectiveAppearances": 19,
+  "markerCounts": {
+    "bullet": 9,
+    "lettered": 5,
+    "roman": 4,
+    "plain": 1
+  },
+  "referenceContexts": 45,
+  "crossPageContextCarry": 1,
+  "headingCounts": {
+    "competency": 6,
+    "background": 28,
+    "related": 1,
+    "relevant": 6,
+    "prior": 3,
+    "training": 1
+  },
+  "artifactBytes": 26923,
+  "artifactSha256": "c751ead2b0afa091ef644c8d371397189c0f1f6748ea49d2b262051578f7bfa4",
+  "twoActualRunsByteIdentical": true,
+  "independentActualRebuildExact": true,
+  "independentObjectiveChecks": 19,
+  "independentHeadingContextChecks": 45,
+  "pythonTestsPassed": 81,
+  "repositoryCheckPassed": true,
+  "review": "no actionable findings",
+  "parent393Ci": {
+    "commit": "9cf874d9f63813cad3891600a670d8b6530f9462",
+    "run": 41597321585,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "originalQueueInputsChanged": false,
+  "semanticReferenceRolesApproved": false,
+  "effective2024ApplicabilityApproved": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}
