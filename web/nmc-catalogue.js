@@ -34,14 +34,15 @@ results.addEventListener('click',async event=>{
  const button=event.target.closest('button[data-nmc-connect]');if(!button||button.disabled)return;
  const group=visibleGroups.get(button.dataset.nmcConnect);if(!group)return;
  const panel=button.parentElement.querySelector('.nmc-connections'),ticket=revision;
- const discoveryUrl='/web/library.html?view=overview&search='+encodeURIComponent(group.label);
+ const discoveryUrl='/web/library.html?view=overview'+(group.allSubjects.length===1?'&subject='+encodeURIComponent(group.allSubjects[0]):'');
  button.disabled=true;panel.textContent='Finding published learning material…';
  try{
-  const matches=await loadTopicConcepts(group,{request,identity:async()=>(await auth.getSession())?.user?.id||null});
+  const learning=await loadTopicConcepts(group,{request,identity:async()=>(await auth.getSession())?.user?.id||null});
   if(ticket!==revision||!panel.isConnected)return;
+  const {matches}=learning;
   const count=matches.length;
   panel.innerHTML=count?'<p>Name matches help you find existing material; they are not validated NMC mappings.</p>'+matches.slice(0,30).map(c=>'<section class="nmc-concept"><h3>'+e(c.label)+'</h3><p>'+c.questionCount+' published questions · '+c.noteCount+' published notes · '+(c.match==='alias'?'Alias match':'Title match')+'</p><div class="nmc-concept-links">'+[['concept','Open concept'],['notes','Notes'],['questions','Questions'],['graph','Graph']].map(([key,label])=>'<a href="'+e(c.urls[key])+'">'+label+'</a>').join('')+'</div></section>').join('')+(count>30?'<p>Showing 30 of '+count+' name matches.</p>':''):'<p>No published concepts match this topic by title or alias yet.</p>';
-  panel.insertAdjacentHTML('beforeend','<p><a href="'+e(discoveryUrl)+'">Search all learning material</a></p>');
+  panel.insertAdjacentHTML('beforeend','<nav class="nmc-concept-links" aria-label="Browse published concepts">'+learning.subjects.map(s=>'<a href="'+e(s.url)+'">Browse '+e(names.get(s.subjectId)||s.subjectId)+' concepts ('+s.conceptCount+')</a>').join('')+'<a href="/web/library.html?view=overview">Browse all published concepts ('+learning.conceptCount+')</a></nav>');
  }catch(error){
   if(ticket!==revision||!panel.isConnected)return;
   if(error.code==='authentication_required')panel.innerHTML='<p><a href="/web/account.html?returnTo='+encodeURIComponent(discoveryUrl)+'">Sign in to find learning material</a></p>';

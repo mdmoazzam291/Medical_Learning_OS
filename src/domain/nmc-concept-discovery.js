@@ -30,5 +30,7 @@ export async function loadTopicConcepts(group,{request,identity}){
  if(!before)throw Object.assign(new Error('Sign in to find learning material.'),{code:'authentication_required'});
  const library=await request('/library');
  if(await identity()!==before)throw Object.assign(new Error('Account changed. Try again.'),{code:'identity_changed'});
- return discoverTopicConcepts(group,library);
+ const matches=discoverTopicConcepts(group,library);
+ const subjects=[...new Set(group.allSubjects)].map(subjectId=>({subjectId,conceptCount:library.concepts.filter(c=>c.classification?.subjects?.includes(subjectId)).length,url:'/web/library.html?view=overview&subject='+encodeURIComponent(subjectId)}));
+ return {matches,subjects,conceptCount:library.concepts.length};
 }

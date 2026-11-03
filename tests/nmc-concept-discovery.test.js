@@ -25,5 +25,11 @@ test('guest performs no library request, errors remain errors, account change di
  await assert.rejects(loadTopicConcepts(group,{request,identity:async()=>null}),{code:'authentication_required'});assert.equal(calls,0);
  let identities=['one','two'];await assert.rejects(loadTopicConcepts(group,{request,identity:async()=>identities.shift()}),{code:'identity_changed'});
  await assert.rejects(loadTopicConcepts(group,{request:async()=>{throw Error('outage');},identity:async()=>'one'}),/outage/);
- const result=await loadTopicConcepts(group,{request,identity:async()=>'one'});assert.equal(result.length,3);
+ const result=await loadTopicConcepts(group,{request,identity:async()=>'one'});assert.equal(result.matches.length,3);assert.equal(result.conceptCount,4);assert.equal(result.subjects[0].conceptCount,4);
+});
+
+test('unmatched broad headings offer existing subject and full explorer navigation without clinical mapping',async()=>{
+ const result=await loadTopicConcepts({labels:['Nervous system'],allSubjects:['anatomy']},{request:async()=>({concepts:[concept('existing','Brown-Sequard syndrome',[],['anatomy','medicine'])],questions:[],notes:[]}),identity:async()=>'one'});
+ assert.deepEqual(result.matches,[]);assert.equal(result.conceptCount,1);
+ assert.deepEqual(result.subjects,[{subjectId:'anatomy',conceptCount:1,url:'/web/library.html?view=overview&subject=anatomy'}]);
 });

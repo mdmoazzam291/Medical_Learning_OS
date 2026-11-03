@@ -55,6 +55,13 @@ try{
   await page.getByText('Learning material could not be loaded.',{exact:false}).waitFor();
   libraryMode='empty';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
   await page.getByText('No published concepts match this topic',{exact:false}).waitFor();
+  libraryMode='normal';
+  await page.locator('#nmc-search').fill('Acute Myocardial Infarction');await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByText('No published concepts match this topic',{exact:false}).waitFor();
+  assert.equal(await page.getByRole('link',{name:'Browse Medicine concepts (1)',exact:true}).getAttribute('href'),'/web/library.html?view=overview&subject=medicine');
+  await page.getByRole('link',{name:'Browse all published concepts (1)',exact:true}).waitFor();
+  await page.locator('#nmc-search').fill('GM9.8');await page.getByRole('button',{name:'Search',exact:true}).click();
   libraryMode='slow';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
   await page.getByRole('button',{name:'Clear',exact:true}).click();
   await page.waitForTimeout(400);
