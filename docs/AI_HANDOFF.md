@@ -1,3 +1,9 @@
+## NMC Alignment/Online selected core — 3 November 2026
+
+Located 43 selected source observations: 13 Alignment/Integration definitions/controls/assessment/designsteps and 30 online principles/faculty roles/capabilities/skills. Teaching-session groups are not canonical concept identities; teacher capabilities are not extra learner competencies. Shared strict validator retains separate source/role/ID profiles and old 22-body support profile.
+
+All 102 NMC tests/repository checks and actual 43+22 body validations pass. Packet 18,050 bytes; SHA d2dada03ba3464f47dceea5cc2e10d2ff304fc321b74c8680404c4251a74dc32. Parent PR #398 source 95ad0f72 all three jobs green in run 41614408709; current hosted CI not yet verified. Previous local sync is resolved. Detailed/actor/assessment/access/privacy/current-version/global work remains open; no approvals, extra learner competencies or deployment. See NMC_ALIGNMENT_ONLINE_CORE_AUDIT.md.
+
 ## NMC selected logbook/assessment source core — 3 November 2026
 
 Twenty-two selected observations now bind 9 core logbook passages/8 sample-column explanations/3 template projections/2 assessment proposed-GMER2019 markers. This is not the original 22-anomaly packet or exhaustive 68-page review. Activity completion stays separate from whole-competency mastery; faculty decisions, learner feedback and institutional format discretion remain distinct. No current eligibility/rating rules accepted.

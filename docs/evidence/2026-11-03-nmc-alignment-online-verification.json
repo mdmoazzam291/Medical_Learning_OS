@@ -1,0 +1,30 @@
+{
+  "kind": "nmc-selected-alignment-online-verification",
+  "baseCommit": "95ad0f72d4d47eb6e1497dbd2324b70cf558e923",
+  "basePullRequest": 398,
+  "selectedObservations": 43,
+  "alignmentObservations": 13,
+  "onlineTeachingObservations": 30,
+  "actualBodiesVerified": 43,
+  "earlierLogbookAssessmentBodiesStillVerified": 22,
+  "pythonTestsPassed": 102,
+  "repositoryCheckPassed": true,
+  "artifactBytes": 18050,
+  "artifactSha256": "d2dada03ba3464f47dceea5cc2e10d2ff304fc321b74c8680404c4251a74dc32",
+  "parent398Ci": {
+    "commit": "95ad0f72d4d47eb6e1497dbd2324b70cf558e923",
+    "run": 41614408709,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "allRequirementsEnumerated": false,
+  "facultyGuidanceAddedAsLearnerCompetencies": false,
+  "sessionGroupingAcceptedAsConceptIdentity": false,
+  "learnerEligibilityRulesApproved": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified",
+  "independentActualBodyChecks": 43,
+  "review": "no actionable findings; old22-body profile preserved"
+}

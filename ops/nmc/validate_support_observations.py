@@ -34,26 +34,30 @@ def validate_body(record,text):
     return True
 
 
-def validate_metadata(packet):
+def validate_selected_packet(packet,sources,ids,kinds,roles,scope,packet_kind):
     require(set(packet)=={'schemaVersion','kind','authorRole','sourceRights','sourceTextStored','sources','records','selectionScope','allRequirementsEnumerated','activityCompletionEqualsWholeCompetencyMastery','sourceRatingAlternativesResolved','learnerEligibilityRulesApproved','eligibility'})
     require(type(packet['schemaVersion']) is int and packet['schemaVersion']==1)
-    require(packet['kind']=='logbook-assessment-selected-source-observations' and packet['authorRole']=='AI_source_investigation')
+    require(packet['kind']==packet_kind and packet['authorRole']=='AI_source_investigation')
     require(packet['sourceRights']=='citation_only' and packet['sourceTextStored'] is False)
-    require(type(packet['selectionScope']) is str and packet['selectionScope']==SCOPE)
-    require(canonical(packet['sources'])==canonical(SOURCES) and canonical(packet['eligibility'])==canonical(ELIGIBILITY))
+    require(type(packet['selectionScope']) is str and packet['selectionScope']==scope)
+    require(canonical(packet['sources'])==canonical(sources) and canonical(packet['eligibility'])==canonical(ELIGIBILITY))
     require(all(packet[key] is False for key in ['allRequirementsEnumerated','activityCompletionEqualsWholeCompetencyMastery','sourceRatingAlternativesResolved','learnerEligibilityRulesApproved']))
-    require(len(packet['records'])==len(IDS) and {r['id'] for r in packet['records']}==IDS)
+    require(len(packet['records'])==len(ids) and {r['id'] for r in packet['records']}==ids)
     for record in packet['records']:
         require(set(record)=={'id','source','pdfPage','startChar','endChar','bodySha256','candidateKind','candidateRole','status','decision','recordDigest'})
-        require(record['source'] in SOURCES)
-        require(type(record['pdfPage']) is int and 1<=record['pdfPage']<=SOURCES[record['source']]['pageCount'])
+        require(record['source'] in sources)
+        require(type(record['pdfPage']) is int and 1<=record['pdfPage']<=sources[record['source']]['pageCount'])
         require(type(record['startChar']) is int and type(record['endChar']) is int and 0<=record['startChar']<record['endChar'])
         require(isinstance(record['bodySha256'],str) and re.fullmatch('[0-9a-f]{64}',record['bodySha256']))
         require(record['status']=='AI_source_observation_pending' and record['decision'] is None)
-        require(type(record['candidateKind']) is str and record['candidateKind'] in KINDS)
-        require(type(record['candidateRole']) is str and record['candidateRole'] in ROLES)
+        require(type(record['candidateKind']) is str and record['candidateKind'] in kinds)
+        require(type(record['candidateRole']) is str and record['candidateRole'] in roles)
         require(record['recordDigest']==digest(canonical({k:v for k,v in record.items() if k!='recordDigest'})))
     return True
+
+
+def validate_metadata(packet):
+    return validate_selected_packet(packet,SOURCES,IDS,KINDS,ROLES,SCOPE,'logbook-assessment-selected-source-observations')
 
 
 def main():
