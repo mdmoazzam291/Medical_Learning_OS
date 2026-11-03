@@ -12,7 +12,9 @@ STOP = re.compile(r'(?im)^[ \t]*(?:Learning experience|Case study(?:\s+\d+)?|Ass
 REFERENCE = re.compile(r'\b[A-Z]{2,4}\s*\d{1,3}\s*\.\s*\d{1,3}\b')
 
 
-def locate_sections(pages, module, source_sha):
+def locate_sections(pages, module, source_sha, heading_pattern=HEADING, stop_pattern=STOP,
+                    kind_for_heading=None, method='pandemic-explicit-nested-text-v1',
+                    number_marker_pattern=r'(?m)^[ \t]*(\d+)\.[ \t]+'):
     # Replace a leading numeric folio with equal-length whitespace so offsets
     # still refer to PyMuPDF plain page text, without polluting nested body hashes.
     parts, ranges, cursor = [], [], 0
@@ -22,13 +24,13 @@ def locate_sections(pages, module, source_sha):
         parts.append(text); ranges.append((number, cursor, cursor + len(text)))
         cursor += len(text) + 1
     text = '\n'.join(parts)
-    headings = list(HEADING.finditer(text)); records = []
+    headings = list(heading_pattern.finditer(text)); records = []
     for index, heading in enumerate(headings):
         end = headings[index + 1].start() if index + 1 < len(headings) else len(text)
-        stop = STOP.search(text, heading.end(), end)
+        stop = stop_pattern.search(text, heading.end(), end)
         if stop: end = stop.start()
         body = text[heading.end():end]
-        markers = list(re.finditer(r'(?m)^[ \t]*(\d+)\.[ \t]+', body))
+        markers = list(re.finditer(number_marker_pattern, body))
         if markers:
             numbers = [int(m.group(1)) for m in markers]
             if numbers != list(range(1, len(markers) + 1)):
@@ -44,9 +46,10 @@ def locate_sections(pages, module, source_sha):
                 raise ValueError('nested_body_missing')
             segments = [{'pdfPage': n, 'startChar': max(begin, a) - a, 'endChar': min(finish, b) - a}
                         for n, a, b in ranges if max(begin, a) < min(finish, b)]
-            record = {'moduleId': module, 'sectionKind': 'learning_objective' if heading.group(1).lower().startswith('learning') else 'subcompetency',
+            kind = kind_for_heading(heading.group(1)) if kind_for_heading else ('learning_objective' if heading.group(1).lower().startswith('learning') else 'subcompetency')
+            record = {'moduleId': module, 'sectionKind': kind,
                       'ordinal': ordinal, 'segments': segments, 'bodySha256': digest(text[begin:finish])}
-            record['appearanceId'] = digest(canonical(dict(record, sourceSha256=source_sha, method='pandemic-explicit-nested-text-v1')))
+            record['appearanceId'] = digest(canonical(dict(record, sourceSha256=source_sha, method=method)))
             records.append(record)
     return records
 

@@ -117,3 +117,20 @@ python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
 Separately, `docs/evidence/nmc-foundation-edition-boundary-v1.json` binds exact text spans in the official 2024 base PDF, page 54 (printed52), to the two-week Foundation Course heading and total 80 teaching hours. The base SHA-256 remains aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c. Both numeric observations were checked in actual source text; the receipt contains offsets/digests rather than copied text. This records a 2024-source constraint and does not carry legacy outcomes into 2024, settle cohort applicability, or establish a cross-edition outcome mapping.
 
 The remaining Foundation Course work includes detailed-module/appendix overlap, other nested goals and source-version applicability. No new effective denominator, source approval, rights/exam acceptance, canonical ingestion, learner activation or deployment. The frozen source-review package and its pending decisions remain unchanged.
+
+## Early Clinical Exposure explicit sample sections — 3 November 2026
+
+`ops/nmc/ece_examples.py` reads the pinned 44-page legacy ECE booklet (SHA-256 8683513a6ed3ec1f1e8feefafddae7756b4ca918e082b158adfcdb6b3c125545). The six earlier sample-module openings cover PDF 21–40. Annexure IV on PDF 41–42 contains a separate humanities module outside that six-opening list; its explicit competency section is now captured rather than omitted. The scope IDs are local MLOS locators, not official competency codes.
+
+The metadata-only receipt `docs/evidence/nmc-ece-example-item-locators-v1.json` preserves 35 explicitly headed appearances: 12 sample expected competencies, 22 sample objectives and one humanities example competency. Numbered lists, source page character spans and body/source-bound identity hashes are retained without exporting the statements. Examples are not universal extra competencies, additional unique requirements or accepted graph relationships.
+
+The shared text-span parser now accepts explicit optional heading, stopping, section-kind, method and list-marker patterns while keeping all original pandemic defaults unchanged. ECE-specific handling supports dot/parenthesis markers, optional objective headings and intro-line fallback where no Objectives heading exists. It stops before teaching experiences/sessions and explicit teaching notes; that selection boundary does not approve the omitted instructional material as irrelevant. Existing pandemic nested output was rerun against the actual source and remains byte-identical to its checked-in artifact.
+
+```sh
+python3 ops/nmc/ece_examples.py /private/Early_Clinical_Exposure-MBBS-07.08.2019.pdf /private/ece-examples.json
+python3 -m unittest discover -s ops/nmc -p 'test_*.py' -v
+```
+
+Two actual ECE runs and independent engineering rerun are byte-identical: 12,177 bytes, SHA-256 f1c67376a1f1ac12fd23e0738b853ca7d3f87b468cf0b2cde0b3b8321f57c20c. Reviewer independently reconstructed all 35 body/appearance hashes and checked character bounds; no actionable findings. All 73 NMC Python tests and repository checks pass. Fresh hosted CI for this implementation is not yet verified. Earlier PR #391 source 48dfd906 has core/Chromium/WebKit success in run 41537207424, separately.
+
+General goals, instructional/assessment material, the clinical-vignette annexure on PDF 43–44, semantic overlaps and current-edition/cohort applicability remain outside this explicit-item extraction or unreviewed. They are not approved exclusions or zero-obligation findings. The existing source case packet/frozen package and learner registry remain unchanged; no source approval, canonical/exam mapping, activation or deployment.

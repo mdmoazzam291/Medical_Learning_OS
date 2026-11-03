@@ -1,6 +1,6 @@
 # NMC foundation readiness — 2 November 2026
 
-**Not fully prepared, not released to learners.** Current production main remains 91a11aff. The existing NEET-PG/INI-CET preference/preparation framework is not a complete NMC syllabus.
+**Not fully prepared, not released to learners.** Repository main was rechecked on 3 November and remains 91a11aff; a repository commit alone does not certify the deployed runtime. The existing NEET-PG/INI-CET preference/preparation framework is not a complete NMC syllabus.
 
 | Layer | Verified engineering state | Release state |
 |---|---|---|
@@ -44,3 +44,5 @@ A source-bound formatting diagnostic accounts for 22 of the 36 previously unmatc
 All 14 AETCOM appearances remaining after formatting comparison now have evidence-bound provisional AI triage: 12 candidate expression variants, one terminology conflict and one action/scope difference. No equivalence or mapping is approved; the original source-case packet remains pending. Validator/tests cover evidence changes and false approvals; 65 local NMC tests pass.
 
 Legacy Foundation Course defining rows are now reproducible: 45 top-level and eight nested source appearances with exact source/page/hash bindings and candidate physical-parent links. The official 2024 two-week/80-hour constraint is separately source-span-bound; older outcomes are not automatically carried forward. All 69 local NMC tests pass. Applicability, semantic/nested overlap and clinical mapping remain open.
+
+Legacy ECE explicit-item locators now cover six sample modules plus the separate humanities annexure: 12 expected competencies, 22 objectives and one humanities example. These are source teaching examples, not universal additional requirements. All 73 local NMC tests pass; prior pandemic text-span output remains byte-identical. Scope, overlap and applicability review remain open.
