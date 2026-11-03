@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04 Asia/Kolkata",
+  "acceptedSourceHead": "c40229c5ad7ee183518051acbc61961cd2c8fd87",
+  "backend": {
+    "function": "owner-api",
+    "version": 16,
+    "deployedFiles": 25,
+    "sourceByteDifferences": 0,
+    "preservedVerifyJwtSetting": false,
+    "manualJwtRuntimeAdminGatesPreserved": true
+  },
+  "httpChecks": [
+    {
+      "case": "guest",
+      "status": 401,
+      "allowOrigin": "https://medretica.com",
+      "cacheControl": "no-store"
+    },
+    {
+      "case": "allowed-preflight",
+      "status": 200,
+      "allowOrigin": "https://medretica.com"
+    },
+    {
+      "case": "foreign-origin",
+      "status": 403,
+      "allowOrigin": null
+    },
+    {
+      "case": "invalid-token",
+      "status": 401,
+      "allowOrigin": "https://medretica.com",
+      "cacheControl": "no-store"
+    }
+  ],
+  "browserAdminGuestGateVerified": true,
+  "genuineSignedInAdminVerified": false,
+  "frontendDeployed": false,
+  "acceptedMappings": 0,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "checkpointBranch": "ops/nmc-objective-release-20261104",
+  "owner": "/root",
+  "unfinished": "Wait for PR410 exact-head full CI, merge frontend, verify deployed Admin gate/assets, record final handoff. Genuine signed-in Admin verification remains unavailable."
+}
