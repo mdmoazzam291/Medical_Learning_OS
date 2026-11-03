@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "241a523c72b0b4845921a7b27f2d04f853d6d9d32abad4315d5e6d71f32e2c68",
+  "evidenceBindings": [
+    {
+      "path": "nmc-electives-fap-source-observations-v1.json",
+      "sha256": "843977966a07169b31b2535b4c7aeaef3f42cf5cede0ab732d632b8630edb6ec"
+    }
+  ],
+  "observedProgress": {
+    "legacyElectivesClauses": 9,
+    "baseElectivesBullets": 7,
+    "durationSpans": 3,
+    "fapPhaseTargets": 17,
+    "fapReportItems": 10,
+    "fapImageAppearances": 4
+  },
+  "openWork": [
+    {
+      "id": "electives-cohort-and-phase",
+      "status": "open",
+      "scope": "Resolve edition/cohort applicability and narrative versus schedule phase placement"
+    },
+    {
+      "id": "fap-image-rows",
+      "status": "open",
+      "scope": "Interpret source table cells/OCR on PDF67\u201370 without counting images as requirements"
+    },
+    {
+      "id": "fap-logbook-template",
+      "status": "open",
+      "scope": "Review PDF71 learner/institution fields and evidence obligations separately"
+    },
+    {
+      "id": "support-guidance-detail",
+      "status": "open",
+      "scope": "Finish assessment/alignment/logbook/online support obligations"
+    },
+    {
+      "id": "global-goal-detail",
+      "status": "open",
+      "scope": "Finish global/national/institutional/subject goals and overlaps"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}
