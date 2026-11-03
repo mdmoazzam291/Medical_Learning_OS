@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04 Asia/Kolkata",
+  "testedFeatureHead": "6ea7177cd0351d4d575fb79a714e4b2b0b75166f",
+  "deployedBaseline": {
+    "function": "owner-api",
+    "version": 15,
+    "filesCompared": 19,
+    "byteDifferences": 0,
+    "comparisonBase": "8bc2709bd74e5da3733813b5105ce4b1f2edf5b5"
+  },
+  "candidateFiles": [
+    {
+      "path": "data/nmc-learning-foundation-drafts.json",
+      "bytes": 9385,
+      "sha256": "d70775b69d63231a92d60d095430189dd7a1de81dd98e3092eec455c938b6f60"
+    },
+    {
+      "path": "data/nmc-reference-catalogue.json",
+      "bytes": 932295,
+      "sha256": "8656e6e9ce902056ed60fe12a92baa1db2852ae69f76bf5f726196807ef2903f"
+    },
+    {
+      "path": "data/preparation-curriculum.js",
+      "bytes": 404,
+      "sha256": "df9eae70cefd5f2f2f6b8509b85041faedd48bff981ded4f0d4d058d3c10de6f"
+    },
+    {
+      "path": "src/domain/catalog-integrity-audit.js",
+      "bytes": 8101,
+      "sha256": "3b23422b1a3b375882f61b6c5c68780a4851f67b36c7437dc1cc7c0b1ee786fc"
+    },
+    {
+      "path": "src/domain/concept-acceptance.js",
+      "bytes": 1126,
+      "sha256": "9882dd7bbdc00d5c4393a2d67b542c783fa4772677d9465ce292625be3ecd0ab"
+    },
+    {
+      "path": "src/domain/concept-drafts.js",
+      "bytes": 1927,
+      "sha256": "3c1b75822e5bc697f378ba8662c533ae8d713dc4d86a681e2764b4175e1b25b7"
+    },
+    {
+      "path": "src/domain/content-coverage.js",
+      "bytes": 10001,
+      "sha256": "b5dc8e68d99de4cf46b3358f5ace908f7920be8290c85a8e9d80e0454600b1b7"
+    },
+    {
+      "path": "src/domain/content-library.js",
+      "bytes": 14361,
+      "sha256": "f4e47f1759125112ed408ea5e0a818f772e222adff581ad07ae44298ddb63be6"
+    },
+    {
+      "path": "src/domain/medical-relationships.js",
+      "bytes": 4298,
+      "sha256": "e43f42530c8a78c294a0626e5b5b5d7c7c2d6e5ed0f1f9ca61b7df75fcabd9d6"
+    },
+    {
+      "path": "src/domain/medical-source-surveillance.js",
+      "bytes": 6012,
+      "sha256": "39611f2c60dbcc56278e5262eae50fc6d37b24b1ebba0d8b2f9e1064cb2af933"
+    },
+    {
+      "path": "src/domain/nmc-learning-foundation.js",
+      "bytes": 7102,
+      "sha256": "e004f2e19cbcd9f77520c287877c7fc6657880572b99f5f7947de4ddeec40fbb"
+    },
+    {
+      "path": "src/domain/nmc-reference-catalogue.js",
+      "bytes": 4652,
+      "sha256": "c9875942637a0535107f221492284709be4755facfca92fdc60b615d308daf2b"
+    },
+    {
+      "path": "src/domain/preparation-pathways.js",
+      "bytes": 12346,
+      "sha256": "55553b42f84b23b0e086da16331462828f5314fe96eb53fbbcbd5877be6ae916"
+    },
+    {
+      "path": "src/domain/question-intelligence.js",
+      "bytes": 6766,
+      "sha256": "7c34a0618565a583884f70079f92f8de8be9fc4b05ee6c80dcbe4ab4f9bb234e"
+    },
+    {
+      "path": "src/domain/subject-index.js",
+      "bytes": 15192,
+      "sha256": "fb85fb6b5ec4ed213f81357c442301d0c4bdf579a769c56ef0763f6e7480548e"
+    },
+    {
+      "path": "src/domain/syllabus-baseline-drafts.js",
+      "bytes": 3369,
+      "sha256": "a219595ab65fcca63069342e3ab3c7eba4f0aa51533c334882fd6dbaae279d75"
+    },
+    {
+      "path": "src/domain/syllabus-review-preflight.js",
+      "bytes": 5397,
+      "sha256": "3545bf778d4814b0682ad59c4d0925f1181c4634c15f00f234cfe4dbf37785c0"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/concept-acceptance.js",
+      "bytes": 1192,
+      "sha256": "6b5fede7c351cbf5b26c740112de30e0aedbf62e800f7f7c977245855ded2c40"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/concept-drafts.js",
+      "bytes": 1819,
+      "sha256": "a853eb08b8f9d4eee4d870b813fdc7bf90baed548deaf9c41289428229bf84af"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/content-coverage.js",
+      "bytes": 957,
+      "sha256": "df4cc7b11031c1a50b48b70947db917c3ec6c3153f5cb7076053419c0d91f196"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/nmc-learning-foundation.js",
+      "bytes": 1586,
+      "sha256": "80185fdaba25791b4d51712d3ec5240d914ca64fbed53b3d3c1addece4000c40"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/runtime-access.ts",
+      "bytes": 1051,
+      "sha256": "17ce10f020f06b7c47ef6358bb1022c3c7451e074b6f6557fd204c97beab5d31"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/syllabus-baseline-drafts.js",
+      "bytes": 2175,
+      "sha256": "c0154bc678ebf7e8e6cbb21c86371e22d7d631e0fccf0ae2fdd67bf5696d8499"
+    },
+    {
+      "path": "supabase/functions/owner-api/_shared/syllabus-review-preflight.js",
+      "bytes": 1377,
+      "sha256": "c8c2af0269c2db886bf9da8962d340b6b229eeca84d5b9d5b2802274847686a5"
+    },
+    {
+      "path": "supabase/functions/owner-api/index.ts",
+      "bytes": 29460,
+      "sha256": "39692ed7320031f758f8d191d5d59d396a6804de1dd564b57678bacb5c504c96"
+    }
+  ],
+  "deployed": false,
+  "denoRuntimeCheck": false,
+  "credentialsOrConfigValuesIncluded": false
+}
