@@ -1666,3 +1666,10 @@ Owner approved the integrated Coverage Index design on 29 October 2026 and reque
 
 ## ADR-133 — Concept proposals do not mutate accepted coverage
 The owner continued the accepted Coverage Index authoring direction on29October2026. New concepts and edits can be saved without questions as immutable Admin-only proposals. Stable IDs, server actor/time, request fingerprints, exact predecessor/canonical-base binding and confirmed readback preserve history and retry safety. No concept acceptance or clinical/source approval follows from a save. The canonical catalog, syllabus denominator and learner delivery remain unchanged until later genuinely reviewed activation. See CONCEPT_DRAFTS.md.
+
+
+## Catalogue-first curriculum navigation — owner direction 3 November 2026
+
+Prioritise a usable NMC competency-reference/topic browser and defer further supplementary auditing. Permit factual identifier/page metadata and concise topic labels in a standalone app catalogue. This supersedes the prior investigation-only/no-runtime-reference scope for this feature; it does not authorise copying protected competency descriptions, clinical teaching publication, accepted concept identities or automatic learner activation.
+
+Use shared topic navigation across subjects; preserve separate source appearances and distinct clinical learning tasks. Conservative exact/spelling/format grouping may organise reference entries, while uncertain matches remain separate. Existing canonical concept IDs, clinical review and learning evidence remain authoritative. Deliver against current main independently of the audit PR stack.

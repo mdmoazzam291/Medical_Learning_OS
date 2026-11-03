@@ -73,6 +73,8 @@ jobs:
           node "$RUNNER_TEMP/mlos-webkit/node_modules/playwright/cli.js" install --with-deps webkit
       - name: Verify synthetic syllabus Admin/learner acceptance UI in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node tests/syllabus-acceptance-browser-check.js
+      - name: Verify NMC topic catalogue in WebKit
+        run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-webkit-screenshots" node scripts/nmc-catalogue-browser-check.js
       - name: Verify concept draft editor in WebKit
         run: BROWSER_ENGINE=webkit PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-webkit/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in WebKit
@@ -122,6 +124,8 @@ jobs:
           node "$RUNNER_TEMP/mlos-browser/node_modules/playwright/cli.js" install --with-deps chromium
       - name: Verify synthetic syllabus Admin/learner acceptance UI in Chromium
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node tests/syllabus-acceptance-browser-check.js
+      - name: Verify NMC topic catalogue in Chromium
+        run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" SCREENSHOT_DIR="$RUNNER_TEMP/mlos-screenshots" node scripts/nmc-catalogue-browser-check.js
       - name: Verify concept draft editor in Chromium
         run: PLAYWRIGHT_MODULE_URL="file://$RUNNER_TEMP/mlos-browser/node_modules/playwright/index.mjs" node scripts/concept-drafts-browser-check.js
       - name: Verify Admin coverage inventory in Chromium
