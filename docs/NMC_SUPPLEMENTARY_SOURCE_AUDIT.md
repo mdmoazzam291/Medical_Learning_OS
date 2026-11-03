@@ -180,3 +180,7 @@ The four image appearances now have 62 candidate raster-grid cell fragments, inc
 ## Selected logbook/assessment core — 3 November 2026
 
 See `NMC_LOGBOOK_ASSESSMENT_CORE_AUDIT.md`: 22 selected observations separate activity evidence/faculty decisions/feedback and preserve institutional format discretion. Two assessment excerpt markers explicitly say proposed GMER 2019; no current eligibility rules are inferred. All 99 NMC tests pass and actual-source validation checks every selected body. This does not finish both booklets or close current-source correspondence/support scope.
+
+## Alignment/Online selected core — 3 November 2026
+
+The next profile binds 43 selected observations: 13 Alignment/Integration definitions/design/assessment/step records and 30 online-teaching principle/faculty-role/capability/skill-category records. These are teaching-design contexts, not extra learner competencies or graph-identity equivalences. All 102 NMC tests and both actual-source validators pass, preserving the earlier 22-body logbook profile. See `NMC_ALIGNMENT_ONLINE_CORE_AUDIT.md`; full-booklet detail and applicability remain open.

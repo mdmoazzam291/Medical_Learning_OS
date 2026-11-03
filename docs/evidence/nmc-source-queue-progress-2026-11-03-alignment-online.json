@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "b8a1bd5d459d6265713315f39f03b827c2a4132ee1ab0aa1ce44b67e95952383",
+  "evidenceBindings": [
+    {
+      "path": "nmc-alignment-online-observations-v1.json",
+      "sha256": "d2dada03ba3464f47dceea5cc2e10d2ff304fc321b74c8680404c4251a74dc32"
+    }
+  ],
+  "observedProgress": {
+    "alignmentCoreObservations": 13,
+    "onlineTeachingObservations": 30,
+    "learnerCompetenciesAdded": 0,
+    "acceptedMappings": 0
+  },
+  "openWork": [
+    {
+      "id": "support-full-detail",
+      "status": "open",
+      "scope": "Finish unenumerated detailed examples/appendices without universal competency inflation"
+    },
+    {
+      "id": "online-assessment-access-privacy",
+      "status": "open",
+      "scope": "Review remaining online assessment/technical/access/privacy guidance"
+    },
+    {
+      "id": "support-actor-obligations",
+      "status": "open",
+      "scope": "Reconcile learner versus faculty/institution responsibilities and current source versions"
+    },
+    {
+      "id": "global-goal-detail",
+      "status": "open",
+      "scope": "Complete global/national/institutional/subject goal and overlap review"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}
