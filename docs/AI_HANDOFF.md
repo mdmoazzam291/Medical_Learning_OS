@@ -1,3 +1,15 @@
+## #2 selected overlap audit saved; #3 active — 3 November 2026
+
+Implementation `5763f88fcc15cf70d5e9f8338c50ecbc91c415e5`; owner Codex /root, /workspace/scratch/54038bc965c2/mlos-nmc-reconcile. Base PR #404 commit c4fc150f1e81622fbd8c03ec9444f9d66644637c; follow-up feat/nmc-global-support-overlap-20261103. Main freshly fetched remains 91a11aff. Parent hosted CI41666991968 last checked in progress; follow-up CI pending. No main merge, source acceptance or deployment.
+
+427 explicit goal appearances source-bound:20 national,45 institutional,32 nested,185 subject,40 opening global and105 volume global copies.275 literal fingerprints/59 repeated groups are NOT unique requirements.14 cross-page appearances preserve exact offsets; all185subject markers/pages checked. Six candidate combined/split relationships plus volume-II k/l fragment preserved without merges.
+
+All10supplement PDF hashes checked. Skills45 spans verified:32literal base-token candidates,13unmatched; no legacy aliases or cross-edition equivalence. AETCOM44-module appearance comparison rebuilt exactly:30format matches,14unmatched remain pending.134 NMC tests,1568application tests, repository checks and actual-source repeated verification pass; independent engineering review clear. See [overlap audit](NMC_GLOBAL_SUPPORT_OVERLAP_AUDIT.md).
+
+Selected mechanical investigation complete; packageTwoAccepted/semantic equivalence/union/learner flags remain false. Full compound-action and supplementary semantic enumeration remains incomplete, not waived. Original twelve-package acceptance register unchanged. Do not restart verified mechanical source work without changed evidence.
+
+**Next active #3:** reconcile actual notice contents, source editions and intended cohort. Kickoff docs/evidence/nmc-package-three-applicability-kickoff-2026-11-03.json binds current-source checkpoint (8 newer URLs/7 distinct PDF hashes),10supplement sources, October projection and new overlap evidence. Separate admission/progression/institution rules from competency wording and learning scope; retain old-batch/2024-onward uncertainty. Existing source/clinical/rights/exam acceptance remains pending.
+
 ## #1 mechanical engineering closed; #2 current task — 3 November 2026
 
 Implementation `5ad46f43ae7cbe0dc90b5f4c85976f6ea3f3b74f`; owner Codex /root, owned /workspace/scratch/54038bc965c2/mlos-nmc-reconcile. Base PR #403 commit 40b6d129eab728f77e074873df635de0737c8af8; follow-up feat/nmc-row-closeout-goals-20261103. Parent hosted CI41648244710 succeeded; main fetched, still 91a11aff. Follow-up CI pending; no main merge/deployment or source acceptance.

@@ -49,3 +49,8 @@ The [consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md) now records
 ### #1 mechanical closeout; #2 scope started — 3 November 2026
 
 The [row engineering closeout](NMC_SOURCE_ROW_BODY_RECONCILIATION.md) accounts for all 3,369 physical bands and records all 16 source exceptions without applying corrections. Mechanical investigation complete; accepted source/package completion remains pending. Package #2 is independent and its goal/support-scope reconciliation has started. The original 12-package acceptance register is unchanged.
+
+
+### Selected #2 goal/support investigation; #3 active — 3 November 2026
+
+The [global/support overlap audit](NMC_GLOBAL_SUPPORT_OVERLAP_AUDIT.md) binds 427 explicit goal appearances, 45 selected Skills references (32 literal base-identifier candidates/13 unmatched), ten supplementary source hashes and a source-rebuilt AETCOM comparison (30 formatting matches/14 unmatched). Repetitions, nested items and candidate compound links are not unique requirements. Selected mechanical investigation complete; semantic enumeration/source acceptance remain open. #3 current-version/cohort applicability is independently executable and active.

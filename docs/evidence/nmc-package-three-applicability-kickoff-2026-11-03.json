@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-package-three-applicability-kickoff",
+  "taskId": "current-cohort-applicability",
+  "status": "scope_reconciliation_started",
+  "primaryIndexedCurriculumDate": "2024-09-12",
+  "primaryIndexedClarificationDate": "2024-10-10",
+  "newerNoticeUrlCount": 8,
+  "newerNoticeDistinctPdfHashes": 7,
+  "supplementSourceCount": 10,
+  "bindings": [
+    {
+      "path": "nmc-source-freshness-2026-11-03.json",
+      "sha256": "060e809d8bfe6c6ca4eb179ab94b240c6d82c937cdee16ac46c4bf0ffbdae10b"
+    },
+    {
+      "path": "nmc-supplement-sources.json",
+      "sha256": "6fe3b586bebc0de32ebcf884a3ecef8fc0332082e4973903330bf97255bc68f4"
+    },
+    {
+      "path": "nmc-global-support-overlap-investigation-v1.json",
+      "sha256": "0c8bdb5974bae7321a37dc8c4c06340b271f278590a19165820463ed7e0ea306"
+    },
+    {
+      "path": "nmc-october-clarification-projection-v1.json",
+      "sha256": "86247a9dbe824203276652bef6a79f8721d13ac3367647c0d6b0062c338ec4da"
+    }
+  ],
+  "allNoticesContentReviewed": false,
+  "cohortApplicabilityApproved": false,
+  "legacyModulesAutomaticallyCarriedForward": false,
+  "learnerEligibilityChanged": false
+}
