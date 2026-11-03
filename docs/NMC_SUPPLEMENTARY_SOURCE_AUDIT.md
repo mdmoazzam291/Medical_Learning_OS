@@ -194,3 +194,8 @@ The next profile binds 43 selected observations: 13 Alignment/Integration defini
 ### Current-source and completion reconciliation — 3 November 2026
 
 The [consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md) now records 12 open major work packages with dependency/acceptance criteria. Fresh official primary downloads match existing hashes; 18 archive pages are title-screened without exhaustive-currentness certification. Eight October clauses have exact-span observations and a local three-reference amendment projection; no live registry or accepted source state changed.
+
+
+### Selected #2 goal/support investigation; #3 active — 3 November 2026
+
+The [global/support overlap audit](NMC_GLOBAL_SUPPORT_OVERLAP_AUDIT.md) binds 427 explicit goal appearances, 45 selected Skills references (32 literal base-identifier candidates/13 unmatched), ten supplementary source hashes and a source-rebuilt AETCOM comparison (30 formatting matches/14 unmatched). Repetitions, nested items and candidate compound links are not unique requirements. Selected mechanical investigation complete; semantic enumeration/source acceptance remain open. #3 current-version/cohort applicability is independently executable and active.
