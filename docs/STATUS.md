@@ -1,3 +1,9 @@
+## NMC legacy ECE teaching-example locators — 3 November 2026
+
+Six sample modules plus a separately detected humanities annexure now have 35 explicit appearances: 12 expected competencies, 22 objectives, 1 humanities example. Source-bound character spans/hashes only; local scope IDs are not official competency codes. Teaching examples are not universal additions or approved graph requirements.
+
+All 73 NMC tests/repository checks pass. Two actual ECE runs and independent rebuild exact (12,177 bytes; SHA f1c67376a1f1ac12fd23e0738b853ca7d3f87b468cf0b2cde0b3b8321f57c20c); reviewer checks 35 body/identity hashes and bounds. Shared parser default pandemic output remains byte-identical. Parent PR #391 source 48dfd906 all three jobs green in run 41537207424; this implementation hosted CI not yet verified. Goals/instructional scope, vignettes, semantic overlap and applicability remain open. No approvals, registry activation or deployment. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-ece-example-verification.json.
+
 ## NMC legacy Foundation Course source rows — 3 November 2026
 
 Reproduced 45 top-level source appearances (groups 10/9/6/15/5) and 8 nested disability appearances. All 53 source-code/page references match existing candidate enumeration; reviewer independently checks body/appearance hashes and parent pointers. Codes remain hashed; clinical parent mapping/applicability not approved. Separate official 2024 page 54 text-span receipt verifies 2 weeks/80 hours without carrying older outcomes forward.
