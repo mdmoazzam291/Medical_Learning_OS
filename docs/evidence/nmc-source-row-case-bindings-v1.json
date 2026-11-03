@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-row-case-evidence-bindings",
+  "sourceRights": "citation_only",
+  "sourceTextStored": false,
+  "bindings": [
+    {
+      "path": "nmc-source-adjudication-packet.json",
+      "sha256": "8f2114cec43198282969a253bd3b04968cfe1d2689d99de3a8b5ec03bc8985c6"
+    },
+    {
+      "path": "nmc-full-row-band-observations-v1.json",
+      "sha256": "c5f4186300aaa7970a366964cb34d20a207bba5c248ef2b1534d41d319bcec55"
+    },
+    {
+      "path": "nmc-five-subject-topic-count-audit-v1.json",
+      "sha256": "60516bfb17e9f035531f5f161da7ab56f2cf19196b42c10ee13a5c097d016e6a"
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "bc-prefix-omitted",
+      "resolutionClass": "contextual_prefix_proposal",
+      "definingPageBindings": [
+        {
+          "pdfPage": 169,
+          "rowBandSequenceSha256": "ec49044f83f500ef6ec71aee4c7ae0e8c4fad17c5304388809517416ee41262e"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+        "bodySha256": "2f0b9b9ca81fc09044c9717006a245f66338a4ac6986df730295ce58124a2563",
+        "wordCount": 27,
+        "outsideColumnWordCount": 26,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "bc-wrapped",
+      "resolutionClass": "same_cell_wrap_observation",
+      "definingPageBindings": [
+        {
+          "pdfPage": 172,
+          "rowBandSequenceSha256": "3342544fccb4d4c329b5ba3553da71b59d066262ce0b8df00c844e44c1d7cc76"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+        "bodySha256": "239565fdd20fba949914bf9b802cfb97f5fff483c1bf45c03d9b602064d26bb4",
+        "wordCount": 27,
+        "outsideColumnWordCount": 25,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "pa-extra-dot",
+      "resolutionClass": "separator_anomaly",
+      "definingPageBindings": [
+        {
+          "pdfPage": 200,
+          "rowBandSequenceSha256": "2a8e67b9194f05fde8c857c3b74ed8eb3ea23de5301146f143e30403082bc8d4"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+        "bodySha256": "396899e0e61a258f706320a7c2f1adcd0ccec00f114c045f96058a8703bae36d",
+        "wordCount": 24,
+        "outsideColumnWordCount": 23,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "fm-colon",
+      "resolutionClass": "separator_anomaly",
+      "definingPageBindings": [
+        {
+          "pdfPage": 217,
+          "rowBandSequenceSha256": "4874a1ac81a59b7f934cf9ba37f5ff395b8b8eb2e3d96a5601ab8af264f04945"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+        "bodySha256": "fc669cb0bd3e7de7838fc89d58151932dc0f085402236d9c236055b152ebf037",
+        "wordCount": 26,
+        "outsideColumnWordCount": 25,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "mi-suffix-absent",
+      "resolutionClass": "missing_suffix_inference_unaccepted",
+      "definingPageBindings": [
+        {
+          "pdfPage": 212,
+          "rowBandSequenceSha256": "f987548597808b38ff26852e7d25225deb105c984e401c546eda21979ba2bcf2"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+        "bodySha256": "be00afd9ff0b226ddc01d70e7bf41726b981712104275a22906f7dbd3613021b",
+        "wordCount": 21,
+        "outsideColumnWordCount": 19,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "as-topic-malformed",
+      "resolutionClass": "malformed_topic_inference_unaccepted",
+      "definingPageBindings": [
+        {
+          "pdfPage": 454,
+          "rowBandSequenceSha256": "d224984c48ad576c68b44388258299e34e6ec86449da922259a36972e09556d1"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+        "bodySha256": "cfbe382b0ae22a030cf92c7b67468cd18f74ea6a63537033fbbcf35bff78fe56",
+        "wordCount": 28,
+        "outsideColumnWordCount": 27,
+        "boundaryCrossingWordCount": 9,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "or-malformed-cell",
+      "resolutionClass": "repeated_topic_segment_unaccepted",
+      "definingPageBindings": [
+        {
+          "pdfPage": 445,
+          "rowBandSequenceSha256": "a1ed29f722097aa0882212c6857e0b536738dee993e4e04dc6560f12cee6fbc9"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false,
+      "focusedRegion": {
+        "regionId": "172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+        "bodySha256": "e7c9b9269ba35898aa8b4b6da666562d1ac37895514b2889474f771adbfa1bf8",
+        "wordCount": 37,
+        "outsideColumnWordCount": 35,
+        "boundaryCrossingWordCount": 0,
+        "candidateRole": "identifier_bearing_band",
+        "reviewStatus": "AI_source_observation_pending"
+      }
+    },
+    {
+      "caseId": "su-numbering-gap",
+      "resolutionClass": "source_gap_preserved",
+      "definingPageBindings": [
+        {
+          "pdfPage": 409,
+          "rowBandSequenceSha256": "4afe6331c83adda8ae6da7d01ba53dffa2e790e321f1070fe26349f7a5772742"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "op-headline-total",
+      "resolutionClass": "publisher_count_conflict",
+      "definingPageBindings": [
+        {
+          "pdfPage": 414,
+          "rowBandSequenceSha256": "b9bd70691c4dca3f9c41a61305989c16d9f93981a67dac5a6322352f5e90854c"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "pe-headline",
+      "resolutionClass": "publisher_count_conflict",
+      "definingPageBindings": [
+        {
+          "pdfPage": 329,
+          "rowBandSequenceSha256": "e6c824cc7e1f2a0f3e2a48abff0d073d5ebd49f0b1cd669e2871f20e06aec9c6"
+        },
+        {
+          "pdfPage": 350,
+          "rowBandSequenceSha256": "e96049f2f5e21d19c44de89a3c58ef6ce7fe577be211d8b6090a2329f516874b"
+        }
+      ],
+      "nonDefiningSourcePages": [
+        259
+      ],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "gm-headline",
+      "resolutionClass": "publisher_count_conflict_with_repeats",
+      "definingPageBindings": [
+        {
+          "pdfPage": 281,
+          "rowBandSequenceSha256": "2e965a1471c5bdc0478fb27733b77ad1896665fe70a525be5e45a1d3e6b99f6a"
+        },
+        {
+          "pdfPage": 297,
+          "rowBandSequenceSha256": "2ccc4dbe01e496bc9feef33e7e124b0cb10ed1f41536a1d461d0e03a0e176cd2"
+        },
+        {
+          "pdfPage": 304,
+          "rowBandSequenceSha256": "6e0fd48984f24cc91cd1a536a6058a6ed1732cfbe46899b292693b440306276f"
+        },
+        {
+          "pdfPage": 321,
+          "rowBandSequenceSha256": "23187bb48a6b4405af1f8215f71de6f4f126856d125720077e3f4979ad07805f"
+        },
+        {
+          "pdfPage": 323,
+          "rowBandSequenceSha256": "158e41cd74d2932889c6d84338ee8d67535e6d37b8f390b37d0df547229a329d"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "og-headline",
+      "resolutionClass": "publisher_count_conflict",
+      "definingPageBindings": [
+        {
+          "pdfPage": 427,
+          "rowBandSequenceSha256": "bcee879e0a3a124bd145eea20cf8815cba693d1c0400765487175d51f0aa3beb"
+        },
+        {
+          "pdfPage": 439,
+          "rowBandSequenceSha256": "288dcd0b147e1bb8468ba30b416e3a5e69e2c9c422d7bdcde07b55e7d54294d1"
+        },
+        {
+          "pdfPage": 442,
+          "rowBandSequenceSha256": "de1d9c0570c7fed2d8d171cf55a76977087d1ea97a55467401f62605a6db9688"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "gm-gap",
+      "resolutionClass": "source_gap_preserved",
+      "definingPageBindings": [
+        {
+          "pdfPage": 295,
+          "rowBandSequenceSha256": "e3c47960d488488e0ce802175a638fc373c92e413938756b757f6473b9441ce9"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "gm-topic-counts",
+      "resolutionClass": "topic_count_conflicts",
+      "definingPageBindings": [
+        {
+          "pdfPage": 296,
+          "rowBandSequenceSha256": "38e45149ff87611cc58a44bb2a7fe6f7fdd4bb06dd712974c37c53d767cdf634"
+        },
+        {
+          "pdfPage": 297,
+          "rowBandSequenceSha256": "2ccc4dbe01e496bc9feef33e7e124b0cb10ed1f41536a1d461d0e03a0e176cd2"
+        },
+        {
+          "pdfPage": 321,
+          "rowBandSequenceSha256": "23187bb48a6b4405af1f8215f71de6f4f126856d125720077e3f4979ad07805f"
+        },
+        {
+          "pdfPage": 323,
+          "rowBandSequenceSha256": "158e41cd74d2932889c6d84338ee8d67535e6d37b8f390b37d0df547229a329d"
+        }
+      ],
+      "nonDefiningSourcePages": [],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "dr-prefix",
+      "resolutionClass": "contents_defining_prefix_conflict",
+      "definingPageBindings": [
+        {
+          "pdfPage": 356,
+          "rowBandSequenceSha256": "73094e971f44e97161404150e7a33e46cd5932786e3f361ac9a4d85173006abc"
+        }
+      ],
+      "nonDefiningSourcePages": [
+        247,
+        355
+      ],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    },
+    {
+      "caseId": "rd-prefix",
+      "resolutionClass": "contents_defining_prefix_conflict",
+      "definingPageBindings": [
+        {
+          "pdfPage": 457,
+          "rowBandSequenceSha256": "585a45ce4da11791cde43e95f79f90a9e3cae323665999ef65355999efc65e41"
+        }
+      ],
+      "nonDefiningSourcePages": [
+        248
+      ],
+      "engineeringStatus": "source_context_bound_not_adjudicated",
+      "qualifiedDecision": null,
+      "normalizationApplied": false
+    }
+  ],
+  "otherPackagesStillTrack": [
+    "aetcom-class",
+    "aetcom-partial",
+    "aetcom-similarity",
+    "amendment-effects",
+    "global-granularity",
+    "institutional-fragment"
+  ],
+  "originalCasesChanged": false,
+  "acceptedDecisions": 0,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

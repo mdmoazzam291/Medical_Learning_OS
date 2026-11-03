@@ -64,3 +64,8 @@ Source verification requires the exact pinned PDFs, PyMuPDF 1.26.6 and private a
 Finish package 1's page/row dispositions and case interpretations together with package 2's remaining goal/support scope. Review the newer notices and cohort boundaries in package 3 in parallel where evidence allows. Qualified exact-version source/clinical and reuse decisions then unblock canonical bindings and exam overlays; integrate and verify the actual Admin/learner flows before staging and a concrete production-release decision.
 
 No qualified reviewer identity, reuse licence, source acceptance, exam scope or production authorization is manufactured by this checkpoint. Implementation can continue autonomously within those boundaries, but those unresolved inputs prevent an honest claim that the entire foundation is complete.
+
+
+### Full row-band evidence for package #1 — 3 November 2026
+
+All 263 selected defining pages/3,369 identifier-column regions now have [full-width row-band evidence](NMC_SOURCE_ROW_BODY_RECONCILIATION.md): 271 empty-code bands contain other text; 114 crossing words and 266 outside-band words remain accounted for. Sixteen source-row/count cases bind current context, including seven focused anomaly regions; six other cases remain tracked. This is plain-text evidence preparation, not accepted logical-row adjudication or package completion.

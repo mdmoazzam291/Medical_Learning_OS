@@ -35,3 +35,8 @@ Freezes aggregate counts,source hash,known repeats and evidence blob versions. D
 Validation19subject rows,2781/2634/2631totals,3repeat appearances,14matches,5disagreements and-150arithmetic PASS. Metadata-only,no runtime tests rerun/fresh CI claim.
 Next concrete task:validate all accumulated evidence schemas/cross-file references and refresh PR346description to current scope,then prepare actual exact-record reviewer workflow when a genuine reviewer is available. Raw-row/rights-review limitations and page dispositions remain open.
 No ingestion,source/medical/rights approval,merge/deploy or learner activation.
+
+
+### Full row-band evidence for package #1 — 3 November 2026
+
+All 263 selected defining pages/3,369 identifier-column regions now have [full-width row-band evidence](NMC_SOURCE_ROW_BODY_RECONCILIATION.md): 271 empty-code bands contain other text; 114 crossing words and 266 outside-band words remain accounted for. Sixteen source-row/count cases bind current context, including seven focused anomaly regions; six other cases remain tracked. This is plain-text evidence preparation, not accepted logical-row adjudication or package completion.
