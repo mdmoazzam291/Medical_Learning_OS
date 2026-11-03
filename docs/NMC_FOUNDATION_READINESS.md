@@ -75,3 +75,8 @@ All 263 selected defining pages/3,369 identifier-column regions now have [full-w
 ### Uncoded structural proposals — 3 November 2026
 
 The [row reconciliation checkpoint](NMC_SOURCE_ROW_BODY_RECONCILIATION.md) now classifies all 271 selected uncoded-text bands as 218 topic-heading, 19 subject-heading and 34 continuation proposals. All 34 pairs have AI visual-context observations; all 114 crossing words have exact locators and remain counted once. No accepted logical merge, exclusion, source decision or package completion follows.
+
+
+### #1 mechanical closeout; #2 scope started — 3 November 2026
+
+The [row engineering closeout](NMC_SOURCE_ROW_BODY_RECONCILIATION.md) accounts for all 3,369 physical bands and records all 16 source exceptions without applying corrections. Mechanical investigation complete; accepted source/package completion remains pending. Package #2 is independent and its goal/support-scope reconciliation has started. The original 12-package acceptance register is unchanged.

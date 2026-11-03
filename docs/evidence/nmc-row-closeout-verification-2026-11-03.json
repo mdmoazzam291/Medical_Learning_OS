@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-row-engineering-closeout-verification",
+  "checkedAt": "2026-11-03T21:13:17+05:30",
+  "implementationCommit": "5ad46f43ae7cbe0dc90b5f4c85976f6ea3f3b74f",
+  "nmcTestsPassed": 129,
+  "applicationTestsPassed": 1568,
+  "repositoryCheck": "passed",
+  "actualSourceVerification": "exact_rebuild_match",
+  "independentReview": "no_blocking_or_P2_findings",
+  "parentHostedCi": {
+    "runId": 41648244710,
+    "conclusion": "success"
+  },
+  "currentHostedCi": "not_yet_run",
+  "engineeringScopeComplete": true,
+  "packageOneAccepted": false,
+  "learnerActivation": false,
+  "bindings": [
+    {
+      "path": "nmc-source-row-engineering-closeout-v1.json",
+      "sha256": "6c711ee77c60cd28115b90be45e7a6fec17d89863eeed5f794d957f1462ffaaf"
+    },
+    {
+      "path": "nmc-package-two-scope-kickoff-2026-11-03.json",
+      "sha256": "0ea2fa899bb538c2b4684d8622965daa0470d2104470f4a78e8a98d54e451b28"
+    }
+  ]
+}

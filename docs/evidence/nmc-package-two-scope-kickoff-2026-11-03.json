@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-package-two-scope-kickoff",
+  "taskId": "global-supplement-scope",
+  "status": "scope_reconciliation_started",
+  "candidateScopeCounts": {
+    "nationalGoalAppearances": 5,
+    "institutionalGoalAppearances": 11,
+    "institutionalNestedAppearances": 8,
+    "subjectSections": 19,
+    "subjectGoalAppearances": 185,
+    "openingGlobalRoleBulletAppearances": 40
+  },
+  "countsAreUniqueRequirements": false,
+  "priorSourceRowEngineeringCloseout": {
+    "path": "nmc-source-row-engineering-closeout-v1.json",
+    "sha256": "6c711ee77c60cd28115b90be45e7a6fec17d89863eeed5f794d957f1462ffaaf"
+  },
+  "sourceAcceptanceStillPending": true,
+  "bindings": [
+    {
+      "path": "nmc-2024-goal-locators.json",
+      "sha256": "7f1b4067554ab8715c5a28776f7c5842eba76e81b8b677caab8cde4f9d42aeee"
+    },
+    {
+      "path": "nmc-global-support-review-queue.json",
+      "sha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7"
+    },
+    {
+      "path": "nmc-supplement-sources.json",
+      "sha256": "6fe3b586bebc0de32ebcf884a3ecef8fc0332082e4973903330bf97255bc68f4"
+    }
+  ],
+  "compoundClausesFullyEnumerated": false,
+  "overlapReviewed": false,
+  "effectiveUniqueRequirementTotal": null,
+  "learnerActivation": false
+}

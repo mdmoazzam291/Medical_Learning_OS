@@ -1,3 +1,13 @@
+## #1 mechanical engineering closed; #2 current task — 3 November 2026
+
+Implementation `5ad46f43ae7cbe0dc90b5f4c85976f6ea3f3b74f`; owner Codex /root, owned /workspace/scratch/54038bc965c2/mlos-nmc-reconcile. Base PR #403 commit 40b6d129eab728f77e074873df635de0737c8af8; follow-up feat/nmc-row-closeout-goals-20261103. Parent hosted CI41648244710 succeeded; main fetched, still 91a11aff. Follow-up CI pending; no main merge/deployment or source acceptance.
+
+All 415 remaining header-classified bands source-rebuilt: 234 column headers and181 topic headings. Full physical-band accounting closes at3,369 (2634identifier,399topic,19subject,34continuation,234column-header,49empty). All16source cases have explicit retained-anomaly engineering dispositions; decisions remain null and aliases/corrections unapplied. Engineering scope complete; packageOneAccepted/logicalRowsAccepted/allSourceCasesAccepted/coverage/activation remain false. Twelve-package acceptance register unchanged. No repeated mechanical row inventory work needed unless evidence changes.
+
+129 NMC tests,1568application tests, repository checks and actual-source closeout verification pass; independent engineering review clear. Source words/PDF/images/OCR excluded from Git. See [row closeout](NMC_SOURCE_ROW_BODY_RECONCILIATION.md).
+
+**Next active task #2:** global goals and supplementary overlap. Scope kickoff docs/evidence/nmc-package-two-scope-kickoff-2026-11-03.json binds existing national/institutional/subject/global/support evidence. Extract exact body spans/compound clauses, retain nested/duplicate appearances, then assess overlap without adding all counts as unique requirements. Qualified acceptance of source-row exceptions remains pending in the existing review path and does not block independent #2 engineering.
+
 ## NMC uncoded-band structural proposals — 3 November 2026
 
 Saved implementation `d5358592f9bf73ad93615dff5526817b48f1b030`; owner Codex /root, worktree /workspace/scratch/54038bc965c2/mlos-nmc-reconcile. Base PR #402 commit 5a3ca3736be12f7c1344df14068900f5ac9ab224; follow-up feat/nmc-uncoded-dispositions-20261103. Parent hosted CI41639667417 succeeded; main freshly fetched remains 91a11aff. Current follow-up CI pending, not a learner release.

@@ -53,3 +53,16 @@ All 114 boundary-crossing word occurrences have exact page/word-index/bounding-b
 The original 415 header-classified bands, the 16 row/count cases and qualified source dispositions remain open. This checkpoint closes the provisional classification/locator task for the 271 selected uncoded-text bands and 114 crossing words; it does not close package #1 or reduce the twelve-package count.
 
 Reproduce with `python3 ops/nmc/uncoded_dispositions.py /private/nmc-official.pdf --verify docs/evidence/nmc-uncoded-band-structural-proposals-v1.json` (exact source and PyMuPDF 1.26.6 required). AI visual-context receipts bind all 34 candidate child IDs and nine local render hashes, with independent review and logical-merge approval explicitly false.
+
+
+## Mechanical engineering closeout and move to #2 — 3 November 2026
+
+The remaining 415 header-classified bands are now source-rebuilt and classified as 234 column-header and 181 topic-heading syntax observations. There are no unclassified headers in this selected set. Combined accounting covers every one of the 3,369 physical bands exactly once: 2,634 identifier appearances, 399 topic-heading appearances, 19 subject headings, 34 continuation candidates, 234 column headers and 49 empty physical bands. These are physical observations, not a unique competency denominator.
+
+All sixteen source-row/count cases now have explicit engineering dispositions: retain raw appearances with unapplied identity proposals, retain source gaps without invented records, preserve edition-specific defining prefixes and contents conflicts, or retain observed rows with publisher-count conflicts. No accepted source decision or proposed correction is applied. Original source-case/page decisions remain untouched.
+
+**Mechanical investigation is complete for this scope. Accepted source adjudication is not complete.** The closeout artifact deliberately sets engineeringReconciliationComplete=true while packageOneAccepted, logicalRowsAccepted, allSourceCasesAccepted, completeCoverageClaim and learnerActivation remain false. The original package acceptance criteria and twelve-package register are unchanged. This closes repeated mechanical inventory work without pretending that publisher/source conflicts have been officially corrected.
+
+Package #2 (global goals and supplementary overlap) has no dependency on package #1 in the existing register and can proceed now. Its scope kickoff binds existing goal/source evidence and records candidate appearances; it does not union counts into new competencies or approve old module applicability. Keep the sixteen source exceptions available for qualified acceptance; do not restart row scanning unless source evidence changes.
+
+Reproduce with `python3 ops/nmc/row_engineering_closeout.py /private/nmc-official.pdf --verify docs/evidence/nmc-source-row-engineering-closeout-v1.json`.

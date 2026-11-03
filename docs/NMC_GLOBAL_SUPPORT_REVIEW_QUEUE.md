@@ -44,3 +44,8 @@ Alignment/Online core progress is captured in `docs/evidence/nmc-source-queue-pr
 ### Current-source and completion reconciliation — 3 November 2026
 
 The [consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md) now records 12 open major work packages with dependency/acceptance criteria. Fresh official primary downloads match existing hashes; 18 archive pages are title-screened without exhaustive-currentness certification. Eight October clauses have exact-span observations and a local three-reference amendment projection; no live registry or accepted source state changed.
+
+
+### #1 mechanical closeout; #2 scope started — 3 November 2026
+
+The [row engineering closeout](NMC_SOURCE_ROW_BODY_RECONCILIATION.md) accounts for all 3,369 physical bands and records all 16 source exceptions without applying corrections. Mechanical investigation complete; accepted source/package completion remains pending. Package #2 is independent and its goal/support-scope reconciliation has started. The original 12-package acceptance register is unchanged.
