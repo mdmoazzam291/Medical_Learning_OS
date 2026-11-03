@@ -1,3 +1,7 @@
+## Online assessment/access source checkpoint — 3 November 2026
+
+31 selected bodies verified; 57 plain-text pages scanned with zero matches for four recorded privacy-term patterns. This grants no permission or policy approval. See [audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md); all acceptance and activation remain pending.
+
 ## NMC Alignment/Online selected core — 3 November 2026
 
 Located 43 selected source observations: 13 Alignment/Integration definitions/controls/assessment/designsteps and 30 online principles/faculty roles/capabilities/skills. Teaching-session groups are not canonical concept identities; teacher capabilities are not extra learner competencies. Shared strict validator retains separate source/role/ID profiles and old 22-body support profile.

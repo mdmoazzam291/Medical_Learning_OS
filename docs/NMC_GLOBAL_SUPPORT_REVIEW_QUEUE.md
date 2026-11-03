@@ -34,3 +34,8 @@ The FAP schedule/template progress delta records three pending year-specific sch
 The support-core progress delta records selected logbook/assessment evidence and keeps full-booklet detail, current-source correspondence, rating/authority acceptance, Alignment/Integration, Online Learning and global goals open. See `docs/evidence/nmc-source-queue-progress-2026-11-03-support-core.json`; 22 selected observations must not be conflated with the original 22 anomaly cases.
 
 Alignment/Online core progress is captured in `docs/evidence/nmc-source-queue-progress-2026-11-03-alignment-online.json`. It locates selected design/faculty guidance while preserving pending full-booklet/appendix, online-assessment/access/privacy, actor-obligation, current-version and global-goal review. No source queue category is closed solely by passage counts.
+
+
+### Selected online assessment/access checkpoint — 3 November 2026
+
+31 source bodies and a bounded 57-page literal-term diagnostic are captured in [the audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md). All observations remain pending; no learner requirements, recording permissions, accepted mappings or completeness claims were added. Semantic privacy/rights and current applicability review remain open.
