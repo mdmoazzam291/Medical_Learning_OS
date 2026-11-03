@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-uncoded-dispositions-verification",
+  "checkedAt": "2026-11-03T19:21:09+05:30",
+  "implementationCommit": "d5358592f9bf73ad93615dff5526817b48f1b030",
+  "baseCommit": "5a3ca3736be12f7c1344df14068900f5ac9ab224",
+  "nmcTestsPassed": 126,
+  "applicationTestsPassed": 1568,
+  "repositoryCheck": "passed",
+  "actualSourceRebuild": "exact_match",
+  "independentReview": "no_blocking_or_P2_findings",
+  "parentHostedCi": {
+    "runId": 41639667417,
+    "conclusion": "success"
+  },
+  "currentHostedCi": "not_yet_run",
+  "trustedSourceApproval": false,
+  "logicalMergesApproved": false,
+  "learnerActivation": false,
+  "bindings": [
+    {
+      "path": "nmc-uncoded-band-structural-proposals-v1.json",
+      "sha256": "602fc27697df06093436a4014e2ad12bab251f7ddfb8eab66e9153bea33681b1"
+    },
+    {
+      "path": "nmc-continuation-visual-context-v1.json",
+      "sha256": "d7dc2641df106a7b611c542c758653db77971b2540ebcf46302c3a84ebb6cab0"
+    }
+  ]
+}

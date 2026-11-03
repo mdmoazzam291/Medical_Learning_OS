@@ -69,3 +69,8 @@ No qualified reviewer identity, reuse licence, source acceptance, exam scope or 
 ### Full row-band evidence for package #1 — 3 November 2026
 
 All 263 selected defining pages/3,369 identifier-column regions now have [full-width row-band evidence](NMC_SOURCE_ROW_BODY_RECONCILIATION.md): 271 empty-code bands contain other text; 114 crossing words and 266 outside-band words remain accounted for. Sixteen source-row/count cases bind current context, including seven focused anomaly regions; six other cases remain tracked. This is plain-text evidence preparation, not accepted logical-row adjudication or package completion.
+
+
+### Uncoded structural proposals — 3 November 2026
+
+The [row reconciliation checkpoint](NMC_SOURCE_ROW_BODY_RECONCILIATION.md) now classifies all 271 selected uncoded-text bands as 218 topic-heading, 19 subject-heading and 34 continuation proposals. All 34 pairs have AI visual-context observations; all 114 crossing words have exact locators and remain counted once. No accepted logical merge, exclusion, source decision or package completion follows.
