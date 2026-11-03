@@ -32,6 +32,54 @@ try{
   await page.locator('#nmc-search').fill('GM9.8');await page.getByRole('button',{name:'Search',exact:true}).click();
   await page.getByRole('status').filter({hasText:'2 source reference appearances'}).waitFor();
   assert.ok(!page.url().includes('page='));
+  await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByRole('link',{name:'Sign in to find learning material',exact:true}).waitFor();
+  let libraryMode='normal',libraryCalls=0;
+  const fixture={concepts:[{conceptId:'existing-anemia',label:'Anemia',aliases:[],classification:{subjects:['medicine','pediatrics']}}],questions:[{questionId:'q1',conceptLinks:[{conceptId:'existing-anemia',role:'primary'}]}],notes:[{noteVersionId:'n1',conceptId:'existing-anemia'}]};
+  await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
+   const path=new URL(route.request().url()).pathname;
+   if(path.endsWith('/content-library-api/library')){
+    assert.equal(route.request().method(),'GET');libraryCalls++;
+    if(libraryMode==='slow')await new Promise(resolve=>setTimeout(resolve,300));
+    return route.fulfill({status:libraryMode==='outage'?503:200,contentType:'application/json',body:JSON.stringify(libraryMode==='outage'?{error:'unavailable'}:libraryMode==='empty'?{concepts:[],questions:[],notes:[]}:fixture)});
+   }
+   return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({isAdmin:false})});
+  });
+  await page.evaluate(()=>localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}})));
+  await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByRole('link',{name:'Open concept',exact:true}).waitFor();
+  assert.equal(await page.getByRole('link',{name:'Open concept',exact:true}).getAttribute('href'),'/web/library.html?view=overview&concept=existing-anemia');
+  await page.getByText('1 published questions · 1 published notes',{exact:false}).waitFor();
+  assert.equal(libraryCalls,1);
+  libraryMode='outage';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByText('Learning material could not be loaded.',{exact:false}).waitFor();
+  libraryMode='empty';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByText('No published concepts match this topic',{exact:false}).waitFor();
+  libraryMode='normal';
+  await page.locator('#nmc-search').fill('Acute Myocardial Infarction');await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByText('No published concepts match this topic',{exact:false}).waitFor();
+  assert.equal(await page.getByRole('link',{name:'Browse Medicine concepts (1)',exact:true}).getAttribute('href'),'/web/library.html?view=overview&subject=medicine');
+  await page.getByRole('link',{name:'Browse all published concepts (1)',exact:true}).waitFor();
+  await page.locator('#nmc-search').fill('GM9.8');await page.getByRole('button',{name:'Search',exact:true}).click();
+  libraryMode='slow';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.waitForTimeout(400);
+  assert.equal(await page.locator('.nmc-concept').count(),0,'late result must not enter a new topic view');
+  await page.locator('#nmc-search').fill('GM9.8');await page.getByRole('button',{name:'Search',exact:true}).click();
+  libraryMode='normal';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByRole('link',{name:'Open concept',exact:true}).waitFor();
+  libraryMode='slow';
+  const accountRead=page.waitForRequest(r=>new URL(r.url()).pathname.endsWith('/content-library-api/library'));
+  await page.getByRole('button',{name:'Find learning material',exact:true}).click();await accountRead;
+  await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('mlos-supabase-auth-v1'));s.user.id='22222222-2222-4222-8222-222222222222';localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify(s));});
+  await page.getByText('Your account changed. Find learning material again.',{exact:true}).waitFor();
+  assert.equal(await page.locator('.nmc-concept').count(),0,'in-flight account switch discards results');
+  libraryMode='normal';await page.getByRole('button',{name:'Find learning material',exact:true}).click();
+  await page.getByRole('link',{name:'Open concept',exact:true}).waitFor();
+  await page.evaluate(()=>{localStorage.removeItem('mlos-supabase-auth-v1');window.dispatchEvent(new StorageEvent('storage',{key:'mlos-supabase-auth-v1'}));});
+  assert.equal(await page.locator('.nmc-concept').count(),0,'logout clears discovery panels');
+
   await page.locator('.nmc-topic summary').click();
   assert.equal(await page.locator('.nmc-references li').count(),2);
   assert.equal(await page.locator('.nmc-references a').first().getAttribute('href').then(h=>h.startsWith('https://nmc.org.in/')),true);
