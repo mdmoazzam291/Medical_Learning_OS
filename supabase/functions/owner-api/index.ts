@@ -1,3 +1,4 @@
+import { readFoundationDrafts } from './_shared/nmc-learning-foundation.js';
 import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { syllabusBaselineDraftRequest } from './_shared/syllabus-baseline-drafts.js';
@@ -244,6 +245,15 @@ Deno.serve(async (req: Request) => {
         learnerAdministration: accessSummaryResult.data,
         infrastructure
       });
+    }
+
+    if (path === "/foundation-objective-drafts") {
+      try {
+        return response(req, 200, await readFoundationDrafts({admin, actor: authData.user.id, method: req.method, params: url.searchParams}));
+      } catch (error) {
+        const problem=error as {status?: number; code?: string};
+        fail(problem.status || 503, problem.code || "foundation_drafts_unavailable");
+      }
     }
 
     if (path.startsWith("/syllabus-review-preflight/")) {

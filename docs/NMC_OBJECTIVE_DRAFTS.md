@@ -1,0 +1,13 @@
+# First foundation objective draft batch
+
+The existing catalogue is a source-reference navigation inventory. This first proposal batch adds ten independently authored, AI-generated learning goals tied to existing canonical IDs. They reuse the Preparation Curriculum objective schema but remain outside the active registry. They are not official NMC wording, accepted mappings, clinical review or learner-published teaching.
+
+Two edition-bound source appearances, AN57.5 (PDF page141) and PY10.10 (page158), explicitly mention Brown-Sequard syndrome. Both propose one localization objective and the same existing canonical concept. A literal mention does not approve the complete goal or full competency equivalence. The other nine goals have no NMC source binding. No identifier was corrected, merged or inferred from a topic title.
+
+The protected Owner API `GET /foundation-objective-drafts` exposes an on-demand read-only panel under Admin → Coverage Index. It rechecks Admin role before reading only current canonical metadata, binds label/aliases/subjectTags by digest, and marks changed or missing identities. All2,634 source appearances remain inspectable in pages of50 with subject/code/topic filters; unbound records explicitly lack objective wording/alignment. They are not a unique competency denominator. No accept/save endpoint, database change, active exam mapping or learner activation is included.
+
+`data/nmc-learning-foundation-drafts.json` is server-only and excluded from static assets. Git owns the draft version; existing catalog IDs own concept identity. The browser keeps responses in page memory only, checks account identity before/after reads, and discards responses after disposal or access/storage/focus changes.
+
+Run source verification with `python ops/nmc/verify_objective_draft_sources.py /path/to/pinned.pdf` using PyMuPDF1.26.6. The PDF is not redistributed; hashes/coordinates are evidence metadata. Run `node --test tests/nmc-learning-foundation.test.js tests/nmc-foundation-api.test.js tests/nmc-foundation-view.test.js` and the existing Chromium/WebKit CI script `scripts/foundation-objective-browser-check.js`. Synthetic browser checks are not actual clinician/Admin acceptance.
+
+Next: deploy only after exact-head CI and backend bundle verification; inspect with a genuine Admin session; obtain explicit clinical/source-alignment review separately before any registry activation. Expand original, task-specific goals and explicit many-to-many proposals in useful batches; never fabricate denominator coverage or duplicate a clinical concept across subjects. Notes/questions and learner recommendations continue using the existing publication/review gates.

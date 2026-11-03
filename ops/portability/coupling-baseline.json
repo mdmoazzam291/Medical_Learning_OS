@@ -818,5 +818,12 @@
   ],
   "scripts/nmc-catalogue-browser-check.js": [
     "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/nmc-learning-foundation.js": [
+    "supabase"
+  ],
+  "scripts/foundation-objective-browser-check.js": [
+    "cloudflare",
+    "supabase"
   ]
 }
