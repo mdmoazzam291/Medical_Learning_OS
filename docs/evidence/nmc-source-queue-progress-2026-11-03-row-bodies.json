@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "relatedEarlierDeltaSha256": "c490a0b26f1daf05accc58cff822a89bef61438d8f24d30322a999bac2a46711",
+  "evidenceBindings": [
+    {
+      "path": "nmc-full-row-band-observations-v1.json",
+      "sha256": "c5f4186300aaa7970a366964cb34d20a207bba5c248ef2b1534d41d319bcec55"
+    },
+    {
+      "path": "nmc-source-row-case-bindings-v1.json",
+      "sha256": "741ae0910f8e6425e04ae2b9672ebe9a69415973dcd0f0b58c2767aec7409d9c"
+    }
+  ],
+  "observedProgress": {
+    "selectedDefiningPages": 263,
+    "physicalBandsWithBodyEvidence": 3369,
+    "uncodedTextBands": 271,
+    "rowCasesBound": 16,
+    "focusedAnomalyRegions": 7,
+    "sourceDecisionsMade": 0
+  },
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "packageOneCompleted": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

@@ -65,3 +65,8 @@ Selected Alignment/Integration and Online Learning core guidance now has 43 exac
 ### Selected online assessment/access checkpoint — 3 November 2026
 
 31 source bodies and a bounded 57-page literal-term diagnostic are captured in [the audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md). All observations remain pending; no learner requirements, recording permissions, accepted mappings or completeness claims were added. Semantic privacy/rights and current applicability review remain open.
+
+
+### Full row-band evidence for package #1 — 3 November 2026
+
+All 263 selected defining pages/3,369 identifier-column regions now have [full-width row-band evidence](NMC_SOURCE_ROW_BODY_RECONCILIATION.md): 271 empty-code bands contain other text; 114 crossing words and 266 outside-band words remain accounted for. Sixteen source-row/count cases bind current context, including seven focused anomaly regions; six other cases remain tracked. This is plain-text evidence preparation, not accepted logical-row adjudication or package completion.

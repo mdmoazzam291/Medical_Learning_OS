@@ -27,3 +27,8 @@ Next: supplement/later-amendment source manifest and page scope inventory, follo
 ### Current-source and completion reconciliation — 3 November 2026
 
 The [consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md) now records 12 open major work packages with dependency/acceptance criteria. Fresh official primary downloads match existing hashes; 18 archive pages are title-screened without exhaustive-currentness certification. Eight October clauses have exact-span observations and a local three-reference amendment projection; no live registry or accepted source state changed.
+
+
+### Full row-band evidence for package #1 — 3 November 2026
+
+All 263 selected defining pages/3,369 identifier-column regions now have [full-width row-band evidence](NMC_SOURCE_ROW_BODY_RECONCILIATION.md): 271 empty-code bands contain other text; 114 crossing words and 266 outside-band words remain accounted for. Sixteen source-row/count cases bind current context, including seven focused anomaly regions; six other cases remain tracked. This is plain-text evidence preparation, not accepted logical-row adjudication or package completion.

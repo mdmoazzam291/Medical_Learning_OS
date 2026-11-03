@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-row-body-verification",
+  "checkedAt": "2026-11-03T18:20:35+05:30",
+  "baseCommit": "1f06f63d21b5fc6e9229f90c4a4529bbd380850a",
+  "localChecks": {
+    "nmcTestsPassed": 122,
+    "applicationTestsPassed": 1568,
+    "applicationTestsFailed": 0,
+    "repositoryCheck": "passed",
+    "actualSourceRebuild": "passed",
+    "caseBindings": "passed",
+    "repeatSourceVerification": "exact_match"
+  },
+  "independentReview": {
+    "findingsFixed": [
+      "same_page_focused_row_substitution",
+      "unchecked_case_metadata_fields_and_classification"
+    ],
+    "finalResult": "no_remaining_blocking_or_P2_findings"
+  },
+  "parentHostedCi": {
+    "runId": 41630077538,
+    "conclusion": "success"
+  },
+  "currentHostedCi": "pending_after_documentation_checkpoint",
+  "packageOneCompleted": false,
+  "sourceDecisionsMade": 0,
+  "learnerActivation": false,
+  "bindings": [
+    {
+      "path": "nmc-full-row-band-observations-v1.json",
+      "sha256": "c5f4186300aaa7970a366964cb34d20a207bba5c248ef2b1534d41d319bcec55"
+    },
+    {
+      "path": "nmc-source-row-case-bindings-v1.json",
+      "sha256": "741ae0910f8e6425e04ae2b9672ebe9a69415973dcd0f0b58c2767aec7409d9c"
+    }
+  ],
+  "implementationCommit": "327836e9f2b928a099e5e383d87dd9966e05874d",
+  "draftPullRequest": 402
+}

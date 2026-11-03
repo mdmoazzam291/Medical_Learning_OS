@@ -1,3 +1,15 @@
+## NMC source-row package #1 — 3 November 2026
+
+Saved implementation `327836e9f2b928a099e5e383d87dd9966e05874d`, [draft PR #402](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/402). Hosted follow-up CI pending; source acceptance remains pending.
+
+Owner Codex /root, owned worktree /workspace/scratch/54038bc965c2/mlos-nmc-reconcile; base PR #401 commit 1f06f63d21b5fc6e9229f90c4a4529bbd380850a; follow-up branch feat/nmc-source-row-bodies-20261103. Main freshly fetched remains 91a11aff; parent hosted CI41630077538 succeeded.
+
+Actual source rebuild now binds all 263 defining pages/3,369 regions to full-width physical text-band bodies: 2,634 identifier-bearing, 415 header-classified, 271 uncoded-text and 49 no-word bands. All word geometry accounted for; 114 crossing words and 266 outside-band words retained. Plain text only, no image OCR or logical-row certification. Seven exact anomaly regions and all 16 row/count cases bound; six other source cases remain tracked separately. Original source decisions/page dispositions unchanged.
+
+122 NMC tests, 1,568 application tests and actual-source rebuild/case verification pass; repository check passes. Independent review caught unchecked case metadata; exact fields/types/controlled classifications fixed with regression. Same-page unrelated-row substitution also rejected. Package #1 remains open for logical dispositions, continuation/exclusion review and qualified/primary-source resolution; overall 12 major packages remain. No source/clinical/rights/exam approval, main merge, deployment or learner activation. See [row reconciliation](NMC_SOURCE_ROW_BODY_RECONCILIATION.md).
+
+Next: inspect the 271 uncoded-text bands and 114 crossing-word locations; adjudicate the sixteen row/count cases without inventing missing source identities or denominators. Current follow-up hosted CI must be checked on its exact saved commit.
+
 ## NMC current-source and completion reconciliation — 3 November 2026
 
 Saved implementation commit: `71442469f797c07fe472b9bf6e688f21f1e1dc0b`, [draft PR #401](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/401); all 20 changed remote files verified exactly. Hosted follow-up CI pending; no release claimed.
