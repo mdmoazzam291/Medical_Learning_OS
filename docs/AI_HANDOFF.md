@@ -1,3 +1,9 @@
+## NMC FAP schedule/template AI proposals — 3 November 2026
+
+Three pending year schedules preserve 24/24/36 hours, around 6-hour minimum 4/4/6 visit alternatives OR 3-hour 8/8/12 visits, and distinct topic labels. Two hours-column image continuations proposed with exact fragment references; other clinical joins not accepted. Visual 4 versus OCR letter-like token explicitly retained as manual-source reading. Twelve template-role proposals have mandatory status unknown; no fixed form or app fields.
+
+All 93 NMC tests/repository checks pass; two builds identical (10,016 bytes; SHA d0dd7699b74f93ae44a7d61236118e3524185443f1765b9d23e42e2c09776b8e). Independent visual review checks 67–70 source alternatives/labels/refs, no actionable findings. Decisions null; no policy/cohort/clinical acceptance, learner plan changes or deployment. Fresh hosted CI not yet verified. See NMC_FAP_TABLE_FRAGMENT_AUDIT.md and docs/evidence/2026-11-03-nmc-fap-proposals-verification.json.
+
 ## NMC FAP raster fragments and template labels — 3 November 2026
 
 Four source table images now have 62 candidate cell fragments across 6 observed columns; 6 headers retained and 6 bottom edges lack detected rule. No cross-image logical joins. Twelve blank logbook labels and institute-modification instruction are span-bound; no fixed learner form or actual personal data. Cell identities are OCR-independent; transcriptions remain candidate/unexported.

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "c51e9701f361081aec0b2bff16dd43b0513adec11898071f543860f320b46d0b",
+  "evidenceBindings": [
+    {
+      "path": "nmc-fap-schedule-template-proposals-v1.json",
+      "sha256": "d0dd7699b74f93ae44a7d61236118e3524185443f1765b9d23e42e2c09776b8e"
+    }
+  ],
+  "observedProgress": {
+    "pendingScheduleProposals": 3,
+    "pendingTemplateRoleProposals": 12,
+    "acceptedDecisions": 0,
+    "candidateHoursContinuationLinks": 2
+  },
+  "openWork": [
+    {
+      "id": "fap-schedule-cohort-acceptance",
+      "status": "open",
+      "scope": "Resolve applicable cohort and accept/reject schedule interpretation before learner use"
+    },
+    {
+      "id": "fap-nonhours-continuations",
+      "status": "open",
+      "scope": "Clinical/source interpretation of remaining cross-image table fragments"
+    },
+    {
+      "id": "fap-logbook-obligation-acceptance",
+      "status": "open",
+      "scope": "Review template roles/mandatory status and evidence duties; no fixed schema inferred"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}
