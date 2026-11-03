@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "baseCommit": "399d747c5ed43783152886a057f0872766f3358b",
+  "selectedBodiesVerified": 31,
+  "plainTextPagesScanned": 57,
+  "diagnosticRunsByteIdentical": true,
+  "nmcUnitTestsPassed": 105,
+  "repositoryCheck": "passed",
+  "diffCheck": "passed",
+  "independentReview": "no blocking or P2 findings",
+  "parentHostedCi": {
+    "runId": 41625060675,
+    "conclusion": "success"
+  },
+  "currentHostedCi": "not yet run",
+  "sourceAcceptance": false,
+  "learnerActivation": false,
+  "bindings": [
+    {
+      "path": "docs/evidence/nmc-online-assessment-access-observations-v1.json",
+      "sha256": "ba557eaf293e4724d99689ae2cbf52fd8b7e5a5968c070f216dce87038f860d4"
+    },
+    {
+      "path": "docs/evidence/nmc-online-privacy-term-diagnostic-v1.json",
+      "sha256": "174669d06b729968f6a0b638c9eac4b4101b1000db5ad25a05eda7f0a46eb9a2"
+    }
+  ]
+}

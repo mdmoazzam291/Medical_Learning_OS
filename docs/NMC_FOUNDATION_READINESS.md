@@ -60,3 +60,8 @@ FAP now has three evidence-bound AI schedule proposals preserving both visit-dur
 Selected logbook/assessment observations now preserve nine core passages, eight column explanations, three sample projections and two proposed-regulation markers. Source activity completion is kept separate from whole-competency mastery and institutional/faculty authority. All 99 local NMC tests pass. This is selected evidence only; current rules, grading choices and remaining support coverage are unresolved.
 
 Selected Alignment/Integration and Online Learning core guidance now has 43 exact source observations, with separate teaching-context classification. Faculty capabilities are not added to learner mastery, and session integration does not imply canonical concept identity. All 102 local NMC tests pass; full support scope, current correspondence and applicability remain unresolved.
+
+
+### Selected online assessment/access checkpoint — 3 November 2026
+
+31 source bodies and a bounded 57-page literal-term diagnostic are captured in [the audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md). All observations remain pending; no learner requirements, recording permissions, accepted mappings or completeness claims were added. Semantic privacy/rights and current applicability review remain open.

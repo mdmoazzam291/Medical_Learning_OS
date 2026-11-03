@@ -184,3 +184,8 @@ See `NMC_LOGBOOK_ASSESSMENT_CORE_AUDIT.md`: 22 selected observations separate ac
 ## Alignment/Online selected core — 3 November 2026
 
 The next profile binds 43 selected observations: 13 Alignment/Integration definitions/design/assessment/step records and 30 online-teaching principle/faculty-role/capability/skill-category records. These are teaching-design contexts, not extra learner competencies or graph-identity equivalences. All 102 NMC tests and both actual-source validators pass, preserving the earlier 22-body logbook profile. See `NMC_ALIGNMENT_ONLINE_CORE_AUDIT.md`; full-booklet detail and applicability remain open.
+
+
+### Selected online assessment/access checkpoint — 3 November 2026
+
+31 source bodies and a bounded 57-page literal-term diagnostic are captured in [the audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md). All observations remain pending; no learner requirements, recording permissions, accepted mappings or completeness claims were added. Semantic privacy/rights and current applicability review remain open.

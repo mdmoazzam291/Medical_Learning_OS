@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "9237175945b4fa57ce0b34bcf3d755ef195b542a2b942b9c73007cc0099c5d21",
+  "evidenceBindings": [
+    {
+      "path": "nmc-online-assessment-access-observations-v1.json",
+      "sha256": "ba557eaf293e4724d99689ae2cbf52fd8b7e5a5968c070f216dce87038f860d4"
+    },
+    {
+      "path": "nmc-online-privacy-term-diagnostic-v1.json",
+      "sha256": "174669d06b729968f6a0b638c9eac4b4101b1000db5ad25a05eda7f0a46eb9a2"
+    }
+  ],
+  "observedProgress": {
+    "selectedSourceBodies": 31,
+    "plainTextPagesScanned": 57,
+    "privacyTermMatches": 0,
+    "learnerCompetenciesAdded": 0,
+    "acceptedMappings": 0
+  },
+  "openWork": [
+    {
+      "id": "support-full-detail",
+      "status": "open",
+      "scope": "Finish unenumerated detailed examples/appendices without universal competency inflation"
+    },
+    {
+      "id": "online-assessment-access-privacy",
+      "status": "open",
+      "scope": "Selected source evidence captured; semantic privacy/rights review, current cohort applicability and source acceptance remain open"
+    },
+    {
+      "id": "support-actor-obligations",
+      "status": "open",
+      "scope": "Reconcile learner versus faculty/institution responsibilities and current source versions"
+    },
+    {
+      "id": "global-goal-detail",
+      "status": "open",
+      "scope": "Complete global/national/institutional/subject goal and overlap review"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}
