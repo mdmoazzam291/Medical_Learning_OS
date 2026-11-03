@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-foundation-completion-work-packages",
+  "checkedAt": "2026-11-03T17:07:15+05:30",
+  "countingUnit": "major_work_package_not_atomic_task_or_competency",
+  "tasks": [
+    {
+      "id": "source-row-reconciliation",
+      "title": "Resolve exact rows and identifier/count anomalies",
+      "ownerClass": "engineering_source_review",
+      "dependsOn": [],
+      "status": "open",
+      "acceptanceCriteria": "Every defining page and ambiguous/uncoded row has evidence-bound disposition; all 22 overlapping cases decided or explicitly excluded with qualified rationale."
+    },
+    {
+      "id": "global-supplement-scope",
+      "title": "Finish global goals and supplementary overlap",
+      "ownerClass": "engineering_source_review",
+      "dependsOn": [],
+      "status": "open",
+      "acceptanceCriteria": "Global/national/institutional/subject goals and all applicable support content have reviewed scope; examples, nested items and duplicate appearances remain distinct from unique requirements."
+    },
+    {
+      "id": "current-cohort-applicability",
+      "title": "Reconcile source versions, newer notices and cohorts",
+      "ownerClass": "engineering_source_review",
+      "dependsOn": [],
+      "status": "open",
+      "acceptanceCriteria": "Current official notices receive content/applicability review; older batches and legacy modules are separated; amendments are bound to exact source and intended cohort."
+    },
+    {
+      "id": "qualified-source-clinical-review",
+      "title": "Obtain qualified source and clinical acceptance",
+      "ownerClass": "qualified_review",
+      "dependsOn": [
+        "source-row-reconciliation",
+        "global-supplement-scope",
+        "current-cohort-applicability"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Verified qualified reviewer accepts exact versions and interpretations; AI investigation is not recorded as independent clinical approval."
+    },
+    {
+      "id": "reuse-rights",
+      "title": "Resolve intended-use rights",
+      "ownerClass": "rights_review",
+      "dependsOn": [],
+      "status": "open",
+      "acceptanceCriteria": "Evidence establishes rights for intended storage/display/reuse; citation-only source observations do not authorize bulk reproduction."
+    },
+    {
+      "id": "canonical-concept-bindings",
+      "title": "Bind accepted requirements to canonical concepts",
+      "ownerClass": "engineering",
+      "dependsOn": [
+        "qualified-source-clinical-review",
+        "reuse-rights"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Accepted exact requirements connect to existing canonical Medical Knowledge Graph identities without duplicate taxonomy or competency-to-mastery equivalence."
+    },
+    {
+      "id": "exam-overlay-review",
+      "title": "Review NEET-PG and INI-CET overlays",
+      "ownerClass": "exam_review",
+      "dependsOn": [
+        "qualified-source-clinical-review",
+        "canonical-concept-bindings"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Each exam scope has independent reviewed mappings and uncertainty; NMC undergraduate scope is not equated to entrance examination weighting."
+    },
+    {
+      "id": "registry-integration",
+      "title": "Integrate approved versioned curriculum registry",
+      "ownerClass": "engineering",
+      "dependsOn": [
+        "canonical-concept-bindings",
+        "exam-overlay-review",
+        "reuse-rights"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Exact approved objective/mapping/artifact versions enter existing registry through authenticated reviewed flow with version history and fail-closed eligibility."
+    },
+    {
+      "id": "admin-acceptance",
+      "title": "Verify actual authorized Admin review flow",
+      "ownerClass": "engineering",
+      "dependsOn": [
+        "registry-integration"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Actual authorized Admin stages/reviews exact accepted material and verifies authorization, duplicate handling, corrections and audit evidence."
+    },
+    {
+      "id": "learner-acceptance",
+      "title": "Verify actual learner syllabus and study flow",
+      "ownerClass": "engineering",
+      "dependsOn": [
+        "registry-integration",
+        "admin-acceptance"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Learner sees only authorized mapped content, honest coverage/unknowns and valid Study Now behavior; device flows and isolation pass on exact candidate."
+    },
+    {
+      "id": "stack-staging",
+      "title": "Consolidate dependency stack and stage exact candidate",
+      "ownerClass": "engineering",
+      "dependsOn": [
+        "admin-acceptance",
+        "learner-acceptance"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Dependency-ordered draft work is integrated with current main; CI, migrations and staging checks pass on the exact release candidate; rollback is verified."
+    },
+    {
+      "id": "production-release",
+      "title": "Approve release and verify production",
+      "ownerClass": "owner_release",
+      "dependsOn": [
+        "stack-staging"
+      ],
+      "status": "open",
+      "acceptanceCriteria": "Owner authorizes concrete reviewed candidate release; production version, access, learner behavior and rollback checks are recorded."
+    }
+  ],
+  "completedSubtasksThisCheckpoint": [
+    "fresh-primary-download-identity-check",
+    "bounded-18-page-archive-screen",
+    "eight-clause-october-amendment-projection"
+  ],
+  "subtasksDoNotCloseParentWorkPackages": true,
+  "atomicRemainingTaskCount": null,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

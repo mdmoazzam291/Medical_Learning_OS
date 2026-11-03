@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-completion-currentness-verification",
+  "checkedAt": "2026-11-03T17:13:06+05:30",
+  "baseCommit": "62f0aa70a56b96a02310bafa03f550914cedd4b8",
+  "localVerification": {
+    "nmcTestsPassed": 116,
+    "applicationTestsPassed": 1568,
+    "applicationTestsFailed": 0,
+    "repositoryCheck": "passed",
+    "diffCheck": "passed",
+    "actualAmendmentClausesVerified": 8,
+    "physicalAmendmentSpans": 9,
+    "archivePagesVerified": 18,
+    "archiveAppearances": 360,
+    "archiveDistinctDocumentUrls": 358,
+    "readinessSnapshot": "exact_rebuild_match"
+  },
+  "independentReview": {
+    "initialP2": "registry counted non-array collections",
+    "fix": "strict registry shape and list/object row validation",
+    "regressionTest": "test_registry_rejects_text_or_object_collections_and_nonobject_rows",
+    "finalResult": "no remaining blocking or P2 findings"
+  },
+  "parentHostedCi": {
+    "runId": 41626466584,
+    "conclusion": "success"
+  },
+  "currentHostedCi": "pending_after_documentation_checkpoint",
+  "sourceAcceptance": false,
+  "clinicalApproval": false,
+  "rightsApproval": false,
+  "learnerActivation": false,
+  "productionReleased": false,
+  "bindings": [
+    {
+      "path": "nmc-october-clarification-projection-v1.json",
+      "sha256": "86247a9dbe824203276652bef6a79f8721d13ac3367647c0d6b0062c338ec4da"
+    },
+    {
+      "path": "nmc-official-archive-screen-2026-11-03.json",
+      "sha256": "c9aa365f0452123d0d7e79fe9c532423f1984161a09d680a1bb941e219a94f78"
+    },
+    {
+      "path": "nmc-source-freshness-2026-11-03.json",
+      "sha256": "060e809d8bfe6c6ca4eb179ab94b240c6d82c937cdee16ac46c4bf0ffbdae10b"
+    },
+    {
+      "path": "nmc-foundation-completion-register-v1.json",
+      "sha256": "55e47701bc4670df92dfd3eba935d8092a13c6486f586f7f1385c0bacda84a75"
+    },
+    {
+      "path": "nmc-foundation-readiness-snapshot-2026-11-03.json",
+      "sha256": "4030e8af561f24fe267b3b0671a931b89f5904d7af1989e50c7666a38a115132"
+    }
+  ],
+  "implementationCommit": "71442469f797c07fe472b9bf6e688f21f1e1dc0b",
+  "draftPullRequest": 401,
+  "remoteImplementationFilesVerified": 20
+}
