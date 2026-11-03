@@ -1,0 +1,45 @@
+{
+  "kind": "nmc-fap-schedule-template-proposal-verification",
+  "baseCommit": "ed50bd5b666415c0085a10c040c0bba7b2c73e4f",
+  "basePullRequest": 396,
+  "pendingScheduleProposals": 3,
+  "pendingTemplateRoleProposals": 12,
+  "acceptedDecisions": 0,
+  "sourceHoursCandidates": [
+    24,
+    24,
+    36
+  ],
+  "aroundSixHourVisitCandidates": [
+    4,
+    4,
+    6
+  ],
+  "threeHourVisitCandidates": [
+    8,
+    8,
+    12
+  ],
+  "nominalHoursSumArithmeticOnly": 84,
+  "fixedVisitCountImposed": false,
+  "candidateHoursContinuationLinks": 2,
+  "artifactBytes": 10016,
+  "artifactSha256": "d0dd7699b74f93ae44a7d61236118e3524185443f1765b9d23e42e2c09776b8e",
+  "packageDigest": "86d7532cd21b59e6e53dcee01b06e273f908cfc61c68e979d12dc54ca1f7609b",
+  "twoBuildsByteIdentical": true,
+  "independentSourceVisualReview": true,
+  "sourcePagesChecked": [
+    67,
+    68,
+    69,
+    70
+  ],
+  "pythonTestsPassed": 93,
+  "repositoryCheckPassed": true,
+  "review": "no actionable findings",
+  "cohortApplicabilityApproved": false,
+  "templateMandatorySchemaApproved": false,
+  "learnerPlansChanged": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}
