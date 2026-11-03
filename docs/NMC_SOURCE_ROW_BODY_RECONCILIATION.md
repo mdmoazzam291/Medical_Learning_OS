@@ -40,3 +40,16 @@ Pinned source hash: `aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5
 Inspect and decide the logical role of uncoded text and boundary crossings; confirm row continuations and exclusions without losing provenance; resolve each of the sixteen identity/count interpretations through evidence-bound review or explicit primary-source clarification. The 415 header-classified bands are also observations, not reviewed exclusions. Qualified acceptance and any official-source clarification remain distinct from AI engineering investigation.
 
 Package #1 and the overall twelve-package register remain open. No effective unique competency denominator, source no-omission statement, normalized canonical identity, clinical/rights approval or learner activation follows from this audit.
+
+
+## Uncoded-band disposition checkpoint — 3 November 2026
+
+All 271 empty-identifier text bands now have reproducible structural proposals: 218 topic-heading syntax observations, 19 subject-heading syntax observations and 34 continuation candidates. One topic is unnumbered; no topic number is inferred. The parser explicitly accepts the source's no-space Topic1 syntax while rejecting ordinary words such as Topical.
+
+All 34 continuation parent/current pairs were visually inspected by AI in rendered source context. Thirty cross to the immediately previous page; four remain on the same page. Some fragments continue only teaching/assessment columns rather than the competency description. Parent links therefore preserve whole-band evidence without assuming that every continuation adds learning objectives. Visual support is not independent qualified acceptance. No source prose or rendered source images are committed.
+
+All 114 boundary-crossing word occurrences have exact page/word-index/bounding-box/hash locators: 108 cross a band's top, six its bottom. Each stays once in its midpoint-assigned physical band; no logical merge or exclusion is authorised. The CLI rebuild-verifies the frozen source inventory and row audit before checking every body hash and regenerating these observations.
+
+The original 415 header-classified bands, the 16 row/count cases and qualified source dispositions remain open. This checkpoint closes the provisional classification/locator task for the 271 selected uncoded-text bands and 114 crossing words; it does not close package #1 or reduce the twelve-package count.
+
+Reproduce with `python3 ops/nmc/uncoded_dispositions.py /private/nmc-official.pdf --verify docs/evidence/nmc-uncoded-band-structural-proposals-v1.json` (exact source and PyMuPDF 1.26.6 required). AI visual-context receipts bind all 34 candidate child IDs and nine local render hashes, with independent review and logical-merge approval explicitly false.

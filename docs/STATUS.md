@@ -1,3 +1,13 @@
+## NMC uncoded-band structural proposals — 3 November 2026
+
+Saved implementation `d5358592f9bf73ad93615dff5526817b48f1b030`; owner Codex /root, worktree /workspace/scratch/54038bc965c2/mlos-nmc-reconcile. Base PR #402 commit 5a3ca3736be12f7c1344df14068900f5ac9ab224; follow-up feat/nmc-uncoded-dispositions-20261103. Parent hosted CI41639667417 succeeded; main freshly fetched remains 91a11aff. Current follow-up CI pending, not a learner release.
+
+All 271 selected uncoded-text bands now have source-bound structural proposals: 218 topic headings (one unnumbered), 19 subject headings, 34 continuation candidates. All 34 parent/current pairs AI-visually inspected (30 prior-page, four same-page); no trusted source/clinical acceptance. Exact locators for all 114 boundary words (108 top/six bottom) retain each word once without logical merging. Topic1 no-space parser regression fixed; Topical remains ordinary text.
+
+126 NMC tests, 1,568 application tests and repository checks pass. Actual-source parent-inventory/audit/body/packet rebuild exact; independent engineering review clear. See [row reconciliation](NMC_SOURCE_ROW_BODY_RECONCILIATION.md). No source prose/PDF/images/OCR copied to Git, no source exclusions or canonical learner activation.
+
+Package #1 remains open: inspect the existing 415 header-classified bands, decide exact logical row/continuation/exclusion dispositions, and resolve the sixteen row/count interpretations with source-supported rationale. The other six original cases stay tracked under their own work packages. Twelve major packages remain; none certified complete here.
+
 ## NMC source-row package #1 — 3 November 2026
 
 Saved implementation `327836e9f2b928a099e5e383d87dd9966e05874d`, [draft PR #402](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/402). Hosted follow-up CI pending; source acceptance remains pending.
