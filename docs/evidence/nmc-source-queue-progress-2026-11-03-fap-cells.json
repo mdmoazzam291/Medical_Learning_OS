@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "9c24a4f4cfc7f489a7e5ffcc1afefc6e6e2483c20b3dfd5a61435af96f7fdce6",
+  "evidenceBindings": [
+    {
+      "path": "nmc-fap-table-fragments-logbook-v1.json",
+      "sha256": "a8f06cc82542fc23c78b71457199042c3894a703b888724270032d6bea5501a4"
+    }
+  ],
+  "observedProgress": {
+    "candidateCellFragments": 62,
+    "headerFragmentsRetained": 6,
+    "fragmentsWithoutDetectedBottomRule": 6,
+    "blankTemplateLabels": 12
+  },
+  "openWork": [
+    {
+      "id": "fap-fragment-continuation",
+      "status": "open",
+      "scope": "Review image-boundary fragments without inventing closed logical rows"
+    },
+    {
+      "id": "fap-clinical-source-roles",
+      "status": "open",
+      "scope": "Interpret competency/objective/teaching/assessment/time cells without universal requirement inflation"
+    },
+    {
+      "id": "fap-logbook-obligations",
+      "status": "open",
+      "scope": "Review modifiable template purpose and actual learner/institution evidence obligations"
+    },
+    {
+      "id": "fap-cohort-applicability",
+      "status": "open",
+      "scope": "Reconcile edition/cohort/overlap before learner use"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

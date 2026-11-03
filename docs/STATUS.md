@@ -1,3 +1,9 @@
+## NMC FAP raster fragments and template labels — 3 November 2026
+
+Four source table images now have 62 candidate cell fragments across 6 observed columns; 6 headers retained and 6 bottom edges lack detected rule. No cross-image logical joins. Twelve blank logbook labels and institute-modification instruction are span-bound; no fixed learner form or actual personal data. Cell identities are OCR-independent; transcriptions remain candidate/unexported.
+
+All 89 NMC tests/repository checks pass; two runs and independent rebuild exact (46,452 bytes; SHA a8f06cc82542fc23c78b71457199042c3894a703b888724270032d6bea5501a4). Reviewer checks 62 crops/identities and 12 labels/instruction. Parent PR #395 source c4617420 all three jobs green in run 41607697923; current hosted CI not yet verified. Continuation/clinical role/logbook obligations/applicability remain open in bound delta. No source approval, universal additions, registry activation or deployment. See NMC_FAP_TABLE_FRAGMENT_AUDIT.md.
+
 ## NMC Electives/FAP source batch — 3 November 2026
 
 Located 9 legacy Electives clauses/7 base2024 bullets and 3 duration spans; preserve 2 months/2x4 weeks versus 1 month/2x15 days without cohort decision. FAP numbered prose preserved as 17 phase targets (6/5/6) plus 10 final-report items. Raw text phase labels are misleadingly ordered; source-specific spatial grouping recorded. Four embedded table images 67–70 and local OCR hashes/counts retained; image-only pages not blank, table rows unadjudicated.
