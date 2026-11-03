@@ -22,3 +22,8 @@ The future reviewer can inspect fixed-source page observations and explicit unkn
 ## Validation
 JSON round-trip,19 unique subjects,263 unique pages,2624 strict candidates,2781 published base sum,9 anomaly links and all activation flags false checked successfully. No runtime files modified/tests rerun; fresh CI not verified. No database writes, approvals, ingestion, merge/deploy or learner activation.
 Next: supplement/later-amendment source manifest and page scope inventory, followed by independent adjudication; do not spend another task treating this consolidated summary as complete code-level enumeration.
+
+
+### Current-source and completion reconciliation — 3 November 2026
+
+The [consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md) now records 12 open major work packages with dependency/acceptance criteria. Fresh official primary downloads match existing hashes; 18 archive pages are title-screened without exhaustive-currentness certification. Eight October clauses have exact-span observations and a local three-reference amendment projection; no live registry or accepted source state changed.

@@ -1,6 +1,6 @@
-# NMC foundation readiness — 2 November 2026
+# NMC foundation readiness — 3 November 2026
 
-**Not fully prepared, not released to learners.** Repository main was rechecked on 3 November and remains 91a11aff; a repository commit alone does not certify the deployed runtime. The existing NEET-PG/INI-CET preference/preparation framework is not a complete NMC syllabus.
+**Not fully prepared, not released to learners.** [Consolidated completion checklist](NMC_COMPLETION_CHECKLIST.md): 12 remaining major work packages, not an atomic task count. Fresh primary downloads match pinned sources; no all-competency latest/completeness certification. Repository main was rechecked on 3 November and remains 91a11aff; a repository commit alone does not certify the deployed runtime. The existing NEET-PG/INI-CET preference/preparation framework is not a complete NMC syllabus.
 
 | Layer | Verified engineering state | Release state |
 |---|---|---|

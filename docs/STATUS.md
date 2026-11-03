@@ -1,3 +1,11 @@
+## NMC current-source and completion reconciliation — 3 November 2026
+
+Owner: Codex /root; continuing NMC work from PR #400 base 62f0aa70a56b96a02310bafa03f550914cedd4b8. Current source PDFs re-retrieved with exact hash parity; 18 news pages/360 appearances/358 URLs/25 pattern hits title-screened. Eight selected newer notice URLs retrieved (seven distinct PDFs); twelve raster-page OCR receipts and four visual spot checks. This is bounded investigation, not all-notice content or current-cohort acceptance. Prior PR #400 hosted run 41626466584 succeeded.
+
+Eight October clarification clauses now span nine physical locators; selected PS9.2/PY9.1/PE6.4 source projection disables base wording while keeping pending approval and unknown denominator. Canonical registry remains zero objectives/mappings/artifacts. Consolidated register: **12 major remaining work packages**, with 22 overlapping pending source cases and 1,031 original pending page dispositions included, not added as independent tasks. See [completion checklist](NMC_COMPLETION_CHECKLIST.md).
+
+No learner source/clinical/rights/exam acceptance, main merge or deployment. Exact next action: close source-row dispositions/22-case interpretations, goal/support scope and newer-notice/cohort applicability before qualified acceptance and canonical/exam bindings. 116 NMC and 1,568 application tests pass; repository/diff checks pass. Independent review P2 for malformed registry counting fixed and regression-tested; final review clear. Verification receipt records exact evidence; hosted follow-up CI must be checked on its exact commit. Owned local worktree: /workspace/scratch/54038bc965c2/mlos-nmc-reconcile; follow-up branch feat/nmc-completion-currentness-20261103.
+
 ## Online assessment/access source checkpoint — 3 November 2026
 
 31 selected bodies verified; 57 plain-text pages scanned with zero matches for four recorded privacy-term patterns. This grants no permission or policy approval. See [audit](NMC_ONLINE_ASSESSMENT_ACCESS_AUDIT.md); all acceptance and activation remain pending.
