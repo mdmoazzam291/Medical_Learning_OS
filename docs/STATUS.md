@@ -1,3 +1,11 @@
+## Catalogue preview verified; compact workspace navigation — 3 November 2026
+
+Owner Codex /root continues standalone PR408 on feat/nmc-catalogue-standalone-20261103, base91a11aff. Final prior headc5c2611 has core CI success and catalogue Chromium/WebKit checks passed in run41693175820; full unrelated regression jobs were still running at this checkpoint. Cloudflare bot confirms successful c5c2611 preview build/deployment66581941-d1cc-4223-9d92-ad34a7bba7dd. Direct browser inspection verifies the deployed catalogue,390groups/2634appearances,GM9.8 repeated-code search and source links. Verified clean preview: https://feat-nmc-catalogue-standalone-20261103-medical-learning-os-web.medicalos.workers.dev/web/nmc-catalogue . Shell HTTP retrieval was denied; no served-byte equivalence claim.
+
+Visual inspection found inherited Workspace nav display:grid occupying125px above content. Code45551f16d20d87cdc750fe0baa1c0dadd1c1c75b scopes flex layout to this page and adds a geometry assertion (<70px) at phone/tablet/desktop widths. Independent review clear; npm check and all1,552Node tests pass on the layout follow-up. Data/domain/source metadata unchanged. New exact-head hosted browser verification is required before claiming this layout fix deployed/verified.
+
+No main merge or production release. After final exact-head CI, mark PR ready; owner release decision remains separate. Further source audits stay deferred; next content work is original canonical concept mapping through existing IDs, not another audit loop.
+
 ## Catalogue-first delivery — 3 November 2026
 
 Owner direction supersedes the audit-first priority: defer further supplementary/source/cohort adjudication and deliver a usable core reference/topic browser. Implementation `3e690ed59b92f70079b7ff899a6c098618a44f14`, standalone [draft PR #408](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/408), base main `91a11aff41048984b039fd269a2a0a9ddc3d99da`. Owner Codex /root; branch `feat/nmc-catalogue-standalone-20261103`, working directory `/workspace/scratch/54038bc965c2/mlos-catalogue-standalone`. Checked 2026-11-03 Asia/Kolkata. Supersedes closed stacked PR #407; none of the earlier audit PRs must merge to deliver this browser.
