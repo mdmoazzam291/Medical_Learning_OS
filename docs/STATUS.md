@@ -1,5 +1,7 @@
 ## NMC current-source and completion reconciliation — 3 November 2026
 
+Saved implementation commit: `71442469f797c07fe472b9bf6e688f21f1e1dc0b`, [draft PR #401](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/401); all 20 changed remote files verified exactly. Hosted follow-up CI pending; no release claimed.
+
 Owner: Codex /root; continuing NMC work from PR #400 base 62f0aa70a56b96a02310bafa03f550914cedd4b8. Current source PDFs re-retrieved with exact hash parity; 18 news pages/360 appearances/358 URLs/25 pattern hits title-screened. Eight selected newer notice URLs retrieved (seven distinct PDFs); twelve raster-page OCR receipts and four visual spot checks. This is bounded investigation, not all-notice content or current-cohort acceptance. Prior PR #400 hosted run 41626466584 succeeded.
 
 Eight October clarification clauses now span nine physical locators; selected PS9.2/PY9.1/PE6.4 source projection disables base wording while keeping pending approval and unknown denominator. Canonical registry remains zero objectives/mappings/artifacts. Consolidated register: **12 major remaining work packages**, with 22 overlapping pending source cases and 1,031 original pending page dispositions included, not added as independent tasks. See [completion checklist](NMC_COMPLETION_CHECKLIST.md).

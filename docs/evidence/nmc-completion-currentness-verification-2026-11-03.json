@@ -26,7 +26,7 @@
     "runId": 41626466584,
     "conclusion": "success"
   },
-  "currentHostedCi": "not_yet_run",
+  "currentHostedCi": "pending_after_documentation_checkpoint",
   "sourceAcceptance": false,
   "clinicalApproval": false,
   "rightsApproval": false,
@@ -53,5 +53,8 @@
       "path": "nmc-foundation-readiness-snapshot-2026-11-03.json",
       "sha256": "4030e8af561f24fe267b3b0671a931b89f5904d7af1989e50c7666a38a115132"
     }
-  ]
+  ],
+  "implementationCommit": "71442469f797c07fe472b9bf6e688f21f1e1dc0b",
+  "draftPullRequest": 401,
+  "remoteImplementationFilesVerified": 20
 }
