@@ -1,0 +1,35 @@
+{
+  "kind": "nmc-selected-support-source-verification",
+  "baseCommit": "6d268f8b8e30ebe6ca5cdd1b3a7e7d96791469fb",
+  "basePullRequest": 397,
+  "selectedObservations": 22,
+  "corePassages": 9,
+  "sampleColumnExplanations": 8,
+  "sampleTemplateProjections": 3,
+  "proposedRegulationMarkers": 2,
+  "artifactBytes": 9625,
+  "artifactSha256": "3ed2f53ad2ba193dd32047f986e48938f5a3e9a4b3a3a4fd8437d11bec439a44",
+  "actualSourceBodiesVerified": 22,
+  "independentSourceReview": "selected passages support provisional classifications",
+  "pythonTestsPassed": 99,
+  "repositoryCheckPassed": true,
+  "review": {
+    "P2": "classification/scope fields accepted arbitrary payloads",
+    "resolution": "allowed classification strings and fixed scope plus RED/GREEN regression",
+    "resolvedRechecked": true,
+    "remainingBlockers": 0
+  },
+  "parent397Ci": {
+    "commit": "6d268f8b8e30ebe6ca5cdd1b3a7e7d96791469fb",
+    "run": 41611522410,
+    "check": "success",
+    "browser": "success",
+    "webkit": "success"
+  },
+  "allRequirementsEnumerated": false,
+  "activityCompletionEqualsWholeCompetencyMastery": false,
+  "learnerEligibilityRulesApproved": false,
+  "learnerActivation": false,
+  "productionDeployed": false,
+  "freshHostedCi": "not yet verified"
+}
