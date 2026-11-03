@@ -172,3 +172,7 @@ A separate progress delta, `docs/evidence/nmc-source-queue-progress-2026-11-03-s
 ## Electives/FAP follow-up — 3 November 2026
 
 See `NMC_ELECTIVES_FAP_SOURCE_AUDIT.md`: nine legacy Electives clauses, seven 2024 bullets, explicit edition-duration evidence, 17 FAP student-target paragraphs, ten final-report items and four embedded table images now have source locators/hashes. Local OCR receipts prevent image-only pages being treated as blank, without approving table interpretation. All 85 NMC tests pass; cohort/phase placement, table rows and FAP logbook scope remain open.
+
+## FAP image-cell and logbook follow-up — 3 November 2026
+
+The four image appearances now have 62 candidate raster-grid cell fragments, including six headers and six fragments without detected bottom rules. Twelve blank logbook labels and the source institute-modification note have exact locators. No cross-image rows are merged or fixed learner schema inferred. All 89 NMC tests pass; source/OCR rebuild is exact. See `NMC_FAP_TABLE_FRAGMENT_AUDIT.md`. Clinical table interpretation, continuations and accepted logbook obligations remain open.
