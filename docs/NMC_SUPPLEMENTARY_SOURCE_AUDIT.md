@@ -176,3 +176,7 @@ See `NMC_ELECTIVES_FAP_SOURCE_AUDIT.md`: nine legacy Electives clauses, seven 20
 ## FAP image-cell and logbook follow-up — 3 November 2026
 
 The four image appearances now have 62 candidate raster-grid cell fragments, including six headers and six fragments without detected bottom rules. Twelve blank logbook labels and the source institute-modification note have exact locators. No cross-image rows are merged or fixed learner schema inferred. All 89 NMC tests pass; source/OCR rebuild is exact. See `NMC_FAP_TABLE_FRAGMENT_AUDIT.md`. Clinical table interpretation, continuations and accepted logbook obligations remain open.
+
+## Selected logbook/assessment core — 3 November 2026
+
+See `NMC_LOGBOOK_ASSESSMENT_CORE_AUDIT.md`: 22 selected observations separate activity evidence/faculty decisions/feedback and preserve institutional format discretion. Two assessment excerpt markers explicitly say proposed GMER 2019; no current eligibility rules are inferred. All 99 NMC tests pass and actual-source validation checks every selected body. This does not finish both booklets or close current-source correspondence/support scope.

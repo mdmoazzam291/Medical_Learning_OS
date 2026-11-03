@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "nmc-source-queue-progress-delta",
+  "baseQueueSha256": "1b8fa1fb8575cdae587ed631b349e2aab4c5c96dda96305917bcd2bdd2ece6b7",
+  "relatedEarlierDeltaSha256": "63b9d41aa53cf3d1b7ddc87c756d01981fd16a4bc6f025376f90444c8abb1b2e",
+  "evidenceBindings": [
+    {
+      "path": "nmc-logbook-assessment-observations-v1.json",
+      "sha256": "3ed2f53ad2ba193dd32047f986e48938f5a3e9a4b3a3a4fd8437d11bec439a44"
+    }
+  ],
+  "observedProgress": {
+    "selectedCorePassages": 9,
+    "sampleColumnExplanations": 8,
+    "sampleTemplateProjections": 3,
+    "proposedRegulationMarkers": 2,
+    "acceptedRules": 0
+  },
+  "openWork": [
+    {
+      "id": "support-booklet-detail",
+      "status": "open",
+      "scope": "Finish remaining logbook/assessment activities, instruments and criteria without copying illustrative questions"
+    },
+    {
+      "id": "support-current-correspondence",
+      "status": "open",
+      "scope": "Reconcile revised2024/later rules and cohort applicability before eligibility implementation"
+    },
+    {
+      "id": "support-rating-authority",
+      "status": "open",
+      "scope": "Resolve intended rubric/evidence authority without automatic mastery conversion"
+    },
+    {
+      "id": "alignment-online-detail",
+      "status": "open",
+      "scope": "Audit Alignment/Integration and Online Learning source guidance"
+    },
+    {
+      "id": "global-goal-detail",
+      "status": "open",
+      "scope": "Complete national/institutional/global/subject goals and overlap review"
+    }
+  ],
+  "earlierOpenItemsRemainOpen": true,
+  "originalQueueChanged": false,
+  "completeCoverageClaim": false,
+  "learnerActivation": false
+}

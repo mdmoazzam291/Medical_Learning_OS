@@ -1,3 +1,9 @@
+## NMC selected logbook/assessment source core — 3 November 2026
+
+Twenty-two selected observations now bind 9 core logbook passages/8 sample-column explanations/3 template projections/2 assessment proposed-GMER2019 markers. This is not the original 22-anomaly packet or exhaustive 68-page review. Activity completion stays separate from whole-competency mastery; faculty decisions, learner feedback and institutional format discretion remain distinct. No current eligibility/rating rules accepted.
+
+All 99 NMC tests/repository checks and actual-source 22-body validation pass. P2 arbitrary classification payload gap fixed with allowlists/fixed scope and RED/GREEN regression; re-review no blockers. Packet 9,625 bytes; SHA 3ed2f53ad2ba193dd32047f986e48938f5a3e9a4b3a3a4fd8437d11bec439a44. Parent PR #397 source 6d268f8b all three jobs green in run 41611522410; current hosted CI not yet verified. Remaining source correspondence, booklet detail, alignment/online/global work stays open. No learner rules/registry activation/deployment. See NMC_LOGBOOK_ASSESSMENT_CORE_AUDIT.md.
+
 ## NMC FAP schedule/template AI proposals — 3 November 2026
 
 Three pending year schedules preserve 24/24/36 hours, around 6-hour minimum 4/4/6 visit alternatives OR 3-hour 8/8/12 visits, and distinct topic labels. Two hours-column image continuations proposed with exact fragment references; other clinical joins not accepted. Visual 4 versus OCR letter-like token explicitly retained as manual-source reading. Twelve template-role proposals have mandatory status unknown; no fixed form or app fields.
