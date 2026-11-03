@@ -1,3 +1,9 @@
+## NMC legacy Skills Training sample references — 3 November 2026
+
+Six sample ranges now have 45 coded-reference appearances/44 whitespace-collapsed code fingerprints and 5 explicit objective-section blocks. Prefixes including IM/PM stay as-source; no aliases or approved semantic roles. Blocks are not individual-objective counts. Example 3 lacks a detected objective heading, not necessarily objectives. No sample reference becomes a universal additional requirement.
+
+All 77 NMC tests/repository checks pass. Two runs and independent source rebuild exact (22,333 bytes; SHA d61833c323f04b5f278258b5ec2463c61ff740e6ee15ea6893eed33c39f05b0a); reviewer checks all 45 reference spans/5 bodies and identities. Parent PR #392 source aaca2ec3 all three jobs green in run 41585679796; current hosted CI not yet verified. Source cases/frozen package/runtime and disabled eligibility unchanged. See NMC_SUPPLEMENTARY_SOURCE_AUDIT.md and docs/evidence/2026-11-03-nmc-skills-example-verification.json.
+
 ## NMC legacy ECE teaching-example locators — 3 November 2026
 
 Six sample modules plus a separately detected humanities annexure now have 35 explicit appearances: 12 expected competencies, 22 objectives, 1 humanities example. Source-bound character spans/hashes only; local scope IDs are not official competency codes. Teaching examples are not universal additions or approved graph requirements.
