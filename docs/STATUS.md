@@ -1,3 +1,13 @@
+## NMC reference catalogue released — 4 November 2026
+
+PR408 merged as `92c6dbee954930cac557e80a2a39d787b85cd00c`; accepted head `5d075e99ebf0f25b02e75d23353951c372730f65`. Full Foundation41694292108 completed SUCCESS: core, Chromium and native WebKit all green. Merged main treef0ab655931f00952b16370c62c7bc18c533103ed exactly equals the tested feature tree. Owner continuation “Next” follows the ready-for-release milestone; release scope is the standalone reference browser only. No audit-stack merges, DB changes or clinical content publication.
+
+Production Git integration served the new route after merge. Direct browser smoke check: https://medretica.com/web/nmc-catalogue shows390topic groups/2634source appearances,GM9.8search preserves two appearances and official page297links,Anatomy filter shows413references,Clear restores full counts,and workspace navigation is flex/46px. Clean post-redirect URL verified and left open. This verifies production behaviour,not exact served-asset byte equality,physical-device acceptance or every production interaction.
+
+Release receipt: releases/2026-11-04-nmc-reference-catalogue-release.md. Owner Codex /root; feature branch feat/nmc-catalogue-standalone-20261103 retained with this documentation checkpoint. Production code is on main; this post-release receipt is saved on the owned feature branch to avoid another production build solely for verification notes. Main may repeat CI independently.
+
+Next: original canonical concept/topic refinement and links to reviewed notes/questions using existing identities. Keep broad source-topic navigation separate from accepted clinical concept equivalence. Full competency wording,semantic mappings and supplementary modules remain outside this release; do not resume exhaustive audit work as the next default. No erased pilots restored.
+
 ## Catalogue preview verified; compact workspace navigation — 3 November 2026
 
 Owner Codex /root continues standalone PR408 on feat/nmc-catalogue-standalone-20261103, base91a11aff. Final prior headc5c2611 has core CI success and catalogue Chromium/WebKit checks passed in run41693175820; full unrelated regression jobs were still running at this checkpoint. Cloudflare bot confirms successful c5c2611 preview build/deployment66581941-d1cc-4223-9d92-ad34a7bba7dd. Direct browser inspection verifies the deployed catalogue,390groups/2634appearances,GM9.8 repeated-code search and source links. Verified clean preview: https://feat-nmc-catalogue-standalone-20261103-medical-learning-os-web.medicalos.workers.dev/web/nmc-catalogue . Shell HTTP retrieval was denied; no served-byte equivalence claim.
