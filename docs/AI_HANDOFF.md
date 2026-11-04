@@ -1,3 +1,11 @@
+## Objective draft batch 2 — 4 November 2026
+
+Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.
+
+The pinned NMC scan found broad opioid references PH2.7/PH3.4 and mortality indicators CM7.4. These were insufficient for literal links to the existing specific concept goals. The two prior Brown-Sequard source proposals were rechecked against the pinned PDF and remain the only proposals. 19 goals have unresolved source alignment. Clinical/source approvals and learner activation remain pending.
+
+Focused API/domain tests passed (12), source verification passed (2 proposals), and Pages build passed (131 files). Full local test run recorded 1,570 passes, one Cashfree trigger404 failure and one Cashfree SIGINT timeout. The isolated trigger404 rerun passed. Hosted full verification and release remain pending. PR410's first batch remains deployed. Next action: inspect hosted checks and review this draft batch before any release.
+
 ## First objective batch verified; PR410 — 4 November 2026
 
 Owner /root; feat/nmc-objective-drafts-20261104. Code435174440671b4e92a667f3fd459560b93aaa0dc; validated feature/checkpoint head6ea7177cd0351d4d575fb79a714e4b2b0b75166f; base main8bc2709bd74e5da3733813b5105ce4b1f2edf5b5. PR410 https://github.com/mdmoazzam291/Medical_Learning_OS/pull/410 saved and remote head verified byte-for-byte for all24changed files.
