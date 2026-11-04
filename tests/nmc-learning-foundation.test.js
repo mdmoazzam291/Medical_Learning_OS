@@ -12,15 +12,15 @@ async function fixture(){
  for(const row of p.objectives)row.canonicalIdentitySha256=digests.get(row.objective.conceptId);
  return {p,catalog:{version:p.authoredCatalogVersion,concepts}};
 }
-test('original objectives reuse the established objective shape, one canonical identity and two source proposals',()=>{
- const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,1);assert.equal(p.sourceBindings.length,2);
- assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,1);
- assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1);
+test('original objectives reuse the established objective shape, stable canonical identities and scoped source proposals',()=>{
+ const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,16);assert.equal(p.sourceBindings.length,17);
+ assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,16);
+ assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,13);
  assert.equal(registry.objectives.length,0);assert.equal(registry.mappings.length,0);
 });
 test('Admin projection tracks all source appearances, pending originals and explicit canonical identities',async()=>{
  const {p,catalog}=await fixture();const result=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,1);assert.equal(result.totals.sourceLinkedReferences,2);
+ assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,16);assert.equal(result.totals.sourceLinkedReferences,8);
  assert.equal(result.acceptedMappings,0);assert.equal(result.learnerActivation,false);assert.equal(result.coverageFraction,null);
  assert.equal(result.objectives.find(r=>r.sourceReferences.length===2).identityState,'current');
  assert.equal(result.totals.unboundObjectiveDrafts,0);
@@ -32,7 +32,9 @@ test('Admin projection tracks all source appearances, pending originals and expl
 test('stale, changed and missing canonical identities never silently remap',async()=>{
  const {p,catalog}=await fixture();catalog.concepts[0].label='Changed';catalog.version++;
  const r=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(r.catalogVersionMatches,false);assert.equal(r.objectives[0].identityState,'changed');catalog.concepts.pop();assert.equal((await foundationDraftPage(p,catalogue,catalog,{})).objectives[0].identityState,'missing');
+ assert.equal(r.catalogVersionMatches,false);assert.equal(r.objectives[0].identityState,'changed');const removed=catalog.concepts.pop();
+ const after=await foundationDraftPage(p,catalogue,catalog,{});
+ assert.equal(after.objectives.find(row=>row.objective.conceptId===removed.conceptId).identityState,'missing');
  assert.equal(r.identityBindingsCurrent,false);assert.equal(r.acceptedMappings,0);
 });
 test('forged approval, duplicate IDs, unknown source refs and amended rows reject',()=>{

@@ -15,7 +15,7 @@ export async function canonicalIdentityDigest(c){
 export function validateFoundationDrafts(input,catalogue){
  const c=validateReferenceCatalogue(catalogue);
  if(!exact(input,['schemaVersion','draftVersion','authoredCatalogVersion','sourceEdition','sourceSha256','clinicalApproval','sourceAlignmentApproved','learnerActivation','objectives','sourceBindings'])||
- input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2','mbbs-foundation:original-objectives@3'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
+ input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2','mbbs-foundation:original-objectives@3','mbbs-foundation:original-objectives@4'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
  input.sourceEdition!==c.edition||input.sourceSha256!==c.sourceSha256||input.clinicalApproval!==false||input.sourceAlignmentApproved!==false||input.learnerActivation!==false||
  !Array.isArray(input.objectives)||input.objectives.length>2000||!Array.isArray(input.sourceBindings)||input.sourceBindings.length>10000)bad();
  const objectives=new Map();
@@ -30,7 +30,7 @@ export function validateFoundationDrafts(input,catalogue){
   const ref=refs.get(link.referenceId),key=link.referenceId+'|'+link.objectiveVersionId;
   if(!exact(link,['referenceId','objectiveVersionId','status','basis','sourcePage','rowBBox','sourceBodySha256','namedConcept'])||
    !ref||!objectives.has(link.objectiveVersionId)||seen.has(key)||ref.identifierState!=='standard'||ref.amendmentNotice||ref.topicId===null||
-   link.status!=='proposed'||link.basis!=='literal-name-in-source-row'||link.sourcePage!==ref.pdfPage||!sha(link.sourceBodySha256)||!text(link.namedConcept,2,240)||
+   link.status!=='proposed'||!['literal-name-in-source-row','scoped-task-in-source-row'].includes(link.basis)||link.sourcePage!==ref.pdfPage||!sha(link.sourceBodySha256)||!text(link.namedConcept,2,240)||
    !Array.isArray(link.rowBBox)||link.rowBBox.length!==4||!link.rowBBox.every(x=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=10000)||
    !(link.rowBBox[0]<link.rowBBox[2]&&link.rowBBox[1]<link.rowBBox[3]))bad();
   seen.add(key);
@@ -56,7 +56,7 @@ export async function foundationDraftPage(input,catalogue,catalog,filters={}){
   const live=known.get(row.objective.conceptId);
   const identityState=!live?'missing':await canonicalIdentityDigest(live)===row.canonicalIdentitySha256?'current':'changed';
   const sourceReferences=p.sourceBindings.filter(b=>b.objectiveVersionId===row.objective.objectiveVersionId).map(b=>({...b,code:refs.get(b.referenceId).observedCode,subjectId:refs.get(b.referenceId).subjectId}));
-  objectives.push({...row,canonicalLabel:live?.label||'Canonical identity unavailable',identityState,sourceReferences});
+  objectives.push({...row,canonicalLabel:live?.label||'Canonical identity unavailable',identityState,identityKind:!live?'missing':live.identityKind==='accepted-private'?'accepted-private':'catalogue',sourceReferences});
  }
  const q=f.search.toLowerCase().trim(),codeQuery=q.replace(/\s+/g,'');
  const requirements=catalogue.references.map(r=>({referenceId:r.referenceId,sourceEdition:p.sourceEdition,sourceSha256:p.sourceSha256,code:r.observedCode,pdfPage:r.pdfPage,subjectId:r.subjectId,topicLabel:topics.get(r.topicId)?.label||'Unresolved topic heading',identifierState:r.identifierState,amendmentNotice:r.amendmentNotice,

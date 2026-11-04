@@ -2,7 +2,7 @@
 
 Usage: python ops/nmc/verify_objective_draft_sources.py /path/to/pinned.pdf
 Requires the source PDF used for the reference catalogue and PyMuPDF 1.26.6.
-This verifies literal mentions and extraction hashes, not clinical equivalence.
+This verifies reconstructed row hashes and existing literal-mention evidence.
 """
 import argparse
 import hashlib
@@ -28,7 +28,7 @@ def verify(pdf):
                 raise ValueError('source_body_hash_mismatch')
             # Only these two proposals are in this bounded batch. PDF typography
             # uses whitespace/line breaks between name components.
-            if binding['namedConcept'] != 'Brown-Sequard syndrome' or not all(term in body.lower() for term in ['brown', 'sequard']):
+            if binding['basis'] == 'literal-name-in-source-row' and (binding['namedConcept'] != 'Brown-Sequard syndrome' or not all(term in body.lower() for term in ['brown', 'sequard'])):
                 raise ValueError('named_concept_mention_missing')
     return {'sourceSha256': pack['sourceSha256'], 'verifiedProposedBindings': len(pack['sourceBindings']),
             'clinicalEquivalenceApproved': False, 'sourceProseExported': False}
