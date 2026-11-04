@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0",
+      "subjectId": "pharmacology",
+      "code": "PH5.1",
+      "page": 179,
+      "rowBBox": [
+        51.7,
+        338.76,
+        105.7,
+        397.08
+      ],
+      "sourceBodySha256": "5e2a6b1476b4cebe7fdbf778f8b83fd9055c9517ed79f8a3bc8270bd7590d718",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Asthma, COPD and rhinitis",
+      "draftLearningTask": "Compare drug classes by kinetics, actions and harms and justify a stage-appropriate plan in simulated cases.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87a58e0abe01416429e76279649ec24cf5282bd8fba1042715035262e5bc09ee",
+      "subjectId": "pharmacology",
+      "code": "PH5.2",
+      "page": 179,
+      "rowBBox": [
+        51.7,
+        397.08,
+        105.7,
+        445.32
+      ],
+      "sourceBodySha256": "17255416ad95086c004be3b6485826fe6621a70ec528023982acc8ea87970cc5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cough medicines",
+      "draftLearningTask": "Compare suppressants and expectorants by actions, kinetics, uses and harms and explain selection for dry and productive cough.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3",
+      "subjectId": "pharmacology",
+      "code": "PH6.1",
+      "page": 179,
+      "rowBBox": [
+        51.7,
+        472.68,
+        105.7,
+        534.6
+      ],
+      "sourceBodySha256": "86fdea6978272b6c1c7924ca1a7e0af27f464bf67dcd0dac527fdd9726ba5d44",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acid peptic disease",
+      "draftLearningTask": "Compare drug classes for ulcer and reflux disease and justify an ulcer regimen using its cause, expected benefits and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd",
+      "subjectId": "pharmacology",
+      "code": "PH6.2",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        112.2
+      ],
+      "sourceBodySha256": "260ae4b7851a654d9139feed703257b57bb2e66e65f8a57a568979975600aeca",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prokinetics and emesis",
+      "draftLearningTask": "Compare prokinetics, emetics and antiemetics by kinetics, targets, clinical uses and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3d89747d9a8213405d5c1ac9326b00670d6bd823936038b9a5719b1670746613",
+      "subjectId": "pharmacology",
+      "code": "PH6.3",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        179.34,
+        105.7,
+        236.58
+      ],
+      "sourceBodySha256": "4b7ecb4c7851ec660ec2700b557f3eec36697b8058909d52088a0c1e8119342a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea pharmacotherapy",
+      "draftLearningTask": "Compare drug actions, kinetics and harms and justify separate plans for acute and chronic diarrhoea in adult and paediatric cases.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+      "subjectId": "pharmacology",
+      "code": "PH6.4",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        236.58,
+        105.7,
+        281.58
+      ],
+      "sourceBodySha256": "64f37307ef08c89c07bf0451761496141ebd4aa024f69bfceb1cb2b41db13fe9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Constipation pharmacotherapy",
+      "draftLearningTask": "Compare laxative classes by action, onset and harms and justify a plan for a representative case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a",
+      "subjectId": "pharmacology",
+      "code": "PH6.5",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        281.58,
+        105.7,
+        326.22
+      ],
+      "sourceBodySha256": "d6159af6fa27bf4031505dfa488ea651563856df9fadaa955376990e1a6ccb8c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "IBD and IBS medicines",
+      "draftLearningTask": "Distinguish disease-modifying treatment from symptom-directed therapy and compare actions, kinetics and harms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bb81e8d46ca8adc24e224d7a7f2a5b56243fe3565f7512ea88a6a88fef76f5e7",
+      "subjectId": "pharmacology",
+      "code": "PH7.1",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        353.58,
+        105.7,
+        415.86
+      ],
+      "sourceBodySha256": "a8fdff0c5e47c17b48af53ad0e31abb892f013cd5f9773e5c9312940bf4537cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes medicines",
+      "draftLearningTask": "Compare drug classes by kinetics, mechanism and adverse effects and justify individualized treatment and complication prevention in cases with and without obesity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:97f32aa37bb49490ccb66bafdfa21a6ed9b8c6ac240c1248cb5118ff8339621e",
+      "subjectId": "pharmacology",
+      "code": "PH7.2",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        415.86,
+        105.7,
+        456.96
+      ],
+      "sourceBodySha256": "88fbbcff2e2df6e586bf7296b85b011292099764d91f897af900d631950a3a82",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Osteoporosis medicines",
+      "draftLearningTask": "Compare antiresorptive and anabolic agents by kinetics, actions, uses and harms and justify treatment choices in male and female cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+      "subjectId": "pharmacology",
+      "code": "PH7.3",
+      "page": 180,
+      "rowBBox": [
+        51.7,
+        456.96,
+        105.7,
+        498.0
+      ],
+      "sourceBodySha256": "62f4a7cfaf2ce5593b26eb26819ed8bf2bca7ed1bf9d524c51bea6f700e499f9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid medicines",
+      "draftLearningTask": "Compare replacement and antithyroid agents by kinetics, actions and adverse effects and build a simulated treatment plan.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:06c70dfbdcf1d1d8a978c83795356b5a9df985d241a90615d00157cb12b77fa4",
+      "subjectId": "pharmacology",
+      "code": "PH7.4",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        110.34
+      ],
+      "sourceBodySha256": "e1ea507553c015634075f20124009959f113a4e1e92fa742189054f30485c1e0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anterior pituitary medicines",
+      "draftLearningTask": "Compare drugs that alter pituitary hormone release by target, indications, contraindications and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:64a3dadadc7de9ae51204b4c5c8a953f09a9d72a6b741a4d1e2fbdfeda6729ad",
+      "subjectId": "pharmacology",
+      "code": "PH7.5",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        110.34,
+        105.7,
+        166.14
+      ],
+      "sourceBodySha256": "7ee562c8181794ee30959eae2ad605f2a9897cde3a0efe72cbeb5e269d135650",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Corticosteroids",
+      "draftLearningTask": "Compare corticosteroids by kinetics, actions, indications and harms and counsel a simulated patient on safe use.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7",
+      "subjectId": "pharmacology",
+      "code": "PH7.6",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        233.28,
+        105.7,
+        277.92
+      ],
+      "sourceBodySha256": "48d121c346c5b88fc5585a401c7da66666d4fa401e726c3eb073a92fde0743c3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Androgens and erectile dysfunction",
+      "draftLearningTask": "Compare representative drugs by kinetics, actions, indications, contraindications and harms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+      "subjectId": "pharmacology",
+      "code": "PH7.7",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        277.92,
+        105.7,
+        340.26
+      ],
+      "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reproductive medicines and contraception",
+      "draftLearningTask": "Compare medicines affecting female reproductive function by kinetics, actions, indications and harms and counsel on correct use of male and female contraceptives.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2",
+      "subjectId": "pharmacology",
+      "code": "PH7.8",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        340.26,
+        105.7,
+        372.96
+      ],
+      "sourceBodySha256": "3c23fec9f7f0afdd21750a3eed8f147618d755cbff115149ac8a4fd9ae427c56",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Uterine drugs",
+      "draftLearningTask": "Compare uterotonics and tocolytics by kinetics, actions, indications, contraindications and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4",
+      "subjectId": "pharmacology",
+      "code": "PH7.9",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        372.96,
+        105.7,
+        397.44
+      ],
+      "sourceBodySha256": "7e25f5d55657ed1c03369625f9205b17bb7a91a25d9cd3bff12120e67a284f88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infertility drugs",
+      "draftLearningTask": "Match representative fertility medicines to their physiological targets and clinical roles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f7109b11ff659f2b31b5cd10210fa2eec569068cc9bd3eabeadec383db11d6c1",
+      "subjectId": "pharmacology",
+      "code": "PH8.1",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        424.8,
+        105.7,
+        465.48
+      ],
+      "sourceBodySha256": "3ec99f1e70e159fe095dc735eea5f19d854ebe8c26b5ac0cd8d063e4f79d3a4e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antimicrobial chemotherapy",
+      "draftLearningTask": "Explain selective toxicity, drug exposure and resistance selection and apply the principles to a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:97158fb5442fe1a8dd5783aa8050979b155d8bd5dc59799a220b15267cc60507",
+      "subjectId": "pharmacology",
+      "code": "PH8.2",
+      "page": 181,
+      "rowBBox": [
+        51.7,
+        465.48,
+        105.7,
+        506.58
+      ],
+      "sourceBodySha256": "a435865aeae61c2d493cc054ed88a341a193e4a70fd5ab823027be98f64b1a57",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antimicrobial stewardship",
+      "draftLearningTask": "Use the local stewardship programme to explain empiric selection, review, narrowing and duration in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6",
+      "subjectId": "pharmacology",
+      "code": "PH8.3",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        130.56
+      ],
+      "sourceBodySha256": "c9f1b72564f2a44a50cba1b49ce478da473975b54c47b3e9fc6beaaf53d8ca81",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antibacterial classes",
+      "draftLearningTask": "Compare sulfonamides, quinolones, beta-lactams, macrolides, tetracyclines, aminoglycosides and newer agents by kinetics, actions, uses and harms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+      "subjectId": "pharmacology",
+      "code": "PH8.4",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        130.56,
+        105.7,
+        198.24
+      ],
+      "sourceBodySha256": "745b41126ad7ef7bf4daea86a1d127d6d4cc3cdbbe8e79e5ea63e753400c1d7f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "UTI and STI prescribing",
+      "draftLearningTask": "Build simulated treatment plans using clinical and microbiological data and counsel on correct use and adherence.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:606bce682b04f9708f6b92ceda09d643760175fd241221ef2a48cd44e487b392",
+      "subjectId": "pharmacology",
+      "code": "PH8.5",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        265.38,
+        105.7,
+        310.74
+      ],
+      "sourceBodySha256": "dec86644a6cb2aa39d2794b254ee348d13a9ae71d1e214b3538e3f88b212d7c9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis medicines",
+      "draftLearningTask": "Compare drug kinetics, actions, indications and toxicity and use current programme guidance to justify plans for representative treatment categories.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9d74ee9688adcd7528b708934a7ca5ee9b9902de0c8245e5748eda6bcd4eb6f8",
+      "subjectId": "pharmacology",
+      "code": "PH8.6",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        310.74,
+        105.7,
+        351.36
+      ],
+      "sourceBodySha256": "8690d460ffe6aaf4779c2303d8de6fded2102a25ee95f3eb4be17fdd161d1136",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy medicines",
+      "draftLearningTask": "Compare drug kinetics, actions and harms and distinguish antimicrobial therapy from treatment of lepra reactions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+      "subjectId": "pharmacology",
+      "code": "PH8.7",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        351.36,
+        105.7,
+        432.42
+      ],
+      "sourceBodySha256": "017ab4692fcc7f0e7ba2a9fdd4dde765b05e1600eac2ab4f3522842a336c3f4b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antiparasitic medicines",
+      "draftLearningTask": "Compare agents for amoebiasis, visceral leishmaniasis, malaria and filariasis by kinetics, targets and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa",
+      "subjectId": "pharmacology",
+      "code": "PH8.8",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        432.42,
+        105.7,
+        473.16
+      ],
+      "sourceBodySha256": "32132158673f3ac08c43b8ac7ef8089af90dd3818e75a123d8508c85f7327324",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antifungal medicines",
+      "draftLearningTask": "Compare drug classes by kinetics, targets, spectrum and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95",
+      "subjectId": "pharmacology",
+      "code": "PH8.9",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        473.16,
+        105.7,
+        504.84
+      ],
+      "sourceBodySha256": "0ca51ab808b04c80bca2ea6ac1bebbf3d5f39f621a90166ff89bb65a4eacd63f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Intestinal anthelmintics",
+      "draftLearningTask": "Compare kinetics, targets and adverse effects and match agents to representative intestinal helminths.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e",
+      "subjectId": "pharmacology",
+      "code": "PH8.10",
+      "page": 182,
+      "rowBBox": [
+        51.7,
+        504.84,
+        105.7,
+        545.58
+      ],
+      "sourceBodySha256": "7f3f8b12a6ab72ada68c04e1b2fcf3387d6bcb4054c6e892cc0301322e84e9eb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antivirals and HIV medicines",
+      "draftLearningTask": "Compare representative agents by kinetics, actions, indications, contraindications and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789",
+      "subjectId": "pharmacology",
+      "code": "PH8.11",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        109.32
+      ],
+      "sourceBodySha256": "a28be24e68efb1d449aa5e62d61dd95c4a0d0ab8a28ee70ddb21f2fb987d205e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anticancer medicines",
+      "draftLearningTask": "Compare classes by kinetics, actions, indications and toxicity and justify a simulated plan for mitigating treatment-related harms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6",
+      "subjectId": "pharmacology",
+      "code": "PH9.1",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        136.32,
+        105.7,
+        166.92
+      ],
+      "sourceBodySha256": "e58e2a995bb18f39c70a21896160a809eedce10c0ab075c2bc5370e9960c582a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunomodulators",
+      "draftLearningTask": "Compare representative agents by kinetics, immune targets, clinical uses and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+      "subjectId": "pharmacology",
+      "code": "PH9.2",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        166.92,
+        105.7,
+        207.6
+      ],
+      "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Poisoning, bites and stings",
+      "draftLearningTask": "Use simulated cases to distinguish initial assessment, supportive care and specific treatments for common drug and insecticide exposures, bites and stings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cf9c887f6e80e503b62e85daf66bec81708a1e7be2386e8c0cb28546d05f53c7",
+      "subjectId": "pharmacology",
+      "code": "PH9.3",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        274.74,
+        105.7,
+        306.42
+      ],
+      "sourceBodySha256": "49234c6988e4a09bbf1845159decd74db108de706a50c5343cc0516b7b40e57f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chelation",
+      "draftLearningTask": "Match representative chelators to metal exposures and justify a simulated plan including monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154",
+      "subjectId": "pharmacology",
+      "code": "PH9.4",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        306.42,
+        105.7,
+        329.46
+      ],
+      "sourceBodySha256": "ec8a2c51a94ac162566a53884173f75fa8b7c190d5276f29522216faba97389d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vaccines",
+      "draftLearningTask": "Classify vaccine types and explain principles of selection and safe use.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0",
+      "subjectId": "pharmacology",
+      "code": "PH9.5",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        329.46,
+        105.7,
+        352.86
+      ],
+      "sourceBodySha256": "fe4a3b70fbf88f529da24f2799098e27513de0b809e75f01ce1bea6480d55127",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antiseptics and disinfectants",
+      "draftLearningTask": "Select an agent for a representative purpose and explain limitations and precautions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:44da0f8afc633dc317984beeb63072f04b6fb9ac4d50282bd3c345583e6d66c6",
+      "subjectId": "pharmacology",
+      "code": "PH9.6",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        352.86,
+        105.7,
+        384.12
+      ],
+      "sourceBodySha256": "aae2bab7bf999e672936c75b761eacb566b35f56c93529206510007da2e701ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dermatology medicines",
+      "draftLearningTask": "Compare medicines for acne, scabies, pediculosis and psoriasis and explain selection of sunscreen.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:664785dc167322609aaad1a503dd0eb647c06a6a868c085e040d4d1aece52db5",
+      "subjectId": "pharmacology",
+      "code": "PH9.7",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        384.12,
+        105.7,
+        415.86
+      ],
+      "sourceBodySha256": "30bd15f0fbd6b714616ce117e56ea0fdbc3a7ac9d380bcdd823706b8073bca84",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ocular medicines",
+      "draftLearningTask": "Compare representative glaucoma and other ocular medicines and explain how topical delivery affects exposure and use.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+      "subjectId": "pharmacology",
+      "code": "PH10.1",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        443.16,
+        105.7,
+        477.06
+      ],
+      "sourceBodySha256": "0009be4bb1da3bfef05b258a00f2e58cea66871ef7a9bc50da54ab465d2ed8ce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Drug information",
+      "draftLearningTask": "Compare evidence sources and demonstrate how to verify a current drug claim.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b",
+      "subjectId": "pharmacology",
+      "code": "PH10.2",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        477.06,
+        105.7,
+        518.1
+      ],
+      "sourceBodySha256": "412ba9993f741c04dcfcb614006966fe33221c3a49c0408045ad4b3449b919b8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Promotion and labelling",
+      "draftLearningTask": "Critically appraise a promotional claim and interpret corresponding package information.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2d24d8954bdbdf01cbd0509fd7b48bae238aa67abecdc226ac382b31e9f1da41",
+      "subjectId": "pharmacology",
+      "code": "PH10.3",
+      "page": 183,
+      "rowBBox": [
+        51.7,
+        518.1,
+        105.7,
+        540.06
+      ],
+      "sourceBodySha256": "6bb72e0ea9bfd311b65058feb4ead82d966f9c4faf395252d31924528b5cf2a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Personal drug selection",
+      "draftLearningTask": "Develop and explain a personal drug list for a simulated condition using efficacy, safety, suitability and cost.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:86dbd8612eb1e01a358bd541bd9de11c4a7b8a592dbee133d8823f2a3f4cda80",
+      "subjectId": "pharmacology",
+      "code": "PH10.4",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        109.32
+      ],
+      "sourceBodySha256": "85aa388bbddefe81241cc13816373930e36bc428ceeb3a915e5b0c64b1f23e25",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prescription writing",
+      "draftLearningTask": "Write a clear, complete and rational prescription for a simulated case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+      "subjectId": "pharmacology",
+      "code": "PH10.5",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        109.32,
+        105.7,
+        152.52
+      ],
+      "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prescribing ethics and law",
+      "draftLearningTask": "Apply relevant rules and ethical principles to controlled drugs, off-label use and prescribing for oneself or close contacts.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:21171ebaf44368d4bd22c24eb4d3f8f24b0e0d8b324d6bd296ff98b0631035fb",
+      "subjectId": "pharmacology",
+      "code": "PH10.6",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        152.52,
+        105.7,
+        183.78
+      ],
+      "sourceBodySha256": "8cc66088e01c7390c2594ac3cd43ee5281b881ba3c4bb81b1aec67123f74cb4b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prescription appraisal",
+      "draftLearningTask": "Review a sample prescription for errors and explain how to improve clarity, safety and appropriateness.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a6c1f6fabbf565eeacaf8e4b6e455080311df87f44cdce082d19f1731efeaca4",
+      "subjectId": "pharmacology",
+      "code": "PH10.7",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        183.78,
+        105.7,
+        224.88
+      ],
+      "sourceBodySha256": "d7a75829f31709c70aa16ac1d985d8948509f5d4007bcbd00402e9108495e4c5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pharmacogenomics and economics",
+      "draftLearningTask": "Use a simulated case to explain how genetic information and treatment cost can affect selection and compare medication prices.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b",
+      "subjectId": "pharmacology",
+      "code": "PH10.8",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        291.96,
+        105.7,
+        323.7
+      ],
+      "sourceBodySha256": "ca71aed9df4dafcb06337f16f5b284468ac296b04355feffc45346f2de18a894",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Essential medicines",
+      "draftLearningTask": "Explain essential medicine selection and evaluate representative fixed-dose combinations and over-the-counter products.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a216b95a3262aaf32f53ad901609ef6d7998a1525a97cc3b266e77c7e00ac543",
+      "subjectId": "pharmacology",
+      "code": "PH10.9",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        323.7,
+        105.7,
+        366.72
+      ],
+      "sourceBodySha256": "810c920a86d535a1f8cae1e82a427334ea1ab203d961ababdb523c17ed275068",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Individualized dosing",
+      "draftLearningTask": "Calculate or justify doses in simulated cases involving age, pregnancy, lactation or impaired renal or hepatic function.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1440f13ec0e6943bb0490bc48ac6ce264c6318202f86a783a91ab4f116a34b8c",
+      "subjectId": "pharmacology",
+      "code": "PH10.10",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        366.72,
+        105.7,
+        419.64
+      ],
+      "sourceBodySha256": "af01d79b8346a53dd793135ecfa12af97c63b06593d21d2cc927a437e99b7439",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Therapeutic drug monitoring",
+      "draftLearningTask": "Select when to measure drug concentrations, choose sampling time and calculate an adjusted dose from representative data.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1b9208c6d14be5c78b5d32e51a7ca45cfb2203906a67dd15723336d80ac924a1",
+      "subjectId": "pharmacology",
+      "code": "PH10.11",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        419.64,
+        105.7,
+        474.12
+      ],
+      "sourceBodySha256": "decb062daca0d32066af2fab782c6939e4b0e0ac685079a3d0cb502155f48f28",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Drug regulation",
+      "draftLearningTask": "Apply relevant regulatory principles to simulated discovery, approval or clinical-use cases.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e87f202dba149cea8f63170f6b0cfe2281e3774a44284b3ef94420e881639902",
+      "subjectId": "pharmacology",
+      "code": "PH10.12",
+      "page": 184,
+      "rowBBox": [
+        51.7,
+        474.12,
+        105.7,
+        518.82
+      ],
+      "sourceBodySha256": "ad869a19dc481ab504ea50021b9fe130535181fa7d10e444a51f748f9f4b8930",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Drug development",
+      "draftLearningTask": "Trace development and trial phases and explain the role of Good Clinical Practice and research.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:25bfa2b53d9061e973187eff0affd3151f8054982c5571c0a509700513d9e735",
+      "subjectId": "pharmacology",
+      "code": "PH10.13",
+      "page": 185,
+      "rowBBox": [
+        51.7,
+        68.22,
+        105.7,
+        108.9
+      ],
+      "sourceBodySha256": "07967bf2d94e18ebc214a6ca0fc11dfba7ca23a7e0a575b1fb5eebc4472e9465",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Industry and media communication",
+      "draftLearningTask": "Role-play verifying and sharing drug information obtained from a representative or media source.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb630545c297b3aeef2014a690ae0fb687439729e14389977e18a84944857812",
+      "subjectId": "pharmacology",
+      "code": "PH10.14",
+      "page": 185,
+      "rowBBox": [
+        51.7,
+        108.9,
+        105.7,
+        149.94
+      ],
+      "sourceBodySha256": "ebba007c1da88b33993feca770cd081ae66421b7f479f0aab9de7073f5f24b78",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Patient counselling",
+      "draftLearningTask": "Use teach-back and empathetic communication to explain correct medicine use in a simulated consultation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+      "subjectId": "pharmacology",
+      "code": "PH10.15",
+      "page": 185,
+      "rowBBox": [
+        51.7,
+        149.94,
+        105.7,
+        190.62
+      ],
+      "sourceBodySha256": "6a270790035623989422b9fad1210ef753cb47407c26e3ee44194cc9269d5e75",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adherence",
+      "draftLearningTask": "Identify barriers in a chronic disease scenario and demonstrate a conversation that supports adherence.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:55bb230b84c28f4a595dabd55c46d7732e52c530713ad54e3149f0cb9c42a7d3",
+      "subjectId": "pharmacology",
+      "code": "PH10.16",
+      "page": 185,
+      "rowBBox": [
+        51.7,
+        190.62,
+        105.7,
+        231.36
+      ],
+      "sourceBodySha256": "2c64832b401164e12a29c89c4c6c0765e2069379e435a15e7b679f37ac7675c8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dependence-risk prescribing",
+      "draftLearningTask": "Explain safeguards when prescribing medicines with dependence potential and recommend a response to a simulated concern.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2fca8b46ee37f410b82a73b169207dee3a6cbc79488944dfdb4c9803563fe3f7",
+      "subjectId": "pharmacology",
+      "code": "PH10.17",
+      "page": 185,
+      "rowBBox": [
+        51.7,
+        231.36,
+        105.7,
+        263.04
+      ],
+      "sourceBodySha256": "7286d56cdcfda20b5eb1b7ebb5812f38a461125283a99bf8c8d96bf176bf16a8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Public medicine education",
+      "draftLearningTask": "Deliver a brief simulated patient or public explanation of safe medicine use, dependence and over-the-counter risks.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}
