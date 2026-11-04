@@ -27,3 +27,11 @@ Candidate names are review labels. No catalogue IDs have been allocated in this 
 Run `node ops/nmc/report-foundation-coverage.js` from the repository. On pack @3 it reports 2,634 source appearances across 19 subjects, with two proposals, 21 source exceptions and 2,611 standard appearances without a proposal. Zero approved mappings. An appearance with a proposal can have uncovered tasks, as both linked rows demonstrate. The catalogue covers the pinned core reference scope. Supplementary or amended curricula require separate source disposition before claiming complete NMC coverage.
 
 Next batch: review the four candidate identities and split the remaining tasks in AN57.5 and PY10.10. Continue by subject and retain practical or skill-based assessment requirements as distinct tasks. PYQ intake remains deferred.
+
+## Catalogue identity check and intake packet
+
+Live catalogue v448 contained Brown-Sequard syndrome with the aliases Brown Sequard syndrome and Hemicord syndrome. The thirteen candidate labels have no match in that catalogue. The accompanying JSON contains thirteen validated create-draft payloads and original tasks: four for AN57.1–AN57.4, seven for the remaining named items in AN57.5, and two for the complete and incomplete transection tasks in PY10.10. The existing Brown-Sequard objective remains shared by both references.
+
+Review classification and scope before accepting any identity. In particular, confirm how the source groups ALS under the motor neuron disease item, retain paraplegia as a presentation, and check whether complete and incomplete transection should be separate concept identities or objective variants under one concept. Keep the hemisection objective linked to the existing identity. No new IDs or review decisions are asserted here.
+
+Owner /root. PR414, branch feat/nmc-spinal-cord-pilot-20261104, stacked on PR413. Verified the live identity inventory and ran the existing concept-draft validator for all thirteen payloads. Next action: stage the candidate payloads through the authenticated Admin intake workflow after identity review and reuse accepted IDs when creating objective bindings.
