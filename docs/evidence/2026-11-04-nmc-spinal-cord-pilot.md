@@ -35,3 +35,9 @@ Live catalogue v448 contained Brown-Sequard syndrome with the aliases Brown Sequ
 Review classification and scope before accepting any identity. In particular, confirm how the source groups ALS under the motor neuron disease item, retain paraplegia as a presentation, and check whether complete and incomplete transection should be separate concept identities or objective variants under one concept. Keep the hemisection objective linked to the existing identity. No new IDs or review decisions are asserted here.
 
 Owner /root. PR414, branch feat/nmc-spinal-cord-pilot-20261104, stacked on PR413. Verified the live identity inventory and ran the existing concept-draft validator for all thirteen payloads. Next action: stage the candidate payloads through the authenticated Admin intake workflow after identity review and reuse accepted IDs when creating objective bindings.
+
+## Canonical grouping decision
+
+The working intake packet now has 12 unique concept requests and 13 learning tasks. Complete and incomplete transection share the proposed **Spinal cord transection patterns** concept and retain distinct tasks. This is a catalogue design decision for the scope of PY10.10. Brown-Sequard syndrome retains its existing ID and objective. Paraplegia remains a presentation candidate, and the motor neuron disease proposal does not assert ALS as an exact alias.
+
+Submit each object in `conceptDrafts` once through the authenticated Admin concept-draft route. Use the returned proposal and concept IDs for review. Each item in `objectives` identifies its matching draft by `conceptRequestId`. Create proposed source bindings only after the corresponding canonical identity is accepted. Local payload validation passed. Live intake and acceptance remain pending an authenticated Admin session.
