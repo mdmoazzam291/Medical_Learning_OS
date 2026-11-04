@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b",
+      "subjectId": "pathology",
+      "code": "PA6.1",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        179.58,
+        105.6,
+        223.44
+      ],
+      "sourceBodySha256": "783a7ad28bbf3a598bfbffda4b047886802f0afd91f990ca783b229b709fbe01",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neoplasia",
+      "draftLearningTask": "Classify neoplasms by lineage and compare benign and malignant tumours by gross and microscopic features, behaviour and routes of spread.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7ef1323578926700dea01d814057dddaa0c0283e548e93ece55181aba578d8ef",
+      "subjectId": "pathology",
+      "code": "PA6.2",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        223.44,
+        105.6,
+        258.78
+      ],
+      "sourceBodySha256": "2802a27160104997a773f5996121008f32d6ca54edad7bf5d0b21c48849b433a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Molecular basis of cancer",
+      "draftLearningTask": "Use breast and colorectal examples to explain how driver mutations, tumour suppressor loss and epigenetic changes contribute to progression.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249",
+      "subjectId": "pathology",
+      "code": "PA6.3",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        258.78,
+        105.6,
+        290.04
+      ],
+      "sourceBodySha256": "1b535244d2cfa1c5d0da40070783cf308541ddfffe077f6cf40d3c99a67cad5d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Carcinogenesis",
+      "draftLearningTask": "Classify chemical, physical and biological carcinogens and compare mechanisms by which they initiate or promote cancer.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c74a502cc8767213806731341aaf133ab941a6c28ba9457e0f4bd22ff2fbbda6",
+      "subjectId": "pathology",
+      "code": "PA6.4",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        290.04,
+        105.6,
+        323.94
+      ],
+      "sourceBodySha256": "45dacdf6d10d4b3553bfd7c93757c770c466724b943eb16b0eeabfb279c68e39",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tumour effects on the host",
+      "draftLearningTask": "Distinguish local and metastatic effects from systemic effects and explain representative paraneoplastic syndromes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+      "subjectId": "pathology",
+      "code": "PA6.5",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        323.94,
+        105.6,
+        352.02
+      ],
+      "sourceBodySha256": "27c3a6669da3d24696bb911f66d811b62f4c26cbdc7cfdc5d9a7a20031207a85",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cancer diagnostics",
+      "draftLearningTask": "Compare tissue diagnosis, molecular profiling and tumour markers by purpose and limitations, and discuss an emerging diagnostic approach.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a872699c4d1d6fb11638fa4e356bb21614341f2cc6e2fc919445def7528fbea",
+      "subjectId": "pathology",
+      "code": "PA6.6",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        352.02,
+        105.6,
+        380.1
+      ],
+      "sourceBodySha256": "18599c8a7b6630d2831bb825e0c52a6dd7b7f63538d33248b86e5568c266e811",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cancer immunity",
+      "draftLearningTask": "Explain immune recognition and escape and relate these mechanisms to the rationale for representative immunotherapies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:735c5b8c572fb3a550dadfff61cff20de047001b281d54f78388fadb7e053cf1",
+      "subjectId": "pathology",
+      "code": "PA6.7",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        380.1,
+        105.6,
+        409.62
+      ],
+      "sourceBodySha256": "1340a4985cacf3bc139b10a5cc2a56a97b22864bfd6719495716f66ef8c590cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neoplasm specimens",
+      "draftLearningTask": "Identify gross and microscopic features in representative benign and malignant specimens and justify each classification.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:777ec4e39dc694be2ff1bf7f07212dc0904d3f72e4c2e71c2a56801c3021c548",
+      "subjectId": "pathology",
+      "code": "PA7.1",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        427.62,
+        105.6,
+        463.26
+      ],
+      "sourceBodySha256": "197da87871fa989b4c6e5751268157d00e47e59889eaeb6d8d0b32c196165cf8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diagnostic cytology",
+      "draftLearningTask": "Compare sample collection, preparation and staining methods and explain when cytology can inform care or requires tissue confirmation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+      "subjectId": "pathology",
+      "code": "PA8.1",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        485.94,
+        105.6,
+        508.98
+      ],
+      "sourceBodySha256": "be0a1d85a355df69a965d8ee54b9a836f5dce8975b07b45a8969fe4fcff9523c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunity",
+      "draftLearningTask": "Compare innate and adaptive responses and trace antigen recognition, activation and effector mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a",
+      "subjectId": "pathology",
+      "code": "PA8.2",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        508.98,
+        105.6,
+        531.66
+      ],
+      "sourceBodySha256": "8d6a8e03e9a2f034cdf6f98f5faebf731cc21365d4800fe9c15f9235354acf35",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypersensitivity",
+      "draftLearningTask": "Classify reactions by mechanism and link each major type to representative tissue injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9",
+      "subjectId": "pathology",
+      "code": "PA8.3",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        124.5,
+        105.6,
+        152.64
+      ],
+      "sourceBodySha256": "1b31eeee89aeb32cacfaecf51abcee131a28ffb09a1685b25145656d74e3d4b4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HLA and transplantation",
+      "draftLearningTask": "Explain HLA matching and compare the immune mechanisms of hyperacute, acute and chronic rejection.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+      "subjectId": "pathology",
+      "code": "PA8.4",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        152.64,
+        105.6,
+        181.08
+      ],
+      "sourceBodySha256": "27e85fb88637cd90b50643ce5e99dba6bf51c53bc38cfa3978ac8d9be7340429",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Autoimmunity",
+      "draftLearningTask": "Explain loss of self-tolerance and compare mechanisms in representative organ-specific and systemic autoimmune diseases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+      "subjectId": "pathology",
+      "code": "PA8.5",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        181.08,
+        105.6,
+        202.98
+      ],
+      "sourceBodySha256": "6a05cc19d762eb19e725af8b2594654cd629ac6db09178f3e7c4d03fc60a9e19",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Systemic lupus erythematosus",
+      "draftLearningTask": "Trace loss of tolerance, autoantibody formation and immune-complex injury and relate them to representative organ lesions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41",
+      "subjectId": "pathology",
+      "code": "PA8.6",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        202.98,
+        105.6,
+        220.98
+      ],
+      "sourceBodySha256": "1f6cf64b211acf235b5712539682381f37aa0430743b8755a09873c7aafb4e02",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV and AIDS pathology",
+      "draftLearningTask": "Trace target-cell infection and immune depletion and relate them to characteristic tissue changes and complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+      "subjectId": "pathology",
+      "code": "PA9.1",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        241.86,
+        105.6,
+        261.66
+      ],
+      "sourceBodySha256": "0a50d167235107422529b8d368de4bde2730533dc8d31d3fb5f2f7f3f9db62df",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Amyloidosis",
+      "draftLearningTask": "Explain fibril formation and compare the causes, distribution and consequences of major forms of amyloid deposition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+      "subjectId": "pathology",
+      "code": "PA9.2",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        261.66,
+        105.6,
+        293.64
+      ],
+      "sourceBodySha256": "f8f9602083bdbead8ff0c1e742ba670ecafbf2aaa5204f897125e2f8528f84a0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Amyloid specimens",
+      "draftLearningTask": "Identify representative gross and microscopic deposits, interpret Congo red findings and connect the affected organs to clinical consequences.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+      "subjectId": "pathology",
+      "code": "PA10.1",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        315.6,
+        105.6,
+        334.32
+      ],
+      "sourceBodySha256": "a5d4ad1b164973833c90405659e6bccea4b9ece6d12853eea74ea960e1c9baaf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Malaria pathology",
+      "draftLearningTask": "Relate erythrocyte infection, haemolysis and sequestration to representative organ pathology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:65b46a3354f75c2b3d4f2b03b3631754ff81f996509eff7946ddde027c3a4eb4",
+      "subjectId": "pathology",
+      "code": "PA10.2",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        334.32,
+        105.6,
+        354.12
+      ],
+      "sourceBodySha256": "b963f96f2cd2c35030a0cffcda8be1252d8e3e3bf5d95931c095a3ab02008b26",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cysticercosis pathology",
+      "draftLearningTask": "Trace tissue larval deposition and explain how cyst location and degeneration influence inflammation and injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:09ec8deb3f35dc03a903356d4443c40d8728dbd1fe3066ff909438430d4c3003",
+      "subjectId": "pathology",
+      "code": "PA10.3",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        354.12,
+        105.6,
+        372.48
+      ],
+      "sourceBodySha256": "cbf6a53990c041a22475dc91f1aceb610fcee552c1e288a604edc51efde60c20",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy pathology",
+      "draftLearningTask": "Compare tissue and nerve changes across the leprosy spectrum and relate them to host immunity and organism burden.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d",
+      "subjectId": "pathology",
+      "code": "PA10.4",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        372.48,
+        105.6,
+        410.64
+      ],
+      "sourceBodySha256": "4e102e6eb5234a8504821e24a1a50d9ff5e88b41863044c88271c7deeb031219",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious tissue injury",
+      "draftLearningTask": "Compare representative bacterial, viral, protozoal and helminthic diseases by route of injury, host response and tissue morphology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:be245daaa8dd97f4563a29877feb57195ab4f85258e6cb46838679c1de3f13f9",
+      "subjectId": "pathology",
+      "code": "PA10.5",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        410.64,
+        105.6,
+        439.74
+      ],
+      "sourceBodySha256": "a3f1dae23d46d561c281e44b8632cab09b0f15d2465acf530bcda2b91cff653c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "COVID-19 pathology",
+      "draftLearningTask": "Relate viral and host responses to representative pulmonary and systemic lesions and interpret characteristic laboratory findings in context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:219e030ef29a1a797e3a2e06941d3323c2563478e45601b557c4a9d0a2283e8d",
+      "subjectId": "pathology",
+      "code": "PA11.1",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        461.7,
+        105.6,
+        493.02
+      ],
+      "sourceBodySha256": "266cdafad7b1a859757cf68119458a1bc8b989368d05f9eb040703f441a36dec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric genetic pathology",
+      "draftLearningTask": "Compare representative chromosomal abnormalities and pathogenic variants by mechanism and phenotype and select suitable diagnostic modalities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd8e45caed1bf9afc5ac506b20c53698ad3540f5f14673630d4a1be1c1d4d656",
+      "subjectId": "pathology",
+      "code": "PA11.2",
+      "page": 190,
+      "rowBBox": [
+        51.5,
+        493.02,
+        105.6,
+        532.62
+      ],
+      "sourceBodySha256": "b7285e82cbc5acdd6cc07f3b49fd3355d7bacf6245a889a191b7bcdb043c66d5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric tumours",
+      "draftLearningTask": "Compare representative childhood tumours and tumour-like lesions by developmental origin, typical age, site and morphology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ede99371c6978a3e345504eb132ae5d99551fa60acf200247fde7f0cc7a958d8",
+      "subjectId": "pathology",
+      "code": "PA11.3",
+      "page": 191,
+      "rowBBox": [
+        51.5,
+        124.5,
+        105.6,
+        152.28
+      ],
+      "sourceBodySha256": "abd4e3c803afc8c1221099473adeb06b49a6bea34b5eb65d1274a7505a2c9811",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric storage disorders",
+      "draftLearningTask": "Link representative enzyme defects to accumulated substrates and explain their organ-specific consequences.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:aef81bfd830c4d75b65fd228ca3a7959df5776e65aef63912b96dce134fae436",
+      "subjectId": "pathology",
+      "code": "PA12.1",
+      "page": 191,
+      "rowBBox": [
+        51.5,
+        174.54,
+        105.6,
+        206.94
+      ],
+      "sourceBodySha256": "00ed1cc652de0b31ff48d5005c2f606a9c15fca8d1585695531394fe754b3fa4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Environmental injury",
+      "draftLearningTask": "Relate air pollution, tobacco, alcohol and noise exposure to distinct mechanisms of tissue injury and representative disorders.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bbc37750b8fa7317f9794f1199367ddb06b3dfb68dbd1a238a121b153fc4edd5",
+      "subjectId": "pathology",
+      "code": "PA12.2",
+      "page": 191,
+      "rowBBox": [
+        51.5,
+        206.94,
+        105.6,
+        239.7
+      ],
+      "sourceBodySha256": "e10d2bd6108a1a0e36ac9f14b26153c769afa9a32fdb99827326e22a47436d33",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutritional pathology",
+      "draftLearningTask": "Compare tissue and metabolic responses to protein–calorie malnutrition, vitamin deficiencies and starvation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdbc139d546ab0671125a563dd82ed5cf500e7560bc5dbe0eb742496632c849a",
+      "subjectId": "pathology",
+      "code": "PA12.3",
+      "page": 191,
+      "rowBBox": [
+        51.5,
+        239.7,
+        105.6,
+        267.48
+      ],
+      "sourceBodySha256": "e3e234e49a17aceae9b1a0adf76949d07ca0b970d30e235867872c1a40a83af5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity pathology",
+      "draftLearningTask": "Explain how adipose dysfunction and insulin resistance contribute to metabolic syndrome and downstream organ injury.",
+      "mode": "knowledge"
+    }
+  ]
+}
