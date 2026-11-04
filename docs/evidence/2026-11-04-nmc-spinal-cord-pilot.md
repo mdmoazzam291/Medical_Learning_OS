@@ -41,3 +41,9 @@ Owner /root. PR414, branch feat/nmc-spinal-cord-pilot-20261104, stacked on PR413
 The working intake packet now has 12 unique concept requests and 13 learning tasks. Complete and incomplete transection share the proposed **Spinal cord transection patterns** concept and retain distinct tasks. This is a catalogue design decision for the scope of PY10.10. Brown-Sequard syndrome retains its existing ID and objective. Paraplegia remains a presentation candidate, and the motor neuron disease proposal does not assert ALS as an exact alias.
 
 Submit each object in `conceptDrafts` once through the authenticated Admin concept-draft route. Use the returned proposal and concept IDs for review. Each item in `objectives` identifies its matching draft by `conceptRequestId`. Create proposed source bindings only after the corresponding canonical identity is accepted. Local payload validation passed. Live intake and acceptance remain pending an authenticated Admin session.
+
+## Cross-subject pathway extension
+
+The pinned rows PY10.7 and PY10.9 were inspected. The packet now holds 12 concept requests and 15 objective drafts. The two additional pathway-tracing tasks share the existing candidate for AN57.4. Each new task has its source-row digest in the intake JSON. They account for the spinal pathway components of the rows. Sensory clinical application, descending tract implications and the upper versus lower motor neuron comparison remain distinct unresolved tasks. No new concept request was needed for the two pathway tasks.
+
+Live Admin intake is blocked at the sign-in screen. The updated packet is validated locally and ready for submission under the genuine Admin session. Next: stage the twelve unique requests, collect server receipts and use accepted IDs for proposed source links.

@@ -93,7 +93,8 @@
         "aliases": [],
         "classification": {
           "subjects": [
-            "anatomy"
+            "anatomy",
+            "physiology"
           ],
           "systems": [],
           "organs": [],
@@ -102,7 +103,7 @@
             "classification"
           ]
         },
-        "sourceEvidence": "NMC CBME 2024-09-12, AN57.4, PDF page 141, nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884. Row digest recorded in the spinal cord pilot. Candidate scope requires review.",
+        "sourceEvidence": "NMC CBME 2024-09-12, AN57.4, PDF page 141, nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884. Row digest recorded in the spinal cord pilot. Candidate scope requires review. Related pathway tasks: PY10.7 and PY10.9, PDF page 158. Only pathway tasks share this identity.",
         "changeReason": "Prepare a distinct canonical identity proposal for the spinal cord foundation pilot."
       }
     },
@@ -461,6 +462,32 @@
       "objective": {
         "task": "pattern-recognition",
         "wording": "Use preserved and impaired functions in a simulated case to explain why an incomplete transection pattern is considered.",
+        "status": "draft"
+      }
+    },
+    {
+      "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+      "code": "PY10.7",
+      "page": 158,
+      "sourceBodySha256": "c30dca15ed9e2c5462fce070e21223e4fbe7a4aaee9711d49b228e7f8de33b03",
+      "alignment": "proposed-partial-task",
+      "conceptRequestId": "744fef8c-0408-455f-a0de-5b5f8afb0ed6",
+      "objective": {
+        "task": "pathway-tracing",
+        "wording": "Trace the spinal portions of selected ascending pathways and identify which sensory modalities each pathway carries.",
+        "status": "draft"
+      }
+    },
+    {
+      "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+      "code": "PY10.9",
+      "page": 158,
+      "sourceBodySha256": "baeacc58aa9fa24ef6b716b945e641a7c74c5fb8c111e599c997975d80d336bb",
+      "alignment": "proposed-partial-task",
+      "conceptRequestId": "744fef8c-0408-455f-a0de-5b5f8afb0ed6",
+      "objective": {
+        "task": "pathway-tracing",
+        "wording": "Trace selected descending pathways through the spinal cord and identify where they connect with motor circuits.",
         "status": "draft"
       }
     }
