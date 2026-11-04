@@ -9,8 +9,15 @@ import {coveragePage,parseCoverageFilters} from '../src/domain/content-coverage.
 import draftSeed from '../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import sourceCatalogue from '../data/nmc-reference-catalogue.json' with {type:'json'};
 import {foundationDraftPage,canonicalIdentityDigest} from '../src/domain/nmc-learning-foundation.js';
-const drafts=structuredClone(draftSeed);const draftCatalog={version:446,concepts:drafts.objectives.map((r,i)=>({conceptId:r.objective.conceptId,label:'Synthetic objective '+i,aliases:[],subjectTags:['medicine']}))};
-for(const [i,c] of draftCatalog.concepts.entries()){drafts.objectives[i].canonicalIdentitySha256=await canonicalIdentityDigest(c);drafts.objectives[i].wording='Synthetic original objective <script>window.injected=true</script>'; }
+const drafts=structuredClone(draftSeed);
+const conceptIds=[...new Set(drafts.objectives.map(row=>row.objective.conceptId))];
+const draftCatalog={version:446,concepts:conceptIds.map((conceptId,i)=>({conceptId,label:'Synthetic objective '+i,aliases:[],subjectTags:['medicine']}))};
+const identityDigests=new Map();
+for(const concept of draftCatalog.concepts)identityDigests.set(concept.conceptId,await canonicalIdentityDigest(concept));
+for(const row of drafts.objectives){
+ row.canonicalIdentitySha256=identityDigests.get(row.objective.conceptId);
+ row.wording='Synthetic original objective <script>window.injected=true</script>';
+}
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-coverage-'));await buildPages({outputDirectory:output});
 const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
@@ -42,7 +49,7 @@ try{
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();
   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
-  await root.locator('summary').click();await root.getByText('Synthetic objective 2',{exact:true}).waitFor();
+  await root.locator('summary').click();await root.getByText('Synthetic objective 2',{exact:true}).first().waitFor();
   assert.match(await root.textContent(),/AN57.5/);assert.match(await root.textContent(),/PY10.10/);assert.equal(await page.evaluate(()=>window.injected===true),false);
   await root.getByRole('button',{name:'Next references',exact:true}).click();await root.getByText(/showing 51–100/).waitFor();
   await root.getByLabel('Code or topic',{exact:true}).fill('AN57.5');await root.getByRole('button',{name:'Filter references',exact:true}).click();await root.getByText(/1 filtered source appearances/).waitFor();

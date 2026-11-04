@@ -15,7 +15,7 @@ export async function canonicalIdentityDigest(c){
 export function validateFoundationDrafts(input,catalogue){
  const c=validateReferenceCatalogue(catalogue);
  if(!exact(input,['schemaVersion','draftVersion','authoredCatalogVersion','sourceEdition','sourceSha256','clinicalApproval','sourceAlignmentApproved','learnerActivation','objectives','sourceBindings'])||
- input.schemaVersion!==1||input.draftVersion!=='mbbs-foundation:original-objectives@1'||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
+ input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
  input.sourceEdition!==c.edition||input.sourceSha256!==c.sourceSha256||input.clinicalApproval!==false||input.sourceAlignmentApproved!==false||input.learnerActivation!==false||
  !Array.isArray(input.objectives)||input.objectives.length>2000||!Array.isArray(input.sourceBindings)||input.sourceBindings.length>10000)bad();
  const objectives=new Map();
