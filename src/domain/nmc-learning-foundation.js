@@ -56,7 +56,7 @@ export async function foundationDraftPage(input,catalogue,catalog,filters={}){
   const live=known.get(row.objective.conceptId);
   const identityState=!live?'missing':await canonicalIdentityDigest(live)===row.canonicalIdentitySha256?'current':'changed';
   const sourceReferences=p.sourceBindings.filter(b=>b.objectiveVersionId===row.objective.objectiveVersionId).map(b=>({...b,code:refs.get(b.referenceId).observedCode,subjectId:refs.get(b.referenceId).subjectId}));
-  objectives.push({...row,canonicalLabel:live?.label||'Canonical identity unavailable',identityState,sourceReferences});
+  objectives.push({...row,canonicalLabel:live?.label||'Canonical identity unavailable',identityState,identityKind:!live?'missing':live.identityKind==='accepted-private'?'accepted-private':'catalogue',sourceReferences});
  }
  const q=f.search.toLowerCase().trim(),codeQuery=q.replace(/\s+/g,'');
  const requirements=catalogue.references.map(r=>({referenceId:r.referenceId,sourceEdition:p.sourceEdition,sourceSha256:p.sourceSha256,code:r.observedCode,pdfPage:r.pdfPage,subjectId:r.subjectId,topicLabel:topics.get(r.topicId)?.label||'Unresolved topic heading',identifierState:r.identifierState,amendmentNotice:r.amendmentNotice,
