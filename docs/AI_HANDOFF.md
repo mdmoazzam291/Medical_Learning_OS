@@ -1,3 +1,9 @@
+## Expanded objective pack released and next candidates staged — 4 November 2026
+
+Owner /root. PR411 merged at 2e76e7853c384a3bc6d0ed3dccbfe8cbae2fa69b after explicit release approval. CI 41775414830 passed. Live Owner API v17 matched all 25 candidate files. Guest 401, allowed preflight 200 and foreign-origin 403 passed. Genuine signed-in Admin readback remains unverified. The live pack has 20 draft objectives, 10 canonical concepts and two proposed source links. Clinical approval and learner activation are false.
+
+Next work is on feat/nmc-canonical-candidates-20261104, based on main 2e76e785. The pinned PDF scan located PA26.2 (aortic aneurysm) and FM14.16 (opium). The review packet records row hashes, suggested goals and the distinction between a separate concept and a possible narrower exposure relationship. No canonical IDs or app bindings were created in this packet. Next action: check candidate identities against the live canonical catalogue and assess the full row scope, then prepare explicit proposals where supported. Release and evidence receipts are in docs/releases and docs/evidence.
+
 ## Objective draft batch 2 — 4 November 2026
 
 Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.
