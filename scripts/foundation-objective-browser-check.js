@@ -11,7 +11,7 @@ import sourceCatalogue from '../data/nmc-reference-catalogue.json' with {type:'j
 import {foundationDraftPage,canonicalIdentityDigest} from '../src/domain/nmc-learning-foundation.js';
 const drafts=structuredClone(draftSeed);
 const conceptIds=[...new Set(drafts.objectives.map(row=>row.objective.conceptId))];
-const draftCatalog={version:446,concepts:conceptIds.map((conceptId,i)=>({conceptId,label:'Synthetic objective '+i,aliases:[],subjectTags:['medicine']}))};
+const draftCatalog={version:drafts.authoredCatalogVersion,concepts:conceptIds.map((conceptId,i)=>({conceptId,label:'Synthetic objective '+i,aliases:[],subjectTags:['medicine']}))};
 const identityDigests=new Map();
 for(const concept of draftCatalog.concepts)identityDigests.set(concept.conceptId,await canonicalIdentityDigest(concept));
 for(const row of drafts.objectives){
@@ -49,13 +49,13 @@ try{
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();
   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
-  await root.locator('summary').click();await root.getByText('Synthetic objective 2',{exact:true}).first().waitFor();
+  await root.locator('summary').click();await root.getByText('Synthetic objective 0',{exact:true}).first().waitFor();
   assert.match(await root.textContent(),/AN57.5/);assert.match(await root.textContent(),/PY10.10/);assert.equal(await page.evaluate(()=>window.injected===true),false);
   await root.getByRole('button',{name:'Next references',exact:true}).click();await root.getByText(/showing 51–100/).waitFor();
   await root.getByLabel('Code or topic',{exact:true}).fill('AN57.5');await root.getByRole('button',{name:'Filter references',exact:true}).click();await root.getByText(/1 filtered source appearances/).waitFor();
   await root.getByRole('combobox',{name:'Objective reference subject',exact:true}).selectOption('physiology');await root.getByRole('button',{name:'Filter references',exact:true}).click();await root.getByText(/0 filtered source appearances/).waitFor();
   failure=503;await root.getByRole('button',{name:'Refresh drafts',exact:true}).click();await root.getByText('Drafts could not be loaded. Check Admin access and retry.',{exact:true}).waitFor();
-  failure=0;slow=true;await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();await page.evaluate(()=>window.dispatchEvent(new Event('storage')));await page.waitForTimeout(500);await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();assert.equal(await root.getByText('Synthetic objective 2',{exact:true}).count(),0);
+  failure=0;slow=true;await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();await page.evaluate(()=>window.dispatchEvent(new Event('storage')));await page.waitForTimeout(500);await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();assert.equal(await root.getByText('Synthetic objective 0',{exact:true}).count(),0);
   slow=false;await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1),false);
   await page.screenshot({path:join(process.env.SCREENSHOT_DIR||tmpdir(),'foundation-objectives-'+name+'.png'),fullPage:true});

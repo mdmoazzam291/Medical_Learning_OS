@@ -13,30 +13,30 @@ async function fixture(){
  return {p,catalog:{version:p.authoredCatalogVersion,concepts}};
 }
 test('original objectives reuse the established objective shape, one canonical identity and two source proposals',()=>{
- const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,20);assert.equal(p.sourceBindings.length,2);
+ const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,1);assert.equal(p.sourceBindings.length,2);
  assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,1);
- assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,10);
+ assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1);
  assert.equal(registry.objectives.length,0);assert.equal(registry.mappings.length,0);
 });
 test('Admin projection tracks all source appearances, pending originals and explicit canonical identities',async()=>{
  const {p,catalog}=await fixture();const result=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,20);assert.equal(result.totals.sourceLinkedReferences,2);
+ assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,1);assert.equal(result.totals.sourceLinkedReferences,2);
  assert.equal(result.acceptedMappings,0);assert.equal(result.learnerActivation,false);assert.equal(result.coverageFraction,null);
  assert.equal(result.objectives.find(r=>r.sourceReferences.length===2).identityState,'current');
- assert.equal(result.totals.unboundObjectiveDrafts,19);
- assert.equal(result.objectives.filter(row=>row.objective.conceptId===p.objectives[0].objective.conceptId).length,2);
+ assert.equal(result.totals.unboundObjectiveDrafts,0);
+ assert.equal(result.objectives.filter(row=>row.objective.conceptId===p.objectives[0].objective.conceptId).length,1);
  assert.ok(result.objectives.every(row=>row.identityState==='current'));
  assert.equal(result.requirements.length,50);assert.equal(result.nextOffset,50);
  assert.equal((await foundationDraftPage(p,catalogue,catalog,{subject:'anatomy'})).filteredReferences,413);
 });
 test('stale, changed and missing canonical identities never silently remap',async()=>{
- const {p,catalog}=await fixture();catalog.concepts[0].label='Changed';catalog.concepts.pop();catalog.version++;
+ const {p,catalog}=await fixture();catalog.concepts[0].label='Changed';catalog.version++;
  const r=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(r.catalogVersionMatches,false);assert.equal(r.objectives[0].identityState,'changed');assert.equal(r.objectives.at(-1).identityState,'missing');
+ assert.equal(r.catalogVersionMatches,false);assert.equal(r.objectives[0].identityState,'changed');catalog.concepts.pop();assert.equal((await foundationDraftPage(p,catalogue,catalog,{})).objectives[0].identityState,'missing');
  assert.equal(r.identityBindingsCurrent,false);assert.equal(r.acceptedMappings,0);
 });
 test('forged approval, duplicate IDs, unknown source refs and amended rows reject',()=>{
- const mutations=[p=>p.clinicalApproval=true,p=>p.objectives[1].objective.objectiveVersionId=p.objectives[0].objective.objectiveVersionId,
+ const mutations=[p=>p.clinicalApproval=true,p=>p.objectives.push(structuredClone(p.objectives[0])),
  p=>p.sourceBindings[0].referenceId='nmc-2024-ref:'+'a'.repeat(64),p=>p.sourceBindings[0].sourcePage++,p=>p.objectives[0].status='approved',
  p=>p.sourceBindings[0].objectiveVersionId='unknown@1',p=>p.sourceBindings[0].rowBBox=[0,0,0,0]];
  for(const mutate of mutations){const p=structuredClone(pack);mutate(p);assert.throws(()=>validateFoundationDrafts(p,catalogue));}
