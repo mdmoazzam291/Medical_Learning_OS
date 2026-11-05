@@ -1,3 +1,7 @@
+## Medicine Admin draft preparation — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Commit `424159830962596031fa56861a86fd9bd3aaa08a` prepares five reviewed concept documents with pinned source locators. Current read-only production preflight found zero exact label or alias collisions at catalogue version 448. All five passed the Admin editor's domain validator and exact remote readback. Only the source subject is populated in classification. Next, enter through the owner-authenticated Concept drafts editor and verify saved revisions. No production drafts were submitted or accepted.
+
 ## Medicine identity semantic review — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `52aa07b4a0e370a4b207cb52135fad0c1dd429a5` reviews all five proposed identities and 14 intake IDs. Retains two proposals as written and recommends label or alias changes for malaria relapse, suspected COPD spirometry and asthma maintenance. Verified candidate accounting and exact remote readback. Next, recheck the revised COPD wording for collisions and prepare the five Admin draft submissions. Identity acceptance, clinical review and source alignment remain pending.
