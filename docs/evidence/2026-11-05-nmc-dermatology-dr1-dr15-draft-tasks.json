@@ -1,0 +1,923 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:7cad061a754ce6a58eb954991ce15e963d0cd215d01df9430c4dc079f2ad5b92",
+      "subjectId": "dermatology",
+      "code": "DR1.1",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        219.0,
+        101.6,
+        259.8
+      ],
+      "sourceBodySha256": "e6965a01526d77bdd8770ec2a63689e8a67a343600cc5ee7c64727e5a1ac3a88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acne assessment",
+      "draftLearningTask": "Identify lesion types, grade severity and elicit risk factors in a sample case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e46d76713179380d6400db31340d51426c89ca362fee5f36342afe6c211ab25c",
+      "subjectId": "dermatology",
+      "code": "DR1.2",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        259.8,
+        101.6,
+        313.92
+      ],
+      "sourceBodySha256": "d32d83f0194af923931749847d09111c8714077306db554a4df206ce214cf023",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acne management",
+      "draftLearningTask": "Develop a severity-based plan covering scarring risk and follow-up.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b6e356a54d1ba50029cb7aa3fb1d4a22132fdd9c16a829ac702041d54d61347d",
+      "subjectId": "dermatology",
+      "code": "DR2.1",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        331.98,
+        101.6,
+        372.78
+      ],
+      "sourceBodySha256": "048bcab555da948b167f0052ac144659e8fd3521a13521a0269dbe9faec26086",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitiligo",
+      "draftLearningTask": "Differentiate vitiligo from other hypopigmented lesions and propose a plan.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a6f0a90d2652e40e195a565a9078a1615c39b1b05a644ccdef453b48fd3dcf98",
+      "subjectId": "dermatology",
+      "code": "DR3.1",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        396.66,
+        101.6,
+        437.34
+      ],
+      "sourceBodySha256": "f0b7e4694e3c701b2f5a786d9010da32275e437536a517fd78ba3d7989e6f0dc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Psoriasis recognition",
+      "draftLearningTask": "Distinguish psoriasis from mimics using morphology, distribution and nail findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fe892f31bca22cffc7a0a56a3de05b40b4e566eeac5caff800998bdf6913778a",
+      "subjectId": "dermatology",
+      "code": "DR3.2",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        437.34,
+        101.6,
+        464.7
+      ],
+      "sourceBodySha256": "21a0052cdb3b82a6d45308367bd53c34cb7e612464eb52a5b61fd3e1deb53767",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Grattage test",
+      "draftLearningTask": "Demonstrate grattage on approved teaching material and explain the finding and its limits.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b0f61714850711bad3e9849343771b214c599085a8082a3a039a05ad4d602b7",
+      "subjectId": "dermatology",
+      "code": "DR3.3",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        464.7,
+        101.6,
+        505.5
+      ],
+      "sourceBodySha256": "df88ef3dd1dfc984f9743f80e4f90d32e2fb6c73db93ad55ea609c2c182eee77",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Psoriasis counselling",
+      "draftLearningTask": "Discuss chronicity and compare management options with a simulated patient.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ca9171715dde7de52a20f3944bb553236ed712852fb79b563f9843dc7707a0b8",
+      "subjectId": "dermatology",
+      "code": "DR4.1",
+      "page": 356,
+      "rowBBox": [
+        39.9,
+        524.28,
+        101.6,
+        538.26
+      ],
+      "sourceBodySha256": "c7ee1e226990f36cb68676f056c3c48b9dc97bc8a4c9c05941dd6ddf0b3bcd05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lichen planus",
+      "draftLearningTask": "Recognize characteristic lesions and outline assessment and management.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:962d3e7e3f7311427ce15b4cf33cbf0d55ce7eb091d65abd9d8c78ca844ea43a",
+      "subjectId": "dermatology",
+      "code": "DR5.1",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        187.92,
+        101.6,
+        228.66
+      ],
+      "sourceBodySha256": "cba70a43e6f80faa25b2c314bdcee631d6842041a09556eb4d63e255ea3952a1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Scabies",
+      "draftLearningTask": "Plan treatment, contact management and counselling about adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f81875ab38b44b753624b322dffcfad7ecd19c757710e67a327d3c98a32a3243",
+      "subjectId": "dermatology",
+      "code": "DR6.1",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        242.58,
+        101.6,
+        283.38
+      ],
+      "sourceBodySha256": "6619870e82730b5d17c61eeccdf0419cbf982a7aff6c8df694ca870c6341bdf2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pediculosis",
+      "draftLearningTask": "Compare presentation, transmission and management in adults and children.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:06d8623e5fcdc12a16bb9b5410d312f5799478ae4e1e3016b9a09aa40d0e259b",
+      "subjectId": "dermatology",
+      "code": "DR7.1",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        297.3,
+        101.6,
+        324.66
+      ],
+      "sourceBodySha256": "50a72006a32c0441ba941d1a2fbaecd51f4dcf070d1fae3a1a15230a7ca384d8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fungal microscopy",
+      "draftLearningTask": "Prepare and examine approved scrapings on KOH mount and distinguish yeast from dermatophyte findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d1a8214a7dde7cd5674aba393f56d0d7bffd3ac054e824420ac500ae71a2fc0b",
+      "subjectId": "dermatology",
+      "code": "DR7.2",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        324.66,
+        101.6,
+        353.52
+      ],
+      "sourceBodySha256": "82e682e5bb5678748ec24540382e446947cc9a402baaa561b0689c3dbfcd20c3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cutaneous fungal infections",
+      "draftLearningTask": "Use a simulated case to choose testing and management by site and extent.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2",
+      "subjectId": "dermatology",
+      "code": "DR8.1",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        367.44,
+        101.6,
+        408.12
+      ],
+      "sourceBodySha256": "eca6716d822812f21a06e2d251a74e9d4500ab006a601aff7b5f2f4b4288f007",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Viral skin infections",
+      "draftLearningTask": "Compare representative adult and paediatric infections by agent, pathogenesis, appearance and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e5554a426e9840d77bcd616d385f712acb27555d2bc0aca727137aa94ea2549a",
+      "subjectId": "dermatology",
+      "code": "DR8.2",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        408.12,
+        101.6,
+        448.92
+      ],
+      "sourceBodySha256": "b198bdfb825a384dd650eea34f1728c573ec90cb39c667df062ad199e427b6ce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Herpes simplex",
+      "draftLearningTask": "Distinguish herpes simplex and herpes labialis from mimics using lesion pattern and recurrence.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc",
+      "subjectId": "dermatology",
+      "code": "DR8.3",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        448.92,
+        101.6,
+        489.66
+      ],
+      "sourceBodySha256": "c3cf006c4a295efb8510e920a31bfd83af460278926f0566cb7844678300f4d4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Zoster and varicella",
+      "draftLearningTask": "Distinguish dermatomal zoster and generalized varicella from other vesicular eruptions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c4a275fb906bf1d064c6f8a9758bdce676c2dee12505a0b959f3f6bcd4364b2f",
+      "subjectId": "dermatology",
+      "code": "DR8.4",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        489.66,
+        101.6,
+        530.46
+      ],
+      "sourceBodySha256": "28ba2934eb0124eb3f2613df1caf64e0e9baba817c98bd11ea1a3cc9b65bc29d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Viral warts",
+      "draftLearningTask": "Identify common wart patterns and distinguish representative mimics.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3a9313d7e2d374828c178352d2ac2584c1fb60171104127049a64bd40e917e82",
+      "subjectId": "dermatology",
+      "code": "DR8.5",
+      "page": 357,
+      "rowBBox": [
+        39.9,
+        530.46,
+        101.6,
+        544.38
+      ],
+      "sourceBodySha256": "c9deee0d84b2b2ead25be4414ebb37c75deda02e1dd68e6b58261954c8ed97ae",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Molluscum contagiosum",
+      "draftLearningTask": "Identify typical lesions and distinguish them from other papular eruptions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:27436d41e17428291fd6929adb52d166768dfc8791a2a0658f97067396e0fa76",
+      "subjectId": "dermatology",
+      "code": "DR9.1",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        147.66,
+        101.6,
+        175.02
+      ],
+      "sourceBodySha256": "508c2ac1ece68e388f1eeb8db25695840ac94040b7b6d04cad3a3e29b75c0f8f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy classification",
+      "draftLearningTask": "Relate epidemiology, skin and nerve findings to clinical and operational classifications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:af769b02acb25b3d81edc1456110d641eb4c929b434e45b263f52095dfede150",
+      "subjectId": "dermatology",
+      "code": "DR9.2",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        175.02,
+        101.6,
+        202.38
+      ],
+      "sourceBodySha256": "8d0f6b748f528ede4f0faf01a94b51a7deba597aaf212506d769c9ec51f6bd3e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy neurological examination",
+      "draftLearningTask": "Demonstrate sensory, motor and peripheral nerve assessment in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b05f97500b03be63f6d16a24e13fbfd9d92fb9c608f75a5a3b0866f4688483a",
+      "subjectId": "dermatology",
+      "code": "DR9.3",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        202.38,
+        101.6,
+        229.74
+      ],
+      "sourceBodySha256": "5841382cf9c4de64f9319d63a38d52e302da0d34826ebdfc1205deea75e6951a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Slit-skin smear",
+      "draftLearningTask": "Explain indications and document observations from a supervised demonstration.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:735d32d6c50f817a74da52dc29585583b0750cf59e55b784fa6ed4d5d2202538",
+      "subjectId": "dermatology",
+      "code": "DR9.4",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        229.74,
+        101.6,
+        297.36
+      ],
+      "sourceBodySha256": "d49a2f5a6d40e4f216d50d09a669717426c4b0dbcc5073798f393779fd5211b7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lepra reactions",
+      "draftLearningTask": "Distinguish reaction types and justify a simulated plan that addresses nerve injury risk.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:41b51d0312674316ef4793a932046d691c3010b52c31ccb5f3824fb5c99491f2",
+      "subjectId": "dermatology",
+      "code": "DR9.5",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        297.36,
+        101.6,
+        364.92
+      ],
+      "sourceBodySha256": "85abd9d22d3d11cc696c385dbb2477f76e602408643eeff59c60b611e7ca50fa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy management",
+      "draftLearningTask": "Use national and WHO guidance to justify classification, treatment and follow-up in a simulated case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1f0a5bb95cd0d9aee5cec01130e3a3d0cf63f78c3a9b0bc5386b5a3b14d5b452",
+      "subjectId": "dermatology",
+      "code": "DR9.6",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        364.92,
+        101.6,
+        405.72
+      ],
+      "sourceBodySha256": "194b4389ecb90df7d0854f26e91cf63af0eff71d83807a8ee58aec3441d79de7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leprosy complications",
+      "draftLearningTask": "Assess disability and demonstrate counselling on self-care and stigma.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eaec650c19428ac2634fd08cf5ad717dea078f8d5a5785478aa23d300ad810e8",
+      "subjectId": "dermatology",
+      "code": "DR10.1",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        429.3,
+        101.6,
+        477.3
+      ],
+      "sourceBodySha256": "a697f34311a20e6c700048acff573070cf5ee6ed9c446fb40c32b2c6bdf968fe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Syndromic STI management",
+      "draftLearningTask": "Explain the rationale and limitations and apply the appropriate pathway to a sample case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a316ad734e1e13929446bc76d19d326be8363bfc882e379dd67da756812d860f",
+      "subjectId": "dermatology",
+      "code": "DR10.2",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        477.3,
+        101.6,
+        504.66
+      ],
+      "sourceBodySha256": "06a66e4c0fd8c7f3f5cc4dd9ae5acc2485c0652a67aca5e4ca710f7a15768d9e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Syphilis diagnosis",
+      "draftLearningTask": "Match clinical stages to findings and interpret representative treponemal and nontreponemal results.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cad0af833b6bbbfb786fa4ba774e4632e19460775d3d8985ebc3aa6fd29d1120",
+      "subjectId": "dermatology",
+      "code": "DR10.3",
+      "page": 358,
+      "rowBBox": [
+        39.9,
+        504.66,
+        101.6,
+        545.4
+      ],
+      "sourceBodySha256": "e32e5420b67f365559c2e518c87f29ee8d0e843fb6ac45f5b78e108cbdae01f3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chancroid and genital herpes",
+      "draftLearningTask": "Differentiate ulcer presentations and select appropriate diagnostic tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8b4f1d9e28364414e8469971b665dbee19aa5e6b7467c478ad7bdf5424e7623e",
+      "subjectId": "dermatology",
+      "code": "DR10.4",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        106.44,
+        101.6,
+        152.52
+      ],
+      "sourceBodySha256": "5c82282a7c80cdc4f4002ebb056c58ef27bccae6b07efd3d833350d83c80637e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Genital ulcer examination",
+      "draftLearningTask": "Demonstrate consent-based examination with privacy, confidentiality and a chaperone in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f87b0409800fc9c261749ee961b38fbdfd5dc1a170781cb7a58cce844530ee7a",
+      "subjectId": "dermatology",
+      "code": "DR10.5",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        152.52,
+        101.6,
+        193.32
+      ],
+      "sourceBodySha256": "fe613de547b9b8a03d4bb4a97515e5481b979d613a086cae92fd6a6f5dc90b70",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sexual history and counselling",
+      "draftLearningTask": "Elicit a nonjudgmental sexual history and demonstrate safer-sex and pretest HIV counselling.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a0ff8e3a4a0969f1e2f4dd5ce248237d8859d73c42d93af9ce9414ce075551c4",
+      "subjectId": "dermatology",
+      "code": "DR10.6",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        193.32,
+        101.6,
+        247.5
+      ],
+      "sourceBodySha256": "d69f855a98400a6275235af84670aa129d1968873a8ddd7efc40c899f7a73242",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Syphilis and genital ulcers",
+      "draftLearningTask": "Use findings and serology to justify simulated care and referral, including pregnancy and neonatal scenarios.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a5f1ad3c14ee54c2a8d98f6d4de2ef27e11558c55e62c63ad39affe347b27bc5",
+      "subjectId": "dermatology",
+      "code": "DR10.7",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        247.5,
+        101.6,
+        315.12
+      ],
+      "sourceBodySha256": "7cf106d02235a0cbe818281dd9b3fe62cc0f242e988c5a315eb33a5802be89e3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "LGV and donovanosis",
+      "draftLearningTask": "Recognize distinguishing findings and justify management using the applicable syndromic pathway.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ddb3a25f43f1f173b1543a9846a824d6517ec80a649e40d3bad1ef094c028a1e",
+      "subjectId": "dermatology",
+      "code": "DR10.8",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        315.12,
+        101.6,
+        342.36
+      ],
+      "sourceBodySha256": "da170285045c2e95b07b45de3c7cf7ed85086bf4e6bb68e6e82fb90a899cf35f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urethritis",
+      "draftLearningTask": "Compare gonococcal and nongonococcal causes by presentation, testing and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:14cf4e5bc591e7b145aaef7ce54d20d94cb0b7ea2ab7c2f74be66b0cfa2e6076",
+      "subjectId": "dermatology",
+      "code": "DR10.9",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        342.36,
+        101.6,
+        385.68
+      ],
+      "sourceBodySha256": "095a96f82a08adbea8997ac57877ce7df54f676f3893a78fabbaf4db139d1b41",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urethral discharge",
+      "draftLearningTask": "Apply the relevant pathway in simulation and counsel on prevention and partner care.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b750a21d9700af02f65c34e1644d41d0ed6473098133c631638e7c9d3d3f05f",
+      "subjectId": "dermatology",
+      "code": "DR10.10",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        385.68,
+        101.6,
+        418.26
+      ],
+      "sourceBodySha256": "d705bfe6b3bd9e1b479c29b1990ab54cfbb87afe97a1c5fd091ac7a02299c327",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vaginal discharge",
+      "draftLearningTask": "Distinguish likely causes and justify assessment, management and follow-up using the applicable pathway.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:051d81a6fb8eb54b2f79d90087fd137ca8e833ef8d2d424bc7873266a9ddc15c",
+      "subjectId": "dermatology",
+      "code": "DR10.11",
+      "page": 359,
+      "rowBBox": [
+        39.9,
+        418.26,
+        101.6,
+        450.84
+      ],
+      "sourceBodySha256": "ae753854fcf3c0c2e5c627abb4f1392f31498e5c6ba4fd0ab709b1ead2d1ec6b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Genital warts",
+      "draftLearningTask": "Recognize typical lesions and demonstrate discussion of treatment options, prevention and follow-up.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5f7dc597606715092aea3ae01d6d4745a5876970239b737837174897958808e4",
+      "subjectId": "dermatology",
+      "code": "DR11.1",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        106.44,
+        101.6,
+        200.94
+      ],
+      "sourceBodySha256": "69689c0f71f7ebd370c4b2bce57af5878899668b776ea9775156cfb246543020",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV-associated dermatoses",
+      "draftLearningTask": "Use clinical findings and targeted tests to assess representative dermatoses and opportunistic infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ca7cc1046f8349d7c83859ac2f0ca71291a3e52ddfa979ca70f8092844d0fccf",
+      "subjectId": "dermatology",
+      "code": "DR11.2",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        200.94,
+        101.6,
+        268.56
+      ],
+      "sourceBodySha256": "ecbfc6eef26b74e9829d0f4a10386b6481b68ac4e5781959493d6f02bda5fb93",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cutaneous ART reactions",
+      "draftLearningTask": "Recognize representative drug reactions and justify initial assessment and escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bad882e10b58cba51cac6077b20a0bcbdcae2466ec14f0de20b5331f6a875f19",
+      "subjectId": "dermatology",
+      "code": "DR12.1",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        282.42,
+        101.6,
+        363.48
+      ],
+      "sourceBodySha256": "a5f6ee0b04d0c57169a52f9b04890ab90b4422dedc385e032e2dc51b94f32d82",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Eczema recognition",
+      "draftLearningTask": "Distinguish endogenous and exogenous eczema patterns using exposure history and distribution.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:484aad85e60f11cca5df3bf261c4e0fcb1612e538bf8a2896e77c32a45b3d3a6",
+      "subjectId": "dermatology",
+      "code": "DR12.2",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        363.48,
+        101.6,
+        417.66
+      ],
+      "sourceBodySha256": "602b8b6898d87f54e8a2aa22758d268c0be2e7fcfeae86f8727888c819c88de3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Eczema management",
+      "draftLearningTask": "Build a simulated plan and explain topical and systemic options and referral criteria.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90156ae0a956ec915088cc6ef0d783bab00b705d1bac544a29c107e09fdd8a4a",
+      "subjectId": "dermatology",
+      "code": "DR12.3",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        417.66,
+        101.6,
+        458.58
+      ],
+      "sourceBodySha256": "7b61c089b2467b1e607609b45d6ca0bdf879307b0b529ad3ad1b83220011381d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Erythroderma",
+      "draftLearningTask": "Recognize erythroderma and complications and demonstrate stabilization and referral priorities in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1e51361ab0918f09189334c807fd6ec6d1a3680a4a5eb9f7c813590d018ce09b",
+      "subjectId": "dermatology",
+      "code": "DR12.4",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        458.58,
+        101.6,
+        499.2
+      ],
+      "sourceBodySha256": "c331645b1bfc6df9d1fc18107bba7bae3d66ebb39e95660ea070bac2ceaea533",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cutaneous drug reactions",
+      "draftLearningTask": "Distinguish fixed drug eruption, drug hypersensitivity and SJS/TEN using morphology, timing and systemic features.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4dfc208b00c7d5a96c67fb78d4911d5bae413a89c83e1d3558ada5f2561d1e1d",
+      "subjectId": "dermatology",
+      "code": "DR12.5",
+      "page": 360,
+      "rowBBox": [
+        39.9,
+        499.2,
+        101.6,
+        539.94
+      ],
+      "sourceBodySha256": "5d4d446ba568437d99da96577c6ae3e915e2a7441b39c517d82466e0f97b83ec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Initial care for drug reactions",
+      "draftLearningTask": "Assess a simulated reaction, prioritize safety and explain documentation and escalation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:da430573839098afe8e9fd790a30ddbdd6799ed98a69b27d0a7b49c8df5d964e",
+      "subjectId": "dermatology",
+      "code": "DR13.1",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        128.4,
+        101.6,
+        209.46
+      ],
+      "sourceBodySha256": "bb829ae38180b40f3fb8fc30ad240a3fcff6eb166c9d812da2c705eb7dad60ea",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Autoimmune blistering disease",
+      "draftLearningTask": "Differentiate pemphigus and bullous pemphigoid using clinical findings and explain how Nikolsky and bulla spread signs inform assessment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:423037ad6ce211c6a54dc88c9270373315fbd07cbd31fd0cc72fed5c453eb9a3",
+      "subjectId": "dermatology",
+      "code": "DR13.2",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        209.46,
+        101.6,
+        263.58
+      ],
+      "sourceBodySha256": "46aba5e15c1746787e76dc7f6d81abf41406a1cb9338e81afc53817dcde5520f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Initial blistering disorder care",
+      "draftLearningTask": "Demonstrate assessment and supportive care priorities and arrange referral in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c9c99afefbf3bbd6d8ab62875f5801d4fc0eeb60108c95981146d7469abf096a",
+      "subjectId": "dermatology",
+      "code": "DR14.1",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        283.56,
+        101.6,
+        364.56
+      ],
+      "sourceBodySha256": "decc9025b2983343d7f255eabd16fab6bb39b89b894bfc075ea762002a8b0d26",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urticaria and angioedema",
+      "draftLearningTask": "Classify presentations and explain mechanisms and representative triggers.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d242f5999634fdde8556f37fc8f60d687facf638c0c5f7679c49776e3d544be8",
+      "subjectId": "dermatology",
+      "code": "DR14.2",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        364.56,
+        101.6,
+        432.18
+      ],
+      "sourceBodySha256": "cfcf3842683c42d05a6404cdf3b8b9264777e551e5b3162aa4b7ee19f7999c90",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urticaria and angioedema management",
+      "draftLearningTask": "Distinguish wheals and angioedema from mimics, assess airway risk and justify initial care in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8ebaf24e427e3a194b47e5d6f94e4afa2f89e2de0b31ee2054919785c7def6bc",
+      "subjectId": "dermatology",
+      "code": "DR14.3",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        432.18,
+        101.6,
+        459.54
+      ],
+      "sourceBodySha256": "35c2bee77416ef0be3ea9fbc6c459cae3cfbec8a293789135a9cdc0a228a0f59",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dermographism",
+      "draftLearningTask": "Demonstrate elicitation in an appropriate teaching setting and document the response.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:034fe626792e1cff5d32c277c4fa19ae03948f118e23a21394110b07592a18e3",
+      "subjectId": "dermatology",
+      "code": "DR15.1",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        473.46,
+        101.6,
+        514.26
+      ],
+      "sourceBodySha256": "ff8b481f918673c6717693b239b09764528afffe9fc49dc4819272b3cedad86c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bacterial skin infections",
+      "draftLearningTask": "Identify representative presentations and distinguish superficial from deeper infections.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9603c66098a028ff30aa2730f5b9b83f36df8275b60a32b1d56b68d3c72db2d7",
+      "subjectId": "dermatology",
+      "code": "DR15.2",
+      "page": 361,
+      "rowBBox": [
+        39.9,
+        514.26,
+        101.6,
+        541.62
+      ],
+      "sourceBodySha256": "8f3cd49aa45e3b4dc2d7a892e8e9c808bfa6fea2257783b6d039d4233e257919",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pyoderma pharmacotherapy",
+      "draftLearningTask": "Compare indications and adverse effects of topical and systemic agents.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8e18748b26547ef327fbeb06645e954dd5eaf457b6e659093eb36fe9256ac0f1",
+      "subjectId": "dermatology",
+      "code": "DR15.3",
+      "page": 362,
+      "rowBBox": [
+        39.9,
+        147.24,
+        101.6,
+        175.38
+      ],
+      "sourceBodySha256": "cd2bdb3e608e3e19971485f27b2ae08d60260d107062d929c57c05ee809462f6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical referral in pyoderma",
+      "draftLearningTask": "Recognize findings in a sample case that warrant surgical assessment.",
+      "mode": "knowledge"
+    }
+  ]
+}
