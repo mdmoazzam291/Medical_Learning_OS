@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:5cf8d2bf6005211f17d3a32f5756b32ecd061700451ad602c559038451678912",
+      "subjectId": "pediatrics",
+      "code": "PE24.6",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        182.64,
+        103.1,
+        215.16
+      ],
+      "sourceBodySha256": "1f58ef2965bfadc5600f38e4143d75aa9be8d5ce5a94c1e6ad4af97554508928",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emergency oxygen",
+      "draftLearningTask": "Compare paediatric oxygen delivery modes and explain selection and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:066e1ad8ced64f75faf8d2ba19fe6c93cea589dd88b857e7401440f1f57c10cc",
+      "subjectId": "pediatrics",
+      "code": "PE24.7",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        215.16,
+        103.1,
+        240.12
+      ],
+      "sourceBodySha256": "4f849bd6c84b91635c860a42c9d89d5164a2d84b81947ea93b8ab71efb338e4b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oxygen delivery observation",
+      "draftLearningTask": "Observe representative delivery methods and describe setup and safety checks.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479",
+      "subjectId": "pediatrics",
+      "code": "PE24.8",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        240.12,
+        103.1,
+        281.1
+      ],
+      "sourceBodySha256": "ed8f3edd0d398ea93d9292e3b9e7f0e6202e4ff04a448269c77006f60067b950",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory distress assessment",
+      "draftLearningTask": "Demonstrate airway and breathing assessment and recognize cyanosis, severe indrawing and grunting.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1b30cffd09eb30040c3cea97a439d83b49c477128a563e58ea0931c19181d2c7",
+      "subjectId": "pediatrics",
+      "code": "PE24.9",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        281.1,
+        103.1,
+        322.14
+      ],
+      "sourceBodySha256": "ca9aba407d08d959d79103639db93a97c2b1dfbff647f10e752a8c4288871d95",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Airway positioning",
+      "draftLearningTask": "Demonstrate age-appropriate airway positioning for an infant and child in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:96c9b7190765b8fb4b375c380a867147574dc35173c4c11684386a1cc906f1e5",
+      "subjectId": "pediatrics",
+      "code": "PE24.10",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        322.14,
+        103.1,
+        354.72
+      ],
+      "sourceBodySha256": "469d13d46f8be55eb2b1c0184e8c77d346656c84635be724c56a81154f69039d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oxygen administration",
+      "draftLearningTask": "Demonstrate device setup and adjust flow to a simulated child's needs using the applicable protocol.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8d1e3765878dfdde27f664db78001bdac73f42d7c390dd1a7d05328db5abad56",
+      "subjectId": "pediatrics",
+      "code": "PE24.11",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        431.94,
+        103.1,
+        464.52
+      ],
+      "sourceBodySha256": "484fde542229ee4e476768b89cd6c6af8d35aa58b826e3a14090fa40c263c731",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bag-mask ventilation",
+      "draftLearningTask": "Demonstrate mask seal, assisted ventilation and reassessment on a simulator.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:077fffc0a57a240078f51714520c0598c25e1b195c55c41874d1aae90d70ca08",
+      "subjectId": "pediatrics",
+      "code": "PE24.12",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        464.52,
+        103.1,
+        497.1
+      ],
+      "sourceBodySha256": "cdc4e0c4af016ad0d9b4cb0775139b92e8dc6e46daa33f53efacbfe02b467708",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock assessment",
+      "draftLearningTask": "Measure pulse, blood pressure and capillary refill and interpret signs of shock.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+      "subjectId": "pediatrics",
+      "code": "PE24.13",
+      "page": 343,
+      "rowBBox": [
+        51.3,
+        497.1,
+        103.1,
+        529.68
+      ],
+      "sourceBodySha256": "6a12fabeb3c3be4c94ac3152147195cb462985fe0fcc38b08215d0cd290d0524",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emergency IV access",
+      "draftLearningTask": "Secure peripheral IV access and demonstrate safety checks in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:85a091c088792cc88ba1d27f962313aa982fe8a083892a9817356fa4a73603a8",
+      "subjectId": "pediatrics",
+      "code": "PE24.14",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        74.46
+      ],
+      "sourceBodySha256": "0230875d6ece6a8297347392db016d36f960212403d6881292c4f4bbb6a2ff04",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock fluids",
+      "draftLearningTask": "Select a fluid and calculate an initial requirement from simulated case data, then explain reassessment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51",
+      "subjectId": "pediatrics",
+      "code": "PE24.15",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        74.46,
+        103.1,
+        161.28
+      ],
+      "sourceBodySha256": "836a112af95a98d63f1dd34dc5d824199a1dd1f5bdec25c99a3392f97b8a402c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Convulsions and coma",
+      "draftLearningTask": "Assess consciousness, demonstrate positioning with and without suspected trauma, and simulate IV or rectal diazepam use according to the approved protocol.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:390dc78699ccfa028891da9c398aafc53aced64eff4bf969e0eb0c0b40bbd900",
+      "subjectId": "pediatrics",
+      "code": "PE24.16",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        161.28,
+        103.1,
+        178.56
+      ],
+      "sourceBodySha256": "bce3843f5cb557f8e7d5e19563dae5d93ae2db2971615cedd08bfa170319ad78",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Severe dehydration",
+      "draftLearningTask": "Assess a simulated child for signs of severe dehydration and document findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c87e597451e373bcab3d63d1d411e610a9ec6fd2d1bf98545eceed92246500d7",
+      "subjectId": "pediatrics",
+      "code": "PE24.17",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        178.56,
+        103.1,
+        225.84
+      ],
+      "sourceBodySha256": "35e6e726b6a7f0c34b5e6f9080ab30576581f67652a58100cb576c885e102389",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypothermia",
+      "draftLearningTask": "Define hypothermia and explain its presentation, complications and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d6ee30a2bb88b674aa4b61f889c023d51a2f0eb2cdd6bc575165c650db1ee2b8",
+      "subjectId": "pediatrics",
+      "code": "PE24.18",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        225.84,
+        103.1,
+        258.42
+      ],
+      "sourceBodySha256": "3bfff270cff35562dceadb8fa0d82101506e6a5f411b0807671a3e41619b9f14",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skin-to-skin warmth",
+      "draftLearningTask": "Explain benefits, safe positioning and monitoring during skin-to-skin care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+      "subjectId": "pediatrics",
+      "code": "PE24.19",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        258.42,
+        103.1,
+        276.54
+      ],
+      "sourceBodySha256": "286c057be97cc182feeeeb1f501934bd490841433fd0bee25352482e10fcc26f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thermal environment",
+      "draftLearningTask": "Identify environmental heat loss risks and explain measures to maintain temperature.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0",
+      "subjectId": "pediatrics",
+      "code": "PE24.20",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        276.54,
+        103.1,
+        294.54
+      ],
+      "sourceBodySha256": "9ae571109c3e90dda7f5bb1b5bcf3f622a37d226a246191bc26f1b0c9d81a3e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Temperature assessment",
+      "draftLearningTask": "Measure temperature and demonstrate safe warming and monitoring in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e",
+      "subjectId": "pediatrics",
+      "code": "PE24.21",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        294.54,
+        103.1,
+        312.66
+      ],
+      "sourceBodySha256": "310238c52301681b872aae13ab47b142a00933c031019d6ada4708092773e198",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric basic life support",
+      "draftLearningTask": "Demonstrate paediatric BLS on a mannequin using the approved checklist.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c3bba0da8b8e243d9a663357e1735bffdb2e03bd26d5496d3f2944cdfc59b1a4",
+      "subjectId": "pediatrics",
+      "code": "PE24.22",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        312.66,
+        103.1,
+        345.24
+      ],
+      "sourceBodySha256": "d657ce9c36d41f03094111693bbbfa671f8aabe2effa988ab6cb6cb848376084",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Difficult news",
+      "draftLearningTask": "Demonstrate an empathetic discussion with a simulated caregiver of a critically or terminally ill child.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+      "subjectId": "pediatrics",
+      "code": "PE24.23",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        345.24,
+        103.1,
+        370.98
+      ],
+      "sourceBodySha256": "7b043ea59dcb390c86ed9759544a0a7e46d79c17022577c79b9460667a19747c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Informed consent",
+      "draftLearningTask": "Demonstrate informed consent in a paediatric scenario with appropriate caregiver and child involvement.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+      "subjectId": "pediatrics",
+      "code": "PE25.1",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        465.96,
+        103.1,
+        498.54
+      ],
+      "sourceBodySha256": "1b9ae11f7bb8b20cea4faa634c721ba2e89bb5c8ce282fa7d408d9580162c66b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute otitis media",
+      "draftLearningTask": "Link pathogenesis to symptoms and otoscopic findings and justify management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1139bc2886bac06aca47bb594655a664170644ac90a6265e1f63c640326a15b1",
+      "subjectId": "pediatrics",
+      "code": "PE25.2",
+      "page": 344,
+      "rowBBox": [
+        51.3,
+        498.54,
+        103.1,
+        531.12
+      ],
+      "sourceBodySha256": "5c0f15055e1c29aafb10f6b4f159fd0cac44b8f1415d6f89a94b4d9e69371547",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Epiglottitis",
+      "draftLearningTask": "Recognize a simulated presentation and explain safe assessment and urgent airway escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4ceeb1c21fa093105c99482ebf4b39751eaae2df48acebeff3db7ecfd8ee1219",
+      "subjectId": "pediatrics",
+      "code": "PE25.3",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "f0f1f1f5ccfc41f4212db7133f43706635535b59412f51ad1a9625a1936bfe6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Croup",
+      "draftLearningTask": "Explain pathogenesis and use clinical severity to justify management and follow-up.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81",
+      "subjectId": "pediatrics",
+      "code": "PE25.4",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        84.9,
+        103.1,
+        117.54
+      ],
+      "sourceBodySha256": "6600a215df5e2e4e60f63bbaae779220be7128d198df1b8c4f9770a28f0276ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric stridor",
+      "draftLearningTask": "Compare likely causes by onset and clinical findings and explain management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110",
+      "subjectId": "pediatrics",
+      "code": "PE25.5",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        117.54,
+        103.1,
+        150.06
+      ],
+      "sourceBodySha256": "f6c946975b93151e62fb6962db8e6994961da1d30f93ebf64ca917abb3331745",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Foreign body aspiration",
+      "draftLearningTask": "Compare presentations by age and obstruction site and explain immediate and definitive management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d281742f40297c83d2f5e09cef88d2ccddb76b72761dcfd9dffec61d89569d7f",
+      "subjectId": "pediatrics",
+      "code": "PE25.6",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        150.06,
+        103.1,
+        227.34
+      ],
+      "sourceBodySha256": "aaaef170d643535d1e30510de2a8b8038df961850c1625982740eb643307c369",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lower respiratory infections",
+      "draftLearningTask": "Use simulated cases to distinguish bronchiolitis, wheeze-associated infection, pneumonia and empyema and justify testing, management and prevention.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e7e95d879f25c4c87a049462c7580aeaada7686db6885ea509546a72ccda3edc",
+      "subjectId": "pediatrics",
+      "code": "PE26.1",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        249.48,
+        103.1,
+        282.0
+      ],
+      "sourceBodySha256": "872b2226b7f09138e94d72350ea1c27d456b49d63ac29dece09eea13fa928ef7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric anaemia assessment",
+      "draftLearningTask": "Classify anaemia by mechanism and indices and build an assessment plan from clinical findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c84ed01fdb385527d4801e57811ec922d9560c9dc77678134120b8e9a838257e",
+      "subjectId": "pediatrics",
+      "code": "PE26.2",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        282.0,
+        103.1,
+        314.58
+      ],
+      "sourceBodySha256": "85e68ce11e547aad72ccbc2bee307b8bb1fa66dbf787b246bd542e083a4aa9e1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Iron deficiency anaemia",
+      "draftLearningTask": "Connect causes and findings to investigations, treatment and follow-up.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48",
+      "subjectId": "pediatrics",
+      "code": "PE26.3",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        314.58,
+        103.1,
+        347.16
+      ],
+      "sourceBodySha256": "f20fa6b10808a08aed88b03aa9392fa3f010886b397c2a0fa63a1e3d474a8c63",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "B12 and folate deficiency",
+      "draftLearningTask": "Compare mechanisms, clinical findings and management of the two deficiencies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6",
+      "subjectId": "pediatrics",
+      "code": "PE26.4",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        347.16,
+        103.1,
+        394.5
+      ],
+      "sourceBodySha256": "1efbc75d14f6b56ed2de535e9583b9df5dbd70c791b0f23d398ec604d789e53d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemolytic anaemias",
+      "draftLearningTask": "Compare thalassaemia major, sickle cell disease, hereditary spherocytosis and autoimmune haemolysis by mechanisms, findings and care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5",
+      "subjectId": "pediatrics",
+      "code": "PE26.5",
+      "page": 345,
+      "rowBBox": [
+        51.3,
+        503.52,
+        103.1,
+        523.86
+      ],
+      "sourceBodySha256": "fe21c3605e3dca5c95373140c59826b167c683a810999323ea6b18d711933d12",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National anaemia control",
+      "draftLearningTask": "Use official programme documents to explain target groups, prevention, treatment and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d76927e1a3106604246996db0a9ba0f3be3303a1c0ef4a25981d92f8cabc0eb8",
+      "subjectId": "pediatrics",
+      "code": "PE26.6",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        99.6
+      ],
+      "sourceBodySha256": "72a0ecc2ae91bd72615c1f9650348ddf197c7542b900b5f24932f6b79ac8a3ad",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thrombocytopenia and ITP",
+      "draftLearningTask": "Compare causes and recognize representative ITP findings and management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:42ee5ad5337839e1563ccaeef1a4c60232913548eda53f77cc1cad7360938bf7",
+      "subjectId": "pediatrics",
+      "code": "PE26.7",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        99.6,
+        103.1,
+        132.24
+      ],
+      "sourceBodySha256": "03cd479acd19d307fcd864775a96a6e06edf5bfdd0aa3b3ce4c5bc055c353f26",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemophilia",
+      "draftLearningTask": "Compare types and explain inheritance, coagulation defects and bleeding patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e3338738f6c606c44e80f0ea0cd05c3dfc709552b878c24b754a2c43b7de65e3",
+      "subjectId": "pediatrics",
+      "code": "PE26.8",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        132.24,
+        103.1,
+        164.76
+      ],
+      "sourceBodySha256": "10900179b873ddc3d8579cbdf4b4f91aa4f7af8f060656f903292f948a33f7a1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute lymphoblastic leukaemia",
+      "draftLearningTask": "Relate pathogenesis to presentation and explain diagnostic and specialist management pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:624f7dd9a7b452ff18d7a1916385beeef58cc507b1654b92384f27f973b31cd5",
+      "subjectId": "pediatrics",
+      "code": "PE26.9",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        164.76,
+        103.1,
+        197.34
+      ],
+      "sourceBodySha256": "1882934fd6bdd5b055190a4d474459c081f356143188a9baced8c5379f88ab91",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric lymphoma",
+      "draftLearningTask": "Compare representative presentations and explain investigation, referral and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:196f3610d0e9e80fcdbf03e1805b918efa1d8bc723b2e6aa226c4fc4a5a7c1df",
+      "subjectId": "pediatrics",
+      "code": "PE26.10",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        197.34,
+        103.1,
+        216.3
+      ],
+      "sourceBodySha256": "42a40f12624a6641ae59af4ea3bc4dbb9935c66c3d630e717f3f2ac8c66c25c2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organomegaly examination",
+      "draftLearningTask": "Demonstrate abdominal examination and document liver and spleen findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:37e9212d5e67c68a4dc9f16fc927d24fea9ce882b02b180dd8667955088c9c20",
+      "subjectId": "pediatrics",
+      "code": "PE26.11",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        216.3,
+        103.1,
+        234.42
+      ],
+      "sourceBodySha256": "29c2205612c381a631dc63d566eab83f750116461aef696bb66e7a2ccb7616ac",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CBC and liver tests",
+      "draftLearningTask": "Interpret representative complete blood count and liver function panels in clinical context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:24026ff7e34ad5467d13d1648f2ef909412db7f9535e030720be0333745bcc5f",
+      "subjectId": "pediatrics",
+      "code": "PE26.12",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        234.42,
+        103.1,
+        261.0
+      ],
+      "sourceBodySha256": "b6d3f85e17031f5fef0077c8fe9bcfa756875bba0adda2feded49897a2014fff",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral blood smear",
+      "draftLearningTask": "Prepare or examine approved teaching material and report representative morphological findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:99f5aab8ff84cbe5dba90fbbf075e4b8ed07f02517ad3d777374ad82e935ea99",
+      "subjectId": "pediatrics",
+      "code": "PE26.13",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        261.0,
+        103.1,
+        293.58
+      ],
+      "sourceBodySha256": "fb3d304eb16d3f273cf007d92ccbc3392711574b8e6c9a3f2075a7649558d022",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemoglobin electrophoresis",
+      "draftLearningTask": "Explain indications and interpret representative reports and limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9cdfa856b29298e136662ea701c6384b264c4d9e687c28276a4c265e831653ae",
+      "subjectId": "pediatrics",
+      "code": "PE26.14",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        293.58,
+        103.1,
+        320.16
+      ],
+      "sourceBodySha256": "ae5130a6ce390de0ec9351249c750d0c86d9460dc7cb0c71dbe88bdebf60bffe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bone marrow aspiration",
+      "draftLearningTask": "Demonstrate preparation and technique on a mannequin using the approved checklist.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fbc00272908e94bfe13438a6315f3f2c999f46edf3c64ee9ecb3b9fe4851d4f5",
+      "subjectId": "pediatrics",
+      "code": "PE26.15",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        320.16,
+        103.1,
+        337.44
+      ],
+      "sourceBodySha256": "6899730c5a4ee03e43d0f5aa1b019081027fc55868a53d70e21e9dd608d1997f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haematology referral",
+      "draftLearningTask": "Use simulated cases to identify referral criteria and communicate urgency.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+      "subjectId": "pediatrics",
+      "code": "PE26.16",
+      "page": 346,
+      "rowBBox": [
+        51.3,
+        337.44,
+        103.1,
+        370.08
+      ],
+      "sourceBodySha256": "8a96291ea16adbcc3fcd8392b4d552ccfbcd53e568fe94dd827b4d64b0176b9c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia counselling",
+      "draftLearningTask": "Explain prevention, treatment and follow-up to a simulated child and caregiver using teach-back.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}
