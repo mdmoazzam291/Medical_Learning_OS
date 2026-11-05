@@ -1,0 +1,961 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:eb14a8a46c6f8d58644de4652391f9696e5045e98e834e1214036464f9d6f10d",
+      "subjectId": "pediatrics",
+      "code": "PE8.1",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        215.64,
+        103.1,
+        230.64
+      ],
+      "sourceBodySha256": "6b5a3ec5f6a5da7fbe66123de4dfb1f83acc70e4d38e2c060aad109fd56e21a8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Complementary feeding",
+      "draftLearningTask": "Define complementary feeding and explain its relationship to continued breastfeeding.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f45f5b63dc1c4b60ce1deea298623a4673b717259568106a2c7954d677811901",
+      "subjectId": "pediatrics",
+      "code": "PE8.2",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        230.64,
+        103.1,
+        263.28
+      ],
+      "sourceBodySha256": "b53044dc606b0b1cb0ed18e1348081602936a277a406bad7faa6a28c1b243de1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Complementary feeding principles",
+      "draftLearningTask": "Explain when to begin and how texture, frequency, feeding technique and hygiene change with age.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:05bf592c81917187358bdf9d3109b6591bbf87df3af94a951835d60dc8ad6bc3",
+      "subjectId": "pediatrics",
+      "code": "PE8.3",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        338.58,
+        103.1,
+        353.64
+      ],
+      "sourceBodySha256": "5277bc8d23e6b583010c147a473e6543edc6c5ffcdebc349b51791d6bc430c78",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Complementary foods",
+      "draftLearningTask": "Identify locally available complementary foods and group them by nutritional contribution.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:abb8ce5a35b544f2db30f60abe8b6640f4e1451710e69af45f01a114053978ef",
+      "subjectId": "pediatrics",
+      "code": "PE8.4",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        353.64,
+        103.1,
+        368.7
+      ],
+      "sourceBodySha256": "0f2dd2e7f74a2d5a126e9f2956a23d4553ff92cbbc9d65ffa9bcec714d9c87b6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Feeding history",
+      "draftLearningTask": "Elicit a caregiver history covering foods, portions, frequency, consistency and feeding practices.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f1316dc70af7255cb77d49e7f76e821f9f32156434472bf1b500b394b26e293a",
+      "subjectId": "pediatrics",
+      "code": "PE8.5",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        368.7,
+        103.1,
+        401.28
+      ],
+      "sourceBodySha256": "e98d773a5bf52c043e4bd1ef1443dba1490326dccf87c019270e71a65373739a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Complementary feeding counselling",
+      "draftLearningTask": "Use teach-back to agree on feasible, age-appropriate feeding changes with a simulated caregiver.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3e8ad232310942347ab306aaa8cbb3f84cc2d6cf820c229b9da081fb030d6591",
+      "subjectId": "pediatrics",
+      "code": "PE9.1",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        421.62,
+        103.1,
+        454.14
+      ],
+      "sourceBodySha256": "0b72dabb2daa78f4671235afb570415f1251e64bbdf610b51f56fc1666058975",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Age-specific nutrition",
+      "draftLearningTask": "Compare energy, macro- and micronutrient needs in infancy, childhood and adolescence.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2b674253409097e59e950eb7e91659d1a1df18c7b98051834afce72dfd3fae25",
+      "subjectId": "pediatrics",
+      "code": "PE9.2",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        454.14,
+        103.1,
+        486.78
+      ],
+      "sourceBodySha256": "2c1693e7d5c912c87835ceabcac8ac793e1ef81ea834535865c1c78d8fe8d816",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutrition assessment methods",
+      "draftLearningTask": "Select and explain tools for nutritional assessment and classification across paediatric age groups.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1e95c83dfb4511ea78472f32aa3647487d61e807fd0ce1330d24b7ad90d7aa1e",
+      "subjectId": "pediatrics",
+      "code": "PE9.3",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        486.78,
+        103.1,
+        502.14
+      ],
+      "sourceBodySha256": "5addf29126fd0f9730f1e28637609a418b0e88549c440e499b8ad4b62678d9d8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Energy in Indian foods",
+      "draftLearningTask": "Estimate and compare energy per serving for representative Indian foods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dacd64cef1edca627f8e708118c2d9110f3bbfdcd07d9fca3cda7f05d936e61f",
+      "subjectId": "pediatrics",
+      "code": "PE9.4",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        502.14,
+        103.1,
+        534.72
+      ],
+      "sourceBodySha256": "b8616e696c699b820534720668c16ed5712354f542818de62a7ee1c1d9fe41dd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dietary recall",
+      "draftLearningTask": "Elicit, document and present a nutrition history and structured dietary recall.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3469e86b20b940eb36e3d7ed56bbc5abb845df69e626340f6b1b40bd8711b230",
+      "subjectId": "pediatrics",
+      "code": "PE9.5",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "03327da556fda9f208c14e72f8350182787712ef073b7d5615237e7ce8de0819",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Energy requirement and gap",
+      "draftLearningTask": "Estimate energy needs in representative healthy and ill children and calculate the gap from reported intake.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c1e6279be1b7ff458602d19f14eaa0f5cea9de738530111e073437483b663298",
+      "subjectId": "pediatrics",
+      "code": "PE9.6",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        84.9,
+        103.1,
+        117.48
+      ],
+      "sourceBodySha256": "3a01a62ffad2d6069a0d3a10b66948e4fc89119b42bfea11b40e653e84db8a85",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutrition classification",
+      "draftLearningTask": "Interpret anthropometry and supporting findings and classify nutritional status by age.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:93ace10dc3141df70bb03d1da3713ad371109f7db53678c17b3509f29d624890",
+      "subjectId": "pediatrics",
+      "code": "PE9.7",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        117.48,
+        103.1,
+        133.74
+      ],
+      "sourceBodySha256": "2a40127ffe110da115924206e9df3ad285f31a2c006e4ee952cefaf5672b76d6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric diet planning",
+      "draftLearningTask": "Plan and justify an age-appropriate diet for representative healthy and ill children.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c6db74745a32b764f46a6a734990063056ce3ebd6b92ab29803effb93bf28f6e",
+      "subjectId": "pediatrics",
+      "code": "PE10.1",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        155.88,
+        103.1,
+        213.84
+      ],
+      "sourceBodySha256": "a9f302ba0d26b147f09cc7fdc4b16211be1ef68d4bb75aa7fe4976fc1c4b65d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute malnutrition",
+      "draftLearningTask": "Compare causes, WHO classifications, manifestations, complications and management principles of severe and moderate acute malnutrition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:48003a49f17b6b5cd041fc9c230883ef5fb10f269949f20183c48b3691a668b6",
+      "subjectId": "pediatrics",
+      "code": "PE10.2",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        213.84,
+        103.1,
+        231.96
+      ],
+      "sourceBodySha256": "57759fe2a39980e47ca5186ad13b50a8bfb578e9ac4edf15b08a6550fb33803b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Approach to acute malnutrition",
+      "draftLearningTask": "Outline assessment for severity, complications and suitability for inpatient or community care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f99ba45016864aaa4b2e3873a6321856e0b09b8bb4f65c65f94c5dfb480f4f2",
+      "subjectId": "pediatrics",
+      "code": "PE10.3",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        231.96,
+        103.1,
+        275.7
+      ],
+      "sourceBodySha256": "99a9f85f6f74875f9bf75da6322a44c64e8665f6fce589eeadf4b1acb68c4143",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Malnutrition care planning",
+      "draftLearningTask": "Classify a simulated child and plan treatment setting, rehabilitation, follow-up and prevention.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:00af7c0ba523493dac28a6bde8a0821b6c7302d76918f7b18d1f563efcd684e6",
+      "subjectId": "pediatrics",
+      "code": "PE10.4",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        351.0,
+        103.1,
+        379.38
+      ],
+      "sourceBodySha256": "3e2ddfec36cb2c654de1a626b3090ac9ff5f0c2aab350998ab732a7604924d67",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Malnutrition counselling",
+      "draftLearningTask": "Explain feeding, follow-up and warning signs to a simulated caregiver.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742",
+      "subjectId": "pediatrics",
+      "code": "PE10.5",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        379.38,
+        103.1,
+        412.02
+      ],
+      "sourceBodySha256": "dd9a6a905d26d3849de47671eb4cb704c86604c48d0b801ccd1d698fffe54b8d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Therapeutic diets",
+      "draftLearningTask": "Compare the roles and practical constraints of locally prepared and ready-to-use therapeutic diets.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce6c07a139035b5c64d6d38d0e1872ae850e11efcb3de83dd46a7b6db056b8ad",
+      "subjectId": "pediatrics",
+      "code": "PE10.6",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        412.02,
+        103.1,
+        429.18
+      ],
+      "sourceBodySha256": "5c8c051453d016dc10ffc96a49bbdf4bca4e09757fdab04fbf016b26e24531b8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent nutrition",
+      "draftLearningTask": "Connect adolescent nutritional needs to common deficiencies and other nutrition problems.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2ef4a053ac82b57315848b27af63ad2bdffde3fd4e10bd937e7520150e3c6435",
+      "subjectId": "pediatrics",
+      "code": "PE11.1",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        447.24,
+        103.1,
+        479.82
+      ],
+      "sourceBodySha256": "b9b58d1b8dc0d390c19e596c7503662fdd9453eeedd58ef54cd7d82c9a51b371",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Childhood obesity",
+      "draftLearningTask": "Compare contributing factors, clinical findings and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4",
+      "subjectId": "pediatrics",
+      "code": "PE11.2",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        479.82,
+        103.1,
+        512.4
+      ],
+      "sourceBodySha256": "f6af6c65e494adecca1edc5407b8c8b8dc5b90e6e326311b922095f58791240a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity risk and prevention",
+      "draftLearningTask": "Assess representative risk factors and identify prevention measures at family and community levels.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+      "subjectId": "pediatrics",
+      "code": "PE11.3",
+      "page": 333,
+      "rowBBox": [
+        51.3,
+        512.4,
+        103.1,
+        544.98
+      ],
+      "sourceBodySha256": "7b939c00dd1f78ea653a918381cf9de1f67c88bcc836e735b901a2c862008545",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity history",
+      "draftLearningTask": "Elicit diet and activity history, perform dietary recall and plot growth in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+      "subjectId": "pediatrics",
+      "code": "PE11.4",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        96.0
+      ],
+      "sourceBodySha256": "940a56c7b7576b471cf88a1dbef70b8cfb6a3a5ded172a4fc5558bb955bf596d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity examination",
+      "draftLearningTask": "Calculate and interpret age-adjusted BMI, measure waist and hip circumference and document representative physical findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f88a93b943fabbbb5578720c43e8fd75e1e1a15653eb39a41eb4f55a9e5963ff",
+      "subjectId": "pediatrics",
+      "code": "PE12.1",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        119.1,
+        103.1,
+        136.74
+      ],
+      "sourceBodySha256": "33ed8f5bee7579a49c94cc53bffbb3dc613fa8b0d30e972e3795a56d5da3788a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin A physiology",
+      "draftLearningTask": "Use age-specific reference values to compare requirements and sources and explain absorption and metabolism.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c05c124ac71e9ac3c27e3c4b7d7dcc13a3b6c928296a851b2ba48a3fdde457e9",
+      "subjectId": "pediatrics",
+      "code": "PE12.2",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        136.74,
+        103.1,
+        169.26
+      ],
+      "sourceBodySha256": "9286877196a87c3c7a93bb7a0b72f2301f3bdd0217e07cfa539f5a594f84172e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin A deficiency and excess",
+      "draftLearningTask": "Compare causes, clinical stages, diagnostic findings and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049",
+      "subjectId": "pediatrics",
+      "code": "PE12.3",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        169.26,
+        103.1,
+        201.84
+      ],
+      "sourceBodySha256": "6f6e15a22265fe49d11050ce250faa2f6d477c0b9b745da4ce1910c9d0f05efe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin D disorders",
+      "draftLearningTask": "Distinguish rickets and vitamin D excess using clinical and laboratory findings and explain management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e566838cdebcdba19f826d9deda1f9bbc3f1555aaa63a676e1fae630b591feb4",
+      "subjectId": "pediatrics",
+      "code": "PE12.4",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        201.84,
+        103.1,
+        234.42
+      ],
+      "sourceBodySha256": "630f3be6cbab21c0ac7138b2eba775f4dfffbb0f9310c2e06be4ee25d46d3c63",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin E deficiency",
+      "draftLearningTask": "Recognize risk settings and representative findings and explain evaluation and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:340b7160234c4a7683583ec3d217578550e35cd04fcef364766163b78433d82e",
+      "subjectId": "pediatrics",
+      "code": "PE12.5",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        234.42,
+        103.1,
+        267.06
+      ],
+      "sourceBodySha256": "549a93bb2ec9a8d183252be2cd1e8d709a2c4223b90fa2a254c36a966d3b3289",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin K physiology",
+      "draftLearningTask": "Compare age-specific requirements and dietary sources and explain vitamin K-dependent functions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:833a138d444d9db1941d373c0256b2d097226f98f59b3f4acbd6bd7d10a0dad7",
+      "subjectId": "pediatrics",
+      "code": "PE12.6",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        343.5,
+        103.1,
+        376.08
+      ],
+      "sourceBodySha256": "fa8136b46bfc194d52fcdc75fda3282b732f9a22fe6d120c74dcbf4286888196",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin K deficiency",
+      "draftLearningTask": "Recognize representative deficiency presentations and explain diagnosis, management and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fc5af4da0b4f6bfead4dfeda236420a2878206bb06f801510dceb815c92903d2",
+      "subjectId": "pediatrics",
+      "code": "PE12.7",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        376.08,
+        103.1,
+        408.66
+      ],
+      "sourceBodySha256": "2fd495052f00ebd03916515060b80ffd16094eed7a79cbaf26489eca667699a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "B-complex deficiencies",
+      "draftLearningTask": "Match representative deficiencies to causes, manifestations, investigations and treatment principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3a3899eac7eaa8c5606b718f2f5dc28cc39511f9db507b5235bec2ffb4456661",
+      "subjectId": "pediatrics",
+      "code": "PE12.8",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        408.66,
+        103.1,
+        441.18
+      ],
+      "sourceBodySha256": "42a383f475da1225d17b3b0980a82ddef5a671fcb17a7015b03c9cd1273312c4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamin C",
+      "draftLearningTask": "Explain requirements, dietary sources and functions and recognize and outline management of deficiency.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fe82c22f87ab47d3791f51744d9dc235b5cd407219583df83a5311972dcb90ab",
+      "subjectId": "pediatrics",
+      "code": "PE13.1",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        460.2,
+        103.1,
+        492.78
+      ],
+      "sourceBodySha256": "16713c0cdc420a8afad387fb6c62ca9ce4675253a992f0c5766fa3cf35841e41",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Iron",
+      "draftLearningTask": "Compare requirements and food sources and connect iron function to deficiency findings and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6",
+      "subjectId": "pediatrics",
+      "code": "PE13.2",
+      "page": 334,
+      "rowBBox": [
+        51.3,
+        492.78,
+        103.1,
+        525.36
+      ],
+      "sourceBodySha256": "5b78ca56f0bce87cfb5b09371a14c024a72de8d947528f2eea6adbd7b054d951",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National anaemia control",
+      "draftLearningTask": "Use current official programme documents to summarize target groups, interventions and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728",
+      "subjectId": "pediatrics",
+      "code": "PE13.3",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.96
+      ],
+      "sourceBodySha256": "90560e5c698bb095ea7caf1d8fe0432d4bc94b4d451eef6acd765c02c6c8aa3d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Iodine and goitre control",
+      "draftLearningTask": "Relate requirements and sources to thyroid function and deficiency and explain programme measures using official guidance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8",
+      "subjectId": "pediatrics",
+      "code": "PE13.4",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        84.96,
+        103.1,
+        128.64
+      ],
+      "sourceBodySha256": "9fa4e7ed5d89a64a6dde6c3c1a88c1c05aa45f841d96beb72b4c07305114e0f6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Calcium and magnesium",
+      "draftLearningTask": "Compare requirements, sources and physiological roles and explain recognition and management of deficiency.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c021af730abedca198c60c76fe19baf9805b349fb8336f4073259a70bbc1fa1a",
+      "subjectId": "pediatrics",
+      "code": "PE14.1",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        150.3,
+        103.1,
+        182.88
+      ],
+      "sourceBodySha256": "d8bd0f736bcd83e64d52f52f243ad7ffb108c61e3f21a0887ca59530077a0570",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Kerosene ingestion",
+      "draftLearningTask": "Recognize risk factors and aspiration findings and explain assessment and management in simulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5",
+      "subjectId": "pediatrics",
+      "code": "PE14.2",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        182.88,
+        103.1,
+        215.46
+      ],
+      "sourceBodySha256": "868ab7e86926ef4477c03c2fc44a6242544d243d39e64d018e67cf1ea9661f75",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organophosphate poisoning",
+      "draftLearningTask": "Recognize a representative toxidrome and explain diagnosis, stabilization and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7",
+      "subjectId": "pediatrics",
+      "code": "PE14.3",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        215.46,
+        103.1,
+        248.04
+      ],
+      "sourceBodySha256": "ef492c58097d91470ca6366841b6758e4e5c520bea2f6c430af123116413b912",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paracetamol poisoning",
+      "draftLearningTask": "Use a simulated exposure history and supplied investigations to explain risk assessment and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ab71fe424f01d00cea0f6c75fc5748903b8c0d78a28efa5eca6bb44066fbf778",
+      "subjectId": "pediatrics",
+      "code": "PE15.1",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        267.0,
+        103.1,
+        284.64
+      ],
+      "sourceBodySha256": "2c13480188be686fdc24bb1fe2f9ee3d999851e458a2d91b6a7fbe4b5d732b3d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fluid and electrolyte needs",
+      "draftLearningTask": "Estimate representative requirements in health and explain adjustments for illness and losses.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199",
+      "subjectId": "pediatrics",
+      "code": "PE15.2",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        359.94,
+        103.1,
+        392.52
+      ],
+      "sourceBodySha256": "e49967c7a9faea6210224091fde7841b4af69a446c9c6a76f1a4f9b6b5d4295a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sodium and potassium disorders",
+      "draftLearningTask": "Interpret a supplied electrolyte panel and justify safe management and monitoring in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+      "subjectId": "pediatrics",
+      "code": "PE15.3",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        392.52,
+        103.1,
+        409.68
+      ],
+      "sourceBodySha256": "2a8c44e3a7f0f26bf5e4dba2ceb82fe7b6d310b2a6475a58ad03ac12fd471a64",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral IV access",
+      "draftLearningTask": "Demonstrate paediatric peripheral cannulation and safety checks on a model.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:78e12b78188193519394584ab1a5d692cc362de37fee15f5a0f6f3cf546d7f1f",
+      "subjectId": "pediatrics",
+      "code": "PE15.4",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        409.68,
+        103.1,
+        427.8
+      ],
+      "sourceBodySha256": "c067cc201860923c67d66551ce1a29251a21e3569ed3ad371aaebfa6b737aa33",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Intraosseous access",
+      "draftLearningTask": "Demonstrate intraosseous access and confirmation on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8a952afba06c9846fbfe7a1b8edac36a0abcdefcaed58b3dcc0bce33efcf0bd4",
+      "subjectId": "pediatrics",
+      "code": "PE16.1",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        445.86,
+        103.1,
+        478.44
+      ],
+      "sourceBodySha256": "383c0ad0ba3bb74e589a446935574c8c3ec6ff99d3ee7deeea911fb476382d13",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "IMNCI risk classification",
+      "draftLearningTask": "Explain guideline components and how assessment findings determine risk and next steps.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4240d18e1996fc5a0278f42dd8f95dd4465a212ba3320ec9a75100d4e9c8eac8",
+      "subjectId": "pediatrics",
+      "code": "PE16.2",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        478.44,
+        103.1,
+        503.7
+      ],
+      "sourceBodySha256": "7b53fc1be06778bd918b33cf98cd95dce9133c1acb677cd91dec075c6c81f143",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Young infant IMNCI assessment",
+      "draftLearningTask": "Assess a simulated infant under two months using the applicable IMNCI checklist.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8a10186d4f07729dbf214858fae1d2e0a9a2d407a951a17d2f739ba924f3f15f",
+      "subjectId": "pediatrics",
+      "code": "PE16.3",
+      "page": 335,
+      "rowBBox": [
+        51.3,
+        503.7,
+        103.1,
+        536.34
+      ],
+      "sourceBodySha256": "46f74f047649ac7670d788860123238ab49b821e4e71c3516b6475a504e59708",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Child IMNCI assessment",
+      "draftLearningTask": "Assess and classify a simulated child aged two months to five years.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a13a0b360443a80d45c7929f798b5679eeac9a49d937d58ad8493d142834a5e",
+      "subjectId": "pediatrics",
+      "code": "PE16.4",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "0f638e82a78d323051db08c23c05e7649ae94a740bd3faad479fabb0b4dd3670",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "IMNCI undernutrition referral",
+      "draftLearningTask": "Identify undernutrition using applicable criteria and demonstrate referral planning.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f4ca17dc359e33d8e02eeb4c5dd3da7785659b695bcc1fcf50cb63dc5b660cf4",
+      "subjectId": "pediatrics",
+      "code": "PE16.5",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        84.9,
+        103.1,
+        109.74
+      ],
+      "sourceBodySha256": "527bedb9bcf291ef60dbb20474d36647b2c942cf32abd51424c96a244ad738c4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sick neonate risk",
+      "draftLearningTask": "Apply IMNCI findings to classify a simulated sick neonate and identify escalation needs.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6606f00a36e80d94f97fd2b3c26b5b64eb70970014390f36fc1ba5246eb09f6b",
+      "subjectId": "pediatrics",
+      "code": "PE16.6",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        109.74,
+        103.1,
+        142.32
+      ],
+      "sourceBodySha256": "5f5599b520a1dc5debf9f172f00a1894c6f058d819a0f6bbea427ccacc8fe29d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoeal dehydration referral",
+      "draftLearningTask": "Classify dehydration using IMNCI and demonstrate referral and initial care planning in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf",
+      "subjectId": "pediatrics",
+      "code": "PE17.1",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        164.4,
+        103.1,
+        235.68
+      ],
+      "sourceBodySha256": "15e73424721762fe288be541662ad9e76f9f87829af26e60bf1a8e0a86000165",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Maternal and child health programmes",
+      "draftLearningTask": "Use official documents to compare NHM, RCH, RMNCH+A, RBSK, RKSK, JSSK, Mission Indradhanush and ICDS by goals and service pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:abce99daeb111c33d77aa6cb4a854b3f88bbea3cc2dd49d947621f50e7520b33",
+      "subjectId": "pediatrics",
+      "code": "PE18.1",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        257.34,
+        103.1,
+        289.92
+      ],
+      "sourceBodySha256": "9c50bc5e93d619fae5a907a5ff1512660722daf4e2d23a089fb6dc65212fd626",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National immunization programme",
+      "draftLearningTask": "Explain programme components and use the applicable official schedule to review a sample record.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:155ff53e14966175824c2de0e5482edfac92e6ca05266184caa72c7fbd71bb92",
+      "subjectId": "pediatrics",
+      "code": "PE18.2",
+      "page": 336,
+      "rowBBox": [
+        51.3,
+        289.92,
+        103.1,
+        306.72
+      ],
+      "sourceBodySha256": "23311422d88c346e5b03d81a3098a99623553a3b2bccad35d6319e66c9a4219a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vaccine-preventable disease epidemiology",
+      "draftLearningTask": "Compare transmission and population patterns and explain how surveillance informs immunization priorities.",
+      "mode": "knowledge"
+    }
+  ]
+}
