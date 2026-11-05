@@ -1,3 +1,7 @@
+## Medicine compound objective checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `b7ecdb23607ceb03fce43a439a47c31ed1f7a537` splits GM26.13, GM26.18, GM26.23, GM27.9 and GM28.15 into 21 assessable draft objectives. Checked all five against the pinned PDF row and confirmed exact remote file readback. The production read-only request timed out. The 14 identity candidates still need a current authenticated registry readback. Next, compare candidates with the current registry and review the split objectives for identity, clinical scope and source alignment. Application tests were not run for this evidence-only change.
+
 ## Medicine identity and objective scope checkpoint — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `15633afabae7457d4d3abf336d69be075b63f9e9` partitions the 130 verified appearances into 20 review groups and identifies 14 checked-in candidate IDs across five partial-match rows. Verified group coverage against the draft packets, candidate IDs against the branch intake packets and exact remote readback. Candidate identities still require current registry readback. No acceptance decisions were made. Next, verify the five candidates' registry scopes and split the five compound rows listed in the review. Application tests were not run for this evidence-only change.
