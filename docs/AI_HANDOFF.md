@@ -1,3 +1,7 @@
+## Medicine identity and objective scope checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `15633afabae7457d4d3abf336d69be075b63f9e9` partitions the 130 verified appearances into 20 review groups and identifies 14 checked-in candidate IDs across five partial-match rows. Verified group coverage against the draft packets, candidate IDs against the branch intake packets and exact remote readback. Candidate identities still require current registry readback. No acceptance decisions were made. Next, verify the five candidates' registry scopes and split the five compound rows listed in the review. Application tests were not run for this evidence-only change.
+
 ## NMC Medicine source-row verification — 2026-11-05 22:53 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `fb4253f529c723e63f1441158f3f7a86acd24777`. Rebuilt the pinned NMC review queue with PyMuPDF 1.26.6, the byte-matched September 2024 PDF, and the frozen row inventory. The builder reproduced the checked-in catalogue and returned 2,634 appearances across 19 subjects. Verified 130 distinct Medicine references by code, page, eligibility, bounding box and reconstructed row SHA-256. Replaced the three staging files with regular draft review packets, preserving task wording. Forty-seven tasks carry a performance component. Exact remote packet readback passed.
