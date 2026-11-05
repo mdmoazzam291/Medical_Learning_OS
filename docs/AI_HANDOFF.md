@@ -1,3 +1,7 @@
+## Medicine identity semantic review — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `52aa07b4a0e370a4b207cb52135fad0c1dd429a5` reviews all five proposed identities and 14 intake IDs. Retains two proposals as written and recommends label or alias changes for malaria relapse, suspected COPD spirometry and asthma maintenance. Verified candidate accounting and exact remote readback. Next, recheck the revised COPD wording for collisions and prepare the five Admin draft submissions. Identity acceptance, clinical review and source alignment remain pending.
+
 ## Medicine identity proposal checkpoint — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `e2582d8213ea55fa20fc9c0fee1dbdca93f2d400` prepares five scoped identity proposals. Read-only production preflight found one pending proposal and no matches for the 14 prior IDs, relevant pending terms, or normalized labels and aliases for the five new candidates. Verified source membership and exact remote packet readback. Next, review semantic overlap and use the owner-authenticated Concept drafts editor for approved submissions. Clinical and source review remain separate. No production drafts were saved.
