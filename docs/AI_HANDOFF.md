@@ -1,3 +1,7 @@
+## General Medicine draft checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `c702a5474d14489a61bfd1edf23c7bd8ff3d0abc`. Added 40 tasks for GM20.2–GM24.2, including 7 performance tasks. Checked source reference membership, codes and uniqueness against the pinned NMC curriculum and verified exact remote file content. Application tests were not run for this evidence-only batch. Clinical and source approval and learner activation are pending. The first-draft backlog is 174 appearances, excluding source-resolution entries. Next action: continue General Medicine after GM24.2.
+
 ## General Medicine draft checkpoint — 2026-11-05 20:22 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `eb55576d7b4f45020f0b8fda553d58ac828b7c37`. Added 40 original learning tasks for GM17.1–GM20.1, including 19 with a performance component. Verified reference membership and uniqueness within the batch, checked competency codes against the pinned PDF and confirmed exact remote readback. Documentation-only content batch, so the application test suite was not run. Drafts require identity and source-alignment review before activation. The running first-draft backlog is 214 appearances, excluding source-resolution entries. Next action: continue General Medicine from GM20.2 on this draft branch.
