@@ -1,3 +1,7 @@
+## General Medicine draft checkpoint — 2026-11-05 20:22 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `eb55576d7b4f45020f0b8fda553d58ac828b7c37`. Added 40 original learning tasks for GM17.1–GM20.1, including 19 with a performance component. Verified reference membership and uniqueness within the batch, checked competency codes against the pinned PDF and confirmed exact remote readback. Documentation-only content batch, so the application test suite was not run. Drafts require identity and source-alignment review before activation. The running first-draft backlog is 214 appearances, excluding source-resolution entries. Next action: continue General Medicine from GM20.2 on this draft branch.
+
 ## Objective draft batch 2 — 4 November 2026
 
 Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.
