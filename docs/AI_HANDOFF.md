@@ -1,3 +1,9 @@
+## NMC Medicine source-row verification — 2026-11-05 22:53 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `fb4253f529c723e63f1441158f3f7a86acd24777`. Rebuilt the pinned NMC review queue with PyMuPDF 1.26.6, the byte-matched September 2024 PDF, and the frozen row inventory. The builder reproduced the checked-in catalogue and returned 2,634 appearances across 19 subjects. Verified 130 distinct Medicine references by code, page, eligibility, bounding box and reconstructed row SHA-256. Replaced the three staging files with regular draft review packets, preserving task wording. Forty-seven tasks carry a performance component. Exact remote packet readback passed.
+
+Next, review canonical identities, compound competency coverage and clinical/source alignment before intake or learner activation. The 21 source exceptions remain tracked separately. Application tests were not run for this evidence-only change.
+
 ## NMC source exception checkpoint — 5 November 2026 IST
 
 Draft PR #415. Commit `7ac137fb9a4c637a9851b493c7bf20a8d677e621` records dispositions for all 21 catalogue exceptions. Official corrigendum replaces PY9.1 and PE6.4 and deletes PS9.2. Seven printed identifiers have collision-free candidate aliases, and eleven Surgery rows have two inferred topic groupings. The latter eighteen await editorial review. The catalogue and active data were left intact. Exact pinned PDF row verification for the 130 staged drafts remains blocked by the unavailable execution environment.
