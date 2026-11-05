@@ -1,3 +1,7 @@
+## Medicine canonical registry readback — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `8e96f4d0b33469843c99c8fbc37639ff0e9c1514` verifies that the 14 repository candidates are absent from both learner catalogue version 448 and the Admin-private accepted identity registry. Targeted related-term search returned no alternatives. Read-only query, with no production writes or accepted links. Next, check pending identity proposals and alias collisions, and prepare supported proposals without duplicating existing scopes. Evidence-only change.
+
 ## Medicine compound objective checkpoint — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `b7ecdb23607ceb03fce43a439a47c31ed1f7a537` splits GM26.13, GM26.18, GM26.23, GM27.9 and GM28.15 into 21 assessable draft objectives. Checked all five against the pinned PDF row and confirmed exact remote file readback. The production read-only request timed out. The 14 identity candidates still need a current authenticated registry readback. Next, compare candidates with the current registry and review the split objectives for identity, clinical scope and source alignment. Application tests were not run for this evidence-only change.
