@@ -1,3 +1,7 @@
+## NMC source exception checkpoint — 5 November 2026 IST
+
+Draft PR #415. Commit `7ac137fb9a4c637a9851b493c7bf20a8d677e621` records dispositions for all 21 catalogue exceptions. Official corrigendum replaces PY9.1 and PE6.4 and deletes PS9.2. Seven printed identifiers have collision-free candidate aliases, and eleven Surgery rows have two inferred topic groupings. The latter eighteen await editorial review. The catalogue and active data were left intact. Exact pinned PDF row verification for the 130 staged drafts remains blocked by the unavailable execution environment.
+
 ## NMC first-draft coverage checkpoint — 5 November 2026 IST
 
 Draft PR #415. Commit `92bdb1e233bc35941dd75c92d28f74a3a51d9f7f` stages the final 26 General Medicine tasks (GM29.1–GM29.26), including 18 with an observed assessment component. The tasks cover the physician's role in the community. Checked the official NMC PDF, catalogue membership, staged reference uniqueness, and exact remote readback.
