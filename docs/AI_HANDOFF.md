@@ -1,3 +1,7 @@
+## Medicine identity proposal checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `e2582d8213ea55fa20fc9c0fee1dbdca93f2d400` prepares five scoped identity proposals. Read-only production preflight found one pending proposal and no matches for the 14 prior IDs, relevant pending terms, or normalized labels and aliases for the five new candidates. Verified source membership and exact remote packet readback. Next, review semantic overlap and use the owner-authenticated Concept drafts editor for approved submissions. Clinical and source review remain separate. No production drafts were saved.
+
 ## Medicine canonical registry readback — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `8e96f4d0b33469843c99c8fbc37639ff0e9c1514` verifies that the 14 repository candidates are absent from both learner catalogue version 448 and the Admin-private accepted identity registry. Targeted related-term search returned no alternatives. Read-only query, with no production writes or accepted links. Next, check pending identity proposals and alias collisions, and prepare supported proposals without duplicating existing scopes. Evidence-only change.
