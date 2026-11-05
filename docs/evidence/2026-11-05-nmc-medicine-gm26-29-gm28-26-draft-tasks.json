@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+      "subjectId": "medicine",
+      "code": "GM26.29",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        153.66
+      ],
+      "sourceBodySha256": "3c19380796128e5b095e529b96899bdf56fdce6e0c93e2a08ea114b7b26d13ef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Use simulated malaria cases to connect parasite biology with presentation, complications and management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+      "subjectId": "medicine",
+      "code": "GM26.30",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "sourceBodySha256": "16bdb4794eab35173f9012f72f5f4fc5bdacf5b8dd0cc9756e9c2f36fec389be",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Write a simulated malaria prescription and justify it using species, local resistance and current national guidance.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b4f2620ee1b5c0c5655e83ee6bf75d9d4402508424c574097d5675ecc3c72ba6",
+      "subjectId": "medicine",
+      "code": "GM26.31",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        221.76
+      ],
+      "sourceBodySha256": "eb690bdafa2808b50222c3878b6d772dac986508ba63ad8ff34738b4f3c6f0e1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Distinguish major forms of leishmaniasis and relate their presentation and management to the underlying infection.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:585d0ff3adc4715aacc2fa1934c190d6caa3912be73443e211047d327f4315fd",
+      "subjectId": "medicine",
+      "code": "GM26.32",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        221.76,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "7ff017aa09a53189ca616feb86b42a6ba1cd2c317facf0de93cb8464f41c9e37",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Relate filarial transmission and pathology to acute and chronic presentations and outline management goals.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc",
+      "subjectId": "medicine",
+      "code": "GM26.33",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        276.48
+      ],
+      "sourceBodySha256": "164811959a51cb45c7969932d919db164a50967424c31eb61a8f00317d801592",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Explain how cysticercosis develops and use lesion location and complications to reason through a simulated management plan.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:13d173ccc240d08072b7fa53df260ebac688a4e15a3edf8c9392f1ef156f25b1",
+      "subjectId": "medicine",
+      "code": "GM26.34",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        276.48,
+        102.7,
+        303.84
+      ],
+      "sourceBodySha256": "ba243e35261c0a640e4a791fdd65dbe7ae1878683eefd371ab72339a494e1572",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Explain an identified infection and its treatment to a simulated patient and family and check understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9954957807ed754b56e80de1c6f45479181473a338d71874604da9833e599a42",
+      "subjectId": "medicine",
+      "code": "GM26.35",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        303.84,
+        102.7,
+        331.2
+      ],
+      "sourceBodySha256": "296d34b51c690546b6b5033e79163b492f500e62491a62c87e24e243d06cfc3e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious Diseases",
+      "draftLearningTask": "Counsel a simulated household on feasible ways to reduce infection risks from its environment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:049c1109ba9f09b780ff08f7397fa3d130dd13b41bf66edd04ad74abf2adfa4c",
+      "subjectId": "medicine",
+      "code": "GM27.1",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        351.06,
+        102.7,
+        378.54
+      ],
+      "sourceBodySha256": "8d1060c6ec4ed3e9f700e747d16da1df15a1658227ae3ee6bb03cd04b2413778",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Interpret Indian TB epidemiology and explain the impact of the disease on households, work and the economy.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1817fa8ed50e2ec99a0cb119bddead84bf9177ef53b4864dd1d4ce71ff2ab511",
+      "subjectId": "medicine",
+      "code": "GM27.2",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        378.54,
+        102.7,
+        432.6
+      ],
+      "sourceBodySha256": "253581e95de59752c78cc4f0e1b5b6bdbfee8160fc81817abdd3358dd24e0768",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Trace TB transmission and progression and contrast pulmonary disease with nodal, skeletal and CNS presentations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:573e4035dbddb4e57c7133aff918d61b02a1524f7dc946e8df818b466ef69588",
+      "subjectId": "medicine",
+      "code": "GM27.3",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        432.6,
+        102.7,
+        473.52
+      ],
+      "sourceBodySha256": "31928e3b695fc23e3dc846b498cecdcc689e08381cbd92c84ee9008820aacd72",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Explain how HIV and diabetes can alter the course and presentation of TB.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c0e054a2617793a26bb8dd8c55ec20161b23a47d77dcd1e58d19189aa32a3739",
+      "subjectId": "medicine",
+      "code": "GM27.4",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        473.52,
+        102.7,
+        514.32
+      ],
+      "sourceBodySha256": "61e210fa2c54a7ccf82b2e5d38c128aca1e28b3933aa5fb753c00e2ff8aeda62",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Distinguish transmission of resistant TB from resistance acquired during treatment and identify contributing factors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3e9d5db2f8672669c726effeff2bfe0a44fd29d15aa614e558ca54735dd91c25",
+      "subjectId": "medicine",
+      "code": "GM27.5",
+      "page": 321,
+      "rowBBox": [
+        44.2,
+        514.32,
+        102.7,
+        541.56
+      ],
+      "sourceBodySha256": "4b87ceb4b69f9e29ffa28dd5daa7a76300b50743ccec7faeac92f5bc67145eb5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Elicit, document and present a focused TB history that includes exposure, constitutional symptoms and possible extrapulmonary involvement.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bf8bad4cc60f8ba1928615432b2fde683846244f4deaeb79b3321af7bccf4986",
+      "subjectId": "medicine",
+      "code": "GM27.6",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        214.86
+      ],
+      "sourceBodySha256": "b8fadafa86e7fc2a50184d1fa51ffe35ccafb1b06659896db0ac3a57f4fc37b6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Perform a focused examination in a simulated TB case and adapt chest, lymph node and neurologic assessment to the presentation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f16289097e9971117d92b4a590f37cbe7408ad59950bc14323548b31393ab7b6",
+      "subjectId": "medicine",
+      "code": "GM27.7",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        214.86,
+        102.7,
+        242.22
+      ],
+      "sourceBodySha256": "83442f6b919f4d74a07c8b195d0b53e81f12a3b99a428c44c9f8af2ccf800d9e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Interpret example tuberculin skin test findings and explain when the test is useful and what limits interpretation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:174980c954938a201c6e6e9b4647350a620881003c260bf772cea9673aea7c0f",
+      "subjectId": "medicine",
+      "code": "GM27.8",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        242.22,
+        102.7,
+        296.34
+      ],
+      "sourceBodySha256": "93dce09a03f9958ecba8937b98de12f10f530cab8515346d2842a5fab5115581",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Present and defend a ranked differential diagnosis in a simulated patient with suspected pulmonary or extrapulmonary TB.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:61f6e9846c2ba57838ab874a8163ebbeaae034972b35e8f22f08cfad60e5db5d",
+      "subjectId": "medicine",
+      "code": "GM27.9",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        296.34,
+        102.7,
+        364.02
+      ],
+      "sourceBodySha256": "487da736e79e69e9f157567962faff53c17e3c4d58e70bf516b14f668fc46018",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Select and interpret investigations for a simulated TB case using imaging, microbiology, HIV testing and site-specific specimens as indicated.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0388ad06da80dff5cdb9e2a7cda0e0a128dd5b7abfd2b798ebdc4ca2a6070fd8",
+      "subjectId": "medicine",
+      "code": "GM27.10",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        364.02,
+        102.7,
+        391.32
+      ],
+      "sourceBodySha256": "1b3feed9466a301b7d4d61d17496f802e1122eead0f55840c9fa7edf186ad4e6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Interpret supplied sputum Gram stain, acid-fast microscopy and susceptibility reports and explain what each can establish.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:93439a25564651523a61045b9c69aceeb9967f099b863d4172e55b01dec0e527",
+      "subjectId": "medicine",
+      "code": "GM27.11",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        391.32,
+        102.7,
+        432.06
+      ],
+      "sourceBodySha256": "61342ebd047c9c91326c2fcedcd24c88b67ff3392428c938c0027fef849c6394",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Explain when molecular testing, specialized culture and drug susceptibility testing can answer a TB diagnostic question and discuss limitations of serology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:86042e0a820f1305a8d471a5ae018cceb7200c500b14609993f525772b5986a7",
+      "subjectId": "medicine",
+      "code": "GM27.12",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        432.06,
+        102.7,
+        459.42
+      ],
+      "sourceBodySha256": "36350b4f3c4eff163b230e6fd78f98f3319c7168602efd2ec7c22d7f782c4935",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Explain the rationale, indications, administration technique, benefits and possible adverse effects of BCG vaccination.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:31a36314426b12800ee154fa46bca5633083790b2aca37eb17e1e4d170bcb52a",
+      "subjectId": "medicine",
+      "code": "GM27.13",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        459.42,
+        102.7,
+        500.22
+      ],
+      "sourceBodySha256": "ab15e2da37cae51261d0e94a7b274b99f611dea780c97414120400493ddbf38b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Compare anti-TB agents by indication, contraindications, interactions and adverse effects in case examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:deeca393f0e6e5e410f4b1a6ade8966f1c5d7f26095edc03b8f787a0578393c2",
+      "subjectId": "medicine",
+      "code": "GM27.14",
+      "page": 322,
+      "rowBBox": [
+        44.2,
+        500.22,
+        102.7,
+        541.14
+      ],
+      "sourceBodySha256": "2a0598ce3de9733b4c6a66bcb890dbfc745db3e5b42df87f8e7c32d49fb24499",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Write and defend a simulated TB prescription using current national guidance, disease site, microbiology and comorbidities, and explain treatment support.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7b762ef3160f5c37a6afd698cd61aa724ed7d3ece66f6b4a34a3ca193be55e33",
+      "subjectId": "medicine",
+      "code": "GM27.15",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        167.04
+      ],
+      "sourceBodySha256": "d8625238d529c87cbdd94af0269ef1c18c3c50c5adba3df3304fd355b13a90fc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Use exposure scenarios to explain TB precautions, contact screening, testing and eligibility for preventive treatment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90aa485bc0708223a78d4c016557dd0ec1e29b5741839d838221ef7231794e9b",
+      "subjectId": "medicine",
+      "code": "GM27.16",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        167.04,
+        102.7,
+        207.78
+      ],
+      "sourceBodySha256": "2a95c397f1076bec815316bde05677474aee30c53bf6507626c20f468033a092",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Apply programme outcome definitions to TB follow-up examples and explain how resistance is recognized, prevented and managed.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:812b229a152e53f7cb10eab8be458cc10daf72222e24fdd2bc85ef6eac29606b",
+      "subjectId": "medicine",
+      "code": "GM27.17",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        207.78,
+        102.7,
+        248.58
+      ],
+      "sourceBodySha256": "fc87529b6aa9fa6f7dd10a2f6413e3a69674eaf438abed0cb820d0c4537bd9e7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Brief simulated healthcare workers on the national TB programme and demonstrate how to support and monitor treatment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:12f2a876e69881f49abcb9f90ee3df85bdb2f1f74a0ecb0e580887a42ed25dfc",
+      "subjectId": "medicine",
+      "code": "GM27.18",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        248.58,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "465312aef954fd47aae37133850660c8e6fd24a9bf9074ed03dbb362d1b62f7d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tuberculosis",
+      "draftLearningTask": "Explain TB diagnosis and treatment to a simulated patient and family, respond to concerns and confirm understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:15f0af5ee02368746a33242fa130f433ac6696636ac5aaf3575cde5ca71a3b8b",
+      "subjectId": "medicine",
+      "code": "GM28.1",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        295.8,
+        102.7,
+        323.16
+      ],
+      "sourceBodySha256": "3718e55691c2f5babc0d481e06de4fed5a44457e59052ed6bd9c0bb3e31cea94",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Define obstructive airway disease and classify representative conditions by their pattern of airflow limitation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:48bb791b6573389fbcc447b299bd108f0e6bae4cc475155df207e39b75611a2f",
+      "subjectId": "medicine",
+      "code": "GM28.2",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        323.16,
+        102.7,
+        350.52
+      ],
+      "sourceBodySha256": "8566bb922e8832d6a1c049e18516c1e7a1028b7285041eb519c01aa6eba775dc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain how population risk factors and disease progression shape the burden of obstructive airway disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e2222a0bbaa17cc0feb96091b1ff7f8f70ba0f0d908f56a76c70c523cad2d72e",
+      "subjectId": "medicine",
+      "code": "GM28.3",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        350.52,
+        102.7,
+        391.38
+      ],
+      "sourceBodySha256": "07fc24bd1f3f2a76c2b665e2265bc4db46726067868ff458bdeb2cc2d8c2ae7d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Identify likely triggers of acute deterioration in obstructive airway disease from short clinical scenarios.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9dceaf8a439558ee3d17458b94b83f1a373bab8ba522824854eed90d8fbcc3e3",
+      "subjectId": "medicine",
+      "code": "GM28.4",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        391.38,
+        102.7,
+        418.62
+      ],
+      "sourceBodySha256": "79f567c097c4c01a4bdb8bc39b21a8aed2f9c0b76ac920a69c2fd27abd2ab3f5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Use sample gas exchange findings to explain mechanisms of hypoxaemia and hypercapnia.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e27b0bd99cb50313de5c8389ed9ddb7f26ed042546466f6d8a3bf8b6e9a69052",
+      "subjectId": "medicine",
+      "code": "GM28.5",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        418.62,
+        102.7,
+        445.98
+      ],
+      "sourceBodySha256": "8de8b5bc81e0fcabd306e9598ed712a999d2ca10e05fd7dbb52638ec56a60045",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain how inherited alpha-1 antitrypsin deficiency predisposes to emphysema and when family history is informative.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d1c298acd390f6264c38f68388548b313c56f7260066288ca3b113a065af4faa",
+      "subjectId": "medicine",
+      "code": "GM28.6",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        445.98,
+        102.7,
+        473.34
+      ],
+      "sourceBodySha256": "5cbd8a81ec4403955276fb4e3b86b1c1305c77e92761ac9de523a23760f934d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Distinguish environmental exposures that contribute to chronic airway disease from those that worsen symptoms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ee0832cd067e89761b6f9fd0847b5e7c7bc8c29a57bbd8d636690a47cabb3c41",
+      "subjectId": "medicine",
+      "code": "GM28.7",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        473.34,
+        102.7,
+        500.7
+      ],
+      "sourceBodySha256": "535083a0dab747bc67e9381bab4d991f91e40d5fe70fc2dbffe58e10d7a82fc6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Compare allergic and non-allergic triggers using patient histories and explain how they shape the assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a926e6275eae3c7cb16126e2a6707e651367972436c240187d2f735ac0d0d209",
+      "subjectId": "medicine",
+      "code": "GM28.8",
+      "page": 323,
+      "rowBBox": [
+        44.2,
+        500.7,
+        102.7,
+        541.44
+      ],
+      "sourceBodySha256": "4a4fedd1827cddf0db4363a5b15d46d51b02a234080190c1765353e09cbc95f3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Elicit and present a respiratory history that differentiates likely causes, severity and triggers of airway obstruction.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c74bb2efeff4a57834800a7c94f631d75a1e24011a3fd54a119e92f3860ce28f",
+      "subjectId": "medicine",
+      "code": "GM28.9",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        174.06
+      ],
+      "sourceBodySha256": "cb60743ae82ff73ee2708b48e8115d8fe8aa7987ba9b4297a2a09201dc5abfb1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Examine a simulated breathless patient, assess respiratory distress and identify findings suggesting consolidation, effusion or pneumothorax.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:886dee005e41e1f59891ef595cb9715c80ea61144f94cd51fd42715bf32c9254",
+      "subjectId": "medicine",
+      "code": "GM28.10",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        228.24
+      ],
+      "sourceBodySha256": "23634de60196732e1f3de1f6c0c9500ef049f4d120229b96396cc1eb7381d388",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Present a ranked differential for suspected airway obstruction and defend it using distinguishing clinical features.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc",
+      "subjectId": "medicine",
+      "code": "GM28.11",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        228.24,
+        102.7,
+        268.92
+      ],
+      "sourceBodySha256": "a69ae001eba0401ed24f8f384a3ebe0ab7b7fec4bce1ebedfdfdbd54ba665a37",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Interpret sample pulmonary function tests and explain how test quality and airflow patterns affect the conclusion.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:008abb4c46f776b5f22d8efb2efc2ecb4f7e19fc17333423eb68c4bddb93021f",
+      "subjectId": "medicine",
+      "code": "GM28.12",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        268.92,
+        102.7,
+        323.16
+      ],
+      "sourceBodySha256": "4135691289a4dd249822c5968ca04748d66dd606f59edc4d011627e1d9af3e82",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Demonstrate peak expiratory flow measurement, record the result and interpret it in context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4235f37fae96d72a0c300b79131cf5a8fa5ff76c6757b635cbf43d328a0bdc92",
+      "subjectId": "medicine",
+      "code": "GM28.13",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        323.16,
+        102.7,
+        377.28
+      ],
+      "sourceBodySha256": "e45e0184aa8e6491c9cbfb0bd78b754e0fb685f97d5eda68c0486616b65bf982",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Present a targeted investigation plan for a simulated patient with airway obstruction and justify it against the leading diagnosis.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466",
+      "subjectId": "medicine",
+      "code": "GM28.14",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        377.28,
+        102.7,
+        431.46
+      ],
+      "sourceBodySha256": "6296a821301ef4a0e1c030d9fac499aa5fe615f7f88bd746ed9cf713a01a42f1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain when to use pulse oximetry, arterial blood gases and chest radiography and interpret example results together.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ea37fdc08bbf17dfed5136d1f572c961ba357f97c910bf7099c02a835a943569",
+      "subjectId": "medicine",
+      "code": "GM28.15",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        431.46,
+        102.7,
+        472.38
+      ],
+      "sourceBodySha256": "076a892e88b63b39bdd9bafdb5673f835872a72fd740e18e6985e5307d000da3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Compare pharmacologic and supportive therapies for obstructive airway disease by indication, expected benefit and limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:593fbf281f729342e053705fea70dcacd8d770adfea5cf5c9adab542ac151799",
+      "subjectId": "medicine",
+      "code": "GM28.16",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        472.38,
+        102.7,
+        499.62
+      ],
+      "sourceBodySha256": "e3b4ea13247d7bf541a37de7955a764efb35ae439532858bac6ee9a1acecdf1e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain how age, risk factors and clinical context inform vaccination decisions in obstructive airway disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a54d769a2db7aa80f396b6137515a35907de9eae3ade9256f63fb3edd876fa4c",
+      "subjectId": "medicine",
+      "code": "GM28.17",
+      "page": 324,
+      "rowBBox": [
+        44.2,
+        499.62,
+        102.7,
+        540.48
+      ],
+      "sourceBodySha256": "e92b677f9c4a5183e8bc8cda3e4be95baf86ad0c4d56b7200bd30aa178f2c99f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Present and defend a simulated maintenance plan for obstructive airway disease, including appropriate use of bronchodilators and inhaled corticosteroids.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "subjectId": "medicine",
+      "code": "GM28.18",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "dd90ab4237ef57e07068c682c58fe6abbbba3fb67e920845bc68e1d9359338b7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Present a simulated exacerbation plan and justify the roles of bronchodilators, systemic steroids and antimicrobials when indicated.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33",
+      "subjectId": "medicine",
+      "code": "GM28.19",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        207.84
+      ],
+      "sourceBodySha256": "a9a5465440dd3709607965a93a98bb108962a536c3a27f9a7db33d9a58905598",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Compare indications, monitoring and safety considerations for hospital and home oxygen therapy.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f6b146ffaab14c923312cb3467ef9b490e40b69e3114aa8e45a321a638981d0a",
+      "subjectId": "medicine",
+      "code": "GM28.20",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        207.84,
+        102.7,
+        248.76
+      ],
+      "sourceBodySha256": "fa122169ae9c2abd4bbc7aa82bbe712112dc505d78e70f18064f45016db5bf5a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Use a role-play to assess readiness to quit smoking and agree on a feasible cessation and follow-up plan.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9796b269dd278e3836ff46235ad51996899440eabf58fd49d8c729cb08b273d5",
+      "subjectId": "medicine",
+      "code": "GM28.21",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        248.76,
+        102.7,
+        276
+      ],
+      "sourceBodySha256": "6bb2db6349c308dec20474d7677e49f3659791fe5e64371de2659795c1c62cc3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Demonstrate device-specific inhaler technique and use return demonstration to identify and correct errors.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c0a81528745b9c46d77e5411f4141a6ff7c47675d97232386004f228e8fb0584",
+      "subjectId": "medicine",
+      "code": "GM28.22",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        276,
+        102.7,
+        303.36
+      ],
+      "sourceBodySha256": "2946cd947e7d674d58fe743026eb7d74a21853f8c671b0708a4fa027700a3749",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain the diagnosis, treatment and follow-up plan to a simulated patient and check their understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5f50684e9f22cf7f77ad9d57c19646c621ce7eb7063ba39099db664ee4e0069a",
+      "subjectId": "medicine",
+      "code": "GM28.23",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        303.36,
+        102.7,
+        344.04
+      ],
+      "sourceBodySha256": "4bdad5a625d59f45147fe6e151585993224dce1e135bd6897b11443fdeaff7d7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explain how obstructive airway disease affects daily function, wellbeing, family responsibilities and employment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fe5da7d0ea87b79a324db8f182c59c9b0c675a7fc146a15c437087523f1b2892",
+      "subjectId": "medicine",
+      "code": "GM28.24",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        344.04,
+        102.7,
+        384.78
+      ],
+      "sourceBodySha256": "3d16eb522461026b28a0dae1453ef24da4cd5c4920941b01cfeb683db219999d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Propose workplace exposure controls for a simulated setting and explain how they could reduce respiratory risk.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8582cfa58b68545fe3fa5238c1bd3f78f1ccce70304ee4f9ccc5510b5c27d244",
+      "subjectId": "medicine",
+      "code": "GM28.25",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        384.78,
+        102.7,
+        425.7
+      ],
+      "sourceBodySha256": "499c40e44359cadbb6fa87c63947769b290290a05b9f1c79bdfee72c0f1983fd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Respond empathetically to a simulated patient with limited control over work or housing exposures and agree on feasible changes.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:05c1ce97a34725729551d9f1c0b48f0ff19d72d9831e8ad7d621a9a6c30aaeb1",
+      "subjectId": "medicine",
+      "code": "GM28.26",
+      "page": 325,
+      "rowBBox": [
+        44.2,
+        425.7,
+        102.7,
+        466.5
+      ],
+      "sourceBodySha256": "09aae82cea3bddd0ea9bc24ce399629f486c0b117a2368347a1a2edef2a7dace",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstructive Airway Diseases",
+      "draftLearningTask": "Explore barriers to smoking cessation in a role-play and respond to relapse or ambivalence without blame.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}
