@@ -1,5 +1,9 @@
 ## General Medicine staging checkpoint — 5 November 2026 IST
 
+Draft PR #415. Commit `19374e6d0559d95121c47edab39ff6b2074ef908` adds 51 staged drafts for GM26.29–GM28.26, including 24 with an observed assessment component. Matched each row to a unique eligible reference in the repository catalogue and checked its competency against the official NMC PDF. Verified exact remote readback and no overlap with the preceding staged batch. The previous 53 also matched catalogue IDs, codes and pages. Exact PDF row hashes and coordinates still require the queue builder, whose execution environment is unavailable. Both batches remain staged. Of 174 eligible appearances at the previous verified checkpoint, 104 now have staged drafts and 70 remain unwritten. Resume at GM29.1 and verify both staged batches against the generated pinned queue before promotion. Clinical and source approval remain pending.
+
+## General Medicine staging checkpoint — 5 November 2026 IST
+
 Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Commit `56a09e78d3040b1b5f7913631f1a3b7b9f9bd573` adds 53 original drafts for GM24.3–GM26.28 in `docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-staged-drafts.json`. Matched each code to a unique catalogue reference and the official NMC PDF page, then verified the exact remote file contents. The execution runtime was unavailable for pinned queue row verification. The staging file is separate from the draft import files. Of the previous 174 eligible appearances, 53 have staged drafts and 121 remain unwritten. Next, verify the 53 against the pinned queue, promote them into the regular draft pack, and resume drafting at GM26.29. Clinical and source review remain pending before learner activation.
 
 ## General Medicine draft checkpoint — 5 November 2026 IST
