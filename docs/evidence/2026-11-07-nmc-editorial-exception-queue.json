@@ -1,0 +1,187 @@
+{
+  "status": "draft-editorial-review-only",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+      "subjectId": "biochemistry",
+      "pdfPage": 169,
+      "observedCode": "14.1",
+      "kind": "search-alias",
+      "candidate": "BC14.1",
+      "reviewPriority": "verify-inference",
+      "evidence": "The Biochemistry Topic 14 row lacks its subject prefix and precedes BC14.2."
+    },
+    {
+      "referenceId": "nmc-2024-ref:9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+      "subjectId": "pathology",
+      "pdfPage": 200,
+      "observedCode": "PA.29.1",
+      "kind": "search-alias",
+      "candidate": "PA29.1",
+      "reviewPriority": "punctuation-only",
+      "evidence": "The first row of Pathology Topic 29 has an extra separator."
+    },
+    {
+      "referenceId": "nmc-2024-ref:7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+      "subjectId": "microbiology",
+      "pdfPage": 212,
+      "observedCode": "MI 8.",
+      "kind": "search-alias",
+      "candidate": "MI8.3",
+      "reviewPriority": "verify-inference",
+      "evidence": "The syndromic STI management row appears between MI8.2 and MI8.4. The missing digit is inferred."
+    },
+    {
+      "referenceId": "nmc-2024-ref:a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+      "subjectId": "forensic-medicine",
+      "pdfPage": 217,
+      "observedCode": "FM2:12",
+      "kind": "search-alias",
+      "candidate": "FM2.12",
+      "reviewPriority": "punctuation-only",
+      "evidence": "The printed identifier uses a colon as a separator."
+    },
+    {
+      "referenceId": "nmc-2024-ref:f51e3441c089b730d29c4604cf6372ac44a8bcfccfd9ebcb48ebe5ee77de6637",
+      "subjectId": "psychiatry",
+      "pdfPage": 352,
+      "observedCode": "PS 2.1*",
+      "kind": "search-alias",
+      "candidate": "PS2.1",
+      "reviewPriority": "verify-inference",
+      "evidence": "The only row in Psychiatry Topic 2 carries an asterisk. Preserve the mark and confirm its meaning before accepting a search alias."
+    },
+    {
+      "referenceId": "nmc-2024-ref:af976ff499dc2d79b35da2cb05691d32c5cd54abcfa367c460798bd81de2cdf1",
+      "subjectId": "surgery",
+      "pdfPage": 408,
+      "observedCode": "SU24.1",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 24 · Pancreatic disorders",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows describe pancreatitis and pancreatic tumours. The catalogue contains no accepted Topic 24 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:df5d0fb4296539b3c0d8df0425c8ce5aec8b9c08c81454adc4b5a17550b0a0b5",
+      "subjectId": "surgery",
+      "pdfPage": 408,
+      "observedCode": "SU24.2",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 24 · Pancreatic disorders",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows describe pancreatitis and pancreatic tumours. The catalogue contains no accepted Topic 24 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU24.3",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 24 · Pancreatic disorders",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows describe pancreatitis and pancreatic tumours. The catalogue contains no accepted Topic 24 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:afde2dbbb31f9c9a938c96cac43b36876618c0948669dcabc97a45fe2a501d77",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU27.1",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd91cb9cc687c595b75c76061465cbc3445a387e7b95502416e7a77fd103aaa9",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU27.2",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:e5579dc23d48cebd3b3ac0dbdd4d4d42635c76185c3015f63fffb7da94234178",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU27.3",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU27.4",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:97fa0972606477d89b208643ca1920d3da7c1257131828ea2eeabc9aa84fdd67",
+      "subjectId": "surgery",
+      "pdfPage": 409,
+      "observedCode": "SU27.5",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+      "subjectId": "surgery",
+      "pdfPage": 410,
+      "observedCode": "SU27.6",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+      "subjectId": "surgery",
+      "pdfPage": 410,
+      "observedCode": "SU27.7",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:0dd1c053ec1f7ebe7ec74246257adaaba9d2b06d17838cfeb9621857df2cc0b5",
+      "subjectId": "surgery",
+      "pdfPage": 410,
+      "observedCode": "SU27.8",
+      "kind": "topic-group",
+      "candidate": "Surgery Topic 27 · Vascular surgery",
+      "reviewPriority": "verify-grouping",
+      "evidence": "The numbered rows cover vascular disease, examination and management. The catalogue contains no accepted Topic 27 heading."
+    },
+    {
+      "referenceId": "nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+      "subjectId": "orthopaedics",
+      "pdfPage": 445,
+      "observedCode": "OR2. 2.9",
+      "kind": "search-alias",
+      "candidate": "OR2.9",
+      "reviewPriority": "verify-inference",
+      "evidence": "The printed row contains an extra segment and precedes OR2.10. The correction is inferred."
+    },
+    {
+      "referenceId": "nmc-2024-ref:26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+      "subjectId": "anaesthesia",
+      "pdfPage": 454,
+      "observedCode": "ASS.4",
+      "kind": "search-alias",
+      "candidate": "AS5.4",
+      "reviewPriority": "verify-inference",
+      "evidence": "The printed identifier is between AS5.3 and AS5.5 in the regional anaesthesia section."
+    }
+  ]
+}
