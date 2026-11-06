@@ -1,3 +1,7 @@
+## Respiratory Admin drafts saved — 7 November 2026 IST
+
+Owner /root. Draft PR #415. Submitted the three Respiratory documents from the validated packet in `424159830962596031fa56861a86fd9bd3aaa08a` through the authenticated Medretica Owner Console. Each exact revision 1 was saved and confirmed by the editor, and all three appeared in Saved drafts: GM28.11 suspected COPD spirometry, GM28.17 asthma maintenance, GM28.18 COPD exacerbation management. These are pending concept drafts. Next, review identity/classification in Admin, then review exact Basics, teaching and assessment bindings before making a coverage claim. No acceptance or learner publication was performed.
+
 ## NMC Respiratory pilot mapping — 7 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `114b13787cf28d27bb3cbd78af76b6dcb6b48e97` specifies three proposed objectives, Basics sequences, teaching and observed assessment deliverables and uncovered scope for GM28.11, GM28.17 and GM28.18. Checked candidate labels and exact source reference metadata against the validated Admin packet and Medicine review packet. Remote readback passed. Next, resolve accepted identities and review prerequisites and exact content bindings. Coverage remains unverified.
