@@ -1,3 +1,7 @@
+## NMC Foundation objective coverage triage — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `7a3a9d0cfb051eb51cceb6afbabcd775c23c787d`. Admin reference rows now distinguish linked drafts, absence of links in the current pack, and unresolved source issues. Each linked row can show its exact proposed objective versions and identity status. Coverage remains unverified pending explicit reviewed requirements and teaching/assessment bindings. All 26 focused NMC tests and the Pages build passed. Next, map reviewed Respiratory objectives and prerequisites before introducing partial coverage or Basics sequences.
+
 ## NMC Foundation Integrated view pilot — 7 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `199eb53dd6998c060aeabf6f54e1ca9d49f8c8bf`. NMC Subjects remains the default. Integrated adds system and optional organ filtering plus label/alias search over authenticated published concepts. Both discovery paths use the same canonical library URL and existing question/note/attempt records. The integrated view exposes no draft content and implies no approved NMC mapping. No data migration or learner activation was performed.
