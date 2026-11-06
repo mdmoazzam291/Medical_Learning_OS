@@ -1,3 +1,7 @@
+## Reusable NMC Foundation views design — 6 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Design commit `572d12142bf8de56496106f1fb9b911ea3c017e9` records stable concept identities, optional facets, explicit relationships and derived views. Verified design file readback. This is a design checkpoint. Implementation and learner activation remain pending. The existing five-identity Admin draft packet remains the immediate operational next step. Pilot the Respiratory view after reviewed identities and mappings are available.
+
 ## Medicine Admin draft preparation — 5 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Commit `424159830962596031fa56861a86fd9bd3aaa08a` prepares five reviewed concept documents with pinned source locators. Current read-only production preflight found zero exact label or alias collisions at catalogue version 448. All five passed the Admin editor's domain validator and exact remote readback. Only the source subject is populated in classification. Next, enter through the owner-authenticated Concept drafts editor and verify saved revisions. No production drafts were submitted or accepted.
