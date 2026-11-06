@@ -1,7 +1,22 @@
 import {escapeText as e} from './navigation-view.js';
+function requirementMarkup(r,objectives){
+ const sourceIssue=r.identifierState==='unresolved'||r.amendmentNotice||r.topicLabel==='Unresolved topic heading';
+ const versions=[...new Set(r.objectiveVersionIds)];
+ const state=sourceIssue?'Source resolution needed':versions.length?'Draft objectives linked':'No linked objective in this pack';
+ const details=versions.length?'<ul>'+versions.map(id=>{
+  const draft=objectives.get(id);
+  if(!draft)return '<li>'+e(id)+' · Draft details unavailable</li>';
+  const identity=draft.identityState==='current'?'Identity current':draft.identityState==='changed'?'Identity changed':'Identity unavailable';
+  return '<li><strong>'+e(draft.canonicalLabel)+'</strong> · '+e(identity)+'<p>'+e(draft.wording)+'</p><small>'+e(draft.objective.task)+' / '+e(draft.objective.depth)+' · '+e(id)+'</small></li>';
+ }).join('')+'</ul>':'';
+ return '<li><strong>'+e(r.code)+'</strong> · '+e(r.subjectId)+' · '+e(r.topicLabel)+' · PDF page '+e(r.pdfPage)+
+  '<p>'+e(state)+(r.amendmentNotice?' · amendment requires review':'')+' · Coverage unverified</p>'+
+  (details?'<details><summary>Review '+versions.length+' proposed objective'+(versions.length===1?'':'s')+'</summary>'+details+'</details>':'')+'</li>';
+}
 export function foundationReviewMarkup(p=null,filters={},message='Load the first objective proposal batch to inspect it.'){
  const intro='<h2>NMC foundation objective drafts</h2><p>AI-generated original learning goals. Clinical review and source alignment are pending. Reference appearances are not a unique competency denominator. This batch does not establish curriculum coverage or learner readiness.</p>';
  if(!p)return intro+'<p role="status">'+e(message)+'</p><button type="button" data-foundation-load>Load objective drafts</button>';
+ const objectivesByVersion=new Map(p.objectives.map(d=>[d.objective.objectiveVersionId,d]));
  return intro+'<p role="status">'+e(message)+'</p><p>Accepted mappings: 0 · Learner activation: off · Coverage: not established</p>'+
  '<p>'+e(p.totals.objectiveDrafts)+' original drafts · '+e(p.totals.sourceLinkedReferences)+' source appearances with proposed links · '+e(p.totals.unboundObjectiveDrafts)+' drafts without NMC links · '+e(p.totals.sourceReferences)+' reference appearances</p>'+
  (!p.catalogVersionMatches?'<p role="alert">Catalog version changed since authoring. Recheck the draft context.</p>':'')+
@@ -9,7 +24,7 @@ export function foundationReviewMarkup(p=null,filters={},message='Load the first
  '<details><summary>Original objectives and canonical identities</summary><ul>'+p.objectives.map(r=>'<li><strong>'+e(r.canonicalLabel)+'</strong> · '+e(r.identityState)+(r.identityKind==='accepted-private'?' · Admin-private identity':'')+'<p>'+e(r.wording)+'</p><p>'+e(r.objective.task)+' / '+e(r.objective.depth)+' · '+e(r.objective.conceptId)+' · '+e(r.objective.objectiveVersionId)+'</p>'+
  (r.sourceReferences.length?'<p>Proposed source links: '+r.sourceReferences.map(b=>e(b.code)+' ('+e(b.subjectId)+', PDF page '+e(b.sourcePage)+')').join('; ')+'. Each link proposes a specific task for review. Full competency coverage requires separate review.</p>':'<p>NMC source alignment unresolved.</p>')+'</li>').join('')+'</ul></details>'+
  '<form data-foundation-filters><label>Subject<select name="subject" aria-label="Objective reference subject"><option value="">All subjects</option>'+p.subjects.map(s=>'<option value="'+e(s)+'"'+(s===filters.subject?' selected':'')+'>'+e(s.replaceAll('-',' '))+'</option>').join('')+'</select></label><label>Code or topic<input name="search" maxlength="200" value="'+e(filters.search||'')+'"></label><button type="submit">Filter references</button></form>'+
- '<p>'+e(p.filteredReferences)+' filtered source appearances; showing '+(p.requirements.length?e(p.offset+1)+'–'+e(p.offset+p.requirements.length):'0')+'</p><ul>'+p.requirements.map(r=>'<li><strong>'+e(r.code)+'</strong> · '+e(r.subjectId)+' · '+e(r.topicLabel)+' · PDF page '+e(r.pdfPage)+' · '+e(r.identifierState)+(r.amendmentNotice?' · amendment requires review':'')+'<p>'+e(r.objectiveVersionIds.length?'Proposed: '+r.objectiveVersionIds.join(', '):'Reference only — objective wording and canonical alignment unresolved.')+'</p></li>').join('')+'</ul>'+
+ '<p>'+e(p.filteredReferences)+' filtered source appearances; showing '+(p.requirements.length?e(p.offset+1)+'–'+e(p.offset+p.requirements.length):'0')+'</p><ul>'+p.requirements.map(r=>requirementMarkup(r,objectivesByVersion)).join('')+'</ul>'+
  '<button type="button" data-foundation-load>Refresh drafts</button> '+(p.offset?'<button type="button" data-foundation-prev>Previous references</button> ':'')+(p.nextOffset!==null?'<button type="button" data-foundation-next>Next references</button>':'');
 }
 export function mountFoundationReview({root,load,identity,window:win=window}){
