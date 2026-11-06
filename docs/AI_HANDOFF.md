@@ -1,3 +1,7 @@
+## NMC Respiratory pilot mapping — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `114b13787cf28d27bb3cbd78af76b6dcb6b48e97` specifies three proposed objectives, Basics sequences, teaching and observed assessment deliverables and uncovered scope for GM28.11, GM28.17 and GM28.18. Checked candidate labels and exact source reference metadata against the validated Admin packet and Medicine review packet. Remote readback passed. Next, resolve accepted identities and review prerequisites and exact content bindings. Coverage remains unverified.
+
 ## NMC Foundation objective coverage triage — 7 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `7a3a9d0cfb051eb51cceb6afbabcd775c23c787d`. Admin reference rows now distinguish linked drafts, absence of links in the current pack, and unresolved source issues. Each linked row can show its exact proposed objective versions and identity status. Coverage remains unverified pending explicit reviewed requirements and teaching/assessment bindings. All 26 focused NMC tests and the Pages build passed. Next, map reviewed Respiratory objectives and prerequisites before introducing partial coverage or Basics sequences.
