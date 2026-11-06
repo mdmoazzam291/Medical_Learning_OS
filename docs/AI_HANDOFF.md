@@ -1,3 +1,7 @@
+## NMC work independent of owner sign-off — 7 November 2026 IST
+
+Draft PR #415. Corrigendum packet commit `51bc6d16d1f5b2fc82f6b9f68ab008e2258ccf4b` records the two official replacements and one deletion with proposed review actions. Exact remote readback passed. Foundation run 42293499793 verified the NMC catalogue step in Chromium and WebKit at `525b0d25657776799cbc634b1a8f8709eb631c87`; overall run status: in_progress. Respiratory drafts remain pending owner identity/classification attestation. Reviewed objective and material bindings remain separate.
+
 ## NMC Foundation readiness audit — 7 November 2026 IST
 
 Draft PR #415. Audited snapshot `ccff2ef60a539ce5e7e6b3c0198de5594497a377`: all 2,607 regular packet rows match the rebuilt pinned review queue by code, page, coordinates and row SHA-256. No duplicate reference IDs in the 65 packets. The union with existing proposals covers 2,613 eligible appearances. The 21 exceptions remain tracked separately. The Respiratory rubric and delayed assessment specifications are in `docs/evidence/2026-11-07-nmc-foundation-readiness-audit.md`. Admin attestation and publication remain deferred at owner request.
