@@ -1,3 +1,7 @@
+## Respiratory identity and classification review — 7 November 2026 IST
+
+Draft PR #415. Review commit `168205d15e5d18dd2f15f74d3bf9621070121b88`. Read-only production check confirmed all three drafts are pending at revision 1, with Medicine and no system facet. Recommend adding the shared Respiratory system to each draft before owner attestation, while keeping organ optional. Next, confirm the shared system key, save revised classifications and review exact bindings. No production change or acceptance was performed.
+
 ## Respiratory Admin drafts saved — 7 November 2026 IST
 
 Owner /root. Draft PR #415. Submitted the three Respiratory documents from the validated packet in `424159830962596031fa56861a86fd9bd3aaa08a` through the authenticated Medretica Owner Console. Each exact revision 1 was saved and confirmed by the editor, and all three appeared in Saved drafts: GM28.11 suspected COPD spirometry, GM28.17 asthma maintenance, GM28.18 COPD exacerbation management. These are pending concept drafts. Next, review identity/classification in Admin, then review exact Basics, teaching and assessment bindings before making a coverage claim. No acceptance or learner publication was performed.
