@@ -1,3 +1,7 @@
+## NMC performance assessment queue — 7 November 2026 IST
+
+Draft PR #415. Commit `1e635bed3f88ca35e94bd260d12ecc27a66912c7` indexes 867 performance-tagged candidates across all 19 subjects and links their source packets. Recounted all 65 packets at `61c810d5531d0e98fb81fd6b879bf7c55d35c08b`; 2,607 distinct reference IDs, no duplicate IDs. Verified exact remote report readback. Next, review three Respiratory rubrics, then batch the source mode and compound-scope review by subject. Owner attestation and clinical sign-off remain pending.
+
 ## NMC editorial exception queue — 7 November 2026 IST
 
 Draft PR #415. Commit `58b1dd69a6f1003e59f478125572d22ced88454b` adds 18 machine-readable editorial candidates: seven search aliases and eleven Surgery rows in two proposed topic groups. Verified each reference ID, original identifier, page and subject against the pinned catalogue. The aliases have no existing exact code collisions. The proposed overlay is review-only. Next, confirm inferred aliases and topic boundaries before applying an approved overlay. The three official corrigendum changes are tracked separately.
