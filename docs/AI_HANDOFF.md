@@ -1,3 +1,9 @@
+## NMC Foundation Integrated view pilot — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `199eb53dd6998c060aeabf6f54e1ca9d49f8c8bf`. NMC Subjects remains the default. Integrated adds system and optional organ filtering plus label/alias search over authenticated published concepts. Both discovery paths use the same canonical library URL and existing question/note/attempt records. The integrated view exposes no draft content and implies no approved NMC mapping. No data migration or learner activation was performed.
+
+Local verification on the matching source files: 1,573 Node tests, npm check and 131-file Pages build passed. Browser regression was extended for shared links, facets and logout. Local Chromium launch was blocked by the runtime socket policy, so hosted browser verification remains pending. Next, obtain reviewed prerequisite sequences and explicit objective-to-competency coverage mappings for the Respiratory pilot before exposing Basics and partial coverage. The five private concept proposals still require Admin submission and review.
+
 ## Reusable NMC Foundation views design — 6 November 2026 IST
 
 Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Design commit `572d12142bf8de56496106f1fb9b911ea3c017e9` records stable concept identities, optional facets, explicit relationships and derived views. Verified design file readback. This is a design checkpoint. Implementation and learner activation remain pending. The existing five-identity Admin draft packet remains the immediate operational next step. Pilot the Respiratory view after reviewed identities and mappings are available.
