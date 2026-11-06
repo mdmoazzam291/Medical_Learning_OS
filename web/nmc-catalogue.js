@@ -31,8 +31,8 @@ async function renderIntegrated(ticket){
   const options=(values,selected)=>values.map(value=>'<option value="'+e(value)+'"'+(value===selected?' selected':'')+'>'+e(value.replaceAll('-',' '))+'</option>').join('');
   integrated.innerHTML='<h2>Browse published concepts</h2><p>Browse by system or organ. NMC competency coverage is tracked separately.</p>'+
    '<form class="nmc-filters" role="search"><label>Concept search<input name="search" type="search" maxlength="200" value="'+e(filters.search)+'"></label>'+
-   '<label>System<select name="system"><option value="">All systems</option>'+options(systems,filters.system)+'</select></label>'+
-   '<label>Organ<select name="organ"><option value="">All organs</option>'+options(organs,filters.organ)+'</select></label><button type="submit">Search</button></form>'+
+   '<label>System<select name="system" aria-label="System"><option value="">All systems</option>'+options(systems,filters.system)+'</select></label>'+
+   '<label>Organ<select name="organ" aria-label="Organ"><option value="">All organs</option>'+options(organs,filters.organ)+'</select></label><button type="submit">Search</button></form>'+
    '<p role="status">'+matches.length+' published concepts'+(matches.length>50?' · Showing the first 50. Use search or filters to narrow the list.':'')+'</p>'+
    (matches.length?'<ul>'+matches.slice(0,50).map(c=>'<li><a href="'+e(c.url)+'">'+e(c.label)+'</a>'+(c.subjects.length?' · '+c.subjects.map(s=>e(names.get(s)||s)).join(' · '):'')+'</li>').join('')+'</ul>':'<p>No published concepts match. Try clearing the filters.</p>');
  }catch(error){

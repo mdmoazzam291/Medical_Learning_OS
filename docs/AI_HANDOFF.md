@@ -1,3 +1,9 @@
+## NMC Foundation readiness audit — 7 November 2026 IST
+
+Draft PR #415. Audited snapshot `ccff2ef60a539ce5e7e6b3c0198de5594497a377`: all 2,607 regular packet rows match the rebuilt pinned review queue by code, page, coordinates and row SHA-256. No duplicate reference IDs in the 65 packets. The union with existing proposals covers 2,613 eligible appearances. The 21 exceptions remain tracked separately. The Respiratory rubric and delayed assessment specifications are in `docs/evidence/2026-11-07-nmc-foundation-readiness-audit.md`. Admin attestation and publication remain deferred at owner request.
+
+Foundation run 42292877735 passed the core job and failed both browser jobs waiting for the Integrated System control. The change adds explicit accessible names to both selectors. All 26 focused NMC tests, Pages build and local diff checks passed. Hosted browser results for the change remain pending.
+
 ## Respiratory classification revisions saved — 7 November 2026 IST
 
 Draft PR #415. Updated GM28.11, GM28.17 and GM28.18 in the authenticated Owner Console. Added the shared `respiratory` system key already used in repository library and integrated-view tests. The Admin editor confirmed revision 2 for each saved proposal. Next, owner attestation of identity/classification, followed by review of exact prerequisite, teaching and assessment bindings. All three remain Admin drafts.
