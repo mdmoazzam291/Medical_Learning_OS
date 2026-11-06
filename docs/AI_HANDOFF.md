@@ -1,3 +1,9 @@
+## NMC editorial exception queue — 7 November 2026 IST
+
+Draft PR #415. Commit `58b1dd69a6f1003e59f478125572d22ced88454b` adds 18 machine-readable editorial candidates: seven search aliases and eleven Surgery rows in two proposed topic groups. Verified each reference ID, original identifier, page and subject against the pinned catalogue. The aliases have no existing exact code collisions. The proposed overlay is review-only. Next, confirm inferred aliases and topic boundaries before applying an approved overlay. The three official corrigendum changes are tracked separately.
+
+Foundation run 42293499793 finished with core and Chromium jobs successful. The NMC catalogue step passed in WebKit before the broader WebKit job was cancelled. The full WebKit run therefore remains outstanding.
+
 ## NMC work independent of owner sign-off — 7 November 2026 IST
 
 Draft PR #415. Corrigendum packet commit `51bc6d16d1f5b2fc82f6b9f68ab008e2258ccf4b` records the two official replacements and one deletion with proposed review actions. Exact remote readback passed. Foundation run 42293499793 verified the NMC catalogue step in Chromium and WebKit at `525b0d25657776799cbc634b1a8f8709eb631c87`; overall run status: in_progress. Respiratory drafts remain pending owner identity/classification attestation. Reviewed objective and material bindings remain separate.
