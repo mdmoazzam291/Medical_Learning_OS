@@ -1,5 +1,5 @@
 import {auth,request} from '/web/content-library-client.js';
-import {loadTopicConcepts} from '/src/domain/nmc-concept-discovery.js';
+import {loadPublishedConceptLibrary,loadTopicConcepts,selectIntegratedConcepts} from '/src/domain/nmc-concept-discovery.js';
 import {SUBJECT_INDEX} from '/src/domain/subject-index.js';
 import {validateReferenceCatalogue,selectCatalogue} from '/src/domain/nmc-reference-catalogue.js';
 const results=document.querySelector('#nmc-results'),status=document.querySelector('#nmc-status');
@@ -8,11 +8,67 @@ const names=new Map(SUBJECT_INDEX.map(s=>[s.id,s.label]));
 const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 subject.insertAdjacentHTML('beforeend',SUBJECT_INDEX.map(s=>'<option value="'+e(s.id)+'">'+e(s.label)+'</option>').join(''));
 let catalogue=null,revision=0;
+const integrated=document.querySelector('#nmc-integrated');
+const referenceView=document.querySelector('#nmc-reference-view');
+const subjectViewLink=document.querySelector('#nmc-subject-view');
+const integratedViewLink=document.querySelector('#nmc-integrated-view');
+const access={request,identity:async()=>(await auth.getSession())?.user?.id||null};
+const isIntegrated=()=>new URLSearchParams(location.search).get('view')==='integrated';
+function integratedRoute(filters){
+ const query=new URLSearchParams({view:'integrated'});
+ for(const [key,value] of Object.entries(filters))if(value)query.set(key,value);
+ history.pushState(null,'',location.pathname+'?'+query);
+ render();
+}
+async function renderIntegrated(ticket){
+ const query=new URLSearchParams(location.search);
+ const filters={system:query.get('system')||'',organ:query.get('organ')||'',search:(query.get('search')||'').slice(0,200)};
+ integrated.innerHTML='<p role="status">Loading published concepts…</p>';
+ try{
+  const library=await loadPublishedConceptLibrary(access);
+  if(ticket!==revision)return;
+  const {systems,organs,matches}=selectIntegratedConcepts(library.concepts,filters);
+  const options=(values,selected)=>values.map(value=>'<option value="'+e(value)+'"'+(value===selected?' selected':'')+'>'+e(value.replaceAll('-',' '))+'</option>').join('');
+  integrated.innerHTML='<h2>Browse published concepts</h2><p>Browse by system or organ. NMC competency coverage is tracked separately.</p>'+
+   '<form class="nmc-filters" role="search"><label>Concept search<input name="search" type="search" maxlength="200" value="'+e(filters.search)+'"></label>'+
+   '<label>System<select name="system"><option value="">All systems</option>'+options(systems,filters.system)+'</select></label>'+
+   '<label>Organ<select name="organ"><option value="">All organs</option>'+options(organs,filters.organ)+'</select></label><button type="submit">Search</button></form>'+
+   '<p role="status">'+matches.length+' published concepts'+(matches.length>50?' · Showing the first 50. Use search or filters to narrow the list.':'')+'</p>'+
+   (matches.length?'<ul>'+matches.slice(0,50).map(c=>'<li><a href="'+e(c.url)+'">'+e(c.label)+'</a>'+(c.subjects.length?' · '+c.subjects.map(s=>e(names.get(s)||s)).join(' · '):'')+'</li>').join('')+'</ul>':'<p>No published concepts match. Try clearing the filters.</p>');
+ }catch(error){
+  if(ticket!==revision)return;
+  integrated.innerHTML=error.code==='authentication_required'
+   ?'<p><a href="/web/account.html?returnTo='+encodeURIComponent(location.pathname+location.search)+'">Sign in to browse published concepts</a></p>'
+   :'<p role="status">Published concepts could not be loaded.</p><button type="button" data-integrated-retry>Retry</button>';
+ }
+}
+integrated.addEventListener('submit',event=>{
+ event.preventDefault();
+ integratedRoute(Object.fromEntries(new FormData(event.target)));
+});
+integrated.addEventListener('change',event=>{
+ if(event.target.name!=='system')return;
+ const filters=Object.fromEntries(new FormData(event.target.form));
+ integratedRoute({...filters,organ:''});
+});
+integrated.addEventListener('click',event=>{
+ if(event.target.closest('[data-integrated-retry]'))render();
+});
 let visibleGroups=new Map();
 function state(){const p=new URLSearchParams(location.search);return {search:(p.get('search')||'').slice(0,200),subject:names.has(p.get('subject'))?p.get('subject'):'',page:Number(p.get('page'))||1};}
 function render(){
+ const ticket=++revision;
+ const showIntegrated=isIntegrated();
+ referenceView.hidden=showIntegrated;
+ integrated.hidden=!showIntegrated;
+ (showIntegrated?integratedViewLink:subjectViewLink).setAttribute('aria-current','page');
+ (showIntegrated?subjectViewLink:integratedViewLink).removeAttribute('aria-current');
+ if(showIntegrated){
+  results.replaceChildren();
+  return renderIntegrated(ticket);
+ }
+ integrated.replaceChildren();
  if(!catalogue)return;
- revision++;
  const s=state();search.value=s.search;subject.value=s.subject;
  const data=selectCatalogue(catalogue,s);
  visibleGroups=new Map(data.groups.map(g=>[g.key,g]));
@@ -28,6 +84,7 @@ pages.addEventListener('click',event=>{const b=event.target.closest('button[data
 window.addEventListener('popstate',render);
 // Never retain a previous account's published-library discovery panel.
 window.addEventListener('storage',render);
+window.addEventListener('mlos:access',render);
 window.addEventListener('pageshow',render);
 window.addEventListener('focus',render);
 results.addEventListener('click',async event=>{
@@ -37,7 +94,7 @@ results.addEventListener('click',async event=>{
  const discoveryUrl='/web/library.html?view=overview'+(group.allSubjects.length===1?'&subject='+encodeURIComponent(group.allSubjects[0]):'');
  button.disabled=true;panel.textContent='Finding published learning material…';
  try{
-  const learning=await loadTopicConcepts(group,{request,identity:async()=>(await auth.getSession())?.user?.id||null});
+  const learning=await loadTopicConcepts(group,access);
   if(ticket!==revision||!panel.isConnected)return;
   const {matches}=learning;
   const count=matches.length;
@@ -50,7 +107,8 @@ results.addEventListener('click',async event=>{
  }finally{if(ticket===revision&&button.isConnected)button.disabled=false;}
 });
 async function load(){
- try{const response=await fetch('/data/nmc-reference-catalogue.json');if(!response.ok)throw Error('catalogue_unavailable');catalogue=validateReferenceCatalogue(await response.json());render();}
+ try{const response=await fetch('/data/nmc-reference-catalogue.json');if(!response.ok)throw Error('catalogue_unavailable');catalogue=validateReferenceCatalogue(await response.json());if(!isIntegrated())render();}
  catch{status.textContent='The catalogue could not be loaded. Please try again.';results.innerHTML='<button id="nmc-retry">Retry</button>';document.querySelector('#nmc-retry').addEventListener('click',load,{once:true});}
 }
+render();
 load();

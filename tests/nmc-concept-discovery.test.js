@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {discoverTopicConcepts,loadTopicConcepts} from '../src/domain/nmc-concept-discovery.js';
+import {discoverTopicConcepts,loadTopicConcepts,selectIntegratedConcepts} from '../src/domain/nmc-concept-discovery.js';
 const group={labels:['Anaemia'],allSubjects:['medicine']};
 const concept=(conceptId,label,aliases=[],subjects=['medicine'])=>({conceptId,label,aliases,classification:{subjects}});
 const library={concepts:[concept('c1','Anemia'),concept('c2','Iron deficiency anaemia'),concept('c3','Another name',['anaemia']),concept('c4','Anemia')],questions:[{questionId:'q1',conceptLinks:[{conceptId:'c1'},{conceptId:'c1'}]},{questionId:'q1',conceptLinks:[{conceptId:'c1'}]}],notes:[{noteVersionId:'n1',conceptId:'c1'},{noteVersionId:'n1',conceptId:'c1'}]};
@@ -40,4 +40,21 @@ test('clinical name discovery preserves Greek letters and positive/negative symb
  assert.deepEqual(discoverTopicConcepts({labels:['A+'],allSubjects:['medicine']},library).map(c=>c.conceptId),['positive']);
  assert.deepEqual(discoverTopicConcepts({labels:['A-'],allSubjects:['medicine']},library).map(c=>c.conceptId),['negative']);
  assert.deepEqual(discoverTopicConcepts({labels:['Variant 1.2'],allSubjects:['medicine']},library).map(c=>c.conceptId),['decimal']);
+});
+
+test('integrated facets and alias search resolve the same concept after rename and reclassification',()=>{
+ const original={...concept('airway:1','Airflow interpretation',['Spirometry'],['medicine','physiology']),
+  classification:{subjects:['medicine','physiology'],systems:['respiratory'],organs:['lungs']}};
+ const other={...concept('ethics:1','Consent'),classification:{subjects:['medicine'],systems:[],organs:[]}};
+ const selected=selectIntegratedConcepts([original,original,other],{system:'respiratory',organ:'lungs',search:'spirometry'});
+ assert.deepEqual(selected.systems,['respiratory']);
+ assert.deepEqual(selected.organs,['lungs']);
+ assert.equal(selected.matches.length,1);
+ const subjectMatch=discoverTopicConcepts({labels:['Airflow interpretation'],allSubjects:['medicine']},{concepts:[original],questions:[],notes:[]})[0];
+ assert.equal(selected.matches[0].url,subjectMatch.urls.concept);
+ const renamed={...original,label:'Pulmonary test interpretation',classification:{...original.classification,organs:[]}};
+ const updated=selectIntegratedConcepts([renamed,other],{system:'respiratory',search:'spirometry'});
+ assert.equal(updated.matches[0].url,selected.matches[0].url);
+ assert.deepEqual(updated.organs,[]);
+ assert.equal(selectIntegratedConcepts([renamed,other]).matches.length,2);
 });
