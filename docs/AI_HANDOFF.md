@@ -1,3 +1,7 @@
+## Respiratory classification revisions saved — 7 November 2026 IST
+
+Draft PR #415. Updated GM28.11, GM28.17 and GM28.18 in the authenticated Owner Console. Added the shared `respiratory` system key already used in repository library and integrated-view tests. The Admin editor confirmed revision 2 for each saved proposal. Next, owner attestation of identity/classification, followed by review of exact prerequisite, teaching and assessment bindings. All three remain Admin drafts.
+
 ## Respiratory identity and classification review — 7 November 2026 IST
 
 Draft PR #415. Review commit `168205d15e5d18dd2f15f74d3bf9621070121b88`. Read-only production check confirmed all three drafts are pending at revision 1, with Medicine and no system facet. Recommend adding the shared Respiratory system to each draft before owner attestation, while keeping organ optional. Next, confirm the shared system key, save revised classifications and review exact bindings. No production change or acceptance was performed.
