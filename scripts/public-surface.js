@@ -6,6 +6,7 @@ export const publicFiles = Object.freeze([
   'src/domain/nmc-reference-catalogue.js',
   'src/domain/nmc-concept-discovery.js',
   'data/nmc-reference-catalogue.json',
+  'data/nmc-reference-overlay.json',
   'web/concept-http-check.html',
   'web/concept-http-check.js',
   'src/adapters/concept-http-acceptance.js',

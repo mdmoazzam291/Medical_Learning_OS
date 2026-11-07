@@ -112,6 +112,15 @@ try{
   await page.getByRole('button',{name:'Clear',exact:true}).click();
   await page.locator('#nmc-search').fill('PY9.1');await page.getByRole('button',{name:'Search',exact:true}).click();
   await page.locator('.nmc-topic summary').click();await page.getByRole('link',{name:'Read October clarification',exact:true}).waitFor();
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.locator('#nmc-search').fill('MI8.3');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.locator('.nmc-topic summary').click();
+  await page.getByText('Editorial search alias: MI8.3',{exact:false}).waitFor();
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.locator('#nmc-search').fill('Pancreatic disorders');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.getByRole('status').filter({hasText:'3 source reference appearances'}).waitFor();
   assert.deepEqual(errors,[],name+' browser errors');
   await page.screenshot({path:join(screenshots,'nmc-catalogue-'+name+'.png'),fullPage:true});
   await page.close();console.log(name+': search/filter/pagination/reload/history/source/amendment/overflow passed');
