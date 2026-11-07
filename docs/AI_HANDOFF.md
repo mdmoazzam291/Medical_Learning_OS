@@ -1,3 +1,9 @@
+## NMC source exceptions in catalogue navigation — 7 November 2026 IST
+
+Owner-authorized autonomous Foundation work, draft PR #415. Implementation `b9e976a7ac4524def165df04b952d175b18ac87b` adds a source-version-bound overlay with all 21 dispositions. Seven editorial aliases support search, eleven Surgery references have two labelled editorial topic groups, and the two official replacements plus one deletion are displayed beside original rows. The pinned catalogue and original IDs remain traceable. Replacement/deletion annotations link to the existing October corrigendum. Editorial candidates remain labelled as interpretations.
+
+All 1,577 Node tests, repository checks and 132-file Pages build passed after hydrating the current branch dependencies. Added regressions for aliases, preserved original rows, inferred topics, edition mismatch, duplicates and invalid official dispositions; browser checks now exercise alias and Surgery grouping searches. Next, check hosted Chromium/WebKit results, then complete objective-level Basics and component mappings using automatic verification. Admin approval is not a Foundation completion dependency.
+
 ## Owner-directed autonomous NMC completion — 7 November 2026 IST
 
 Owner explicitly requires NMC Foundation completion without Admin approval, review or permission prompts. Recorded in AGENTS.md at `d7ba65d42dfa758d412ec7b3ec6bd830a2337677`. The inventory reporter now includes all regular task packets and computes eligible first-draft completion automatically. Verified 65 packets, 2,613 references with drafts/proposals, zero eligible references needing a first draft, and 21 separately tracked source exceptions. Existing app proposal counts are preserved as separate fields. Exact remote code readback passed.
