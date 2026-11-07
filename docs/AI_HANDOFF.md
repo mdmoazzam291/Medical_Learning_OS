@@ -1,3 +1,7 @@
+## Repeatable NMC draft verification — 7 November 2026 IST
+
+Draft PR #415. Foundation run 42295508853 passed all jobs at `8cd1bea9768cc8b910f8899e1aad2efa97e4567e`. Commit `31521eb12699df1a66054055f6943d331bcda021` adds `ops/nmc/verify_draft_packets.py`, which validates task packets against the regenerated pinned review queue, including source version, exact row evidence, duplicate references, source exceptions, assessment modes and pending approval flags. Verified the 130 Respiratory/Medicine source rows in three local packets. Injected changed page evidence, duplicate packets and forged learner activation were rejected. Exact remote script readback passed. The broader 2,607-row source audit remains recorded separately. Next, run the reusable verifier over all 65 packets and review the Respiratory prerequisite and material bindings. Owner sign-off remains deferred.
+
 ## NMC performance assessment queue — 7 November 2026 IST
 
 Draft PR #415. Commit `1e635bed3f88ca35e94bd260d12ecc27a66912c7` indexes 867 performance-tagged candidates across all 19 subjects and links their source packets. Recounted all 65 packets at `61c810d5531d0e98fb81fd6b879bf7c55d35c08b`; 2,607 distinct reference IDs, no duplicate IDs. Verified exact remote report readback. Next, review three Respiratory rubrics, then batch the source mode and compound-scope review by subject. Owner attestation and clinical sign-off remain pending.
