@@ -32,3 +32,25 @@ for(const o of c.objectives){
  assert.equal(c.artifacts.filter(a=>a.objectiveVersionIds.includes(o.objectiveVersionId)&&a.role==='assessment').length,3);
 }
 console.log('Respiratory bindings verified: 3 objectives, 3 teaching notes, 9 simulated cases; all draft-only');
+const requirements=JSON.parse(readFileSync(new URL('docs/evidence/2026-11-08-nmc-respiratory-components.json',root),'utf8'));
+assert.equal(requirements.status,'draft-component-decomposition');
+assert.equal(requirements.sourceEdition,catalogue.edition);assert.equal(requirements.sourceSha256,catalogue.sourceSha256);
+assert.equal(requirements.clinicalApproval,false);assert.equal(requirements.learnerActivation,false);
+assert.equal(requirements.rows.length,3);
+const ids=new Set(),referenceIds=new Set();
+for(const row of requirements.rows){
+ assert(!referenceIds.has(row.referenceId));referenceIds.add(row.referenceId);
+ assert(catalogue.references.some(r=>r.referenceId===row.referenceId&&r.searchCode===row.code&&r.pdfPage===row.pdfPage));
+ assert.equal(row.completeRequirementSetKnown,false);assert.equal(row.coverageFraction,null);
+ assert(/^[a-f0-9]{64}$/.test(row.sourceBodySha256));assert(row.components.length>0);
+ for(const component of row.components){
+  assert(!ids.has(component.componentId));ids.add(component.componentId);
+  assert.equal(component.clinicalValidation,false);
+  for(const field of ['wording','assessmentPrompt','expectedEvidence'])assert(typeof component[field]==='string'&&component[field].trim());
+  assert(['pilot-candidate-partial','broader-test-scope-unbound','explicit-assessment-missing'].includes(component.evidenceStatus));
+  assert.equal(component.bindingStatus,component.candidateObjectiveVersionIds.length?'candidate-only':'unbound');
+  for(const id of component.candidateObjectiveVersionIds)assert(p.components.some(x=>x.referenceId===row.referenceId&&x.objectiveVersionId===id));
+ }
+}
+assert.equal(ids.size,10);
+console.log('Respiratory source components verified: 10 unique components, incomplete scope and candidate bindings explicit');

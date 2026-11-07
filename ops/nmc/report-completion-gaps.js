@@ -18,6 +18,7 @@ for(const row of exceptions.rows)tasks.set(row.referenceId,{task:row.draftLearni
 const objectives=new Map(pack.objectives.map(row=>[row.objective.objectiveVersionId,row]));
 execFileSync(process.execPath,[fileURLToPath(new URL('./verify-respiratory-bindings.js',import.meta.url))],{encoding:'utf8'});
 const pilot=JSON.parse(readFileSync(new URL('2026-11-08-nmc-respiratory-artifact-bindings.json',directory),'utf8'));
+const requirements=JSON.parse(readFileSync(new URL('2026-11-08-nmc-respiratory-components.json',directory),'utf8'));
 const rows=catalogue.references.map(ref=>{
  const component=pilot.components.find(c=>c.referenceId===ref.referenceId);
  const pilotObjective=component?pilot.curriculum.objectives.find(o=>o.objectiveVersionId===component.objectiveVersionId):null;
@@ -33,7 +34,7 @@ const rows=catalogue.references.map(ref=>{
   task:task||null,replacementTasks:replacement?.draftLearningTasks||[],proposedObjectives,
   // The draft pack contains no exact component/teaching/assessment bindings. Do not
   // infer them from matching labels or the existence of offline teaching notes.
-  componentRequirements:null,teachingArtifactVersionIds:null,assessmentArtifactVersionIds:null,
+  componentRequirements:requirements.rows.find(r=>r.referenceId===ref.referenceId)||null,teachingArtifactVersionIds:null,assessmentArtifactVersionIds:null,
   draftTeachingArtifactVersionIds:draftArtifacts.filter(a=>a.role==='teaching').map(a=>a.artifactVersionId),
   draftAssessmentArtifactVersionIds:draftArtifacts.filter(a=>a.role==='assessment').map(a=>a.artifactVersionId),
   coverageFraction:null,
