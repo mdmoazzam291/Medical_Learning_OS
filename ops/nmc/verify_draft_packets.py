@@ -38,7 +38,7 @@ def verify(queue, packets):
                 raise ValueError(f"row_digest_invalid: {path}")
             if not isinstance(row.get("draftLearningTask"), str) or not row["draftLearningTask"].strip():
                 raise ValueError(f"missing_learning_task: {path}")
-            if row.get("mode") not in ("knowledge", "performance-and-knowledge"):
+            if row.get("mode") not in ("knowledge", "performance", "performance-and-knowledge"):
                 raise ValueError(f"invalid_assessment_mode: {path}")
             subject = row["subjectId"]
             counts[subject] = counts.get(subject, 0) + 1
