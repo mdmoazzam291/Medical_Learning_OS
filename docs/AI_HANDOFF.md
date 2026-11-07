@@ -1,3 +1,7 @@
+## Complete task packet verification — 7 November 2026 IST
+
+Draft PR #415. The reusable verifier passed all 65 packets and 2,607 distinct source references across 19 subjects. Full-run testing revealed two existing performance-only tasks in neurophysiology; the verifier now accepts that mode alongside knowledge and combined modes. Verification patch `aa90eee5fb6c99def8b54ba821a28f8dd75a04a7`. All source evidence, approval flags, unique references and task modes passed. Next, clinical and identity review and exact reviewed content bindings; owner sign-off remains deferred.
+
 ## Repeatable NMC draft verification — 7 November 2026 IST
 
 Draft PR #415. Foundation run 42295508853 passed all jobs at `8cd1bea9768cc8b910f8899e1aad2efa97e4567e`. Commit `31521eb12699df1a66054055f6943d331bcda021` adds `ops/nmc/verify_draft_packets.py`, which validates task packets against the regenerated pinned review queue, including source version, exact row evidence, duplicate references, source exceptions, assessment modes and pending approval flags. Verified the 130 Respiratory/Medicine source rows in three local packets. Injected changed page evidence, duplicate packets and forged learner activation were rejected. Exact remote script readback passed. The broader 2,607-row source audit remains recorded separately. Next, run the reusable verifier over all 65 packets and review the Respiratory prerequisite and material bindings. Owner sign-off remains deferred.
