@@ -1,0 +1,714 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d",
+      "subjectId": "medicine",
+      "code": "GM10.19",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "9d8dca2e9ceb7b903cc5a1a176b2f0369e7c0c3b9cf391a757a44239bb918636",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute kidney injury management",
+      "draftLearningTask": "Prioritize volume, diet, medicine adjustment, monitoring and dialysis assessment in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bceb73d9a8bd9866a1848827488880dca613bbbf77ed03203685084fda967e23",
+      "subjectId": "medicine",
+      "code": "GM10.20",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        303.36
+      ],
+      "sourceBodySha256": "e773c8613569225d2b027a6b6be0f588549bb57faa3411cfbc42320f05363f60",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Supportive CKD care",
+      "draftLearningTask": "Build a plan addressing diet, blood pressure, glycaemia, lipids, anaemia, potassium and mineral-bone complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bbc13bf1d5b9d733143f0f33699c15018c84662c11c1a667909644b7bc60d0f8",
+      "subjectId": "medicine",
+      "code": "GM10.21",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        303.36,
+        102.7,
+        323.16
+      ],
+      "sourceBodySha256": "83adb0c75107df0aa2a478269b950856a0659cba9f2733fc8780f23e1d64fb2c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dialysis indications",
+      "draftLearningTask": "Identify urgent and planned dialysis indications in representative cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a",
+      "subjectId": "medicine",
+      "code": "GM10.22",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        323.16,
+        102.7,
+        350.52
+      ],
+      "sourceBodySha256": "c6bf97aedefa0ab1c7ffe39eb735a7a34ea5fb88c725018e96caadb3cc1b8c45",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Kidney replacement therapy",
+      "draftLearningTask": "Compare indications for dialysis and transplant assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3d7b80431c76e77e5d2bce8f7314fbfa2ecf7715777c5ee53661e8b3f0607434",
+      "subjectId": "medicine",
+      "code": "GM10.23",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        350.52,
+        102.7,
+        377.88
+      ],
+      "sourceBodySha256": "463d60f987abd986b56c40bb6eabeef10c63b72ca7547b0f02b5f7113821ad05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ethics of kidney replacement",
+      "draftLearningTask": "Explain consent, preferences and relevant ethical and legal considerations in a simulated consultation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f",
+      "subjectId": "medicine",
+      "code": "GM10.24",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        377.88,
+        102.7,
+        422.1
+      ],
+      "sourceBodySha256": "b7baaabe275aa0d367add0bfc8357f8e12f12f20baceefa4dc0957238fb31cbf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CKD and quality of life",
+      "draftLearningTask": "Explore effects on wellbeing, work and family and incorporate preferences into a care plan.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:33056cbc6462a9800911e5890beacb7dbe56bf84b0aabcf4f86bf97764b55da4",
+      "subjectId": "medicine",
+      "code": "GM11.1",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        441.96,
+        102.7,
+        461.82
+      ],
+      "sourceBodySha256": "79a131f8178907dd6fee0ae7da9ec8e7e74aa7082e8fbf4633a0113a6c8db9ea",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes classification",
+      "draftLearningTask": "Define diabetes and distinguish major categories using representative presentations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8d60be8a75e08394e4ceb530b6240b5f37c171f8cf05eeb9aaae18b400fa2c01",
+      "subjectId": "medicine",
+      "code": "GM11.2",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        461.82,
+        102.7,
+        489.18
+      ],
+      "sourceBodySha256": "ffb93801752e340d1355f166a67f3baf6135352afadd05e4dadabacf68afd94e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Type 1 diabetes",
+      "draftLearningTask": "Relate epidemiology, risk factors and autoimmune mechanisms to clinical evolution.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8634107389533d96f67a5070a64fe0b9ac2353667a090b363ce58b496f1fcc50",
+      "subjectId": "medicine",
+      "code": "GM11.3",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        489.18,
+        102.7,
+        516.54
+      ],
+      "sourceBodySha256": "781da59dcbe7a483d2d1c45c6888f22219644d0c4a628fe7aeff7c2a682be1ec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Type 2 diabetes",
+      "draftLearningTask": "Relate epidemiology, risk, insulin resistance and beta-cell dysfunction to clinical evolution and economic burden.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d5e4cc3b3feaa371d25379bde1462764a1c942a5326f833ef325678344e37430",
+      "subjectId": "medicine",
+      "code": "GM11.4",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        516.54,
+        102.7,
+        543.9
+      ],
+      "sourceBodySha256": "5717a5576e1269010a55b60829d85c0ad23fefd247aacd58ec2105eee8d62c03",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Genetics and environment",
+      "draftLearningTask": "Explain how inherited susceptibility and environmental exposures contribute to diabetes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:467e8b65036b703ee65949f0ac1a6a933c16e980f2f5bd6cf5ae254bf51c154e",
+      "subjectId": "medicine",
+      "code": "GM11.5",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        133.8
+      ],
+      "sourceBodySha256": "989ba48828d4324269be434cf284e21d7e38d087189d48f99a0451093d6561e7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetic vascular complications",
+      "draftLearningTask": "Compare mechanisms and time course of microvascular and macrovascular injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d77cbb3c0e64f010ef736c3e5950831d07dc2939d1274ef4e2cc33ad4a3921b6",
+      "subjectId": "medicine",
+      "code": "GM11.6",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        161.16
+      ],
+      "sourceBodySha256": "1e31c464225bbba9ea6da98be088dcd5476b3e839df31767ccc27204d2bb7ec4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetic emergencies",
+      "draftLearningTask": "Compare precipitating factors, mechanisms, recognition and management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e8c269a5ae4042c630305c6dd4d2af201178bba183050311d2a8fc1c2558bde4",
+      "subjectId": "medicine",
+      "code": "GM11.7",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        161.16,
+        102.7,
+        215.28
+      ],
+      "sourceBodySha256": "3ed9a02e426c1e0d6235c640ce27740574fd9d8302555089b385921f6ecb5271",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes history",
+      "draftLearningTask": "Elicit symptoms, lifestyle, diet, family and medicine history, comorbidities and evidence of organ injury.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fc998ac8e1341dcc211dd5e8c61c57376fb6527dee39e0e9305f04c5fd36dd90",
+      "subjectId": "medicine",
+      "code": "GM11.8",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        215.28,
+        102.7,
+        282.96
+      ],
+      "sourceBodySha256": "7e8eadf86546077cdf65d7823afbfa010567d895ed9e220685f8fd9e7cbabbba",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes examination",
+      "draftLearningTask": "Demonstrate examination of skin, blood pressure, peripheral pulses, fundus and foot sensation, deformity and injury.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:79bd186d85fad0bbecd95b1b3ef23577769e45c3eb6f44837d5473ae83f4a218",
+      "subjectId": "medicine",
+      "code": "GM11.9",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        282.96,
+        102.7,
+        310.2
+      ],
+      "sourceBodySha256": "421998f7bedaf9bff95cb3ef8f0054de6337e42ccdfc0ef01c813297021d3bdf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emergency recognition",
+      "draftLearningTask": "Identify features of hypoglycaemia, ketoacidosis and hyperosmolar illness in simulated cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f1cb574250381ede189d305e847c94e23e8121e1a1e47535524e592726311f41",
+      "subjectId": "medicine",
+      "code": "GM11.10",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        310.2,
+        102.7,
+        337.68
+      ],
+      "sourceBodySha256": "c02833e4719dc2658bdbc8aaf45b834abc25b78dca7cf566d36241d3aa89f032",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes differential",
+      "draftLearningTask": "Use clinical clues to prioritize diabetes categories and alternative diagnoses.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:113f6b260a0cb2d72d5d290a7f57d20fb602c08b0ecda61afd7cd5b0348234bd",
+      "subjectId": "medicine",
+      "code": "GM11.11",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        337.68,
+        102.7,
+        391.74
+      ],
+      "sourceBodySha256": "c8ac186d3ef1917892c7618360ac3bf5b64ed8faadf305d5ca8757c8f13fb8f2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes tests",
+      "draftLearningTask": "Select and interpret glycaemic tests, albuminuria, ECG, electrolytes, blood gases, ketones, renal tests and lipids when indicated.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90dfbdb2c9b7ee62047591f7df922675fc7fb3585ca3651983e29049ca3f050a",
+      "subjectId": "medicine",
+      "code": "GM11.12",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        391.74,
+        102.7,
+        411.66
+      ],
+      "sourceBodySha256": "8c54a52e95bb532a5874d8f0eaffa25ccc91c485e9038fa5815be3971456a1a3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Capillary glucose",
+      "draftLearningTask": "Demonstrate capillary sampling and interpret the result in clinical context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492",
+      "subjectId": "medicine",
+      "code": "GM11.13",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        411.66,
+        102.7,
+        431.52
+      ],
+      "sourceBodySha256": "542664e2cf02f1793c1141a2f43912d1538a589639003a41a5971df6b357c1ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urine ketones",
+      "draftLearningTask": "Perform a urine dipstick on a teaching sample and interpret the result and limitations.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ead3823a4c7b1bf3fca283aba2ab8184d0d44446eb0bac1b1051d295f3c178a0",
+      "subjectId": "medicine",
+      "code": "GM11.14",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        431.52,
+        102.7,
+        458.82
+      ],
+      "sourceBodySha256": "66477b105018b843a7c247d1d751ed8b92672d9d375e84c4cb3a78afee6affd2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypoglycaemia recognition",
+      "draftLearningTask": "Recognize hypoglycaemia and explain immediate treatment and reassessment priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1163d6dc12ce37739fdca68a39fad0b6fcd1e630a4f591984a08e58aac9e8ff5",
+      "subjectId": "medicine",
+      "code": "GM11.15",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        458.82,
+        102.7,
+        486.18
+      ],
+      "sourceBodySha256": "35df2d3dd0c6ff6d263648cde79970d169614e47dbcdbbd63c7c5dcd9e38c4a6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetic emergency treatment",
+      "draftLearningTask": "Distinguish representative emergencies and justify initial treatment and escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1cc13004c540e300d70b03ac860f1b95613329f8bd3b4a86a88418809fd02df0",
+      "subjectId": "medicine",
+      "code": "GM11.16",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        486.18,
+        102.7,
+        513.54
+      ],
+      "sourceBodySha256": "6a4a110f5d528f0f4cf020fc73263cf4c5fde6c79b3cf9fbb97cc831640c9798",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetes pharmacotherapy",
+      "draftLearningTask": "Compare major drug classes by indications, contraindications, adverse effects and interactions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe",
+      "subjectId": "medicine",
+      "code": "GM11.17",
+      "page": 300,
+      "rowBBox": [
+        44.2,
+        513.54,
+        102.7,
+        540.9
+      ],
+      "sourceBodySha256": "c593ad7e2049eb9427f02f230ac3a408788df19be98cf7d9f5c967f694b66822",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cost-conscious type 2 diabetes care",
+      "draftLearningTask": "Build an individualized plan based on severity, complications, access and cost.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc",
+      "subjectId": "medicine",
+      "code": "GM11.18",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        174.06
+      ],
+      "sourceBodySha256": "295234632c82cd9c04c2eb7c13b33252ae7eb76d90ee90203d23c2a8b60ff720",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Complication-directed treatment",
+      "draftLearningTask": "Compare medicines for neurological, renal, retinal and cardiovascular complications and explain safety monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:65f91fb0d0d795b2d4b9fc07a57d5c070e01beab21d157965203e729a23e47e6",
+      "subjectId": "medicine",
+      "code": "GM11.19",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        201.42
+      ],
+      "sourceBodySha256": "96ed4a1f05ee9a405c565d6886abef55a0f3d739652a8a15b397611f3691a755",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Insulin administration",
+      "draftLearningTask": "Demonstrate injection technique and counsel a simulated patient on administration and safety.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e15e707db3837a867893f3a86bcb02c26ab028e833babfc158ac31a6281c256b",
+      "subjectId": "medicine",
+      "code": "GM11.20",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        201.42,
+        102.7,
+        228.72
+      ],
+      "sourceBodySha256": "1271d1e10c1a1306ab3bf152f7daf903beb0d2910c8c069523c1890b4fb07dc4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Glucose self-monitoring",
+      "draftLearningTask": "Demonstrate meter use and use teach-back to confirm understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:afeac2ed795ed89816c6ef858da971f8afa9035c557e4ad051c6c51cfd18fb37",
+      "subjectId": "medicine",
+      "code": "GM11.21",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        228.72,
+        102.7,
+        256.08
+      ],
+      "sourceBodySha256": "9d8cd900a809ed7aa45a15dfd7aad009437568fcfddf9a1fe836aeae77aa1b2a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Treatment preferences",
+      "draftLearningTask": "Elicit and incorporate patient preferences when comparing diabetes therapies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f080ee5cdf3f203726e414d5d4b164b14ebad2fd42fba1ce3fd86632df0abe55",
+      "subjectId": "medicine",
+      "code": "GM11.22",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        256.08,
+        102.7,
+        283.44
+      ],
+      "sourceBodySha256": "e3e769f4b79efa4c54179e2b60075c7953face235b74a31f053b3be9d581557d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypoglycaemia mechanisms",
+      "draftLearningTask": "Classify causes, explain counterregulation and justify initial assessment and care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:80cffd3fe7ce058d5dde55b3f1d3c62439058bd2baa1334eab18753129c33718",
+      "subjectId": "medicine",
+      "code": "GM11.23",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        283.44,
+        102.7,
+        324.36
+      ],
+      "sourceBodySha256": "2ad644b951c5c9dec4f841bae26d39dc584116bfa37abb3509dc8794006a1c3a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diabetic ketoacidosis",
+      "draftLearningTask": "Link precipitants and mechanisms to diagnosis, stabilization and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:386e644b7696b262692cf6ef8a2cda3949629aaaa5e06e03bd7221887aff6796",
+      "subjectId": "medicine",
+      "code": "GM11.24",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        324.36,
+        102.7,
+        366.12
+      ],
+      "sourceBodySha256": "25285fbf1ae7fc1ac403fac3e73b5afba3c1b52ae3c975f7dad5b07787af132c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyperosmolar hyperglycaemic state",
+      "draftLearningTask": "Explain pathophysiology and distinguish diagnostic and management priorities from ketoacidosis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a",
+      "subjectId": "medicine",
+      "code": "GM12.1",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        385.98,
+        102.7,
+        440.22
+      ],
+      "sourceBodySha256": "a34f691f082f30c8e044a5c5ae51c1378033be8c2689ff7057baa1409cc0285e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid disease mechanisms",
+      "draftLearningTask": "Compare epidemiology, genetics and mechanisms including iodine deficiency and autoimmunity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3",
+      "subjectId": "medicine",
+      "code": "GM12.2",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        440.22,
+        102.7,
+        481.08
+      ],
+      "sourceBodySha256": "139d6405ca77ce39395f1b589c1184fd5615356771b640b81cec8b05d6ed2a0f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid axis and testing",
+      "draftLearningTask": "Trace feedback regulation and interpret representative thyroid function patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:12c11ca1f8419b803a36dd9e4f2e70bb2efe185f6f192947087730cfe233f3a4",
+      "subjectId": "medicine",
+      "code": "GM12.3",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        481.08,
+        102.7,
+        508.32
+      ],
+      "sourceBodySha256": "496ffcad994dd670b186eff6c3319d683feda9564f46297f9429c8156587572c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Radioiodine uptake",
+      "draftLearningTask": "Explain how uptake testing helps distinguish causes of thyroid dysfunction.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:598e34d36d97751960364f74d90ff0b50cec3f76fed5c5441fe0a73ecc5ce1e5",
+      "subjectId": "medicine",
+      "code": "GM12.4",
+      "page": 301,
+      "rowBBox": [
+        44.2,
+        508.32,
+        102.7,
+        539.46
+      ],
+      "sourceBodySha256": "56b9ce9d44eb14f7f481b428a600227d71fe970db5c853a8f1c38de250d4edae",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid history",
+      "draftLearningTask": "Elicit and present features that clarify cause and severity.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ef1bcf8ba186bc621652abbbcbd29ec684043e425042b3bcc8bff9f0a4545e92",
+      "subjectId": "medicine",
+      "code": "GM12.5",
+      "page": 302,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        174.06
+      ],
+      "sourceBodySha256": "4f78c6e9e5f7304201e5f49cd0a57ee48b9aa260346665a097693aa57d50a7b9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid examination",
+      "draftLearningTask": "Demonstrate examination for systemic, cardiovascular, thyroid and nodal findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fab42bf3cafb0cd4eb23172194cb488c8c63780d72d976c1e4816a59a9a8f4d6",
+      "subjectId": "medicine",
+      "code": "GM12.6",
+      "page": 302,
+      "rowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        188.52
+      ],
+      "sourceBodySha256": "a429c01a6665aaf676ea75ddee9690795939d6e938153c60cb04b6c59be622b4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid palpation",
+      "draftLearningTask": "Demonstrate systematic palpation and document relevant findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:58acb4b7f630115666ca9549b35db7984b5a08242716742029eef28a38c14c1c",
+      "subjectId": "medicine",
+      "code": "GM12.7",
+      "page": 302,
+      "rowBBox": [
+        44.2,
+        188.52,
+        102.7,
+        215.88
+      ],
+      "sourceBodySha256": "0ad81efdfafe6953d62b0d7b61227dd5b1cc6dce9ad15ce5f02659337aab4fda",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thyroid differential",
+      "draftLearningTask": "Prioritize likely causes using the supplied presentation.",
+      "mode": "knowledge"
+    }
+  ]
+}

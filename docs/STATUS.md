@@ -1,3 +1,15 @@
+## NMC Foundation Integrated view pilot — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `199eb53dd6998c060aeabf6f54e1ca9d49f8c8bf`. NMC Subjects remains the default. Integrated adds system and optional organ filtering plus label/alias search over authenticated published concepts. Both discovery paths use the same canonical library URL and existing question/note/attempt records. The integrated view exposes no draft content and implies no approved NMC mapping. No data migration or learner activation was performed.
+
+Local verification on the matching source files: 1,573 Node tests, npm check and 131-file Pages build passed. Browser regression was extended for shared links, facets and logout. Local Chromium launch was blocked by the runtime socket policy, so hosted browser verification remains pending. Next, obtain reviewed prerequisite sequences and explicit objective-to-competency coverage mappings for the Respiratory pilot before exposing Basics and partial coverage. The five private concept proposals still require Admin submission and review.
+
+## NMC Medicine source-row verification — 2026-11-05 22:53 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `fb4253f529c723e63f1441158f3f7a86acd24777`. Rebuilt the pinned NMC review queue with PyMuPDF 1.26.6, the byte-matched September 2024 PDF, and the frozen row inventory. The builder reproduced the checked-in catalogue and returned 2,634 appearances across 19 subjects. Verified 130 distinct Medicine references by code, page, eligibility, bounding box and reconstructed row SHA-256. Replaced the three staging files with regular draft review packets, preserving task wording. Forty-seven tasks carry a performance component. Exact remote packet readback passed.
+
+Next, review canonical identities, compound competency coverage and clinical/source alignment before intake or learner activation. The 21 source exceptions remain tracked separately. Application tests were not run for this evidence-only change.
+
 ## Objective draft batch 2 — 4 November 2026
 
 Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.

@@ -1,3 +1,139 @@
+## NMC source exceptions in catalogue navigation — 7 November 2026 IST
+
+Owner-authorized autonomous Foundation work, draft PR #415. Implementation `b9e976a7ac4524def165df04b952d175b18ac87b` adds a source-version-bound overlay with all 21 dispositions. Seven editorial aliases support search, eleven Surgery references have two labelled editorial topic groups, and the two official replacements plus one deletion are displayed beside original rows. The pinned catalogue and original IDs remain traceable. Replacement/deletion annotations link to the existing October corrigendum. Editorial candidates remain labelled as interpretations.
+
+All 1,577 Node tests, repository checks and 132-file Pages build passed after hydrating the current branch dependencies. Added regressions for aliases, preserved original rows, inferred topics, edition mismatch, duplicates and invalid official dispositions; browser checks now exercise alias and Surgery grouping searches. Next, check hosted Chromium/WebKit results, then complete objective-level Basics and component mappings using automatic verification. Admin approval is not a Foundation completion dependency.
+
+## Owner-directed autonomous NMC completion — 7 November 2026 IST
+
+Owner explicitly requires NMC Foundation completion without Admin approval, review or permission prompts. Recorded in AGENTS.md at `d7ba65d42dfa758d412ec7b3ec6bd830a2337677`. The inventory reporter now includes all regular task packets and computes eligible first-draft completion automatically. Verified 65 packets, 2,613 references with drafts/proposals, zero eligible references needing a first draft, and 21 separately tracked source exceptions. Existing app proposal counts are preserved as separate fields. Exact remote code readback passed.
+
+Next, continue automatic Foundation component and source-exception work without pausing on Admin identity acceptance. Preserve accurate clinical evidence status and existing authenticated publication authority.
+
+## Respiratory pilot authoring package complete — 7 November 2026 IST
+
+Draft PR #415. Commit `9400bc9b2d078696191d247865c4d0005a8ced54` adds original teaching notes, three simulated cases and criterion-based draft rubrics for asthma maintenance and COPD exacerbation management. Combined with the spirometry packet, the pilot now has three teaching notes, nine simulated cases and three draft rubrics. Verified primary GINA/GOLD references, scope boundaries and exact remote file readback. The cases are original and carry no PYQ claims. The three concept proposals remain saved at revision 2.
+
+Authoring is complete for this bounded pilot. Identity acceptance, source/rights/clinical review, rubric validation and exact artifact bindings are required for learner release. The wider NMC first-draft inventory and automated source evidence verification are complete. Broader clinical coverage remains pending. Next, batch the three identities and teaching/assessment versions through the existing review workflow, then verify the actual learner projection. No learner release has occurred.
+
+## Spirometry pilot teaching and assessment draft — 7 November 2026 IST
+
+Draft PR #415. Commit `ef638d9b01957dd1f6d00218f9bb162fe8baeed7` adds an original teaching note, baseline case, quality-sensitive comparison, delayed unfamiliar case and four-criterion rubric for GM28.11. Checked claims against GOLD and ATS/ERS primary sources and verified case arithmetic and exact remote readback. Clinical approval, rubric validation and publication are pending. Next, review the case keys and bind exact reviewed teaching/assessment versions to the accepted identity after owner sign-off.
+
+## Complete task packet verification — 7 November 2026 IST
+
+Draft PR #415. The reusable verifier passed all 65 packets and 2,607 distinct source references across 19 subjects. Full-run testing revealed two existing performance-only tasks in neurophysiology; the verifier now accepts that mode alongside knowledge and combined modes. Verification patch `aa90eee5fb6c99def8b54ba821a28f8dd75a04a7`. All source evidence, approval flags, unique references and task modes passed. Next, clinical and identity review and exact reviewed content bindings; owner sign-off remains deferred.
+
+## Repeatable NMC draft verification — 7 November 2026 IST
+
+Draft PR #415. Foundation run 42295508853 passed all jobs at `8cd1bea9768cc8b910f8899e1aad2efa97e4567e`. Commit `31521eb12699df1a66054055f6943d331bcda021` adds `ops/nmc/verify_draft_packets.py`, which validates task packets against the regenerated pinned review queue, including source version, exact row evidence, duplicate references, source exceptions, assessment modes and pending approval flags. Verified the 130 Respiratory/Medicine source rows in three local packets. Injected changed page evidence, duplicate packets and forged learner activation were rejected. Exact remote script readback passed. The broader 2,607-row source audit remains recorded separately. Next, run the reusable verifier over all 65 packets and review the Respiratory prerequisite and material bindings. Owner sign-off remains deferred.
+
+## NMC performance assessment queue — 7 November 2026 IST
+
+Draft PR #415. Commit `1e635bed3f88ca35e94bd260d12ecc27a66912c7` indexes 867 performance-tagged candidates across all 19 subjects and links their source packets. Recounted all 65 packets at `61c810d5531d0e98fb81fd6b879bf7c55d35c08b`; 2,607 distinct reference IDs, no duplicate IDs. Verified exact remote report readback. Next, review three Respiratory rubrics, then batch the source mode and compound-scope review by subject. Owner attestation and clinical sign-off remain pending.
+
+## NMC editorial exception queue — 7 November 2026 IST
+
+Draft PR #415. Commit `58b1dd69a6f1003e59f478125572d22ced88454b` adds 18 machine-readable editorial candidates: seven search aliases and eleven Surgery rows in two proposed topic groups. Verified each reference ID, original identifier, page and subject against the pinned catalogue. The aliases have no existing exact code collisions. The proposed overlay is review-only. Next, confirm inferred aliases and topic boundaries before applying an approved overlay. The three official corrigendum changes are tracked separately.
+
+Foundation run 42293499793 finished with core and Chromium jobs successful. The NMC catalogue step passed in WebKit before the broader WebKit job was cancelled. The full WebKit run therefore remains outstanding.
+
+## NMC work independent of owner sign-off — 7 November 2026 IST
+
+Draft PR #415. Corrigendum packet commit `51bc6d16d1f5b2fc82f6b9f68ab008e2258ccf4b` records the two official replacements and one deletion with proposed review actions. Exact remote readback passed. Foundation run 42293499793 verified the NMC catalogue step in Chromium and WebKit at `525b0d25657776799cbc634b1a8f8709eb631c87`; overall run status: in_progress. Respiratory drafts remain pending owner identity/classification attestation. Reviewed objective and material bindings remain separate.
+
+## NMC Foundation readiness audit — 7 November 2026 IST
+
+Draft PR #415. Audited snapshot `ccff2ef60a539ce5e7e6b3c0198de5594497a377`: all 2,607 regular packet rows match the rebuilt pinned review queue by code, page, coordinates and row SHA-256. No duplicate reference IDs in the 65 packets. The union with existing proposals covers 2,613 eligible appearances. The 21 exceptions remain tracked separately. The Respiratory rubric and delayed assessment specifications are in `docs/evidence/2026-11-07-nmc-foundation-readiness-audit.md`. Admin attestation and publication remain deferred at owner request.
+
+Foundation run 42292877735 passed the core job and failed both browser jobs waiting for the Integrated System control. The change adds explicit accessible names to both selectors. All 26 focused NMC tests, Pages build and local diff checks passed. Hosted browser results for the change remain pending.
+
+## Respiratory classification revisions saved — 7 November 2026 IST
+
+Draft PR #415. Updated GM28.11, GM28.17 and GM28.18 in the authenticated Owner Console. Added the shared `respiratory` system key already used in repository library and integrated-view tests. The Admin editor confirmed revision 2 for each saved proposal. Next, owner attestation of identity/classification, followed by review of exact prerequisite, teaching and assessment bindings. All three remain Admin drafts.
+
+## Respiratory identity and classification review — 7 November 2026 IST
+
+Draft PR #415. Review commit `168205d15e5d18dd2f15f74d3bf9621070121b88`. Read-only production check confirmed all three drafts are pending at revision 1, with Medicine and no system facet. Recommend adding the shared Respiratory system to each draft before owner attestation, while keeping organ optional. Next, confirm the shared system key, save revised classifications and review exact bindings. No production change or acceptance was performed.
+
+## Respiratory Admin drafts saved — 7 November 2026 IST
+
+Owner /root. Draft PR #415. Submitted the three Respiratory documents from the validated packet in `424159830962596031fa56861a86fd9bd3aaa08a` through the authenticated Medretica Owner Console. Each exact revision 1 was saved and confirmed by the editor, and all three appeared in Saved drafts: GM28.11 suspected COPD spirometry, GM28.17 asthma maintenance, GM28.18 COPD exacerbation management. These are pending concept drafts. Next, review identity/classification in Admin, then review exact Basics, teaching and assessment bindings before making a coverage claim. No acceptance or learner publication was performed.
+
+## NMC Respiratory pilot mapping — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `114b13787cf28d27bb3cbd78af76b6dcb6b48e97` specifies three proposed objectives, Basics sequences, teaching and observed assessment deliverables and uncovered scope for GM28.11, GM28.17 and GM28.18. Checked candidate labels and exact source reference metadata against the validated Admin packet and Medicine review packet. Remote readback passed. Next, resolve accepted identities and review prerequisites and exact content bindings. Coverage remains unverified.
+
+## NMC Foundation objective coverage triage — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `7a3a9d0cfb051eb51cceb6afbabcd775c23c787d`. Admin reference rows now distinguish linked drafts, absence of links in the current pack, and unresolved source issues. Each linked row can show its exact proposed objective versions and identity status. Coverage remains unverified pending explicit reviewed requirements and teaching/assessment bindings. All 26 focused NMC tests and the Pages build passed. Next, map reviewed Respiratory objectives and prerequisites before introducing partial coverage or Basics sequences.
+
+## NMC Foundation Integrated view pilot — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `199eb53dd6998c060aeabf6f54e1ca9d49f8c8bf`. NMC Subjects remains the default. Integrated adds system and optional organ filtering plus label/alias search over authenticated published concepts. Both discovery paths use the same canonical library URL and existing question/note/attempt records. The integrated view exposes no draft content and implies no approved NMC mapping. No data migration or learner activation was performed.
+
+Local verification on the matching source files: 1,573 Node tests, npm check and 131-file Pages build passed. Browser regression was extended for shared links, facets and logout. Local Chromium launch was blocked by the runtime socket policy, so hosted browser verification remains pending. Next, obtain reviewed prerequisite sequences and explicit objective-to-competency coverage mappings for the Respiratory pilot before exposing Basics and partial coverage. The five private concept proposals still require Admin submission and review.
+
+## Reusable NMC Foundation views design — 6 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Design commit `572d12142bf8de56496106f1fb9b911ea3c017e9` records stable concept identities, optional facets, explicit relationships and derived views. Verified design file readback. This is a design checkpoint. Implementation and learner activation remain pending. The existing five-identity Admin draft packet remains the immediate operational next step. Pilot the Respiratory view after reviewed identities and mappings are available.
+
+## Medicine Admin draft preparation — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Commit `424159830962596031fa56861a86fd9bd3aaa08a` prepares five reviewed concept documents with pinned source locators. Current read-only production preflight found zero exact label or alias collisions at catalogue version 448. All five passed the Admin editor's domain validator and exact remote readback. Only the source subject is populated in classification. Next, enter through the owner-authenticated Concept drafts editor and verify saved revisions. No production drafts were submitted or accepted.
+
+## Medicine identity semantic review — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `52aa07b4a0e370a4b207cb52135fad0c1dd429a5` reviews all five proposed identities and 14 intake IDs. Retains two proposals as written and recommends label or alias changes for malaria relapse, suspected COPD spirometry and asthma maintenance. Verified candidate accounting and exact remote readback. Next, recheck the revised COPD wording for collisions and prepare the five Admin draft submissions. Identity acceptance, clinical review and source alignment remain pending.
+
+## Medicine identity proposal checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `e2582d8213ea55fa20fc9c0fee1dbdca93f2d400` prepares five scoped identity proposals. Read-only production preflight found one pending proposal and no matches for the 14 prior IDs, relevant pending terms, or normalized labels and aliases for the five new candidates. Verified source membership and exact remote packet readback. Next, review semantic overlap and use the owner-authenticated Concept drafts editor for approved submissions. Clinical and source review remain separate. No production drafts were saved.
+
+## Medicine canonical registry readback — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `8e96f4d0b33469843c99c8fbc37639ff0e9c1514` verifies that the 14 repository candidates are absent from both learner catalogue version 448 and the Admin-private accepted identity registry. Targeted related-term search returned no alternatives. Read-only query, with no production writes or accepted links. Next, check pending identity proposals and alias collisions, and prepare supported proposals without duplicating existing scopes. Evidence-only change.
+
+## Medicine compound objective checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `b7ecdb23607ceb03fce43a439a47c31ed1f7a537` splits GM26.13, GM26.18, GM26.23, GM27.9 and GM28.15 into 21 assessable draft objectives. Checked all five against the pinned PDF row and confirmed exact remote file readback. The production read-only request timed out. The 14 identity candidates still need a current authenticated registry readback. Next, compare candidates with the current registry and review the split objectives for identity, clinical scope and source alignment. Application tests were not run for this evidence-only change.
+
+## Medicine identity and objective scope checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Evidence commit `15633afabae7457d4d3abf336d69be075b63f9e9` partitions the 130 verified appearances into 20 review groups and identifies 14 checked-in candidate IDs across five partial-match rows. Verified group coverage against the draft packets, candidate IDs against the branch intake packets and exact remote readback. Candidate identities still require current registry readback. No acceptance decisions were made. Next, verify the five candidates' registry scopes and split the five compound rows listed in the review. Application tests were not run for this evidence-only change.
+
+## NMC Medicine source-row verification — 2026-11-05 22:53 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `fb4253f529c723e63f1441158f3f7a86acd24777`. Rebuilt the pinned NMC review queue with PyMuPDF 1.26.6, the byte-matched September 2024 PDF, and the frozen row inventory. The builder reproduced the checked-in catalogue and returned 2,634 appearances across 19 subjects. Verified 130 distinct Medicine references by code, page, eligibility, bounding box and reconstructed row SHA-256. Replaced the three staging files with regular draft review packets, preserving task wording. Forty-seven tasks carry a performance component. Exact remote packet readback passed.
+
+Next, review canonical identities, compound competency coverage and clinical/source alignment before intake or learner activation. The 21 source exceptions remain tracked separately. Application tests were not run for this evidence-only change.
+
+## NMC source exception checkpoint — 5 November 2026 IST
+
+Draft PR #415. Commit `7ac137fb9a4c637a9851b493c7bf20a8d677e621` records dispositions for all 21 catalogue exceptions. Official corrigendum replaces PY9.1 and PE6.4 and deletes PS9.2. Seven printed identifiers have collision-free candidate aliases, and eleven Surgery rows have two inferred topic groupings. The latter eighteen await editorial review. The catalogue and active data were left intact. Exact pinned PDF row verification for the 130 staged drafts remains blocked by the unavailable execution environment.
+
+## NMC first-draft coverage checkpoint — 5 November 2026 IST
+
+Draft PR #415. Commit `92bdb1e233bc35941dd75c92d28f74a3a51d9f7f` stages the final 26 General Medicine tasks (GM29.1–GM29.26), including 18 with an observed assessment component. The tasks cover the physician's role in the community. Checked the official NMC PDF, catalogue membership, staged reference uniqueness, and exact remote readback.
+
+Recounted coverage by reference ID using the current catalogue, foundation source bindings, all draft task files in PR #415, and the three staged General Medicine files. The previous estimate of 70 unwritten entries was 44 too high. There were 26, now all drafted. Of 2,634 catalogue appearances, 2,613 eligible appearances have at least one draft or existing proposal, including 130 staged entries. The remaining 21 need source resolution. This is a first-draft accounting check, with compound competency completeness, clinical review and source approval still pending. The execution environment remains unavailable for regenerating the pinned queue. Next, verify the 130 staged entries against the exact PDF row hashes and coordinates, promote verified drafts for review, and resolve the 21 source exceptions.
+
+## General Medicine staging checkpoint — 5 November 2026 IST
+
+Draft PR #415. Commit `19374e6d0559d95121c47edab39ff6b2074ef908` adds 51 staged drafts for GM26.29–GM28.26, including 24 with an observed assessment component. Matched each row to a unique eligible reference in the repository catalogue and checked its competency against the official NMC PDF. Verified exact remote readback and no overlap with the preceding staged batch. The previous 53 also matched catalogue IDs, codes and pages. Exact PDF row hashes and coordinates still require the queue builder, whose execution environment is unavailable. Both batches remain staged. Of 174 eligible appearances at the previous verified checkpoint, 104 now have staged drafts and 70 remain unwritten. Resume at GM29.1 and verify both staged batches against the generated pinned queue before promotion. Clinical and source approval remain pending.
+
+## General Medicine staging checkpoint — 5 November 2026 IST
+
+Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`. Commit `56a09e78d3040b1b5f7913631f1a3b7b9f9bd573` adds 53 original drafts for GM24.3–GM26.28 in `docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-staged-drafts.json`. Matched each code to a unique catalogue reference and the official NMC PDF page, then verified the exact remote file contents. The execution runtime was unavailable for pinned queue row verification. The staging file is separate from the draft import files. Of the previous 174 eligible appearances, 53 have staged drafts and 121 remain unwritten. Next, verify the 53 against the pinned queue, promote them into the regular draft pack, and resume drafting at GM26.29. Clinical and source review remain pending before learner activation.
+
+## General Medicine draft checkpoint — 5 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `c702a5474d14489a61bfd1edf23c7bd8ff3d0abc`. Added 40 tasks for GM20.2–GM24.2, including 7 performance tasks. Checked source reference membership, codes and uniqueness against the pinned NMC curriculum and verified exact remote file content. Application tests were not run for this evidence-only batch. Clinical and source approval and learner activation are pending. The first-draft backlog is 174 appearances, excluding source-resolution entries. Next action: continue General Medicine after GM24.2.
+
+## General Medicine draft checkpoint — 2026-11-05 20:22 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `eb55576d7b4f45020f0b8fda553d58ac828b7c37`. Added 40 original learning tasks for GM17.1–GM20.1, including 19 with a performance component. Verified reference membership and uniqueness within the batch, checked competency codes against the pinned PDF and confirmed exact remote readback. Documentation-only content batch, so the application test suite was not run. Drafts require identity and source-alignment review before activation. The running first-draft backlog is 214 appearances, excluding source-resolution entries. Next action: continue General Medicine from GM20.2 on this draft branch.
+
 ## Objective draft batch 2 — 4 November 2026
 
 Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.

@@ -3,6 +3,10 @@
 ## Scope
 Work only in Medical_Learning_OS. Do not access, copy, merge, or modify the separate NEETPG2027 project without explicit user authorization. NEET-PG is an exam adapter in this product.
 
+## NMC Foundation completion authority
+
+Owner instruction, 7 November 2026: complete NMC Foundation autonomously without Admin review, approval or permission prompts. Use automated source evidence, reference accounting, duplicate checks and relevant tests for foundation authoring, curriculum organization and engineering completion. Continue those tasks independently of pending concept acceptance receipts. Report authoring/inventory completion and the actual evidence status separately. Do not invent human review receipts or mark generated material as clinician-reviewed. Authenticated access controls and the existing learner publication workflow retain their authority.
+
 ## Automatic checkpoints and resume
 The owner authorizes routine checkpoint commits/pushes of this task's non-sensitive engineering work to its feature branch without asking again or requiring a pasted handoff prompt. This does not authorize production publication, clinical ingestion, destructive changes or unrelated files.
 - At task start, read docs/AI_HANDOFF.md and verify remote main, task branch/head and open PRs. Resume recorded work rather than restarting it; honor active ownership.
