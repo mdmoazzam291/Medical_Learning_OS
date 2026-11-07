@@ -26,6 +26,42 @@ for (const name of packetFiles) {
   }
 }
 
+const exceptionPath = new URL('../../docs/evidence/2026-11-07-nmc-source-exception-task-packet.json', import.meta.url);
+const exceptions = JSON.parse(readFileSync(exceptionPath, 'utf8'));
+if (exceptions.sourceEdition !== catalogue.edition || exceptions.sourceSha256 !== catalogue.sourceSha256 ||
+    exceptions.status !== 'original-tasks-for-editorial-source-exceptions' ||
+    exceptions.clinicalApproval !== false || exceptions.learnerActivation !== false)
+  throw new Error('exception_packet_invalid');
+const exceptionReferences = new Set();
+for (const row of exceptions.rows) {
+  const reference = references.get(row.referenceId);
+  if (!reference || reference.searchCode !== row.code || reference.pdfPage !== row.page ||
+      reference.subjectId !== row.subjectId || reference.amendmentNotice ||
+      (reference.identifierState === 'standard' && reference.topicId !== null) ||
+      exceptionReferences.has(row.referenceId) || draftedReferences.has(row.referenceId) ||
+      typeof row.draftLearningTask !== 'string' || !row.draftLearningTask.trim())
+    throw new Error('exception_reference_invalid');
+  exceptionReferences.add(row.referenceId);
+}
+const replacementCodes = new Set();
+for (const replacement of exceptions.officialReplacementTasks) {
+  if (!['PY9.1', 'PE6.4'].includes(replacement.code) || replacementCodes.has(replacement.code) ||
+      replacement.amendmentSource !== catalogue.clarificationUrl || replacement.amendmentPdfPage !== 3 ||
+      !Array.isArray(replacement.draftLearningTasks) || !replacement.draftLearningTasks.length ||
+      replacement.draftLearningTasks.some(task => typeof task !== 'string' || !task.trim()))
+    throw new Error('replacement_scope_invalid');
+  replacementCodes.add(replacement.code);
+}
+if (replacementCodes.size !== 2 || exceptions.deletedReference.code !== 'PS9.2' ||
+    exceptions.deletedReference.disposition !== 'historical-reference-only' ||
+    exceptions.deletedReference.amendmentSource !== catalogue.clarificationUrl ||
+    exceptions.deletedReference.amendmentPdfPage !== 3)
+  throw new Error('official_dispositions_invalid');
+const accounted = reference => proposedReferences.has(reference.referenceId) ||
+  draftedReferences.has(reference.referenceId) || exceptionReferences.has(reference.referenceId) ||
+  (reference.amendmentNotice && (replacementCodes.has(reference.searchCode) || reference.searchCode === 'PS9.2'));
+const missingDisposition = catalogue.references.filter(reference => !accounted(reference));
+
 const bySubject = new Map();
 const emptyCounts = () => ({
   appearances: 0, withProposal: 0, needsSourceResolution: 0, withoutProposal: 0,
@@ -54,6 +90,15 @@ console.log(JSON.stringify({
   packetFiles: packetFiles.length,
   firstDraftInventoryComplete: totals.needsFirstDraft === 0,
   adminApprovalRequiredForFoundationAuthoring: false,
+  allSourceAppearancesAccountedFor: missingDisposition.length === 0,
+  sourceAccounting: {
+    regularDrafts: draftedReferences.size,
+    editorialExceptionDrafts: exceptionReferences.size,
+    officialReplacements: replacementCodes.size,
+    officialDeletions: 1,
+    missingDispositions: missingDisposition.map(reference => reference.referenceId),
+    componentCoverage: 'unverified',
+  },
   totals,
   subjects: Object.fromEntries(bySubject),
 }, null, 2));
