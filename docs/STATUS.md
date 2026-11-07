@@ -1,3 +1,9 @@
+## Automatic NMC completion regression checks — 8 November 2026 IST
+
+Owner /root, draft PR #415. Added two executable regression tests covering full source inventory uniqueness, unknown coverage, no false learner publication, existing COPD canonical reuse and exact draft artifact resolution. Both passed locally. Foundation CI now explicitly runs the Respiratory binding verifier and full completion-gap reporter, writing the report into the runner temporary directory. No deployment or external service change. Hosted run for this new commit is pending. Next, resolve broader PFT identity using current registry evidence and expand canonical mappings beyond the pilot.
+
+Owner requested recurring continuation 20 minutes after each task until stopped. The available automation scheduler permits at most hourly recurrence and does not support completion-relative chaining. No schedule was created or substituted. Explained the limit; hourly cadence still needs the owner's choice. This does not block current authorized Foundation work.
+
 ## Scoped COPD extension objectives resolved — 8 November 2026 IST
 
 Owner /root, draft PR #415. The systemic-steroid and antimicrobial extension components now have two versioned management objectives using the existing COPD-exacerbation concept proposal C-f2c27acd-d39a-4558-9f04-83aa591d72fd. Reused the exact two teaching sections and six case artifact versions, with draft-only preparation-curriculum bindings and explicit partial adult COPD simulation context. No duplicate disease identities were created. Broader PFT principles remains material-only pending a correctly scoped canonical identity; it is not forced into suspected-COPD spirometry.
