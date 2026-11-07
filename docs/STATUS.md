@@ -1,3 +1,7 @@
+## Cross-subject endocarditis scope decomposition — 8 November 2026 IST
+
+Resumed PR #415 at 8040929e6757250449bee143b11cce467ac9ca8d. Added an authoring packet for GM1.19, MI3.2, PA26.7 and PE22.5. Preserved four distinct reference locators and original task scopes; decomposed them into eight task components with explicit unbound teaching, assessment and canonical objective fields. This is decomposition of existing task drafts, not fresh official-source or clinical validation. Adult clinical integration, microbiology, pathology and pediatric context remain distinct objectives under a possible shared disease home. No canonical concept was created or merged. Verified four unique references and eight component IDs against fetched branch packets. No domain/UI changes; application tests not rerun for this evidence-only batch. Next, verify source breadth and canonical registry identity, then attach actual artifact versions. Foundation completion remains false.
+
 ## Hourly continuation, cross-subject queue and exact-byte repair — 8 November 2026 IST
 
 Owner /root, draft PR #415. User accepted hourly continuation until stopped. Created enabled automation Continue NMC Foundation with HOURLY interval 1, Asia/Kolkata, first scheduled start returned as 2026-11-07T23:24:06Z (8 November 04:54:06 IST). Runs must reread current handoff/head, avoid active-writer overlap, perform substantive bounded implementation, preserve real evidence status and checkpoint with expected-head leases. No completion-relative timer is supported.
