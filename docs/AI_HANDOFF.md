@@ -1,3 +1,9 @@
+## NMC exception task authoring completed — 7 November 2026 IST
+
+Draft PR #415. Commit `225a9288626198c118cbb7d01632d6783a882ac5` adds original tasks for all eighteen editorial exception references, including nine performance components. Reconstructed every original row from the pinned PDF with matching SHA-256 and coordinates. Added four task drafts for the two official replacement scopes and the official deleted-reference disposition. The separate packet preserves source-resolution flags and inferred identifier provenance. Verified exact remote readback. All 2,634 original appearances now have an authoring path or an explicit official deletion disposition. This remains source-appearance accounting, with component-level coverage tracked separately.
+
+Full Foundation run 42395358653 succeeded at `4df186419b92315ec65e7a66f3b93d48de2fc46a`, including Chromium and WebKit for the source navigation overlay. Next, expand prerequisite and component projections, retaining actual evidence status. Owner policy permits autonomous Foundation completion without Admin approval prompts.
+
 ## NMC source exceptions in catalogue navigation — 7 November 2026 IST
 
 Owner-authorized autonomous Foundation work, draft PR #415. Implementation `b9e976a7ac4524def165df04b952d175b18ac87b` adds a source-version-bound overlay with all 21 dispositions. Seven editorial aliases support search, eleven Surgery references have two labelled editorial topic groups, and the two official replacements plus one deletion are displayed beside original rows. The pinned catalogue and original IDs remain traceable. Replacement/deletion annotations link to the existing October corrigendum. Editorial candidates remain labelled as interpretations.
