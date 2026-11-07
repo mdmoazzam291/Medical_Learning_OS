@@ -1,3 +1,9 @@
+## Owner-directed autonomous NMC completion — 7 November 2026 IST
+
+Owner explicitly requires NMC Foundation completion without Admin approval, review or permission prompts. Recorded in AGENTS.md at `d7ba65d42dfa758d412ec7b3ec6bd830a2337677`. The inventory reporter now includes all regular task packets and computes eligible first-draft completion automatically. Verified 65 packets, 2,613 references with drafts/proposals, zero eligible references needing a first draft, and 21 separately tracked source exceptions. Existing app proposal counts are preserved as separate fields. Exact remote code readback passed.
+
+Next, continue automatic Foundation component and source-exception work without pausing on Admin identity acceptance. Preserve accurate clinical evidence status and existing authenticated publication authority.
+
 ## Respiratory pilot authoring package complete — 7 November 2026 IST
 
 Draft PR #415. Commit `9400bc9b2d078696191d247865c4d0005a8ced54` adds original teaching notes, three simulated cases and criterion-based draft rubrics for asthma maintenance and COPD exacerbation management. Combined with the spirometry packet, the pilot now has three teaching notes, nine simulated cases and three draft rubrics. Verified primary GINA/GOLD references, scope boundaries and exact remote file readback. The cases are original and carry no PYQ claims. The three concept proposals remain saved at revision 2.
