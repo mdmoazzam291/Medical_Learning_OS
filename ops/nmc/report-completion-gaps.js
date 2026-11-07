@@ -27,14 +27,20 @@ const rows=catalogue.references.map(ref=>{
  const bindings=pack.sourceBindings.filter(b=>b.referenceId===ref.referenceId);
  const proposedObjectives=bindings.map(b=>{const row=objectives.get(b.objectiveVersionId);return {objectiveVersionId:b.objectiveVersionId,conceptId:row.objective.conceptId,wording:row.wording,status:row.status};});
  if(pilotObjective)proposedObjectives.push({objectiveVersionId:pilotObjective.objectiveVersionId,conceptId:pilotObjective.conceptId,wording:component.wording,status:'draft',identityState:component.identityState});
+ for(const row of extension.rows){
+  const binding=row.canonicalObjectiveBinding;
+  if(!binding||!requirements.rows.find(r=>r.referenceId===ref.referenceId)?.components.some(c=>c.componentId===row.componentId))continue;
+  proposedObjectives.push(binding);
+  draftArtifacts.push(...extension.curriculum.artifacts.filter(a=>a.objectiveVersionIds.includes(binding.objectiveVersionId)));
+ }
+
  const deleted=ref.searchCode===exceptions.deletedReference.code&&Boolean(ref.amendmentNotice);
  const replacement=exceptions.officialReplacementTasks.find(r=>r.code===ref.searchCode&&ref.amendmentNotice);
  const task=tasks.get(ref.referenceId);
  return {referenceId:ref.referenceId,code:ref.observedCode,subjectId:ref.subjectId,pdfPage:ref.pdfPage,
   disposition:deleted?'historical-deletion':replacement?'official-replacement':task?'task-drafted':proposedObjectives.length?'objective-proposed':'missing-draft',
   task:task||null,replacementTasks:replacement?.draftLearningTasks||[],proposedObjectives,
-  // The draft pack contains no exact component/teaching/assessment bindings. Do not
-  // infer them from matching labels or the existence of offline teaching notes.
+  // Only exact draft bindings are listed. Published artifact availability is unknown.
   draftComponentMaterialBindings:extension.rows.filter(r=>requirements.rows.find(source=>source.referenceId===ref.referenceId)?.components.some(c=>c.componentId===r.componentId)),
   componentRequirements:requirements.rows.find(r=>r.referenceId===ref.referenceId)||null,teachingArtifactVersionIds:null,assessmentArtifactVersionIds:null,
   draftTeachingArtifactVersionIds:draftArtifacts.filter(a=>a.role==='teaching').map(a=>a.artifactVersionId),

@@ -58,18 +58,36 @@ const extension=JSON.parse(readFileSync(new URL('docs/evidence/2026-11-08-nmc-re
 assert.equal(extension.status,'draft-component-material-bindings');assert.equal(extension.clinicalApproval,false);assert.equal(extension.learnerActivation,false);
 assert.equal(extension.completeRequirementSetKnown,false);assert.equal(extension.coverageFraction,null);
 assert.equal(extension.rows.length,3);assert.equal(new Set(extension.rows.map(r=>r.componentId)).size,3);
+const gapCurriculum=validatePreparationCurriculum(extension.curriculum);
+assert.equal(gapCurriculum.objectives.length,2);assert.equal(gapCurriculum.artifacts.length,8);
 const extensionArtifactIds=new Set();
 for(const row of extension.rows){
- assert(ids.has(row.componentId));assert.equal(row.bindingStatus,'draft-material-only');assert.equal(row.canonicalObjectiveBinding,null);
+ assert(ids.has(row.componentId));
+ if(row.canonicalObjectiveBinding===null){assert.equal(row.bindingStatus,'draft-material-only');assert.equal(row.componentId,'nmc-component:gm28.11:test-principles@1');}
+ else {
+  const binding=row.canonicalObjectiveBinding;
+  assert.equal(row.bindingStatus,'draft-objective-and-material');assert.equal(binding.status,'draft');assert.equal(binding.identityState,'existing-proposal');assert.equal(binding.scope,'partial-COPD-simulation');
+  assert.equal(binding.conceptId,'C-f2c27acd-d39a-4558-9f04-83aa591d72fd');
+  assert(row.componentId.startsWith('nmc-component:gm28.18:'));
+  assert(gapCurriculum.objectives.some(o=>o.objectiveVersionId===binding.objectiveVersionId&&o.conceptId===binding.conceptId));
+  assert.equal(gapCurriculum.artifacts.filter(a=>a.objectiveVersionIds.includes(binding.objectiveVersionId)).length,4);
+ }
+
  assert(/^docs\/evidence\/[a-z0-9-]+\.md$/.test(row.path));
  const body=readFileSync(new URL(row.path,root));assert.equal(createHash('sha256').update(body).digest('hex'),row.fileSha256);
  assert.equal(row.artifacts.length,4);assert.equal(row.artifacts.filter(a=>a.role==='teaching').length,1);assert.equal(row.artifacts.filter(a=>a.role==='assessment').length,3);
  for(const a of row.artifacts){
   assert(!extensionArtifactIds.has(a.artifactVersionId));extensionArtifactIds.add(a.artifactVersionId);
   assert(a.artifactVersionId.endsWith('@sha256:'+row.fileSha256));
+  if(row.canonicalObjectiveBinding){
+   const artifact=gapCurriculum.artifacts.find(x=>x.artifactVersionId===a.artifactVersionId);
+   assert(artifact);assert.equal(artifact.status,'draft');assert.equal(artifact.reviewedBy,null);
+   assert.deepEqual(artifact.objectiveVersionIds,[row.canonicalObjectiveBinding.objectiveVersionId]);
+   assert.equal(artifact.role,a.role);assert.equal(artifact.artifactKind,a.kind);assert.equal(artifact.familyId,a.familyId);
+  }
   assert.equal(a.kind,a.role==='teaching'?'note':'case');
   assert(body.toString('utf8').includes(a.kind==='note'?'## '+a.section+'\n':'| '+a.section+' |'));
   if(a.kind==='case'){assert(body.toString('utf8').includes('## '+a.rubricSection+'\n'));assert(typeof a.familyId==='string'&&a.familyId.length>0);}
  }
 }
-console.log('Gap material verified: 3 component teaching extensions, 9 cases, exact file hashes; objective bindings unresolved');
+console.log('Gap material verified: 3 component teaching extensions, 9 cases, exact file hashes; 2 scoped draft objective bindings, PFT identity unresolved');

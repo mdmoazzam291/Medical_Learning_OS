@@ -49,8 +49,15 @@
     },
     {
       "componentId": "nmc-component:gm28.18:systemic-steroid-plan@1",
-      "bindingStatus": "draft-material-only",
-      "canonicalObjectiveBinding": null,
+      "bindingStatus": "draft-objective-and-material",
+      "canonicalObjectiveBinding": {
+        "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1",
+        "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+        "status": "draft",
+        "identityState": "existing-proposal",
+        "scope": "partial-COPD-simulation",
+        "wording": "Justify systemic corticosteroid decisions in a simulated COPD exacerbation using the supplied reference, patient context and reassessment needs."
+      },
       "path": "docs/evidence/2026-11-08-nmc-respiratory-gap-teaching-assessment.md",
       "fileSha256": "99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
       "artifacts": [
@@ -90,8 +97,15 @@
     },
     {
       "componentId": "nmc-component:gm28.18:antimicrobial-plan@1",
-      "bindingStatus": "draft-material-only",
-      "canonicalObjectiveBinding": null,
+      "bindingStatus": "draft-objective-and-material",
+      "canonicalObjectiveBinding": {
+        "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1",
+        "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+        "status": "draft",
+        "identityState": "existing-proposal",
+        "scope": "partial-COPD-simulation",
+        "wording": "Justify antimicrobial decisions in a simulated COPD exacerbation using the supplied reference, patient context and reassessment needs."
+      },
       "path": "docs/evidence/2026-11-08-nmc-respiratory-gap-teaching-assessment.md",
       "fileSha256": "99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
       "artifacts": [
@@ -129,5 +143,129 @@
         }
       ]
     }
-  ]
+  ],
+  "curriculum": {
+    "schemaVersion": 1,
+    "registryVersion": "nmc:respiratory-gap-objectives@1",
+    "pathways": [],
+    "objectives": [
+      {
+        "objectiveId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan",
+        "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1",
+        "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+        "task": "management",
+        "depth": "applied",
+        "context": {
+          "jurisdiction": "not-specified",
+          "population": "adult-COPD-exercise",
+          "setting": "simulation"
+        },
+        "prerequisites": []
+      },
+      {
+        "objectiveId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan",
+        "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1",
+        "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+        "task": "management",
+        "depth": "applied",
+        "context": {
+          "jurisdiction": "not-specified",
+          "population": "adult-COPD-exercise",
+          "setting": "simulation"
+        },
+        "prerequisites": []
+      }
+    ],
+    "mappings": [],
+    "artifacts": [
+      {
+        "artifactKind": "note",
+        "artifactVersionId": "nmc:gap:systemic-steroid-plan:teaching@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1"
+        ],
+        "role": "teaching",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": null
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-1@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-2@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-3@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:systemic-steroid-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+      },
+      {
+        "artifactKind": "note",
+        "artifactVersionId": "nmc:gap:antimicrobial-plan:teaching@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1"
+        ],
+        "role": "teaching",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": null
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:antimicrobial-plan:case-1@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:antimicrobial-plan:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:antimicrobial-plan:case-2@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:antimicrobial-plan:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:gap:antimicrobial-plan:case-3@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:antimicrobial-plan@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:gap:antimicrobial-plan:simulation"
+      }
+    ]
+  }
 }
