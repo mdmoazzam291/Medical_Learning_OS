@@ -23,3 +23,14 @@ test('full NMC completion queue preserves unknown coverage and canonical reuse',
 test('draft teaching and case files resolve to exact component and objective versions',()=>{
  assert.doesNotThrow(()=>execFileSync(process.execPath,['ops/nmc/verify-respiratory-bindings.js'],{cwd,encoding:'utf8'}));
 });
+test('cross-subject candidates retain distinct source tasks and never infer a canonical merge',()=>{
+ const report=JSON.parse(execFileSync(process.execPath,['ops/nmc/report-cross-subject-candidates.js'],{cwd,encoding:'utf8',maxBuffer:16*1024*1024}));
+ assert.equal(report.automaticMerging,false);assert.equal(report.productionRegistryChecked,false);
+ const appearances=report.candidates.flatMap(g=>g.appearances);
+ assert.equal(new Set(appearances.map(a=>a.referenceId)).size,appearances.length);
+ assert(report.candidates.every(g=>g.subjectIds.length>1&&g.canonicalConceptId===null&&g.identityEquivalence==='unverified'));
+ const group=report.candidates.find(g=>g.label==='Infective endocarditis');
+ assert.deepEqual(group.subjectIds,['medicine','microbiology','pathology','pediatrics']);
+ assert.equal(group.appearances.length,4);
+ assert.equal(new Set(group.appearances.map(a=>a.draftLearningTask)).size,4);
+});
