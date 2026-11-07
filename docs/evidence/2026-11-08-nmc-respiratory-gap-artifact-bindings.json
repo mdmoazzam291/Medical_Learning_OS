@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-component-material-bindings",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "completeRequirementSetKnown": false,
+  "coverageFraction": null,
+  "rows": [
+    {
+      "componentId": "nmc-component:gm28.11:test-principles@1",
+      "bindingStatus": "draft-material-only",
+      "canonicalObjectiveBinding": null,
+      "path": "docs/evidence/2026-11-08-nmc-respiratory-gap-teaching-assessment.md",
+      "fileSha256": "99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+      "artifacts": [
+        {
+          "artifactVersionId": "nmc:gap:test-principles:teaching@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "teaching",
+          "kind": "note",
+          "section": "PFT principles teaching",
+          "rubricSection": null,
+          "familyId": null
+        },
+        {
+          "artifactVersionId": "nmc:gap:test-principles:case-1@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "PFT baseline",
+          "rubricSection": "PFT principles rubric",
+          "familyId": "nmc:gap:test-principles:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:test-principles:case-2@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "PFT changed constraint",
+          "rubricSection": "PFT principles rubric",
+          "familyId": "nmc:gap:test-principles:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:test-principles:case-3@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "PFT delayed",
+          "rubricSection": "PFT principles rubric",
+          "familyId": "nmc:gap:test-principles:simulation"
+        }
+      ]
+    },
+    {
+      "componentId": "nmc-component:gm28.18:systemic-steroid-plan@1",
+      "bindingStatus": "draft-material-only",
+      "canonicalObjectiveBinding": null,
+      "path": "docs/evidence/2026-11-08-nmc-respiratory-gap-teaching-assessment.md",
+      "fileSha256": "99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+      "artifacts": [
+        {
+          "artifactVersionId": "nmc:gap:systemic-steroid-plan:teaching@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "teaching",
+          "kind": "note",
+          "section": "Systemic steroid decisions teaching",
+          "rubricSection": null,
+          "familyId": null
+        },
+        {
+          "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-1@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Steroid baseline",
+          "rubricSection": "Systemic steroid decisions rubric",
+          "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-2@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Steroid changed constraint",
+          "rubricSection": "Systemic steroid decisions rubric",
+          "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:systemic-steroid-plan:case-3@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Steroid delayed",
+          "rubricSection": "Systemic steroid decisions rubric",
+          "familyId": "nmc:gap:systemic-steroid-plan:simulation"
+        }
+      ]
+    },
+    {
+      "componentId": "nmc-component:gm28.18:antimicrobial-plan@1",
+      "bindingStatus": "draft-material-only",
+      "canonicalObjectiveBinding": null,
+      "path": "docs/evidence/2026-11-08-nmc-respiratory-gap-teaching-assessment.md",
+      "fileSha256": "99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+      "artifacts": [
+        {
+          "artifactVersionId": "nmc:gap:antimicrobial-plan:teaching@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "teaching",
+          "kind": "note",
+          "section": "Antimicrobial decisions teaching",
+          "rubricSection": null,
+          "familyId": null
+        },
+        {
+          "artifactVersionId": "nmc:gap:antimicrobial-plan:case-1@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Antimicrobial baseline",
+          "rubricSection": "Antimicrobial decisions rubric",
+          "familyId": "nmc:gap:antimicrobial-plan:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:antimicrobial-plan:case-2@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Antimicrobial changed constraint",
+          "rubricSection": "Antimicrobial decisions rubric",
+          "familyId": "nmc:gap:antimicrobial-plan:simulation"
+        },
+        {
+          "artifactVersionId": "nmc:gap:antimicrobial-plan:case-3@sha256:99ed7111caa811b9a0e41cc7f9ef8d45e94cba52ff298c9625008b2994cf6058",
+          "role": "assessment",
+          "kind": "case",
+          "section": "Antimicrobial delayed",
+          "rubricSection": "Antimicrobial decisions rubric",
+          "familyId": "nmc:gap:antimicrobial-plan:simulation"
+        }
+      ]
+    }
+  ]
+}

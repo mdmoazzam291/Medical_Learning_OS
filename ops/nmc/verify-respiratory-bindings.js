@@ -54,3 +54,22 @@ for(const row of requirements.rows){
 }
 assert.equal(ids.size,10);
 console.log('Respiratory source components verified: 10 unique components, incomplete scope and candidate bindings explicit');
+const extension=JSON.parse(readFileSync(new URL('docs/evidence/2026-11-08-nmc-respiratory-gap-artifact-bindings.json',root),'utf8'));
+assert.equal(extension.status,'draft-component-material-bindings');assert.equal(extension.clinicalApproval,false);assert.equal(extension.learnerActivation,false);
+assert.equal(extension.completeRequirementSetKnown,false);assert.equal(extension.coverageFraction,null);
+assert.equal(extension.rows.length,3);assert.equal(new Set(extension.rows.map(r=>r.componentId)).size,3);
+const extensionArtifactIds=new Set();
+for(const row of extension.rows){
+ assert(ids.has(row.componentId));assert.equal(row.bindingStatus,'draft-material-only');assert.equal(row.canonicalObjectiveBinding,null);
+ assert(/^docs\/evidence\/[a-z0-9-]+\.md$/.test(row.path));
+ const body=readFileSync(new URL(row.path,root));assert.equal(createHash('sha256').update(body).digest('hex'),row.fileSha256);
+ assert.equal(row.artifacts.length,4);assert.equal(row.artifacts.filter(a=>a.role==='teaching').length,1);assert.equal(row.artifacts.filter(a=>a.role==='assessment').length,3);
+ for(const a of row.artifacts){
+  assert(!extensionArtifactIds.has(a.artifactVersionId));extensionArtifactIds.add(a.artifactVersionId);
+  assert(a.artifactVersionId.endsWith('@sha256:'+row.fileSha256));
+  assert.equal(a.kind,a.role==='teaching'?'note':'case');
+  assert(body.toString('utf8').includes(a.kind==='note'?'## '+a.section+'\n':'| '+a.section+' |'));
+  if(a.kind==='case'){assert(body.toString('utf8').includes('## '+a.rubricSection+'\n'));assert(typeof a.familyId==='string'&&a.familyId.length>0);}
+ }
+}
+console.log('Gap material verified: 3 component teaching extensions, 9 cases, exact file hashes; objective bindings unresolved');
