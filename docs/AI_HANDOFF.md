@@ -1,3 +1,7 @@
+## Spirometry pilot teaching and assessment draft — 7 November 2026 IST
+
+Draft PR #415. Commit `ef638d9b01957dd1f6d00218f9bb162fe8baeed7` adds an original teaching note, baseline case, quality-sensitive comparison, delayed unfamiliar case and four-criterion rubric for GM28.11. Checked claims against GOLD and ATS/ERS primary sources and verified case arithmetic and exact remote readback. Clinical approval, rubric validation and publication are pending. Next, review the case keys and bind exact reviewed teaching/assessment versions to the accepted identity after owner sign-off.
+
 ## Complete task packet verification — 7 November 2026 IST
 
 Draft PR #415. The reusable verifier passed all 65 packets and 2,607 distinct source references across 19 subjects. Full-run testing revealed two existing performance-only tasks in neurophysiology; the verifier now accepts that mode alongside knowledge and combined modes. Verification patch `aa90eee5fb6c99def8b54ba821a28f8dd75a04a7`. All source evidence, approval flags, unique references and task modes passed. Next, clinical and identity review and exact reviewed content bindings; owner sign-off remains deferred.
