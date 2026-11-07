@@ -1,3 +1,9 @@
+## Respiratory pilot authoring package complete — 7 November 2026 IST
+
+Draft PR #415. Commit `9400bc9b2d078696191d247865c4d0005a8ced54` adds original teaching notes, three simulated cases and criterion-based draft rubrics for asthma maintenance and COPD exacerbation management. Combined with the spirometry packet, the pilot now has three teaching notes, nine simulated cases and three draft rubrics. Verified primary GINA/GOLD references, scope boundaries and exact remote file readback. The cases are original and carry no PYQ claims. The three concept proposals remain saved at revision 2.
+
+Authoring is complete for this bounded pilot. Identity acceptance, source/rights/clinical review, rubric validation and exact artifact bindings are required for learner release. The wider NMC first-draft inventory and automated source evidence verification are complete. Broader clinical coverage remains pending. Next, batch the three identities and teaching/assessment versions through the existing review workflow, then verify the actual learner projection. No learner release has occurred.
+
 ## Spirometry pilot teaching and assessment draft — 7 November 2026 IST
 
 Draft PR #415. Commit `ef638d9b01957dd1f6d00218f9bb162fe8baeed7` adds an original teaching note, baseline case, quality-sensitive comparison, delayed unfamiliar case and four-criterion rubric for GM28.11. Checked claims against GOLD and ATS/ERS primary sources and verified case arithmetic and exact remote readback. Clinical approval, rubric validation and publication are pending. Next, review the case keys and bind exact reviewed teaching/assessment versions to the accepted identity after owner sign-off.
