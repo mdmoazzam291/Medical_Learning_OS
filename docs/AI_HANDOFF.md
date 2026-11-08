@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 21 — 8 November 2026 IST
+
+Checked at 2026-11-08T18:28:01.419Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 1ba47e977bf8e51eab1c0d354569fa4daaa19324; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 95b98d68b804141bb7a1c618133bb7a33ce68ef0. Names-only instruction active.
+
+Reviewed next 30 family parents, Transfusion physiology through Vaccine-preventable disease epidemiology. Added 133 source-bound proposals across 30 source appearances. Vaccine indications/profiles/pregnancy and tuberculosis medicines/programmes remain document-bound without current schedule or treatment verification. Supplied karyotype recognition, anatomy specimen/model/image tasks and urine findings retain task context. Source-named bones, vaccine types and tumour examples preserved; unnamed pathogen, transplant, reaction and tubulointerstitial subtypes remain unspecified. IDs null; acceptance false; scope/binding incomplete. No teaching content or automatic merging.
+
+Cumulative twenty-one family batches: 630 groups, 2,911 proposal occurrences, 641 source appearances; 22 family groups await initial proposals. Queue/three inventories/all twenty predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'21') PASS across ordered cohorts, exact task hashes/coordinates/modes, reference coverage, unique IDs, exact-label hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run in partial evidence/verifier checkout; no domain/UI changes. No clinical/guideline or semantic certification.
+
+Next: final family batch 22 beginning Vaccines, selectionLimit=22. Inspect all remaining source tasks, preserve unnamed members and role limits; pin queue/three inventories/all twenty-one predecessors, run verifier --batch=22. Zero unproposed family groups will mean initial decomposition proposal coverage only, not canonical/binding or Foundation completion. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration unfinished. Save with expected-head lease and verify remote files; release ownership afterwards. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Family/context decomposition proposals batch 20 — 8 November 2026 IST
 
 Checked at 2026-11-08T18:24:19.074Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at de23a6f0d1f2171e1f439fbaca585597f859a907; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 8fffe4d0c9ea37b746085f195a47c75ab289d4a5. Names-only instruction active.

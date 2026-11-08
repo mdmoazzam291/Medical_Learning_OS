@@ -1,3 +1,11 @@
+## Family decomposition batch 21 — 8 November 2026
+
+Added 133 source-bound names-only proposals across 30 groups / 30 source appearances (Transfusion physiology through Vaccine-preventable disease epidemiology). Cumulative: 630 groups, 2,911 proposals, 641 source appearances; 22 groups await initial proposals. Implementation: 95b98d68b804141bb7a1c618133bb7a33ce68ef0. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twenty-one-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: final family batch 22, Vaccines; selectionLimit=22. Foundation incomplete.
+
+---
+
 ## Family decomposition batch 20 — 8 November 2026
 
 Added 141 source-bound names-only proposals across 30 groups / 32 source appearances (Substance dependence through Tracheal anatomy). Cumulative: 600 groups, 2,778 proposals, 611 source appearances; 52 groups await initial proposals. Implementation: 8fffe4d0c9ea37b746085f195a47c75ab289d4a5. Acceptance/scope/binding remains pending. No teaching content or production changes.
