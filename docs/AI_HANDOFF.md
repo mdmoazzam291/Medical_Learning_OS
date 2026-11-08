@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 19 — 8 November 2026 IST
+
+Checked at 2026-11-08T18:20:28.988Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 4c33b9358cf58ee8ee644a3fe6ff26aeb5ad6a2f; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 26113da5737ce92e9b344de320681826f2f63b95. Names-only instruction active.
+
+Reviewed next 30 family parents, Renal syndromes through Study designs. Added 134 source-bound proposals across 31 source appearances. Renal tumours retains separate clinical/imaging/treatment and genetic/morphology/spread task evidence. Skin tumour specimens versus clinical classification remain distinct. Soft tissue assessment remains simulated where specified. Special immunization remains source-guidance-bound with no current schedule revalidation. Source-named retinal disorders, single-gene examples and sensory pathways preserved; unspecified renal syndrome/tumour members remain open. IDs null; acceptance false; scope/binding incomplete. No teaching content or automatic merging.
+
+Cumulative nineteen family batches: 570 groups, 2,637 proposal occurrences, 579 source appearances; 82 family groups await initial proposals. Queue/three inventories/all eighteen predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'19') PASS across ordered cohorts, exact task hashes/coordinates/modes, reference coverage, unique IDs, exact-label hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run in partial evidence/verifier checkout; no domain/UI changes. No clinical/guideline or semantic certification.
+
+Next: family batch 20 beginning Substance dependence. Inspect source tasks; preserve unnamed members and role limits; pin queue/three inventories/all nineteen predecessors, run verifier --batch=20. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease and verify remote files; release ownership afterwards. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Family/context decomposition proposals batch 18 — 8 November 2026 IST
 
 Checked at 2026-11-08T17:58:11.263Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d4f3156d2faf39f3ccd7abfbb856a8eddcdfb3d9; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: c2bad432126b22a27add249f6d88401e3aa45ae4. Names-only instruction active.
