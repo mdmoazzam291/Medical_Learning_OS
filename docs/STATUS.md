@@ -1,3 +1,17 @@
+## Mixed-scope decomposition proposals batch 04: all 69 represented — 8 November 2026 IST
+
+Checked at 2026-11-08T21:47:57.623088+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 942a6b05d9846b92846aca3f9720ae18bf5a5193; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: f186ae767c17c5c2d0c9a41e9a912d6a1b6bdd6f. Names-only instruction active.
+
+Reviewed final nine mixed groups, Social context through Water safety. Added 114 component name proposals: 24 reusable-topic candidates and 90 contextual-task facets across 34 source appearances. The physician-in-community heading preserves its 26 separate tasks with task-specific consent, privacy, research, supervision, teamwork and development names. Professional/legal contexts and simulations remain source-limited; no current guidance verification or independent competence claimed.
+
+All four batches exactly partition all 69 mixed parents: 660 component occurrences (308 reusable-topic candidates, 352 contextual-task facets), retaining all 176 source appearances. Zero mixed parents lack initial decomposition proposals. This is proposal inventory completion only; all original mixed scopes remain unresolved for semantic scope and binding. Counts are occurrences, not unique or accepted concepts. Queue and all three predecessor packets byte-unchanged, exact SHA256 pins recorded. Canonical/objective IDs null and mapping/scope/binding flags false. No teaching content or production changes.
+
+Verification: audited all four batches jointly for exact ordered 69-parent partition, 660 globally unique proposal IDs, valid nonempty source subsets and complete reference representation; all 176 task/body hashes and modes matched source packets. Follow-up queue --verify passed; 11 focused tests passed; npm run check passed; whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata only, full suite not repeated (last full 1,613/1,613).
+
+Next: add a repeatable decomposition verifier and exact-label reuse inventory across all four mixed batches and existing names, with behavior tests for omitted/duplicated parents, forged source associations/digests and acceptance. Preserve repeated labels and distinct contexts until semantic equivalence established; do not allocate duplicate identities from name equality. Then resolve 652 families/contexts, homes/objective/canonical bindings, shared scope, 21 source exceptions and learner integration. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease, verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
 ## Mixed-scope decomposition proposals batch 03 — 8 November 2026 IST
 
 Checked at 2026-11-08T21:42:06.584710+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e3563c21a5e18c029708a3136130ee9d5c351b49; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 7f461ec3ebf29266611662f047bcc334ab39be15. Names-only instruction active.
