@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 08 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:23:18.985Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at daff65c9050e5177876dc7c9387b269e6ebd70be; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 3a1c91e41508943adb33e43c7bf3dc6db6c648c1. Names-only instruction active.
+
+Reviewed next 30 facets, ECG practical through Ethical research practice. Preserved 30 source appearances; proposed 25 distinct home labels with fourteen existing-name and sixteen proposed-name links. ECG practical remains simulated hypertension-specific. Emergency recognition remains hypoglycaemia/DKA/hyperosmolar-specific. Suspected endocarditis diagnostics retains broader sepsis integration without equating identities. ENT consent role-play, simulator episiotomy and simulated research ethics remain distinct from clinical authorization, independent performance and research approval. Current list/checklist/classification/guideline versions not reverified. Canonical IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative eight scoped-home batches: 240 facets, 243 source appearances, 157 distinct proposed homes; 419 scoped facets await initial proposals. Queue/three inventories/all seven predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=08 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 09 beginning Ethics of kidney replacement. Inspect source tasks and preserve source role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=09. Actual canonical/home/objective binding, 570 standalone-topic cases, source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 07 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:20:28.569Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ae3968cfee8ede981941d45ab6343e360060d5e0; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 82f2580ffc8b662bf2172bcf7c8497ed087daa6f. Names-only instruction active.
