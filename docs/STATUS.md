@@ -1,3 +1,17 @@
+## Repeatable mixed decomposition verification and reuse leads — 8 November 2026 IST
+
+Checked at 2026-11-08T21:52:39.111099+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ea8ddcb051682e994803407dc82a83a2dac795b5; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 847c5c43e7905f371b6ff140e8ad2018761e1276. Names-only instruction active.
+
+Added ops/nmc/report-mixed-decomposition.js, eight behavior tests and saved mixed-decomposition-audit.json. Revalidates parent follow-up queue and all underlying batches, then checks the exact four-batch 69-parent partition, 176 source appearances and 660 component occurrences, source-task identity/coordinates/mode/body/task hashes, valid component source subsets and complete representation, unique proposal IDs, predecessor/queue digests and pending identity/acceptance flags.
+
+Audit reports 654 distinct proposed labels and 60 exact-label lead groups against the original index, selected name-role inventory and proposed homes. Unicode NFC, case and whitespace only; no synonyms, semantic equivalence, objectives or competence inferred. Leads retain proposal IDs, roles, parent/source references and target inventory path/key; all inputs digest-pinned. Offline evidence only, no production registry check, automatic merge, canonical allocation or teaching content.
+
+Verification: eight new tests observed failing before implementation, then all passed; rejects omissions, duplicate parents, foreign source links, acceptance forgery, queue/predecessor digest changes and underlying task drift. Audit --verify passed; full npm test passed 1,621/1,621; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. All previous four proposal batches and queue unchanged.
+
+Next: inspect 60 exact-label lead groups against both source task contexts; create source-bound reuse/keep-separate proposals, retaining uncertainty and role differences. Exact labels are not accepted concept identities. Then 652 family/context groups, actual home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. All 69 mixed groups have initial proposals but unresolved actual scopes/bindings. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease; verify all six changed files at final remote commit, then release ownership. No external writer jobs remain.
+
+---
+
 ## Mixed-scope decomposition proposals batch 04: all 69 represented — 8 November 2026 IST
 
 Checked at 2026-11-08T21:47:57.623088+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 942a6b05d9846b92846aca3f9720ae18bf5a5193; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: f186ae767c17c5c2d0c9a41e9a912d6a1b6bdd6f. Names-only instruction active.
