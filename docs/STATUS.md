@@ -1,3 +1,15 @@
+## Source-bound parent follow-up queue — 8 November 2026 IST
+
+Checked at 2026-11-08T21:23:34.337324+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 31dd66951058bce6bd17dc9d976586ae21777c5b; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8c1a1cbe3fbfb2b2eeed03a7ace52e9bafb51dd2. Names-only user instruction remains active.
+
+Added ops/nmc/report-parent-follow-up.js, its five behavioral tests, source-bound evidence queue and documentation. Queue preserves all 1,950 scope-triaged parent names and 2,094 source appearances. Routes: 69 decompose-mixed-scope, 652 decompose-family-context, 570 check-semantic-reuse-and-bind-topic and 659 resolve-home-and-bind-task. These are authoring dependencies, not learner priorities or medical urgency. Every original task record, source mode and assessment batch remains attached. All eleven source projection digests are pinned; CLI revalidates each underlying batch against task evidence before generating/verifying. Duplicate names/references, unknown dispositions and forged accepted/allocated states are rejected. All acceptance/completion flags remain false, canonical IDs null. No educational content or learner publication.
+
+Verification: five new tests observed failing against missing behavior, then passing; queue --verify passed; full npm test rerun passed 1,613/1,613; npm run check passed; staged whitespace check passed; local staged tree matches GitHub implementation tree. First full-suite invocation lost its execution session before completion; retry completed with exit 0 and all 1,613 tests passing. No unresolved test failures. Original assessments and decisions unchanged.
+
+Next: inspect the 69 mixed groups and underlying source tasks; create first names-only decomposition decisions/projection with explicit parent/source links and reusable-topic versus contextual-facet distinctions. Preserve unresolved/uncertain cases rather than fabricate one canonical identity. Then address 652 families/contexts, semantic reuse, home and objective/canonical bindings, shared target scope, 21 source exceptions and learner integration. Initial parent-name inventory is accounted for (420 compound + 57 reuse + 1,950 triaged = 2,427); Foundation remains incomplete. No merge, deploy or clinical acceptance. Save with expected-head lease, verify all six changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
 ## Parent scope batch 11: initial parent-name triage complete — 8 November 2026 IST
 
 Checked at 2026-11-08T20:12:11.993306+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c4b8aab9adeac289a6cbf35c6df062a873fc49f1; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 0eac83fa4d334c3d0b7339c676e38e25af0ce5eb. User requested Next; names-only instruction active.
