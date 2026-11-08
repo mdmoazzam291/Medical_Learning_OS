@@ -1,3 +1,11 @@
+## Family decomposition batch 13 — 8 November 2026
+
+Added 158 source-bound names-only proposals across 30 groups / 30 source appearances (Lower respiratory infections through Meningeal layers). Cumulative: 390 groups, 1,843 proposals, 395 source appearances; 262 groups await initial proposals. Implementation: 8d021d6ff85a42b47cd39f9aa694082bf4d2d87a. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: thirteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 14, Mental health concepts.
+
+---
+
 ## Family decomposition batch 12 — 8 November 2026
 
 Added 135 source-bound names-only proposals across 30 groups / 30 source appearances (Intra-abdominal lesions through Lower respiratory infection). Cumulative: 360 groups, 1,685 proposals, 365 source appearances; 292 groups await initial proposals. Implementation: 00baefc17e8f24e8b8e88513f917848d488a9977. All acceptance/scope/binding remains pending. No teaching content or production changes.
