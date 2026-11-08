@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-standalone-role-refinement",
+  "sourceHead": "c7a94c6a0b4fab1d571290948df7d52efdb769c2",
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "canonicalIdentityAllocation": false,
+  "automaticMerging": false,
+  "coverageFraction": null,
+  "totals": {
+    "reclassifiedNames": 9,
+    "totalNames": 1195,
+    "reusableNameCandidates": 797,
+    "scopeFacets": 398,
+    "componentOccurrences": 1218,
+    "facetHomeLinks": 392,
+    "remainingFacetHomeGaps": 6
+  },
+  "rows": [
+    {
+      "nameKey": "medical practitioner duties",
+      "name": "Medical practitioner duties",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "professional-rights-or-duties-facet",
+      "sourceContextHomeLabel": "Medical practice",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-duty-concept",
+      "proposedHomeLabel": "Medical practitioner duties",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Independently named professional duties; preserve distinction from rights.",
+      "componentProposalIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.24",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            85.44,
+            95.2,
+            128.64
+          ],
+          "sourceBodySha256": "ef522afe50181251680ef2d7971ef350b78d5d96e4770a4572fe428d70090e12",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "medical practitioner rights",
+      "name": "Medical practitioner rights",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "professional-rights-or-duties-facet",
+      "sourceContextHomeLabel": "Medical practice",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-rights-concept",
+      "proposedHomeLabel": "Medical practitioner rights",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Independently named professional rights; preserve distinction from duties.",
+      "componentProposalIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.24",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            85.44,
+            95.2,
+            128.64
+          ],
+          "sourceBodySha256": "ef522afe50181251680ef2d7971ef350b78d5d96e4770a4572fe428d70090e12",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "privileged communication",
+      "name": "Privileged communication",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "professional-rights-or-duties-facet",
+      "sourceContextHomeLabel": "Medical practice",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-legal-concept",
+      "proposedHomeLabel": "Privileged communication",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Independently named legal communication concept; not equivalent to confidentiality or therapeutic privilege.",
+      "componentProposalIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.24",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            85.44,
+            95.2,
+            128.64
+          ],
+          "sourceBodySha256": "ef522afe50181251680ef2d7971ef350b78d5d96e4770a4572fe428d70090e12",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "controlled-drug prescribing",
+      "name": "Controlled-drug prescribing",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "ethical-or-legal-facet",
+      "sourceContextHomeLabel": "Prescribing",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "regulated-prescribing-practice",
+      "proposedHomeLabel": "Controlled-drug prescribing",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Distinct prescribing circumstance; no current legal rule or permission inferred.",
+      "componentProposalIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+          "subjectId": "pharmacology",
+          "code": "PH10.5",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            109.32,
+            105.7,
+            152.52
+          ],
+          "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "off-label prescribing",
+      "name": "Off-label prescribing",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "ethical-or-legal-facet",
+      "sourceContextHomeLabel": "Prescribing",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "prescribing-practice",
+      "proposedHomeLabel": "Off-label prescribing",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Distinct prescribing circumstance; no specific medicine, indication or permission inferred.",
+      "componentProposalIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+          "subjectId": "pharmacology",
+          "code": "PH10.5",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            109.32,
+            105.7,
+            152.52
+          ],
+          "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "prescribing for close contacts",
+      "name": "Prescribing for close contacts",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "ethical-or-legal-facet",
+      "sourceContextHomeLabel": "Prescribing",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-prescribing-practice",
+      "proposedHomeLabel": "Prescribing for close contacts",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Distinct relationship-specific prescribing circumstance; no permissibility inferred.",
+      "componentProposalIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+          "subjectId": "pharmacology",
+          "code": "PH10.5",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            109.32,
+            105.7,
+            152.52
+          ],
+          "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "self-prescribing",
+      "name": "Self-prescribing",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "ethical-or-legal-facet",
+      "sourceContextHomeLabel": "Prescribing",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-prescribing-practice",
+      "proposedHomeLabel": "Self-prescribing",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Distinct self-treatment prescribing circumstance; no permissibility inferred.",
+      "componentProposalIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+          "subjectId": "pharmacology",
+          "code": "PH10.5",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            109.32,
+            105.7,
+            152.52
+          ],
+          "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "survivor-centred care",
+      "name": "Survivor-centred care",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "documentation-sequelae-or-care-facet",
+      "sourceContextHomeLabel": "Torture",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "care-approach",
+      "proposedHomeLabel": "Survivor-centred care",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Independently named care approach; does not imply a specific therapy or equivalence to physical/psychological sequelae.",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900",
+          "subjectId": "forensic-medicine",
+          "code": "FM9.2",
+          "page": 224,
+          "rowBBox": [
+            45.5,
+            404.7,
+            93.7,
+            447.9
+          ],
+          "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "nameKey": "torture injury documentation",
+      "name": "Torture injury documentation",
+      "previousClassificationRole": "scope-facet",
+      "previousKind": "documentation-sequelae-or-care-facet",
+      "sourceContextHomeLabel": "Torture",
+      "proposedClassificationRole": "reusable-name-candidate",
+      "proposedKind": "medico-legal-documentation-method",
+      "proposedHomeLabel": "Torture injury documentation",
+      "basis": "independently-addressable-existing-name-not-new-parent-synonym",
+      "boundaryNote": "Independently named documentation method; does not imply clinical examination or certification competence.",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900",
+          "subjectId": "forensic-medicine",
+          "code": "FM9.2",
+          "page": 224,
+          "rowBBox": [
+            45.5,
+            404.7,
+            93.7,
+            447.9
+          ],
+          "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    }
+  ]
+}

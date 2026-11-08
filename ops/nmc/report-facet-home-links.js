@@ -49,7 +49,7 @@ for(const facet of facets){
 }
 links.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));unresolved.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));
 const result={schemaVersion:1,status:'editorial-facet-home-link-proposals',sourceRolePath:'docs/evidence/2026-11-08-nmc-name-role-proposals.json',sourceHomeProposalPath:'docs/evidence/2026-11-08-nmc-missing-home-proposals.json',sourceLabelResolutionPath:'docs/evidence/2026-11-08-nmc-home-label-resolutions.json',automaticMerging:false,clinicalApproval:false,learnerActivation:false,registryAcceptance:false,coverageFraction:null,totals:{classifiedNames:roles.entries.length,scopeFacets:links.length+unresolved.length,exactCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&!l.resolvedHomeNameKey).length,labelResolvedCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&l.resolvedHomeNameKey).length,proposedNewHomeLinks:links.filter(l=>l.targetHomeProposalId).length,totalFacetHomeLinks:links.length,unresolvedFacetHomes:unresolved.length,distinctCandidateHomes:new Set(links.map(l=>l.targetNameKey)).size,explicitLabelResolutions:aliases.size},links,unresolved};
-assert.equal(result.totals.scopeFacets,407);
+assert.equal(result.totals.scopeFacets,roles.totals.scopeFacets,'facet denominator differs from source roles');
 if(process.argv.includes('--verify')){
  assert.deepEqual(read('docs/evidence/2026-11-08-nmc-facet-home-links.json'),result,'facet-home projection differs from source roles');
  console.log(JSON.stringify({status:'PASS',...result.totals,canonicalAcceptance:false}));

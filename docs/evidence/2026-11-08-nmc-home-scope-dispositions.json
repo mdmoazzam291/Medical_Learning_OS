@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "names-only-editorial-scope-dispositions",
-  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
+  "sourceHead": "c7a94c6a0b4fab1d571290948df7d52efdb769c2",
   "sourceQueuePath": "docs/evidence/2026-11-08-nmc-home-scope-gap-queue.json",
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -11,11 +11,11 @@
   "productionRegistryChecked": false,
   "coverageFraction": null,
   "totals": {
-    "groups": 7,
-    "facets": 15,
+    "groups": 5,
+    "facets": 6,
     "relationCounts": {
       "family-scope-pending": 4,
-      "context-only": 11
+      "context-only": 2
     }
   },
   "rows": [
@@ -73,138 +73,6 @@
           "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "medical practice",
-      "organizerType": "professional-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Professional context; confidentiality and privileged communication remain distinct.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "medical practitioner duties",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "medical practitioner rights",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "privileged communication",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6",
-          "subjectId": "forensic-medicine",
-          "code": "FM10.24",
-          "page": 227,
-          "rowBBox": [
-            45.5,
-            85.44,
-            95.2,
-            128.64
-          ],
-          "sourceBodySha256": "ef522afe50181251680ef2d7971ef350b78d5d96e4770a4572fe428d70090e12",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "prescribing",
-      "organizerType": "professional-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Professional context; preserve each prescribing circumstance separately.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "controlled-drug prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "off-label prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "prescribing for close contacts",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "self-prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
-          "subjectId": "pharmacology",
-          "code": "PH10.5",
-          "page": 184,
-          "rowBBox": [
-            51.7,
-            109.32,
-            105.7,
-            152.52
-          ],
-          "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
         }
       ]
     },
@@ -316,26 +184,6 @@
           "facetNameKey": "psychological torture sequelae",
           "componentProposalIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "survivor-centred care",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "torture injury documentation",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:01"
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"

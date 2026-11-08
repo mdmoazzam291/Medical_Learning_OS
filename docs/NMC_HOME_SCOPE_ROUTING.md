@@ -1,5 +1,34 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current standalone-name correction
+
+Nine existing names were reclassified from scope facets to independently addressable reusable-name candidates. This avoids inventing near-synonymous parent containers solely to clear a home gap. The names and every source occurrence are unchanged; the earlier source contexts and roles are retained in the audit. The classification is an editorial proposal, not a claim of clinical or legal validation or accepted canonical identity.
+
+| Existing names | Proposed editorial kind |
+| --- | --- |
+| Medical practitioner duties; Medical practitioner rights | Separate professional-duty/right concepts |
+| Privileged communication | Forensic/legal concept |
+| Controlled-drug prescribing; Off-label prescribing; Prescribing for close contacts; Self-prescribing | Separate prescribing-practice concepts |
+| Survivor-centred care | Care approach |
+| Torture injury documentation | Medico-legal documentation method |
+
+No current prescribing law, permission, treatment, documentation competence or clinical recommendation is inferred. Privileged communication is not equated with confidentiality or therapeutic privilege. Survivor-centred care is not equated with a specific therapy or with physical/psychological sequelae. All source-task assessment modes and exact component/reference bindings remain available in `docs/evidence/2026-11-08-nmc-standalone-role-refinement.json`.
+
+The inventory still contains **1,195 names and 1,218 component occurrences**. It now has **797 reusable-name candidates and 398 scope facets**, replacing the previous 788/407 editorial partition. All **392 proposed facet-home links are unchanged**. The nine fewer gaps reflect reclassification, not new links, accepted identities or removed source material.
+
+Six facet-home gaps remain across five groups: marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy, physical torture sequelae, psychological torture sequelae and scleral referral. Current queue/routing totals describe these six. Historical snapshots below retain their historical denominators.
+
+The projection utility previously hard-coded the old 407-facet partition, preventing legitimate role revisions. It now checks its computed facet denominator against the current role inventory. The full role verifier independently checks the exact name/component sets across all12source batches. Regression tests exercise a changed denominator and reject inconsistent role totals. No catalogue, canonical binding, UI or learner behavior changes.
+
+## Current next actions
+
+1. Inspect the six residual scopes at source-component level. Preserve aspiration/biopsy and episcleritis/scleritis alternatives until exact shared-versus-specific scope is established. Do not force a single target where the source spans several concepts.
+2. Keep female reproductive and neurodegeneration pharmacotherapy families broad until supported narrower names can be extracted; do not substitute one condition for the family.
+3. Separate physical and psychological torture sequelae from the newly standalone care/documentation methods. Do not invent diagnoses absent from the source.
+4. Refresh registry metadata before canonical identity reuse/allocation, then continue the other2,007parent labels,21source exceptions and learner integration. NMC Foundation remains incomplete.
+
+# Historical context-refinement snapshot — checkpoint c7a94c6a
+
 ## Current context-facet refinement
 
 All 31 context facets were inspected individually using existing authoring names and draft-task metadata. Twenty now have proposed topic homes; eleven retain explicit unresolved context scope. Source contexts are preserved in the before/after audit rather than being accepted as canonical identities.

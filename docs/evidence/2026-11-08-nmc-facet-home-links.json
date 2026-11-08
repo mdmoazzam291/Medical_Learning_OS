@@ -11,12 +11,12 @@
   "coverageFraction": null,
   "totals": {
     "classifiedNames": 1195,
-    "scopeFacets": 407,
+    "scopeFacets": 398,
     "exactCandidateHomeLinks": 49,
     "labelResolvedCandidateHomeLinks": 2,
     "proposedNewHomeLinks": 341,
     "totalFacetHomeLinks": 392,
-    "unresolvedFacetHomes": 15,
+    "unresolvedFacetHomes": 6,
     "distinctCandidateHomes": 220,
     "explicitLabelResolutions": 14
   },
@@ -7240,18 +7240,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "controlled-drug prescribing",
-      "proposedHomeNameKey": "prescribing",
-      "componentProposalIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "female reproductive pharmacotherapy",
       "proposedHomeNameKey": "female reproductive function",
       "componentProposalIds": [
@@ -7259,30 +7247,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "medical practitioner duties",
-      "proposedHomeNameKey": "medical practice",
-      "componentProposalIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "medical practitioner rights",
-      "proposedHomeNameKey": "medical practice",
-      "componentProposalIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -7300,18 +7264,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "off-label prescribing",
-      "proposedHomeNameKey": "prescribing",
-      "componentProposalIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "physical torture sequelae",
       "proposedHomeNameKey": "torture",
       "componentProposalIds": [
@@ -7319,30 +7271,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "prescribing for close contacts",
-      "proposedHomeNameKey": "prescribing",
-      "componentProposalIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "privileged communication",
-      "proposedHomeNameKey": "medical practice",
-      "componentProposalIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -7367,42 +7295,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "self-prescribing",
-      "proposedHomeNameKey": "prescribing",
-      "componentProposalIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "survivor-centred care",
-      "proposedHomeNameKey": "torture",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "torture injury documentation",
-      "proposedHomeNameKey": "torture",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null

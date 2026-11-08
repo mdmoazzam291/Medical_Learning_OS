@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-scope-gap-queue",
-  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
+  "sourceHead": "c7a94c6a0b4fab1d571290948df7d52efdb769c2",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "groups": 7,
-    "facets": 15
+    "groups": 5,
+    "facets": 6
   },
   "rows": [
     {
@@ -27,89 +27,6 @@
           "sourceReferenceIds": [
             "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
             "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "medical practice",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "medical practitioner duties",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ]
-        },
-        {
-          "facetNameKey": "medical practitioner rights",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ]
-        },
-        {
-          "facetNameKey": "privileged communication",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "prescribing",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "controlled-drug prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ]
-        },
-        {
-          "facetNameKey": "off-label prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ]
-        },
-        {
-          "facetNameKey": "prescribing for close contacts",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-          ]
-        },
-        {
-          "facetNameKey": "self-prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
           ]
         }
       ]
@@ -173,24 +90,6 @@
           "facetNameKey": "psychological torture sequelae",
           "componentProposalIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ]
-        },
-        {
-          "facetNameKey": "survivor-centred care",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ]
-        },
-        {
-          "facetNameKey": "torture injury documentation",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:01"
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
