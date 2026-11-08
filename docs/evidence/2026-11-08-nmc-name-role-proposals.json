@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "editorial-name-role-proposals",
-  "sourceHead": "0191e55f9e5aa385fbdeb1a37ad48ead3a71f110",
+  "sourceHead": "81fa08ab7a3bb72ff70d37d539ff7f15fddbfd17",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -9,10 +9,10 @@
   "coverageFraction": null,
   "classificationBasis": "editorial-name-and-existing-source-context",
   "totals": {
-    "entries": 912,
-    "reusableNameCandidates": 657,
-    "scopeFacets": 255,
-    "componentOccurrences": 935
+    "entries": 1055,
+    "reusableNameCandidates": 717,
+    "scopeFacets": 338,
+    "componentOccurrences": 1078
   },
   "entries": [
     {
@@ -18437,6 +18437,2872 @@
           "parentNameKey": "injury and hurt",
           "sourceReferenceIds": [
             "nmc-2024-ref:230565b6a706d91fc9477271f1f187a2aa071d12ae79852a204fdc07cda622f9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Healthcare access barriers",
+      "nameKey": "healthcare access barriers",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "health-access-concept",
+      "proposedHomeLabel": "Healthcare access barriers",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1939668e854c40035eb61202324a7b9414388763d061dfc0230aba6a25e9983e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "barriers and care seeking",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1939668e854c40035eb61202324a7b9414388763d061dfc0230aba6a25e9983e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Health-seeking decisions",
+      "nameKey": "health-seeking decisions",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "health-access-concept",
+      "proposedHomeLabel": "Health-seeking decisions",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1939668e854c40035eb61202324a7b9414388763d061dfc0230aba6a25e9983e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "barriers and care seeking",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1939668e854c40035eb61202324a7b9414388763d061dfc0230aba6a25e9983e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tuberculosis contact history",
+      "nameKey": "tuberculosis contact history",
+      "classificationRole": "scope-facet",
+      "proposedKind": "assessment-facet",
+      "proposedHomeLabel": "Tuberculosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "contact and immunization assessment",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BCG scar assessment",
+      "nameKey": "bcg scar assessment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "assessment-facet",
+      "proposedHomeLabel": "Tuberculosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "contact and immunization assessment",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mantoux interpretation",
+      "nameKey": "mantoux interpretation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "assessment-facet",
+      "proposedHomeLabel": "Tuberculosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "contact and immunization assessment",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Evidence-based medicine selection",
+      "nameKey": "evidence-based medicine selection",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prescribing-decision-facet",
+      "proposedHomeLabel": "Rational medicine use",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "evidence and rational use",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medicine benefit–harm assessment",
+      "nameKey": "medicine benefit–harm assessment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prescribing-decision-facet",
+      "proposedHomeLabel": "Rational medicine use",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "evidence and rational use",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Patient preferences in prescribing",
+      "nameKey": "patient preferences in prescribing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prescribing-decision-facet",
+      "proposedHomeLabel": "Rational medicine use",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "evidence and rational use",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Iodine requirements",
+      "nameKey": "iodine requirements",
+      "classificationRole": "scope-facet",
+      "proposedKind": "nutrition-facet",
+      "proposedHomeLabel": "Iodine",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "iodine and goitre control",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Iodine deficiency",
+      "nameKey": "iodine deficiency",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Iodine deficiency",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "iodine and goitre control",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Goitre control programmes",
+      "nameKey": "goitre control programmes",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prevention-facet",
+      "proposedHomeLabel": "Iodine deficiency",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "iodine and goitre control",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Patient isolation",
+      "nameKey": "patient isolation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "infection-control-process",
+      "proposedHomeLabel": "Patient isolation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "isolation and precautions",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barrier precautions",
+      "nameKey": "barrier precautions",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "infection-control-process",
+      "proposedHomeLabel": "Barrier precautions",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "isolation and precautions",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arthralgia",
+      "nameKey": "arthralgia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Arthralgia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint and periarticular pain",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Periarticular pain",
+      "nameKey": "periarticular pain",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Periarticular pain",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint and periarticular pain",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mechanical joint pain",
+      "nameKey": "mechanical joint pain",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Mechanical joint pain",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint and periarticular pain",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Inflammatory joint pain",
+      "nameKey": "inflammatory joint pain",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Inflammatory joint pain",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint and periarticular pain",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joint classification",
+      "nameKey": "joint classification",
+      "classificationRole": "scope-facet",
+      "proposedKind": "classification-facet",
+      "proposedHomeLabel": "Joints",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint classification and movement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joint movements",
+      "nameKey": "joint movements",
+      "classificationRole": "scope-facet",
+      "proposedKind": "movement-facet",
+      "proposedHomeLabel": "Joints",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint classification and movement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baby-Friendly hospital practices",
+      "nameKey": "baby-friendly hospital practices",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "maternal-care-practice",
+      "proposedHomeLabel": "Baby-Friendly hospital practices",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lactation and baby-friendly care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lactation physiology",
+      "nameKey": "lactation physiology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-or-cultural-facet",
+      "proposedHomeLabel": "Lactation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lactation and cultural practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Breastfeeding cultural beliefs",
+      "nameKey": "breastfeeding cultural beliefs",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-or-cultural-facet",
+      "proposedHomeLabel": "Lactation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lactation and cultural practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lipoprotein metabolism",
+      "nameKey": "lipoprotein metabolism",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathophysiological-process",
+      "proposedHomeLabel": "Lipoprotein metabolism",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lipids and plaque",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dyslipidaemia",
+      "nameKey": "dyslipidaemia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Dyslipidaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lipids and plaque",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Atherosclerotic plaque formation",
+      "nameKey": "atherosclerotic plaque formation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathophysiological-process",
+      "proposedHomeLabel": "Atherosclerotic plaque formation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lipids and plaque",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pregnancy customs",
+      "nameKey": "pregnancy customs",
+      "classificationRole": "scope-facet",
+      "proposedKind": "cultural-context-facet",
+      "proposedHomeLabel": "Maternal and child care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "local maternal and feeding practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Delivery customs",
+      "nameKey": "delivery customs",
+      "classificationRole": "scope-facet",
+      "proposedKind": "cultural-context-facet",
+      "proposedHomeLabel": "Maternal and child care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "local maternal and feeding practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lactation customs",
+      "nameKey": "lactation customs",
+      "classificationRole": "scope-facet",
+      "proposedKind": "cultural-context-facet",
+      "proposedHomeLabel": "Maternal and child care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "local maternal and feeding practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Feeding customs",
+      "nameKey": "feeding customs",
+      "classificationRole": "scope-facet",
+      "proposedKind": "cultural-context-facet",
+      "proposedHomeLabel": "Maternal and child care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "local maternal and feeding practices",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fascia lata",
+      "nameKey": "fascia lata",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Fascia lata",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lower-limb fascia and regional maps",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lower-limb retinacula",
+      "nameKey": "lower-limb retinacula",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Lower-limb retinacula",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lower-limb fascia and regional maps",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lower-limb venous pathways",
+      "nameKey": "lower-limb venous pathways",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Lower limb",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lower-limb fascia and regional maps",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lower-limb lymphatic pathways",
+      "nameKey": "lower-limb lymphatic pathways",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Lower limb",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lower-limb fascia and regional maps",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lower-limb dermatomes",
+      "nameKey": "lower-limb dermatomes",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Lower limb",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lower-limb fascia and regional maps",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lymphatic obstruction",
+      "nameKey": "lymphatic obstruction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Lymphatic obstruction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lymphatic obstruction and routes of spread",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lymphatic tumour spread",
+      "nameKey": "lymphatic tumour spread",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Lymphatic tumour spread",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lymphatic obstruction and routes of spread",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Venous tumour spread",
+      "nameKey": "venous tumour spread",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Venous tumour spread",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lymphatic obstruction and routes of spread",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bone marrow aspiration indications",
+      "nameKey": "bone marrow aspiration indications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "indications-facet",
+      "proposedHomeLabel": "Bone marrow aspiration",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "marrow indications and interpretation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+            "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bone marrow biopsy indications",
+      "nameKey": "bone marrow biopsy indications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "indications-facet",
+      "proposedHomeLabel": "Bone marrow biopsy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "marrow indications and interpretation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+            "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bone marrow interpretation",
+      "nameKey": "bone marrow interpretation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "interpretation-facet",
+      "proposedHomeLabel": "Bone marrow examination",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "marrow indications and interpretation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+            "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "National Health Mission",
+      "nameKey": "national health mission",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "National Health Mission",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reproductive and Child Health Programme",
+      "nameKey": "reproductive and child health programme",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Reproductive and Child Health Programme",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RMNCH+A",
+      "nameKey": "rmnch+a",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "RMNCH+A",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rashtriya Bal Swasthya Karyakram",
+      "nameKey": "rashtriya bal swasthya karyakram",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Rashtriya Bal Swasthya Karyakram",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rashtriya Kishor Swasthya Karyakram",
+      "nameKey": "rashtriya kishor swasthya karyakram",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Rashtriya Kishor Swasthya Karyakram",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Janani Shishu Suraksha Karyakram",
+      "nameKey": "janani shishu suraksha karyakram",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Janani Shishu Suraksha Karyakram",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:06",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mission Indradhanush",
+      "nameKey": "mission indradhanush",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Mission Indradhanush",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:07",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Integrated Child Development Services",
+      "nameKey": "integrated child development services",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "public-health-programme",
+      "proposedHomeLabel": "Integrated Child Development Services",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf:name-component:08",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health programmes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reproductive health indicators",
+      "nameKey": "reproductive health indicators",
+      "classificationRole": "scope-facet",
+      "proposedKind": "population-indicator-facet",
+      "proposedHomeLabel": "Reproductive maternal newborn and child health",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health status",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maternal health indicators",
+      "nameKey": "maternal health indicators",
+      "classificationRole": "scope-facet",
+      "proposedKind": "population-indicator-facet",
+      "proposedHomeLabel": "Reproductive maternal newborn and child health",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health status",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Newborn health indicators",
+      "nameKey": "newborn health indicators",
+      "classificationRole": "scope-facet",
+      "proposedKind": "population-indicator-facet",
+      "proposedHomeLabel": "Reproductive maternal newborn and child health",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health status",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Child health indicators",
+      "nameKey": "child health indicators",
+      "classificationRole": "scope-facet",
+      "proposedKind": "population-indicator-facet",
+      "proposedHomeLabel": "Reproductive maternal newborn and child health",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "maternal and child health status",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mental illness diagnosis",
+      "nameKey": "mental illness diagnosis",
+      "classificationRole": "scope-facet",
+      "proposedKind": "diagnostic-facet",
+      "proposedHomeLabel": "Mental illness",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "mental illness and legal responsibility",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Civil capacity",
+      "nameKey": "civil capacity",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "medico-legal-concept",
+      "proposedHomeLabel": "Civil capacity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "mental illness and legal responsibility",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Criminal responsibility",
+      "nameKey": "criminal responsibility",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "medico-legal-concept",
+      "proposedHomeLabel": "Criminal responsibility",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "mental illness and legal responsibility",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Isometric contraction",
+      "nameKey": "isometric contraction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Isometric contraction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "muscle work and metabolism",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Isotonic contraction",
+      "nameKey": "isotonic contraction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Isotonic contraction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "muscle work and metabolism",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Muscle energy sources",
+      "nameKey": "muscle energy sources",
+      "classificationRole": "scope-facet",
+      "proposedKind": "metabolism-facet",
+      "proposedHomeLabel": "Skeletal muscle",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "muscle work and metabolism",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Motor unit recruitment",
+      "nameKey": "motor unit recruitment",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Motor unit recruitment",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "muscle work and metabolism",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Motor unit firing rate",
+      "nameKey": "motor unit firing rate",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-measure",
+      "proposedHomeLabel": "Motor unit firing rate",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "muscle work and metabolism",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Indian health policy",
+      "nameKey": "indian health policy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "health-policy-framework",
+      "proposedHomeLabel": "Indian health policy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "national policy and development goals",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Millennium Development Goals",
+      "nameKey": "millennium development goals",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "health-policy-framework",
+      "proposedHomeLabel": "Millennium Development Goals",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "national policy and development goals",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Health development indicators",
+      "nameKey": "health development indicators",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "health-policy-framework",
+      "proposedHomeLabel": "Health development indicators",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "national policy and development goals",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neurological history",
+      "nameKey": "neurological history",
+      "classificationRole": "scope-facet",
+      "proposedKind": "clinical-assessment-facet",
+      "proposedHomeLabel": "Nervous system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neurological history and examination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Higher function examination",
+      "nameKey": "higher function examination",
+      "classificationRole": "scope-facet",
+      "proposedKind": "clinical-assessment-facet",
+      "proposedHomeLabel": "Nervous system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neurological history and examination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sensory examination",
+      "nameKey": "sensory examination",
+      "classificationRole": "scope-facet",
+      "proposedKind": "clinical-assessment-facet",
+      "proposedHomeLabel": "Nervous system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neurological history and examination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Motor examination",
+      "nameKey": "motor examination",
+      "classificationRole": "scope-facet",
+      "proposedKind": "clinical-assessment-facet",
+      "proposedHomeLabel": "Nervous system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neurological history and examination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reflex examination",
+      "nameKey": "reflex examination",
+      "classificationRole": "scope-facet",
+      "proposedKind": "clinical-assessment-facet",
+      "proposedHomeLabel": "Nervous system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neurological history and examination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuron parts",
+      "nameKey": "neuron parts",
+      "classificationRole": "scope-facet",
+      "proposedKind": "structural-or-classification-facet",
+      "proposedHomeLabel": "Neuron",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and classification",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuron structural classification",
+      "nameKey": "neuron structural classification",
+      "classificationRole": "scope-facet",
+      "proposedKind": "structural-or-classification-facet",
+      "proposedHomeLabel": "Neuron",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and classification",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuron functional classification",
+      "nameKey": "neuron functional classification",
+      "classificationRole": "scope-facet",
+      "proposedKind": "structural-or-classification-facet",
+      "proposedHomeLabel": "Neuron",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and classification",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dendrites",
+      "nameKey": "dendrites",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "cellular-structure",
+      "proposedHomeLabel": "Dendrites",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and function",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuronal soma",
+      "nameKey": "neuronal soma",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "cellular-structure",
+      "proposedHomeLabel": "Neuronal soma",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and function",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Axon",
+      "nameKey": "axon",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "cellular-structure",
+      "proposedHomeLabel": "Axon",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and function",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Axon terminals",
+      "nameKey": "axon terminals",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "cellular-structure",
+      "proposedHomeLabel": "Axon terminals",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "neuron structure and function",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Local nutrient sources",
+      "nameKey": "local nutrient sources",
+      "classificationRole": "scope-facet",
+      "proposedKind": "dietary-source-facet",
+      "proposedHomeLabel": "Nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutrient sources and requirements",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nutrient requirements",
+      "nameKey": "nutrient requirements",
+      "classificationRole": "scope-facet",
+      "proposedKind": "requirements-facet",
+      "proposedHomeLabel": "Nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutrient sources and requirements",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dietary health promotion",
+      "nameKey": "dietary health promotion",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prevention-facet",
+      "proposedHomeLabel": "Nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutrition and prevention",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dietary disease prevention",
+      "nameKey": "dietary disease prevention",
+      "classificationRole": "scope-facet",
+      "proposedKind": "prevention-facet",
+      "proposedHomeLabel": "Nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutrition and prevention",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Balanced diet counselling",
+      "nameKey": "balanced diet counselling",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "nutrition-care-method",
+      "proposedHomeLabel": "Balanced diet counselling",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutritional and vitamin deficiencies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vitamin deficiency comparison",
+      "nameKey": "vitamin deficiency comparison",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "nutrition-care-method",
+      "proposedHomeLabel": "Vitamin deficiency comparison",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutritional and vitamin deficiencies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:541a07207128053c96cc5130d4b85b96c3b4edbb900d77efd6b1e45a9b988e97"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enteral nutrition indications",
+      "nameKey": "enteral nutrition indications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "indications-facet",
+      "proposedHomeLabel": "Enteral nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutritional and vitamin deficiencies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Parenteral nutrition indications",
+      "nameKey": "parenteral nutrition indications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "indications-facet",
+      "proposedHomeLabel": "Parenteral nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "nutritional and vitamin deficiencies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity progression",
+      "nameKey": "obesity progression",
+      "classificationRole": "scope-facet",
+      "proposedKind": "course-or-complication-facet",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity course and complications",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity metabolic complications",
+      "nameKey": "obesity metabolic complications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "course-or-complication-facet",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity course and complications",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity mechanical complications",
+      "nameKey": "obesity mechanical complications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "course-or-complication-facet",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity course and complications",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity psychosocial complications",
+      "nameKey": "obesity psychosocial complications",
+      "classificationRole": "scope-facet",
+      "proposedKind": "course-or-complication-facet",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity course and complications",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cbe143ad7a9f5a9c8ad4b6a93b33305f7cebe8860e7990518d199019eb19d17"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity diagnostic criteria",
+      "nameKey": "obesity diagnostic criteria",
+      "classificationRole": "scope-facet",
+      "proposedKind": "diagnostic-facet",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity definition and measurement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e",
+            "nmc-2024-ref:54a1f93e36d81d04333afc06047a3c4bfbe8834b1995b2a08d6bdbca449043b1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Body mass index",
+      "nameKey": "body mass index",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anthropometric-measure",
+      "proposedHomeLabel": "Body mass index",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity definition and measurement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e",
+            "nmc-2024-ref:54a1f93e36d81d04333afc06047a3c4bfbe8834b1995b2a08d6bdbca449043b1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Central adiposity",
+      "nameKey": "central adiposity",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "body-composition-measure",
+      "proposedHomeLabel": "Central adiposity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity definition and measurement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2eed5d221db1a9603cb6dcafefb8b7cac7b1446c0cb30b7ec448f9197e801c4e",
+            "nmc-2024-ref:54a1f93e36d81d04333afc06047a3c4bfbe8834b1995b2a08d6bdbca449043b1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Childhood obesity risk factors",
+      "nameKey": "childhood obesity risk factors",
+      "classificationRole": "scope-facet",
+      "proposedKind": "risk-or-prevention-facet",
+      "proposedHomeLabel": "Childhood obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity risk and prevention",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Family obesity prevention",
+      "nameKey": "family obesity prevention",
+      "classificationRole": "scope-facet",
+      "proposedKind": "risk-or-prevention-facet",
+      "proposedHomeLabel": "Childhood obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity risk and prevention",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Community obesity prevention",
+      "nameKey": "community obesity prevention",
+      "classificationRole": "scope-facet",
+      "proposedKind": "risk-or-prevention-facet",
+      "proposedHomeLabel": "Childhood obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "obesity risk and prevention",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oral rehydration physiology",
+      "nameKey": "oral rehydration physiology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-composition-or-treatment-facet",
+      "proposedHomeLabel": "Diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "oral rehydration and adjuncts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oral rehydration solution composition",
+      "nameKey": "oral rehydration solution composition",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-composition-or-treatment-facet",
+      "proposedHomeLabel": "Diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "oral rehydration and adjuncts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diarrhoea adjunct therapy",
+      "nameKey": "diarrhoea adjunct therapy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-composition-or-treatment-facet",
+      "proposedHomeLabel": "Diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "oral rehydration and adjuncts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pain pathways",
+      "nameKey": "pain pathways",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "neural-pathway",
+      "proposedHomeLabel": "Pain pathways",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pain pathways and modulation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gate-control pain modulation",
+      "nameKey": "gate-control pain modulation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "modulation-facet",
+      "proposedHomeLabel": "Pain",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pain pathways and modulation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Palmar fascial spaces",
+      "nameKey": "palmar fascial spaces",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Palmar fascial spaces",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "palmar spaces and infection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Palmar infection spread",
+      "nameKey": "palmar infection spread",
+      "classificationRole": "scope-facet",
+      "proposedKind": "spread-facet",
+      "proposedHomeLabel": "Hand infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "palmar spaces and infection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Parkinsonism pharmacotherapy",
+      "nameKey": "parkinsonism pharmacotherapy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "pharmacotherapy-facet",
+      "proposedHomeLabel": "Parkinsonism",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "parkinsonism and neurodegeneration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neurodegeneration pharmacotherapy",
+      "nameKey": "neurodegeneration pharmacotherapy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "pharmacotherapy-facet",
+      "proposedHomeLabel": "Neurodegenerative disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "parkinsonism and neurodegeneration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drug-induced parkinsonism",
+      "nameKey": "drug-induced parkinsonism",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Drug-induced parkinsonism",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "parkinsonism and neurodegeneration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diagnosis communication",
+      "nameKey": "diagnosis communication",
+      "classificationRole": "scope-facet",
+      "proposedKind": "communication-facet",
+      "proposedHomeLabel": "Clinical communication",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "patient and family communication",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prognosis communication",
+      "nameKey": "prognosis communication",
+      "classificationRole": "scope-facet",
+      "proposedKind": "communication-facet",
+      "proposedHomeLabel": "Clinical communication",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "patient and family communication",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Understanding verification",
+      "nameKey": "understanding verification",
+      "classificationRole": "scope-facet",
+      "proposedKind": "communication-facet",
+      "proposedHomeLabel": "Clinical communication",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "patient and family communication",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Perineal tears",
+      "nameKey": "perineal tears",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition-or-injury",
+      "proposedHomeLabel": "Perineal tears",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "perineal injury and disease",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Episiotomy anatomy",
+      "nameKey": "episiotomy anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Episiotomy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "perineal injury and disease",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Perianal abscess",
+      "nameKey": "perianal abscess",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition-or-injury",
+      "proposedHomeLabel": "Perianal abscess",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "perineal injury and disease",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anal fissures",
+      "nameKey": "anal fissures",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition-or-injury",
+      "proposedHomeLabel": "Anal fissures",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "perineal injury and disease",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chorionic villous development",
+      "nameKey": "chorionic villous development",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-process",
+      "proposedHomeLabel": "Chorionic villous development",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "placenta and exchange",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maternal placental circulation",
+      "nameKey": "maternal placental circulation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-facet",
+      "proposedHomeLabel": "Placenta",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "placenta and exchange",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fetal placental circulation",
+      "nameKey": "fetal placental circulation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-facet",
+      "proposedHomeLabel": "Placenta",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "placenta and exchange",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Placental exchange barrier",
+      "nameKey": "placental exchange barrier",
+      "classificationRole": "scope-facet",
+      "proposedKind": "functional-anatomy-facet",
+      "proposedHomeLabel": "Placenta",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "placenta and exchange",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Placental functions",
+      "nameKey": "placental functions",
+      "classificationRole": "scope-facet",
+      "proposedKind": "physiology-facet",
+      "proposedHomeLabel": "Placenta",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "placenta and exchange",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drug poisoning treatment",
+      "nameKey": "drug poisoning treatment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "management-facet",
+      "proposedHomeLabel": "Poisoning and envenomation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poisoning, bites and stings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Insecticide poisoning treatment",
+      "nameKey": "insecticide poisoning treatment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "management-facet",
+      "proposedHomeLabel": "Poisoning and envenomation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poisoning, bites and stings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bite treatment",
+      "nameKey": "bite treatment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "management-facet",
+      "proposedHomeLabel": "Poisoning and envenomation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poisoning, bites and stings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sting treatment",
+      "nameKey": "sting treatment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "management-facet",
+      "proposedHomeLabel": "Poisoning and envenomation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poisoning, bites and stings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Poverty-related health barriers",
+      "nameKey": "poverty-related health barriers",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "social-health-concept",
+      "proposedHomeLabel": "Poverty-related health barriers",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:25f3c33a62e909514d5cc5a80cbf597e3f58bca838cf7fba82b71de469aa56d6:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poverty and social protection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:25f3c33a62e909514d5cc5a80cbf597e3f58bca838cf7fba82b71de469aa56d6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Social security measures",
+      "nameKey": "social security measures",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "social-health-concept",
+      "proposedHomeLabel": "Social security measures",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:25f3c33a62e909514d5cc5a80cbf597e3f58bca838cf7fba82b71de469aa56d6:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "poverty and social protection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:25f3c33a62e909514d5cc5a80cbf597e3f58bca838cf7fba82b71de469aa56d6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medical practitioner rights",
+      "nameKey": "medical practitioner rights",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-rights-or-duties-facet",
+      "proposedHomeLabel": "Medical practice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "practitioner rights and duties",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medical practitioner duties",
+      "nameKey": "medical practitioner duties",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-rights-or-duties-facet",
+      "proposedHomeLabel": "Medical practice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "practitioner rights and duties",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Confidentiality",
+      "nameKey": "confidentiality",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-rights-or-duties-facet",
+      "proposedHomeLabel": "Medical practice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "practitioner rights and duties",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Privileged communication",
+      "nameKey": "privileged communication",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-rights-or-duties-facet",
+      "proposedHomeLabel": "Medical practice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "practitioner rights and duties",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pregnancy evidence",
+      "nameKey": "pregnancy evidence",
+      "classificationRole": "scope-facet",
+      "proposedKind": "forensic-assessment-facet",
+      "proposedHomeLabel": "Pregnancy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Recent delivery evidence",
+      "nameKey": "recent delivery evidence",
+      "classificationRole": "scope-facet",
+      "proposedKind": "forensic-assessment-facet",
+      "proposedHomeLabel": "Delivery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Remote delivery evidence",
+      "nameKey": "remote delivery evidence",
+      "classificationRole": "scope-facet",
+      "proposedKind": "forensic-assessment-facet",
+      "proposedHomeLabel": "Delivery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Precipitate labour",
+      "nameKey": "precipitate labour",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "obstetric-condition",
+      "proposedHomeLabel": "Precipitate labour",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Superfetation",
+      "nameKey": "superfetation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "obstetric-condition",
+      "proposedHomeLabel": "Superfetation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Superfecundation",
+      "nameKey": "superfecundation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "obstetric-condition",
+      "proposedHomeLabel": "Superfecundation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:06",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "pregnancy and delivery findings",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Controlled-drug prescribing",
+      "nameKey": "controlled-drug prescribing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-or-legal-facet",
+      "proposedHomeLabel": "Prescribing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "prescribing ethics and law",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Off-label prescribing",
+      "nameKey": "off-label prescribing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-or-legal-facet",
+      "proposedHomeLabel": "Prescribing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "prescribing ethics and law",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Self-prescribing",
+      "nameKey": "self-prescribing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-or-legal-facet",
+      "proposedHomeLabel": "Prescribing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "prescribing ethics and law",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prescribing for close contacts",
+      "nameKey": "prescribing for close contacts",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-or-legal-facet",
+      "proposedHomeLabel": "Prescribing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "prescribing ethics and law",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Therapeutic privilege",
+      "nameKey": "therapeutic privilege",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-ethical-concept",
+      "proposedHomeLabel": "Therapeutic privilege",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professional secrecy and related concepts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Malingering",
+      "nameKey": "malingering",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "behavioural-presentation",
+      "proposedHomeLabel": "Malingering",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professional secrecy and related concepts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Therapeutic misadventure",
+      "nameKey": "therapeutic misadventure",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "adverse-clinical-event-concept",
+      "proposedHomeLabel": "Therapeutic misadventure",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professional secrecy and related concepts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Professional secrecy",
+      "nameKey": "professional secrecy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "professional-ethical-concept",
+      "proposedHomeLabel": "Professional secrecy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professional secrecy and related concepts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Research participation",
+      "nameKey": "research participation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "research-ethics-concept",
+      "proposedHomeLabel": "Research participation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professional secrecy and related concepts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86401967f0c18c4bcf133b6b9ab44b0e4d73a72c81790312d37233b927dce1e4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Respectful surgical communication",
+      "nameKey": "respectful surgical communication",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-behaviour-facet",
+      "proposedHomeLabel": "Surgical care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professionalism and empathy",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Surgical encounter privacy",
+      "nameKey": "surgical encounter privacy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-behaviour-facet",
+      "proposedHomeLabel": "Surgical care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professionalism and empathy",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Surgical empathy",
+      "nameKey": "surgical empathy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "professional-behaviour-facet",
+      "proposedHomeLabel": "Surgical care",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "professionalism and empathy",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
           ]
         }
       ]
