@@ -150,3 +150,11 @@ The next 30 family parents (Cervical lymph nodes through Costal cartilage joints
 The queue, three inventories and four predecessor packets are digest-pinned; two component labels have unverified exact-label hints. Across five batches, 150 family parents have 694 proposal occurrences and 153 source appearances; 502 families lack initial proposals. All enumerations, scopes and bindings remain incomplete; canonical IDs null. No teaching content or automatic merging.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=05`. Next: inspect the next family cohort beginning Cough medicines, preserving task-specific evidence and all predecessor pins.
+
+## Family/context decomposition proposals: batch 06
+
+The next 30 family parents (Cough medicines through Disaster management) have [149 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json): 36 reusable-topic candidates and 113 contextual-task facets across 30 source appearances. Pregnancy diabetes, general diabetes medicines/tests and emergency contexts retain distinct references. Crash-cart observation and teaching-sample practicals do not establish independent clinical performance. Bite-mark interpretation limits and medical-witness concepts retain source context without claiming current forensic/legal verification. Unnamed emergency types, drug agents, nuclei and defects remain unspecified.
+
+The queue, three inventories and all five predecessors are digest-pinned; one component has an unverified exact-label hint. Across six batches, 180 family parents have 843 proposal occurrences and 183 source appearances; 472 families lack initial proposals. Canonical IDs remain null; all enumerations/scopes/bindings incomplete. No teaching content or automatic merge.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=06`. Next: inspect the next family cohort beginning Disciplinary process, preserving original task modes and all predecessor pins.
