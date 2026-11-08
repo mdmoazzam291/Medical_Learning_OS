@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 01 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:02:58.088151+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ff894b9ca7c9c5cde5ca70821727a63b6313879f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 5838f7e701c86ae9abc554a7590ea8975dd08130. Names-only instruction active.
+
+Inspected first 30 family/context groups, Abdominal incisions through Age-specific nutrition. Added 138 source-linked name proposals: 47 reusable-topic candidates, 91 contextual-task facets, across all 31 source appearances. Adrenal tumours retains separate pathology and clinical task support. Broad representative conditions not enumerated by source tasks remain unspecified rather than filled with invented members. Simulation, age and clinical/technical contexts remain explicit. All member enumerations and scopes/bindings remain partial/unresolved; canonical IDs null and acceptance flags false. No teaching content.
+
+Queue and original index, role and home inventories are digest-pinned and byte-unchanged. Component labels compared against these three offline inventories; one exact-label hint retained without semantic/identity acceptance. Lack of exact equality does not prove a new concept. Of 652 family/context parents, 30 now have initial proposals and 622 do not.
+
+Verification: exact first-30 cohort, 138 unique proposal IDs, all 31 reference contexts represented, valid single-task links, original task/body hashes, subject/code/page/coordinates/modes and exact-label hints checked; prior inventory byte-equality confirmed. Mixed reuse verifier passed, 27 focused tests passed, npm run check passed, whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, no code/test changes; full suite not repeated (last full 1,629/1,629).
+
+Next: add repeatable family-decomposition verification before substantial expansion, then inspect the next family cohort starting AI in laboratory biochemistry, Airway adjuncts and Airway opening. Preserve unspecified members and avoid generating teaching content. Then remaining family decompositions, home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify four changed files at final remote commit, then release ownership. No external writer jobs.
+
+---
+
 ## Repeatable mixed reuse verification — 8 November 2026 IST
 
 Checked at 2026-11-08T21:59:26.742880+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at baae60af438b6e5c7ae302ed346aa7cb69f97847; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8a49c10676f8384b947b8284175aae2469a46ecd. Names-only instruction active.
