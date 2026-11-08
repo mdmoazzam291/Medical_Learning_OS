@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "status": "editorial-name-role-proposals",
+  "sourceHead": "1e1818d37aec9a0f13c2efdc3cc43a808e46dcd4",
+  "automaticMerging": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "productionRegistryChecked": false,
+  "coverageFraction": null,
+  "classificationBasis": "editorial-name-and-existing-source-context",
+  "totals": {
+    "entries": 40,
+    "reusableNameCandidates": 22,
+    "scopeFacets": 18,
+    "componentOccurrences": 63
+  },
+  "entries": [
+    {
+      "name": "Arthritis",
+      "nameKey": "arthritis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition-family",
+      "proposedHomeLabel": "Arthritis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gout, arthritis and migraine",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "joint and periarticular pain",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Breast lymphatic drainage",
+      "nameKey": "breast lymphatic drainage",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Breast",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "parentNameKey": "breast anatomy and tests",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "parentNameKey": "breast structure and drainage",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diarrhoea",
+      "nameKey": "diarrhoea",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-syndrome",
+      "proposedHomeLabel": "Diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "diarrhoea and dysentery",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Disinfection",
+      "nameKey": "disinfection",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "infection-control-process",
+      "proposedHomeLabel": "Disinfection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "sterilization and disinfection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "asepsis and decontamination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dysentery",
+      "nameKey": "dysentery",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-syndrome",
+      "proposedHomeLabel": "Dysentery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "diarrhoea and dysentery",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Erb palsy",
+      "nameKey": "erb palsy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Erb palsy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "erb and klumpke palsies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "parentNameKey": "upper and lower plexus lesions",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food poisoning",
+      "nameKey": "food poisoning",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-syndrome-family",
+      "proposedHomeLabel": "Food poisoning",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986:name-component:08",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "parentNameKey": "recreational and food toxicology",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gallstones",
+      "nameKey": "gallstones",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Gallstones",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty liver, gallstones and obesity",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gallstones and cholecystitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+            "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gout",
+      "nameKey": "gout",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Gout",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gout, arthritis and migraine",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "parentNameKey": "osteoarthritis and gout",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Infertility",
+      "nameKey": "infertility",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-condition",
+      "proposedHomeLabel": "Infertility",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "sexual dysfunction and infertility",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-07.json",
+          "parentNameKey": "infertility and ivf",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jaundice",
+      "nameKey": "jaundice",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-sign",
+      "proposedHomeLabel": "Jaundice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bilirubin and jaundice",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haem and porphyrins",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Klumpke palsy",
+      "nameKey": "klumpke palsy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Klumpke palsy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "erb and klumpke palsies",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "parentNameKey": "upper and lower plexus lesions",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Metabolic syndrome",
+      "nameKey": "metabolic syndrome",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-syndrome",
+      "proposedHomeLabel": "Metabolic syndrome",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "parentNameKey": "obesity and metabolic syndrome",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:a80311dc8aa7fcfb39635935b1b8cac8af88cf80d866b6a4510a5fcb821da06e:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "inactivity and obesity",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a80311dc8aa7fcfb39635935b1b8cac8af88cf80d866b6a4510a5fcb821da06e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Milk ejection",
+      "nameKey": "milk ejection",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Milk ejection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "parentNameKey": "pregnancy, birth and lactation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lactation and baby-friendly care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Milk production",
+      "nameKey": "milk production",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Milk production",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "parentNameKey": "pregnancy, birth and lactation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "parentNameKey": "lactation and baby-friendly care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obesity",
+      "nameKey": "obesity",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty liver, gallstones and obesity",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "parentNameKey": "obesity and metabolic syndrome",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pulmonary circulation",
+      "nameKey": "pulmonary circulation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-system",
+      "proposedHomeLabel": "Pulmonary circulation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "pulmonary and systemic circulation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "parentNameKey": "pulmonary supply and drainage",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reticulocyte count",
+      "nameKey": "reticulocyte count",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "laboratory-measurement",
+      "proposedHomeLabel": "Reticulocyte count",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "reticulocyte and platelet counts",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "haemogram and related tests",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sterilization",
+      "nameKey": "sterilization",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "infection-control-process",
+      "proposedHomeLabel": "Sterilization",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "sterilization and disinfection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "parentNameKey": "asepsis and decontamination",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stillbirth",
+      "nameKey": "stillbirth",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-outcome",
+      "proposedHomeLabel": "Stillbirth",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "parentNameKey": "stillbirth and abortion",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-07.json",
+          "parentNameKey": "infanticide, foeticide and stillbirth",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tissue regeneration",
+      "nameKey": "tissue regeneration",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biological-process",
+      "proposedHomeLabel": "Tissue regeneration",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-08.json",
+          "parentNameKey": "cell cycle and regeneration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "parentNameKey": "repair and wound healing",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Visual pathway",
+      "nameKey": "visual pathway",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-pathway",
+      "proposedHomeLabel": "Visual pathway",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:b50ecf698a8d93c30731cde9232031e52eee4d0eb81ea2ea0bccc389a82b27a8:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-08.json",
+          "parentNameKey": "vision and optics",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b50ecf698a8d93c30731cde9232031e52eee4d0eb81ea2ea0bccc389a82b27a8"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "parentNameKey": "visual pathway and reflexes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vitamin B12 deficiency",
+      "nameKey": "vitamin b12 deficiency",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Vitamin B12 deficiency",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "b12 and folate deficiency",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "parentNameKey": "vitamin b12 and macrocytosis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anaemia morphology",
+      "nameKey": "anaemia morphology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Anaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "anaemia morphology and causes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anaemia aetiology",
+      "nameKey": "anaemia aetiology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Anaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "anaemia morphology and causes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anaemia prevalence",
+      "nameKey": "anaemia prevalence",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Anaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "anaemia morphology and causes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cancer pain assessment",
+      "nameKey": "cancer pain assessment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Cancer",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "cancer pain and suffering",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cancer-related functional impairment",
+      "nameKey": "cancer-related functional impairment",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Cancer",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "cancer pain and suffering",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cancer-related distress",
+      "nameKey": "cancer-related distress",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Cancer",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "cancer pain and suffering",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CKD wellbeing",
+      "nameKey": "ckd wellbeing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Chronic kidney disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "ckd and quality of life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CKD work participation",
+      "nameKey": "ckd work participation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Chronic kidney disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "ckd and quality of life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CKD family impact",
+      "nameKey": "ckd family impact",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Chronic kidney disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "ckd and quality of life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CKD care preferences",
+      "nameKey": "ckd care preferences",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Chronic kidney disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "ckd and quality of life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hernia mechanisms",
+      "nameKey": "hernia mechanisms",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hernia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hernia assessment and care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hernia presentation",
+      "nameKey": "hernia presentation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hernia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hernia assessment and care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hernia investigation",
+      "nameKey": "hernia investigation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hernia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hernia assessment and care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hernia management",
+      "nameKey": "hernia management",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hernia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hernia assessment and care",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypertension wellbeing",
+      "nameKey": "hypertension wellbeing",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hypertension",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hypertension and daily life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypertension work participation",
+      "nameKey": "hypertension work participation",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hypertension",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hypertension and daily life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypertension family impact",
+      "nameKey": "hypertension family impact",
+      "classificationRole": "scope-facet",
+      "proposedKind": "context-specific-scope-dimension",
+      "proposedHomeLabel": "Hypertension",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "parentNameKey": "hypertension and daily life",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+          ]
+        }
+      ]
+    }
+  ]
+}
