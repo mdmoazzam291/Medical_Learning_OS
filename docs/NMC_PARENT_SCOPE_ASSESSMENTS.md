@@ -174,3 +174,11 @@ The next 30 family parents (Exercise physiology through Genetic syndromes) have 
 Queue, three inventories and seven predecessor packets are digest-pinned; eight labels have unverified exact-label hints. Cumulative: 240 family parents, 1,142 proposal occurrences and 244 source appearances; 412 families lack initial proposals. All identities null; scopes, enumerations and bindings remain incomplete. No teaching content or automatic merge.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=08`. Next: inspect the next cohort beginning Genital fistula, keeping source contexts and predecessor pins intact.
+
+## Family/context decomposition proposals: batch 09
+
+The next 30 family parents (Genital fistula through Healthcare-associated infection) have [137 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json): 26 reusable-topic candidates and 111 contextual-task facets across 30 source appearances. Gestational trophoblastic disease and neoplasia preserve their separate clinical and pathology contexts. Haemorrhage-control simulation is not independent procedural competence. Geriatric services and older-adult needs remain different source tasks, as do health planning, information and management workflows. Unnamed conditions, hormones and muscle members remain unspecified; current policy/guideline validity was not rechecked.
+
+Queue, three inventories and eight predecessors are digest-pinned; three component labels have unverified exact-label hints. Cumulative: 270 family parents, 1,279 proposal occurrences, 274 source appearances; 382 families lack initial proposals. Canonical IDs null, enumerations/scopes/bindings incomplete. No teaching content or automatic merge.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=09`. Next: inspect the next family cohort beginning Hearing loss, retaining source-specific links and predecessor pins.

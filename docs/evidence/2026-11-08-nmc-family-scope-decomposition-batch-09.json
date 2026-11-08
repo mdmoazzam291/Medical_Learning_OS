@@ -1,0 +1,2706 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    }
+  ],
+  "sourceHead": "379b54ae3ad73e3a959e6a1aead91a87bbb2d7d1",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 30,
+    "componentProposals": 137,
+    "familyParentsWithoutDecompositionProposal": 382
+  },
+  "rows": [
+    {
+      "parentNameKey": "genital fistula",
+      "parentName": "Genital fistula",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b72ed191c5b28c2d82166dddfb853e68e19ce25e2c2ae87f7936cda71546d081",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG26.2",
+          "page": 437,
+          "rowBBox": [
+            49.1,
+            170.76,
+            103.1,
+            206.58
+          ],
+          "sourceBodySha256": "4bf27387bdc1b361395b6b63018a01956ed4203d5b214497bb2dbdcaedf5bb4b",
+          "editorialTaskSha256": "b90f8a1f27dc196a1690d4b3ff7789248fb3ca6c344d85f4454e9bfb5d774e60",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:01:01",
+          "name": "Genital fistula presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b72ed191c5b28c2d82166dddfb853e68e19ce25e2c2ae87f7936cda71546d081"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:01:02",
+          "name": "Genital fistula causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b72ed191c5b28c2d82166dddfb853e68e19ce25e2c2ae87f7936cda71546d081"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:01:03",
+          "name": "Genital fistula prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b72ed191c5b28c2d82166dddfb853e68e19ce25e2c2ae87f7936cda71546d081"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:01:04",
+          "name": "Genital fistula management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b72ed191c5b28c2d82166dddfb853e68e19ce25e2c2ae87f7936cda71546d081"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "genital injury",
+      "parentName": "Genital injury",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4e66143c6165f88aeb8d8b60a5a7d403cc985abce19783a20389370e503c8fbe",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG26.1",
+          "page": 437,
+          "rowBBox": [
+            49.1,
+            140.1,
+            103.1,
+            170.76
+          ],
+          "sourceBodySha256": "f48bb48d258bae133f2aff782e37c706e18d1952b30c8a6d15abcee0c6a58fa5",
+          "editorialTaskSha256": "3c8a3a6ca16fc5963af651d092be001bc30b63b3d872c784e6f16ab455867837",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:02:01",
+          "name": "Genital injury recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e66143c6165f88aeb8d8b60a5a7d403cc985abce19783a20389370e503c8fbe"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:02:02",
+          "name": "Genital injury risk reduction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e66143c6165f88aeb8d8b60a5a7d403cc985abce19783a20389370e503c8fbe"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:02:03",
+          "name": "Genital injury assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e66143c6165f88aeb8d8b60a5a7d403cc985abce19783a20389370e503c8fbe"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:02:04",
+          "name": "Genital injury care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e66143c6165f88aeb8d8b60a5a7d403cc985abce19783a20389370e503c8fbe"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "genitourinary anomalies",
+      "parentName": "Genitourinary anomalies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2e5af25298cbaed1cfd0226fc63272fb42ef5c9e3106dbd3e859b9ff1866a566",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU29.2",
+          "page": 411,
+          "rowBBox": [
+            45,
+            412.02,
+            101.7,
+            447.54
+          ],
+          "sourceBodySha256": "1914e5fbca2a21ec47215aa5b268fa841dfd48b424edf42d6a02eaad0f30d4af",
+          "editorialTaskSha256": "012e12df8a11799a55d0252a1fdaae61b4e6db0961100329a80305f065ac2f98",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:03:01",
+          "name": "Genitourinary congenital anomaly presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e5af25298cbaed1cfd0226fc63272fb42ef5c9e3106dbd3e859b9ff1866a566"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:03:02",
+          "name": "Genitourinary congenital anomaly investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e5af25298cbaed1cfd0226fc63272fb42ef5c9e3106dbd3e859b9ff1866a566"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:03:03",
+          "name": "Genitourinary congenital anomaly treatment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e5af25298cbaed1cfd0226fc63272fb42ef5c9e3106dbd3e859b9ff1866a566"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "genitourinary infections",
+      "parentName": "Genitourinary infections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI8.1",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            152.28,
+            108.8,
+            193.32
+          ],
+          "sourceBodySha256": "e0dd108c9e123813c84b4aa2912fb4cdfa30d12e295045aab6e10178c4457cb0",
+          "editorialTaskSha256": "3895a83569ccf770492297b8601180a986bce451852cadb0f7b09e7126ff4c2b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:04:01",
+          "name": "Bacterial genitourinary causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:04:02",
+          "name": "Viral genitourinary causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:04:03",
+          "name": "Fungal genitourinary causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:04:04",
+          "name": "Parasitic genitourinary causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:04:05",
+          "name": "Genitourinary infection specimen selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:04:06",
+          "name": "Genitourinary infection testing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "geriatric services",
+      "parentName": "Geriatric services",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:43f2f821cc5a3c170a433507074e0b6f64c40b9d6c0f501194c873e928b04b50",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM12.1",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            282.9,
+            98.6,
+            300.12
+          ],
+          "sourceBodySha256": "3a1f9d7948828164909c9a7c2e43867be647296347e2c5eb5738bb32444a768f",
+          "editorialTaskSha256": "a6dde0def75f850e85f5ac862fa7f9f07facc4d492e39c0db8935d3380068746",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:05:01",
+          "name": "Geriatric service components",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43f2f821cc5a3c170a433507074e0b6f64c40b9d6c0f501194c873e928b04b50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:05:02",
+          "name": "Geriatric community support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43f2f821cc5a3c170a433507074e0b6f64c40b9d6c0f501194c873e928b04b50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:05:03",
+          "name": "Geriatric referral pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43f2f821cc5a3c170a433507074e0b6f64c40b9d6c0f501194c873e928b04b50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gestational trophoblastic disease",
+      "parentName": "Gestational trophoblastic disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG34.3",
+          "page": 439,
+          "rowBBox": [
+            49.1,
+            517.2,
+            103.1,
+            563.64
+          ],
+          "sourceBodySha256": "f605ca39542f8e1f787cc877dec05d282ab132be20127a1802568d47a772cb87",
+          "editorialTaskSha256": "8ef96cceff50ce4bb93c6348f197cee76d9cab1b38d1e630147e4b67ad11f465",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:06:01",
+          "name": "Gestational trophoblastic disease classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:06:02",
+          "name": "Trophoblastic clinical findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:06:03",
+          "name": "Trophoblastic imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:06:04",
+          "name": "Trophoblastic hCG interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:06:05",
+          "name": "Trophoblastic disease staging",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:06:06",
+          "name": "Trophoblastic disease follow-up",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:82b92c058fdaab76485dd36d0777a9c4e6ac77d5f689ee5fcd0450ef907a261f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gestational trophoblastic neoplasia",
+      "parentName": "Gestational trophoblastic neoplasia",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA29.5",
+          "page": 200,
+          "rowBBox": [
+            51.5,
+            347.28,
+            105.6,
+            379.38
+          ],
+          "sourceBodySha256": "b6e1f549a51780225b3f350ada2eb48c9eaabdc8a8d46a1d604b7f00c9d39d37",
+          "editorialTaskSha256": "7ec5900d1f4e5651ce763bc803e976cb3faa5155654713df2b182f8855d6069d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:07:01",
+          "name": "Trophoblastic neoplasia forms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:07:02",
+          "name": "Trophoblastic neoplasia pathogenesis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:07:03",
+          "name": "Trophoblastic neoplasia morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:07:04",
+          "name": "Trophoblastic neoplasia clinical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:07:05",
+          "name": "Trophoblastic metastatic potential",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gi hormones",
+      "parentName": "GI hormones",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:231e0daae2d32cfb6c53058b411b863365ed4753fe069a28f3073750cd844dac",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY4.2",
+          "page": 152,
+          "rowBBox": [
+            58.5,
+            320.88,
+            107.8,
+            348.24
+          ],
+          "sourceBodySha256": "9c95dae6c4d5f63f2895a839fce29c557a3ef0a83a312c0aaa57615af33df384",
+          "editorialTaskSha256": "1525966e5fcf3d6e164b71ebe67726ecd75edccb45708391331742c4bc031cb9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:08:01",
+          "name": "GI hormone release stimuli",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:231e0daae2d32cfb6c53058b411b863365ed4753fe069a28f3073750cd844dac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:08:02",
+          "name": "GI hormone targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:231e0daae2d32cfb6c53058b411b863365ed4753fe069a28f3073750cd844dac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:08:03",
+          "name": "GI hormone feedback",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:231e0daae2d32cfb6c53058b411b863365ed4753fe069a28f3073750cd844dac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gi motility",
+      "parentName": "GI motility",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a7f759382ac857880755bf9f734fa52a87172434d478639013b3e6f2dc52717d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY4.8",
+          "page": 152,
+          "rowBBox": [
+            58.5,
+            498.72,
+            107.8,
+            531.84
+          ],
+          "sourceBodySha256": "a59649f8c8e346f0d680ca41b57af2b5123c52e0f074555d2c67987ebc249bc5",
+          "editorialTaskSha256": "7e51e3067120de2a0f9571ac0998e585999900b7a0d810ea795c5265e7c0affd",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:09:01",
+          "name": "Defecation reflex",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a7f759382ac857880755bf9f734fa52a87172434d478639013b3e6f2dc52717d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:09:02",
+          "name": "Regional GI movement patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a7f759382ac857880755bf9f734fa52a87172434d478639013b3e6f2dc52717d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:09:03",
+          "name": "GI motility control",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a7f759382ac857880755bf9f734fa52a87172434d478639013b3e6f2dc52717d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:09:04",
+          "name": "Fibre effects on motility",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a7f759382ac857880755bf9f734fa52a87172434d478639013b3e6f2dc52717d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "glomerular disease",
+      "parentName": "Glomerular disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA27.5",
+          "page": 198,
+          "rowBBox": [
+            51.5,
+            215.22,
+            105.6,
+            264.54
+          ],
+          "sourceBodySha256": "14a078a254da40502114f13faaa45c0a33ec4542c74e544a5b903e4273e57777",
+          "editorialTaskSha256": "53c4402b311ab60f1eacc5b88f6989366405c5317243520db8751538a9d529fe",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:10:01",
+          "name": "Glomerular injury classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:10:02",
+          "name": "Nephritis mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:10:03",
+          "name": "Nephritis microscopy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:10:04",
+          "name": "Nephritis clinical presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gluteal muscles",
+      "parentName": "Gluteal muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN16.1",
+          "page": 117,
+          "rowBBox": [
+            51.2,
+            175.38,
+            121.9,
+            221.46
+          ],
+          "sourceBodySha256": "664c5f2631c9a9b612e7bbb3fa8cabd4059a26df73f7a79871f9aa494c0280ff",
+          "editorialTaskSha256": "c7ffe67bc90b2db300532ffaed9b7331f9c6d4c93f1524682b0bd2963085d56d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:11:01",
+          "name": "Gluteal muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:11:02",
+          "name": "Gluteal muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:11:03",
+          "name": "Gluteal muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:11:04",
+          "name": "Gluteal muscle actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "glycaemic testing",
+      "parentName": "Glycaemic testing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.22",
+          "page": 172,
+          "rowBBox": [
+            58.5,
+            185.28,
+            108.2,
+            266.28
+          ],
+          "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+          "editorialTaskSha256": "9c8b3b54c1767b55fd468769645e0c56d1d31081eb7fb7d9707fa47bc85d756e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:12:01",
+          "name": "Oral glucose tolerance test",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:12:02",
+          "name": "Glucose challenge test",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:12:03",
+          "name": "HbA1c testing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:12:04",
+          "name": "Glycaemic result interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "granulomatous nasal disease",
+      "parentName": "Granulomatous nasal disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ca65d9cac2472f7bfdc0042047ed3d5299165cdda859f5a5e88c70aa6065edec",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN4.34",
+          "page": 424,
+          "rowBBox": [
+            40,
+            547.08,
+            94.3,
+            578.82
+          ],
+          "sourceBodySha256": "76fa649be9f628cc72db6bf23d88bc7d7e91ad3a0c1b845fe3431142b25e58bd",
+          "editorialTaskSha256": "b15daa7623e4ca5278f9cb09185ca35af0e5b442a23a1e4d5e2495457716dc5e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:13:01",
+          "name": "Granulomatous nasal disease causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca65d9cac2472f7bfdc0042047ed3d5299165cdda859f5a5e88c70aa6065edec"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:13:02",
+          "name": "Granulomatous nasal investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca65d9cac2472f7bfdc0042047ed3d5299165cdda859f5a5e88c70aa6065edec"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:13:03",
+          "name": "Granulomatous nasal management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca65d9cac2472f7bfdc0042047ed3d5299165cdda859f5a5e88c70aa6065edec"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "growth deviations",
+      "parentName": "Growth deviations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e64a54e099cfefa0d8832b73b33670ec297c2472308e9304dbabc45d1a9fe0ae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE30.7",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            242.34,
+            103.1,
+            259.44
+          ],
+          "sourceBodySha256": "27b3b270ff01bba25e981a68dab0902975374a9bed80488ea3a16bbdbe002778",
+          "editorialTaskSha256": "b5075d18f8b6bdfd866cc4f99dd78af7e1ca559b25f3e7ef7489940a8c51f0d9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:14:01",
+          "name": "Growth chart trajectory recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e64a54e099cfefa0d8832b73b33670ec297c2472308e9304dbabc45d1a9fe0ae"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:14:02",
+          "name": "Abnormal growth referral",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e64a54e099cfefa0d8832b73b33670ec297c2472308e9304dbabc45d1a9fe0ae"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gut development",
+      "parentName": "Gut development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.6",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            199.44,
+            122.2,
+            227.94
+          ],
+          "sourceBodySha256": "0a6cc324eff4481985d3ae2bf04854166ed636391dfdf3ced7adfd189feacaba",
+          "editorialTaskSha256": "787a373c3044ab79422c1980704da6998ca8f42dbb559f36c8b9cd91a1fe183e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:15:01",
+          "name": "Foregut derivatives",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:15:02",
+          "name": "Midgut derivatives",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:15:03",
+          "name": "Hindgut derivatives",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:15:04",
+          "name": "Foregut anomaly developmental correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:15:05",
+          "name": "Midgut anomaly developmental correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:15:06",
+          "name": "Hindgut anomaly developmental correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:455d80708b4e5a3c7fd81e4c8cf0064fec149ed3897da66a9aeb9c2d994a848e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "haemoglobin forms",
+      "parentName": "Haemoglobin forms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC5.9",
+          "page": 165,
+          "rowBBox": [
+            58.7,
+            244.02,
+            108.5,
+            287.88
+          ],
+          "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+          "editorialTaskSha256": "103334808e4f2eaa0d6fdb1b02e6a4b64582dba56191decbf6faf8cfb444dab4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:16:01",
+          "name": "Physiological haemoglobin forms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:16:02",
+          "name": "Haemoglobin chemical derivatives",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:16:03",
+          "name": "Inherited haemoglobin variants",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:16:04",
+          "name": "Haemoglobin structure–function correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "haemolytic anaemias",
+      "parentName": "Haemolytic anaemias",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.4",
+          "page": 345,
+          "rowBBox": [
+            51.3,
+            347.16,
+            103.1,
+            394.5
+          ],
+          "sourceBodySha256": "1efbc75d14f6b56ed2de535e9583b9df5dbd70c791b0f23d398ec604d789e53d",
+          "editorialTaskSha256": "102e03b962dc8021f40767b07c8f8ce05e6c99000d89214cb64d87e0e17b17ea",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:17:01",
+          "name": "Thalassaemia major",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:02",
+          "name": "Sickle cell disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "sickle cell disease"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:03",
+          "name": "Hereditary spherocytosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:04",
+          "name": "Autoimmune haemolysis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:05",
+          "name": "Haemolytic anaemia mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:06",
+          "name": "Haemolytic anaemia findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:17:07",
+          "name": "Haemolytic anaemia care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "haemoparasites",
+      "parentName": "Haemoparasites",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.11",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            282.24,
+            108.8,
+            340.62
+          ],
+          "sourceBodySha256": "94ffb9cc750c3ff78dded29d63b6a9fb267bc153944d8eaa5d1bc8bfcb7902cc",
+          "editorialTaskSha256": "07d4f10b2f402394dad3bd04c92445f322c49ba67133b0395a04ec09f8c339c9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:18:01",
+          "name": "Malaria",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:02",
+          "name": "Visceral leishmaniasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:03",
+          "name": "Filariasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:04",
+          "name": "Haemoparasite morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:05",
+          "name": "Haemoparasite life cycle",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:06",
+          "name": "Haemoparasite presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:07",
+          "name": "Haemoparasite tests",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:18:08",
+          "name": "Haemoparasite prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "haemorrhage control techniques",
+      "parentName": "Haemorrhage control techniques",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG16.2",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            113.46,
+            103.1,
+            171.54
+          ],
+          "sourceBodySha256": "ac0b5a28ba42e3f93dcdb3c1def497557781838e5a1cd5ded1c2ca627b69aba1",
+          "editorialTaskSha256": "672b576cc85abf01f552e81ae47e63936cfbcffa88a13f71e2eaea6de8f5197e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:19:01",
+          "name": "Bimanual compression",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:19:02",
+          "name": "Aortic compression",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:19:03",
+          "name": "Balloon tamponade",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:19:04",
+          "name": "Anti-shock garment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:19:05",
+          "name": "Haemorrhage control simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f40f3f8f90999bb7d2eb1a8dc2eb5fffedfc2777057505a0d0e83176b65a067c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hamstrings",
+      "parentName": "Hamstrings",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN16.4",
+          "page": 117,
+          "rowBBox": [
+            51.2,
+            302.82,
+            121.9,
+            351.78
+          ],
+          "sourceBodySha256": "e1c85bffe07d2dfa981c32ebe82c69411faf787d81438d6780ad2fb4a04be9d6",
+          "editorialTaskSha256": "72d08c4e1978c4fc152f3344c1d5857bb15eeebf2d4400100525d386faabb9b6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:20:01",
+          "name": "Hamstring identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:20:02",
+          "name": "Hamstring attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:20:03",
+          "name": "Hamstring innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:20:04",
+          "name": "Hamstring joint crossings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:20:05",
+          "name": "Hamstring actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hand osteology",
+      "parentName": "Hand osteology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN8.3",
+          "page": 111,
+          "rowBBox": [
+            51.2,
+            153.06,
+            120.4,
+            198.78
+          ],
+          "sourceBodySha256": "9d5b8046957e141834aab918fa99fbb8497c3a267b2770fe4856d2c875bb6b87",
+          "editorialTaskSha256": "f3503b6690cb2a377e542937d98cda7a9027b93d50ada5034c304090ad909f64",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:21:01",
+          "name": "Metacarpals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:02",
+          "name": "Phalanges",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:03",
+          "name": "Pisiform",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:04",
+          "name": "Articulated hand bone localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:05",
+          "name": "Metacarpal parts",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:06",
+          "name": "Phalangeal parts",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:21:07",
+          "name": "Pisiform distinguishing features",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9db28c24806daf60d9fe59e47a8823b6bf86afccb2fc8fc6f22b50db5caa0e2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "headache investigations",
+      "parentName": "Headache investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.6",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            283.44,
+            102.7,
+            324.18
+          ],
+          "sourceBodySha256": "0e9a6f33dcfeb930aea336cbd40570d4e024b265ba26d6e3e1f5f7ea922adc43",
+          "editorialTaskSha256": "153a5a587e89e2a6e28a74bf92e0ffe5794835f5a1ad246d54e2c0dbee12136e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:22:01",
+          "name": "Headache test selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:22:02",
+          "name": "Headache test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:22:03",
+          "name": "Headache imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:22:04",
+          "name": "Headache imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health education methods",
+      "parentName": "Health education methods",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM4.1",
+          "page": 271,
+          "rowBBox": [
+            40.1,
+            165.48,
+            98.6,
+            202.14
+          ],
+          "sourceBodySha256": "2d4a586cecf80ce616e916750591b76f9dc225e0f66085da40cc0cfc156eae14",
+          "editorialTaskSha256": "1f592221058899e0bee67425c71c5d3a50f1992f7a5d5d07980cdce2e7511637",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:23:01",
+          "name": "Individual health education",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:23:02",
+          "name": "Group health education",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:23:03",
+          "name": "Mass health education",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:23:04",
+          "name": "Health education reach",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:23:05",
+          "name": "Health education participation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:23:06",
+          "name": "Health education limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health information systems",
+      "parentName": "Health information systems",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM8.7",
+          "page": 275,
+          "rowBBox": [
+            40.1,
+            312.06,
+            98.6,
+            346.38
+          ],
+          "sourceBodySha256": "f8c9481013ef1e1d44a47b0fdb601ac1447f22ebb69d2fe9230b674204f754cb",
+          "editorialTaskSha256": "67e3d3c92cd92d980145c1ec818f8da03ff35dd6be463b1c297c50cc8ecc67f0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:24:01",
+          "name": "Health information collection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:24:02",
+          "name": "Health information validation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:24:03",
+          "name": "Health information reporting",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:24:04",
+          "name": "Health information feedback",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:24:05",
+          "name": "Health information managerial use",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7be56af14fd8753982c47063203d7d816d6bf6737e71a9a8a608af35bd4ccae8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health management techniques",
+      "parentName": "Health management techniques",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM16.3",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            402.06,
+            98.6,
+            420.06
+          ],
+          "sourceBodySha256": "5369cc260f19146ec6c458539d3e80dcb5ff127845dfd170fbcff792ecb40985",
+          "editorialTaskSha256": "e08232d2ff8a363d346af972eecc65d8db777929ed9cc20571e9901360d9942f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:25:01",
+          "name": "Health service scheduling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:25:02",
+          "name": "Health resource allocation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:25:03",
+          "name": "Health service monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:25:04",
+          "name": "Management technique selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health planning concepts",
+      "parentName": "Health planning concepts",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM16.1",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            366.06,
+            98.6,
+            384.06
+          ],
+          "sourceBodySha256": "4dbe845221562a31124790b60b5447c5b2ecffa43377069f75ae7702246661cb",
+          "editorialTaskSha256": "ba09eb157fbb5c237b2199d5e69d6ab14aebcd942ff0e031fc7fbe25b7d68eae",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:26:01",
+          "name": "Health planning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "health planning"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:26:02",
+          "name": "Health needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:26:03",
+          "name": "Health priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:26:04",
+          "name": "Health objectives",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:26:05",
+          "name": "Health resources",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health planning in india",
+      "parentName": "Health planning in India",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d9fa6d309e476217ad6cb54adff95b36ce324ce599f70a9f64a9631d191fddfc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM16.4",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            420.06,
+            98.6,
+            451.98
+          ],
+          "sourceBodySha256": "434637d902facf2edb5567f2412064a285ad1422dcb534dcf38655a2d883840d",
+          "editorialTaskSha256": "5ca6879eb39feba1a4a46b68f24da75cbef3c0c9e311af263835251062dd402c",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:27:01",
+          "name": "Indian health policy source interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d9fa6d309e476217ad6cb54adff95b36ce324ce599f70a9f64a9631d191fddfc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:27:02",
+          "name": "National health priority comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d9fa6d309e476217ad6cb54adff95b36ce324ce599f70a9f64a9631d191fddfc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:27:03",
+          "name": "Policy-to-planning translation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d9fa6d309e476217ad6cb54adff95b36ce324ce599f70a9f64a9631d191fddfc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "health problems in older adults",
+      "parentName": "Health problems in older adults",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM12.2",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            300.12,
+            98.6,
+            333.24
+          ],
+          "sourceBodySha256": "5f65b8f18921ca332dc42caddb2352ef4184f0be904af874f53db99575eca348",
+          "editorialTaskSha256": "b61e1a0889808b889bb667d135944c0daee0560644d31758c90e6a453959809f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:28:01",
+          "name": "Older-adult chronic health needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:28:02",
+          "name": "Older-adult functional needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:28:03",
+          "name": "Older-adult sensory needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:28:04",
+          "name": "Older-adult cognitive needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:28:05",
+          "name": "Older-adult psychosocial needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "healthcare worker health",
+      "parentName": "Healthcare worker health",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3597a578834ed45438a8fe41148111fa1f3789e1cac210170f310f43cc2fda37",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM11.5",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            188.4,
+            98.6,
+            223.26
+          ],
+          "sourceBodySha256": "046db6d1159a16c710886ed3b892c24f40f5349e2bd34f535c7c409002627868",
+          "editorialTaskSha256": "772dcea6a82e410d4d0b453bcf1abe8413c3100125c6e6c889bde8265e7c8f19",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:29:01",
+          "name": "Healthcare worker occupational disorders",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3597a578834ed45438a8fe41148111fa1f3789e1cac210170f310f43cc2fda37"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:29:02",
+          "name": "Healthcare worker occupational prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3597a578834ed45438a8fe41148111fa1f3789e1cac210170f310f43cc2fda37"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:29:03",
+          "name": "Healthcare worker occupational management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3597a578834ed45438a8fe41148111fa1f3789e1cac210170f310f43cc2fda37"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "healthcare-associated infection",
+      "parentName": "Healthcare-associated infection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI10.1",
+          "page": 213,
+          "rowBBox": [
+            51.9,
+            176.7,
+            108.8,
+            221.04
+          ],
+          "sourceBodySha256": "84e75b8f15dbf916d4dc65316ca8eeb3769c60ca39e5de5607f6615eda22abe9",
+          "editorialTaskSha256": "9b55084e0ce4b43112242bdb715a7a372eaaee0164371d238f6ec6c2fcf20e00",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-09:30:01",
+          "name": "Healthcare-associated infection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "healthcare-associated infection"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:30:02",
+          "name": "Healthcare infection definition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:30:03",
+          "name": "Healthcare infection agents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:30:04",
+          "name": "Healthcare infection types",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-09:30:05",
+          "name": "Healthcare transmission interruption",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}
