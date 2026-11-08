@@ -1,3 +1,17 @@
+## Parent scope batch 09: 1,600 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T20:01:22.503098+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 13588dfe2e010a3ff1ec73f4af3f230550a50450; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and PR head verified unchanged. Implementation checkpoint: 3b50e4a88c078b921138d3e2187c8d06d848d77e. User requested Next; names-only instruction active.
+
+Reviewed 200 names from Peripheral nerve injuries through Respectful specimen handling, preserving all 202 source appearances. Dispositions: 66 standalone candidates, 64 scoped facets, 62 families/contexts and eight mixed cases: Polytrauma resuscitation teamwork, Post-mortem reports, Pubertal timing, Regional circulation, Renal test interpretation, Reproductive interventions, Reproductive markers and Reproductive tract anatomy. Preserve renal tumour surgical/pathology contexts, overlapping puberty and preoperative labels, source-version legal/programme limits and supervised/simulated task modes without automatic merging or competence claims.
+
+Cumulative nine batches: 1,600 names / 1,711 disjoint source references; 432 standalone candidates, 563 scoped facets, 546 families/contexts, 59 mixed cases. 350 untouched names remain. Predecessor projections and decisions are byte-unchanged; all predecessor SHA256 pins and cohort/source-reference disjointness verified. Existing selected component inventory and reuse proposals unchanged. All canonical IDs remain null, mapping/scope completion false. No educational content added.
+
+Verification this run: all nine batch projections and parent reuse reporter --verify passed; six focused parent-scope tests passed; npm run check passed; git diff --check passed. Metadata-only changes; no code/test changes. Full suite not rerun (last full checkpoint: 1,608 tests). Local staged tree matched GitHub implementation tree exactly.
+
+Next: inspect the next untouched cohort and create batch 10 using --batch=10, retaining predecessor digests and source contexts. Resolve indicated decomposition, 59 mixed cases, semantic reuse, canonical/objective bindings, shared/family target scope, 21 source exceptions and learner integration. Foundation remains incomplete. No merge, deployment or clinical acceptance. No external writer jobs; ownership released after verified checkpoint. Save with expected-head lease and verify all seven changed files against the final remote commit.
+
+---
+
 ## Parent scope batch 08: 1,400 names cumulatively triaged — 8 November 2026 IST
 
 Checked at 2026-11-08T19:55:33+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 1ceaf5c73dc4394b097b617a97e774c78fa1f6fd; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation checkpoint: f14b820360d602d8fc59b50ab3e6d521f1fea7fc. User requested Next; names-only instruction active.
