@@ -1,3 +1,11 @@
+## Family decomposition batch 12 — 8 November 2026
+
+Added 135 source-bound names-only proposals across 30 groups / 30 source appearances (Intra-abdominal lesions through Lower respiratory infection). Cumulative: 360 groups, 1,685 proposals, 365 source appearances; 292 groups await initial proposals. Implementation: 00baefc17e8f24e8b8e88513f917848d488a9977. All acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twelve-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 13, Lower respiratory infections (plural).
+
+---
+
 ## Family decomposition batch 11 — 8 November 2026
 
 Added 119 source-linked names-only proposals across 30 groups / 30 source appearances (Indian medico-legal framework through Intestinal secretions). Cumulative: 330 groups / 1,550 proposals / 335 source appearances; 322 groups await initial proposals. All identities, scopes and bindings remain pending. Implementation: 552518e4ab501231b6f68596333b724ce1aab990.

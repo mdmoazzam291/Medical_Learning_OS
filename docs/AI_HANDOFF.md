@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 12 — 8 November 2026 IST
+
+Checked at 2026-11-08T17:31:00.673Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ccda08c20fe4e50d190546700e3a70655b8265e2; open draft PR head and main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 verified. Implementation commit: 00baefc17e8f24e8b8e88513f917848d488a9977. Names-only instruction active.
+
+Reviewed next 30 family parents, Intra-abdominal lesions through Lower respiratory infection. Added 135 source-bound name/facet proposals across 30 source appearances. Joint dislocations, intracellular accumulation classes and intraocular muscle names use only source-named members. Laryngoscopy remains observed; local anaesthetic administration remains simulated; regional snake image identification retains limitations. Iodine programmes remain document-bound, with no current programme verification. Unnamed agents, disease examples, transplant types and leucocyte members remain unspecified. IDs null, acceptance false, scope/binding incomplete. No teaching content or automatic merge.
+
+Cumulative twelve family batches: 360 parents, 1,685 proposal occurrences, 365 source appearances; 292 family groups await initial proposals. Queue/three inventories/all eleven predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'12') PASS across all ordered cohorts and source task hashes, coordinates, modes, source coverage, unique IDs, reuse hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run: partial evidence/verifier checkout only. No domain/UI implementation changes. Results do not claim semantic certification or source/guideline revalidation.
+
+Next: family batch 13 beginning Lower respiratory infections (plural; preserve its own task context). Inspect source tasks, preserve unnamed members and role limits, pin queue/three inventories/all twelve predecessors, run verifier --batch=13. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. Save with expected-head lease and verify changed remote files, then release ownership. No external writer jobs; no merge, deployment or publication.
+
+---
+
 ## Family/context decomposition proposals batch 11 — 8 November 2026 IST
 
 Checked at 2026-11-08T17:28:03.656Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 2013ff7c315b1c2c1dbc4ca287263808a9e06e0c; verified open draft PR and base main SHA 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 552518e4ab501231b6f68596333b724ce1aab990. Names-only instruction active.
