@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 15 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:52:16.441Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c0a9ccc3eb850ece8880ac46370b494d0551b1ff; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 0d72d4012199041c8a2daad882b9afd9ee3cb2bc. Names-only instruction active.
+
+Reviewed next 30 facets, Midbrain landmarks through Obesity differential. Preserved 31 source appearances; proposed 21 home labels with twelve existing-name and eighteen proposed-name links. Midbrain syndromes retain distinct localization. Movement-disorder facets retain history/exam/rating/differential scope. Neonatal checklist simulation remains distinct from resuscitation principles. Thyroid screening requires confirmation. Identical obesity-aetiology wording retains both distinct source appearances without implying two competence receipts. Volunteer/simulator ECG and anatomical diagrams do not establish general clinical/operative competence. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative fifteen scoped-home batches: 450 facets, 455 source appearances, 261 proposed home labels; 209 facets await initial proposals. Queue/three inventories/all fourteen predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=15 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 16 beginning Obesity examination. Inspect source tasks, preserve role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=16. Actual canonical/home/objective binding, 570 standalone-topic cases, exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 14 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:50:09.340Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 8675875bd7d6cdd71f4955068dd4c9595f865a13; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 445b163a8cdd4ad4b6cfd5e1ad831164f05925fc. Names-only instruction active.

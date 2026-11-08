@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 15 — 9 November 2026
+
+Added proposals for 30 facets / 31 source appearances (Midbrain landmarks through Obesity differential). Batch: 21 home labels, twelve existing-name and eighteen proposed-name links. Cumulative: 450 facets / 455 appearances / 261 proposed home labels; 209 facets await initial homes. Implementation: 0d72d4012199041c8a2daad882b9afd9ee3cb2bc. All mappings/bindings pending.
+
+Fifteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Obesity examination. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 14 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (Lower-limb radiographic anatomy through Microvascular flow regulation). Batch: 22 home labels, eight existing-name and 22 proposed-name links. Cumulative: 420 facets / 424 appearances / 250 proposed home labels; 239 facets await initial homes. Implementation: 445b163a8cdd4ad4b6cfd5e1ad831164f05925fc. All mappings/bindings pending.
