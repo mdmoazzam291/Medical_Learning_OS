@@ -126,3 +126,11 @@ The next 30 family parents (AI in laboratory biochemistry through Antiretroviral
 The queue, three comparison inventories and batch-01 packet are digest-pinned. One component has an exact-label lead, retained as unverified. Across both batches, 60 family parents have 290 proposals and 62 source appearances; 592 families still lack initial proposals. All enumerations/scopes/bindings remain incomplete and canonical IDs null. No teaching content or automatic merging.
 
 Verified with `node ops/nmc/verify-family-decomposition.js --batch=02`. Next: inspect the next family cohort beginning Antiseizure medicines, preserving source-specific evidence and predecessor pins.
+
+## Family/context decomposition proposals: batch 03
+
+The next 30 family parents (Antiseizure medicines through Birth injuries) have [129 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json): 36 reusable-topic candidates and 93 contextual-task facets across 31 source appearances. Benign breast disease preserves separate pathology and clinical task support. Assisted-birth observation and assigned assistance remain distinct; model-based genital-development assessment and artificial ventilation simulation do not establish independent clinical performance. Unnamed family members remain unspecified.
+
+The queue, three inventories and both predecessors are digest-pinned; two component labels have unverified exact-label leads. Across three batches, 90 family parents have 419 proposals and 93 source appearances; 562 families lack initial proposals. All enumerations/scopes/bindings remain incomplete, canonical IDs null. No teaching content, current guidance recheck or automatic merging.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=03`. Next: inspect the next cohort beginning Bleeding disorders, retaining source-specific contexts and all predecessor pins.
