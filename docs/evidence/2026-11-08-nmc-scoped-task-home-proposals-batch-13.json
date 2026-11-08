@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-10.json",
+      "sha256": "8b42358aa9fe8aea57654b5ca3465604285d1edcaa555b5622147c744210f467"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-11.json",
+      "sha256": "92422976e793d8bed80b24fc30fa4a30f75e7a62566d1d1522cfb8bd3c6eda60"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-12.json",
+      "sha256": "0f7800bddee98ede8dd3e320717e82a539314538be0b1c5c8feb49663d3b74e1"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-13:01",
+      "facetNameKey": "ischaemic stroke treatment",
+      "facetName": "Ischaemic stroke treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb4d0b3893e63b807ff82bb9d1ddadd233e790ac69bc35c1b8973e0686a9611a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.11",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            174.48,
+            102.7,
+            215.22
+          ],
+          "sourceBodySha256": "df9745b156d3c406a683f966588d0e5b2f4fd7413a6e46f437b437061d7d9753",
+          "editorialTaskSha256": "f16e50d0aadd651aa8734d18d4fa73b13c341a84562b970c5ae1077538a92af8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Ischaemic stroke",
+      "proposedHomeNameKey": "ischaemic stroke",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-guidance management/thrombolysis eligibility/contraindications/escalation; no current eligibility-rule validation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:02",
+      "facetNameKey": "iucd skills",
+      "facetName": "IUCD skills",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1ec8cf2772f20862daed21f6216d7d334511f1f3109b3386154a8d1caa969df8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG21.2",
+          "page": 436,
+          "rowBBox": [
+            49.1,
+            113.46,
+            103.1,
+            142.92
+          ],
+          "sourceBodySha256": "3c39dd32fc77e542cd2b82dff51362ba61d1d55db35dd484d31d9c61cb5c9d13",
+          "editorialTaskSha256": "8f18c9b465df10915db180117a256a9589c6c1f860fabb11ee421b7edca9683f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Intrauterine contraception",
+      "proposedHomeNameKey": "intrauterine contraception",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Indications and simulator insertion/removal; not independent contraception procedure competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:03",
+      "facetNameKey": "iud practical",
+      "facetName": "IUD practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a8a126a69de210092f045eb5b1ce63bbf1b75d2271bd0adde8ecc7aba0e8db27",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.18",
+          "page": 441,
+          "rowBBox": [
+            49.1,
+            366.96,
+            103.1,
+            394.98
+          ],
+          "sourceBodySha256": "a72defcc075f851e671a975a2a1237679395a2f8f92a55602d244976f6744e97",
+          "editorialTaskSha256": "f76c3d8bdac71e88cac312aa3736476dab6c836afa3208d671608b1011b38f66",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Intrauterine contraception",
+      "proposedHomeNameKey": "intrauterine contraception",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model insertion/removal with counselling/safety checks; keep separate source from IUCD skills.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:04",
+      "facetNameKey": "joint aspiration teamwork",
+      "facetName": "Joint aspiration teamwork",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d678da00ce31ae31cbfa716b55f89c0fa43204cc6cea4c40c91d578247535fec",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR3.2",
+          "page": 447,
+          "rowBBox": [
+            49.1,
+            272.1,
+            103.1,
+            315.48
+          ],
+          "sourceBodySha256": "6fafffcc77e7907118c2cd671b814a532cac9ef4163a2da2a6a53832e8314680",
+          "editorialTaskSha256": "761da62f942ad4750c18d75c16671c276e2f066abf273bd22bb808ecf931bf63",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Arthrocentesis",
+      "proposedHomeNameKey": "arthrocentesis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised or simulated joint aspiration assistance, preparation/specimen/aftercare documentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:05",
+      "facetNameKey": "joint innervation",
+      "facetName": "Joint innervation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8988eba110cf95f940f049df0b7b22bee8b8de0da075d7081b051118d50bebd3",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN2.6",
+          "page": 108,
+          "rowBBox": [
+            51.2,
+            440.64,
+            120.4,
+            471.96
+          ],
+          "sourceBodySha256": "5363225176452a1f262b9f9d71e7ed98b3c04c9ef15f415746687856827e4e9e",
+          "editorialTaskSha256": "52277e92acb4faff845d103214c3e3b91530261dc18cf22d95262e5eb9766bd4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Joints",
+      "proposedHomeNameKey": "joints",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "joints"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Labelled selected-joint innervation and Hilton-law application; unnamed joints remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:06",
+      "facetNameKey": "joint pain assessment",
+      "facetName": "Joint pain assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7cc979a4d27d4a30c5740db086c4a6f82c9dbba90fa73a75eaaa1a1b088ec416",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.3",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            447.6,
+            102.7,
+            474.96
+          ],
+          "sourceBodySha256": "aded2f6dea6d8f3dbbc4a995556c806301d0b0d48c7af0972fc940d3c063a752",
+          "editorialTaskSha256": "4a9fce4ec35a3b967afe0151be964050a55e88a6ee3074e5bc524ff14192a54a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Joint pain",
+      "proposedHomeNameKey": "joint pain",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "joint pain"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Staged localization/time/mechanism-based assessment.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:07",
+      "facetNameKey": "joint pain classification",
+      "facetName": "Joint pain classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:27b5ca02ab252a935159cf9af5235aa3e636c8fc64c64ed8f30b7e6921e758b9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.2",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            426.72,
+            102.7,
+            447.6
+          ],
+          "sourceBodySha256": "3d8ddd10b3c17b2f2a04a90db7e10c2f1dce3926546d1171a80d8ba4b3cb356d",
+          "editorialTaskSha256": "ab1df91a2122b5780aa67ff77fe6e6b10b58f9ec32e87b92a0ddaddb60ce06e8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Joint pain",
+      "proposedHomeNameKey": "joint pain",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "joint pain"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Inflammatory/mechanical/infectious/other mechanism classification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:08",
+      "facetNameKey": "joint pain prescribing",
+      "facetName": "Joint pain prescribing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:acf40a5b7c3ec0027417b98a64d9536fa2275d87d11a27ecc0b0fcd59afe6d1c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR2.3",
+          "page": 445,
+          "rowBBox": [
+            49.1,
+            137.64,
+            103.1,
+            190.08
+          ],
+          "sourceBodySha256": "5ae00d105462a2e6bf981b362c875a7bb64287c4aa724b50defba65f36918d8c",
+          "editorialTaskSha256": "55902bee7114e30f1789db06452274ea733681ba1646f14f8bd7b77b8e82b97e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Joint pain",
+      "proposedHomeNameKey": "joint pain",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "joint pain"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated analgesic choice/communication with contraindications; not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:09",
+      "facetNameKey": "joint symptom timeline",
+      "facetName": "Joint symptom timeline",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5180c3cad95b8e590d47ccecee567466091e738be2140097de50dadd5c8b402e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.4",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            474.96,
+            102.7,
+            502.32
+          ],
+          "sourceBodySha256": "db51ee58c7ceafbb3ec8555ab632109042e2b06f205ff9ef966de45518e468df",
+          "editorialTaskSha256": "9ec3e44bd2e8ca49cfb53f57faa9c10904b652a415df4cb2c372aa03f95b378f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Joint pain",
+      "proposedHomeNameKey": "joint pain",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "joint pain"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Acute/subacute/chronic differential narrowing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:10",
+      "facetNameKey": "labour stages simulation",
+      "facetName": "Labour stages simulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bbc36060e631b6a9fe9c22824d570ff04882d42150b80fe1704582f85d8d4d9c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG13.6",
+          "page": 432,
+          "rowBBox": [
+            49.1,
+            465.3,
+            103.1,
+            492.48
+          ],
+          "sourceBodySha256": "6e6ff0840e64d33b2ba6f25e5065eb673f2bb460c6e4de7ad69a4933c0ea1da2",
+          "editorialTaskSha256": "bb3e9cf1d2427c9df986f1dfc44ac9d43661de1ee7fa7e98c439bac755428166",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Labour",
+      "proposedHomeNameKey": "labour",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "labour"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Mannequin normal-labour stage demonstration only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:11",
+      "facetNameKey": "laparotomy assistance",
+      "facetName": "Laparotomy assistance",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ffee8a7fb13a70d089783d818a209760ff7741ca46b1ceaace3f23ce6595a9d8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG37.2",
+          "page": 442,
+          "rowBBox": [
+            49.1,
+            216.78,
+            103.1,
+            243.36
+          ],
+          "sourceBodySha256": "518df4739242067522adda3ed77e27c134ffde9b223433a3234fb86ebef04938",
+          "editorialTaskSha256": "e25ec4529f1de7c6288b91c67c3f6f75878daad4cde4d0e72b630da7926470cb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Laparotomy",
+      "proposedHomeNameKey": "laparotomy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised laparotomy observation/assistance in preparation/exposure/closure only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:12",
+      "facetNameKey": "laryngitis anatomy",
+      "facetName": "Laryngitis anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d291acd0442797bddc086fe7f75f8f59e6b5bd5a9c3552dd8e4c9cc5514e482d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN38.2",
+          "page": 130,
+          "rowBBox": [
+            51.2,
+            506.94,
+            122.2,
+            531.72
+          ],
+          "sourceBodySha256": "c48c4b31664af49fa6921366596b2567a441f7665f3342af2313c87ea029e36d",
+          "editorialTaskSha256": "fc353b29cb9ce0eb000d079a1d207717277b0049473e41e52244f7e0b2bfe2d3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Larynx",
+      "proposedHomeNameKey": "larynx",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "larynx"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Laryngeal section-based inflammation/oedema effects on vocal folds/airway calibre.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:13",
+      "facetNameKey": "leprosy classification",
+      "facetName": "Leprosy classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:27436d41e17428291fd6929adb52d166768dfc8791a2a0658f97067396e0fa76",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR9.1",
+          "page": 358,
+          "rowBBox": [
+            39.9,
+            147.66,
+            101.6,
+            175.02
+          ],
+          "sourceBodySha256": "508c2ac1ece68e388f1eeb8db25695840ac94040b7b6d04cad3a3e29b75c0f8f",
+          "editorialTaskSha256": "308cfe59d9dc07ce5ce44ca359ca3d88d9cbafddaebbc8d98900b466a1197301",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Skin/nerve findings and epidemiology linked to clinical/operational categories.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:14",
+      "facetNameKey": "leprosy complications",
+      "facetName": "Leprosy complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f0a5bb95cd0d9aee5cec01130e3a3d0cf63f78c3a9b0bc5386b5a3b14d5b452",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR9.6",
+          "page": 358,
+          "rowBBox": [
+            39.9,
+            364.92,
+            101.6,
+            405.72
+          ],
+          "sourceBodySha256": "194b4389ecb90df7d0854f26e91cf63af0eff71d83807a8ee58aec3441d79de7",
+          "editorialTaskSha256": "e1902832912e1e4d5dd944ffdedbdb6d6d12b6df896a4b89eb8edd25097cbc55",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Disability assessment and self-care/stigma counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:15",
+      "facetNameKey": "leprosy management",
+      "facetName": "Leprosy management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:41b51d0312674316ef4793a932046d691c3010b52c31ccb5f3824fb5c99491f2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR9.5",
+          "page": 358,
+          "rowBBox": [
+            39.9,
+            297.36,
+            101.6,
+            364.92
+          ],
+          "sourceBodySha256": "85abd9d22d3d11cc696c385dbb2477f76e602408643eeff59c60b611e7ca50fa",
+          "editorialTaskSha256": "cb65550398e7d7c5af11ef5bd656597465d00dd53cf0db7c731dc112e5862bd0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated classification/treatment/follow-up under national/WHO source guidance, not refreshed current regimen.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:16",
+      "facetNameKey": "leprosy medicines",
+      "facetName": "Leprosy medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9d74ee9688adcd7528b708934a7ca5ee9b9902de0c8245e5748eda6bcd4eb6f8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.6",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            310.74,
+            105.7,
+            351.36
+          ],
+          "sourceBodySha256": "8690d460ffe6aaf4779c2303d8de6fded2102a25ee95f3eb4be17fdd161d1136",
+          "editorialTaskSha256": "60fcb3321b4234ce6b520d9ebe077a69afc7de2a7696796507ac0bb7dc76eb73",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Drug kinetics/actions/harms with explicit antimicrobial versus lepra-reaction treatment distinction.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:17",
+      "facetNameKey": "leprosy neurological examination",
+      "facetName": "Leprosy neurological examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:af769b02acb25b3d81edc1456110d641eb4c929b434e45b263f52095dfede150",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR9.2",
+          "page": 358,
+          "rowBBox": [
+            39.9,
+            175.02,
+            101.6,
+            202.38
+          ],
+          "sourceBodySha256": "8d0f6b748f528ede4f0faf01a94b51a7deba597aaf212506d769c9ec51f6bd3e",
+          "editorialTaskSha256": "84e003aa63e20f7076b54a6b71fa989a6a8bdb254d3002607ba8ad2c65eb9920",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated sensory/motor/peripheral-nerve examination.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:18",
+      "facetNameKey": "leprosy pathology",
+      "facetName": "Leprosy pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:09ec8deb3f35dc03a903356d4443c40d8728dbd1fe3066ff909438430d4c3003",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.3",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            354.12,
+            105.6,
+            372.48
+          ],
+          "sourceBodySha256": "cbf6a53990c041a22475dc91f1aceb610fcee552c1e288a604edc51efde60c20",
+          "editorialTaskSha256": "030d843a8fe989a82d7e3f446e2cd5c27824c0bc350d783a36299808645568c4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Leprosy",
+      "proposedHomeNameKey": "leprosy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Tissue/nerve spectrum, immunity and organism burden.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:19",
+      "facetNameKey": "levothyroxine prescription",
+      "facetName": "Levothyroxine prescription",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8d7c36f6cc3915a62232ed146fe7acf3cb186dcfb33a01733f4e92eb90940b29",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.13",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            366,
+            102.7,
+            393.36
+          ],
+          "sourceBodySha256": "5ef4546cbc869313db142c53a05d93d1bd490614f8bf6ef729a0d99f702b9008",
+          "editorialTaskSha256": "50238488bf7b4be551a204f525d0a4db663e028a85a9af81fa25948b6c636004",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Levothyroxine",
+      "proposedHomeNameKey": "levothyroxine",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated patient/biochemistry-tailored prescription, not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:20",
+      "facetNameKey": "lifestyle counselling",
+      "facetName": "Lifestyle counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:00dee43e80d11016d1285a0253bde7c729129b4037dab2a42d838e9474875c23",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM8.15",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            212.76,
+            102.7,
+            253.56
+          ],
+          "sourceBodySha256": "a5a2342d39137f0409ebfabeb133b281fe878c0cbe6eaf623ae45b8527ec33a2",
+          "editorialTaskSha256": "04325330005514a24520f1606902dfad8490028fac3615d39bb04906c20a12f0",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:0f5400b311fde5f5d1f7db8904364a8d918b51ba167eec0398dc5fba1fac8621",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.24",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            521.58,
+            102.7,
+            541.5
+          ],
+          "sourceBodySha256": "ff78a53a3de998c9183e9be02b99dddb70b21cbdb6962ee6d01afe31cace23cb",
+          "editorialTaskSha256": "5d76cfd89477df9aed80cbc0c36c2435d88440c5ed7c9e5a0180d4ec0d0afbc9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cardiovascular prevention",
+      "proposedHomeNameKey": "cardiovascular prevention",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve separate simulated hypertension lifestyle targets and cardiovascular risk-reduction communication sources.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:21",
+      "facetNameKey": "lipid test interpretation",
+      "facetName": "Lipid test interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC4.8",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            287.58,
+            108.5,
+            327.84
+          ],
+          "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+          "editorialTaskSha256": "14a9708c46e2a6e1b18c5036df2f6094ad659f0a308e233a649032fba0db30db",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lipid metabolism",
+      "proposedHomeNameKey": "lipid metabolism",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Panel sampling/calculation limitations and result interpretation only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:22",
+      "facetNameKey": "liver differential",
+      "facetName": "Liver differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f66c48ed85b56446c9ed29e92ba53207a9a7896f5b71d4c48aaa0fd65bef660f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.10",
+          "page": 291,
+          "rowBBox": [
+            44.2,
+            147.36,
+            102.7,
+            187.92
+          ],
+          "sourceBodySha256": "a3e38421d5d41470859d9c7ce6be5224d5b51603582a7a05eb93a08168117930",
+          "editorialTaskSha256": "1a92b3847632a32dec1358b584f1a389740133fc0c63ac909ee4f9e989d13986",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Liver disease",
+      "proposedHomeNameKey": "liver disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated clinical-clue-based liver differential.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:23",
+      "facetNameKey": "liver disease mechanisms",
+      "facetName": "Liver disease mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9bf9dc7cae9d19fa269406c62e3823665597a5d9cf263610ed677271d7df79bf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.2",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            200.7,
+            102.7,
+            241.44
+          ],
+          "sourceBodySha256": "581d41869f021a491936f4dd51f85ba83448da728f77404ca5a026d1c3db0430",
+          "editorialTaskSha256": "397b19d91689b518ee38f353b6f1c64a893b5d07d96e711b3dd3b6ce84083c7b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Liver disease",
+      "proposedHomeNameKey": "liver disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Major liver injury cause/mechanism comparison.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:24",
+      "facetNameKey": "liver examination",
+      "facetName": "Liver examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:842b3039be46aa34afac72cb7332fbbfe8a9c6830c1b3d981311b6c163cf6ab9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.9",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            526.26,
+            102.7,
+            546.18
+          ],
+          "sourceBodySha256": "7b460bcd7c7dfdd2b485d64d19c4154663ce3339f020470f17bdaae02f5c34be",
+          "editorialTaskSha256": "f73d09c91853b933e7c652d35ff81232a91501fa2c2f353f7ea5c8fcbbd747ab",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Liver disease",
+      "proposedHomeNameKey": "liver disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Focused jaundice/chronic disease/decompensation examination documentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:25",
+      "facetNameKey": "liver history",
+      "facetName": "Liver history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:94fc08fa74a7a78a28c16ead822e666bac5c034bb24e1c5738890f4f18a6aec6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.8",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            472.08,
+            102.7,
+            526.26
+          ],
+          "sourceBodySha256": "f1d098957fee3b6e18b9ae0e0f7589b7ef6ae59cb859ce1e8af9dffd24568fa9",
+          "editorialTaskSha256": "70739b7328e57ba4e094ae1e1528a2672760431f97654181acd004347fa8c52f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Liver disease",
+      "proposedHomeNameKey": "liver disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptoms/exposures/medicines/sexual/vaccination/family history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:26",
+      "facetNameKey": "liver investigation interpretation",
+      "facetName": "Liver investigation interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f1fbcb82caf72a4c78f98d41ac4b296a556f46fcb9dba6cf2cdbcf40f9143802",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.20",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            463.02,
+            103.1,
+            481.98
+          ],
+          "sourceBodySha256": "e8061a1cb7a4c86767747fedf103c43292862223be2df0f155642515a11e0808",
+          "editorialTaskSha256": "83f2635f39a1f1cb9805db845c172176bd7159f2600ea7ef9db478fa6a05d0c6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Liver disease",
+      "proposedHomeNameKey": "liver disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated liver tests/viral markers/ultrasound integration.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:27",
+      "facetNameKey": "lower respiratory risk contexts",
+      "facetName": "Lower respiratory risk contexts",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8d160b85d57bc1614fe175f9f9cd66dd592d30d2f73403ef592447a28aa99a89",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI7.3",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            457.98,
+            108.8,
+            499.02
+          ],
+          "sourceBodySha256": "1e11c230d0fe68a904e3c725c43c4aeeb246c83ee9e23c705abb6c2580949f35",
+          "editorialTaskSha256": "4c73b13e8546a71d81b384176c8769675f8563d32d0d343be735a1b1295833a7",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower respiratory infection",
+      "proposedHomeNameKey": "lower respiratory infection",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "lower respiratory infection"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age/immunity/community-healthcare pathogen prediction; no assumed organism identity.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:28",
+      "facetNameKey": "lower respiratory stains",
+      "facetName": "Lower respiratory stains",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9b48a0b828dfa66e4fc95a83e79614cb1c8f77c48f8a1ba856f525a1d702a03d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI7.5",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            68.34,
+            108.8,
+            122.7
+          ],
+          "sourceBodySha256": "9f5fe15a96f98a1569bea4feab70637fde9d8b7fff53ce8eb4d387cd32908bdd",
+          "editorialTaskSha256": "f72652e88a161395dd6f0af4e8de35784d46801b8fd95f5238204d356d49f448",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower respiratory infection",
+      "proposedHomeNameKey": "lower respiratory infection",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "lower respiratory infection"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied Gram/acid-fast interpretation with clinical correlation, not independent specimen processing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:29",
+      "facetNameKey": "lower-limb development",
+      "facetName": "Lower-limb development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:27ebafc9dd36840feb19f5b88bfe1de96eb80b63aa6bb9c8a4891d4808474571",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN20.10",
+          "page": 120,
+          "rowBBox": [
+            51.2,
+            326.64,
+            122.2,
+            351.48
+          ],
+          "sourceBodySha256": "6e567b3f102e03eb842b3cc18bbf77623db6d0b36801d820be5ee388d16e39ea",
+          "editorialTaskSha256": "92284e978afcc9af9613440992c2acb8462a88caf1445d2d52f368c542d6bdbb",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower limb",
+      "proposedHomeNameKey": "lower limb",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "lower limb"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Limb-bud growth/digits/rotation to adult orientation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:30",
+      "facetNameKey": "lower-limb ossification",
+      "facetName": "Lower-limb ossification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:381c04a9db0fcd0b08bb4b4dae97f855e44680b0741724d5c8f4d48f7ae3214f",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN14.3",
+          "page": 116,
+          "rowBBox": [
+            51.2,
+            275.67,
+            121.6,
+            311.82
+          ],
+          "sourceBodySha256": "3ebece9ddbd100a7bf311a35d32d0c7b972bebd9ddbc39d3e9294e1e2c186f78",
+          "editorialTaskSha256": "d762095c8f2db89f4f399b600a35058568d9c916be4a680bfb24fced4a9c71b8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower-limb bones",
+      "proposedHomeNameKey": "lower-limb bones",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Distal femur/proximal tibia ossification significance and source-specified fibular exception.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 31,
+    "distinctProposedHomes": 16,
+    "existingNameHomeLinks": 10,
+    "newNameHomeLinks": 20,
+    "facetsWithoutInitialHomeProposal": 269
+  }
+}
