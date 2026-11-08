@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "names-only-editorial-scope-dispositions",
-  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
+  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
   "sourceQueuePath": "docs/evidence/2026-11-08-nmc-home-scope-gap-queue.json",
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -11,11 +11,11 @@
   "productionRegistryChecked": false,
   "coverageFraction": null,
   "totals": {
-    "groups": 14,
-    "facets": 35,
+    "groups": 7,
+    "facets": 15,
     "relationCounts": {
       "family-scope-pending": 4,
-      "context-only": 31
+      "context-only": 11
     }
   },
   "rows": [
@@ -77,77 +77,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "reproductive maternal newborn and child health",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Service and population context; indicator facets are not one disease identity.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "child health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "maternal health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "newborn health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "reproductive health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a",
-          "subjectId": "community-medicine",
-          "code": "CM10.1",
-          "page": 276,
-          "rowBBox": [
-            40.1,
-            178.38,
-            98.6,
-            210.0
-          ],
-          "sourceBodySha256": "f4dae68f9bc84b71c271ccce0f370281b7eec5c0900ad9f7e2b5daead82abe88",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json"
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "medical practice",
       "organizerType": "professional-context",
       "dispositionStatus": "editorial-routing-proposed",
@@ -159,16 +88,6 @@
       "mappingAccepted": false,
       "scopeComplete": false,
       "facets": [
-        {
-          "facetNameKey": "confidentiality",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ],
-          "routing": "context-only"
-        },
         {
           "facetNameKey": "medical practitioner duties",
           "componentProposalIds": [
@@ -290,189 +209,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "maternal and child care",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Care context; preserve pregnancy, delivery, lactation and feeding customs separately.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "delivery customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "feeding customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "lactation customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "pregnancy customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a",
-          "subjectId": "community-medicine",
-          "code": "CM10.3",
-          "page": 276,
-          "rowBBox": [
-            40.1,
-            242.1,
-            98.6,
-            273.24
-          ],
-          "sourceBodySha256": "c6f3b7a0523ff1ed909b99961013c8042b45629298867991e33d266f3dbb873b",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "medicine information",
-      "organizerType": "professional-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Professional information-appraisal context; retain promotion and package-information facets separately.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "drug package information",
-          "componentProposalIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "drug promotion appraisal",
-          "componentProposalIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b",
-          "subjectId": "pharmacology",
-          "code": "PH10.2",
-          "page": 183,
-          "rowBBox": [
-            51.7,
-            477.06,
-            105.7,
-            518.1
-          ],
-          "sourceBodySha256": "412ba9993f741c04dcfcb614006966fe33221c3a49c0408045ad4b3449b919b8",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "rational medicine use",
-      "organizerType": "professional-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Decision context; preserve evidence, benefit–harm and preference facets separately.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "evidence-based medicine selection",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "medicine benefit–harm assessment",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "patient preferences in prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9",
-          "subjectId": "pharmacology",
-          "code": "PH1.2",
-          "page": 174,
-          "rowBBox": [
-            51.7,
-            215.46,
-            105.7,
-            252.9
-          ],
-          "sourceBodySha256": "9d4537928d71baf9f3898571f72b08135245988274029a33223c3f8453b7c76c",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "female reproductive function",
       "organizerType": "clinical-family",
       "dispositionStatus": "editorial-routing-proposed",
@@ -514,57 +250,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "abortion care",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Care context; preserve first-trimester termination and incomplete-abortion assistance scopes separately.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "first-trimester termination assistance",
-          "componentProposalIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "incomplete abortion evacuation assistance",
-          "componentProposalIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395",
-          "subjectId": "obstetrics-gynaecology",
-          "code": "OG37.7",
-          "page": 442,
-          "rowBBox": [
-            49.1,
-            347.34,
-            103.1,
-            373.98
-          ],
-          "sourceBodySha256": "3e23a387c2e303baecbaaf10e1d048b63f5cdb59cf91e49a617fc2812e22e263",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json"
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "neurodegenerative disease",
       "organizerType": "clinical-family",
       "dispositionStatus": "editorial-routing-proposed",
@@ -602,47 +287,6 @@
           "sourceBodySha256": "99541bffa3a4b0e126c679c976135b428b2099a242ab8c55d0b1eb8f24a6ce4d",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "obstetric and gynaecological care",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Encounter context; the history facet does not cover examination scope.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "obstetric and gynaecological history",
-          "componentProposalIds": [
-            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584",
-          "subjectId": "obstetrics-gynaecology",
-          "code": "OG35.1",
-          "page": 440,
-          "rowBBox": [
-            49.1,
-            309.48,
-            103.1,
-            360.0
-          ],
-          "sourceBodySha256": "ba57cb969a618addc2c537652fedfee9707de5e51954c35fdd9d22df5b74d674",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json"
         }
       ]
     },
@@ -714,67 +358,6 @@
           "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "surgical care",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Encounter context; communication, privacy and empathy remain separate facets.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "respectful surgical communication",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "surgical empathy",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "surgical encounter privacy",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1",
-          "subjectId": "surgery",
-          "code": "SU8.2",
-          "page": 404,
-          "rowBBox": [
-            45.0,
-            458.64,
-            101.7,
-            491.76
-          ],
-          "sourceBodySha256": "2f9825a96e0c02ed91c1c9f61c0a9190c438074a6f387c0f4f29a34e9d05245b",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
         }
       ]
     },

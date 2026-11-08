@@ -1,5 +1,35 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current context-facet refinement
+
+All 31 context facets were inspected individually using existing authoring names and draft-task metadata. Twenty now have proposed topic homes; eleven retain explicit unresolved context scope. Source contexts are preserved in the before/after audit rather than being accepted as canonical identities.
+
+| Source facet group | Proposed topic homes | New links |
+| --- | --- | --- |
+| Reproductive/maternal/newborn/child indicators | Health indicators | 4 |
+| Confidentiality | Existing Patient confidentiality candidate | 1 |
+| Local customs | Existing Pregnancy and Lactation homes; Childbirth; Feeding practices | 4 |
+| Package information and promotion appraisal | Medicine labelling; Medicine promotion | 2 |
+| Medicine selection, benefit–harm and preferences | Medicine selection; Medicine benefit–harm; Patient preferences | 3 |
+| Termination/evacuation assistance | Existing Medical termination and Abortion candidates | 2 |
+| Obstetric/gynaecological history | Clinical history taking | 1 |
+| Surgical communication, empathy and privacy | Existing Clinical communication home; Clinical empathy; Patient privacy | 3 |
+
+Eleven home labels were added, three existing component-name candidates reused, and three existing home proposals extended. These remain names-only facet-of proposals. Patient privacy is not equated with confidentiality. Generic feeding customs are not narrowed to breastfeeding or complementary feeding. The original indicator population scopes, prescribing context, respectful communication and supervised assistance remain in the facet names and source-task metadata. No independent competence is inferred from observation or assistance.
+
+The graph now contains **392 proposed links and 15 unresolved facet homes across seven groups**: eleven context facets plus the four retained family/multiple-target cases. Every previous 372 link object, all 407 facets and all 1,218 component occurrences are retained. All canonical IDs remain null and all identity/mapping/scope-completion approvals remain false. No teaching content or new objective prose was added.
+
+The audit is `docs/evidence/2026-11-08-nmc-context-facet-home-refinement.json`. It preserves all31examined facets, original context labels, proposed homes or explicit reasons for retaining scope, component/source references and exact task metadata including assessment modes.
+
+## Current next actions
+
+1. Resolve the eleven retained context facets: practitioner rights/duties, privileged communication, four prescribing circumstances and four torture/documentation/care facets. Avoid treating privileged communication as equivalent to confidentiality or physical injury as equivalent to psychological sequelae/survivor care.
+2. Resolve the four retained family/multiple-target cases: marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy and scleral referral. Keep the recorded alternatives distinct.
+3. Refresh registry metadata before canonical reuse/allocation; editorial draft-task scope is not official-source/clinical validation.
+4. Address the 2,007 other parent labels, 21 source exceptions and learner integration separately. NMC Foundation remains incomplete.
+
+# Historical refinement snapshot — checkpoint 7a90d053
+
 ## Current refinement
 
 Examined all 19 non-context facets from the historical snapshot below. Fifteen now have more specific authoring-home proposals. These change editorial organization only; all canonical IDs remain null and all acceptance/scope-completion flags remain false. No educational content was added.

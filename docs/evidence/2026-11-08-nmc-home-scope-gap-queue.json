@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-scope-gap-queue",
-  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
+  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "groups": 14,
-    "facets": 35
+    "groups": 7,
+    "facets": 15
   },
   "rows": [
     {
@@ -32,52 +32,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "reproductive maternal newborn and child health",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "child health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ]
-        },
-        {
-          "facetNameKey": "maternal health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ]
-        },
-        {
-          "facetNameKey": "newborn health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ]
-        },
-        {
-          "facetNameKey": "reproductive health indicators",
-          "componentProposalIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ]
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "medical practice",
       "status": "scope-decision-pending",
       "reason": "care-or-professional-context",
@@ -85,15 +39,6 @@
       "mappingAccepted": false,
       "scopeComplete": false,
       "facets": [
-        {
-          "facetNameKey": "confidentiality",
-          "componentProposalIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-          ]
-        },
         {
           "facetNameKey": "medical practitioner duties",
           "componentProposalIds": [
@@ -170,117 +115,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "maternal and child care",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "delivery customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ]
-        },
-        {
-          "facetNameKey": "feeding customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ]
-        },
-        {
-          "facetNameKey": "lactation customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ]
-        },
-        {
-          "facetNameKey": "pregnancy customs",
-          "componentProposalIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "medicine information",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "drug package information",
-          "componentProposalIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
-          ]
-        },
-        {
-          "facetNameKey": "drug promotion appraisal",
-          "componentProposalIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "rational medicine use",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "evidence-based medicine selection",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ]
-        },
-        {
-          "facetNameKey": "medicine benefit–harm assessment",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ]
-        },
-        {
-          "facetNameKey": "patient preferences in prescribing",
-          "componentProposalIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-          ]
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "female reproductive function",
       "status": "scope-decision-pending",
       "reason": "generic-disease-or-function-family",
@@ -300,34 +134,6 @@
       ]
     },
     {
-      "proposedHomeNameKey": "abortion care",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "first-trimester termination assistance",
-          "componentProposalIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-          ]
-        },
-        {
-          "facetNameKey": "incomplete abortion evacuation assistance",
-          "componentProposalIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-          ]
-        }
-      ]
-    },
-    {
       "proposedHomeNameKey": "neurodegenerative disease",
       "status": "scope-decision-pending",
       "reason": "generic-disease-or-function-family",
@@ -342,25 +148,6 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "obstetric and gynaecological care",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "obstetric and gynaecological history",
-          "componentProposalIds": [
-            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584"
           ]
         }
       ]
@@ -407,43 +194,6 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "surgical care",
-      "status": "scope-decision-pending",
-      "reason": "care-or-professional-context",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "respectful surgical communication",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
-          ]
-        },
-        {
-          "facetNameKey": "surgical empathy",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
-          ]
-        },
-        {
-          "facetNameKey": "surgical encounter privacy",
-          "componentProposalIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
           ]
         }
       ]

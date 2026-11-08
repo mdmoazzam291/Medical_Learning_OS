@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-proposals",
-  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
+  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "productionRegistryChecked": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "homeNames": 185,
-    "facetBindings": 324
+    "homeNames": 196,
+    "facetBindings": 341
   },
   "homes": [
     {
@@ -1473,6 +1473,15 @@
           "sourceReferenceIds": [
             "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
           ]
+        },
+        {
+          "facetNameKey": "respectful surgical communication",
+          "componentProposalIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
+          ]
         }
       ]
     },
@@ -2251,6 +2260,15 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
+          ]
+        },
+        {
+          "facetNameKey": "lactation customs",
+          "componentProposalIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
           ]
         }
       ]
@@ -3491,6 +3509,15 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
+          ]
+        },
+        {
+          "facetNameKey": "pregnancy customs",
+          "componentProposalIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
           ]
         },
         {
@@ -5516,6 +5543,286 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:childbirth",
+      "name": "Childbirth",
+      "nameKey": "childbirth",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "delivery customs",
+          "componentProposalIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:clinical-empathy",
+      "name": "Clinical empathy",
+      "nameKey": "clinical empathy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "surgical empathy",
+          "componentProposalIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:clinical-history-taking",
+      "name": "Clinical history taking",
+      "nameKey": "clinical history taking",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "obstetric and gynaecological history",
+          "componentProposalIds": [
+            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:feeding-practices",
+      "name": "Feeding practices",
+      "nameKey": "feeding practices",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "feeding customs",
+          "componentProposalIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:health-indicators",
+      "name": "Health indicators",
+      "nameKey": "health indicators",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "reproductive health indicators",
+          "componentProposalIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        },
+        {
+          "facetNameKey": "maternal health indicators",
+          "componentProposalIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        },
+        {
+          "facetNameKey": "newborn health indicators",
+          "componentProposalIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        },
+        {
+          "facetNameKey": "child health indicators",
+          "componentProposalIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:medicine-benefit-harm",
+      "name": "Medicine benefit–harm",
+      "nameKey": "medicine benefit–harm",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "medicine benefit–harm assessment",
+          "componentProposalIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:medicine-labelling",
+      "name": "Medicine labelling",
+      "nameKey": "medicine labelling",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "drug package information",
+          "componentProposalIds": [
+            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:medicine-promotion",
+      "name": "Medicine promotion",
+      "nameKey": "medicine promotion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "drug promotion appraisal",
+          "componentProposalIds": [
+            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:medicine-selection",
+      "name": "Medicine selection",
+      "nameKey": "medicine selection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "evidence-based medicine selection",
+          "componentProposalIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:patient-preferences",
+      "name": "Patient preferences",
+      "nameKey": "patient preferences",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "patient preferences in prescribing",
+          "componentProposalIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:patient-privacy",
+      "name": "Patient privacy",
+      "nameKey": "patient privacy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "surgical encounter privacy",
+          "componentProposalIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
           ]
         }
       ]
