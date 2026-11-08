@@ -2,7 +2,7 @@
 
 ## Current parent reuse follow-up
 
-The 57 wider-parent reuse leads now have source-bound name-only proposals covering 88 source appearances, with all task contexts retained separately. See [the parent reuse audit](NMC_PARENT_NAME_REUSE.md). This is not accepted scope or objective equivalence. Separate [wider-parent scope batches](NMC_PARENT_SCOPE_ASSESSMENTS.md) have now triaged 400 names across 411 source appearances; 1,550 names remain untouched in that cohort.
+The 57 wider-parent reuse leads now have source-bound name-only proposals covering 88 source appearances, with all task contexts retained separately. See [the parent reuse audit](NMC_PARENT_NAME_REUSE.md). This is not accepted scope or objective equivalence. Separate [wider-parent scope batches](NMC_PARENT_SCOPE_ASSESSMENTS.md) have now triaged 600 names across 613 source appearances; 1,350 names remain untouched in that cohort.
 
 ## Current selected-set representation
 
@@ -21,7 +21,7 @@ The complete57match snapshot is `docs/evidence/2026-11-08-nmc-unassessed-parent-
 ## Current next actions
 
 1. Examine the57reuse leads against their exact source-task scopes before adding source occurrences to an existing candidate or proposing a distinct concept. Prioritize reuse without assuming equality from labels.
-2. Continue the 1,550 untouched parent names with no exact-label lead. The 400 editorially triaged names still require their indicated decomposition or binding; do not infer completeness from the earlier punctuation-based selection.
+2. Continue the 1,350 untouched parent names with no exact-label lead. The 600 editorially triaged names still require their indicated decomposition or binding; do not infer completeness from the earlier punctuation-based selection.
 3. Refresh registry metadata before canonical reuse/allocation. Resolve target-specific objectives for shared/family contexts before claiming scope completion.
 4. Reconcile21source exceptions and learner integration separately. NMC Foundation remains incomplete.
 
