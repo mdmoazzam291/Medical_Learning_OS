@@ -1,3 +1,17 @@
+## Parent scope batch 11: initial parent-name triage complete — 8 November 2026 IST
+
+Checked at 2026-11-08T20:12:11.993306+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c4b8aab9adeac289a6cbf35c6df062a873fc49f1; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 0eac83fa4d334c3d0b7339c676e38e25af0ce5eb. User requested Next; names-only instruction active.
+
+Reviewed final 150 names from Thyrotoxicosis through Zoonoses, preserving 153 source appearances. Dispositions: 57 standalone candidates, 32 scoped facets, 58 families/contexts, three mixed groups: Tongue anatomy, Trauma systems and Water safety. Transfusion observation, urinalysis and varicocele each preserve both source appearances and source-specific contexts. Observation/assistance and performed tasks remain distinct. Vaccine, TB, waste-rule and IMNCI references preserve source-version limits; current official guidance not rechecked.
+
+Cumulative eleven batches: 1,950 names / 2,094 disjoint source references; 570 standalone candidates, 659 scoped facets, 652 families/contexts and 69 mixed groups. Zero untouched names remain. Explicit partition proof: these 1,950 names plus 420 compound parents plus 57 reuse leads are disjoint and equal all 2,427 original index parent names. This completes initial inventory triage, not canonical or curriculum acceptance. All predecessor decisions/projections byte-unchanged and exact SHA256 pins verified. Existing selected inventory and reuse proposals unchanged. Canonical IDs remain null and mapping/scope completion false. No educational content added.
+
+Verification this run: all eleven batch reporters and parent reuse --verify passed; six focused parent-scope tests passed; npm run check passed; staged diff whitespace check passed. Local staged tree exactly matches GitHub implementation tree. Metadata only, no code/test changes. Full suite not repeated (last full checkpoint: 1,608 tests).
+
+Next: build a deterministic source-bound follow-up queue over all eleven scope batches, routing 69 mixed groups and 652 families/contexts to decomposition, and retaining separate binding/reuse work for 570 standalone candidates and 659 scoped facets. Verify complete reference accounting, predecessor digests and fail-closed acceptance flags; do not create batch 12 for an empty cohort. Actual semantic reuse, canonical/objective binding, shared/family scope, 21 source exceptions and learner integration remain unfinished. Foundation remains incomplete. No merge, deployment or clinical acceptance. Save using expected-head lease and verify all seven changed files at final remote commit. No external writer jobs; ownership released after verified checkpoint.
+
+---
+
 ## Parent scope batch 10: 1,800 names cumulatively triaged — 8 November 2026 IST
 
 Checked at 2026-11-08T20:07:47.944537+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 879f80db1db51d3b2cfe7e470ea4c4960341fad9; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and PR head verified unchanged. Implementation checkpoint: 00f92bbd258055cb06428ce570e92c2929b35c38. User requested Next; names-only instruction active.
