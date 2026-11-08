@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 14 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Lower-limb radiographic anatomy through Microvascular flow regulation). Batch: 22 home labels, eight existing-name and 22 proposed-name links. Cumulative: 420 facets / 424 appearances / 250 proposed home labels; 239 facets await initial homes. Implementation: 445b163a8cdd4ad4b6cfd5e1ad831164f05925fc. All mappings/bindings pending.
+
+Fourteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Midbrain landmarks. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 13 — 9 November 2026
 
 Added proposals for 30 facets / 31 source appearances (Ischaemic stroke treatment through Lower-limb ossification). Batch: 16 home labels, ten existing-name and twenty proposed-name links. Cumulative: 390 facets / 394 appearances / 236 proposed home labels; 269 facets await initial homes. Implementation: c678304e1a4a4b07cae4982b25c0e385153a9be7. All mappings/bindings pending.
