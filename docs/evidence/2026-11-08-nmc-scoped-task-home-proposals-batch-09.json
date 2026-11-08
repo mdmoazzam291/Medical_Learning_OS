@@ -1,0 +1,1156 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-09:01",
+      "facetNameKey": "ethics of kidney replacement",
+      "facetName": "Ethics of kidney replacement",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3d7b80431c76e77e5d2bce8f7314fbfa2ecf7715777c5ee53661e8b3f0607434",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.23",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            350.52,
+            102.7,
+            377.88
+          ],
+          "sourceBodySha256": "463d60f987abd986b56c40bb6eabeef10c63b72ca7547b0f02b5f7113821ad05",
+          "editorialTaskSha256": "e2aee7d8f79fdc3cf292cc73f2ef7ddcfb05b1c0aee0ffd2e2d7096fa48519fb",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Kidney replacement therapy",
+      "proposedHomeNameKey": "kidney replacement therapy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "kidney replacement therapy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated kidney replacement consent/preferences/ethical-legal consultation; no current legal validation or actual consent.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:02",
+      "facetNameKey": "examination of accused person",
+      "facetName": "Examination of accused person",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f8106dfcf41cef640314507d5d07bf5a6d215f4532ad7ce95d3732410b4f199e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.13",
+          "page": 233,
+          "rowBBox": [
+            45.5,
+            237.42,
+            95.2,
+            274.92
+          ],
+          "sourceBodySha256": "d7b0d10d4124bcaecbf8423b70b866b174b20d6630eec961afd9427f66d68a9a",
+          "editorialTaskSha256": "5c5c513716853e86c2ac4226e915a9d804c6a191490d4e5dbd803213c0418846",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Medico-legal examination",
+      "proposedHomeNameKey": "medico-legal examination",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Authorized simulated accused-person examination and objective report; not actual examination authority.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:03",
+      "facetNameKey": "external skull views",
+      "facetName": "External skull views",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bce4b96de424ed243e34f6623894e4e41970952bd89573b17eeb42d9d72612a2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN26.2",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            384.9,
+            122.2,
+            415.86
+          ],
+          "sourceBodySha256": "8c9638e00a9eccdf89927cae1889405fbb2d017c763075df45fd642f63a0509b",
+          "editorialTaskSha256": "b221dc3ac6524d3cbd471491f8272041b3b3a39b76ba4f6233d7bad60f6a10ff",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Skull",
+      "proposedHomeNameKey": "skull",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Five source-named skull views, landmarks and sutures.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:04",
+      "facetNameKey": "extraocular movements",
+      "facetName": "Extraocular movements",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60edd5650f5430fda74c8dd31deac29ed9c0166534e94b6ed4baedd0ecb09684",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP10.1",
+          "page": 418,
+          "rowBBox": [
+            49.5,
+            277.86,
+            103.5,
+            307.2
+          ],
+          "sourceBodySha256": "be93ea44667a11eb52099bcce4927ac9f642740dd5af08fc2162f7d0e4fc0228",
+          "editorialTaskSha256": "cbcd378c3a236696460e02686d9f7c288666fffc3860ac7f2c48807340da8ad3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Ocular motility",
+      "proposedHomeNameKey": "ocular motility",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated monocular/binocular movement examination and documentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:05",
+      "facetNameKey": "eye drops",
+      "facetName": "Eye drops",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7137b20ca6ecd8faaeaee083d44e969daac7bf41fb41ae019da18aebb98752e9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP3.7",
+          "page": 415,
+          "rowBBox": [
+            49.5,
+            413.28,
+            103.5,
+            457.98
+          ],
+          "sourceBodySha256": "f16089181e5aa8e52c98dfebea36105215247a02ed5b074bcdf3766ae5a0d597",
+          "editorialTaskSha256": "2e98a9495dddd77765067b1f22c3bd4b4133e244d9018db6ee91111dac38dadd",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Ocular medicines",
+      "proposedHomeNameKey": "ocular medicines",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "ocular medicines"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Instillation demonstration and simulated teach-back counselling, not medicine equivalence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:06",
+      "facetNameKey": "facial nerve branches",
+      "facetName": "Facial nerve branches",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:030be2cf0a8fb95b2ae27bd3a059cf0d480618463200401fdd4dcd1e0cce67d1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN28.4",
+          "page": 125,
+          "rowBBox": [
+            51.2,
+            397.8,
+            121.6,
+            447.12
+          ],
+          "sourceBodySha256": "610a5ac2c0a341bde4233742f665644aaebf1c00eb7d07ef01fce8a78a2c4e38",
+          "editorialTaskSha256": "3d4a8bfa524150e0147b992ac592a0441fe011398d27e2a01675a9ca837bdaa2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Facial nerve",
+      "proposedHomeNameKey": "facial nerve",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Trunk-to-peripheral branch tracing and supplied-muscle matching.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:07",
+      "facetNameKey": "facial sensation",
+      "facetName": "Facial sensation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:739389f8994bb09cb641ebc976ab66f71ae150526c34ab84b9b8006cf0028cb2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN28.2",
+          "page": 125,
+          "rowBBox": [
+            51.2,
+            314.28,
+            121.6,
+            348.12
+          ],
+          "sourceBodySha256": "229881d2043ec0c5c1dce11a9a47438c33250a2b2eaaa83f062752ab8f9e543e",
+          "editorialTaskSha256": "fdc6c0251ef00801ed803cd5eae65ca8aa935336fe9ce8c03b683a46f406c1b2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Trigeminal nerve",
+      "proposedHomeNameKey": "trigeminal nerve",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Trigeminal cutaneous territories with explicit cervical exception at mandibular angle; do not assign that exception to trigeminal identity.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:08",
+      "facetNameKey": "family counselling after poisoning",
+      "facetName": "Family counselling after poisoning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b54b0a8650ab97d5ccbcc02f8936c28916081356f7f909214ca8e24778b590a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.12",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            446.88,
+            102.7,
+            474.24
+          ],
+          "sourceBodySha256": "280f43fc3c47c10d746657a258a69b75fb5e6a824a88eaf320d22ba324d7ce1a",
+          "editorialTaskSha256": "f529ddf469e4587c8980ffdf15ff760c0e78fac2848c1e9a9713febb219d249e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Poisoning",
+      "proposedHomeNameKey": "poisoning",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Empathetic simulated relatives counselling with clinical/medico-legal next steps.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:09",
+      "facetNameKey": "febrile response",
+      "facetName": "Febrile response",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:518f344aa96f18c881ed13b3f9a8ef5366e013516d19ba42ff2c9f8e85c40ebd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.1",
+          "page": 288,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            180.48
+          ],
+          "sourceBodySha256": "57c92672a4c8698e2f760a1d326c1733ced1da553437e39340024a6498889add",
+          "editorialTaskSha256": "4a6a2d6ee7a6ee9b540fc6f311740d8af2f79e9fd53537158d59bac793ff8855",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Host/age/immune/travel/comorbidity influences on fever expression.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:10",
+      "facetNameKey": "feeding history",
+      "facetName": "Feeding history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:abb8ce5a35b544f2db30f60abe8b6640f4e1451710e69af45f01a114053978ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE8.4",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            353.64,
+            103.1,
+            368.7
+          ],
+          "sourceBodySha256": "0f2dd2e7f74a2d5a126e9f2956a23d4553ff92cbbc9d65ffa9bcec714d9c87b6",
+          "editorialTaskSha256": "f034b1b4a1be440e656da617cf1209c49c1e1a7ee56554326fdf339b04bb669f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Infant and child feeding",
+      "proposedHomeNameKey": "infant and child feeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Caregiver food/portion/frequency/consistency/practice history only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:11",
+      "facetNameKey": "femoral neck fracture complications",
+      "facetName": "Femoral neck fracture complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2ee94c0d59f2e183f6f2ad916c2a93f9356ac516f445169dadcecc7f455ae06a",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN17.2",
+          "page": 118,
+          "rowBBox": [
+            51.2,
+            108.42,
+            121.9,
+            139.38
+          ],
+          "sourceBodySha256": "5109cc18310d68f9ef801694bf14be36bd380340bd5b7f0d6a6b57f26f47b616",
+          "editorialTaskSha256": "08227994cc25531270a387e7b26cff291b6b53fe0de609fa43e1989926732169",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Femoral neck fracture",
+      "proposedHomeNameKey": "femoral neck fracture",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diagram-based femoral head blood supply and fracture-site healing/osteonecrosis mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:12",
+      "facetNameKey": "fetal growth restriction in obstetric care",
+      "facetName": "Fetal growth restriction in obstetric care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG16.4",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            201.42,
+            103.1,
+            273.78
+          ],
+          "sourceBodySha256": "377bcb97ded58681b0f54b00be429665dcaa09df1d9d5f91ff9db7e8c83f4b9d",
+          "editorialTaskSha256": "e08e1f2ac0e36b41a8d1017a49d1d1ce8aca62d54c9c92402fdb1ccddab532fa",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Fetal growth restriction",
+      "proposedHomeNameKey": "fetal growth restriction",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "fetal growth restriction"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Serial growth/ultrasound/Doppler monitoring-management justification and risk counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:13",
+      "facetNameKey": "fever differential",
+      "facetName": "Fever differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a0f99fa4e0ee7911c9572943d5e70b33f2f9ad143dc0da9116995a66f2be5ae6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.12",
+          "page": 289,
+          "rowBBox": [
+            44.2,
+            180.48,
+            102.7,
+            221.4
+          ],
+          "sourceBodySha256": "cbc9a4b941e47e8b3c7a37e4a30ea0e5b0c55197c3b2cf63f7c061d5eaa7a3ce",
+          "editorialTaskSha256": "c5f59d17d227952884a47bafea95840e859fcbe6aa44d167cbdf9bfed7300df3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated infective/inflammatory/malignant/rheumatological differential prioritization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:14",
+      "facetNameKey": "fever examination",
+      "facetName": "Fever examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a01adf346f605b1e6d5ec6eec221903ddd73460bd9596f0139197c49cd4319f8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.11",
+          "page": 289,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            180.48
+          ],
+          "sourceBodySha256": "74e51bde9f10806f41b9c362937c87809d3269a96a08bd8dc07690277c88de18",
+          "editorialTaskSha256": "b8019905cf116e131cf222e86b5281ee0285fee88dc964d856a819de8292e2e7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "General/skin/mucosal/nodal/chest/abdominal demonstration with severity clues.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:15",
+      "facetNameKey": "fever history",
+      "facetName": "Fever history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dd9f680aca10048533a5bad5793befdbafd797784bcbb783c8d49617f3a8ae29",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.10",
+          "page": 288,
+          "rowBBox": [
+            44.2,
+            493.08,
+            102.7,
+            547.32
+          ],
+          "sourceBodySha256": "7b052a843d02f3b5915651dbe0ac72077e04aa70912d9d463c9969befd8a0543",
+          "editorialTaskSha256": "92843f646232c8cf6573157f28e6c4bbee36ba77bdf99fc3218f330ce595dcdc",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Fever pattern/symptoms/host status/exposure elicitation and presentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:16",
+      "facetNameKey": "food composition",
+      "facetName": "Food composition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC8.6",
+          "page": 166,
+          "rowBBox": [
+            58.7,
+            318.96,
+            108.5,
+            364.68
+          ],
+          "sourceBodySha256": "37c5262d12491c8b12f56d5fb812fc145f21d3ce75dc71194b5a9fe3fd884178",
+          "editorialTaskSha256": "a8e4445b8ef14e752530097ce6dbc6c521ae3f9ad6ed6557ba834834e495907e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Foods and nutrients",
+      "proposedHomeNameKey": "foods and nutrients",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Common food nutrient composition and dietary contribution; numerical values not supplied or validated.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:17",
+      "facetNameKey": "forensic laboratory referral",
+      "facetName": "Forensic laboratory referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b0a6a32404611e7109938aecd6b881e567f64ad86830ee6a007e1395e8d6a754",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM12.4",
+          "page": 228,
+          "rowBBox": [
+            45.5,
+            314.88,
+            95.2,
+            372.48
+          ],
+          "sourceBodySha256": "b2c5fc0bf941b409ee36518cb9c09807ebdc941798204875dc0929ef94887b1e",
+          "editorialTaskSha256": "4f071dafbd5dd3386dda61e335e0cfd3634663e496851d9122b580189ce3cf97",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Forensic laboratory investigation",
+      "proposedHomeNameKey": "forensic laboratory investigation",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated evidence referral, preservation rationale and lab questions.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:18",
+      "facetNameKey": "forensic specimen selection",
+      "facetName": "Forensic specimen selection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:28df0f5d131df891a5c6ec074d270d9fd6dd59ff1d5cf75b811e4f18ce4018dc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM12.1",
+          "page": 228,
+          "rowBBox": [
+            45.5,
+            157.14,
+            95.2,
+            243.24
+          ],
+          "sourceBodySha256": "1905ba192ace6c8db4f38eaf6347019e7da71284100741791266b7cd06005386",
+          "editorialTaskSha256": "658a126fddcd4d6e1649e1dea0b97c547601b41d3bd1acf297c7ae3d78156f0c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Forensic evidence",
+      "proposedHomeNameKey": "forensic evidence",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Living/post-mortem sample selection and Locard principle, not actual collection authority.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:19",
+      "facetNameKey": "fracture complications",
+      "facetName": "Fracture complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:44e736a4a5d36eea22f10ebe5368b64126f2eba37b8ef0d0107402ad9d6e6b85",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR2.14",
+          "page": 446,
+          "rowBBox": [
+            49.1,
+            368.76,
+            103.1,
+            405.18
+          ],
+          "sourceBodySha256": "080d088848355365eb02cbb596e0e3f18e0b8d75a92bce5c176af25425ae021a",
+          "editorialTaskSha256": "1982f7df70288a8c2d8af7984f4f66e01743a514241dd0f07271ac9941aa3d28",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Fracture healing",
+      "proposedHomeNameKey": "fracture healing",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied malunion/nonunion/infection investigation selection and interpretation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:20",
+      "facetNameKey": "functional cardiac anatomy",
+      "facetName": "Functional cardiac anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5c7297139e9802791fe1b6f4c8fab63cb0dd9b35fb037e4b85143372af944726",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.1",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            262.56,
+            107.8,
+            289.92
+          ],
+          "sourceBodySha256": "d0c7fb4c2bac5ad7d769d8659a057bfd904bab81fe0bf71c4a89e82794cb3cf2",
+          "editorialTaskSha256": "6ce3bdff02986e4ca5549e063d43becb8e0baf975149e36012d628e36c0faca7",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart",
+      "proposedHomeNameKey": "heart",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Chamber/valve flow and coronary territories.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:21",
+      "facetNameKey": "gastric anatomy",
+      "facetName": "Gastric anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f89df4d7233b6f8e300972bf37cc3446922dc37acd1a4865f2ebb94842d64173",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.7",
+          "page": 410,
+          "rowBBox": [
+            45,
+            394.08,
+            101.7,
+            415.14
+          ],
+          "sourceBodySha256": "0c2809f2a63fb97f9b60550a99d85d4a7131d91d27fd5498d4fcdc490d80dd86",
+          "editorialTaskSha256": "01919b7be5e8e0011ba4d0f7eda0a955b340187e25256f92ad3e86b522b3a694",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Stomach",
+      "proposedHomeNameKey": "stomach",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gastric vessels/innervation/physiology in surgical disease.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:22",
+      "facetNameKey": "gastric examination",
+      "facetName": "Gastric examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6825067cd3179f6042f693867c92fd1867aeada1a6fc3a17038b0486f8a1a99a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.9",
+          "page": 410,
+          "rowBBox": [
+            45,
+            463.92,
+            101.7,
+            493.26
+          ],
+          "sourceBodySha256": "9562c64f4235dd7bbc0301c6298e040824e4bc0d70ecb3df9491d737d804bee7",
+          "editorialTaskSha256": "ce26e243ba783cc425f403aaa095f125a562faf2241109d687d6ea2143b35ea3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Stomach",
+      "proposedHomeNameKey": "stomach",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Focused simulated gastric examination, not full GI examination competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:23",
+      "facetNameKey": "gastrointestinal history",
+      "facetName": "Gastrointestinal history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e337370f7541dc334c66889fc2d7affb1eea7fee3a5e3b3d93e85279442b88b7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.17",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            268.14,
+            103.1,
+            300.66
+          ],
+          "sourceBodySha256": "ccca6b804da6efe794b838518d6be8573614057ac65f9fd9734424a39c580402",
+          "editorialTaskSha256": "89bd14dcffab542180ad0bf6cde0f805151bd764ddfe7c09fb7417695429df87",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal clinical assessment",
+      "proposedHomeNameKey": "gastrointestinal clinical assessment",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated focused GI history documentation/presentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:24",
+      "facetNameKey": "genital ulcer assessment",
+      "facetName": "Genital ulcer assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:03a3813a59b5efc63d2381836eefb506528b2a2e9e77c106c009fed90af39c65",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.6",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            481.08,
+            103.1,
+            512.16
+          ],
+          "sourceBodySha256": "07162fa0346ffb13cc2381a7141dd57bd86e29b2895e6571b29c6fae7a576d40",
+          "editorialTaskSha256": "db0fa3b441d0d258f7fda93b1b1c291cc567e518c65c133f3cfb8238cf30040a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Genital ulcer disease",
+      "proposedHomeNameKey": "genital ulcer disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Privacy-preserving simulated ulcer assessment with test/management justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:25",
+      "facetNameKey": "genital ulcer examination",
+      "facetName": "Genital ulcer examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8b4f1d9e28364414e8469971b665dbee19aa5e6b7467c478ad7bdf5424e7623e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR10.4",
+          "page": 359,
+          "rowBBox": [
+            39.9,
+            106.44,
+            101.6,
+            152.52
+          ],
+          "sourceBodySha256": "5c82282a7c80cdc4f4002ebb056c58ef27bccae6b07efd3d833350d83c80637e",
+          "editorialTaskSha256": "d1197cffc711493328db01258c6c714a3a0da821c527c8c12f07613fb0b71189",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Genital ulcer disease",
+      "proposedHomeNameKey": "genital ulcer disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated consent/privacy/confidentiality/chaperone examination requirements.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:26",
+      "facetNameKey": "gi bleeding care plan",
+      "facetName": "GI bleeding care plan",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:84576a38ed05743f073288ad9d6374bd374d8deced151cd3485b0c5baeeaf447",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.11",
+          "page": 306,
+          "rowBBox": [
+            44.2,
+            330.12,
+            102.7,
+            370.86
+          ],
+          "sourceBodySha256": "187e7e1e329a923bc1f7c558a6412bab2cf5a1f376fd887bf0b41cb603f8e294",
+          "editorialTaskSha256": "cd5dddfe7ef859da451655f5fa39464bfc1fc204c3d9c3be51a84879f3c85d3a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated resuscitation/transfusion/haemostasis plan, not independent emergency care.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:27",
+      "facetNameKey": "gi bleeding causes",
+      "facetName": "GI bleeding causes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2036733ddac04433a6d8101d11e718a9514e7b18421706e7e1f657f23113221a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.1",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            320.52,
+            102.7,
+            361.32
+          ],
+          "sourceBodySha256": "6feb8c9dd8120c30398ffe36b4ded3ab458e68013caa9d993f517341a05b24af",
+          "editorialTaskSha256": "d11d781359abc7bc4d064a8ffb63406b8d4f372d79d1409a1b667610270a1841",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Upper/lower source classification and representative risk factors.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:28",
+      "facetNameKey": "gi bleeding counselling",
+      "facetName": "GI bleeding counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f1d64b1e197804e9eadcc5ee1b6976c7c56b1485b37a907cd729d0b193e4df72",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.18",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            187.92,
+            102.7,
+            215.28
+          ],
+          "sourceBodySha256": "f03f9590c1eb448311ff3e7c5fc3b72d57ed5bd1ee27ef73b78aa18d5a9ca670",
+          "editorialTaskSha256": "32f98fa8472352aa61f3fa02c8ab63dc12bab8acdc28e42071bf6ca821933870",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated cause/treatment discussion with patient/family empathy.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:29",
+      "facetNameKey": "gi bleeding differential",
+      "facetName": "GI bleeding differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d3d8ec3581f0b16f9caf8b69472140136a9af43ee48b1965ad09cda05555faa4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.8",
+          "page": 306,
+          "rowBBox": [
+            44.2,
+            194.4,
+            102.7,
+            248.76
+          ],
+          "sourceBodySha256": "7afbd22d019f02b9d5d825b43ae9ac9c3df04ea418b73a7665333550ab1a8bcc",
+          "editorialTaskSha256": "87222d4a99878cc1cc6cb7e9b821a2b832b2c4f7a66bae4e9d0d3d33891111d8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Likely/dangerous cause prioritization from supplied findings.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:30",
+      "facetNameKey": "gi bleeding escalation",
+      "facetName": "GI bleeding escalation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:080abab079a97a384a83d7fd7cb7640b3e12a92c33dcb44243038af68cb96a1b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.17",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            187.92
+          ],
+          "sourceBodySha256": "82cfcdac530dcb4938a38268aa76236a41c883c08a3cdd6f6a830a061e1c5339",
+          "editorialTaskSha256": "aed8836260ca8d617b8b37de75d95590be058ef4e621b91c4c06583526db26f4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Haemodynamics and response-based referral urgency/level justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 21,
+    "existingNameHomeLinks": 7,
+    "newNameHomeLinks": 23,
+    "facetsWithoutInitialHomeProposal": 389
+  }
+}
