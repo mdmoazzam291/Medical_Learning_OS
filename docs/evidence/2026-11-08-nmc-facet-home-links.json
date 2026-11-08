@@ -3,6 +3,7 @@
   "status": "editorial-facet-home-link-proposals",
   "sourceRolePath": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
   "sourceHomeProposalPath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+  "sourceLabelResolutionPath": "docs/evidence/2026-11-08-nmc-home-label-resolutions.json",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -12,10 +13,12 @@
     "classifiedNames": 1195,
     "scopeFacets": 407,
     "exactCandidateHomeLinks": 45,
-    "proposedNewHomeLinks": 134,
-    "totalFacetHomeLinks": 179,
-    "unresolvedFacetHomes": 228,
-    "distinctCandidateHomes": 51
+    "labelResolvedCandidateHomeLinks": 2,
+    "proposedNewHomeLinks": 247,
+    "totalFacetHomeLinks": 294,
+    "unresolvedFacetHomes": 113,
+    "distinctCandidateHomes": 144,
+    "explicitLabelResolutions": 14
   },
   "links": [
     {
@@ -79,6 +82,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "accessory nerve surface projection",
+      "proposedHomeNameKey": "accessory nerve",
+      "componentProposalIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:10"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+      ],
+      "targetNameKey": "accessory nerve",
+      "targetHomeProposalId": "editorial-home:accessory-nerve",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "adiposity-related endocrine changes",
       "proposedHomeNameKey": "obesity",
       "componentProposalIds": [
@@ -94,6 +115,44 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "adolescent noncommunicable disease risk",
+      "proposedHomeNameKey": "adolescent health",
+      "componentProposalIds": [
+        "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d"
+      ],
+      "targetNameKey": "adolescent health",
+      "targetHomeProposalId": "editorial-home:adolescent-health",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "adrenal histology",
+      "proposedHomeNameKey": "adrenal",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:12"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "adrenal gland",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "adrenal gland",
+      "targetHomeProposalId": "editorial-home:adrenal-gland",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -264,6 +323,222 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "animal research ethics",
+      "proposedHomeNameKey": "animal research",
+      "componentProposalIds": [
+        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
+      ],
+      "targetNameKey": "animal research",
+      "targetHomeProposalId": "editorial-home:animal-research",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "antenatal immunization review",
+      "proposedHomeNameKey": "antenatal care",
+      "componentProposalIds": [
+        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5"
+      ],
+      "targetNameKey": "antenatal care",
+      "targetHomeProposalId": "editorial-home:antenatal-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "antenatal risk assessment",
+      "proposedHomeNameKey": "antenatal care",
+      "componentProposalIds": [
+        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5"
+      ],
+      "targetNameKey": "antenatal care",
+      "targetHomeProposalId": "editorial-home:antenatal-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior forearm blood vessels",
+      "proposedHomeNameKey": "anterior forearm",
+      "componentProposalIds": [
+        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317"
+      ],
+      "targetNameKey": "anterior forearm",
+      "targetHomeProposalId": "editorial-home:anterior-forearm",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior forearm nerves",
+      "proposedHomeNameKey": "anterior forearm",
+      "componentProposalIds": [
+        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317"
+      ],
+      "targetNameKey": "anterior forearm",
+      "targetHomeProposalId": "editorial-home:anterior-forearm",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior leg blood vessels",
+      "proposedHomeNameKey": "anterior leg",
+      "componentProposalIds": [
+        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d"
+      ],
+      "targetNameKey": "anterior leg",
+      "targetHomeProposalId": "editorial-home:anterior-leg",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior leg nerves",
+      "proposedHomeNameKey": "anterior leg",
+      "componentProposalIds": [
+        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d"
+      ],
+      "targetNameKey": "anterior leg",
+      "targetHomeProposalId": "editorial-home:anterior-leg",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior thigh blood vessels",
+      "proposedHomeNameKey": "anterior thigh",
+      "componentProposalIds": [
+        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558"
+      ],
+      "targetNameKey": "anterior thigh",
+      "targetHomeProposalId": "editorial-home:anterior-thigh",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anterior thigh nerves",
+      "proposedHomeNameKey": "anterior thigh",
+      "componentProposalIds": [
+        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558"
+      ],
+      "targetNameKey": "anterior thigh",
+      "targetHomeProposalId": "editorial-home:anterior-thigh",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "appendix histology",
+      "proposedHomeNameKey": "appendix",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:08"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "targetNameKey": "appendix",
+      "targetHomeProposalId": "editorial-home:appendix",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "arm blood vessels",
+      "proposedHomeNameKey": "arm",
+      "componentProposalIds": [
+        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886"
+      ],
+      "targetNameKey": "arm",
+      "targetHomeProposalId": "editorial-home:arm",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "arm nerves",
+      "proposedHomeNameKey": "arm",
+      "componentProposalIds": [
+        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886"
+      ],
+      "targetNameKey": "arm",
+      "targetHomeProposalId": "editorial-home:arm",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "arterial architecture",
       "proposedHomeNameKey": "blood vessels",
       "componentProposalIds": [
@@ -274,6 +549,78 @@
       ],
       "targetNameKey": "blood vessels",
       "targetHomeProposalId": "editorial-home:blood-vessels",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "assisted reproductive technology regulation",
+      "proposedHomeNameKey": "assisted reproductive technology",
+      "componentProposalIds": [
+        "nmc-2024-ref:ec636c6f40e7e4045b74966ec0fb69e518476eb6c5af665419bcd6f1da7ca612:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ec636c6f40e7e4045b74966ec0fb69e518476eb6c5af665419bcd6f1da7ca612"
+      ],
+      "targetNameKey": "assisted reproductive technology",
+      "targetHomeProposalId": "editorial-home:assisted-reproductive-technology",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "asthma pharmacology",
+      "proposedHomeNameKey": "asthma",
+      "componentProposalIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+      ],
+      "targetNameKey": "asthma",
+      "targetHomeProposalId": "editorial-home:asthma",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "atrial septal defect development",
+      "proposedHomeNameKey": "atrial septal defect",
+      "componentProposalIds": [
+        "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7"
+      ],
+      "targetNameKey": "atrial septal defect",
+      "targetHomeProposalId": "editorial-home:atrial-septal-defect",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "auditory anatomy",
+      "proposedHomeNameKey": "auditory system",
+      "componentProposalIds": [
+        "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166"
+      ],
+      "targetNameKey": "auditory system",
+      "targetHomeProposalId": "editorial-home:auditory-system",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -354,6 +701,42 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "bacterial diarrhoea treatment",
+      "proposedHomeNameKey": "bacterial diarrhoea",
+      "componentProposalIds": [
+        "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1"
+      ],
+      "targetNameKey": "bacterial diarrhoea",
+      "targetHomeProposalId": "editorial-home:bacterial-diarrhoea",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "basilic vein surface marking",
+      "proposedHomeNameKey": "basilic vein",
+      "componentProposalIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+      ],
+      "targetNameKey": "basilic vein",
+      "targetHomeProposalId": "editorial-home:basilic-vein",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "bcg scar assessment",
       "proposedHomeNameKey": "tuberculosis",
       "componentProposalIds": [
@@ -364,6 +747,42 @@
       ],
       "targetNameKey": "tuberculosis",
       "targetHomeProposalId": "editorial-home:tuberculosis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "below-knee rehabilitation",
+      "proposedHomeNameKey": "below-knee amputation",
+      "componentProposalIds": [
+        "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b"
+      ],
+      "targetNameKey": "below-knee amputation",
+      "targetHomeProposalId": "editorial-home:below-knee-amputation",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "biceps testing",
+      "proposedHomeNameKey": "biceps",
+      "componentProposalIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:10"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+      ],
+      "targetNameKey": "biceps",
+      "targetHomeProposalId": "editorial-home:biceps",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -408,6 +827,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "blindness prevention programmes",
+      "proposedHomeNameKey": "visual impairment",
+      "componentProposalIds": [
+        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26"
+      ],
+      "targetNameKey": "visual impairment",
+      "targetHomeProposalId": "editorial-home:visual-impairment",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "blood component indications",
       "proposedHomeNameKey": "blood transfusion",
       "componentProposalIds": [
@@ -426,6 +863,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "blood donation counselling",
+      "proposedHomeNameKey": "blood donation",
+      "componentProposalIds": [
+        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05"
+      ],
+      "targetNameKey": "blood donation",
+      "targetHomeProposalId": "editorial-home:blood-donation",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "bone classification",
       "proposedHomeNameKey": "bone",
       "componentProposalIds": [
@@ -436,6 +891,24 @@
       ],
       "targetNameKey": "bone",
       "targetHomeProposalId": "editorial-home:bone",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "bone infection microbiology",
+      "proposedHomeNameKey": "bone infection",
+      "componentProposalIds": [
+        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
+      ],
+      "targetNameKey": "bone infection",
+      "targetHomeProposalId": "editorial-home:bone-infection",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -504,6 +977,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "bone marrow composition",
+      "proposedHomeNameKey": "bone marrow",
+      "componentProposalIds": [
+        "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14"
+      ],
+      "targetNameKey": "bone marrow",
+      "targetHomeProposalId": "editorial-home:bone-marrow",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "bone tissue composition",
       "proposedHomeNameKey": "bone",
       "componentProposalIds": [
@@ -532,6 +1023,42 @@
       ],
       "targetNameKey": "bone",
       "targetHomeProposalId": "editorial-home:bone",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "brachial pulse palpation",
+      "proposedHomeNameKey": "brachial artery",
+      "componentProposalIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+      ],
+      "targetNameKey": "brachial artery",
+      "targetHomeProposalId": "editorial-home:brachial-artery",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "brachioradialis testing",
+      "proposedHomeNameKey": "brachioradialis",
+      "componentProposalIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:11"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+      ],
+      "targetNameKey": "brachioradialis",
+      "targetHomeProposalId": "editorial-home:brachioradialis",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -642,6 +1169,24 @@
       ],
       "targetNameKey": "breast",
       "targetHomeProposalId": "editorial-home:breast",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "breastfeeding cultural beliefs",
+      "proposedHomeNameKey": "lactation",
+      "componentProposalIds": [
+        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
+      ],
+      "targetNameKey": "lactation",
+      "targetHomeProposalId": "editorial-home:lactation",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -788,6 +1333,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "calcium nutrition",
+      "proposedHomeNameKey": "calcium",
+      "componentProposalIds": [
+        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
+      ],
+      "targetNameKey": "calcium",
+      "targetHomeProposalId": "editorial-home:calcium",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "cancer imaging",
       "proposedHomeNameKey": "cancer",
       "componentProposalIds": [
@@ -914,6 +1477,42 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "cataract anatomy",
+      "proposedHomeNameKey": "cataract",
+      "componentProposalIds": [
+        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+      ],
+      "targetNameKey": "cataract",
+      "targetHomeProposalId": "editorial-home:cataract",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cephalic vein surface marking",
+      "proposedHomeNameKey": "cephalic vein",
+      "componentProposalIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+      ],
+      "targetNameKey": "cephalic vein",
+      "targetHomeProposalId": "editorial-home:cephalic-vein",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "cerebellar circuit deficits",
       "proposedHomeNameKey": "cerebellum",
       "componentProposalIds": [
@@ -960,6 +1559,24 @@
       ],
       "targetNameKey": "cerebellum",
       "targetHomeProposalId": "editorial-home:cerebellum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cervix histology",
+      "proposedHomeNameKey": "cervix",
+      "componentProposalIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:12"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+      ],
+      "targetNameKey": "cervix",
+      "targetHomeProposalId": "editorial-home:cervix",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1058,6 +1675,44 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "colonic histology",
+      "proposedHomeNameKey": "colonic",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:07"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "colon",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "colon",
+      "targetHomeProposalId": "editorial-home:colon",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "common carotid surface projection",
+      "proposedHomeNameKey": "common carotid artery",
+      "componentProposalIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+      ],
+      "targetNameKey": "common carotid artery",
+      "targetHomeProposalId": "editorial-home:common-carotid-artery",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "community obesity prevention",
       "proposedHomeNameKey": "childhood obesity",
       "componentProposalIds": [
@@ -1068,6 +1723,62 @@
       ],
       "targetNameKey": "childhood obesity",
       "targetHomeProposalId": "editorial-home:childhood-obesity",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "copd pharmacology",
+      "proposedHomeNameKey": "copd",
+      "componentProposalIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+      ],
+      "targetNameKey": "copd",
+      "targetHomeProposalId": "editorial-home:copd",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "corneal histology",
+      "proposedHomeNameKey": "corneal",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:08"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "cornea",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "cornea",
+      "targetHomeProposalId": "editorial-home:cornea",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "corneoscleral junction histology",
+      "proposedHomeNameKey": "corneoscleral junction",
+      "componentProposalIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+      ],
+      "targetNameKey": "corneoscleral junction",
+      "targetHomeProposalId": "editorial-home:corneoscleral-junction",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1130,6 +1841,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "cranial nerve examination",
+      "proposedHomeNameKey": "cranial nerves",
+      "componentProposalIds": [
+        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2"
+      ],
+      "targetNameKey": "cranial nerves",
+      "targetHomeProposalId": "editorial-home:cranial-nerves",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cranial nerve history",
+      "proposedHomeNameKey": "cranial nerves",
+      "componentProposalIds": [
+        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2"
+      ],
+      "targetNameKey": "cranial nerves",
+      "targetHomeProposalId": "editorial-home:cranial-nerves",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "crystal arthritis pharmacotherapy",
+      "proposedHomeNameKey": "crystal arthritis",
+      "componentProposalIds": [
+        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b"
+      ],
+      "targetNameKey": "crystal arthritis",
+      "targetHomeProposalId": "editorial-home:crystal-arthritis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "cutaneous findings in hiv",
       "proposedHomeNameKey": "hiv infection",
       "componentProposalIds": [
@@ -1182,6 +1947,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "depression pharmacotherapy",
+      "proposedHomeNameKey": "depression",
+      "componentProposalIds": [
+        "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6"
+      ],
+      "targetNameKey": "depression",
+      "targetHomeProposalId": "editorial-home:depression",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -1303,6 +2086,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "duodenal histology",
+      "proposedHomeNameKey": "duodenal",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "duodenum",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "duodenum",
+      "targetHomeProposalId": "editorial-home:duodenum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "early cancer detection",
       "proposedHomeNameKey": "cancer",
       "componentProposalIds": [
@@ -1313,6 +2116,60 @@
       ],
       "targetNameKey": "cancer",
       "targetHomeProposalId": "editorial-home:cancer",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "end-of-life ethics",
+      "proposedHomeNameKey": "end-of-life care",
+      "componentProposalIds": [
+        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2"
+      ],
+      "targetNameKey": "end-of-life care",
+      "targetHomeProposalId": "editorial-home:end-of-life-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "end-of-life law",
+      "proposedHomeNameKey": "end-of-life care",
+      "componentProposalIds": [
+        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2"
+      ],
+      "targetNameKey": "end-of-life care",
+      "targetHomeProposalId": "editorial-home:end-of-life-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "enteral nutrition indications",
+      "proposedHomeNameKey": "enteral nutrition",
+      "componentProposalIds": [
+        "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac"
+      ],
+      "targetNameKey": "enteral nutrition",
+      "targetHomeProposalId": "editorial-home:enteral-nutrition",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1341,6 +2198,114 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "epididymis histology",
+      "proposedHomeNameKey": "epididymis",
+      "componentProposalIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+      ],
+      "targetNameKey": "epididymis",
+      "targetHomeProposalId": "editorial-home:epididymis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "epiglottis histology",
+      "proposedHomeNameKey": "epiglottis",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:07"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "targetNameKey": "epiglottis",
+      "targetHomeProposalId": "editorial-home:epiglottis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "episiotomy anatomy",
+      "proposedHomeNameKey": "episiotomy",
+      "componentProposalIds": [
+        "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
+      ],
+      "targetNameKey": "episiotomy",
+      "targetHomeProposalId": "editorial-home:episiotomy",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "erectile dysfunction pharmacotherapy",
+      "proposedHomeNameKey": "erectile dysfunction",
+      "componentProposalIds": [
+        "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7"
+      ],
+      "targetNameKey": "erectile dysfunction",
+      "targetHomeProposalId": "editorial-home:erectile-dysfunction",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ethics of virginity testing",
+      "proposedHomeNameKey": "virginity testing",
+      "componentProposalIds": [
+        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010"
+      ],
+      "targetNameKey": "virginity testing",
+      "targetHomeProposalId": "editorial-home:virginity-testing",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "external jugular surface projection",
+      "proposedHomeNameKey": "external jugular vein",
+      "componentProposalIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:07"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+      ],
+      "targetNameKey": "external jugular vein",
+      "targetHomeProposalId": "editorial-home:external-jugular-vein",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "extrinsic laryngeal muscles",
       "proposedHomeNameKey": "larynx",
       "componentProposalIds": [
@@ -1351,6 +2316,78 @@
       ],
       "targetNameKey": "larynx",
       "targetHomeProposalId": "editorial-home:larynx",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "eye functional anatomy",
+      "proposedHomeNameKey": "eye",
+      "componentProposalIds": [
+        "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9"
+      ],
+      "targetNameKey": "eye",
+      "targetHomeProposalId": "editorial-home:eye",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "eyelid histology",
+      "proposedHomeNameKey": "eyelid",
+      "componentProposalIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+      ],
+      "targetNameKey": "eyelid",
+      "targetHomeProposalId": "editorial-home:eyelid",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "face lymphatic drainage",
+      "proposedHomeNameKey": "face",
+      "componentProposalIds": [
+        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
+      ],
+      "targetNameKey": "face",
+      "targetHomeProposalId": "editorial-home:face",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "facial artery surface projection",
+      "proposedHomeNameKey": "facial artery",
+      "componentProposalIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:09"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+      ],
+      "targetNameKey": "facial artery",
+      "targetHomeProposalId": "editorial-home:facial-artery",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1377,6 +2414,78 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "family violence documentation",
+      "proposedHomeNameKey": "family violence",
+      "componentProposalIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
+      ],
+      "targetNameKey": "family violence",
+      "targetHomeProposalId": "editorial-home:family-violence",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "family violence human rights",
+      "proposedHomeNameKey": "family violence",
+      "componentProposalIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
+      ],
+      "targetNameKey": "family violence",
+      "targetHomeProposalId": "editorial-home:family-violence",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "family violence referral",
+      "proposedHomeNameKey": "family violence",
+      "componentProposalIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
+      ],
+      "targetNameKey": "family violence",
+      "targetHomeProposalId": "editorial-home:family-violence",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "fertility determinants",
+      "proposedHomeNameKey": "fertility",
+      "componentProposalIds": [
+        "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16"
+      ],
+      "targetNameKey": "fertility",
+      "targetHomeProposalId": "editorial-home:fertility",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "fetal placental circulation",
       "proposedHomeNameKey": "placenta",
       "componentProposalIds": [
@@ -1387,6 +2496,96 @@
       ],
       "targetNameKey": "placenta",
       "targetHomeProposalId": "editorial-home:placenta",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gallbladder histology",
+      "proposedHomeNameKey": "gallbladder",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:10"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "targetNameKey": "gallbladder",
+      "targetHomeProposalId": "editorial-home:gallbladder",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gallbladder physiology",
+      "proposedHomeNameKey": "gallbladder",
+      "componentProposalIds": [
+        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae"
+      ],
+      "targetNameKey": "gallbladder",
+      "targetHomeProposalId": "editorial-home:gallbladder",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gastric fundus histology",
+      "proposedHomeNameKey": "gastric fundus",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "targetNameKey": "gastric fundus",
+      "targetHomeProposalId": "editorial-home:gastric-fundus",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gastric pylorus histology",
+      "proposedHomeNameKey": "gastric pylorus",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "targetNameKey": "gastric pylorus",
+      "targetHomeProposalId": "editorial-home:gastric-pylorus",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gate-control pain modulation",
+      "proposedHomeNameKey": "pain",
+      "componentProposalIds": [
+        "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2"
+      ],
+      "targetNameKey": "pain",
+      "targetHomeProposalId": "editorial-home:pain",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1433,6 +2632,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "glaucoma anatomy",
+      "proposedHomeNameKey": "glaucoma",
+      "componentProposalIds": [
+        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+      ],
+      "targetNameKey": "glaucoma",
+      "targetHomeProposalId": "editorial-home:glaucoma",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "goitre control programmes",
       "proposedHomeNameKey": "iodine deficiency",
       "componentProposalIds": [
@@ -1463,6 +2680,24 @@
       ],
       "targetNameKey": "bone",
       "targetHomeProposalId": "editorial-home:bone",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "gynaecological imaging",
+      "proposedHomeNameKey": "gynaecology",
+      "componentProposalIds": [
+        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c"
+      ],
+      "targetNameKey": "gynaecology",
+      "targetHomeProposalId": "editorial-home:gynaecology",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1705,6 +2940,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "human research ethics",
+      "proposedHomeNameKey": "human research",
+      "componentProposalIds": [
+        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
+      ],
+      "targetNameKey": "human research",
+      "targetHomeProposalId": "editorial-home:human-research",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "hypertension dietary planning",
       "proposedHomeNameKey": "hypertension",
       "componentProposalIds": [
@@ -1777,6 +3030,80 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "hypothalamic circuits",
+      "proposedHomeNameKey": "hypothalamus",
+      "componentProposalIds": [
+        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
+      ],
+      "targetNameKey": "hypothalamus",
+      "targetHomeProposalId": "editorial-home:hypothalamus",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "icu admission criteria",
+      "proposedHomeNameKey": "intensive care",
+      "componentProposalIds": [
+        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39"
+      ],
+      "targetNameKey": "intensive care",
+      "targetHomeProposalId": "editorial-home:intensive-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "icu discharge criteria",
+      "proposedHomeNameKey": "intensive care",
+      "componentProposalIds": [
+        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39"
+      ],
+      "targetNameKey": "intensive care",
+      "targetHomeProposalId": "editorial-home:intensive-care",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ileal histology",
+      "proposedHomeNameKey": "ileal",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:06"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "ileum",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "ileum",
+      "targetHomeProposalId": "editorial-home:ileum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "incompatible transfusion management",
       "proposedHomeNameKey": "blood transfusion",
       "componentProposalIds": [
@@ -1805,6 +3132,78 @@
       ],
       "targetNameKey": "blood transfusion",
       "targetHomeProposalId": "editorial-home:blood-transfusion",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "infant growth monitoring",
+      "proposedHomeNameKey": "infancy",
+      "componentProposalIds": [
+        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df"
+      ],
+      "targetNameKey": "infancy",
+      "targetHomeProposalId": "editorial-home:infancy",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "infant physiological adaptation",
+      "proposedHomeNameKey": "infancy",
+      "componentProposalIds": [
+        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df"
+      ],
+      "targetNameKey": "infancy",
+      "targetHomeProposalId": "editorial-home:infancy",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "infective endocarditis investigation",
+      "proposedHomeNameKey": "infective endocarditis",
+      "componentProposalIds": [
+        "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20"
+      ],
+      "targetNameKey": "infective endocarditis",
+      "targetHomeProposalId": "editorial-home:infective-endocarditis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "inflammatory bowel disease pharmacotherapy",
+      "proposedHomeNameKey": "inflammatory bowel disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a"
+      ],
+      "targetNameKey": "inflammatory bowel disease",
+      "targetHomeProposalId": "editorial-home:inflammatory-bowel-disease",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1889,6 +3288,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "iodine requirements",
+      "proposedHomeNameKey": "iodine",
+      "componentProposalIds": [
+        "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728"
+      ],
+      "targetNameKey": "iodine",
+      "targetHomeProposalId": "editorial-home:iodine",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "irritable bowel syndrome pharmacotherapy",
+      "proposedHomeNameKey": "irritable bowel syndrome",
+      "componentProposalIds": [
+        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a"
+      ],
+      "targetNameKey": "irritable bowel syndrome",
+      "targetHomeProposalId": "editorial-home:irritable-bowel-syndrome",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ischaemic heart disease pharmacotherapy",
+      "proposedHomeNameKey": "ischaemic heart disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2"
+      ],
+      "targetNameKey": "ischaemic heart disease",
+      "targetHomeProposalId": "editorial-home:ischaemic-heart-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "jaundice investigation",
       "proposedHomeNameKey": "jaundice",
       "componentProposalIds": [
@@ -1904,6 +3357,152 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "jejunal histology",
+      "proposedHomeNameKey": "jejunal",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "jejunum",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "jejunum",
+      "targetHomeProposalId": "editorial-home:jejunum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "joint classification",
+      "proposedHomeNameKey": "joints",
+      "componentProposalIds": [
+        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
+      ],
+      "targetNameKey": "joints",
+      "targetHomeProposalId": "editorial-home:joints",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "joint infection microbiology",
+      "proposedHomeNameKey": "joint infection",
+      "componentProposalIds": [
+        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
+      ],
+      "targetNameKey": "joint infection",
+      "targetHomeProposalId": "editorial-home:joint-infection",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "joint movements",
+      "proposedHomeNameKey": "joints",
+      "componentProposalIds": [
+        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
+      ],
+      "targetNameKey": "joints",
+      "targetHomeProposalId": "editorial-home:joints",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "joint pain pharmacotherapy",
+      "proposedHomeNameKey": "joint pain",
+      "componentProposalIds": [
+        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b"
+      ],
+      "targetNameKey": "joint pain",
+      "targetHomeProposalId": "editorial-home:joint-pain",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "kidney histology",
+      "proposedHomeNameKey": "kidney",
+      "componentProposalIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+      ],
+      "targetNameKey": "kidney",
+      "targetHomeProposalId": "editorial-home:kidney",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "labour physiology",
+      "proposedHomeNameKey": "labour",
+      "componentProposalIds": [
+        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
+      ],
+      "targetNameKey": "labour",
+      "targetHomeProposalId": "editorial-home:labour",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "lactation physiology",
+      "proposedHomeNameKey": "lactation",
+      "componentProposalIds": [
+        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
+      ],
+      "targetNameKey": "lactation",
+      "targetHomeProposalId": "editorial-home:lactation",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -2032,6 +3631,78 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "limbic circuits",
+      "proposedHomeNameKey": "limbic system",
+      "componentProposalIds": [
+        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
+      ],
+      "targetNameKey": "limbic system",
+      "targetHomeProposalId": "editorial-home:limbic-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "lip histology",
+      "proposedHomeNameKey": "lip",
+      "componentProposalIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+      ],
+      "targetNameKey": "lip",
+      "targetHomeProposalId": "editorial-home:lip",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "liver histology",
+      "proposedHomeNameKey": "liver",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:09"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "targetNameKey": "liver",
+      "targetHomeProposalId": "editorial-home:liver",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "liver physiology",
+      "proposedHomeNameKey": "liver",
+      "componentProposalIds": [
+        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae"
+      ],
+      "targetNameKey": "liver",
+      "targetHomeProposalId": "editorial-home:liver",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -2200,6 +3871,42 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "macrocytic anaemia investigation",
+      "proposedHomeNameKey": "macrocytic anaemia",
+      "componentProposalIds": [
+        "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796"
+      ],
+      "targetNameKey": "macrocytic anaemia",
+      "targetHomeProposalId": "editorial-home:macrocytic-anaemia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "magnesium nutrition",
+      "proposedHomeNameKey": "magnesium",
+      "componentProposalIds": [
+        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
+      ],
+      "targetNameKey": "magnesium",
+      "targetHomeProposalId": "editorial-home:magnesium",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "mantoux interpretation",
       "proposedHomeNameKey": "tuberculosis",
       "componentProposalIds": [
@@ -2210,6 +3917,24 @@
       ],
       "targetNameKey": "tuberculosis",
       "targetHomeProposalId": "editorial-home:tuberculosis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "maternal physiological adaptation",
+      "proposedHomeNameKey": "pregnancy",
+      "componentProposalIds": [
+        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
+      ],
+      "targetNameKey": "pregnancy",
+      "targetHomeProposalId": "editorial-home:pregnancy",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2250,6 +3975,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "mental illness diagnosis",
+      "proposedHomeNameKey": "mental illness",
+      "componentProposalIds": [
+        "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40"
+      ],
+      "targetNameKey": "mental illness",
+      "targetHomeProposalId": "editorial-home:mental-illness",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -2338,6 +4081,24 @@
       ],
       "targetNameKey": "skeletal muscle",
       "targetHomeProposalId": "editorial-home:skeletal-muscle",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "neck lymphatic drainage",
+      "proposedHomeNameKey": "neck",
+      "componentProposalIds": [
+        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
+      ],
+      "targetNameKey": "neck",
+      "targetHomeProposalId": "editorial-home:neck",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2602,6 +4363,80 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "obstetric imaging",
+      "proposedHomeNameKey": "obstetrics",
+      "componentProposalIds": [
+        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c"
+      ],
+      "targetNameKey": "obstetrics",
+      "targetHomeProposalId": "editorial-home:obstetrics",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "oesophageal histology",
+      "proposedHomeNameKey": "oesophageal",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "oesophagus",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "oesophagus",
+      "targetHomeProposalId": "editorial-home:oesophagus",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "olfactory mucosa histology",
+      "proposedHomeNameKey": "olfactory mucosa",
+      "componentProposalIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+      ],
+      "targetNameKey": "olfactory mucosa",
+      "targetHomeProposalId": "editorial-home:olfactory-mucosa",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "optic nerve histology",
+      "proposedHomeNameKey": "optic nerve",
+      "componentProposalIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+      ],
+      "targetNameKey": "optic nerve",
+      "targetHomeProposalId": "editorial-home:optic-nerve",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "oral findings in hiv",
       "proposedHomeNameKey": "hiv infection",
       "componentProposalIds": [
@@ -2662,6 +4497,84 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "orbital blood vessels",
+      "proposedHomeNameKey": "orbit",
+      "componentProposalIds": [
+        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988"
+      ],
+      "targetNameKey": "orbit",
+      "targetHomeProposalId": "editorial-home:orbit",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "orbital nerves",
+      "proposedHomeNameKey": "orbit",
+      "componentProposalIds": [
+        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988"
+      ],
+      "targetNameKey": "orbit",
+      "targetHomeProposalId": "editorial-home:orbit",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "pancreatic histology",
+      "proposedHomeNameKey": "pancreatic",
+      "componentProposalIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:11"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
+      ],
+      "resolvedHomeNameKey": "pancreas",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "pancreas",
+      "targetHomeProposalId": "editorial-home:pancreas",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "parathyroid histology",
+      "proposedHomeNameKey": "parathyroid",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "parathyroid glands",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "parathyroid glands",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831:name-component:02"
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "pharyngeal arterial supply",
       "proposedHomeNameKey": "pharynx",
       "componentProposalIds": [
@@ -2716,6 +4629,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "pituitary histology",
+      "proposedHomeNameKey": "pituitary",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "pituitary gland",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "pituitary gland",
+      "targetHomeProposalId": "editorial-home:pituitary-gland",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "placenta histology",
       "proposedHomeNameKey": "placenta",
       "componentProposalIds": [
@@ -2762,6 +4695,24 @@
       ],
       "targetNameKey": "placenta",
       "targetHomeProposalId": "editorial-home:placenta",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "pregnancy evidence",
+      "proposedHomeNameKey": "pregnancy",
+      "componentProposalIds": [
+        "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+      ],
+      "targetNameKey": "pregnancy",
+      "targetHomeProposalId": "editorial-home:pregnancy",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2842,6 +4793,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "retinal histology",
+      "proposedHomeNameKey": "retinal",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:09"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "retina",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "retina",
+      "targetHomeProposalId": "editorial-home:retina",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "routine newborn care",
       "proposedHomeNameKey": "newborn",
       "componentProposalIds": [
@@ -2852,6 +4823,80 @@
       ],
       "targetNameKey": "newborn",
       "targetHomeProposalId": "editorial-home:newborn",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "salivary gland histology",
+      "proposedHomeNameKey": "salivary gland",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "salivary glands",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "salivary glands",
+      "targetHomeProposalId": "editorial-home:salivary-glands",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "salivary neoplasms",
+      "proposedHomeNameKey": "salivary glands",
+      "componentProposalIds": [
+        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe"
+      ],
+      "targetNameKey": "salivary glands",
+      "targetHomeProposalId": "editorial-home:salivary-glands",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "salivary surgical anatomy",
+      "proposedHomeNameKey": "salivary glands",
+      "componentProposalIds": [
+        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe"
+      ],
+      "targetNameKey": "salivary glands",
+      "targetHomeProposalId": "editorial-home:salivary-glands",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "scientific limitations of virginity testing",
+      "proposedHomeNameKey": "virginity testing",
+      "componentProposalIds": [
+        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010"
+      ],
+      "targetNameKey": "virginity testing",
+      "targetHomeProposalId": "editorial-home:virginity-testing",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -3086,6 +5131,28 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "thyroid histology",
+      "proposedHomeNameKey": "thyroid",
+      "componentProposalIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+      ],
+      "resolvedHomeNameKey": "thyroid gland",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "thyroid gland",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831:name-component:01"
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "explicit-editorial-home-label-resolution",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "thyroid surface projection",
       "proposedHomeNameKey": "thyroid gland",
       "componentProposalIds": [
@@ -3100,6 +5167,26 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "tracheal histology",
+      "proposedHomeNameKey": "tracheal",
+      "componentProposalIds": [
+        "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939"
+      ],
+      "resolvedHomeNameKey": "trachea",
+      "labelResolutionBasis": "explicit-editorial-label-resolution",
+      "targetNameKey": "trachea",
+      "targetHomeProposalId": "editorial-home:trachea",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "explicit-editorial-home-label-resolution",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -3330,6 +5417,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "visual impairment causes",
+      "proposedHomeNameKey": "visual impairment",
+      "componentProposalIds": [
+        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26"
+      ],
+      "targetNameKey": "visual impairment",
+      "targetHomeProposalId": "editorial-home:visual-impairment",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "whole blood indications",
       "proposedHomeNameKey": "blood transfusion",
       "componentProposalIds": [
@@ -3350,282 +5455,6 @@
   ],
   "unresolved": [
     {
-      "facetNameKey": "accessory nerve surface projection",
-      "proposedHomeNameKey": "accessory nerve",
-      "componentProposalIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:10"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "adolescent noncommunicable disease risk",
-      "proposedHomeNameKey": "adolescent health",
-      "componentProposalIds": [
-        "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "adrenal histology",
-      "proposedHomeNameKey": "adrenal",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:12"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "animal research ethics",
-      "proposedHomeNameKey": "animal research",
-      "componentProposalIds": [
-        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "antenatal immunization review",
-      "proposedHomeNameKey": "antenatal care",
-      "componentProposalIds": [
-        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "antenatal risk assessment",
-      "proposedHomeNameKey": "antenatal care",
-      "componentProposalIds": [
-        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a3762e8286a60518f4c697529c687e45b84f8dd655fb264917e63e483cf67bd5"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior forearm blood vessels",
-      "proposedHomeNameKey": "anterior forearm",
-      "componentProposalIds": [
-        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior forearm nerves",
-      "proposedHomeNameKey": "anterior forearm",
-      "componentProposalIds": [
-        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a784fa6e5614202b9080513e7c048dc4cf0a89c4c5a1b01a863ce94e2e226317"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior leg blood vessels",
-      "proposedHomeNameKey": "anterior leg",
-      "componentProposalIds": [
-        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior leg nerves",
-      "proposedHomeNameKey": "anterior leg",
-      "componentProposalIds": [
-        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior thigh blood vessels",
-      "proposedHomeNameKey": "anterior thigh",
-      "componentProposalIds": [
-        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anterior thigh nerves",
-      "proposedHomeNameKey": "anterior thigh",
-      "componentProposalIds": [
-        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "appendix histology",
-      "proposedHomeNameKey": "appendix",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:08"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "arm blood vessels",
-      "proposedHomeNameKey": "arm",
-      "componentProposalIds": [
-        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "arm nerves",
-      "proposedHomeNameKey": "arm",
-      "componentProposalIds": [
-        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:8e1793f0449a2ffc81ae2467f8b803cb9020753ab4d035706af9d7b827cc9886"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "assisted reproductive technology regulation",
-      "proposedHomeNameKey": "assisted reproductive technology",
-      "componentProposalIds": [
-        "nmc-2024-ref:ec636c6f40e7e4045b74966ec0fb69e518476eb6c5af665419bcd6f1da7ca612:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ec636c6f40e7e4045b74966ec0fb69e518476eb6c5af665419bcd6f1da7ca612"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "asthma pharmacology",
-      "proposedHomeNameKey": "asthma",
-      "componentProposalIds": [
-        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "atrial septal defect development",
-      "proposedHomeNameKey": "atrial septal defect",
-      "componentProposalIds": [
-        "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "auditory anatomy",
-      "proposedHomeNameKey": "auditory system",
-      "componentProposalIds": [
-        "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "bacterial diarrhoea treatment",
-      "proposedHomeNameKey": "bacterial diarrhoea",
-      "componentProposalIds": [
-        "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "basilic vein surface marking",
-      "proposedHomeNameKey": "basilic vein",
-      "componentProposalIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "below-knee rehabilitation",
-      "proposedHomeNameKey": "below-knee amputation",
-      "componentProposalIds": [
-        "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "biceps testing",
-      "proposedHomeNameKey": "biceps",
-      "componentProposalIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:10"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "bite treatment",
       "proposedHomeNameKey": "poisoning and envenomation",
       "componentProposalIds": [
@@ -3633,54 +5462,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "blindness prevention programmes",
-      "proposedHomeNameKey": "visual impairment",
-      "componentProposalIds": [
-        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "blood donation counselling",
-      "proposedHomeNameKey": "blood donation",
-      "componentProposalIds": [
-        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "bone infection microbiology",
-      "proposedHomeNameKey": "bone infection",
-      "componentProposalIds": [
-        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "bone marrow composition",
-      "proposedHomeNameKey": "bone marrow",
-      "componentProposalIds": [
-        "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3694,90 +5475,6 @@
       "sourceReferenceIds": [
         "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
         "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "brachial pulse palpation",
-      "proposedHomeNameKey": "brachial artery",
-      "componentProposalIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "brachioradialis testing",
-      "proposedHomeNameKey": "brachioradialis",
-      "componentProposalIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:11"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "breastfeeding cultural beliefs",
-      "proposedHomeNameKey": "lactation",
-      "componentProposalIds": [
-        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "calcium nutrition",
-      "proposedHomeNameKey": "calcium",
-      "componentProposalIds": [
-        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cataract anatomy",
-      "proposedHomeNameKey": "cataract",
-      "componentProposalIds": [
-        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cephalic vein surface marking",
-      "proposedHomeNameKey": "cephalic vein",
-      "componentProposalIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cervix histology",
-      "proposedHomeNameKey": "cervix",
-      "componentProposalIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:12"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3807,30 +5504,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "colonic histology",
-      "proposedHomeNameKey": "colonic",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:07"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "common carotid surface projection",
-      "proposedHomeNameKey": "common carotid artery",
-      "componentProposalIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "confidentiality",
       "proposedHomeNameKey": "medical practice",
       "componentProposalIds": [
@@ -3855,78 +5528,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "copd pharmacology",
-      "proposedHomeNameKey": "copd",
-      "componentProposalIds": [
-        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "corneal histology",
-      "proposedHomeNameKey": "corneal",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:08"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "corneoscleral junction histology",
-      "proposedHomeNameKey": "corneoscleral junction",
-      "componentProposalIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cranial nerve examination",
-      "proposedHomeNameKey": "cranial nerves",
-      "componentProposalIds": [
-        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cranial nerve history",
-      "proposedHomeNameKey": "cranial nerves",
-      "componentProposalIds": [
-        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "crystal arthritis pharmacotherapy",
-      "proposedHomeNameKey": "crystal arthritis",
-      "componentProposalIds": [
-        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "delivery customs",
       "proposedHomeNameKey": "maternal and child care",
       "componentProposalIds": [
@@ -3934,18 +5535,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "depression pharmacotherapy",
-      "proposedHomeNameKey": "depression",
-      "componentProposalIds": [
-        "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3999,114 +5588,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "duodenal histology",
-      "proposedHomeNameKey": "duodenal",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "end-of-life ethics",
-      "proposedHomeNameKey": "end-of-life care",
-      "componentProposalIds": [
-        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "end-of-life law",
-      "proposedHomeNameKey": "end-of-life care",
-      "componentProposalIds": [
-        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "enteral nutrition indications",
-      "proposedHomeNameKey": "enteral nutrition",
-      "componentProposalIds": [
-        "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "epididymis histology",
-      "proposedHomeNameKey": "epididymis",
-      "componentProposalIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "epiglottis histology",
-      "proposedHomeNameKey": "epiglottis",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:07"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "episiotomy anatomy",
-      "proposedHomeNameKey": "episiotomy",
-      "componentProposalIds": [
-        "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "erectile dysfunction pharmacotherapy",
-      "proposedHomeNameKey": "erectile dysfunction",
-      "componentProposalIds": [
-        "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ethics of virginity testing",
-      "proposedHomeNameKey": "virginity testing",
-      "componentProposalIds": [
-        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "evidence-based medicine selection",
       "proposedHomeNameKey": "rational medicine use",
       "componentProposalIds": [
@@ -4114,102 +5595,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "external jugular surface projection",
-      "proposedHomeNameKey": "external jugular vein",
-      "componentProposalIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:07"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "eye functional anatomy",
-      "proposedHomeNameKey": "eye",
-      "componentProposalIds": [
-        "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "eyelid histology",
-      "proposedHomeNameKey": "eyelid",
-      "componentProposalIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "face lymphatic drainage",
-      "proposedHomeNameKey": "face",
-      "componentProposalIds": [
-        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "facial artery surface projection",
-      "proposedHomeNameKey": "facial artery",
-      "componentProposalIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:09"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "family violence documentation",
-      "proposedHomeNameKey": "family violence",
-      "componentProposalIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "family violence human rights",
-      "proposedHomeNameKey": "family violence",
-      "componentProposalIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "family violence referral",
-      "proposedHomeNameKey": "family violence",
-      "componentProposalIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4239,18 +5624,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "fertility determinants",
-      "proposedHomeNameKey": "fertility",
-      "componentProposalIds": [
-        "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "first-trimester termination assistance",
       "proposedHomeNameKey": "abortion care",
       "componentProposalIds": [
@@ -4263,150 +5636,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "gallbladder histology",
-      "proposedHomeNameKey": "gallbladder",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:10"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "gallbladder physiology",
-      "proposedHomeNameKey": "gallbladder",
-      "componentProposalIds": [
-        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "gastric fundus histology",
-      "proposedHomeNameKey": "gastric fundus",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "gastric pylorus histology",
-      "proposedHomeNameKey": "gastric pylorus",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "gate-control pain modulation",
-      "proposedHomeNameKey": "pain",
-      "componentProposalIds": [
-        "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "glaucoma anatomy",
-      "proposedHomeNameKey": "glaucoma",
-      "componentProposalIds": [
-        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "gynaecological imaging",
-      "proposedHomeNameKey": "gynaecology",
-      "componentProposalIds": [
-        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "human research ethics",
-      "proposedHomeNameKey": "human research",
-      "componentProposalIds": [
-        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hypothalamic circuits",
-      "proposedHomeNameKey": "hypothalamus",
-      "componentProposalIds": [
-        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "icu admission criteria",
-      "proposedHomeNameKey": "intensive care",
-      "componentProposalIds": [
-        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "icu discharge criteria",
-      "proposedHomeNameKey": "intensive care",
-      "componentProposalIds": [
-        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ileal histology",
-      "proposedHomeNameKey": "ileal",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:06"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "incomplete abortion evacuation assistance",
       "proposedHomeNameKey": "abortion care",
       "componentProposalIds": [
@@ -4414,54 +5643,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "infant growth monitoring",
-      "proposedHomeNameKey": "infancy",
-      "componentProposalIds": [
-        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "infant physiological adaptation",
-      "proposedHomeNameKey": "infancy",
-      "componentProposalIds": [
-        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78c17359e5a4c60646269af56410d488eff9173455e522939f0b4b39745322df"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "infective endocarditis investigation",
-      "proposedHomeNameKey": "infective endocarditis",
-      "componentProposalIds": [
-        "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "inflammatory bowel disease pharmacotherapy",
-      "proposedHomeNameKey": "inflammatory bowel disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4491,126 +5672,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "iodine requirements",
-      "proposedHomeNameKey": "iodine",
-      "componentProposalIds": [
-        "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "irritable bowel syndrome pharmacotherapy",
-      "proposedHomeNameKey": "irritable bowel syndrome",
-      "componentProposalIds": [
-        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ischaemic heart disease pharmacotherapy",
-      "proposedHomeNameKey": "ischaemic heart disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "jejunal histology",
-      "proposedHomeNameKey": "jejunal",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "joint classification",
-      "proposedHomeNameKey": "joints",
-      "componentProposalIds": [
-        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "joint infection microbiology",
-      "proposedHomeNameKey": "joint infection",
-      "componentProposalIds": [
-        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "joint movements",
-      "proposedHomeNameKey": "joints",
-      "componentProposalIds": [
-        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "joint pain pharmacotherapy",
-      "proposedHomeNameKey": "joint pain",
-      "componentProposalIds": [
-        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "kidney histology",
-      "proposedHomeNameKey": "kidney",
-      "componentProposalIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "labour physiology",
-      "proposedHomeNameKey": "labour",
-      "componentProposalIds": [
-        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "lactation customs",
       "proposedHomeNameKey": "maternal and child care",
       "componentProposalIds": [
@@ -4623,90 +5684,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "lactation physiology",
-      "proposedHomeNameKey": "lactation",
-      "componentProposalIds": [
-        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "limbic circuits",
-      "proposedHomeNameKey": "limbic system",
-      "componentProposalIds": [
-        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "lip histology",
-      "proposedHomeNameKey": "lip",
-      "componentProposalIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "liver histology",
-      "proposedHomeNameKey": "liver",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:09"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "liver physiology",
-      "proposedHomeNameKey": "liver",
-      "componentProposalIds": [
-        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:37a19a2c5bc718ac90e9d50a0ee0286eb7cb449e7cd794e9be8053c2298fbeae"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "macrocytic anaemia investigation",
-      "proposedHomeNameKey": "macrocytic anaemia",
-      "componentProposalIds": [
-        "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "magnesium nutrition",
-      "proposedHomeNameKey": "magnesium",
-      "componentProposalIds": [
-        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "maternal health indicators",
       "proposedHomeNameKey": "reproductive maternal newborn and child health",
       "componentProposalIds": [
@@ -4714,18 +5691,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "maternal physiological adaptation",
-      "proposedHomeNameKey": "pregnancy",
-      "componentProposalIds": [
-        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4767,30 +5732,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "mental illness diagnosis",
-      "proposedHomeNameKey": "mental illness",
-      "componentProposalIds": [
-        "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fc37eac805400dc5fa0d045a91410fa29099fae70b19ce34198c376d1b5ffc40"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neck lymphatic drainage",
-      "proposedHomeNameKey": "neck",
-      "componentProposalIds": [
-        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "neurodegeneration pharmacotherapy",
       "proposedHomeNameKey": "neurodegenerative disease",
       "componentProposalIds": [
@@ -4827,30 +5768,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "obstetric imaging",
-      "proposedHomeNameKey": "obstetrics",
-      "componentProposalIds": [
-        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "oesophageal histology",
-      "proposedHomeNameKey": "oesophageal",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "off-label prescribing",
       "proposedHomeNameKey": "prescribing",
       "componentProposalIds": [
@@ -4858,54 +5775,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "olfactory mucosa histology",
-      "proposedHomeNameKey": "olfactory mucosa",
-      "componentProposalIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "optic nerve histology",
-      "proposedHomeNameKey": "optic nerve",
-      "componentProposalIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "orbital blood vessels",
-      "proposedHomeNameKey": "orbit",
-      "componentProposalIds": [
-        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "orbital nerves",
-      "proposedHomeNameKey": "orbit",
-      "componentProposalIds": [
-        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4966,30 +5835,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "pancreatic histology",
-      "proposedHomeNameKey": "pancreatic",
-      "componentProposalIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884:name-component:11"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "parathyroid histology",
-      "proposedHomeNameKey": "parathyroid",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5127,18 +5972,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "pituitary histology",
-      "proposedHomeNameKey": "pituitary",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "poor growth signs",
       "proposedHomeNameKey": "gastrointestinal and liver disease",
       "componentProposalIds": [
@@ -5230,18 +6063,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "pregnancy evidence",
-      "proposedHomeNameKey": "pregnancy",
-      "componentProposalIds": [
-        "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5379,18 +6200,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "retinal histology",
-      "proposedHomeNameKey": "retinal",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:09"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "rheumatic fever investigation",
       "proposedHomeNameKey": "rheumatic fever",
       "componentProposalIds": [
@@ -5415,42 +6224,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "salivary gland histology",
-      "proposedHomeNameKey": "salivary gland",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "salivary neoplasms",
-      "proposedHomeNameKey": "salivary glands",
-      "componentProposalIds": [
-        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "salivary surgical anatomy",
-      "proposedHomeNameKey": "salivary glands",
-      "componentProposalIds": [
-        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "scalp lymphatic drainage",
       "proposedHomeNameKey": "scalp",
       "componentProposalIds": [
@@ -5458,18 +6231,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "scientific limitations of virginity testing",
-      "proposedHomeNameKey": "virginity testing",
-      "componentProposalIds": [
-        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:eedd7a167e391ea8f5b5a36c55e72adff3b303762bd496d75d1840444e799010"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5799,18 +6560,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "thyroid histology",
-      "proposedHomeNameKey": "thyroid",
-      "componentProposalIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "tongue histology",
       "proposedHomeNameKey": "tongue",
       "componentProposalIds": [
@@ -5842,18 +6591,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "tracheal histology",
-      "proposedHomeNameKey": "tracheal",
-      "componentProposalIds": [
-        "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5986,18 +6723,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "visual impairment causes",
-      "proposedHomeNameKey": "visual impairment",
-      "componentProposalIds": [
-        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:c6cda8c4044d3a62f093d817042cffedbcb167f8cb9991ab71f6a8a36606df26"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
