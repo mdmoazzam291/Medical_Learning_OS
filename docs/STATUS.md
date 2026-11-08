@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 06 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:21:30.003072+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 90408a017bea993cc41727ecc9e4f1fc2e1beb69; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8a7061fa8c3f3f65a24f67ee842321a2ddb1be4c. Names-only instruction active.
+
+Reviewed next 30 family parents, Cough medicines through Disaster management. Added 149 proposals: 36 reusable-topic candidates, 113 contextual-task facets across 30 source appearances. Diabetes pregnancy/general medicine/testing/emergency contexts preserve their own references. Crash-cart observation and teaching-material practicals remain source-limited, bite-mark evidential limits and medical witness concepts explicit without current forensic/legal verification. Unnamed family members not supplied. One exact-label hint unverified, canonical IDs null, scopes/bindings false. No teaching content or automatic merge.
+
+Cumulative six family batches: 180 parents, 843 proposal occurrences, 183 source appearances; 472 families without initial proposals. Queue, three inventories and five predecessors digest-pinned, queue/predecessors byte-unchanged.
+
+Verification: family verifier --batch=06 passed across all ordered cohorts, full source support and hashes/coordinates/modes, unique proposal IDs, recomputed hints and flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 07 beginning Disciplinary process. Inspect actual source tasks, preserve unnamed members and role limits; set selectionLimit, pin queue/three inventories/all six predecessors and run verifier --batch=07. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease, verify all four changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
 ## Family/context decomposition proposals batch 05 — 8 November 2026 IST
 
 Checked at 2026-11-08T22:18:31.374080+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c35414dd60a9c815f9ebcc86799f8641c0065593; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 35b186179bd2305cb9ec42517ea6dbbdbfcfdf18. Names-only instruction active.
