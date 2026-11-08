@@ -1,3 +1,11 @@
+## Family decomposition batch 16 — 8 November 2026
+
+Added 144 source-bound names-only proposals across 30 groups / 30 source appearances (Opportunistic infection tests through Perineal pouches). Cumulative: 480 groups, 2,247 proposals, 487 source appearances; 172 groups await initial proposals. Implementation: 74b76970546bedaaa5f7df5af93af8da53753e54. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: sixteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 17, Perioperative care.
+
+---
+
 ## Family decomposition batch 15 — 8 November 2026
 
 Added 136 source-bound names-only proposals across 30 groups / 31 source appearances (Neonatal seizures through Opportunistic infection prophylaxis). Cumulative: 450 groups, 2,103 proposals, 457 source appearances; 202 groups await initial proposals. Implementation: 2f8bb4087a5a55b89dffdc54ada5b45460c0deb8. Acceptance/scope/binding remains pending. No teaching content or production changes.
