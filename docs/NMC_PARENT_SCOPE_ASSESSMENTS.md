@@ -166,3 +166,11 @@ The next 30 family parents (Disciplinary process through Eustachian tube disorde
 Queue, three inventories and six predecessor packets are digest-pinned; one component has an unverified exact-label hint. Cumulative: 210 family parents, 987 proposal occurrences and 213 source appearances; 442 families lack initial proposals. All scopes, member enumerations and bindings remain incomplete; canonical IDs null. No teaching content or automatic merge.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=07`. Next: inspect the next family cohort beginning Exercise physiology, keeping exact task support and predecessor digests.
+
+## Family/context decomposition proposals: batch 08
+
+The next 30 family parents (Exercise physiology through Genetic syndromes) have [155 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json): 58 reusable-topic candidates and 97 contextual-task facets across 31 source appearances. Fever of unknown origin preserves separate clinical-setting and microbiological-selection tasks. Eye-banking documentation/coordination remain simulated. Forensic technologies retain evidentiary-limit context without implying legal validity or reliable diagnostic performance. Unnamed eye muscles, disease categories and specimen lesions remain unspecified.
+
+Queue, three inventories and seven predecessor packets are digest-pinned; eight labels have unverified exact-label hints. Cumulative: 240 family parents, 1,142 proposal occurrences and 244 source appearances; 412 families lack initial proposals. All identities null; scopes, enumerations and bindings remain incomplete. No teaching content or automatic merge.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=08`. Next: inspect the next cohort beginning Genital fistula, keeping source contexts and predecessor pins intact.
