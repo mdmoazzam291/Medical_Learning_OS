@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 03 — 9 November 2026 IST
+
+Checked at 2026-11-08T18:55:07.086Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d20ccd89c20cf9380d752c80e15c7fa3c91a0dc0; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: cc3e50f407cb3e83cd39159b88ddc50aaa7eb19e. Names-only instruction active.
+
+Reviewed next 30 scoped facets, Asthma planning through Cancer epidemiology in India. Preserved 31 source appearances and proposed 20 distinct home labels, with 20 existing-name links and ten proposed-name links. Breastfeeding counselling retains two sources, while supervised observation and model technique remain distinct tasks. Autopsy conduct/teamwork remains simulated; caesarean assistance is supervised with assigned roles, audit is grouping/rate interpretation. Simulated breast-cancer consent is not an actual patient consent. Dated epidemiology and legal/protocol contexts are not reverified current. No unspecified variants, tumours or muscles invented. Canonical IDs null; mapping/scope/binding/independent competence false. Names-only, no teaching content or production changes.
+
+Cumulative three scoped-home batches: 90 facets, 92 source appearances, 60 distinct proposed homes; 569 scoped facets await initial proposals. Queue/three inventories/all two predecessors digest-pinned; earlier evidence unchanged.
+
+Verification: scoped-home verifier --batch=03 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because family implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify home semantic fit.
+
+Next: scoped-task home batch 04 beginning Cancer examination. Inspect source tasks, preserve role limits, reuse prior proposed labels and keep ambiguity explicit; pin queue/three inventories/all predecessors and run --batch=04. Actual canonical/home/objective binding, 570 standalone-topic cases, exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease and verify remote files; release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 02 — 9 November 2026 IST
 
 Checked at 2026-11-08T18:52:54.483Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c964e9c68067fe2c1143e461d042347b50928781; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 0ddc997a3556708d920785f859477df5e354a6aa. Names-only instruction active.

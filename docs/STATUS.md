@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 03 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Asthma planning through Cancer epidemiology in India). Batch: 20 home labels, 20 existing-name links, ten proposed-name links. Cumulative: 90 facets / 92 appearances / 60 proposed homes; 569 facets await initial homes. Implementation: cc3e50f407cb3e83cd39159b88ddc50aaa7eb19e. All mappings/bindings remain pending.
+
+Three-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Cancer examination. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 02 — 9 November 2026
 
 Added proposals for 30 scoped facets / 31 source appearances (Amniotomy practical through Articulations of lower-limb bones). Batch proposes 19 home labels, with 18 existing-name links and 12 proposed-name links. Cumulative: 60 facets / 61 appearances / 40 proposed homes; 599 facets await initial homes. Implementation: 0ddc997a3556708d920785f859477df5e354a6aa. All mappings and bindings remain pending.
