@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "editorial-name-role-proposals",
-  "sourceHead": "ec15a11bd04c8a6590c37197aa2059d456b02ac6",
+  "sourceHead": "c5c7db189c95c628461d1bbf152b5255ed4a6fcf",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -9,10 +9,10 @@
   "coverageFraction": null,
   "classificationBasis": "editorial-name-and-existing-source-context",
   "totals": {
-    "entries": 101,
-    "reusableNameCandidates": 71,
-    "scopeFacets": 30,
-    "componentOccurrences": 124
+    "entries": 169,
+    "reusableNameCandidates": 133,
+    "scopeFacets": 36,
+    "componentOccurrences": 192
   },
   "entries": [
     {
@@ -2216,6 +2216,1367 @@
           "parentNameKey": "crohn disease and ulcerative colitis",
           "sourceReferenceIds": [
             "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fatty acid beta-oxidation",
+      "nameKey": "fatty acid beta-oxidation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Fatty acid beta-oxidation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty acid oxidation and ketones",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ketone synthesis",
+      "nameKey": "ketone synthesis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Ketone synthesis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty acid oxidation and ketones",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ketone utilization",
+      "nameKey": "ketone utilization",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Ketone utilization",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty acid oxidation and ketones",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fatty liver",
+      "nameKey": "fatty liver",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Fatty liver",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fatty liver, gallstones and obesity",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chorion",
+      "nameKey": "chorion",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-structure",
+      "proposedHomeLabel": "Chorion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fetal membranes and decidua",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amnion",
+      "nameKey": "amnion",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-structure",
+      "proposedHomeLabel": "Amnion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fetal membranes and decidua",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yolk sac",
+      "nameKey": "yolk sac",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-structure",
+      "proposedHomeLabel": "Yolk sac",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fetal membranes and decidua",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Allantois",
+      "nameKey": "allantois",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-structure",
+      "proposedHomeLabel": "Allantois",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fetal membranes and decidua",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Decidua",
+      "nameKey": "decidua",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "developmental-structure",
+      "proposedHomeLabel": "Decidua",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fetal membranes and decidua",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fever",
+      "nameKey": "fever",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-state",
+      "proposedHomeLabel": "Fever",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fever and hyperthermia",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyperthermia",
+      "nameKey": "hyperthermia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-state",
+      "proposedHomeLabel": "Hyperthermia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fever and hyperthermia",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Firearms",
+      "nameKey": "firearms",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-object-class",
+      "proposedHomeLabel": "Firearms",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c765793ce2f30897d987aac6a4adf5e8e1749777b0adbfa7e39c8b6bcbd498f7:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "firearms and ammunition",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c765793ce2f30897d987aac6a4adf5e8e1749777b0adbfa7e39c8b6bcbd498f7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ammunition",
+      "nameKey": "ammunition",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-object-class",
+      "proposedHomeLabel": "Ammunition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c765793ce2f30897d987aac6a4adf5e8e1749777b0adbfa7e39c8b6bcbd498f7:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "firearms and ammunition",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c765793ce2f30897d987aac6a4adf5e8e1749777b0adbfa7e39c8b6bcbd498f7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flatfoot",
+      "nameKey": "flatfoot",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Flatfoot",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flatfoot and clubfoot",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clubfoot",
+      "nameKey": "clubfoot",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Clubfoot",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flatfoot and clubfoot",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fibrous flexor sheaths",
+      "nameKey": "fibrous flexor sheaths",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Fibrous flexor sheaths",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flexor sheaths and bursae",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digital synovial sheaths",
+      "nameKey": "digital synovial sheaths",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Digital synovial sheaths",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flexor sheaths and bursae",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radial bursa",
+      "nameKey": "radial bursa",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Radial bursa",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flexor sheaths and bursae",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ulnar bursa",
+      "nameKey": "ulnar bursa",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Ulnar bursa",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "flexor sheaths and bursae",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c068766c0c059cc736a58e671f8fc86182bc83ed4f793c4f3bcffc507aaa0b7c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food energy",
+      "nameKey": "food energy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "nutrition-measure",
+      "proposedHomeLabel": "Food energy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "food energy and glycaemic index",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Glycaemic index",
+      "nameKey": "glycaemic index",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "nutrition-measure",
+      "proposedHomeLabel": "Glycaemic index",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "food energy and glycaemic index",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food fortification",
+      "nameKey": "food fortification",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "food-processing-or-exposure",
+      "proposedHomeLabel": "Food fortification",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fortification and adulteration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food additives",
+      "nameKey": "food additives",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "substance-class",
+      "proposedHomeLabel": "Food additives",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fortification and adulteration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food adulteration",
+      "nameKey": "food adulteration",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "food-processing-or-exposure",
+      "proposedHomeLabel": "Food adulteration",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fortification and adulteration",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b53e200ae52093ff328a96c49f677126d5d890a2527208f8fa9af628c6efc66"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fragmented remains",
+      "nameKey": "fragmented remains",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-specimen-category",
+      "proposedHomeLabel": "Fragmented remains",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fragmented and burned remains",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Charred remains",
+      "nameKey": "charred remains",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-specimen-category",
+      "proposedHomeLabel": "Charred remains",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fragmented and burned remains",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Commingled remains",
+      "nameKey": "commingled remains",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "forensic-specimen-category",
+      "proposedHomeLabel": "Commingled remains",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "fragmented and burned remains",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3feeca32894b3be5b52895ca4d83bc9aed2c5dbfd11a92292d875db9723d2831"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cholecystitis",
+      "nameKey": "cholecystitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Cholecystitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gallstones and cholecystitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+            "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gastro-oesophageal junction",
+      "nameKey": "gastro-oesophageal junction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Gastro-oesophageal junction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6eadc310f8687a44dc49742c027eeb8a7fbea1083487886113e09207eb61227b:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gastro-oesophageal junction and corpus luteum",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6eadc310f8687a44dc49742c027eeb8a7fbea1083487886113e09207eb61227b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Corpus luteum",
+      "nameKey": "corpus luteum",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Corpus luteum",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6eadc310f8687a44dc49742c027eeb8a7fbea1083487886113e09207eb61227b:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gastro-oesophageal junction and corpus luteum",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6eadc310f8687a44dc49742c027eeb8a7fbea1083487886113e09207eb61227b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Glucose homeostasis",
+      "nameKey": "glucose homeostasis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-process",
+      "proposedHomeLabel": "Glucose homeostasis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "glucose homeostasis and diabetes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diabetes mellitus",
+      "nameKey": "diabetes mellitus",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Diabetes mellitus",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "glucose homeostasis and diabetes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Migraine",
+      "nameKey": "migraine",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Migraine",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "gout, arthritis and migraine",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ABO typing",
+      "nameKey": "abo typing",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "laboratory-procedure",
+      "proposedHomeLabel": "ABO typing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "grouping and crossmatching",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rh typing",
+      "nameKey": "rh typing",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "laboratory-procedure",
+      "proposedHomeLabel": "Rh typing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "grouping and crossmatching",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Crossmatching",
+      "nameKey": "crossmatching",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "laboratory-procedure",
+      "proposedHomeLabel": "Crossmatching",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "grouping and crossmatching",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Haem synthesis",
+      "nameKey": "haem synthesis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Haem synthesis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haem and porphyrins",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Haem degradation",
+      "nameKey": "haem degradation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Haem degradation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haem and porphyrins",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Porphyrias",
+      "nameKey": "porphyrias",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition-family",
+      "proposedHomeLabel": "Porphyrias",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haem and porphyrins",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Haemostasis",
+      "nameKey": "haemostasis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "haemostatic-process",
+      "proposedHomeLabel": "Haemostasis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haemostasis and thrombosis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thrombosis",
+      "nameKey": "thrombosis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "haemostatic-process",
+      "proposedHomeLabel": "Thrombosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "haemostasis and thrombosis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hand nerves",
+      "nameKey": "hand nerves",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Hand",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hand nerves and vessels",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hand blood vessels",
+      "nameKey": "hand blood vessels",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Hand",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hand nerves and vessels",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hanging",
+      "nameKey": "hanging",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury-mechanism",
+      "proposedHomeLabel": "Hanging",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:85e93d7f08c93eab330be0cbeb243ded45b547d300df291bab739bc9f0b98e47:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hanging and strangulation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:85e93d7f08c93eab330be0cbeb243ded45b547d300df291bab739bc9f0b98e47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strangulation",
+      "nameKey": "strangulation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury-mechanism",
+      "proposedHomeLabel": "Strangulation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:85e93d7f08c93eab330be0cbeb243ded45b547d300df291bab739bc9f0b98e47:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hanging and strangulation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:85e93d7f08c93eab330be0cbeb243ded45b547d300df291bab739bc9f0b98e47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Heat injuries",
+      "nameKey": "heat injuries",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury-category",
+      "proposedHomeLabel": "Heat injuries",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:75f7f71702ccba6db2d3057ca349781ba70049824c5113cd5425d8191c29b295:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "heat and cold injuries",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:75f7f71702ccba6db2d3057ca349781ba70049824c5113cd5425d8191c29b295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cold injuries",
+      "nameKey": "cold injuries",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury-category",
+      "proposedHomeLabel": "Cold injuries",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:75f7f71702ccba6db2d3057ca349781ba70049824c5113cd5425d8191c29b295:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "heat and cold injuries",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:75f7f71702ccba6db2d3057ca349781ba70049824c5113cd5425d8191c29b295"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hip dislocation",
+      "nameKey": "hip dislocation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Hip dislocation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hip dislocation and replacement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hip replacement",
+      "nameKey": "hip replacement",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "surgical-procedure",
+      "proposedHomeLabel": "Hip replacement",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hip dislocation and replacement",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HLA matching",
+      "nameKey": "hla matching",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "laboratory-assessment",
+      "proposedHomeLabel": "HLA matching",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hla and transplantation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyperacute transplant rejection",
+      "nameKey": "hyperacute transplant rejection",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immune-pathological-process",
+      "proposedHomeLabel": "Hyperacute transplant rejection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hla and transplantation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute transplant rejection",
+      "nameKey": "acute transplant rejection",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immune-pathological-process",
+      "proposedHomeLabel": "Acute transplant rejection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hla and transplantation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic transplant rejection",
+      "nameKey": "chronic transplant rejection",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immune-pathological-process",
+      "proposedHomeLabel": "Chronic transplant rejection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hla and transplantation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Human research ethics",
+      "nameKey": "human research ethics",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-scope-facet",
+      "proposedHomeLabel": "Human research",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "human and animal research",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Animal research ethics",
+      "nameKey": "animal research ethics",
+      "classificationRole": "scope-facet",
+      "proposedKind": "ethical-scope-facet",
+      "proposedHomeLabel": "Animal research",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "human and animal research",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Humeral shaft fracture",
+      "nameKey": "humeral shaft fracture",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury",
+      "proposedHomeLabel": "Humeral shaft fracture",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "humeral shaft and intercondylar fractures",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Intercondylar humeral fracture",
+      "nameKey": "intercondylar humeral fracture",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "injury",
+      "proposedHomeLabel": "Intercondylar humeral fracture",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "humeral shaft and intercondylar fractures",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Humoral immune response",
+      "nameKey": "humoral immune response",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immune-process",
+      "proposedHomeLabel": "Humoral immune response",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "humoral and cellular responses",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cellular immune response",
+      "nameKey": "cellular immune response",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immune-process",
+      "proposedHomeLabel": "Cellular immune response",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "humoral and cellular responses",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyperaemia",
+      "nameKey": "hyperaemia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Hyperaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hyperemia, congestion and haemorrhage",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Congestion",
+      "nameKey": "congestion",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Congestion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hyperemia, congestion and haemorrhage",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Haemorrhage",
+      "nameKey": "haemorrhage",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Haemorrhage",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hyperemia, congestion and haemorrhage",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypertensive disorders of pregnancy",
+      "nameKey": "hypertensive disorders of pregnancy",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Hypertensive disorders of pregnancy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ce61fac71fdb5f0b4787eca1ac859fe750f4b4b644e08ab07437199562a73cdb:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hypertension and eclampsia",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ce61fac71fdb5f0b4787eca1ac859fe750f4b4b644e08ab07437199562a73cdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eclampsia",
+      "nameKey": "eclampsia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Eclampsia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:ce61fac71fdb5f0b4787eca1ac859fe750f4b4b644e08ab07437199562a73cdb:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hypertension and eclampsia",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ce61fac71fdb5f0b4787eca1ac859fe750f4b4b644e08ab07437199562a73cdb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyphema",
+      "nameKey": "hyphema",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-finding",
+      "proposedHomeLabel": "Hyphema",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:259c780745763af02e9f852dfcf49f360460aeac984c48e49489b3960b7e8263:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hyphema and hypopyon",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:259c780745763af02e9f852dfcf49f360460aeac984c48e49489b3960b7e8263"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypopyon",
+      "nameKey": "hypopyon",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-finding",
+      "proposedHomeLabel": "Hypopyon",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:259c780745763af02e9f852dfcf49f360460aeac984c48e49489b3960b7e8263:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hyphema and hypopyon",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:259c780745763af02e9f852dfcf49f360460aeac984c48e49489b3960b7e8263"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hypothalamic circuits",
+      "nameKey": "hypothalamic circuits",
+      "classificationRole": "scope-facet",
+      "proposedKind": "neural-circuit-facet",
+      "proposedHomeLabel": "Hypothalamus",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hypothalamic and limbic circuits",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Limbic circuits",
+      "nameKey": "limbic circuits",
+      "classificationRole": "scope-facet",
+      "proposedKind": "neural-circuit-facet",
+      "proposedHomeLabel": "Limbic system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "parentNameKey": "hypothalamic and limbic circuits",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e"
           ]
         }
       ]
