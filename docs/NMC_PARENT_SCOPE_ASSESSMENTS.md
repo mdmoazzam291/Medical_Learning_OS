@@ -158,3 +158,11 @@ The next 30 family parents (Cough medicines through Disaster management) have [1
 The queue, three inventories and all five predecessors are digest-pinned; one component has an unverified exact-label hint. Across six batches, 180 family parents have 843 proposal occurrences and 183 source appearances; 472 families lack initial proposals. Canonical IDs remain null; all enumerations/scopes/bindings incomplete. No teaching content or automatic merge.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=06`. Next: inspect the next family cohort beginning Disciplinary process, preserving original task modes and all predecessor pins.
+
+## Family/context decomposition proposals: batch 07
+
+The next 30 family parents (Disciplinary process through Eustachian tube disorders) have [144 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json): 49 reusable-topic candidates and 95 contextual-task facets across 30 source appearances. Disciplinary, dying-statement, end-of-life, regulatory and dated programme contexts retain source-version limits; no current-law or guideline verification is implied. Emergency autonomic drug simulation is not independent administration competence. Environmental exposure, tissue injury and microbial surveillance tasks remain separate. Unnamed family members remain unspecified.
+
+Queue, three inventories and six predecessor packets are digest-pinned; one component has an unverified exact-label hint. Cumulative: 210 family parents, 987 proposal occurrences and 213 source appearances; 442 families lack initial proposals. All scopes, member enumerations and bindings remain incomplete; canonical IDs null. No teaching content or automatic merge.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=07`. Next: inspect the next family cohort beginning Exercise physiology, keeping exact task support and predecessor digests.
