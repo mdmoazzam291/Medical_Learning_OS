@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 19 — 9 November 2026 IST
+
+Checked at 2026-11-08T20:02:07.121Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 21292e502690a294bb76ece2336750e2adec9261; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 73d086da924eecbe37eebea0e6c7f47e6e3fc98e. Names-only instruction active.
+
+Reviewed next 30 facets, Provisional diagnosis through Rheumatology examination. Preserved 31 source appearances; proposed 21 home labels with three existing-name and 27 proposed-name links. Reasoned provisional diagnosis is not confirmed identity. Public/privacy responses are drafts, not disclosure authorization. Reduction teamwork remains supervised/simulated; remote-site anaesthesia observed. Two respiratory examination sources retain volunteer/simulation and severity/complication contexts. Respiratory support uses a general Respiratory care home, avoiding an unsupported respiratory-failure diagnosis. Renal diet and disease tasks remain source-bound; quality-of-life exploration is not validated scoring. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative nineteen scoped-home batches: 570 facets, 579 source appearances, 321 proposed home labels; 89 facets await initial proposals. Queue/three inventories/all eighteen predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=19 PASS; nine focused scoped-home tests PASS. Verifier rerun after broadening the respiratory support home label. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 20 beginning Rheumatology history. Inspect source tasks, preserve role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=20. Actual canonical/home/objective binding, 570 standalone-topic cases, exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 18 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:58:33.379Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at b70bd1d0f6a097366e3ceae40e3086244a948b6c; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 5a72f2b8afe90fbee091a9ae69d41e819b6e77cd. Names-only instruction active.

@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 19 — 9 November 2026
+
+Added proposals for 30 facets / 31 source appearances (Provisional diagnosis through Rheumatology examination). Batch: 21 home labels, three existing-name and 27 proposed-name links. Cumulative: 570 facets / 579 appearances / 321 proposed home labels; 89 facets await initial homes. Implementation: 73d086da924eecbe37eebea0e6c7f47e6e3fc98e. All mappings/bindings pending.
+
+Nineteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Rheumatology history. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 18 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (Poisoning examination through Prototype drug effects). Batch: 19 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 540 facets / 548 appearances / 303 proposed home labels; 119 facets await initial homes. Implementation: 5a72f2b8afe90fbee091a9ae69d41e819b6e77cd. All mappings/bindings pending.
