@@ -1,0 +1,1192 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-05:01",
+      "facetNameKey": "cervical rib compression",
+      "facetName": "Cervical rib compression",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c2ef106d0a02b452be2643cc8d927a4f6e0fb8739f1a27d8479434ea5d4b4145",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN35.9",
+          "page": 129,
+          "rowBBox": [
+            51.2,
+            385.26,
+            122.2,
+            420.54
+          ],
+          "sourceBodySha256": "4367e5a5db5ed7505d535bd1f5e2be718b2936c57867cbb7db07a9643828401a",
+          "editorialTaskSha256": "c7430c5628ebec3c455bb7c024f3146725777f4379d36d7948f07faeba392dd0",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cervical rib",
+      "proposedHomeNameKey": "cervical rib",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Subclavian arterial versus lower-plexus compression findings; do not equate vascular and neural deficits.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:02",
+      "facetNameKey": "cervical screening practical",
+      "facetName": "Cervical screening practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f054345c46519bdf693135642067fdd1529cd4f274e396c547390b0e862f3f4b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG33.3",
+          "page": 439,
+          "rowBBox": [
+            49.1,
+            260.88,
+            103.1,
+            301.56
+          ],
+          "sourceBodySha256": "21b305d6b71b839f6dee2a5d9b1bf8fb0ac46e6ae42880aebf78cf88ad02a563",
+          "editorialTaskSha256": "058c135b2298956de8b41bd534928eac9f964cfbea0ce83e277627324168e020",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cervical cancer",
+      "proposedHomeNameKey": "cervical cancer",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model cervical screening workflow with consent, sampling and documentation; not actual patient screening or clinical competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:03",
+      "facetNameKey": "chest trauma assessment",
+      "facetName": "Chest trauma assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ff34fe6556de77161cd9ee819f9f255242aa90c76e6798ce15c254dbe36a51ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.9",
+          "page": 407,
+          "rowBBox": [
+            45,
+            232.92,
+            101.7,
+            262.32
+          ],
+          "sourceBodySha256": "e7b2e6b7e993994d48a47513061a6d485d30ff24389b6b2a51fe1a4d2e548fd6",
+          "editorialTaskSha256": "410da607c90cadc59394282a87a91322eb72105db3c54d9d5a9d05f2709b6f7c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chest trauma",
+      "proposedHomeNameKey": "chest trauma",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Major injury pattern recognition, initial priorities and escalation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:04",
+      "facetNameKey": "chest trauma mechanisms",
+      "facetName": "Chest trauma mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:34100ca64603733aee28dbe2be98a15f8f575cfd9eccc4da2c0304e883b11205",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.8",
+          "page": 407,
+          "rowBBox": [
+            45,
+            216.78,
+            101.7,
+            232.92
+          ],
+          "sourceBodySha256": "9cacefba931b9ff37fd032fcc911735eed7cc51e72a49afb491127abf7d8c68a",
+          "editorialTaskSha256": "81a4007bfc305aef5f1bd59a48dc3be93a1a68e7d37decd8befa2dca667f59cc",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chest trauma",
+      "proposedHomeNameKey": "chest trauma",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Blunt/penetrating compromise of ventilation or circulation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:05",
+      "facetNameKey": "child imnci assessment",
+      "facetName": "Child IMNCI assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8a10186d4f07729dbf214858fae1d2e0a9a2d407a951a17d2f739ba924f3f15f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE16.3",
+          "page": 335,
+          "rowBBox": [
+            51.3,
+            503.7,
+            103.1,
+            536.34
+          ],
+          "sourceBodySha256": "46f74f047649ac7670d788860123238ab49b821e4e71c3516b6475a504e59708",
+          "editorialTaskSha256": "82fd04b98759c1b20c9d3e01b9137b8639e698764bdff24d40e94f1c9001a50b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Integrated management of childhood illness",
+      "proposedHomeNameKey": "integrated management of childhood illness",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated two-month-to-five-year assessment/classification under IMNCI source context; protocol not refreshed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:06",
+      "facetNameKey": "childhood asthma",
+      "facetName": "Childhood asthma",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ba070339032c6d51f8b6752f26aecc9d6c0c44519655d4c7efeb57a49b77efee",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE28.2",
+          "page": 348,
+          "rowBBox": [
+            51.3,
+            138.24,
+            103.1,
+            170.88
+          ],
+          "sourceBodySha256": "ae1e938289ca7b1d7527c31d31c6557cf318b2480c7d05b9aca50ce6477b66c5",
+          "editorialTaskSha256": "11ef73d38cc9da002846d092fc98fc54f43eb61f78650aa752036ba987c6053f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Asthma",
+      "proposedHomeNameKey": "asthma",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "asthma"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Child-specific presentations, mechanisms, management and prevention.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:07",
+      "facetNameKey": "childhood epilepsy",
+      "facetName": "Childhood epilepsy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5e10bfbc186f0c23fc4d31c62ac2a9b62da838b2b10911d2c2889fb4e5c82209",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE27.7",
+          "page": 347,
+          "rowBBox": [
+            51.3,
+            231.06,
+            103.1,
+            263.64
+          ],
+          "sourceBodySha256": "1dabb1e0edcb3ab61e65326f2b37101f17ee5b251ce26d6e65a73044d9935ada",
+          "editorialTaskSha256": "6d976a8d25e5539723800484661ee088457d765b48e457bda2ab1818833dd4f9",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Epilepsy",
+      "proposedHomeNameKey": "epilepsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Child-specific epilepsy definition, seizure types, presentation and management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:08",
+      "facetNameKey": "childhood hearing loss",
+      "facetName": "Childhood hearing loss",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6e1901420520003346726ba528a5d5aa573e84cefc0c3a6a9eb07d18f48095bf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN4.20",
+          "page": 423,
+          "rowBBox": [
+            40,
+            415.02,
+            94.3,
+            451.26
+          ],
+          "sourceBodySha256": "e09d1172cd7276a9ecb6350de13dd462c4d37deaf5cf6961f9b1acf2dc552763",
+          "editorialTaskSha256": "f9fc2098dbee679e69a4c02834b557ae94708662f211a1c50bdded84970d0126",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Hearing loss",
+      "proposedHomeNameKey": "hearing loss",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "hearing loss"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-specific hearing-loss signs, testing, intervention and follow-up.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:09",
+      "facetNameKey": "childhood tuberculosis diagnosis",
+      "facetName": "Childhood tuberculosis diagnosis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:09533e0d035bb004eb15f282d87bd9a04894f9c771fcf90a44e43269b214ad41",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE31.2",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            314.64,
+            103.1,
+            331.32
+          ],
+          "sourceBodySha256": "c3542a4d3531b1fa1831fd49d0f7315a46e285c0fc2bf38ea90aff87cd9865d7",
+          "editorialTaskSha256": "71644cec2fefab92d41ac182f87f4583dcf35ae6d05be43e762d74aaa0347274",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Tuberculosis",
+      "proposedHomeNameKey": "tuberculosis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "tuberculosis"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "tuberculosis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Childhood exposure/clinical/microbiology integration, not adult diagnostic equivalence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:10",
+      "facetNameKey": "cholera microscopy",
+      "facetName": "Cholera microscopy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bc74fbf5971990dbc9ccde914643b0563c33efceeb50df2c8570bc6988f9fea8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.10",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            177,
+            102.7,
+            204.48
+          ],
+          "sourceBodySha256": "87f088968be2f50829e72e1b2dadedb447d10abd898f089d6eceb7ed658a21f6",
+          "editorialTaskSha256": "9837d77a748b0ce45a6610801d754919c0b60d9d5df6d5f30a721827ec99c9ab",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cholera",
+      "proposedHomeNameKey": "cholera",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Teaching hanging-drop motility is suggestive only and requires confirmation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:11",
+      "facetNameKey": "chromosome structure",
+      "facetName": "Chromosome structure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:561dbe977a276d1261c866126258b676ec02bd951e411d32c6385d210d68ab65",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN73.1",
+          "page": 145,
+          "rowBBox": [
+            51.2,
+            386.7,
+            122,
+            411.18
+          ],
+          "sourceBodySha256": "22cc775e5a6394299acb04b44614489be4b7e0a646c8ef951b75bc03a5d7dad1",
+          "editorialTaskSha256": "ac8e9d3881c9f85b4280bc1b3284255e5d7715814733339d4b41e5b5ef06ffd3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chromosome",
+      "proposedHomeNameKey": "chromosome",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Metaphase chromosome labelling and centromere-position classification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:12",
+      "facetNameKey": "chronic consequences of diarrhoea",
+      "facetName": "Chronic consequences of diarrhoea",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c8567598f01815014cef5fe167aa999196b5a20dac27033bffcdd48b1c03274e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.3",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            316.62,
+            102.7,
+            357.42
+          ],
+          "sourceBodySha256": "c24fde50748c7e67d53e75f61d01aa5ba4bb2aa0175b9bf1cf502de576f85b17",
+          "editorialTaskSha256": "181e8c13d9e8e786e832ea15749297eaa602df6e742d8f228be25b0d134c44da",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Persistent diarrhoeal/malabsorptive nutritional and systemic consequences.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:13",
+      "facetNameKey": "chronic diarrhoea investigations",
+      "facetName": "Chronic diarrhoea investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6e0443c9e83d074bb517e1aa6836349f20d500675a00b66f1977a890bd925074",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.12",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            245.1,
+            102.7,
+            285.9
+          ],
+          "sourceBodySha256": "ff7efa948bd5767f4f0898bc25a4fd3e965f3742f1f1e176326af708d5043385",
+          "editorialTaskSha256": "75c5df7b8478dfc5bb986ab66bcaecdc714af7fb7272c2a182a84ad77b2f62eb",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chronic diarrhoea",
+      "proposedHomeNameKey": "chronic diarrhoea",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Clinical-clue-guided serology, colonoscopy, imaging and biopsy.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:14",
+      "facetNameKey": "chronic diarrhoea pharmacotherapy",
+      "facetName": "Chronic diarrhoea pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bccffa217d5e5da4ce76778ad96a312f04433a9e7d5fd84c09a5c70b50c860a6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.16",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            408.12,
+            102.7,
+            448.98
+          ],
+          "sourceBodySha256": "a1de88281e51b4d9b4e6f788a353204de9cdf9fdf72e3fa859b4d3ca712af38a",
+          "editorialTaskSha256": "6e6bc9c3496ca85972fd03369ed2674cb64c71a89393538ad748bc8e146e6ee3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chronic diarrhoea",
+      "proposedHomeNameKey": "chronic diarrhoea",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cause-directed indications/mechanisms/harms, with immune therapies only when appropriate; no regimen acceptance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:15",
+      "facetNameKey": "chronic kidney disease staging",
+      "facetName": "Chronic kidney disease staging",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a56332213f52d34ab56ad4d04f277f167d39819f36194ea8a3afd839d5669987",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.4",
+          "page": 298,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            146.16
+          ],
+          "sourceBodySha256": "a3761fb15f07ee521d8ed492f091c8f53ac9cf49203e9f1accaf5f2e574525b9",
+          "editorialTaskSha256": "ca032f0e9771f98f5c4580e5b2efc91363197570e3acce0b5b4a06f52b18249b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chronic kidney disease",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "chronic kidney disease"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "chronic kidney disease"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cause classification and staging using function/albuminuria, not all CKD management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:16",
+      "facetNameKey": "chronic otitis complications",
+      "facetName": "Chronic otitis complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dcc79ab30ae5682570d2d98a5f2694869b967277821292154b8e0fe23ff3ff74",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN4.8",
+          "page": 422,
+          "rowBBox": [
+            40,
+            403.56,
+            94.3,
+            442.02
+          ],
+          "sourceBodySha256": "c7184113ec9e27e5a9966d4dc185b9b2499d7fdab4f4f857f62bf0eb7060ba4e",
+          "editorialTaskSha256": "3f5e82b76ca39dcd4b4d9159f14627bca565730627d33d841402273aeec7248a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Chronic otitis media",
+      "proposedHomeNameKey": "chronic otitis media",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Extracranial/intracranial warning signs and urgent evaluation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:17",
+      "facetNameKey": "cleft classification",
+      "facetName": "Cleft classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:da0522aed1cf913a3456a9a2dd74bd67fe5dcce42c8a17e69b12e3d70b1be0ff",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU19.1",
+          "page": 407,
+          "rowBBox": [
+            45,
+            460.5,
+            101.7,
+            494.22
+          ],
+          "sourceBodySha256": "49d44690bc9dc452e858c6ee424b9cd6a43e43fc2b37f9ca0111638469154716",
+          "editorialTaskSha256": "a275cf017ee4deaad881d9b29e2c732fa24d9333a215a861516567ae5271fa5f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cleft lip and palate",
+      "proposedHomeNameKey": "cleft lip and palate",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Developmental causes and cleft lip/palate pattern classification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:18",
+      "facetNameKey": "cleft reconstruction",
+      "facetName": "Cleft reconstruction",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c6bdbe335297aadc0a041fe8392e922d8e61df6e50306d628ac32136de5d1a23",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU19.2",
+          "page": 407,
+          "rowBBox": [
+            45,
+            494.22,
+            101.7,
+            516.3
+          ],
+          "sourceBodySha256": "ae50800cf0ba404f6461e2bd580de82dc6040addd2b1cde54d77575e75e99e1e",
+          "editorialTaskSha256": "ccfdd51857f2cd65166210add78fdebaec74109ff9eb506774f361ae8a617577",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cleft lip and palate",
+      "proposedHomeNameKey": "cleft lip and palate",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Staged reconstruction goals and multidisciplinary care; no surgical performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:19",
+      "facetNameKey": "clinical dural sinuses",
+      "facetName": "Clinical dural sinuses",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:38506d0c7317aa04a4b09f0eba8d722cca169f2548efd5483ed4a874d2d6f909",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN30.4",
+          "page": 127,
+          "rowBBox": [
+            51.2,
+            207.06,
+            122.2,
+            231.9
+          ],
+          "sourceBodySha256": "0484a57422b11f88898efc6da0baef80ffd5793519142a2c3010819691dba0a8",
+          "editorialTaskSha256": "2cab300ab830dd4c2db1866bcb88d1155e257cdc5e6d52c59b21c4c4672d18a2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Dural venous sinuses",
+      "proposedHomeNameKey": "dural venous sinuses",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "dural venous sinuses"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Thrombosis/infection routes and cavernous sinus related-structure localization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:20",
+      "facetNameKey": "clinical laboratory follow-up",
+      "facetName": "Clinical laboratory follow-up",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.24",
+          "page": 172,
+          "rowBBox": [
+            58.5,
+            307.32,
+            108.2,
+            348.06
+          ],
+          "sourceBodySha256": "239565fdd20fba949914bf9b802cfb97f5fff483c1bf45c03d9b602064d26bb4",
+          "editorialTaskSha256": "beb38529827687c66d9fdbf85f3cff1a6e0d8303f150ec29f495906b15458880",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Laboratory medicine",
+      "proposedHomeNameKey": "laboratory medicine",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated baseline/diagnostic/prognostic/discharge result review; no unsupported disease home inferred.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:21",
+      "facetNameKey": "cns specimen interpretation",
+      "facetName": "CNS specimen interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f67b8288f33c0ea2c0c20bd9afb40c5727668af86690d17ad6e7b6cf1d974cff",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI6.3",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            295.92,
+            108.8,
+            350.28
+          ],
+          "sourceBodySha256": "18cbb1f70169405cfd4369093aadbebce9bcb29e7770246da3927e67e4038c08",
+          "editorialTaskSha256": "fb3e4208d3d2ad97f113d26b34652e7cc20069d1b4ddad0926b7d8e0060a8f76",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "CNS infection",
+      "proposedHomeNameKey": "cns infection",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied Gram stain/CSF/culture interpretation for likely causes, not independent specimen processing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:22",
+      "facetNameKey": "community disease control planning",
+      "facetName": "Community disease control planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a503ab755e47b342b9cec54e0a67fc06a87e22f366dc5f0a13a0665905467e2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM8.5",
+          "page": 275,
+          "rowBBox": [
+            40.1,
+            234.9,
+            98.6,
+            282.72
+          ],
+          "sourceBodySha256": "9eb7eed8d49743336c4091c371959c875f0be848a28c6842ed50ddbdfbcde3ed",
+          "editorialTaskSha256": "480a1dd0b93472c5a2d9bd1eaaf6beb296f7cd36a871e80f3f6f4f719daca61f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Community disease control",
+      "proposedHomeNameKey": "community disease control",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Implementation/evaluation planning from burden/resources/measurable outcomes.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:23",
+      "facetNameKey": "community education session",
+      "facetName": "Community education session",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:984330e47c4cfc6d3f1792a17e05f28892c8f4d95deff11faba8f05d4a074278",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM4.4",
+          "page": 271,
+          "rowBBox": [
+            40.1,
+            263.94,
+            98.6,
+            307.5
+          ],
+          "sourceBodySha256": "14034d78812d30e74b0f63d56c350e6d5e1571faef6c8963f87fb8c8b77b7437",
+          "editorialTaskSha256": "34a1b50a3881f974365a2839a62ffdfc9d666040972c1dfae6ad0f75df322412",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Health education",
+      "proposedHomeNameKey": "health education",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "health education"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Audience-appropriate session in simulation or supervised posting with understanding check.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:24",
+      "facetNameKey": "community nutrition education",
+      "facetName": "Community nutrition education",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:59f248bf50419e5b8f1684ab7c8db966cbd20029329b02cfa479add077dd845b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.21",
+          "page": 273,
+          "rowBBox": [
+            40.1,
+            245.58,
+            98.6,
+            273.18
+          ],
+          "sourceBodySha256": "62bbb605cef9b968e312dc72fa2afb3fa8cf9dc907e36fc26a63a19795a9877a",
+          "editorialTaskSha256": "e7a6e4ffffdd2c89322ac862a4608ba7c50a191ab4ecb95483a592454c9955e8",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Nutrition education",
+      "proposedHomeNameKey": "nutrition education",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Community/NCD nutrition session and understanding assessment.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:25",
+      "facetNameKey": "complementary feeding counselling",
+      "facetName": "Complementary feeding counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:16cc6337e4dc687b9c50e7e455bbcd7c2f60cc30520b9cbb4a9de60fa131f591",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.13",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            399.54,
+            98.6,
+            440.52
+          ],
+          "sourceBodySha256": "a31bbd83faac1822dfa5d9d6af30253e4024cf0e9a44428d3e461d155b1ea921",
+          "editorialTaskSha256": "fa5fa6c386235edf1e4b555b3fe21dea58c30e58177d84915c78f3a71642251a",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f1316dc70af7255cb77d49e7f76e821f9f32156434472bf1b500b394b26e293a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE8.5",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            368.7,
+            103.1,
+            401.28
+          ],
+          "sourceBodySha256": "e98d773a5bf52c043e4bd1ef1443dba1490326dccf87c019270e71a65373739a",
+          "editorialTaskSha256": "1bc83c237c08fab42dd812c323ba5922520488ca6b288f278bb85f2cf0f56f7e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Complementary feeding",
+      "proposedHomeNameKey": "complementary feeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "complementary feeding"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "complementary feeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Retain separate age-specific food-group/quantity/texture task and simulated caregiver teach-back task.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:26",
+      "facetNameKey": "complementary feeding principles",
+      "facetName": "Complementary feeding principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f45f5b63dc1c4b60ce1deea298623a4673b717259568106a2c7954d677811901",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE8.2",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            230.64,
+            103.1,
+            263.28
+          ],
+          "sourceBodySha256": "b53044dc606b0b1cb0ed18e1348081602936a277a406bad7faa6a28c1b243de1",
+          "editorialTaskSha256": "9e47db1395cb65e06bbdfa3f63410214811dda3056ec82e828e93c7d48305d11",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Complementary feeding",
+      "proposedHomeNameKey": "complementary feeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "complementary feeding"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "complementary feeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-related introduction, texture/frequency/technique/hygiene principles.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:27",
+      "facetNameKey": "confidentiality",
+      "facetName": "Confidentiality",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:85bbc25aedca3793adbb80760b84996d6a0aebebe1d01be4ae63924eeef0a466",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.9",
+          "page": 207,
+          "rowBBox": [
+            51.9,
+            114.78,
+            108.8,
+            155.88
+          ],
+          "sourceBodySha256": "192eca3ad7d882cea2109106032f33c43c9a86d84268bb1bf516ed7529221935",
+          "editorialTaskSha256": "2f2c364401192fc8f336db528927276aaaab262f5b6342ecddcc781d0ae9a3b7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Patient confidentiality",
+      "proposedHomeNameKey": "patient confidentiality",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "patient confidentiality"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Identifiable laboratory-result privacy, secure handling and communication; not all confidentiality contexts.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:28",
+      "facetNameKey": "connective tissue identification",
+      "facetName": "Connective tissue identification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1ca97fc81b1c62db41ac62513f716f847ff03dade4784d7d002cbdb89aecb687",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN66.1",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            226.86,
+            121.9,
+            263.58
+          ],
+          "sourceBodySha256": "dff739cc9752bf822f4b012a2138baa29007414e05da6e76dd37db31743da0a2",
+          "editorialTaskSha256": "9eebbd9b663712c7bbe97acc5d2cc714c4308c689a7d8ec1b53267edd2e4de96",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Connective tissue",
+      "proposedHomeNameKey": "connective tissue",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Connective tissue slides by cells/fibres/matrix and functions.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:29",
+      "facetNameKey": "connective tissue ultrastructure",
+      "facetName": "Connective tissue ultrastructure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:522a19847b3a8ec9a2c952f566450d39bf5edf127e7d35cb277f0d20f3cef8a0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN66.2",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            263.58,
+            121.9,
+            288.06
+          ],
+          "sourceBodySha256": "37238a5bb390896f1abb34485b357ca55dc4fb6af8a234c8c94c51977243b701",
+          "editorialTaskSha256": "f1588875edd41c0b502be494fd54badb54e5611c91fb535b98f490f3c547d088",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Connective tissue",
+      "proposedHomeNameKey": "connective tissue",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Fibre/matrix/resident-cell ultrastructural support of function.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:30",
+      "facetNameKey": "constipation pharmacotherapy",
+      "facetName": "Constipation pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH6.4",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            236.58,
+            105.7,
+            281.58
+          ],
+          "sourceBodySha256": "64f37307ef08c89c07bf0451761496141ebd4aa024f69bfceb1cb2b41db13fe9",
+          "editorialTaskSha256": "8056a71984766b8c1e7e04e9f85dc8d243cc8ed05e02bc2263a165975fa4361c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Constipation",
+      "proposedHomeNameKey": "constipation",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "constipation"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Laxative class action/onset/harms and case planning; no independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 31,
+    "distinctProposedHomes": 25,
+    "existingNameHomeLinks": 11,
+    "newNameHomeLinks": 19,
+    "facetsWithoutInitialHomeProposal": 509
+  }
+}
