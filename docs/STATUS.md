@@ -1,3 +1,11 @@
+## Family decomposition batch 18 — 8 November 2026
+
+Added 124 source-bound names-only proposals across 30 groups / 30 source appearances (Postpartum IUCD programme through Renal specimens). Cumulative: 540 groups, 2,503 proposals, 548 source appearances; 112 groups await initial proposals. Implementation: c2bad432126b22a27add249f6d88401e3aa45ae4. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: eighteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 19, Renal syndromes.
+
+---
+
 ## Family decomposition batch 17 — 8 November 2026
 
 Added 132 source-bound names-only proposals across 30 groups / 31 source appearances (Perioperative care through Posterior triangle muscles). Cumulative: 510 groups, 2,379 proposals, 518 source appearances; 142 groups await initial proposals. Implementation: f859f115babe1becf5e737b9e452b083fab20770. Acceptance/scope/binding remains pending. No teaching content or production changes.
