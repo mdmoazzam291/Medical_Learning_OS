@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 14 — 8 November 2026 IST
+
+Checked at 2026-11-08T17:39:53.312Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 89ac124990ba128f1b4fc17513d7859af8f26a4a; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 7ad20c769e69b36fbe96159663947f219596aa92. Names-only instruction active.
+
+Reviewed next 30 family parents, Mental health concepts through Neonatal respiratory distress. Added 124 source-bound name/facet proposals across 31 source appearances. National anaemia control retains both task sources; prevention/treatment components link only to the first task and interventions only to the second, with common target/monitoring evidence linked to both. Mental healthcare law and national programmes remain document/version-bound, not current legal/schedule certification. Motor examination stays simulated. Unnamed microbial members, fibre types, monogenic examples and respiratory distress causes remain unspecified. Canonical IDs null; acceptance false; scope/binding incomplete. No teaching content, automatic merging or publication.
+
+Cumulative fourteen family batches: 420 groups, 1,967 proposal occurrences, 426 source appearances; 232 family groups await initial proposals. Queue/three inventories/all thirteen predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'14') PASS across all ordered cohorts, exact task hashes/coordinates/modes, source coverage, unique IDs, exact-label hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run in partial evidence/verifier checkout; no domain/UI changes. No prior full-suite result claimed as current.
+
+Next: family batch 15 beginning Neonatal seizures. Inspect source tasks, preserve unnamed members and source role limits; pin queue/three inventories/all fourteen predecessors, run verifier --batch=15. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease and verify remote files; release ownership afterwards. No external writer jobs, merge or deployment.
+
+---
+
 ## Family/context decomposition proposals batch 13 — 8 November 2026 IST
 
 Checked at 2026-11-08T17:34:05.872Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at acae9f4f2df45bd0d2b96ad310941192ad119abd; open PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 8d021d6ff85a42b47cd39f9aa694082bf4d2d87a. Names-only instruction active.
