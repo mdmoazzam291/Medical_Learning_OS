@@ -1,3 +1,11 @@
+## Family proposal audit and reuse report — 9 November 2026
+
+Added a repeatable audit reusing the family verifier. Covers all 652 groups / 663 source appearances / 3,002 proposals; 2,983 distinct normalized labels. Identifies 78 exact-label reuse leads: 61 existing inventory matches, 14 cross-parent repeats, five within-parent repeats (overlapping categories). No semantic or objective equivalence accepted. All 88 input files digest-pinned and each component retains its exact supporting tasks.
+
+Implementation: 08b07f9a38149430084a057cbb22cb0ca5f4d8bd. Report --verify, 18 focused tests and syntax checks PASS. Full suite and npm run check not run in partial checkout. Next: source-scope comparison of 78 leads. No teaching content, production changes or accepted canonical bindings. Foundation incomplete.
+
+---
+
 ## Initial family decomposition proposal coverage complete — 9 November 2026
 
 Final batch adds 91 source-bound names-only proposals across 22 groups / 22 source appearances (Vaccines through Zoonoses). All 652 family/context groups now have initial proposals: 3,002 proposal occurrences, preserving 663 source appearances. Zero groups remain without initial proposals. Implementation: ab9a4902e7b7d1b83194965bbc3dadcf8c614aea.

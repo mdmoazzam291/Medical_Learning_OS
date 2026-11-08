@@ -1,3 +1,17 @@
+## Family decomposition audit and exact-label reuse leads — 9 November 2026 IST
+
+Checked at 2026-11-08T18:35:29.056Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 50f74a9b682ccf87a3dca110865a18c46a53eb2e; open draft PR head verified. Main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 08b07f9a38149430084a057cbb22cb0ca5f4d8bd. Names-only instruction active.
+
+Added ops/nmc/report-family-decomposition.js, tests/nmc-family-audit.test.js and generated family-decomposition-audit.json. Reuses verifyFamily for all cohort/source checks rather than duplicating its validation. Covers all 652 family groups, 663 source appearances and 3,002 proposal occurrences. Found 2,983 normalized distinct labels and 78 reuse-lead labels: 61 with existing inventory matches, 14 repeated across parent groups and five repeated within a parent. Categories overlap. Same-label proposals are not accepted equivalent identities, objectives or competencies.
+
+Each occurrence retains its exact component-supporting task metadata, including mode, source/task hashes and coordinates. Inventory targets remain locators into pinned inventories for subsequent source-scope comparison. All 88 accessed input files are SHA-256 pinned, including all 22 batches, the queue, three inventories and source-task packets. Repeated immunity and alcohol-related liver disease labels retain separate task versions; CT/MRI, haematology tests and contraceptive labels remain unmerged. Original evidence unchanged.
+
+Verification: report --verify PASS; 18 focused tests PASS (nine new audit tests plus nine existing family tests); node --check PASS for both new JS files. Tests reject omitted leads, forged acceptance/objective equivalence, lost supporting tasks, invented inventory targets, changed digests and upstream task drift. Full npm test and npm run check NOT run in partial reconstructed checkout. No domain/UI changes; no teaching content, clinical validation, deployment or learner publication.
+
+Next: compare the 78 family reuse leads against their task contexts and target-source scopes, using existing mixed-reuse packet/verifier patterns. Classify plausible shared-topic reuse, scoped facets, self-parent references and different-meaning collisions; never infer competence equivalence from a label. For target locators, inspect actual source/version evidence before classifying. Preserve separate source-role/mode limits and pending identity flags. Scope/home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Save with expected-head lease, verify changed remote files, release ownership. No external writer jobs or auto-merge.
+
+---
+
 ## Initial family/context decomposition proposal coverage complete — 9 November 2026 IST
 
 Checked at 2026-11-08T18:31:54.833Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e81bd09cf67dbd6b736d820e1f41e43c6aaa92f5; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: ab9a4902e7b7d1b83194965bbc3dadcf8c614aea. Names-only instruction active.
