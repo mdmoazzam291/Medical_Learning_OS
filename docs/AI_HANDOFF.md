@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 18 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:58:33.379Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at b70bd1d0f6a097366e3ceae40e3086244a948b6c; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 5a72f2b8afe90fbee091a9ae69d41e819b6e77cd. Names-only instruction active.
+
+Reviewed next 30 facets, Poisoning examination through Prototype drug effects. Preserved 30 source appearances; proposed 19 home labels with eleven existing-name and nineteen proposed-name links. Poisoning reports separate observations/conclusions; exhibits do not imply actual collection authority. Voluntary postpartum contraceptive choice and simulated preoperative histories remain explicit. PC-PNDT and professional ethics/rules remain source-text/version-bound, not verified current law. GI procedural haemostasis remains indication-only. Computer drug simulation does not establish clinical efficacy. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative eighteen scoped-home batches: 540 facets, 548 source appearances, 303 proposed home labels; 119 facets await initial proposals. Queue/three inventories/all seventeen predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=18 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 19 beginning Provisional diagnosis. Inspect source tasks, preserve role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=19. Actual canonical/home/objective binding, 570 standalone-topic cases, exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 17 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:56:24.063Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at a24895bbd90daaed57337142d7218cbd655bb24b; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 9a1a301b11faf202824a97178caeb26da1b553cc. Names-only instruction active.
