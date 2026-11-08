@@ -1,0 +1,1553 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-component-proposals",
+  "sourceHead": "4e1127b55e618d30cfd3d34f754ad8e6564acb77",
+  "parentIndexPath": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+  "scopeBasis": "existing-editorial-labels-and-task-scopes",
+  "officialSourceRechecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "coverageFraction": null,
+  "totals": {
+    "parentNames": 35,
+    "sourceReferences": 35,
+    "componentNames": 96,
+    "subjects": 12,
+    "priorComponentReuseCandidates": 2
+  },
+  "rows": [
+    {
+      "parentNameKey": "clavicular and hand joints",
+      "parentName": "Clavicular and hand joints",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076",
+          "subjectId": "anatomy",
+          "code": "AN13.4",
+          "pdfPage": 115,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076:name-component:01",
+          "name": "Sternoclavicular joint",
+          "nameKey": "sternoclavicular joint",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076:name-component:02",
+          "name": "Acromioclavicular joint",
+          "nameKey": "acromioclavicular joint",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076:name-component:03",
+          "name": "Carpometacarpal joints",
+          "nameKey": "carpometacarpal joints",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076:name-component:04",
+          "name": "Metacarpophalangeal joints",
+          "nameKey": "metacarpophalangeal joints",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "clothing, viscera and artefacts",
+      "parentName": "Clothing, viscera and artefacts",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:b29d81a017c3c55de224e757433f28486238999c51aa80ea5da9c74e4419efe2",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.16",
+          "pdfPage": 218,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:b29d81a017c3c55de224e757433f28486238999c51aa80ea5da9c74e4419efe2:name-component:01",
+          "name": "Clothing evidence",
+          "nameKey": "clothing evidence",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:b29d81a017c3c55de224e757433f28486238999c51aa80ea5da9c74e4419efe2:name-component:02",
+          "name": "Viscera preservation",
+          "nameKey": "viscera preservation",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:b29d81a017c3c55de224e757433f28486238999c51aa80ea5da9c74e4419efe2:name-component:03",
+          "name": "Post-mortem artefacts",
+          "nameKey": "post-mortem artefacts",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "confidentiality and disclosure",
+      "parentName": "Confidentiality and disclosure",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:074056175f14786b27a4af8a7670408e62ca0969b90c20620d22c4fdf443d44f",
+          "subjectId": "medicine",
+          "code": "GM6.21",
+          "pdfPage": 293,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:074056175f14786b27a4af8a7670408e62ca0969b90c20620d22c4fdf443d44f:name-component:01",
+          "name": "Patient confidentiality",
+          "nameKey": "patient confidentiality",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:074056175f14786b27a4af8a7670408e62ca0969b90c20620d22c4fdf443d44f:name-component:02",
+          "name": "Disclosure decisions",
+          "nameKey": "disclosure decisions",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "consent and sexual rights",
+      "parentName": "Consent and sexual rights",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:8161f7c833b7b4cd69d4816fb0ffc9b5cd38ea6f6e4f3529ee49e9c611216b63",
+          "subjectId": "forensic-medicine",
+          "code": "FM8.3",
+          "pdfPage": 222,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:8161f7c833b7b4cd69d4816fb0ffc9b5cd38ea6f6e4f3529ee49e9c611216b63:name-component:01",
+          "name": "Sexual consent",
+          "nameKey": "sexual consent",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:8161f7c833b7b4cd69d4816fb0ffc9b5cd38ea6f6e4f3529ee49e9c611216b63:name-component:02",
+          "name": "Sexual rights",
+          "nameKey": "sexual rights",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "corneal anomalies and inflammation",
+      "parentName": "Corneal anomalies and inflammation",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:cbe53ed21ab685fe9abf1417d19712de2fc0e08cc357d635c0486b86bc523005",
+          "subjectId": "ophthalmology",
+          "code": "OP4.2",
+          "pdfPage": 415,
+          "packet": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:cbe53ed21ab685fe9abf1417d19712de2fc0e08cc357d635c0486b86bc523005:name-component:01",
+          "name": "Congenital corneal disorders",
+          "nameKey": "congenital corneal disorders",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:cbe53ed21ab685fe9abf1417d19712de2fc0e08cc357d635c0486b86bc523005:name-component:02",
+          "name": "Inflammatory corneal disorders",
+          "nameKey": "inflammatory corneal disorders",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "courts and boards",
+      "parentName": "Courts and boards",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:1e5d3a829aea17923a3c5a4a95ac7253d3b321023f1678db0ccb7bfeff67b4ca",
+          "subjectId": "forensic-medicine",
+          "code": "FM1.4",
+          "pdfPage": 215,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:1e5d3a829aea17923a3c5a4a95ac7253d3b321023f1678db0ccb7bfeff67b4ca:name-component:01",
+          "name": "Courts",
+          "nameKey": "courts",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:1e5d3a829aea17923a3c5a4a95ac7253d3b321023f1678db0ccb7bfeff67b4ca:name-component:02",
+          "name": "Executive magistrates",
+          "nameKey": "executive magistrates",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:1e5d3a829aea17923a3c5a4a95ac7253d3b321023f1678db0ccb7bfeff67b4ca:name-component:03",
+          "name": "Juvenile Justice Board",
+          "nameKey": "juvenile justice board",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "cranial fossae and foramina",
+      "parentName": "Cranial fossae and foramina",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d",
+          "subjectId": "anatomy",
+          "code": "AN26.3",
+          "pdfPage": 124,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d:name-component:01",
+          "name": "Cranial fossae",
+          "nameKey": "cranial fossae",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "cranial fossae"
+          ],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d:name-component:02",
+          "name": "Cranial foramina",
+          "nameKey": "cranial foramina",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "cranial foramina"
+          ],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "curative and palliative care",
+      "parentName": "Curative and palliative care",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:c0229aab912574ae002ebb9674cee854c7e305c8185e3d28e84fc2cee5a7c437",
+          "subjectId": "medicine",
+          "code": "GM13.6",
+          "pdfPage": 303,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:c0229aab912574ae002ebb9674cee854c7e305c8185e3d28e84fc2cee5a7c437:name-component:01",
+          "name": "Curative care",
+          "nameKey": "curative care",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c0229aab912574ae002ebb9674cee854c7e305c8185e3d28e84fc2cee5a7c437:name-component:02",
+          "name": "Palliative care",
+          "nameKey": "palliative care",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "developmental delay and disability",
+      "parentName": "Developmental delay and disability",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8",
+          "subjectId": "pediatrics",
+          "code": "PE3.1",
+          "pdfPage": 330,
+          "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8:name-component:01",
+          "name": "Developmental delay",
+          "nameKey": "developmental delay",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8:name-component:02",
+          "name": "Disability",
+          "nameKey": "disability",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8:name-component:03",
+          "name": "Intellectual disability",
+          "nameKey": "intellectual disability",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "intellectual disability"
+          ],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "end-of-life ethics and law",
+      "parentName": "End-of-life ethics and law",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2",
+          "subjectId": "medicine",
+          "code": "GM13.18",
+          "pdfPage": 304,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:01",
+          "name": "End-of-life ethics",
+          "nameKey": "end-of-life ethics",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2:name-component:02",
+          "name": "End-of-life law",
+          "nameKey": "end-of-life law",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "endoscopy and imaging",
+      "parentName": "Endoscopy and imaging",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf",
+          "subjectId": "medicine",
+          "code": "GM15.10",
+          "pdfPage": 306,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf:name-component:01",
+          "name": "Upper gastrointestinal endoscopy",
+          "nameKey": "upper gastrointestinal endoscopy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf:name-component:02",
+          "name": "Colonoscopy",
+          "nameKey": "colonoscopy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf:name-component:03",
+          "name": "Gastrointestinal imaging",
+          "nameKey": "gastrointestinal imaging",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "environmental and occupational toxicology",
+      "parentName": "Environmental and occupational toxicology",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:507046ef740ad1c0468663109d5ebb8d6ab08d0db6f4b3587acdbe51dfa0a4ce",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.21",
+          "pdfPage": 231,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:507046ef740ad1c0468663109d5ebb8d6ab08d0db6f4b3587acdbe51dfa0a4ce:name-component:01",
+          "name": "Environmental toxicology",
+          "nameKey": "environmental toxicology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:507046ef740ad1c0468663109d5ebb8d6ab08d0db6f4b3587acdbe51dfa0a4ce:name-component:02",
+          "name": "Occupational toxicology",
+          "nameKey": "occupational toxicology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "extensor compartments and snuffbox",
+      "parentName": "Extensor compartments and snuffbox",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:b1577cdd1e2b4ff9867e416896c7e156ca92d6c8bb752ff71b00996d5203a4bf",
+          "subjectId": "anatomy",
+          "code": "AN12.14",
+          "pdfPage": 115,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:b1577cdd1e2b4ff9867e416896c7e156ca92d6c8bb752ff71b00996d5203a4bf:name-component:01",
+          "name": "Wrist extensor tendon compartments",
+          "nameKey": "wrist extensor tendon compartments",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:b1577cdd1e2b4ff9867e416896c7e156ca92d6c8bb752ff71b00996d5203a4bf:name-component:02",
+          "name": "Anatomical snuffbox",
+          "nameKey": "anatomical snuffbox",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "falls and transport injuries",
+      "parentName": "Falls and transport injuries",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:3b6427c6f74b935442585ff799e9ea26bab5e586e28d98116daf786c62d1ac16",
+          "subjectId": "forensic-medicine",
+          "code": "FM7.2",
+          "pdfPage": 222,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:3b6427c6f74b935442585ff799e9ea26bab5e586e28d98116daf786c62d1ac16:name-component:01",
+          "name": "Fall injuries",
+          "nameKey": "fall injuries",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3b6427c6f74b935442585ff799e9ea26bab5e586e28d98116daf786c62d1ac16:name-component:02",
+          "name": "Transport injuries",
+          "nameKey": "transport injuries",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3b6427c6f74b935442585ff799e9ea26bab5e586e28d98116daf786c62d1ac16:name-component:03",
+          "name": "Crush syndrome",
+          "nameKey": "crush syndrome",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "fetal and placental development",
+      "parentName": "Fetal and placental development",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:766329efcd08557e55a58b6293746f12b5828f46b2faff3cea57322b456f20c9",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG4.1",
+          "pdfPage": 427,
+          "packet": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:766329efcd08557e55a58b6293746f12b5828f46b2faff3cea57322b456f20c9:name-component:01",
+          "name": "Embryonic development",
+          "nameKey": "embryonic development",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:766329efcd08557e55a58b6293746f12b5828f46b2faff3cea57322b456f20c9:name-component:02",
+          "name": "Placental development",
+          "nameKey": "placental development",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:766329efcd08557e55a58b6293746f12b5828f46b2faff3cea57322b456f20c9:name-component:03",
+          "name": "Fetal growth",
+          "nameKey": "fetal growth",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "firearm and blast evidence",
+      "parentName": "Firearm and blast evidence",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:45635b43685225f833f4380d048cb8e4543aab567e0ce23e304b79222336a998",
+          "subjectId": "forensic-medicine",
+          "code": "FM6.2",
+          "pdfPage": 221,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:45635b43685225f833f4380d048cb8e4543aab567e0ce23e304b79222336a998:name-component:01",
+          "name": "Firearm wound evidence",
+          "nameKey": "firearm wound evidence",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:45635b43685225f833f4380d048cb8e4543aab567e0ce23e304b79222336a998:name-component:02",
+          "name": "Blast injury evidence",
+          "nameKey": "blast injury evidence",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "fluid and electrolyte needs",
+      "parentName": "Fluid and electrolyte needs",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:ab71fe424f01d00cea0f6c75fc5748903b8c0d78a28efa5eca6bb44066fbf778",
+          "subjectId": "pediatrics",
+          "code": "PE15.1",
+          "pdfPage": 335,
+          "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:ab71fe424f01d00cea0f6c75fc5748903b8c0d78a28efa5eca6bb44066fbf778:name-component:01",
+          "name": "Fluid requirements",
+          "nameKey": "fluid requirements",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:ab71fe424f01d00cea0f6c75fc5748903b8c0d78a28efa5eca6bb44066fbf778:name-component:02",
+          "name": "Electrolyte requirements",
+          "nameKey": "electrolyte requirements",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "fluids and electrolytes",
+      "parentName": "Fluids and electrolytes",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:218ccf0090e2a67178e3f2a4c43e026a2fb03d5767fb386b9108a2276ec6aef5",
+          "subjectId": "surgery",
+          "code": "SU12.2",
+          "pdfPage": 405,
+          "packet": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:218ccf0090e2a67178e3f2a4c43e026a2fb03d5767fb386b9108a2276ec6aef5:name-component:01",
+          "name": "Fluid replacement",
+          "nameKey": "fluid replacement",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:218ccf0090e2a67178e3f2a4c43e026a2fb03d5767fb386b9108a2276ec6aef5:name-component:02",
+          "name": "Electrolyte replacement",
+          "nameKey": "electrolyte replacement",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "formulations and devices",
+      "parentName": "Formulations and devices",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:d29161feb0271e8c336bbd7d4b08f3af1979a8c6fdcf1b9b701e7f6ab0f7c888",
+          "subjectId": "pharmacology",
+          "code": "PH1.4",
+          "pdfPage": 174,
+          "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:d29161feb0271e8c336bbd7d4b08f3af1979a8c6fdcf1b9b701e7f6ab0f7c888:name-component:01",
+          "name": "Drug formulations",
+          "nameKey": "drug formulations",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:d29161feb0271e8c336bbd7d4b08f3af1979a8c6fdcf1b9b701e7f6ab0f7c888:name-component:02",
+          "name": "Drug delivery devices",
+          "nameKey": "drug delivery devices",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "genetics and environment",
+      "parentName": "Genetics and environment",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:d5e4cc3b3feaa371d25379bde1462764a1c942a5326f833ef325678344e37430",
+          "subjectId": "medicine",
+          "code": "GM11.4",
+          "pdfPage": 299,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:d5e4cc3b3feaa371d25379bde1462764a1c942a5326f833ef325678344e37430:name-component:01",
+          "name": "Genetic susceptibility to diabetes",
+          "nameKey": "genetic susceptibility to diabetes",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:d5e4cc3b3feaa371d25379bde1462764a1c942a5326f833ef325678344e37430:name-component:02",
+          "name": "Environmental determinants of diabetes",
+          "nameKey": "environmental determinants of diabetes",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "growth and development",
+      "parentName": "Growth and development",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08",
+          "subjectId": "pediatrics",
+          "code": "PE1.1",
+          "pdfPage": 329,
+          "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08:name-component:01",
+          "name": "Growth",
+          "nameKey": "growth",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08:name-component:02",
+          "name": "Development",
+          "nameKey": "development",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "head and neck histology i",
+      "parentName": "Head and neck histology I",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6",
+          "subjectId": "anatomy",
+          "code": "AN43.2",
+          "pdfPage": 132,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:01",
+          "name": "Pituitary histology",
+          "nameKey": "pituitary histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:02",
+          "name": "Thyroid histology",
+          "nameKey": "thyroid histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:03",
+          "name": "Parathyroid histology",
+          "nameKey": "parathyroid histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:04",
+          "name": "Tongue histology",
+          "nameKey": "tongue histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:05",
+          "name": "Salivary gland histology",
+          "nameKey": "salivary gland histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:06",
+          "name": "Tonsil histology",
+          "nameKey": "tonsil histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:07",
+          "name": "Epiglottis histology",
+          "nameKey": "epiglottis histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:08",
+          "name": "Corneal histology",
+          "nameKey": "corneal histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:09",
+          "name": "Retinal histology",
+          "nameKey": "retinal histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "head and neck histology ii",
+      "parentName": "Head and neck histology II",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3",
+          "subjectId": "anatomy",
+          "code": "AN43.3",
+          "pdfPage": 132,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:01",
+          "name": "Olfactory mucosa histology",
+          "nameKey": "olfactory mucosa histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:02",
+          "name": "Eyelid histology",
+          "nameKey": "eyelid histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:03",
+          "name": "Lip histology",
+          "nameKey": "lip histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:04",
+          "name": "Corneoscleral junction histology",
+          "nameKey": "corneoscleral junction histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:05",
+          "name": "Optic nerve histology",
+          "nameKey": "optic nerve histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:06",
+          "name": "Organ of Corti histology",
+          "nameKey": "organ of corti histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:07",
+          "name": "Pineal gland histology",
+          "nameKey": "pineal gland histology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "headache and refraction",
+      "parentName": "Headache and refraction",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc",
+          "subjectId": "ophthalmology",
+          "code": "OP10.3",
+          "pdfPage": 418,
+          "packet": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc:name-component:01",
+          "name": "Headache",
+          "nameKey": "headache",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc:name-component:02",
+          "name": "Refractive errors",
+          "nameKey": "refractive errors",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "refractive errors"
+          ],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "health economics and planning",
+      "parentName": "Health economics and planning",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f",
+          "subjectId": "community-medicine",
+          "code": "CM16.5",
+          "pdfPage": 278,
+          "packet": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f:name-component:01",
+          "name": "Cost-effectiveness analysis",
+          "nameKey": "cost-effectiveness analysis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f:name-component:02",
+          "name": "Cost-utility analysis",
+          "nameKey": "cost-utility analysis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f:name-component:03",
+          "name": "Cost–benefit analysis",
+          "nameKey": "cost–benefit analysis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f:name-component:04",
+          "name": "Health planning",
+          "nameKey": "health planning",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "hiv testing and staging",
+      "parentName": "HIV testing and staging",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975",
+          "subjectId": "medicine",
+          "code": "GM6.9",
+          "pdfPage": 292,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975:name-component:01",
+          "name": "HIV diagnostic testing",
+          "nameKey": "hiv diagnostic testing",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975:name-component:02",
+          "name": "HIV staging",
+          "nameKey": "hiv staging",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "ibd and ibs medicines",
+      "parentName": "IBD and IBS medicines",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a",
+          "subjectId": "pharmacology",
+          "code": "PH6.5",
+          "pdfPage": 180,
+          "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:01",
+          "name": "Inflammatory bowel disease pharmacotherapy",
+          "nameKey": "inflammatory bowel disease pharmacotherapy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a:name-component:02",
+          "name": "Irritable bowel syndrome pharmacotherapy",
+          "nameKey": "irritable bowel syndrome pharmacotherapy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "icu admission and discharge",
+      "parentName": "ICU admission and discharge",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39",
+          "subjectId": "anaesthesia",
+          "code": "AS7.2",
+          "pdfPage": 454,
+          "packet": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:01",
+          "name": "ICU admission criteria",
+          "nameKey": "icu admission criteria",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39:name-component:02",
+          "name": "ICU discharge criteria",
+          "nameKey": "icu discharge criteria",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "image formation and refraction",
+      "parentName": "Image formation and refraction",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc",
+          "subjectId": "physiology",
+          "code": "PY11.6",
+          "pdfPage": 159,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc:name-component:01",
+          "name": "Image formation",
+          "nameKey": "image formation",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc:name-component:02",
+          "name": "Accommodation",
+          "nameKey": "accommodation",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc:name-component:03",
+          "name": "Refractive error correction",
+          "nameKey": "refractive error correction",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "imaging, biopsy and tumour markers",
+      "parentName": "Imaging, biopsy and tumour markers",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e",
+          "subjectId": "medicine",
+          "code": "GM13.12",
+          "pdfPage": 303,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e:name-component:01",
+          "name": "Cancer imaging",
+          "nameKey": "cancer imaging",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e:name-component:02",
+          "name": "Biopsy",
+          "nameKey": "biopsy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e:name-component:03",
+          "name": "Tumour markers",
+          "nameKey": "tumour markers",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "infanticide, foeticide and stillbirth",
+      "parentName": "Infanticide, foeticide and stillbirth",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a",
+          "subjectId": "forensic-medicine",
+          "code": "FM8.4",
+          "pdfPage": 223,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a:name-component:01",
+          "name": "Infanticide",
+          "nameKey": "infanticide",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a:name-component:02",
+          "name": "Foeticide",
+          "nameKey": "foeticide",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a:name-component:03",
+          "name": "Stillbirth",
+          "nameKey": "stillbirth",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [
+            "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb:name-component:01"
+          ],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "infertility and ivf",
+      "parentName": "Infertility and IVF",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9",
+          "subjectId": "physiology",
+          "code": "PY9.10",
+          "pdfPage": 157,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9:name-component:01",
+          "name": "Infertility",
+          "nameKey": "infertility",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [
+            "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82:name-component:02"
+          ],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9:name-component:02",
+          "name": "In vitro fertilization",
+          "nameKey": "in vitro fertilization",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "innate and adaptive immunity",
+      "parentName": "Innate and adaptive immunity",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7",
+          "subjectId": "microbiology",
+          "code": "MI2.1",
+          "pdfPage": 207,
+          "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7:name-component:01",
+          "name": "Innate immunity",
+          "nameKey": "innate immunity",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7:name-component:02",
+          "name": "Adaptive immunity",
+          "nameKey": "adaptive immunity",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "insecticides and rodenticides",
+      "parentName": "Insecticides and rodenticides",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:338b443af44e2ea79a1fccda10478d5e89e9b3a8a5eae50d99bf5d3dee09d04e",
+          "subjectId": "community-medicine",
+          "code": "CM3.8",
+          "pdfPage": 271,
+          "packet": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:338b443af44e2ea79a1fccda10478d5e89e9b3a8a5eae50d99bf5d3dee09d04e:name-component:01",
+          "name": "Insecticides",
+          "nameKey": "insecticides",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:338b443af44e2ea79a1fccda10478d5e89e9b3a8a5eae50d99bf5d3dee09d04e:name-component:02",
+          "name": "Rodenticides",
+          "nameKey": "rodenticides",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    },
+    {
+      "parentNameKey": "intercostal and internal thoracic vessels",
+      "parentName": "Intercostal and internal thoracic vessels",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256",
+          "subjectId": "anatomy",
+          "code": "AN21.6",
+          "pdfPage": 121,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256:name-component:01",
+          "name": "Anterior intercostal vessels",
+          "nameKey": "anterior intercostal vessels",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256:name-component:02",
+          "name": "Posterior intercostal vessels",
+          "nameKey": "posterior intercostal vessels",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256:name-component:03",
+          "name": "Internal thoracic vessels",
+          "nameKey": "internal thoracic vessels",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "priorExactComponentNameCandidateIds": [],
+          "identityStatus": "unresolved-editorial-proposal"
+        }
+      ]
+    }
+  ]
+}
