@@ -1,6 +1,6 @@
 # Wider parent-name scope assessment
 
-Ten batches have editorially triaged **1,800 parent names across 1,941 source appearances**. There are **150 untouched parent names** left in the no-exact-label cohort. These are authoring dispositions, not accepted medical/canonical coverage.
+Eleven batches have editorially triaged **1,950 parent names across 2,094 source appearances**. The no-exact-label cohort has **zero untouched parent names**. These are authoring dispositions, not accepted medical/canonical coverage.
 
 | Batch | Names | Source appearances | Standalone candidates | Scoped facets | Families/contexts | Mixed scope |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -14,11 +14,12 @@ Ten batches have editorially triaged **1,800 parent names across 1,941 source ap
 | 08 | 200 | 231 | 58 | 64 | 67 | 11 |
 | 09 | 200 | 202 | 66 | 64 | 62 | 8 |
 | 10 | 200 | 230 | 81 | 64 | 48 | 7 |
-| Total | 1,800 | 1,941 | 513 | 627 | 594 | 66 |
+| 11 | 150 | 153 | 57 | 32 | 58 | 3 |
+| Total | 1,950 | 2,094 | 570 | 659 | 652 | 69 |
 
-Batch 10 runs from Respiratory acidosis through Thyroid tumours. Its seven mixed cases are Simulated amphibian experiments, Social context, Special populations, Statistical workflow, Surgical imaging integration, Surgical investigations and The role of the physician in the community. All prior mixed cases remain open.
+Batch 11 runs from Thyrotoxicosis through Zoonoses. Its three mixed groups are Tongue anatomy, Trauma systems and Water safety. All prior mixed cases remain open.
 
-The role of the physician in the community retains 26 distinct task records, spanning professional conduct, teamwork, learning, research, consent and documentation; this is not one canonical concept. Respiratory examination, status epilepticus, testicular tumours, thyroid examination and thyroid swellings each retain multiple source appearances. Thyroid cancer/tumours and medicines/pharmacology, and soft tissue injuries/trauma, remain separate source-bound proposals without asserting synonymy. Computer simulations, observed procedures and performed tasks retain their original modes. Legal, ethical and immunization guidance retains source-version limits; current official guidance was not rechecked.
+Transfusion observation, urinalysis and varicocele each retain two source appearances, including different teaching and specialty contexts. Urinary infection and urinary tract infections remain separate proposals without asserting synonymy. Observation, assistance, supervised assays and mannequin skills retain their source modes. Vaccine, tuberculosis, waste-rule and IMNCI labels preserve their source-version limits; no current official guidance verification is claimed.
 
 Family/context labels do not assert a single disease, medicine or procedure. Observation, supervised participation, assistance and simulation remain bound to their exact task references and modes, and do not prove independent clinical competence. No task prose or teaching content is copied into the generated packets. All canonical IDs are null, semantic equivalence unverified, and mapping/scope completion false.
 
@@ -37,8 +38,11 @@ node ops/nmc/report-parent-scope-assessments.js --batch=07 --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=08 --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=09 --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=10 --verify
+node ops/nmc/report-parent-scope-assessments.js --batch=11 --verify
 ```
 
-The reporter verifies deterministic cohort membership, index digests, source versions and all generated rows/counts. It rejects changed source evidence, forged scope completion and omitted rows with adjusted totals. Later batches exclude names recorded by predecessors and pin their exact projection digests. The ten actual cohorts have disjoint names and source references; their source-task paths, codes, coordinates, body/task hashes and modes are retained.
+The reporter verifies deterministic cohort membership, index digests, source versions and all generated rows/counts. It rejects changed source evidence, forged scope completion and omitted rows with adjusted totals. Later batches exclude names recorded by predecessors and pin their exact projection digests. The eleven actual cohorts have disjoint names and source references; their source-task paths, codes, coordinates, body/task hashes and modes are retained.
 
-Next: inspect the next untouched cohort and create batch 11 without rewriting predecessors. The 1,800 triaged names still need their indicated decomposition, semantic reuse and objective/canonical binding; triage is not certified curriculum coverage. All 66 mixed cases remain open. Shared/family target scope, 21 source exceptions and learner integration also remain unfinished. NMC Foundation is incomplete.
+Initial editorial triage is complete for all 1,950 no-exact-label parent names. Combined with 420 selected compound parents and 57 exact-label reuse leads, all 2,427 original parent names are accounted for in distinct authoring cohorts. This is inventory/triage completion, not accepted curriculum coverage.
+
+Next: build a deterministic follow-up queue across these dispositions, preserving all source references and routing the 69 mixed groups and 652 families/contexts to decomposition before canonical binding. The 570 standalone candidates and 659 scoped facets also need semantic reuse and objective/canonical binding. Shared/family target scope, 21 source exceptions and learner integration remain unfinished. NMC Foundation is incomplete.
