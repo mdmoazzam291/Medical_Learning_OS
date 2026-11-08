@@ -1,0 +1,2759 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    }
+  ],
+  "sourceHead": "95eb12ef95f37eb0f74f40652673a9dc96c19878",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 30,
+    "componentProposals": 140,
+    "familyParentsWithoutDecompositionProposal": 532
+  },
+  "rows": [
+    {
+      "parentNameKey": "bleeding disorders",
+      "parentName": "Bleeding disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA20.1",
+          "page": 193,
+          "rowBBox": [
+            51.5,
+            264.9,
+            105.6,
+            305.94
+          ],
+          "sourceBodySha256": "82e93263de50fbd731d6c9fb479c710b8ddcae6b6fc12668564cf21d1a49ec4a",
+          "editorialTaskSha256": "b517b1b33e2e18f426ee3775c316539674d975f2df275ac65d8873549400601a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:01:01",
+          "name": "Haemostasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "haemostasis"
+            },
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "haemostasis"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:02",
+          "name": "Vascular bleeding disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:03",
+          "name": "Platelet disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:04",
+          "name": "Coagulation disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:05",
+          "name": "Immune thrombocytopenia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "immune thrombocytopenia"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:06",
+          "name": "Haemophilia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "haemophilia"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:01:07",
+          "name": "Bleeding disorder differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "blood practicals",
+      "parentName": "Blood practicals",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.11",
+          "page": 151,
+          "rowBBox": [
+            58.5,
+            239.58,
+            107.8,
+            272.34
+          ],
+          "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+          "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:02:01",
+          "name": "Haemoglobin estimation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:02",
+          "name": "Red cell count",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:03",
+          "name": "Total leucocyte count",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:04",
+          "name": "Differential leucocyte count",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:05",
+          "name": "Blood grouping",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "blood grouping"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:06",
+          "name": "Bleeding time",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:07",
+          "name": "Clotting time",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:08",
+          "name": "Red cell indices",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "red cell indices"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:09",
+          "name": "Approved-specimen blood practical",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:02:10",
+          "name": "Blood practical simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "bone specimens",
+      "parentName": "Bone specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:355b3a29ad7752635ab24b5458426d2aacbe1a8505e6f1c119fc7732b99fba54",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA32.7",
+          "page": 203,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            157.98
+          ],
+          "sourceBodySha256": "b7e73e490a17de1e461313e9d2b6e70ec303c8416369e1215cbc25c6f1ae581a",
+          "editorialTaskSha256": "6af3d5ef77e8ea7faaa2a272b316dddf69c91476a6bce7d63e0a7eb763f5b08d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:03:01",
+          "name": "Bone disease specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:355b3a29ad7752635ab24b5458426d2aacbe1a8505e6f1c119fc7732b99fba54"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:03:02",
+          "name": "Bone tumour specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:355b3a29ad7752635ab24b5458426d2aacbe1a8505e6f1c119fc7732b99fba54"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:03:03",
+          "name": "Bone histology identification justification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:355b3a29ad7752635ab24b5458426d2aacbe1a8505e6f1c119fc7732b99fba54"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "breast imaging",
+      "parentName": "Breast imaging",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD7.6",
+          "page": 459,
+          "rowBBox": [
+            40.1,
+            389.88,
+            103.9,
+            431.28
+          ],
+          "sourceBodySha256": "07fe8b444116fe462190e964f8bd8edf726cc55f761a1bff31c9c15596762c42",
+          "editorialTaskSha256": "95ca16cb6be748eef90a9edbef09cfef862d127d58cd17691df59ef446818017",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:04:01",
+          "name": "Breast screening imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:04:02",
+          "name": "Known breast cancer imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:04:03",
+          "name": "Breast imaging diagnostic discussion",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "breast specimens",
+      "parentName": "Breast specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA30.5",
+          "page": 201,
+          "rowBBox": [
+            51.5,
+            268.86,
+            105.6,
+            300.9
+          ],
+          "sourceBodySha256": "42712a4bfc2ff4f8502ae60b46ffd608048b58d400a3eea2707d5dc720ea50ab",
+          "editorialTaskSha256": "3235a22c35cfa3e4ec95a11159b8dec8cb709513aed7c8872d69b0d27242f281",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:05:01",
+          "name": "Benign breast tumour specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:05:02",
+          "name": "Malignant breast tumour specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:05:03",
+          "name": "Breast tumour gross discrimination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:05:04",
+          "name": "Breast tumour microscopic discrimination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "breast tumours",
+      "parentName": "Breast tumours",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e4d26e3cc68a575776d78557664bf5c0f935c315eb47233971b255ccd47d5971",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU25.3",
+          "page": 409,
+          "rowBBox": [
+            45,
+            197.28,
+            101.7,
+            231.18
+          ],
+          "sourceBodySha256": "2c5ee836d0fb51133d5c311514ea66e706a6b5aeba191b2eb290ba990eefb2f5",
+          "editorialTaskSha256": "cb3725e46bedfa99aa8d990e4fdac0075a09e87992d4f2eabed75668f29ae826",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:06:01",
+          "name": "Benign breast tumour presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4d26e3cc68a575776d78557664bf5c0f935c315eb47233971b255ccd47d5971"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:06:02",
+          "name": "Malignant breast tumour presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4d26e3cc68a575776d78557664bf5c0f935c315eb47233971b255ccd47d5971"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:06:03",
+          "name": "Breast tumour investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4d26e3cc68a575776d78557664bf5c0f935c315eb47233971b255ccd47d5971"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:06:04",
+          "name": "Breast tumour treatment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4d26e3cc68a575776d78557664bf5c0f935c315eb47233971b255ccd47d5971"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "bronchopulmonary segments",
+      "parentName": "Bronchopulmonary segments",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN24.3",
+          "page": 123,
+          "rowBBox": [
+            51.2,
+            301.02,
+            121.9,
+            333.78
+          ],
+          "sourceBodySha256": "98dfceb6411fcfd9173fcfcad3f0c607990ff6048224e9cf4084a6a5ee3c517e",
+          "editorialTaskSha256": "6c79e7dfda5ffa678dbf0ee307daae53ee1e88e832760e95710380b28ac6046b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:07:01",
+          "name": "Bronchopulmonary segment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:07:02",
+          "name": "Segmental bronchus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:07:03",
+          "name": "Segmental pulmonary artery",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:07:04",
+          "name": "Intersegmental pulmonary veins",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:07:05",
+          "name": "Pulmonary segmental resection anatomy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "buffers",
+      "parentName": "Buffers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:be0fcdf98acfb713939cd061185b3ce392cbe8b0e3cb2a0e86a9604b57d48f33",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY1.6",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            300.72,
+            107.8,
+            323.04
+          ],
+          "sourceBodySha256": "89be209a06cad7b9b06247911888440677eb2298916e739b117fbcb35c8486a2",
+          "editorialTaskSha256": "e6d64cc01df2d3e55f007ac6f7b0930a8af84aff3c31e1c0eff3220d454f179d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:08:01",
+          "name": "Bicarbonate buffer",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be0fcdf98acfb713939cd061185b3ce392cbe8b0e3cb2a0e86a9604b57d48f33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:08:02",
+          "name": "Buffer equation application",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be0fcdf98acfb713939cd061185b3ce392cbe8b0e3cb2a0e86a9604b57d48f33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:08:03",
+          "name": "Non-bicarbonate buffer function",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be0fcdf98acfb713939cd061185b3ce392cbe8b0e3cb2a0e86a9604b57d48f33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cancer diagnostics",
+      "parentName": "Cancer diagnostics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA6.5",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            323.94,
+            105.6,
+            352.02
+          ],
+          "sourceBodySha256": "27c3a6669da3d24696bb911f66d811b62f4c26cbdc7cfdc5d9a7a20031207a85",
+          "editorialTaskSha256": "513c2bd9f50980841f26258d0b97cdfc598f9e43a50fa15dab0a4a13b34d63ea",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:09:01",
+          "name": "Tissue cancer diagnosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:09:02",
+          "name": "Molecular cancer profiling",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:09:03",
+          "name": "Tumour markers",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "tumour markers"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:09:04",
+          "name": "Cancer diagnostic purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:09:05",
+          "name": "Cancer diagnostic limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:09:06",
+          "name": "Emerging cancer diagnostic approaches",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cancer treatment modalities",
+      "parentName": "Cancer treatment modalities",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e2e3aed8281bf247311f376454d647cbdd56142eb0c15947e0b71518da662c79",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.14",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            452.94,
+            102.7,
+            480.3
+          ],
+          "sourceBodySha256": "ae22ef56bd400b45198db6f829227946ab8b724b737442461edeb1e3634f167c",
+          "editorialTaskSha256": "e624a4a9a56af762f4be929b5c13840bd3fab5c931f2a9a25bcdb8e5cfca79c4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:10:01",
+          "name": "Cancer surgery",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e3aed8281bf247311f376454d647cbdd56142eb0c15947e0b71518da662c79"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:10:02",
+          "name": "Radiotherapy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e3aed8281bf247311f376454d647cbdd56142eb0c15947e0b71518da662c79"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:10:03",
+          "name": "Cancer chemotherapy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e3aed8281bf247311f376454d647cbdd56142eb0c15947e0b71518da662c79"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:10:04",
+          "name": "Cancer treatment modality indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e2e3aed8281bf247311f376454d647cbdd56142eb0c15947e0b71518da662c79"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "carbohydrate classes",
+      "parentName": "Carbohydrate classes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC3.1",
+          "page": 163,
+          "rowBBox": [
+            58.7,
+            124.5,
+            108.5,
+            179.64
+          ],
+          "sourceBodySha256": "3cfe43f1387d91b0b5ae091ad6c59349f8858a3efc62f461d71782c6218c7fd2",
+          "editorialTaskSha256": "8bd75a0960c5ebf2a9b1be65e96b5ee876745fd1e0f9830a2b60e24818e01172",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:11:01",
+          "name": "Carbohydrate classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:11:02",
+          "name": "Carbohydrate structure–fuel correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:11:03",
+          "name": "Carbohydrate storage role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:11:04",
+          "name": "Carbohydrate structural role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiac chambers",
+      "parentName": "Cardiac chambers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN22.2",
+          "page": 122,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            153.42
+          ],
+          "sourceBodySha256": "501e9c6a4b5761b72edd56e41070e57daed430ef48dd21803b3d26cd2f07dad2",
+          "editorialTaskSha256": "e308800fe98799e00c1d8ca8c6d542ec599e8f82ed9dc63592e041d183ef5b58",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:12:01",
+          "name": "Cardiac chamber orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:12:02",
+          "name": "Cardiac chamber surfaces",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:12:03",
+          "name": "Cardiac chamber inflow",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:12:04",
+          "name": "Cardiac chamber outflow",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:12:05",
+          "name": "Cardiac septal features",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:12:06",
+          "name": "Cardiac chamber internal landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiac interventions",
+      "parentName": "Cardiac interventions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.23",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            364.02,
+            102.7,
+            404.7
+          ],
+          "sourceBodySha256": "bdd68e7d2c6c9a20453ab269cce017192d2d69298acfa6b4b32473f7824aa65b",
+          "editorialTaskSha256": "e49144074463f30e4665f23606527bf2212e73bd562e4eedc2a281f24b174c93",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:13:01",
+          "name": "Valvuloplasty",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:13:02",
+          "name": "Valvotomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:13:03",
+          "name": "Cardiac revascularization",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:13:04",
+          "name": "Heart transplantation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:13:05",
+          "name": "Cardiac intervention indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiac murmurs",
+      "parentName": "Cardiac murmurs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.13",
+          "page": 282,
+          "rowBBox": [
+            44.2,
+            296.52,
+            102.7,
+            337.14
+          ],
+          "sourceBodySha256": "986ce6a10def8bb59e46b293c286c4ff6c2977ef2956736d2892e4558eb26229",
+          "editorialTaskSha256": "6fe06546fde694a7d1ec7c432a8118dd9a35e50fb1c9744ed6da25470dde38df",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:14:01",
+          "name": "Murmur timing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:14:02",
+          "name": "Murmur pitch",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:14:03",
+          "name": "Murmur quality",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:14:04",
+          "name": "Murmur radiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:14:05",
+          "name": "Dynamic murmur manoeuvres",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiac surgery",
+      "parentName": "Cardiac surgery",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9b44a5086232bda269009ec2aed235b9e4d146854961fd0cdf3cc6585579e313",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU26.1",
+          "page": 409,
+          "rowBBox": [
+            45,
+            326.46,
+            101.7,
+            363.54
+          ],
+          "sourceBodySha256": "4cb3818ddd9765b0d546ceaa539756c52e9b7f0979167dd4505f3ae26c0abac7",
+          "editorialTaskSha256": "bb98b132d3ad93d7329b7d0289c456a8619e19ff44b4228fc7c276a3267bb5bd",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:15:01",
+          "name": "Coronary disease surgical role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b44a5086232bda269009ec2aed235b9e4d146854961fd0cdf3cc6585579e313"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:15:02",
+          "name": "Valvular disease surgical role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b44a5086232bda269009ec2aed235b9e4d146854961fd0cdf3cc6585579e313"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:15:03",
+          "name": "Congenital cardiac disease surgical role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b44a5086232bda269009ec2aed235b9e4d146854961fd0cdf3cc6585579e313"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiomyopathies",
+      "parentName": "Cardiomyopathies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.9",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            383.7,
+            105.6,
+            428.04
+          ],
+          "sourceBodySha256": "395590bacd1c3a24b7fd8324d45474d3652b2ef053d26bfbe3e3c90bf4df5bd5",
+          "editorialTaskSha256": "ec5652209c46fa239d3cf6e47308dc322adb3007830414490faf617d72b1851b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:16:01",
+          "name": "Dilated cardiomyopathy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:02",
+          "name": "Hypertrophic cardiomyopathy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:03",
+          "name": "Restrictive cardiomyopathy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:04",
+          "name": "Cardiomyopathy causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:05",
+          "name": "Cardiomyopathy morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:06",
+          "name": "Cardiomyopathy functional findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:16:07",
+          "name": "Cardiomyopathy complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cardiovascular tumours",
+      "parentName": "Cardiovascular tumours",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.10",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            428.04,
+            105.6,
+            455.7
+          ],
+          "sourceBodySha256": "2d2b89bb0d6e3e952dc769b1ee83814aa8acc01ffdba13c6a2006e6c720d35a3",
+          "editorialTaskSha256": "ef6cbc2b331ca9dc7c91872689d3d9ee729e60a2d362d8cd0f29555467443f10",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:17:01",
+          "name": "Cardiac tumour origins",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:17:02",
+          "name": "Vascular tumour origins",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:17:03",
+          "name": "Cardiovascular tumour morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:17:04",
+          "name": "Cardiovascular tumour consequences",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "career pathways",
+      "parentName": "Career pathways",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:009beeb379b6d247e3daa15046c638a7652773c4d4c31d7296876a3ddde7c8b9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS1.4",
+          "page": 452,
+          "rowBBox": [
+            46.7,
+            386.52,
+            98.1,
+            400.62
+          ],
+          "sourceBodySha256": "f5a47f95e1f9562ee1982c63627177dab916a9bba972a915c974949a7c667116",
+          "editorialTaskSha256": "1fbae6c29f5322a6f16b67a75c1807976bac18e9c94d4ae28ca2cf1787d7a98b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:18:01",
+          "name": "Specialty training pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:009beeb379b6d247e3daa15046c638a7652773c4d4c31d7296876a3ddde7c8b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:18:02",
+          "name": "Specialty practice roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:009beeb379b6d247e3daa15046c638a7652773c4d4c31d7296876a3ddde7c8b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cartilage types",
+      "parentName": "Cartilage types",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a87902ebfebd099f6aebd573087b1a547abc39c2bd7a937ac5bd10d429646f74",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN2.4",
+          "page": 108,
+          "rowBBox": [
+            51.2,
+            361.44,
+            120.4,
+            392.4
+          ],
+          "sourceBodySha256": "54b2191ae48950e984ac13f8fd5a47cdd8060e6124b25d4a27a7504193546cc4",
+          "editorialTaskSha256": "38c8780dce27ba88368e7b7afe628922850eb12c504b0880a62383d767fac074",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:19:01",
+          "name": "Cartilage specimen comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a87902ebfebd099f6aebd573087b1a547abc39c2bd7a937ac5bd10d429646f74"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:19:02",
+          "name": "Cartilage structural classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a87902ebfebd099f6aebd573087b1a547abc39c2bd7a937ac5bd10d429646f74"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:19:03",
+          "name": "Cartilage anatomical distribution",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a87902ebfebd099f6aebd573087b1a547abc39c2bd7a937ac5bd10d429646f74"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cataract procedures",
+      "parentName": "Cataract procedures",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP8.4",
+          "page": 417,
+          "rowBBox": [
+            49.5,
+            325.68,
+            103.5,
+            398.04
+          ],
+          "sourceBodySha256": "dafd9b1df01dc158c8cb764f2e2df8f245900f3b6899e35b791314b64138aa98",
+          "editorialTaskSha256": "3c841961d8909962c10905fa81545a05982b8a7d086171a7211e61092e9e6451",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:20:01",
+          "name": "Extracapsular cataract extraction",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:20:02",
+          "name": "Cataract surgical approach comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:20:03",
+          "name": "Cataract anaesthetic approach comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:20:04",
+          "name": "ECCE steps",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:20:05",
+          "name": "Cataract procedure complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:20:06",
+          "name": "Cataract postoperative care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b7b02a58ad5652e7b89252f2137470ea4181c7d13d67f7e9c24562519ee61dd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cell death",
+      "parentName": "Cell death",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA2.4",
+          "page": 187,
+          "rowBBox": [
+            51.5,
+            418.62,
+            105.6,
+            452.4
+          ],
+          "sourceBodySha256": "1ffe5918c9efb5e08194799e2011cf2e345991cbc821e12854adeef497caadd0",
+          "editorialTaskSha256": "355a133470ecc4027f415ff3809aca1566374694b75a756fd4491224929aacff",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:21:01",
+          "name": "Necrosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:21:02",
+          "name": "Apoptosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "apoptosis"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:21:03",
+          "name": "Autolysis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:21:04",
+          "name": "Cell death mechanism comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:21:05",
+          "name": "Cell death morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cell physiology",
+      "parentName": "Cell physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY1.1",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            158.22,
+            107.8,
+            190.98
+          ],
+          "sourceBodySha256": "e955af14eb89e3983d3d22ae1edc0c07b54520c4b76bd01520a9867d841485b7",
+          "editorialTaskSha256": "54e81640081484a7583feb97d5154ba40b877190bf837784129ebf23a8187b44",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:22:01",
+          "name": "Cell organelles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "cell organelles"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:22:02",
+          "name": "Cell signalling pathways",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:22:03",
+          "name": "Cell structure–function mapping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:22:04",
+          "name": "Cell physiology example interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cellular adaptation",
+      "parentName": "Cellular adaptation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA2.6",
+          "page": 187,
+          "rowBBox": [
+            51.5,
+            473.28,
+            105.6,
+            508.2
+          ],
+          "sourceBodySha256": "c2ccfb77d385cfbc46457f055d6fe79b0e5d327cda8426d938347ccef5a2ffd4",
+          "editorialTaskSha256": "ea091141a488cf9c37a2fd150c7d7d33970d1952636ff1244f00ceb6fd832fc6",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:23:01",
+          "name": "Atrophy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:02",
+          "name": "Hypertrophy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:03",
+          "name": "Hyperplasia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:04",
+          "name": "Metaplasia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:05",
+          "name": "Dysplasia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:06",
+          "name": "Carcinoma in situ",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:07",
+          "name": "Cellular adaptation comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:23:08",
+          "name": "Dysplasia–carcinoma in situ distinction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cellular energy",
+      "parentName": "Cellular energy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC7.2",
+          "page": 165,
+          "rowBBox": [
+            58.7,
+            475.08,
+            108.5,
+            508.56
+          ],
+          "sourceBodySha256": "43c0d2230ae255e491b0feb18477ea92735b2cbaf16da13e37d1253ab23620c1",
+          "editorialTaskSha256": "cad5fb018e7fa53755d88fd0087ead7049f2bfd223a6cb0d2706c816e675b1fb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:24:01",
+          "name": "Substrate-level phosphorylation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:24:02",
+          "name": "Oxidative phosphorylation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:24:03",
+          "name": "Electron transport",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:24:04",
+          "name": "Oxidative coupling",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:24:05",
+          "name": "Disrupted cellular energy prediction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "central nervous system histology",
+      "parentName": "Central nervous system histology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN64.1",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            483.24,
+            122.2,
+            508.08
+          ],
+          "sourceBodySha256": "27db6b221f290f4db98161eba25208215707dbcce5508b1a73ed65dff2be5038",
+          "editorialTaskSha256": "69915e98511b9e6141d6d159385d06cdf8e8af3237c2af1e47bb63f1c9ac404b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:25:01",
+          "name": "Spinal cord histology identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:25:02",
+          "name": "Cerebellar histology identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:25:03",
+          "name": "Cerebral histology identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:25:04",
+          "name": "CNS histological architecture justification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "central nervous system organization",
+      "parentName": "Central nervous system organization",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.1",
+          "page": 157,
+          "rowBBox": [
+            58.5,
+            450.42,
+            107.8,
+            477.78
+          ],
+          "sourceBodySha256": "d67b5255716062038f825e86cef7855317a7098c82c861cc2c03ebf32521678d",
+          "editorialTaskSha256": "3e7cde4766f3907a622eaa08f8ca4b32a7a4af7b0b996fcdbe072ccb01445063",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:26:01",
+          "name": "Brain functional divisions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:26:02",
+          "name": "Spinal cord functional divisions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:26:03",
+          "name": "CNS division–function mapping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cerebellar dysfunction",
+      "parentName": "Cerebellar dysfunction",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN60.3",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            286.62,
+            121.9,
+            311.46
+          ],
+          "sourceBodySha256": "58037934f3256fefe816c931388b517f1f26a0bb6383c158c559b27dd123777a",
+          "editorialTaskSha256": "9015450a3214aaf5664a04e31caa4b9ee11c7a341c0f98c00c595928bfc67f80",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:27:01",
+          "name": "Cerebellar functional regions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:27:02",
+          "name": "Cerebellar connections",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "cerebellar connections"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:27:03",
+          "name": "Cerebellar gait findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:27:04",
+          "name": "Cerebellar limb coordination findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:27:05",
+          "name": "Cerebellar eye movement findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cerebral arterial circulation",
+      "parentName": "Cerebral arterial circulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN62.6",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            280.86,
+            122.2,
+            329.46
+          ],
+          "sourceBodySha256": "6d5b3f828ee88258695a900db07e8d0cdbcda7e3aa0e7c1bd0009b2503cb50a3",
+          "editorialTaskSha256": "22b07be08a9f93e10bd8a7ac67e1c483217cf477cffa79a996357025e8a862d4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:28:01",
+          "name": "Circle of Willis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:28:02",
+          "name": "Cerebral arterial branches",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:28:03",
+          "name": "Cerebral arterial territory mapping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cerebral white matter",
+      "parentName": "Cerebral white matter",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN62.3",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            157.74,
+            122.2,
+            194.1
+          ],
+          "sourceBodySha256": "f824933aba723580192ab09d263c5629a8197af927bb2c364ad0ab3da5026907",
+          "editorialTaskSha256": "f168bacc9e2b2a48b6e5d5d9e8d4367bc486d9a0d46556447ebe375e2eb0f58e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:29:01",
+          "name": "Association fibres",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:29:02",
+          "name": "Commissural fibres",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:29:03",
+          "name": "Projection fibres",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:29:04",
+          "name": "Corpus callosum",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:29:05",
+          "name": "Internal capsule",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:29:06",
+          "name": "White matter lesion deficit prediction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cervical fascial spaces",
+      "parentName": "Cervical fascial spaces",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN35.10",
+          "page": 129,
+          "rowBBox": [
+            51.2,
+            420.54,
+            122.2,
+            445.02
+          ],
+          "sourceBodySha256": "77e0ca51b055d27ca1b14790e6b186b591d6172f1c5ccd5690a642563c8afac7",
+          "editorialTaskSha256": "ee28d419a9be1f3f635fd58eb85fb8e79a48f2a8823ddb4edb6c03fc72784d0d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-04:30:01",
+          "name": "Deep neck space anatomy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:30:02",
+          "name": "Cervical infection spread pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-04:30:03",
+          "name": "Mediastinal infection spread",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

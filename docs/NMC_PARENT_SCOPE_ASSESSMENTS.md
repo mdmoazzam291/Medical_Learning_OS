@@ -134,3 +134,11 @@ The next 30 family parents (Antiseizure medicines through Birth injuries) have [
 The queue, three inventories and both predecessors are digest-pinned; two component labels have unverified exact-label leads. Across three batches, 90 family parents have 419 proposals and 93 source appearances; 562 families lack initial proposals. All enumerations/scopes/bindings remain incomplete, canonical IDs null. No teaching content, current guidance recheck or automatic merging.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=03`. Next: inspect the next cohort beginning Bleeding disorders, retaining source-specific contexts and all predecessor pins.
+
+## Family/context decomposition proposals: batch 04
+
+The next 30 family parents (Bleeding disorders through Cervical fascial spaces) have [140 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json): 55 reusable-topic candidates and 85 contextual-task facets across 30 source appearances. Breast imaging, specimen discrimination and clinical tumour care retain distinct scopes. Blood practicals preserve approved-sample/simulation context. Named cardiomyopathy patterns, cellular processes and fibre classes are distinguished without inventing unnamed family members. Career pathways remain specialty-bound facets; no specialty-independent qualification claim is made.
+
+The queue, three inventories and all three predecessors are digest-pinned; nine component labels have unverified exact-label hints. Cumulative: 120 family parents, 559 proposal occurrences and 123 source appearances; 532 families still lack initial proposals. All scopes, enumerations and bindings remain incomplete; canonical IDs null. No teaching content or automatic merging.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=04`. Next: inspect the next family cohort beginning Cervical lymph nodes, preserving task support and predecessor digests.
