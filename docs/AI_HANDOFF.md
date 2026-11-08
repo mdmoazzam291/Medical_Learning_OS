@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 01 — 9 November 2026 IST
+
+Checked at 2026-11-08T18:44:09.951Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 005cc4ff231c71eebe55e80f38f10cf0b132650b; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 170174710a60d8e4b3289338415b80715d79edba. Names-only instruction active.
+
+Added scoped-task-home-proposals-batch-01.json, verify-scoped-task-homes.js and nine focused tests. Reviewed first 30 original scoped facets from the 659-row resolve-home-and-bind-task cohort, Abdominal muscle attachments through Amniotomy observation. Preserved all 30 source appearances; proposed 22 distinct home names. Fifteen links have exact-label inventory candidates and 15 have proposed new names (links, not distinct new names). Existing-name matches are hints, not validated home identities. Original selected-component home packets and family packets remain unchanged.
+
+Admission criteria remains pneumonia-specific (GM3.17). ACLS remains supervised observation/assigned role. Adolescent consultation confidentiality retains its limits; adolescent clinic observation is not service competence. Adrenal gland homes preserve anatomy/physiology source scopes; amniotomy observation or assistance does not establish independent performance. Adult protein reference, migraine medicines reference and seizure protocol remain version-bound and not current guideline rechecks. No unnamed muscles are invented. All canonical/objective IDs null, mapping/scope/binding/independent competence false. No teaching content, production changes or automatic merges.
+
+Verification: scoped home verifier PASS; 36 focused tests PASS (nine scoped-home plus 27 family checks); syntax check PASS. Cohort order, exact source tasks/hashes/coordinates/modes, queue/inventory pins, unique IDs, hints, totals and pending flags checked. Tests reject self-parent mapping, forged candidates, independent ACLS competence, changed mode and omitted facets. Full npm test and npm run check NOT run in partial checkout. Semantic fit remains editorial and unverified.
+
+Next: scoped-task home batch 02 beginning Amniotomy practical, next 30 original queue facets. Inspect source tasks, reuse existing home proposals from batch 01 where appropriate without duplicate identities; preserve multi-home ambiguity rather than forcing mappings. Pin queue/three inventories and batch-01 digest; run verifier --batch=02. 629 scoped facets await initial homes, 570 standalone-topic reuse/binding cases remain, and all actual home/objective/canonical binding, exceptions and learner integration are unfinished. Foundation incomplete. Save with expected-head lease and verify remote files; release ownership. No external writer jobs, auto-merge or deployment.
+
+---
+
 ## Family reuse source-scope comparisons — 9 November 2026 IST
 
 Checked at 2026-11-08T18:39:56.025Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 841132eb389e3c9e9512addb526e5b9efcc0a8ed; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: e6de7ba6a1527c491fe06ad566439a686a9c2d6e. Names-only instruction active.

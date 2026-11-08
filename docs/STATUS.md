@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 01 — 9 November 2026
+
+Added initial home proposals for 30 scoped facets / 30 source appearances (Abdominal muscle attachments through Amniotomy observation). Proposed 22 distinct homes: 15 existing-name candidate links and 15 proposed-new-name links. 629 original scoped facets remain without initial home proposals. Canonical identities, mapping acceptance, full scope, objective binding and independent competence remain unaccepted. Implementation: 170174710a60d8e4b3289338415b80715d79edba.
+
+Scoped-home verifier, 36 focused tests and syntax checks PASS. Full suite and npm run check not run in partial checkout. Next: batch 02, Amniotomy practical. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Family reuse source-scope comparisons — 9 November 2026
 
 Compared all 78 family leads: 62 shared-topic name candidates, ten scoped facets, five self-parent references and one context-specific separation (forensic versus paediatric anthropometry). Preserved 97 component occurrences, 61 source references and 66 target-support references. No semantic/objective equivalence, independent competence or identity acceptance. Implementation: e6de7ba6a1527c491fe06ad566439a686a9c2d6e.
