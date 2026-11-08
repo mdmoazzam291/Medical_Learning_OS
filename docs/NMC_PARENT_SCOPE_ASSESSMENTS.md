@@ -110,3 +110,11 @@ The first 30 family/context parents (Abdominal incisions through Age-specific nu
 The batch pins the queue and three existing comparison inventories. One component has an exact-label inventory lead, retained as an unverified hint; lack of exact equality does not establish novelty. No automatic merge, canonical allocation, full member enumeration, clinical/source approval or teaching content. All scopes and bindings remain incomplete. Of 652 family/context parents, 30 now have initial proposals and 622 do not.
 
 Next: inspect the next source-sized family cohort beginning with AI in laboratory biochemistry, preserving unspecified family members and task modes. Consolidate repeatable verification for family packets before expanding substantially. Mixed-group and reuse evidence remains unchanged; actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished.
+
+## Repeatable family-decomposition verification
+
+Run `node ops/nmc/verify-family-decomposition.js` (or `--batch=NN` once later batches exist). The CLI revalidates the parent queue against its eleven assessment batches, then verifies family cohorts in source order, queue and comparison-inventory hashes, exact source-task evidence, nonempty valid component bindings, complete source representation, unique proposal IDs and recomputed exact-label hints. Later batches must pin every predecessor packet digest and exclude their cohorts. Initial batch 01 retains its original 30-row selection; future packets may state an explicit selectionLimit.
+
+All parent enumerations remain partial/unspecified and scope/binding flags false; canonical IDs remain null. The verifier checks evidence structure and accounting, not whether a proposed name is clinically complete or equivalent to another concept. Nine behavioral tests cover omissions with adjusted totals, foreign links, canonical/full-scope forgery, false label hints, queue drift, duplicate IDs and forged source modes.
+
+Next: continue family batch 02 from AI in laboratory biochemistry, using source-sized proposals and explicit predecessor pins. The 622 remaining family groups and actual bindings remain unfinished; no teaching content or learner publication.
