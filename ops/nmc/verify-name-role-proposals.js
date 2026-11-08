@@ -26,4 +26,15 @@ for(const e of p.entries){
  }
 }
 assert.deepEqual(p.totals,{entries:names.size,reusableNameCandidates:candidates,scopeFacets:facets,componentOccurrences:count});
-console.log(JSON.stringify({status:'PASS',...p.totals,canonicalAcceptance:false}));
+assert.equal(p.expectedComponentBatchCount,12);
+const expectedIds=new Set(),expectedNames=new Set();
+for(let i=1;i<=p.expectedComponentBatchCount;i++){
+ const path='docs/evidence/2026-11-08-nmc-compound-name-components-batch-'+String(i).padStart(2,'0')+'.json';
+ for(const row of read(path).rows)for(const c of row.components){
+  assert(!expectedIds.has(c.componentProposalId),'duplicate source component');
+  expectedIds.add(c.componentProposalId);expectedNames.add(c.name.normalize('NFC').trim().toLowerCase());
+ }
+}
+assert.deepEqual([...ids].sort(),[...expectedIds].sort(),'incomplete component role coverage');
+assert.deepEqual([...names].sort(),[...expectedNames].sort(),'incomplete name role coverage');
+console.log(JSON.stringify({status:'PASS',...p.totals,completeForSelectedComponentBatches:true,canonicalAcceptance:false}));
