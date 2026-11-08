@@ -1,3 +1,11 @@
+## Family decomposition batch 15 — 8 November 2026
+
+Added 136 source-bound names-only proposals across 30 groups / 31 source appearances (Neonatal seizures through Opportunistic infection prophylaxis). Cumulative: 450 groups, 2,103 proposals, 457 source appearances; 202 groups await initial proposals. Implementation: 2f8bb4087a5a55b89dffdc54ada5b45460c0deb8. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: fifteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 16, Opportunistic infection tests.
+
+---
+
 ## Family decomposition batch 14 — 8 November 2026
 
 Added 124 source-bound names-only proposals across 30 groups / 31 source appearances (Mental health concepts through Neonatal respiratory distress). Cumulative: 420 groups, 1,967 proposals, 426 source appearances; 232 groups await initial proposals. Implementation: 7ad20c769e69b36fbe96159663947f219596aa92. All acceptance/scope/binding remains pending. No teaching content or production changes.
