@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 16 — 9 November 2026
+
+Added proposals for 30 facets / 33 source appearances (Obesity examination through Paediatric lupus). Batch: 23 home labels, 21 existing-name and nine proposed-name links. Cumulative: 480 facets / 488 appearances / 273 proposed home labels; 179 facets await initial homes. Implementation: 8299446fa99bc2efff518802099dde5e7f1c8851. All mappings/bindings pending.
+
+Sixteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Paediatric lymphoma. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 15 — 9 November 2026
 
 Added proposals for 30 facets / 31 source appearances (Midbrain landmarks through Obesity differential). Batch: 21 home labels, twelve existing-name and eighteen proposed-name links. Cumulative: 450 facets / 455 appearances / 261 proposed home labels; 209 facets await initial homes. Implementation: 0d72d4012199041c8a2daad882b9afd9ee3cb2bc. All mappings/bindings pending.
