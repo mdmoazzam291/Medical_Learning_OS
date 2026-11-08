@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 07 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Diabetes classification through ECG in suspected coronary disease). Batch: 18 home labels, 21 existing-name and nine proposed-name links. Cumulative: 210 facets / 213 appearances / 135 proposed homes; 449 facets await initial homes. Implementation: 82f2580ffc8b662bf2172bcf7c8497ed087daa6f. All mappings/bindings pending.
+
+Seven-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: ECG practical. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 06 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (Context-sensitive complementary feeding through Depression red flags). Batch: 24 home labels, fourteen existing-name and sixteen proposed-name links. Cumulative: 180 facets / 183 appearances / 119 proposed homes; 479 facets await initial homes. Implementation: 0a1532276762af77c45771989249acffd17943b1. All mappings/bindings pending.

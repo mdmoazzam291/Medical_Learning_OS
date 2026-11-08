@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 07 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:20:28.569Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ae3968cfee8ede981941d45ab6343e360060d5e0; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 82f2580ffc8b662bf2172bcf7c8497ed087daa6f. Names-only instruction active.
+
+Reviewed next 30 facets, Diabetes classification through ECG in suspected coronary disease. Preserved 30 source appearances; proposed 18 distinct home labels with 21 existing-name and nine proposed-name links. Diabetes contexts remain separate from emergency/DKA scopes; diarrhoea plans preserve acute/chronic and adult/paediatric/HIV distinctions. IMNCI/DKA referral, disaster exercises, DNA exhibits and dying declaration retain simulation/evidence limits; protocol/legal authority not reverified. EA-ECC remains supervised observation/assistance. Coronary ECG retains indication/recording/interpretation context rather than all ECG competence. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative seven scoped-home batches: 210 facets, 213 source appearances, 135 distinct proposed homes; 449 scoped facets await initial proposals. Queue/three inventories/all six predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=07 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 08 beginning ECG practical. Inspect source tasks, preserve role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors, run --batch=08. Actual canonical/home/objective binding, 570 standalone-topic cases, exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 06 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:17:25.148Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at b5ff6025c1bf6c526034c47db0a2ee70e7af70fb; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 0a1532276762af77c45771989249acffd17943b1. Names-only instruction active.
