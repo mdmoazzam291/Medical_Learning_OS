@@ -1,3 +1,11 @@
+## Family decomposition batch 11 — 8 November 2026
+
+Added 119 source-linked names-only proposals across 30 groups / 30 source appearances (Indian medico-legal framework through Intestinal secretions). Cumulative: 330 groups / 1,550 proposals / 335 source appearances; 322 groups await initial proposals. All identities, scopes and bindings remain pending. Implementation: 552518e4ab501231b6f68596333b724ce1aab990.
+
+Validation: eleven-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial reconstructed checkout. No teaching content or production changes. Next: Intra-abdominal lesions, batch 12.
+
+---
+
 ## Family/context decomposition proposals batch 10 — 8 November 2026 IST
 
 Checked at 2026-11-08T22:42:38.756962+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 3489eacb5a263f23577665bc8eeefe0bab24c2d3; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 649f24a63c06768f7026dc235353c1b101ed6e67. Names-only instruction active.

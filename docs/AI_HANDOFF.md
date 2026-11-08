@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 11 — 8 November 2026 IST
+
+Checked at 2026-11-08T17:28:03.656Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 2013ff7c315b1c2c1dbc4ca287263808a9e06e0c; verified open draft PR and base main SHA 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 552518e4ab501231b6f68596333b724ce1aab990. Names-only instruction active.
+
+Reviewed next 30 family parents, Indian medico-legal framework through Intestinal secretions. Added 119 proposals (18 reusable-topic candidates and 101 contextual-task facets), preserving 30 source appearances. Similar infection-associated cancer headings and infant-feeding knowledge versus simulated counselling retain separate source tasks. Unnamed organisms, medicines, agencies and disorders remain unspecified. Legal classification is source-bound, not a current-law verification; simulated workplace/infection-control skills are not independent competence. IDs remain null; acceptance, scope and binding flags remain pending.
+
+Cumulative eleven family batches: 330 parents, 1,550 proposal occurrences and 335 source appearances; 322 family groups without initial proposals. Queue, three inventories and all ten predecessor digests pinned; original source bytes unchanged.
+
+Verification: verifyFamily(..., '11') PASS across all ordered cohorts, exact source hashes/coordinates/modes, reference coverage, unique IDs, reuse hints, predecessor pins and pending flags; nine focused tests PASS. Full npm test and npm run check NOT run this turn: local checkout reconstructed only for relevant evidence/verifier files after authenticated git clone was unavailable. No domain/UI implementation changes. The initial local test failure was caused by an extra newline during reconstruction; restoring exact original bytes resolved it without modifying repository evidence. No previous full-suite result is represented as a current run.
+
+Next: family batch 12 beginning Intra-abdominal lesions. Inspect source tasks; preserve unspecified members/roles; pin queue/three inventories/all eleven predecessors, run verifier --batch=12. Scope/home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No teaching content, merge, deployment or learner publication. Save with expected-head lease; verify changed remote files and release ownership. No external writer jobs.
+
+---
+
 ## Family/context decomposition proposals batch 10 — 8 November 2026 IST
 
 Checked at 2026-11-08T22:42:38.756962+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 3489eacb5a263f23577665bc8eeefe0bab24c2d3; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 649f24a63c06768f7026dc235353c1b101ed6e67. Names-only instruction active.
