@@ -1,3 +1,13 @@
+## Initial family decomposition proposal coverage complete — 9 November 2026
+
+Final batch adds 91 source-bound names-only proposals across 22 groups / 22 source appearances (Vaccines through Zoonoses). All 652 family/context groups now have initial proposals: 3,002 proposal occurrences, preserving 663 source appearances. Zero groups remain without initial proposals. Implementation: ab9a4902e7b7d1b83194965bbc3dadcf8c614aea.
+
+This completes initial proposal coverage only. Unnamed members, reuse/scope resolution and canonical/objective binding remain unfinished; no identities accepted, no teaching content or production changes. Foundation incomplete.
+
+Validation: twenty-two-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: repeatable family audit and exact-label reuse report, preserving distinct task contexts.
+
+---
+
 ## Family decomposition batch 21 — 8 November 2026
 
 Added 133 source-bound names-only proposals across 30 groups / 30 source appearances (Transfusion physiology through Vaccine-preventable disease epidemiology). Cumulative: 630 groups, 2,911 proposals, 641 source appearances; 22 groups await initial proposals. Implementation: 95b98d68b804141bb7a1c618133bb7a33ce68ef0. Acceptance/scope/binding remains pending. No teaching content or production changes.

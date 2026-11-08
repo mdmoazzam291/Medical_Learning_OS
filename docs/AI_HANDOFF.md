@@ -1,3 +1,17 @@
+## Initial family/context decomposition proposal coverage complete — 9 November 2026 IST
+
+Checked at 2026-11-08T18:31:54.833Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e81bd09cf67dbd6b736d820e1f41e43c6aaa92f5; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: ab9a4902e7b7d1b83194965bbc3dadcf8c614aea. Names-only instruction active.
+
+Reviewed final 22 family parents, Vaccines through Zoonoses. Added 91 source-bound proposals preserving 22 source appearances. Vaccine safe-use, Indian vector programme and biomedical waste rules remain source-bound, not current official-source certification. Supplied image/specimen/model tasks retain their evidence contexts; source-named childhood viral illnesses and abdominal projections preserved. Unnamed vaccine types, vector members, vitamins, waste categories and zoonoses remain unspecified. IDs null, acceptance false, scope/binding incomplete. No teaching content or automatic merging.
+
+Cumulative twenty-two family batches: all 652 groups have initial decomposition proposals, 3,002 proposal occurrences and 663 source appearances; zero family groups without initial proposals. This is proposal coverage only, not 3,002 unique accepted concepts, complete family member enumeration, objective binding or Foundation completion. Queue/three inventories/all twenty-one predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'22') PASS across every ordered cohort, exact task hashes/coordinates/modes, complete reference coverage, unique IDs, exact-label hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run in partial evidence/verifier checkout; no domain/UI changes. No clinical/guideline or semantic certification.
+
+Next: generate a repeatable family-decomposition audit and exact-label reuse report across all 22 batches (within-family and cross-family duplicate labels plus hints against existing inventories), pin all inputs, and preserve task-specific sources and uncertainty. Do not equate shared labels with objective/competence equivalence. Existing mixed reuse work may provide a reusable approach; inspect it before introducing another parallel system. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. Save with expected-head lease and verify remote files; release ownership afterwards. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Family/context decomposition proposals batch 21 — 8 November 2026 IST
 
 Checked at 2026-11-08T18:28:01.419Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 1ba47e977bf8e51eab1c0d354569fa4daaa19324; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 95b98d68b804141bb7a1c618133bb7a33ce68ef0. Names-only instruction active.
