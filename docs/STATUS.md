@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 05 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Cervical rib compression through Constipation pharmacotherapy). Batch: 25 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 150 facets / 153 appearances / 97 proposed homes; 509 facets await initial homes. Implementation: 623415be4a2c8ace3732b4c09d29d08eec7898b7. All mappings/bindings remain pending.
+
+Five-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Context-sensitive complementary feeding. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 04 — 9 November 2026
 
 Added proposals for 30 scoped facets / 30 source appearances (Cancer examination through Cervical cancer treatment). Batch: 18 home labels, ten existing-name links and twenty proposed-name links. Cumulative: 120 facets / 122 appearances / 76 proposed homes; 539 facets await initial homes. Implementation: b79dd9106dd3331b1a4a8b0079398850d2a98fb9. All mappings/bindings remain pending.
