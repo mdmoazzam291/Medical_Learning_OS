@@ -1,3 +1,15 @@
+## Repeatable family decomposition verification — 8 November 2026 IST
+
+Checked at 2026-11-08T22:06:21.631032+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 0624a84f47a5f220fa9d4573c2298fc06b1a25e5; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 540e51dc42b766eeb98948b354e98ddd382fa6ff. Names-only instruction active.
+
+Added ops/nmc/verify-family-decomposition.js and nine behavior tests. CLI revalidates parent follow-up queue/eleven assessments, then checks source-order family cohorts, queue/three comparison-inventory digests, full source-task hashes/coordinates/modes, nonempty source bindings and complete representation, unique proposal IDs, recomputed exact-label hints, totals, null identities and pending acceptance/scope/binding flags. Supports --batch=NN with explicit predecessor digests and optional selectionLimit for future batches; batch 01 retains original 30-row default. Current packet verifies 30 parents, 31 appearances, 138 proposals and 622 families without proposals.
+
+Verification: nine tests observed failing before implementation then passing; omissions with adjusted totals, foreign links, accepted identities/full scopes, fake exact-label hints, queue drift, duplicate IDs and forged modes rejected. CLI passed; full npm test passed 1,638/1,638; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Existing family proposal and other source evidence unchanged. Verifier establishes structural/source accounting only, not clinical completeness or semantic equivalence. No teaching content, identity allocation or publication.
+
+Next: inspect next family cohort from AI in laboratory biochemistry, Airway adjuncts and Airway opening; create family-scope-decomposition-batch-02 with selectionLimit appropriate to actual cohort, pin queue, all three inventories and batch-01 digest. Run verifier --batch=02. Keep broad unnamed family members unspecified and all roles/identities pending. Remaining 622 family decompositions, home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify all five changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
 ## Family/context decomposition proposals batch 01 — 8 November 2026 IST
 
 Checked at 2026-11-08T22:02:58.088151+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ff894b9ca7c9c5cde5ca70821727a63b6313879f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 5838f7e701c86ae9abc554a7590ea8975dd08130. Names-only instruction active.
