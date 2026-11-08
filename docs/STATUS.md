@@ -1,3 +1,11 @@
+## Family decomposition batch 20 — 8 November 2026
+
+Added 141 source-bound names-only proposals across 30 groups / 32 source appearances (Substance dependence through Tracheal anatomy). Cumulative: 600 groups, 2,778 proposals, 611 source appearances; 52 groups await initial proposals. Implementation: 8fffe4d0c9ea37b746085f195a47c75ab289d4a5. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twenty-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 21, Transfusion physiology.
+
+---
+
 ## Family decomposition batch 19 — 8 November 2026
 
 Added 134 source-bound names-only proposals across 30 groups / 31 source appearances (Renal syndromes through Study designs). Cumulative: 570 groups, 2,637 proposals, 579 source appearances; 82 groups await initial proposals. Implementation: 26113da5737ce92e9b344de320681826f2f63b95. Acceptance/scope/binding remains pending. No teaching content or production changes.
