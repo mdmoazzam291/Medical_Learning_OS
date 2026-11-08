@@ -1,3 +1,17 @@
+## Mixed-scope decomposition proposals batch 03 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:42:06.584710+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e3563c21a5e18c029708a3136130ee9d5c351b49; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 7f461ec3ebf29266611662f047bcc334ab39be15. Names-only instruction active.
+
+Reviewed next 20 mixed parents, Neonatal surgical conditions through Simulated amphibian experiments (the actual 20-row cohort includes this final group). Added 170 name proposals: 66 reusable-topic candidates and 104 contextual-task facets across 45 source appearances. Obstructive Airway Diseases retains all 26 tasks and component-specific source links for examinations, tests, physiology, exposures, counselling and treatment plans. Procedure observation, assistance, model work and assigned team roles remain distinct from independent competence. Forensic viability, flotation-test limits and prenatal screening/diagnosis retain context; no current legal/guideline verification claimed.
+
+Cumulative three batches: 60 mixed parents, 546 proposals, 142 source appearances. Nine mixed parents have no decomposition proposals; all 69 mixed scopes still unresolved for actual scope and binding. Queue and both predecessor packets byte-unchanged, exact SHA256 digests pinned. Canonical/objective IDs null, semantic equivalence unverified, mapping/scope/binding flags false. No educational content or registry changes.
+
+Verification: exact next-20 cohort, disjoint predecessor parents, 170 unique proposal IDs, valid nonempty single-source links, every parent reference represented, all 45 task/body hashes and modes matched underlying source packets. Follow-up queue --verify passed; 11 focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree matched GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,613/1,613 passed).
+
+Next: inspect final nine mixed parents, Social context through Water safety; create mixed-scope-decomposition-batch-04 pinning the queue and all three predecessor digests. Preserve uncertainty and source-specific roles, then consolidate decomposition verification/reuse leads without accepting canonical identities. Remaining 652 families/contexts, semantic reuse, home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease; verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
 ## Mixed-scope decomposition proposals batch 02 — 8 November 2026 IST
 
 Checked at 2026-11-08T21:31:32.749169+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f140347e019258e1c14fbd63fdaaab48b61f1fc8; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: d06943195be9cedc467cf6f1d132d99a4283893a. Names-only instruction active.
