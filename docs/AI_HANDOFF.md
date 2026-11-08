@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 13 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:48:03.772Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 7780701b6422e1ad5118ecc63f7081c534d47e5e; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: c678304e1a4a4b07cae4982b25c0e385153a9be7. Names-only instruction active.
+
+Reviewed next 30 facets, Ischaemic stroke treatment through Lower-limb ossification. Preserved 31 source appearances; proposed 16 home labels with ten existing-name and twenty proposed-name links. IUCD/IUD simulator tasks share proposed Intrauterine contraception home while remaining source-distinct. Aspiration/laparotomy assistance remains supervised/simulated, labour mannequin work not independent delivery. Leprosy antimicrobial and reaction treatment remain distinct; national/WHO regimens not revalidated current. Two lifestyle counselling sources preserved. Supplied respiratory stains and fibular ossification exception retain source limits. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative thirteen scoped-home batches: 390 facets, 394 source appearances, 236 proposed home labels; 269 facets await initial proposals. Queue/three inventories/all twelve predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=13 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 14 beginning Lower-limb radiographic anatomy. Inspect source tasks, preserve role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=14. Actual canonical/home/objective binding, 570 standalone-topic cases, source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 12 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:45:45.887Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 4cc8cce1854be0109ecc6527ca10a4ecda39a2b9; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 92593d7845399ac9792bd7dc46508c820cdef386. Names-only instruction active.
