@@ -1,3 +1,11 @@
+## Family reuse source-scope comparisons — 9 November 2026
+
+Compared all 78 family leads: 62 shared-topic name candidates, ten scoped facets, five self-parent references and one context-specific separation (forensic versus paediatric anthropometry). Preserved 97 component occurrences, 61 source references and 66 target-support references. No semantic/objective equivalence, independent competence or identity acceptance. Implementation: e6de7ba6a1527c491fe06ad566439a686a9c2d6e.
+
+Verifier and 27 focused tests PASS; syntax check PASS. Full suite and npm run check not run in partial checkout. Next: first source-bound home proposal cohort from 659 original scoped-task facets, beginning Abdominal muscle attachments. No teaching content or publication. Foundation incomplete.
+
+---
+
 ## Family proposal audit and reuse report — 9 November 2026
 
 Added a repeatable audit reusing the family verifier. Covers all 652 groups / 663 source appearances / 3,002 proposals; 2,983 distinct normalized labels. Identifies 78 exact-label reuse leads: 61 existing inventory matches, 14 cross-parent repeats, five within-parent repeats (overlapping categories). No semantic or objective equivalence accepted. All 88 input files digest-pinned and each component retains its exact supporting tasks.

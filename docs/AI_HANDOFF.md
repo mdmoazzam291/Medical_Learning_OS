@@ -1,3 +1,17 @@
+## Family reuse source-scope comparisons — 9 November 2026 IST
+
+Checked at 2026-11-08T18:39:56.025Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 841132eb389e3c9e9512addb526e5b9efcc0a8ed; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: e6de7ba6a1527c491fe06ad566439a686a9c2d6e. Names-only instruction active.
+
+Compared all 78 family reuse leads against actual source tasks and target-source evidence, following the mixed-reuse evidence structure. Added family-reuse-scope-proposals.json, verify-family-reuse.js and nine focused tests. Dispositions: 62 shared-topic-name candidates, ten scoped facets, five same-source self-parent references, one context-specific separation. Anthropometry retains forensic identity versus paediatric growth purposes; this is not declared a different medical concept or automatic merge. Self-parent references (communicable disease control, disaster management, healthcare-associated infection, infant feeding practices, stroke mechanisms) add no independent evidence.
+
+Preserves all 97 lead component occurrences, 61 distinct occurrence references and 66 distinct target-support references. Source tasks retain exact text, hashes, coordinates and modes on both sides; target support matches inventory references. Basis statements explain each scope comparison without accepting identical objectives. Clinical approval, learner activation, merging, identity allocation, semantic equivalence, independent competence and complete scope remain unaccepted. Original inventories and proposal packets unchanged; no teaching content or production changes.
+
+Verification: family reuse verifier PASS; 27 focused tests PASS (nine reuse + nine audit + nine decomposition); syntax check PASS. New tests reject anthropometry context collapse, self-parent miscounting, omitted leads, objective acceptance, target-task omission/text drift, altered evidence and independent-competence claims. Full npm test and npm run check NOT run in partial evidence/verifier checkout. No prior full-suite result presented as current.
+
+Next: begin source-bound home proposals for the original 659 scoped-task facets (nextAction=resolve-home-and-bind-task), starting Abdominal muscle attachments. Inspect first cohort source tasks; reuse existing proposed homes if source scope fits, preserve unnamed group members, and represent multiple targets where necessary. No forced single-home mapping, canonical acceptance or teaching content. Original 570 standalone-topic reuse/binding cases also remain. Family member enumeration, actual home/objective/canonical bindings, 21 exceptions and learner integration remain unfinished; Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs or auto-merge.
+
+---
+
 ## Family decomposition audit and exact-label reuse leads — 9 November 2026 IST
 
 Checked at 2026-11-08T18:35:29.056Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 50f74a9b682ccf87a3dca110865a18c46a53eb2e; open draft PR head verified. Main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 08b07f9a38149430084a057cbb22cb0ca5f4d8bd. Names-only instruction active.
