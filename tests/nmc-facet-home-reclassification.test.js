@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {spawnSync} from 'node:child_process';
 
-function runProjection(scopeFacets, {shared = false, mutate = () => {}} = {}) {
+function runProjection(scopeFacets, {shared = false, family = false, mutate = () => {}} = {}) {
  const root = mkdtempSync(join(tmpdir(), 'nmc-home-role-'));
  try {
   mkdirSync(join(root, 'ops/nmc'), {recursive: true});
@@ -19,7 +19,7 @@ function runProjection(scopeFacets, {shared = false, mutate = () => {}} = {}) {
    totals: {scopeFacets}, entries: [
     {nameKey: 'synthetic topic', classificationRole: 'reusable-name-candidate', occurrences: [{componentProposalId: 'synthetic:topic', sourceReferenceIds: ['synthetic:topic-reference']}]},
     {nameKey: 'synthetic second topic', classificationRole: 'reusable-name-candidate', occurrences: [{componentProposalId: 'synthetic:second-topic', sourceReferenceIds: ['synthetic:second-topic-reference']}]},
-    {nameKey: 'synthetic interpretation', classificationRole: 'scope-facet', proposedHomeLabel: shared ? 'Synthetic family' : 'Synthetic topic', occurrences: [{componentProposalId: 'synthetic:facet', sourceReferenceIds: ['synthetic:reference'], batchPath: 'docs/evidence/synthetic-components.json', parentNameKey: 'synthetic source task'}]}
+    {nameKey: 'synthetic interpretation', classificationRole: 'scope-facet', proposedHomeLabel: shared || family ? 'Synthetic family' : 'Synthetic topic', occurrences: [{componentProposalId: 'synthetic:facet', sourceReferenceIds: ['synthetic:reference'], batchPath: 'docs/evidence/synthetic-components.json', parentNameKey: 'synthetic source task'}]}
    ]
   };
   const sourceTask = {referenceId: 'synthetic:reference', subjectId: 'synthetic', code: 'S1', page: 1, rowBBox: [0, 0, 1, 1], sourceBodySha256: 'a'.repeat(64), mode: 'knowledge'};
@@ -31,10 +31,18 @@ function runProjection(scopeFacets, {shared = false, mutate = () => {}} = {}) {
    canonicalConceptId: null, canonicalObjectiveVersionId: null, mappingAccepted: false, scopeComplete: false, targetCoverage: 'unverified',
    sourceTasks: [{...sourceTask, packetPath: 'docs/evidence/synthetic-tasks.json'}]
   }] : []};
-  mutate({roles, sharedPacket});
+  const homePacket = {status: 'names-only-home-proposals', ...flags, totals: {homeNames: family ? 1 : 0, facetBindings: family ? 1 : 0}, homes: family ? [{
+   homeProposalId: 'editorial-home:synthetic-family', name: 'Synthetic family', nameKey: 'synthetic family',
+   canonicalConceptId: null, canonicalObjectiveVersionId: null, coverageFraction: null,
+   identityAccepted: false, mappingAccepted: false, scopeComplete: false,
+   basis: 'explicit-family-context-with-bound-facets', scopeType: 'family-context-only', targetCoverage: 'unverified',
+   facetBindings: [{facetNameKey: 'synthetic interpretation', componentProposalIds: ['synthetic:facet'], sourceReferenceIds: ['synthetic:reference']}],
+   sourceTasks: [{...sourceTask, packetPath: 'docs/evidence/synthetic-tasks.json'}]
+  }] : []};
+  mutate({roles, sharedPacket, homePacket});
   write('2026-11-08-nmc-name-role-proposals.json', roles);
   write('2026-11-08-nmc-shared-facet-scope-proposals.json', sharedPacket);
-  write('2026-11-08-nmc-missing-home-proposals.json', {status: 'names-only-home-proposals', ...flags, totals: {homeNames: 0, facetBindings: 0}, homes: []});
+  write('2026-11-08-nmc-missing-home-proposals.json', homePacket);
   write('2026-11-08-nmc-home-label-resolutions.json', {status: 'names-only-home-label-resolutions', ...flags, resolutions: []});
   return spawnSync(process.execPath, [script], {encoding: 'utf8'});
  } finally { rmSync(root, {recursive: true, force: true}); }
@@ -82,6 +90,24 @@ for (const [name, mutate, error] of [
  ['omitted source task evidence', ({sharedPacket}) => { sharedPacket.groups[0].sourceTasks = []; }, /shared scope task evidence drift/]
 ]) test(`shared scope rejects ${name}`, () => {
  const result = runProjection(1, {shared: true, mutate});
+ assert.notEqual(result.status, 0);
+ assert.match(result.stderr, error);
+});
+
+test('family context keeps its broad unverified scope visible on the proposed link', () => {
+ const result = runProjection(1, {family: true});
+ assert.equal(result.status, 0, result.stderr);
+ const graph = JSON.parse(result.stdout);
+ assert.equal(graph.links[0].targetScopeType, 'family-context-only');
+ assert.equal(graph.links[0].targetCoverage, 'unverified');
+ assert.equal(graph.links[0].mappingAccepted, false);
+});
+
+for (const [name, mutate, error] of [
+ ['altered source task hashes', ({homePacket}) => { homePacket.homes[0].sourceTasks[0].sourceBodySha256 = 'b'.repeat(64); }, /family context task evidence drift/],
+ ['missing family scope type', ({homePacket}) => { delete homePacket.homes[0].scopeType; }, /family context scope type/]
+]) test(`family context rejects ${name}`, () => {
+ const result = runProjection(1, {family: true, mutate});
  assert.notEqual(result.status, 0);
  assert.match(result.stderr, error);
 });

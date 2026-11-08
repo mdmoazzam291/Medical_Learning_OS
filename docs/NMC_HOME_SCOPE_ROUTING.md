@@ -1,5 +1,28 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current selected-set representation
+
+The four remaining facets now use their already-declared broad family/topic contexts: Female reproductive function, Neurodegenerative disease and Torture. The three home proposals explicitly use `scopeType: family-context-only` and `targetCoverage: unverified`. This represents the existing names without inventing narrower diagnoses, medicines or source-specific objectives. Physical and psychological torture sequelae remain separate facets; neurodegeneration is not reduced to drug-induced parkinsonism; the reproductive-function facet does not cover the entire contraception task.
+
+All **398 selected scope facets now have an authoring representation: 396 single-home links plus two shared-scope groups**. The two shared groups expose four target relationships without counting each target as another source facet. Zero entries remain in this selected-set authoring-home gap queue. This is not canonical/source/clinical acceptance, full curriculum scope or NMC Foundation completion. All relevant acceptance flags remain false, canonical IDs null and coverage unknown.
+
+All prior 392 single-home links, both shared groups and the 1,195 names/1,218 component occurrences are retained. New family-home proposals preserve exact source-task paths, codes, coordinates, body hashes and assessment modes. The reporter validates those against existing task records and carries the broad, unverified qualifier onto the generated links. Regression tests reject changed family source hashes and missing family scope types. The source-linked closure audit is `docs/evidence/2026-11-08-nmc-family-context-refinement.json`.
+
+## Wider parent-name triage
+
+The wider index has 2,427 parent names. The selected compound-name pass used 420; the other **2,007 parents, covering 2,182 source appearances, still require scope assessment**. A metadata scan found 57 exact-label reuse leads: 34 existing reusable-name candidates and 23 existing authoring-home labels. The other 1,950 names lack those exact-label leads. These categories are triage, not accepted matches or assessed source coverage.
+
+The complete57match snapshot is `docs/evidence/2026-11-08-nmc-unassessed-parent-reuse-triage.json`. It pins the index SHA-256, retains every matching parent's exact source appearances and target candidate/proposal identifiers, and leaves semantic mapping and scope completion unaccepted. Equal labels never establish equivalent medical scope or authorize registry merging.
+
+## Current next actions
+
+1. Examine the57reuse leads against their exact source-task scopes before adding source occurrences to an existing candidate or proposing a distinct concept. Prioritize reuse without assuming equality from labels.
+2. Assess the remaining1,950parent names with no exact-label lead. Do not infer completeness from the earlier punctuation-based selection.
+3. Refresh registry metadata before canonical reuse/allocation. Resolve target-specific objectives for shared/family contexts before claiming scope completion.
+4. Reconcile21source exceptions and learner integration separately. NMC Foundation remains incomplete.
+
+# Historical shared-scope snapshot — checkpoint c8b04102
+
 ## Current shared-scope representation
 
 Two remaining facets explicitly span multiple existing candidate names in their draft-task context. They are represented as shared source-task groups, preserving each target without choosing an arbitrary single home or inventing duplicate facet names.

@@ -17,10 +17,10 @@
     "sharedScopeTargetLinks": 4,
     "exactCandidateHomeLinks": 49,
     "labelResolvedCandidateHomeLinks": 2,
-    "proposedNewHomeLinks": 341,
-    "totalFacetHomeLinks": 392,
-    "unresolvedFacetHomes": 4,
-    "distinctCandidateHomes": 222,
+    "proposedNewHomeLinks": 345,
+    "totalFacetHomeLinks": 396,
+    "unresolvedFacetHomes": 0,
+    "distinctCandidateHomes": 225,
     "explicitLabelResolutions": 14
   },
   "links": [
@@ -2671,6 +2671,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "female reproductive pharmacotherapy",
+      "proposedHomeNameKey": "female reproductive function",
+      "componentProposalIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
+      ],
+      "targetNameKey": "female reproductive function",
+      "targetHomeProposalId": "editorial-home:female-reproductive-function",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "fertility determinants",
       "proposedHomeNameKey": "fertility",
       "componentProposalIds": [
@@ -4440,6 +4460,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "neurodegeneration pharmacotherapy",
+      "proposedHomeNameKey": "neurodegenerative disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+      ],
+      "targetNameKey": "neurodegenerative disease",
+      "targetHomeProposalId": "editorial-home:neurodegenerative-disease",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "neurological history",
       "proposedHomeNameKey": "nervous system",
       "componentProposalIds": [
@@ -5232,6 +5272,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "physical torture sequelae",
+      "proposedHomeNameKey": "torture",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "targetNameKey": "torture",
+      "targetHomeProposalId": "editorial-home:torture",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "pineal gland histology",
       "proposedHomeNameKey": "pineal gland",
       "componentProposalIds": [
@@ -5534,6 +5594,26 @@
       ],
       "targetNameKey": "prostate",
       "targetHomeProposalId": "editorial-home:prostate",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "psychological torture sequelae",
+      "proposedHomeNameKey": "torture",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "targetNameKey": "torture",
+      "targetHomeProposalId": "editorial-home:torture",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -7323,54 +7403,5 @@
       ]
     }
   ],
-  "unresolved": [
-    {
-      "facetNameKey": "female reproductive pharmacotherapy",
-      "proposedHomeNameKey": "female reproductive function",
-      "componentProposalIds": [
-        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neurodegeneration pharmacotherapy",
-      "proposedHomeNameKey": "neurodegenerative disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "physical torture sequelae",
-      "proposedHomeNameKey": "torture",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "psychological torture sequelae",
-      "proposedHomeNameKey": "torture",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    }
-  ]
+  "unresolved": []
 }

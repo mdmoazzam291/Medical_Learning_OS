@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "names-only-editorial-scope-dispositions",
-  "sourceHead": "dee04cf265cf9135b847ffc290ad815cbc5635f4",
+  "sourceHead": "c8b0410203de4e9c51be97625db4105742083541",
   "sourceQueuePath": "docs/evidence/2026-11-08-nmc-home-scope-gap-queue.json",
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -11,146 +11,9 @@
   "productionRegistryChecked": false,
   "coverageFraction": null,
   "totals": {
-    "groups": 3,
-    "facets": 4,
-    "relationCounts": {
-      "family-scope-pending": 2,
-      "context-only": 2
-    }
+    "groups": 0,
+    "facets": 0,
+    "relationCounts": {}
   },
-  "rows": [
-    {
-      "proposedHomeNameKey": "female reproductive function",
-      "organizerType": "clinical-family",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Broad function family; do not infer specific medicine or contraception mappings.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "female reproductive pharmacotherapy",
-          "componentProposalIds": [
-            "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
-          ],
-          "routing": "family-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
-          "subjectId": "pharmacology",
-          "code": "PH7.7",
-          "page": 181,
-          "rowBBox": [
-            51.7,
-            277.92,
-            105.7,
-            340.26
-          ],
-          "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "neurodegenerative disease",
-      "organizerType": "clinical-family",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Broad disease family; do not equate with the separate parkinsonism scope in the source task.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "neurodegeneration pharmacotherapy",
-          "componentProposalIds": [
-            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
-          ],
-          "routing": "family-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2",
-          "subjectId": "pharmacology",
-          "code": "PH3.7",
-          "page": 177,
-          "rowBBox": [
-            51.7,
-            280.98,
-            105.7,
-            345.78
-          ],
-          "sourceBodySha256": "99541bffa3a4b0e126c679c976135b428b2099a242ab8c55d0b1eb8f24a6ce4d",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "torture",
-      "organizerType": "care-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Survivor-care context; documentation, physical and psychological sequelae remain distinct.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "physical torture sequelae",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ],
-          "routing": "context-only"
-        },
-        {
-          "facetNameKey": "psychological torture sequelae",
-          "componentProposalIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ],
-          "routing": "context-only"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900",
-          "subjectId": "forensic-medicine",
-          "code": "FM9.2",
-          "page": 224,
-          "rowBBox": [
-            45.5,
-            404.7,
-            93.7,
-            447.9
-          ],
-          "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
-        }
-      ]
-    }
-  ]
+  "rows": []
 }

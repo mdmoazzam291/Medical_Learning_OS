@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-proposals",
-  "sourceHead": "7a90d053572bca205179c63a2923c93a7a18219d",
+  "sourceHead": "c8b0410203de4e9c51be97625db4105742083541",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "productionRegistryChecked": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "homeNames": 196,
-    "facetBindings": 341
+    "homeNames": 199,
+    "facetBindings": 345
   },
   "homes": [
     {
@@ -5824,6 +5824,144 @@
           "sourceReferenceIds": [
             "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1"
           ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:female-reproductive-function",
+      "name": "Female reproductive function",
+      "nameKey": "female reproductive function",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "basis": "explicit-family-context-with-bound-facets",
+      "scopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "scopeNote": "Broad function-family authoring context only; does not cover the whole PH7.7 task or infer a medicine/contraceptive objective.",
+      "facetBindings": [
+        {
+          "facetNameKey": "female reproductive pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
+          ]
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+          "subjectId": "pharmacology",
+          "code": "PH7.7",
+          "page": 181,
+          "rowBBox": [
+            51.7,
+            277.92,
+            105.7,
+            340.26
+          ],
+          "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
+          "mode": "performance-and-knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:neurodegenerative-disease",
+      "name": "Neurodegenerative disease",
+      "nameKey": "neurodegenerative disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "basis": "explicit-family-context-with-bound-facets",
+      "scopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "scopeNote": "Broad disease-family authoring context only; does not equate neurodegeneration with drug-induced parkinsonism.",
+      "facetBindings": [
+        {
+          "facetNameKey": "neurodegeneration pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+          ]
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2",
+          "subjectId": "pharmacology",
+          "code": "PH3.7",
+          "page": 177,
+          "rowBBox": [
+            51.7,
+            280.98,
+            105.7,
+            345.78
+          ],
+          "sourceBodySha256": "99541bffa3a4b0e126c679c976135b428b2099a242ab8c55d0b1eb8f24a6ce4d",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:torture",
+      "name": "Torture",
+      "nameKey": "torture",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "basis": "explicit-family-context-with-bound-facets",
+      "scopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "scopeNote": "Exposure/topic context only; physical and psychological sequelae remain separate facets without invented diagnoses or equivalence to survivor care.",
+      "facetBindings": [
+        {
+          "facetNameKey": "physical torture sequelae",
+          "componentProposalIds": [
+            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+          ]
+        },
+        {
+          "facetNameKey": "psychological torture sequelae",
+          "componentProposalIds": [
+            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+          ]
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900",
+          "subjectId": "forensic-medicine",
+          "code": "FM9.2",
+          "page": 224,
+          "rowBBox": [
+            45.5,
+            404.7,
+            93.7,
+            447.9
+          ],
+          "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
         }
       ]
     }

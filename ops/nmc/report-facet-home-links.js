@@ -29,7 +29,7 @@ for(const h of proposals.homes){
  assert(!byName.has(h.nameKey),'reuse existing name');assert(!aliases.has(h.nameKey),'resolve raw label before creating home');
  for(const k of ['canonicalConceptId','canonicalObjectiveVersionId','coverageFraction'])assert.equal(h[k],null);
  for(const k of ['identityAccepted','mappingAccepted','scopeComplete'])assert.equal(h[k],false);
- assert(['existing-proposed-home-label-and-bound-facet-context','existing-facet-context-with-explicit-label-resolution'].includes(h.basis));
+ assert(['existing-proposed-home-label-and-bound-facet-context','existing-facet-context-with-explicit-label-resolution','explicit-family-context-with-bound-facets'].includes(h.basis));
  const expected=facets.filter(e=>(aliases.get(norm(e.proposedHomeLabel))?.resolvedHomeNameKey??norm(e.proposedHomeLabel))===h.nameKey).map(bindings);
  assert(expected.length);assert.deepEqual(h.facetBindings,expected,'home source bindings changed');
  homes.set(h.nameKey,h);boundFacets+=expected.length;
@@ -61,6 +61,17 @@ const taskEvidence=facet=>{
  assert.deepEqual([...tasks.keys()].sort(),referenceIds,'shared scope source task omission');
  return [...tasks.values()].sort((a,b)=>a.referenceId.localeCompare(b.referenceId));
 };
+for(const h of homes.values()){
+ if(h.basis==='explicit-family-context-with-bound-facets'){
+  assert.equal(h.scopeType,'family-context-only','family context scope type');assert.equal(h.targetCoverage,'unverified');
+  const tasks=new Map();
+  for(const binding of h.facetBindings)for(const task of taskEvidence(byName.get(binding.facetNameKey))){
+   if(tasks.has(task.referenceId))assert.deepEqual(tasks.get(task.referenceId),task,'conflicting family context source evidence');
+   tasks.set(task.referenceId,task);
+  }
+  assert.deepEqual(h.sourceTasks,[...tasks.values()].sort((a,b)=>a.referenceId.localeCompare(b.referenceId)),'family context task evidence drift');
+ }else assert.equal(h.scopeType,undefined,'family context requires explicit basis');
+}
 for(const g of shared.groups){
  const facet=byName.get(g.facetNameKey);assert.equal(facet?.classificationRole,'scope-facet','unknown shared-scope facet');
  assert(!sharedByFacet.has(g.facetNameKey),'duplicate shared-scope facet');
@@ -90,7 +101,7 @@ for(const facet of facets){
  if(target?.classificationRole==='reusable-name-candidate'){
   assert.notEqual(facet.nameKey,target.nameKey);
   links.push({...source,...resolution,targetNameKey:target.nameKey,targetComponentProposalIds:target.occurrences.map(o=>o.componentProposalId),relation:'proposed-scope-facet-of-name-candidate',basis:alias?'explicit-editorial-home-label-resolution':'exact-normalized-editorial-home-label',...flags});
- }else if(home)links.push({...source,...resolution,targetNameKey:home.nameKey,targetHomeProposalId:home.homeProposalId,relation:'proposed-scope-facet-of-home-proposal',basis:alias?'explicit-editorial-home-label-resolution':'exact-normalized-declared-home-label',...flags});
+ }else if(home)links.push({...source,...resolution,targetNameKey:home.nameKey,targetHomeProposalId:home.homeProposalId,...(home.scopeType?{targetScopeType:home.scopeType,targetCoverage:home.targetCoverage}:{}),relation:'proposed-scope-facet-of-home-proposal',basis:alias?'explicit-editorial-home-label-resolution':'exact-normalized-declared-home-label',...flags});
  else unresolved.push({...source,reason:target?'home-label-is-scope-facet':'home-label-has-no-name-candidate',canonicalConceptId:null});
 }
 links.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));unresolved.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));
