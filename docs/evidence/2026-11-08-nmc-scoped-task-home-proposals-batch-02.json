@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-02:01",
+      "facetNameKey": "amniotomy practical",
+      "facetName": "Amniotomy practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:494ff720f6146325d03c2205e03dfc605afd40ff9a92d192282370a90ec804c9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.16",
+          "page": 441,
+          "rowBBox": [
+            49.1,
+            313.26,
+            103.1,
+            340.38
+          ],
+          "sourceBodySha256": "5b93ea52d6384b4a05721d3c2257dcb9024ab6731e937fe38f1ad21858ba3c36",
+          "editorialTaskSha256": "c139bdc9e8fa268f73805522d6538017ad139789b1ba8fa0bdfe06684d3543dc",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Amniotomy",
+      "proposedHomeNameKey": "amniotomy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Reuse batch-01 Amniotomy home label; simulator checks and reassessment remain distinct from observation or assistance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:02",
+      "facetNameKey": "amyloid specimens",
+      "facetName": "Amyloid specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA9.2",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            261.66,
+            105.6,
+            293.64
+          ],
+          "sourceBodySha256": "f8f9602083bdbead8ff0c1e742ba670ecafbf2aaa5204f897125e2f8528f84a0",
+          "editorialTaskSha256": "c9cbad4e056fa94a16161dcaf22d21994d9316ee94b492739e8449c0a21550cf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Amyloidosis",
+      "proposedHomeNameKey": "amyloidosis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "amyloidosis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gross/microscopic deposits and Congo red interpretation with organ consequences; not full amyloidosis coverage.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:03",
+      "facetNameKey": "anaemia classification",
+      "facetName": "Anaemia classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79f91d13b50e569d816d52ae0ca9a7456d1b7aa5fc1c78dc1f2d4c1103e0f957",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.1",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            375.36,
+            102.7,
+            402.72
+          ],
+          "sourceBodySha256": "f66f066413df3e0a7aefb8e1ed40f988e093c3b1f88312019ce2bb13a3f03ddb",
+          "editorialTaskSha256": "d9c7f4bf508859bf4eab63fef08b7db0e877cad0adc36709b773722602f3b1e6",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cell size and reticulocyte-response classification only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:04",
+      "facetNameKey": "anaemia counselling",
+      "facetName": "Anaemia counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:61894540e63ec9266d9aef2ab2d8bd316f4ceda61507007f134b7ebd42eea048",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.12",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            281.46,
+            102.7,
+            308.82
+          ],
+          "sourceBodySha256": "6ff1e9c18f373136cf51ed53664db1c4bb84640f4ee23f5c96fbabf40f1666e1",
+          "editorialTaskSha256": "54b847977e7fe0ad04ba4ea675deaed607ff6d44bfd9e23e351c4194d29019a0",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.16",
+          "page": 346,
+          "rowBBox": [
+            51.3,
+            337.44,
+            103.1,
+            370.08
+          ],
+          "sourceBodySha256": "8a96291ea16adbcc3fcd8392b4d552ccfbcd53e568fe94dd827b4d64b0176b9c",
+          "editorialTaskSha256": "74be6f5d1985cc78a685e9e92e72f4c106cc78fc25994b69bcb7ad8028c07882",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve adult simulated diagnosis/treatment/follow-up and child/caregiver prevention/teach-back as separate source tasks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:05",
+      "facetNameKey": "anaemia differential",
+      "facetName": "Anaemia differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:57e695d805248048d8b425396d3b64c32c37eea3e8307bc4283ff424512f29b2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.5",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            511.56,
+            102.7,
+            538.98
+          ],
+          "sourceBodySha256": "2fbc67efddb84c277e183b2f5774d571377ad441ab9e0ffe506a6b6fc38bb3cc",
+          "editorialTaskSha256": "662add6be7075d4462b0e189734ba8f1080cb0f50841c1348868c2dcfff01958",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cause prioritization from history and examination.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:06",
+      "facetNameKey": "anaemia evaluation",
+      "facetName": "Anaemia evaluation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8c2000177df50440935a89f81147139002eac13848bf91c8191a219b40121b9e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA13.2",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            319.26,
+            105.6,
+            348.78
+          ],
+          "sourceBodySha256": "ce85e108dcf617fab4d3c369db6968008e6123025063796d37a8579c10649134",
+          "editorialTaskSha256": "fe5817eaa57233112dac0c974e52c3592aa40ab3aeddeb741db55798961c22e4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Indices/mechanism classification and initial investigation sequencing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:07",
+      "facetNameKey": "anaemia examination",
+      "facetName": "Anaemia examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:74f99f6ff3cb3e49df9ee876b3826d5c1b1d0e9593814c2d93782e29d9a1bc2b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.4",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            470.76,
+            102.7,
+            511.56
+          ],
+          "sourceBodySha256": "2e281f3f617e88db03a17ae8a50b70b72147825690b794bda5feb195df70b594",
+          "editorialTaskSha256": "3a7b5e8652dd66a56eef9e0a9870aeca49e3f7a6345328d25d7b0354739f8a41",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated pallor, oral, circulatory, node and spleen assessment; no independent competence receipt.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:08",
+      "facetNameKey": "anaemia history",
+      "facetName": "Anaemia history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:703ab2632daa0f6638d153698797df8dcbc63de8f47ad43b90ee652432a175eb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.3",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            430.08,
+            102.7,
+            470.76
+          ],
+          "sourceBodySha256": "4f5b790384b2e318f748dbf110bc4b4d3e219b4d6ee5d039f3a42f65d4b04258",
+          "editorialTaskSha256": "62a6d37b128b1221694d8209b20fce4b387dd75b86e5d3ab256f6d196ec0b3df",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bleeding, diet, medicine, menstrual and family-history scope retained.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:09",
+      "facetNameKey": "anaemia in pregnancy",
+      "facetName": "Anaemia in pregnancy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c9b4c570158ce0ef5e0854749d4c277fe7abf415218c34aa718256b426cdc41a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG12.2",
+          "page": 431,
+          "rowBBox": [
+            49.1,
+            113.46,
+            103.1,
+            174.6
+          ],
+          "sourceBodySha256": "2be9ee542e6d96cf791b0978417d2322c508eee03e51be6c59ac78318c9222e0",
+          "editorialTaskSha256": "ee245a86e19fd31e350df46dc827f9994b11d48465819cffb21733961e6209e9",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Pregnancy-specific causes, tests and maternal/fetal effects through labour remain contextual, not equivalent to general anaemia care.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:10",
+      "facetNameKey": "anaemia referral",
+      "facetName": "Anaemia referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a48631f583eacceba6f68b69cac5e41264e8421ac250cda28a269753539dbdd8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.17",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            418.26,
+            102.7,
+            472.38
+          ],
+          "sourceBodySha256": "32d13b319cb7b626acf37c98afecf46b42a8f0239eb160174f54535369b16fd4",
+          "editorialTaskSha256": "87cce912a77d149284a904241844dfc85c73f9497dc0c192d468bd6b2e976838",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Specialist consultation thresholds only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:11",
+      "facetNameKey": "anaemia shared decisions",
+      "facetName": "Anaemia shared decisions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fe06b6ec6d1040887a8773ee1c33016a379fb1cb78a44cca9bd58bb4ce0b0ebb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.13",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            308.82,
+            102.7,
+            336.18
+          ],
+          "sourceBodySha256": "caa7fec77377d9e068ade1df55a76ef7497cc0586295341efbba8aad28545d6d",
+          "editorialTaskSha256": "06dbc26fe5bb100910011335bc5fc0cd2f9ecd0b12ed4b0efc866a6f80dbd094",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preference elicitation and feasible shared plans.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:12",
+      "facetNameKey": "anaemia workup",
+      "facetName": "Anaemia workup",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c96f2e97eb5c4c6053684272304067e609377fcd384bf7b26f40e8438c85c868",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.6",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            52.26,
+            102.7,
+            79.62
+          ],
+          "sourceBodySha256": "587a6a199f54a14c306566ad1b518b783bbb87dcf6fc66bc00764065ec8912cc",
+          "editorialTaskSha256": "0ebe822216472f5f9d340c6b6575e049a56b4982ac2fb2674d52c2eee1a595d5",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Mechanism-directed investigation selection in simulation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:13",
+      "facetNameKey": "anaesthesia errors",
+      "facetName": "Anaesthesia errors",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ddcbee571be5c8bc60d19a4dd28b5a21d21361c157e52ed867f87b09766881d3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS10.4",
+          "page": 455,
+          "rowBBox": [
+            46.7,
+            324,
+            98.5,
+            346.56
+          ],
+          "sourceBodySha256": "1682044672f7f40a12bd93c32ae476bf6ea6d20d9cd13a7d904fd5447af7ac3d",
+          "editorialTaskSha256": "68b4eb123a7593a30de0f0cd9ed50f9b352384d55dcd9facc09aabccdb139ad1",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaesthesia safety",
+      "proposedHomeNameKey": "anaesthesia safety",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Medical and medication error classification, prevention and reporting in anaesthesia.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:14",
+      "facetNameKey": "anatomy of skin incisions",
+      "facetName": "Anatomy of skin incisions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ce6704848c955a866a9628e3023aed7a8fedee03b8d8c53cb00d5fc725d3f0d1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN4.5",
+          "page": 109,
+          "rowBBox": [
+            51.2,
+            312.84,
+            120.4,
+            328.98
+          ],
+          "sourceBodySha256": "0e96d44e790621f88b9546535faa82028374058570a0865942cf9ddfce96fbf6",
+          "editorialTaskSha256": "e6b8e4b77c2409f81e32108ff9f9a24734819e4263713988143022d875dfaff1",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Skin",
+      "proposedHomeNameKey": "skin",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "skin"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Anatomical incision direction principles, not independent surgery.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:15",
+      "facetNameKey": "antenatal care goals",
+      "facetName": "Antenatal care goals",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0b9d00c807fe7c0952a19f680e3e84c926df7371ee302199bcd037dc8b5b7ed9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG8.1",
+          "page": 428,
+          "rowBBox": [
+            49.1,
+            447.24,
+            103.1,
+            492.48
+          ],
+          "sourceBodySha256": "9ce71486fdd2df4b5d914475487f3aec623fa4c1a8d9ec50f8f37ee8f66c45f5",
+          "editorialTaskSha256": "cf43436bdb64ad3577dd042995f5497b8323ec077def322fda74dde2584f3bc2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Antenatal care",
+      "proposedHomeNameKey": "antenatal care",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "antenatal care"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gestational age, early risks and source-described inverted pyramid of care.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:16",
+      "facetNameKey": "antenatal investigations",
+      "facetName": "Antenatal investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fce51773c1f47e770dd65a0b6bc80fdc7590e0adc990b75055de500ae46ef51d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG8.8",
+          "page": 429,
+          "rowBBox": [
+            49.1,
+            324.42,
+            103.1,
+            353.82
+          ],
+          "sourceBodySha256": "9caa3e693e9713791ce75126bfcca28d1dd78377a6e88b07eb9c0db74fc2276d",
+          "editorialTaskSha256": "21b290eedc278fe9ac65623df838e91784ecb3755ef26f0f78ea8cc81e0f64ab",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Antenatal care",
+      "proposedHomeNameKey": "antenatal care",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "antenatal care"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gestation/context-specific investigation selection, including ultrasound.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:17",
+      "facetNameKey": "anterior abdominal wall development",
+      "facetName": "Anterior abdominal wall development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f767d4f28ce511048d2c996e1305a51a2c250dbe63d23f92f53417d25c914e7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.4",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            140.46,
+            122.2,
+            169.98
+          ],
+          "sourceBodySha256": "ead0d825d9c3145f983157a1ccb013dbd191b548b6165ade7711caa595e8f107",
+          "editorialTaskSha256": "99a19143528524debfff4c3f4b6e066a0c86b8e5d9332573dda379f4411bf2c4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anterior abdominal wall",
+      "proposedHomeNameKey": "anterior abdominal wall",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Lateral folding and ventral wall closure with the umbilical ring.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:18",
+      "facetNameKey": "anterior abdominal wall layers",
+      "facetName": "Anterior abdominal wall layers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c3f3a46cbfcf0a3b90e0679a3fa7f69027af2f78640c7f7214cfaeb2f51bb274",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN44.2",
+          "page": 133,
+          "rowBBox": [
+            51.2,
+            423.48,
+            122.2,
+            467.82
+          ],
+          "sourceBodySha256": "2f1ff5ff3c6aadd6f6f044a09b9faae8ebf1b94d746da086f77c75227a94b6c7",
+          "editorialTaskSha256": "84f8b6a7323d547580a2c2423c3b216fb7a204be4928ef80a057066f67dc243e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anterior abdominal wall",
+      "proposedHomeNameKey": "anterior abdominal wall",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model fascial planes, segmental nerves and vessels; broader than abdominal muscle attachments.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:19",
+      "facetNameKey": "anterior pituitary medicines",
+      "facetName": "Anterior pituitary medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:06c70dfbdcf1d1d8a978c83795356b5a9df985d241a90615d00157cb12b77fa4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH7.4",
+          "page": 181,
+          "rowBBox": [
+            51.7,
+            68.22,
+            105.7,
+            110.34
+          ],
+          "sourceBodySha256": "e1ea507553c015634075f20124009959f113a4e1e92fa742189054f30485c1e0",
+          "editorialTaskSha256": "a3b51c53c42c18eb0c601b2bf2170ad8c23bb7d722c0ccf58945e1d95b302ea3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Pituitary gland",
+      "proposedHomeNameKey": "pituitary gland",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "pituitary gland"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Anterior pituitary release-modifying medicine targets, indications, contraindications and adverse effects.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:20",
+      "facetNameKey": "anterior triangle overview",
+      "facetName": "Anterior triangle overview",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:53b1cfd7cd9f5cc62d0153e2a3a1f24971d4e5baab2522ec3cecdc3df3afcef7",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN32.1",
+          "page": 127,
+          "rowBBox": [
+            51.2,
+            487.14,
+            122.2,
+            519.96
+          ],
+          "sourceBodySha256": "6539853536a57f39bdd66101da8028d29df86cf41753a9dcfa9291e75a94d462",
+          "editorialTaskSha256": "5ec608b056040d6ed069b62959340b1b68d07bf95bf452581ab08e17dba8f163",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anterior triangle of neck",
+      "proposedHomeNameKey": "anterior triangle of neck",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Anterior-triangle boundaries and digastric/omohyoid subdivision landmarks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:21",
+      "facetNameKey": "antiparasitic therapy",
+      "facetName": "Antiparasitic therapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c06706726d9f2d690377d4795f2095e613792b8bf4380ae608707539671b3aa5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.13",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            285.9,
+            102.7,
+            326.64
+          ],
+          "sourceBodySha256": "a2b9d51959fdbb87b57f7ffe9e3ad11714567077100371162b033e644f45507c",
+          "editorialTaskSha256": "c698e023b5076288ec06976c21f5859f602086fc8da5527d677ed7cfc3dcd0c3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Parasitic infections",
+      "proposedHomeNameKey": "parasitic infections",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Organism-specific therapy indications, actions and harms; unnamed agents remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:22",
+      "facetNameKey": "antiplatelets in stroke",
+      "facetName": "Antiplatelets in stroke",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:78f51194d5366a0ec5cbc2019192d3955a74ad383b6c848a420b323f06e3e3ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.12",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            215.22,
+            102.7,
+            256.02
+          ],
+          "sourceBodySha256": "78b3734ebe74e4c0091b246b3581740f4fe8b66ba79c521314bd6b0e1705abad",
+          "editorialTaskSha256": "b7b5aea8180faf926116687198a4b9a02bfa06cb542091e70310ea191cd70e75",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Ischaemic stroke",
+      "proposedHomeNameKey": "ischaemic stroke",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Antiplatelet role, indications, timing and contraindications in ischaemic stroke only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:23",
+      "facetNameKey": "anxiety pharmacotherapy",
+      "facetName": "Anxiety pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:428c8d98219190b4af3594d849e1c22c68274cf3bdc5343e07ea254e05f153fc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH3.6",
+          "page": 177,
+          "rowBBox": [
+            51.7,
+            222.66,
+            105.7,
+            280.98
+          ],
+          "sourceBodySha256": "8ba3baa88b47b92f6fa03551791e32e199bdf20fe18467a87f2cf975adc17c6f",
+          "editorialTaskSha256": "4d93be6a609be9788689450203062d1b36f16d5737faf0d0e61e0ee73892471b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anxiety",
+      "proposedHomeNameKey": "anxiety",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Case-based medicine comparison and treatment trade-offs; not all anxiety disorders.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:24",
+      "facetNameKey": "applied axillary lymphatics",
+      "facetName": "Applied axillary lymphatics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:adda5a029ab811f3f50bc9d29a98c1419beaf44a2bb17ca796cce87d8f109f5a",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN10.7",
+          "page": 112,
+          "rowBBox": [
+            51.2,
+            240.18,
+            120.4,
+            284.04
+          ],
+          "sourceBodySha256": "67ae3dd7c41754c6d7d89f033002c69d6786cade90777f9c812633e65e560c68",
+          "editorialTaskSha256": "de8af70e81b6f21fc7c6a6fddea920aab996cc10f491456d50cf449333d052b5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Axillary lymph nodes",
+      "proposedHomeNameKey": "axillary lymph nodes",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Vignette drainage routes to axillary groups and nodal enlargement; unnamed groups remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:25",
+      "facetNameKey": "applied tonsillar anatomy",
+      "facetName": "Applied tonsillar anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3daa463e11d9a5cbea79d9425239c92f6298e39f50bb434d135212bc109414f3",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN36.6",
+          "page": 130,
+          "rowBBox": [
+            51.2,
+            265.74,
+            122.2,
+            290.58
+          ],
+          "sourceBodySha256": "1e45d6fc2f60826cd436bab7ea090c9aa3267ce5cd1a438ec23647042b2aec2c",
+          "editorialTaskSha256": "d16fc9bff4cb1c965530fc97e8d73f81864a5881a385245f204e723c46b4dd5d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Palatine tonsil",
+      "proposedHomeNameKey": "palatine tonsil",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "palatine tonsil"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Tonsillar/abscess anatomy, surgical relations and adenoid obstruction; shared regional context does not equate adenoid and palatine tonsil identities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:26",
+      "facetNameKey": "approach to acute malnutrition",
+      "facetName": "Approach to acute malnutrition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:48003a49f17b6b5cd041fc9c230883ef5fb10f269949f20183c48b3691a668b6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE10.2",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            213.84,
+            103.1,
+            231.96
+          ],
+          "sourceBodySha256": "57759fe2a39980e47ca5186ad13b50a8bfb578e9ac4edf15b08a6550fb33803b",
+          "editorialTaskSha256": "6467423eba1e4af4eda3650d514d8e4ab0921e714b75ab48506f781a33d8e2e3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute malnutrition",
+      "proposedHomeNameKey": "acute malnutrition",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute malnutrition"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Severity, complications and inpatient/community suitability assessment only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:27",
+      "facetNameKey": "arrhythmia pharmacotherapy",
+      "facetName": "Arrhythmia pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2b77cc843deeedd87fa979fae0f73c6f61d92409550866c3e9be1e0f06622871",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.10",
+          "page": 179,
+          "rowBBox": [
+            51.7,
+            203.1,
+            105.7,
+            257.46
+          ],
+          "sourceBodySha256": "dc8991f4a54f1c4f190324dfe79528fa1d7b38b069388d5ca78b4a510adf7938",
+          "editorialTaskSha256": "fbf6e7ff6825718de2be7893be92c6a1f6057aec107867ab0eb876be89ad1511",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Arrhythmia",
+      "proposedHomeNameKey": "arrhythmia",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated drug choices across source-described arrhythmic scenarios; no independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:28",
+      "facetNameKey": "arrhythmias in heart failure",
+      "facetName": "Arrhythmias in heart failure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:edf5b88c879dcd78165f71b1e6adfa33cb8c24d03ba277a3f7e4e8a5d24ee637",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.7",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            402.84,
+            102.7,
+            443.76
+          ],
+          "sourceBodySha256": "47910a7c2a1c5501934e2496a16f293606b4629fa5383d953449f2f6b5139c6c",
+          "editorialTaskSha256": "94b71bfae852f27cf558ae029ebce875f9f6934343bf555be9ccf3136d329dae",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Heart-failure structural and haemodynamic predisposition to arrhythmias, especially atrial fibrillation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:29",
+      "facetNameKey": "arthrocentesis indications",
+      "facetName": "Arthrocentesis indications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d4a887bf2075a97fcabfd07eb5c4efe8f7c7cd6d3d0d0c2a9693504f9d3caad0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.12",
+          "page": 294,
+          "rowBBox": [
+            44.2,
+            289.92,
+            102.7,
+            317.22
+          ],
+          "sourceBodySha256": "a7421bf10bffffd24d80442a89bd4952973e45a7602014d1071ae9ebc9c58826",
+          "editorialTaskSha256": "db61bb555ac8d30ade361a109c02c60a9e77095d653f36ace4eaded7cae93a71",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Arthrocentesis",
+      "proposedHomeNameKey": "arthrocentesis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diagnostic/therapeutic indications only, not procedure performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:30",
+      "facetNameKey": "articulations of lower-limb bones",
+      "facetName": "Articulations of lower-limb bones",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:62ce1f726bef55290f67424a98971ed330ce87f4803ce1c7a110e7eecca52ccc",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN14.2",
+          "page": 116,
+          "rowBBox": [
+            51.2,
+            250.62,
+            121.6,
+            275.67
+          ],
+          "sourceBodySha256": "4c71ff374af561425da179b76861b6e9be679214c065d359b3d63be89b3823a6",
+          "editorialTaskSha256": "d81ad8e8663b9bcd47789a4134e091a8db2d6c642afc111ba684ae811411e22a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower-limb bones",
+      "proposedHomeNameKey": "lower-limb bones",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied bone joint/articular-surface identification; unspecified bones remain unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 31,
+    "distinctProposedHomes": 19,
+    "existingNameHomeLinks": 18,
+    "newNameHomeLinks": 12,
+    "facetsWithoutInitialHomeProposal": 599
+  }
+}
