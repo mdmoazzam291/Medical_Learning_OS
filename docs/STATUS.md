@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 17 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Paediatric lymphoma through Poisoning autopsy). Batch: 24 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 510 facets / 518 appearances / 291 proposed home labels; 149 facets await initial homes. Implementation: 9a1a301b11faf202824a97178caeb26da1b553cc. All mappings/bindings pending.
+
+Seventeen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Poisoning examination. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 16 — 9 November 2026
 
 Added proposals for 30 facets / 33 source appearances (Obesity examination through Paediatric lupus). Batch: 23 home labels, 21 existing-name and nine proposed-name links. Cumulative: 480 facets / 488 appearances / 273 proposed home labels; 179 facets await initial homes. Implementation: 8299446fa99bc2efff518802099dde5e7f1c8851. All mappings/bindings pending.
