@@ -1,3 +1,15 @@
+## Repeatable mixed reuse verification — 8 November 2026 IST
+
+Checked at 2026-11-08T21:59:26.742880+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at baae60af438b6e5c7ae302ed346aa7cb69f97847; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8a49c10676f8384b947b8284175aae2469a46ecd. Names-only instruction active.
+
+Added ops/nmc/verify-mixed-reuse.js and eight behavioral tests. CLI revalidates decomposition audit and underlying parent queue/batches, then verifies all 60 lead comparisons, 66 component occurrences, 45 distinct occurrence references and 65 distinct target references; exact cohort/target entries, source hashes/coordinates/modes, full reference support, overlap accounting, totals, digests and pending identity/acceptance flags. Protects explicitly inspected editorial constraints: contraceptive versus microbial sterilization kept separate, two self-parent contexts, four scoped facets. Does not independently establish medical semantics or accept 53 shared-topic candidates.
+
+Verification: eight tests observed failing before implementation and passing after; mutations cover omitted leads, lost target support, forged modes/acceptance/audit digest, conflated sterilization meanings and self-reference falsely treated as independent reuse. CLI verifier passed; full npm test passed 1,629/1,629; npm run check passed; staged whitespace check passed. Local staged tree matched GitHub implementation tree. Existing proposal packets and source evidence unchanged; no teaching content, production registry writes, identity allocation, objective/semantic equivalence or competence claims.
+
+Next: begin source-bound names-only decomposition of the 652 family/context groups from parent-follow-up-queue.json, inspecting source tasks and existing inventories before proposing reusable names or task facets. Preserve original queue as triage snapshot and keep proposed decompositions separate. Consider a meaningful source-sized first cohort rather than arbitrary bulk splitting. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or learner publication. Save via expected-head lease, verify all five changed files at final remote commit, release ownership after verification. No external writer jobs.
+
+---
+
 ## Source-context proposals for all 60 mixed reuse leads — 8 November 2026 IST
 
 Checked at 2026-11-08T21:56:08.520793+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f00c871f51d4dfbfc83a7ccc7707be39f07ddb0f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: e0e365d0450bfc79147ff2703d47794cfbd46f07. Names-only instruction active.
