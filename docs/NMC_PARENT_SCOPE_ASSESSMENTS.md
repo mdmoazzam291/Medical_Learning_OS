@@ -118,3 +118,11 @@ Run `node ops/nmc/verify-family-decomposition.js` (or `--batch=NN` once later ba
 All parent enumerations remain partial/unspecified and scope/binding flags false; canonical IDs remain null. The verifier checks evidence structure and accounting, not whether a proposed name is clinically complete or equivalent to another concept. Nine behavioral tests cover omissions with adjusted totals, foreign links, canonical/full-scope forgery, false label hints, queue drift, duplicate IDs and forged source modes.
 
 Next: continue family batch 02 from AI in laboratory biochemistry, using source-sized proposals and explicit predecessor pins. The 622 remaining family groups and actual bindings remain unfinished; no teaching content or learner publication.
+
+## Family/context decomposition proposals: batch 02
+
+The next 30 family parents (AI in laboratory biochemistry through Antiretroviral therapy) have [152 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json): 38 reusable-topic candidates and 114 contextual-task facets across 31 source appearances. Alcohol-related liver disease retains clinical-evolution and pathological-lesion tasks separately. AI local validation/oversight and airway simulation remain explicit facets. Where source tasks do not enumerate individual drugs, parasites, muscles or conditions, members remain unspecified rather than supplied from inference.
+
+The queue, three comparison inventories and batch-01 packet are digest-pinned. One component has an exact-label lead, retained as unverified. Across both batches, 60 family parents have 290 proposals and 62 source appearances; 592 families still lack initial proposals. All enumerations/scopes/bindings remain incomplete and canonical IDs null. No teaching content or automatic merging.
+
+Verified with `node ops/nmc/verify-family-decomposition.js --batch=02`. Next: inspect the next family cohort beginning Antiseizure medicines, preserving source-specific evidence and predecessor pins.
