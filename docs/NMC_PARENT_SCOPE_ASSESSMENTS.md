@@ -46,3 +46,9 @@ The reporter verifies deterministic cohort membership, index digests, source ver
 Initial editorial triage is complete for all 1,950 no-exact-label parent names. Combined with 420 selected compound parents and 57 exact-label reuse leads, all 2,427 original parent names are accounted for in distinct authoring cohorts. This is inventory/triage completion, not accepted curriculum coverage.
 
 Next: build a deterministic follow-up queue across these dispositions, preserving all source references and routing the 69 mixed groups and 652 families/contexts to decomposition before canonical binding. The 570 standalone candidates and 659 scoped facets also need semantic reuse and objective/canonical binding. Shared/family target scope, 21 source exceptions and learner integration remain unfinished. NMC Foundation is incomplete.
+
+## Follow-up queue
+
+The deterministic [source-bound queue](evidence/2026-11-08-nmc-parent-follow-up-queue.json) includes all 1,950 triaged parents and 2,094 source appearances. It routes 69 mixed groups and 652 families/contexts to decomposition, 570 standalone candidates to semantic reuse/topic binding and 659 scoped facets to home resolution/task binding. These are authoring dependencies, not learner study priorities or medical urgency rankings. Original task evidence and assessment modes remain attached to every row.
+
+Run `node ops/nmc/report-parent-follow-up.js --verify` to revalidate all eleven underlying batches against task evidence, then check exact queue content and source digests. The builder rejects overlapping names/references, unknown dispositions and accepted/allocated identities. Next: resolve the mixed groups in source-bound names-only packets; do not infer completion from queue generation.
