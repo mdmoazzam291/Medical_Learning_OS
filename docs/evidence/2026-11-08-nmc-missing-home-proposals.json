@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-proposals",
-  "sourceHead": "d73fc92ef80fd172b789fdb2939e17934fdd5848",
+  "sourceHead": "1ee866260f5271d0012726ee616844e10d7518fc",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "productionRegistryChecked": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "homeNames": 122,
-    "facetBindings": 247
+    "homeNames": 174,
+    "facetBindings": 310
   },
   "homes": [
     {
@@ -3941,6 +3941,1301 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:8bb09d7744c4e52864b8e8d68dca5d56111e2ad60ed16ae6f70e3bc4ca3048fe"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:organ-donation",
+      "name": "Organ donation",
+      "nameKey": "organ donation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "organ donation ethics",
+          "componentProposalIds": [
+            "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac"
+          ]
+        },
+        {
+          "facetNameKey": "organ donation law",
+          "componentProposalIds": [
+            "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:organ-of-corti",
+      "name": "Organ of Corti",
+      "nameKey": "organ of corti",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "organ of corti histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:06"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:ovary",
+      "name": "Ovary",
+      "nameKey": "ovary",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "ovary histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:09"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:hand-infection",
+      "name": "Hand infection",
+      "nameKey": "hand infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "palmar infection spread",
+          "componentProposalIds": [
+            "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:67f78b54dd1e1a198de6a11ca9838302299ff424c8eccf989fd56807dc358b5a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:parenteral-nutrition",
+      "name": "Parenteral nutrition",
+      "nameKey": "parenteral nutrition",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "parenteral nutrition indications",
+          "componentProposalIds": [
+            "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:parkinsonism",
+      "name": "Parkinsonism",
+      "nameKey": "parkinsonism",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "parkinsonism pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:parotid-duct",
+      "name": "Parotid duct",
+      "nameKey": "parotid duct",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "parotid duct surface projection",
+          "componentProposalIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:parotid-gland",
+      "name": "Parotid gland",
+      "nameKey": "parotid gland",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "parotid surface projection",
+          "componentProposalIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:pectoralis-major",
+      "name": "Pectoralis major",
+      "nameKey": "pectoralis major",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "pectoralis major testing",
+          "componentProposalIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:06"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:penis",
+      "name": "Penis",
+      "nameKey": "penis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "penis histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:08"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:peripheral-vascular-disease",
+      "name": "Peripheral vascular disease",
+      "nameKey": "peripheral vascular disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "peripheral vascular disease pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:pineal-gland",
+      "name": "Pineal gland",
+      "nameKey": "pineal gland",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "pineal physiology",
+          "componentProposalIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77"
+          ]
+        },
+        {
+          "facetNameKey": "pineal gland histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3:name-component:07"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:posterior-forearm",
+      "name": "Posterior forearm",
+      "nameKey": "posterior forearm",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "posterior forearm nerves",
+          "componentProposalIds": [
+            "nmc-2024-ref:10cafaa0c722a509d70b7ddb02e4373d309d40c496c0dff6f88cfb48bf098519:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:10cafaa0c722a509d70b7ddb02e4373d309d40c496c0dff6f88cfb48bf098519"
+          ]
+        },
+        {
+          "facetNameKey": "posterior forearm blood vessels",
+          "componentProposalIds": [
+            "nmc-2024-ref:10cafaa0c722a509d70b7ddb02e4373d309d40c496c0dff6f88cfb48bf098519:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:10cafaa0c722a509d70b7ddb02e4373d309d40c496c0dff6f88cfb48bf098519"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:posterior-leg",
+      "name": "Posterior leg",
+      "nameKey": "posterior leg",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "posterior leg nerves",
+          "componentProposalIds": [
+            "nmc-2024-ref:38af0ecbbbed67c1c4fcf162fb776bcfa9cd16b8d45ac5ea116aa1b4a154aee5:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38af0ecbbbed67c1c4fcf162fb776bcfa9cd16b8d45ac5ea116aa1b4a154aee5"
+          ]
+        },
+        {
+          "facetNameKey": "posterior leg blood vessels",
+          "componentProposalIds": [
+            "nmc-2024-ref:38af0ecbbbed67c1c4fcf162fb776bcfa9cd16b8d45ac5ea116aa1b4a154aee5:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:38af0ecbbbed67c1c4fcf162fb776bcfa9cd16b8d45ac5ea116aa1b4a154aee5"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:posterior-thigh",
+      "name": "Posterior thigh",
+      "nameKey": "posterior thigh",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "posterior thigh nerves",
+          "componentProposalIds": [
+            "nmc-2024-ref:e7f7babb5d2e6d204670efdf623b2ae0a04853724e6be4b00c5ed5e0ddda33a8:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7f7babb5d2e6d204670efdf623b2ae0a04853724e6be4b00c5ed5e0ddda33a8"
+          ]
+        },
+        {
+          "facetNameKey": "posterior thigh blood vessels",
+          "componentProposalIds": [
+            "nmc-2024-ref:e7f7babb5d2e6d204670efdf623b2ae0a04853724e6be4b00c5ed5e0ddda33a8:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7f7babb5d2e6d204670efdf623b2ae0a04853724e6be4b00c5ed5e0ddda33a8"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:prostate",
+      "name": "Prostate",
+      "nameKey": "prostate",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "prostate histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:07"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:psychosis",
+      "name": "Psychosis",
+      "nameKey": "psychosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "psychosis pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:radial-artery",
+      "name": "Radial artery",
+      "nameKey": "radial artery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "radial pulse palpation",
+          "componentProposalIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:delivery",
+      "name": "Delivery",
+      "nameKey": "delivery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "recent delivery evidence",
+          "componentProposalIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        },
+        {
+          "facetNameKey": "remote delivery evidence",
+          "componentProposalIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46b09220a83c6ec92fd991933184b768d203d7cbd03818afae164617ce3fcc61"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:retinal-arterial-occlusion",
+      "name": "Retinal arterial occlusion",
+      "nameKey": "retinal arterial occlusion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "retinal arterial occlusion anatomy",
+          "componentProposalIds": [
+            "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:rheumatic-fever",
+      "name": "Rheumatic fever",
+      "nameKey": "rheumatic fever",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "rheumatic fever investigation",
+          "componentProposalIds": [
+            "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:rhinitis",
+      "name": "Rhinitis",
+      "nameKey": "rhinitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "rhinitis pharmacology",
+          "componentProposalIds": [
+            "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:scalp",
+      "name": "Scalp",
+      "nameKey": "scalp",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "scalp lymphatic drainage",
+          "componentProposalIds": [
+            "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:serratus-anterior",
+      "name": "Serratus anterior",
+      "nameKey": "serratus anterior",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "serratus anterior testing",
+          "componentProposalIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193:name-component:07"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:sexually-transmitted-infections",
+      "name": "Sexually transmitted infections",
+      "nameKey": "sexually transmitted infections",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "sexually transmitted infection pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:skin-infection",
+      "name": "Skin infection",
+      "nameKey": "skin infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "skin infection microbiology",
+          "componentProposalIds": [
+            "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534"
+          ]
+        },
+        {
+          "facetNameKey": "skin infection surgery",
+          "componentProposalIds": [
+            "nmc-2024-ref:40785db42d7737ee430dccca281c92d053184ab750bf44b9801c6db786a85da4:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:40785db42d7737ee430dccca281c92d053184ab750bf44b9801c6db786a85da4"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:soft-tissue-infection",
+      "name": "Soft tissue infection",
+      "nameKey": "soft tissue infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "soft tissue infection microbiology",
+          "componentProposalIds": [
+            "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:subclavian-vein",
+      "name": "Subclavian vein",
+      "nameKey": "subclavian vein",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "subclavian vein surface projection",
+          "componentProposalIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1:name-component:08"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:subcutaneous-adipose-tissue",
+      "name": "Subcutaneous adipose tissue",
+      "nameKey": "subcutaneous adipose tissue",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "subcutaneous fat distribution",
+          "componentProposalIds": [
+            "nmc-2024-ref:99ac270c24814d8a033c7d2005268b365da810dda220850d5e94e02969d23825:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:99ac270c24814d8a033c7d2005268b365da810dda220850d5e94e02969d23825"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:subcutaneous-infection",
+      "name": "Subcutaneous infection",
+      "nameKey": "subcutaneous infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "subcutaneous infection surgery",
+          "componentProposalIds": [
+            "nmc-2024-ref:40785db42d7737ee430dccca281c92d053184ab750bf44b9801c6db786a85da4:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:40785db42d7737ee430dccca281c92d053184ab750bf44b9801c6db786a85da4"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:surgery",
+      "name": "Surgery",
+      "nameKey": "surgery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "surgical procedure observation",
+          "componentProposalIds": [
+            "nmc-2024-ref:f7c7a7c6f079b0d1efdcc5103be51c45461eed39262f80d3dbc7fdd48c5ee9fe:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f7c7a7c6f079b0d1efdcc5103be51c45461eed39262f80d3dbc7fdd48c5ee9fe"
+          ]
+        },
+        {
+          "facetNameKey": "supervised minor surgical assistance",
+          "componentProposalIds": [
+            "nmc-2024-ref:f7c7a7c6f079b0d1efdcc5103be51c45461eed39262f80d3dbc7fdd48c5ee9fe:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f7c7a7c6f079b0d1efdcc5103be51c45461eed39262f80d3dbc7fdd48c5ee9fe"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:synapse",
+      "name": "Synapse",
+      "nameKey": "synapse",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "synapse classification",
+          "componentProposalIds": [
+            "nmc-2024-ref:0651dc8a67a787cc1f338b56a0fecbc8864734a58f2a11ddf2ca5be19d1d9d24:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0651dc8a67a787cc1f338b56a0fecbc8864734a58f2a11ddf2ca5be19d1d9d24"
+          ]
+        },
+        {
+          "facetNameKey": "synaptic transmission properties",
+          "componentProposalIds": [
+            "nmc-2024-ref:0651dc8a67a787cc1f338b56a0fecbc8864734a58f2a11ddf2ca5be19d1d9d24:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0651dc8a67a787cc1f338b56a0fecbc8864734a58f2a11ddf2ca5be19d1d9d24"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:testis",
+      "name": "Testis",
+      "nameKey": "testis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "testis histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:tetralogy-of-fallot",
+      "name": "Tetralogy of Fallot",
+      "nameKey": "tetralogy of fallot",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "tetralogy of fallot development",
+          "componentProposalIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:thalamus",
+      "name": "Thalamus",
+      "nameKey": "thalamus",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "thalamic connections",
+          "componentProposalIds": [
+            "nmc-2024-ref:5cdc05d135d7ec932a58363670ce7e169539fbcf0fd10fa763d9eddfca24a8b5:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cdc05d135d7ec932a58363670ce7e169539fbcf0fd10fa763d9eddfca24a8b5"
+          ]
+        },
+        {
+          "facetNameKey": "thalamic pathway function",
+          "componentProposalIds": [
+            "nmc-2024-ref:5cdc05d135d7ec932a58363670ce7e169539fbcf0fd10fa763d9eddfca24a8b5:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cdc05d135d7ec932a58363670ce7e169539fbcf0fd10fa763d9eddfca24a8b5"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:thorax",
+      "name": "Thorax",
+      "nameKey": "thorax",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "thoracic cavity boundaries",
+          "componentProposalIds": [
+            "nmc-2024-ref:527f01d307e798344f0c150a74488cfdb478a722d127540b9b699ee83442489f:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:527f01d307e798344f0c150a74488cfdb478a722d127540b9b699ee83442489f"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:thymus",
+      "name": "Thymus",
+      "nameKey": "thymus",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "thymus physiology",
+          "componentProposalIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:thyroid-function",
+      "name": "Thyroid function",
+      "nameKey": "thyroid function",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "thyroid feedback regulation",
+          "componentProposalIds": [
+            "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3"
+          ]
+        },
+        {
+          "facetNameKey": "thyroid function test interpretation",
+          "componentProposalIds": [
+            "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:tongue",
+      "name": "Tongue",
+      "nameKey": "tongue",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "tongue histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:tonsil",
+      "name": "Tonsil",
+      "nameKey": "tonsil",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "tonsil histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6:name-component:06"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:tracheoesophageal-fistula",
+      "name": "Tracheoesophageal fistula",
+      "nameKey": "tracheoesophageal fistula",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "tracheoesophageal fistula development",
+          "componentProposalIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:umbilical-cord",
+      "name": "Umbilical cord",
+      "nameKey": "umbilical cord",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "umbilical cord histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:14"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:ureter",
+      "name": "Ureter",
+      "nameKey": "ureter",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "ureter histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:urinary-bladder",
+      "name": "Urinary bladder",
+      "nameKey": "urinary bladder",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "urinary bladder histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:urinary-tract-infection",
+      "name": "Urinary tract infection",
+      "nameKey": "urinary tract infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "urinary tract infection pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:uterine-tube",
+      "name": "Uterine tube",
+      "nameKey": "uterine tube",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "uterine tube histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:11"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:uterus",
+      "name": "Uterus",
+      "nameKey": "uterus",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "uterus histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:10"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:vas-deferens",
+      "name": "Vas deferens",
+      "nameKey": "vas deferens",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "vas deferens histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:06"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:ventricular-septal-defect",
+      "name": "Ventricular septal defect",
+      "nameKey": "ventricular septal defect",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "ventricular septal defect development",
+          "componentProposalIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:vestibular-system",
+      "name": "Vestibular system",
+      "nameKey": "vestibular system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "vestibular anatomy",
+          "componentProposalIds": [
+            "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:viral-diarrhoea",
+      "name": "Viral diarrhoea",
+      "nameKey": "viral diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "viral diarrhoea treatment",
+          "componentProposalIds": [
+            "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:vitamin-b12",
+      "name": "Vitamin B12",
+      "nameKey": "vitamin b12",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "vitamin b12 metabolism",
+          "componentProposalIds": [
+            "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796"
           ]
         }
       ]
