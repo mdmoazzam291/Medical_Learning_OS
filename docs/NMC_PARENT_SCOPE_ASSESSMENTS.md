@@ -102,3 +102,11 @@ Run `node ops/nmc/verify-mixed-reuse.js` to check all 60 comparison proposals ag
 Recorded editorial constraints preserve the contraceptive/microbial sterilization separation, the two self-parent contexts and four scoped facets. The verifier protects those inspected decisions; it does not independently establish medical semantics or certify the other 53 shared-topic candidates. Behavioral tests reject omissions, lost target support, forged modes/acceptance/digests and changes that would treat different meanings or self-references as shared-topic reuse. No names are allocated, merged or published.
 
 Next: inspect the 652 family/context groups in source-bound batches. Reuse existing names where source scope supports it while keeping unresolved home/objective/canonical links explicit. No teaching content is authorized in this phase.
+
+## Family/context decomposition proposals: batch 01
+
+The first 30 family/context parents (Abdominal incisions through Age-specific nutrition) have [138 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json): 47 reusable-topic candidates and 91 contextual-task facets across 31 source appearances. Both adrenal tumour tasks retain separate support. Broad family tasks that do not enumerate conditions are left open; no list of diagnoses or procedures is invented to fill them. Named contrast studies, routes, presentations and drug groups come from the source-task scope. Simulation and age-specific care remain explicit contexts.
+
+The batch pins the queue and three existing comparison inventories. One component has an exact-label inventory lead, retained as an unverified hint; lack of exact equality does not establish novelty. No automatic merge, canonical allocation, full member enumeration, clinical/source approval or teaching content. All scopes and bindings remain incomplete. Of 652 family/context parents, 30 now have initial proposals and 622 do not.
+
+Next: inspect the next source-sized family cohort beginning with AI in laboratory biochemistry, preserving unspecified family members and task modes. Consolidate repeatable verification for family packets before expanding substantially. Mixed-group and reuse evidence remains unchanged; actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished.
