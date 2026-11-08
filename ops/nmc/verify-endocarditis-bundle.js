@@ -3,7 +3,11 @@ import {readFileSync} from 'node:fs';
 const root=new URL('../../',import.meta.url);
 const read=p=>JSON.parse(readFileSync(new URL(p,root),'utf8'));
 const scope=read('docs/evidence/2026-11-08-nmc-endocarditis-cross-subject-components.json');
-const path='docs/evidence/2026-11-08-nmc-endocarditis-evidence-integration-bundle.json';
+const paths=scope.rows.flatMap(r=>r.components.map(c=>c.draftLearningBundlePath).filter(Boolean));
+assert(paths.length>0);assert.equal(new Set(paths).size,paths.length);
+const globalIds=new Set();
+for(const path of paths){
+assert(/^docs\/evidence\/[a-z0-9-]+\.json$/.test(path));
 const b=read(path);
 assert.equal(b.status,'draft-component-learning-bundle');
 for(const key of ['clinicalApproval','learnerActivation'])assert.equal(b[key],false);
@@ -14,6 +18,7 @@ assert.equal(component.draftLearningBundlePath,path);
 assert.equal(b.cases.length,2);
 const artifacts=[b.teaching,...b.cases,b.rubric],ids=artifacts.map(a=>a.artifactVersionId);
 assert.equal(new Set(ids).size,ids.length);
+for(const id of ids){assert(typeof id==='string'&&id.length>0);assert(!globalIds.has(id));globalIds.add(id);}
 assert.deepEqual(component.draftMaterialVersionIds,ids);
 assert(typeof b.teaching.body==='string'&&b.teaching.body.length>40);
 for(const c of b.cases){
@@ -24,4 +29,5 @@ for(const c of b.cases){
 assert.equal(b.rubric.validated,false);assert.equal(b.rubric.passThreshold,null);
 assert.equal(b.rubric.dimensions.length,4);assert.equal(new Set(b.rubric.dimensions).size,4);
 assert(b.source.url.startsWith('https://'));assert(b.source.locators.length>0);
-console.log('Verified endocarditis bundle: exact component and four artifact IDs; draft-only evidence');
+}
+console.log('Verified '+paths.length+' endocarditis bundles and '+globalIds.size+' unique artifact bindings; draft-only evidence');
