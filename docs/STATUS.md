@@ -1,3 +1,15 @@
+## Mixed-scope decomposition proposals batch 01 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:27:56.993085+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d448e403aeef9261c94bed0770f3081840c67f7e; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 3e3f1b7c4192d8606c389edf40643505194401f6. Names-only user instruction active.
+
+Inspected the first 20 of 69 mixed groups and underlying tasks (Abdominal diagnostic modalities through Creatinine estimation). Added 133 source-linked name proposals: 78 reusable-topic candidates and 55 contextual-task facets. All 21 source appearances retained with exact hashes, modes and parent references. Blood components has separate physiology versus transfusion-selection evidence; proposals link only the appropriate reference. Parent scopes/bindings remain incomplete; canonical/objective IDs null, semantic equivalence unverified, mappings false. No educational content, production registry change or clinical acceptance.
+
+Verification: exact first-20 cohort and 133 unique proposal IDs; every proposal has nonempty source-reference subset, every parent source is represented; task/body hashes and modes match underlying task packets. Original queue and all eleven predecessor projections byte-unchanged. Parent follow-up --verify passed, 11 focused tests passed, npm run check passed, staged whitespace check passed. Local staged tree matches remote implementation tree exactly. Metadata-only changes; full suite not repeated (last full run 1,613/1,613 passed).
+
+Remaining: all 69 mixed groups remain unresolved; 20 now have decomposition proposals, 49 do not. Next inspect the next 20 starting Deformities, through Muscle classification, using underlying task evidence and explicit source-role links; create mixed-scope-decomposition-batch-02, pin queue and predecessor proposal digests, preserve uncertainty and check reuse before allocating identities. Existing 652 family/context groups, semantic reuse, homes, canonical/objective bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or publication. Save via expected-head lease; verify all four changed files remotely and release ownership. No external writer jobs remain.
+
+---
+
 ## Source-bound parent follow-up queue — 8 November 2026 IST
 
 Checked at 2026-11-08T21:23:34.337324+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 31dd66951058bce6bd17dc9d976586ae21777c5b; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8c1a1cbe3fbfb2b2eeed03a7ace52e9bafb51dd2. Names-only user instruction remains active.
