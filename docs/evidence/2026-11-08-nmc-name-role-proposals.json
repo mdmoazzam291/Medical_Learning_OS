@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "editorial-name-role-proposals",
-  "sourceHead": "1e1818d37aec9a0f13c2efdc3cc43a808e46dcd4",
+  "sourceHead": "ec15a11bd04c8a6590c37197aa2059d456b02ac6",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -9,10 +9,10 @@
   "coverageFraction": null,
   "classificationBasis": "editorial-name-and-existing-source-context",
   "totals": {
-    "entries": 40,
-    "reusableNameCandidates": 22,
-    "scopeFacets": 18,
-    "componentOccurrences": 63
+    "entries": 101,
+    "reusableNameCandidates": 71,
+    "scopeFacets": 30,
+    "componentOccurrences": 124
   },
   "entries": [
     {
@@ -996,6 +996,1226 @@
           "parentNameKey": "hypertension and daily life",
           "sourceReferenceIds": [
             "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ABO blood groups",
+      "nameKey": "abo blood groups",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "blood-group-system",
+      "proposedHomeLabel": "ABO blood groups",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1020c8d0faab96aba97087842343e5659ca924e34ee2c5906cb51442b4a61b9f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "abo and rh groups",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1020c8d0faab96aba97087842343e5659ca924e34ee2c5906cb51442b4a61b9f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rh blood groups",
+      "nameKey": "rh blood groups",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "blood-group-system",
+      "proposedHomeLabel": "Rh blood groups",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:1020c8d0faab96aba97087842343e5659ca924e34ee2c5906cb51442b4a61b9f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "abo and rh groups",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1020c8d0faab96aba97087842343e5659ca924e34ee2c5906cb51442b4a61b9f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute inflammation",
+      "nameKey": "acute inflammation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Acute inflammation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic inflammation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic inflammation",
+      "nameKey": "chronic inflammation",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "pathological-process",
+      "proposedHomeLabel": "Chronic inflammation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic inflammation",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute kidney dysfunction",
+      "nameKey": "acute kidney dysfunction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-condition",
+      "proposedHomeLabel": "Acute kidney dysfunction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:18712fae8a70131474313dc72eff318cdfbcd9b5db209fe7d837e1324221ad07:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic kidney dysfunction",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:18712fae8a70131474313dc72eff318cdfbcd9b5db209fe7d837e1324221ad07"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic kidney dysfunction",
+      "nameKey": "chronic kidney dysfunction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-condition",
+      "proposedHomeLabel": "Chronic kidney dysfunction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:18712fae8a70131474313dc72eff318cdfbcd9b5db209fe7d837e1324221ad07:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic kidney dysfunction",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:18712fae8a70131474313dc72eff318cdfbcd9b5db209fe7d837e1324221ad07"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute rhinitis",
+      "nameKey": "acute rhinitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Acute rhinitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic rhinitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic rhinitis",
+      "nameKey": "chronic rhinitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Chronic rhinitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic rhinitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute sinusitis",
+      "nameKey": "acute sinusitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Acute sinusitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c23d204ba31e4bdc9e418ab94272ea873e0f160e9d66835ff20ffbdb5e5891d6:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic sinusitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c23d204ba31e4bdc9e418ab94272ea873e0f160e9d66835ff20ffbdb5e5891d6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic sinusitis",
+      "nameKey": "chronic sinusitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Chronic sinusitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c23d204ba31e4bdc9e418ab94272ea873e0f160e9d66835ff20ffbdb5e5891d6:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "acute and chronic sinusitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c23d204ba31e4bdc9e418ab94272ea873e0f160e9d66835ff20ffbdb5e5891d6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stable angina",
+      "nameKey": "stable angina",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Stable angina",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "angina and infarction",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unstable angina",
+      "nameKey": "unstable angina",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Unstable angina",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "angina and infarction",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Myocardial infarction",
+      "nameKey": "myocardial infarction",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Myocardial infarction",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "angina and infarction",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ankle joint",
+      "nameKey": "ankle joint",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Ankle joint",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "ankle and tibiofibular joints",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Proximal tibiofibular joint",
+      "nameKey": "proximal tibiofibular joint",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Proximal tibiofibular joint",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "ankle and tibiofibular joints",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Distal tibiofibular joint",
+      "nameKey": "distal tibiofibular joint",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Distal tibiofibular joint",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "ankle and tibiofibular joints",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Antiseptics",
+      "nameKey": "antiseptics",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "agent-class",
+      "proposedHomeLabel": "Antiseptics",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "antiseptics and disinfectants",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Disinfectants",
+      "nameKey": "disinfectants",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "agent-class",
+      "proposedHomeLabel": "Disinfectants",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "antiseptics and disinfectants",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arousal",
+      "nameKey": "arousal",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-state",
+      "proposedHomeLabel": "Arousal",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arousal, sleep and eeg",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sleep",
+      "nameKey": "sleep",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "physiological-state",
+      "proposedHomeLabel": "Sleep",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arousal, sleep and eeg",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electroencephalography",
+      "nameKey": "electroencephalography",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "diagnostic-investigation",
+      "proposedHomeLabel": "Electroencephalography",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arousal, sleep and eeg",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arteries",
+      "nameKey": "arteries",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure-class",
+      "proposedHomeLabel": "Arteries",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arteries, veins and vascular sinuses",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Veins",
+      "nameKey": "veins",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure-class",
+      "proposedHomeLabel": "Veins",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arteries, veins and vascular sinuses",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vascular sinuses",
+      "nameKey": "vascular sinuses",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure-class",
+      "proposedHomeLabel": "Vascular sinuses",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "arteries, veins and vascular sinuses",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Asthma pharmacology",
+      "nameKey": "asthma pharmacology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "pharmacotherapy-facet",
+      "proposedHomeLabel": "Asthma",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "asthma, copd and rhinitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "COPD pharmacology",
+      "nameKey": "copd pharmacology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "pharmacotherapy-facet",
+      "proposedHomeLabel": "COPD",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "asthma, copd and rhinitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rhinitis pharmacology",
+      "nameKey": "rhinitis pharmacology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "pharmacotherapy-facet",
+      "proposedHomeLabel": "Rhinitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "asthma, copd and rhinitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auditory anatomy",
+      "nameKey": "auditory anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Auditory system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "auditory and vestibular anatomy",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vestibular anatomy",
+      "nameKey": "vestibular anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Vestibular system",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "auditory and vestibular anatomy",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb7504afd102ba5e591f1fa9dac6a13869a6aa4a2a41a700cca6036ddfa54166"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Folate deficiency",
+      "nameKey": "folate deficiency",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Folate deficiency",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "b12 and folate deficiency",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Basal ganglia",
+      "nameKey": "basal ganglia",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Basal ganglia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "basal ganglia and limbic lobe",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Limbic lobe",
+      "nameKey": "limbic lobe",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "anatomical-structure",
+      "proposedHomeLabel": "Limbic lobe",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "basal ganglia and limbic lobe",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bilirubin metabolism",
+      "nameKey": "bilirubin metabolism",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "biochemical-process",
+      "proposedHomeLabel": "Bilirubin metabolism",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bilirubin and jaundice",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bone infection microbiology",
+      "nameKey": "bone infection microbiology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "microbiology-facet",
+      "proposedHomeLabel": "Bone infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joint infection microbiology",
+      "nameKey": "joint infection microbiology",
+      "classificationRole": "scope-facet",
+      "proposedKind": "microbiology-facet",
+      "proposedHomeLabel": "Joint infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infection",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Acute osteomyelitis",
+      "nameKey": "acute osteomyelitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Acute osteomyelitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infections",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Subacute osteomyelitis",
+      "nameKey": "subacute osteomyelitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Subacute osteomyelitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infections",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic osteomyelitis",
+      "nameKey": "chronic osteomyelitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Chronic osteomyelitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infections",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Septic arthritis",
+      "nameKey": "septic arthritis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Septic arthritis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "bone and joint infections",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Calcium nutrition",
+      "nameKey": "calcium nutrition",
+      "classificationRole": "scope-facet",
+      "proposedKind": "nutrition-facet",
+      "proposedHomeLabel": "Calcium",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "calcium and magnesium",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnesium nutrition",
+      "nameKey": "magnesium nutrition",
+      "classificationRole": "scope-facet",
+      "proposedKind": "nutrition-facet",
+      "proposedHomeLabel": "Magnesium",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "calcium and magnesium",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Above-elbow cast",
+      "nameKey": "above-elbow cast",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Above-elbow cast",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Below-knee cast",
+      "nameKey": "below-knee cast",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Below-knee cast",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Above-knee cast",
+      "nameKey": "above-knee cast",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Above-knee cast",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thomas splint",
+      "nameKey": "thomas splint",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Thomas splint",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:04",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Long-bone splinting",
+      "nameKey": "long-bone splinting",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Long-bone splinting",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:05",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shoulder strapping",
+      "nameKey": "shoulder strapping",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Shoulder strapping",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:06",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clavicle strapping",
+      "nameKey": "clavicle strapping",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "immobilization-procedure-or-device",
+      "proposedHomeLabel": "Clavicle strapping",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b:name-component:07",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "casting and splinting",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cataract anatomy",
+      "nameKey": "cataract anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Cataract",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "cataract, glaucoma and retinal arterial occlusion",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Glaucoma anatomy",
+      "nameKey": "glaucoma anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Glaucoma",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "cataract, glaucoma and retinal arterial occlusion",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Retinal arterial occlusion anatomy",
+      "nameKey": "retinal arterial occlusion anatomy",
+      "classificationRole": "scope-facet",
+      "proposedKind": "anatomical-facet",
+      "proposedHomeLabel": "Retinal arterial occlusion",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26:name-component:03",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "cataract, glaucoma and retinal arterial occlusion",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chancroid",
+      "nameKey": "chancroid",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Chancroid",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:cad0af833b6bbbfb786fa4ba774e4632e19460775d3d8985ebc3aa6fd29d1120:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "chancroid and genital herpes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cad0af833b6bbbfb786fa4ba774e4632e19460775d3d8985ebc3aa6fd29d1120"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Genital herpes",
+      "nameKey": "genital herpes",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Genital herpes",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:cad0af833b6bbbfb786fa4ba774e4632e19460775d3d8985ebc3aa6fd29d1120:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "chancroid and genital herpes",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cad0af833b6bbbfb786fa4ba774e4632e19460775d3d8985ebc3aa6fd29d1120"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chronic conjunctivitis",
+      "nameKey": "chronic conjunctivitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Chronic conjunctivitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:da0e71956c1e39cdff10e5e926d844970c975e1bc7023ed32176a28cc48efa25:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "chronic conjunctivitis and trachoma",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:da0e71956c1e39cdff10e5e926d844970c975e1bc7023ed32176a28cc48efa25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trachoma",
+      "nameKey": "trachoma",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Trachoma",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:da0e71956c1e39cdff10e5e926d844970c975e1bc7023ed32176a28cc48efa25:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "chronic conjunctivitis and trachoma",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:da0e71956c1e39cdff10e5e926d844970c975e1bc7023ed32176a28cc48efa25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cirrhosis",
+      "nameKey": "cirrhosis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Cirrhosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "cirrhosis and portal hypertension",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Portal hypertension",
+      "nameKey": "portal hypertension",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Portal hypertension",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "cirrhosis and portal hypertension",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Convulsions",
+      "nameKey": "convulsions",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Convulsions",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "convulsions and coma",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coma",
+      "nameKey": "coma",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "clinical-presentation",
+      "proposedHomeLabel": "Coma",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "convulsions and coma",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Crohn disease",
+      "nameKey": "crohn disease",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Crohn disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d:name-component:01",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "crohn disease and ulcerative colitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ulcerative colitis",
+      "nameKey": "ulcerative colitis",
+      "classificationRole": "reusable-name-candidate",
+      "proposedKind": "condition",
+      "proposedHomeLabel": "Ulcerative colitis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d:name-component:02",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "parentNameKey": "crohn disease and ulcerative colitis",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d"
           ]
         }
       ]
