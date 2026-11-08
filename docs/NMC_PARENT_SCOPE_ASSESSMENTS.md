@@ -142,3 +142,11 @@ The next 30 family parents (Bleeding disorders through Cervical fascial spaces) 
 The queue, three inventories and all three predecessors are digest-pinned; nine component labels have unverified exact-label hints. Cumulative: 120 family parents, 559 proposal occurrences and 123 source appearances; 532 families still lack initial proposals. All scopes, enumerations and bindings remain incomplete; canonical IDs null. No teaching content or automatic merging.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=04`. Next: inspect the next family cohort beginning Cervical lymph nodes, preserving task support and predecessor digests.
+
+## Family/context decomposition proposals: batch 05
+
+The next 30 family parents (Cervical lymph nodes through Costal cartilage joints) have [135 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json): 32 reusable-topic candidates and 103 contextual-task facets across 30 source appearances. Contraception physiology and method/technique comparison keep their own references. Clinic workflows, anaesthesiology roles and child-development unit observation remain contextual; surgical block observation is not performance. Legal-source identification and healthcare claim interpretation do not establish that current law has been rechecked. Unnamed tumour/defect/food/drug members remain unspecified.
+
+The queue, three inventories and four predecessor packets are digest-pinned; two component labels have unverified exact-label hints. Across five batches, 150 family parents have 694 proposal occurrences and 153 source appearances; 502 families lack initial proposals. All enumerations, scopes and bindings remain incomplete; canonical IDs null. No teaching content or automatic merging.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=05`. Next: inspect the next family cohort beginning Cough medicines, preserving task-specific evidence and all predecessor pins.
