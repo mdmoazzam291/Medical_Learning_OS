@@ -1,3 +1,17 @@
+## Mixed-scope decomposition proposals batch 02 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:31:32.749169+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f140347e019258e1c14fbd63fdaaab48b61f1fc8; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: d06943195be9cedc467cf6f1d132d99a4283893a. Names-only instruction active.
+
+Inspected next 20 mixed parents, Deformities through Muscle classification. Added 243 source-specific name proposals: 140 reusable-topic candidates and 103 contextual-task facets across 76 source appearances. Geriatrics retains 22 task contexts and Infectious Diseases 35, each component linked only to the task supporting it. Muscle tissue classification and skeletal descriptive classification remain separate. Broad drug classes, procedure contexts, developmental timing and prenatal screening labels remain editorial candidates, not allocated identities or coverage claims. No educational content.
+
+Cumulative: 40 mixed parents, 376 component proposals, 97 source appearances. 29 mixed parents have no decomposition proposals; all 69 original mixed scopes remain unresolved until actual scope/binding work. Queue snapshot and batch 01 unchanged; batch 02 pins both digests. All canonical/objective IDs null, semantic equivalence unverified, mapping and scope/binding completion false.
+
+Verification: exact next-20 cohort, unique proposal IDs, disjoint parent cohorts; every source reference covered and every component linked to a valid single source; all 76 task/body hashes and modes match underlying packets; previous queue and proposal byte-unchanged. Follow-up queue --verify passed, 11 focused tests passed, npm run check passed, whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only: no code/tests changed; full suite not repeated (last full: 1,613/1,613).
+
+Next: inspect remaining 29 mixed groups; batch 03 can cover next 20, Neonatal surgical conditions through Reproductive tract anatomy. Preserve source-specific modes and evidence, pin queue and both predecessor proposal digests, check role/name reuse before allocating identities. Then final nine mixed groups, 652 families/contexts, semantic reuse, home/objective/canonical bindings, shared target scope, 21 source exceptions and learner integration remain. Foundation incomplete. No merge, deployment, production publication or clinical acceptance. Save via expected-head lease, verify all four changed files at remote final commit; ownership released after verification. No external writer jobs.
+
+---
+
 ## Mixed-scope decomposition proposals batch 01 — 8 November 2026 IST
 
 Checked at 2026-11-08T21:27:56.993085+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d448e403aeef9261c94bed0770f3081840c67f7e; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 3e3f1b7c4192d8606c389edf40643505194401f6. Names-only user instruction active.
