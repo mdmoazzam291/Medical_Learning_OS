@@ -12,10 +12,10 @@
     "classifiedNames": 1195,
     "scopeFacets": 407,
     "exactCandidateHomeLinks": 45,
-    "proposedNewHomeLinks": 63,
-    "totalFacetHomeLinks": 108,
-    "unresolvedFacetHomes": 299,
-    "distinctCandidateHomes": 31
+    "proposedNewHomeLinks": 104,
+    "totalFacetHomeLinks": 149,
+    "unresolvedFacetHomes": 258,
+    "distinctCandidateHomes": 41
   },
   "links": [
     {
@@ -190,6 +190,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "anaesthetic induction",
+      "proposedHomeNameKey": "general anaesthesia",
+      "componentProposalIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
+      ],
+      "targetNameKey": "general anaesthesia",
+      "targetHomeProposalId": "editorial-home:general-anaesthesia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anaesthetic maintenance",
+      "proposedHomeNameKey": "general anaesthesia",
+      "componentProposalIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
+      ],
+      "targetNameKey": "general anaesthesia",
+      "targetHomeProposalId": "editorial-home:general-anaesthesia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "anaesthetic preparation",
+      "proposedHomeNameKey": "general anaesthesia",
+      "componentProposalIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
+      ],
+      "targetNameKey": "general anaesthesia",
+      "targetHomeProposalId": "editorial-home:general-anaesthesia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "angioedema management",
       "proposedHomeNameKey": "angioedema",
       "componentProposalIds": [
@@ -310,6 +364,24 @@
       ],
       "targetNameKey": "cancer",
       "targetHomeProposalId": "editorial-home:cancer",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "blood component indications",
+      "proposedHomeNameKey": "blood transfusion",
+      "componentProposalIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
+      ],
+      "targetNameKey": "blood transfusion",
+      "targetHomeProposalId": "editorial-home:blood-transfusion",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -788,6 +860,78 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "ckd care preferences",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+      ],
+      "targetNameKey": "chronic kidney disease",
+      "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ckd family impact",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+      ],
+      "targetNameKey": "chronic kidney disease",
+      "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ckd wellbeing",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+      ],
+      "targetNameKey": "chronic kidney disease",
+      "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "ckd work participation",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
+      ],
+      "targetNameKey": "chronic kidney disease",
+      "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "cutaneous findings in hiv",
       "proposedHomeNameKey": "hiv infection",
       "componentProposalIds": [
@@ -881,6 +1025,42 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "dietary disease prevention",
+      "proposedHomeNameKey": "nutrition",
+      "componentProposalIds": [
+        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
+      ],
+      "targetNameKey": "nutrition",
+      "targetHomeProposalId": "editorial-home:nutrition",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "dietary health promotion",
+      "proposedHomeNameKey": "nutrition",
+      "componentProposalIds": [
+        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
+      ],
+      "targetNameKey": "nutrition",
+      "targetHomeProposalId": "editorial-home:nutrition",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -1001,6 +1181,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "gestational age classification",
+      "proposedHomeNameKey": "newborn",
+      "componentProposalIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
+      ],
+      "targetNameKey": "newborn",
+      "targetHomeProposalId": "editorial-home:newborn",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "goitre control programmes",
       "proposedHomeNameKey": "iodine deficiency",
       "componentProposalIds": [
@@ -1031,6 +1229,150 @@
       ],
       "targetNameKey": "bone",
       "targetHomeProposalId": "editorial-home:bone",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hand blood vessels",
+      "proposedHomeNameKey": "hand",
+      "componentProposalIds": [
+        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
+      ],
+      "targetNameKey": "hand",
+      "targetHomeProposalId": "editorial-home:hand",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hand nerves",
+      "proposedHomeNameKey": "hand",
+      "componentProposalIds": [
+        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
+      ],
+      "targetNameKey": "hand",
+      "targetHomeProposalId": "editorial-home:hand",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hernia investigation",
+      "proposedHomeNameKey": "hernia",
+      "componentProposalIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+      ],
+      "targetNameKey": "hernia",
+      "targetHomeProposalId": "editorial-home:hernia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hernia management",
+      "proposedHomeNameKey": "hernia",
+      "componentProposalIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+      ],
+      "targetNameKey": "hernia",
+      "targetHomeProposalId": "editorial-home:hernia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hernia mechanisms",
+      "proposedHomeNameKey": "hernia",
+      "componentProposalIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+      ],
+      "targetNameKey": "hernia",
+      "targetHomeProposalId": "editorial-home:hernia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hernia presentation",
+      "proposedHomeNameKey": "hernia",
+      "componentProposalIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
+      ],
+      "targetNameKey": "hernia",
+      "targetHomeProposalId": "editorial-home:hernia",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "high-risk newborn recognition",
+      "proposedHomeNameKey": "newborn",
+      "componentProposalIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
+      ],
+      "targetNameKey": "newborn",
+      "targetHomeProposalId": "editorial-home:newborn",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "higher function examination",
+      "proposedHomeNameKey": "nervous system",
+      "componentProposalIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+      ],
+      "targetNameKey": "nervous system",
+      "targetHomeProposalId": "editorial-home:nervous-system",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1129,6 +1471,114 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "hypertension dietary planning",
+      "proposedHomeNameKey": "hypertension",
+      "componentProposalIds": [
+        "nmc-2024-ref:688951659268169b16aa9d1ceef4d327218fe562c3c9d0a27b3d05dbbb1b1b50:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:688951659268169b16aa9d1ceef4d327218fe562c3c9d0a27b3d05dbbb1b1b50"
+      ],
+      "targetNameKey": "hypertension",
+      "targetHomeProposalId": "editorial-home:hypertension",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hypertension family impact",
+      "proposedHomeNameKey": "hypertension",
+      "componentProposalIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+      ],
+      "targetNameKey": "hypertension",
+      "targetHomeProposalId": "editorial-home:hypertension",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hypertension wellbeing",
+      "proposedHomeNameKey": "hypertension",
+      "componentProposalIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+      ],
+      "targetNameKey": "hypertension",
+      "targetHomeProposalId": "editorial-home:hypertension",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "hypertension work participation",
+      "proposedHomeNameKey": "hypertension",
+      "componentProposalIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
+      ],
+      "targetNameKey": "hypertension",
+      "targetHomeProposalId": "editorial-home:hypertension",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "incompatible transfusion management",
+      "proposedHomeNameKey": "blood transfusion",
+      "componentProposalIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
+      ],
+      "targetNameKey": "blood transfusion",
+      "targetHomeProposalId": "editorial-home:blood-transfusion",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "incompatible transfusion recognition",
+      "proposedHomeNameKey": "blood transfusion",
+      "componentProposalIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
+      ],
+      "targetNameKey": "blood transfusion",
+      "targetHomeProposalId": "editorial-home:blood-transfusion",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "initial burn care",
       "proposedHomeNameKey": "burns",
       "componentProposalIds": [
@@ -1163,6 +1613,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "intrinsic hand muscles",
+      "proposedHomeNameKey": "hand",
+      "componentProposalIds": [
+        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1"
+      ],
+      "targetNameKey": "hand",
+      "targetHomeProposalId": "editorial-home:hand",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -1336,6 +1804,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "local nutrient sources",
+      "proposedHomeNameKey": "nutrition",
+      "componentProposalIds": [
+        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
+      ],
+      "targetNameKey": "nutrition",
+      "targetHomeProposalId": "editorial-home:nutrition",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "lung fissures",
       "proposedHomeNameKey": "lung",
       "componentProposalIds": [
@@ -1464,6 +1950,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "motor examination",
+      "proposedHomeNameKey": "nervous system",
+      "componentProposalIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+      ],
+      "targetNameKey": "nervous system",
+      "targetHomeProposalId": "editorial-home:nervous-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "motor muscle innervation",
       "proposedHomeNameKey": "skeletal muscle",
       "componentProposalIds": [
@@ -1528,6 +2032,60 @@
       ],
       "targetNameKey": "skeletal muscle",
       "targetHomeProposalId": "editorial-home:skeletal-muscle",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "neurological history",
+      "proposedHomeNameKey": "nervous system",
+      "componentProposalIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+      ],
+      "targetNameKey": "nervous system",
+      "targetHomeProposalId": "editorial-home:nervous-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "newborn size classification",
+      "proposedHomeNameKey": "newborn",
+      "componentProposalIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
+      ],
+      "targetNameKey": "newborn",
+      "targetHomeProposalId": "editorial-home:newborn",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "nutrient requirements",
+      "proposedHomeNameKey": "nutrition",
+      "componentProposalIds": [
+        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
+      ],
+      "targetNameKey": "nutrition",
+      "targetHomeProposalId": "editorial-home:nutrition",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1834,6 +2392,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "reflex examination",
+      "proposedHomeNameKey": "nervous system",
+      "componentProposalIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+      ],
+      "targetNameKey": "nervous system",
+      "targetHomeProposalId": "editorial-home:nervous-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "routine newborn care",
+      "proposedHomeNameKey": "newborn",
+      "componentProposalIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
+      ],
+      "targetNameKey": "newborn",
+      "targetHomeProposalId": "editorial-home:newborn",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "sensory examination",
+      "proposedHomeNameKey": "nervous system",
+      "componentProposalIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
+      ],
+      "targetNameKey": "nervous system",
+      "targetHomeProposalId": "editorial-home:nervous-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "sensory muscle innervation",
       "proposedHomeNameKey": "skeletal muscle",
       "componentProposalIds": [
@@ -1970,6 +2582,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "thumb movements",
+      "proposedHomeNameKey": "hand",
+      "componentProposalIds": [
+        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1"
+      ],
+      "targetNameKey": "hand",
+      "targetHomeProposalId": "editorial-home:hand",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "thyroid surface projection",
       "proposedHomeNameKey": "thyroid gland",
       "componentProposalIds": [
@@ -1990,6 +2620,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "transfusion counselling",
+      "proposedHomeNameKey": "blood transfusion",
+      "componentProposalIds": [
+        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05"
+      ],
+      "targetNameKey": "blood transfusion",
+      "targetHomeProposalId": "editorial-home:blood-transfusion",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "trapezius testing",
       "proposedHomeNameKey": "trapezius",
       "componentProposalIds": [
@@ -2004,6 +2652,78 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "upper-limb deep venous return",
+      "proposedHomeNameKey": "upper limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
+      ],
+      "targetNameKey": "upper limb",
+      "targetHomeProposalId": "editorial-home:upper-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "upper-limb fascial compartments",
+      "proposedHomeNameKey": "upper limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
+      ],
+      "targetNameKey": "upper limb",
+      "targetHomeProposalId": "editorial-home:upper-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "upper-limb lymphatic drainage",
+      "proposedHomeNameKey": "upper limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
+      ],
+      "targetNameKey": "upper limb",
+      "targetHomeProposalId": "editorial-home:upper-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "upper-limb superficial venous return",
+      "proposedHomeNameKey": "upper limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
+      ],
+      "targetNameKey": "upper limb",
+      "targetHomeProposalId": "editorial-home:upper-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -2068,6 +2788,24 @@
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
       "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "whole blood indications",
+      "proposedHomeNameKey": "blood transfusion",
+      "componentProposalIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
+      ],
+      "targetNameKey": "blood transfusion",
+      "targetHomeProposalId": "editorial-home:blood-transfusion",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
     }
   ],
   "unresolved": [
@@ -2103,42 +2841,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anaesthetic induction",
-      "proposedHomeNameKey": "general anaesthesia",
-      "componentProposalIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anaesthetic maintenance",
-      "proposedHomeNameKey": "general anaesthesia",
-      "componentProposalIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "anaesthetic preparation",
-      "proposedHomeNameKey": "general anaesthesia",
-      "componentProposalIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -2432,18 +3134,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "blood component indications",
-      "proposedHomeNameKey": "blood transfusion",
-      "componentProposalIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "blood donation counselling",
       "proposedHomeNameKey": "blood donation",
       "componentProposalIds": [
@@ -2661,54 +3351,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "ckd care preferences",
-      "proposedHomeNameKey": "chronic kidney disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ckd family impact",
-      "proposedHomeNameKey": "chronic kidney disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ckd wellbeing",
-      "proposedHomeNameKey": "chronic kidney disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "ckd work participation",
-      "proposedHomeNameKey": "chronic kidney disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "colonic histology",
       "proposedHomeNameKey": "colonic",
       "componentProposalIds": [
@@ -2908,30 +3550,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "dietary disease prevention",
-      "proposedHomeNameKey": "nutrition",
-      "componentProposalIds": [
-        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "dietary health promotion",
-      "proposedHomeNameKey": "nutrition",
-      "componentProposalIds": [
-        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3321,18 +3939,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "gestational age classification",
-      "proposedHomeNameKey": "newborn",
-      "componentProposalIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "glaucoma anatomy",
       "proposedHomeNameKey": "glaucoma",
       "componentProposalIds": [
@@ -3357,102 +3963,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "hand blood vessels",
-      "proposedHomeNameKey": "hand",
-      "componentProposalIds": [
-        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hand nerves",
-      "proposedHomeNameKey": "hand",
-      "componentProposalIds": [
-        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1905040c376eaa8dc91bd3874e349d6b62c986205f5d36c93f4bb146e132e3e3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hernia investigation",
-      "proposedHomeNameKey": "hernia",
-      "componentProposalIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hernia management",
-      "proposedHomeNameKey": "hernia",
-      "componentProposalIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hernia mechanisms",
-      "proposedHomeNameKey": "hernia",
-      "componentProposalIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hernia presentation",
-      "proposedHomeNameKey": "hernia",
-      "componentProposalIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:78cc8a0e7b6e7f6ac740a3370bde03ef5356cf734f7c719b69981dcebb3ca295"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "high-risk newborn recognition",
-      "proposedHomeNameKey": "newborn",
-      "componentProposalIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "higher function examination",
-      "proposedHomeNameKey": "nervous system",
-      "componentProposalIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "human research ethics",
       "proposedHomeNameKey": "human research",
       "componentProposalIds": [
@@ -3460,54 +3970,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:6674bd58ed58d675e70061523f126546b56616282964cdf9db522b81d5bcce35"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hypertension dietary planning",
-      "proposedHomeNameKey": "hypertension",
-      "componentProposalIds": [
-        "nmc-2024-ref:688951659268169b16aa9d1ceef4d327218fe562c3c9d0a27b3d05dbbb1b1b50:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:688951659268169b16aa9d1ceef4d327218fe562c3c9d0a27b3d05dbbb1b1b50"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hypertension family impact",
-      "proposedHomeNameKey": "hypertension",
-      "componentProposalIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hypertension wellbeing",
-      "proposedHomeNameKey": "hypertension",
-      "componentProposalIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "hypertension work participation",
-      "proposedHomeNameKey": "hypertension",
-      "componentProposalIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3556,30 +4018,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:9df851d772392b2460bff2d2806a7f4997bcbf442bde86a299d14a245ade7884"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "incompatible transfusion management",
-      "proposedHomeNameKey": "blood transfusion",
-      "componentProposalIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "incompatible transfusion recognition",
-      "proposedHomeNameKey": "blood transfusion",
-      "componentProposalIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3664,18 +4102,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "intrinsic hand muscles",
-      "proposedHomeNameKey": "hand",
-      "componentProposalIds": [
-        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3873,18 +4299,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "local nutrient sources",
-      "proposedHomeNameKey": "nutrition",
-      "componentProposalIds": [
-        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "lower-limb dermatomes",
       "proposedHomeNameKey": "lower limb",
       "componentProposalIds": [
@@ -4029,18 +4443,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "motor examination",
-      "proposedHomeNameKey": "nervous system",
-      "componentProposalIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "neck lymphatic drainage",
       "proposedHomeNameKey": "neck",
       "componentProposalIds": [
@@ -4060,18 +4462,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neurological history",
-      "proposedHomeNameKey": "nervous system",
-      "componentProposalIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4120,30 +4510,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "newborn size classification",
-      "proposedHomeNameKey": "newborn",
-      "componentProposalIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "nutrient requirements",
-      "proposedHomeNameKey": "nutrition",
-      "componentProposalIds": [
-        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:bd00055af75ffb81b9bc804e427bb3c9169545b9b12bee2a65bd2dfdfe8944d2"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4713,18 +5079,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "reflex examination",
-      "proposedHomeNameKey": "nervous system",
-      "componentProposalIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "remote delivery evidence",
       "proposedHomeNameKey": "delivery",
       "componentProposalIds": [
@@ -4804,18 +5158,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "routine newborn care",
-      "proposedHomeNameKey": "newborn",
-      "componentProposalIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4912,18 +5254,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "sensory examination",
-      "proposedHomeNameKey": "nervous system",
-      "componentProposalIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5217,18 +5547,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "thumb movements",
-      "proposedHomeNameKey": "hand",
-      "componentProposalIds": [
-        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:0ab559c749b0c81c64a76868c047fabaaab112037e4cac04d819c1efb602c1d1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "thymus physiology",
       "proposedHomeNameKey": "thymus",
       "componentProposalIds": [
@@ -5337,18 +5655,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "transfusion counselling",
-      "proposedHomeNameKey": "blood transfusion",
-      "componentProposalIds": [
-        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "tuberculosis contact history",
       "proposedHomeNameKey": "tuberculosis",
       "componentProposalIds": [
@@ -5380,54 +5686,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "upper-limb deep venous return",
-      "proposedHomeNameKey": "upper limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "upper-limb fascial compartments",
-      "proposedHomeNameKey": "upper limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "upper-limb lymphatic drainage",
-      "proposedHomeNameKey": "upper limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "upper-limb superficial venous return",
-      "proposedHomeNameKey": "upper limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5584,18 +5842,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "whole blood indications",
-      "proposedHomeNameKey": "blood transfusion",
-      "componentProposalIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
