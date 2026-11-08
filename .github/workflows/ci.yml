@@ -23,6 +23,10 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify endocarditis draft components and learning bundle
+        run: |
+          node ops/nmc/verify-endocarditis-blueprints.js
+          node ops/nmc/verify-endocarditis-bundle.js
       - name: Verify NMC source accounting and draft learning bindings
         run: |
           node ops/nmc/verify-respiratory-bindings.js
