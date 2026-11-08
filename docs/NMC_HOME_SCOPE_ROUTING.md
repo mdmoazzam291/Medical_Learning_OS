@@ -1,5 +1,33 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current refinement
+
+Examined all 19 non-context facets from the historical snapshot below. Fifteen now have more specific authoring-home proposals. These change editorial organization only; all canonical IDs remain null and all acceptance/scope-completion flags remain false. No educational content was added.
+
+| Facet group | Proposed authoring homes | Facets |
+| --- | --- | --- |
+| Poisoning, bites and stings | Drug poisoning; Insecticide poisoning; Bites; Stings | 4 |
+| GI/liver signs | Chronic liver disease; existing Growth candidate; Vitamin deficiencies | 3 |
+| Wound-specific scope | Wounds; Wound healing; Wound reporting | 5 |
+| Cross-cutting injury/death scope | Injuries; Cause of death | 3 |
+
+Eleven home labels were added and the existing Growth name candidate was reused. A proposed facet-of relationship is not semantic equivalence, an approved objective binding or certified coverage. Direct and secondary causes of death remain separate facets; neither is relabelled as underlying cause of death. Wound management is not reduced to suturing. Generic bites/stings are not narrowed to snakebite or insect species.
+
+The authoring graph now has **372 proposed links and 35 unresolved homes across 14 groups**. All previous 357 links remain byte-equivalent as JSON objects. All 407 facets and 1,218 component occurrences are retained.
+
+The four remaining non-context gaps are bone marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy and scleral referral. Marrow aspiration/biopsy and episcleritis/scleritis are recorded as separate existing candidate alternatives, without selecting one or claiming full scope. Neurodegeneration is not equated with drug-induced parkinsonism. The remaining 31 facets still use care/professional organizers.
+
+The source-linked before/after audit is `docs/evidence/2026-11-08-nmc-facet-home-refinement.json`. It retains every examined facet, previous/proposed home label, component/reference binding, source-task metadata and unresolved disposition. The gap queue and routing packet now describe only the current 35 unresolved facets. Earlier snapshots remain in Git.
+
+## Next actions
+
+1. Inspect and map the 31 context facets individually, reusing existing name candidates before creating another home. Keep service, encounter and professional contexts as organizers.
+2. Resolve the four retained family/multiple-target cases against narrower source scope; do not choose a convenient candidate just to clear a gap.
+3. Refresh live registry evidence before canonical reuse/allocation. Existing task metadata are not an official-source or clinical revalidation.
+4. Continue the 2,007 other parent labels, 21 source exceptions and learner integration separately. NMC Foundation remains incomplete.
+
+# Historical routing snapshot — checkpoint 55fd2cb6
+
 This is an editorial routing proposal derived from existing task packets, not official-source revalidation or an accepted canonical mapping. Organizer labels provide authoring context; they are not automatically concepts. The original gap queue and graph remain unchanged: 357 proposed links and 50 unresolved canonical facet homes.
 
 | Organizer label | Type | Facets |

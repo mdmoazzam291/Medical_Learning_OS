@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-proposals",
-  "sourceHead": "1ee866260f5271d0012726ee616844e10d7518fc",
+  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "productionRegistryChecked": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "homeNames": 174,
-    "facetBindings": 310
+    "homeNames": 185,
+    "facetBindings": 324
   },
   "homes": [
     {
@@ -5236,6 +5236,286 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:bites",
+      "name": "Bites",
+      "nameKey": "bites",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "bite treatment",
+          "componentProposalIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:cause-of-death",
+      "name": "Cause of death",
+      "nameKey": "cause of death",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "direct cause of death",
+          "componentProposalIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+          ]
+        },
+        {
+          "facetNameKey": "secondary cause of death",
+          "componentProposalIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:chronic-liver-disease",
+      "name": "Chronic liver disease",
+      "nameKey": "chronic liver disease",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "chronic liver disease signs",
+          "componentProposalIds": [
+            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:drug-poisoning",
+      "name": "Drug poisoning",
+      "nameKey": "drug poisoning",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "drug poisoning treatment",
+          "componentProposalIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:injuries",
+      "name": "Injuries",
+      "nameKey": "injuries",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "injury determinants",
+          "componentProposalIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:insecticide-poisoning",
+      "name": "Insecticide poisoning",
+      "nameKey": "insecticide poisoning",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "insecticide poisoning treatment",
+          "componentProposalIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:stings",
+      "name": "Stings",
+      "nameKey": "stings",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "sting treatment",
+          "componentProposalIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:vitamin-deficiencies",
+      "name": "Vitamin deficiencies",
+      "nameKey": "vitamin deficiencies",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "vitamin deficiency signs",
+          "componentProposalIds": [
+            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:wound-healing",
+      "name": "Wound healing",
+      "nameKey": "wound healing",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "wound healing determinants",
+          "componentProposalIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:wound-reporting",
+      "name": "Wound reporting",
+      "nameKey": "wound reporting",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "wound report drafting",
+          "componentProposalIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:wounds",
+      "name": "Wounds",
+      "nameKey": "wounds",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "wound classification",
+          "componentProposalIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+          ]
+        },
+        {
+          "facetNameKey": "wound management",
+          "componentProposalIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+          ]
+        },
+        {
+          "facetNameKey": "wound care observation",
+          "componentProposalIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
           ]
         }
       ]

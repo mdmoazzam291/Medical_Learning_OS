@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "names-only-editorial-scope-dispositions",
-  "sourceHead": "d56c513c8edd5d31740cf68389d88dd407440de3",
+  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
   "sourceQueuePath": "docs/evidence/2026-11-08-nmc-home-scope-gap-queue.json",
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -11,87 +11,14 @@
   "productionRegistryChecked": false,
   "coverageFraction": null,
   "totals": {
-    "groups": 17,
-    "facets": 50,
+    "groups": 14,
+    "facets": 35,
     "relationCounts": {
-      "specific-home-scope-pending": 10,
       "family-scope-pending": 4,
-      "context-only": 31,
-      "cross-cutting-scope-pending": 5
+      "context-only": 31
     }
   },
   "rows": [
-    {
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "organizerType": "mixed-clinical-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Mixed exposure context; retain separate poisoning, bite and sting scopes.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "bite treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "drug poisoning treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "insecticide poisoning treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "sting treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ],
-          "routing": "specific-home-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
-          "subjectId": "pharmacology",
-          "code": "PH9.2",
-          "page": 183,
-          "rowBBox": [
-            51.7,
-            166.92,
-            105.7,
-            207.6
-          ],
-          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
-        }
-      ]
-    },
     {
       "proposedHomeNameKey": "bone marrow examination",
       "organizerType": "procedure-family",
@@ -217,67 +144,6 @@
           "sourceBodySha256": "f4dae68f9bc84b71c271ccce0f370281b7eec5c0900ad9f7e2b5daead82abe88",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "gastrointestinal and liver disease",
-      "organizerType": "mixed-clinical-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Chronic liver signs are specific; growth and deficiency signs require cross-cutting scope checks.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "chronic liver disease signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "poor growth signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-          ],
-          "routing": "cross-cutting-scope-pending"
-        },
-        {
-          "facetNameKey": "vitamin deficiency signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-          ],
-          "routing": "cross-cutting-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
-          "subjectId": "pediatrics",
-          "code": "PE23.18",
-          "page": 342,
-          "rowBBox": [
-            51.3,
-            300.66,
-            103.1,
-            355.14
-          ],
-          "sourceBodySha256": "75b02b6bcb9a600b600357c010ee4ccc37bd4fbae7dc3b216e2fb20c1133e683",
-          "mode": "performance-and-knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json"
         }
       ]
     },
@@ -491,132 +357,6 @@
           "sourceBodySha256": "c6f3b7a0523ff1ed909b99961013c8042b45629298867991e33d266f3dbb873b",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "wounds",
-      "organizerType": "mixed-wound-context",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Retain wound-specific facets; injury determinants and causes of death require separate cross-cutting scope checks.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "direct cause of death",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ],
-          "routing": "cross-cutting-scope-pending"
-        },
-        {
-          "facetNameKey": "injury determinants",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ],
-          "routing": "cross-cutting-scope-pending"
-        },
-        {
-          "facetNameKey": "secondary cause of death",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ],
-          "routing": "cross-cutting-scope-pending"
-        },
-        {
-          "facetNameKey": "wound care observation",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "wound classification",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "wound healing determinants",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "wound management",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ],
-          "routing": "specific-home-scope-pending"
-        },
-        {
-          "facetNameKey": "wound report drafting",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ],
-          "routing": "specific-home-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175",
-          "subjectId": "surgery",
-          "code": "SU5.3",
-          "page": 404,
-          "rowBBox": [
-            45.0,
-            195.12,
-            101.7,
-            229.98
-          ],
-          "sourceBodySha256": "28cc0a6d16e29646a27aa3e2477ec94e4b2851beb1ac3ff2f4796a96121ed0a1",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
-        },
-        {
-          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
-          "subjectId": "forensic-medicine",
-          "code": "FM5.5",
-          "page": 221,
-          "rowBBox": [
-            45.5,
-            199.02,
-            94.0,
-            241.86
-          ],
-          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
         }
       ]
     },

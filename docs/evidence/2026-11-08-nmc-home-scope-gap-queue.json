@@ -1,62 +1,16 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-scope-gap-queue",
-  "sourceHead": "1ee866260f5271d0012726ee616844e10d7518fc",
+  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "groups": 17,
-    "facets": 50
+    "groups": 14,
+    "facets": 35
   },
   "rows": [
-    {
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "status": "scope-decision-pending",
-      "reason": "mixed-clinical-scope",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "bite treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ]
-        },
-        {
-          "facetNameKey": "drug poisoning treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ]
-        },
-        {
-          "facetNameKey": "insecticide poisoning treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ]
-        },
-        {
-          "facetNameKey": "sting treatment",
-          "componentProposalIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-          ]
-        }
-      ]
-    },
     {
       "proposedHomeNameKey": "bone marrow examination",
       "status": "scope-decision-pending",
@@ -119,43 +73,6 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "gastrointestinal and liver disease",
-      "status": "scope-decision-pending",
-      "reason": "mixed-clinical-scope",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "chronic liver disease signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-          ]
-        },
-        {
-          "facetNameKey": "poor growth signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-          ]
-        },
-        {
-          "facetNameKey": "vitamin deficiency signs",
-          "componentProposalIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
           ]
         }
       ]
@@ -294,88 +211,6 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "wounds",
-      "status": "scope-decision-pending",
-      "reason": "cross-cutting-outcome-under-specific-home",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "direct cause of death",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ]
-        },
-        {
-          "facetNameKey": "injury determinants",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ]
-        },
-        {
-          "facetNameKey": "secondary cause of death",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ]
-        },
-        {
-          "facetNameKey": "wound care observation",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ]
-        },
-        {
-          "facetNameKey": "wound classification",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ]
-        },
-        {
-          "facetNameKey": "wound healing determinants",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-          ]
-        },
-        {
-          "facetNameKey": "wound management",
-          "componentProposalIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-          ]
-        },
-        {
-          "facetNameKey": "wound report drafting",
-          "componentProposalIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
           ]
         }
       ]

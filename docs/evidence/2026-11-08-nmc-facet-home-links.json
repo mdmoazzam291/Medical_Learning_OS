@@ -12,12 +12,12 @@
   "totals": {
     "classifiedNames": 1195,
     "scopeFacets": 407,
-    "exactCandidateHomeLinks": 45,
+    "exactCandidateHomeLinks": 46,
     "labelResolvedCandidateHomeLinks": 2,
-    "proposedNewHomeLinks": 310,
-    "totalFacetHomeLinks": 357,
-    "unresolvedFacetHomes": 50,
-    "distinctCandidateHomes": 196,
+    "proposedNewHomeLinks": 324,
+    "totalFacetHomeLinks": 372,
+    "unresolvedFacetHomes": 35,
+    "distinctCandidateHomes": 208,
     "explicitLabelResolutions": 14
   },
   "links": [
@@ -827,6 +827,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "bite treatment",
+      "proposedHomeNameKey": "bites",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "targetNameKey": "bites",
+      "targetHomeProposalId": "editorial-home:bites",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "blindness prevention programmes",
       "proposedHomeNameKey": "visual impairment",
       "componentProposalIds": [
@@ -1603,6 +1621,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "chronic liver disease signs",
+      "proposedHomeNameKey": "chronic liver disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "targetNameKey": "chronic liver disease",
+      "targetHomeProposalId": "editorial-home:chronic-liver-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "ckd care preferences",
       "proposedHomeNameKey": "chronic kidney disease",
       "componentProposalIds": [
@@ -2066,6 +2102,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "direct cause of death",
+      "proposedHomeNameKey": "cause of death",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "targetNameKey": "cause of death",
+      "targetHomeProposalId": "editorial-home:cause-of-death",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "disclosure decisions",
       "proposedHomeNameKey": "patient confidentiality",
       "componentProposalIds": [
@@ -2080,6 +2134,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "drug poisoning treatment",
+      "proposedHomeNameKey": "drug poisoning",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "targetNameKey": "drug poisoning",
+      "targetHomeProposalId": "editorial-home:drug-poisoning",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -3226,6 +3298,42 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "injury determinants",
+      "proposedHomeNameKey": "injuries",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "targetNameKey": "injuries",
+      "targetHomeProposalId": "editorial-home:injuries",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "insecticide poisoning treatment",
+      "proposedHomeNameKey": "insecticide poisoning",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "targetNameKey": "insecticide poisoning",
+      "targetHomeProposalId": "editorial-home:insecticide-poisoning",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -4955,6 +5063,26 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "poor growth signs",
+      "proposedHomeNameKey": "growth",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "targetNameKey": "growth",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08:name-component:01"
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "posterior forearm blood vessels",
       "proposedHomeNameKey": "posterior forearm",
       "componentProposalIds": [
@@ -5427,6 +5555,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "secondary cause of death",
+      "proposedHomeNameKey": "cause of death",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "targetNameKey": "cause of death",
+      "targetHomeProposalId": "editorial-home:cause-of-death",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "sensory examination",
       "proposedHomeNameKey": "nervous system",
       "componentProposalIds": [
@@ -5617,6 +5763,24 @@
       ],
       "targetNameKey": "soft tissue infection",
       "targetHomeProposalId": "editorial-home:soft-tissue-infection",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "sting treatment",
+      "proposedHomeNameKey": "stings",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "targetNameKey": "stings",
+      "targetHomeProposalId": "editorial-home:stings",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -6569,6 +6733,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "vitamin deficiency signs",
+      "proposedHomeNameKey": "vitamin deficiencies",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "targetNameKey": "vitamin deficiencies",
+      "targetHomeProposalId": "editorial-home:vitamin-deficiencies",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "whole blood indications",
       "proposedHomeNameKey": "blood transfusion",
       "componentProposalIds": [
@@ -6585,21 +6767,99 @@
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
       "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "wound care observation",
+      "proposedHomeNameKey": "wounds",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "targetNameKey": "wounds",
+      "targetHomeProposalId": "editorial-home:wounds",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "wound classification",
+      "proposedHomeNameKey": "wounds",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "targetNameKey": "wounds",
+      "targetHomeProposalId": "editorial-home:wounds",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "wound healing determinants",
+      "proposedHomeNameKey": "wound healing",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "targetNameKey": "wound healing",
+      "targetHomeProposalId": "editorial-home:wound-healing",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "wound management",
+      "proposedHomeNameKey": "wounds",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "targetNameKey": "wounds",
+      "targetHomeProposalId": "editorial-home:wounds",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "wound report drafting",
+      "proposedHomeNameKey": "wound reporting",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "targetNameKey": "wound reporting",
+      "targetHomeProposalId": "editorial-home:wound-reporting",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
     }
   ],
   "unresolved": [
-    {
-      "facetNameKey": "bite treatment",
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "componentProposalIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
     {
       "facetNameKey": "bone marrow interpretation",
       "proposedHomeNameKey": "bone marrow examination",
@@ -6621,18 +6881,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "chronic liver disease signs",
-      "proposedHomeNameKey": "gastrointestinal and liver disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -6674,18 +6922,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "direct cause of death",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "drug package information",
       "proposedHomeNameKey": "medicine information",
       "componentProposalIds": [
@@ -6693,18 +6929,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "drug poisoning treatment",
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "componentProposalIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -6777,30 +7001,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:349a01c532f81e789cd0c5f3f53de61b2d0a97768d4a7885626bba38693ef395"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "injury determinants",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "insecticide poisoning treatment",
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "componentProposalIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -6938,18 +7138,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "poor growth signs",
-      "proposedHomeNameKey": "gastrointestinal and liver disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "pregnancy customs",
       "proposedHomeNameKey": "maternal and child care",
       "componentProposalIds": [
@@ -7034,18 +7222,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "secondary cause of death",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "self-prescribing",
       "proposedHomeNameKey": "prescribing",
       "componentProposalIds": [
@@ -7053,18 +7229,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "sting treatment",
-      "proposedHomeNameKey": "poisoning and envenomation",
-      "componentProposalIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -7113,78 +7277,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "vitamin deficiency signs",
-      "proposedHomeNameKey": "gastrointestinal and liver disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "wound care observation",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "wound classification",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "wound healing determinants",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "wound management",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "wound report drafting",
-      "proposedHomeNameKey": "wounds",
-      "componentProposalIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
