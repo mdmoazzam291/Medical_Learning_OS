@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 11 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (HIV care communication through IBD surgery). Batch: 12 home labels, nineteen existing-name and eleven proposed-name links. Cumulative: 330 facets / 333 appearances / 201 proposed homes; 329 facets await initial homes. Implementation: 0ba709647f2a19a6640f5723c8f97dd4f92136f3. All mappings/bindings pending.
+
+Eleven-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: ICU device position. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 10 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (GI bleeding examination through Hernia examination). Batch: 17 home labels, eighteen existing-name and twelve proposed-name links. Cumulative: 300 facets / 303 appearances / 190 proposed homes; 359 facets await initial homes. Implementation: 8da178dcf1682b822fb5147d0b445e289798548f. All mappings/bindings pending.
