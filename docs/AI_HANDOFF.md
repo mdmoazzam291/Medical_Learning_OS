@@ -1,3 +1,11 @@
+## Compound topic names decomposed — 8 November 2026 IST
+
+Owner /root resumes PR #415 on feat/nmc-foundation-review-queue-20261104 at 179372e9fd4b980c3bb446d079f955b00745ab87 (base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5). Checked current instructions, handoff/status and unchanged PR head; prior writer released ownership. Names-only instruction continues. Added 63 explicit component-name proposals for 25 compound parent labels across 11 subjects, preserving 25 exact curriculum reference appearances. Examples include acute/chronic distinctions, stable/unstable angina and infarction, and separate casting/splinting names already present in task scope. No clinical prose, questions, cases or new assessment content. Existing source tasks, canonical identities and learner data unchanged.
+
+Verified all parent/source associations against the saved names index; reread the 20 relevant task packets at current head and confirmed unchanged exact bytes. Checked 63 unique proposal IDs, nonempty names and null canonical concept/objective IDs. This is editorial scope organization based on existing tasks, not fresh official-source verification, accepted canonical identity, complete component scope or clinical approval. No domain/UI change; application tests not run. Remote checkpoint uses expected-head lease and must be read back before claiming saved. No merge or publication.
+
+Next: continue compound-label component NAMES in further bounded batches, preserving source-specific scope and reusing actual canonical identities only where verified; reconcile eight prior proposed mappings and 21 exceptions separately. Do not add learning content. Full mapping and learner integration remain unfinished. Ownership released after verified checkpoint; this session starts no external writer.
+
 ## Names-only Foundation authoring — 8 November 2026 IST
 
 Owner /root; PR #415, branch feat/nmc-foundation-review-queue-20261104; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Resumed source head 338c8a3d3e09458059af96c10e0f8bd24efc969b. Current owner instruction supersedes older next actions: add topic/concept names and organizational mappings only; do not add teaching prose, questions, cases or assessment content. Existing drafts retained. Foundation authoring needs no Admin approval prompt; access, privacy and publication gates remain unchanged.
