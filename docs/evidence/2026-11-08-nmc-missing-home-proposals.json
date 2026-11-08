@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-home-proposals",
+  "sourceHead": "78163143fefecbda2487e77decb675169d543000",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "productionRegistryChecked": false,
+  "canonicalIdentityAllocation": false,
+  "totals": {
+    "homeNames": 10,
+    "facetBindings": 63
+  },
+  "homes": [
+    {
+      "homeProposalId": "editorial-home:cancer",
+      "name": "Cancer",
+      "nameKey": "cancer",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "cancer pain assessment",
+          "componentProposalIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        },
+        {
+          "facetNameKey": "cancer-related functional impairment",
+          "componentProposalIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        },
+        {
+          "facetNameKey": "cancer-related distress",
+          "componentProposalIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9d48597ca274e4ede699311e5a50c9f2b14e96639fea47f86b6929d3eef5f322"
+          ]
+        },
+        {
+          "facetNameKey": "cancer imaging",
+          "componentProposalIds": [
+            "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e"
+          ]
+        },
+        {
+          "facetNameKey": "early cancer detection",
+          "componentProposalIds": [
+            "nmc-2024-ref:e4a3e847f45b11ce9958b6dded9d4f5cf354119ef19c7315bd6558014396b851:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4a3e847f45b11ce9958b6dded9d4f5cf354119ef19c7315bd6558014396b851"
+          ]
+        },
+        {
+          "facetNameKey": "multidisciplinary cancer care",
+          "componentProposalIds": [
+            "nmc-2024-ref:e4a3e847f45b11ce9958b6dded9d4f5cf354119ef19c7315bd6558014396b851:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e4a3e847f45b11ce9958b6dded9d4f5cf354119ef19c7315bd6558014396b851"
+          ]
+        },
+        {
+          "facetNameKey": "cancer prevention",
+          "componentProposalIds": [
+            "nmc-2024-ref:160031eb32bd2379edad78fe097dcec2660fb90a852cf9a1227811d9ca4f4da9:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:160031eb32bd2379edad78fe097dcec2660fb90a852cf9a1227811d9ca4f4da9"
+          ]
+        },
+        {
+          "facetNameKey": "cancer screening",
+          "componentProposalIds": [
+            "nmc-2024-ref:160031eb32bd2379edad78fe097dcec2660fb90a852cf9a1227811d9ca4f4da9:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:160031eb32bd2379edad78fe097dcec2660fb90a852cf9a1227811d9ca4f4da9"
+          ]
+        },
+        {
+          "facetNameKey": "biochemical tumour markers",
+          "componentProposalIds": [
+            "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9"
+          ]
+        },
+        {
+          "facetNameKey": "biochemical cancer therapy targets",
+          "componentProposalIds": [
+            "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:hiv-infection",
+      "name": "HIV infection",
+      "nameKey": "hiv infection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "hiv diagnostic testing",
+          "componentProposalIds": [
+            "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975"
+          ]
+        },
+        {
+          "facetNameKey": "hiv staging",
+          "componentProposalIds": [
+            "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975"
+          ]
+        },
+        {
+          "facetNameKey": "hiv pathogenesis",
+          "componentProposalIds": [
+            "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41"
+          ]
+        },
+        {
+          "facetNameKey": "aids pathology",
+          "componentProposalIds": [
+            "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41"
+          ]
+        },
+        {
+          "facetNameKey": "cutaneous findings in hiv",
+          "componentProposalIds": [
+            "nmc-2024-ref:bba0f6429d812993131ba8d316682e0d24769ea6ba1290518fbd7c2d85441db7:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bba0f6429d812993131ba8d316682e0d24769ea6ba1290518fbd7c2d85441db7"
+          ]
+        },
+        {
+          "facetNameKey": "oral findings in hiv",
+          "componentProposalIds": [
+            "nmc-2024-ref:bba0f6429d812993131ba8d316682e0d24769ea6ba1290518fbd7c2d85441db7:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bba0f6429d812993131ba8d316682e0d24769ea6ba1290518fbd7c2d85441db7"
+          ]
+        },
+        {
+          "facetNameKey": "hiv-related biochemical changes",
+          "componentProposalIds": [
+            "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2"
+          ]
+        },
+        {
+          "facetNameKey": "hiv treatment-related biochemical changes",
+          "componentProposalIds": [
+            "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:lung",
+      "name": "Lung",
+      "nameKey": "lung",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "lung histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939"
+          ]
+        },
+        {
+          "facetNameKey": "lung surfaces",
+          "componentProposalIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247"
+          ]
+        },
+        {
+          "facetNameKey": "lung lobes",
+          "componentProposalIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247"
+          ]
+        },
+        {
+          "facetNameKey": "lung fissures",
+          "componentProposalIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247"
+          ]
+        },
+        {
+          "facetNameKey": "lung hilum",
+          "componentProposalIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247"
+          ]
+        },
+        {
+          "facetNameKey": "bronchial branching",
+          "componentProposalIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247"
+          ]
+        },
+        {
+          "facetNameKey": "pulmonary lymphatic drainage",
+          "componentProposalIds": [
+            "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22"
+          ]
+        },
+        {
+          "facetNameKey": "pulmonary autonomic pathways",
+          "componentProposalIds": [
+            "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:larynx",
+      "name": "Larynx",
+      "nameKey": "larynx",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "laryngeal cartilages",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "laryngeal membranes",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "laryngeal folds",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "laryngeal cavity",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "intrinsic laryngeal muscles",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "extrinsic laryngeal muscles",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:06"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "laryngeal arterial supply",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:07"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        },
+        {
+          "facetNameKey": "laryngeal innervation",
+          "componentProposalIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7:name-component:08"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:breast",
+      "name": "Breast",
+      "nameKey": "breast",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "breast lymphatic drainage",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028:name-component:02",
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028",
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1"
+          ]
+        },
+        {
+          "facetNameKey": "breast anatomy",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028"
+          ]
+        },
+        {
+          "facetNameKey": "breast investigations",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028"
+          ]
+        },
+        {
+          "facetNameKey": "breast gross structure",
+          "componentProposalIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1"
+          ]
+        },
+        {
+          "facetNameKey": "breast microscopic structure",
+          "componentProposalIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1"
+          ]
+        },
+        {
+          "facetNameKey": "breast vascular supply",
+          "componentProposalIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:bone",
+      "name": "Bone",
+      "nameKey": "bone",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "bone tissue composition",
+          "componentProposalIds": [
+            "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14"
+          ]
+        },
+        {
+          "facetNameKey": "bone classification",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2"
+          ]
+        },
+        {
+          "facetNameKey": "gross bone structure",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2"
+          ]
+        },
+        {
+          "facetNameKey": "bone vascular supply",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2"
+          ]
+        },
+        {
+          "facetNameKey": "bone innervation",
+          "componentProposalIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:placenta",
+      "name": "Placenta",
+      "nameKey": "placenta",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "placenta histology",
+          "componentProposalIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be:name-component:13"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
+          ]
+        },
+        {
+          "facetNameKey": "maternal placental circulation",
+          "componentProposalIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        },
+        {
+          "facetNameKey": "fetal placental circulation",
+          "componentProposalIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        },
+        {
+          "facetNameKey": "placental exchange barrier",
+          "componentProposalIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        },
+        {
+          "facetNameKey": "placental functions",
+          "componentProposalIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:skeletal-muscle",
+      "name": "Skeletal muscle",
+      "nameKey": "skeletal muscle",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "sensory muscle innervation",
+          "componentProposalIds": [
+            "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469"
+          ]
+        },
+        {
+          "facetNameKey": "motor muscle innervation",
+          "componentProposalIds": [
+            "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469"
+          ]
+        },
+        {
+          "facetNameKey": "muscle energy sources",
+          "componentProposalIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21"
+          ]
+        },
+        {
+          "facetNameKey": "skeletal muscle anatomy",
+          "componentProposalIds": [
+            "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf"
+          ]
+        },
+        {
+          "facetNameKey": "muscle attachments",
+          "componentProposalIds": [
+            "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:anaemia",
+      "name": "Anaemia",
+      "nameKey": "anaemia",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "anaemia morphology",
+          "componentProposalIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        },
+        {
+          "facetNameKey": "anaemia aetiology",
+          "componentProposalIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        },
+        {
+          "facetNameKey": "anaemia prevalence",
+          "componentProposalIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206"
+          ]
+        },
+        {
+          "facetNameKey": "anaemia pharmacotherapy",
+          "componentProposalIds": [
+            "nmc-2024-ref:12f367ef6aa7f60f4e3f2cb512d192fa60095b6b5600a4565a623edb7f17af69:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:12f367ef6aa7f60f4e3f2cb512d192fa60095b6b5600a4565a623edb7f17af69"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:axilla",
+      "name": "Axilla",
+      "nameKey": "axilla",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "axillary walls",
+          "componentProposalIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d"
+          ]
+        },
+        {
+          "facetNameKey": "axillary apex",
+          "componentProposalIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d"
+          ]
+        },
+        {
+          "facetNameKey": "axillary base",
+          "componentProposalIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d"
+          ]
+        },
+        {
+          "facetNameKey": "axillary contents",
+          "componentProposalIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d"
+          ]
+        }
+      ]
+    }
+  ]
+}
