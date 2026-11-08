@@ -117,6 +117,20 @@
           "canonicalObjectiveVersionId": null,
           "teachingArtifactVersionId": null,
           "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-morphology@1",
+          "wording": "Describe gross and microscopic features of infective endocarditis using supplied specimens or images.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-pathophysiology@1",
+          "wording": "Explain the pathophysiological sequence linking cause, valve pathology and complications.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
         }
       ]
     },
@@ -153,8 +167,39 @@
           "canonicalObjectiveVersionId": null,
           "teachingArtifactVersionId": null,
           "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pe22.5:endocarditis-etiopathogenesis@1",
+          "wording": "Explain etiopathogenesis of infective endocarditis in a pediatric context.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
         }
       ]
+    }
+  ],
+  "sourceEvidenceCheck": {
+    "sourceUrl": "https://nmc.org.in/rules-regulation-nmc/33/file",
+    "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+    "checkedDate": "2026-11-08",
+    "method": "Downloaded PDF SHA-256 matched pinned edition; read competency wording on PDF pages 197, 208, 283 and 340.",
+    "clinicalValidation": false
+  },
+  "relatedSourceBoundaries": [
+    {
+      "code": "GM1.20",
+      "pdfPage": 283,
+      "scope": "Blood-culture specimen collection technique is a separate competency."
+    },
+    {
+      "code": "MI3.3",
+      "pdfPage": 208,
+      "scope": "Diagnostic modalities and blood culture collection/processing have separate source scope."
+    },
+    {
+      "code": "MI3.4",
+      "pdfPage": 208,
+      "scope": "Investigation-based diagnosis has a separate source competency."
     }
   ]
 }
