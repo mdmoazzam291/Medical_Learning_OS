@@ -1,3 +1,17 @@
+## Source-context proposals for all 60 mixed reuse leads — 8 November 2026 IST
+
+Checked at 2026-11-08T21:56:08.520793+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f00c871f51d4dfbfc83a7ccc7707be39f07ddb0f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: e0e365d0450bfc79147ff2703d47794cfbd46f07. Names-only instruction active.
+
+Inspected both source-task contexts for all 60 lead labels and recorded mixed-reuse-scope-proposals.json. Preserves 66 component occurrences, 45 distinct occurrence-source references and 65 distinct target-support references, with exact inventory links, task hashes/modes/coordinates and source overlap accounting. Dispositions: 53 shared-topic-name candidates, four retain-facet-with-home candidates, two self-parent contexts and one keep-separate different-meaning collision.
+
+Sterilization in reproductive interventions means contraceptive sterilization; existing role sources mean microbial sterilization. Explicitly keep separate and propose contextual display name Contraceptive sterilization without renaming existing identities. Laboratory technique observation and Pathology terminology point back to their own parent tasks; not independent evidence. Haemostasis, lipid/renal test interpretation and respiratory distress assessment remain scoped facets. Oxygen delivery/physiology/home-hospital tasks, muscle, malaria and stroke contexts stay separate. No automatic merging, objective equivalence, clinical competence or current legal verification claimed. Canonical IDs null and acceptance/scope flags false. No educational content, production registry check or publication.
+
+Verification: exact all-60 cohort and target-entry sets, complete occurrence and target reference accounting, every source task/body hash and identity/coordinate/mode matches source packets, self-reference subsets checked, sterilization separation asserted. Existing mixed audit and four decomposition batches byte-unchanged. Mixed decomposition --verify passed, 19 focused tests passed, npm run check passed, staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only changes; full suite not repeated (last full 1,621/1,621).
+
+Next: add a repeatable verifier for reuse scope proposals, preserving different-meaning and self-parent decisions; then resolve scoped facet/home relationships and begin source-specific decomposition of 652 family/context groups. Do not treat 53 name candidates as accepted semantic or objective equivalence. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or learner publication. Save with expected-head lease; verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
 ## Repeatable mixed decomposition verification and reuse leads — 8 November 2026 IST
 
 Checked at 2026-11-08T21:52:39.111099+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ea8ddcb051682e994803407dc82a83a2dac795b5; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 847c5c43e7905f371b6ff140e8ad2018761e1276. Names-only instruction active.
