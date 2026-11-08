@@ -182,3 +182,11 @@ The next 30 family parents (Genital fistula through Healthcare-associated infect
 Queue, three inventories and eight predecessors are digest-pinned; three component labels have unverified exact-label hints. Cumulative: 270 family parents, 1,279 proposal occurrences, 274 source appearances; 382 families lack initial proposals. Canonical IDs null, enumerations/scopes/bindings incomplete. No teaching content or automatic merge.
 
 Run `node ops/nmc/verify-family-decomposition.js --batch=09`. Next: inspect the next family cohort beginning Hearing loss, retaining source-specific links and predecessor pins.
+
+## Family/context decomposition proposals: batch 10
+
+The next 30 family parents (Hearing loss through Indian healthcare delivery) have [152 names-only proposals](evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json): 57 reusable-topic candidates and 95 contextual-task facets across 31 source appearances. Immunity retains separate response/regulation and recognition/effector tasks. ICU and human milk-bank observation remain observational contexts; no independent competence is inferred. Identification techniques preserve evidentiary limits. Imaging modality principles, indications and patient-group adaptations remain separate task scopes; generic History is explicitly anaesthesia history, not an unrestricted history concept. Unnamed disease and assay members remain unspecified.
+
+Queue, three inventories and nine predecessors are digest-pinned; 11 component occurrences have unverified exact-label hints. Across ten batches, 300 family parents have 1,431 proposal occurrences and 305 source appearances; 352 families lack initial proposals. All identities null; enumerations/scopes/bindings incomplete. No teaching content, current official-source verification or automatic merge.
+
+Run `node ops/nmc/verify-family-decomposition.js --batch=10`. Next: inspect the next family cohort beginning Indian medico-legal framework, preserving source-specific evidence and predecessor pins.
