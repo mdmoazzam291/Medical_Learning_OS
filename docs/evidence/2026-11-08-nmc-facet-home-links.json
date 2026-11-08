@@ -12,10 +12,10 @@
     "classifiedNames": 1195,
     "scopeFacets": 407,
     "exactCandidateHomeLinks": 45,
-    "proposedNewHomeLinks": 104,
-    "totalFacetHomeLinks": 149,
-    "unresolvedFacetHomes": 258,
-    "distinctCandidateHomes": 41
+    "proposedNewHomeLinks": 134,
+    "totalFacetHomeLinks": 179,
+    "unresolvedFacetHomes": 228,
+    "distinctCandidateHomes": 51
   },
   "links": [
     {
@@ -264,6 +264,24 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "arterial architecture",
+      "proposedHomeNameKey": "blood vessels",
+      "componentProposalIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+      ],
+      "targetNameKey": "blood vessels",
+      "targetHomeProposalId": "editorial-home:blood-vessels",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "axillary apex",
       "proposedHomeNameKey": "axilla",
       "componentProposalIds": [
@@ -328,6 +346,24 @@
       ],
       "targetNameKey": "axilla",
       "targetHomeProposalId": "editorial-home:axilla",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "bcg scar assessment",
+      "proposedHomeNameKey": "tuberculosis",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+      ],
+      "targetNameKey": "tuberculosis",
+      "targetHomeProposalId": "editorial-home:tuberculosis",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -860,6 +896,96 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "capillary architecture",
+      "proposedHomeNameKey": "blood vessels",
+      "componentProposalIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+      ],
+      "targetNameKey": "blood vessels",
+      "targetHomeProposalId": "editorial-home:blood-vessels",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cerebellar circuit deficits",
+      "proposedHomeNameKey": "cerebellum",
+      "componentProposalIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+      ],
+      "targetNameKey": "cerebellum",
+      "targetHomeProposalId": "editorial-home:cerebellum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cerebellar connections",
+      "proposedHomeNameKey": "cerebellum",
+      "componentProposalIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+      ],
+      "targetNameKey": "cerebellum",
+      "targetHomeProposalId": "editorial-home:cerebellum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cerebellar function",
+      "proposedHomeNameKey": "cerebellum",
+      "componentProposalIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+      ],
+      "targetNameKey": "cerebellum",
+      "targetHomeProposalId": "editorial-home:cerebellum",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "childhood obesity risk factors",
+      "proposedHomeNameKey": "childhood obesity",
+      "componentProposalIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+      ],
+      "targetNameKey": "childhood obesity",
+      "targetHomeProposalId": "editorial-home:childhood-obesity",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "ckd care preferences",
       "proposedHomeNameKey": "chronic kidney disease",
       "componentProposalIds": [
@@ -924,6 +1050,78 @@
       ],
       "targetNameKey": "chronic kidney disease",
       "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "community obesity prevention",
+      "proposedHomeNameKey": "childhood obesity",
+      "componentProposalIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+      ],
+      "targetNameKey": "childhood obesity",
+      "targetHomeProposalId": "editorial-home:childhood-obesity",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cortical connections",
+      "proposedHomeNameKey": "cerebral cortex",
+      "componentProposalIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+      ],
+      "targetNameKey": "cerebral cortex",
+      "targetHomeProposalId": "editorial-home:cerebral-cortex",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cortical localization",
+      "proposedHomeNameKey": "cerebral cortex",
+      "componentProposalIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+      ],
+      "targetNameKey": "cerebral cortex",
+      "targetHomeProposalId": "editorial-home:cerebral-cortex",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "cortical regions",
+      "proposedHomeNameKey": "cerebral cortex",
+      "componentProposalIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+      ],
+      "targetNameKey": "cerebral cortex",
+      "targetHomeProposalId": "editorial-home:cerebral-cortex",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1004,6 +1202,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "diagnosis communication",
+      "proposedHomeNameKey": "clinical communication",
+      "componentProposalIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+      ],
+      "targetNameKey": "clinical communication",
+      "targetHomeProposalId": "editorial-home:clinical-communication",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -1135,6 +1351,24 @@
       ],
       "targetNameKey": "larynx",
       "targetHomeProposalId": "editorial-home:larynx",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "family obesity prevention",
+      "proposedHomeNameKey": "childhood obesity",
+      "componentProposalIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+      ],
+      "targetNameKey": "childhood obesity",
+      "targetHomeProposalId": "editorial-home:childhood-obesity",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -1822,6 +2056,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "lower-limb dermatomes",
+      "proposedHomeNameKey": "lower limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+      ],
+      "targetNameKey": "lower limb",
+      "targetHomeProposalId": "editorial-home:lower-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "lower-limb lymphatic pathways",
+      "proposedHomeNameKey": "lower limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+      ],
+      "targetNameKey": "lower limb",
+      "targetHomeProposalId": "editorial-home:lower-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "lower-limb venous pathways",
+      "proposedHomeNameKey": "lower limb",
+      "componentProposalIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+      ],
+      "targetNameKey": "lower limb",
+      "targetHomeProposalId": "editorial-home:lower-limb",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "lung fissures",
       "proposedHomeNameKey": "lung",
       "componentProposalIds": [
@@ -1904,6 +2192,24 @@
       ],
       "targetNameKey": "lung",
       "targetHomeProposalId": "editorial-home:lung",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "mantoux interpretation",
+      "proposedHomeNameKey": "tuberculosis",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+      ],
+      "targetNameKey": "tuberculosis",
+      "targetHomeProposalId": "editorial-home:tuberculosis",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2050,6 +2356,60 @@
       ],
       "targetNameKey": "nervous system",
       "targetHomeProposalId": "editorial-home:nervous-system",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "neuron functional classification",
+      "proposedHomeNameKey": "neuron",
+      "componentProposalIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+      ],
+      "targetNameKey": "neuron",
+      "targetHomeProposalId": "editorial-home:neuron",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "neuron parts",
+      "proposedHomeNameKey": "neuron",
+      "componentProposalIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+      ],
+      "targetNameKey": "neuron",
+      "targetHomeProposalId": "editorial-home:neuron",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "neuron structural classification",
+      "proposedHomeNameKey": "neuron",
+      "componentProposalIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+      ],
+      "targetNameKey": "neuron",
+      "targetHomeProposalId": "editorial-home:neuron",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2302,6 +2662,60 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "pharyngeal arterial supply",
+      "proposedHomeNameKey": "pharynx",
+      "componentProposalIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+      ],
+      "targetNameKey": "pharynx",
+      "targetHomeProposalId": "editorial-home:pharynx",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "pharyngeal innervation",
+      "proposedHomeNameKey": "pharynx",
+      "componentProposalIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+      ],
+      "targetNameKey": "pharynx",
+      "targetHomeProposalId": "editorial-home:pharynx",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "pharyngeal lymphatic drainage",
+      "proposedHomeNameKey": "pharynx",
+      "componentProposalIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+      ],
+      "targetNameKey": "pharynx",
+      "targetHomeProposalId": "editorial-home:pharynx",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "placenta histology",
       "proposedHomeNameKey": "placenta",
       "componentProposalIds": [
@@ -2348,6 +2762,24 @@
       ],
       "targetNameKey": "placenta",
       "targetHomeProposalId": "editorial-home:placenta",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "prognosis communication",
+      "proposedHomeNameKey": "clinical communication",
+      "componentProposalIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+      ],
+      "targetNameKey": "clinical communication",
+      "targetHomeProposalId": "editorial-home:clinical-communication",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2474,6 +2906,60 @@
       ],
       "targetNameKey": "skeletal muscle",
       "targetHomeProposalId": "editorial-home:skeletal-muscle",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "skin appendages",
+      "proposedHomeNameKey": "skin",
+      "componentProposalIds": [
+        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
+      ],
+      "targetNameKey": "skin",
+      "targetHomeProposalId": "editorial-home:skin",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "skin layers",
+      "proposedHomeNameKey": "skin",
+      "componentProposalIds": [
+        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
+      ],
+      "targetNameKey": "skin",
+      "targetHomeProposalId": "editorial-home:skin",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "skin types",
+      "proposedHomeNameKey": "skin",
+      "componentProposalIds": [
+        "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25"
+      ],
+      "targetNameKey": "skin",
+      "targetHomeProposalId": "editorial-home:skin",
       "relation": "proposed-scope-facet-of-home-proposal",
       "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
@@ -2658,6 +3144,42 @@
       "mappingAccepted": false
     },
     {
+      "facetNameKey": "tuberculosis contact history",
+      "proposedHomeNameKey": "tuberculosis",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+      ],
+      "targetNameKey": "tuberculosis",
+      "targetHomeProposalId": "editorial-home:tuberculosis",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "understanding verification",
+      "proposedHomeNameKey": "clinical communication",
+      "componentProposalIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+      ],
+      "targetNameKey": "clinical communication",
+      "targetHomeProposalId": "editorial-home:clinical-communication",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
       "facetNameKey": "upper-limb deep venous return",
       "proposedHomeNameKey": "upper limb",
       "componentProposalIds": [
@@ -2744,6 +3266,24 @@
       ],
       "relation": "proposed-scope-facet-of-name-candidate",
       "basis": "exact-normalized-editorial-home-label",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "facetNameKey": "venous architecture",
+      "proposedHomeNameKey": "blood vessels",
+      "componentProposalIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+      ],
+      "targetNameKey": "blood vessels",
+      "targetHomeProposalId": "editorial-home:blood-vessels",
+      "relation": "proposed-scope-facet-of-home-proposal",
+      "basis": "exact-normalized-declared-home-label",
       "semanticEquivalence": "unverified",
       "canonicalConceptId": null,
       "canonicalObjectiveVersionId": null,
@@ -2990,18 +3530,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "arterial architecture",
-      "proposedHomeNameKey": "blood vessels",
-      "componentProposalIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "assisted reproductive technology regulation",
       "proposedHomeNameKey": "assisted reproductive technology",
       "componentProposalIds": [
@@ -3069,18 +3597,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "bcg scar assessment",
-      "proposedHomeNameKey": "tuberculosis",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3231,18 +3747,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "capillary architecture",
-      "proposedHomeNameKey": "blood vessels",
-      "componentProposalIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "cataract anatomy",
       "proposedHomeNameKey": "cataract",
       "componentProposalIds": [
@@ -3267,42 +3771,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "cerebellar circuit deficits",
-      "proposedHomeNameKey": "cerebellum",
-      "componentProposalIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cerebellar connections",
-      "proposedHomeNameKey": "cerebellum",
-      "componentProposalIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cerebellar function",
-      "proposedHomeNameKey": "cerebellum",
-      "componentProposalIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "cervix histology",
       "proposedHomeNameKey": "cervix",
       "componentProposalIds": [
@@ -3322,18 +3790,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "childhood obesity risk factors",
-      "proposedHomeNameKey": "childhood obesity",
-      "componentProposalIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3370,18 +3826,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "community obesity prevention",
-      "proposedHomeNameKey": "childhood obesity",
-      "componentProposalIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3447,42 +3891,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "cortical connections",
-      "proposedHomeNameKey": "cerebral cortex",
-      "componentProposalIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cortical localization",
-      "proposedHomeNameKey": "cerebral cortex",
-      "componentProposalIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "cortical regions",
-      "proposedHomeNameKey": "cerebral cortex",
-      "componentProposalIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "cranial nerve examination",
       "proposedHomeNameKey": "cranial nerves",
       "componentProposalIds": [
@@ -3538,18 +3946,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "diagnosis communication",
-      "proposedHomeNameKey": "clinical communication",
-      "componentProposalIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -3778,18 +4174,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "family obesity prevention",
-      "proposedHomeNameKey": "childhood obesity",
-      "componentProposalIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4299,42 +4683,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "lower-limb dermatomes",
-      "proposedHomeNameKey": "lower limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "lower-limb lymphatic pathways",
-      "proposedHomeNameKey": "lower limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "lower-limb venous pathways",
-      "proposedHomeNameKey": "lower limb",
-      "componentProposalIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "macrocytic anaemia investigation",
       "proposedHomeNameKey": "macrocytic anaemia",
       "componentProposalIds": [
@@ -4354,18 +4702,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "mantoux interpretation",
-      "proposedHomeNameKey": "tuberculosis",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4462,42 +4798,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neuron functional classification",
-      "proposedHomeNameKey": "neuron",
-      "componentProposalIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neuron parts",
-      "proposedHomeNameKey": "neuron",
-      "componentProposalIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "neuron structural classification",
-      "proposedHomeNameKey": "neuron",
-      "componentProposalIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -4791,42 +5091,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "pharyngeal arterial supply",
-      "proposedHomeNameKey": "pharynx",
-      "componentProposalIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:04"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "pharyngeal innervation",
-      "proposedHomeNameKey": "pharynx",
-      "componentProposalIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "pharyngeal lymphatic drainage",
-      "proposedHomeNameKey": "pharynx",
-      "componentProposalIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:05"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "physical torture sequelae",
       "proposedHomeNameKey": "torture",
       "componentProposalIds": [
@@ -5002,18 +5266,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:afaf08537b2290709349ef4673e85172f20135b9c93504535d1117bb1f8cc1e6"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "prognosis communication",
-      "proposedHomeNameKey": "clinical communication",
-      "componentProposalIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5283,18 +5535,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "skin appendages",
-      "proposedHomeNameKey": "skin",
-      "componentProposalIds": [
-        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "skin infection microbiology",
       "proposedHomeNameKey": "skin infection",
       "componentProposalIds": [
@@ -5314,30 +5554,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:40785db42d7737ee430dccca281c92d053184ab750bf44b9801c6db786a85da4"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "skin layers",
-      "proposedHomeNameKey": "skin",
-      "componentProposalIds": [
-        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "skin types",
-      "proposedHomeNameKey": "skin",
-      "componentProposalIds": [
-        "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5655,18 +5871,6 @@
       "canonicalConceptId": null
     },
     {
-      "facetNameKey": "tuberculosis contact history",
-      "proposedHomeNameKey": "tuberculosis",
-      "componentProposalIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:01"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
       "facetNameKey": "umbilical cord histology",
       "proposedHomeNameKey": "umbilical cord",
       "componentProposalIds": [
@@ -5674,18 +5878,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "understanding verification",
-      "proposedHomeNameKey": "clinical communication",
-      "componentProposalIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
@@ -5758,18 +5950,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "venous architecture",
-      "proposedHomeNameKey": "blood vessels",
-      "componentProposalIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:02"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null

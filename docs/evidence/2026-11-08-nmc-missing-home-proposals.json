@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-proposals",
-  "sourceHead": "e79aaf71cc1614ad7107d1257920d859b691460c",
+  "sourceHead": "fee7d436a3ccba29ba188bb659194b8f9cfc36ef",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "productionRegistryChecked": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "homeNames": 20,
-    "facetBindings": 104
+    "homeNames": 30,
+    "facetBindings": 134
   },
   "homes": [
     {
@@ -1226,6 +1226,416 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:blood-vessels",
+      "name": "Blood vessels",
+      "nameKey": "blood vessels",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "arterial architecture",
+          "componentProposalIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+          ]
+        },
+        {
+          "facetNameKey": "venous architecture",
+          "componentProposalIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+          ]
+        },
+        {
+          "facetNameKey": "capillary architecture",
+          "componentProposalIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:tuberculosis",
+      "name": "Tuberculosis",
+      "nameKey": "tuberculosis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "tuberculosis contact history",
+          "componentProposalIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        },
+        {
+          "facetNameKey": "bcg scar assessment",
+          "componentProposalIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        },
+        {
+          "facetNameKey": "mantoux interpretation",
+          "componentProposalIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:cerebellum",
+      "name": "Cerebellum",
+      "nameKey": "cerebellum",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "cerebellar connections",
+          "componentProposalIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+          ]
+        },
+        {
+          "facetNameKey": "cerebellar function",
+          "componentProposalIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+          ]
+        },
+        {
+          "facetNameKey": "cerebellar circuit deficits",
+          "componentProposalIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:childhood-obesity",
+      "name": "Childhood obesity",
+      "nameKey": "childhood obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "childhood obesity risk factors",
+          "componentProposalIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        },
+        {
+          "facetNameKey": "family obesity prevention",
+          "componentProposalIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        },
+        {
+          "facetNameKey": "community obesity prevention",
+          "componentProposalIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:cerebral-cortex",
+      "name": "Cerebral cortex",
+      "nameKey": "cerebral cortex",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "cortical regions",
+          "componentProposalIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+          ]
+        },
+        {
+          "facetNameKey": "cortical connections",
+          "componentProposalIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+          ]
+        },
+        {
+          "facetNameKey": "cortical localization",
+          "componentProposalIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:clinical-communication",
+      "name": "Clinical communication",
+      "nameKey": "clinical communication",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "diagnosis communication",
+          "componentProposalIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        },
+        {
+          "facetNameKey": "prognosis communication",
+          "componentProposalIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        },
+        {
+          "facetNameKey": "understanding verification",
+          "componentProposalIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:016c9edc1a4f6d7120c9534a0f9cf8dbd2bd422e0d9d87539d102ef88161f4f9"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:lower-limb",
+      "name": "Lower limb",
+      "nameKey": "lower limb",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "lower-limb venous pathways",
+          "componentProposalIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        },
+        {
+          "facetNameKey": "lower-limb lymphatic pathways",
+          "componentProposalIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        },
+        {
+          "facetNameKey": "lower-limb dermatomes",
+          "componentProposalIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:neuron",
+      "name": "Neuron",
+      "nameKey": "neuron",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "neuron parts",
+          "componentProposalIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        },
+        {
+          "facetNameKey": "neuron structural classification",
+          "componentProposalIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        },
+        {
+          "facetNameKey": "neuron functional classification",
+          "componentProposalIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:pharynx",
+      "name": "Pharynx",
+      "nameKey": "pharynx",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "pharyngeal innervation",
+          "componentProposalIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+          ]
+        },
+        {
+          "facetNameKey": "pharyngeal arterial supply",
+          "componentProposalIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:04"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+          ]
+        },
+        {
+          "facetNameKey": "pharyngeal lymphatic drainage",
+          "componentProposalIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7:name-component:05"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7"
+          ]
+        }
+      ]
+    },
+    {
+      "homeProposalId": "editorial-home:skin",
+      "name": "Skin",
+      "nameKey": "skin",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "basis": "existing-proposed-home-label-and-bound-facet-context",
+      "scopeComplete": false,
+      "coverageFraction": null,
+      "facetBindings": [
+        {
+          "facetNameKey": "skin layers",
+          "componentProposalIds": [
+            "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
+          ]
+        },
+        {
+          "facetNameKey": "skin appendages",
+          "componentProposalIds": [
+            "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4"
+          ]
+        },
+        {
+          "facetNameKey": "skin types",
+          "componentProposalIds": [
+            "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25"
           ]
         }
       ]
