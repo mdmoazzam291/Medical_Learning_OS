@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "names-only-editorial-scope-dispositions",
-  "sourceHead": "c7a94c6a0b4fab1d571290948df7d52efdb769c2",
+  "sourceHead": "dee04cf265cf9135b847ffc290ad815cbc5635f4",
   "sourceQueuePath": "docs/evidence/2026-11-08-nmc-home-scope-gap-queue.json",
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -11,71 +11,14 @@
   "productionRegistryChecked": false,
   "coverageFraction": null,
   "totals": {
-    "groups": 5,
-    "facets": 6,
+    "groups": 3,
+    "facets": 4,
     "relationCounts": {
-      "family-scope-pending": 4,
+      "family-scope-pending": 2,
       "context-only": 2
     }
   },
   "rows": [
-    {
-      "proposedHomeNameKey": "bone marrow examination",
-      "organizerType": "procedure-family",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Procedure family; aspiration, biopsy and interpretation require distinct scope checks.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "bone marrow interpretation",
-          "componentProposalIds": [
-            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
-            "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
-          ],
-          "routing": "family-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
-          "subjectId": "medicine",
-          "code": "GM9.8",
-          "page": 297,
-          "rowBBox": [
-            44.2,
-            152.28,
-            102.7,
-            179.52
-          ],
-          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
-        },
-        {
-          "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
-          "subjectId": "medicine",
-          "code": "GM9.8",
-          "page": 297,
-          "rowBBox": [
-            44.2,
-            179.52,
-            102.7,
-            207.06
-          ],
-          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
-        }
-      ]
-    },
     {
       "proposedHomeNameKey": "female reproductive function",
       "organizerType": "clinical-family",
@@ -206,47 +149,6 @@
           "sourceBodySha256": "c6eaa3e7d75abf059ddbf7ae9e610b5727bf80251a6b9e0f84ea43cee1c02fc0",
           "mode": "knowledge",
           "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "scleral disease",
-      "organizerType": "clinical-family",
-      "dispositionStatus": "editorial-routing-proposed",
-      "basis": "existing-draft-task-and-component-metadata",
-      "boundaryNote": "Broad disease family; do not equate the referral facet with all episcleritis or scleritis scope.",
-      "organizerIsCanonicalConcept": false,
-      "canonicalConceptId": null,
-      "canonicalObjectiveVersionId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "scleral disease referral",
-          "componentProposalIds": [
-            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
-          ],
-          "routing": "family-scope-pending"
-        }
-      ],
-      "sourceTasks": [
-        {
-          "referenceId": "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4",
-          "subjectId": "ophthalmology",
-          "code": "OP5.2",
-          "page": 416,
-          "rowBBox": [
-            49.5,
-            363.0,
-            103.5,
-            396.96
-          ],
-          "sourceBodySha256": "11cd0f5f564d5aba050f5a99e1960ea297a50bf7c51fedb7fb755149f0a4e9eb",
-          "mode": "knowledge",
-          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json"
         }
       ]
     }

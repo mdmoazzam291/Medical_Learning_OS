@@ -1,5 +1,30 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current shared-scope representation
+
+Two remaining facets explicitly span multiple existing candidate names in their draft-task context. They are represented as shared source-task groups, preserving each target without choosing an arbitrary single home or inventing duplicate facet names.
+
+| Shared facet | Existing candidate targets | Source-task code |
+| --- | --- | --- |
+| Bone marrow interpretation | Bone marrow aspiration; Bone marrow biopsy | GM9.8 (two retained source appearances) |
+| Scleral disease referral | Episcleritis; Scleritis | OP5.2 |
+
+These are unaccepted authoring relationships. The shared task does not establish identical interpretation/referral objectives, target-specific competence, full coverage or clinical equivalence. `targetCoverage` stays `unverified`; group and target canonical IDs are null and mapping/scope-completion flags false. Clinical/source acceptance remains unverified.
+
+The source packet is `docs/evidence/2026-11-08-nmc-shared-facet-scope-proposals.json`. The projection validates exact facet components/references, existing reusable target names, and source-task paths, versions/body hashes, coordinates and assessment modes. It rejects duplicate/unknown targets, forged acceptance, source drift and replacing an available single home with a shared group. Both GM9.8 source appearances remain separate.
+
+The offline graph is now **schema version 2**. Its accounting is **392 single-home facet links + two shared-scope facets + four unrepresented facets = 398 scope facets**. The two groups expose four proposed target relationships; those four targets do not add four source facets. `totalFacetHomeLinks` retains its single-home count; `sharedScopeFacetCount` and `sharedScopeTargetLinks` are separate. The input role inventory is unchanged: 1,195 names, 797 reusable candidates and 1,218 component occurrences. All 392 earlier single-home link objects are unchanged.
+
+The current gap queue contains four facets in three groups: Female reproductive pharmacotherapy; Neurodegeneration pharmacotherapy; Physical torture sequelae; Psychological torture sequelae. The two shared groups have a represented authoring context, while their target-specific scope remains unverified; they are not clinically or canonically resolved.
+
+## Current next actions
+
+1. Examine the four broad outcome/pharmacotherapy scopes without inventing diagnoses or reducing a family to one condition. Reuse explicit existing family/topic names where supported.
+2. Before exact objective binding, resolve the target-specific interpretation/referral scope of the two shared groups. Shared context alone cannot certify each target.
+3. Refresh registry metadata before canonical identity reuse/allocation, then assess the other2,007parent labels,21source exceptions and learner integration. NMC Foundation remains incomplete.
+
+# Historical standalone-role snapshot — checkpoint dee04cf2
+
 ## Current standalone-name correction
 
 Nine existing names were reclassified from scope facets to independently addressable reusable-name candidates. This avoids inventing near-synonymous parent containers solely to clear a home gap. The names and every source occurrence are unchanged; the earlier source contexts and roles are retained in the audit. The classification is an editorial proposal, not a claim of clinical or legal validation or accepted canonical identity.

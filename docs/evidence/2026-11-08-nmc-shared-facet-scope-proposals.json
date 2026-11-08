@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-shared-facet-scope-proposals",
+  "sourceHead": "dee04cf265cf9135b847ffc290ad815cbc5635f4",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "productionRegistryChecked": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "groups": [
+    {
+      "facetNameKey": "bone marrow interpretation",
+      "componentProposalIds": [
+        "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+        "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
+      ],
+      "targetNameKeys": [
+        "bone marrow aspiration",
+        "bone marrow biopsy"
+      ],
+      "basis": "explicit-shared-source-task-context",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "targetCoverage": "unverified",
+      "scopeNote": "Shared source-task context only; target-specific objectives, equivalent scope and clinical acceptance are not established.",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+          "subjectId": "medicine",
+          "code": "GM9.8",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            152.28,
+            102.7,
+            179.52
+          ],
+          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
+          "subjectId": "medicine",
+          "code": "GM9.8",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            179.52,
+            102.7,
+            207.06
+          ],
+          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "scleral disease referral",
+      "componentProposalIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+      ],
+      "targetNameKeys": [
+        "episcleritis",
+        "scleritis"
+      ],
+      "basis": "explicit-shared-source-task-context",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "targetCoverage": "unverified",
+      "scopeNote": "Shared source-task context only; target-specific objectives, equivalent scope and clinical acceptance are not established.",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4",
+          "subjectId": "ophthalmology",
+          "code": "OP5.2",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            363.0,
+            103.5,
+            396.96
+          ],
+          "sourceBodySha256": "11cd0f5f564d5aba050f5a99e1960ea297a50bf7c51fedb7fb755149f0a4e9eb",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json"
+        }
+      ]
+    }
+  ]
+}

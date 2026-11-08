@@ -5,6 +5,7 @@ const root=new URL('../../',import.meta.url),read=p=>JSON.parse(readFileSync(new
 const roles=read('docs/evidence/2026-11-08-nmc-name-role-proposals.json');
 const proposals=read('docs/evidence/2026-11-08-nmc-missing-home-proposals.json');
 const resolutions=read('docs/evidence/2026-11-08-nmc-home-label-resolutions.json');
+const sharedPath='docs/evidence/2026-11-08-nmc-shared-facet-scope-proposals.json',shared=read(sharedPath);
 const norm=s=>s.normalize('NFC').trim().toLowerCase(),byName=new Map(roles.entries.map(e=>[e.nameKey,e]));
 const facets=roles.entries.filter(e=>e.classificationRole==='scope-facet');
 const bindings=e=>({facetNameKey:e.nameKey,componentProposalIds:e.occurrences.map(o=>o.componentProposalId),sourceReferenceIds:[...new Set(e.occurrences.flatMap(o=>o.sourceReferenceIds))].sort()});
@@ -35,11 +36,56 @@ for(const h of proposals.homes){
 }
 assert.deepEqual(proposals.totals,{homeNames:homes.size,facetBindings:boundFacets});
 for(const a of aliases.values())assert(homes.has(a.resolvedHomeNameKey)||byName.get(a.resolvedHomeNameKey)?.classificationRole==='reusable-name-candidate','unresolved label target');
-const links=[],unresolved=[];
+assert.equal(shared.schemaVersion,1);assert.equal(shared.status,'names-only-shared-facet-scope-proposals');
+for(const k of ['clinicalApproval','learnerActivation','automaticMerging','productionRegistryChecked','canonicalIdentityAllocation','officialSourceRechecked'])assert.equal(shared[k],false);
+const sharedByFacet=new Map();
+const taskEvidence=facet=>{
+ const tasks=new Map(),referenceIds=bindings(facet).sourceReferenceIds;
+ for(const occurrence of facet.occurrences){
+  const parent=read(occurrence.batchPath).rows.find(r=>r.parentNameKey===occurrence.parentNameKey);assert(parent,'unknown shared-scope source parent');
+  for(const appearance of parent.sourceAppearances.filter(a=>referenceIds.includes(a.referenceId))){
+   const matches=[];
+   const walk=value=>{
+    if(Array.isArray(value))value.forEach(walk);
+    else if(value&&typeof value==='object'){
+     if(value.referenceId===appearance.referenceId&&value.sourceBodySha256)matches.push(value);
+     else Object.values(value).forEach(walk);
+    }
+   };
+   walk(read(appearance.packet));assert.equal(matches.length,1,'ambiguous shared-scope source task');
+   const t=matches[0],metadata={referenceId:t.referenceId,packetPath:appearance.packet,subjectId:t.subjectId,code:t.code,page:t.page,rowBBox:t.rowBBox,sourceBodySha256:t.sourceBodySha256,mode:t.mode};
+   if(tasks.has(t.referenceId))assert.deepEqual(tasks.get(t.referenceId),metadata,'conflicting shared-scope source evidence');
+   tasks.set(t.referenceId,metadata);
+  }
+ }
+ assert.deepEqual([...tasks.keys()].sort(),referenceIds,'shared scope source task omission');
+ return [...tasks.values()].sort((a,b)=>a.referenceId.localeCompare(b.referenceId));
+};
+for(const g of shared.groups){
+ const facet=byName.get(g.facetNameKey);assert.equal(facet?.classificationRole,'scope-facet','unknown shared-scope facet');
+ assert(!sharedByFacet.has(g.facetNameKey),'duplicate shared-scope facet');
+ assert.deepEqual({facetNameKey:g.facetNameKey,componentProposalIds:g.componentProposalIds,sourceReferenceIds:g.sourceReferenceIds},bindings(facet),'shared scope source drift');
+ const rawKey=norm(facet.proposedHomeLabel),key=aliases.get(rawKey)?.resolvedHomeNameKey??rawKey;
+ assert(!homes.has(key)&&byName.get(key)?.classificationRole!=='reusable-name-candidate','shared scope cannot override a single home');
+ assert.equal(g.basis,'explicit-shared-source-task-context');
+ for(const k of ['canonicalConceptId','canonicalObjectiveVersionId'])assert.equal(g[k],null,'shared scope has no accepted identity');
+ for(const k of ['mappingAccepted','scopeComplete'])assert.equal(g[k],false,'shared scope is unaccepted');
+ assert.equal(g.targetCoverage,'unverified');assert(Array.isArray(g.targetNameKeys)&&g.targetNameKeys.length>=2);
+ assert.equal(new Set(g.targetNameKeys).size,g.targetNameKeys.length,'duplicate shared-scope target');
+ for(const key of g.targetNameKeys)assert.equal(byName.get(key)?.classificationRole,'reusable-name-candidate','unknown reusable shared-scope target');
+ assert.deepEqual(g.sourceTasks,taskEvidence(facet),'shared scope task evidence drift');
+ sharedByFacet.set(g.facetNameKey,g);
+}
+const links=[],unresolved=[],sharedScopeGroups=[];
 for(const facet of facets){
  const homeKey=norm(facet.proposedHomeLabel),alias=aliases.get(homeKey),targetKey=alias?.resolvedHomeNameKey??homeKey,target=byName.get(targetKey),home=homes.get(targetKey);
  const source={facetNameKey:facet.nameKey,proposedHomeNameKey:homeKey,componentProposalIds:facet.occurrences.map(o=>o.componentProposalId),sourceReferenceIds:[...new Set(facet.occurrences.flatMap(o=>o.sourceReferenceIds))].sort()};
  const flags={semanticEquivalence:'unverified',canonicalConceptId:null,canonicalObjectiveVersionId:null,mappingAccepted:false};
+ const sharedGroup=sharedByFacet.get(facet.nameKey);
+ if(sharedGroup){
+  sharedScopeGroups.push({...source,relation:'proposed-shared-source-task-context',basis:sharedGroup.basis,...flags,scopeComplete:false,targetCoverage:'unverified',targets:sharedGroup.targetNameKeys.map(key=>({targetNameKey:key,targetComponentProposalIds:byName.get(key).occurrences.map(o=>o.componentProposalId),targetSourceReferenceIds:[...new Set(byName.get(key).occurrences.flatMap(o=>o.sourceReferenceIds))].sort(),canonicalConceptId:null,canonicalObjectiveVersionId:null,mappingAccepted:false,scopeComplete:false}))});
+  continue;
+ }
  const resolution=alias?{resolvedHomeNameKey:targetKey,labelResolutionBasis:alias.basis}:{};
  if(target?.classificationRole==='reusable-name-candidate'){
   assert.notEqual(facet.nameKey,target.nameKey);
@@ -48,7 +94,8 @@ for(const facet of facets){
  else unresolved.push({...source,reason:target?'home-label-is-scope-facet':'home-label-has-no-name-candidate',canonicalConceptId:null});
 }
 links.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));unresolved.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));
-const result={schemaVersion:1,status:'editorial-facet-home-link-proposals',sourceRolePath:'docs/evidence/2026-11-08-nmc-name-role-proposals.json',sourceHomeProposalPath:'docs/evidence/2026-11-08-nmc-missing-home-proposals.json',sourceLabelResolutionPath:'docs/evidence/2026-11-08-nmc-home-label-resolutions.json',automaticMerging:false,clinicalApproval:false,learnerActivation:false,registryAcceptance:false,coverageFraction:null,totals:{classifiedNames:roles.entries.length,scopeFacets:links.length+unresolved.length,exactCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&!l.resolvedHomeNameKey).length,labelResolvedCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&l.resolvedHomeNameKey).length,proposedNewHomeLinks:links.filter(l=>l.targetHomeProposalId).length,totalFacetHomeLinks:links.length,unresolvedFacetHomes:unresolved.length,distinctCandidateHomes:new Set(links.map(l=>l.targetNameKey)).size,explicitLabelResolutions:aliases.size},links,unresolved};
+sharedScopeGroups.sort((a,b)=>a.facetNameKey.localeCompare(b.facetNameKey));
+const result={schemaVersion:2,status:'editorial-facet-home-link-proposals',sourceRolePath:'docs/evidence/2026-11-08-nmc-name-role-proposals.json',sourceHomeProposalPath:'docs/evidence/2026-11-08-nmc-missing-home-proposals.json',sourceLabelResolutionPath:'docs/evidence/2026-11-08-nmc-home-label-resolutions.json',sourceSharedScopePath:sharedPath,automaticMerging:false,clinicalApproval:false,learnerActivation:false,registryAcceptance:false,coverageFraction:null,totals:{classifiedNames:roles.entries.length,scopeFacets:links.length+sharedScopeGroups.length+unresolved.length,sharedScopeFacetCount:sharedScopeGroups.length,sharedScopeTargetLinks:sharedScopeGroups.reduce((n,g)=>n+g.targets.length,0),exactCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&!l.resolvedHomeNameKey).length,labelResolvedCandidateHomeLinks:links.filter(l=>l.targetComponentProposalIds&&l.resolvedHomeNameKey).length,proposedNewHomeLinks:links.filter(l=>l.targetHomeProposalId).length,totalFacetHomeLinks:links.length,unresolvedFacetHomes:unresolved.length,distinctCandidateHomes:new Set([...links.map(l=>l.targetNameKey),...sharedScopeGroups.flatMap(g=>g.targets.map(t=>t.targetNameKey))]).size,explicitLabelResolutions:aliases.size},links,sharedScopeGroups,unresolved};
 assert.equal(result.totals.scopeFacets,roles.totals.scopeFacets,'facet denominator differs from source roles');
 if(process.argv.includes('--verify')){
  assert.deepEqual(read('docs/evidence/2026-11-08-nmc-facet-home-links.json'),result,'facet-home projection differs from source roles');

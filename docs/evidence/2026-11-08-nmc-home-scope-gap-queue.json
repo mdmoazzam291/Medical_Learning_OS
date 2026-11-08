@@ -1,36 +1,16 @@
 {
   "schemaVersion": 1,
   "status": "names-only-home-scope-gap-queue",
-  "sourceHead": "c7a94c6a0b4fab1d571290948df7d52efdb769c2",
+  "sourceHead": "dee04cf265cf9135b847ffc290ad815cbc5635f4",
   "clinicalApproval": false,
   "learnerActivation": false,
   "automaticMerging": false,
   "canonicalIdentityAllocation": false,
   "totals": {
-    "groups": 5,
-    "facets": 6
+    "groups": 3,
+    "facets": 4
   },
   "rows": [
-    {
-      "proposedHomeNameKey": "bone marrow examination",
-      "status": "scope-decision-pending",
-      "reason": "procedure-family-scope",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "bone marrow interpretation",
-          "componentProposalIds": [
-            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
-            "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
-          ]
-        }
-      ]
-    },
     {
       "proposedHomeNameKey": "female reproductive function",
       "status": "scope-decision-pending",
@@ -93,25 +73,6 @@
           ],
           "sourceReferenceIds": [
             "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-          ]
-        }
-      ]
-    },
-    {
-      "proposedHomeNameKey": "scleral disease",
-      "status": "scope-decision-pending",
-      "reason": "generic-disease-or-function-family",
-      "canonicalConceptId": null,
-      "mappingAccepted": false,
-      "scopeComplete": false,
-      "facets": [
-        {
-          "facetNameKey": "scleral disease referral",
-          "componentProposalIds": [
-            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
-          ],
-          "sourceReferenceIds": [
-            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
           ]
         }
       ]

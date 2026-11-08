@@ -1,9 +1,10 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "status": "editorial-facet-home-link-proposals",
   "sourceRolePath": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
   "sourceHomeProposalPath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
   "sourceLabelResolutionPath": "docs/evidence/2026-11-08-nmc-home-label-resolutions.json",
+  "sourceSharedScopePath": "docs/evidence/2026-11-08-nmc-shared-facet-scope-proposals.json",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -12,12 +13,14 @@
   "totals": {
     "classifiedNames": 1195,
     "scopeFacets": 398,
+    "sharedScopeFacetCount": 2,
+    "sharedScopeTargetLinks": 4,
     "exactCandidateHomeLinks": 49,
     "labelResolvedCandidateHomeLinks": 2,
     "proposedNewHomeLinks": 341,
     "totalFacetHomeLinks": 392,
-    "unresolvedFacetHomes": 6,
-    "distinctCandidateHomes": 220,
+    "unresolvedFacetHomes": 4,
+    "distinctCandidateHomes": 222,
     "explicitLabelResolutions": 14
   },
   "links": [
@@ -7225,7 +7228,7 @@
       "mappingAccepted": false
     }
   ],
-  "unresolved": [
+  "sharedScopeGroups": [
     {
       "facetNameKey": "bone marrow interpretation",
       "proposedHomeNameKey": "bone marrow examination",
@@ -7236,9 +7239,91 @@
         "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
         "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
       ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
+      "relation": "proposed-shared-source-task-context",
+      "basis": "explicit-shared-source-task-context",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "targetCoverage": "unverified",
+      "targets": [
+        {
+          "targetNameKey": "bone marrow aspiration",
+          "targetComponentProposalIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105:name-component:02"
+          ],
+          "targetSourceReferenceIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "mappingAccepted": false,
+          "scopeComplete": false
+        },
+        {
+          "targetNameKey": "bone marrow biopsy",
+          "targetComponentProposalIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105:name-component:03"
+          ],
+          "targetSourceReferenceIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "mappingAccepted": false,
+          "scopeComplete": false
+        }
+      ]
     },
+    {
+      "facetNameKey": "scleral disease referral",
+      "proposedHomeNameKey": "scleral disease",
+      "componentProposalIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+      ],
+      "relation": "proposed-shared-source-task-context",
+      "basis": "explicit-shared-source-task-context",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "targetCoverage": "unverified",
+      "targets": [
+        {
+          "targetNameKey": "episcleritis",
+          "targetComponentProposalIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:01"
+          ],
+          "targetSourceReferenceIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "mappingAccepted": false,
+          "scopeComplete": false
+        },
+        {
+          "targetNameKey": "scleritis",
+          "targetComponentProposalIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:02"
+          ],
+          "targetSourceReferenceIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "mappingAccepted": false,
+          "scopeComplete": false
+        }
+      ]
+    }
+  ],
+  "unresolved": [
     {
       "facetNameKey": "female reproductive pharmacotherapy",
       "proposedHomeNameKey": "female reproductive function",
@@ -7283,18 +7368,6 @@
       ],
       "sourceReferenceIds": [
         "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
-      ],
-      "reason": "home-label-has-no-name-candidate",
-      "canonicalConceptId": null
-    },
-    {
-      "facetNameKey": "scleral disease referral",
-      "proposedHomeNameKey": "scleral disease",
-      "componentProposalIds": [
-        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
-      ],
-      "sourceReferenceIds": [
-        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
       ],
       "reason": "home-label-has-no-name-candidate",
       "canonicalConceptId": null
