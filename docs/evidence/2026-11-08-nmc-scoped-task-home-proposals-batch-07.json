@@ -1,0 +1,1218 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-07:01",
+      "facetNameKey": "diabetes classification",
+      "facetName": "Diabetes classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:33056cbc6462a9800911e5890beacb7dbe56bf84b0aabcf4f86bf97764b55da4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.1",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            441.96,
+            102.7,
+            461.82
+          ],
+          "sourceBodySha256": "79a131f8178907dd6fee0ae7da9ec8e7e74aa7082e8fbf4633a0113a6c8db9ea",
+          "editorialTaskSha256": "427a4bb6faa2e61d538e22bf2a56856a98ca84f3fbb5854a66a1955b82b6a3ce",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diabetes definition and representative categories, not all disease management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:02",
+      "facetNameKey": "diabetes differential",
+      "facetName": "Diabetes differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f1cb574250381ede189d305e847c94e23e8121e1a1e47535524e592726311f41",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.10",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            310.2,
+            102.7,
+            337.68
+          ],
+          "sourceBodySha256": "c02833e4719dc2658bdbc8aaf45b834abc25b78dca7cf566d36241d3aa89f032",
+          "editorialTaskSha256": "17f8e7a3d4db769abcacb61f2992038b9d9696d8b0012fe6ffa6cb0ac981bbc7",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Category and alternative-diagnosis prioritization from clinical clues.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:03",
+      "facetNameKey": "diabetes examination",
+      "facetName": "Diabetes examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fc998ac8e1341dcc211dd5e8c61c57376fb6527dee39e0e9305f04c5fd36dd90",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.8",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            215.28,
+            102.7,
+            282.96
+          ],
+          "sourceBodySha256": "7e8eadf86546077cdf65d7823afbfa010567d895ed9e220685f8fd9e7cbabbba",
+          "editorialTaskSha256": "87378b93192afcbeb3d64ffdf7d49294ea720692e46929208599c6317b843efd",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated skin/BP/pulse/fundus/foot examination; no independent competence receipt.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:04",
+      "facetNameKey": "diabetes history",
+      "facetName": "Diabetes history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e8c269a5ae4042c630305c6dd4d2af201178bba183050311d2a8fc1c2558bde4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.7",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            161.16,
+            102.7,
+            215.28
+          ],
+          "sourceBodySha256": "3ed9a02e426c1e0d6235c640ce27740574fd9d8302555089b385921f6ecb5271",
+          "editorialTaskSha256": "ffbfa5bef83d2f7f6c3886307f4d94d45abd5b1a30b0054191d243c5c038b15e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptoms, lifestyle/diet/family/medicine history and organ-injury evidence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:05",
+      "facetNameKey": "diabetes pathology",
+      "facetName": "Diabetes pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:456c55df9ed6e330258e5e49d3d4f8588ca03f74a9f1da649fd87ad27d371720",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA31.5",
+          "page": 201,
+          "rowBBox": [
+            51.5,
+            473.28,
+            105.6,
+            514.32
+          ],
+          "sourceBodySha256": "e9e7b0b13747483171dcf9a0ecf0092b3e325a456bd7e2535467e7e7d7de6c97",
+          "editorialTaskSha256": "b2c140ea967dce1cc996761e136bafa7a4690e4265cf1dc0f93932ed03cd9d69",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Major diabetes forms, mechanisms, laboratory/tissue progression and complications.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:06",
+      "facetNameKey": "diabetes pharmacotherapy",
+      "facetName": "Diabetes pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1cc13004c540e300d70b03ac860f1b95613329f8bd3b4a86a88418809fd02df0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.16",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            486.18,
+            102.7,
+            513.54
+          ],
+          "sourceBodySha256": "6a4a110f5d528f0f4cf020fc73263cf4c5fde6c79b3cf9fbb97cc831640c9798",
+          "editorialTaskSha256": "0d90e99ed3919712c715d6e13b7bfff6194fa7db2954d52f7c254fba90ecc4a4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Drug-class indications/contraindications/adverse effects/interactions; no independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:07",
+      "facetNameKey": "diabetic emergency treatment",
+      "facetName": "Diabetic emergency treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1163d6dc12ce37739fdca68a39fad0b6fcd1e630a4f591984a08e58aac9e8ff5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.15",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            458.82,
+            102.7,
+            486.18
+          ],
+          "sourceBodySha256": "35df2d3dd0c6ff6d263648cde79970d169614e47dbcdbbd63c7c5dcd9e38c4a6",
+          "editorialTaskSha256": "02572d3581fbdaf7220861e01af5533067a155557a4dfd272e272458d3e7618a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetic emergencies",
+      "proposedHomeNameKey": "diabetic emergencies",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "diabetic emergencies"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative emergency distinction, initial treatment and escalation; emergency members remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:08",
+      "facetNameKey": "diabetic ketoacidosis recognition",
+      "facetName": "Diabetic ketoacidosis recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE30.4",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            153.78,
+            103.1,
+            181.32
+          ],
+          "sourceBodySha256": "45b048df9b273843876be382196450fc3e520478ed8a00e8254f0246487f0ad1",
+          "editorialTaskSha256": "b447c585f9db0bd2e850adfe8389705c37d2d01d096f76e36d3cd83dd38a04e9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetic ketoacidosis",
+      "proposedHomeNameKey": "diabetic ketoacidosis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "diabetic ketoacidosis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated DKA recognition, urine glucose/ketone testing and urgent referral.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:09",
+      "facetNameKey": "diabetic vascular complications",
+      "facetName": "Diabetic vascular complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:467e8b65036b703ee65949f0ac1a6a933c16e980f2f5bd6cf5ae254bf51c154e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.5",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            133.8
+          ],
+          "sourceBodySha256": "989ba48828d4324269be434cf284e21d7e38d087189d48f99a0451093d6561e7",
+          "editorialTaskSha256": "fffd68c4272d6b70760f8fa95d77da044a27276c2ff45d1aca7237f8f2d5aa1a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetes mellitus",
+      "proposedHomeNameKey": "diabetes mellitus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diabetes mellitus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Microvascular/macrovascular mechanisms and time course.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:10",
+      "facetNameKey": "diagnostic approach to jaundice",
+      "facetName": "Diagnostic approach to jaundice",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f579510472b9a291408a90106c15837a335f890cfec742dcd981acef9aa816a4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.13",
+          "page": 291,
+          "rowBBox": [
+            44.2,
+            269.46,
+            102.7,
+            310.14
+          ],
+          "sourceBodySha256": "d4fa792918208ac11071323cb268acdf803a40b71b6ee0f7d46306e8490ffdc9",
+          "editorialTaskSha256": "ca91f0f10ebcf1ae88cc7d57dd119176e5a85c00152ad88fbf91897446671e66",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Jaundice",
+      "proposedHomeNameKey": "jaundice",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "jaundice"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bilirubin fractions, liver patterns and serology in differential narrowing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:11",
+      "facetNameKey": "dialysis indications",
+      "facetName": "Dialysis indications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bbc13bf1d5b9d733143f0f33699c15018c84662c11c1a667909644b7bc60d0f8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.21",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            303.36,
+            102.7,
+            323.16
+          ],
+          "sourceBodySha256": "83adb0c75107df0aa2a478269b950856a0659cba9f2733fc8780f23e1d64fb2c",
+          "editorialTaskSha256": "488ea4786735d5217187e4c037132bfd4960cf6c5adf360a3e4796dcbe2908ab",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Dialysis",
+      "proposedHomeNameKey": "dialysis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Urgent/planned dialysis indications only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:12",
+      "facetNameKey": "diaphragm development",
+      "facetName": "Diaphragm development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.5",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            169.98,
+            122.2,
+            199.44
+          ],
+          "sourceBodySha256": "38523e2db191fea9c8bc3968432654bed05829b2079407d6917a105dbe82203f",
+          "editorialTaskSha256": "d85b59263f44078f42aca6917d10a6a7dc8af1c64e8c59a5308c80386537a36b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diaphragm",
+      "proposedHomeNameKey": "diaphragm",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "diaphragm"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Embryonic contributions/fusion and congenital-defect mechanisms; contributors remain unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:13",
+      "facetNameKey": "diarrhoea assessment",
+      "facetName": "Diarrhoea assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6faec9de959af5016c42bfbf7dd97090426cc9e6a6f2818c82444b437b5c8dbf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.7",
+          "page": 341,
+          "rowBBox": [
+            51.3,
+            433.92,
+            103.1,
+            474.9
+          ],
+          "sourceBodySha256": "1f237d5790c413eb4a8fe49ea6ca85477193a80b3e2a0396c9e5a86c75a8e9b6",
+          "editorialTaskSha256": "8bbabc5682c4dcbfb17ed1618308410531e975e8c1203e239613c278aa43308a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Focused history and dehydration/shock/prerenal/electrolyte concerns.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:14",
+      "facetNameKey": "diarrhoea causes",
+      "facetName": "Diarrhoea causes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c4c7bf311c3aca1359a9eee1bbbf3332df9188f09b7c3309d1181eed18d9ed5b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.1",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            235.2,
+            102.7,
+            275.94
+          ],
+          "sourceBodySha256": "88900c2017567a562e47f49841fe4d6cb459dbf9adf118527a170fc3a88b6a4f",
+          "editorialTaskSha256": "56cdd430eb99a8102feb488d2bb051a95955af017eb57466a239d7ecae8dc279",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Infectious/noninfectious acute/chronic causes; no exhaustive agent enumeration.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:15",
+      "facetNameKey": "diarrhoea differential",
+      "facetName": "Diarrhoea differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6497fc38d47f85767edc3d4e481afcafb1731efb9e40729d866651bcf0ddae03",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.7",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            487.92,
+            102.7,
+            528.78
+          ],
+          "sourceBodySha256": "7b6f9599750cc7b8343170d6a9b2b3f66926b27539bd024c3550502fce7fcb0c",
+          "editorialTaskSha256": "2e4d2051bc87ded93bdf6841a7f7445f03e9fca8d7cea6d2b8ce9ebedd374d14",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated likely/serious cause prioritization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:16",
+      "facetNameKey": "diarrhoea examination",
+      "facetName": "Diarrhoea examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4114479d9b68d0eb173beb6e3c519c8155aee80c99ecd9b210ce1adf8d234835",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.5",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            398.16,
+            102.7,
+            447.18
+          ],
+          "sourceBodySha256": "5a307f2c67a8da12afca599f6ba5f368af0cdc9f992453f009abeb723963b9e6",
+          "editorialTaskSha256": "f7de3ff5b7723dd085c450b7a87e9ed8940421dcd42825f29a1fd7140a153a63",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated hydration/systemic/abdominal examination.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:17",
+      "facetNameKey": "diarrhoea history",
+      "facetName": "Diarrhoea history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f8fb89101f4bbbda9654883fd93d6190509dffeb24baed5121b3c1623b6c3805",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.4",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            357.42,
+            102.7,
+            398.16
+          ],
+          "sourceBodySha256": "8d87acac7d96345165184edcb2f76c7b9f28d2b29eca220f23c63ec22f63ebe4",
+          "editorialTaskSha256": "15f802b5f1da09e93791a3f6f05500108aaf5119332583230fe783d15037f9ea",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Course/diet/travel/sexual exposure/coexisting illness history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:18",
+      "facetNameKey": "diarrhoea pharmacotherapy",
+      "facetName": "Diarrhoea pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3d89747d9a8213405d5c1ac9326b00670d6bd823936038b9a5719b1670746613",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH6.3",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            179.34,
+            105.7,
+            236.58
+          ],
+          "sourceBodySha256": "4b7ecb4c7851ec660ec2700b557f3eec36697b8058909d52088a0c1e8119342a",
+          "editorialTaskSha256": "e98c1be26951da779c5b0743d44579f7233e1cc06b82138a9f9816493637e7bf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Separate acute/chronic and adult/paediatric drug plans; no interchangeability inferred.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:19",
+      "facetNameKey": "diarrhoea treatments in hiv",
+      "facetName": "Diarrhoea treatments in HIV",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:104c1dd7d4aa0974b2ade4cfdac42a582b3246aaacd3b6636aa8f4603261e4fd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.13",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            481.38,
+            102.7,
+            522.12
+          ],
+          "sourceBodySha256": "e0075b0897f7fbb1d86d6bbab98f93b89fbdfea27fc7902582cee5b8d8493ab7",
+          "editorialTaskSha256": "550d987658c6977800bd65cbd057801546efca88bd47f59fc7234b33459ce2bd",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "HIV-associated diarrhoea",
+      "proposedHomeNameKey": "hiv-associated diarrhoea",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "HIV-specific likely-cause therapy indications/adverse effects.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:20",
+      "facetNameKey": "diarrhoeal dehydration referral",
+      "facetName": "Diarrhoeal dehydration referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6606f00a36e80d94f97fd2b3c26b5b64eb70970014390f36fc1ba5246eb09f6b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE16.6",
+          "page": 336,
+          "rowBBox": [
+            51.3,
+            109.74,
+            103.1,
+            142.32
+          ],
+          "sourceBodySha256": "5f5599b520a1dc5debf9f172f00a1894c6f058d819a0f6bbea427ccacc8fe29d",
+          "editorialTaskSha256": "b85262fc3da02f1b3a3c12d6a8aaf4500f43a13407b3cbe50bfbfde3f7c6adf3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoeal dehydration",
+      "proposedHomeNameKey": "diarrhoeal dehydration",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "IMNCI classification and simulated referral/initial planning; protocol not reverified current.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:21",
+      "facetNameKey": "disaster resources",
+      "facetName": "Disaster resources",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c2605bb0f40e0483ac30317f1fb7ef5ff6b2b5785e41720a8936773ecdab16ae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.28",
+          "page": 219,
+          "rowBBox": [
+            45.5,
+            302.64,
+            95.2,
+            336.48
+          ],
+          "sourceBodySha256": "2dfae6814c20a4d2ff1e5c123d02839d88e44b93cdb2eff7eb4969812a05a82c",
+          "editorialTaskSha256": "f9ac843049e890c51c1c78907d6e87c462fa575db3c2e73f2a57f224e70efffe",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Disaster management",
+      "proposedHomeNameKey": "disaster management",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "disaster management"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Local resource coordination in mass-fatality exercise, not actual emergency command authority.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:22",
+      "facetNameKey": "disaster response simulation",
+      "facetName": "Disaster response simulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7234cadb714769b6e449319984afc869a314278734c10dc897fb9c75770c3689",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM13.5",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            503.94,
+            98.6,
+            531.3
+          ],
+          "sourceBodySha256": "5ba6ed8030b8ac4ddf52d260bcdd8346fb42c33539aeb90df2fd181bb0afaa2b",
+          "editorialTaskSha256": "973d882678a6e5b1e91a209b939d22ae1fcfd76ccd7e036540ba6a58985f1768",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Disaster management",
+      "proposedHomeNameKey": "disaster management",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "disaster management"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Tabletop triage/communication/resources/referral participation only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:23",
+      "facetNameKey": "dna exhibits",
+      "facetName": "DNA exhibits",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:04b4521693e3b92f61776d5c9ccbf3624f56d79d0057070003a194f2474980df",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.19",
+          "page": 234,
+          "rowBBox": [
+            45.5,
+            197.7,
+            95.2,
+            224.04
+          ],
+          "sourceBodySha256": "ffc881fc3627afd671303d0abffe40675bebda152ce8e2bc416826c982333285",
+          "editorialTaskSha256": "c69599511f9c3da2af03406a9b67f545e99f9d430470ef815cc58b9b4df6cfe4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "DNA analysis",
+      "proposedHomeNameKey": "dna analysis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated DNA exhibit collection/preservation/sealing/documentation using receiving-lab forms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:24",
+      "facetNameKey": "donation counselling",
+      "facetName": "Donation counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ec526a6caa7d813e4ae1ce9f00cefbb16f42615a3a77d3e88b6a1c4e01d9253f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP4.10",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            271.26,
+            103.5,
+            314.94
+          ],
+          "sourceBodySha256": "99a6013f26ff296188d4cd8d179b6d089f98ba52f7dda9e6bba8946232148238",
+          "editorialTaskSha256": "9785ccc8e450499b20b37e0ffb5ad85ad78d2fc68def09a5ea8efc9e5ac30168",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Eye donation",
+      "proposedHomeNameKey": "eye donation",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Role-play relatives counselling and preservation pending retrieval under source eye-bank protocol.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:25",
+      "facetNameKey": "dying declaration practical",
+      "facetName": "Dying declaration practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60344b8eb8d4cdb5226fcd8bbd5f8efce2dc53581fa47db154f7ab7d37512077",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.18",
+          "page": 234,
+          "rowBBox": [
+            45.5,
+            154.14,
+            95.2,
+            197.7
+          ],
+          "sourceBodySha256": "69069f57d24c462a1a86d9c3620ae2790c094943ac5518537e2b5cfe48fd9afd",
+          "editorialTaskSha256": "a303c26d1aa815d23d88ed40bfe1c0e01d7d85abfb8954884d5f60bae76cc29d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Dying declaration",
+      "proposedHomeNameKey": "dying declaration",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated recording/certification with circumstances/capacity; not actual legal certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:26",
+      "facetNameKey": "dyslipidaemia medicines",
+      "facetName": "Dyslipidaemia medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b55c04b92ef3738be9231499d207d9cd981c384b716e1eda98db77e66965d0f6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.18",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            303.84,
+            102.7,
+            344.58
+          ],
+          "sourceBodySha256": "1c43d27b2625d12c50940ec49fbfab75b1a535008d6215415cb5430880f65231",
+          "editorialTaskSha256": "7bd38b4417fb33a11537fdd78fbd50315da6437b5e991066f2a6182ce2b4d39b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Dyslipidaemia",
+      "proposedHomeNameKey": "dyslipidaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "dyslipidaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Medicine formulation/dosing-principle/adverse-effect monitoring against source reference, not refreshed here.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:27",
+      "facetNameKey": "ea–ecc assistance",
+      "facetName": "EA–ECC assistance",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f0bf214987358c75a1062f523f6875c1aa578a6a6b4fd926d0f640d4be38f50d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG37.5",
+          "page": 442,
+          "rowBBox": [
+            49.1,
+            292.74,
+            103.1,
+            319.74
+          ],
+          "sourceBodySha256": "e07f980218d07ea680b0345d6fc4d8c5d1e02b58fe216f78de29f17d4650099e",
+          "editorialTaskSha256": "bd29af2652c2055e83e1f49a4daaa00dfdbced3bcc81b22682bad1e485be8c16",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Endometrial and endocervical sampling",
+      "proposedHomeNameKey": "endometrial and endocervical sampling",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised EA-ECC sampling-site/label observation and assistance, not independent sampling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:28",
+      "facetNameKey": "early geriatric needs assessment",
+      "facetName": "Early geriatric needs assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8325ea071f356d4c9e95e10311e26f63fbcf9e7bfbb8674256c2e04a42b94ad8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM12.5",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            379.02,
+            98.6,
+            411.6
+          ],
+          "sourceBodySha256": "36360c52fa865352658ff9cb7aea2d9379b8e4d244b7c3db18bdd61579ae4daa",
+          "editorialTaskSha256": "5f64b9f8d1ae2a5ba713eabed5b106e6be9aafde546c7bb9d18e1fe71fd2c754",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Geriatric assessment",
+      "proposedHomeNameKey": "geriatric assessment",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated function/falls/cognition/nutrition/support assessment and follow-up prioritization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:29",
+      "facetNameKey": "early mental health recognition",
+      "facetName": "Early mental health recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8c0656715d17e8b70e1bf774dfd0a78a5a31b966f2646748ac3da63f8768ce20",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM15.4",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            313.32,
+            98.6,
+            342.66
+          ],
+          "sourceBodySha256": "2e7e3189b6a7df969588aed24517c18075247a483bf8d53a652ceaae02f6a1a7",
+          "editorialTaskSha256": "f6c1a0cdbaa68f901c3dc9910df6ce316b1f0e0e8ae6d9cc16ee2d18b557e54c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Mental health",
+      "proposedHomeNameKey": "mental health",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated individual/family/community recognition, initial support and referral.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:30",
+      "facetNameKey": "ecg in suspected coronary disease",
+      "facetName": "ECG in suspected coronary disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.10",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            500.82,
+            102.7,
+            521.88
+          ],
+          "sourceBodySha256": "266badf1c1147f62df71750bce52c7b69fa33d2c62b53e81355eb164e4ce950c",
+          "editorialTaskSha256": "ed6c3935ca046f77e17aaa5c9535769b8f2f8d86b934cdd41056135a37745c45",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Coronary-context ECG indication/recording/representative interpretation, not all ECG competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 18,
+    "existingNameHomeLinks": 21,
+    "newNameHomeLinks": 9,
+    "facetsWithoutInitialHomeProposal": 449
+  }
+}
