@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 17 — 8 November 2026 IST
+
+Checked at 2026-11-08T17:50:43.696Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 562e0e50aee0e2c1b2b5cd914a71e47b0728c322; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: f859f115babe1becf5e737b9e452b083fab20770. Names-only instruction active.
+
+Reviewed next 30 family parents, Perioperative care through Posterior triangle muscles. Added 132 source-bound proposals across 31 source appearances. Plasma proteins retains two task sources: electrophoretic patterns link only to their biochemistry task, origin/fractions/clinical changes to their physiology task, shared functions to both. Peripheral block observation and simulated poisoning treatment remain explicit. Named pesticide classes, nerve deficits, pneumonia categories and pontine syndromes use source-named examples; unspecified plant toxins, muscle groups and nuclei remain open. IDs null, acceptance false, scope/binding incomplete. No teaching content or automatic merging.
+
+Cumulative seventeen family batches: 510 groups, 2,379 proposal occurrences, 518 source appearances; 142 family groups await initial proposals. Queue/three inventories/all sixteen predecessors digest-pinned; original evidence unchanged.
+
+Verification: verifyFamily(...,'17') PASS across ordered cohorts, task hashes/coordinates/modes, reference coverage, unique IDs, exact-label hints and pending flags. Nine focused tests PASS. Full npm test and npm run check NOT run in partial evidence/verifier checkout; no domain/UI changes. No clinical or semantic certification.
+
+Next: family batch 18 beginning Postpartum IUCD programme. Inspect source tasks, preserve unspecified members/source role limits; pin queue/three inventories/all seventeen predecessors, run verifier --batch=18. Scope/home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease and verify remote files, then release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Family/context decomposition proposals batch 16 — 8 November 2026 IST
 
 Checked at 2026-11-08T17:48:04.401Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ab5c9c049099768e9321b219e36b239c16cfec65; open draft PR head verified, main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 74b76970546bedaaa5f7df5af93af8da53753e54. Names-only instruction active.
