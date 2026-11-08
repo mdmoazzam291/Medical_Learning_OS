@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-reuse-candidate-summary",
+  "sourceHead": "7dd8cf7436d88736b84e4843488d8c561a78d850",
+  "generator": "ops/nmc/report-name-consolidation.js",
+  "automaticMerging": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "productionRegistryChecked": false,
+  "coverageFraction": null,
+  "totals": {
+    "batches": 12,
+    "parentNames": 420,
+    "componentOccurrences": 1218,
+    "distinctReferences": 425,
+    "distinctNormalizedNames": 1195,
+    "repeatedNameGroups": 23,
+    "crossSubjectNameGroups": 19,
+    "crossBatchNameGroups": 19,
+    "explicitComponentBindings": 290,
+    "inferredParentBindings": 928
+  },
+  "repeatedNameGroups": [
+    {
+      "nameKey": "arthritis",
+      "name": "Arthritis",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:02",
+          "parentNameKey": "gout, arthritis and migraine",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+              "subjectId": "pharmacology",
+              "code": "PH2.8",
+              "pdfPage": 176,
+              "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d:name-component:02",
+          "parentNameKey": "joint and periarticular pain",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d",
+              "subjectId": "medicine",
+              "code": "GM7.5",
+              "pdfPage": 293,
+              "packet": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "medicine",
+        "pharmacology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "breast lymphatic drainage",
+      "name": "Breast lymphatic drainage",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028:name-component:02",
+          "parentNameKey": "breast anatomy and tests",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:3f85177b77a6800042770682c6224397feac567cd83f7ed6bb73d46d7d6df028",
+              "subjectId": "surgery",
+              "code": "SU25.1",
+              "pdfPage": 409,
+              "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1:name-component:04",
+          "parentNameKey": "breast structure and drainage",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:4dd448c8d7ce881a66eb31dcdee4de5f4fc3c06bfdfb24b481b9b9009fe1b2e1",
+              "subjectId": "anatomy",
+              "code": "AN9.2",
+              "pdfPage": 111,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "anatomy",
+        "surgery"
+      ],
+      "batchCount": 1
+    },
+    {
+      "nameKey": "diarrhoea",
+      "name": "Diarrhoea",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a:name-component:01",
+          "parentNameKey": "diarrhoea and dysentery",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a",
+              "subjectId": "medicine",
+              "code": "GM16.6",
+              "pdfPage": 307,
+              "packet": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:01",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+              "subjectId": "microbiology",
+              "code": "MI4.1",
+              "pdfPage": 209,
+              "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "medicine",
+        "microbiology"
+      ],
+      "batchCount": 1
+    },
+    {
+      "nameKey": "disinfection",
+      "name": "Disinfection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:02",
+          "parentNameKey": "sterilization and disinfection",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+              "subjectId": "microbiology",
+              "code": "MI1.12",
+              "pdfPage": 207,
+              "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1:name-component:02",
+          "parentNameKey": "asepsis and decontamination",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1",
+              "subjectId": "surgery",
+              "code": "SU14.1",
+              "pdfPage": 406,
+              "packet": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "microbiology",
+        "surgery"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "dysentery",
+      "name": "Dysentery",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a:name-component:02",
+          "parentNameKey": "diarrhoea and dysentery",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a",
+              "subjectId": "medicine",
+              "code": "GM16.6",
+              "pdfPage": 307,
+              "packet": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:02",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+              "subjectId": "microbiology",
+              "code": "MI4.1",
+              "pdfPage": 209,
+              "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "medicine",
+        "microbiology"
+      ],
+      "batchCount": 1
+    },
+    {
+      "nameKey": "erb palsy",
+      "name": "Erb palsy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:01",
+          "parentNameKey": "erb and klumpke palsies",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
+              "subjectId": "anatomy",
+              "code": "AN29.3",
+              "pdfPage": 126,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb:name-component:01",
+          "parentNameKey": "upper and lower plexus lesions",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb",
+              "subjectId": "anatomy",
+              "code": "AN10.6",
+              "pdfPage": 112,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "anatomy"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "food poisoning",
+      "name": "Food poisoning",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:03",
+          "parentNameKey": "diarrhoea, dysentery and food poisoning",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+              "subjectId": "microbiology",
+              "code": "MI4.1",
+              "pdfPage": 209,
+              "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986:name-component:08",
+          "parentNameKey": "recreational and food toxicology",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986",
+              "subjectId": "forensic-medicine",
+              "code": "FM13.20",
+              "pdfPage": 231,
+              "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "forensic-medicine",
+        "microbiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "gallstones",
+      "name": "Gallstones",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:02",
+          "parentNameKey": "fatty liver, gallstones and obesity",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+              "subjectId": "biochemistry",
+              "code": "BC4.7",
+              "pdfPage": 164,
+              "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707:name-component:01",
+          "parentNameKey": "gallstones and cholecystitis",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+              "subjectId": "pathology",
+              "code": "PA24.8",
+              "pdfPage": 195,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json"
+            },
+            {
+              "referenceId": "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0",
+              "subjectId": "medicine",
+              "code": "GM5.7",
+              "pdfPage": 290,
+              "packet": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "biochemistry",
+        "medicine",
+        "pathology"
+      ],
+      "batchCount": 1
+    },
+    {
+      "nameKey": "gout",
+      "name": "Gout",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:01",
+          "parentNameKey": "gout, arthritis and migraine",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+              "subjectId": "pharmacology",
+              "code": "PH2.8",
+              "pdfPage": 176,
+              "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6:name-component:02",
+          "parentNameKey": "osteoarthritis and gout",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6",
+              "subjectId": "pathology",
+              "code": "PA32.6",
+              "pdfPage": 202,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "pathology",
+        "pharmacology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "infertility",
+      "name": "Infertility",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82:name-component:02",
+          "parentNameKey": "sexual dysfunction and infertility",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82",
+              "subjectId": "forensic-medicine",
+              "code": "FM8.11",
+              "pdfPage": 223,
+              "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9:name-component:01",
+          "parentNameKey": "infertility and ivf",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-07.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9",
+              "subjectId": "physiology",
+              "code": "PY9.10",
+              "pdfPage": 157,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "forensic-medicine",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "jaundice",
+      "name": "Jaundice",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f:name-component:02",
+          "parentNameKey": "bilirubin and jaundice",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f",
+              "subjectId": "pathology",
+              "code": "PA24.1",
+              "pdfPage": 195,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:04",
+          "parentNameKey": "haem and porphyrins",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+              "subjectId": "biochemistry",
+              "code": "BC5.8",
+              "pdfPage": 165,
+              "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "biochemistry",
+        "pathology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "klumpke palsy",
+      "name": "Klumpke palsy",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:02",
+          "parentNameKey": "erb and klumpke palsies",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
+              "subjectId": "anatomy",
+              "code": "AN29.3",
+              "pdfPage": 126,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb:name-component:02",
+          "parentNameKey": "upper and lower plexus lesions",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb",
+              "subjectId": "anatomy",
+              "code": "AN10.6",
+              "pdfPage": 112,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "anatomy"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "metabolic syndrome",
+      "name": "Metabolic syndrome",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4:name-component:02",
+          "parentNameKey": "obesity and metabolic syndrome",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+              "subjectId": "biochemistry",
+              "code": "BC8.5",
+              "pdfPage": 166,
+              "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:a80311dc8aa7fcfb39635935b1b8cac8af88cf80d866b6a4510a5fcb821da06e:name-component:04",
+          "parentNameKey": "inactivity and obesity",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:a80311dc8aa7fcfb39635935b1b8cac8af88cf80d866b6a4510a5fcb821da06e",
+              "subjectId": "physiology",
+              "code": "PY12.4",
+              "pdfPage": 160,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "biochemistry",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "milk ejection",
+      "name": "Milk ejection",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:04",
+          "parentNameKey": "pregnancy, birth and lactation",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4",
+              "subjectId": "physiology",
+              "code": "PY9.7",
+              "pdfPage": 157,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a:name-component:02",
+          "parentNameKey": "lactation and baby-friendly care",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG17.1",
+              "pdfPage": 434,
+              "packet": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "obstetrics-gynaecology",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "milk production",
+      "name": "Milk production",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4:name-component:03",
+          "parentNameKey": "pregnancy, birth and lactation",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-05.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:d3621f08ae0facc711842b57721ed955ae911a94a9c7d4e1df1259c0bac83fe4",
+              "subjectId": "physiology",
+              "code": "PY9.7",
+              "pdfPage": 157,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a:name-component:01",
+          "parentNameKey": "lactation and baby-friendly care",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-11.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:0c24b95700f428b7c3ebf8a5939cdb8bab5f5a1cbccbab835a737c5c5b6f064a",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG17.1",
+              "pdfPage": 434,
+              "packet": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "obstetrics-gynaecology",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "obesity",
+      "name": "Obesity",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:03",
+          "parentNameKey": "fatty liver, gallstones and obesity",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+              "subjectId": "biochemistry",
+              "code": "BC4.7",
+              "pdfPage": 164,
+              "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4:name-component:01",
+          "parentNameKey": "obesity and metabolic syndrome",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-03.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+              "subjectId": "biochemistry",
+              "code": "BC8.5",
+              "pdfPage": 166,
+              "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "biochemistry"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "pulmonary circulation",
+      "name": "Pulmonary circulation",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4:name-component:01",
+          "parentNameKey": "pulmonary and systemic circulation",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4",
+              "subjectId": "anatomy",
+              "code": "AN5.2",
+              "pdfPage": 109,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22:name-component:01",
+          "parentNameKey": "pulmonary supply and drainage",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22",
+              "subjectId": "anatomy",
+              "code": "AN24.5",
+              "pdfPage": 123,
+              "packet": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "anatomy"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "reticulocyte count",
+      "name": "Reticulocyte count",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51:name-component:01",
+          "parentNameKey": "reticulocyte and platelet counts",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51",
+              "subjectId": "physiology",
+              "code": "PY2.13",
+              "pdfPage": 151,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2:name-component:02",
+          "parentNameKey": "haemogram and related tests",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-10.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2",
+              "subjectId": "medicine",
+              "code": "GM9.7",
+              "pdfPage": 297,
+              "packet": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "medicine",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "sterilization",
+      "name": "Sterilization",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:01",
+          "parentNameKey": "sterilization and disinfection",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+              "subjectId": "microbiology",
+              "code": "MI1.12",
+              "pdfPage": 207,
+              "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1:name-component:03",
+          "parentNameKey": "asepsis and decontamination",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-06.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1",
+              "subjectId": "surgery",
+              "code": "SU14.1",
+              "pdfPage": 406,
+              "packet": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "microbiology",
+        "surgery"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "stillbirth",
+      "name": "Stillbirth",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb:name-component:01",
+          "parentNameKey": "stillbirth and abortion",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-04.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG1.3",
+              "pdfPage": 427,
+              "packet": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a:name-component:03",
+          "parentNameKey": "infanticide, foeticide and stillbirth",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-07.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:5081bfdf5b5593074121faf42451129e2e8f8b965013221524c2e2aa0822c64a",
+              "subjectId": "forensic-medicine",
+              "code": "FM8.4",
+              "pdfPage": 223,
+              "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "forensic-medicine",
+        "obstetrics-gynaecology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "tissue regeneration",
+      "name": "Tissue regeneration",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c:name-component:03",
+          "parentNameKey": "cell cycle and regeneration",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-08.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+              "subjectId": "pathology",
+              "code": "PA1.3",
+              "pdfPage": 187,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346:name-component:01",
+          "parentNameKey": "repair and wound healing",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346",
+              "subjectId": "pathology",
+              "code": "PA4.1",
+              "pdfPage": 188,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "pathology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "visual pathway",
+      "name": "Visual pathway",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:b50ecf698a8d93c30731cde9232031e52eee4d0eb81ea2ea0bccc389a82b27a8:name-component:02",
+          "parentNameKey": "vision and optics",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-08.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:b50ecf698a8d93c30731cde9232031e52eee4d0eb81ea2ea0bccc389a82b27a8",
+              "subjectId": "ophthalmology",
+              "code": "OP1.1",
+              "pdfPage": 414,
+              "packet": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9:name-component:02",
+          "parentNameKey": "visual pathway and reflexes",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-12.json",
+          "sourceBindingBasis": "explicit-component-reference",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:6075d9a001ceafda020c92c75b827ebb2643cb26ded6515d3b3bdf91243d31a9",
+              "subjectId": "physiology",
+              "code": "PY11.5",
+              "pdfPage": 159,
+              "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "ophthalmology",
+        "physiology"
+      ],
+      "batchCount": 2
+    },
+    {
+      "nameKey": "vitamin b12 deficiency",
+      "name": "Vitamin B12 deficiency",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "semanticEquivalence": "unverified",
+      "scopeKind": "unclassified-concept-or-facet",
+      "occurrences": [
+        {
+          "componentProposalId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48:name-component:01",
+          "parentNameKey": "b12 and folate deficiency",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48",
+              "subjectId": "pediatrics",
+              "code": "PE26.3",
+              "pdfPage": 345,
+              "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json"
+            }
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796:name-component:02",
+          "parentNameKey": "vitamin b12 and macrocytosis",
+          "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-09.json",
+          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceAppearances": [
+            {
+              "referenceId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796",
+              "subjectId": "pathology",
+              "code": "PA15.1",
+              "pdfPage": 191,
+              "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json"
+            }
+          ]
+        }
+      ],
+      "subjectIds": [
+        "pathology",
+        "pediatrics"
+      ],
+      "batchCount": 2
+    }
+  ]
+}
