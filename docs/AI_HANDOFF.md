@@ -1,3 +1,17 @@
+## Family/context decomposition proposals batch 03 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:12:36.395196+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at deda7c8c425fdb88fd46fb90bc1c334ee8aebf74; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: e5ae2aaacfd4a66d0254c1b430d836cd8767db61. Names-only instruction active.
+
+Reviewed next 30 family parents, Antiseizure medicines through Birth injuries. Added 129 source-linked proposals: 36 reusable-topic candidates and 93 contextual-task facets across 31 source appearances. Benign breast disease retains separate pathology and clinical source support. Assisted birth observation/assigned assistance, genital-development model work, ventilation simulation and toxicological test limitations stay source-specific. Unnamed drugs/conditions/muscle groups remain unspecified. Two exact-label hints unverified; no semantic acceptance or identity allocation.
+
+Cumulative three family batches: 90 parents, 419 proposals, 93 source appearances; 562 family parents without initial proposals. Queue, three inventories and both predecessor packets pinned, queue/predecessor bytes unchanged. All enumerations partial/unspecified and scope/binding flags false, canonical IDs null. No teaching content or current official-source verification.
+
+Verification: family verifier --batch=03 passed (all three exact source-order cohorts, source hashes/coordinates/modes, full reference accounting, unique proposal IDs, hints, predecessor pins and flags); nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, no code/test changes; full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 04 beginning Bleeding disorders. Inspect actual task evidence, preserve unnamed members and role/mode distinctions; set selectionLimit explicitly, pin queue/three inventories/all three predecessors and run verifier --batch=04. Home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease, verify all four changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
 ## Family/context decomposition proposals batch 02 — 8 November 2026 IST
 
 Checked at 2026-11-08T22:09:31.986199+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 6ebb38c1b86d7369386dfb7c20eb766ef6bdeb49; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 098b7fa1b7ffe28a85172dfb8dab931fbc1df554. Names-only instruction active.
