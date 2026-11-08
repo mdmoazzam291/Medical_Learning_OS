@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 02 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Amniotomy practical through Articulations of lower-limb bones). Batch proposes 19 home labels, with 18 existing-name links and 12 proposed-name links. Cumulative: 60 facets / 61 appearances / 40 proposed homes; 599 facets await initial homes. Implementation: 0ddc997a3556708d920785f859477df5e354a6aa. All mappings and bindings remain pending.
+
+Two-batch verifier and 36 focused tests PASS. Full suite and npm run check not run in partial checkout. Next: Asthma planning. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 01 — 9 November 2026
 
 Added initial home proposals for 30 scoped facets / 30 source appearances (Abdominal muscle attachments through Amniotomy observation). Proposed 22 distinct homes: 15 existing-name candidate links and 15 proposed-new-name links. 629 original scoped facets remain without initial home proposals. Canonical identities, mapping acceptance, full scope, objective binding and independent competence remain unaccepted. Implementation: 170174710a60d8e4b3289338415b80715d79edba.

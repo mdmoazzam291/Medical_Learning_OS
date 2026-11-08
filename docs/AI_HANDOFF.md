@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 02 — 9 November 2026 IST
+
+Checked at 2026-11-08T18:52:54.483Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c964e9c68067fe2c1143e461d042347b50928781; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 0ddc997a3556708d920785f859477df5e354a6aa. Names-only instruction active.
+
+Reviewed next 30 original scoped facets, Amniotomy practical through Articulations of lower-limb bones. Preserved 31 source appearances. Proposed 19 distinct home labels: 18 existing-inventory name links and 12 proposed-new-name links (links, not unique identities). Reused batch-01 Amniotomy label without allocating an identity; simulator checks/reassessment remain distinct from earlier observation/assistance. Anaemia counselling preserves separate adult and child/caregiver teach-back sources. Antepartum anaemia remains pregnancy-contextual. Tonsillar anatomy keeps adenoid obstruction as regional context, not identity equivalence. Arthrocentesis indications do not establish performance; unnamed bones/muscles/agents remain unspecified.
+
+Cumulative two scoped-home batches: 60 facets, 61 source appearances, 40 distinct proposed homes; 599 scoped facets await initial home proposals. Queue/three inventories and batch-01 digest pinned. Previous packet bytes unchanged. Canonical IDs null, mapping/scope/binding/independent competence false; names-only, no teaching content or production changes.
+
+Verification: scoped home verifier --batch=02 PASS; 36 focused tests PASS (scoped homes and family decomposition/audit/reuse). Full npm test and npm run check NOT run in partial checkout. No domain/UI changes. Structural evidence checks do not certify home semantic fit.
+
+Next: scoped-task home batch 03 beginning Asthma planning. Inspect source tasks, preserve source role limits; reuse proposed labels from earlier batches where appropriate; pin queue/three inventories/all predecessor packets, run --batch=03. Actual canonical/home/objective bindings, 570 standalone-topic cases, exceptions and learner integration remain unfinished. Foundation incomplete. Save with expected-head lease, verify changed remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 01 — 9 November 2026 IST
 
 Checked at 2026-11-08T18:44:09.951Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 005cc4ff231c71eebe55e80f38f10cf0b132650b; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 170174710a60d8e4b3289338415b80715d79edba. Names-only instruction active.
