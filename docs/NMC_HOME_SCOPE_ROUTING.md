@@ -1,5 +1,9 @@
 # NMC names-only scope routing — 8 November 2026
 
+## Current parent reuse follow-up
+
+The 57 wider-parent reuse leads now have source-bound name-only proposals covering 88 source appearances, with all task contexts retained separately. See [the parent reuse audit](NMC_PARENT_NAME_REUSE.md). This is not accepted scope or objective equivalence. The next untouched set is the 1,950 parents without exact-label leads.
+
 ## Current selected-set representation
 
 The four remaining facets now use their already-declared broad family/topic contexts: Female reproductive function, Neurodegenerative disease and Torture. The three home proposals explicitly use `scopeType: family-context-only` and `targetCoverage: unverified`. This represents the existing names without inventing narrower diagnoses, medicines or source-specific objectives. Physical and psychological torture sequelae remain separate facets; neurodegeneration is not reduced to drug-induced parkinsonism; the reproductive-function facet does not cover the entire contraception task.
