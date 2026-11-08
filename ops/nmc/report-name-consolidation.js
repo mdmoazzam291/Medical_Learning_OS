@@ -15,21 +15,25 @@ for(let i=1;i<=12;i++){
   const sources=new Map(row.sourceAppearances.map(a=>[a.referenceId,a]));
   assert.equal(sources.size,row.sourceAppearances.length);
   for(const id of sources.keys())refs.add(id);
-  if(row.sourceScopeEvidence){
-   const e=row.sourceScopeEvidence;
-   assert.equal(e.basis,'existing-editorial-parent-label-and-task-scope');
-   assert.equal(e.officialSourceRechecked,false);assert.equal(e.clinicalValidation,false);
-   assert(/^[a-f0-9]{40}$/.test(e.checkedAtHead));
-   assert(/^docs\/evidence\/[a-z0-9-]+-draft-tasks\.json$/.test(e.sourcePacketPath));
-   assert.equal(sources.size,1);assert(sources.has(e.sourceReferenceId));
-   assert.equal(sources.get(e.sourceReferenceId).packet,e.sourcePacketPath);
-   const source=JSON.parse(readFileSync(new URL(e.sourcePacketPath,root),'utf8')).rows.find(r=>r.referenceId===e.sourceReferenceId);
-   assert(source,'missing editorial task');
-   const appearance=sources.get(e.sourceReferenceId);
-   assert.equal(source.code,appearance.code);assert.equal(source.subjectId,appearance.subjectId);assert.equal(source.page,appearance.pdfPage);
-   assert.equal(source.sourceBodySha256,e.sourceBodySha256);
-   assert.equal(createHash('sha256').update(source.draftLearningTask).digest('hex'),e.editorialTaskSha256,'editorial task drift');
-   for(const c of row.components)assert.deepEqual(c.sourceReferenceIds,[e.sourceReferenceId]);
+  const scopeEvidence=row.sourceScopeEvidence?[row.sourceScopeEvidence]:row.sourceScopeEvidenceByReference;
+  if(scopeEvidence){
+   assert.equal(new Set(scopeEvidence.map(e=>e.sourceReferenceId)).size,scopeEvidence.length);
+   assert.deepEqual(scopeEvidence.map(e=>e.sourceReferenceId),[...sources.keys()]);
+   for(const e of scopeEvidence){
+    assert.equal(e.basis,'existing-editorial-parent-label-and-task-scope');
+    assert.equal(e.officialSourceRechecked,false);assert.equal(e.clinicalValidation,false);
+    assert(/^[a-f0-9]{40}$/.test(e.checkedAtHead));
+    assert(/^docs\/evidence\/[a-z0-9-]+-draft-tasks\.json$/.test(e.sourcePacketPath));
+    assert(sources.has(e.sourceReferenceId));
+    assert.equal(sources.get(e.sourceReferenceId).packet,e.sourcePacketPath);
+    const source=JSON.parse(readFileSync(new URL(e.sourcePacketPath,root),'utf8')).rows.find(r=>r.referenceId===e.sourceReferenceId);
+    assert(source,'missing editorial task');
+    const appearance=sources.get(e.sourceReferenceId);
+    assert.equal(source.code,appearance.code);assert.equal(source.subjectId,appearance.subjectId);assert.equal(source.page,appearance.pdfPage);
+    assert.equal(source.sourceBodySha256,e.sourceBodySha256);
+    assert.equal(createHash('sha256').update(source.draftLearningTask).digest('hex'),e.editorialTaskSha256,'editorial task drift');
+   }
+   for(const c of row.components)assert.deepEqual(c.sourceReferenceIds,[...sources.keys()]);
   }
   for(const c of row.components){
    assert(!ids.has(c.componentProposalId),'duplicate component');ids.add(c.componentProposalId);
@@ -41,8 +45,7 @@ for(let i=1;i<=12;i++){
    const sourceIds=c.sourceReferenceIds??[...sources.keys()];
    assert(sourceIds.length);assert.equal(new Set(sourceIds).size,sourceIds.length);
    for(const id of sourceIds)assert(sources.has(id),'unknown component source');
-   // Legacy multi-reference inference is allowed only for this inspected two-subject row.
-   if(!c.sourceReferenceIds&&sources.size>1)assert.equal(row.parentNameKey,'gallstones and cholecystitis');
+   if(!c.sourceReferenceIds)assert.equal(sources.size,1,'multi-reference scope requires explicit bindings');
    if(c.sourceReferenceIds)explicit++;else inferred++;
    if(!groups.has(key))groups.set(key,{nameKey:key,name:c.name,canonicalConceptId:null,canonicalObjectiveVersionId:null,semanticEquivalence:'unverified',scopeKind:'unclassified-concept-or-facet',occurrences:[]});
    groups.get(key).occurrences.push({componentProposalId:c.componentProposalId,parentNameKey:row.parentNameKey,batchPath:path,sourceBindingBasis:c.sourceReferenceIds?'explicit-component-reference':'inferred-from-parent-scope',sourceAppearances:sourceIds.map(id=>{const a=sources.get(id);return {referenceId:a.referenceId,subjectId:a.subjectId,code:a.code,pdfPage:a.pdfPage,packet:a.packet};})});

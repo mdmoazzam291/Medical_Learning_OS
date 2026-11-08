@@ -15,10 +15,10 @@
     "repeatedNameGroups": 23,
     "crossSubjectNameGroups": 19,
     "crossBatchNameGroups": 19,
-    "explicitComponentBindings": 353,
-    "inferredParentBindings": 865
+    "explicitComponentBindings": 429,
+    "inferredParentBindings": 789
   },
-  "sourceHead": "31f515a64a102e21e2ea5a2cec60c561b0f3e883",
+  "sourceHead": "0466f3389b50eeca423db0a4cfe5a2774c84a159",
   "generator": "ops/nmc/report-name-consolidation.js",
   "repeatedNameGroups": [
     {
@@ -33,7 +33,7 @@
           "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:02",
           "parentNameKey": "gout, arthritis and migraine",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
@@ -258,7 +258,7 @@
           "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:01",
           "parentNameKey": "erb and klumpke palsies",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
@@ -347,7 +347,7 @@
           "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:02",
           "parentNameKey": "fatty liver, gallstones and obesity",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
@@ -362,7 +362,7 @@
           "componentProposalId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707:name-component:01",
           "parentNameKey": "gallstones and cholecystitis",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
@@ -400,7 +400,7 @@
           "componentProposalId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13:name-component:01",
           "parentNameKey": "gout, arthritis and migraine",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
@@ -505,7 +505,7 @@
           "componentProposalId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac:name-component:04",
           "parentNameKey": "haem and porphyrins",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
@@ -535,7 +535,7 @@
           "componentProposalId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb:name-component:02",
           "parentNameKey": "erb and klumpke palsies",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
@@ -714,7 +714,7 @@
           "componentProposalId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134:name-component:03",
           "parentNameKey": "fatty liver, gallstones and obesity",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-02.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
