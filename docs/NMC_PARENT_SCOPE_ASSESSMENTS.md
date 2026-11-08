@@ -1,6 +1,6 @@
 # Wider parent-name scope assessment
 
-Four batches have editorially triaged **600 parent names across 613 source appearances**. There are **1,350 untouched parent names** left in the no-exact-label cohort. These are authoring dispositions, not accepted medical/canonical coverage.
+Five batches have editorially triaged **800 parent names across 836 source appearances**. There are **1,150 untouched parent names** left in the no-exact-label cohort. These are authoring dispositions, not accepted medical/canonical coverage.
 
 | Batch | Names | Source appearances | Standalone candidates | Scoped facets | Families/contexts | Mixed scope |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -8,11 +8,12 @@ Four batches have editorially triaged **600 parent names across 613 source appea
 | 02 | 100 | 102 | 17 | 35 | 42 | 6 |
 | 03 | 200 | 206 | 51 | 81 | 60 | 8 |
 | 04 | 200 | 202 | 55 | 77 | 59 | 9 |
-| Total | 600 | 613 | 153 | 223 | 198 | 26 |
+| 05 | 200 | 223 | 57 | 65 | 71 | 7 |
+| Total | 800 | 836 | 210 | 288 | 269 | 33 |
 
-Batch 04 runs from Concepts of death through Energy in Indian foods. Its nine mixed cases are Concepts of death, Conventional examination, Creatinine estimation, Deformities, Developmental terminology, Drug toxicology I, Drug toxicology II, Early pregnancy concepts and Emergency radiographs. Their source tasks retain separate definitions, procedures, regions or case contexts rather than asserting one precise canonical scope. Earlier mixed cases remain open.
+Batch 05 runs from ENT cancer recognition through Healthcare worker health. Its seven mixed cases are ENT emergencies, Essential medicines, First-trimester assessment, General anaesthetic drugs, Geriatrics, GI pathology slides and Haematopoiesis. Earlier mixed cases remain open.
 
-Broad labels stay tied to their actual task context: laboratory confidentiality is not treated as all confidentiality practice, and diabetic emergency recognition is not a generic emergency competence. Legal and end-of-life task records preserve their source versions without making new claims about current law.
+Geriatrics retains 22 separate source appearances rather than being treated as one precise competency. Fetal age assessment and estimation keep their own forensic/developmental source contexts. Anaesthesia adjuncts are not silently equated with a single anaesthetic drug class, and blood-formation versus specimen-handling scope remains separate. All of these are source-bound editorial observations, not new clinical guidance.
 
 Family/context labels do not assert a single disease, medicine or procedure. Observation, supervised participation, assistance and simulation remain bound to their exact task references and modes, and do not prove independent clinical competence. No task prose or teaching content is copied into the generated packets. All canonical IDs are null, semantic equivalence unverified, and mapping/scope completion false.
 
@@ -25,8 +26,9 @@ node ops/nmc/report-parent-scope-assessments.js --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=02 --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=03 --verify
 node ops/nmc/report-parent-scope-assessments.js --batch=04 --verify
+node ops/nmc/report-parent-scope-assessments.js --batch=05 --verify
 ```
 
-The reporter verifies deterministic cohort membership, index digests, source versions and all generated rows/counts. It rejects changed source evidence, forged scope completion and omitted rows with adjusted totals. Later batches exclude names recorded by predecessors and pin their exact projection digests. The four actual cohorts have disjoint names and source references; their source-task paths, codes, coordinates, body/task hashes and modes are retained.
+The reporter verifies deterministic cohort membership, index digests, source versions and all generated rows/counts. It rejects changed source evidence, forged scope completion and omitted rows with adjusted totals. Later batches exclude names recorded by predecessors and pin their exact projection digests. The five actual cohorts have disjoint names and source references; their source-task paths, codes, coordinates, body/task hashes and modes are retained.
 
-Next: inspect the next untouched cohort and create batch 05 without rewriting predecessors. The 600 triaged names still need their indicated decomposition, semantic reuse and objective/canonical binding; triage is not certified curriculum coverage. All 26 mixed cases remain open. Shared/family target scope, 21 source exceptions and learner integration also remain unfinished. NMC Foundation is incomplete.
+Next: inspect the next untouched cohort and create batch 06 without rewriting predecessors. The 800 triaged names still need their indicated decomposition, semantic reuse and objective/canonical binding; triage is not certified curriculum coverage. All 33 mixed cases remain open. Shared/family target scope, 21 source exceptions and learner integration also remain unfinished. NMC Foundation is incomplete.
