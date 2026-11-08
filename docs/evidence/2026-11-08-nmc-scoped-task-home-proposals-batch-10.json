@@ -1,0 +1,1255 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-10:01",
+      "facetNameKey": "gi bleeding examination",
+      "facetName": "GI bleeding examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:065fc4928f13bfb73538e22312aeb0ac405aa1e6f7e97a26aa1546acff550662",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.5",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            497.04,
+            102.7,
+            537.84
+          ],
+          "sourceBodySha256": "fb547eec9bf063c6a7e3b43cca4cbf5a9f9d28cbcaf31fb3097e8aead8dac0a2",
+          "editorialTaskSha256": "a903419a1f3f1753f76e73023e5978d94a09bd9e673b10baa76197c03ce802bb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "General/abdominal demonstration and volume-status documentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:02",
+      "facetNameKey": "gi bleeding history",
+      "facetName": "GI bleeding history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6b0f90ff68a69bbcf83d36d43a1a1149f16e3e6871785b7df74af7c8c8eb1aef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.4",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            442.86,
+            102.7,
+            497.04
+          ],
+          "sourceBodySha256": "6dd418b0ca7db091cfb39f829c44c4fce85ade7227fb0010af580f919b78d792",
+          "editorialTaskSha256": "0f4ec73e153215347076ddab31c8ea60d6d42825c9291e611c5363b99a578f70",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bleeding route/quantity/duration, volume-loss symptoms, comorbidities and risks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:03",
+      "facetNameKey": "glaucoma counselling",
+      "facetName": "Glaucoma counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0608863a8239b041da0d8e676a67c2e0e4cc7a4e823472b5b0c17d0007418c56",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP7.5",
+          "page": 417,
+          "rowBBox": [
+            49.5,
+            190.56,
+            103.5,
+            226.32
+          ],
+          "sourceBodySha256": "1dbd8c21ac893c10dd25a4d015244627fc4047e00dca97886b1f9036a129d4a7",
+          "editorialTaskSha256": "6196e4b3334876eedcdc111db9e5a27c192cb2dac1e09bd076a613976d782440",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Glaucoma",
+      "proposedHomeNameKey": "glaucoma",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "glaucoma"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated options/adverse-effects/prognosis/follow-up counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:04",
+      "facetNameKey": "great-vessel development",
+      "facetName": "Great-vessel development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d16477c090b3f238a5788b2d24992ab9867fbd76e0ad0620d4efddae4fc1953e",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN25.6",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            194.1,
+            122.2,
+            226.5
+          ],
+          "sourceBodySha256": "30f6e2e47004b01fe3fa72faf0a559c8737cd5967253b4be2798656f100ab9cb",
+          "editorialTaskSha256": "3292a11dfbf69ad6bb6c65e74d496165b2f0caa444f2a94b78425dec83d008b0",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Great vessels",
+      "proposedHomeNameKey": "great vessels",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Aortic arch and venous-channel embryonic contributions to adult vessels.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:05",
+      "facetNameKey": "growth counselling",
+      "facetName": "Growth counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4d7794f1c6ae7a86feaafd172fe3d26c935d790216c7c71ead8492d68fdc788d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE2.2",
+          "page": 329,
+          "rowBBox": [
+            51.3,
+            526.56,
+            103.1,
+            550.98
+          ],
+          "sourceBodySha256": "7edc04da5bf477b1d7de168ff234ef6ba6b6bb57ae890e515f6f6a99baff295d",
+          "editorialTaskSha256": "7978c57b3b24d70814561d4bf3d718290b7e43de10bb4f05c76e9b885dae0eb0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Child growth",
+      "proposedHomeNameKey": "child growth",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated caregiver growth-concern/feasible-feeding/follow-up discussion.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:06",
+      "facetNameKey": "haematinic replacement",
+      "facetName": "Haematinic replacement",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d644de25dfeaeb75ce44dd7a98034e50ea6a45691f5b47da367e783dc6c894f4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.10",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            234.24,
+            102.7,
+            261.6
+          ],
+          "sourceBodySha256": "b811fdad30a5a434cf19dc14ecb504a5b7be8e30548617e220841de7f8bc63d6",
+          "editorialTaskSha256": "5973f852828a066eb8601bbc6be3d82c6296399f58649fe3be585b41ce902c1e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated iron/B12/folate prescription only after confirmed deficiency.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:07",
+      "facetNameKey": "haematology referral",
+      "facetName": "Haematology referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fbc00272908e94bfe13438a6315f3f2c999f46edf3c64ee9ecb3b9fe4851d4f5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.15",
+          "page": 346,
+          "rowBBox": [
+            51.3,
+            320.16,
+            103.1,
+            337.44
+          ],
+          "sourceBodySha256": "6899730c5a4ee03e43d0f5aa1b019081027fc55868a53d70e21e9dd608d1997f",
+          "editorialTaskSha256": "4197f298810395fb69277eada408e76d3b42617cd257eeb079472a133c5e39fc",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Haematological disorders",
+      "proposedHomeNameKey": "haematological disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated haematological referral thresholds and urgency communication; disorders unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:08",
+      "facetNameKey": "haematology specimen handling",
+      "facetName": "Haematology specimen handling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:95f0dd5e33f82fd00ec8d1e14c1acaaf19b3bc1a10119fa47d9de730b6f74677",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA13.3",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            348.78,
+            105.6,
+            378.72
+          ],
+          "sourceBodySha256": "b0f7d485786e9e91ca118590cf4e5f8049bf58add83c29df7d39082b077030eb",
+          "editorialTaskSha256": "889a13c3014849e5a0f8cc1958efd2048d917c82f66cd001ce6d8a4d21fe1188",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Haematology laboratory methods",
+      "proposedHomeNameKey": "haematology laboratory methods",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated collection workflow/tube/additive/instrument recognition, not independent lab certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:09",
+      "facetNameKey": "haemorrhagic stroke care",
+      "facetName": "Haemorrhagic stroke care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d3285911a5b3402cb4ba8b6c4569327432c31a8392cb627a202b7de929c4f567",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.13",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            256.02,
+            102.7,
+            293.28
+          ],
+          "sourceBodySha256": "22c513c5334a9badb81e468a3c603af007cb67b7f2162e4d6a68139032d3e3cf",
+          "editorialTaskSha256": "501c67921c905c511074f81c78616fcb945441bdd548a5a25b27ebb36418b992",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Haemorrhagic stroke",
+      "proposedHomeNameKey": "haemorrhagic stroke",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated stabilization/monitoring/specialist priorities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:10",
+      "facetNameKey": "head injury management",
+      "facetName": "Head injury management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d5a24785c278736da7eb17886437352bcbc0b9cfec126d33dea683cf1d4f9197",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.6",
+          "page": 407,
+          "rowBBox": [
+            45,
+            143.7,
+            101.7,
+            173.04
+          ],
+          "sourceBodySha256": "85838b40619153172ba7940331bdb2a8720b45e4039971a8547c404765535b88",
+          "editorialTaskSha256": "945a8e115f72ff45a6d2d66335abb0b6b0c331ed5ff494f80e15c95faab43d1f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Head injury",
+      "proposedHomeNameKey": "head injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated investigation/observation/intervention/escalation justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:11",
+      "facetNameKey": "head injury mechanisms",
+      "facetName": "Head injury mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fac2fd082d405d6f8424f4fe920af9562f820b30a2fec8344495eca9dc3a78d8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.4",
+          "page": 407,
+          "rowBBox": [
+            45,
+            91.8,
+            101.7,
+            112.92
+          ],
+          "sourceBodySha256": "43fd0d0b47b1c2a4833aa2dec1186e4b3e8d3dd20a41df01834716c1c1587a80",
+          "editorialTaskSha256": "784a7b779597ede19ede689cd4d74925c25c0a9a23bfa2379e5d96e4067bcddc",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Head injury",
+      "proposedHomeNameKey": "head injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Primary/secondary brain injury mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:12",
+      "facetNameKey": "headache classification",
+      "facetName": "Headache classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0b3ed2137d664224c714396dfc1e4ead86cd649b6d1bbaa053468e161f1bfe6e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.1",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            520.32,
+            102.7,
+            540.18
+          ],
+          "sourceBodySha256": "c4b125b328173718bedc227eb60ced74d97785658bc2b524ee745189d48db50c",
+          "editorialTaskSha256": "c9044b3629b2f93027d48d85fd3c23320a0bf031079c3987a30a4d32aacca1cc",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Primary/secondary headache pattern and associated-feature distinction.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:13",
+      "facetNameKey": "headache counselling",
+      "facetName": "Headache counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0741c87b004a789688878a53a80101935a46fbc1465dca260f6b904c800457c2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.14",
+          "page": 310,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            133.8
+          ],
+          "sourceBodySha256": "e41fc531b798f05c426a651deeec491d53bc358ca20257204cb496cf9b79218d",
+          "editorialTaskSha256": "a467052b8ae0496e3e121e37a914ae38daf3a7c543aad8fc705f71afec83c1ba",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated migraine/tension-type lifestyle/prevention discussion; neither diagnosis treated as equivalent.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:14",
+      "facetNameKey": "headache differential",
+      "facetName": "Headache differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2e30250999eb27c7d368a9668e6152d96567c5408a9bb5b289ac2a3e211fef5d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.5",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            242.64,
+            102.7,
+            283.44
+          ],
+          "sourceBodySha256": "ed3dc935bf8e5d2464d43695993beb7043de173d37f5a3e3fb222ccce401b1c9",
+          "editorialTaskSha256": "f4525c4ce2e68e19acbb43fd5e8588c278f60b395748f6d1bb50af5b9ac5091f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Prioritized differential and urgent alternatives.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:15",
+      "facetNameKey": "headache history",
+      "facetName": "Headache history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e549ece720732c50bab23b09fe81dd6749b4186e280ed90525b73a5ee4e6518a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.2",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            133.8,
+            102.7,
+            174.48
+          ],
+          "sourceBodySha256": "de616c4d0a5775d2df1209a8d23c911ab12a59a617e0cf33ff9ba7687b31b0ef",
+          "editorialTaskSha256": "90840a82c4f16d60e325c935b48bce90ac3bd17d5674c49f622b92f73d3e812d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Onset/aura/triggers/relief/associated-symptom history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:16",
+      "facetNameKey": "health promotion planning",
+      "facetName": "Health promotion planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d1f3bbe401cc589bb12d7ae6191210932dcd5a3874aeab65799beba1fca08f58",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM4.2",
+          "page": 271,
+          "rowBBox": [
+            40.1,
+            202.14,
+            98.6,
+            233.04
+          ],
+          "sourceBodySha256": "fba12139aab9c9e1d5b8f2b3ae592757c908fba3857d0740ed7519406aaa468a",
+          "editorialTaskSha256": "8a18409134e6cf3e6d7a5ee4fd5003230acf53d804d24b0f0d007701176e02d2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Health promotion",
+      "proposedHomeNameKey": "health promotion",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "health promotion"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Individual/family/community objectives and delivery methods for education/counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:17",
+      "facetNameKey": "health system functioning",
+      "facetName": "Health system functioning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:808f757c6b2b8bb02355accd90f824839c54461b12242bb654d3a3d26ce26987",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM17.6",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            175.44,
+            98.6,
+            205.62
+          ],
+          "sourceBodySha256": "5f262fcd2d99a8cca852fb66e20957a1a278b8f1274a25f57ca3673ba48ad691",
+          "editorialTaskSha256": "3c0feebeb268c4afe1bc4c1751658421bb95bc77e405c82f73709880f5f9f601",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Healthcare delivery",
+      "proposedHomeNameKey": "healthcare delivery",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated patient pathway, referral/follow-up/coordination responsibilities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:18",
+      "facetNameKey": "health worker training",
+      "facetName": "Health worker training",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:67040484156e820285393bd765a564abbe06cf0eecd35b5fbecbcf1ac9080112",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM8.6",
+          "page": 275,
+          "rowBBox": [
+            40.1,
+            282.72,
+            98.6,
+            312.06
+          ],
+          "sourceBodySha256": "a1e7fdc0918cf7c67c58c876d5d55f34c686a08d8cb0fda1505f70b0d8699839",
+          "editorialTaskSha256": "085cab07bbf93d39f17b46a0e78a33345563fe8eac59b5740cac0bcdb78bb37a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Health workforce development",
+      "proposedHomeNameKey": "health workforce development",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated worker training in source-named service activities, not credentialing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:19",
+      "facetNameKey": "heart failure compensation",
+      "facetName": "Heart failure compensation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdb2c13e100d1ae645af647c93d710c15e438902a37e4f2cfa789bcade3e9ed8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.5",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            321.42,
+            102.7,
+            362.04
+          ],
+          "sourceBodySha256": "66a8c198b85ba28991a68d80a98a687edbd5ffb4f54a9664408391964d640cac",
+          "editorialTaskSha256": "74c187efd51cc9634ebc45363794a393c461fecc4f3c741c99d5e3a7c4907d52",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Neurohormonal responses and remodelling over time.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:20",
+      "facetNameKey": "heart failure examination",
+      "facetName": "Heart failure examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6d2ca10b6ede9cb0898b4f7fe3189d74327f499e2d84b64fac5fe2284881cb65",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.9",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            511.26,
+            102.7,
+            538.62
+          ],
+          "sourceBodySha256": "c580a508ecb6f96d172ee037c0d94afbd26520ef2802f63d839cfe7b553915f7",
+          "editorialTaskSha256": "cb3b7fe520b421412c47b8a57180893cd0228ffde603bb34040e515d3054ae2a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Targeted examination documentation and findings-based severity estimate.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:21",
+      "facetNameKey": "heart failure history",
+      "facetName": "Heart failure history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:59116e71ee1c8c2d1e727a943fd52b9def8f0d5a34baa544977e1d7e72375ccb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.8",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            443.76,
+            102.7,
+            511.26
+          ],
+          "sourceBodySha256": "e7b55fec2aaf52d2a466daf2f08801e479d57868817d53ce286b39900423027c",
+          "editorialTaskSha256": "89bb7313c46a57aadab9c2aadf90efc6adf7eeb400c2e3797e132379cbc613dc",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptoms/triggers/risks/function/sleep and endocarditis clues.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:22",
+      "facetNameKey": "heart failure management plan",
+      "facetName": "Heart failure management plan",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0216b34fde94865426c7253ea9036ca099e093d5d97ca91ec741b1e485946836",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.24",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            404.7,
+            102.7,
+            472.38
+          ],
+          "sourceBodySha256": "4f92b10107fd85b6ccde2420398281e75601a8c0c10bda1b690f79c7cfb09fa4",
+          "editorialTaskSha256": "8dd31f14ef29a6cb9c11bd5e16a774bb706a6d5f9f9109ac44a3349b6594b86b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Phenotype/cause/severity-tailored plan documentation and presentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:23",
+      "facetNameKey": "heart failure medicines",
+      "facetName": "Heart failure medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e496f319f75847aa5e8d96d3b94d4d1b5064cfe01143b394f2c452b46e092282",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.22",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            309.78,
+            102.7,
+            364.02
+          ],
+          "sourceBodySha256": "250ce639aabb6f3b253d937904331735d6c2b8c17c5fd33a52e392f9601d3940",
+          "editorialTaskSha256": "67bfc41620caca785926c22ee947b096888fa37c14b85aab9dbaf7b0ec7feb30",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-named drug indications/contraindications/monitoring; no independent prescription.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:24",
+      "facetNameKey": "heart failure pharmacotherapy",
+      "facetName": "Heart failure pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1948e8494f48773ad56b6e001cb674148767dcb1437a74f44d7ffa5e58451cb6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.9",
+          "page": 179,
+          "rowBBox": [
+            51.7,
+            68.22,
+            105.7,
+            135.96
+          ],
+          "sourceBodySha256": "c59097a8e8d702a339451d3d9c52de6c1798c08d0655b44b2dd9de6df29a08d1",
+          "editorialTaskSha256": "cd0f3f18b4a9274be165300d43dd95187b32b07cf62ac404651c3a4b9b3bff87",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Drug kinetics/actions/indications/harms; symptom relief versus longer-term complication strategies retained.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:25",
+      "facetNameKey": "heart failure phenotypes",
+      "facetName": "Heart failure phenotypes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c5125466b57bc1cdb4367592fdedc58b60968722b798e3504a6e66db6e29d39b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.4",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            293.94,
+            102.7,
+            321.42
+          ],
+          "sourceBodySha256": "44edc34e59ec3131740a2c87be501ef6f31a381696319e9c85bc06d257c76c08",
+          "editorialTaskSha256": "5842d1282c2fc58198a1dcfceaf199b6780c8191df00fa1e08ff5aec9831516d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Left/right failure and contraction/filling distinctions, not identity collapse.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:26",
+      "facetNameKey": "heart failure precipitants",
+      "facetName": "Heart failure precipitants",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:44168bb413e80962f83d88a8cdf4fac1f8393d73d255bb800663ab5c937bf28e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.6",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            362.04,
+            102.7,
+            402.84
+          ],
+          "sourceBodySha256": "3a80b9618078669a9eaf61954427e0117940a20f27317f41189868bc55b96a6c",
+          "editorialTaskSha256": "26362d85281d451172740d8bb430e8665822fe31228762f4f6909026bfd0acef",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated precipitant review across source-named conditions/behaviours/medicines.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:27",
+      "facetNameKey": "heart failure stages",
+      "facetName": "Heart failure stages",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dee02340b5ea0a1e3d835a9f6d1e54fc6bd5c005919ea33639f01df49fd776d4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.3",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            266.64,
+            102.7,
+            293.94
+          ],
+          "sourceBodySha256": "6d5d9f05f7282c7fa3e166b291ed96b3de2e94294d7bf99983f919e727003b4c",
+          "editorialTaskSha256": "da8bc50439ece9efa381e95d016e81272a78f6ea404c7ca53033a7f74fa42674",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Definition and representative stage assignment; stage system/version not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:28",
+      "facetNameKey": "hepatitis marker interpretation",
+      "facetName": "Hepatitis marker interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2f66649c02e129d6cf9efa1070a23d826a0889212a9b0e4b65b4c7e2791eee09",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.9",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            362.94,
+            108.8,
+            425.58
+          ],
+          "sourceBodySha256": "56f0da4952817d5e250de55e6ca053d12f471b603b1a7864d45e79154e214148",
+          "editorialTaskSha256": "cd00ed0d03d570619c0ee5e11891dd0fe7556ed45706230cb9b5c11b5b2b61b3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Viral hepatitis",
+      "proposedHomeNameKey": "viral hepatitis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "viral hepatitis"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "viral hepatitis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Infection-type/phase marker selection and interpretation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:29",
+      "facetNameKey": "hepatitis vaccination counselling",
+      "facetName": "Hepatitis vaccination counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6474d116c0f05208ad52ed891472ff7f5189ec8647800a84f74335db7a574ed8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.16",
+          "page": 291,
+          "rowBBox": [
+            44.2,
+            391.68,
+            102.7,
+            432.6
+          ],
+          "sourceBodySha256": "79e46586592119ceba714a432bdcabcd10fe0eebb13769d0668ce7d9b1185696",
+          "editorialTaskSha256": "0d18c0dc8ef067a8019f9e197227c576838e0f3cff27520398e350b170981fed",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Hepatitis immunization",
+      "proposedHomeNameKey": "hepatitis immunization",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated benefits/indications/precautions; schedule not refreshed or certified current.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-10:30",
+      "facetNameKey": "hernia examination",
+      "facetName": "Hernia examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:aa8aea924585b07ec208d477a5f561e1ed32d28b75e39bb528e6a23ee95f020a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.2",
+          "page": 410,
+          "rowBBox": [
+            45,
+            222.42,
+            101.7,
+            259.5
+          ],
+          "sourceBodySha256": "4d4e676ba5c09fbaf43abd903f7ea405aa57e9338456c6cd952d39e49a27ca3c",
+          "editorialTaskSha256": "41908a251a0a2152ad256f35151411ae0aeec50ad8cca4ea8d251182337535e3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Hernia",
+      "proposedHomeNameKey": "hernia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "hernia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated examination/type distinction; unnamed hernia types remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 17,
+    "existingNameHomeLinks": 18,
+    "newNameHomeLinks": 12,
+    "facetsWithoutInitialHomeProposal": 359
+  }
+}
