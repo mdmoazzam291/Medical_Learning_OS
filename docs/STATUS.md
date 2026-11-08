@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 09 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Ethics of kidney replacement through GI bleeding escalation). Batch: 21 home labels, seven existing-name and 23 proposed-name links. Cumulative: 270 facets / 273 appearances / 177 proposed homes; 389 facets await initial homes. Implementation: 748379b0f2a776576ba849c0f3eccad052661a2c. All mappings/bindings pending.
+
+Nine-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: GI bleeding examination. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 08 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (ECG practical through Ethical research practice). Batch: 25 home labels, fourteen existing-name and sixteen proposed-name links. Cumulative: 240 facets / 243 appearances / 157 proposed homes; 419 facets await initial homes. Implementation: 3a1c91e41508943adb33e43c7bf3dc6db6c648c1. All mappings/bindings pending.

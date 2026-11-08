@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 09 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:26:17.785Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 7c2ebdaae18ed982a09d2b84281dc615cea867a3; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 748379b0f2a776576ba849c0f3eccad052661a2c. Names-only instruction active.
+
+Reviewed next 30 facets, Ethics of kidney replacement through GI bleeding escalation. Preserved 30 source appearances; proposed 21 distinct home labels with seven existing-name and 23 proposed-name links. Facial sensation preserves the cervical sensory exception near the mandibular angle rather than assigning it to trigeminal identity. Simulated kidney consent, accused-person examinations, laboratory referrals and medico-legal reports are not actual legal authority. Genital ulcer examination preserves consent/privacy/chaperone requirements. GI bleeding care remains simulated; source findings guide escalation only. Canonical IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative nine scoped-home batches: 270 facets, 273 source appearances, 177 distinct proposed homes; 389 scoped facets await initial proposals. Queue/three inventories/all eight predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=09 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 10 beginning GI bleeding examination. Inspect source tasks, retain source role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors, run --batch=10. Actual canonical/home/objective binding, 570 standalone-topic cases, source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 08 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:23:18.985Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at daff65c9050e5177876dc7c9387b269e6ebd70be; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 3a1c91e41508943adb33e43c7bf3dc6db6c648c1. Names-only instruction active.
