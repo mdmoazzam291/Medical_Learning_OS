@@ -1,3 +1,11 @@
+## Scoped-task home proposals batch 12 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (ICU device position through Ischaemic disease progression). Batch: 28 home labels, six existing-name and 24 proposed-name links. Cumulative: 360 facets / 363 appearances / 223 proposed homes; 299 facets await initial homes. Implementation: 92593d7845399ac9792bd7dc46508c820cdef386. All mappings/bindings pending.
+
+Twelve-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Ischaemic stroke treatment. No teaching content or publication; Foundation incomplete.
+
+---
+
 ## Scoped-task home proposals batch 11 — 9 November 2026
 
 Added proposals for 30 facets / 30 source appearances (HIV care communication through IBD surgery). Batch: 12 home labels, nineteen existing-name and eleven proposed-name links. Cumulative: 330 facets / 333 appearances / 201 proposed homes; 329 facets await initial homes. Implementation: 0ba709647f2a19a6640f5723c8f97dd4f92136f3. All mappings/bindings pending.

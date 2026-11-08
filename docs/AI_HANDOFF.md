@@ -1,3 +1,17 @@
+## Original scoped-task home proposals batch 12 — 9 November 2026 IST
+
+Checked at 2026-11-08T19:45:45.887Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 4cc8cce1854be0109ecc6527ca10a4ecda39a2b9; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 92593d7845399ac9792bd7dc46508c820cdef386. Names-only instruction active.
+
+Reviewed next 30 facets, ICU device position through Ischaemic disease progression. Preserved 30 source appearances; proposed 28 distinct home labels with six existing-name and 24 proposed-name links. ICU radiograph position assessment does not establish device insertion; ICU and intraoperative monitoring remain observed. Generic Investigation selection remains microbiology-specific. Simulated immunization records/schedules, IMNCI and drug dosing retain guidance/version limits; dates/thresholds not refreshed. Injuries, laboratory follow-up, infertility and diagnostic source scopes remain explicit. IDs null; mapping/scope/binding/independent competence false. No teaching content or production changes.
+
+Cumulative twelve scoped-home batches: 360 facets, 363 source appearances, 223 distinct proposed homes; 299 facets await initial proposals. Queue/three inventories/all eleven predecessors digest-pinned; original evidence unchanged.
+
+Verification: scoped-home verifier --batch=12 PASS; nine focused scoped-home tests PASS. Broader family tests not repeated because implementation/evidence unchanged. Full npm test and npm run check NOT run in partial checkout. Structural checks do not certify semantic fit.
+
+Next: scoped-task home batch 13 beginning Ischaemic stroke treatment. Inspect source tasks, preserve source role limits/home ambiguity; reuse prior labels, pin queue/three inventories/all predecessors and run --batch=13. Actual canonical/home/objective binding, 570 standalone-topic cases, source exceptions and learner integration unfinished. Foundation incomplete. Save with expected-head lease, verify remote files, release ownership. No external writer jobs, merge, deployment or publication.
+
+---
+
 ## Original scoped-task home proposals batch 11 — 9 November 2026 IST
 
 Checked at 2026-11-08T19:43:18.298Z. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f75a73a5d10b7ef2857ad820221a2e3b057a980d; open draft PR head verified, main base remains 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Implementation commit: 0ba709647f2a19a6640f5723c8f97dd4f92136f3. Names-only instruction active.
