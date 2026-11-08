@@ -1,6 +1,7 @@
 // Names-only metadata projection. Equal names never authorize identity merging.
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 const root=new URL('../../',import.meta.url);
 const groups=new Map(),parents=new Set(),ids=new Set(),refs=new Set();
 let inferred=0,explicit=0;
@@ -14,6 +15,22 @@ for(let i=1;i<=12;i++){
   const sources=new Map(row.sourceAppearances.map(a=>[a.referenceId,a]));
   assert.equal(sources.size,row.sourceAppearances.length);
   for(const id of sources.keys())refs.add(id);
+  if(row.sourceScopeEvidence){
+   const e=row.sourceScopeEvidence;
+   assert.equal(e.basis,'existing-editorial-parent-label-and-task-scope');
+   assert.equal(e.officialSourceRechecked,false);assert.equal(e.clinicalValidation,false);
+   assert(/^[a-f0-9]{40}$/.test(e.checkedAtHead));
+   assert(/^docs\/evidence\/[a-z0-9-]+-draft-tasks\.json$/.test(e.sourcePacketPath));
+   assert.equal(sources.size,1);assert(sources.has(e.sourceReferenceId));
+   assert.equal(sources.get(e.sourceReferenceId).packet,e.sourcePacketPath);
+   const source=JSON.parse(readFileSync(new URL(e.sourcePacketPath,root),'utf8')).rows.find(r=>r.referenceId===e.sourceReferenceId);
+   assert(source,'missing editorial task');
+   const appearance=sources.get(e.sourceReferenceId);
+   assert.equal(source.code,appearance.code);assert.equal(source.subjectId,appearance.subjectId);assert.equal(source.page,appearance.pdfPage);
+   assert.equal(source.sourceBodySha256,e.sourceBodySha256);
+   assert.equal(createHash('sha256').update(source.draftLearningTask).digest('hex'),e.editorialTaskSha256,'editorial task drift');
+   for(const c of row.components)assert.deepEqual(c.sourceReferenceIds,[e.sourceReferenceId]);
+  }
   for(const c of row.components){
    assert(!ids.has(c.componentProposalId),'duplicate component');ids.add(c.componentProposalId);
    assert.equal(c.canonicalConceptId,null);assert.equal(c.canonicalObjectiveVersionId,null);

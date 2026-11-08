@@ -1,8 +1,6 @@
 {
   "schemaVersion": 1,
   "status": "names-only-reuse-candidate-summary",
-  "sourceHead": "7dd8cf7436d88736b84e4843488d8c561a78d850",
-  "generator": "ops/nmc/report-name-consolidation.js",
   "automaticMerging": false,
   "clinicalApproval": false,
   "learnerActivation": false,
@@ -17,9 +15,11 @@
     "repeatedNameGroups": 23,
     "crossSubjectNameGroups": 19,
     "crossBatchNameGroups": 19,
-    "explicitComponentBindings": 290,
-    "inferredParentBindings": 928
+    "explicitComponentBindings": 353,
+    "inferredParentBindings": 865
   },
+  "sourceHead": "31f515a64a102e21e2ea5a2cec60c561b0f3e883",
+  "generator": "ops/nmc/report-name-consolidation.js",
   "repeatedNameGroups": [
     {
       "nameKey": "arthritis",
@@ -490,7 +490,7 @@
           "componentProposalId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f:name-component:02",
           "parentNameKey": "bilirubin and jaundice",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f",
@@ -1026,7 +1026,7 @@
           "componentProposalId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48:name-component:01",
           "parentNameKey": "b12 and folate deficiency",
           "batchPath": "docs/evidence/2026-11-08-nmc-compound-name-components-batch-01.json",
-          "sourceBindingBasis": "inferred-from-parent-scope",
+          "sourceBindingBasis": "explicit-component-reference",
           "sourceAppearances": [
             {
               "referenceId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48",
