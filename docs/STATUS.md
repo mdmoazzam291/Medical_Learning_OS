@@ -1,3 +1,13 @@
+## NMC names-only inventory and remaining scope accounting
+
+Checked 2026-11-09T05:37:37.112Z on PR #415 from d50f50abd785c90224c237caa24aea63b9a3f448.
+
+Reconciled 37 proposed names, three aliases and 84 distinct source references. Accounted for all 28 distinct-scope comparisons and the prior gestational resolution separately from the five incorporated leads. Bindings remain pending. Full repository checks were not run.
+
+Next group the distinct-scope comparisons by source topic and identify which need a separate name or a narrower context.
+
+---
+
 ## Five names-only NMC variant proposals
 
 Checked 2026-11-09T05:35:48.551Z on PR #415 from 72bfec1f1dad2d89e67a407feba5e20932ff25f2.
