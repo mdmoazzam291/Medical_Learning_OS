@@ -1,3 +1,13 @@
+## Ocular canonical registry readback
+
+Checked 2026-11-09T04:52:27.966Z on PR #415 from a765d8e383b3a2efd253a578bc0e136d8e9d2d96.
+
+Read-only production lookup found zero candidates in the published catalogue, accepted identities and saved draft revisions for the recorded ocular terms. Bindings remain pending. Full repository checks were not run.
+
+Next prepare the two names-only ocular identity proposals with separate OP3.6 and OP4.9 references and the proposed narrower-scope relationship.
+
+---
+
 ## Standalone ocular scope comparison
 
 Checked 2026-11-09T04:50:27.129Z on PR #415 from 9448a57fff58a28ee17e68c81a749cdacc7acc0f.
