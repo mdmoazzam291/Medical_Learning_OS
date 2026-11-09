@@ -610,6 +610,9 @@ try {
     const diagnostics=page.getByRole('navigation',{name:'Content Diagnostics'});
     await diagnostics.getByRole('link',{name:'Catalog Integrity',exact:true}).waitFor();
     assert.equal(await diagnostics.getByRole('link',{name:'Source Change Watch',exact:true}).getAttribute('href'),'#owner-source-watch');
+    if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
+    const overviewContentGroup = page.locator('#mlos-local-nav details[data-group="admin:content"]');
+    if (!(await overviewContentGroup.evaluate(node => node.open))) await activate(overviewContentGroup.locator(':scope > summary'));
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
     await page.getByLabel('Import manifest JSON', { exact: true }).fill('Unsent synthetic intake draft');
