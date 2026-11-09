@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 27
+
+Checked 2026-11-09T04:28:59.456Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 99091ba77902a21653f1117d4f6579822ce025ea.
+
+Screened 18 names from Thoracolumbar fascia through Twinning against 18 linked draft tasks. Recorded seven related-scope comparisons. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 476 of 512 topics. Resume at type 1 diabetes with 36 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 26
 
 Checked 2026-11-09T04:21:46.889Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 212f61a0c969a2637707c6919fa9ad69bd9e4bda.
