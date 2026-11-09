@@ -1,3 +1,13 @@
+## Consolidated 48-name NMC proposal inventory
+
+Checked 2026-11-09T05:53:25.615Z on PR #415 from 5f45e613ad43cce908b06a830fc366df8b8b80b6.
+
+Reconciled the 11 names and otitis context with the 37-name inventory. Verified 48 names, three aliases, three contexts and 96 distinct references with no cross-cohort reference overlap or normalized label collisions. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the remaining narrower and procedure contexts against the consolidated inventory, verifying their parent names and retaining separate source references.
+
+---
+
 ## Eleven distinct-scope names-only proposals
 
 Checked 2026-11-09T05:45:08.774Z on PR #415 from 9548fe9ec1e0ba0daee4df949ee9e011a9e3e85d.
