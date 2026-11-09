@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-15.json",
+    "sha256": "8af7dc290aa6b8f3ef0c3d3d0650ba62759327545af94ff382aa628194265f1b"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 278,
+  "remainingTopics": 234,
+  "nextTopicNameKey": "neonatal hypocalcaemia",
+  "rows": [
+    {
+      "topicNameKey": "metabolic alkalosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:21549c916e51a103f73d270e10a2298705bb52c59dac79cb03fc2a79a88cc216"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:0a765a5719b866fe4d02a9dbe1bc1dfcfde191c2741b41f879f4ea87a22e3a2f"
+      ],
+      "scopeComparison": "Metabolic alkalosis mechanisms and laboratory patterns",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "micturition",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:db80d16c23ff51a008903d9a30c1cc13cb186e389ddb741302d97b0aa7b82589"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:89248c3d1f39054477449f4733a1517a96c3fc17f1c469b7887ced5b5dae02b1",
+        "nmc-2024-ref:17145c1a0375857ab9cf0979c85bf99544c8ffe59d8330f98facc59442a3f636"
+      ],
+      "scopeComparison": "Bladder innervation, storage and voiding",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "modified ect",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8d11748a1634c78bdaf0c19302a6fb89ebf051944638fd7bcf74da628d46782c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Modified ECT assessment, consent and monitoring",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "molluscum contagiosum",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3a9313d7e2d374828c178352d2ac2584c1fb60171104127049a64bd40e917e82"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Molluscum contagiosum lesion recognition",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "multifactorial inheritance",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:246dad106a7e9353c7db16973f404a77da02fc146e27cd783725cdbe81978cec"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Genetic and environmental contributions to multifactorial traits",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "multiple myeloma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1468344dca839d962864abacf4a086213a28a13f30b5a647f2aae204154f51b6"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Multiple myeloma protein, marrow and organ findings",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "muscle denervation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a475651b83d13d51e5faa456e693955db25fa9d60d3b254e64cc36074ef4c4e4"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Muscle denervation and functional deficits",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasal cavity",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:aa1de5d04c4382c2b5c982385cafb7c5856fdaf9d7796087bb6e35c56168d34f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Nasal cavity anatomy and neurovascular supply",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasal endoscopy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b1a531dcc5b087fe3117bf03e17ba3a3a4b8e8f6d0459fa7a12c010ff24b4a0e"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:aa1de5d04c4382c2b5c982385cafb7c5856fdaf9d7796087bb6e35c56168d34f"
+      ],
+      "scopeComparison": "Observed diagnostic nasal endoscopy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasal obstruction",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bda4b1c710a4e06106c0b90978f34b35a33f11068fdfd9e255a58bf6d29bb925"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:fe036a5d4857342fce79bdc4b5174490394d3715e0475ccd56029cfad2c67d13"
+      ],
+      "scopeComparison": "Unilateral and bilateral nasal obstruction assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasal polyps",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fe036a5d4857342fce79bdc4b5174490394d3715e0475ccd56029cfad2c67d13"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:bda4b1c710a4e06106c0b90978f34b35a33f11068fdfd9e255a58bf6d29bb925"
+      ],
+      "scopeComparison": "Nasal polyposis assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasogastric tube insertion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:417f0a2cfc24f3f6298aa936e53717b0b95f526dbec9ddff9844fd9554c5b138"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Simulated nasogastric tube placement and verification",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nasopharyngeal angiofibroma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1dd229a4751fee368512017a71a2ceca6b6c3b3b7e5270db4c1521c8fcfcd4c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Nasopharyngeal angiofibroma recognition and referral",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "national disaster authority",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:edac41b44b8f4b37c97e30c42048257186797d5d0ecc2302cd49da85331869f7"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:dc25b72e7a031b56935b618743e6f0019855c86a0b50a28d0c0c7e4600207077"
+      ],
+      "scopeComparison": "NDMA responsibilities and disaster coordination",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "national population policy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a14ba470ec93459de869757c5a054a7dfd9f862f33c92c1a5a2f36d19366e9ca"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "National Population Policy objectives and indicators",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "natural history",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fdd88c1aa6a7c446aa05a92a2503b28286ac34c88b03c984b941164284d0d31b"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:44f23bd51e2163cd0ad02227986c5d84250c6e74843e8d7f5fc1ebb8765afd86"
+      ],
+      "scopeComparison": "Natural history of disease",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nebulization",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:792d7b4eb7a8d8f52ad52c76a004591ea34eba89418563a6ee4e32d6b33d6e82"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Observed nebulization setup and monitoring",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neonatal hyperbilirubinaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4487c9512d47216b9ac7d5c1c752ac22e3bbfb58b53ae97736f0c55d67a9ee76"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Age-specific neonatal bilirubin assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}
