@@ -1,3 +1,13 @@
+## Exact-label live registry readback
+
+Checked 2026-11-09T05:18:39.013Z on PR #415 from c5cf59792c72ac72065e21f0473224e7bd5bfd06.
+
+Compared all 25 names and recorded synonym terms against production labels and aliases across the published catalogue, accepted identities and saved drafts. Zero matches for the tested terms. All mappings remain pending. Full repository checks were not run.
+
+Next assemble the 25 names-only proposals with their distinct source references and retain the readback as collision evidence.
+
+---
+
 ## Exact-label NMC reuse reconciliation
 
 Checked 2026-11-09T05:16:47.073Z on PR #415 from 2c2ad12592a2faf19f61f5ee82f17e9fa29c2f50.
