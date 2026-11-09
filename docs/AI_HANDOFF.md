@@ -1,3 +1,13 @@
+## Consolidated 58-name NMC proposal inventory
+
+Checked 2026-11-09T06:16:19.222Z on PR #415 from fde24816a22310ded8a7b994baf260eeaff4d862.
+
+Live registry returned zero matches for the tested gestational terms. Added Gestational trophoblastic neoplasia to the proposal inventory with separate OG9.5 and PA29.5 source references. Verified 58 names and 118 distinct source references. All bindings remain pending. Full repository checks were not run.
+
+Next audit the names-only deliverables against the Foundation completion tracker and identify the highest-priority remaining names-only gap.
+
+---
+
 ## NMC standalone disposition coverage and gestational scope
 
 Checked 2026-11-09T06:10:59.572Z on PR #415 from fc7c2f016de201ba9d227196db9d3bdeb4d31612.
