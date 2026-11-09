@@ -58,3 +58,28 @@ test('integrated facets and alias search resolve the same concept after rename a
  assert.deepEqual(updated.organs,[]);
  assert.equal(selectIntegratedConcepts([renamed,other]).matches.length,2);
 });
+
+test('a cross-subject Foundation fixture resolves to one canonical URL with separate source contexts',async()=>{
+ const {default:audit}=await import('../docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json',{with:{type:'json'}});
+ const proposal=audit.rows.find(row=>row.name==='Acute kidney injury');
+ const subjects=[...new Set(proposal.references.map(ref=>ref.subject))];
+ const canonical=concept('fixture:aki',proposal.name,[],subjects);
+ const library={concepts:[canonical],questions:[],notes:[]};
+ const integrated=selectIntegratedConcepts(library.concepts,{search:proposal.name}).matches;
+ assert.equal(integrated.length,1);
+ assert.deepEqual(new Set(subjects),new Set(['medicine','pathology','pediatrics']));
+ const seenReferences=new Set();
+ for(const subject of subjects){
+  const matches=discoverTopicConcepts({labels:[proposal.name],allSubjects:[subject]},library);
+  assert.equal(matches.length,1);
+  assert.equal(matches[0].urls.concept,integrated[0].url);
+  const refs=proposal.references.filter(ref=>ref.subject===subject);
+  assert.ok(refs.length);
+  for(const ref of refs){
+   assert.ok(ref.code);
+   assert.ok(!seenReferences.has(ref.referenceId));
+   seenReferences.add(ref.referenceId);
+  }
+ }
+ assert.equal(seenReferences.size,proposal.references.length);
+});
