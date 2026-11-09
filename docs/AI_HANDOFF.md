@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 14
+
+Checked 2026-11-09T04:02:33.959Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 3707cea93aff96dfddac6bfff3e1ab27c0e0d75e.
+
+Screened 18 names from Kawasaki disease through Lumbar plexus against 18 linked draft tasks. Compared knee joint and knee osteoarthritis, and laparoscopy and laparoscopic sterilization, with distinct scopes. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 242 of 512 topics. Resume at Lung abscess with 270 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 13
 
 Checked 2026-11-09T04:01:03.114Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 118edf4b9cd8793baf46d00cd648f767329b9a78.
