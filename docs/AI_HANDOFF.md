@@ -1,3 +1,13 @@
+## Names-only exact catalogue and objective inventory
+
+Checked 2026-11-09T05:11:31.055Z on PR #415 from 28d464789b4c8ad84a1b193af8ade6bcc28666c7.
+
+Verified ten reference IDs and competency codes against the pinned catalogue. 10 meet catalogue eligibility rules. 0 have an exact objective-version link in the scanned repository JSON inventory. Full repository checks were not run.
+
+Next reconcile missing exact links with the remaining objective inventory or record them as objective-version gaps. Keep bindings pending and continue names-only work.
+
+---
+
 ## Names-only binding contract preflight
 
 Checked 2026-11-09T05:01:56.674Z on PR #415 from 8fef950717e5dcfc97bd6047aaba4d1ae1ccca23.
