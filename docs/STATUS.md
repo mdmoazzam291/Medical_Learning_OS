@@ -1,3 +1,13 @@
+## Standalone ocular scope comparison
+
+Checked 2026-11-09T04:50:27.129Z on PR #415 from 9448a57fff58a28ee17e68c81a749cdacc7acc0f.
+
+Verified OP3.6 and OP4.9 against their pinned draft-task rows. Proposed two related names with a narrower-scope relationship and separate source objectives. Decision is provisional and based on repository draft tasks. Bindings remain pending. Full repository checks were not run.
+
+Next verify the two ocular names and aliases against the canonical registry and reconcile any existing identities before proposing bindings.
+
+---
+
 ## Standalone names-only identity proposals
 
 Checked 2026-11-09T04:47:10.120Z on PR #415 from a529fd38efc3dcc782bc86fe6089d7dfcca31e62.

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "evidenceScope": "Repository draft tasks",
+  "sourceDraftBlobSha": "61efd8f9d625c315b2fe70f2f1e4bd57f5bf9592",
+  "concepts": [
+    {
+      "name": "Ocular foreign body",
+      "reference": {
+        "id": "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+        "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+        "code": "OP3.6"
+      }
+    },
+    {
+      "name": "Corneal foreign body",
+      "reference": {
+        "id": "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+        "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+        "code": "OP4.9"
+      }
+    }
+  ],
+  "rationale": "The OP3.6 draft covers superficial ocular removal and recognition of unsafe removal. The OP4.9 draft specifically covers identification and simulated removal of a superficial corneal foreign body.",
+  "proposedRelationship": {
+    "type": "narrower-scope",
+    "from": "Corneal foreign body",
+    "to": "Ocular foreign body"
+  },
+  "mappingAccepted": false
+}
