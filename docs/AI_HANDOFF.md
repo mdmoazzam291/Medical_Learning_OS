@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 06
+
+Checked 2026-11-09T03:21:32.090Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 83d4f0ae6257f6ab7dc63269f8cd6a3af0c3a292.
+
+Screened 18 topics from Conflict resolution through Deep cervical fascia against 20 source-linked draft tasks. Preserved the three Medicine, Paediatrics and Pathology references for CSF interpretation. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 98 of 512 topics. Resume at Deep facial vein with 414 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 05
 
 Checked 2026-11-09T03:20:24.491Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 2d871dff573e952335987b4eb2533b6c9e189bcb.
