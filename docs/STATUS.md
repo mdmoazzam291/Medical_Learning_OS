@@ -1,3 +1,11 @@
+## Standalone topic scope review
+
+Checked 2026-11-09T02:52:44.190Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 774bc80996b4b6e6ccb9e28ef64680e5dd9c3c64. Implementation commit 5a157170dd2c7a91fabbecbd7b0c8cd9a4e599a2.
+
+Compared all 25 exact-label leads against their source tasks. Retained shared topic name candidates with distinct source objectives. Source accounting checks and the triage verifier passed. Semantic equivalence and canonical bindings remain pending. Next, examine the remaining 545 topics for reuse beyond exact labels.
+
+---
+
 ## Standalone topic reuse triage
 
 Checked 2026-11-09T02:49:27.996Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 073379d838d3986b98b293216fef05350ab068b8. Implementation commit b8b5004f9c75565dd0081a048e38af7a097f75a4.
