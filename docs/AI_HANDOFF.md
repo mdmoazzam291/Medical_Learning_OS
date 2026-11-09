@@ -1,3 +1,13 @@
+## Names-only proposal worklist reconciliation
+
+Checked 2026-11-09T04:55:50.992Z on PR #415 from 6bdbf968194906b83fe4a3c5d20468986528b49b.
+
+Reconciled five proposals and the emergency IV context against the exact worklist rows and source draft tasks. All ten source references are distinct and accounted for. Both proposed relationships have valid endpoints. No mappings are accepted. Full repository checks were not run.
+
+Next prepare a draft binding candidate manifest for the reconciled references with separate objectives and explicit pending status.
+
+---
+
 ## Ocular names-only identity proposals
 
 Checked 2026-11-09T04:54:02.814Z on PR #415 from cc85a8941e0ecf52a3adf6d37bac60951991f299.
