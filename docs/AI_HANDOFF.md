@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 15
+
+Checked 2026-11-09T04:03:52.511Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 093738104f59dac4c44f064aedd861bf38c2f6e0.
+
+Screened 18 names from Lung abscess through Metabolic acidosis against 19 linked draft tasks. Preserved both malabsorption references and compared related testimony, reporting and menopause scopes. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 260 of 512 topics. Resume at Metabolic alkalosis with 252 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 14
 
 Checked 2026-11-09T04:02:33.959Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 3707cea93aff96dfddac6bfff3e1ab27c0e0d75e.
