@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-16.json",
+    "sha256": "9307f866e59b39f2c094a2e36abf4c5c071942175ee276365e5a43f356205b9b"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 296,
+  "remainingTopics": 216,
+  "nextTopicNameKey": "olfaction",
+  "rows": [
+    {
+      "topicNameKey": "neonatal hypocalcaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:85c61e0e8478cf977b5d5bdbe069105dcdade72204420a8bbb695d6ae04842c7"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Neonatal hypocalcaemia causes and assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neonatal hypoglycaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:41853af6c3fd5e6c79c6d386527ead8597d754f8c854c286b55143c3c8a42137"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Neonatal glucose homeostasis and hypoglycaemia recognition",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neonatal hypothermia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d6ff6e796cbf964730cb433c9113a03d52c18a74df644b135b7a38dfa193746e"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:c87e597451e373bcab3d63d1d411e610a9ec6fd2d1bf98545eceed92246500d7"
+      ],
+      "scopeComparison": "Neonatal heat loss and thermal monitoring",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neonatal sepsis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:829c0619ff9c76ac585c892b86caee74d3f3fbcafcb82c63eddbcf5da666feba"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Neonatal sepsis risk, assessment and escalation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neoplasia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249"
+      ],
+      "scopeComparison": "Neoplasm lineage, morphology and spread",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neurogenic bladder",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cb4a8d1be0d2f03857a674acc5fd0a9a343355f22d7d5d3b7fe36009a0615912"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:db80d16c23ff51a008903d9a30c1cc13cb186e389ddb741302d97b0aa7b82589",
+        "nmc-2024-ref:89248c3d1f39054477449f4733a1517a96c3fc17f1c469b7887ced5b5dae02b1"
+      ],
+      "scopeComparison": "Neurogenic bladder storage and voiding disturbances",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neurological localization",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f324d9218fc9addaf8e80ba2e8c7318fb5742a4084375392c9ecb11d9a5631c9"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Upper and lower motor neuron lesion localisation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neuromuscular transmission",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b454b2f6d5ea49a749a177df5acd7a6d9a2c8202afe86b0e461d3d14fed09e0e"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Neuromuscular junction and signal transmission",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "neurulation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7491ddd67d909d9255dc6a3a1a446d445fec6a5aae08468251091f34e1621999"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:431f81526a2c7d35a16771e7606227c05593d1a75f5de28006d6e2c9549b5335"
+      ],
+      "scopeComparison": "Neural tube closure and neural crest separation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "nonjudgmental care",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0130490114d2cde71d6f82b8b44c9291b88f02901fd69540fbc258ed2937532f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Respectful and inclusive clinical communication",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "notochord",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:431f81526a2c7d35a16771e7606227c05593d1a75f5de28006d6e2c9549b5335"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Notochord development and induction",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "obstetric examination",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f467ccb08e992388bd004c28b8746b101d2d280146af09e0e9eed392d752d60"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "General and abdominal obstetric examination",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "obstructed labour",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cb9d0a69d6842d8f745aa6c6a592c74fffea44579127c37f3edf7d8659283a68"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Obstructed labour recognition and escalation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "obstructive sleep apnoea",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:78c6e60875586cdc803bd0dbdd93a7d4a4fbc52f1ecf31015cd4b60d1c963bfa"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Obstructive sleep apnoea assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "occupational dosimetry",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2c746fab91db25c10d2315b29df749218dca7cce9729a57733fc9a083c160789"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Personal dosimetry and radiation units",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ocular foreign body",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4"
+      ],
+      "scopeComparison": "Simulated superficial ocular foreign body removal",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oedema",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:20e1bdcdfe1457fd9c57ec95e8da4d780d77cd18972c458c243247a26a501312"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Hydrostatic, oncotic, permeability and lymphatic oedema",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oesophageal cancer",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:48fa2150b6c312d523880c05a3ba1abaf5f4b34f2f6b5c962101699a6c83d812"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Oesophageal cancer histology and risk factors",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}
