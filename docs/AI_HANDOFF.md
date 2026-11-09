@@ -1,3 +1,13 @@
+## Standalone identity reconciliation
+
+Checked 2026-11-09T04:40:38.619Z on PR #415. Reconciliation commit 1e9a6b76c52cb3021f6664285b452505f2d932b7.
+
+Consolidated both emergency IV comparisons into one context proposal, retaining three topic labels and four source references. Default-branch searches and available repository evidence did not establish canonical registry status for the three shared identity proposals. Historical Medicine readback is limited to its original cohort. All bindings remain pending; ocular scope remains unresolved. Verified remote readback. Full repository checks were not run.
+
+Next verify the three names and aliases against the current canonical registry before proposing bindings.
+
+---
+
 ## Standalone shortlist source comparison
 
 Checked 2026-11-09T04:39:19.289Z on PR #415. Comparison commit fcb21eaef768ad86d5ec086432e6b82ae6134f1c.
