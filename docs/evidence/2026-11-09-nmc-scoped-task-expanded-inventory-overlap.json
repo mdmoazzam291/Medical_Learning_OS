@@ -1,0 +1,870 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "39f552d73388c20f65b8e43c387df2ca5fc10d53",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-family-alternate-label-and-name-consolidation.json",
+      "blobSha": "4c01fdfe3baa08cce56ee35b893dd34af3006d90"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-family-final-disposition-coverage.json",
+      "blobSha": "1977f7d11b9e1cd68a0ae6c4b432aa3461690ed1"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-mixed-baseline-ledger-reconciliation.json",
+      "blobSha": "ae085596c8092e051f55ebc370b883373f191d96"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-consolidated-58-name-inventory.json",
+      "blobSha": "2b9cd653795ceb915c6f7b7b4afc01ef9d2932a3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-21.json",
+      "blobSha": "ea8da85e29b16b43d0fc3e27c79c32b32342205d"
+    }
+  ],
+  "totals": {
+    "facets": 659,
+    "flagged": 55,
+    "facetMatches": 1,
+    "homeMatches": 49,
+    "sharedReferenceRows": 44
+  },
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-01:11",
+      "facet": "Acute kidney injury course",
+      "home": "Acute kidney injury",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:12",
+      "facet": "Acute kidney injury management",
+      "home": "Acute kidney injury",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:13",
+      "facet": "Acute kidney injury mechanisms",
+      "home": "Acute kidney injury",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:17",
+      "facet": "Adherence barriers",
+      "home": "Adherence",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Adherence",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:27",
+      "facet": "Age estimation report",
+      "home": "Age estimation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Age estimation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:02",
+      "facet": "Amyloid specimens",
+      "home": "Amyloidosis",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Amyloidosis",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:02",
+      "facet": "Atherosclerosis epidemiology",
+      "home": "Atherosclerosis",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Atherosclerosis",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:03",
+      "facet": "Autoimmune mechanisms",
+      "home": "Autoimmunity",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Autoimmunity",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:10",
+      "facet": "Birth asphyxia assessment",
+      "home": "Birth asphyxia",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Birth asphyxia",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:11",
+      "facet": "Blood culture interpretation",
+      "home": "Blood culture",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Blood culture",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:12",
+      "facet": "Blood pressure assessment",
+      "home": "Blood pressure",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Blood pressure",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:30",
+      "facet": "Constipation pharmacotherapy",
+      "home": "Constipation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Constipation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:13",
+      "facet": "Cost-conscious type 2 diabetes care",
+      "home": "Type 2 diabetes",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Type 2 diabetes",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:27",
+      "facet": "Death certification practical",
+      "home": "Medical cause-of-death certification",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Medical cause-of-death certification",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:08",
+      "facet": "Diabetic ketoacidosis recognition",
+      "home": "Diabetic ketoacidosis",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Diabetic ketoacidosis",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:11",
+      "facet": "Dialysis indications",
+      "home": "Dialysis",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sharedReferences": [
+        "nmc-2024-ref:bbc13bf1d5b9d733143f0f33699c15018c84662c11c1a667909644b7bc60d0f8"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:12",
+      "facet": "Diaphragm development",
+      "home": "Diaphragm",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Diaphragm",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:17",
+      "facet": "ENT procedural consent",
+      "home": "Informed consent",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:18",
+      "facet": "Enteric fever results",
+      "home": "Enteric fever",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Enteric fever",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:19",
+      "facet": "Enteric fever testing",
+      "home": "Enteric fever",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Enteric fever",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:30",
+      "facet": "Ethical research practice",
+      "home": "Research ethics",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Research ethics",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:12",
+      "facet": "Fetal growth restriction in obstetric care",
+      "home": "Fetal growth restriction",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Fetal growth restriction",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-11:16",
+      "facet": "Hyperkalaemia ECG",
+      "home": "Hyperkalaemia",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Hyperkalaemia",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:02",
+      "facet": "ICU monitoring",
+      "home": "Critical care",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sharedReferences": [
+        "nmc-2024-ref:bb269f5d845c571894dfc1c250439e52fba8f19f70762e8ebd8bcea0ecf966a7"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:20",
+      "facet": "Initial stroke support",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:06",
+      "facet": "Joint pain assessment",
+      "home": "Joint pain",
+      "facetMatches": [
+        {
+          "name": "Joint pain assessment",
+          "role": "context"
+        }
+      ],
+      "homeMatches": [],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:21",
+      "facet": "Lipid test interpretation",
+      "home": "Lipid metabolism",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sharedReferences": [
+        "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:02",
+      "facet": "Lumbar puncture anatomy",
+      "home": "Lumbar puncture",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:03",
+      "facet": "Lumbar puncture indications",
+      "home": "Lumbar puncture",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:04",
+      "facet": "Lumbar puncture technique",
+      "home": "Lumbar puncture",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:07",
+      "facet": "Malaria pathology",
+      "home": "Malaria",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Malaria",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:08",
+      "facet": "Malaria species differentiation",
+      "home": "Malaria",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Malaria",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:16",
+      "facet": "Neonatal resuscitation simulation",
+      "home": "Neonatal resuscitation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Neonatal resuscitation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:23",
+      "facet": "Newborn resuscitation principles",
+      "home": "Neonatal resuscitation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Neonatal resuscitation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:16",
+      "facet": "Orthopaedic consent",
+      "home": "Informed consent",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:22",
+      "facet": "Paediatric acute kidney injury",
+      "home": "Acute kidney injury",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:27",
+      "facet": "Paediatric haematuria",
+      "home": "Haematuria",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Haematuria",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:30",
+      "facet": "Paediatric lupus",
+      "home": "Systemic lupus erythematosus",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Systemic lupus erythematosus",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:02",
+      "facet": "Paediatric proteinuria",
+      "home": "Proteinuria",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Proteinuria",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:04",
+      "facet": "Paediatric stridor",
+      "home": "Stridor",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stridor",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:22",
+      "facet": "pH measurement",
+      "home": "Acid-base balance",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sharedReferences": [
+        "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-19:24",
+      "facet": "Respiratory distress assessment",
+      "home": "Respiratory distress",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sharedReferences": [
+        "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:26",
+      "facet": "Stem cell research",
+      "home": "Research ethics",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Research ethics",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:28",
+      "facet": "Stroke counselling",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:29",
+      "facet": "Stroke examination",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:30",
+      "facet": "Stroke history",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:01",
+      "facet": "Stroke imaging",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:02",
+      "facet": "Stroke in young adults",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:03",
+      "facet": "Stroke rehabilitation",
+      "home": "Stroke",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:16",
+      "facet": "Temperature assessment",
+      "home": "Thermoregulation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Thermoregulation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:18",
+      "facet": "Termination consent",
+      "home": "Informed consent",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:19",
+      "facet": "Thermal environment",
+      "home": "Thermoregulation",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Thermoregulation",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:46",
+      "facet": "Urine ketones",
+      "home": "Urinalysis",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Urinalysis",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:47",
+      "facet": "Urine reporting",
+      "home": "Urinalysis",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Urinalysis",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:51",
+      "facet": "Vaginal discharge assessment",
+      "home": "Vaginal discharge",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Vaginal discharge",
+          "role": "proposal"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b"
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Review flagged facets and home matches against their exact source-task scopes before proposing reuse."
+}
