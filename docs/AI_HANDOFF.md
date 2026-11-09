@@ -1,3 +1,13 @@
+## Exact-label names-only proposals
+
+Checked 2026-11-09T05:20:20.957Z on PR #415 from 38775ab941c03249ff9fa62392472f0d61d29c7d.
+
+Prepared 25 names-only concept proposals, preserving 65 reference occurrences across 65 distinct source IDs. Verified each reference in the pinned catalogue and matched every name to its zero-match registry readback. Objective versions and bindings remain pending. Full repository checks were not run.
+
+Next reconcile the 25 proposals with the prior five names-only proposals and check any shared references or overlapping scope before consolidating the proposal inventory.
+
+---
+
 ## Exact-label live registry readback
 
 Checked 2026-11-09T05:18:39.013Z on PR #415 from c5cf59792c72ac72065e21f0473224e7bd5bfd06.
