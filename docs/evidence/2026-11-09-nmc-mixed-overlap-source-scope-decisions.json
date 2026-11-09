@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "7eee000cac9a89dca4cb93b5b1edab9992dcc567",
+  "input": {
+    "path": "docs/evidence/2026-11-09-nmc-mixed-reuse-consolidated-overlap.json",
+    "blobSha": "2236c37f1f983d523a91bb3c10425f13dd9648ad"
+  },
+  "proposals": [
+    {
+      "name": "Constipation",
+      "disposition": "reuse-name-with-scoped-component",
+      "rationale": "PY4.11 supports the constipation mechanism component within a wider gastrointestinal task. PE23.2 remains a separate paediatric assessment objective.",
+      "occurrenceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+          "code": "PY4.11",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json"
+        }
+      ],
+      "existingTargetReferences": [
+        {
+          "referenceId": "nmc-2024-ref:37d03a9c073318da41c9ec261ed34b1f1c4055ae308b7d282bdbe8997e1d8ddb",
+          "code": "PE23.2",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Enteric fever",
+      "disposition": "reuse-name-with-separate-source-objectives",
+      "rationale": "GM26.17 supports disease mechanisms and management alongside the existing microbiology and paediatric source scopes.",
+      "occurrenceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77",
+          "code": "GM26.17",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json"
+        }
+      ],
+      "existingTargetReferences": [
+        {
+          "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+          "code": "MI3.6",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+          "code": "PE31.12",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle",
+      "disposition": "reuse-parent-with-scoped-components",
+      "rationale": "AN3.1 supports skeletal muscle description and AN67.2 supports comparative muscle structure and function. Keep only the skeletal muscle components under this parent and retain the broader comparative scope separately.",
+      "occurrenceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "code": "AN3.1",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "code": "AN67.2",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json"
+        }
+      ],
+      "existingTargetReferences": [
+        {
+          "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+          "code": "AN7.5",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21",
+          "code": "PY3.9",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+          "code": "AN3.2",
+          "mode": "knowledge",
+          "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "distinctAdditionalEvidenceReferences": 4
+}

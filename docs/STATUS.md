@@ -1,3 +1,13 @@
+## NMC mixed reuse source scope decisions
+
+Checked 2026-11-09T06:22:35.112Z on PR #415 from 7eee000cac9a89dca4cb93b5b1edab9992dcc567.
+
+Compared source tasks for Constipation, Enteric fever and Skeletal muscle. Proposed reuse of all three names with four separate incoming source references. Retained compound and comparative scope at component level. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the four source references with the names-only evidence inventory and route the remaining mixed reuse leads by scope and registry status.
+
+---
+
 ## Mixed reuse and consolidated name overlap
 
 Checked 2026-11-09T06:20:29.315Z on PR #415 from 6bce1f919113c70969c0830bc2014c9e39cd1468.
