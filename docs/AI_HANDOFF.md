@@ -1,3 +1,13 @@
+## Eleven distinct-scope names-only proposals
+
+Checked 2026-11-09T05:45:08.774Z on PR #415 from 9548fe9ec1e0ba0daee4df949ee9e011a9e3e85d.
+
+Prepared 11 names and one acute suppurative otitis context. Verified 12 distinct reference IDs in the pinned catalogue. Preserved observed competency code spacing and compared the otitis codes after removing whitespace. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile the 11 names and scoped context against the 37-name inventory and check source-reference overlap before consolidation.
+
+---
+
 ## Acute otitis scope and distinct-name registry check
 
 Checked 2026-11-09T05:42:21.634Z on PR #415 from f296c2ea06d10b5b0d2ccd090c3f6e7fc6e1200f.
