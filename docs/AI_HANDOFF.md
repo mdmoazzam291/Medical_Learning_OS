@@ -1,3 +1,13 @@
+## Variant cohort reconciliation
+
+Checked 2026-11-09T05:24:00.153Z on PR #415 from 7151d56f59de27e62b33d80569832f3d1ddcf95b.
+
+Accounted for 38 comparisons across 33 worklist rows, including the previously resolved gestational scope. Found 4 comparisons targeting consolidated proposal names. Preserved prior dispositions and separate source references. All mappings remain pending. Full repository checks were not run.
+
+Next review the overlapping variant candidates for alias or narrower-scope treatment before adding any new names.
+
+---
+
 ## Consolidated names-only NMC proposal inventory
 
 Checked 2026-11-09T05:22:02.088Z on PR #415 from fb7f06513577a44c2140fde6cdcaea45f07e5746.
