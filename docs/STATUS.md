@@ -1,3 +1,13 @@
+## Five NMC reuse leads registry preflight
+
+Checked 2026-11-09T05:33:58.720Z on PR #415 from 404d383eab518f55212288c9aa9a33d696ee8f83.
+
+Checked five reuse leads against the 32-name inventory, neighboring variant dispositions and live registry terms. No inventory name or live registry match was found. Neighboring narrower or related scopes stay separate. Bindings remain pending. Full repository checks were not run.
+
+Next assemble the five names-only candidates with their separate source references and proposed aliases.
+
+---
+
 ## Remaining NMC naming variant dispositions
 
 Checked 2026-11-09T05:31:51.345Z on PR #415 from 2675f694af0aaf9c27a7a58752c2018abdec6486.
