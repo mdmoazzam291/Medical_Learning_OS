@@ -1,3 +1,13 @@
+## Ocular names-only identity proposals
+
+Checked 2026-11-09T04:54:02.814Z on PR #415 from cc85a8941e0ecf52a3adf6d37bac60951991f299.
+
+Prepared two names-only proposals with separate OP3.6 and OP4.9 references and a proposed narrower-scope relationship. Verified both exact draft-task references and pinned the scope and registry evidence. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile all five names-only proposals against the screening worklist and confirm the source-reference and relationship accounting before preparing any binding candidates.
+
+---
+
 ## Ocular canonical registry readback
 
 Checked 2026-11-09T04:52:27.966Z on PR #415 from a765d8e383b3a2efd253a578bc0e136d8e9d2d96.
