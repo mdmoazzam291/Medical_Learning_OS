@@ -1,3 +1,13 @@
+## Standalone topic binding worklist
+
+Checked 2026-11-09T02:59:19.358Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at e344976c82bd4f893065e247e4a6530b82cce68a. Implementation commit 81bef299a1e10f0316f6fe9c43a6ad2bec926e91.
+
+Consolidated 570 standalone topics, preserving 25 exact-label reviews and 38 variant reviews. Official NMC 2024 rows OG9.5 and PA29.5 confirm shared gestational trophoblastic scope with distinct obstetric and pathology objectives. The worklist records the proposed name and source links. All bindings remain pending. Both report verifiers and worklist accounting passed. Full repository checks remain unrun.
+
+Next audit the OG9.6 source-label conflict and adjacent OG9 rows before relying on the affected drafts for binding. Local OG9.6 says Ovarian tumours, while the official row concerns hyperemesis gravidarum. Continue semantic screening for 512 topics after source audit.
+
+---
+
 ## Standalone topic variant scope review
 
 Checked 2026-11-09T02:56:14.773Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 8cc9b8b976b46ac0371d3e07bd5abcb3a2b87f68. Implementation commit 2dfc17f8f71eec080d4ff87ae4cd7f3655d0b7b5.
