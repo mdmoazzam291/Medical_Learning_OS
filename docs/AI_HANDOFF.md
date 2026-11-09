@@ -1,3 +1,11 @@
+## Standalone semantic screening batch 03
+
+Checked 2026-11-09T03:08:04.509Z on PR #415 at a817727778399a052594dc69314759629ea907c4. Implementation commit bce6ca35ddad085d67605fa24a3f4e6bd8d81d47.
+
+Reviewed 18 topics from Autism through Capillary glucose. Five have source-linked comparisons. Source accounting and both report verifiers passed. Full repository checks remain unrun. Cumulative review covers 51 of 512 topics. Resume at Carbohydrate digestion with 461 remaining. Bindings remain pending.
+
+---
+
 ## Standalone semantic screening batch 02
 
 Checked 2026-11-09T03:05:38.570Z on PR #415 at 42fc6b04e3e566868dc155a7b3b97ed4a0149c64. Implementation commit 0f62374caa31cc321678c0ad8fcbc470b2dd4223.
