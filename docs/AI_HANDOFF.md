@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 04
+
+Checked 2026-11-09T03:19:12.999Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 48e1710d2fdec2fa0e9288bfe6e3805c17358c11.
+
+Reviewed 14 topics from Carbohydrate digestion through Cerumen removal against 16 source draft tasks. Cardiac cycle and Cardiac impulse retain a related-scope comparison with separate bindings. All canonical and objective bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 65 of 512 topics. Resume at Cervical cytology sampling with 447 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 03
 
 Checked 2026-11-09T03:08:04.509Z on PR #415 at a817727778399a052594dc69314759629ea907c4. Implementation commit bce6ca35ddad085d67605fa24a3f4e6bd8d81d47.
