@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 18
+
+Checked 2026-11-09T04:08:02.547Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit de355449b35fae5d50ffcd6eda48d7d4c4fbf888.
+
+Screened 18 names from Olfaction through Paget disease of bone against 18 linked draft tasks. Recorded related-scope comparisons for oncogenesis, glaucoma, otomicroscopy and outbreak investigation. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 314 of 512 topics. Resume at Pancreatic carcinoma with 198 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 17
 
 Checked 2026-11-09T04:06:32.498Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit f2764d3c814c8eec4f3d52c3673a109cb4bd3d1a.
