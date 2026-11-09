@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "baseline": {
+    "harness": "scripts/baseline-migrations-db-check.js",
+    "migrationCount": 5,
+    "result": "passed",
+    "authPlatform": "synthetic"
+  },
+  "stagingRuntimeAccess": {
+    "repositoryFunctionBodyMatches": true,
+    "execute": {
+      "anon": false,
+      "authenticated": false,
+      "serviceRole": true
+    }
+  },
+  "fullMigrationChainVerified": false,
+  "hostedChangesApplied": false,
+  "next": "Rehearse the remaining Owner API authorization and concept acceptance migrations together with staging parity before deployment."
+}
