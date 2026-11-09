@@ -1,3 +1,13 @@
+## Standalone topic variant screening
+
+Checked 2026-11-09T02:54:32.695Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at bd137ad32b4b61b9369a5ad52d139db31cb9ab08. Implementation commit ee37596d530785307fe19effb81368689ad38376.
+
+Screened all 545 remaining standalone topics against the pinned label inventories. Spelling and punctuation normalization, possible initials and bounded shared phrases produced 38 leads across 33 topics. The other 512 had no lead under these rules. Both report verifiers passed. Full repository checks were outside the partial checkout.
+
+Next compare the source scope of the 38 leads and document ambiguous or distinct meanings. Semantic equivalence and canonical bindings remain pending.
+
+---
+
 ## Standalone topic scope review
 
 Checked 2026-11-09T02:52:44.190Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 774bc80996b4b6e6ccb9e28ef64680e5dd9c3c64. Implementation commit 5a157170dd2c7a91fabbecbd7b0c8cd9a4e599a2.
