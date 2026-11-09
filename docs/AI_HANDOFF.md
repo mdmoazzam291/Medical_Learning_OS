@@ -1,3 +1,13 @@
+## Standalone semantic screening checksum chain
+
+Checked 2026-11-09T04:36:26.961Z on PR #415. Verification commit 12f0f7f344063a63fc4859ff819d92211d522615.
+
+All 29 batches pin the historical worklist and all 28 predecessor checksum links match. The screening-start worklist differs only in source audit metadata and a proposed Hyperemesis gravidarum label. Topic keys, ordering, source IDs and binding state are identical. Current worklist matches screening-start blob. Verified remote readback. Full repository checks were not run.
+
+Next triage the consolidated candidate pairs into names-only identity reuse proposals and related-but-distinct scopes. Keep all bindings pending.
+
+---
+
 ## Standalone semantic screening provenance
 
 Checked 2026-11-09T04:35:13.546Z on PR #415. Implementation commit 4a177e7ae4e70f96e63f3b7e0e014ad7d55359ff.
