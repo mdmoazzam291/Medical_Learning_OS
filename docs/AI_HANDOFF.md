@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 19
+
+Checked 2026-11-09T04:09:19.616Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 46e529237670557e39dff1a9ac3896ca2f451955.
+
+Screened 18 names from Pancreatic carcinoma through Pharmacovigilance against 19 linked draft tasks. Preserved both peripheral IV access references and compared peripheral IV access, peripheral IV cannulation and emergency IV access. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 332 of 512 topics. Resume at phrenic nerve with 180 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 18
 
 Checked 2026-11-09T04:08:02.547Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit de355449b35fae5d50ffcd6eda48d7d4c4fbf888.
