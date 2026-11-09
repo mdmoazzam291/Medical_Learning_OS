@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 07
+
+Checked 2026-11-09T03:22:58.676Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit ac08e581fdda2d1c3fa62f4277a1563531fc3d70.
+
+Screened 18 names from Deep facial vein through Disease causation against 18 linked draft tasks. Kept diagnostic communication and communicating investigation results separate, and distinguished discharge summary from clinical case documentation. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 116 of 512 topics. Resume at Disputed parentage with 396 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 06
 
 Checked 2026-11-09T03:21:32.090Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 83d4f0ae6257f6ab7dc63269f8cd6a3af0c3a292.
