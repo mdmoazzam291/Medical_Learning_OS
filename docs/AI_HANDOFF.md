@@ -1,3 +1,13 @@
+## Four overlapping names-only variant dispositions
+
+Checked 2026-11-09T05:26:27.293Z on PR #415 from 0c3b59318fbfa2e5a5ad385a7495cb86950514d5.
+
+Verified four distinct source draft references. Proposed a scoped search alias for abnormal vaginal discharge, a narrower concept for physiological vaginal discharge, a separate related fetal age concept and a radiographic method context. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile these four dispositions with the names-only inventory and check the two proposed new identities for registry collisions.
+
+---
+
 ## Variant cohort reconciliation
 
 Checked 2026-11-09T05:24:00.153Z on PR #415 from 7151d56f59de27e62b33d80569832f3d1ddcf95b.
