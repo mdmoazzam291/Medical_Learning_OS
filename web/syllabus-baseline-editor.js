@@ -1,6 +1,7 @@
 import registry from '../data/preparation-curriculum.js';
 import {escapeText as e} from './navigation-view.js';
 import {validateBaselineDraft} from '../src/domain/syllabus-baseline-drafts.js';
+import {dualExamSyllabusOverview} from '../src/domain/dual-exam-syllabus-foundation.js';
 const blank=()=>({label:'',pathwayVersionId:registry.pathways.find(p=>p.status==='active')?.pathwayVersionId||'',
  sourceKind:'historical',sourceLocator:'',sourceVersion:'',scopeDeclaration:'partial',conceptIds:[],changeReason:''});
 // JSONB may reorder object keys; compare all fields while retaining array order.
@@ -26,12 +27,36 @@ const reviewPacketMarkup=p=>!p?'':(
  '</section>'
 );
 
+
+const dualExamOverview=dualExamSyllabusOverview();
+const foundationMarkup=()=>{
+ const o=dualExamOverview;
+ const sourceLinks=o.sources.map(s=>'<li><a href="'+e(s.url)+'" target="_blank" rel="noopener noreferrer">'+
+   e(s.issuer+' · '+s.sourceVersion)+'</a> · '+e(s.sourceRole)+'</li>').join('');
+ return '<section class="review-packet" aria-label="Shared MBBS syllabus foundation">'+
+  '<h3>Shared MBBS syllabus foundation</h3>'+
+  '<p><strong>NEET-PG + INI-CET</strong> use one Medical Knowledge Graph; two separate exam scope proposals.</p>'+
+  '<p>'+e(o.sharedSubjects.length)+' editorial subject buckets and '+e(o.domainCount)+
+  ' broad navigation domains. These are not an official topic list, approved exam objectives, or a syllabus denominator.</p>'+
+  '<ul>'+o.scopes.map(s=>'<li><strong>'+e(s.label)+'</strong> · '+e(s.pathwayVersionId)+
+   ' · source review pending · official topic list unverified · exam priority not evaluated</li>').join('')+'</ul>'+
+  '<details><summary>Inspect shared editorial subject/domain scaffold</summary><ul>'+
+  o.sharedSubjects.map(s=>'<li><strong>'+e(s.label)+'</strong> ('+e(s.phase)+') · '+
+    e(s.domains.map(d=>d.label).join('; '))+'</li>').join('')+
+  '</ul></details>'+
+  '<details><summary>Authority references and limitations</summary><p>Official sources describe undergraduate curricular scope or exam scheme; their links do not certify this editorial subject/domain inventory.</p><ul>'+
+  sourceLinks+'</ul></details>'+
+  '<p><strong>No activation:</strong> no approved exam objectives, no inferred readiness, no Study Now eligibility, and no learner content publication.</p>'+
+  '</section>';
+};
+
 export function syllabusBaselineForm(s={}){
  const d=s.document||blank(),disabled=s.busy||!s.loaded,readonly=s.readOnly;
  const paths=registry.pathways.filter(p=>p.status==='active');
  const option=(value,title,current)=>'<option value="'+e(value)+'"'+(value===current?' selected':'')+'>'+e(title)+'</option>';
  return '<section class="concept-editor"><h2>Proposed syllabus checklist</h2>'+
  '<p>Private, versioned scope proposal. Indexed concepts are not approved exam objectives; no syllabus percentage or learner release follows.</p>'+
+ foundationMarkup()+
  '<p role="status" data-syllabus-status>'+e(s.status||'Load checklist proposals to begin.')+'</p>'+
  '<div class="coverage-pagination"><button type="button" data-syllabus-new'+(s.busy?' disabled':'')+'>New checklist draft</button> '+
  '<button type="button" data-syllabus-refresh'+(s.busy?' disabled':'')+'>Refresh draft list</button></div>'+
