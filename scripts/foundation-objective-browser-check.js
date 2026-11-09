@@ -52,7 +52,7 @@ try{
    return reply({});
   });
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(origin+'/web/admin.html#owner-coverage');
+  await page.goto(origin+'/web/admin.html#owner-foundation');
   const root=page.locator('#owner-foundation-objectives');
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();

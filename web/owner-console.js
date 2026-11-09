@@ -371,9 +371,12 @@ function dashboardMarkup(data) {
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
     </section>
 
-    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
-      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Foundation and content coverage</h2><p>Review the NMC Foundation draft first. Use the inventory to inspect existing content, or open the relevant editor to work on a draft.</p></div></div>
+    <section id="owner-foundation" class="panel" data-admin-panel="foundation" hidden aria-label="NMC Foundation">
       <section id="owner-foundation-objectives" class="concept-editor" aria-label="NMC Foundation draft review"></section>
+    </section>
+
+    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
+      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Content inventory</h2><p>Inspect existing content and open the relevant editor to work on a draft.</p></div></div>
       <div id="owner-coverage-body"><p>Loading the content inventory…</p></div>
       <section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section>
       <section id="owner-syllabus-baselines" class="concept-editor" aria-label="Syllabus baseline draft editor"></section>
