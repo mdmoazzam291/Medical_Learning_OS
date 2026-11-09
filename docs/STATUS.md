@@ -1,3 +1,13 @@
+## Standalone topic variant scope review
+
+Checked 2026-11-09T02:56:14.773Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 8cc9b8b976b46ac0371d3e07bd5abcb3a2b87f68. Implementation commit 2dfc17f8f71eec080d4ff87ae4cd7f3655d0b7b5.
+
+Reviewed 38 leads against source tasks. Recorded 23 narrower scopes, eight related scopes, four shared topic candidates, two alias candidates and one ambiguity. Source lead accounting and the lexical report verifier passed. Full repository checks were outside the partial checkout.
+
+Next resolve the gestational trophoblastic scope ambiguity using the original source row and consolidate reuse findings into a canonical binding worklist. The 512 topics without lexical leads remain pending semantic screening. Canonical bindings remain pending.
+
+---
+
 ## Standalone topic variant screening
 
 Checked 2026-11-09T02:54:32.695Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at bd137ad32b4b61b9369a5ad52d139db31cb9ab08. Implementation commit ee37596d530785307fe19effb81368689ad38376.
