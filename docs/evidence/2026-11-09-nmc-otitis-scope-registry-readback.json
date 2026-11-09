@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "source": [
+    {
+      "code": "PE25.1",
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+      "referenceId": "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+      "reviewLabel": "Acute otitis media"
+    },
+    {
+      "code": "EN4.3",
+      "path": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+      "referenceId": "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+      "reviewLabel": "Acute suppurative otitis media"
+    }
+  ],
+  "proposalName": "Acute otitis media",
+  "scopedContext": "Acute suppurative otitis media",
+  "rationale": "Both draft tasks use otoscopic findings to justify management. Retain paediatric pathogenesis and ENT investigations as separate source objectives. Keep the suppurative qualifier as a scoped context.",
+  "registryReadback": {
+    "names": [
+      "Acute otitis media",
+      "Cause of death coding",
+      "Essential medicines list",
+      "External ear",
+      "Facial nerve palsy",
+      "Mucosal chronic otitis media",
+      "Otitis media with effusion",
+      "Recurrent pregnancy loss",
+      "Rheumatic heart disease",
+      "Squamosal chronic otitis media",
+      "Vitamin K deficiency bleeding"
+    ],
+    "termFamilies": [
+      "otitis and middle ear",
+      "cholesteatoma",
+      "death coding",
+      "essential medicines or drugs",
+      "external ear",
+      "facial palsy, nerve or paralysis",
+      "pregnancy loss and miscarriage",
+      "rheumatic disease",
+      "vitamin K and neonatal haemorrhagic terminology"
+    ],
+    "results": [
+      {
+        "scope": "accepted",
+        "records": 12,
+        "matches": 0,
+        "catalog_version": 448
+      },
+      {
+        "scope": "draft revision",
+        "records": 20,
+        "matches": 0,
+        "catalog_version": 448
+      },
+      {
+        "scope": "published",
+        "records": 1,
+        "matches": 0,
+        "catalog_version": 448
+      }
+    ]
+  },
+  "mappingAccepted": false
+}

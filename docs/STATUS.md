@@ -1,3 +1,13 @@
+## Acute otitis scope and distinct-name registry check
+
+Checked 2026-11-09T05:42:21.634Z on PR #415 from f296c2ea06d10b5b0d2ccd090c3f6e7fc6e1200f.
+
+Compared PE25.1 with EN4.3. Proposed one acute otitis name with a suppurative context and separate source objectives. Live registry returned zero matches for tested terms covering 11 separately routed names. All bindings remain pending. Full repository checks were not run.
+
+Next assemble the 11 names-only proposals with source references and preserve the scoped otitis relationship.
+
+---
+
 ## NMC distinct-scope routing
 
 Checked 2026-11-09T05:39:30.919Z on PR #415 from d6cfb3e9cb1589dc389c2632ddad8078aa1451c8.
