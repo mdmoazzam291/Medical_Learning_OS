@@ -1,3 +1,13 @@
+## Standalone topic pair triage
+
+Checked 2026-11-09T04:37:47.608Z on PR #415. Triage commit dc8d97dd6fbfdc07964ae867525b592c501b7935.
+
+Classified all 116 in-worklist candidate pairs by topic and recorded scope: 2 possible shared identities, 9 scope checks, and 105 related distinct scopes. All dispositions are provisional and mappings remain pending. Verified pair accounting and exact remote readback. Full repository checks were not run.
+
+Next compare source drafts for the 11 shortlisted pairs and keep source-specific objectives separate. External candidate references remain in the separate provenance record.
+
+---
+
 ## Standalone semantic screening checksum chain
 
 Checked 2026-11-09T04:36:26.961Z on PR #415. Verification commit 12f0f7f344063a63fc4859ff819d92211d522615.
