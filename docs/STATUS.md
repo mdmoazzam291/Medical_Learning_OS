@@ -1,3 +1,13 @@
+## Standalone names-only identity proposals
+
+Checked 2026-11-09T04:47:10.120Z on PR #415 from a529fd38efc3dcc782bc86fe6089d7dfcca31e62.
+
+Prepared three proposed names with seven separate source references and one emergency IV context reference. Verified all eight IDs in their draft-task files. All mappings remain pending. Full repository checks were not run.
+
+Next trace the unresolved ocular comparison to its exact source scope before proposing reuse or distinct identities.
+
+---
+
 ## Standalone semantic screening batch 03
 
 Checked 2026-11-09T03:08:04.509Z on PR #415 at a817727778399a052594dc69314759629ea907c4. Implementation commit bce6ca35ddad085d67605fa24a3f4e6bd8d81d47.
