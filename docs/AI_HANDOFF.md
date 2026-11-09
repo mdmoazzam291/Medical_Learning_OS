@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 12
+
+Checked 2026-11-09T03:38:15.497Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit d566bb427e6eeeb1d983a56b4271ab8262bd06d6.
+
+Screened 18 topic names from Horner syndrome through Implied consent against 18 linked draft tasks. Recorded comparisons for Horner syndrome and cervical sympathetic chain, hydrocephalus and congenital hydrocephalus, and IgA nephropathy and IgA vasculitis. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 206 of 512 topics. Resume at Infantile hemiplegia with 306 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 11
 
 Checked 2026-11-09T03:33:53.552Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 0fa0b13835e6b46b3e918c016f536cd812a77ccc.
