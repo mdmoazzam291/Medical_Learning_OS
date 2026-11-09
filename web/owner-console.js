@@ -376,9 +376,16 @@ function dashboardMarkup(data) {
     </section>
 
     <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
-      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Content inventory</h2><p>Inspect existing content and open the relevant editor to work on a draft.</p></div></div>
+      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Content inventory</h2><p>Inspect existing content and its coverage.</p></div></div>
+      <nav aria-label="Content editors"><a href="#owner-concept-drafts">Concept Drafts</a> · <a href="#owner-exam-syllabus">Exam Syllabus</a></nav>
       <div id="owner-coverage-body"><p>Loading the content inventory…</p></div>
+    </section>
+
+    <section id="owner-concept-drafts" class="panel" data-admin-panel="concept-drafts" hidden aria-label="Concept Drafts">
       <section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section>
+    </section>
+
+    <section id="owner-exam-syllabus" class="panel" data-admin-panel="exam-syllabus" hidden aria-label="Exam Syllabus">
       <section id="owner-syllabus-baselines" class="concept-editor" aria-label="Syllabus baseline draft editor"></section>
     </section>
 

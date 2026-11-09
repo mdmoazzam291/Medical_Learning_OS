@@ -82,7 +82,7 @@ try{
    return reply({});
   });
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));let dialogs=0;page.on('dialog',async d=>{dialogs++;await d.dismiss();});
-  await page.goto(origin+'/web/admin.html#owner-coverage');const root=page.locator('#owner-concept-editor');await root.getByText('Drafts loaded. Saved drafts do not change accepted coverage.',{exact:true}).waitFor();
+  await page.goto(origin+'/web/admin.html#owner-concept-drafts');const root=page.locator('#owner-concept-editor');await root.getByText('Drafts loaded. Saved drafts do not change accepted coverage.',{exact:true}).waitFor();
   await root.getByLabel('Canonical target',{exact:true}).selectOption('existing');assert.equal(await root.getByLabel('Concept name',{exact:true}).inputValue(),'Existing synthetic');assert.equal(dialogs,0);
   await root.getByRole('button',{name:'New proposal',exact:true}).click();
   await root.getByLabel('Concept name',{exact:true}).fill('Synthetic <img src=x onerror="window.injected=true">');await root.getByLabel('Source evidence or locator',{exact:true}).fill('Synthetic locator only; review pending');await root.getByLabel('Reason for this revision',{exact:true}).fill('Add missing concept without a question');
@@ -97,7 +97,6 @@ try{
   await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.getByText('Saved and confirmed revision 2. Accepted coverage is unchanged.',{exact:true}).waitFor();assert.equal(versions.length,2);assert.equal(await root.locator('img').count(),0);assert.equal(await page.evaluate(()=>window.injected===true),false);
   await root.getByRole('button',{name:'Revision 1',exact:true}).click();await root.getByText('Historical revision: read-only. Open the latest revision to continue editing.',{exact:true}).waitFor();assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
   await root.getByRole('button',{name:'Open latest revision',exact:true}).click();await root.getByText('Loaded saved revision 2.',{exact:true}).waitFor();await root.getByLabel('Concept name',{exact:true}).fill('Conflict-preserved input');conflict=true;await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.locator('[data-concept-status]').filter({hasText:'Conflict:'}).waitFor();assert.equal(await root.getByLabel('Concept name',{exact:true}).inputValue(),'Conflict-preserved input');assert.equal(versions.length,2);
-  await page.locator('#owner-coverage-body').getByLabel('Concept name or ID',{exact:true}).fill('empty');await page.locator('#owner-coverage-body').getByRole('button',{name:'Apply filters',exact:true}).click();await page.locator('#owner-coverage-body').getByRole('heading',{name:/Empty synthetic/}).waitFor();assert.equal(await root.getByLabel('Concept name',{exact:true}).inputValue(),'Conflict-preserved input');
   page.removeAllListeners('dialog');page.once('dialog',async d=>d.accept());await root.getByRole('button',{name:'New proposal',exact:true}).click();versions.length=0;receipts.clear();requestIds.length=0;conflict=false;failSave=false;failRead=403;
   await root.getByLabel('Concept name',{exact:true}).fill('Direct successful write with denied readback');await root.getByLabel('Source evidence or locator',{exact:true}).fill('Synthetic locator');await root.getByLabel('Reason for this revision',{exact:true}).fill('Direct write retry regression');
   await root.getByRole('button',{name:'Save concept draft',exact:true}).click();await root.locator('[data-concept-status]').filter({hasText:'Save not confirmed'}).waitFor();assert.equal(await root.getByRole('button',{name:'Retry pending save',exact:true}).count(),1);assert.equal(versions.length,1);
@@ -118,6 +117,8 @@ try{
   assert.equal(await root.getByRole('button',{name:'Save concept draft',exact:true}).isDisabled(),true);
   assert.match(await root.textContent(),/This does not approve medical claims, rights, questions or learner release/);
   // Independent private syllabus draft editor must survive an uncertain write and retry exactly once.
+  await page.evaluate(()=>{location.hash='owner-exam-syllabus';});
+  await root.waitFor({state:'hidden'});
   const syllabus=page.locator('#owner-syllabus-baselines');
   await syllabus.getByText('Draft list loaded. No active syllabus baseline.',{exact:true}).waitFor();
   await syllabus.locator('input[name="label"]').fill('Synthetic proposed partial scope');
