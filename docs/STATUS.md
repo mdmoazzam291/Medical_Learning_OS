@@ -1,3 +1,13 @@
+## Names-only variant inventory reconciliation
+
+Checked 2026-11-09T05:30:08.678Z on PR #415 from f64209c706a68d67ba71c0245adb0891e987373f.
+
+Production registry readback returned zero matches for the two proposed identities under the recorded terms. Reconciled all four dispositions into a 32-name inventory with 79 distinct references. Preserved both new proposals, the scoped search alias, the radiographic method context, and the earlier relationships. All mappings remain pending. Full repository checks were not run.
+
+Next review the remaining variant comparisons for reusable names, distinct scope and unresolved decisions without adding objective wording.
+
+---
+
 ## Four overlapping names-only variant dispositions
 
 Checked 2026-11-09T05:26:27.293Z on PR #415 from 0c3b59318fbfa2e5a5ad385a7495cb86950514d5.
