@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 16
+
+Checked 2026-11-09T04:05:14.925Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 7cbf5e4cbee3a65f489a86c01268f27986de96c4.
+
+Screened 18 names from Metabolic alkalosis through Neonatal hyperbilirubinaemia against 18 linked draft tasks. Recorded related-scope leads for acid–base disorders, bladder physiology, nasal assessment, disaster coordination and prevention. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 278 of 512 topics. Resume at Neonatal hypocalcaemia with 234 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 15
 
 Checked 2026-11-09T04:03:52.511Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 093738104f59dac4c44f064aedd861bf38c2f6e0.
