@@ -1,3 +1,13 @@
+## Standalone semantic screening provenance
+
+Checked 2026-11-09T04:35:13.546Z on PR #415. Implementation commit 4a177e7ae4e70f96e63f3b7e0e014ad7d55359ff.
+
+The recorded worklist checksum matches the historical worklist creation commit. The first screening commit and current branch carry a different worklist blob. Traced all 20 candidate appearances (19 unique IDs) to source draft files and competency codes. Verified remote readback. All bindings remain pending. Full repository checks were not run.
+
+Next compare the historical and screening-start worklist rows and validate the full batch digest chain before proposing bindings.
+
+---
+
 ## Standalone semantic screening audit
 
 Checked 2026-11-09T04:33:27.155Z on PR #415. Audit commit 54bb7378812ff523314236b87253126430964805.
