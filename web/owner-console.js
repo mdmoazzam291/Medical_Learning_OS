@@ -377,8 +377,8 @@ function dashboardMarkup(data) {
       <section id="owner-foundation-objectives" class="concept-editor" aria-label="NMC Foundation draft review"></section>
     </section>
 
-    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
-      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Content inventory</h2><p>Inspect existing content and its coverage.</p></div></div>
+    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Content Inventory">
+      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Inventory and coverage</h2><p>Inspect existing content and its coverage.</p></div></div>
       <nav aria-label="Content editors"><a href="#owner-concept-drafts">Concept Drafts</a> · <a href="#owner-exam-syllabus">Exam Syllabus</a></nav>
       <div id="owner-coverage-body"><p>Loading the content inventory…</p></div>
     </section>

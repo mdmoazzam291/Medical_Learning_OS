@@ -60,7 +60,7 @@ const SECTIONS = {
       item('relationships', 'Medical Relationships', 'graph', '/web/content-import.html#medical-relationships'),
       item('snapshot', 'Content Overview', 'graph', '/web/admin.html#owner-content'),
       item('foundation', 'NMC Foundation', 'graph', '/web/admin.html#owner-foundation'),
-      item('coverage', 'Coverage Index', 'graph', '/web/admin.html#owner-coverage'),
+      item('coverage', 'Content Inventory', 'graph', '/web/admin.html#owner-coverage'),
       item('concept-drafts', 'Concept Drafts', 'graph', '/web/admin.html#owner-concept-drafts'),
       item('exam-syllabus', 'Exam Syllabus', 'graph', '/web/admin.html#owner-exam-syllabus'),
       item('review', 'Review Workspace', 'edit', '/web/review.html'),
