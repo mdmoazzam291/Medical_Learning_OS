@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-14.json",
+    "sha256": "47fafbb59e1e3d86d1cf55489231ccdddb188ad66a150e2aecfe848ce71d21e8"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 260,
+  "remainingTopics": 252,
+  "nextTopicNameKey": "metabolic alkalosis",
+  "rows": [
+    {
+      "topicNameKey": "lung abscess",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d8f9a7200c79adf80f45223dc87b3666d86709c3613aa4b43dc380cc5e13e150"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Lung abscess morphology and complications",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "lymphadenopathy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f22859e5664a9ee64b8a47d1229c53e9b15ba116091e20deb352c53574affa95"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Infectious, reactive and malignant lymphadenopathy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "malabsorption",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0258fc0d522a8820c3a40da696208a5811784250b7cb8938897cce08d6066ce4",
+        "nmc-2024-ref:0d7a22e04abe70fcd38761f0f0f1bfb1bcd5432d354fd88ef11c4c577c05c2d0"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930"
+      ],
+      "scopeComparison": "Malabsorption mechanisms, clinical care and laboratory assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "mastoidectomy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3c577d3987421d8792845d06395595f97d2eb1a32bd7e427622ee07090f28f95"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Observed mastoidectomy and surgical landmarks",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medical certification",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:56e24522f8b4084b3b7025d826183d6190864197e5c0ce215984626dfd64ef45"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Medical certification and verifiable findings",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medical negligence",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ac1c133a347eab0c2c0b0129a3fd91795bfdc22ae6a7187bc642bee051973fdd"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Medical negligence categories and evidentiary assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medical register",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bfb7628fd41bcb46ade0a80e863e73b251315285fa3ea0a4cb37aa13997783d0"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Medical registration and practitioner verification",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medical testimony",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fbb9a18355017d1bc32e964c089ca681ca49cdcd3d50d88a27566e5b694e622b"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:53bf8a71b13bc362e1bdc8d5cae034b41b6be2563dc28513c47cfcd1548ca00d"
+      ],
+      "scopeComparison": "Medical witness testimony and court procedure",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medicine requirement calculation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8636c1bfdb8edf69f9407dd05242ae4c5180ca6e794f3a5709fdff40299a9516"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Essential medicine demand and stock calculation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "medico-legal reporting",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b68bcfd663f290272200698f6c5c832f6c5cf4d73ff04342ac83cbc12bca6bda"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:97fae85bea59994b11695a9cafd29c2a7e8252cd727d99659cab676eeed30af4",
+        "nmc-2024-ref:a0653defdcd7fa666e501736c9dd267ffd9f276b8fcd05ebf29a5c9b73a177e6"
+      ],
+      "scopeComparison": "Medico-legal report writing and evidence custody",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "megaloblastic anaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1410fca4088b10a3809fe86cfdb8ec87baf7f6a9c7e0dddce54b04afa715fa3b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Megaloblastic and other macrocytic anaemia patterns",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "membrane excitability",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6650cd73c53582617f4860f8f5e55de87f7cc5b44d4264e7b68a26a8ea3d2109"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Resting membrane potential and nerve action potentials",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ménière disease",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e9ef29236ddc9ff503ef73396aac4c6d44c11af8d5d441e2e678b3697ef751c4"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Ménière disease recognition and assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "menopausal transition",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d205fa50e1a2e6669f1843e3f41fea0576051ac8f3870254dc9080eafe4ffc64"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:672e00a5b58689e096159da340f2abb020944f3d97b4c2b3bb8e4c28f0141e2a"
+      ],
+      "scopeComparison": "Ovarian function and hormonal feedback across menopause",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "menopause",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:672e00a5b58689e096159da340f2abb020944f3d97b4c2b3bb8e4c28f0141e2a"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:d205fa50e1a2e6669f1843e3f41fea0576051ac8f3870254dc9080eafe4ffc64"
+      ],
+      "scopeComparison": "Menopausal physiology and symptom management",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "menstrual cycle",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e8fb9c66fae93c9c459b7c6ff44dc5c220ffb8f54745baf30ef7d0ca8e3efa3a"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Ovarian and uterine cycles and hormonal feedback",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "mental status examination",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d79536a0246f0d34e0177b91ce1c49d6b993a043ecd0f1255793a73efb766ad9"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Structured mental status examination",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "metabolic acidosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0a765a5719b866fe4d02a9dbe1bc1dfcfde191c2741b41f879f4ea87a22e3a2f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Metabolic acidosis causes and laboratory patterns",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}
