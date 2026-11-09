@@ -1,3 +1,13 @@
+## Standalone shortlist source comparison
+
+Checked 2026-11-09T04:39:19.289Z on PR #415. Comparison commit fcb21eaef768ad86d5ec086432e6b82ae6134f1c.
+
+Compared all 11 shortlisted pairs against linked draft tasks. Recorded three shared identity proposals, two pair-level emergency context facet proposals, five distinct scopes and one unresolved ocular scope. All source objectives and bindings remain separate and pending. Verified source-reference accounting and exact remote readback. Full repository checks were not run.
+
+Next check the three proposed names against existing canonical records and reconcile the two emergency IV comparisons into one context proposal. Keep the ocular scope unresolved until its source boundary is established.
+
+---
+
 ## Standalone topic pair triage
 
 Checked 2026-11-09T04:37:47.608Z on PR #415. Triage commit dc8d97dd6fbfdc07964ae867525b592c501b7935.
