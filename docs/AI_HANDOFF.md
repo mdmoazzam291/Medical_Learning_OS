@@ -1,3 +1,13 @@
+## Consolidated names-only NMC proposal inventory
+
+Checked 2026-11-09T05:22:02.088Z on PR #415 from fb7f06513577a44c2140fde6cdcaea45f07e5746.
+
+Reconciled 25 exact-label proposals and five semantic-screening proposals. Verified 30 distinct normalized names and 75 distinct source references including the emergency IV context. No cross-cohort merge was proposed after comparing scopes. The ocular relationship and emergency IV context are retained. Bindings remain pending. Full repository checks were not run.
+
+Next review the variant-disposition cohort against this inventory and preserve any unresolved scope differences.
+
+---
+
 ## Exact-label names-only proposals
 
 Checked 2026-11-09T05:20:20.957Z on PR #415 from 38775ab941c03249ff9fa62392472f0d61d29c7d.
