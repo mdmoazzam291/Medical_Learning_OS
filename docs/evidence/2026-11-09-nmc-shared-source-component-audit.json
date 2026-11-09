@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "checkedHead": "da807dcc73108f41325a23fa37eb5afc1f799262",
+  "lineageBlobSha": "f3d3ac1af6a44448d6f35deb34f934b99b49c9be",
+  "catalogueBlobSha": "4e042cc674fb29ad610d3d82aecb65f9c3e0286c",
+  "verifiedLinkRecords": 146,
+  "distinctVerifiedReferences": 132,
+  "shared": [
+    {
+      "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+      "code": "AN3.1",
+      "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+      "sourceBodySha256": "d0db9d647566a52c58b92431651afefb510e532e90a8af4f4826fa477c71a99e",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "Cardiac muscle",
+          "scope": "Tissue-type classification only for cardiac and smooth muscle. Detailed muscle description applies to skeletal muscle."
+        },
+        {
+          "name": "Smooth muscle",
+          "scope": "Tissue-type classification only for cardiac and smooth muscle. Detailed muscle description applies to skeletal muscle."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+      "code": "AN67.2",
+      "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "sourceBodySha256": "d4dbf79b5a00a72708bf8b358b757d5a41084eda36e88c9ac7d278ad7e8766b7",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "Cardiac muscle",
+          "scope": "Compare tissue organization, contraction and role for the named muscle type."
+        },
+        {
+          "name": "Smooth muscle",
+          "scope": "Compare tissue organization, contraction and role for the named muscle type."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+      "code": "GM5.4",
+      "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+      "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "Alcohol-related cirrhosis",
+          "scope": "Named stage and clinical progression."
+        },
+        {
+          "name": "Alcohol-related hepatic steatosis",
+          "scope": "Named stage and clinical progression."
+        },
+        {
+          "name": "Alcohol-related hepatitis",
+          "scope": "Named stage and clinical progression."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+      "code": "PA24.4",
+      "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "Alcohol-related cirrhosis",
+          "scope": "Named stage and representative morphology within the progression."
+        },
+        {
+          "name": "Alcohol-related hepatic steatosis",
+          "scope": "Named stage and representative morphology within the progression."
+        },
+        {
+          "name": "Alcohol-related hepatitis",
+          "scope": "Named stage and representative morphology within the progression."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+      "code": "AN54.1",
+      "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+      "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "CT imaging",
+          "scope": "Named modality and image-generation principles."
+        },
+        {
+          "name": "MRI imaging",
+          "scope": "Named modality and image-generation principles."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+      "code": "RD1.1",
+      "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+      "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2",
+      "mode": "performance-and-knowledge",
+      "components": [
+        {
+          "name": "CT imaging",
+          "scope": "Named modality principles, hazards and suitability."
+        },
+        {
+          "name": "MRI imaging",
+          "scope": "Named modality principles, hazards and suitability."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+      "code": "PA13.4",
+      "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5",
+      "mode": "performance-and-knowledge",
+      "components": [
+        {
+          "name": "Differential leucocyte count",
+          "scope": "Named laboratory measurement or differential only."
+        },
+        {
+          "name": "Haemoglobin estimation",
+          "scope": "Named laboratory measurement or differential only."
+        },
+        {
+          "name": "Red cell count",
+          "scope": "Named laboratory measurement or differential only."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+      "code": "PY2.11",
+      "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+      "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+      "mode": "performance-and-knowledge",
+      "components": [
+        {
+          "name": "Differential leucocyte count",
+          "scope": "Named practical measurement or differential only; retain other assays and indices separately."
+        },
+        {
+          "name": "Haemoglobin estimation",
+          "scope": "Named practical measurement or differential only; retain other assays and indices separately."
+        },
+        {
+          "name": "Red cell count",
+          "scope": "Named practical measurement or differential only; retain other assays and indices separately."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+      "code": "BC10.7",
+      "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+      "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "FISH",
+          "scope": "Named molecular method, mechanism, applications and limits."
+        },
+        {
+          "name": "PCR",
+          "scope": "Named molecular method, mechanism, applications and limits."
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+      "code": "AN75.5",
+      "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+      "mode": "knowledge",
+      "components": [
+        {
+          "name": "FISH",
+          "scope": "Named genetic test purpose and selection."
+        },
+        {
+          "name": "PCR",
+          "scope": "Named genetic test purpose and selection."
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "mappingAccepted": false,
+  "next": "Integrate the component-qualified links into the draft projection and validate that navigation headings, aliases and held entries remain separate."
+}
