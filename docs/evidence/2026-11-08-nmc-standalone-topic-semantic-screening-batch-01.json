@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "reviewedTopics": 16,
+  "remainingTopics": 496,
+  "nextTopicNameKey": "allergic rhinitis",
+  "rows": [
+    {
+      "topicNameKey": "12-lead ecg",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:bcf25c85eb3b2f88a284cb40b1ba7ae9e8c704815d5673740c68a5e8946db5fd"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:29884fa47f8bb6236984cc80e1e5de68d0b8a6f72c64decfe469958fcfa66388",
+        "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf",
+        "nmc-2024-ref:a8aad58d590340efdca756dbb75607a40d171f50fba763060af729bcc99c2aa8"
+      ],
+      "scopeComparison": "Shared ECG recording scope. Preserve normal tracing, suspected coronary disease and simulated hypertension contexts.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "abdominal pain",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:356c2f6cff054d6a6a846772eb7b9ac85183f55027fe773b51fa28b899e2f89e"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain symptom-based paediatric assessment. No alternate label selected in this review.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "abnormal uterine bleeding",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1e1710841e8eb4bd75fd7492c31b75c725644478c152a4d84309c48834799b13"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain uterine bleeding assessment. No alternate label selected in this review.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acid–base interpretation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b749ac0285ce32e7ff94991fe0076054c56ccd6d240d7b097ba7d8e4c603a3e0"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f"
+      ],
+      "scopeComparison": "Related acid–base scope. Preserve ABG interpretation separately from regulation and broader electrolyte disturbances.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acute febrile illness",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9efa08cc8d3cc9abe55d67dbc216142644e551e8d65a0125fc5550d33507c232"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+      ],
+      "scopeComparison": "Vector-borne illness is a narrower context than staged assessment of undifferentiated fever.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acute hiv",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:74aea76cdf7f082d77748d71162c8e013c4dc8b759bafd7ed94311d9b2661593"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain acute seroconversion recognition and differential as a distinct scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acute liver failure",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:341964f33036074bff3d8e77ed82b5cbc190b3f6b955f28ddedb73614364ae54"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain simulated acute liver failure recognition and urgent referral scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acute lymphoblastic leukaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e3338738f6c606c44e80f0ea0cd05c3dfc709552b878c24b754a2c43b7de65e3"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain the specific leukaemia subtype and specialist pathway.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "acute tubular injury",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7dcea39ab52a27d4676105172f5619d6479aad9be69f61cac85bbde3eb86797d"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain tubular pathology and clinical course as a distinct scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "adductor canal",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:79d5cd2de126b412bba5c0e08f71e3d8869384d15a9ef69d19ba3d2a52e12dee"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain model-based canal boundaries and contents.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "adherence counselling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1a30b9ada6f982c66b96e97c66c9ebb8d0787b5f0c0bd7930ce5d9fc87954894"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+        "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10"
+      ],
+      "scopeComparison": "Shared adherence conversation candidate. Preserve medication planning and separate chronic disease scenarios.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "adrenal insufficiency",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:07fca23f980d2ee7eb72856d20dec143629a21029e389fa729e5132d690bc8e1"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain primary versus central adrenal insufficiency scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "adverse reactions",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:024daf5da54ad59f225f1247f5387f4d7fa07c4474eb923c950ea06e89b3812a"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain suspected reaction classification and causality assessment.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ageing",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9ddcd02eb746b32535ae80cb5efaa5de090549366e3482003c9d625cf4392375"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767"
+      ],
+      "scopeComparison": "Organ reserve and oxidative stress are related to cellular ageing but have distinct objectives.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "airway maintenance",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7c4f967f379db0700eb70ec82a34de1be32bcfd874ae1960dfdf2f4abbb4602c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain mannequin airway maintenance and reassessment scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "alcohol metabolism",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain biochemical ethanol metabolism and redox scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}
