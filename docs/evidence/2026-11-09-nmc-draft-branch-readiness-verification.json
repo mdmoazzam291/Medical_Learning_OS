@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "a2ca3d807fc49e9c1758ee750d10c28611835f95",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-projection-verification.json",
+      "blobSha": "7d2d4efb08728283f17766f36df50b6cc08f922f"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json",
+      "blobSha": "4bcabb896a8fecdedcc18fee1c5169d7f4d09296"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-source-exception-alias-and-heading-review.json",
+      "blobSha": "41b056604be11777b266b12683584b4da7e814d8"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-source-exception-heading-and-psychiatry-check.json",
+      "blobSha": "98c9c892fe1c6285543eb2a2d8eba85e165005ac"
+    }
+  ],
+  "completionReporter": {
+    "schemaVersion": 1,
+    "sourceEdition": "nmc-cbme-2024-09-12",
+    "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+    "draftVersion": "mbbs-foundation:original-objectives@4",
+    "evidenceScope": "repository-drafts-only",
+    "productionStateVerified": false,
+    "adminApprovalRequired": false,
+    "sourceAccountingComplete": true,
+    "foundationComplete": false,
+    "totals": {
+      "appearances": 2634,
+      "withProposedObjectives": 11,
+      "withDraftArtifactBindings": 3,
+      "historicalDeletions": 1
+    }
+  },
+  "metadata": {
+    "provisionalAliases": [
+      {
+        "alias": "BC14.1",
+        "referenceId": "nmc-2024-ref:7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+        "review": "proposed-search-alias-inferred"
+      },
+      {
+        "alias": "PA29.1",
+        "referenceId": "nmc-2024-ref:9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+        "review": "proposed-search-alias-punctuation"
+      },
+      {
+        "alias": "MI8.3",
+        "referenceId": "nmc-2024-ref:7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+        "review": "proposed-search-alias-inferred"
+      },
+      {
+        "alias": "FM2.12",
+        "referenceId": "nmc-2024-ref:a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+        "review": "proposed-search-alias-punctuation"
+      },
+      {
+        "alias": "OR2.9",
+        "referenceId": "nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+        "review": "proposed-search-alias-inferred"
+      },
+      {
+        "alias": "AS5.4",
+        "referenceId": "nmc-2024-ref:26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+        "review": "proposed-search-alias-inferred"
+      }
+    ],
+    "provisionalHeadings": [
+      {
+        "name": "Pancreatic disorders",
+        "referenceIds": [
+          "nmc-2024-ref:af976ff499dc2d79b35da2cb05691d32c5cd54abcfa367c460798bd81de2cdf1",
+          "nmc-2024-ref:df5d0fb4296539b3c0d8df0425c8ce5aec8b9c08c81454adc4b5a17550b0a0b5",
+          "nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319"
+        ]
+      },
+      {
+        "name": "Vascular and lymphatic disorders",
+        "referenceIds": [
+          "nmc-2024-ref:afde2dbbb31f9c9a938c96cac43b36876618c0948669dcabc97a45fe2a501d77",
+          "nmc-2024-ref:cd91cb9cc687c595b75c76061465cbc3445a387e7b95502416e7a77fd103aaa9",
+          "nmc-2024-ref:e5579dc23d48cebd3b3ac0dbdd4d4d42635c76185c3015f63fffb7da94234178",
+          "nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+          "nmc-2024-ref:97fa0972606477d89b208643ca1920d3da7c1257131828ea2eeabc9aa84fdd67",
+          "nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+          "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+          "nmc-2024-ref:0dd1c053ec1f7ebe7ec74246257adaaba9d2b06d17838cfeb9621857df2cc0b5"
+        ]
+      }
+    ],
+    "heldAlias": {
+      "printedCode": "PS 2.1*",
+      "alias": "PS2.1",
+      "decision": "hold",
+      "reason": "Official curriculum and compendium reproduce the mark. Its meaning was not verified.",
+      "sources": [
+        "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+        "https://www.nmc.org.in/MCIRest/open/getDocument?path=%2FDocuments%2FPublic%2FPortal%2FE_Compendium_of_NMC_2024%2F10.+Curriculum.pdf"
+      ]
+    }
+  },
+  "mappingAccepted": false,
+  "next": "Check whether the names-only projection can be previewed through existing Foundation navigation without publishing provisional metadata."
+}
