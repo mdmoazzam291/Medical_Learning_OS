@@ -1,3 +1,13 @@
+## Mixed cross-cohort names and context leads
+
+Checked 2026-11-09T06:32:04.652Z on PR #415 from 97f1c6cc7f6a331f7f3c8afb2255cb8bc63136cd.
+
+Compared 57 mixed leads with consolidated labels and exact source-index entries. Routed Urinary tract infection to the existing Urinary infection proposal while preserving its distinct source scope. Traced four context leads to existing proposal records and kept parent scope pending. All bindings remain pending. Full repository checks were not run.
+
+Next verify the source tasks for the four context leads and resolve the shared-name candidates with existing source-index matches before adding names.
+
+---
+
 ## Mixed names-only registry and scope reconciliation
 
 Checked 2026-11-09T06:28:46.335Z on PR #415 from 5843ce3566aadccf15449815f3ebbae71725dd59.
