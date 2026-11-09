@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 25
+
+Checked 2026-11-09T04:18:17.870Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 392db5aa40721181b921fae5a4bebe37f0628fa6.
+
+Screened 18 names from Social psychology through Submandibular region against 19 linked draft tasks. Preserved both Status epilepticus references and compared specimen handling, splenectomy, statistical analysis and submandibular scopes. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 440 of 512 topics. Resume at suboccipital triangle with 72 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 24
 
 Checked 2026-11-09T04:16:04.333Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit c0822e886bf79e89a3082ce06b73591a3f386846.
