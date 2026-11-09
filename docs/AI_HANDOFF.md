@@ -1,3 +1,13 @@
+## Standalone canonical registry readback
+
+Checked 2026-11-09T04:43:16.797Z on PR #415. Evidence commit 9c9d2f2fce5c80e722e1ade0abe3b43b2ac6bd03.
+
+Read-only production lookup found no matches for the three proposed identities across the published catalogue, accepted registry and saved draft revisions under the recorded terms. All bindings remain pending. Verified exact remote readback. Full repository checks were not run.
+
+Next prepare three names-only identity proposals with separate source-objective references and the emergency IV context facet.
+
+---
+
 ## Standalone identity reconciliation
 
 Checked 2026-11-09T04:40:38.619Z on PR #415. Reconciliation commit 1e9a6b76c52cb3021f6664285b452505f2d932b7.
