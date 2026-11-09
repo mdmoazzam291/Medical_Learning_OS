@@ -1,3 +1,13 @@
+## Five names-only NMC variant proposals
+
+Checked 2026-11-09T05:35:48.551Z on PR #415 from 72bfec1f1dad2d89e67a407feba5e20932ff25f2.
+
+Prepared five provisional names and two proposed aliases. Verified all five distinct source IDs and competency codes against the pinned catalogue. Preserved Cause of death as a separate scope from certification. Objective versions and bindings remain pending. Full repository checks were not run.
+
+Next reconcile the five proposals and aliases with the 32-name inventory, then account for the remaining distinct-scope variants.
+
+---
+
 ## Five NMC reuse leads registry preflight
 
 Checked 2026-11-09T05:33:58.720Z on PR #415 from 404d383eab518f55212288c9aa9a33d696ee8f83.

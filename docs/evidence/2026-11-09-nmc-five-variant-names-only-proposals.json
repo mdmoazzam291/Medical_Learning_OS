@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-five-variant-reuse-leads-preflight.json",
+      "blobSha": "7f371bbccdba33af50dff2f7c62aafce5f125612"
+    },
+    {
+      "path": "data/nmc-reference-catalogue.json",
+      "blobSha": "4e042cc674fb29ad610d3d82aecb65f9c3e0286c"
+    }
+  ],
+  "identities": [
+    {
+      "name": "Rheumatic fever",
+      "proposedAliases": [],
+      "sourceNameKey": "acute rheumatic fever",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c",
+          "competencyCode": "PE22.4",
+          "objectiveVersionId": null
+        }
+      ],
+      "reviewIndex": 2,
+      "distinctScopeComparisons": [],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Attention-deficit/hyperactivity disorder",
+      "proposedAliases": [
+        "ADHD"
+      ],
+      "sourceNameKey": "adhd",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75",
+          "competencyCode": "PE4.1",
+          "objectiveVersionId": null
+        }
+      ],
+      "reviewIndex": 4,
+      "distinctScopeComparisons": [],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Medical cause-of-death certification",
+      "proposedAliases": [
+        "Cause of death certification"
+      ],
+      "sourceNameKey": "cause of death certification",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937",
+          "competencyCode": "FM2.2",
+          "objectiveVersionId": null
+        }
+      ],
+      "reviewIndex": 8,
+      "distinctScopeComparisons": [
+        {
+          "reviewIndex": 7,
+          "sourceNameKey": "cause of death certification",
+          "candidateName": "Cause of death",
+          "disposition": "related-distinct-scope"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peptic ulcer",
+      "proposedAliases": [],
+      "sourceNameKey": "peptic ulcer disease",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f",
+          "competencyCode": "PA23.3",
+          "objectiveVersionId": null
+        }
+      ],
+      "reviewIndex": 23,
+      "distinctScopeComparisons": [],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Population sex ratio",
+      "proposedAliases": [],
+      "sourceNameKey": "sex ratio",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166",
+          "competencyCode": "CM9.3",
+          "objectiveVersionId": null
+        }
+      ],
+      "reviewIndex": 30,
+      "distinctScopeComparisons": [],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    }
+  ]
+}
