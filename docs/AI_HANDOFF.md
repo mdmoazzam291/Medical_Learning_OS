@@ -1,3 +1,13 @@
+## Mixed reuse and consolidated name overlap
+
+Checked 2026-11-09T06:20:29.315Z on PR #415 from 6bce1f919113c70969c0830bc2014c9e39cd1468.
+
+Compared all 60 mixed reuse leads with the 58-name inventory and its aliases and contexts. Found 3 label matches, 0 leads sharing occurrence evidence, and 3 sharing target evidence. Preserved existing scope dispositions. Bindings remain pending. Full repository checks were not run.
+
+Next inspect overlapping leads against their exact source tasks before recording reuse or distinct scope.
+
+---
+
 ## NMC names-only completion audit
 
 Checked 2026-11-09T06:18:13.386Z on PR #415 from d5f63c5f0c74838b6d476ad0ee5415476e84f914.
