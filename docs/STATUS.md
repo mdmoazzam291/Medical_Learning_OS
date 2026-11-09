@@ -1,3 +1,13 @@
+## NMC distinct-scope routing
+
+Checked 2026-11-09T05:39:30.919Z on PR #415 from d6cfb3e9cb1589dc389c2632ddad8078aa1451c8.
+
+Grouped 28 comparisons across 24 source topics and recorded provisional routing. Kept acute suppurative otitis media open for direct source comparison with acute otitis media. All bindings remain pending. Full repository checks were not run.
+
+Next compare the acute otitis media source tasks and check the separately routed concept names against the registry.
+
+---
+
 ## NMC names-only inventory and remaining scope accounting
 
 Checked 2026-11-09T05:37:37.112Z on PR #415 from d50f50abd785c90224c237caa24aea63b9a3f448.
