@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 10
+
+Checked 2026-11-09T03:31:34.697Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit ff32f1884a7dd2ff7a0a58614481a4f53bbfa012.
+
+Screened 18 topic names from Fetal age assessment through Glucose estimation against 18 linked draft tasks. Recorded comparison leads for flexor retinaculum and carpal tunnel syndrome, genetic counselling and Down syndrome, and glucose estimation and capillary glucose. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 170 of 512 topics. Resume at Glucose self-monitoring with 342 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 09
 
 Checked 2026-11-09T03:30:13.744Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 9280f8b441575630fcaeeb0db09334aeb92ce18a.
