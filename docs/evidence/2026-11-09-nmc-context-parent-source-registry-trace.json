@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "83831aa0aa5b56ba625145f07d6bd388d2834fe5",
+  "inputs": [
+    "docs/evidence/2026-11-09-nmc-context-parent-reconciliation.json",
+    "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+    "docs/evidence/2026-11-08-nmc-standalone-topic-variant-scope-review.json"
+  ],
+  "parents": [
+    {
+      "name": "Blood culture",
+      "contexts": [
+        "Blood culture collection"
+      ],
+      "indexedAppearances": [],
+      "leadInventoryPaths": [
+        "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json"
+      ],
+      "route": "verify-home-proposal-scope",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Research ethics",
+      "contexts": [
+        "Clinical research ethics"
+      ],
+      "indexedAppearances": [],
+      "leadInventoryPaths": [
+        "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+        "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-20.json"
+      ],
+      "route": "verify-home-proposal-scope",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug information",
+      "contexts": [
+        "Drug information in media"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+          "subjectId": "pharmacology",
+          "code": "PH10.1",
+          "pdfPage": 183,
+          "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Basic life support",
+      "contexts": [
+        "Paediatric basic life support"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+          "subjectId": "anaesthesia",
+          "code": "AS2.1",
+          "pdfPage": 452,
+          "packet": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        },
+        {
+          "referenceId": "nmc-2024-ref:2757f0e6f07d4b93dcdd21f907d626bf0ee380920aff0f6c4683b230afef8ef4",
+          "subjectId": "physiology",
+          "code": "PY12.10",
+          "pdfPage": 160,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        },
+        {
+          "referenceId": "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+          "subjectId": "medicine",
+          "code": "GM2.22",
+          "pdfPage": 285,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [
+        "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+        "docs/evidence/2026-11-08-nmc-name-role-proposals.json"
+      ],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pain assessment",
+      "contexts": [
+        "Joint pain assessment",
+        "Cancer pain assessment"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+          "subjectId": "anaesthesia",
+          "code": "AS8.2",
+          "pdfPage": 454,
+          "packet": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Posterior triangle",
+      "contexts": [
+        "Posterior triangle muscles"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+          "subjectId": "anatomy",
+          "code": "AN29.1",
+          "pdfPage": 126,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Public health",
+      "contexts": [
+        "Recent public health events"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+          "subjectId": "community-medicine",
+          "code": "CM1.1",
+          "pdfPage": 269,
+          "packet": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle",
+      "contexts": [
+        "Skeletal muscle contraction"
+      ],
+      "indexedAppearances": [],
+      "leadInventoryPaths": [
+        "docs/evidence/2026-11-08-nmc-missing-home-proposals.json"
+      ],
+      "route": "verify-home-proposal-scope",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary infection",
+      "contexts": [
+        "Urinary infection in pregnancy"
+      ],
+      "indexedAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+          "subjectId": "surgery",
+          "code": "SU29.3",
+          "pdfPage": 411,
+          "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "leadInventoryPaths": [
+        "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json"
+      ],
+      "route": "reuse-source-backed-name-proposal",
+      "mappingAccepted": false
+    }
+  ],
+  "registryReadback": {
+    "results": [
+      {
+        "scope": "published",
+        "records": 1,
+        "matches": 0,
+        "version": 448
+      },
+      {
+        "scope": "draft revision",
+        "records": 20,
+        "matches": 0,
+        "version": 448
+      },
+      {
+        "scope": "accepted",
+        "records": 12,
+        "matches": 0,
+        "version": 448
+      }
+    ],
+    "fields": [
+      "ID",
+      "label",
+      "title",
+      "aliases"
+    ],
+    "termFamilies": [
+      "Blood culture",
+      "Research ethics",
+      "Drug information",
+      "Basic life support",
+      "Pain assessment",
+      "Posterior triangle",
+      "Public health",
+      "Skeletal muscle",
+      "Urinary infection",
+      "BLS",
+      "UTI",
+      "pain evaluation"
+    ]
+  }
+}

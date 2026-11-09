@@ -1,3 +1,13 @@
+## NMC context parent source and registry trace
+
+Checked 2026-11-09T05:59:58.198Z on PR #415 from 83831aa0aa5b56ba625145f07d6bd388d2834fe5.
+
+Traced nine parent names for ten contexts. Six have exact source-index appearances and three have home-proposal leads. Live registry returned zero matches for tested terms. Bindings remain pending. Full repository checks were not run.
+
+Next inspect the three home-proposal scopes and assemble supported parent names with separate context references.
+
+---
+
 ## NMC procedure and narrower context parent reconciliation
 
 Checked 2026-11-09T05:55:11.118Z on PR #415 from e5d901166fe1735fb72745ef6bde05ff931189dd.
