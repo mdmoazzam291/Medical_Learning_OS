@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "status": "preflight-only",
+  "manifestPath": "docs/evidence/2026-11-09-nmc-names-only-draft-binding-manifest.json",
+  "manifestBlobSha": "a5d327b29a929dcf870672d9f4296ab693e05139",
+  "contractPath": "src/domain/nmc-learning-foundation.js",
+  "contractBlobSha": "d804e0d6f2f4cc176f406063fcedb1026d3e8a9d",
+  "prerequisites": [
+    "Resolve each proposed name to a canonical concept identity and capture its identity digest.",
+    "Resolve a distinct source-specific objective version for each row and include it in the validated objective registry.",
+    "Verify each reference is standard, has a topic and has no amendment notice against the exact reference catalogue edition and source digest.",
+    "Choose a supported basis per row and supply the named concept and exact source coordinates and hash in a proposed binding.",
+    "Keep source alignment, clinical approval and learner activation separate from draft validation."
+  ],
+  "candidates": [
+    {
+      "referenceId": "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+      "code": "GM10.15",
+      "proposalName": "Arterial blood gas sampling",
+      "contextName": null,
+      "sourcePage": 298,
+      "rowBBox": [
+        44.2,
+        527.52,
+        102.7,
+        547.44
+      ],
+      "sourceBodySha256": "725aa8c12ec1d12803190fa05357b246fb4a2acf43b474d7de7b728347e0ff41",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+      "code": "GM3.8",
+      "proposalName": "Arterial blood gas sampling",
+      "contextName": null,
+      "sourcePage": 286,
+      "rowBBox": [
+        44.2,
+        458.34,
+        102.7,
+        489
+      ],
+      "sourceBodySha256": "a9a0d0331eaa649d5ffa1ca495d2cf91459c595fe4447d44cd3c3a63cbb20933",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f",
+      "code": "OG34.1",
+      "proposalName": "Endometrial carcinoma",
+      "contextName": null,
+      "sourcePage": 439,
+      "rowBBox": [
+        49.1,
+        422.16,
+        103.1,
+        465
+      ],
+      "sourceBodySha256": "1a2d3f7c62bb59845ca9de3d0abbd9b75f46bd44a9ecf475b0f1e97294ff19e4",
+      "sourceDraftMode": "knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+      "code": "PA29.2",
+      "proposalName": "Endometrial carcinoma",
+      "contextName": null,
+      "sourcePage": 200,
+      "rowBBox": [
+        51.5,
+        238.2,
+        105.6,
+        276
+      ],
+      "sourceBodySha256": "c9f5a9e41ea60424ab830406443dd74e3aa12e1260d3a9fdd6d8243e1a7eecdf",
+      "sourceDraftMode": "knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+      "code": "PE15.3",
+      "proposalName": "Peripheral IV cannulation",
+      "contextName": null,
+      "sourcePage": 335,
+      "rowBBox": [
+        51.3,
+        392.52,
+        103.1,
+        409.68
+      ],
+      "sourceBodySha256": "2a8c44e3a7f0f26bf5e4dba2ceb82fe7b6d310b2a6475a58ad03ac12fd471a64",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+      "code": "AS9.1",
+      "proposalName": "Peripheral IV cannulation",
+      "contextName": null,
+      "sourcePage": 455,
+      "rowBBox": [
+        46.7,
+        178.86,
+        98.5,
+        196.98
+      ],
+      "sourceBodySha256": "91bc2c9da2aba14fc3dca1e02db3a96aee4b131c732b34fd7f3b34ee7b4f585a",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+      "code": "PE23.10",
+      "proposalName": "Peripheral IV cannulation",
+      "contextName": null,
+      "sourcePage": 342,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        79.98
+      ],
+      "sourceBodySha256": "716dfa44a6ceff214d5e8f4f73343833cfdbd34e26ef4285edea7706b08e25a0",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+      "code": "OP3.6",
+      "proposalName": "Ocular foreign body",
+      "contextName": null,
+      "sourcePage": 415,
+      "rowBBox": [
+        49.5,
+        381.72,
+        103.5,
+        413.28
+      ],
+      "sourceBodySha256": "fb05a6eaface078203cd53e55f9c49d3301e95e2645acfd1b16143685097d4b9",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+      "code": "OP4.9",
+      "proposalName": "Corneal foreign body",
+      "contextName": null,
+      "sourcePage": 416,
+      "rowBBox": [
+        49.5,
+        240.9,
+        103.5,
+        271.26
+      ],
+      "sourceBodySha256": "f7b04b01407ce932dc0dffe6c3fd4c978140254b23ebbd9c11aa41a8e1e09d7f",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+      "code": "PE24.13",
+      "proposalName": "Peripheral IV cannulation",
+      "contextName": "Emergency peripheral IV access",
+      "sourcePage": 343,
+      "rowBBox": [
+        51.3,
+        497.1,
+        103.1,
+        529.68
+      ],
+      "sourceBodySha256": "6a12fabeb3c3be4c94ac3152147195cb462985fe0fcc38b08215d0cd290d0524",
+      "sourceDraftMode": "performance-and-knowledge",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "status": "pending"
+    }
+  ]
+}

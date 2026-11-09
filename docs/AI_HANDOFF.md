@@ -1,3 +1,13 @@
+## Names-only binding contract preflight
+
+Checked 2026-11-09T05:01:56.674Z on PR #415 from 8fef950717e5dcfc97bd6047aaba4d1ae1ccca23.
+
+Compared all ten candidates with the Foundation draft binding contract and verified source-row evidence. The evidence manifest is preflight metadata. Every candidate still needs a resolved canonical identity and a distinct objective version. No runtime bindings were submitted. Full repository checks were not run.
+
+Next run a read-only exact catalogue and objective inventory check for all ten references to distinguish missing versions from versions already available elsewhere.
+
+---
+
 ## Draft names-only binding manifest
 
 Checked 2026-11-09T04:59:49.310Z on PR #415 from 59bdb0242291e4aecd70a3b0a24214ead4257a9f.
