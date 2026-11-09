@@ -1,3 +1,13 @@
+## Names-only objective-version gaps
+
+Checked 2026-11-09T05:15:02.429Z on PR #415 from 41e44ef843de10ef445cea8066e24c51f50df516.
+
+Checked the exact-link inventory plus Foundation draft and preparation objective registries. Recorded ten objective-version gaps within those checked inventories. No objective wording, IDs or bindings were created. Full repository checks were not run.
+
+Next return to the names-only worklist and reconcile the exact-label reuse cohort separately from objective authoring.
+
+---
+
 ## Names-only exact catalogue and objective inventory
 
 Checked 2026-11-09T05:11:31.055Z on PR #415 from 28d464789b4c8ad84a1b193af8ade6bcc28666c7.
