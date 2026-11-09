@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-22.json",
+    "sha256": "b3e9d27e3c71140bc16e46ea027ecc2e8297283803997cf6ab3d20252610837d"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 404,
+  "remainingTopics": 108,
+  "nextTopicNameKey": "screening evaluation",
+  "rows": [
+    {
+      "topicNameKey": "respectful maternity care",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b1bad4e0b8d1fcaf53b5b5b618221ff3e147102563b23a88ed0b0a2ffeaa31f6"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Consent, dignity and privacy in labour",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "respectful specimen handling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e20db5a56fcf4123da61aa8294ff6488ff502531819faf2f213236fc60c6ce51"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Observed cadaver and tissue handling",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "respiratory acidosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e146fde8d04565802ebfc4863d6bffb445b5ed853ae6f0dd2d89508338ce0d79"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:00cfc026be395eee17591afc8bf3f371bbc2795a70ac187a07843dc5835df374"
+      ],
+      "scopeComparison": "Hypoventilation and respiratory acidosis patterns",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "respiratory alkalosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:00cfc026be395eee17591afc8bf3f371bbc2795a70ac187a07843dc5835df374"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:e146fde8d04565802ebfc4863d6bffb445b5ed853ae6f0dd2d89508338ce0d79"
+      ],
+      "scopeComparison": "Hyperventilation and respiratory alkalosis patterns",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "retinal vascular occlusion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0c0e15c6b92a4c12c906e999e129d08fce01f2393dda1a716518ee2cc6dcbb6d"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retinal arterial and venous occlusion",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "retinoblastoma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:510a2515b44ebc36d019781219922d18c2c8d0e13f423e8274aee49144c60b50"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "RB1 and retinoblastoma morphology",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "rheumatoid arthritis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:edbaf29e8cb219b444c0a06582792c9ef117737692c4a4f73b6c103b2d692dde"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Rheumatoid synovial injury and classification",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "safe surgery",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5c768f2829e26d916ddb95b2d60ba71b7b247ad7038916ab69534f56ec9410de"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Simulated surgical safety checks",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "safe vaccine practice",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a21430302a06fc62f965a105ae573ac6162c42d3457fa39058be30f317c5db8b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Vaccine counselling, injection safety and reporting",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "safety communication",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2073d77bbfa924ee053ee88d0ece313d77134a9050ebba1f8275052805eb2e6b"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:5c768f2829e26d916ddb95b2d60ba71b7b247ad7038916ab69534f56ec9410de"
+      ],
+      "scopeComparison": "Safety briefings, closed-loop communication and handovers",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "salivary secretion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:98a44c73076827a458d37974b5efa5c7ed0d309b3e2debc01e7f1c0c58c1f5c5"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Acinar and ductal salivary secretion",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "sample chain of custody",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:87afa0046bd268bf5a0e0d1988667121273e93f47bf6233ddb4586fb3f983944"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:b68bcfd663f290272200698f6c5c832f6c5cf4d73ff04342ac83cbc12bca6bda"
+      ],
+      "scopeComparison": "Sample preservation, labelling and custody",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "scabies",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:962d3e7e3f7311427ce15b4cf33cbf0d55ce7eb091d65abd9d8c78ca844ea43a"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Scabies treatment and contact management",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "scalp emissary veins",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:58e711b15936b416054519a27f276fd50f45eadc77a28c84c8b3d6422fb7a116"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:a9e7a9568e0a2b1090c6900059e4d627606031991b20133ad11824d7af0dc37f"
+      ],
+      "scopeComparison": "Scalp emissary venous connections",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "scalp layers",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a9e7a9568e0a2b1090c6900059e4d627606031991b20133ad11824d7af0dc37f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Scalp layers and neurovascular supply",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "scaphoid fracture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3143b84a5ff2c1edd238e86140bc2bc80bd054b39316e380a06d3599c65e20bb"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Scaphoid fracture and vascular supply",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "scene investigation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:88dfe291ffaff818b2c8db572a30d6c56a7250ab3e6bb2aabc7114e76fd98a17"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Forensic scene documentation and reconstruction",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "schizophrenia in primary care",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:dddc1e795842ed3d5ffb54600a56a823774caeefbc331de2d6b87390659738bd"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Psychosis assessment and referral in primary care",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}
