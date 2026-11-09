@@ -1,3 +1,13 @@
+## Exact-label NMC reuse reconciliation
+
+Checked 2026-11-09T05:16:47.073Z on PR #415 from 2c2ad12592a2faf19f61f5ee82f17e9fa29c2f50.
+
+Reconciled all 25 worklist rows to their source-scope reviews. All 25 are shared-name candidates with distinct source objectives. 0 have an exact normalized label or alias match in the historical registry snapshot. Full repository checks were not run.
+
+Next verify exact labels and synonyms against the current canonical registry before proposing reuse or new names.
+
+---
+
 ## Names-only objective-version gaps
 
 Checked 2026-11-09T05:15:02.429Z on PR #415 from 41e44ef843de10ef445cea8066e24c51f50df516.
