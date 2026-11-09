@@ -1,3 +1,13 @@
+## NMC procedure and narrower context parent reconciliation
+
+Checked 2026-11-09T05:55:11.118Z on PR #415 from e5d901166fe1735fb72745ef6bde05ff931189dd.
+
+Grouped 13 comparisons into ten context leads and verified 11 distinct catalogue references. 0 proposed parents appear in the 48-name inventory. Distinguished parent-scope evidence from context-scope evidence. All bindings remain pending. Full repository checks were not run.
+
+Next trace the missing parent names through the source inventories and canonical registry before proposing parent identities or adding contexts.
+
+---
+
 ## Consolidated 48-name NMC proposal inventory
 
 Checked 2026-11-09T05:53:25.615Z on PR #415 from 5f45e613ad43cce908b06a830fc366df8b8b80b6.
