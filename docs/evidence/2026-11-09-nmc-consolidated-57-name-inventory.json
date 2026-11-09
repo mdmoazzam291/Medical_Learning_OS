@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "68e21f6d78c10a8b565d2945ab472c47679f7cae",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-consolidated-48-name-inventory.json",
+      "blobSha": "e3d8c293fddceec2bfc903f06e83e950723b5a7a"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-context-parent-names-only-proposals.json",
+      "blobSha": "d677825e64f8a5ff1d607ee7ccc7d8ba9bd49402"
+    }
+  ],
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body",
+    "Fetal age estimation",
+    "Physiological vaginal discharge",
+    "Rheumatic fever",
+    "Attention-deficit/hyperactivity disorder",
+    "Medical cause-of-death certification",
+    "Peptic ulcer",
+    "Population sex ratio",
+    "Acute otitis media",
+    "Cause of death coding",
+    "Essential medicines list",
+    "External ear",
+    "Facial nerve palsy",
+    "Mucosal chronic otitis media",
+    "Otitis media with effusion",
+    "Recurrent pregnancy loss",
+    "Rheumatic heart disease",
+    "Squamosal chronic otitis media",
+    "Vitamin K deficiency bleeding",
+    "Blood culture",
+    "Research ethics",
+    "Drug information",
+    "Basic life support",
+    "Pain assessment",
+    "Posterior triangle",
+    "Public health",
+    "Skeletal muscle",
+    "Urinary infection"
+  ],
+  "aliases": [
+    {
+      "name": "Abnormal vaginal discharge",
+      "target": "Vaginal discharge"
+    },
+    {
+      "name": "ADHD",
+      "target": "Attention-deficit/hyperactivity disorder"
+    },
+    {
+      "name": "Cause of death certification",
+      "target": "Medical cause-of-death certification"
+    }
+  ],
+  "contexts": [
+    {
+      "name": "Emergency peripheral IV access",
+      "parentName": "Peripheral IV cannulation"
+    },
+    {
+      "name": "Radiographic age estimation",
+      "parentName": "Age estimation"
+    },
+    {
+      "name": "Acute suppurative otitis media",
+      "parentName": "Acute otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+          "competencyCode": "EN 4.3",
+          "objectiveVersionId": null
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood culture collection",
+      "parentName": "Blood culture",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 5,
+          "sourceNameKey": "blood culture collection",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26",
+              "competencyCode": "GM 1.20"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        },
+        {
+          "reviewIndex": 6,
+          "sourceNameKey": "blood culture sampling",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+              "competencyCode": "GM3.12"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Clinical research ethics",
+      "parentName": "Research ethics",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 10,
+          "sourceNameKey": "clinical research ethics",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169",
+              "competencyCode": "FM10.25"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        },
+        {
+          "reviewIndex": 11,
+          "sourceNameKey": "clinical research ethics",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169",
+              "competencyCode": "FM10.25"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug information in media",
+      "parentName": "Drug information",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 12,
+          "sourceNameKey": "drug information",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+              "competencyCode": "PH10.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paediatric basic life support",
+      "parentName": "Basic life support",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 20,
+          "sourceNameKey": "paediatric basic life support",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e",
+              "competencyCode": "PE24.21"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Joint pain assessment",
+      "parentName": "Pain assessment",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 21,
+          "sourceNameKey": "pain assessment",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+              "competencyCode": "AS8.2"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cancer pain assessment",
+      "parentName": "Pain assessment",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 22,
+          "sourceNameKey": "pain assessment",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+              "competencyCode": "AS8.2"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Posterior triangle muscles",
+      "parentName": "Posterior triangle",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 25,
+          "sourceNameKey": "posterior triangle",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+              "competencyCode": "AN29.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Recent public health events",
+      "parentName": "Public health",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 26,
+          "sourceNameKey": "public health",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+              "competencyCode": "CM1.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle contraction",
+      "parentName": "Skeletal muscle",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 31,
+          "sourceNameKey": "skeletal muscle contraction",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378",
+              "competencyCode": "PY3.7"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary infection in pregnancy",
+      "parentName": "Urinary infection",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 35,
+          "sourceNameKey": "urinary infection",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+              "competencyCode": "SU29.3"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        },
+        {
+          "reviewIndex": 36,
+          "sourceNameKey": "urinary infection in pregnancy",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:8bf82fcf516e08674cfa8ffdbdb5592a344837d96cb4547ffa7b748765ab28f4",
+              "competencyCode": "OG12.5"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "ocularRelationship": {
+    "type": "narrower-scope",
+    "from": "Corneal foreign body",
+    "to": "Ocular foreign body"
+  },
+  "distinctSourceReferences": 116,
+  "multipleRoleReferences": [
+    {
+      "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+      "roles": [
+        "parent:Drug information:indexed-parent-appearance",
+        "context:Drug information in media:parent-scope-evidence"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+      "roles": [
+        "parent:Pain assessment:indexed-parent-appearance",
+        "context:Joint pain assessment:parent-scope-evidence",
+        "context:Cancer pain assessment:parent-scope-evidence"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+      "roles": [
+        "parent:Posterior triangle:indexed-parent-appearance",
+        "context:Posterior triangle muscles:parent-scope-evidence"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+      "roles": [
+        "parent:Public health:indexed-parent-appearance",
+        "context:Recent public health events:parent-scope-evidence"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+      "roles": [
+        "parent:Skeletal muscle:parent-scope-facet-evidence:sensory muscle innervation",
+        "parent:Skeletal muscle:parent-scope-facet-evidence:motor muscle innervation"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+      "roles": [
+        "parent:Skeletal muscle:parent-scope-facet-evidence:skeletal muscle anatomy",
+        "parent:Skeletal muscle:parent-scope-facet-evidence:muscle attachments"
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+      "roles": [
+        "parent:Urinary infection:indexed-parent-appearance",
+        "context:Urinary infection in pregnancy:parent-scope-evidence"
+      ]
+    }
+  ],
+  "mappingAccepted": false
+}

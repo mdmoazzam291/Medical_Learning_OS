@@ -1,3 +1,13 @@
+## Consolidated 57-name NMC proposal inventory
+
+Checked 2026-11-09T06:06:31.668Z on PR #415 from 68e21f6d78c10a8b565d2945ab472c47679f7cae.
+
+Reconciled 57 names, three aliases and 13 contexts with 116 distinct source references. Verified normalized labels and parent links and recorded 7 references with multiple evidence roles. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the source-confirmed gestational naming decision with the consolidated inventory and verify final worklist disposition coverage.
+
+---
+
 ## NMC names-only context parent proposals
 
 Checked 2026-11-09T06:01:51.878Z on PR #415 from 340dd6098e08b3002590e01bac3eda3191014ba8.
