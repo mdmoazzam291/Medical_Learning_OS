@@ -603,9 +603,13 @@ try {
     await settleAdmin();
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
     assert.deepEqual(writes, [], 'Admin sidebar actions never change user access or content');
-    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/admin.html#owner-integrity', 'Catalog Integrity'], ['/web/admin.html#owner-source-watch', 'Source Change Watch'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
+    for (const [href, title] of [['/web/admin.html', 'Overview'], ['/web/content-import.html', 'Content Intake'], ['/web/review.html', 'Review Workspace'], ['/web/review.html?workspace=references', 'Reference Review'], ['/web/review.html?workspace=rights', 'Source Rights']]) {
       assert.equal(await page.locator('#mlos-local-nav a[href="' + href + '"]').count(), 1, title);
     }
+    await go(origin + '/web/admin.html#owner-content');
+    const diagnostics=page.getByRole('navigation',{name:'Content Diagnostics'});
+    await diagnostics.getByRole('link',{name:'Catalog Integrity',exact:true}).waitFor();
+    assert.equal(await diagnostics.getByRole('link',{name:'Source Change Watch',exact:true}).getAttribute('href'),'#owner-source-watch');
     await activate(page.locator('#mlos-local-nav a[href="/web/content-import.html"]'));
     await page.getByRole('heading', { name: 'Import & review', exact: true }).waitFor();
     await page.getByLabel('Import manifest JSON', { exact: true }).fill('Unsent synthetic intake draft');
