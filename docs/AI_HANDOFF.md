@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 26
+
+Checked 2026-11-09T04:21:46.889Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 212f61a0c969a2637707c6919fa9ad69bd9e4bda.
+
+Screened 18 names from Suboccipital triangle through Thoracic sympathetic chain against 18 linked draft tasks. Recorded related-scope leads including self-harm assessment and surgical consent. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 458 of 512 topics. Resume at thoracolumbar fascia with 54 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 25
 
 Checked 2026-11-09T04:18:17.870Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 392db5aa40721181b921fae5a4bebe37f0628fa6.
