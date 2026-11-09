@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 24
+
+Checked 2026-11-09T04:16:04.333Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit c0822e886bf79e89a3082ce06b73591a3f386846.
+
+Screened 18 names from Screening evaluation through Smooth muscle contraction against 18 linked draft tasks. Recorded comparisons for glaucoma, sepsis, nasal obstruction, growth assessment and neonatal thermal care. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 422 of 512 topics. Resume at social psychology with 90 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 23
 
 Checked 2026-11-09T04:15:21.483Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit bb865535ad51b9f89ef9ea993012476ee85c2dad.
