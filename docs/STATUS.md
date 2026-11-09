@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 01
+
+Checked 2026-11-09T03:03:48.164Z on PR #415 at 7c0ff866508856f1fa257c697f42ee8e2958cd1c. Implementation commit d90e4ca2762ca3cfb62a7e7387714e7fa3695cde.
+
+Reviewed the first 16 of 512 pending topics against their source tasks and selected related labels. Five topics have source-linked comparison leads. All mappings remain pending. Source reference accounting and both report verifiers passed. Full repository checks remain unrun.
+
+Next review starts at Allergic rhinitis. There are 496 topics left in this screening queue.
+
+---
+
 ## OG9 source audit
 
 Checked 2026-11-09T03:01:48.652Z on PR #415 at b05c282a41c5de365fec79d862715b9ce4abd2da. Implementation commit e75e360ee73baec8fd373d0d8ce38b7d9f384dab.
