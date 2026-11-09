@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 08
+
+Checked 2026-11-09T03:27:14.006Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 069bed18394aab7755cab373e0456c19feef892e.
+
+Screened 18 names from Disputed parentage through Epidemic control against 18 linked draft tasks. Flagged Endometrial cancer and Endometrial carcinoma for possible identity reuse while preserving separate clinical and pathology objectives. Endometrial hyperplasia is a related scope with a separate pending identity. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 134 of 512 topics. Resume at Epididymo-orchitis with 378 remaining. Names and scope metadata only. All bindings remain pending.
+
+---
+
 ## Standalone semantic screening batch 07
 
 Checked 2026-11-09T03:22:58.676Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit ac08e581fdda2d1c3fa62f4277a1563531fc3d70.
