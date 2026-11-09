@@ -1,3 +1,13 @@
+## OG9 source audit
+
+Checked 2026-11-09T03:01:48.652Z on PR #415 at b05c282a41c5de365fec79d862715b9ce4abd2da. Implementation commit e75e360ee73baec8fd373d0d8ce38b7d9f384dab.
+
+Current branch OG9.6 draft and queue agree on Hyperemesis. The official 12 September 2024 curriculum specifies hyperemesis gravidarum. Closed the stale conflict flag and recorded that proposed topic name. Official excerpt comparison covers OG9.4 through OG9.6. OG9.1 through OG9.3 were inspected locally only. Both standalone report verifiers and the cumulative scoped-home verifier passed. Canonical binding remains pending.
+
+Next resume semantic screening of the 512 topics without lexical leads, using source tasks and keeping candidate mappings pending.
+
+---
+
 ## Standalone topic binding worklist
 
 Checked 2026-11-09T02:59:19.358Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at e344976c82bd4f893065e247e4a6530b82cce68a. Implementation commit 81bef299a1e10f0316f6fe9c43a6ad2bec926e91.
