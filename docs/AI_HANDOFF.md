@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 22
+
+Checked 2026-11-09T04:14:03.835Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 7ecb8ea0f66b68333111e9489e10dbc6a04e70ad.
+
+Screened 18 names from Puberty through Research questions against 18 linked draft tasks. Recorded related-scope comparisons for pubertal timing, radiation effects and protection, voice assessment, and research design. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 386 of 512 topics. Resume at respectful maternity care with 126 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 21
 
 Checked 2026-11-09T04:12:44.342Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit dda621e211bd21683da06305dcdbbd6a9f519226.
