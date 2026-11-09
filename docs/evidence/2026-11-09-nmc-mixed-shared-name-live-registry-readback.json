@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "status": "readback-only",
+  "checkedAt": "2026-11-09T06:26:15.543Z",
+  "checkedHead": "3745a75dd1d8e8f233575c890232881f8bfe3ad7",
+  "input": {
+    "path": "docs/evidence/2026-11-09-nmc-mixed-reuse-evidence-reconciliation.json",
+    "blobSha": "b905384a0ce8c25e3d0bacd72c05320409239176"
+  },
+  "matchMethod": "Normalized whole-term search across IDs, labels, titles and aliases with listed alternate terms",
+  "registryScopes": [
+    {
+      "scope": "accepted",
+      "records": 12,
+      "version": 448
+    },
+    {
+      "scope": "draft revision",
+      "records": 20,
+      "version": 448
+    },
+    {
+      "scope": "published",
+      "records": 1,
+      "version": 448
+    }
+  ],
+  "rows": [
+    {
+      "name": "Antepartum haemorrhage",
+      "terms": [
+        "Antepartum haemorrhage"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Appendicitis",
+      "terms": [
+        "Appendicitis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Assault",
+      "terms": [
+        "Assault"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cardiac muscle",
+      "terms": [
+        "Cardiac muscle"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cervical cytology sampling",
+      "terms": [
+        "Cervical cytology sampling"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Chest radiography",
+      "terms": [
+        "Chest radiography"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cholecystitis",
+      "terms": [
+        "Cholecystitis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Clubfoot",
+      "terms": [
+        "Clubfoot",
+        "talipes equinovarus"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "COPD",
+      "terms": [
+        "COPD",
+        "chronic obstructive pulmonary disease"
+      ],
+      "matches": [
+        {
+          "scope": "draft revision",
+          "conceptId": "C-89191b5c-5d54-41e3-bd76-dfb6d34edc99",
+          "label": "Spirometric assessment of suspected COPD"
+        },
+        {
+          "scope": "draft revision",
+          "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+          "label": "COPD exacerbation management"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Death by neurological criteria",
+      "terms": [
+        "Death by neurological criteria",
+        "brain death"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Delayed puberty",
+      "terms": [
+        "Delayed puberty"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diarrhoea",
+      "terms": [
+        "Diarrhoea"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drowning",
+      "terms": [
+        "Drowning"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Episiotomy",
+      "terms": [
+        "Episiotomy"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fetal circulation",
+      "terms": [
+        "Fetal circulation"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Foreign body aspiration",
+      "terms": [
+        "Foreign body aspiration",
+        "inhaled foreign body"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hearing loss",
+      "terms": [
+        "Hearing loss"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Heart failure",
+      "terms": [
+        "Heart failure"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Herpes zoster",
+      "terms": [
+        "Herpes zoster",
+        "shingles"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hysteroscopy",
+      "terms": [
+        "Hysteroscopy"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "In vitro fertilization",
+      "terms": [
+        "In vitro fertilization"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Infectious diarrhoea",
+      "terms": [
+        "Infectious diarrhoea"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Malaria",
+      "terms": [
+        "Malaria"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Non-opioid analgesics",
+      "terms": [
+        "Non-opioid analgesics"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Nutritional assessment",
+      "terms": [
+        "Nutritional assessment"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Opioid analgesics",
+      "terms": [
+        "Opioid analgesics"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Organophosphate poisoning",
+      "terms": [
+        "Organophosphate poisoning"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Osteoarthritis",
+      "terms": [
+        "Osteoarthritis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Otosclerosis",
+      "terms": [
+        "Otosclerosis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Oxygen therapy",
+      "terms": [
+        "Oxygen therapy"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paracetamol poisoning",
+      "terms": [
+        "Paracetamol poisoning"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "pH measurement",
+      "terms": [
+        "pH measurement"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Postpartum haemorrhage",
+      "terms": [
+        "Postpartum haemorrhage"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Precocious puberty",
+      "terms": [
+        "Precocious puberty"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pregnancy recognition",
+      "terms": [
+        "Pregnancy recognition"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Prostatitis",
+      "terms": [
+        "Prostatitis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pulmonary circulation",
+      "terms": [
+        "Pulmonary circulation"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Salicylate poisoning",
+      "terms": [
+        "Salicylate poisoning"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Smooth muscle",
+      "terms": [
+        "Smooth muscle"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke",
+      "terms": [
+        "Stroke",
+        "cerebrovascular accident"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Surrogacy",
+      "terms": [
+        "Surrogacy"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tetanus",
+      "terms": [
+        "Tetanus"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Torticollis",
+      "terms": [
+        "Torticollis"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tracheoesophageal fistula",
+      "terms": [
+        "Tracheoesophageal fistula",
+        "tracheo-oesophageal fistula"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tracheostomy",
+      "terms": [
+        "Tracheostomy"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary catheterization",
+      "terms": [
+        "Urinary catheterization"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary tract infection",
+      "terms": [
+        "Urinary tract infection",
+        "UTI",
+        "urinary infection"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Uterine prolapse",
+      "terms": [
+        "Uterine prolapse"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Varicella",
+      "terms": [
+        "Varicella",
+        "chickenpox"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vomiting",
+      "terms": [
+        "Vomiting"
+      ],
+      "matches": [],
+      "mappingAccepted": false
+    }
+  ]
+}

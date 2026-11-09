@@ -1,3 +1,13 @@
+## Mixed shared-name live registry readback
+
+Checked 2026-11-09T06:26:15.543Z on PR #415 from 3745a75dd1d8e8f233575c890232881f8bfe3ad7.
+
+Checked all 50 mixed shared-name candidates. 1 had possible registry matches for the tested terms. Bindings remain pending. Full repository checks were not run.
+
+Next compare matched registry scopes with source tasks before deciding reuse, and keep zero-match leads provisional.
+
+---
+
 ## NMC mixed reuse evidence reconciliation and routing
 
 Checked 2026-11-09T06:24:25.124Z on PR #415 from e8f90155b1f56838585bcbb9646505a04c4d6d2a.
