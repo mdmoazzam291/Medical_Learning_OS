@@ -1,3 +1,13 @@
+## NMC names-only completion audit
+
+Checked 2026-11-09T06:18:13.386Z on PR #415 from d5f63c5f0c74838b6d476ad0ee5415476e84f914.
+
+Verified 570 standalone worklist dispositions and 58 proposed names. The repository completion reporter passed source accounting for 2634 appearances and reports 11 with proposed objectives and three with draft artifact bindings. Foundation remains incomplete. Prioritized reconciling 60 mixed reuse leads with the consolidated names-only inventory. Full repository checks were not run.
+
+Next compare the 60 mixed reuse leads with the 58-name inventory and flag overlap by scope and source reference.
+
+---
+
 ## Consolidated 58-name NMC proposal inventory
 
 Checked 2026-11-09T06:16:19.222Z on PR #415 from fde24816a22310ded8a7b994baf260eeaff4d862.
