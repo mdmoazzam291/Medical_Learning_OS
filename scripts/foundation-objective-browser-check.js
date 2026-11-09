@@ -59,7 +59,7 @@ try{
   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
   const preview=root.locator('details').filter({has:page.getByText('Names-only draft preview',{exact:true})});
   await preview.locator('summary').click();
-  assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[78,2,6,1]);
+  assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[91,2,6,1]);
   assert.equal(await preview.locator('ul').last().textContent(),'PS2.1');
   assert.equal(await preview.locator('ul').nth(2).getByText('PS2.1',{exact:true}).count(),0);
   await root.getByText('Original objectives and canonical identities',{exact:true}).click();await root.getByText('Synthetic objective 0',{exact:true}).first().waitFor();

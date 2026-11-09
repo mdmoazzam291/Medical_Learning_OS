@@ -13,7 +13,10 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  assert.equal(await canonicalIdentityDigest(concept),pack.objectives[0].canonicalIdentitySha256);
  const admin=fake(),fallback=admin.from.bind(admin);admin.from=name=>name==='study_catalog'?({select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[concept]}}})})})}):fallback(name);
  const read=()=>readFoundationDrafts({admin,actor:'actor',method:'GET',params:new URLSearchParams()});
- assert.equal((await read()).objectives[0].identityState,'current');concept.subjectTags=['anatomy'];assert.equal((await read()).objectives[0].identityState,'changed');
+ const page=await read();
+ assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[91,2,6,1]);
+ assert.ok(page.namesOnlyPreview.concepts.some(row=>row.label==='Brown-Sequard syndrome'&&row.codes.length===2));
+ assert.equal(page.objectives[0].identityState,'current');concept.subjectTags=['anatomy'];assert.equal((await read()).objectives[0].identityState,'changed');
 });
 test('foundation adapter encodes filters and authenticates a read without client actor fields',async()=>{
  const {createCloudOwner}=await import('../src/adapters/cloud-owner.js');let request;

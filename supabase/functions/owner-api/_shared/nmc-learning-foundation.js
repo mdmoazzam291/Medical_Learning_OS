@@ -1,3 +1,4 @@
+import unified from '../../../../docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json' with {type:'json'};
 import names from '../../../../docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json' with {type:'json'};
 import pack from '../../../../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import catalogue from '../../../../data/nmc-reference-catalogue.json' with {type:'json'};
@@ -36,7 +37,7 @@ export async function readFoundationDrafts({admin,actor,method,params}){
   }
   const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
   return {...page,namesOnlyPreview:{
-   concepts:names.conceptProposals.map(row=>({label:row.name,codes:[...new Set(row.sourceLinks.map(link=>link.code))]})),
+   concepts:unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
    headings:names.navigationHeadings.map(row=>row.name),
    aliases:names.searchAliases.map(row=>row.alias),
    held:names.heldEntries.map(row=>row.alias),
