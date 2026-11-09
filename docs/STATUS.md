@@ -1,3 +1,13 @@
+## Standalone topic reuse triage
+
+Checked 2026-11-09T02:49:27.996Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 073379d838d3986b98b293216fef05350ab068b8. Implementation commit b8b5004f9c75565dd0081a048e38af7a097f75a4.
+
+Verified source appearances and scanned 570 topics against the three name inventories and 21 scoped-home batches. The 585 source appearances are accounted for. There are 25 exact-label leads with additional source references and 545 matches limited to the topic's own sources. Labels and source overlap are triage evidence. Semantic equivalence and canonical binding remain pending.
+
+The reproducible triage verifier and cumulative scoped-home verifier passed. Next, compare task scope for the 25 leads, then examine the other 545 for semantic reuse beyond exact labels.
+
+---
+
 ## Initial scoped-task home proposals complete
 
 Checked 2026-11-09T02:47:23.793Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 265f02ed9da758c963a06993006d70f8f2a8b087. Implementation commit 6d0228220e242b2b372984701fcc140d92f7dc21.
