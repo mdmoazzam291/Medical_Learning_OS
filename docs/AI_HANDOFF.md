@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 09
+
+Checked 2026-11-09T03:30:13.744Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 9280f8b441575630fcaeeb0db09334aeb92ce18a.
+
+Screened 18 topic names from Epididymo-orchitis through Fertilization against 18 linked draft tasks. Cross-referenced facial expression and facial palsy for comparison while preserving their distinct anatomy and lesion-localisation scopes. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 152 of 512 topics. Resume at Fetal age assessment with 360 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 08
 
 Checked 2026-11-09T03:27:14.006Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 069bed18394aab7755cab373e0456c19feef892e.
