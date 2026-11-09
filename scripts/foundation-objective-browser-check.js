@@ -57,7 +57,7 @@ try{
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();
   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
-  const preview=root.locator('details').filter({has:root.getByText('Names-only draft preview',{exact:true})});
+  const preview=root.locator('details').filter({has:page.getByText('Names-only draft preview',{exact:true})});
   await preview.locator('summary').click();
   assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[78,2,6,1]);
   assert.equal(await preview.locator('ul').last().textContent(),'PS2.1');
