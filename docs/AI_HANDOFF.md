@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 17
+
+Checked 2026-11-09T04:06:32.498Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit f2764d3c814c8eec4f3d52c3673a109cb4bd3d1a.
+
+Screened 18 names from Neonatal hypocalcaemia through Oesophageal cancer against 18 linked draft tasks. Recorded comparison leads for neonatal hypothermia, neoplasia, neurogenic bladder, neurulation and ocular foreign body. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 296 of 512 topics. Resume at Olfaction with 216 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 16
 
 Checked 2026-11-09T04:05:14.925Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 7cbf5e4cbee3a65f489a86c01268f27986de96c4.
