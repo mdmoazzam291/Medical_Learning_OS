@@ -1,3 +1,13 @@
+## Standalone semantic screening batches 28–29
+
+Checked 2026-11-09T04:30:38.722Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commits ef4fc0bd39d945c2cb825b7a4da84c07f7af9554 and 3696684aaf882437879e364a336f103c1bad7dfb.
+
+Screened the final 36 names from Type 1 diabetes through Xenobiotic metabolism against 37 linked draft tasks. Preserved both Varicocele references. Verified the final batches' reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+The standalone screening queue has reached 512 of 512 topics. Next, verify all 29 batches against the worklist and reconcile candidate comparisons before proposing canonical or objective bindings. All bindings remain pending. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 27
 
 Checked 2026-11-09T04:28:59.456Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 99091ba77902a21653f1117d4f6579822ce025ea.
