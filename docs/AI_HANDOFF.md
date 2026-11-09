@@ -1,3 +1,13 @@
+## NMC standalone disposition coverage and gestational scope
+
+Checked 2026-11-09T06:10:59.572Z on PR #415 from fc7c2f016de201ba9d227196db9d3bdeb4d31612.
+
+Verified that all 570 standalone worklist rows have one recorded disposition with exact source-reference agreement. Reconciled Gestational trophoblastic neoplasia as a distinct names-only candidate with separate OG9.5 and PA29.5 references. It remains outside the 57-name inventory pending a registry collision check. All bindings remain pending. Full repository checks were not run.
+
+Next check the gestational name and aliases against the live registry before consolidation.
+
+---
+
 ## Consolidated 57-name NMC proposal inventory
 
 Checked 2026-11-09T06:06:31.668Z on PR #415 from 68e21f6d78c10a8b565d2945ab472c47679f7cae.
