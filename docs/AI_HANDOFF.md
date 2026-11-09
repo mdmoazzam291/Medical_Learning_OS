@@ -1,3 +1,13 @@
+## Standalone semantic screening audit
+
+Checked 2026-11-09T04:33:27.155Z on PR #415. Audit commit 54bb7378812ff523314236b87253126430964805.
+
+All 29 batches match the ordered worklist for 512 topics and 523 unique source references. Consolidated 116 topic pairs, preserving proposal direction, and isolated 20 candidate references requiring resolution. Batch 01 lacks the cumulative count field. Worklist checksum validation did not pass and full repository checks were not run. All bindings remain pending.
+
+Next resolve the checksum discrepancy against historical snapshots, then trace the unresolved references in the full source inventory before proposing bindings.
+
+---
+
 ## Standalone semantic screening batches 28–29
 
 Checked 2026-11-09T04:30:38.722Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commits ef4fc0bd39d945c2cb825b7a4da84c07f7af9554 and 3696684aaf882437879e364a336f103c1bad7dfb.
