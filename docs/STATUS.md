@@ -1,3 +1,13 @@
+## Mixed names-only registry and scope reconciliation
+
+Checked 2026-11-09T06:28:46.335Z on PR #415 from 5843ce3566aadccf15449815f3ebbae71725dd59.
+
+Proposed COPD as a broader name for GM25.10 and kept both narrower draft scopes separate. Reconciled 49 zero-match leads and seven other scope routes and verified 44 distinct source references against the catalogue. No bindings were accepted. Full repository checks were not run.
+
+Next compare provisional names and alternate terms across earlier proposal cohorts, including Urinary tract infection versus Urinary infection, then consolidate collision-free leads and check the four context parents in the same run where possible.
+
+---
+
 ## Mixed shared-name live registry readback
 
 Checked 2026-11-09T06:26:15.543Z on PR #415 from 3745a75dd1d8e8f233575c890232881f8bfe3ad7.
