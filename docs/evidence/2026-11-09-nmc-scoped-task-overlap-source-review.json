@@ -1,0 +1,1947 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "7f41585b942fe8d4ccac3ae7c58fa9bb4b378b5e",
+  "overlapAuditBlobSha": "47c447fdb4a35ab65837a4fda7b9013b76f43520",
+  "status": "proposed",
+  "counts": {
+    "retain-scoped-facet-under-matched-home": 49,
+    "retain-reference-overlap-only": 5,
+    "retain-facet-label-match-with-separate-home-review": 1
+  },
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-01:11",
+      "facet": "Acute kidney injury course",
+      "proposedHome": "Acute kidney injury",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Clinical evolution, complications and treatment priorities.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.3",
+          "page": 298,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            126.36
+          ],
+          "sourceBodySha256": "48ef9726cbee77c554f78efed99aba7988e5d5c22cdf0a75dbf8d1059e402f5b",
+          "editorialTaskSha256": "39a5aa15a88d9b4c88350fb3e29c9037cb5115a8d693a4f8a30af31ae71f74cc",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:12",
+      "facet": "Acute kidney injury management",
+      "proposedHome": "Acute kidney injury",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated volume/diet/medicine/monitoring/dialysis assessment priorities.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.19",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            208.32,
+            102.7,
+            249.12
+          ],
+          "sourceBodySha256": "9d8dca2e9ceb7b903cc5a1a176b2f0369e7c0c3b9cf391a757a44239bb918636",
+          "editorialTaskSha256": "bc7985c5e2d45aea8bfd9cffc396f0d290b45157a2c6d0e2a7af93f0bd2ed2c0",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:13",
+      "facet": "Acute kidney injury mechanisms",
+      "proposedHome": "Acute kidney injury",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Prerenal/intrinsic/postrenal mechanisms and clinical clues.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.2",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            519.66,
+            102.7,
+            547.02
+          ],
+          "sourceBodySha256": "f4c38f53e827360ee60c91cb5009363f1a2dbc32b41b64da3143abd4f9eb4c58",
+          "editorialTaskSha256": "a0a717e658cdda65295ba360bab9b741b16ba790a62bffaa829b6a778663f074",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:17",
+      "facet": "Adherence barriers",
+      "proposedHome": "Adherence",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Nonjudgmental barrier exploration and collaborative simulated care-plan revision.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Adherence",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.12",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            181.14,
+            102.7,
+            208.32
+          ],
+          "sourceBodySha256": "5adb4328f41f355f76783a7b037f272429713fbf36c9304559e56fae8a134a05",
+          "editorialTaskSha256": "c33ab342ab43e54f719e742001ccf295a8616e1113c8467988069e3b25e1a267",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:27",
+      "facet": "Age estimation report",
+      "proposedHome": "Age estimation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated age-estimation report with explicit uncertainty.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Age estimation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.4",
+          "page": 232,
+          "rowBBox": [
+            45.5,
+            210.42,
+            95.2,
+            254.34
+          ],
+          "sourceBodySha256": "c780625fa3830452aa0d2383d3ad2fc3ada9370c1b53f72a712022230f7101c9",
+          "editorialTaskSha256": "dc12b32e5bfcfabec8bc2e5f5f8371461074115bd758b6928c74680a2c6e6323",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-02:02",
+      "facet": "Amyloid specimens",
+      "proposedHome": "Amyloidosis",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Gross/microscopic deposits and Congo red interpretation with organ consequences; not full amyloidosis coverage.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Amyloidosis",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA9.2",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            261.66,
+            105.6,
+            293.64
+          ],
+          "sourceBodySha256": "f8f9602083bdbead8ff0c1e742ba670ecafbf2aaa5204f897125e2f8528f84a0",
+          "editorialTaskSha256": "c9cbad4e056fa94a16161dcaf22d21994d9316ee94b492739e8449c0a21550cf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:02",
+      "facet": "Atherosclerosis epidemiology",
+      "proposedHome": "Atherosclerosis",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Population patterns and antecedents of ischaemic risk; dated epidemiology not revalidated.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Atherosclerosis",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.1",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            201.12,
+            102.7,
+            228.48
+          ],
+          "sourceBodySha256": "3c7c2a93b4ff410013550cffdb8ddbdd3ee1236e49a457e0d3b887ad89f7067b",
+          "editorialTaskSha256": "27e3a9d29fecab7747b3611b04f032f61334f7b3f4ff227770b5070b178e0e31",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:03",
+      "facet": "Autoimmune mechanisms",
+      "proposedHome": "Autoimmunity",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Genetic susceptibility and loss of tolerance in representative disease mechanisms.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Autoimmunity",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.1",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            399.18,
+            102.7,
+            426.72
+          ],
+          "sourceBodySha256": "6c86c594a19c49c0acf399842d041d410fe1ad29673e5e078e2c947357a0a06f",
+          "editorialTaskSha256": "254cb131efa10de64dcb187c674db85aab2ab74933819d526ded6566b83c31a5",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:10",
+      "facet": "Birth asphyxia assessment",
+      "proposedHome": "Birth asphyxia",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Perinatal history/newborn findings and limits of individual indicators.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Birth asphyxia",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.3",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            494.76,
+            103.1,
+            517.32
+          ],
+          "sourceBodySha256": "ed24c78e3775289212d08b386bb6db57a20af1dfd0b2a4753da91ca9d2357ba5",
+          "editorialTaskSha256": "0ccd4813ff5698efb6078a6003fb3f7b539b24de964338b7e9a7e06027786c67",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:11",
+      "facet": "Blood culture interpretation",
+      "proposedHome": "Blood culture",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Bloodstream infection versus contamination using sample results and clinical context.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Blood culture",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.13",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            174.48,
+            102.7,
+            202.02
+          ],
+          "sourceBodySha256": "4928ca9c19d279a7e61d4981df3c884ba8ec85c071bf0f04509a34b9aa6a99bb",
+          "editorialTaskSha256": "37c519463383e8cf172f5f3e59bd86e57a457d989a9b29d283e3348cdcd61b8e",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:12",
+      "facet": "Blood pressure assessment",
+      "proposedHome": "Blood pressure",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Measurement and alterations in source-specified cardiac contexts; not universal haemodynamic competence.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Blood pressure",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.11",
+          "page": 282,
+          "rowBBox": [
+            44.2,
+            214.86,
+            102.7,
+            255.66
+          ],
+          "sourceBodySha256": "e199132a77f753c1be257fcbd4dfbf43b5f966ef9f95a2d84da645e9349ae9c8",
+          "editorialTaskSha256": "ed07e8c8ec72d50104920b3200cf57e5e82f2a368d2fdbd03629dd9823959603",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-05:30",
+      "facet": "Constipation pharmacotherapy",
+      "proposedHome": "Constipation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Laxative class action/onset/harms and case planning; no independent prescribing.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Constipation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH6.4",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            236.58,
+            105.7,
+            281.58
+          ],
+          "sourceBodySha256": "64f37307ef08c89c07bf0451761496141ebd4aa024f69bfceb1cb2b41db13fe9",
+          "editorialTaskSha256": "8056a71984766b8c1e7e04e9f85dc8d243cc8ed05e02bc2263a165975fa4361c",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:13",
+      "facet": "Cost-conscious type 2 diabetes care",
+      "proposedHome": "Type 2 diabetes",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Type-2-specific individualized severity/complication/access/cost plan.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Type 2 diabetes",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.17",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            513.54,
+            102.7,
+            540.9
+          ],
+          "sourceBodySha256": "c593ad7e2049eb9427f02f230ac3a408788df19be98cf7d9f5c967f694b66822",
+          "editorialTaskSha256": "59ff158334f349c94c13697a53fa4b9c4e0aecc684e531124922a6f98fb78f3b",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:27",
+      "facet": "Death certification practical",
+      "proposedHome": "Medical cause-of-death certification",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated medical cause-of-death certificate completion, not actual certification authority.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Medical cause-of-death certification",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8ab9bde74d3961052da96568d1c436896571d8fc901bcd2fd706bd8c76b9cc24",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.5",
+          "page": 232,
+          "rowBBox": [
+            45.5,
+            267.72,
+            95.2,
+            306.6
+          ],
+          "sourceBodySha256": "cb80f6934dec122d574282b8f8f036019323454bdbaf28014ba5ce8f7e5c8f4a",
+          "editorialTaskSha256": "cb36ebbc4b402eef5deae51d80cf3f6d5fddd2ea590b041e051dd25069532dce",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:08",
+      "facet": "Diabetic ketoacidosis recognition",
+      "proposedHome": "Diabetic ketoacidosis",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated DKA recognition, urine glucose/ketone testing and urgent referral.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Diabetic ketoacidosis",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE30.4",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            153.78,
+            103.1,
+            181.32
+          ],
+          "sourceBodySha256": "45b048df9b273843876be382196450fc3e520478ed8a00e8254f0246487f0ad1",
+          "editorialTaskSha256": "b447c585f9db0bd2e850adfe8389705c37d2d01d096f76e36d3cd83dd38a04e9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:11",
+      "facet": "Dialysis indications",
+      "proposedHome": "Dialysis",
+      "decision": "retain-reference-overlap-only",
+      "scope": "Urgent/planned dialysis indications only.",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bbc13bf1d5b9d733143f0f33699c15018c84662c11c1a667909644b7bc60d0f8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.21",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            303.36,
+            102.7,
+            323.16
+          ],
+          "sourceBodySha256": "83adb0c75107df0aa2a478269b950856a0659cba9f2733fc8780f23e1d64fb2c",
+          "editorialTaskSha256": "488ea4786735d5217187e4c037132bfd4960cf6c5adf360a3e4796dcbe2908ab",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bbc13bf1d5b9d733143f0f33699c15018c84662c11c1a667909644b7bc60d0f8"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-07:12",
+      "facet": "Diaphragm development",
+      "proposedHome": "Diaphragm",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Embryonic contributions/fusion and congenital-defect mechanisms; contributors remain unnamed.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Diaphragm",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.5",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            169.98,
+            122.2,
+            199.44
+          ],
+          "sourceBodySha256": "38523e2db191fea9c8bc3968432654bed05829b2079407d6917a105dbe82203f",
+          "editorialTaskSha256": "d85b59263f44078f42aca6917d10a6a7dc8af1c64e8c59a5308c80386537a36b",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:17",
+      "facet": "ENT procedural consent",
+      "proposedHome": "Informed consent",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Role-play ENT procedural consent with understanding check, not actual clinical consent.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.9",
+          "page": 421,
+          "rowBBox": [
+            40,
+            151.74,
+            94.3,
+            219.36
+          ],
+          "sourceBodySha256": "dee1a3e764f241523b575eb12c9678f030a6454cd99046888b79abb2c1f5ed80",
+          "editorialTaskSha256": "45ed8f3bbb1aada9f90f263dec055fb2b1f43e423531d835f9400372f9b9b688",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:18",
+      "facet": "Enteric fever results",
+      "proposedHome": "Enteric fever",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Culture/serology interpretation with limitations.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Enteric fever",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.8",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            130.68,
+            108.8,
+            190.08
+          ],
+          "sourceBodySha256": "4c39a3a5410f1a988154c29d2b3e74dcc0435d310d198795cd7f16f9e49e90b0",
+          "editorialTaskSha256": "7aafb494d6335c80c4a48c51c5694774fdde1a09d355e5489c3b119c90d03460",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:19",
+      "facet": "Enteric fever testing",
+      "proposedHome": "Enteric fever",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Illness-duration test choice and suspected carriage distinction.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Enteric fever",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.7",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            68.34,
+            108.8,
+            130.68
+          ],
+          "sourceBodySha256": "4d61edf4531aaeab622cd83be8077ed905f7c97639c1e9c7dd252c92fce10200",
+          "editorialTaskSha256": "649406ab983fd52009a32fe4f18b5e312505c706fd69c1f83a42bd7575d207d9",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:30",
+      "facet": "Ethical research practice",
+      "proposedHome": "Research ethics",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated study design/documentation under applicable ethics guidance, not actual ethics approval.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Research ethics",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.29",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            275.16,
+            95.2,
+            307.2
+          ],
+          "sourceBodySha256": "fefde6b2bf7a74b80be377821f05eb56eff7075c7629acb558d28c7c2bf19e7d",
+          "editorialTaskSha256": "d387a49615119502246f497192aa32f78b5a3b0b3d1aa8c345292f1e1c8d48e9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-09:12",
+      "facet": "Fetal growth restriction in obstetric care",
+      "proposedHome": "Fetal growth restriction",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Serial growth/ultrasound/Doppler monitoring-management justification and risk counselling.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Fetal growth restriction",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG16.4",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            201.42,
+            103.1,
+            273.78
+          ],
+          "sourceBodySha256": "377bcb97ded58681b0f54b00be429665dcaa09df1d9d5f91ff9db7e8c83f4b9d",
+          "editorialTaskSha256": "e08e1f2ac0e36b41a8d1017a49d1d1ce8aca62d54c9c92402fdb1ccddab532fa",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-11:16",
+      "facet": "Hyperkalaemia ECG",
+      "proposedHome": "Hyperkalaemia",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "ECG changes with explicit limitation: ECG cannot exclude hyperkalaemia.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Hyperkalaemia",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.14",
+          "page": 298,
+          "rowBBox": [
+            44.2,
+            486.96,
+            102.7,
+            527.52
+          ],
+          "sourceBodySha256": "820705f82112cf3d66451a01f1dabbc80805f58d4d724666d6472455b61dab34",
+          "editorialTaskSha256": "b33e8b4b4ad07103ce0895f14253ee945343d182316c7452a723e5210aaf8996",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:02",
+      "facet": "ICU monitoring",
+      "proposedHome": "Critical care",
+      "decision": "retain-reference-overlap-only",
+      "scope": "Observed monitor choices/trends related to organ function, not independent critical care competence.",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bb269f5d845c571894dfc1c250439e52fba8f19f70762e8ebd8bcea0ecf966a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS7.5",
+          "page": 454,
+          "rowBBox": [
+            46.7,
+            457.74,
+            98.1,
+            475.32
+          ],
+          "sourceBodySha256": "1a7996e4e3bd794247ab9ee4792e8ba04fd7645895ae8e82bca6288d92c03707",
+          "editorialTaskSha256": "55f603dca1a0c90e49d94278e853402b27c11d19d2d20ce09fb0c3fd28d66b45",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:bb269f5d845c571894dfc1c250439e52fba8f19f70762e8ebd8bcea0ecf966a7"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:20",
+      "facet": "Initial stroke support",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated immediate stroke assessment/support/escalation.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8757c33fbb3f47999686fc737ad2563facd8fed2108b822d7a2ef8dd6566a711",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.10",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            174.48
+          ],
+          "sourceBodySha256": "1aeb5c5d983ec8c170050514c18fe5730963c22ede2ade0075d31dbed9928b9a",
+          "editorialTaskSha256": "03ec50e89c462aae312e6b50f8fb22224553118e7b1a370cffa20397e61da3e0",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:06",
+      "facet": "Joint pain assessment",
+      "proposedHome": "Joint pain",
+      "decision": "retain-facet-label-match-with-separate-home-review",
+      "scope": "Staged localization/time/mechanism-based assessment.",
+      "facetMatches": [
+        {
+          "name": "Joint pain assessment",
+          "role": "context"
+        }
+      ],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7cc979a4d27d4a30c5740db086c4a6f82c9dbba90fa73a75eaaa1a1b088ec416",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.3",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            447.6,
+            102.7,
+            474.96
+          ],
+          "sourceBodySha256": "aded2f6dea6d8f3dbbc4a995556c806301d0b0d48c7af0972fc940d3c063a752",
+          "editorialTaskSha256": "4a9fce4ec35a3b967afe0151be964050a55e88a6ee3074e5bc524ff14192a54a",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:21",
+      "facet": "Lipid test interpretation",
+      "proposedHome": "Lipid metabolism",
+      "decision": "retain-reference-overlap-only",
+      "scope": "Panel sampling/calculation limitations and result interpretation only.",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC4.8",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            287.58,
+            108.5,
+            327.84
+          ],
+          "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+          "editorialTaskSha256": "14a9708c46e2a6e1b18c5036df2f6094ad659f0a308e233a649032fba0db30db",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:02",
+      "facet": "Lumbar puncture anatomy",
+      "proposedHome": "Lumbar puncture",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Sagittal adult conus/interspace/trajectory/layer anatomy, not procedure competence.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN50.3",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            154.86,
+            122.2,
+            185.82
+          ],
+          "sourceBodySha256": "6f355dcad68a472aa2a9ff6f8f683d5bc8286403e2a050a4ecf8197d7fc0d03c",
+          "editorialTaskSha256": "0be615bfcf8859ae6ded68aa2b334491d23770063dfd23c71263a63a605b1162",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:03",
+      "facet": "Lumbar puncture indications",
+      "proposedHome": "Lumbar puncture",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Appropriate LP use and comparative meningitis CSF patterns.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.7",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            324.18,
+            102.7,
+            351.54
+          ],
+          "sourceBodySha256": "7e3f4bee7f168d292eadcc1a7c888308b0d1ba20ccc2c8461303b0f1e4d60804",
+          "editorialTaskSha256": "9ba8863a036f99b34c9254299ead28f2099fbe79c7a2bfa0a0b5714d93649cc4",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:04",
+      "facet": "Lumbar puncture technique",
+      "proposedHome": "Lumbar puncture",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Mannequin preparation/positioning/sampling/safety demonstration only.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Lumbar puncture",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.8",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            351.54,
+            102.7,
+            382.62
+          ],
+          "sourceBodySha256": "b1feb0d29db2079f22b0ab9b6e9463af64d18f30b5864331fd6b136c7d5515d3",
+          "editorialTaskSha256": "d0e3a1d44600a1b7d5446ea899744a9f7bbda6c173829b87f6a696dc14144a22",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:07",
+      "facet": "Malaria pathology",
+      "proposedHome": "Malaria",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Erythrocyte infection/haemolysis/sequestration and organ pathology.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Malaria",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.1",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            315.6,
+            105.6,
+            334.32
+          ],
+          "sourceBodySha256": "a5d4ad1b164973833c90405659e6bccea4b9ece6d12853eea74ea960e1c9baaf",
+          "editorialTaskSha256": "9f41a873e36307b117a1a111a27a4c5c8de9bae3ece3e94bdffac1fb8f5b406f",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:08",
+      "facet": "Malaria species differentiation",
+      "proposedHome": "Malaria",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Falciparum-versus-other smear differentiation with explicit acute-serology limits.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Malaria",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e5bebcc10cee836b56d9deb3a8a0d2b038323bafafaecb0c1747630e0cc995e3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.12",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            340.62,
+            108.8,
+            394.98
+          ],
+          "sourceBodySha256": "7832d1e518cbf8bfa7b55e92f3d20435913bb5e4203d188facf88d9462add0cf",
+          "editorialTaskSha256": "5ee56c8aadea46bfb873f6339842ea84d5a8457688f4a6b80853655b1ee6e15c",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:16",
+      "facet": "Neonatal resuscitation simulation",
+      "proposedHome": "Neonatal resuscitation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Source-approved checklist simulation only, not independent neonatal resuscitation competence.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Neonatal resuscitation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.2",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            463.08,
+            103.1,
+            494.76
+          ],
+          "sourceBodySha256": "b6d3f94bc35bcd53b392d278b37f3f5a84ede9cc16258284fa2939d029e83958",
+          "editorialTaskSha256": "21426b5f533a581d09a8c16163997aaf5b9f1ea0560f8911c3761dd7132e552b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:23",
+      "facet": "Newborn resuscitation principles",
+      "proposedHome": "Neonatal resuscitation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Preparation/assessment/ventilation/difficulty explanation distinct from simulator performance.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Neonatal resuscitation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.4",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            517.32,
+            103.1,
+            553.2
+          ],
+          "sourceBodySha256": "0324c5ad09eca40868a0cd41b4f3d6cbe1c72881b16955663d8666c1c188320c",
+          "editorialTaskSha256": "93860a7bee27154647bb746dbaec4b82a580ac4756f34d3d7c106ec5966884ae",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:16",
+      "facet": "Orthopaedic consent",
+      "proposedHome": "Informed consent",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated orthopaedic benefit/risk/alternative/consequence consent discussion.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR14.2",
+          "page": 450,
+          "rowBBox": [
+            49.1,
+            307.98,
+            103.1,
+            396.54
+          ],
+          "sourceBodySha256": "394b65025f8e6b4fe019d33c598cb0a3b733fddb52fc0168edb249cfa58b9d84",
+          "editorialTaskSha256": "5a6ac51a238d3ad41644bc7e6b8c84f7b96c88708a7e7365c8b9117dc636e5a2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:22",
+      "facet": "Paediatric acute kidney injury",
+      "proposedHome": "Acute kidney injury",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Paediatric cause/complication/management-priority scope retained.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Acute kidney injury",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.5",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            218.58,
+            103.1,
+            251.16
+          ],
+          "sourceBodySha256": "523ec716f0bbb9e736090b1f41a9d75c252a65e0d61bae9e2fc178f2b2c7e1b1",
+          "editorialTaskSha256": "fc3153f658e0b1b0a38496381d82d15b66295686f3403aa1b130bccc2519b0fd",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:27",
+      "facet": "Paediatric haematuria",
+      "proposedHome": "Haematuria",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Paediatric glomerular/nonglomerular patterns and referral.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Haematuria",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.4",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            196.92,
+            103.1,
+            218.58
+          ],
+          "sourceBodySha256": "a2e5f058902eb1485f9f1da9005ecbc08857604488d1c8b3cffdc73256e8ef34",
+          "editorialTaskSha256": "3a8c3f6201897ce9ca3391f79ba34a537f2ad2cab47428e5fd0475b904077846",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:30",
+      "facet": "Paediatric lupus",
+      "proposedHome": "Systemic lupus erythematosus",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Paediatric multisystem lupus patterns/investigations/management principles.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Systemic lupus erythematosus",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE21.4",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            84.9,
+            103.1,
+            100.02
+          ],
+          "sourceBodySha256": "67767672a47842689d7bd326b01cdb43975917663522748dc4e122e1d6b2a4ef",
+          "editorialTaskSha256": "9afe7729c689b6c5d1329f39eb68169a697f614e27156716e57896e0aaa5312b",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:02",
+      "facet": "Paediatric proteinuria",
+      "proposedHome": "Proteinuria",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Paediatric transient/orthostatic/persistent proteinuria distinction and referral.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Proteinuria",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.3",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            179.28,
+            103.1,
+            196.92
+          ],
+          "sourceBodySha256": "6b1eb3beec6b3dc5aa41b26c42160dfd2b14941508c0150539ff621b5a7282f3",
+          "editorialTaskSha256": "a512e195b056c21ce4eb7a6d68f87dd298396e404d228204bfb998721176919d",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:04",
+      "facet": "Paediatric stridor",
+      "proposedHome": "Stridor",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Paediatric onset/findings-based stridor causes and management priorities.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stridor",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE25.4",
+          "page": 345,
+          "rowBBox": [
+            51.3,
+            84.9,
+            103.1,
+            117.54
+          ],
+          "sourceBodySha256": "6600a215df5e2e4e60f63bbaae779220be7128d198df1b8c4f9770a28f0276ab",
+          "editorialTaskSha256": "075bdbacbe99e88d12ba77d0e01d18ee73ae0d57285ff92d5a292d02163df992",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-17:22",
+      "facet": "pH measurement",
+      "proposedHome": "Acid-base balance",
+      "decision": "retain-reference-overlap-only",
+      "scope": "pH meter/blood-gas measurement explanation and sample acid-base interpretation.",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.2",
+          "page": 169,
+          "rowBBox": [
+            58.5,
+            203.94,
+            108.2,
+            254.7
+          ],
+          "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+          "editorialTaskSha256": "64fa8a3b42289b2317d5b23c6b4a10929e904e7487b2dd03963389bfd95d71d0",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-19:24",
+      "facet": "Respiratory distress assessment",
+      "proposedHome": "Respiratory distress",
+      "decision": "retain-reference-overlap-only",
+      "scope": "Airway/breathing assessment and cyanosis/indrawing/grunting recognition.",
+      "facetMatches": [],
+      "homeMatches": [],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.8",
+          "page": 343,
+          "rowBBox": [
+            51.3,
+            240.12,
+            103.1,
+            281.1
+          ],
+          "sourceBodySha256": "ed8f3edd0d398ea93d9292e3b9e7f0e6202e4ff04a448269c77006f60067b950",
+          "editorialTaskSha256": "83548b07581a625eee57094ab895e944351e1d73d285bca7cbcd3114e8f75cbe",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:26",
+      "facet": "Stem cell research",
+      "proposedHome": "Research ethics",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Source guidance on stem cell consent, oversight and safety.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Research ethics",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.12",
+          "page": 225,
+          "rowBBox": [
+            45.5,
+            482.1,
+            94.4,
+            515.22
+          ],
+          "sourceBodySha256": "202eff8b31be28c630837cf4a348f4e71c9abd95e86508cf14d34cab1fdc4df9",
+          "editorialTaskSha256": "0beb4f728db7f581d9327f1407174f80669ffe0ab445dd9da1276ce425dabf18",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:28",
+      "facet": "Stroke counselling",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated diagnosis, prognosis and recovery uncertainty counselling.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:78c4887778f0db0aeb0ddd0bbce2a45b57e9bef6df09e4f9be1711d228d5d83c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.16",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            361.44,
+            102.7,
+            402.24
+          ],
+          "sourceBodySha256": "3d2a54df77e895711b5aba1805dbfa68c76f5ded7147a89b32b6ef06a398f792",
+          "editorialTaskSha256": "83f439e232149541af0c8feaeb54b0ae0187b3d9e4ab3df34bc70e615784b353",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:29",
+      "facet": "Stroke examination",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated general and neurological examination documentation.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:036e7ebce65ac4b604c1b5ee7d736a478068c719888eb8f5548529e265f626ce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.4",
+          "page": 310,
+          "rowBBox": [
+            44.2,
+            289.56,
+            102.7,
+            343.56
+          ],
+          "sourceBodySha256": "ca36ea65eb18df64d1e94232eed9d888e598f69caebd9bd524b51013f3c281a3",
+          "editorialTaskSha256": "850306290167bd838a78ecead3b8cf8e7041f732354b8aa90c6ae70853313b31",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-20:30",
+      "facet": "Stroke history",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Onset, last known well, progression and associated symptoms.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cd0cf3810cfac598c68c26ba67ede36d6f6228c51db3b0c30579ea68048515a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.3",
+          "page": 310,
+          "rowBBox": [
+            44.2,
+            235.2,
+            102.7,
+            289.56
+          ],
+          "sourceBodySha256": "ca513a09c2e82998985a90352461d7defc717b64b30f2e9408637d15770a5d56",
+          "editorialTaskSha256": "ed1c27d00b5354be532c3316ba7b3497cc9266ec66528bd009aea78852f0bce9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:01",
+      "facet": "Stroke imaging",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Imaging selection and interpretation for stroke type, site and cause.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b57fbf369e42bdb0d9e03aef736c90681c9d60d1e6224d04709d3424ac267ca5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.8",
+          "page": 310,
+          "rowBBox": [
+            44.2,
+            519.54,
+            102.7,
+            546.96
+          ],
+          "sourceBodySha256": "7d7448716744c3094ceee769b4c29965f6b31279477ba4d0efd285ea556989cd",
+          "editorialTaskSha256": "c59816525c671b902e312ec7e22f8a88532c07509cb501074b8feec1bd8b9e85",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:02",
+      "facet": "Stroke in young adults",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Targeted investigations for young adult presentations.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:937bba4b457c9dd463efa5501337beb0d08523e7ad4dd8f4dc52df0d54cd7f8f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.9",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            147.24
+          ],
+          "sourceBodySha256": "68a9c0423be262c644d496a5b8c99a76b1bba7f0b3291946d8d3bbef2d58dbb3",
+          "editorialTaskSha256": "4aefd51c528a55c358f1d62b7a03a7dfd05c65365ae4c049d1e5524bed13e477",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:03",
+      "facet": "Stroke rehabilitation",
+      "proposedHome": "Stroke",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Functional deficits, multidisciplinary rehabilitation and reassessment.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Stroke",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cfa749e661afdafb5bb1fb24933677ad0fc5b28cb71154fd2d3fd82bb7c5ac44",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.15",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            320.82,
+            102.7,
+            361.44
+          ],
+          "sourceBodySha256": "88bb968791d7a304d5e702638693cfaca42fdff14755bb313595b5dd764a937d",
+          "editorialTaskSha256": "11bb9f1958d30246dd3b05560b1623c36f28fc061156f691886f0d8073b693de",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:16",
+      "facet": "Temperature assessment",
+      "proposedHome": "Thermoregulation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Simulated measurement, safe warming and monitoring.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Thermoregulation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.20",
+          "page": 344,
+          "rowBBox": [
+            51.3,
+            276.54,
+            103.1,
+            294.54
+          ],
+          "sourceBodySha256": "9ae571109c3e90dda7f5bb1b5bcf3f622a37d226a246191bc26f1b0c9d81a3e5",
+          "editorialTaskSha256": "31e22c6fe0179542be7bc2c590cb70d395842409a384837113af8f6fe308cdfb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:18",
+      "facet": "Termination consent",
+      "proposedHome": "Informed consent",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Termination role-play with privacy, options and voluntariness.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Informed consent",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG20.2",
+          "page": 435,
+          "rowBBox": [
+            49.1,
+            357.48,
+            103.1,
+            400.14
+          ],
+          "sourceBodySha256": "a2d27fe5bccdfc5a3cf05d20b22a9d41d8c31de68b6b90035e40f831036bed62",
+          "editorialTaskSha256": "459e5c1c9be1014e341a49012f235b6b9132ae39d09f622efab3e31fce231c86",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:19",
+      "facet": "Thermal environment",
+      "proposedHome": "Thermoregulation",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Environmental heat loss and temperature maintenance.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Thermoregulation",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.19",
+          "page": 344,
+          "rowBBox": [
+            51.3,
+            258.42,
+            103.1,
+            276.54
+          ],
+          "sourceBodySha256": "286c057be97cc182feeeeb1f501934bd490841433fd0bee25352482e10fcc26f",
+          "editorialTaskSha256": "d854735732b67036fa87fb1e15a8d1ee1e7d16bfd73c2a1adec28c5f4ff0481d",
+          "mode": "knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:46",
+      "facet": "Urine ketones",
+      "proposedHome": "Urinalysis",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Teaching sample ketone dipstick and interpretation limits.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Urinalysis",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.13",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            411.66,
+            102.7,
+            431.52
+          ],
+          "sourceBodySha256": "542664e2cf02f1793c1141a2f43912d1538a589639003a41a5971df6b357c1ab",
+          "editorialTaskSha256": "a101831ef938b9cd9550dc8a00d690fa2dc2880ab80989a17435dba88e146282",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:47",
+      "facet": "Urine reporting",
+      "proposedHome": "Urinalysis",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Supplied specimen findings, mechanisms and laboratory reporting.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Urinalysis",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.4",
+          "page": 169,
+          "rowBBox": [
+            58.5,
+            324.18,
+            108.2,
+            368.52
+          ],
+          "sourceBodySha256": "9d835c2377e6158fb350f41eada18e0e1427a406effe3436a39dc33961f80477",
+          "editorialTaskSha256": "c04ed74908ffa21788c57a6d025e44b6a3154a372d6ea8198e9ab67409d8f282",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-21:51",
+      "facet": "Vaginal discharge assessment",
+      "proposedHome": "Vaginal discharge",
+      "decision": "retain-scoped-facet-under-matched-home",
+      "scope": "Consent-based simulated assessment and management reasoning.",
+      "facetMatches": [],
+      "homeMatches": [
+        {
+          "name": "Vaginal discharge",
+          "role": "proposal"
+        }
+      ],
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.5",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            454.44,
+            103.1,
+            481.08
+          ],
+          "sourceBodySha256": "dc2bfae6928fb470c2e46e4cac23811378e992228cdbdbb8608e9f56b2e6167c",
+          "editorialTaskSha256": "195b795474709919260fceb9f9e80b2b5fbed78107e5ce9e98c0072dd81368bb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "sharedReferences": [
+        "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b"
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Reconcile the reviewed source evidence and audit disposition coverage across all 659 scoped tasks."
+}
