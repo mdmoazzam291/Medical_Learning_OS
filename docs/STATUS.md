@@ -1,3 +1,13 @@
+## NMC names-only context parent proposals
+
+Checked 2026-11-09T06:01:51.878Z on PR #415 from 340dd6098e08b3002590e01bac3eda3191014ba8.
+
+Prepared nine parent name proposals for ten context leads. Verified 14 distinct parent-evidence references against the pinned catalogue. Blood culture, Research ethics and Skeletal muscle use facet evidence for their broader names. Context references and their evidence roles remain separate. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile the nine parent names and ten context leads with the 48-name inventory and account for any shared source references by role.
+
+---
+
 ## NMC context parent source and registry trace
 
 Checked 2026-11-09T05:59:58.198Z on PR #415 from 83831aa0aa5b56ba625145f07d6bd388d2834fe5.
