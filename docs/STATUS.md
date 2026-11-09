@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 02
+
+Checked 2026-11-09T03:05:38.570Z on PR #415 at 42fc6b04e3e566868dc155a7b3b97ed4a0149c64. Implementation commit 0f62374caa31cc321678c0ad8fcbc470b2dd4223.
+
+Reviewed 17 topics from Allergic rhinitis through Ascitic fluid analysis. Eight have source-linked comparisons, including overlap between arterial sampling and arterial blood gas sampling. All mappings remain pending. Source reference accounting and both report verifiers passed. Full repository checks remain unrun.
+
+Cumulative review covers 33 of 512 topics. Resume at Autism with 479 remaining.
+
+---
+
 ## Standalone semantic screening batch 01
 
 Checked 2026-11-09T03:03:48.164Z on PR #415 at 7c0ff866508856f1fa257c697f42ee8e2958cd1c. Implementation commit d90e4ca2762ca3cfb62a7e7387714e7fa3695cde.
