@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 11
+
+Checked 2026-11-09T03:33:53.552Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 0fa0b13835e6b46b3e918c016f536cd812a77ccc.
+
+Screened 18 topic names from Glucose self-monitoring through Homeostasis against 18 linked draft tasks. Recorded comparison leads for glucose self-monitoring and glucose estimation, haemoglobin electrophoresis and haemoglobin, and heart rate control and cardiac impulse. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 188 of 512 topics. Resume at Horner syndrome with 324 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 10
 
 Checked 2026-11-09T03:31:34.697Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit ff32f1884a7dd2ff7a0a58614481a4f53bbfa012.
