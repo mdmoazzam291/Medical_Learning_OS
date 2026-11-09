@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 23
+
+Checked 2026-11-09T04:15:21.483Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit bb865535ad51b9f89ef9ea993012476ee85c2dad.
+
+Screened 18 names from Respectful maternity care through Schizophrenia in primary care against 18 linked draft tasks. Compared respiratory acid–base scopes, surgical safety communication, sample custody and scalp anatomy. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 404 of 512 topics. Resume at screening evaluation with 108 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 22
 
 Checked 2026-11-09T04:14:03.835Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 7ecb8ea0f66b68333111e9489e10dbc6a04e70ad.
