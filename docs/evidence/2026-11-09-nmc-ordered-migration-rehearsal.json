@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "scope": "Disposable PGlite with synthetic Auth and digest fixtures; ordered repository SQL from the NMC preview worktree",
+  "applied": 43,
+  "total": 105,
+  "firstUnverified": "20260928120011_m10b_canonical_visual_interaction_profile.sql",
+  "databaseError": "visual_interaction_question_unknown",
+  "dependency": {
+    "questionVersionId": "visual:pathology:clear-cell-rcc@1",
+    "mediaAssetVersionId": "media:pathology:clear-cell-rcc-grade1@1",
+    "repositoryEvidence": [
+      "data/content-intake-pilot-multimodal-breadth-06.json",
+      "data/content-media-links-pilot-multimodal-breadth-06.json"
+    ]
+  },
+  "fullChainPassed": false,
+  "hostedChangesApplied": false,
+  "next": "Determine the supported empty-staging bootstrap path for the historical data-dependent migration, respecting the respiratory pilot reset and existing staging runtime parity."
+}
