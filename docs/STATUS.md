@@ -1,3 +1,13 @@
+## Scoped-task home proposals batch 20 — 9 November 2026 IST
+
+Checked at 2026-11-09T02:45:30.588Z. Resumed PR #415 at 41b96dcb418e761da9e07ae0a31fc545dd4a65c2 on feat/nmc-foundation-review-queue-20261104. Implementation commit 64c3795b3bf00dab7d821cae3ac830f7e1676d94.
+
+Added names-only proposals for 30 facets from Rheumatology history through Stroke history. Cumulative verifier passed for 600 facets and 609 source appearances. Nine focused tests passed. Full repository checks were outside this partial checkout. Canonical binding remains pending.
+
+Next batch starts at Stroke imaging. There are 59 facets awaiting initial proposals.
+
+---
+
 ## Scoped-task home proposals batch 19 — 9 November 2026
 
 Added proposals for 30 facets / 31 source appearances (Provisional diagnosis through Rheumatology examination). Batch: 21 home labels, three existing-name and 27 proposed-name links. Cumulative: 570 facets / 579 appearances / 321 proposed home labels; 89 facets await initial homes. Implementation: 73d086da924eecbe37eebea0e6c7f47e6e3fc98e. All mappings/bindings pending.
