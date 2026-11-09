@@ -1,3 +1,13 @@
+## Remaining NMC naming variant dispositions
+
+Checked 2026-11-09T05:31:51.345Z on PR #415 from 2675f694af0aaf9c27a7a58752c2018abdec6486.
+
+Reconciled all 34 remaining comparisons with their indexed source-scope reviews. Retained shared-name and alias leads, narrower and related distinct scopes, and the prior source-confirmed gestational naming decision. All mappings remain pending. Full repository checks were not run.
+
+Next check the shared-name and alias leads for conflicting dispositions and canonical registry collisions before incorporating names or aliases.
+
+---
+
 ## Names-only variant inventory reconciliation
 
 Checked 2026-11-09T05:30:08.678Z on PR #415 from f64209c706a68d67ba71c0245adb0891e987373f.
