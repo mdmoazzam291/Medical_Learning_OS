@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 13
+
+Checked 2026-11-09T04:01:03.114Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 118edf4b9cd8793baf46d00cd648f767329b9a78.
+
+Screened 18 names from Infantile hemiplegia through Karyotyping against 19 linked draft tasks. Preserved both intraosseous access references and recorded related-scope comparisons for infantile hemiplegia, iron and iron deficiency anaemia, and jugular venous pressure. All bindings remain pending. Verified source-reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 224 of 512 topics. Resume at Kawasaki disease with 288 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 12
 
 Checked 2026-11-09T03:38:15.497Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit d566bb427e6eeeb1d983a56b4271ab8262bd06d6.
