@@ -1,3 +1,13 @@
+## Initial scoped-task home proposals complete
+
+Checked 2026-11-09T02:47:23.793Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 265f02ed9da758c963a06993006d70f8f2a8b087. Implementation commit 6d0228220e242b2b372984701fcc140d92f7dc21.
+
+Batch 21 covers all 59 remaining facets from Stroke imaging through Young infant IMNCI assessment. The cumulative verifier passed for 659 facets, 670 source appearances and 346 distinct proposed homes. Nine focused tests passed. Verification was limited to the available checkout.
+
+Next, inspect the 570 standalone-topic cases and prioritize reconciliation with existing names. Canonical binding and learner integration remain pending.
+
+---
+
 ## Scoped-task home proposals batch 20 — 9 November 2026 IST
 
 Checked at 2026-11-09T02:45:30.588Z. Resumed PR #415 at 41b96dcb418e761da9e07ae0a31fc545dd4a65c2 on feat/nmc-foundation-review-queue-20261104. Implementation commit 64c3795b3bf00dab7d821cae3ac830f7e1676d94.
