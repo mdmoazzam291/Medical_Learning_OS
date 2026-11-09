@@ -17,6 +17,11 @@ on:
       - 'ops/r2-backups/check_vault_recovery.py'
       - 'ops/r2-backups/install_age.sh'
   workflow_dispatch:
+    inputs:
+      schema_only:
+        description: Rehearse application schema and access grants without row data
+        type: boolean
+        default: false
   schedule:
     # Monthly full recoverability proof. Weekly backups remain separate.
     # 06:00 IST on the first day of each month.
@@ -198,6 +203,8 @@ jobs:
 
       - name: Restore only into disposable local Supabase database
         shell: bash
+        env:
+          SCHEMA_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.schema_only }}
         run: |
           set -euo pipefail
           if ! command -v psql >/dev/null 2>&1; then
@@ -228,11 +235,14 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           python3 ops/r2-backups/check_vault_recovery.py
           docker cp "$RUNNER_TEMP/mlos-restore" "$container:/tmp/mlos-restore"
+          data_args=()
+          if [ "$SCHEMA_ONLY" != true ]; then
+            data_args=(--command 'SET session_replication_role = replica' --file /tmp/mlos-restore/data.sql)
+          fi
           if ! docker exec "$container" psql --username supabase_admin --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
             --variable VERBOSITY=sqlstate --quiet --file "/tmp/mlos-restore/roles.sql" \
             --file "/tmp/mlos-restore/schema.sql" \
-            --command 'SET session_replication_role = replica' \
-            --file "/tmp/mlos-restore/data.sql" \
+            "${data_args[@]}" \
             --file "/tmp/mlos-restore/access.sql" \
             --dbname postgres > "$RUNNER_TEMP/restore.out" 2> "$RUNNER_TEMP/restore.err"; then
             python3 - <<'PYERR'
@@ -248,10 +258,11 @@ jobs:
             exit 1
           fi
 
-      - name: Verify restored access, data and encrypted Vault configuration
+      - name: Verify restored access and selected restore scope
         shell: bash
         env:
           MLOS_RECOVERY_AGE_IDENTITY: ${{ secrets.MLOS_RECOVERY_AGE_IDENTITY }}
+          SCHEMA_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.schema_only }}
         run: |
           set -euo pipefail
           container=supabase_db_mlos-local-restore
@@ -264,6 +275,17 @@ jobs:
             exit 1
           fi
           echo 'Exact source public owners, grants, column privileges and defaults matched.'
+          if [ "$SCHEMA_ONLY" = true ]; then
+            docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 -c "
+              select to_regprocedure('public.owner_admin_dashboard_v1()') is not null
+                 and to_regprocedure('public.content_admin_status_v1(uuid)') is not null
+                 and to_regclass('public.content_concept_acceptances') is not null
+                 and not exists (select 1 from public.study_catalog)
+                 and not exists (select 1 from auth.users);
+            " | grep -qx t
+            echo 'Schema-only preview dependencies verified. No application catalogue or Auth rows were restored.'
+            exit 0
+          fi
           python3 ops/r2-backups/verify_restore.py \
             "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
 
