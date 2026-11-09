@@ -1,3 +1,13 @@
+## Standalone semantic screening batch 21
+
+Checked 2026-11-09T04:12:44.342Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit dda621e211bd21683da06305dcdbbd6a9f519226.
+
+Screened 18 names from Pregnancy recognition through Pterygoid plexus against 18 linked draft tasks. Compared pregnancy recognition with pregnancy testing, premedication with prescription writing, primary hyperparathyroidism with hyperparathyroidism, and pterygoid plexus with deep facial vein. All bindings remain pending. Verified reference accounting and exact remote readback. Repository verifiers and full checks were not run.
+
+Cumulative screening covers 368 of 512 topics. Resume at puberty with 144 remaining. Names and scope metadata only.
+
+---
+
 ## Standalone semantic screening batch 20
 
 Checked 2026-11-09T04:10:36.316Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Implementation commit 5c7be7fac3858defc44fc595ff28a7339fa37b4c.
