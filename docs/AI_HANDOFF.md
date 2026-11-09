@@ -1,3 +1,13 @@
+## NMC mixed reuse evidence reconciliation and routing
+
+Checked 2026-11-09T06:24:25.124Z on PR #415 from e8f90155b1f56838585bcbb9646505a04c4d6d2a.
+
+Reconciled four incoming references with three existing names. The inventory now accounts for 122 distinct source references across 58 proposed names. Routed all 57 remaining mixed leads by recorded scope and kept registry status unverified for each. Bindings remain pending. Full repository checks were not run.
+
+Next batch the shared-name leads for a live registry comparison while preserving distinct scope and separate source references.
+
+---
+
 ## NMC mixed reuse source scope decisions
 
 Checked 2026-11-09T06:22:35.112Z on PR #415 from 7eee000cac9a89dca4cb93b5b1edab9992dcc567.
