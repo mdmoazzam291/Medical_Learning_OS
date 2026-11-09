@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "checkedCommit": "efc25dba4ceb1b0d1a71771046c7480a5ebb57d2",
+  "workflowRun": 42609514310,
+  "browserSteps": {
+    "chromium": "success",
+    "webkit": "success"
+  },
+  "staging": {
+    "cataloguePresent": false,
+    "adminStatusRpcPresent": false,
+    "authUsers": 0
+  },
+  "deploymentVerified": false,
+  "next": "Rehearse a content-free staging bootstrap for the protected preview, preserving runtime and Admin gates, then test real reviewer and learner sessions."
+}
