@@ -1,3 +1,13 @@
+## Draft names-only binding manifest
+
+Checked 2026-11-09T04:59:49.310Z on PR #415 from 59bdb0242291e4aecd70a3b0a24214ead4257a9f.
+
+Prepared ten distinct pending binding candidates across five proposed identities. Verified each reference ID and competency code against its draft-task row. Kept the emergency IV context and ocular scope relationship explicit. Canonical concept and objective version IDs are unset. Full repository checks were not run.
+
+Next check the draft manifest against the existing binding contract and identify the exact identity and objective version prerequisites for each candidate.
+
+---
+
 ## Names-only proposal worklist reconciliation
 
 Checked 2026-11-09T04:55:50.992Z on PR #415 from 6bdbf968194906b83fe4a3c5d20468986528b49b.
