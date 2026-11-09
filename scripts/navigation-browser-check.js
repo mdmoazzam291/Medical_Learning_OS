@@ -537,8 +537,8 @@ try {
     await enterAdmin();
     await page.waitForFunction(() => location.hash === '' && scrollY < 100);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview navigation retains owner drafts');
-    await activate(page.locator('#owner-home').getByRole('link', { name: 'Content Snapshot →', exact: true }));
-    await page.getByRole('heading', { name: 'Content Snapshot', exact: true }).waitFor();
+    await activate(page.locator('#owner-home').getByRole('link', { name: 'Content Overview →', exact: true }));
+    await page.getByRole('heading', { name: 'Content Overview', exact: true }).waitFor();
     assert.deepEqual(await page.locator('[data-admin-panel]:visible').evaluateAll(nodes => nodes.map(node => node.dataset.adminPanel)), ['content']);
     assert.equal(await page.locator('#owner-learner-query').inputValue(), 'Unsent navigation draft', 'Overview shortcuts retain mounted tool drafts');
     // Audit every Admin workspace in both approved palettes and appearances.

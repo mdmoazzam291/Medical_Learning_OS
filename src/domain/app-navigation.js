@@ -58,13 +58,11 @@ const SECTIONS = {
     item('content', 'Content & Quality', 'book', '/web/content-import.html', [
       item('intake', 'Content Intake', 'book', '/web/content-import.html'),
       item('relationships', 'Medical Relationships', 'graph', '/web/content-import.html#medical-relationships'),
-      item('snapshot', 'Content Snapshot', 'graph', '/web/admin.html#owner-content'),
+      item('snapshot', 'Content Overview', 'graph', '/web/admin.html#owner-content'),
       item('foundation', 'NMC Foundation', 'graph', '/web/admin.html#owner-foundation'),
       item('coverage', 'Coverage Index', 'graph', '/web/admin.html#owner-coverage'),
       item('concept-drafts', 'Concept Drafts', 'graph', '/web/admin.html#owner-concept-drafts'),
       item('exam-syllabus', 'Exam Syllabus', 'graph', '/web/admin.html#owner-exam-syllabus'),
-      item('integrity', 'Catalog Integrity', 'graph', '/web/admin.html#owner-integrity'),
-      item('source-watch', 'Source Change Watch', 'reference', '/web/admin.html#owner-source-watch'),
       item('review', 'Review Workspace', 'edit', '/web/review.html'),
       item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references'),
       item('rights', 'Source Rights', 'reference', '/web/review.html?workspace=rights')

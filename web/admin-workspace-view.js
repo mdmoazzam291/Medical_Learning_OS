@@ -5,7 +5,7 @@ export const ADMIN_VIEWS = Object.freeze([
   ['overview', 'Overview', 'owner-home'], ['actions', 'Action Inbox', 'admin-actions'],
   ['snapshot', 'Platform Snapshot', 'owner-overview'], ['users', 'Learner Accounts', 'owner-users'],
   ['authority', 'Reviewer Authority', 'owner-review-authority'], ['learning', 'Observed Learning', 'owner-learning'],
-  ['content', 'Content Snapshot', 'owner-content'], ['foundation', 'NMC Foundation', 'owner-foundation'], ['coverage', 'Coverage Index', 'owner-coverage'], ['concept-drafts', 'Concept Drafts', 'owner-concept-drafts'], ['exam-syllabus', 'Exam Syllabus', 'owner-exam-syllabus'], ['integrity', 'Catalog Integrity', 'owner-integrity'],
+  ['content', 'Content Overview', 'owner-content'], ['foundation', 'NMC Foundation', 'owner-foundation'], ['coverage', 'Coverage Index', 'owner-coverage'], ['concept-drafts', 'Concept Drafts', 'owner-concept-drafts'], ['exam-syllabus', 'Exam Syllabus', 'owner-exam-syllabus'], ['integrity', 'Catalog Integrity', 'owner-integrity'],
   ['source-watch', 'Source Change Watch', 'owner-source-watch'], ['ai', 'AI Usage', 'owner-ai'],
   ['health', 'Provider Health', 'owner-infrastructure'], ['alerts', 'Infrastructure Alerts', 'owner-infrastructure-alerts'],
   ['features', 'Feature Gates', 'owner-features'], ['research', 'Research Readiness', 'research-gate']
