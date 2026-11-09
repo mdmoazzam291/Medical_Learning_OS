@@ -13,6 +13,15 @@ function requirementMarkup(r,objectives){
   '<p>'+e(state)+(r.amendmentNotice?' · amendment requires review':'')+' · Coverage unverified</p>'+
   (details?'<details><summary>Review '+versions.length+' proposed objective'+(versions.length===1?'':'s')+'</summary>'+details+'</details>':'')+'</li>';
 }
+function namesOnlyMarkup(preview){
+ if(!preview||![preview.concepts,preview.headings,preview.aliases,preview.held].every(Array.isArray))return '';
+ const section=(heading,items)=>'<h4>'+e(heading)+'</h4><ul>'+items.map(item=>'<li>'+e(item)+'</li>').join('')+'</ul>';
+ return '<details><summary>Names-only draft preview</summary><p>Read-only proposals. Source links do not establish accepted mappings.</p>'+
+ section('Proposed concept names',preview.concepts.map(row=>row.label+' · '+row.codes.join(', ')))+
+ section('Provisional navigation headings',preview.headings)+
+ section('Provisional search aliases',preview.aliases)+
+ section('Held entries',preview.held)+'</details>';
+}
 export function foundationReviewMarkup(p=null,filters={},message='Load the first objective proposal batch to inspect it.'){
  const intro='<h2>NMC foundation objective drafts</h2><p>AI-generated original learning goals. Clinical review and source alignment are pending. Reference appearances are not a unique competency denominator. This batch does not establish curriculum coverage or learner readiness.</p>';
  if(!p)return intro+'<p role="status">'+e(message)+'</p><button type="button" data-foundation-load>Load objective drafts</button>';
@@ -21,6 +30,7 @@ export function foundationReviewMarkup(p=null,filters={},message='Load the first
  '<p>'+e(p.totals.objectiveDrafts)+' original drafts · '+e(p.totals.sourceLinkedReferences)+' source appearances with proposed links · '+e(p.totals.unboundObjectiveDrafts)+' drafts without NMC links · '+e(p.totals.sourceReferences)+' reference appearances</p>'+
  (!p.catalogVersionMatches?'<p role="alert">Catalog version changed since authoring. Recheck the draft context.</p>':'')+
  (!p.identityBindingsCurrent?'<p role="alert">Canonical identities changed or are missing. These links require review.</p>':'')+
+ namesOnlyMarkup(p.namesOnlyPreview)+
  '<details><summary>Original objectives and canonical identities</summary><ul>'+p.objectives.map(r=>'<li><strong>'+e(r.canonicalLabel)+'</strong> · '+e(r.identityState)+(r.identityKind==='accepted-private'?' · Admin-private identity':'')+'<p>'+e(r.wording)+'</p><p>'+e(r.objective.task)+' / '+e(r.objective.depth)+' · '+e(r.objective.conceptId)+' · '+e(r.objective.objectiveVersionId)+'</p>'+
  (r.sourceReferences.length?'<p>Proposed source links: '+r.sourceReferences.map(b=>e(b.code)+' ('+e(b.subjectId)+', PDF page '+e(b.sourcePage)+')').join('; ')+'. Each link proposes a specific task for review. Full competency coverage requires separate review.</p>':'<p>NMC source alignment unresolved.</p>')+'</li>').join('')+'</ul></details>'+
  '<form data-foundation-filters><label>Subject<select name="subject" aria-label="Objective reference subject"><option value="">All subjects</option>'+p.subjects.map(s=>'<option value="'+e(s)+'"'+(s===filters.subject?' selected':'')+'>'+e(s.replaceAll('-',' '))+'</option>').join('')+'</select></label><label>Code or topic<input name="search" maxlength="200" value="'+e(filters.search||'')+'"></label><button type="submit">Filter references</button></form>'+

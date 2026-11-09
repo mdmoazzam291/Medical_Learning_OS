@@ -1,3 +1,4 @@
+import names from '../../../../docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json' with {type:'json'};
 import pack from '../../../../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import catalogue from '../../../../data/nmc-reference-catalogue.json' with {type:'json'};
 import {foundationDraftPage,parseFoundationFilters} from '../../../../src/domain/nmc-learning-foundation.js';
@@ -33,6 +34,12 @@ export async function readFoundationDrafts({admin,actor,method,params}){
     concepts.push({conceptId:row.concept_id,label:identity.label,aliases:identity.aliases,subjectTags:identity.classification?.subjects,identityKind:'accepted-private'});
    }
   }
-  return await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
+  const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
+  return {...page,namesOnlyPreview:{
+   concepts:names.conceptProposals.map(row=>({label:row.name,codes:[...new Set(row.sourceLinks.map(link=>link.code))]})),
+   headings:names.navigationHeadings.map(row=>row.name),
+   aliases:names.searchAliases.map(row=>row.alias),
+   held:names.heldEntries.map(row=>row.alias),
+  }};
  }catch{fail(503,'foundation_drafts_unavailable');}
 }
