@@ -38,8 +38,8 @@ jobs:
               raise SystemExit("Expected the designated staging Session pooler URI.")
           PY
 
-          PGDATABASE="$STAGING_DB_URL?sslmode=verify-full" PGCONNECT_TIMEOUT=10 PGSSLROOTCERT=/etc/ssl/certs/ca-certificates.crt \
-            psql --no-psqlrc --set ON_ERROR_STOP=1 <<'SQL'
+          PGCONNECT_TIMEOUT=10 PGSSLROOTCERT=/etc/ssl/certs/ca-certificates.crt \
+            psql --dbname="$STAGING_DB_URL?sslmode=verify-full" --no-psqlrc --set ON_ERROR_STOP=1 <<'SQL'
           BEGIN READ ONLY;
           SELECT current_user AS connected_role,
                  pg_has_role(current_user, 'supabase_admin', 'MEMBER') AS managed_admin_member,
