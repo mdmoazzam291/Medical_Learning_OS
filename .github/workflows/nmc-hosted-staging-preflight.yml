@@ -1,0 +1,52 @@
+name: NMC hosted staging preflight
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify the staging connection and inspect schema readiness
+        env:
+          STAGING_DB_URL: ${{ secrets.MLOS_STAGING_DB_URL }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os
+          from urllib.parse import urlsplit
+
+          try:
+              url = urlsplit(os.environ["STAGING_DB_URL"])
+              valid = (
+                  url.scheme in {"postgres", "postgresql"}
+                  and url.username == "postgres.vwtdwafjrraptrgeshzt"
+                  and url.hostname is not None
+                  and url.hostname.endswith(".pooler.supabase.com")
+                  and url.port == 5432
+                  and url.path == "/postgres"
+                  and bool(url.password)
+                  and not url.query
+                  and not url.fragment
+              )
+          except ValueError:
+              valid = False
+          if not valid:
+              raise SystemExit("Expected the designated staging Session pooler URI.")
+          PY
+
+          PGDATABASE="$STAGING_DB_URL?sslmode=verify-full" PGCONNECT_TIMEOUT=10 PGSSLROOTCERT=/etc/ssl/certs/ca-certificates.crt \
+            psql --no-psqlrc --set ON_ERROR_STOP=1 <<'SQL'
+          BEGIN READ ONLY;
+          SELECT current_user AS connected_role,
+                 pg_has_role(current_user, 'supabase_admin', 'MEMBER') AS managed_admin_member,
+                 to_regclass('public.learner_reference_codes') IS NOT NULL AS learner_reference_codes_present,
+                 to_regclass('public.study_catalog') IS NOT NULL AS catalogue_present,
+                 to_regprocedure('public.owner_admin_dashboard_v1()') IS NOT NULL AS owner_dashboard_present,
+                 to_regprocedure('public.content_admin_status_v1(uuid)') IS NOT NULL AS content_admin_status_present,
+                 EXISTS (SELECT 1 FROM auth.users) AS auth_users_present;
+          ROLLBACK;
+          SQL
