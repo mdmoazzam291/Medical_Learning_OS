@@ -16,7 +16,21 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  const page=await read();
  assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[91,2,6,1]);
  assert.ok(page.namesOnlyPreview.concepts.some(row=>row.label==='Brown-Sequard syndrome'&&row.codes.length===2));
- assert.equal(page.objectives[0].identityState,'current');concept.subjectTags=['anatomy'];assert.equal((await read()).objectives[0].identityState,'changed');
+ assert.equal(page.objectives[0].identityState,'current');
+ const expectedObjectiveId = pack.objectives[0].objective.objectiveVersionId;
+ for (const [subject, code] of [['anatomy', 'AN57.5'], ['physiology', 'PY10.10']]) {
+  const params = new URLSearchParams({ subject, search: code });
+  const result = await readFoundationDrafts({ admin, actor: 'actor', method: 'GET', params });
+  const requirement = result.requirements.find(row => row.code === code && row.subjectId === subject);
+  assert.ok(requirement?.objectiveVersionIds.includes(expectedObjectiveId));
+  const objective = result.objectives.find(row => row.objective.objectiveVersionId === expectedObjectiveId);
+  assert.equal(objective?.objective.conceptId, concept.conceptId);
+  assert.equal(objective.identityState, 'current');
+  assert.equal(objective.sourceReferences.find(row => row.referenceId === requirement.referenceId)?.status, 'proposed');
+  assert.equal(result.learnerActivation, false);
+ }
+ concept.subjectTags = ['anatomy'];
+ assert.equal((await read()).objectives[0].identityState, 'changed');
 });
 test('foundation adapter encodes filters and authenticates a read without client actor fields',async()=>{
  const {createCloudOwner}=await import('../src/adapters/cloud-owner.js');let request;
