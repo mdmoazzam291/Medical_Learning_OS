@@ -240,7 +240,7 @@ jobs:
             data_args=(--command 'SET session_replication_role = replica' --file /tmp/mlos-restore/data.sql)
           fi
           if ! docker exec "$container" psql --username supabase_admin --no-psqlrc --single-transaction --variable ON_ERROR_STOP=1 \
-            --variable VERBOSITY=sqlstate --quiet --file "/tmp/mlos-restore/roles.sql" \
+            --variable VERBOSITY=verbose --quiet --file "/tmp/mlos-restore/roles.sql" \
             --file "/tmp/mlos-restore/schema.sql" \
             "${data_args[@]}" \
             --file "/tmp/mlos-restore/access.sql" \
@@ -254,16 +254,9 @@ jobs:
                   name, number, code = match.groups()
                   print(f'Restore SQLSTATE={code} file={name}.sql line={number}')
                   if name == 'data' and code == '42P01':
-                      dump = Path(os.environ['RUNNER_TEMP']) / 'mlos-restore' / 'data.sql'
-                      with dump.open() as stream:
-                          statement = next((sql for index, sql in enumerate(stream, 1)
-                                            if index == int(number)), '')
-                      identifier = r'[a-z_][a-z0-9_]*\.[a-z_][a-z0-9_]*'
-                      target = re.match(r'COPY (' + identifier + r') \([^\n]*\) FROM stdin;\s*$', statement)
-                      if not target:
-                          target = re.match(r"SELECT pg_catalog\.setval\('(" + identifier + r")', \d+, (?:true|false)\);\s*$", statement)
-                      if target:
-                          print(f'Restore missing relation candidate: {target.group(1)}')
+                      relation = re.search(r'ERROR:  42P01:  relation "([a-z_][a-z0-9_]*(?:\.[a-z_][a-z0-9_]*)?)" does not exist$', line)
+                      if relation:
+                          print(f'Restore missing relation: {relation.group(1)}')
           PYERR
             echo 'Local restore failed. No live database was modified.'
             exit 1
