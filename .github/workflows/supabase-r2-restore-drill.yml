@@ -199,7 +199,8 @@ jobs:
 
       - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
         with:
-          version: 2.121.0
+          # Storage v1.90.1 includes the hosted lifecycle tables.
+          version: 3.1.0
 
       - name: Restore only into disposable local Supabase database
         shell: bash
