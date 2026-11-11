@@ -17,9 +17,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Verify anonymous staging request is denied
+        env:
+          STAGING_PUBLIC_KEY: sb_publishable_oivLc6grSgYnlKUxMEw07A_ZC2ZYeu0
+        run: |
+          status=$(curl --silent --show-error --max-time 20 --output /dev/null --write-out '%{http_code}' --header "apikey: $STAGING_PUBLIC_KEY" https://vwtdwafjrraptrgeshzt.supabase.co/functions/v1/owner-api/foundation-objective-drafts)
+          test "$status" = 401 || { echo "Expected anonymous HTTP 401, got $status"; exit 1; }
       - name: Verify staging Owner preview and learner denial
         env:
-          MLOS_STAGING_PUBLISHABLE_KEY: ${{ vars.MLOS_STAGING_PUBLISHABLE_KEY || secrets.MLOS_STAGING_PUBLISHABLE_KEY }}
+          MLOS_STAGING_PUBLISHABLE_KEY: ${{ vars.MLOS_STAGING_PUBLISHABLE_KEY || secrets.MLOS_STAGING_PUBLISHABLE_KEY || 'sb_publishable_oivLc6grSgYnlKUxMEw07A_ZC2ZYeu0' }}
           MLOS_STAGING_OWNER_EMAIL: ${{ secrets.MLOS_STAGING_OWNER_EMAIL }}
           MLOS_STAGING_OWNER_PASSWORD: ${{ secrets.MLOS_STAGING_OWNER_PASSWORD }}
           MLOS_STAGING_LEARNER_EMAIL: ${{ secrets.MLOS_STAGING_LEARNER_EMAIL }}
