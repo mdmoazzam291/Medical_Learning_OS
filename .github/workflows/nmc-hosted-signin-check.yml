@@ -1,0 +1,27 @@
+name: NMC hosted staging sign-in
+on:
+  workflow_dispatch:
+  push:
+    branches: [ops/nmc-hosted-signin-check-20261111]
+    paths:
+      - .github/workflows/nmc-hosted-signin-check.yml
+      - scripts/nmc-hosted-signin-check.mjs
+permissions:
+  contents: read
+jobs:
+  staging-sign-in:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify staging Owner preview and learner denial
+        env:
+          MLOS_STAGING_PUBLISHABLE_KEY: ${{ vars.MLOS_STAGING_PUBLISHABLE_KEY || secrets.MLOS_STAGING_PUBLISHABLE_KEY }}
+          MLOS_STAGING_OWNER_EMAIL: ${{ secrets.MLOS_STAGING_OWNER_EMAIL }}
+          MLOS_STAGING_OWNER_PASSWORD: ${{ secrets.MLOS_STAGING_OWNER_PASSWORD }}
+          MLOS_STAGING_LEARNER_EMAIL: ${{ secrets.MLOS_STAGING_LEARNER_EMAIL }}
+          MLOS_STAGING_LEARNER_PASSWORD: ${{ secrets.MLOS_STAGING_LEARNER_PASSWORD }}
+        run: node scripts/nmc-hosted-signin-check.mjs
