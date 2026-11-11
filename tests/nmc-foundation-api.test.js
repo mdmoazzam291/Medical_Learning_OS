@@ -14,8 +14,8 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  const admin=fake(),fallback=admin.from.bind(admin);admin.from=name=>name==='study_catalog'?({select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[concept]}}})})})}):fallback(name);
  const read=()=>readFoundationDrafts({admin,actor:'actor',method:'GET',params:new URLSearchParams()});
  const page=await read();
- assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[116,2,6,1]);
- assert.equal(new Set(page.namesOnlyPreview.concepts.map(row=>row.label.toLowerCase())).size,116);
+ assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[118,2,6,1]);
+ assert.equal(new Set(page.namesOnlyPreview.concepts.map(row=>row.label.toLowerCase())).size,118);
  assert.deepEqual(page.namesOnlyPreview.concepts.find(row=>row.label==='Torticollis').codes,['AN29.4','OR12.1']);
  assert.equal(page.namesOnlyPreview.concepts.some(row=>row.label==='Precocious puberty'),false);
  assert.equal(page.namesOnlyRelationships.length,5);
