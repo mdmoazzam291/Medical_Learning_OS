@@ -14,7 +14,7 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  const admin=fake(),fallback=admin.from.bind(admin);admin.from=name=>name==='study_catalog'?({select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[concept]}}})})})}):fallback(name);
  const read=()=>readFoundationDrafts({admin,actor:'actor',method:'GET',params:new URLSearchParams()});
  const page=await read();
- assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[91,2,6,1]);
+ assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[93,2,6,1]);
  assert.ok(page.namesOnlyPreview.concepts.some(row=>row.label==='Brown-Sequard syndrome'&&row.codes.length===2));
  assert.equal(page.objectives[0].identityState,'current');
  const expectedObjectiveId = pack.objectives[0].objective.objectiveVersionId;
