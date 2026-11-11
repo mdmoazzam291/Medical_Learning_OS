@@ -1,0 +1,629 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-queue-supplement",
+  "baseQueue": "2026-11-09-nmc-unified-names-only-review-queue.json",
+  "relationshipEvidence": "2026-11-12-nmc-shared-name-relationships.json",
+  "baseProposalCount": 91,
+  "addedProposalCount": 25,
+  "proposedUnionCount": 116,
+  "distinctSupplementReferences": 49,
+  "additionalRelationshipEndpoints": [
+    "Analgesic drugs",
+    "Childhood hearing loss",
+    "Paediatric heart failure",
+    "Puberty"
+  ],
+  "conceptProposals": [
+    {
+      "name": "Antepartum haemorrhage",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:da5438435abc5e4c54f3137d51bd676bd0d6608e16f219cc8aa0dcb8101b6f75",
+          "code": "OG35.19",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:8270ae1505883fdc7e933197ec29f05ec4b223e15856d55e0a4c9ca87a95c8b2",
+          "code": "OG10.1",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cervical cytology sampling",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028",
+          "code": "GM13.9",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:247852e249d96958c3d64dc211bed852f3d5b581fdaeaf0ae704dc7a284f597f",
+          "code": "OG35.15",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Death by neurological criteria",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d",
+          "code": "FM2.3",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ae0a4fc2156fe9f0de1f3aa9aa1e22ec644f685729819e62e4080d72bd486110",
+          "code": "PY12.7",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Delayed puberty",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a",
+          "code": "PE30.6",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2ca3cc8cf157e281ef512ba3877bf1aa266b36c59b2c68ed3318e3b75f324ee0",
+          "code": "OG23.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drowning",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1",
+          "code": "PY6.6",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:73dff45bffaa1d5479457d5dd5baee1fa95e8a2cc009a81941d68b35545dca34",
+          "code": "FM3.4",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fetal circulation",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:23f70d14a6674f916f89ae8dc611b0253e66c9d357d5cfc9655c9b89d70778b1",
+          "code": "PY5.12",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1",
+          "code": "AN25.3",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Foreign body aspiration",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd",
+          "code": "RD7.5",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110",
+          "code": "PE25.5",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hearing loss",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99",
+          "code": "GM25.17",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d",
+          "code": "EN4.14",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Heart failure",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+          "code": "RD7.3",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af",
+          "code": "PA26.3",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hysteroscopy",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180",
+          "code": "OG34.5",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:fc23e271d9c20e0800bc803473cd5be94b6d349801588645c4151ba9dcf07c17",
+          "code": "OG38.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Infectious diarrhoea",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca",
+          "code": "GM26.10",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb",
+          "code": "MI4.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Non-opioid analgesics",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057",
+          "code": "AS4.1",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94",
+          "code": "PH2.7",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Nutritional assessment",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089",
+          "code": "CM5.9",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d99d246f692a50faf76d97c28a9b2b7d87e938b29005d1e9e4a0e31190f7a46c",
+          "code": "CM5.2",
+          "role": "existing-index-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f35bdf1d4da03eea02ef49d05281ace14101f9ed451da22756454b672d8d9e79",
+          "code": "GM24.1",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Opioid analgesics",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057",
+          "code": "AS4.1",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069",
+          "code": "PH3.4",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Organophosphate poisoning",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1",
+          "code": "PH2.2",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5",
+          "code": "PE14.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Otosclerosis",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4",
+          "code": "EN1.2",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2e2a9f07fd736484aba7b7ce2ded7cbb7aaef1654b23a382c3f63e3c0e7010fd",
+          "code": "EN4.13",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Oxygen therapy",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33",
+          "code": "GM28.19",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1",
+          "code": "PY6.6",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ad8b42d65278540419217b2a17921d772d9eee7c50053ff3b087beea4d1620cc",
+          "code": "AS11.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paracetamol poisoning",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c",
+          "code": "FM13.17",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7",
+          "code": "PE14.3",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "pH measurement",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+          "code": "BC14.18",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+          "code": "BC14.2",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Postpartum haemorrhage",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:da5438435abc5e4c54f3137d51bd676bd0d6608e16f219cc8aa0dcb8101b6f75",
+          "code": "OG35.19",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:68f1064e8eb1583e8dcaddcb57143658040803846b9d37143240fd89b9fd2654",
+          "code": "OG16.1",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pregnancy recognition",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+          "code": "AN79.6",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:80c94cf12fccecaf5f1db07673e05449ba8a0e3c0de105d18415f7bf6ee81f7c",
+          "code": "OG6.1",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Prostatitis",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da",
+          "code": "GM26.11",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:66732075966806fd63e14410d32640a914fecfbd1f1633384636bac2ed44fe0b",
+          "code": "PA28.5",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Torticollis",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d",
+          "code": "OR12.1",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c74196034f600a466ef9398a9101160a67be1072129c98642ebef1130fff133f",
+          "code": "AN29.4",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tracheostomy",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9",
+          "code": "EN2.10",
+          "mode": "performance-and-knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9d3368c6d93efe91bff6e8a5619e4e6eab06a846576f1068dbb63eada9d3c539",
+          "code": "EN4.44",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vomiting",
+      "status": "proposed",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+          "code": "PY4.11",
+          "mode": "knowledge",
+          "role": "incoming-task-scope"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ec51d1ddd62af2e8afdea5e3a47bfc2f3fa9a8029b248b4be15ad78ea3db1f7c",
+          "code": "PE23.1",
+          "role": "existing-index-scope"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "relationships": [
+    {
+      "narrower": {
+        "name": "Opioid analgesics",
+        "nameKey": "opioid analgesics",
+        "referenceIds": [
+          "nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069"
+        ]
+      },
+      "broader": {
+        "name": "Analgesic drugs",
+        "nameKey": "analgesic drugs",
+        "referenceIds": [
+          "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9"
+        ]
+      },
+      "status": "proposed"
+    },
+    {
+      "narrower": {
+        "name": "Non-opioid analgesics",
+        "nameKey": "non-opioid analgesics",
+        "referenceIds": [
+          "nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94"
+        ]
+      },
+      "broader": {
+        "name": "Analgesic drugs",
+        "nameKey": "analgesic drugs",
+        "referenceIds": [
+          "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9"
+        ]
+      },
+      "status": "proposed"
+    },
+    {
+      "narrower": {
+        "name": "Delayed puberty",
+        "nameKey": "delayed puberty",
+        "referenceIds": [
+          "nmc-2024-ref:2ca3cc8cf157e281ef512ba3877bf1aa266b36c59b2c68ed3318e3b75f324ee0"
+        ]
+      },
+      "broader": {
+        "name": "Puberty",
+        "nameKey": "puberty",
+        "referenceIds": [
+          "nmc-2024-ref:d85cf0f9912c1e987a7c166b3a1eaecdf2b317f3b9388b20807a4e8dbbbf2eba"
+        ]
+      },
+      "status": "proposed"
+    },
+    {
+      "narrower": {
+        "name": "Childhood hearing loss",
+        "nameKey": "childhood hearing loss",
+        "referenceIds": [
+          "nmc-2024-ref:6e1901420520003346726ba528a5d5aa573e84cefc0c3a6a9eb07d18f48095bf"
+        ]
+      },
+      "broader": {
+        "name": "Hearing loss",
+        "nameKey": "hearing loss",
+        "referenceIds": [
+          "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+        ]
+      },
+      "status": "proposed"
+    },
+    {
+      "narrower": {
+        "name": "Paediatric heart failure",
+        "nameKey": "paediatric heart failure",
+        "referenceIds": [
+          "nmc-2024-ref:31bb1804895c02c744c0f739e29ace7042a70c0de47784509d9428bc6aea135e"
+        ]
+      },
+      "broader": {
+        "name": "Heart failure",
+        "nameKey": "heart failure",
+        "referenceIds": [
+          "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af"
+        ]
+      },
+      "status": "proposed"
+    }
+  ],
+  "heldLinks": [
+    {
+      "name": "Precocious puberty",
+      "disposition": "held",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a",
+          "code": "PE30.6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "existing": [
+        {
+          "referenceId": "nmc-2024-ref:cd078130cb670dc57c5d18f3c36c45b2ba175d5738d836d2a614a3b591453aef",
+          "code": "OG23.3"
+        }
+      ],
+      "mappingAccepted": false,
+      "reason": "Early puberty scope is broader"
+    },
+    {
+      "name": "Urinary catheterization",
+      "disposition": "held",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71",
+          "code": "OR13.2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "existing": [
+        {
+          "referenceId": "nmc-2024-ref:20637b247511ad008003fddf8b118e0636ed461a9316cb0baed85a162ef67840",
+          "code": "OG35.20"
+        }
+      ],
+      "mappingAccepted": false,
+      "reason": "Catheter type is implicit"
+    },
+    {
+      "name": "Uterine prolapse",
+      "disposition": "held",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e",
+          "code": "AN48.5",
+          "mode": "knowledge"
+        }
+      ],
+      "existing": [
+        {
+          "referenceId": "nmc-2024-ref:abb0f475f6df3c8e3d2d0223b5d2f101d7ac1199450648fb8d808a4aafd381a6",
+          "code": "OG31.1"
+        }
+      ],
+      "mappingAccepted": false,
+      "reason": "Prolapse identity is implicit"
+    }
+  ],
+  "mappingAccepted": false,
+  "learnerActivation": false,
+  "checkedHead": "204f26d98831bc1aea4694ab2018451e004c5105",
+  "next": "Reconcile index-only relationship endpoints and check the consumer projection before any preview integration."
+}
