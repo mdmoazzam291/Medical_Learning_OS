@@ -58,13 +58,24 @@ async function main() {
   const owner = await signIn('Owner', ownerEmail, ownerPassword);
   const allowed = await request(route, { headers: { Authorization: `Bearer ${owner}` } });
   assert.equal(allowed.status, 200, 'Owner preview HTTP status');
-  const { namesOnlyPreview: preview } = await allowed.json();
+  const { namesOnlyPreview: preview, namesOnlyRelationships } = await allowed.json();
   for (const [field, count] of Object.entries({ concepts: 91, headings: 2, aliases: 6, held: 1 })) {
     assert.equal(preview?.[field]?.length, count, `Owner preview ${field} count`);
   }
   const brownSequard = preview.concepts.find(({ label }) => label === 'Brown-Sequard syndrome');
   assert.deepEqual([...(brownSequard?.codes ?? [])].sort(), ['AN57.5', 'PY10.10']);
-  console.log('Staging Owner preview and learner denial verified, including both Brown-Sequard references.');
+  assert.equal(namesOnlyRelationships?.length, 5, 'Owner relationship count');
+  const links = namesOnlyRelationships.map(({ narrower, broader }) =>
+    [narrower.label, narrower.codes.join(','), broader.label, broader.codes.join(',')].join('|')
+  ).sort();
+  assert.deepEqual(links, [
+    'Childhood hearing loss|EN4.20|Hearing loss|EN4.14',
+    'Delayed puberty|OG23.2|Puberty|PY9.2',
+    'Non-opioid analgesics|PH2.7|Analgesic drugs|AS8.3',
+    'Opioid analgesics|PH3.4|Analgesic drugs|AS8.3',
+    'Paediatric heart failure|PE22.3|Heart failure|PA26.3',
+  ]);
+  console.log('Staging Owner preview verified all five relationships and denied learner access.');
 }
 
 main().catch(error => {
