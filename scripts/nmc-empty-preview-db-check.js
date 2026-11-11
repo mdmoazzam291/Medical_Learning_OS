@@ -52,9 +52,9 @@ const call=actor=>readFoundationDrafts({admin,actor,method:'GET',params:new URLS
 await assert.rejects(call(l),{status:403,code:'content_admin_required'});
 assert.equal(contentReads,0);
 const page=await call(u);
-assert.deepEqual(Object.values(page.namesOnlyPreview).map(x=>x.length),[91,2,6,1]);
+assert.deepEqual(Object.values(page.namesOnlyPreview).map(x=>x.length),[93,2,6,1]);
 assert.deepEqual(page.namesOnlyPreview.held,['PS2.1']);
 assert.equal(page.acceptedMappings,0);
 assert.equal(page.learnerActivation,false);
-console.log('PASS: dashboard and access summary on empty catalogue; actual handler returns 91 names to Admin and denies learner before content reads');
+console.log('PASS: dashboard and access summary on empty catalogue; actual handler returns 93 names to Admin and denies learner before content reads');
 }catch(e){console.error(e.message);process.exitCode=1;}finally{await db.close();}

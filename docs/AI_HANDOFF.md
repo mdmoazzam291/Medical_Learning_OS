@@ -3344,3 +3344,7 @@ An outgoing AI's GitHub, Drive, cloud, Library and browser sessions do not trans
 
 ## Next handoff fields
 Replace the current-task section for each new task: objective/acceptance, owner or released ownership, date, branch, base/head commit, PR, touched files, unfinished work, exact test results/time, blockers, authorization/release state and next action. Record uncertain operations as uncertain and reconcile before retrying. Push WIP on the feature branch before provider transfer; stop the outgoing remote job first.
+
+## NMC sensory and motor names-only inventory
+
+Checked 2026-11-11. Branch feat/nmc-sensory-motor-names-20261111, base ef4396a2. Added the recorded PY10.7 and PY10.9 draft labels with their existing reference IDs, bringing the protected projection to 93 labels. Both mappings remain proposed. Eighteen focused tests passed. Next verify CI and reconcile the hosted smoke-test count with the deployed preview version.
