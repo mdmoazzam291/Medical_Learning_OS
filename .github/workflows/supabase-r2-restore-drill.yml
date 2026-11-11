@@ -254,7 +254,56 @@ jobs:
                   name, number, code = match.groups()
                   print(f'Restore SQLSTATE={code} file={name}.sql line={number}')
                   if name == 'data' and code == '42P01':
-                      relation = re.search(r'ERROR:  42P01:  relation "([a-z_][a-z0-9_]*(?:\.[a-z_][a-z0-9_]*)?)" does not exist$', line)
+                      relation = re.search(r'ERROR:\s+42P01:\s+relation "([a-z_][a-z0-9_]*(?:\.[a-z_][a-z0-9_]*)?)" does not exist\s*
+                      if relation:
+                          print(f'Restore missing relation: {relation.group(1)}')
+          PYERR
+            echo 'Local restore failed. No live database was modified.'
+            exit 1
+          fi
+
+      - name: Verify restored access and selected restore scope
+        shell: bash
+        env:
+          MLOS_RECOVERY_AGE_IDENTITY: ${{ secrets.MLOS_RECOVERY_AGE_IDENTITY }}
+          SCHEMA_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.schema_only }}
+        run: |
+          set -euo pipefail
+          container=supabase_db_mlos-local-restore
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -q -v ON_ERROR_STOP=1 \
+            < supabase/verification/data-api-grants.sql
+          docker exec -i "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 \
+            < supabase/verification/export-access.sql > "$RUNNER_TEMP/mlos-restore/access.restored.sql"
+          if ! cmp --silent "$RUNNER_TEMP/mlos-restore/access.sql" "$RUNNER_TEMP/mlos-restore/access.restored.sql"; then
+            echo 'Restored access metadata differs from the source snapshot.'
+            exit 1
+          fi
+          echo 'Exact source public owners, grants, column privileges and defaults matched.'
+          if [ "$SCHEMA_ONLY" = true ]; then
+            docker exec "$container" psql -U supabase_admin -d postgres -X -qAt -v ON_ERROR_STOP=1 -c "
+              select to_regprocedure('public.owner_admin_dashboard_v1()') is not null
+                 and to_regprocedure('public.content_admin_status_v1(uuid)') is not null
+                 and to_regclass('public.content_concept_acceptances') is not null
+                 and not exists (select 1 from public.study_catalog)
+                 and not exists (select 1 from auth.users);
+            " | grep -qx t
+            echo 'Schema-only preview dependencies verified. No application catalogue or Auth rows were restored.'
+            exit 0
+          fi
+          python3 ops/r2-backups/verify_restore.py \
+            "$RUNNER_TEMP/mlos-restore/data.sql" supabase/migrations "$container"
+
+      - name: Remove disposable database and downloaded backup
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/mlos-local-restore/supabase/config.toml" ]; then
+            cd "$RUNNER_TEMP/mlos-local-restore"
+            supabase stop --no-backup || true
+          fi
+          rm -rf "$RUNNER_TEMP/mlos-restore"
+          rm -f "$RUNNER_TEMP/restore.out" "$RUNNER_TEMP/restore.err" "$RUNNER_TEMP/restore-platform.log"
+, line)
                       if relation:
                           print(f'Restore missing relation: {relation.group(1)}')
           PYERR
