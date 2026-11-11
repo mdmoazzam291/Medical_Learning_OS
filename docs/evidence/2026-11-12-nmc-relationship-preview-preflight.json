@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "status": "offline-preview-preflight",
+  "currentBranchConceptCount": 91,
+  "projectedConceptCount": 116,
+  "relationshipCount": 5,
+  "heldLinkCount": 3,
+  "endpoints": {
+    "opioid analgesics": {
+      "label": "Opioid analgesics",
+      "codes": [
+        "PH3.4"
+      ],
+      "location": "concept-list"
+    },
+    "analgesic drugs": {
+      "label": "Analgesic drugs",
+      "codes": [
+        "AS8.3"
+      ],
+      "location": "relationship-only"
+    },
+    "non-opioid analgesics": {
+      "label": "Non-opioid analgesics",
+      "codes": [
+        "PH2.7"
+      ],
+      "location": "concept-list"
+    },
+    "delayed puberty": {
+      "label": "Delayed puberty",
+      "codes": [
+        "OG23.2"
+      ],
+      "location": "concept-list"
+    },
+    "puberty": {
+      "label": "Puberty",
+      "codes": [
+        "PY9.2"
+      ],
+      "location": "relationship-only"
+    },
+    "childhood hearing loss": {
+      "label": "Childhood hearing loss",
+      "codes": [
+        "EN4.20"
+      ],
+      "location": "relationship-only"
+    },
+    "hearing loss": {
+      "label": "Hearing loss",
+      "codes": [
+        "EN4.14"
+      ],
+      "location": "concept-list"
+    },
+    "paediatric heart failure": {
+      "label": "Paediatric heart failure",
+      "codes": [
+        "PE22.3"
+      ],
+      "location": "relationship-only"
+    },
+    "heart failure": {
+      "label": "Heart failure",
+      "codes": [
+        "PA26.3"
+      ],
+      "location": "concept-list"
+    }
+  },
+  "mappingAccepted": false,
+  "learnerActivation": false,
+  "next": "Add a protected relationship projection with focused access and reference tests.",
+  "checkedHead": "08d9a765a851e6cf07b4d42b223e562af58ef41e"
+}
