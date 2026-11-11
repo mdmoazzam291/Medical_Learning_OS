@@ -18,6 +18,8 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  assert.equal(new Set(page.namesOnlyPreview.concepts.map(row=>row.label.toLowerCase())).size,121);
  assert.deepEqual(page.namesOnlyPreview.concepts.find(row=>row.label==='Torticollis').codes,['AN29.4','OR12.1']);
  assert.equal(page.namesOnlyPreview.concepts.some(row=>row.label==='Precocious puberty'),true);
+ assert.ok(page.namesOnlyPreview.concepts.every(row=>row.codes.every(code=>!code.includes(' '))));
+ assert.ok(page.namesOnlyPreview.concepts.find(row=>row.label==='Adherence').codes.includes('GM14.12'));
  assert.equal(page.namesOnlyRelationships.length,5);
  assert.deepEqual(page.namesOnlyRelationships.find(row=>row.narrower.label==='Delayed puberty'),{
   narrower:{label:'Delayed puberty',codes:['OG23.2']},

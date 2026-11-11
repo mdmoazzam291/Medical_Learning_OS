@@ -90,67 +90,10 @@
       "status": "proposed"
     }
   ],
-  "heldLinks": [
-    {
-      "name": "Precocious puberty",
-      "disposition": "held",
-      "incoming": [
-        {
-          "referenceId": "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a",
-          "code": "PE30.6",
-          "mode": "performance-and-knowledge"
-        }
-      ],
-      "existing": [
-        {
-          "referenceId": "nmc-2024-ref:cd078130cb670dc57c5d18f3c36c45b2ba175d5738d836d2a614a3b591453aef",
-          "code": "OG23.3"
-        }
-      ],
-      "mappingAccepted": false,
-      "reason": "Early puberty scope is broader"
-    },
-    {
-      "name": "Urinary catheterization",
-      "disposition": "held",
-      "incoming": [
-        {
-          "referenceId": "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71",
-          "code": "OR13.2",
-          "mode": "performance-and-knowledge"
-        }
-      ],
-      "existing": [
-        {
-          "referenceId": "nmc-2024-ref:20637b247511ad008003fddf8b118e0636ed461a9316cb0baed85a162ef67840",
-          "code": "OG35.20"
-        }
-      ],
-      "mappingAccepted": false,
-      "reason": "Catheter type is implicit"
-    },
-    {
-      "name": "Uterine prolapse",
-      "disposition": "held",
-      "incoming": [
-        {
-          "referenceId": "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e",
-          "code": "AN48.5",
-          "mode": "knowledge"
-        }
-      ],
-      "existing": [
-        {
-          "referenceId": "nmc-2024-ref:abb0f475f6df3c8e3d2d0223b5d2f101d7ac1199450648fb8d808a4aafd381a6",
-          "code": "OG31.1"
-        }
-      ],
-      "mappingAccepted": false,
-      "reason": "Prolapse identity is implicit"
-    }
-  ],
+  "heldLinks": [],
   "mappingAccepted": false,
   "learnerActivation": false,
-  "next": "Reconcile proposed relationships with the unified names-only queue and retain source-specific facets.",
-  "checkedHead": "338efc55b822e7adee69e4647ecba9c7073ec724"
+  "next": "Canonical mapping remains proposed. Source scope for the three previously held links is resolved.",
+  "checkedHead": "338efc55b822e7adee69e4647ecba9c7073ec724",
+  "sourceResolutionEvidence": "2026-11-12-nmc-unified-queue-reuse-supplement.json"
 }

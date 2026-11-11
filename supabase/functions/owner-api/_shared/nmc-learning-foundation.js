@@ -50,7 +50,7 @@ export async function readFoundationDrafts({admin,actor,method,params}){
   }));
   return {...page,namesOnlyRelationships,namesOnlyPreview:{
    concepts:[
-    ...unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
+    ...unified.rows.map(row=>relationshipEndpoint({name:row.name,referenceIds:row.references.map(link=>link.referenceId)})),
     ...supplement.conceptProposals.map(row=>relationshipEndpoint({
      name:row.name,referenceIds:row.sourceLinks.map(link=>link.referenceId),
     })),
