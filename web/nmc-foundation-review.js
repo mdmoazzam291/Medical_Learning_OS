@@ -22,6 +22,13 @@ function namesOnlyMarkup(preview){
  section('Provisional search aliases',preview.aliases)+
  section('Held entries',preview.held)+'</details>';
 }
+function namesOnlyRelationshipMarkup(relationships){
+ if(!Array.isArray(relationships)||!relationships.length)return '';
+ const endpoint=({label,codes})=>e(label)+' ('+e(codes.join(', '))+')';
+ return '<details><summary>Proposed concept relationships</summary><ul>'+
+  relationships.map(({narrower,broader})=>'<li>'+endpoint(narrower)+' is narrower than '+endpoint(broader)+'</li>').join('')+
+  '</ul></details>';
+}
 export function foundationReviewMarkup(p=null,filters={},message='Load the first objective proposal batch to inspect it.'){
  const intro='<h2>NMC foundation objective drafts</h2><p>AI-generated original learning goals. Clinical review and source alignment are pending. Reference appearances are not a unique competency denominator. This batch does not establish curriculum coverage or learner readiness.</p>';
  if(!p)return intro+'<p role="status">'+e(message)+'</p><button type="button" data-foundation-load>Load objective drafts</button>';
@@ -31,6 +38,7 @@ export function foundationReviewMarkup(p=null,filters={},message='Load the first
  (!p.catalogVersionMatches?'<p role="alert">Catalog version changed since authoring. Recheck the draft context.</p>':'')+
  (!p.identityBindingsCurrent?'<p role="alert">Canonical identities changed or are missing. These links require review.</p>':'')+
  namesOnlyMarkup(p.namesOnlyPreview)+
+ namesOnlyRelationshipMarkup(p.namesOnlyRelationships)+
  '<details><summary>Original objectives and canonical identities</summary><ul>'+p.objectives.map(r=>'<li><strong>'+e(r.canonicalLabel)+'</strong> · '+e(r.identityState)+(r.identityKind==='accepted-private'?' · Admin-private identity':'')+'<p>'+e(r.wording)+'</p><p>'+e(r.objective.task)+' / '+e(r.objective.depth)+' · '+e(r.objective.conceptId)+' · '+e(r.objective.objectiveVersionId)+'</p>'+
  (r.sourceReferences.length?'<p>Proposed source links: '+r.sourceReferences.map(b=>e(b.code)+' ('+e(b.subjectId)+', PDF page '+e(b.sourcePage)+')').join('; ')+'. Each link proposes a specific task for review. Full competency coverage requires separate review.</p>':'<p>NMC source alignment unresolved.</p>')+'</li>').join('')+'</ul></details>'+
  '<form data-foundation-filters><label>Subject<select name="subject" aria-label="Objective reference subject"><option value="">All subjects</option>'+p.subjects.map(s=>'<option value="'+e(s)+'"'+(s===filters.subject?' selected':'')+'>'+e(s.replaceAll('-',' '))+'</option>').join('')+'</select></label><label>Code or topic<input name="search" maxlength="200" value="'+e(filters.search||'')+'"></label><button type="submit">Filter references</button></form>'+

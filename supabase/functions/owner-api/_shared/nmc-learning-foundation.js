@@ -1,9 +1,16 @@
+import relationships from '../../../../docs/evidence/2026-11-12-nmc-shared-name-relationships.json' with {type:'json'};
 import unified from '../../../../docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json' with {type:'json'};
 import names from '../../../../docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json' with {type:'json'};
 import pack from '../../../../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import catalogue from '../../../../data/nmc-reference-catalogue.json' with {type:'json'};
 import {foundationDraftPage,parseFoundationFilters} from '../../../../src/domain/nmc-learning-foundation.js';
 const fail=(status,code)=>{throw Object.assign(new Error(code),{status,code});};
+const codeByReference = new Map(catalogue.references.map(row => [row.referenceId, row.searchCode]));
+function relationshipEndpoint({name, referenceIds}) {
+ const codes = referenceIds.map(id => codeByReference.get(id));
+ if (codes.some(code => !code)) throw new Error('Relationship reference missing');
+ return {label: name, codes: [...new Set(codes)].sort()};
+}
 export async function readFoundationDrafts({admin,actor,method,params}){
  if(method!=='GET')fail(405,'method_not_allowed');
  let filters;
@@ -36,7 +43,11 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    }
   }
   const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
-  return {...page,namesOnlyPreview:{
+  const namesOnlyRelationships = relationships.relationships.map(({narrower, broader}) => ({
+   narrower: relationshipEndpoint(narrower),
+   broader: relationshipEndpoint(broader),
+  }));
+  return {...page,namesOnlyRelationships,namesOnlyPreview:{
    concepts:unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
    headings:names.navigationHeadings.map(row=>row.name),
    aliases:names.searchAliases.map(row=>row.alias),
