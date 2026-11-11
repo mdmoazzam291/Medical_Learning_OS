@@ -1,3 +1,4 @@
+import supplement from '../../../../docs/evidence/2026-11-12-nmc-unified-queue-reuse-supplement.json' with {type:'json'};
 import relationships from '../../../../docs/evidence/2026-11-12-nmc-shared-name-relationships.json' with {type:'json'};
 import unified from '../../../../docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json' with {type:'json'};
 import names from '../../../../docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json' with {type:'json'};
@@ -48,7 +49,12 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    broader: relationshipEndpoint(broader),
   }));
   return {...page,namesOnlyRelationships,namesOnlyPreview:{
-   concepts:unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
+   concepts:[
+    ...unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
+    ...supplement.conceptProposals.map(row=>relationshipEndpoint({
+     name:row.name,referenceIds:row.sourceLinks.map(link=>link.referenceId),
+    })),
+   ],
    headings:names.navigationHeadings.map(row=>row.name),
    aliases:names.searchAliases.map(row=>row.alias),
    held:names.heldEntries.map(row=>row.alias),
