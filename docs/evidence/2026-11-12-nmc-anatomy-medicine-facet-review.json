@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "8da0d4cd0eaf83f91e9b0c0ad52b8f8f363c5188",
+  "reviewBasis": "Existing source-linked draft tasks and shared source references",
+  "rows": [
+    {
+      "name": "Acute kidney injury course",
+      "nameKey": "acute kidney injury course",
+      "proposedParent": "Acute kidney injury",
+      "sourceCodes": [
+        "GM10.3"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Acute kidney injury management",
+      "nameKey": "acute kidney injury management",
+      "proposedParent": "Acute kidney injury",
+      "sourceCodes": [
+        "GM10.19"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Acute kidney injury mechanisms",
+      "nameKey": "acute kidney injury mechanisms",
+      "proposedParent": "Acute kidney injury",
+      "sourceCodes": [
+        "GM10.2"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Adherence barriers",
+      "nameKey": "adherence barriers",
+      "proposedParent": "Adherence",
+      "sourceCodes": [
+        "GM14.12"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Atherosclerosis epidemiology",
+      "nameKey": "atherosclerosis epidemiology",
+      "proposedParent": "Atherosclerosis",
+      "sourceCodes": [
+        "GM2.1"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Autoimmune mechanisms",
+      "nameKey": "autoimmune mechanisms",
+      "proposedParent": "Autoimmunity",
+      "sourceCodes": [
+        "GM7.1"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood culture interpretation",
+      "nameKey": "blood culture interpretation",
+      "proposedParent": "Blood culture",
+      "sourceCodes": [
+        "GM3.13"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood pressure assessment",
+      "nameKey": "blood pressure assessment",
+      "proposedParent": "Blood pressure",
+      "sourceCodes": [
+        "GM1.11"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cost-conscious type 2 diabetes care",
+      "nameKey": "cost-conscious type 2 diabetes care",
+      "proposedParent": "Type 2 diabetes",
+      "sourceCodes": [
+        "GM11.17"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diaphragm development",
+      "nameKey": "diaphragm development",
+      "proposedParent": "Diaphragm",
+      "sourceCodes": [
+        "AN52.5"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hyperkalaemia ECG",
+      "nameKey": "hyperkalaemia ecg",
+      "proposedParent": "Hyperkalaemia",
+      "sourceCodes": [
+        "GM10.14"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Lumbar puncture anatomy",
+      "nameKey": "lumbar puncture anatomy",
+      "proposedParent": "Lumbar puncture",
+      "sourceCodes": [
+        "AN50.3"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Lumbar puncture indications",
+      "nameKey": "lumbar puncture indications",
+      "proposedParent": "Lumbar puncture",
+      "sourceCodes": [
+        "GM17.7"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Lumbar puncture technique",
+      "nameKey": "lumbar puncture technique",
+      "proposedParent": "Lumbar puncture",
+      "sourceCodes": [
+        "GM17.8"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Sensory and motor muscle innervation",
+      "nameKey": "sensory and motor muscle innervation",
+      "proposedParent": "Skeletal muscle",
+      "sourceCodes": [
+        "AN7.5"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle and attachments",
+      "nameKey": "skeletal muscle and attachments",
+      "proposedParent": "Skeletal muscle",
+      "sourceCodes": [
+        "AN3.2"
+      ],
+      "disposition": "supported-task-facet-proposal",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urine ketones",
+      "nameKey": "urine ketones",
+      "proposedParent": "Urinalysis",
+      "sourceCodes": [
+        "GM11.13"
+      ],
+      "disposition": "held-analyte-scope",
+      "mappingAccepted": false,
+      "reason": "Draft task describes generic urine dipstick use and interpretation. Check the original source row for ketone-specific scope."
+    }
+  ],
+  "sourceGroupsCarriedForward": 14,
+  "arterialSamplingProposal": "Arterial blood gas sampling (GM3.8)",
+  "mappingAccepted": false
+}
