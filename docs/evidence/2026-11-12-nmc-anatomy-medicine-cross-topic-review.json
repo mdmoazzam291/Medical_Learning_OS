@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedHead": "5f877729945d3b6961071fef9e26ca527e177473",
-  "reviewBasis": "Catalogue topic and reference IDs. Semantic decisions remain proposed.",
+  "reviewBasis": "Catalogue references and corresponding draft tasks. Compound gallstone scopes also checked against original PDF rows.",
   "rows": [
     {
       "name": "Anaemia counselling",
@@ -16,7 +16,8 @@
             "number": 9,
             "label": "Anaemia",
             "pdfPage": 296
-          }
+          },
+          "draftTaskScope": "Adult patient counselling"
         },
         {
           "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
@@ -27,11 +28,13 @@
             "number": 26,
             "label": "Anemia and other Hemato-oncologic disorders in children",
             "pdfPage": 345
-          }
+          },
+          "draftTaskScope": "Child and caregiver counselling"
         }
       ],
       "disposition": "retain-age-specific-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "CSF interpretation",
@@ -46,7 +49,8 @@
             "number": 17,
             "label": "Headache",
             "pdfPage": 308
-          }
+          },
+          "draftTaskScope": "General CSF report interpretation"
         },
         {
           "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
@@ -57,7 +61,8 @@
             "number": 27,
             "label": "Systemic Pediatrics-Central Nervous system",
             "pdfPage": 346
-          }
+          },
+          "draftTaskScope": "Paediatric CSF interpretation"
         },
         {
           "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
@@ -68,11 +73,13 @@
             "number": 34,
             "label": "Central Nervous System",
             "pdfPage": 203
-          }
+          },
+          "draftTaskScope": "Meningitis aetiology"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Fever of unknown origin",
@@ -87,7 +94,8 @@
             "number": 4,
             "label": "Fever and febrile syndromes",
             "pdfPage": 288
-          }
+          },
+          "draftTaskScope": "Clinical patterns across patient groups"
         },
         {
           "referenceId": "nmc-2024-ref:c9047871596072c6cc4de2f46756cbb3f22e6264ab456bf3b427ce3a34e7050e",
@@ -98,11 +106,13 @@
             "number": 3,
             "label": "CVS and Blood",
             "pdfPage": 208
-          }
+          },
+          "draftTaskScope": "Microbiological investigation"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Gallstones and cholecystitis",
@@ -179,7 +189,8 @@
             "number": 3,
             "label": "CVS and Blood",
             "pdfPage": 208
-          }
+          },
+          "draftTaskScope": "Microbiology and pathogenesis"
         },
         {
           "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
@@ -190,7 +201,8 @@
             "number": 26,
             "label": "Cardiovascular system",
             "pdfPage": 196
-          }
+          },
+          "draftTaskScope": "Valve pathology and complications"
         },
         {
           "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
@@ -201,7 +213,8 @@
             "number": 1,
             "label": "Heart failure",
             "pdfPage": 281
-          }
+          },
+          "draftTaskScope": "Clinical diagnosis and planning"
         },
         {
           "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
@@ -212,11 +225,13 @@
             "number": 22,
             "label": "Cardiovascular system- Heart Diseases",
             "pdfPage": 340
-          }
+          },
+          "draftTaskScope": "Paediatric diagnosis and management"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Ischaemic heart disease",
@@ -231,7 +246,8 @@
             "number": 26,
             "label": "Cardiovascular system",
             "pdfPage": 196
-          }
+          },
+          "draftTaskScope": "Pathology and complications"
         },
         {
           "referenceId": "nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2",
@@ -242,11 +258,13 @@
             "number": 22,
             "label": "Heart & Pericardium",
             "pdfPage": 121
-          }
+          },
+          "draftTaskScope": "Coronary territory anatomy"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Lifestyle counselling",
@@ -261,7 +279,8 @@
             "number": 8,
             "label": "Hypertension",
             "pdfPage": 295
-          }
+          },
+          "draftTaskScope": "Hypertension counselling"
         },
         {
           "referenceId": "nmc-2024-ref:0f5400b311fde5f5d1f7db8904364a8d918b51ba167eec0398dc5fba1fac8621",
@@ -272,11 +291,13 @@
             "number": 2,
             "label": "Acute Myocardial Infarction / IHD",
             "pdfPage": 284
-          }
+          },
+          "draftTaskScope": "Ischaemic heart disease risk reduction"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Obesity examination",
@@ -291,7 +312,8 @@
             "number": 11,
             "label": "Obesity in children",
             "pdfPage": 333
-          }
+          },
+          "draftTaskScope": "Age-adjusted measurements"
         },
         {
           "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
@@ -302,11 +324,13 @@
             "number": 14,
             "label": "Obesity",
             "pdfPage": 304
-          }
+          },
+          "draftTaskScope": "Adult examination"
         }
       ],
       "disposition": "retain-age-specific-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Obesity history",
@@ -321,7 +345,8 @@
             "number": 14,
             "label": "Obesity",
             "pdfPage": 304
-          }
+          },
+          "draftTaskScope": "Adult weight and lifestyle history"
         },
         {
           "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
@@ -332,11 +357,13 @@
             "number": 11,
             "label": "Obesity in children",
             "pdfPage": 333
-          }
+          },
+          "draftTaskScope": "Paediatric diet and growth history"
         }
       ],
       "disposition": "retain-age-specific-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Oesophageal anatomy",
@@ -351,7 +378,8 @@
             "number": 23,
             "label": "Mediastinum",
             "pdfPage": 122
-          }
+          },
+          "draftTaskScope": "Anatomical relations and pathways"
         },
         {
           "referenceId": "nmc-2024-ref:c2fcd95c7c88b246a9b60b89f545e79b41bd87ac10fa5da6c888fbf7a1bd464c",
@@ -362,11 +390,13 @@
             "number": 28,
             "label": "Abdomen",
             "pdfPage": 410
-          }
+          },
+          "draftTaskScope": "Surgical anatomy and motility"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Respiratory examination",
@@ -381,7 +411,8 @@
             "number": 6,
             "label": "Respiratory Physiology",
             "pdfPage": 154
-          }
+          },
+          "draftTaskScope": "General respiratory examination"
         },
         {
           "referenceId": "nmc-2024-ref:a2e47d9e6f71af8c4a3d52581bb9cb21ef55c9771df88da1b64de13945ed7c26",
@@ -392,11 +423,13 @@
             "number": 3,
             "label": "Pneumonia",
             "pdfPage": 286
-          }
+          },
+          "draftTaskScope": "Pneumonia examination and severity"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Thyroid examination",
@@ -411,7 +444,8 @@
             "number": 22,
             "label": "Endocrine General Surgery: Thyroid and parathyroid",
             "pdfPage": 408
-          }
+          },
+          "draftTaskScope": "Surgical examination and differential"
         },
         {
           "referenceId": "nmc-2024-ref:ef1bcf8ba186bc621652abbbcbd29ec684043e425042b3bcc8bff9f0a4545e92",
@@ -422,11 +456,13 @@
             "number": 12,
             "label": "Thyroid Dysfunction",
             "pdfPage": 301
-          }
+          },
+          "draftTaskScope": "Thyroid and systemic examination"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Transfusion observation",
@@ -441,7 +477,8 @@
             "number": 15,
             "label": "GI Bleeding",
             "pdfPage": 305
-          }
+          },
+          "draftTaskScope": "Compatibility and GI bleeding context"
         },
         {
           "referenceId": "nmc-2024-ref:55be358d271c724154af5cce9e6a896fd9cb5b8085f885e28153ce19b1de7ad3",
@@ -452,11 +489,13 @@
             "number": 3,
             "label": "Blood and blood components",
             "pdfPage": 403
-          }
+          },
+          "draftTaskScope": "Observation and monitoring"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Varicocele",
@@ -471,7 +510,8 @@
             "number": 30,
             "label": "Penis, Testis and scrotum",
             "pdfPage": 412
-          }
+          },
+          "draftTaskScope": "Clinical examination and management"
         },
         {
           "referenceId": "nmc-2024-ref:c0e8b960cb01d0cf926bd4cd129693211361af431aa40c6a3ab74c55c3f859e0",
@@ -482,11 +522,13 @@
             "number": 46,
             "label": "Male external genitalia",
             "pdfPage": 134
-          }
+          },
+          "draftTaskScope": "Venous drainage anatomy"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     },
     {
       "name": "Viral hepatitis",
@@ -501,7 +543,8 @@
             "number": 5,
             "label": "Liver disease",
             "pdfPage": 290
-          }
+          },
+          "draftTaskScope": "Clinical course and immune injury"
         },
         {
           "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
@@ -512,11 +555,13 @@
             "number": 4,
             "label": "Gastrointestinal and Hepatobiliary system",
             "pdfPage": 209
-          }
+          },
+          "draftTaskScope": "Microbiology and pathogenesis"
         }
       ],
       "disposition": "shared-label-candidate-with-separate-source-contexts",
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "scopeReviewed": true
     }
   ]
 }
