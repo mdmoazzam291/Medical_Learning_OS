@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "d5f63c5f0c74838b6d476ad0ee5415476e84f914",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-consolidated-58-name-inventory.json",
+      "blobSha": "2b9cd653795ceb915c6f7b7b4afc01ef9d2932a3"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-standalone-disposition-coverage.json",
+      "blobSha": "b543d26193a91f39d849627b9d2f9ec188074524"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-mixed-decomposition-audit.json",
+      "blobSha": "0582dbb264fc87ca74240f628f2cae61f87d98f4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-mixed-reuse-scope-proposals.json",
+      "blobSha": "086391038802708ab0424c6eb9c8b4f905c2d4a2"
+    }
+  ],
+  "standalone": {
+    "worklistRows": 570,
+    "missingDispositions": 0,
+    "proposals": 58,
+    "aliases": 3,
+    "contexts": 13,
+    "distinctSourceReferences": 118
+  },
+  "completionReporter": {
+    "totals": {
+      "appearances": 2634,
+      "withProposedObjectives": 11,
+      "withDraftArtifactBindings": 3,
+      "historicalDeletions": 1
+    },
+    "sourceAccountingComplete": true,
+    "foundationComplete": false,
+    "productionStateVerified": false
+  },
+  "mixedReuse": {
+    "totals": {
+      "leadLabels": 60,
+      "componentOccurrences": 66,
+      "distinctOccurrenceReferences": 45,
+      "distinctTargetReferences": 65
+    },
+    "dispositionCounts": {
+      "keep-separate-different-meaning": 1,
+      "retain-facet-with-home-candidate": 4,
+      "self-parent-context-only": 2,
+      "shared-topic-name-candidate": 53
+    },
+    "productionRegistryChecked": false
+  },
+  "priority": {
+    "cohort": "mixed reuse",
+    "reason": "Existing scope decisions for 60 leads can be checked for cross-cohort duplication before any additional names are proposed.",
+    "next": "Compare all 60 mixed reuse leads with the consolidated 58-name inventory and preserve scope and source differences."
+  }
+}

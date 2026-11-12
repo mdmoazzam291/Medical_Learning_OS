@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "sourceTriage": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-reuse-triage.json",
+    "sha256": "2a07230e4b31eb6025e6e6517ac6011bb55c274908b9ffcc0e1852acae44fc92"
+  },
+  "rows": [
+    {
+      "topicName": "Acute kidney injury",
+      "topicNameKey": "acute kidney injury",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cfd9e37f4dad89a719d41c5a05c4c7e82e7bee52c9eca07ef5e73c17efdc39e0"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+        "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+        "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+        "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d"
+      ],
+      "scopeComparison": "Preserve pathology and mechanisms alongside simulated management, course and paediatric care.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Adherence",
+      "topicNameKey": "adherence",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10"
+      ],
+      "scopeComparison": "Both address adherence barriers. Preserve collaborative plan revision as a separate task.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Age estimation",
+      "topicNameKey": "age estimation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c73e05551c60f042fbabf0192ff2db175c4ed96a683d02387cd5dfb93b56f96b"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96"
+      ],
+      "scopeComparison": "Both support reporting uncertainty. Preserve multimodal age estimation and report preparation separately.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Amyloidosis",
+      "topicNameKey": "amyloidosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b"
+      ],
+      "scopeComparison": "Preserve fibril mechanisms and distribution separately from specimen recognition and stain interpretation.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Atherosclerosis",
+      "topicNameKey": "atherosclerosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:feaf1b63953cd8c40bae19e1a6f1e668de289dfc7845766f02bee47e3aa43934"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f"
+      ],
+      "scopeComparison": "Preserve plaque mechanisms separately from population patterns and risk.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Autoimmunity",
+      "topicNameKey": "autoimmunity",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011"
+      ],
+      "scopeComparison": "Loss of tolerance overlaps. Genetic susceptibility and organ-specific versus systemic comparison have distinct emphases.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Birth asphyxia",
+      "topicNameKey": "birth asphyxia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:76ffed5376221456428421836f34df15c386efc8146c2b8a8c8693cc85c21738"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c"
+      ],
+      "scopeComparison": "Preserve simulated care priorities and the limits of perinatal indicators.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Blood pressure",
+      "topicNameKey": "blood pressure",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9288d600c8e49f13bbbc2bf7039e274a9a03fb6fea2285c6c323e09de3271192"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad"
+      ],
+      "scopeComparison": "Preserve regulatory physiology separately from measurement and clinical interpretation.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Constipation",
+      "topicNameKey": "constipation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:37d03a9c073318da41c9ec261ed34b1f1c4055ae308b7d282bdbe8997e1d8ddb"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a"
+      ],
+      "scopeComparison": "Preserve recognition and red flags separately from laxative selection.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Diabetic ketoacidosis",
+      "topicNameKey": "diabetic ketoacidosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:80cffd3fe7ce058d5dde55b3f1d3c62439058bd2baa1334eab18753129c33718"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda"
+      ],
+      "scopeComparison": "Preserve mechanisms and stabilization separately from simulated urine testing and referral.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Diaphragm",
+      "topicNameKey": "diaphragm",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a2a075f94157b5ae4c65c58e41113c5ee7ffbe4cadc46536fbc07bf875ec435f"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc"
+      ],
+      "scopeComparison": "Preserve adult anatomy and mechanics separately from embryology and congenital defects.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Enteric fever",
+      "topicNameKey": "enteric fever",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+        "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+        "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00"
+      ],
+      "scopeComparison": "Preserve disease course and management separately from test interpretation, timing and carriage.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Fetal growth restriction",
+      "topicNameKey": "fetal growth restriction",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:861dc9af2668848a2731e3389c3c05fbab833beeadaac430a82b61b3bc471125"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66"
+      ],
+      "scopeComparison": "Ultrasound and Doppler overlap. Preserve constitutional smallness distinction and serial monitoring scope.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Haematuria",
+      "topicNameKey": "haematuria",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c2000c7ec485b69d917bc94610cea5e198d871a7e5209433de0bbddc123b92cf"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14"
+      ],
+      "scopeComparison": "Preserve general cause assessment and the source-specific glomerular distinction and referral.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Hyperkalaemia",
+      "topicNameKey": "hyperkalaemia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1068fc841594b94e42aae4f2f2451e5a10767b0807ffe97095cba41334e95878"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00"
+      ],
+      "scopeComparison": "Preserve immediate clinical assessment and the limits of ECG exclusion.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Informed consent",
+      "topicNameKey": "informed consent",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+        "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+        "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
+        "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f",
+        "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa"
+      ],
+      "scopeComparison": "Preserve general consent principles and paediatric, ENT, orthopaedic and termination scenarios separately.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Lumbar puncture",
+      "topicNameKey": "lumbar puncture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ea9b95539ea713317897e4084b3372013d91cf431694cae45d1ad13b8ea6ed26"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+        "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+        "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2"
+      ],
+      "scopeComparison": "Preserve anatomy, indications, CSF interpretation and mannequin technique as distinct objectives.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Neonatal resuscitation",
+      "topicNameKey": "neonatal resuscitation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d80b286ce7438bc25b1cb691ada9aab14abeb48441fe7aa0f1e989a08149dd6e"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+        "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae"
+      ],
+      "scopeComparison": "Checklist demonstration overlaps. Preserve explanatory preparation and ventilation priorities separately.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Proteinuria",
+      "topicNameKey": "proteinuria",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5411b6095880ee0262f2e560736d01d1aba1bed66d412f34be3e9571d6e393f5"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166"
+      ],
+      "scopeComparison": "Preserve CKD prognosis separately from transient, orthostatic and persistent patterns and referral.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Stridor",
+      "topicNameKey": "stridor",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9bf879a4feed91445031bce874317a8a0ff6e283d688dacb2bd7226d8e095608"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81"
+      ],
+      "scopeComparison": "Presentation and airway priorities overlap. Preserve localization and the paediatric task context.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Systemic lupus erythematosus",
+      "topicNameKey": "systemic lupus erythematosus",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f"
+      ],
+      "scopeComparison": "Preserve immune mechanisms and organ lesions separately from clinical recognition and planning.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Thermoregulation",
+      "topicNameKey": "thermoregulation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b3e0148b740005c2fddf9d0833e976dfa7ba05e083b10e726c4804f42345e291"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+        "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0"
+      ],
+      "scopeComparison": "Preserve physiological regulation separately from simulated warming and environmental measures.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Type 2 diabetes",
+      "topicNameKey": "type 2 diabetes",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8634107389533d96f67a5070a64fe0b9ac2353667a090b363ce58b496f1fcc50"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe"
+      ],
+      "scopeComparison": "Preserve epidemiology and mechanisms separately from individualized care planning and cost.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Urinalysis",
+      "topicNameKey": "urinalysis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+        "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492",
+        "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf"
+      ],
+      "scopeComparison": "Dipstick demonstration overlaps. Preserve ketone-specific limits and laboratory reporting separately.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicName": "Vaginal discharge",
+      "topicNameKey": "vaginal discharge",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6b750a21d9700af02f65c34e1644d41d0ed6473098133c631638e7c9d3d3f05f"
+      ],
+      "additionalSourceReferenceIds": [
+        "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b"
+      ],
+      "scopeComparison": "Assessment and management overlap. Preserve consent-based simulated examination and pathway follow-up separately.",
+      "disposition": "shared-topic-name-candidate-with-distinct-source-objectives",
+      "semanticEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

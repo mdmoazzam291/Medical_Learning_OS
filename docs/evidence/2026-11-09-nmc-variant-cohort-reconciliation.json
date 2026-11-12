@@ -1,0 +1,626 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "7151d56f59de27e62b33d80569832f3d1ddcf95b",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+      "blobSha": "b10a4cbcee177711364294c9e2d7fdb9e1f66714"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-standalone-topic-variant-scope-review.json",
+      "blobSha": "89bcb4047cb2ec1c4d2cb4e75bf7b76a7f58dbfd"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-consolidated-names-only-proposal-inventory.json",
+      "blobSha": "3d9410465a42c2e9143152ecda3ccd997d921a19"
+    }
+  ],
+  "rows": [
+    {
+      "nameKey": "abnormal vaginal discharge",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6fc9df4678ff3f74f5731dde08889b2915ed3e630192cdcfe1e79b3e601d3fb1"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 0,
+          "candidateName": "Vaginal discharge",
+          "consolidatedProposal": "Vaginal discharge",
+          "disposition": "shared"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "acute otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 1,
+          "candidateName": "Otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "acute rheumatic fever",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 2,
+          "candidateName": "Rheumatic fever",
+          "consolidatedProposal": null,
+          "disposition": "shared"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "acute suppurative otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 3,
+          "candidateName": "Otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "adhd",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 4,
+          "candidateName": "Attention-deficit/hyperactivity disorder",
+          "consolidatedProposal": null,
+          "disposition": "alias"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood culture collection",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 5,
+          "candidateName": "Blood culture",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood culture sampling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 6,
+          "candidateName": "Blood culture",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cause of death certification",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 7,
+          "candidateName": "Cause of death",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        },
+        {
+          "reviewIndex": 8,
+          "candidateName": "Medical cause-of-death certification",
+          "consolidatedProposal": null,
+          "disposition": "alias"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cause of death coding",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:62ae1c5c8867df7500be94236140c486934f417f953ce13314adfaadba3c4043"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 9,
+          "candidateName": "Cause of death",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "clinical research ethics",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 10,
+          "candidateName": "Research ethics",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        },
+        {
+          "reviewIndex": 11,
+          "candidateName": "Clinical research",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "drug information",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 12,
+          "candidateName": "Drug information in media",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "essential medicines list",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 13,
+          "candidateName": "Essential medicines",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "external ear",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 14,
+          "candidateName": "External ear disease",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "facial nerve palsy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:36988f661104d0c74c301f72c5bf09ae9f93399938021e95e8980d0a02b21187"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 15,
+          "candidateName": "Facial nerve",
+          "consolidatedProposal": null,
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "fetal age estimation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 16,
+          "candidateName": "Age estimation",
+          "consolidatedProposal": "Age estimation",
+          "disposition": "related"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "mucosal chronic otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 17,
+          "candidateName": "Otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        },
+        {
+          "reviewIndex": 18,
+          "candidateName": "Chronic otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "otitis media with effusion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7e780a7d847205fddcc4cdd6efb0ccecd1a4891bb94d3ed74d9274a5ec38bcc6"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 19,
+          "candidateName": "Otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "paediatric basic life support",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 20,
+          "candidateName": "Basic life support",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "pain assessment",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 21,
+          "candidateName": "Joint pain assessment",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        },
+        {
+          "reviewIndex": 22,
+          "candidateName": "Cancer pain assessment",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "peptic ulcer disease",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 23,
+          "candidateName": "Peptic ulcer",
+          "consolidatedProposal": null,
+          "disposition": "shared"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "physiological vaginal discharge",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:10b1f9e164d54d4d37df490fb24a40a0dde246e2dd7eaf818f9a0bcd1eda79be"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 24,
+          "candidateName": "Vaginal discharge",
+          "consolidatedProposal": "Vaginal discharge",
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "posterior triangle",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 25,
+          "candidateName": "Posterior triangle muscles",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "public health",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 26,
+          "candidateName": "Recent public health events",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "radiographic age estimation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 27,
+          "candidateName": "Age estimation",
+          "consolidatedProposal": "Age estimation",
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "recurrent pregnancy loss",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 28,
+          "candidateName": "Pregnancy loss",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "rheumatic heart disease",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 29,
+          "candidateName": "Heart disease",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "sex ratio",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 30,
+          "candidateName": "Population sex ratio",
+          "consolidatedProposal": null,
+          "disposition": "shared"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "skeletal muscle contraction",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 31,
+          "candidateName": "Skeletal muscle",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "squamosal chronic otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 32,
+          "candidateName": "Otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        },
+        {
+          "reviewIndex": 33,
+          "candidateName": "Chronic otitis media",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "trophoblastic neoplasia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4441130f4df6101b38c55f8b38ca2914ad39644ed00c3bcd1996e13f43706144"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 34,
+          "candidateName": "Gestational trophoblastic neoplasia",
+          "consolidatedProposal": null,
+          "disposition": "ambiguous"
+        }
+      ],
+      "resolvedName": "Gestational trophoblastic neoplasia",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "urinary infection",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 35,
+          "candidateName": "Urinary infection in pregnancy",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "urinary infection in pregnancy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8bf82fcf516e08674cfa8ffdbdb5592a344837d96cb4547ffa7b748765ab28f4"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 36,
+          "candidateName": "Urinary infection",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "vitamin k deficiency bleeding",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950"
+      ],
+      "sharedInventoryReferences": [],
+      "comparisons": [
+        {
+          "reviewIndex": 37,
+          "candidateName": "Vitamin K deficiency",
+          "consolidatedProposal": null,
+          "disposition": "narrow"
+        }
+      ],
+      "resolvedName": null,
+      "mappingAccepted": false
+    }
+  ],
+  "priorScopeResolution": {
+    "topicNameKey": "trophoblastic neoplasia",
+    "competencyCodes": [
+      "OG9.5",
+      "PA29.5"
+    ],
+    "officialSources": [
+      "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+      "https://www.nmc.org.in/MCIRest/open/getDocument?path=%2FDocuments%2FPublic%2FPortal%2FLatestNews%2Fdocument+%288%29_merged.pdf"
+    ],
+    "scope": "Both rows explicitly concern gestational trophoblastic neoplasms. Preserve obstetric assessment, management and follow-up separately from pathology mechanisms and morphology."
+  },
+  "comparisonCount": 38,
+  "consolidatedNameOverlapCount": 4
+}

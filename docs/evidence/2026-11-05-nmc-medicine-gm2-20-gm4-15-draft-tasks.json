@@ -1,0 +1,809 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:3aeb646d3cbb3bf6ec5fdf558a4ba095ea0ecd37015d407e1935eb5ab276026a",
+      "subjectId": "medicine",
+      "code": "GM2.20",
+      "page": 285,
+      "rowBBox": [
+        44.2,
+        398.76,
+        102.7,
+        426.12
+      ],
+      "sourceBodySha256": "b213f3344dcc45b69f7968334811745ad04f9bd0d98e185e81660ffd50de3f31",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Coronary pain",
+      "draftLearningTask": "Assess pain and reassess response to appropriate relief in an acute coronary scenario.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a698cb0665f4ad3e07547c777820480b5255ac8c80770ea9b02a47d2cbac5587",
+      "subjectId": "medicine",
+      "code": "GM2.21",
+      "page": 285,
+      "rowBBox": [
+        44.2,
+        426.12,
+        102.7,
+        453.42
+      ],
+      "sourceBodySha256": "01be3e2f17ecac7ba7d6b01f6a251fb51f5406459d28f44cb6948d1b99391f71",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ACLS participation",
+      "draftLearningTask": "Observe and take an assigned role in a supervised ACLS exercise.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+      "subjectId": "medicine",
+      "code": "GM2.22",
+      "page": 285,
+      "rowBBox": [
+        44.2,
+        453.42,
+        102.7,
+        480.78
+      ],
+      "sourceBodySha256": "b60346819874f7d3a608f6109913b8f12ce1606c73b91eeb0efdfd34102a2155",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Basic life support",
+      "draftLearningTask": "Demonstrate adult BLS on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b68be8b83a3c1328a6d4011c87721097e29610a5d90f643a0d4560fab00a2a93",
+      "subjectId": "medicine",
+      "code": "GM2.23",
+      "page": 285,
+      "rowBBox": [
+        44.2,
+        480.78,
+        102.7,
+        521.58
+      ],
+      "sourceBodySha256": "3cfcee473667f0ec8e41fd99bc5cb9a9ae3d38018165026f61eae2f8dcdb79a9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Coronary drug selection",
+      "draftLearningTask": "Explain indications and safety checks for nitrates, antiplatelets, GP IIb/IIIa inhibitors, beta blockers and ACE inhibitors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0f5400b311fde5f5d1f7db8904364a8d918b51ba167eec0398dc5fba1fac8621",
+      "subjectId": "medicine",
+      "code": "GM2.24",
+      "page": 285,
+      "rowBBox": [
+        44.2,
+        521.58,
+        102.7,
+        541.5
+      ],
+      "sourceBodySha256": "ff78a53a3de998c9183e9be02b99dddb70b21cbdb6962ee6d01afe31cace23cb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lifestyle counselling",
+      "draftLearningTask": "Agree on feasible cardiovascular risk reduction with a simulated patient using empathetic communication.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4",
+      "subjectId": "medicine",
+      "code": "GM3.1",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        146.16,
+        102.7,
+        186.96
+      ],
+      "sourceBodySha256": "66232552069af3b1c32ac0ad6d10dc2de1261279b8a812e94480aecb7030c769",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia classification",
+      "draftLearningTask": "Distinguish community-acquired, hospital-acquired and aspiration pneumonia.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:222444c244f19cdef268c96ec1165e92cf174ee9638d505d59bb8b15f21c60e8",
+      "subjectId": "medicine",
+      "code": "GM3.2",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        186.96,
+        102.7,
+        227.76
+      ],
+      "sourceBodySha256": "f88991762bb9dfb8ab23985601c40efa01486e8377a50f41d3c01ccac337e938",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia microbiology",
+      "draftLearningTask": "Predict likely organisms from care setting and host immune status.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5df5a23fe92341ca4a2c6d055e4f8f66db7d5144974fa800ad7f0d03fb5513fa",
+      "subjectId": "medicine",
+      "code": "GM3.3",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        227.76,
+        102.7,
+        268.62
+      ],
+      "sourceBodySha256": "9035bef88831a1abad60e98fa23e7a4d8dfbab5c98107df1a31d550d5601e8fd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia evolution",
+      "draftLearningTask": "Relate pathogenesis to presentation, disease course and complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:14d8f85d7c3fddd2f96e27383151cbce55986929483a643c925d1a046223ce1a",
+      "subjectId": "medicine",
+      "code": "GM3.4",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        268.62,
+        102.7,
+        309.24
+      ],
+      "sourceBodySha256": "a801bf4d09ae3859c03c6bdc94d04ce7f3ad5b9ee787796c1efcf75ef8a36c4e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia history",
+      "draftLearningTask": "Elicit and present symptom evolution, immune status and occupational and other exposures.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a2e47d9e6f71af8c4a3d52581bb9cb21ef55c9771df88da1b64de13945ed7c26",
+      "subjectId": "medicine",
+      "code": "GM3.5",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        309.24,
+        102.7,
+        363.42
+      ],
+      "sourceBodySha256": "b025c3bbb7e9ccdf00aceee02263568ca34c30e6888e6643c1dce6fbf1c579ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory examination",
+      "draftLearningTask": "Demonstrate and document general and lung examination and assess severity and complications.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:07c5f1083505c25348beb3b0017fbdd74d9bc6a4cac3800ae93b63f9529f359a",
+      "subjectId": "medicine",
+      "code": "GM3.6",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        363.42,
+        102.7,
+        404.16
+      ],
+      "sourceBodySha256": "d25d076d01a7802d906973e48000e0130762868192db38ace5bbdd9f350070e3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia differential",
+      "draftLearningTask": "Prioritize infectious and noninfectious alternatives using clinical findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5eb7b49b5aae7600edf34a73b91fbfcfad2b8c5a7039f6bb93c26e1bc583da39",
+      "subjectId": "medicine",
+      "code": "GM3.7",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        404.16,
+        102.7,
+        458.34
+      ],
+      "sourceBodySha256": "c3db184e109a708ce5e545ba319179872eeb18c4bd38f1ad330c2413fb7ca71c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diagnostic tests",
+      "draftLearningTask": "Select and interpret relevant blood, imaging, respiratory, pleural and microbiological tests in representative cases.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+      "subjectId": "medicine",
+      "code": "GM3.8",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        458.34,
+        102.7,
+        489.0
+      ],
+      "sourceBodySha256": "a9a0d0331eaa649d5ffa1ca495d2cf91459c595fe4447d44cd3c3a63cbb20933",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arterial sampling",
+      "draftLearningTask": "Demonstrate arterial blood gas sampling and specimen handling on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0fb2b00f258b6b17a8ce8b0d224834da45e075a19b0e2242ca6e78c094042a8b",
+      "subjectId": "medicine",
+      "code": "GM3.9",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        489.0,
+        102.7,
+        516.48
+      ],
+      "sourceBodySha256": "599600c161ccba78987e2a27e0595be660dfb0b1d926f76a066a6a3daa60a777",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood gas interpretation",
+      "draftLearningTask": "Interpret a supplied arterial blood gas and explain its oxygenation, ventilation and acid–base findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a0e75d4d3c51c0e58054598c9c1cb2cb9abff5710e6ff3c8c6b950afac08721d",
+      "subjectId": "medicine",
+      "code": "GM3.10",
+      "page": 286,
+      "rowBBox": [
+        44.2,
+        516.48,
+        102.7,
+        543.78
+      ],
+      "sourceBodySha256": "f53299d88c90f3e96b997f38b0cf42c5eeaebb9770a32cec71b07c21728ad6db",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pleural aspiration",
+      "draftLearningTask": "Demonstrate preparation, aspiration and safety checks on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:81cb55762ed6935ca045625deb4a2e931800d2f402e37680d9cf9ac7f1ff601e",
+      "subjectId": "medicine",
+      "code": "GM3.11",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "f4392e2f72fce7af7a79e7d04bcf121ae2290ce1ac0e25e020f2653a284d267e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pleural fluid analysis",
+      "draftLearningTask": "Select fluid tests and interpret a sample report in clinical context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+      "subjectId": "medicine",
+      "code": "GM3.12",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "ba5ebf8b962705643d4dcee6ff6afa33108a4b8578bcbbe0426e113ad6d34a7b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood culture sampling",
+      "draftLearningTask": "Demonstrate aseptic collection, labelling and transport on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+      "subjectId": "medicine",
+      "code": "GM3.13",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        202.02
+      ],
+      "sourceBodySha256": "4928ca9c19d279a7e61d4981df3c884ba8ec85c071bf0f04509a34b9aa6a99bb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood culture interpretation",
+      "draftLearningTask": "Distinguish plausible bloodstream infection from contamination using sample results and clinical findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:75003b02a58cf526dccb67707d7b34d2e0d69b0ca2d26429001a7266fcd18f2e",
+      "subjectId": "medicine",
+      "code": "GM3.14",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        202.02,
+        102.7,
+        229.2
+      ],
+      "sourceBodySha256": "3bf145ae4d342e4859b0e37678dfec2c83b188270528ed478f95780c40128b63",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Additional pneumonia testing",
+      "draftLearningTask": "Justify when HRCT, viral culture, PCR or other specialized tests could change management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:986f2075ab7d32e6a3dc22a4074c76e5114c4d72322a41c1b6c725fbfd8d1e74",
+      "subjectId": "medicine",
+      "code": "GM3.15",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        229.2,
+        102.7,
+        269.94
+      ],
+      "sourceBodySha256": "d1d12fc42231f0866b4443d13a8df9663c4d74c147fe492d34b9e010751d6fb1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Empirical antibiotics",
+      "draftLearningTask": "Select and write a simulated empiric prescription using likely pathogens, spectrum and patient factors.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+      "subjectId": "medicine",
+      "code": "GM3.16",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        269.94,
+        102.7,
+        310.68
+      ],
+      "sourceBodySha256": "10f7b9f08c14cd50f9d7d26fe301cbd105d91694298d59f5aedd7c7ccb2ffc31",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Culture-directed antibiotics",
+      "draftLearningTask": "Use susceptibility results to select and justify targeted treatment in a simulated prescription.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6e87e8b4b3e39696537bfed544c445f9968f8af31cb3fa958038f5c05a329706",
+      "subjectId": "medicine",
+      "code": "GM3.17",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        310.68,
+        102.7,
+        351.48
+      ],
+      "sourceBodySha256": "68864c31c01eb3a6dd75286ee2d1799b832bb442ee592886f034566208459c9d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Admission criteria",
+      "draftLearningTask": "Use clinical severity and support needs to justify disposition for representative cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f",
+      "subjectId": "medicine",
+      "code": "GM3.18",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        351.48,
+        102.7,
+        392.16
+      ],
+      "sourceBodySha256": "b8c4ed24582569a65023e8683ecd93728198a7c943560b73aa82da02338fce5d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Isolation and precautions",
+      "draftLearningTask": "Explain when isolation and barrier precautions are indicated based on suspected transmission.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:84377d55955323fb840a9afbd6fa6b0d9c481631c4d322c95de3fc7ed70b07d3",
+      "subjectId": "medicine",
+      "code": "GM3.19",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        392.16,
+        102.7,
+        433.02
+      ],
+      "sourceBodySha256": "b691fcbafd6f7adcc41d9cf87723f439d2639d71bf2ff4d6ab1f50ab3a1950e2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory support",
+      "draftLearningTask": "Explain supportive care, oxygen monitoring and indications for ventilatory escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7cfd1ab171689801df404662e3c86fa4c986ac1db1b64ce71a9cff2ac8939afb",
+      "subjectId": "medicine",
+      "code": "GM3.20",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        433.02,
+        102.7,
+        460.32
+      ],
+      "sourceBodySha256": "898d7f7326c909e1e47d3c303572565ed1d82815ddd443bfd527d36f64c48a6e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumonia counselling",
+      "draftLearningTask": "Explain diagnosis, care, follow-up and warning signs to a simulated patient and family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:38832f81dccbc6136ff64b2977b09f662850227e197d82179e50bacac5f1ad4f",
+      "subjectId": "medicine",
+      "code": "GM3.21",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        460.32,
+        102.7,
+        501.12
+      ],
+      "sourceBodySha256": "b403cc21a4b76bd5e417c3794dc7448aa72ab122aa2395505290e1119cc3a406",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pneumococcal and influenza vaccination",
+      "draftLearningTask": "Use current applicable guidance to identify indications for both vaccines.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9fcb0ebe01f9849d582b9202205ac0b4eda222ea16491b60eea5344b6f20f30d",
+      "subjectId": "medicine",
+      "code": "GM3.22",
+      "page": 287,
+      "rowBBox": [
+        44.2,
+        501.12,
+        102.7,
+        528.48
+      ],
+      "sourceBodySha256": "edb23398832045bce3a62d3af82bf35f5cd16fe959d13b8b4544d3d4f381aeb4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vaccine counselling",
+      "draftLearningTask": "Explain benefits, expected reactions and follow-up using teach-back in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:518f344aa96f18c881ed13b3f9a8ef5366e013516d19ba42ff2c9f8e85c40ebd",
+      "subjectId": "medicine",
+      "code": "GM4.1",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "57c92672a4c8698e2f760a1d326c1733ced1da553437e39340024a6498889add",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Febrile response",
+      "draftLearningTask": "Explain how immunity, age, malignancy, neutropenia, HIV, travel and comorbidity can modify fever.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea",
+      "subjectId": "medicine",
+      "code": "GM4.2",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        207.84
+      ],
+      "sourceBodySha256": "1640974992edea64bbdcb535f9e6e0278c113f7cbaecc9805182ca55822e7b65",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever and hyperthermia",
+      "draftLearningTask": "Distinguish altered hypothalamic set point from excess heat accumulation using examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a7c8a91655f292046e395d6fbbed5b1c4f203d493d577f1221a91d34f292481",
+      "subjectId": "medicine",
+      "code": "GM4.3",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        207.84,
+        102.7,
+        235.2
+      ],
+      "sourceBodySha256": "80fa36cdf1e97e719a4cf5e93ab5b2e8054f98473421b8222a209faf4644784c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Regional causes of fever",
+      "draftLearningTask": "Compare representative causes across Indian regions using season, exposures and local epidemiology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ef278ff6c74a0baa130bb14338a6a67bcef299c96e2a506a1150992c2474b4ca",
+      "subjectId": "medicine",
+      "code": "GM4.4",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "667fda1d78aa2c1d36c05e3709b3c9b47787307b94630911653f7d61dc40c68e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Inflammatory fever",
+      "draftLearningTask": "Link inflammatory mechanisms to representative clinical patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2e1920bc4397605615c780624f6feaea49f84088f9618bae663e40f74763c234",
+      "subjectId": "medicine",
+      "code": "GM4.5",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        275.94,
+        102.7,
+        316.62
+      ],
+      "sourceBodySha256": "9c629accdf8426b24be69b0df27d03e4de78df8f188b9835dcac970fe26de8ae",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Malignant fever",
+      "draftLearningTask": "Explain representative mechanisms and clues to haematological and lymphatic malignancies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9efa08cc8d3cc9abe55d67dbc216142644e551e8d65a0125fc5550d33507c232",
+      "subjectId": "medicine",
+      "code": "GM4.6",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        316.62,
+        102.7,
+        357.42
+      ],
+      "sourceBodySha256": "b25a9d9419c724509cc67ddca6259bf513482046a93dc912d3124eb00df50043",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute febrile illness",
+      "draftLearningTask": "Build a staged assessment using acuity, exposure, duration and localizing findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a707c344606b740c91a24b6dc81bca220717d971de32ea3fa192261d238cd840",
+      "subjectId": "medicine",
+      "code": "GM4.7",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        357.42,
+        102.7,
+        398.16
+      ],
+      "sourceBodySha256": "8fa792937684a1984f72ddc1881de50755bdf854620fb9bcf016d79967a1a3dd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sepsis",
+      "draftLearningTask": "Relate dysregulated host responses to organ dysfunction and representative manifestations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5",
+      "subjectId": "medicine",
+      "code": "GM4.8",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        398.16,
+        102.7,
+        438.9
+      ],
+      "sourceBodySha256": "2de3125d238f4fe08ff9dbf76e733a2102d01426ee11dcb838a91fa800849290",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Heat illness",
+      "draftLearningTask": "Differentiate cramps, exhaustion and heatstroke and explain management priorities in simulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6efda0ddb4e77bb68ff13e87bda8b28d6e038258dd9fe30b9d67a0654ea609fe",
+      "subjectId": "medicine",
+      "code": "GM4.9",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        438.9,
+        102.7,
+        493.08
+      ],
+      "sourceBodySha256": "39ab536b84e2c61da983f4281ef7e04989b3e26481969903700b4a1e0a8da917",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever of unknown origin",
+      "draftLearningTask": "Compare causes and presentations in general, neutropenic, nosocomial and HIV-associated settings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dd9f680aca10048533a5bad5793befdbafd797784bcbb783c8d49617f3a8ae29",
+      "subjectId": "medicine",
+      "code": "GM4.10",
+      "page": 288,
+      "rowBBox": [
+        44.2,
+        493.08,
+        102.7,
+        547.32
+      ],
+      "sourceBodySha256": "7b052a843d02f3b5915651dbe0ac72077e04aa70912d9d463c9969befd8a0543",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever history",
+      "draftLearningTask": "Elicit and present fever pattern, symptoms, immune status, comorbidities and occupational, travel and environmental exposures.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a01adf346f605b1e6d5ec6eec221903ddd73460bd9596f0139197c49cd4319f8",
+      "subjectId": "medicine",
+      "code": "GM4.11",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "74e51bde9f10806f41b9c362937c87809d3269a96a08bd8dc07690277c88de18",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever examination",
+      "draftLearningTask": "Demonstrate general, skin, mucosal, nodal, chest and abdominal assessment and document severity clues.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a0f99fa4e0ee7911c9572943d5e70b33f2f9ad143dc0da9116995a66f2be5ae6",
+      "subjectId": "medicine",
+      "code": "GM4.12",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        221.4
+      ],
+      "sourceBodySha256": "cbc9a4b941e47e8b3c7a37e4a30ea0e5b0c55197c3b2cf63f7c061d5eaa7a3ce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever differential",
+      "draftLearningTask": "Prioritize infective, inflammatory, malignant and rheumatological causes from a simulated case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:23366de59b7448dd6803b0f90364a954f787389a38a0afa1e385888aacbd3e0d",
+      "subjectId": "medicine",
+      "code": "GM4.13",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        221.4,
+        102.7,
+        315.78
+      ],
+      "sourceBodySha256": "28f7602fe66dcf4abb4388ce612840dce06113b93dbacacd87d2122a45317a5e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever investigations",
+      "draftLearningTask": "Select and interpret targeted blood, urine, imaging, microbiology, fluid, serology and tissue investigations based on the differential.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b9a2278a43e1e36eb4f017cd3f8f0448466b9e919c0f65062a3e80f79540b030",
+      "subjectId": "medicine",
+      "code": "GM4.14",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        315.78,
+        102.7,
+        369.96
+      ],
+      "sourceBodySha256": "3c19e1d540dadfccec40258517d858c974c9124ecf8887caa4f88c1f02c50ab6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prolonged fever tests",
+      "draftLearningTask": "Explain indications and representative findings for inflammatory, rheumatological, pathogen and marrow investigations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:532f595cc5317d46d8d56163e953abbf977a1747e5d1f6b3e13831045fbd2a8d",
+      "subjectId": "medicine",
+      "code": "GM4.15",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        369.96,
+        102.7,
+        410.76
+      ],
+      "sourceBodySha256": "fcf0f03fab8bf72ee5cb06f5640c56497cddea688c470f54ab1c34529bc6e969",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Marrow procedure assistance",
+      "draftLearningTask": "Observe and demonstrate an assigned assistance role for marrow aspiration and biopsy in simulation.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-17.json",
+    "sha256": "17c41c5641f58b914b9cc74a4f75e710c25f5e055b0a9921f173ab6ff5d6092c"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 314,
+  "remainingTopics": 198,
+  "nextTopicNameKey": "pancreatic carcinoma",
+  "rows": [
+    {
+      "topicNameKey": "olfaction",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:455e4d01a8c1ede675c61f7ea6dbbee86c4dcbd9650b8c154369ac5ef068e39f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Odour transduction and olfactory dysfunction",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oncogenesis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249",
+        "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b"
+      ],
+      "scopeComparison": "Oncogenes, tumour suppression and apoptosis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "open fractures",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:622b79188bc2a5bac6447f8bc742c7ab94d619ae95bccaabf253374901ab54da"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Open fracture assessment and infection prevention",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "open-angle glaucoma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:12ebfe530e5fa2d5a14e91ca1f668265273afe8334ce0fa8bbecd4410cfa76e8"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:be5bac8c0808258b11af69be698f0d8ac3d98e10f375c9f29a5a9b250d3e46f5"
+      ],
+      "scopeComparison": "Open-angle glaucoma and optic nerve assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oral cavity",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1fb7a8cf949f437095ef43421465b76b9b596c07fa53c70a06117de4329dcfab"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Oral vestibule and oral cavity proper anatomy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "orbital cellulitis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1bda8575dfd5c32c6a10f657054f9943003e3d546ac6c3041ac255581830ccd4"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Orbital and preseptal infection differentiation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "organophosphate poisoning",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Organophosphate toxidrome and stabilisation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "osteomyelitis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d3a61c9c7d897b48ff6dcadca4a456c78b1297eb6bdee28c01386a9f8921785e"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Acute and chronic osteomyelitis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "otalgia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a9e1056ea24b3c2bcfafc7496a71036b1bfd3653ecc651885066ce3f0ba49d43"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Primary and referred otalgia",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "otomicroscopy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:06861bd3972484b02633995419c5e6d6dc1f18ccb71e0150f6cda1a6a34a7cd1"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:a9e1056ea24b3c2bcfafc7496a71036b1bfd3653ecc651885066ce3f0ba49d43",
+        "nmc-2024-ref:0673e4ee40f3512bf88a763765108799b71c576953652b4ee0d9ad3f423a2934"
+      ],
+      "scopeComparison": "Observed otomicroscopy and examination setup",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "otorrhoea",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0673e4ee40f3512bf88a763765108799b71c576953652b4ee0d9ad3f423a2934"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Otorrhoea source localisation and assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "otosclerosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2e2a9f07fd736484aba7b7ce2ded7cbb7aaef1654b23a382c3f63e3c0e7010fd"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Otosclerosis and audiometric findings",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "outbreak investigation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ca88edd2c2276fb0c4717be78bb8fc9c038bec8882518303cb1e04ae363923cc"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:e6ffd006ba61998ea98d5b8219ec44e8c1775b5dd079019c2aad81486a05a3d1"
+      ],
+      "scopeComparison": "Outbreak case definition, line listing and control",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ovarian cancer",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f61a475dc80673ae67b25b9377ca120335601dba0700c98fa21215a39f2d59f5"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Ovarian tumour groups and staging",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ovulation induction",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ed4adc2c59bfaf66a234575a8c44ff16d613dfa8ee7b04429a853d888ceff812"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Ovulation induction selection and monitoring",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oxidative stress",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Oxidative injury mechanisms",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "oxygen toxicity",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:84c4af836b619c87e91ba89ca71f6e9014f4b85e70fecd12b5a4d1a7c2dfba38"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Oxygen toxicity risk and monitoring",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "paget disease of bone",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f9913b6acaec3f579c2e026ca9ab572f6ce677ba69d3163cf5538a8113af14be"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Paget disease bone remodelling and imaging",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

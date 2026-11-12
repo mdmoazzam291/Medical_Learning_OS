@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "scope": "Disposable PostgreSQL using repository access-summary RPC and synthetic Auth and dependency tables",
+  "verified": [
+    "Empty access and audit counts",
+    "Suspended learner counted and Admin excluded",
+    "Anonymous and authenticated direct RPC calls denied"
+  ],
+  "hostedChangesApplied": false,
+  "next": "Assemble and rehearse the content-free staging schema as one versioned deployment unit before hosted provisioning."
+}

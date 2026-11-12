@@ -13,7 +13,34 @@ test('Owner boundary preserves canonical subjectTags and detects subject-only dr
  assert.equal(await canonicalIdentityDigest(concept),pack.objectives[0].canonicalIdentitySha256);
  const admin=fake(),fallback=admin.from.bind(admin);admin.from=name=>name==='study_catalog'?({select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[concept]}}})})})}):fallback(name);
  const read=()=>readFoundationDrafts({admin,actor:'actor',method:'GET',params:new URLSearchParams()});
- assert.equal((await read()).objectives[0].identityState,'current');concept.subjectTags=['anatomy'];assert.equal((await read()).objectives[0].identityState,'changed');
+ const page=await read();
+ assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[121,2,6,1]);
+ assert.equal(new Set(page.namesOnlyPreview.concepts.map(row=>row.label.toLowerCase())).size,121);
+ assert.deepEqual(page.namesOnlyPreview.concepts.find(row=>row.label==='Torticollis').codes,['AN29.4','OR12.1']);
+ assert.equal(page.namesOnlyPreview.concepts.some(row=>row.label==='Precocious puberty'),true);
+ assert.ok(page.namesOnlyPreview.concepts.every(row=>row.codes.every(code=>!code.includes(' '))));
+ assert.ok(page.namesOnlyPreview.concepts.find(row=>row.label==='Adherence').codes.includes('GM14.12'));
+ assert.equal(page.namesOnlyRelationships.length,5);
+ assert.deepEqual(page.namesOnlyRelationships.find(row=>row.narrower.label==='Delayed puberty'),{
+  narrower:{label:'Delayed puberty',codes:['OG23.2']},
+  broader:{label:'Puberty',codes:['PY9.2']},
+ });
+ assert.ok(page.namesOnlyPreview.concepts.some(row=>row.label==='Brown-Sequard syndrome'&&row.codes.length===2));
+ assert.equal(page.objectives[0].identityState,'current');
+ const expectedObjectiveId = pack.objectives[0].objective.objectiveVersionId;
+ for (const [subject, code] of [['anatomy', 'AN57.5'], ['physiology', 'PY10.10']]) {
+  const params = new URLSearchParams({ subject, search: code });
+  const result = await readFoundationDrafts({ admin, actor: 'actor', method: 'GET', params });
+  const requirement = result.requirements.find(row => row.code === code && row.subjectId === subject);
+  assert.ok(requirement?.objectiveVersionIds.includes(expectedObjectiveId));
+  const objective = result.objectives.find(row => row.objective.objectiveVersionId === expectedObjectiveId);
+  assert.equal(objective?.objective.conceptId, concept.conceptId);
+  assert.equal(objective.identityState, 'current');
+  assert.equal(objective.sourceReferences.find(row => row.referenceId === requirement.referenceId)?.status, 'proposed');
+  assert.equal(result.learnerActivation, false);
+ }
+ concept.subjectTags = ['anatomy'];
+ assert.equal((await read()).objectives[0].identityState, 'changed');
 });
 test('foundation adapter encodes filters and authenticates a read without client actor fields',async()=>{
  const {createCloudOwner}=await import('../src/adapters/cloud-owner.js');let request;

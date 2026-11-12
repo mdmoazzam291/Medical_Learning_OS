@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "f286a146fe11fa355c5150bb9537d3d2a1727e72",
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body",
+    "Fetal age estimation",
+    "Physiological vaginal discharge",
+    "Rheumatic fever",
+    "Attention-deficit/hyperactivity disorder",
+    "Medical cause-of-death certification",
+    "Peptic ulcer",
+    "Population sex ratio",
+    "Acute otitis media",
+    "Cause of death coding",
+    "Essential medicines list",
+    "External ear",
+    "Facial nerve palsy",
+    "Mucosal chronic otitis media",
+    "Otitis media with effusion",
+    "Recurrent pregnancy loss",
+    "Rheumatic heart disease",
+    "Squamosal chronic otitis media",
+    "Vitamin K deficiency bleeding",
+    "Blood culture",
+    "Research ethics",
+    "Drug information",
+    "Basic life support",
+    "Pain assessment",
+    "Posterior triangle",
+    "Public health",
+    "Skeletal muscle",
+    "Urinary infection",
+    "Gestational trophoblastic neoplasia",
+    "Cardiac muscle",
+    "Malaria",
+    "Smooth muscle",
+    "Stroke",
+    "COPD",
+    "Contraceptive sterilization"
+  ],
+  "distinctReferences": 216,
+  "registryCheck": {
+    "name": "Contraceptive sterilization",
+    "terms": [
+      "sterilization and sterilisation",
+      "vasectomy",
+      "tubectomy",
+      "tubal ligation or occlusion",
+      "permanent contraception"
+    ],
+    "results": [
+      {
+        "scope": "published",
+        "records": 1,
+        "matches": 0,
+        "version": 448
+      },
+      {
+        "scope": "draft revision",
+        "records": 20,
+        "matches": 0,
+        "version": 448
+      },
+      {
+        "scope": "accepted",
+        "records": 12,
+        "matches": 0,
+        "version": 448
+      }
+    ]
+  },
+  "rows": [
+    {
+      "sourceName": "Constipation",
+      "decision": "reuse-name-with-scoped-component",
+      "targetName": "Constipation",
+      "group": 0,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Enteric fever",
+      "decision": "reuse-name-with-separate-source-objectives",
+      "targetName": "Enteric fever",
+      "group": 0,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Skeletal muscle",
+      "decision": "reuse-parent-with-scoped-components",
+      "targetName": "Skeletal muscle",
+      "group": 0,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Antepartum haemorrhage",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Antepartum haemorrhage",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Cervical cytology sampling",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Cervical cytology sampling",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Death by neurological criteria",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Death by neurological criteria",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Delayed puberty",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Delayed puberty",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Drowning",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Drowning",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Fetal circulation",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Fetal circulation",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Foreign body aspiration",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Foreign body aspiration",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Haemostasis",
+      "decision": "retain-scoped-facet-under-existing-proposed-name",
+      "targetName": "Haemostasis",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Hearing loss",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Hearing loss",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Heart failure",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Heart failure",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Hysteroscopy",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Hysteroscopy",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Infectious diarrhoea",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Infectious diarrhoea",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Lipid test interpretation",
+      "decision": "retain-scoped-facet-under-existing-proposed-name",
+      "targetName": "Lipid test interpretation",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Non-opioid analgesics",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Non-opioid analgesics",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Nutritional assessment",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Nutritional assessment",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Opioid analgesics",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Opioid analgesics",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Organophosphate poisoning",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Organophosphate poisoning",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Otosclerosis",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Otosclerosis",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Oxygen therapy",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Oxygen therapy",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Paracetamol poisoning",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Paracetamol poisoning",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "pH measurement",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "pH measurement",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Postpartum haemorrhage",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Postpartum haemorrhage",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Precocious puberty",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Precocious puberty",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Pregnancy recognition",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Pregnancy recognition",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Prostatitis",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Prostatitis",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Renal test interpretation",
+      "decision": "retain-scoped-facet-under-existing-proposed-name",
+      "targetName": "Renal test interpretation",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Respiratory distress assessment",
+      "decision": "retain-scoped-facet-under-existing-proposed-name",
+      "targetName": "Respiratory distress assessment",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Torticollis",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Torticollis",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Tracheostomy",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Tracheostomy",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Urinary catheterization",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Urinary catheterization",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Uterine prolapse",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Uterine prolapse",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Vomiting",
+      "decision": "reuse-existing-proposed-name-with-separate-source-scopes",
+      "targetName": "Vomiting",
+      "group": 1,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Appendicitis",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Appendicitis",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Assault",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Assault",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Cardiac muscle",
+      "decision": "propose-name",
+      "targetName": "Cardiac muscle",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Chest radiography",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Chest radiography",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Cholecystitis",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Cholecystitis",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Clubfoot",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Clubfoot",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Diarrhoea",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Diarrhoea",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Episiotomy",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Episiotomy",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Herpes zoster",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Herpes zoster",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "In vitro fertilization",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "In vitro fertilization",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Malaria",
+      "decision": "propose-name",
+      "targetName": "Malaria",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Osteoarthritis",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Osteoarthritis",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Pulmonary circulation",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Pulmonary circulation",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Salicylate poisoning",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Salicylate poisoning",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Smooth muscle",
+      "decision": "propose-name",
+      "targetName": "Smooth muscle",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Stroke",
+      "decision": "propose-name",
+      "targetName": "Stroke",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Surrogacy",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Surrogacy",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Tetanus",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Tetanus",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Tracheoesophageal fistula",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Tracheoesophageal fistula",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Varicella",
+      "decision": "reuse-earlier-proposed-label",
+      "targetName": "Varicella",
+      "group": 2,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "COPD",
+      "decision": "propose-broader-parent",
+      "targetName": "COPD",
+      "group": 3,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Laboratory technique observation",
+      "decision": "context-only",
+      "targetName": "Laboratory technique observation",
+      "group": 3,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Pathology terminology",
+      "decision": "context-only",
+      "targetName": "Pathology terminology",
+      "group": 3,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Sterilization",
+      "decision": "propose-qualified-distinct-name",
+      "targetName": "Contraceptive sterilization",
+      "group": 3,
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Urinary tract infection",
+      "decision": "reuse-proposed-name",
+      "targetName": "Urinary infection",
+      "group": 3,
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Audit family and context reuse candidates for overlap with the expanded names-only inventory."
+}

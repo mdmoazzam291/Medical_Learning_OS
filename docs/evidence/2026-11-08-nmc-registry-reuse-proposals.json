@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-registry-reuse-proposals",
+  "sourceHead": "a90bc8dbad01ec798aa75a00b8220c924fd04e6a",
+  "checkedAt": "2026-11-08T10:11:13.501Z",
+  "registryReadOnly": true,
+  "catalogVersion": 448,
+  "registryScope": "catalogue plus acceptance metadata plus three respiratory pending identities; engineering test draft excluded",
+  "registrySnapshot": [
+    {
+      "registry": "accepted",
+      "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+      "label": "Spinal cord extent and termination",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+      "label": "Spinal cord external anatomy",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+      "label": "Motor neuron disease",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+      "label": "Poliomyelitis",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+      "label": "Spinal cord sectional anatomy",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+      "label": "Paraplegia",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "label": "Spinal cord pathways",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+      "label": "Hereditary sensory neuropathy",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+      "label": "Transverse myelitis",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+      "label": "Syringomyelia",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+      "label": "Spinal cord transection patterns",
+      "aliases": []
+    },
+    {
+      "registry": "accepted",
+      "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+      "label": "Subacute combined degeneration",
+      "aliases": []
+    },
+    {
+      "registry": "catalog",
+      "conceptId": "C-101d60e987915f6fa8175c469a265f79",
+      "label": "Brown-Sequard syndrome",
+      "aliases": [
+        "Brown Sequard syndrome",
+        "Hemicord syndrome"
+      ]
+    },
+    {
+      "registry": "draft",
+      "conceptId": "C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473",
+      "label": "Asthma maintenance treatment",
+      "aliases": [
+        "Asthma maintenance therapy"
+      ]
+    },
+    {
+      "registry": "draft",
+      "conceptId": "C-89191b5c-5d54-41e3-bd76-dfb6d34edc99",
+      "label": "Spirometric assessment of suspected COPD",
+      "aliases": [
+        "Spirometry for suspected COPD"
+      ]
+    },
+    {
+      "registry": "draft",
+      "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+      "label": "COPD exacerbation management",
+      "aliases": [
+        "Acute exacerbation of COPD management",
+        "AECOPD management"
+      ]
+    }
+  ],
+  "exactMatchAccounting": {
+    "classifiedNames": 1195,
+    "exactNameOrAliasMatches": 0,
+    "exactProposedHomeMatches": 0,
+    "semanticAbsenceProven": false
+  },
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "productionWrites": false,
+  "registryAcceptanceWrites": false,
+  "foundationComplete": false,
+  "proposalCounts": {
+    "partialScopeReuse": 2,
+    "unbound": 1
+  },
+  "entries": [
+    {
+      "nameKey": "asthma pharmacology",
+      "name": "Asthma pharmacology",
+      "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:01",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+      ],
+      "sourceCode": "PH5.1",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "clinicalValidation": false,
+      "completeScope": false,
+      "coverageFraction": null,
+      "relation": "proposed-partial-scope-objective-reuse",
+      "candidateConceptId": "C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473",
+      "candidateDraftRevision": 2,
+      "candidateDraftDigest": "6ee02f8aa69f87e06f8249693d86107f2988427f6a1ccceacd4f926b95090963",
+      "candidateObjectiveVersionId": "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1",
+      "candidateObjectiveSourceReferenceId": "nmc-2024-ref:a54d769a2db7aa80f396b6137515a35907de9eae3ade9256f63fb3edd876fa4c",
+      "candidateObjectiveSourceCode": "GM28.17",
+      "scopeSubsetName": "Asthma maintenance management",
+      "remainingScopeNames": [
+        "Acute asthma pharmacology",
+        "Pharmacokinetic scope",
+        "Full drug-class scope"
+      ]
+    },
+    {
+      "nameKey": "copd pharmacology",
+      "name": "COPD pharmacology",
+      "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:02",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+      ],
+      "sourceCode": "PH5.1",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "clinicalValidation": false,
+      "completeScope": false,
+      "coverageFraction": null,
+      "relation": "proposed-partial-scope-objective-reuse",
+      "candidateConceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+      "candidateDraftRevision": 2,
+      "candidateDraftDigest": "02c189db237a1a773beb52a3f9718569e30942fc9cd95b1fd743d71eef2587f1",
+      "candidateObjectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1",
+      "candidateObjectiveSourceReferenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "candidateObjectiveSourceCode": "GM28.18",
+      "scopeSubsetName": "COPD exacerbation management",
+      "remainingScopeNames": [
+        "Stable COPD pharmacology",
+        "Pharmacokinetic scope",
+        "Full drug-class scope"
+      ]
+    },
+    {
+      "nameKey": "rhinitis pharmacology",
+      "name": "Rhinitis pharmacology",
+      "componentProposalId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0:name-component:03",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0"
+      ],
+      "sourceCode": "PH5.1",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "identityAccepted": false,
+      "mappingAccepted": false,
+      "clinicalValidation": false,
+      "completeScope": false,
+      "coverageFraction": null,
+      "relation": "unbound",
+      "candidateConceptId": null,
+      "candidateDraftRevision": null,
+      "candidateDraftDigest": null,
+      "candidateObjectiveVersionId": null,
+      "candidateObjectiveSourceReferenceId": null,
+      "candidateObjectiveSourceCode": null,
+      "scopeSubsetName": null,
+      "remainingScopeNames": [
+        "Canonical rhinitis identity",
+        "Rhinitis objective bindings"
+      ]
+    }
+  ]
+}

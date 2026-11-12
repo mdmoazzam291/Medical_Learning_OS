@@ -1,0 +1,1141 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "567ae0de58f8becace20fcc8e837b2fa9183ddee",
+  "indexBlobSha": "be36201443fd5eecbf8b20211cac752f84c4ff36",
+  "provisionalNames": [
+    {
+      "name": "Alcohol-related cirrhosis",
+      "indexMatches": []
+    },
+    {
+      "name": "Alcohol-related hepatic steatosis",
+      "indexMatches": []
+    },
+    {
+      "name": "Alcohol-related hepatitis",
+      "indexMatches": []
+    },
+    {
+      "name": "CT imaging",
+      "indexMatches": []
+    },
+    {
+      "name": "Differential leucocyte count",
+      "indexMatches": []
+    },
+    {
+      "name": "Disc prolapse",
+      "indexMatches": []
+    },
+    {
+      "name": "Echocardiography",
+      "indexMatches": []
+    },
+    {
+      "name": "FISH",
+      "indexMatches": []
+    },
+    {
+      "name": "Haemoglobin estimation",
+      "indexMatches": []
+    },
+    {
+      "name": "Male contraceptive methods",
+      "indexMatches": []
+    },
+    {
+      "name": "MRI imaging",
+      "indexMatches": []
+    },
+    {
+      "name": "PCR",
+      "indexMatches": []
+    },
+    {
+      "name": "Red cell count",
+      "indexMatches": []
+    },
+    {
+      "name": "Spermatogenesis",
+      "indexMatches": []
+    }
+  ],
+  "reviewedFamilyReferenceRoles": {
+    "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c": [
+      {
+        "name": "Acute suppurative otitis media",
+        "role": "incoming",
+        "code": "RD7.2"
+      },
+      {
+        "name": "Sensorineural hearing loss",
+        "role": "incoming",
+        "code": "RD7.2"
+      }
+    ],
+    "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd": [
+      {
+        "name": "Acute suppurative otitis media",
+        "role": "support",
+        "code": "EN4.3"
+      }
+    ],
+    "nmc-2024-ref:bb25f5f31ed070c5e74a0e8d1a446280066c4fac276de2326e9abfeb6efca160": [
+      {
+        "name": "Appendicitis",
+        "role": "incoming",
+        "code": "SU28.15"
+      }
+    ],
+    "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39": [
+      {
+        "name": "Appendicitis",
+        "role": "support",
+        "code": "PA23.5"
+      }
+    ],
+    "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c": [
+      {
+        "name": "Autoimmunity",
+        "role": "incoming",
+        "code": "MI2.7"
+      },
+      {
+        "name": "Hypersensitivity",
+        "role": "incoming",
+        "code": "MI2.7"
+      }
+    ],
+    "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0": [
+      {
+        "name": "Autoimmunity",
+        "role": "support",
+        "code": "PA8.4"
+      }
+    ],
+    "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977": [
+      {
+        "name": "Haemostasis",
+        "role": "incoming",
+        "code": "PA20.1"
+      },
+      {
+        "name": "Haemophilia",
+        "role": "incoming",
+        "code": "PA20.1"
+      },
+      {
+        "name": "Immune thrombocytopenia",
+        "role": "incoming",
+        "code": "PA20.1"
+      }
+    ],
+    "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62": [
+      {
+        "name": "Haemostasis",
+        "role": "support",
+        "code": "PY2.9"
+      }
+    ],
+    "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e": [
+      {
+        "name": "Haemostasis",
+        "role": "support",
+        "code": "PA5.4"
+      }
+    ],
+    "nmc-2024-ref:4e3012e46374338c6f3a43e994da3d671776d8f2cea1ed8231aa51c63dcf6961": [
+      {
+        "name": "Newborn resuscitation principles",
+        "role": "incoming",
+        "code": "OG18.1"
+      }
+    ],
+    "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd": [
+      {
+        "name": "Newborn resuscitation principles",
+        "role": "support",
+        "code": "OG18.4"
+      }
+    ],
+    "nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3": [
+      {
+        "name": "Peptic ulcer disease",
+        "role": "incoming",
+        "code": "PH6.1"
+      }
+    ],
+    "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f": [
+      {
+        "name": "Peptic ulcer disease",
+        "role": "support",
+        "code": "PA23.3"
+      }
+    ],
+    "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708": [
+      {
+        "name": "Rheumatic heart disease",
+        "role": "incoming",
+        "code": "GM1.1"
+      },
+      {
+        "name": "Ischaemic heart disease",
+        "role": "incoming",
+        "code": "GM1.1"
+      }
+    ],
+    "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87": [
+      {
+        "name": "Rheumatic heart disease",
+        "role": "support",
+        "code": "GM1.2"
+      }
+    ],
+    "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d": [
+      {
+        "name": "Sensorineural hearing loss",
+        "role": "incoming",
+        "code": "EN4.14"
+      }
+    ],
+    "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac": [
+      {
+        "name": "Varicella",
+        "role": "incoming",
+        "code": "PE31.10"
+      }
+    ],
+    "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc": [
+      {
+        "name": "Varicella",
+        "role": "support",
+        "code": "DR8.3"
+      }
+    ],
+    "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a": [
+      {
+        "name": "Accommodation",
+        "role": "incoming",
+        "code": "AN41.3"
+      }
+    ],
+    "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc": [
+      {
+        "name": "Accommodation",
+        "role": "support",
+        "code": "PY11.6"
+      }
+    ],
+    "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb": [
+      {
+        "name": "Adaptive immunity",
+        "role": "incoming",
+        "code": "PY2.7"
+      },
+      {
+        "name": "Innate immunity",
+        "role": "incoming",
+        "code": "PY2.7"
+      }
+    ],
+    "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d": [
+      {
+        "name": "Adaptive immunity",
+        "role": "incoming",
+        "code": "PA8.1"
+      },
+      {
+        "name": "Innate immunity",
+        "role": "incoming",
+        "code": "PA8.1"
+      }
+    ],
+    "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7": [
+      {
+        "name": "Adaptive immunity",
+        "role": "support",
+        "code": "MI2.1"
+      },
+      {
+        "name": "Innate immunity",
+        "role": "support",
+        "code": "MI2.1"
+      }
+    ],
+    "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719": [
+      {
+        "name": "Alcohol-related cirrhosis",
+        "role": "incoming",
+        "code": "GM5.4"
+      },
+      {
+        "name": "Alcohol-related hepatic steatosis",
+        "role": "incoming",
+        "code": "GM5.4"
+      },
+      {
+        "name": "Alcohol-related hepatitis",
+        "role": "incoming",
+        "code": "GM5.4"
+      }
+    ],
+    "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376": [
+      {
+        "name": "Alcohol-related cirrhosis",
+        "role": "incoming",
+        "code": "PA24.4"
+      },
+      {
+        "name": "Alcohol-related hepatic steatosis",
+        "role": "incoming",
+        "code": "PA24.4"
+      },
+      {
+        "name": "Alcohol-related hepatitis",
+        "role": "incoming",
+        "code": "PA24.4"
+      }
+    ],
+    "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e": [
+      {
+        "name": "Apoptosis",
+        "role": "incoming",
+        "code": "PA2.4"
+      }
+    ],
+    "nmc-2024-ref:4fcae1fedd037114cbafb572b4405eca78fcd8002573a67cdabae28b7c4a3d5f": [
+      {
+        "name": "Apoptosis",
+        "role": "support",
+        "code": "PY1.3"
+      }
+    ],
+    "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a": [
+      {
+        "name": "Blood grouping",
+        "role": "incoming",
+        "code": "PY2.11"
+      },
+      {
+        "name": "Differential leucocyte count",
+        "role": "incoming",
+        "code": "PY2.11"
+      },
+      {
+        "name": "Haemoglobin estimation",
+        "role": "incoming",
+        "code": "PY2.11"
+      },
+      {
+        "name": "Red cell count",
+        "role": "incoming",
+        "code": "PY2.11"
+      }
+    ],
+    "nmc-2024-ref:8e44f653c72096b74dbc1e5cbae64f75a008c7bc52471dc7ef11a9a75765d507": [
+      {
+        "name": "Blood grouping",
+        "role": "support",
+        "code": "FM14.7"
+      }
+    ],
+    "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2": [
+      {
+        "name": "Breastfeeding",
+        "role": "incoming",
+        "code": "CM5.16"
+      },
+      {
+        "name": "Complementary feeding",
+        "role": "incoming",
+        "code": "CM5.16"
+      }
+    ],
+    "nmc-2024-ref:79efb0722a75143250c86725986c1a3fe844f0ff531182163c9a9e791854cb47": [
+      {
+        "name": "Breastfeeding",
+        "role": "support",
+        "code": "PE7.6"
+      },
+      {
+        "name": "Complementary feeding",
+        "role": "support",
+        "code": "PE7.6"
+      }
+    ],
+    "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6": [
+      {
+        "name": "Cell organelles",
+        "role": "incoming",
+        "code": "PY1.1"
+      }
+    ],
+    "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54": [
+      {
+        "name": "Cell organelles",
+        "role": "support",
+        "code": "BC1.1"
+      }
+    ],
+    "nmc-2024-ref:83dedebb9b53528b29a21541486079e19c40e7d61e1150755f58aafa57a0664e": [
+      {
+        "name": "Central nervous system organization",
+        "role": "incoming",
+        "code": "AN7.1"
+      },
+      {
+        "name": "Peripheral nervous system organization",
+        "role": "incoming",
+        "code": "AN7.1"
+      }
+    ],
+    "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268": [
+      {
+        "name": "Central nervous system organization",
+        "role": "support",
+        "code": "PY10.1"
+      }
+    ],
+    "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0": [
+      {
+        "name": "Cerebellar connections",
+        "role": "incoming",
+        "code": "AN60.3"
+      }
+    ],
+    "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390": [
+      {
+        "name": "Cerebellar connections",
+        "role": "support",
+        "code": "PY10.11"
+      }
+    ],
+    "nmc-2024-ref:eb14a8a46c6f8d58644de4652391f9696e5045e98e834e1214036464f9d6f10d": [
+      {
+        "name": "Complementary feeding",
+        "role": "support",
+        "code": "PE8.1"
+      }
+    ],
+    "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6": [
+      {
+        "name": "CT imaging",
+        "role": "incoming",
+        "code": "AN54.1"
+      },
+      {
+        "name": "MRI imaging",
+        "role": "incoming",
+        "code": "AN54.1"
+      }
+    ],
+    "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd": [
+      {
+        "name": "CT imaging",
+        "role": "incoming",
+        "code": "RD1.1"
+      },
+      {
+        "name": "MRI imaging",
+        "role": "incoming",
+        "code": "RD1.1"
+      }
+    ],
+    "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec": [
+      {
+        "name": "Differential leucocyte count",
+        "role": "incoming",
+        "code": "PA13.4"
+      },
+      {
+        "name": "Haemoglobin estimation",
+        "role": "incoming",
+        "code": "PA13.4"
+      },
+      {
+        "name": "Red cell count",
+        "role": "incoming",
+        "code": "PA13.4"
+      }
+    ],
+    "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6": [
+      {
+        "name": "Disc prolapse",
+        "role": "incoming",
+        "code": "OR6.1"
+      }
+    ],
+    "nmc-2024-ref:c853fff15cc9d6d27d886e075b090c789e95d8d836295968ed92fd61d1bd423c": [
+      {
+        "name": "Disc prolapse",
+        "role": "incoming",
+        "code": "AN50.4"
+      }
+    ],
+    "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403": [
+      {
+        "name": "Down syndrome",
+        "role": "incoming",
+        "code": "AN75.3"
+      },
+      {
+        "name": "Klinefelter syndrome",
+        "role": "incoming",
+        "code": "AN75.3"
+      },
+      {
+        "name": "Turner syndrome",
+        "role": "incoming",
+        "code": "AN75.3"
+      }
+    ],
+    "nmc-2024-ref:8626be69de06dfb8baa1cf0cd9193cf5adf981362c3c98ebaae5cbfec4fe9838": [
+      {
+        "name": "Down syndrome",
+        "role": "support",
+        "code": "PE29.1"
+      }
+    ],
+    "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662": [
+      {
+        "name": "Drug action",
+        "role": "incoming",
+        "code": "PH1.1"
+      }
+    ],
+    "nmc-2024-ref:1b681999780c031f430a829bfb6f62b3f1888862addf682b268ebbf013ced300": [
+      {
+        "name": "Drug action",
+        "role": "support",
+        "code": "PH1.7"
+      }
+    ],
+    "nmc-2024-ref:09f9c855e5c26b9912717ccb5d26a9372f1dae34ff8ed01c90efbd1ca506bf25": [
+      {
+        "name": "Echocardiography",
+        "role": "incoming",
+        "code": "GM1.17"
+      }
+    ],
+    "nmc-2024-ref:fee905096fd818032003a8c7cbb2b39a26d87833d05571fff3011080109c11c2": [
+      {
+        "name": "Echocardiography",
+        "role": "incoming",
+        "code": "GM2.13"
+      }
+    ],
+    "nmc-2024-ref:08b122fbfb9efe49038a6c11a348135f592904ce6b32026bf4f21927535e0e3a": [
+      {
+        "name": "Facial artery",
+        "role": "incoming",
+        "code": "AN28.3"
+      }
+    ],
+    "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1": [
+      {
+        "name": "Facial artery",
+        "role": "support",
+        "code": "AN43.6"
+      }
+    ],
+    "nmc-2024-ref:45e82aab93ac869026e881e6b9e057a03b2e67a06c72f7e171809f7392de274f": [
+      {
+        "name": "Fertilization",
+        "role": "incoming",
+        "code": "OG3.1"
+      },
+      {
+        "name": "Gametogenesis",
+        "role": "incoming",
+        "code": "OG3.1"
+      },
+      {
+        "name": "Implantation",
+        "role": "incoming",
+        "code": "OG3.1"
+      }
+    ],
+    "nmc-2024-ref:08151ab8cceccd4c845b947b93de09bdddf2e17a919bca976a177eeb47703992": [
+      {
+        "name": "Fertilization",
+        "role": "support",
+        "code": "AN77.4"
+      }
+    ],
+    "nmc-2024-ref:0742ca4320e03bf7246cea14158d7eee6e273c360210e34d58c3500ac3e65304": [
+      {
+        "name": "First aid",
+        "role": "incoming",
+        "code": "SU10.4"
+      }
+    ],
+    "nmc-2024-ref:653a872e6c31f8a6fc2b547ce26da9963532216f4a121e3d3553f9d78f69dde1": [
+      {
+        "name": "First aid",
+        "role": "support",
+        "code": "SU17.1"
+      }
+    ],
+    "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52": [
+      {
+        "name": "FISH",
+        "role": "incoming",
+        "code": "BC10.7"
+      },
+      {
+        "name": "PCR",
+        "role": "incoming",
+        "code": "BC10.7"
+      }
+    ],
+    "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f": [
+      {
+        "name": "FISH",
+        "role": "incoming",
+        "code": "AN75.5"
+      },
+      {
+        "name": "Genetic counselling",
+        "role": "incoming",
+        "code": "AN75.5"
+      },
+      {
+        "name": "Karyotyping",
+        "role": "incoming",
+        "code": "AN75.5"
+      },
+      {
+        "name": "PCR",
+        "role": "incoming",
+        "code": "AN75.5"
+      }
+    ],
+    "nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415": [
+      {
+        "name": "Gametogenesis",
+        "role": "support",
+        "code": "AN77.3"
+      },
+      {
+        "name": "Spermatogenesis",
+        "role": "incoming",
+        "code": "AN77.3"
+      }
+    ],
+    "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50": [
+      {
+        "name": "General anaesthesia",
+        "role": "incoming",
+        "code": "SU11.2"
+      }
+    ],
+    "nmc-2024-ref:96c281609dd41a6fac209980c6395d714a1013dcde8fe52ec4d904bbd1f36f19": [
+      {
+        "name": "General anaesthesia",
+        "role": "support",
+        "code": "PH3.1"
+      }
+    ],
+    "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e": [
+      {
+        "name": "General anaesthesia",
+        "role": "support",
+        "code": "AS4.3"
+      }
+    ],
+    "nmc-2024-ref:ddd789974be4b629ffa00f0fb0b1e15fe7f0179c0e1b9298ab7f85f5bdae9bc6": [
+      {
+        "name": "Genetic counselling",
+        "role": "support",
+        "code": "PE29.3"
+      }
+    ],
+    "nmc-2024-ref:42ee5ad5337839e1563ccaeef1a4c60232913548eda53f77cc1cad7360938bf7": [
+      {
+        "name": "Haemophilia",
+        "role": "support",
+        "code": "PE26.7"
+      }
+    ],
+    "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3": [
+      {
+        "name": "Hip dislocation",
+        "role": "incoming",
+        "code": "OR1.4"
+      }
+    ],
+    "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834": [
+      {
+        "name": "Hip dislocation",
+        "role": "support",
+        "code": "AN17.3"
+      }
+    ],
+    "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a": [
+      {
+        "name": "Hypersensitivity",
+        "role": "support",
+        "code": "PA8.2"
+      }
+    ],
+    "nmc-2024-ref:d76927e1a3106604246996db0a9ba0f3be3303a1c0ef4a25981d92f8cabc0eb8": [
+      {
+        "name": "Immune thrombocytopenia",
+        "role": "support",
+        "code": "PE26.6"
+      }
+    ],
+    "nmc-2024-ref:5687678ee0952a8eb3a12d60de74195f6aed087e3bb4bc331f7c293c07794b36": [
+      {
+        "name": "Implantation",
+        "role": "support",
+        "code": "AN78.3"
+      }
+    ],
+    "nmc-2024-ref:ffc9898b016b6315218b7ee6d6a24fdc7d1b4e68c93bb6a77eb72a286a9ef3e7": [
+      {
+        "name": "Iodine deficiency",
+        "role": "incoming",
+        "code": "CM5.3"
+      },
+      {
+        "name": "Vitamin A deficiency",
+        "role": "incoming",
+        "code": "CM5.3"
+      }
+    ],
+    "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728": [
+      {
+        "name": "Iodine deficiency",
+        "role": "support",
+        "code": "PE13.3"
+      }
+    ],
+    "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d": [
+      {
+        "name": "Iron metabolism",
+        "role": "incoming",
+        "code": "PA14.1"
+      }
+    ],
+    "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628": [
+      {
+        "name": "Iron metabolism",
+        "role": "support",
+        "code": "BC9.1"
+      }
+    ],
+    "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724": [
+      {
+        "name": "Ischaemic heart disease",
+        "role": "support",
+        "code": "PA26.6"
+      }
+    ],
+    "nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2": [
+      {
+        "name": "Ischaemic heart disease",
+        "role": "support",
+        "code": "AN22.4"
+      }
+    ],
+    "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2": [
+      {
+        "name": "Ischaemic heart disease",
+        "role": "support",
+        "code": "PH4.8"
+      }
+    ],
+    "nmc-2024-ref:a5a5048d01747edf8da32222ea0be8d4f3257fe7a10e2667e6b478c7a80dfaed": [
+      {
+        "name": "Karyotyping",
+        "role": "support",
+        "code": "AN73.2"
+      }
+    ],
+    "nmc-2024-ref:ce8bdaac79666a3aa40133eeabf4bce237aaedbf4b44ab925d58bb191fd681cb": [
+      {
+        "name": "Klinefelter syndrome",
+        "role": "support",
+        "code": "PE29.5"
+      }
+    ],
+    "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3": [
+      {
+        "name": "Male contraceptive methods",
+        "role": "incoming",
+        "code": "OG21.1"
+      }
+    ],
+    "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e": [
+      {
+        "name": "Male contraceptive methods",
+        "role": "incoming",
+        "code": "PY9.6"
+      }
+    ],
+    "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0": [
+      {
+        "name": "Paget disease of bone",
+        "role": "incoming",
+        "code": "OR7.1"
+      }
+    ],
+    "nmc-2024-ref:f9913b6acaec3f579c2e026ca9ab572f6ce677ba69d3163cf5538a8113af14be": [
+      {
+        "name": "Paget disease of bone",
+        "role": "support",
+        "code": "PA32.4"
+      }
+    ],
+    "nmc-2024-ref:aa1122632798a3babb991c7fc26b20c1d60f4f0622054155857080f1898f65a2": [
+      {
+        "name": "Penile carcinoma",
+        "role": "incoming",
+        "code": "SU30.1"
+      }
+    ],
+    "nmc-2024-ref:688d1e0370d39ddf1674ebd43cc21378aca783f3cc860466782655f537917422": [
+      {
+        "name": "Penile carcinoma",
+        "role": "support",
+        "code": "PA28.2"
+      }
+    ],
+    "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e": [
+      {
+        "name": "Peripheral nervous system organization",
+        "role": "support",
+        "code": "PY10.2"
+      }
+    ],
+    "nmc-2024-ref:e4d6af345cbd9f7beecd4c81cb77d38050847417a500820454bbf1bb4d76be3a": [
+      {
+        "name": "Post-mortem imaging",
+        "role": "incoming",
+        "code": "FM12.6"
+      }
+    ],
+    "nmc-2024-ref:71d565a43129dde8149213d0f81fe0dfef2a54ae4c7b53507b1de3d40d10e860": [
+      {
+        "name": "Post-mortem imaging",
+        "role": "support",
+        "code": "FM2.15"
+      }
+    ],
+    "nmc-2024-ref:ee91b49745bfbc3d66214cd37be4fdc01391050b5d35ff78481e3d763b828ebe": [
+      {
+        "name": "Retinoblastoma",
+        "role": "incoming",
+        "code": "OP9.4"
+      }
+    ],
+    "nmc-2024-ref:510a2515b44ebc36d019781219922d18c2c8d0e13f423e8274aee49144c60b50": [
+      {
+        "name": "Retinoblastoma",
+        "role": "support",
+        "code": "PA35.1"
+      }
+    ],
+    "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6": [
+      {
+        "name": "Sickle cell disease",
+        "role": "incoming",
+        "code": "PE26.4"
+      }
+    ],
+    "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a": [
+      {
+        "name": "Sickle cell disease",
+        "role": "support",
+        "code": "PA16.2"
+      }
+    ],
+    "nmc-2024-ref:7b0352f96d379e342fb9c6f9480c80ff8c2c6a2e3bfab77af9b061cd066a2cbe": [
+      {
+        "name": "Spermatogenesis",
+        "role": "incoming",
+        "code": "PY9.3"
+      }
+    ],
+    "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149": [
+      {
+        "name": "Standard precautions",
+        "role": "incoming",
+        "code": "MI10.2"
+      }
+    ],
+    "nmc-2024-ref:1ea1d0551e5063303e00d0b26db58099b7a1277ea57fe9d06fc892253ee5119d": [
+      {
+        "name": "Standard precautions",
+        "role": "support",
+        "code": "OG35.14"
+      }
+    ],
+    "nmc-2024-ref:6715fe57e5a2d6ae0fa029872c87da372312fe8667210055448aae22ae955040": [
+      {
+        "name": "Toxidromes",
+        "role": "incoming",
+        "code": "FM13.6"
+      }
+    ],
+    "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f": [
+      {
+        "name": "Toxidromes",
+        "role": "support",
+        "code": "GM22.5"
+      }
+    ],
+    "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9": [
+      {
+        "name": "Tumour markers",
+        "role": "incoming",
+        "code": "PA6.5"
+      }
+    ],
+    "nmc-2024-ref:171d18311152a25db8757f4461212b0e7f9424392a384c63572974e6bccf3f1e": [
+      {
+        "name": "Tumour markers",
+        "role": "support",
+        "code": "GM13.12"
+      }
+    ],
+    "nmc-2024-ref:d5d8c43d8442d27b716b79dbaeb876e33ca0730ffd66070c9de0834b5472233d": [
+      {
+        "name": "Turner syndrome",
+        "role": "support",
+        "code": "PE29.4"
+      }
+    ],
+    "nmc-2024-ref:28756c6792ac9752aba35095bf16750cf0ebc94edb2096727f5c68ffd7260655": [
+      {
+        "name": "Vitamin A deficiency",
+        "role": "support",
+        "code": "OP10.4"
+      }
+    ],
+    "nmc-2024-ref:c05c124ac71e9ac3c27e3c4b7d7dcc13a3b6c928296a851b2ba48a3fdde457e9": [
+      {
+        "name": "Vitamin A deficiency",
+        "role": "support",
+        "code": "PE12.2"
+      }
+    ],
+    "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7": [
+      {
+        "name": "Wound healing",
+        "role": "incoming",
+        "code": "FM5.4"
+      }
+    ],
+    "nmc-2024-ref:efecc3784deb87f1ac1c2349441a2ce806af3eafb712dd64023156d49dbfbb7a": [
+      {
+        "name": "Wound healing",
+        "role": "support",
+        "code": "SU5.1"
+      }
+    ],
+    "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2": [
+      {
+        "name": "Wound healing",
+        "role": "support",
+        "code": "FM5.5"
+      }
+    ]
+  },
+  "distinctCombinedReviewedReferences": 309,
+  "retainedScopeDecisions": [
+    {
+      "name": "Anthropometry",
+      "disposition": "retain-context-specific-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580",
+          "code": "FM4.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Communicable disease control",
+      "disposition": "self-parent-context-only",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5158391b5cc10b9e4c91941cbeb44a344b784e59d6dc477cee69ab5f601cb68a",
+          "code": "CM8.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Contraceptive adverse effects",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+          "code": "OG21.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+          "code": "PY9.6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Contraceptive suitability",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+          "code": "OG21.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+          "code": "PY9.6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Dental evidence",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580",
+          "code": "FM4.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Dialysis indications",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a",
+          "code": "GM10.22",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Disaster management",
+      "disposition": "self-parent-context-only",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:f789b4d750a04063eb67a64c1b64f5aab8187bb5a91db3a3cff4252b2eb97a5d",
+          "code": "CM13.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Exercise cardiovascular responses",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5ecc6d31c743ded0721366cab00f38eb26917d231ae216297459813499b3de22",
+          "code": "PY12.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Health planning",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb",
+          "code": "CM16.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Healthcare-associated infection",
+      "disposition": "self-parent-context-only",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b",
+          "code": "MI10.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "ICU monitoring",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021",
+          "code": "AS7.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Infant feeding practices",
+      "disposition": "self-parent-context-only",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2",
+          "code": "CM5.16",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Red cell indices",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "code": "PY2.11",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke mechanisms",
+      "disposition": "self-parent-context-only",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5f21e84be680313d3944d10c91106a6728623fb39581123ea1f870f8428f54af",
+          "code": "GM18.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Termination complications",
+      "disposition": "retain-scoped-facet",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5e5ff5b2d8edca7d1e9215b1c5c6c0fae1bf9284b3a254ac1676534fa1d62b15",
+          "code": "OG20.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Check alternative labels and scope boundaries before consolidating the provisional family names. Preserve the 15 retained scope routes separately."
+}

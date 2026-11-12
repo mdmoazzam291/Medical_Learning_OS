@@ -1,0 +1,4046 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-decomposition-audit",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "normalization": "NFC, trimmed and collapsed whitespace, lowercase; punctuation preserved",
+  "totals": {
+    "parentNames": 652,
+    "sourceAppearances": 663,
+    "componentOccurrences": 3002,
+    "distinctProposedLabels": 2983,
+    "reuseLeadLabels": 78,
+    "withinParentRepeatedLabels": 5,
+    "crossParentRepeatedLabels": 14,
+    "existingInventoryMatchLabels": 61
+  },
+  "sourceDigests": [
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+      "sha256": "c8a04c5f9a68ddbe8ec294cb0407bbdd4827f5765853cd600871ff4f10ca8642"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+      "sha256": "2bc5477cbabdd75d852c9d8dccb759cc269e3c70052a43460af3d926e0e9117a"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sha256": "22c6a999de781255c74e6e23cc1a3c33152526a3657459021c706c46d4be598f"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sha256": "cc750aa80dac109bf847330acd8c0408ea2985cd90dbbd9830981e43144e69d0"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+      "sha256": "4f1d3a1dce609c2fad9ea0d65a91f666b892f8c820b8c1218e4b86854b3c12c9"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+      "sha256": "e77580c4b18e8e4d1bd1b286bd35d5f721590d935a59ff68dafca79200ad6ef4"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sha256": "53852a5d7bb7345e0d6928979503adf6d8be11044864b168c2d0303500ce4f7a"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+      "sha256": "7485ade1c5e13f8171d6de6a1c65c3a43b1969f1e5f2ae503289d8a5d68a5d94"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "sha256": "66682bea591c2721332ba5541b6452af857147bad6bb05892932da4f0dcc5569"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+      "sha256": "d38aa61ee2b46c51c81bc742ec9e0c68e18385d6e0bacc09e32cf58414466051"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+      "sha256": "7bf10da8cd616452281e80f61be81710d3fe73581ad015fca912f43614ab42e5"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+      "sha256": "41633e060edf73d018b8773c767e70ae942667e897155109dfd826d60227e808"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "sha256": "8631b50c5c44c4bea6ae6f5d2adaed230e593385c5c116db76ea1c0e93e973b5"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+      "sha256": "3d9216d776dfa392b82d5fd547220958e31c1762582e555415d131eb55113606"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+      "sha256": "1e903d978bc9f48994df9192d971ae92fb1af21e8d8abae3562578a1a16d3f4e"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+      "sha256": "708dc4552b2fe7d919b26f867f7f35f8e7132d48f1a075c02c1e90386452aedf"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+      "sha256": "65a57e6bc9a86e57484cce47260eb7730ba3cd9aade1d3fff32cb103c69261bd"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+      "sha256": "75df03873c727a604bc7b39b60d75c023c0754c9c1eea9d81960d28d5926f49c"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+      "sha256": "3a2ea645a3e32cae3f22b6f466902dfd620cfcce0bbd110a1e75afb282451da1"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+      "sha256": "a3d203d422360be0de2ae98086cf3e004bef0bbb84320e0d7480b14a15b95b60"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+      "sha256": "ef930505f806447547cf003dfacec27b0589d96768e27501535e6d8cc932bc16"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+      "sha256": "704bdce51bd33253ecd7b39cc597a3a974c3d0dce77bca81958e2e2e440c3879"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+      "sha256": "35bf6139da76f22cae6ee80633913e11979559bae5ff3058bfc7fd6f882750fb"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+      "sha256": "16d848dfe321f2e5d8d5289b2ddd73f737537b4d525705c8725309e34d5cb474"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json",
+      "sha256": "ba8efb63499bcea3df025f1f8dfceb52df149c773f5c80d0e2cf65cb38d96c0a"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+      "sha256": "0a975bd2265526c732718a773af58ca7e20016a5bcfab15d45fa0ff2e7fbb81a"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "sha256": "b9616ee260c4db379477e0518e3ee387bb5836a22abbadc9adc790a26dbd8dab"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+      "sha256": "32873345472f7b8198692f30a516450ba9cb60108855fc4130774bba7de6c49c"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+      "sha256": "d00501d8800e57a55f5b067a784da8d71d5c16b734225454d284ce6bf5c7fbee"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+      "sha256": "f7c62a599a8ed36d28b390b8cda889c323224c4b10f3177493d4c4d6f3faf595"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "sha256": "6bc2132816090c913c550aeae53d274be17ff385541d604fd384cefdb15d3926"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "sha256": "04994c5233891ea4bf9561c6bda53a429b64fcee5c894147d9d2a2eb162155ad"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "sha256": "3b8c3d7303dbaddea083c2cec5309a6cc7038942296ba7eca4c875dd955f8580"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+      "sha256": "54ab5c08b82a8e0fcc7bbfa6f9197a74f2c161945956c7b7dc7ba09dda28e5ae"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "sha256": "20b9ae3dbac251310ba9c3ab001b1bbe318ab6f0829474b4e0875adc27e3e90c"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "sha256": "762c13701cc6ca02cd1538a217b1260f44bc27d835a76b84a2376f34949e2554"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "sha256": "ec6dbdee217d199073647eb9499220f33549fa6b72e63a145b624fb29d4a4ae0"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+      "sha256": "c9e0c5d4c30b97e59ad193c4edae51956ca3b19962cf630bcceb8e265d0d11f3"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+      "sha256": "4b1486b3d37bf9a8868e4160cdba1f34a08bce63d55e48760937c14b4efaf335"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+      "sha256": "3c2da063fc6a2fe7d9c430aab805db512a390279beb71eb2c7d7c5b3d1742706"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+      "sha256": "fe3e64a0e0aa3fba831e59ca172302e56ff63897c86a0f60ec0532293538704e"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+      "sha256": "d3ac8e1580555e9f1ad31c45906f74250f8c8258719a23c4700931915fe3f320"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+      "sha256": "d85272c9db909efc26f85c6efacb7a0034eae5096c455a24144e50098ffc3b04"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+      "sha256": "4c5659011b24045ad774e80b2666e2bf26e51182606b77b6025227c599622e8d"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+      "sha256": "bdf6fb15d288473b53f6a2295bd1d196e282a6b5945399d193ea0a0a0b2e044a"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+      "sha256": "6bde92e71818f1adc5de942b12fafbd5c51ff24ab8f9cff9bbbdadc756d7fe0c"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+      "sha256": "355ca0d23c3e04ca4a504a81267c36757a1cb419a5cb65c312822b4d6789df98"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+      "sha256": "900e946bad9f592788921ad36e3c1d2c87992b015fdac5789f3e66cff9d09a5f"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "sha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "sha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "sha256": "e7e76ecc32fcf6ba8f1fe4035ccded62f62c73e1034947829312f602ea4db05c"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "sha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+      "sha256": "161945b54e5ee5902bd60d5a10e2c304f493d87842aa15864cebc4762ab83526"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+      "sha256": "76ea96c329b5a08fdead6e1273fe69a0ade0123480b707bb56b0202352c2b89d"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+      "sha256": "6fca73dbbe6de839f931ab7d318dbaa5119403d979b54880e0b70cc213601c58"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+      "sha256": "58dd74ccc49c77baf1255279e379d1cfc8aa3b6f4a45f0c9a4fadf1abe764034"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+      "sha256": "cbac20a385e663545828831f35baadd3d1fe9a2a0da0495702993501a1633953"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+      "sha256": "5262a4ef3e2160c1969416f1158783aa3d3f03196198054d81236df359a45216"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+      "sha256": "30fcb22e4631a6af0837e76241ebaeda267379d8c6f73566533a201ee5eb610e"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+      "sha256": "7dc9f5bb77046bb685d24db4246c7cd9eeff72cc1ba277235de81fd3da11a6ae"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+      "sha256": "923934a18b6e5e897faeface2e8ced3f84907102b28bec5f0b827e5ff771b588"
+    },
+    {
+      "path": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "sha256": "a9f90ab6be3a3f2f50ed10373a7556e93078ff846111a869ffcb3db153e98c72"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+      "sha256": "d73d8f162382d10a978b97526956759a6f569c707f2eed24d0968177216b1cc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+      "sha256": "cc0ba2a8e4f79139c67ba6279cec7c0bad490a11e7d7d2c623d2ff07e71b05aa"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+      "sha256": "94432d89808a86487cd26062bb47f73c8f07edcdad5783feafda405555fd6ba1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+      "sha256": "c7151bc83f20df5684e3e9e95733a5cda0ee2ea60e8142b4dd579c91ecc0872a"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-16.json",
+      "sha256": "1732353578a16e2bf8c302962c0cee29a8c0a661e76f9d45c00352f3cf116f1c"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-17.json",
+      "sha256": "5945d172acea5370789b41495fc88ff120594c7235d51dff323e3bf5ed597684"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-18.json",
+      "sha256": "96ff1d6e8322fac6952bc83b2a3d2fbc6fb17b1a81f4f24f4cbb7a7b42248525"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+      "sha256": "004d7030dfa02a5f7fa686fa0d0df1d17ad55453f5fd0d5c428e2ac04b7f5e2f"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-20.json",
+      "sha256": "330abe6df59ad3b531fb0d9a7975e57b2eda344ad3d61e4ae042324765be19d3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-21.json",
+      "sha256": "c2b207bd07226f7453a108f130371db4d64b7e2f4f94546bd3dc3ee99570154e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-22.json",
+      "sha256": "d8acc212fcbd3dd1570a419a488ab3aad1f9499046be182e835394777799b302"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+      "sha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694"
+    }
+  ],
+  "reuseLeads": [
+    {
+      "nameKey": "accommodation",
+      "label": "Accommodation",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+          "proposalId": "nmc-family-12:03:06",
+          "parentNameKey": "intraocular muscles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a",
+              "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN41.3",
+              "page": 131,
+              "rowBBox": [
+                51.2,
+                499.32,
+                121.7,
+                530.64
+              ],
+              "sourceBodySha256": "4fe31176f1a96076420265637324b454473d85f56382b9dc2c6a1d1ca3b11b8b",
+              "editorialTaskSha256": "89997629962e8774a4d174204cf63b74f35b6b5a08dd23749373dde7376c378d",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "accommodation"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "acute suppurative otitis media",
+      "label": "Acute suppurative otitis media",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+          "proposalId": "nmc-family-07:20:01",
+          "parentNameKey": "ent imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
+              "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+              "subjectId": "radiology",
+              "code": "RD7.2",
+              "page": 459,
+              "rowBBox": [
+                40.1,
+                206.04,
+                103.9,
+                247.26
+              ],
+              "sourceBodySha256": "478fd1a17c7ecf93cd51f7cd89c94231a8bbe8d26e7d9c2c17bf0dbe91ef6c05",
+              "editorialTaskSha256": "7f170af71d4b470b1db188df934de8dcd9ac72e4b3134c1a5ce864f6b9fb0dbe",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute suppurative otitis media"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "adaptive immunity",
+      "label": "Adaptive immunity",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:26:02",
+          "parentNameKey": "immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.7",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                108.96,
+                107.8,
+                136.32
+              ],
+              "sourceBodySha256": "f38df1942ae5074cad77c912039eb856aec87df8406a25280c297eb41585e92f",
+              "editorialTaskSha256": "56ddd6766d0f69cc7fc6bdf826db12fd96a7fda52499c4df71f50caa29403eda",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:26:07",
+          "parentNameKey": "immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA8.1",
+              "page": 189,
+              "rowBBox": [
+                51.5,
+                485.94,
+                105.6,
+                508.98
+              ],
+              "sourceBodySha256": "be0a1d85a355df69a965d8ee54b9a836f5dce8975b07b45a8969fe4fcff9523c",
+              "editorialTaskSha256": "6929c61accf78956abf1512167f5d5a8eae367ebfc50adeaca5c7eae2e0bb86e",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": true,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "adaptive immunity"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "alcohol-related cirrhosis",
+      "label": "Alcohol-related cirrhosis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:03",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM5.4",
+              "page": 290,
+              "rowBBox": [
+                44.2,
+                282.24,
+                102.7,
+                322.92
+              ],
+              "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+              "editorialTaskSha256": "612e58f06b63fe27f5f61a79352449829f881a9d6b4304810337da90353e3138",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:08",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA24.4",
+              "page": 195,
+              "rowBBox": [
+                51.5,
+                355.14,
+                105.6,
+                389.88
+              ],
+              "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+              "editorialTaskSha256": "6b04a721b23b793deb78e5005bb882ac74f71ac06506ebf4fbb89b748adc1327",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": true,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "alcohol-related hepatic steatosis",
+      "label": "Alcohol-related hepatic steatosis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:01",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM5.4",
+              "page": 290,
+              "rowBBox": [
+                44.2,
+                282.24,
+                102.7,
+                322.92
+              ],
+              "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+              "editorialTaskSha256": "612e58f06b63fe27f5f61a79352449829f881a9d6b4304810337da90353e3138",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:05",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA24.4",
+              "page": 195,
+              "rowBBox": [
+                51.5,
+                355.14,
+                105.6,
+                389.88
+              ],
+              "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+              "editorialTaskSha256": "6b04a721b23b793deb78e5005bb882ac74f71ac06506ebf4fbb89b748adc1327",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": true,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "alcohol-related hepatitis",
+      "label": "Alcohol-related hepatitis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:02",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM5.4",
+              "page": 290,
+              "rowBBox": [
+                44.2,
+                282.24,
+                102.7,
+                322.92
+              ],
+              "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+              "editorialTaskSha256": "612e58f06b63fe27f5f61a79352449829f881a9d6b4304810337da90353e3138",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:04:06",
+          "parentNameKey": "alcohol-related liver disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA24.4",
+              "page": 195,
+              "rowBBox": [
+                51.5,
+                355.14,
+                105.6,
+                389.88
+              ],
+              "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+              "editorialTaskSha256": "6b04a721b23b793deb78e5005bb882ac74f71ac06506ebf4fbb89b748adc1327",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": true,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "anthropometry",
+      "label": "Anthropometry",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:17:04",
+          "parentNameKey": "identification from remains",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580",
+              "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json",
+              "subjectId": "forensic-medicine",
+              "code": "FM4.4",
+              "page": 220,
+              "rowBBox": [
+                45.5,
+                309.06,
+                94.7,
+                354.42
+              ],
+              "sourceBodySha256": "4c22a09cd6753b0e76434db1bca84d85259116dbf7e72ac0ac83487474572858",
+              "editorialTaskSha256": "6b8e841cc4e70246fba63d465130741d5d5f50ecdf0fae77ba2ff386f3dc112d",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "anthropometry"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "apoptosis",
+      "label": "Apoptosis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:21:02",
+          "parentNameKey": "cell death",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA2.4",
+              "page": 187,
+              "rowBBox": [
+                51.5,
+                418.62,
+                105.6,
+                452.4
+              ],
+              "sourceBodySha256": "1ffe5918c9efb5e08194799e2011cf2e345991cbc821e12854adeef497caadd0",
+              "editorialTaskSha256": "355a133470ecc4027f415ff3809aca1566374694b75a756fd4491224929aacff",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "apoptosis"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "appendicitis",
+      "label": "Appendicitis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:04:01",
+          "parentNameKey": "appendiceal disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:bb25f5f31ed070c5e74a0e8d1a446280066c4fac276de2326e9abfeb6efca160",
+              "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+              "subjectId": "surgery",
+              "code": "SU28.15",
+              "page": 411,
+              "rowBBox": [
+                45,
+                196.56,
+                101.7,
+                244.2
+              ],
+              "sourceBodySha256": "1aba115e7b5ec3f25efde1d95b39e2f677747707ab5375825e0eb2e48fe48523",
+              "editorialTaskSha256": "b43d1c8aaae68158047d7b40154ddc39c990c0f097603198a3eeaff240b74815",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "appendicitis"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "autoimmunity",
+      "label": "Autoimmunity",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:25:02",
+          "parentNameKey": "immune disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+              "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+              "subjectId": "microbiology",
+              "code": "MI2.7",
+              "page": 208,
+              "rowBBox": [
+                51.9,
+                162.3,
+                108.8,
+                209.46
+              ],
+              "sourceBodySha256": "65677ea3bac682484087268d749f0ad9b26a5cb2ead4bea8e20aff58da2e7b01",
+              "editorialTaskSha256": "767277eb188f9783910a740d04b5ee4e8da65198c8685bb0b0665b3f959ecde0",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "autoimmunity"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "blood grouping",
+      "label": "Blood grouping",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:02:05",
+          "parentNameKey": "blood practicals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.11",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                239.58,
+                107.8,
+                272.34
+              ],
+              "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+              "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "blood grouping"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "breastfeeding",
+      "label": "Breastfeeding",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+          "proposalId": "nmc-family-11:03:01",
+          "parentNameKey": "infant feeding practices",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM5.16",
+              "page": 272,
+              "rowBBox": [
+                40.1,
+                494.52,
+                98.6,
+                522
+              ],
+              "sourceBodySha256": "b33acb2bbcebb5f1fdde17171a422bf73c66cbdd9d9fe0491c450cd0b69d70d9",
+              "editorialTaskSha256": "b357fecfcad40cfe42b224efcb3b764b00c8b598710718a64abb0e22b1751bb0",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "cell organelles",
+      "label": "Cell organelles",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:22:01",
+          "parentNameKey": "cell physiology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY1.1",
+              "page": 150,
+              "rowBBox": [
+                58.5,
+                158.22,
+                107.8,
+                190.98
+              ],
+              "sourceBodySha256": "e955af14eb89e3983d3d22ae1edc0c07b54520c4b76bd01520a9867d841485b7",
+              "editorialTaskSha256": "54e81640081484a7583feb97d5154ba40b877190bf837784129ebf23a8187b44",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "cell organelles"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "central nervous system organization",
+      "label": "Central nervous system organization",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+          "proposalId": "nmc-family-15:03:01",
+          "parentNameKey": "nervous system organization",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:83dedebb9b53528b29a21541486079e19c40e7d61e1150755f58aafa57a0664e",
+              "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN7.1",
+              "page": 110,
+              "rowBBox": [
+                51.2,
+                285.54,
+                120.4,
+                318.24
+              ],
+              "sourceBodySha256": "f75bef30586790deae09fab3b099f87a65dcb4cf6876815896026cd90046c587",
+              "editorialTaskSha256": "93e4380dd7b65754d6980ca0d335aaf8900d87e88ffb4986d7550b6696440807",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "central nervous system organization"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "cerebellar connections",
+      "label": "Cerebellar connections",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:27:02",
+          "parentNameKey": "cerebellar dysfunction",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN60.3",
+              "page": 142,
+              "rowBBox": [
+                51.2,
+                286.62,
+                121.9,
+                311.46
+              ],
+              "sourceBodySha256": "58037934f3256fefe816c931388b517f1f26a0bb6383c158c559b27dd123777a",
+              "editorialTaskSha256": "9015450a3214aaf5664a04e31caa4b9ee11c7a341c0f98c00c595928bfc67f80",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "cerebellar connections"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "communicable disease control",
+      "label": "Communicable disease control",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:14:04",
+          "parentNameKey": "communicable disease control",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5158391b5cc10b9e4c91941cbeb44a344b784e59d6dc477cee69ab5f601cb68a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM8.1",
+              "page": 274,
+              "rowBBox": [
+                40.1,
+                490.2,
+                98.6,
+                536.16
+              ],
+              "sourceBodySha256": "080156f7432e968f4ef75386b3b0dbfc3cb91744957dd360bf9ecbf34dd6af2f",
+              "editorialTaskSha256": "f480564f533703613a6b7f9e0c61c6f8a6a292e68e09a62c328110f6bf0643ad",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "communicable disease control"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "complementary feeding",
+      "label": "Complementary feeding",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+          "proposalId": "nmc-family-11:03:02",
+          "parentNameKey": "infant feeding practices",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM5.16",
+              "page": 272,
+              "rowBBox": [
+                40.1,
+                494.52,
+                98.6,
+                522
+              ],
+              "sourceBodySha256": "b33acb2bbcebb5f1fdde17171a422bf73c66cbdd9d9fe0491c450cd0b69d70d9",
+              "editorialTaskSha256": "b357fecfcad40cfe42b224efcb3b764b00c8b598710718a64abb0e22b1751bb0",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "complementary feeding"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "complementary feeding"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "contraceptive adverse effects",
+      "label": "Contraceptive adverse effects",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:22:07",
+          "parentNameKey": "contraception",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY9.6",
+              "page": 157,
+              "rowBBox": [
+                58.5,
+                285.66,
+                107.8,
+                318.36
+              ],
+              "sourceBodySha256": "7831701de80ed35d2ffd01ff8111b3fb45ea800ce7e0579ef30bfdbe312fe588",
+              "editorialTaskSha256": "554d5687c263c20b5c60cf17047dece7fd4cec5812bb6fca034f12bb480bda74",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:23:09",
+          "parentNameKey": "contraceptive methods",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG21.1",
+              "page": 435,
+              "rowBBox": [
+                49.1,
+                476.16,
+                103.1,
+                538.44
+              ],
+              "sourceBodySha256": "227a2d87f29559b68346fdbe9481ef51ebff9e09d1321c403fd7d890ad64b909",
+              "editorialTaskSha256": "fb47d4da6083ad070df9d0891a2beaef9c4896797438d692d99050aad697782b",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "contraceptive suitability",
+      "label": "Contraceptive suitability",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:22:04",
+          "parentNameKey": "contraception",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY9.6",
+              "page": 157,
+              "rowBBox": [
+                58.5,
+                285.66,
+                107.8,
+                318.36
+              ],
+              "sourceBodySha256": "7831701de80ed35d2ffd01ff8111b3fb45ea800ce7e0579ef30bfdbe312fe588",
+              "editorialTaskSha256": "554d5687c263c20b5c60cf17047dece7fd4cec5812bb6fca034f12bb480bda74",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:23:08",
+          "parentNameKey": "contraceptive methods",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG21.1",
+              "page": 435,
+              "rowBBox": [
+                49.1,
+                476.16,
+                103.1,
+                538.44
+              ],
+              "sourceBodySha256": "227a2d87f29559b68346fdbe9481ef51ebff9e09d1321c403fd7d890ad64b909",
+              "editorialTaskSha256": "fb47d4da6083ad070df9d0891a2beaef9c4896797438d692d99050aad697782b",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "ct imaging",
+      "label": "CT imaging",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:20:03",
+          "parentNameKey": "imaging modalities",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+              "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+              "subjectId": "radiology",
+              "code": "RD1.1",
+              "page": 457,
+              "rowBBox": [
+                40.1,
+                267.6,
+                103.9,
+                389.4
+              ],
+              "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2",
+              "editorialTaskSha256": "bebd3068a801cc0189801b260758cdc825f469fa55176c53ca9a35869c6b2420",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:21:03",
+          "parentNameKey": "imaging principles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN54.1",
+              "page": 139,
+              "rowBBox": [
+                51.2,
+                493.5,
+                122.2,
+                543.96
+              ],
+              "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad",
+              "editorialTaskSha256": "4a1d64887044811c381329a02713b1c7f8bb7b5b03b29e853b105a967b339923",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "dental evidence",
+      "label": "Dental evidence",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:17:03",
+          "parentNameKey": "identification from remains",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580",
+              "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json",
+              "subjectId": "forensic-medicine",
+              "code": "FM4.4",
+              "page": 220,
+              "rowBBox": [
+                45.5,
+                309.06,
+                94.7,
+                354.42
+              ],
+              "sourceBodySha256": "4c22a09cd6753b0e76434db1bca84d85259116dbf7e72ac0ac83487474572858",
+              "editorialTaskSha256": "6b8e841cc4e70246fba63d465130741d5d5f50ecdf0fae77ba2ff386f3dc112d",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "dental evidence"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "dialysis indications",
+      "label": "Dialysis indications",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+          "proposalId": "nmc-family-12:08:01",
+          "parentNameKey": "kidney replacement therapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM10.22",
+              "page": 299,
+              "rowBBox": [
+                44.2,
+                323.16,
+                102.7,
+                350.52
+              ],
+              "sourceBodySha256": "c6bf97aedefa0ab1c7ffe39eb735a7a34ea5fb88c725018e96caadb3cc1b8c45",
+              "editorialTaskSha256": "023717c04df0097889f5de0995a6fdcffd3119e99790b73ea495a6f90e77d773",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "dialysis indications"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "differential leucocyte count",
+      "label": "Differential leucocyte count",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:25:04",
+          "parentNameKey": "basic haematology assays",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA13.4",
+              "page": 191,
+              "rowBBox": [
+                51.5,
+                378.72,
+                105.6,
+                408.18
+              ],
+              "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5",
+              "editorialTaskSha256": "c64387301008e6587294d3a2408493c5aafd8da94f136cc0cad66abc1e4a60e4",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:02:04",
+          "parentNameKey": "blood practicals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.11",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                239.58,
+                107.8,
+                272.34
+              ],
+              "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+              "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "disaster management",
+      "label": "Disaster management",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+          "proposalId": "nmc-family-06:30:01",
+          "parentNameKey": "disaster management",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:f789b4d750a04063eb67a64c1b64f5aab8187bb5a91db3a3cff4252b2eb97a5d",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM13.1",
+              "page": 277,
+              "rowBBox": [
+                40.1,
+                431.7,
+                98.6,
+                450
+              ],
+              "sourceBodySha256": "04429b706176235cdd90abdb8e96bae6dc743d2d48a4741460e36202e6b14959",
+              "editorialTaskSha256": "1d0514af7c1f7171f13ece28b9a6498c34c96378d17996dc102ab7a522b73a5a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "disaster management"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "disc prolapse",
+      "label": "Disc prolapse",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:06:03",
+          "parentNameKey": "applied vertebral anatomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c853fff15cc9d6d27d886e075b090c789e95d8d836295968ed92fd61d1bd423c",
+              "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN50.4",
+              "page": 138,
+              "rowBBox": [
+                51.2,
+                185.82,
+                122.2,
+                210.6
+              ],
+              "sourceBodySha256": "efe7a92eb1565d764b7f75966ce548338231d6cf1132f41cde706252fb566878",
+              "editorialTaskSha256": "69c83e052f1274f2aedaa6cc6e2f83af097a858dd5822f81b678bc3f404276f2",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+          "proposalId": "nmc-family-06:13:03",
+          "parentNameKey": "degenerative spine disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6",
+              "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+              "subjectId": "orthopaedics",
+              "code": "OR6.1",
+              "page": 448,
+              "rowBBox": [
+                49.1,
+                106.02,
+                103.1,
+                176.34
+              ],
+              "sourceBodySha256": "d46bf82ef6f37d9f3259bf434a20728d8dd5fd7a8569d4e3fa92ae2e4b78f3ed",
+              "editorialTaskSha256": "a04ea33060c643875f199432dad0c4e93a7ec593d674b35909da9f732ad3294e",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "down syndrome",
+      "label": "Down syndrome",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:30:04",
+          "parentNameKey": "genetic syndromes",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.3",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                225.48,
+                121.9,
+                271.2
+              ],
+              "sourceBodySha256": "022d59696bd0d4fc77124d916c383b3668bc1df913bcec2f02e84a0b2b0cc09a",
+              "editorialTaskSha256": "edfdfcd230f01e22c2dda1f6490e07aeb94b01ea7ba837c8e8da518bf56c38c2",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "down syndrome"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "drug action",
+      "label": "Drug action",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-17.json",
+          "proposalId": "nmc-family-17:09:02",
+          "parentNameKey": "pharmacology fundamentals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+              "subjectId": "pharmacology",
+              "code": "PH1.1",
+              "page": 174,
+              "rowBBox": [
+                51.7,
+                185.22,
+                105.7,
+                215.46
+              ],
+              "sourceBodySha256": "7eb40863337e80c5a15896b31062f82ffc328f516394c90fd348ec06f1b8d726",
+              "editorialTaskSha256": "b0144d409bdfb51c7665bdf0909f447ab66eb9e6ddd74c2e42f52c32b22b56fd",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "drug action"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "echocardiography",
+      "label": "Echocardiography",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+          "proposalId": "nmc-family-01:28:01",
+          "parentNameKey": "advanced cardiac investigations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:09f9c855e5c26b9912717ccb5d26a9372f1dae34ff8ed01c90efbd1ca506bf25",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM1.17",
+              "page": 282,
+              "rowBBox": [
+                44.2,
+                446.16,
+                102.7,
+                500.28
+              ],
+              "sourceBodySha256": "4c4ab7a1d1755c812579a9d530f6c7276c7e543b60d0e6977dabaafd62b0869c",
+              "editorialTaskSha256": "d2e5682d0a9f133745dec2ae400f0a422adf99531f0b91c57929608682d0deb7",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:26:01",
+          "parentNameKey": "coronary investigations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:fee905096fd818032003a8c7cbb2b39a26d87833d05571fff3011080109c11c2",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM2.13",
+              "page": 285,
+              "rowBBox": [
+                44.2,
+                153.66,
+                102.7,
+                181.14
+              ],
+              "sourceBodySha256": "6cffcf1e5daff030af4e9099d615372edd8bbc3adc714e6372957ccefb1a8338",
+              "editorialTaskSha256": "975a501e2cfc48bfdfe392254cf37f02981056c5d233b225dee0cb230559ed40",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "exercise cardiovascular responses",
+      "label": "Exercise cardiovascular responses",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:01:03",
+          "parentNameKey": "exercise physiology",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5ecc6d31c743ded0721366cab00f38eb26917d231ae216297459813499b3de22",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY12.3",
+              "page": 159,
+              "rowBBox": [
+                58.5,
+                491.58,
+                107.8,
+                534.84
+              ],
+              "sourceBodySha256": "3d867f83f4878efeb37ac25063dcbb3ab3e4ceabceb9a8531a2bc4c46f4126fa",
+              "editorialTaskSha256": "09b974ca622746ded04e5d404ba20abeed842073a6893349a67932906e3bf08c",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "exercise cardiovascular responses"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "facial artery",
+      "label": "Facial artery",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:09:01",
+          "parentNameKey": "facial vessels",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:08b122fbfb9efe49038a6c11a348135f592904ce6b32026bf4f21927535e0e3a",
+              "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN28.3",
+              "page": 125,
+              "rowBBox": [
+                51.2,
+                348.12,
+                121.6,
+                397.8
+              ],
+              "sourceBodySha256": "9ddd00dc4dfab683a6e4b561830d7101eba0eab86c187605ff605da26297cb13",
+              "editorialTaskSha256": "35c8e243297aa76eff4232f3c7b171ab25884fb7bd192475de41d1a362819c1d",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "facial artery"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "fertilization",
+      "label": "Fertilization",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+          "proposalId": "nmc-family-19:06:04",
+          "parentNameKey": "reproductive physiology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:45e82aab93ac869026e881e6b9e057a03b2e67a06c72f7e171809f7392de274f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG3.1",
+              "page": 427,
+              "rowBBox": [
+                49.1,
+                435.3,
+                103.1,
+                474.84
+              ],
+              "sourceBodySha256": "19bdbfa99c5028c6bc38784ea112f76fcaeb124ab6ad4cd6cdc1e565b45fe01b",
+              "editorialTaskSha256": "b2fbcc347326b607d9c0f914b41d933272ed3a143857ad56c9c37b4e45882de8",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "fertilization"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "first aid",
+      "label": "First aid",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:26:01",
+          "parentNameKey": "basic surgical skills",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:0742ca4320e03bf7246cea14158d7eee6e273c360210e34d58c3500ac3e65304",
+              "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+              "subjectId": "surgery",
+              "code": "SU10.4",
+              "page": 405,
+              "rowBBox": [
+                45,
+                262.08,
+                101.7,
+                291.48
+              ],
+              "sourceBodySha256": "9dcf419f7836c4d600c324b7c5d0021edba6bd54e25c9de94d04a4e062e0de47",
+              "editorialTaskSha256": "0bf5d74636c2ff89846c2974d8030e5826d12cba555750a5d0859a335abb144d",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "first aid"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "fish",
+      "label": "FISH",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:29:03",
+          "parentNameKey": "genetic assessment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.5",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                295.68,
+                121.9,
+                320.52
+              ],
+              "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+              "editorialTaskSha256": "f23e48270f6e7175c8ef3a8e5cbca5b58bb74c885482b6159ea12b56080a228a",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+          "proposalId": "nmc-family-14:13:04",
+          "parentNameKey": "molecular technologies",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+              "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+              "subjectId": "biochemistry",
+              "code": "BC10.7",
+              "page": 167,
+              "rowBBox": [
+                58.7,
+                371.82,
+                108.5,
+                429.06
+              ],
+              "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+              "editorialTaskSha256": "69ababefd87f9f23750ad9630bde510a6c6b1839ffcebd57fd1ed589475dff5e",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "gametogenesis",
+      "label": "Gametogenesis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+          "proposalId": "nmc-family-19:06:01",
+          "parentNameKey": "reproductive physiology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:45e82aab93ac869026e881e6b9e057a03b2e67a06c72f7e171809f7392de274f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG3.1",
+              "page": 427,
+              "rowBBox": [
+                49.1,
+                435.3,
+                103.1,
+                474.84
+              ],
+              "sourceBodySha256": "19bdbfa99c5028c6bc38784ea112f76fcaeb124ab6ad4cd6cdc1e565b45fe01b",
+              "editorialTaskSha256": "b2fbcc347326b607d9c0f914b41d933272ed3a143857ad56c9c37b4e45882de8",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "gametogenesis"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "general anaesthesia",
+      "label": "General anaesthesia",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+          "proposalId": "nmc-family-02:11:01",
+          "parentNameKey": "anaesthesia principles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50",
+              "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+              "subjectId": "surgery",
+              "code": "SU11.2",
+              "page": 405,
+              "rowBBox": [
+                45,
+                333.66,
+                101.7,
+                353.52
+              ],
+              "sourceBodySha256": "0e3c7f7bde965de0f386478c730910d3623f8925d767b30e75445919c545cbea",
+              "editorialTaskSha256": "9fc25b8c914a552eecbed9287082d796af20c00e6887129eed4550c9c5614c44",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "general anaesthesia"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "general anaesthesia"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "genetic counselling",
+      "label": "Genetic counselling",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:29:01",
+          "parentNameKey": "genetic assessment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.5",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                295.68,
+                121.9,
+                320.52
+              ],
+              "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+              "editorialTaskSha256": "f23e48270f6e7175c8ef3a8e5cbca5b58bb74c885482b6159ea12b56080a228a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "genetic counselling"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "haemoglobin estimation",
+      "label": "Haemoglobin estimation",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:25:01",
+          "parentNameKey": "basic haematology assays",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA13.4",
+              "page": 191,
+              "rowBBox": [
+                51.5,
+                378.72,
+                105.6,
+                408.18
+              ],
+              "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5",
+              "editorialTaskSha256": "c64387301008e6587294d3a2408493c5aafd8da94f136cc0cad66abc1e4a60e4",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:02:01",
+          "parentNameKey": "blood practicals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.11",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                239.58,
+                107.8,
+                272.34
+              ],
+              "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+              "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "haemophilia",
+      "label": "Haemophilia",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:01:06",
+          "parentNameKey": "bleeding disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA20.1",
+              "page": 193,
+              "rowBBox": [
+                51.5,
+                264.9,
+                105.6,
+                305.94
+              ],
+              "sourceBodySha256": "82e93263de50fbd731d6c9fb479c710b8ddcae6b6fc12668564cf21d1a49ec4a",
+              "editorialTaskSha256": "b517b1b33e2e18f426ee3775c316539674d975f2df275ac65d8873549400601a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "haemophilia"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "haemostasis",
+      "label": "Haemostasis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:01:01",
+          "parentNameKey": "bleeding disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA20.1",
+              "page": 193,
+              "rowBBox": [
+                51.5,
+                264.9,
+                105.6,
+                305.94
+              ],
+              "sourceBodySha256": "82e93263de50fbd731d6c9fb479c710b8ddcae6b6fc12668564cf21d1a49ec4a",
+              "editorialTaskSha256": "b517b1b33e2e18f426ee3775c316539674d975f2df275ac65d8873549400601a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "haemostasis"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "haemostasis"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "health planning",
+      "label": "Health planning",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+          "proposalId": "nmc-family-09:26:01",
+          "parentNameKey": "health planning concepts",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM16.1",
+              "page": 278,
+              "rowBBox": [
+                40.1,
+                366.06,
+                98.6,
+                384.06
+              ],
+              "sourceBodySha256": "4dbe845221562a31124790b60b5447c5b2ecffa43377069f75ae7702246661cb",
+              "editorialTaskSha256": "ba09eb157fbb5c237b2199d5e69d6ab14aebcd942ff0e031fc7fbe25b7d68eae",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "health planning"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "healthcare-associated infection",
+      "label": "Healthcare-associated infection",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+          "proposalId": "nmc-family-09:30:01",
+          "parentNameKey": "healthcare-associated infection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b",
+              "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+              "subjectId": "microbiology",
+              "code": "MI10.1",
+              "page": 213,
+              "rowBBox": [
+                51.9,
+                176.7,
+                108.8,
+                221.04
+              ],
+              "sourceBodySha256": "84e75b8f15dbf916d4dc65316ca8eeb3769c60ca39e5de5607f6615eda22abe9",
+              "editorialTaskSha256": "9b55084e0ce4b43112242bdb715a7a372eaaee0164371d238f6ec6c2fcf20e00",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "healthcare-associated infection"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "hip dislocation",
+      "label": "Hip dislocation",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+          "proposalId": "nmc-family-12:05:03",
+          "parentNameKey": "joint dislocations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3",
+              "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+              "subjectId": "orthopaedics",
+              "code": "OR1.4",
+              "page": 444,
+              "rowBBox": [
+                49.1,
+                413.7,
+                103.1,
+                457.38
+              ],
+              "sourceBodySha256": "ea659017cdd3f07a4f70e59a694af34188778f326fa99691d3e06f39df09f929",
+              "editorialTaskSha256": "215c081640189d77a5d03e393e0409d57f1d0015a625287b6403b6e10d9023c5",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "hip dislocation"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "hypersensitivity",
+      "label": "Hypersensitivity",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:25:01",
+          "parentNameKey": "immune disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+              "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+              "subjectId": "microbiology",
+              "code": "MI2.7",
+              "page": 208,
+              "rowBBox": [
+                51.9,
+                162.3,
+                108.8,
+                209.46
+              ],
+              "sourceBodySha256": "65677ea3bac682484087268d749f0ad9b26a5cb2ead4bea8e20aff58da2e7b01",
+              "editorialTaskSha256": "767277eb188f9783910a740d04b5ee4e8da65198c8685bb0b0665b3f959ecde0",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "hypersensitivity"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "icu monitoring",
+      "label": "ICU monitoring",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:16:03",
+          "parentNameKey": "icu functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+              "subjectId": "anaesthesia",
+              "code": "AS7.1",
+              "page": 454,
+              "rowBBox": [
+                46.7,
+                376.86,
+                98.1,
+                398.94
+              ],
+              "sourceBodySha256": "2839a8975cfc87ad7dd5f93d23f47556542a62a29882149b373bde2bb699771d",
+              "editorialTaskSha256": "147bb30d2d74ced57b38eaff6adc8bea28c81288407d752739cdb2cbf38dbd98",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "icu monitoring"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "immune thrombocytopenia",
+      "label": "Immune thrombocytopenia",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:01:05",
+          "parentNameKey": "bleeding disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA20.1",
+              "page": 193,
+              "rowBBox": [
+                51.5,
+                264.9,
+                105.6,
+                305.94
+              ],
+              "sourceBodySha256": "82e93263de50fbd731d6c9fb479c710b8ddcae6b6fc12668564cf21d1a49ec4a",
+              "editorialTaskSha256": "b517b1b33e2e18f426ee3775c316539674d975f2df275ac65d8873549400601a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "immune thrombocytopenia"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "implantation",
+      "label": "Implantation",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+          "proposalId": "nmc-family-19:06:05",
+          "parentNameKey": "reproductive physiology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:45e82aab93ac869026e881e6b9e057a03b2e67a06c72f7e171809f7392de274f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG3.1",
+              "page": 427,
+              "rowBBox": [
+                49.1,
+                435.3,
+                103.1,
+                474.84
+              ],
+              "sourceBodySha256": "19bdbfa99c5028c6bc38784ea112f76fcaeb124ab6ad4cd6cdc1e565b45fe01b",
+              "editorialTaskSha256": "b2fbcc347326b607d9c0f914b41d933272ed3a143857ad56c9c37b4e45882de8",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "implantation"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "infant feeding practices",
+      "label": "Infant feeding practices",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+          "proposalId": "nmc-family-11:03:03",
+          "parentNameKey": "infant feeding practices",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM5.16",
+              "page": 272,
+              "rowBBox": [
+                40.1,
+                494.52,
+                98.6,
+                522
+              ],
+              "sourceBodySha256": "b33acb2bbcebb5f1fdde17171a422bf73c66cbdd9d9fe0491c450cd0b69d70d9",
+              "editorialTaskSha256": "b357fecfcad40cfe42b224efcb3b764b00c8b598710718a64abb0e22b1751bb0",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "infant feeding practices"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "innate immunity",
+      "label": "Innate immunity",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:26:01",
+          "parentNameKey": "immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.7",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                108.96,
+                107.8,
+                136.32
+              ],
+              "sourceBodySha256": "f38df1942ae5074cad77c912039eb856aec87df8406a25280c297eb41585e92f",
+              "editorialTaskSha256": "56ddd6766d0f69cc7fc6bdf826db12fd96a7fda52499c4df71f50caa29403eda",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:26:06",
+          "parentNameKey": "immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA8.1",
+              "page": 189,
+              "rowBBox": [
+                51.5,
+                485.94,
+                105.6,
+                508.98
+              ],
+              "sourceBodySha256": "be0a1d85a355df69a965d8ee54b9a836f5dce8975b07b45a8969fe4fcff9523c",
+              "editorialTaskSha256": "6929c61accf78956abf1512167f5d5a8eae367ebfc50adeaca5c7eae2e0bb86e",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": true,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "innate immunity"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "iodine deficiency",
+      "label": "Iodine deficiency",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+          "proposalId": "nmc-family-15:14:04",
+          "parentNameKey": "nutrition disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:ffc9898b016b6315218b7ee6d6a24fdc7d1b4e68c93bb6a77eb72a286a9ef3e7",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM5.3",
+              "page": 271,
+              "rowBBox": [
+                40.1,
+                416.88,
+                98.6,
+                462.72
+              ],
+              "sourceBodySha256": "d2652e763dc5e5f4e6a0414a2b5eb37f4fc6a08686869ea91eb12d7401411816",
+              "editorialTaskSha256": "84598ac3a69518a0069a43d1a547bb4388e542c544555d667fcfebbd4e31cefc",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "iodine deficiency"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "iron metabolism",
+      "label": "Iron metabolism",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+          "proposalId": "nmc-family-14:08:01",
+          "parentNameKey": "microcytic anaemia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA14.1",
+              "page": 191,
+              "rowBBox": [
+                51.5,
+                426.18,
+                105.6,
+                455.7
+              ],
+              "sourceBodySha256": "dd5a91ac4c28b75973426de772ae94e3ea9d171e24489b3c7a78ac3aea41dc44",
+              "editorialTaskSha256": "fba92f31b9c2d08dfccbdd3353200e3adf7bbfa21681b1739e35836507876232",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "iron metabolism"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "ischaemic heart disease",
+      "label": "Ischaemic heart disease",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:02:03",
+          "parentNameKey": "heart disease overview",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM1.1",
+              "page": 281,
+              "rowBBox": [
+                44.2,
+                171.66,
+                102.7,
+                212.46
+              ],
+              "sourceBodySha256": "54ffe3489ac37e79034bd477ed49e683c19997b4eac661eb99b226edf841959f",
+              "editorialTaskSha256": "95f82ed53b864a65acbfa52189223c8c048d52c660144b836c3d1a3c78c512b6",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "ischaemic heart disease"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "ischaemic heart disease"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "karyotyping",
+      "label": "Karyotyping",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:29:02",
+          "parentNameKey": "genetic assessment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.5",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                295.68,
+                121.9,
+                320.52
+              ],
+              "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+              "editorialTaskSha256": "f23e48270f6e7175c8ef3a8e5cbca5b58bb74c885482b6159ea12b56080a228a",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "karyotyping"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "klinefelter syndrome",
+      "label": "Klinefelter syndrome",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:30:06",
+          "parentNameKey": "genetic syndromes",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.3",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                225.48,
+                121.9,
+                271.2
+              ],
+              "sourceBodySha256": "022d59696bd0d4fc77124d916c383b3668bc1df913bcec2f02e84a0b2b0cc09a",
+              "editorialTaskSha256": "edfdfcd230f01e22c2dda1f6490e07aeb94b01ea7ba837c8e8da518bf56c38c2",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "klinefelter syndrome"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "male contraceptive methods",
+      "label": "Male contraceptive methods",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:22:01",
+          "parentNameKey": "contraception",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY9.6",
+              "page": 157,
+              "rowBBox": [
+                58.5,
+                285.66,
+                107.8,
+                318.36
+              ],
+              "sourceBodySha256": "7831701de80ed35d2ffd01ff8111b3fb45ea800ce7e0579ef30bfdbe312fe588",
+              "editorialTaskSha256": "554d5687c263c20b5c60cf17047dece7fd4cec5812bb6fca034f12bb480bda74",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:23:04",
+          "parentNameKey": "contraceptive methods",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG21.1",
+              "page": 435,
+              "rowBBox": [
+                49.1,
+                476.16,
+                103.1,
+                538.44
+              ],
+              "sourceBodySha256": "227a2d87f29559b68346fdbe9481ef51ebff9e09d1321c403fd7d890ad64b909",
+              "editorialTaskSha256": "fb47d4da6083ad070df9d0891a2beaef9c4896797438d692d99050aad697782b",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "mri imaging",
+      "label": "MRI imaging",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:20:06",
+          "parentNameKey": "imaging modalities",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+              "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+              "subjectId": "radiology",
+              "code": "RD1.1",
+              "page": 457,
+              "rowBBox": [
+                40.1,
+                267.6,
+                103.9,
+                389.4
+              ],
+              "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2",
+              "editorialTaskSha256": "bebd3068a801cc0189801b260758cdc825f469fa55176c53ca9a35869c6b2420",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:21:04",
+          "parentNameKey": "imaging principles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN54.1",
+              "page": 139,
+              "rowBBox": [
+                51.2,
+                493.5,
+                122.2,
+                543.96
+              ],
+              "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad",
+              "editorialTaskSha256": "4a1d64887044811c381329a02713b1c7f8bb7b5b03b29e853b105a967b339923",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "newborn resuscitation principles",
+      "label": "Newborn resuscitation principles",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+          "proposalId": "nmc-family-15:06:04",
+          "parentNameKey": "newborn assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:4e3012e46374338c6f3a43e994da3d671776d8f2cea1ed8231aa51c63dcf6961",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG18.1",
+              "page": 434,
+              "rowBBox": [
+                49.1,
+                418.26,
+                103.1,
+                463.08
+              ],
+              "sourceBodySha256": "48d2020163422002e5104caf5111537d2ceb1c6cdefc52820d91581867394364",
+              "editorialTaskSha256": "b730e38cb64a9aeaf9cacb34c0613626a47ec2a052f8d5f57f085a222eac54ba",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "newborn resuscitation principles"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "paget disease of bone",
+      "label": "Paget disease of bone",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+          "proposalId": "nmc-family-14:03:04",
+          "parentNameKey": "metabolic bone disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0",
+              "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+              "subjectId": "orthopaedics",
+              "code": "OR7.1",
+              "page": 448,
+              "rowBBox": [
+                49.1,
+                203.64,
+                103.1,
+                266.46
+              ],
+              "sourceBodySha256": "f906818de2fcff04c2700330b80fca08c97eb6cf0aef0c30a6247599e6193b95",
+              "editorialTaskSha256": "84ef342017fa36e6eed216a468888064e500fe87ce18defd23d2dc2eca243b06",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "paget disease of bone"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "pcr",
+      "label": "PCR",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:29:04",
+          "parentNameKey": "genetic assessment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.5",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                295.68,
+                121.9,
+                320.52
+              ],
+              "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+              "editorialTaskSha256": "f23e48270f6e7175c8ef3a8e5cbca5b58bb74c885482b6159ea12b56080a228a",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+          "proposalId": "nmc-family-14:13:02",
+          "parentNameKey": "molecular technologies",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+              "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+              "subjectId": "biochemistry",
+              "code": "BC10.7",
+              "page": 167,
+              "rowBBox": [
+                58.7,
+                371.82,
+                108.5,
+                429.06
+              ],
+              "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+              "editorialTaskSha256": "69ababefd87f9f23750ad9630bde510a6c6b1839ffcebd57fd1ed589475dff5e",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "penile carcinoma",
+      "label": "Penile carcinoma",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-16.json",
+          "proposalId": "nmc-family-16:27:03",
+          "parentNameKey": "penile disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:aa1122632798a3babb991c7fc26b20c1d60f4f0622054155857080f1898f65a2",
+              "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+              "subjectId": "surgery",
+              "code": "SU30.1",
+              "page": 412,
+              "rowBBox": [
+                45,
+                254.28,
+                101.7,
+                289.92
+              ],
+              "sourceBodySha256": "1cb953cb10dfd822eecefcef18cd1b908df962ebca546d3be679a585bd648cba",
+              "editorialTaskSha256": "ae8043ed66632958d14af7ba4e7d77148349a7fb38250967e72ed17a287b3525",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "penile carcinoma"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "peptic ulcer disease",
+      "label": "Peptic ulcer disease",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+          "proposalId": "nmc-family-01:07:01",
+          "parentNameKey": "acid peptic disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+              "subjectId": "pharmacology",
+              "code": "PH6.1",
+              "page": 179,
+              "rowBBox": [
+                51.7,
+                472.68,
+                105.7,
+                534.6
+              ],
+              "sourceBodySha256": "86fdea6978272b6c1c7924ca1a7e0af27f464bf67dcd0dac527fdd9726ba5d44",
+              "editorialTaskSha256": "70183e4ec61f7bf18819cf88b3c29afc334c1c6032998deb722037c671fa8c3b",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "peptic ulcer disease"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "peripheral nervous system organization",
+      "label": "Peripheral nervous system organization",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+          "proposalId": "nmc-family-15:03:02",
+          "parentNameKey": "nervous system organization",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:83dedebb9b53528b29a21541486079e19c40e7d61e1150755f58aafa57a0664e",
+              "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN7.1",
+              "page": 110,
+              "rowBBox": [
+                51.2,
+                285.54,
+                120.4,
+                318.24
+              ],
+              "sourceBodySha256": "f75bef30586790deae09fab3b099f87a65dcb4cf6876815896026cd90046c587",
+              "editorialTaskSha256": "93e4380dd7b65754d6980ca0d335aaf8900d87e88ffb4986d7550b6696440807",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "peripheral nervous system organization"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "post-mortem imaging",
+      "label": "Post-mortem imaging",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:25:06",
+          "parentNameKey": "forensic technologies",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:e4d6af345cbd9f7beecd4c81cb77d38050847417a500820454bbf1bb4d76be3a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+              "subjectId": "forensic-medicine",
+              "code": "FM12.6",
+              "page": 229,
+              "rowBBox": [
+                45.5,
+                52.38,
+                95.2,
+                213
+              ],
+              "sourceBodySha256": "4653b877a86e6e7d2adfebf7fb2c010261cd2c2f8ea172cce24c264eb1d58d2e",
+              "editorialTaskSha256": "f89e1dc12150b5c71f821bcc447c1d4ca34a340980f5a631194bc95cbc6c3213",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "post-mortem imaging"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "red cell count",
+      "label": "Red cell count",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+          "proposalId": "nmc-family-03:25:02",
+          "parentNameKey": "basic haematology assays",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA13.4",
+              "page": 191,
+              "rowBBox": [
+                51.5,
+                378.72,
+                105.6,
+                408.18
+              ],
+              "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5",
+              "editorialTaskSha256": "c64387301008e6587294d3a2408493c5aafd8da94f136cc0cad66abc1e4a60e4",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:02:02",
+          "parentNameKey": "blood practicals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.11",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                239.58,
+                107.8,
+                272.34
+              ],
+              "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+              "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "red cell indices",
+      "label": "Red cell indices",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:02:08",
+          "parentNameKey": "blood practicals",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY2.11",
+              "page": 151,
+              "rowBBox": [
+                58.5,
+                239.58,
+                107.8,
+                272.34
+              ],
+              "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+              "editorialTaskSha256": "90739986b52d6805a3617cd1f38dabd7e6b0ea0d27195024bba20f17d64cf541",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "red cell indices"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "retinoblastoma",
+      "label": "Retinoblastoma",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+          "proposalId": "nmc-family-19:09:09",
+          "parentNameKey": "retinal disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:ee91b49745bfbc3d66214cd37be4fdc01391050b5d35ff78481e3d763b828ebe",
+              "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+              "subjectId": "ophthalmology",
+              "code": "OP9.4",
+              "page": 418,
+              "rowBBox": [
+                49.5,
+                141.42,
+                103.5,
+                213.78
+              ],
+              "sourceBodySha256": "f54aad7e070bc83abcef99b109486c38eab519372c8defff7338da357178860b",
+              "editorialTaskSha256": "189b3cb3c246847fe5738518c76bf7520f5fd84d86477ed779ef4dfa8cdacfed",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "retinoblastoma"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "rheumatic heart disease",
+      "label": "Rheumatic heart disease",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:02:01",
+          "parentNameKey": "heart disease overview",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM1.1",
+              "page": 281,
+              "rowBBox": [
+                44.2,
+                171.66,
+                102.7,
+                212.46
+              ],
+              "sourceBodySha256": "54ffe3489ac37e79034bd477ed49e683c19997b4eac661eb99b226edf841959f",
+              "editorialTaskSha256": "95f82ed53b864a65acbfa52189223c8c048d52c660144b836c3d1a3c78c512b6",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "rheumatic heart disease"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "sensorineural hearing loss",
+      "label": "Sensorineural hearing loss",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+          "proposalId": "nmc-family-07:20:03",
+          "parentNameKey": "ent imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
+              "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+              "subjectId": "radiology",
+              "code": "RD7.2",
+              "page": 459,
+              "rowBBox": [
+                40.1,
+                206.04,
+                103.9,
+                247.26
+              ],
+              "sourceBodySha256": "478fd1a17c7ecf93cd51f7cd89c94231a8bbe8d26e7d9c2c17bf0dbe91ef6c05",
+              "editorialTaskSha256": "7f170af71d4b470b1db188df934de8dcd9ac72e4b3134c1a5ce864f6b9fb0dbe",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+          "proposalId": "nmc-family-10:01:02",
+          "parentNameKey": "hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d",
+              "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+              "subjectId": "ent",
+              "code": "EN4.14",
+              "page": 423,
+              "rowBBox": [
+                40,
+                167.28,
+                94.3,
+                221.76
+              ],
+              "sourceBodySha256": "50a7101d511e59e9b731207588d62d041a5d77a0b914c3ca2f1ba81321c1099d",
+              "editorialTaskSha256": "838e31f0cb004971fc4cdff6e1c1faeddb0ff5e9f8fc5de10266109893af7722",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "sickle cell disease",
+      "label": "Sickle cell disease",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+          "proposalId": "nmc-family-09:17:02",
+          "parentNameKey": "haemolytic anaemias",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6",
+              "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+              "subjectId": "pediatrics",
+              "code": "PE26.4",
+              "page": 345,
+              "rowBBox": [
+                51.3,
+                347.16,
+                103.1,
+                394.5
+              ],
+              "sourceBodySha256": "1efbc75d14f6b56ed2de535e9583b9df5dbd70c791b0f23d398ec604d789e53d",
+              "editorialTaskSha256": "102e03b962dc8021f40767b07c8f8ce05e6c99000d89214cb64d87e0e17b17ea",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "sickle cell disease"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "spermatogenesis",
+      "label": "Spermatogenesis",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:27:01",
+          "parentNameKey": "gametogenesis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN77.3",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                457.68,
+                121.9,
+                482.46
+              ],
+              "sourceBodySha256": "c738ca427a7a4727f15eadb19ce9a0f575f3a7a0257303d00fb69fbc71265fe7",
+              "editorialTaskSha256": "c78f2f3e6131a055ef09f6ba72d0f80919b26db045b6caf8fe7dfb571caf4810",
+              "mode": "knowledge"
+            }
+          ]
+        },
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+          "proposalId": "nmc-family-13:13:02",
+          "parentNameKey": "male reproductive physiology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:7b0352f96d379e342fb9c6f9480c80ff8c2c6a2e3bfab77af9b061cd066a2cbe",
+              "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "subjectId": "physiology",
+              "code": "PY9.3",
+              "page": 157,
+              "rowBBox": [
+                58.5,
+                169.02,
+                107.8,
+                209.7
+              ],
+              "sourceBodySha256": "015ebd8e6dc47aa800bea90b6c9578e3e17f6261f152702f001d09f738661fc2",
+              "editorialTaskSha256": "1b5c93244fdf05ddedd973baf0cb2c031b073602956293781823fe3fa5f35271",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": true,
+      "existingLabelTargets": [],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "standard precautions",
+      "label": "Standard precautions",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+          "proposalId": "nmc-family-11:05:01",
+          "parentNameKey": "infection precautions",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149",
+              "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+              "subjectId": "microbiology",
+              "code": "MI10.2",
+              "page": 213,
+              "rowBBox": [
+                51.9,
+                221.04,
+                108.8,
+                262.08
+              ],
+              "sourceBodySha256": "dc6776b553862114fb9a83ef905c03b22157af35ef6c70421197f6a76a920f74",
+              "editorialTaskSha256": "4f6923d95b0d342c8261313dd07d9cf1302d2ee22ca184a59a74a738bc1646d0",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "standard precautions"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "stroke mechanisms",
+      "label": "Stroke mechanisms",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+          "proposalId": "nmc-family-19:29:03",
+          "parentNameKey": "stroke mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5f21e84be680313d3944d10c91106a6728623fb39581123ea1f870f8428f54af",
+              "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+              "subjectId": "medicine",
+              "code": "GM18.2",
+              "page": 310,
+              "rowBBox": [
+                44.2,
+                194.4,
+                102.7,
+                235.2
+              ],
+              "sourceBodySha256": "f5d55cfb5c79c18b2ff50e2d0d48e3c650de3705ae16d7cdf5a7b17cef962c25",
+              "editorialTaskSha256": "636fe873eacd3b9768e202b4a803625747b949d9dfbd6fd1a4806dccb5b7a825",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "stroke mechanisms"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "termination complications",
+      "label": "Termination complications",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+          "proposalId": "nmc-family-13:26:03",
+          "parentNameKey": "medical termination of pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5e5ff5b2d8edca7d1e9215b1c5c6c0fae1bf9284b3a254ac1676534fa1d62b15",
+              "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+              "subjectId": "obstetrics-gynaecology",
+              "code": "OG20.1",
+              "page": 435,
+              "rowBBox": [
+                49.1,
+                294.36,
+                103.1,
+                357.48
+              ],
+              "sourceBodySha256": "f0424c6a8081999bdea55e65ec0dd913ec34b3fd4d8f9be2106a226447db476a",
+              "editorialTaskSha256": "1ad6fe53564848c945714153e94c9ee9ea50d1ce051fa4acee1163b4bc4afd81",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "termination complications"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "toxidromes",
+      "label": "Toxidromes",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+          "proposalId": "nmc-family-05:12:01",
+          "parentNameKey": "common poisoning presentations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:6715fe57e5a2d6ae0fa029872c87da372312fe8667210055448aae22ae955040",
+              "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+              "subjectId": "forensic-medicine",
+              "code": "FM13.6",
+              "page": 229,
+              "rowBBox": [
+                45.5,
+                408.18,
+                95.2,
+                451.68
+              ],
+              "sourceBodySha256": "7c84964bdfacb81fb9769a8ff4f1da62d09017e05cafe4c94909c30808a9d55b",
+              "editorialTaskSha256": "6cd1e909364d3c67ba7be6429a208560dd7fe2dbb9ea573214813edfac17ef5c",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "toxidromes"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "tumour markers",
+      "label": "Tumour markers",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+          "proposalId": "nmc-family-04:09:03",
+          "parentNameKey": "cancer diagnostics",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+              "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+              "subjectId": "pathology",
+              "code": "PA6.5",
+              "page": 189,
+              "rowBBox": [
+                51.5,
+                323.94,
+                105.6,
+                352.02
+              ],
+              "sourceBodySha256": "27c3a6669da3d24696bb911f66d811b62f4c26cbdc7cfdc5d9a7a20031207a85",
+              "editorialTaskSha256": "513c2bd9f50980841f26258d0b97cdfc598f9e43a50fa15dab0a4a13b34d63ea",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "tumour markers"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "turner syndrome",
+      "label": "Turner syndrome",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+          "proposalId": "nmc-family-08:30:05",
+          "parentNameKey": "genetic syndromes",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403",
+              "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "subjectId": "anatomy",
+              "code": "AN75.3",
+              "page": 146,
+              "rowBBox": [
+                51.2,
+                225.48,
+                121.9,
+                271.2
+              ],
+              "sourceBodySha256": "022d59696bd0d4fc77124d916c383b3668bc1df913bcec2f02e84a0b2b0cc09a",
+              "editorialTaskSha256": "edfdfcd230f01e22c2dda1f6490e07aeb94b01ea7ba837c8e8da518bf56c38c2",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "turner syndrome"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "varicella",
+      "label": "Varicella",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-22.json",
+          "proposalId": "nmc-family-22:12:04",
+          "parentNameKey": "viral childhood illnesses",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac",
+              "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+              "subjectId": "pediatrics",
+              "code": "PE31.10",
+              "page": 350,
+              "rowBBox": [
+                51.3,
+                185.1,
+                103.1,
+                239.58
+              ],
+              "sourceBodySha256": "1589f0bdf7cbffbf88fed79b53789cef948d5057e68b75f074ddd0c03ff7f7a0",
+              "editorialTaskSha256": "3789ca51e24e153ab5a5b85e7b5f729dab2b96844a710e85d28c997649e02a6b",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "varicella"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "vitamin a deficiency",
+      "label": "Vitamin A deficiency",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+          "proposalId": "nmc-family-15:14:05",
+          "parentNameKey": "nutrition disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:ffc9898b016b6315218b7ee6d6a24fdc7d1b4e68c93bb6a77eb72a286a9ef3e7",
+              "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+              "subjectId": "community-medicine",
+              "code": "CM5.3",
+              "page": 271,
+              "rowBBox": [
+                40.1,
+                416.88,
+                98.6,
+                462.72
+              ],
+              "sourceBodySha256": "d2652e763dc5e5f4e6a0414a2b5eb37f4fc6a08686869ea91eb12d7401411816",
+              "editorialTaskSha256": "84598ac3a69518a0069a43d1a547bb4388e542c544555d667fcfebbd4e31cefc",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "vitamin a deficiency"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "vitamin a deficiency"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    },
+    {
+      "nameKey": "wound healing",
+      "label": "Wound healing",
+      "occurrences": [
+        {
+          "batchPath": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+          "proposalId": "nmc-family-11:21:01",
+          "parentNameKey": "injury healing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceTasks": [
+            {
+              "referenceId": "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7",
+              "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+              "subjectId": "forensic-medicine",
+              "code": "FM5.4",
+              "page": 221,
+              "rowBBox": [
+                45.5,
+                95.94,
+                94,
+                129.42
+              ],
+              "sourceBodySha256": "4f8920bfe878c24c26b46f5e90a89581c10cd1765311dbe76388bdcb3083a73c",
+              "editorialTaskSha256": "cf21ca1a89c70d3ff6e1c41ab84f8a3fdd7302df797858248bc218d24169acf2",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "withinParentRepeat": false,
+      "crossParentRepeat": false,
+      "existingLabelTargets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "wound healing"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "wound healing"
+        }
+      ],
+      "semanticEquivalence": "unverified",
+      "objectiveEquivalence": "unverified",
+      "mappingAccepted": false,
+      "canonicalConceptId": null
+    }
+  ]
+}

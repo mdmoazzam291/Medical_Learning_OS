@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-03.json",
+    "sha256": "792d11f4307e2850a81eb3b014720f4ca872ac5a7bc2a1d16021e6d067fbdf1f"
+  },
+  "reviewedTopics": 14,
+  "cumulativeReviewedTopics": 65,
+  "remainingTopics": 447,
+  "nextTopicNameKey": "cervical cytology sampling",
+  "rows": [
+    {
+      "topicNameKey": "carbohydrate digestion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Carbohydrate hydrolysis, absorption and malabsorption",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "carcinogenesis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Chemical, physical and biological carcinogenesis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cardiac cycle",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4b0ab08c91882d510c98ce6443a28b2c42107fd4b4d4ac1087150052a0a72757"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:d1aeb16327779e3a6793b7be7af0398eccae1e2c60e440239ddd4c5ba72015fc"
+      ],
+      "scopeComparison": "Cardiac-cycle pressure, volume, valves and sounds",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cardiac impulse",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d1aeb16327779e3a6793b7be7af0398eccae1e2c60e440239ddd4c5ba72015fc"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:4b0ab08c91882d510c98ce6443a28b2c42107fd4b4d4ac1087150052a0a72757"
+      ],
+      "scopeComparison": "Cardiac conduction and myocardial action potentials",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cardiac output",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4f8a8735c88cbf31e58fa72abd96df604212967d8c8de9081e69f118df6a7714"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cardiac output and its determinants",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cardiac rehabilitation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f7abcc579a055c81d660fc6949a182f8543423176c329012edd8872ef3cace45"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cardiac rehabilitation eligibility and follow-up",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cardiovascular examination",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:94ba6e62e3264cd9c37edae043b6f76b7419b2d62746657a6b17930bd25476e9",
+        "nmc-2024-ref:c49c8ff30f0abb8fcbb68476cc3cc086fbf580a143559346431500b4f7400d4a"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "General cardiovascular examination and paediatric precordial examination",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "carpal tunnel syndrome",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5105e62668690e9bf7bc0651bf2c247d70c2d9bf375c681e2e6c947c67292711"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Median nerve compression in the carpal tunnel",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "caudal epidural",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:79c8bb2933932d865442b448e8fddaadd599d2ee63b8b7bc331ba8b071904c90"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Caudal epidural observation and age-specific anatomy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cavernous sinus thrombosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1df679f707edff38ae96b568079adc393b541bb530b4a2c8ad8fbf0965427351"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Ocular and neurological recognition of cavernous sinus thrombosis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cellular ageing",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cellular senescence, cumulative damage and apoptosis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "central access",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7c4c94bb70152e7690c0f0bb191759628f4e47405b725cc84629cc4539342d56"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Simulated central venous access",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cerebral palsy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5dc4a1b473fcd477bd7e70e2536073dbc32325426d29595689ab7266147dfafc",
+        "nmc-2024-ref:86a1049ee9dd7f89b89d4152ea3c5e9a28bbf611101c5bb7975a1c4ef517d631"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Paediatric functional assessment and orthopaedic movement and contracture assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cerumen removal",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:52142b14f58252c2cc39e8ff9bcfba784e85c2c447df1c67601f5350f2c9a6bb"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Simulated cerumen removal and technique suitability",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

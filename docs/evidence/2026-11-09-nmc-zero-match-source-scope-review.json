@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "77e7a884302840492f5ee3ae69ad67cffa0b6803",
+  "status": "proposed",
+  "rows": [
+    {
+      "name": "Appendicitis",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58",
+          "code": "RD7.4",
+          "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "appendicitis",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39",
+              "code": "PA23.5",
+              "path": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Assault",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Keep support and referral separate from legal terminology.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:0e69f9564200cf9c82b18068de8dc7de63379de19057032a2da427e0edff2dc2",
+          "code": "FM10.13",
+          "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "assault",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:230565b6a706d91fc9477271f1f187a2aa071d12ae79852a204fdc07cda622f9",
+              "code": "FM5.2",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cardiac muscle",
+      "decision": "propose-name",
+      "scope": "Retain only the named component of comparative muscle tasks.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "code": "AN3.1",
+          "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "code": "AN67.2",
+          "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Chest radiography",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466",
+          "code": "GM28.14",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "chest radiography",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:5aca0d8673e308cbb8cb0f94648c260f211c2a4ee82e2e0b01874a730b09a0a9",
+              "code": "GM2.11",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cholecystitis",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+          "code": "RD4.3",
+          "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "cholecystitis",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+              "code": "PA24.8",
+              "path": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+              "mode": "knowledge"
+            },
+            {
+              "referenceId": "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0",
+              "code": "GM5.7",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Clubfoot",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d",
+          "code": "OR12.1",
+          "path": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "clubfoot",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7",
+              "code": "AN19.6",
+              "path": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diarrhoea",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+          "code": "PY4.11",
+          "path": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a",
+              "code": "GM16.6",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+              "mode": "knowledge"
+            },
+            {
+              "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+              "code": "MI4.1",
+              "path": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Episiotomy",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:841a1a6fc83e30028023896e8faca9fd0ff6fa2f16b2de36643999ca7fcff071",
+          "code": "OG15.1",
+          "path": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "episiotomy",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5",
+              "code": "AN49.5",
+              "path": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Herpes zoster",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+          "code": "GM26.22",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "herpes zoster",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc",
+              "code": "DR8.3",
+              "path": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "In vitro fertilization",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "code": "FM8.12",
+          "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "in vitro fertilization",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9",
+              "code": "PY9.10",
+              "path": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Malaria",
+      "decision": "propose-name",
+      "scope": "Separate parasite biology and case reasoning from simulated prescribing.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+          "code": "GM26.30",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+          "code": "GM26.29",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Osteoarthritis",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+          "code": "RD4.3",
+          "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "osteoarthritis",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6",
+              "code": "PA32.6",
+              "path": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pulmonary circulation",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:23f70d14a6674f916f89ae8dc611b0253e66c9d357d5cfc9655c9b89d70778b1",
+          "code": "PY5.12",
+          "path": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "pulmonary circulation",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22",
+              "code": "AN24.5",
+              "path": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+              "mode": "knowledge"
+            },
+            {
+              "referenceId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4",
+              "code": "AN5.2",
+              "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Salicylate poisoning",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c",
+          "code": "FM13.17",
+          "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "salicylate poisoning",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:e7ab1b66455162bacb80311aee33d88a5cfdd2ee356b79490f4f6c5ec1489abc",
+              "code": "FM13.11",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Smooth muscle",
+      "decision": "propose-name",
+      "scope": "Retain only the named component of comparative muscle tasks.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "code": "AN3.1",
+          "path": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "code": "AN67.2",
+          "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke",
+      "decision": "propose-name",
+      "scope": "Separate older-adult clinical assessment and rehabilitation from imaging decisions.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+          "code": "GM25.9",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+          "code": "RD7.3",
+          "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Surrogacy",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "code": "FM8.12",
+          "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "surrogacy",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16",
+              "code": "AN77.6",
+              "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tetanus",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5",
+          "code": "GM26.13",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "tetanus",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:4df168b01a7036fc03ecde67e90a36bead3a80da3f8b9f18f8d433416a14afdb",
+              "code": "PE31.11",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tracheoesophageal fistula",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:be1f46aab2f1dea65ff5aaa13b61be515efb23e4733f6cabccc05b35405faf9c",
+          "code": "PE19.16",
+          "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "tracheoesophageal fistula",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7",
+              "code": "AN25.4",
+              "path": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+              "mode": "knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Varicella",
+      "decision": "reuse-earlier-proposed-label",
+      "scope": "Retain the named component and preserve each source task separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+          "code": "GM26.22",
+          "path": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "varicella",
+          "references": [
+            {
+              "referenceId": "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc",
+              "code": "DR8.3",
+              "path": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+              "mode": "performance-and-knowledge"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Consolidate the four names and 16 reuse routes into the evidence inventory, checking aliases and deduplicating reference IDs by role."
+}

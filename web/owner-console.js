@@ -369,10 +369,26 @@ function dashboardMarkup(data) {
       <div class="section-heading"><div><span class="eyebrow">CONTENT SYSTEM</span><h2>Canonical content + review pipeline</h2><p>Concepts, questions, sources, NeuralVault notes and learner reports remain governed independently from learner access.</p></div><a class="primary action-link" href="/web/review.html">Open Content Review →</a></div>
       <div class="owner-metrics">${metric('Concepts', number(content.concepts))}${metric('Sources', number(content.sources))}${metric('Questions', number(content.questions))}${metric('Review evidence', number(content.reviewEvidence))}${metric('Learner reports', number(content.openLearnerReports), 'open')}${metric('Unresolved rights', number(content.unresolvedRights))}</div>
       <div class="owner-status-block"><strong>Question lifecycle</strong><p>${statusPills(content.questionStatus)}</p></div><div class="owner-status-block"><strong>Canonical notes</strong><p>${statusPills(content.canonicalNoteStatus)}</p></div><div class="owner-status-block"><strong>Pending human review</strong><p>${statusPills(content.pendingReview)}</p></div>
+      <h3>Content Diagnostics</h3>
+      <nav aria-label="Content Diagnostics"><a href="#owner-integrity">Catalog Integrity</a> · <a href="#owner-source-watch">Source Change Watch</a></nav>
     </section>
 
-    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Coverage Index">
-      <div id="owner-coverage-body"><p>Open Coverage Index to load the current inventory.</p></div><section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section><section id="owner-foundation-objectives" class="concept-editor" aria-label="Foundation objective draft review"></section><section id="owner-syllabus-baselines" class="concept-editor" aria-label="Syllabus baseline draft editor"></section>
+    <section id="owner-foundation" class="panel" data-admin-panel="foundation" hidden aria-label="NMC Foundation">
+      <section id="owner-foundation-objectives" class="concept-editor" aria-label="NMC Foundation draft review"></section>
+    </section>
+
+    <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Content Inventory">
+      <div class="section-heading"><div><span class="eyebrow">CONTENT WORKSPACE</span><h2>Inventory and coverage</h2><p>Inspect existing content and its coverage.</p></div></div>
+      <nav aria-label="Content editors"><a href="#owner-concept-drafts">Concept Drafts</a> · <a href="#owner-exam-syllabus">Exam Syllabus</a></nav>
+      <div id="owner-coverage-body"><p>Loading the content inventory…</p></div>
+    </section>
+
+    <section id="owner-concept-drafts" class="panel" data-admin-panel="concept-drafts" hidden aria-label="Concept Drafts">
+      <section id="owner-concept-editor" class="concept-editor" aria-label="Concept draft editor"></section>
+    </section>
+
+    <section id="owner-exam-syllabus" class="panel" data-admin-panel="exam-syllabus" hidden aria-label="Exam Syllabus">
+      <section id="owner-syllabus-baselines" class="concept-editor" aria-label="Syllabus baseline draft editor"></section>
     </section>
 
     <section id="owner-integrity" class="panel" data-admin-panel="integrity" hidden aria-label="Catalog integrity audit">

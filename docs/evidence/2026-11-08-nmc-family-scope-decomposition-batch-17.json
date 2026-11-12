@@ -1,0 +1,2680 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+      "sha256": "d73d8f162382d10a978b97526956759a6f569c707f2eed24d0968177216b1cc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+      "sha256": "cc0ba2a8e4f79139c67ba6279cec7c0bad490a11e7d7d2c623d2ff07e71b05aa"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+      "sha256": "94432d89808a86487cd26062bb47f73c8f07edcdad5783feafda405555fd6ba1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+      "sha256": "c7151bc83f20df5684e3e9e95733a5cda0ee2ea60e8142b4dd579c91ecc0872a"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-16.json",
+      "sha256": "1732353578a16e2bf8c302962c0cee29a8c0a661e76f9d45c00352f3cf116f1c"
+    }
+  ],
+  "sourceHead": "562e0e50aee0e2c1b2b5cd914a71e47b0728c322",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 31,
+    "componentProposals": 132,
+    "familyParentsWithoutDecompositionProposal": 142
+  },
+  "rows": [
+    {
+      "parentNameKey": "perioperative care",
+      "parentName": "Perioperative care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU1.3",
+          "page": 403,
+          "rowBBox": [
+            45,
+            245.64,
+            101.7,
+            260.7
+          ],
+          "sourceBodySha256": "02499c9260820065a40f0bf3b47946a5704a935a877049684dfbe920f6dae69a",
+          "editorialTaskSha256": "3c782ce2e40f2719a0fd3a1a67f3510d92343e15854fbc042145473e53d953c1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:01:01",
+          "name": "Perioperative assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:01:02",
+          "name": "Perioperative optimization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:01:03",
+          "name": "Intraoperative coordination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:01:04",
+          "name": "Postoperative recovery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "perioperative hazards",
+      "parentName": "Perioperative hazards",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4060ed9575859cd70049bc36d1308ec1a3685f3dfdac9f5f36bf9939b0fe7bde",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS10.2",
+          "page": 455,
+          "rowBBox": [
+            46.7,
+            286.14,
+            98.5,
+            309.78
+          ],
+          "sourceBodySha256": "499ce3ff8142c74d1fb93bc2fc20536b718555e4226035583236de7fa1d12bde",
+          "editorialTaskSha256": "356ad40a30c8b0a5e0e5529e2243161e3167238b315e61009de009ce7e92eb24",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:02:01",
+          "name": "Perioperative hazard identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4060ed9575859cd70049bc36d1308ec1a3685f3dfdac9f5f36bf9939b0fe7bde"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:02:02",
+          "name": "Perioperative hazard prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4060ed9575859cd70049bc36d1308ec1a3685f3dfdac9f5f36bf9939b0fe7bde"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "perioperative management",
+      "parentName": "Perioperative management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:96a4a6433338a21566311eb90e5bd5f2dcbf416ec21ec8deabb79b2d7c303875",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU10.1",
+          "page": 405,
+          "rowBBox": [
+            45,
+            160.62,
+            101.7,
+            194.28
+          ],
+          "sourceBodySha256": "d9e40cb25c9fe90a021d09b599e7e0be64ddef4f0595ba6e0f32632204362740",
+          "editorialTaskSha256": "f2989612d98692ec5d669bb1daa48c4b2bf922208441f865895313eb75d07567",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:03:01",
+          "name": "Procedure-specific perioperative needs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:96a4a6433338a21566311eb90e5bd5f2dcbf416ec21ec8deabb79b2d7c303875"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:03:02",
+          "name": "Perioperative prevention priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:96a4a6433338a21566311eb90e5bd5f2dcbf416ec21ec8deabb79b2d7c303875"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:03:03",
+          "name": "Perioperative monitoring priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:96a4a6433338a21566311eb90e5bd5f2dcbf416ec21ec8deabb79b2d7c303875"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "peripheral blocks",
+      "parentName": "Peripheral blocks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS5.3",
+          "page": 454,
+          "rowBBox": [
+            46.7,
+            137.94,
+            98.1,
+            165.48
+          ],
+          "sourceBodySha256": "5256d5ba035996ab7588ab7ec5001df45c55ff11956307d2d6063347849dad5e",
+          "editorialTaskSha256": "169cff3ce8854a45c222770eedbd0782ef76a1f703e064cec307d51af0acfb9b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:04:01",
+          "name": "Observed peripheral block preparation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:04:02",
+          "name": "Observed peripheral block localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:04:03",
+          "name": "Observed peripheral block monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:04:04",
+          "name": "Observed peripheral block safety checks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "peripheral nerve injuries",
+      "parentName": "Peripheral nerve injuries",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR11.1",
+          "page": 449,
+          "rowBBox": [
+            49.1,
+            142.14,
+            103.1,
+            214.5
+          ],
+          "sourceBodySha256": "184b8aa8bffc78f45ccdc338a614a76374a054151fab6dc9d6de2f34bc9ff357",
+          "editorialTaskSha256": "71d2df4bbfdbedff06221a0aabfe37f801415916ec0b38f50155d5726d3281cf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:05:01",
+          "name": "Radial nerve injury localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:02",
+          "name": "Ulnar nerve injury localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:03",
+          "name": "Median nerve injury localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:04",
+          "name": "Common fibular nerve injury localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:05",
+          "name": "Sciatic nerve injury localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:06",
+          "name": "Peripheral nerve injury assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:07",
+          "name": "Peripheral nerve injury management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:08",
+          "name": "Foot drop splint demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:09",
+          "name": "Wrist drop splint demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:05:10",
+          "name": "Claw hand splint demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "peripheral nervous system organization",
+      "parentName": "Peripheral nervous system organization",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.2",
+          "page": 157,
+          "rowBBox": [
+            58.5,
+            477.78,
+            107.8,
+            505.14
+          ],
+          "sourceBodySha256": "9b28578b0c201424ebeca66972ce2bd9c3a3e4803915f6d9fc11a647ef6df7de",
+          "editorialTaskSha256": "9197c4088cff01aff92f0b22f0cdddd9f37115478fa42bbdb5b696da76f5b217",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:06:01",
+          "name": "Peripheral neural route tracing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:06:02",
+          "name": "Somatic peripheral pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:06:03",
+          "name": "Autonomic peripheral pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "peritoneal sacs",
+      "parentName": "Peritoneal sacs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN47.1",
+          "page": 135,
+          "rowBBox": [
+            51.2,
+            155.94,
+            121.3,
+            200.58
+          ],
+          "sourceBodySha256": "dbfe59edd49c8a741f9fe74af4732662bd0722c574093c2bd02b0a2fe8296bd0",
+          "editorialTaskSha256": "8fe993428ee689649be5c2512d1223a2efc3c0e7e99a6d99e4fd796cb29ddc04",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:07:01",
+          "name": "Horizontal peritoneal tracing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:07:02",
+          "name": "Sagittal peritoneal tracing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:07:03",
+          "name": "Greater peritoneal sac boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:07:04",
+          "name": "Lesser peritoneal sac boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:07:05",
+          "name": "Peritoneal sac recesses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:07:06",
+          "name": "Peritoneal sac communication",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:32f65dbcd66f3aaa3668a564f6712645066b11bdcd949444b91896e85b3c00de"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pesticide poisoning",
+      "parentName": "Pesticide poisoning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.15",
+          "page": 230,
+          "rowBBox": [
+            45.5,
+            446.7,
+            95.2,
+            518.76
+          ],
+          "sourceBodySha256": "9649557bb4c90a8b95dd016677c8e9e6e9aa9ebf7a5db7e22eed801b13a9be7a",
+          "editorialTaskSha256": "2e21c5bbef36834302c380a9476c021e9e7cb702661f5818cae09edd0d4e988a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:08:01",
+          "name": "Organophosphate poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:02",
+          "name": "Carbamate poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:03",
+          "name": "Organochlorine poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:04",
+          "name": "Pyrethroid poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:05",
+          "name": "Paraquat poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:06",
+          "name": "Phosphide poisoning mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:08:07",
+          "name": "Pesticide poisoning treatment principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fee05f20d53859195c482869c9e88362bae4e399ffcf790e7a3c9b51c6bcc0bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pharmacology fundamentals",
+      "parentName": "Pharmacology fundamentals",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH1.1",
+          "page": 174,
+          "rowBBox": [
+            51.7,
+            185.22,
+            105.7,
+            215.46
+          ],
+          "sourceBodySha256": "7eb40863337e80c5a15896b31062f82ffc328f516394c90fd348ec06f1b8d726",
+          "editorialTaskSha256": "b0144d409bdfb51c7665bdf0909f447ab66eb9e6ddd74c2e42f52c32b22b56fd",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:09:01",
+          "name": "Core pharmacology terminology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:09:02",
+          "name": "Drug action",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "drug action"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:09:03",
+          "name": "Therapeutic drug application",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "phosphide poisoning",
+      "parentName": "Phosphide poisoning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.7",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            283.38,
+            102.7,
+            324.12
+          ],
+          "sourceBodySha256": "9f5becaebaf9ab3987c2633d6167ba92e5a1667e6535b3a244f325b9089ce64a",
+          "editorialTaskSha256": "edd8f874a07ef8276bcddd6327d9f867dff8512bc11ea754ffbd05df1ab3508c",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:10:01",
+          "name": "Aluminium phosphide exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:10:02",
+          "name": "Zinc phosphide exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:10:03",
+          "name": "Phosphide poisoning clinical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:10:04",
+          "name": "Phosphide poisoning supportive care priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pituitary function",
+      "parentName": "Pituitary function",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY8.2",
+          "page": 156,
+          "rowBBox": [
+            58.5,
+            279.96,
+            107.8,
+            320.58
+          ],
+          "sourceBodySha256": "bf18a30f1eb247389c3aa2a0e019460d3243d6d133a945c54f15b7057952e682",
+          "editorialTaskSha256": "404727187f3ce38d18c4ba86ccc3ff40ca784100f4618404bb5e854a9ed6dc42",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:11:01",
+          "name": "Anterior pituitary hormone production",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:02",
+          "name": "Posterior pituitary hormone production",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:03",
+          "name": "Pituitary hormone release",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:04",
+          "name": "Pituitary hormone transport",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:05",
+          "name": "Pituitary hormone feedback",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:06",
+          "name": "Pituitary hormone deficiency effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:11:07",
+          "name": "Pituitary hormone excess effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:653602b5d97b1c108b67fa6702784efe2be7339cb1ecfc58b48d98b782f9fb0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "placental hormones",
+      "parentName": "Placental hormones",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN80.5",
+          "page": 148,
+          "rowBBox": [
+            51.2,
+            158.1,
+            122.2,
+            182.94
+          ],
+          "sourceBodySha256": "8d99c90e013a9247db47f2e500a2f49ac5860a380d0e04e2c194d99913eb33b4",
+          "editorialTaskSha256": "d1e068ed3279161e9e322692a8d9ad73169acd2b009a9cf28c53892bc3dacbc1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:12:01",
+          "name": "Placental hormones in uterine growth",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:12:02",
+          "name": "Placental hormones in pregnancy maintenance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:12:03",
+          "name": "Placental hormones near parturition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "plain abdominal radiographs",
+      "parentName": "Plain abdominal radiographs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c367efbbadd84ece74d9ce6cab3ed971fb49d902cefce5b181630d31d8cd2421",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN54.2",
+          "page": 140,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            139.74
+          ],
+          "sourceBodySha256": "aba478702712423db4e94c7954114695f0305e901a83d2fc8f2a13b145e3cdd8",
+          "editorialTaskSha256": "efd847dec9dc9848dd6b9ac59ce5b36c8f62f815e1aab6d642c97334069cf889",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:13:01",
+          "name": "Plain abdominal film orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c367efbbadd84ece74d9ce6cab3ed971fb49d902cefce5b181630d31d8cd2421"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:13:02",
+          "name": "Abdominal radiograph skeletal landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c367efbbadd84ece74d9ce6cab3ed971fb49d902cefce5b181630d31d8cd2421"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:13:03",
+          "name": "Abdominal radiograph gas patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c367efbbadd84ece74d9ce6cab3ed971fb49d902cefce5b181630d31d8cd2421"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:13:04",
+          "name": "Abdominal radiograph soft-tissue outlines",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c367efbbadd84ece74d9ce6cab3ed971fb49d902cefce5b181630d31d8cd2421"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "plant toxins",
+      "parentName": "Plant toxins",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.2",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            147.24
+          ],
+          "sourceBodySha256": "a12b5ad7245e84bf1d1aa2906ddb0e18862eaa41f49cdcd58b4b06e6fda479ed",
+          "editorialTaskSha256": "d45164ce52186be1d6a80af73d0c9f34cde8712c8041ecfd91a1a5f568640835",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:14:01",
+          "name": "Local plant toxin mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:14:02",
+          "name": "Local plant toxin findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:14:03",
+          "name": "Local plant toxin prognosis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:14:04",
+          "name": "Plant toxin agent-specific management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "plasma proteins",
+      "parentName": "Plasma proteins",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC5.4",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            455.28,
+            108.5,
+            499.2
+          ],
+          "sourceBodySha256": "9040c20facfa82f74f68d6b3c268bc779a4bf6c04896afa21d6e651b7c231c25",
+          "editorialTaskSha256": "1cdff7f2d46762c33b2e2f59e6e1bc604ff89b280cfbddd5fbcd0b0d83206f20",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.2",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            392.82,
+            107.8,
+            420.18
+          ],
+          "sourceBodySha256": "cd3c25a8e80a99203f36eae4b0556839714908907d466cdb88d5e3e2db8bada0",
+          "editorialTaskSha256": "dc1b088ad44907d572d63073a7bbb2f8013781fee7786809dff5e621d0baa8ab",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:15:01",
+          "name": "Plasma protein functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
+            "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:02",
+          "name": "Normal plasma protein electrophoretic patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:03",
+          "name": "Inflammatory plasma protein electrophoretic patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:04",
+          "name": "Abnormal plasma protein electrophoretic patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:05",
+          "name": "Plasma protein origins",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:06",
+          "name": "Plasma protein fractions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:15:07",
+          "name": "Plasma protein change clinical consequences",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pneumonia classification",
+      "parentName": "Pneumonia classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.1",
+          "page": 286,
+          "rowBBox": [
+            44.2,
+            146.16,
+            102.7,
+            186.96
+          ],
+          "sourceBodySha256": "66232552069af3b1c32ac0ad6d10dc2de1261279b8a812e94480aecb7030c769",
+          "editorialTaskSha256": "a7c75529e14afd524b4049a8444c9c0a3888ae30b3d0a439b2fe3ebf43e5256f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:16:01",
+          "name": "Community-acquired pneumonia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:16:02",
+          "name": "Hospital-acquired pneumonia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:16:03",
+          "name": "Aspiration pneumonia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pneumonia microbiology",
+      "parentName": "Pneumonia microbiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:222444c244f19cdef268c96ec1165e92cf174ee9638d505d59bb8b15f21c60e8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.2",
+          "page": 286,
+          "rowBBox": [
+            44.2,
+            186.96,
+            102.7,
+            227.76
+          ],
+          "sourceBodySha256": "f88991762bb9dfb8ab23985601c40efa01486e8377a50f41d3c01ccac337e938",
+          "editorialTaskSha256": "b5b5870500c9840d043c66938eb6e3cb6eab3de540a0b48ac2c029da34208bcb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:17:01",
+          "name": "Pneumonia organism prediction by care setting",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:222444c244f19cdef268c96ec1165e92cf174ee9638d505d59bb8b15f21c60e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:17:02",
+          "name": "Pneumonia organism prediction by immune status",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:222444c244f19cdef268c96ec1165e92cf174ee9638d505d59bb8b15f21c60e8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pneumonia pathology",
+      "parentName": "Pneumonia pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA25.1",
+          "page": 196,
+          "rowBBox": [
+            51.5,
+            175.26,
+            105.6,
+            211.98
+          ],
+          "sourceBodySha256": "5547cf6a5a9d31ec1c7debe30533c920db786d4d06f182ef0a6c284cc82cedf8",
+          "editorialTaskSha256": "2a319f09978aa1a4455cf6e0b8af205f3dc9e99cf1e393ab62fb2367c2c2e178",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:18:01",
+          "name": "Pneumonia pathological causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:18:02",
+          "name": "Pneumonia pathological evolution",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:18:03",
+          "name": "Pneumonia morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:18:04",
+          "name": "Pneumonia pathological complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "poison identification",
+      "parentName": "Poison identification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:46e4d4cfd2262d0958ae658a622c14120bd0fa9bc45d866f855883b0e16acaaf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.16",
+          "page": 234,
+          "rowBBox": [
+            45.5,
+            52.38,
+            95.2,
+            106.68
+          ],
+          "sourceBodySha256": "34adf04ecbe5fd1a392d228d1bcd0c09455737b3ce009980aa29cb4f48559304",
+          "editorialTaskSha256": "e12b51b28278f2c9edf9a432300bb899fe369ee4b9f94d6c7f5273a175d1b590",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:19:01",
+          "name": "Botanical poison specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46e4d4cfd2262d0958ae658a622c14120bd0fa9bc45d866f855883b0e16acaaf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:19:02",
+          "name": "Chemical poison specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46e4d4cfd2262d0958ae658a622c14120bd0fa9bc45d866f855883b0e16acaaf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:19:03",
+          "name": "Animal poison specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46e4d4cfd2262d0958ae658a622c14120bd0fa9bc45d866f855883b0e16acaaf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:19:04",
+          "name": "Supported poison specimen forensic inferences",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46e4d4cfd2262d0958ae658a622c14120bd0fa9bc45d866f855883b0e16acaaf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "poisoning mechanisms",
+      "parentName": "Poisoning mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.3",
+          "page": 229,
+          "rowBBox": [
+            45.5,
+            302.94,
+            95.2,
+            336.48
+          ],
+          "sourceBodySha256": "458da85794be68169de31c7550b29361e38b03307255319ada88fed144951c21",
+          "editorialTaskSha256": "510d591f9f5649b1404172242bd89c36a5320681a9f79f94a75b9e746d8be31b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:20:01",
+          "name": "Poison classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:20:02",
+          "name": "Toxicokinetics in poisoning investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:20:03",
+          "name": "Toxicodynamics in poisoning investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:20:04",
+          "name": "Living-person poisoning investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:20:05",
+          "name": "Deceased-person poisoning investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ea4597f1e96d06efc3b28012d11daf90f3dcc9938a7c35073cda9e3fac16db9e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "poisoning treatment principles",
+      "parentName": "Poisoning treatment principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1c25e5278031e220b1900b331c7f2e7abd2f77b08406729b82a2917dbf54a3be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.8",
+          "page": 229,
+          "rowBBox": [
+            45.5,
+            494.88,
+            95.2,
+            538.5
+          ],
+          "sourceBodySha256": "10d2913efd59f5866f87acbfe72a1c76a156404383a2b8c2ecb269a04086feb3",
+          "editorialTaskSha256": "d5d57010c0d96641d2e3b2146499f26b319569ee5bcc663cc60ae3196a28fc0e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:21:01",
+          "name": "Simulated poisoning supportive care considerations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1c25e5278031e220b1900b331c7f2e7abd2f77b08406729b82a2917dbf54a3be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:21:02",
+          "name": "Simulated poisoning decontamination considerations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1c25e5278031e220b1900b331c7f2e7abd2f77b08406729b82a2917dbf54a3be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:21:03",
+          "name": "Simulated antidote considerations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1c25e5278031e220b1900b331c7f2e7abd2f77b08406729b82a2917dbf54a3be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:21:04",
+          "name": "Simulated enhanced elimination considerations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1c25e5278031e220b1900b331c7f2e7abd2f77b08406729b82a2917dbf54a3be"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pontine cranial nerve nuclei",
+      "parentName": "Pontine cranial nerve nuclei",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3b5f6a364f788bbf1e2c408369178b50a02c266be58adea58a68cabc29cbb7ab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN59.3",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            108.42,
+            121.9,
+            140.46
+          ],
+          "sourceBodySha256": "940e9829eeefb0c1af52e4965defe876fc37f102be2f59a08c302d79f131a102",
+          "editorialTaskSha256": "667d78d0c83e7e5896e3b321abfe07db2a2e26a318cb073f18a299f962bf4bab",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:22:01",
+          "name": "Pontine cranial nerve nucleus levels",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b5f6a364f788bbf1e2c408369178b50a02c266be58adea58a68cabc29cbb7ab"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:22:02",
+          "name": "Pontine cranial nerve nucleus modalities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b5f6a364f788bbf1e2c408369178b50a02c266be58adea58a68cabc29cbb7ab"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pontine lesion localization",
+      "parentName": "Pontine lesion localization",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN59.4",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            140.46,
+            121.9,
+            191.22
+          ],
+          "sourceBodySha256": "3c442e4651c4fce04cb22e6e11d5c40ee5b797212bfe12adfca19c1bd743977d",
+          "editorialTaskSha256": "d953a78059eddd2f3c99fd995004834c83e9fb574dacbd93c4f3ac283d70fb3b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:23:01",
+          "name": "Locked-in syndrome localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:02",
+          "name": "Pontine haemorrhage localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:03",
+          "name": "Foville pattern localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:04",
+          "name": "Raymond pattern localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:05",
+          "name": "Millard-Gubler pattern localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:06",
+          "name": "Pontine tract localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:07",
+          "name": "Pontine nuclear localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:23:08",
+          "name": "Pontine fascicular localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pontine sections",
+      "parentName": "Pontine sections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN59.2",
+          "page": 141,
+          "rowBBox": [
+            51.2,
+            494.34,
+            122.2,
+            527.16
+          ],
+          "sourceBodySha256": "b0c2fae6a9c7bcfcbecfaaa08d5079a772eecfddb0b8050365609acfadb38714",
+          "editorialTaskSha256": "9ced6439ea4cf862e7b1d8529ce7f2a4eb1bfe91c7a791eab6892b1216dbe4d9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:24:01",
+          "name": "Upper pontine section landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:24:02",
+          "name": "Lower pontine section landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:24:03",
+          "name": "Pontine section tract identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "pontine surface landmarks",
+      "parentName": "Pontine surface landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN59.1",
+          "page": 141,
+          "rowBBox": [
+            51.2,
+            449.7,
+            122.2,
+            494.34
+          ],
+          "sourceBodySha256": "357f0af3a065b8c332b3a5a7c49ca2cf63c568695a8dea600e7d3669cbc62d5e",
+          "editorialTaskSha256": "a5e735054a396d32d8942136c90c84ddc7a8b496644c5501097eb9e9c4b9350f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:25:01",
+          "name": "Pons specimen orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:25:02",
+          "name": "Basilar groove",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:25:03",
+          "name": "Pontine cerebellar connections",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:25:04",
+          "name": "Visible pontine cranial nerve root attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "posterior abdominal autonomic plexuses",
+      "parentName": "Posterior abdominal autonomic plexuses",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:51c3bb3345e6ce981148be1b15cc01585d5bac80989cfc768346b316990762a8",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN47.12",
+          "page": 136,
+          "rowBBox": [
+            51.2,
+            220.02,
+            122.2,
+            244.8
+          ],
+          "sourceBodySha256": "e7a21ff89159fbb1d3485b000b02ecdf95d3f9e4c9acf258c4050acf1d225760",
+          "editorialTaskSha256": "454c284ed666628abf63f851768255774307241f0a3c9d7ec19a4e5ddad68a90",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:26:01",
+          "name": "Posterior abdominal prevertebral plexuses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51c3bb3345e6ce981148be1b15cc01585d5bac80989cfc768346b316990762a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:26:02",
+          "name": "Abdominal autonomic fibre routes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51c3bb3345e6ce981148be1b15cc01585d5bac80989cfc768346b316990762a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:26:03",
+          "name": "Abdominal autonomic targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51c3bb3345e6ce981148be1b15cc01585d5bac80989cfc768346b316990762a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "posterior forearm muscles",
+      "parentName": "Posterior forearm muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d4a6cc9b12ce5c589d54b5ea677e8bf0b0d21311f08b85b0f1374ca235faba60",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN12.11",
+          "page": 114,
+          "rowBBox": [
+            51.2,
+            434.64,
+            120.4,
+            484.32
+          ],
+          "sourceBodySha256": "0f8939bdac87048cfd1d3d22861bef95ce3c7c9f2a68a4581351b24a3052e3ce",
+          "editorialTaskSha256": "3d691bfe8c70aff1dc43632377c7343ef14ee44881c59de6888c7dc37c7b60a9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:27:01",
+          "name": "Posterior forearm muscle specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d4a6cc9b12ce5c589d54b5ea677e8bf0b0d21311f08b85b0f1374ca235faba60"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:27:02",
+          "name": "Posterior forearm muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d4a6cc9b12ce5c589d54b5ea677e8bf0b0d21311f08b85b0f1374ca235faba60"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:27:03",
+          "name": "Posterior forearm muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d4a6cc9b12ce5c589d54b5ea677e8bf0b0d21311f08b85b0f1374ca235faba60"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:27:04",
+          "name": "Posterior forearm muscle actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d4a6cc9b12ce5c589d54b5ea677e8bf0b0d21311f08b85b0f1374ca235faba60"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "posterior leg muscles",
+      "parentName": "Posterior leg muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN19.1",
+          "page": 118,
+          "rowBBox": [
+            51.2,
+            493.56,
+            121.9,
+            543.3
+          ],
+          "sourceBodySha256": "cd3ff86543bb9861a7c1a8ad95df6b1b24e08f0502352d7d4d85d02edcbc36d4",
+          "editorialTaskSha256": "17c87c1fd4aca0daa49967e441d0b3c44ae4837eee4093503e94b128ef2757e1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:28:01",
+          "name": "Superficial posterior leg muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:28:02",
+          "name": "Deep posterior leg muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:28:03",
+          "name": "Posterior leg muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:28:04",
+          "name": "Posterior leg muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:28:05",
+          "name": "Posterior leg muscle actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "posterior neck muscle anatomy",
+      "parentName": "Posterior neck muscle anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN42.3",
+          "page": 132,
+          "rowBBox": [
+            51.2,
+            217.86,
+            121.6,
+            252.42
+          ],
+          "sourceBodySha256": "a7793077ea42b8f2fd61959c95a361bc18fbe55db3a8da98e1a953c82932eacb",
+          "editorialTaskSha256": "84ec4a16c7aaec4aa1ede2ca215218b0fb3b4a1980a6df5149a471086de86b3f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:29:01",
+          "name": "Semispinalis capitis fibre orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:29:02",
+          "name": "Splenius capitis fibre orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:29:03",
+          "name": "Posterior neck muscle relations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:29:04",
+          "name": "Posterior neck muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:29:05",
+          "name": "Posterior neck muscle unilateral actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:29:06",
+          "name": "Posterior neck muscle bilateral actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "posterior triangle muscles",
+      "parentName": "Posterior triangle muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN29.5",
+          "page": 126,
+          "rowBBox": [
+            51.2,
+            399.24,
+            122.2,
+            448.56
+          ],
+          "sourceBodySha256": "d02b152f3cdc728d836eb93881181a8e7820459cf1f5c360a3cd34bc23237bb6",
+          "editorialTaskSha256": "2c58d0f184320376ec7c7d1c5c34be6da4c101d10e872680e0a90de151283ac3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-17:30:01",
+          "name": "Inferior omohyoid belly attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:30:02",
+          "name": "Anterior scalene attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:30:03",
+          "name": "Middle scalene attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-17:30:04",
+          "name": "Levator scapulae attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

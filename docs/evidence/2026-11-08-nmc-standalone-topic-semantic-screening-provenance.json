@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "worklistPath": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+  "historicalPin": {
+    "commit": "81bef299a1e10f0316f6fe9c43a6ad2bec926e91",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "screeningStartSnapshot": {
+    "commit": "d90e4ca2762ca3cfb62a7e7387714e7fa3695cde",
+    "sha256": "952b32028c38820867805a49166ba87ab0ec59a574af330d67362df4659407b7"
+  },
+  "pinMatchesHistoricalSnapshot": true,
+  "pinMatchesScreeningStartSnapshot": false,
+  "candidateReferences": [
+    {
+      "topic": "12-lead ecg",
+      "referenceId": "nmc-2024-ref:29884fa47f8bb6236984cc80e1e5de68d0b8a6f72c64decfe469958fcfa66388",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+        "code": "PY5.15",
+        "topicName": "Normal ECG practical"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "12-lead ecg",
+      "referenceId": "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+        "code": "GM2.10",
+        "topicName": "ECG in suspected coronary disease"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "12-lead ecg",
+      "referenceId": "nmc-2024-ref:a8aad58d590340efdca756dbb75607a40d171f50fba763060af729bcc99c2aa8",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+        "code": "GM8.16",
+        "topicName": "ECG practical"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "acid–base interpretation",
+      "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+        "code": "BC9.3",
+        "topicName": "Acid–base, water and electrolytes"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "acute febrile illness",
+      "referenceId": "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+        "code": "PE31.13",
+        "topicName": "Vector-borne febrile illness"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "adherence counselling",
+      "referenceId": "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+        "code": "GM14.12",
+        "topicName": "Adherence barriers"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "allergic rhinitis",
+      "referenceId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+        "code": "PH5.1",
+        "topicName": "Asthma, COPD and rhinitis"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "allergic rhinitis",
+      "referenceId": "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+        "code": "EN4.26",
+        "topicName": "Acute and chronic rhinitis"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "amniocentesis",
+      "referenceId": "nmc-2024-ref:f9a4416841b1c78af4a9b38258675538f21ec4a5138c6277139f10586d18a60d",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+        "code": "AN81.1",
+        "topicName": "Prenatal diagnostic methods"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "antimicrobial stewardship",
+      "referenceId": "nmc-2024-ref:986f2075ab7d32e6a3dc22a4074c76e5114c4d72322a41c1b6c725fbfd8d1e74",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+        "code": "GM3.15",
+        "topicName": "Empirical antibiotics"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "antimicrobial stewardship",
+      "referenceId": "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+        "code": "GM3.16",
+        "topicName": "Culture-directed antibiotics"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "antimicrobial stewardship",
+      "referenceId": "nmc-2024-ref:8b1b67e430f3efa742d192e093464bb13f25b827914374f8230fcb62394469a3",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+        "code": "SU6.2",
+        "topicName": "Surgical antibiotics"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "apoptosis",
+      "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+        "code": "PA2.4",
+        "topicName": "Cell death"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "bacterial meningitis",
+      "referenceId": "nmc-2024-ref:2192f181c5ffa328da3475110bbd81386e5a7e032c27763d1555b3717732ddac",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+        "code": "MI6.1",
+        "topicName": "Meningitis microbiology"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "bacterial meningitis",
+      "referenceId": "nmc-2024-ref:91ca9222ff92580dcbd34834167f4e974484ce9ad95a817d01236171ec6a4600",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+        "code": "PE27.3",
+        "topicName": "Meningitis differentiation"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "bacterial meningitis",
+      "referenceId": "nmc-2024-ref:f706cc663d2815115357335ffc27ea7fda45fe01f6d1250c7abf6135a1e7be56",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+        "code": "PA34.1",
+        "topicName": "Meningitis mechanisms"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "bilirubin estimation",
+      "referenceId": "nmc-2024-ref:67b36bc3316de835f3de33221f5f7ddc92ba80e8abc5edb8315915e35a5850c8",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+        "code": "GM5.1",
+        "topicName": "Bilirubin physiology"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "bilirubin estimation",
+      "referenceId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+        "code": "PA24.1",
+        "topicName": "Bilirubin and jaundice"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "blood gas interpretation",
+      "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+        "code": "BC9.3",
+        "topicName": "Acid–base, water and electrolytes"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "topic": "breast carcinoma",
+      "referenceId": "nmc-2024-ref:5dddefb11b8986394a9c22b2ec89e6e4ca20d35dd38b8d5eea0c0d4ebb71f852",
+      "reason": "outside-worklist",
+      "sourceDraft": {
+        "path": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+        "code": "SU25.4",
+        "topicName": "Breast cancer consent"
+      },
+      "mappingAccepted": false
+    }
+  ],
+  "mappingAccepted": false
+}

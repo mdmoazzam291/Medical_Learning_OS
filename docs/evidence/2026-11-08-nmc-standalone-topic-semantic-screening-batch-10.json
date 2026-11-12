@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-09.json",
+    "sha256": "51ca316c8e5fe2c535412ba59122edf75d8e03e2ef553ba64a1cd731794371a2"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 170,
+  "remainingTopics": 342,
+  "nextTopicNameKey": "glucose self-monitoring",
+  "rows": [
+    {
+      "topicNameKey": "fetal age assessment",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2cd85f58dec7149152b3b6a11a35beeefdc2e21516e1420530b8658ab05ad331"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Post-mortem fetal age estimation and uncertainty",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "fetal circulation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Fetal shunts and circulatory transition at birth",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "fibrous cardiac skeleton",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:139c18e3ccdf15f6ddecfda6bd505c332b7bdcfdeb4e276a172c51c73149446b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cardiac annuli and fibrous trigones",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "flexor retinaculum",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:43e0894570cc887587fb6783747725dbb04c9f5e31e165a7f01674dab5ea1c9d"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:5105e62668690e9bf7bc0651bf2c247d70c2d9bf375c681e2e6c947c67292711"
+      ],
+      "scopeComparison": "Wrist flexor retinaculum attachments",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "food hygiene",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:85bf73d4d62abb86fc073444e266e49200ee40b3f0d87d05efb65c70a114962a"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Food preparation and storage hygiene",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "foot drop",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d845c826d2adc3ba610ab1af4df85dd347b9f0972ee10b7d168f19735557ffb7"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Foot drop and lesion localisation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "foreign body aspiration",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Foreign body aspiration by age and obstruction site",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "frey syndrome",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:215a54022529d818c67afdee18b39781281c327f1fbb2c55d412f1455b5dd491"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Parotid secretomotor pathway and gustatory sweating",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "fungal microscopy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:06d8623e5fcdc12a16bb9b5410d312f5799478ae4e1e3016b9a09aa40d0e259b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "KOH microscopy for yeast and dermatophytes",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "gastric carcinoma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:17b0f2da6fb14ceef9158433f6832087f9f07288c83dbbbb082221e96083e721"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Gastric carcinoma pathways and morphology",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "gastric secretion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:18daa58b979f4d9d9b691243d01809edb3c8169f34cc1fccd1cea38828020ff2"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Gastric acid secretion, regulation and function tests",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "gene expression",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Transcriptional and post-transcriptional gene regulation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "genetic counselling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:ddd789974be4b629ffa00f0fb0b1e15fe7f0179c0e1b9298ab7f85f5bdae9bc6"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:8626be69de06dfb8baa1cf0cd9193cf5adf981362c3c98ebaae5cbfec4fe9838"
+      ],
+      "scopeComparison": "Cytogenetic results and recurrence counselling",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "genetic variation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:198a19a6ee93ba081bd70b88288513f3e9add033ff51e15be33ec2a5bf0ea4bd"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Genetic variant frequency and pathogenicity",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "genital tuberculosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:55328eec2d95710775eb1d0bdd14941a9f24a60e4c25ad06d2308ddfc273a35f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Genital tuberculosis assessment and long-term implications",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "genital warts",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:051d81a6fb8eb54b2f79d90087fd137ca8e833ef8d2d424bc7873266a9ddc15c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Genital wart recognition and counselling",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "glenohumeral joint",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:64b3785c7097feacc1441dbca19011cd5b727e7e6d3eff05a0053370cc23676c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Glenohumeral joint anatomy and movements",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "glucose estimation",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:90dfbdb2c9b7ee62047591f7df922675fc7fb3585ca3651983e29049ca3f050a"
+      ],
+      "scopeComparison": "Laboratory glucose measurement and glucometer use",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

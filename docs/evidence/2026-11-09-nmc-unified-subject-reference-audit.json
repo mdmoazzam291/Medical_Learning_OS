@@ -1,0 +1,1613 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "queueBlobSha": "fcc207e1cdf83ad11610f479d99433ce45eae59d",
+  "catalogueBlobSha": "4e042cc674fb29ad610d3d82aecb65f9c3e0286c",
+  "rows": [
+    {
+      "name": "Acute kidney injury",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cfd9e37f4dad89a719d41c5a05c4c7e82e7bee52c9eca07ef5e73c17efdc39e0",
+          "subject": "pathology",
+          "code": "PA27.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+          "subject": "pediatrics",
+          "code": "PE20.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+          "subject": "medicine",
+          "code": "GM10.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+          "subject": "medicine",
+          "code": "GM10.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d",
+          "subject": "medicine",
+          "code": "GM10.19"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Adherence",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+          "subject": "pharmacology",
+          "code": "PH10.15"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+          "subject": "medicine",
+          "code": "GM 14.12"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Age estimation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c73e05551c60f042fbabf0192ff2db175c4ed96a683d02387cd5dfb93b56f96b",
+          "subject": "forensic-medicine",
+          "code": "FM4.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96",
+          "subject": "forensic-medicine",
+          "code": "FM14.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Amyloidosis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+          "subject": "pathology",
+          "code": "PA9.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+          "subject": "pathology",
+          "code": "PA9.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Atherosclerosis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:feaf1b63953cd8c40bae19e1a6f1e668de289dfc7845766f02bee47e3aa43934",
+          "subject": "pathology",
+          "code": "PA26.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f",
+          "subject": "medicine",
+          "code": "GM 2.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Autoimmunity",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+          "subject": "pathology",
+          "code": "PA8.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011",
+          "subject": "medicine",
+          "code": "GM7.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Birth asphyxia",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:76ffed5376221456428421836f34df15c386efc8146c2b8a8c8693cc85c21738",
+          "subject": "pediatrics",
+          "code": "PE19.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG18.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood pressure",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9288d600c8e49f13bbbc2bf7039e274a9a03fb6fea2285c6c323e09de3271192",
+          "subject": "physiology",
+          "code": "PY5.11"
+        },
+        {
+          "referenceId": "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad",
+          "subject": "medicine",
+          "code": "GM 1.11"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Constipation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:37d03a9c073318da41c9ec261ed34b1f1c4055ae308b7d282bdbe8997e1d8ddb",
+          "subject": "pediatrics",
+          "code": "PE23.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+          "subject": "pharmacology",
+          "code": "PH6.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diabetic ketoacidosis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:80cffd3fe7ce058d5dde55b3f1d3c62439058bd2baa1334eab18753129c33718",
+          "subject": "medicine",
+          "code": "GM 11.23"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda",
+          "subject": "pediatrics",
+          "code": "PE30.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diaphragm",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:a2a075f94157b5ae4c65c58e41113c5ee7ffbe4cadc46536fbc07bf875ec435f",
+          "subject": "anatomy",
+          "code": "AN47.13"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc",
+          "subject": "anatomy",
+          "code": "AN52.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Enteric fever",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+          "subject": "microbiology",
+          "code": "MI 3.6"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+          "subject": "pediatrics",
+          "code": "PE31.12"
+        },
+        {
+          "referenceId": "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+          "subject": "microbiology",
+          "code": "MI 3.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+          "subject": "microbiology",
+          "code": "MI 3.8"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fetal growth restriction",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:861dc9af2668848a2731e3389c3c05fbab833beeadaac430a82b61b3bc471125",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG12.11"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG16.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haematuria",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c2000c7ec485b69d917bc94610cea5e198d871a7e5209433de0bbddc123b92cf",
+          "subject": "surgery",
+          "code": "SU29.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14",
+          "subject": "pediatrics",
+          "code": "PE20.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hyperkalaemia",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:1068fc841594b94e42aae4f2f2451e5a10767b0807ffe97095cba41334e95878",
+          "subject": "medicine",
+          "code": "GM 23.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00",
+          "subject": "medicine",
+          "code": "GM10.14"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Informed consent",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+          "subject": "forensic-medicine",
+          "code": "FM10.19"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+          "subject": "pediatrics",
+          "code": "PE24.23"
+        },
+        {
+          "referenceId": "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG35.10"
+        },
+        {
+          "referenceId": "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
+          "subject": "orthopaedics",
+          "code": "OR14.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG20.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa",
+          "subject": "ent",
+          "code": "EN 2.9"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Lumbar puncture",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:ea9b95539ea713317897e4084b3372013d91cf431694cae45d1ad13b8ea6ed26",
+          "subject": "pediatrics",
+          "code": "PE27.14"
+        },
+        {
+          "referenceId": "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+          "subject": "medicine",
+          "code": "GM17.8"
+        },
+        {
+          "referenceId": "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+          "subject": "medicine",
+          "code": "GM17.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2",
+          "subject": "anatomy",
+          "code": "AN50.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Neonatal resuscitation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d80b286ce7438bc25b1cb691ada9aab14abeb48441fe7aa0f1e989a08149dd6e",
+          "subject": "pediatrics",
+          "code": "PE19.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG18.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG18.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Proteinuria",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5411b6095880ee0262f2e560736d01d1aba1bed66d412f34be3e9571d6e393f5",
+          "subject": "medicine",
+          "code": "GM10.6"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166",
+          "subject": "pediatrics",
+          "code": "PE20.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stridor",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9bf879a4feed91445031bce874317a8a0ff6e283d688dacb2bd7226d8e095608",
+          "subject": "ent",
+          "code": "EN 4.43"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81",
+          "subject": "pediatrics",
+          "code": "PE25.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Systemic lupus erythematosus",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+          "subject": "pathology",
+          "code": "PA8.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f",
+          "subject": "pediatrics",
+          "code": "PE21.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Thermoregulation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b3e0148b740005c2fddf9d0833e976dfa7ba05e083b10e726c4804f42345e291",
+          "subject": "physiology",
+          "code": "PY12.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+          "subject": "pediatrics",
+          "code": "PE24.19"
+        },
+        {
+          "referenceId": "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0",
+          "subject": "pediatrics",
+          "code": "PE24.20"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Type 2 diabetes",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:8634107389533d96f67a5070a64fe0b9ac2353667a090b363ce58b496f1fcc50",
+          "subject": "medicine",
+          "code": "GM 11.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe",
+          "subject": "medicine",
+          "code": "GM 11.17"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinalysis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+          "subject": "pediatrics",
+          "code": "PE20.8"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+          "subject": "biochemistry",
+          "code": "BC14.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492",
+          "subject": "medicine",
+          "code": "GM 11.13"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+          "subject": "biochemistry",
+          "code": "BC14.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vaginal discharge",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:6b750a21d9700af02f65c34e1644d41d0ed6473098133c631638e7c9d3d3f05f",
+          "subject": "dermatology",
+          "code": "DR10.10"
+        },
+        {
+          "referenceId": "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG 35.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Arterial blood gas sampling",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+          "subject": "medicine",
+          "code": "GM10.15"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+          "subject": "medicine",
+          "code": "GM3.8"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Endometrial carcinoma",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG34.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+          "subject": "pathology",
+          "code": "PA29.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peripheral IV cannulation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+          "subject": "pediatrics",
+          "code": "PE15.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+          "subject": "anaesthesia",
+          "code": "AS9.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+          "subject": "pediatrics",
+          "code": "PE23.10"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Ocular foreign body",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+          "subject": "ophthalmology",
+          "code": "OP3.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Corneal foreign body",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+          "subject": "ophthalmology",
+          "code": "OP4.9"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fetal age estimation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610",
+          "subject": "anatomy",
+          "code": "AN80.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Physiological vaginal discharge",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:10b1f9e164d54d4d37df490fb24a40a0dde246e2dd7eaf818f9a0bcd1eda79be",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG22.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Rheumatic fever",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c",
+          "subject": "pediatrics",
+          "code": "PE22.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Attention-deficit/hyperactivity disorder",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75",
+          "subject": "pediatrics",
+          "code": "PE4.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Medical cause-of-death certification",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937",
+          "subject": "forensic-medicine",
+          "code": "FM2.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peptic ulcer",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f",
+          "subject": "pathology",
+          "code": "PA23.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Population sex ratio",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166",
+          "subject": "community-medicine",
+          "code": "CM9.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Acute otitis media",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+          "subject": "pediatrics",
+          "code": "PE25.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cause of death coding",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:62ae1c5c8867df7500be94236140c486934f417f953ce13314adfaadba3c4043",
+          "subject": "forensic-medicine",
+          "code": "FM2.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Essential medicines list",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7",
+          "subject": "community-medicine",
+          "code": "CM19.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "External ear",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6",
+          "subject": "anatomy",
+          "code": "AN40.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Facial nerve palsy",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:36988f661104d0c74c301f72c5bf09ae9f93399938021e95e8980d0a02b21187",
+          "subject": "ent",
+          "code": "EN 4.16"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Mucosal chronic otitis media",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71",
+          "subject": "ent",
+          "code": "EN 4.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Otitis media with effusion",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7e780a7d847205fddcc4cdd6efb0ccecd1a4891bb94d3ed74d9274a5ec38bcc6",
+          "subject": "ent",
+          "code": "EN 4.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Recurrent pregnancy loss",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG 9.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Rheumatic heart disease",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87",
+          "subject": "medicine",
+          "code": "GM 1.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Squamosal chronic otitis media",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4",
+          "subject": "ent",
+          "code": "EN 4.7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vitamin K deficiency bleeding",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950",
+          "subject": "pediatrics",
+          "code": "PE19.7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood culture",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+          "subject": "medicine",
+          "code": "GM 3.13"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Research ethics",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc",
+          "subject": "forensic-medicine",
+          "code": "FM10.29"
+        },
+        {
+          "referenceId": "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a",
+          "subject": "forensic-medicine",
+          "code": "FM10.12"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug information",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+          "subject": "pharmacology",
+          "code": "PH10.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Basic life support",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+          "subject": "anaesthesia",
+          "code": "AS2.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2757f0e6f07d4b93dcdd21f907d626bf0ee380920aff0f6c4683b230afef8ef4",
+          "subject": "physiology",
+          "code": "PY12.10"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+          "subject": "medicine",
+          "code": "GM 2.22"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pain assessment",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+          "subject": "anaesthesia",
+          "code": "AS8.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Posterior triangle",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+          "subject": "anatomy",
+          "code": "AN29.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Public health",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+          "subject": "community-medicine",
+          "code": "CM1.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+          "subject": "anatomy",
+          "code": "AN7.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21",
+          "subject": "physiology",
+          "code": "PY3.9"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+          "subject": "anatomy",
+          "code": "AN3.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary infection",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+          "subject": "surgery",
+          "code": "SU29.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Gestational trophoblastic neoplasia",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e",
+          "subject": "pathology",
+          "code": "PA29.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4441130f4df6101b38c55f8b38ca2914ad39644ed00c3bcd1996e13f43706144",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG9.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cardiac muscle",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "subject": "anatomy",
+          "code": "AN3.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "subject": "anatomy",
+          "code": "AN67.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Malaria",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+          "subject": "medicine",
+          "code": "GM26.30"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+          "subject": "medicine",
+          "code": "GM26.29"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Smooth muscle",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "subject": "anatomy",
+          "code": "AN3.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "subject": "anatomy",
+          "code": "AN67.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+          "subject": "medicine",
+          "code": "GM25.9"
+        },
+        {
+          "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+          "subject": "radiology",
+          "code": "RD7.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "COPD",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b",
+          "subject": "medicine",
+          "code": "GM25.10"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Contraceptive sterilization",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "subject": "forensic-medicine",
+          "code": "FM8.12"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related cirrhosis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "subject": "medicine",
+          "code": "GM 5.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "subject": "pathology",
+          "code": "PA24.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatic steatosis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "subject": "medicine",
+          "code": "GM 5.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "subject": "pathology",
+          "code": "PA24.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatitis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "subject": "medicine",
+          "code": "GM 5.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "subject": "pathology",
+          "code": "PA24.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "CT imaging",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+          "subject": "anatomy",
+          "code": "AN54.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+          "subject": "radiology",
+          "code": "RD1.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Differential leucocyte count",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "subject": "pathology",
+          "code": "PA13.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "subject": "physiology",
+          "code": "PY2.11"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Disc prolapse",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6",
+          "subject": "orthopaedics",
+          "code": "OR6.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c853fff15cc9d6d27d886e075b090c789e95d8d836295968ed92fd61d1bd423c",
+          "subject": "anatomy",
+          "code": "AN50.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Echocardiography",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:09f9c855e5c26b9912717ccb5d26a9372f1dae34ff8ed01c90efbd1ca506bf25",
+          "subject": "medicine",
+          "code": "GM 1.17"
+        },
+        {
+          "referenceId": "nmc-2024-ref:fee905096fd818032003a8c7cbb2b39a26d87833d05571fff3011080109c11c2",
+          "subject": "medicine",
+          "code": "GM 2.13"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "FISH",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+          "subject": "biochemistry",
+          "code": "BC10.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+          "subject": "anatomy",
+          "code": "AN75.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemoglobin estimation",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "subject": "pathology",
+          "code": "PA13.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "subject": "physiology",
+          "code": "PY2.11"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Male contraceptive methods",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+          "subject": "obstetrics-gynaecology",
+          "code": "OG21.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+          "subject": "physiology",
+          "code": "PY9.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "MRI imaging",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+          "subject": "anatomy",
+          "code": "AN54.1"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+          "subject": "radiology",
+          "code": "RD1.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "PCR",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+          "subject": "biochemistry",
+          "code": "BC10.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+          "subject": "anatomy",
+          "code": "AN75.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Red cell count",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "subject": "pathology",
+          "code": "PA13.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "subject": "physiology",
+          "code": "PY2.11"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spermatogenesis",
+      "origin": "fresh-foundation",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7b0352f96d379e342fb9c6f9480c80ff8c2c6a2e3bfab77af9b061cd066a2cbe",
+          "subject": "physiology",
+          "code": "PY9.3"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415",
+          "subject": "anatomy",
+          "code": "AN77.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Brown-Sequard syndrome",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-101d60e987915f6fa8175c469a265f79",
+        "state": "published"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+          "subject": "physiology",
+          "code": "PY10.10"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord extent and termination",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:bff943f8f8d6a41099b670567d240e019e706516521cf0c460d77fd7e31e1a3b",
+          "subject": "anatomy",
+          "code": "AN57.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord external anatomy",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:74d020a4a08c0746dfa925fe1cf755f4393e82556c4b1e5fb764b9cb006feb4c",
+          "subject": "anatomy",
+          "code": "AN57.1"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Motor neuron disease",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Poliomyelitis",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord sectional anatomy",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:f6e884076849a56fc0b10a496782c2e59b8c9b232c3912a1165b51c02f4b7fb7",
+          "subject": "anatomy",
+          "code": "AN57.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paraplegia",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord pathways",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884",
+          "subject": "anatomy",
+          "code": "AN57.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+          "subject": "physiology",
+          "code": "PY10.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+          "subject": "physiology",
+          "code": "PY10.9"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hereditary sensory neuropathy",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Transverse myelitis",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Syringomyelia",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord transection patterns",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+          "subject": "physiology",
+          "code": "PY10.10"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Subacute combined degeneration",
+      "origin": "previous-foundation",
+      "priorIdentity": {
+        "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Somatic sensory application",
+      "origin": "source-linked-draft-task",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+          "subject": "physiology",
+          "code": "PY10.7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Motor lesion patterns",
+      "origin": "source-linked-draft-task",
+      "priorIdentity": null,
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+          "subject": "physiology",
+          "code": "PY10.9"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "crossSubjectProposalCount": 40,
+  "next": "Wire unified queue into protected preview and test subject and integrated discovery with approved canonical fixtures."
+}

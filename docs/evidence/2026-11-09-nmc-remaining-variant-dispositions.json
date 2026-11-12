@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedAt": "2026-11-09T05:31:51.345Z",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-variant-cohort-reconciliation.json",
+      "blobSha": "ec359a79804b667c8975ffceab666f46ef6ecdf1"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-variant-inventory-reconciliation.json",
+      "blobSha": "8501408fad27f696a87684d78a320f6600038259"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-standalone-topic-variant-scope-review.json",
+      "blobSha": "89bcb4047cb2ec1c4d2cb4e75bf7b76a7f58dbfd"
+    }
+  ],
+  "totals": {
+    "narrower-scope-retained": 21,
+    "shared-name-candidate": 3,
+    "alias-candidate": 2,
+    "related-distinct-scope": 7,
+    "prior-source-scope-resolution": 1
+  },
+  "comparisons": [
+    {
+      "reviewIndex": 1,
+      "sourceNameKey": "acute otitis media",
+      "candidateName": "Otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Acute disease is narrower than middle-ear anatomy and disease.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 2,
+      "sourceNameKey": "acute rheumatic fever",
+      "candidateName": "Rheumatic fever",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Preserve acute assessment alongside pathology and laboratory evidence.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 3,
+      "sourceNameKey": "acute suppurative otitis media",
+      "candidateName": "Otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Acute suppurative disease has a distinct clinical scope.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 4,
+      "sourceNameKey": "adhd",
+      "candidateName": "Attention-deficit/hyperactivity disorder",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75"
+      ],
+      "disposition": "alias-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "ADHD expands to the listed disorder. Preserve cross-setting assessment and developmental comparison.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 5,
+      "sourceNameKey": "blood culture collection",
+      "candidateName": "Blood culture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Collection simulation differs from result interpretation.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 6,
+      "sourceNameKey": "blood culture sampling",
+      "candidateName": "Blood culture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Mannequin sampling differs from result interpretation.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 7,
+      "sourceNameKey": "cause of death certification",
+      "candidateName": "Cause of death",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "Certificate completion and forensic causation have distinct objectives.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 8,
+      "sourceNameKey": "cause of death certification",
+      "candidateName": "Medical cause-of-death certification",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937"
+      ],
+      "disposition": "alias-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both cover simulated medical certification. Preserve causal sequence and interval requirements.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 9,
+      "sourceNameKey": "cause of death coding",
+      "candidateName": "Cause of death",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:62ae1c5c8867df7500be94236140c486934f417f953ce13314adfaadba3c4043"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "ICD coding and forensic causation differ.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 10,
+      "sourceNameKey": "clinical research ethics",
+      "candidateName": "Research ethics",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Clinical trial ethics has a narrower scope than general research ethics.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 11,
+      "sourceNameKey": "clinical research ethics",
+      "candidateName": "Clinical research",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "Ethics assessment differs from broader study design and analysis.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 12,
+      "sourceNameKey": "drug information",
+      "candidateName": "Drug information in media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "Media verification is a specific application of general drug information appraisal.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 13,
+      "sourceNameKey": "essential medicines list",
+      "candidateName": "Essential medicines",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "List purpose and selection differ from service delivery and prescribing applications.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 14,
+      "sourceNameKey": "external ear",
+      "candidateName": "External ear disease",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "External ear anatomy and clinical disease differ.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 15,
+      "sourceNameKey": "facial nerve palsy",
+      "candidateName": "Facial nerve",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:36988f661104d0c74c301f72c5bf09ae9f93399938021e95e8980d0a02b21187"
+      ],
+      "disposition": "related-distinct-scope",
+      "resolvedName": null,
+      "scopeEvidence": "Palsy localization and care differ from branch anatomy.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 17,
+      "sourceNameKey": "mucosal chronic otitis media",
+      "candidateName": "Otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Mucosal chronic disease has a narrower clinical scope.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 18,
+      "sourceNameKey": "mucosal chronic otitis media",
+      "candidateName": "Chronic otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Mucosal assessment differs from general chronic complication recognition.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 19,
+      "sourceNameKey": "otitis media with effusion",
+      "candidateName": "Otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:7e780a7d847205fddcc4cdd6efb0ccecd1a4891bb94d3ed74d9274a5ec38bcc6"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Effusion assessment and follow-up warrant a distinct clinical scope.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 20,
+      "sourceNameKey": "paediatric basic life support",
+      "candidateName": "Basic life support",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Preserve paediatric checklist and mannequin context within BLS.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 21,
+      "sourceNameKey": "pain assessment",
+      "candidateName": "Joint pain assessment",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Joint pain assessment applies general assessment to joint mechanisms.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 22,
+      "sourceNameKey": "pain assessment",
+      "candidateName": "Cancer pain assessment",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Cancer pain assessment adds function and distress in its specific context.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 23,
+      "sourceNameKey": "peptic ulcer disease",
+      "candidateName": "Peptic ulcer",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both concern ulcer disease. Preserve pathology and clinical workup separately.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 25,
+      "sourceNameKey": "posterior triangle",
+      "candidateName": "Posterior triangle muscles",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Muscle attachments cover a subset of the regional anatomy.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 26,
+      "sourceNameKey": "public health",
+      "candidateName": "Recent public health events",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "A dated event timeline is a distinct application of population health.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 28,
+      "sourceNameKey": "recurrent pregnancy loss",
+      "candidateName": "Pregnancy loss",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Recurrent loss evaluation differs from acute pregnancy loss classification.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 29,
+      "sourceNameKey": "rheumatic heart disease",
+      "candidateName": "Heart disease",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Rheumatic valve disease warrants a distinct scope within heart disease.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 30,
+      "sourceNameKey": "sex ratio",
+      "candidateName": "Population sex ratio",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both concern population sex ratio. Preserve the differing source contexts.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 31,
+      "sourceNameKey": "skeletal muscle contraction",
+      "candidateName": "Skeletal muscle",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Contraction mechanisms are a subset of skeletal muscle anatomy and physiology.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 32,
+      "sourceNameKey": "squamosal chronic otitis media",
+      "candidateName": "Otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Squamosal disease and cholesteatoma assessment warrant distinct scope.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 33,
+      "sourceNameKey": "squamosal chronic otitis media",
+      "candidateName": "Chronic otitis media",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Preserve cholesteatoma assessment separately from general chronic complications.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 34,
+      "sourceNameKey": "trophoblastic neoplasia",
+      "candidateName": "Gestational trophoblastic neoplasia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4441130f4df6101b38c55f8b38ca2914ad39644ed00c3bcd1996e13f43706144"
+      ],
+      "disposition": "prior-source-scope-resolution",
+      "resolvedName": "Gestational trophoblastic neoplasia",
+      "scopeEvidence": "The shorter label omits gestational scope. Confirm from source before treating the labels as aliases.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 35,
+      "sourceNameKey": "urinary infection",
+      "candidateName": "Urinary infection in pregnancy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Pregnancy adds screening and pregnancy-specific care.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 36,
+      "sourceNameKey": "urinary infection in pregnancy",
+      "candidateName": "Urinary infection",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8bf82fcf516e08674cfa8ffdbdb5592a344837d96cb4547ffa7b748765ab28f4"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Preserve pregnancy-specific screening and care within urinary infection.",
+      "mappingAccepted": false
+    },
+    {
+      "reviewIndex": 37,
+      "sourceNameKey": "vitamin k deficiency bleeding",
+      "candidateName": "Vitamin K deficiency",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950"
+      ],
+      "disposition": "narrower-scope-retained",
+      "resolvedName": null,
+      "scopeEvidence": "Bleeding presentation and prevention differ from general deficiency and coagulation interpretation.",
+      "mappingAccepted": false
+    }
+  ]
+}

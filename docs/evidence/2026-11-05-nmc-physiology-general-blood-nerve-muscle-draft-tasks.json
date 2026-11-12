@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:a02b9e230f4aca9f93c6df4c1c29f48133f5741bfe36a443b444d80c90939ec6",
+      "subjectId": "physiology",
+      "code": "PY1.1",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        158.22,
+        107.8,
+        190.98
+      ],
+      "sourceBodySha256": "e955af14eb89e3983d3d22ae1edc0c07b54520c4b76bd01520a9867d841485b7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell physiology",
+      "draftLearningTask": "Map organelles and signalling pathways to cell functions and interpret a clinical or research example.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:661859dd643adfc2b6ad3597e0edafe3f4ab909495eea9dac63592e0c24affee",
+      "subjectId": "physiology",
+      "code": "PY1.2",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        190.98,
+        107.8,
+        213.3
+      ],
+      "sourceBodySha256": "35ea885e7ecf0f3cf717e30d54ae5466d697bc97e3a842235d8806f4ca1e00da",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Homeostasis",
+      "draftLearningTask": "Draw a regulated variable's feedback loop and predict its response to a disturbance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4fcae1fedd037114cbafb572b4405eca78fcd8002573a67cdabae28b7c4a3d5f",
+      "subjectId": "physiology",
+      "code": "PY1.3",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        213.3,
+        107.8,
+        240.66
+      ],
+      "sourceBodySha256": "87154f263348f635c7b4868db00f00cbb9d4773818cb1b0afaaeaa1d2ebae8bc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Apoptosis",
+      "draftLearningTask": "Compare intrinsic and extrinsic pathways and explain the role of programmed death in tissue maintenance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b4f599d7e45719a8f81a9172a52f7da2ced5c8e91d0c6fb7068fc88242d40bb5",
+      "subjectId": "physiology",
+      "code": "PY1.4",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        240.66,
+        107.8,
+        273.42
+      ],
+      "sourceBodySha256": "43366552a138acae50b6f6fb9221810d83f88d1cf3137f973034a8f9aa8c839f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Membrane transport",
+      "draftLearningTask": "Classify transport mechanisms by energy source and gradient and predict flux in representative examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1043e39fdb48d31c66526f7ba75078e025f6bf3874cd957a67a4122388eee7f3",
+      "subjectId": "physiology",
+      "code": "PY1.5",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        273.42,
+        107.8,
+        300.72
+      ],
+      "sourceBodySha256": "ea49bf2a6b687998f4aec263dc067389c83713d8457b913de06b8ead0e4fc345",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Body fluids",
+      "draftLearningTask": "Compare compartment volumes and ions and select tracers to estimate compartment sizes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:be0fcdf98acfb713939cd061185b3ce392cbe8b0e3cb2a0e86a9604b57d48f33",
+      "subjectId": "physiology",
+      "code": "PY1.6",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        300.72,
+        107.8,
+        323.04
+      ],
+      "sourceBodySha256": "89be209a06cad7b9b06247911888440677eb2298916e739b117fbcb35c8486a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Buffers",
+      "draftLearningTask": "Use a buffer equation to explain how bicarbonate and other buffers oppose changes in pH.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6650cd73c53582617f4860f8f5e55de87f7cc5b44d4264e7b68a26a8ea3d2109",
+      "subjectId": "physiology",
+      "code": "PY1.7",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        323.04,
+        107.8,
+        355.8
+      ],
+      "sourceBodySha256": "c08cb91579e65a28cec9b7252a1eeb02eef5cc579a821a76e95de935cdc90fab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Membrane excitability",
+      "draftLearningTask": "Relate ion gradients and permeability to resting potential and trace channel changes during a nerve action potential.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c",
+      "subjectId": "physiology",
+      "code": "PY2.1",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        370.56,
+        107.8,
+        392.82
+      ],
+      "sourceBodySha256": "81edfc83fffeb0961d9e3ba1f78ff9b9940f2e2005c9fdf345be4a6a7cb67a1e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood components",
+      "draftLearningTask": "Relate plasma and formed elements to transport, defence and haemostasis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:88f03f5b6164579e578548c20fb9e79d82d38001425fb25470ad48d742bbc874",
+      "subjectId": "physiology",
+      "code": "PY2.2",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        392.82,
+        107.8,
+        420.18
+      ],
+      "sourceBodySha256": "cd3c25a8e80a99203f36eae4b0556839714908907d466cdb88d5e3e2db8bada0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Plasma proteins",
+      "draftLearningTask": "Compare their origins, fractions and functions and explain clinical consequences of representative changes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:409ecf8d84c29d66ba8239877d7eaa5328aab31a13c11cc46c56e16d2a707bc3",
+      "subjectId": "physiology",
+      "code": "PY2.3",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        420.18,
+        107.8,
+        452.58
+      ],
+      "sourceBodySha256": "62847b4118fdeb005e660d71ce435ebd5abf1147aff336dd4163504a87690420",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemoglobin",
+      "draftLearningTask": "Trace synthesis and breakdown, relate structure to gas transport and compare clinically important variants.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:aa79db6e709111f992414c92e23d82dbdc596009bbea2de9ac27e81462dd7640",
+      "subjectId": "physiology",
+      "code": "PY2.4",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        452.58,
+        107.8,
+        479.94
+      ],
+      "sourceBodySha256": "da581701ece79119db116e0dc943e5ad61703b607ab987be0193821c1044f785",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Erythropoiesis",
+      "draftLearningTask": "Trace maturation and explain how oxygen delivery and erythropoietin regulate red cell production in health and disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:33d5fe1874f4b9935a63f2547eec7a6ec267d4539dc6e36a248aa666a3c64f99",
+      "subjectId": "physiology",
+      "code": "PY2.5",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        479.94,
+        107.8,
+        512.7
+      ],
+      "sourceBodySha256": "f757178321b665319d28981bea2113b2e6847a86f2477c9552f906b4b743202c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Red cell disorders",
+      "draftLearningTask": "Distinguish physiological mechanisms in anaemia, polycythaemia and jaundice and link representative management principles to the underlying disturbance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82",
+      "subjectId": "physiology",
+      "code": "PY2.6",
+      "page": 150,
+      "rowBBox": [
+        58.5,
+        512.7,
+        107.8,
+        545.82
+      ],
+      "sourceBodySha256": "9b5d1e16bffb27a39f66cccc4ceaf1626ee016cc299192302aa674b1cc808f64",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Leucocytes",
+      "draftLearningTask": "Trace leucocyte production and compare the regulation, structure and functions of the major cell types.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb",
+      "subjectId": "physiology",
+      "code": "PY2.7",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        108.96,
+        107.8,
+        136.32
+      ],
+      "sourceBodySha256": "f38df1942ae5074cad77c912039eb856aec87df8406a25280c297eb41585e92f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunity",
+      "draftLearningTask": "Compare innate and adaptive responses and explain their development, regulation and protective roles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:daad1899edc60c4fe5660c0295daf5892a55f9e0a36d6260b6f555c3f1ee895c",
+      "subjectId": "physiology",
+      "code": "PY2.8",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        136.32,
+        107.8,
+        163.62
+      ],
+      "sourceBodySha256": "72a993f7d4229dd9252c416feaf6db77f8bf9b4c1db5c8ecb284c120550a38f9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Platelets",
+      "draftLearningTask": "Trace megakaryocyte maturation and platelet release, then explain platelet structure, function and causes of count variation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62",
+      "subjectId": "physiology",
+      "code": "PY2.9",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        163.62,
+        107.8,
+        206.82
+      ],
+      "sourceBodySha256": "ec665647cce85a638454a80f7be59441501457d9e5f2254d6e29683e364c9478",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemostasis",
+      "draftLearningTask": "Trace platelet plug formation and coagulation, identify anticoagulant targets and contrast mechanisms of representative bleeding and thrombotic disorders.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:43fbb23070a461771287aab336c7813eebb9f59730daea1ed9d68080846c9bbd",
+      "subjectId": "physiology",
+      "code": "PY2.10",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        206.82,
+        107.8,
+        239.58
+      ],
+      "sourceBodySha256": "8eb7017ff4c5f4baadf60d2d7caac1c204af6a6cc5139e4f52c3c1a19654ff83",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion physiology",
+      "draftLearningTask": "Compare ABO and Rh systems and explain how typing, compatibility testing and blood banking support transfusion.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+      "subjectId": "physiology",
+      "code": "PY2.11",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        239.58,
+        107.8,
+        272.34
+      ],
+      "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood practicals",
+      "draftLearningTask": "Using approved specimens or simulations, estimate Hb, RBC count, total and differential leucocyte counts, blood group and bleeding and clotting times, then calculate RBC indices.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c248b0deee96303cebcf7e6f6dd231add31cecb25f91f345cccb47f215280f9b",
+      "subjectId": "physiology",
+      "code": "PY2.12",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        272.34,
+        107.8,
+        313.02
+      ],
+      "sourceBodySha256": "c5d9bfc951b2a2af238f49a8a0980e4b3ea3ae0a98f6f182ff458025f38c4dbe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Red cell laboratory tests",
+      "draftLearningTask": "Explain how ESR, osmotic fragility and haematocrit are measured and interpret representative results.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51",
+      "subjectId": "physiology",
+      "code": "PY2.13",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        313.02,
+        107.8,
+        327.78
+      ],
+      "sourceBodySha256": "1f3df916027e47a4420da4784457ef7efc72714bd60225983cd7061bb29d735c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reticulocyte and platelet counts",
+      "draftLearningTask": "Sequence specimen preparation, identification, counting and calculation for each measurement.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ab8b182f0a7e974f2d6df4097f2bb2ceda320370cd07e392904700513185ef08",
+      "subjectId": "physiology",
+      "code": "PY3.1",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        356.22,
+        107.8,
+        383.58
+      ],
+      "sourceBodySha256": "45e4a5b17bc79ef1518f692a38d174e420164dbb22765ac876029b4b805b9fe8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurons and glia",
+      "draftLearningTask": "Relate neuronal and glial structure to function and explain how representative growth factors support neural development or survival.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7892bcbd40f0f58e15beef34c0b8577ff069ec5f187b2abd15c1402d8517536f",
+      "subjectId": "physiology",
+      "code": "PY3.2",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        383.58,
+        107.8,
+        416.34
+      ],
+      "sourceBodySha256": "9fe7cbacbd452672ce609aae1cec57ad55807c4fb6951a6b584ec4e72518cd98",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nerve fibre properties",
+      "draftLearningTask": "Compare nerve fibre classes and derive rheobase and chronaxie from a strength-duration curve.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8b3e90507a6e5c0b00febf6361342421deb49e7623310ec23b2c5241cbf119f6",
+      "subjectId": "physiology",
+      "code": "PY3.3",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        416.34,
+        107.8,
+        443.7
+      ],
+      "sourceBodySha256": "45acbd29ac24e796950c1e4bfad83a08b59213244aa30c35ac148c6e39e54cd2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral nerve injury",
+      "draftLearningTask": "Classify injury patterns and predict degeneration and regeneration from the structures involved.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b454b2f6d5ea49a749a177df5acd7a6d9a2c8202afe86b0e461d3d14fed09e0e",
+      "subjectId": "physiology",
+      "code": "PY3.4",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        443.7,
+        107.8,
+        476.46
+      ],
+      "sourceBodySha256": "1e52d24788184daaa792f0aaf3b9e1c102617d0aa5be8ca3b645b207d8d2ba99",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neuromuscular transmission",
+      "draftLearningTask": "Diagram the junction and trace events from motor nerve depolarization to the muscle action potential.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:03049974c939ea85a8dde31976baccc487cf38cbc7863f880f11568c0ad18b4b",
+      "subjectId": "physiology",
+      "code": "PY3.5",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        476.46,
+        107.8,
+        508.08
+      ],
+      "sourceBodySha256": "33edab46710442b5b39190a75a97a3414a695c28465604728136eca56996882f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neuromuscular junction disorders",
+      "draftLearningTask": "Compare presynaptic and postsynaptic defects in Lambert-Eaton syndrome and myasthenia gravis and locate the effects of blocking agents.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33",
+      "subjectId": "physiology",
+      "code": "PY3.6",
+      "page": 151,
+      "rowBBox": [
+        58.5,
+        508.08,
+        107.8,
+        535.44
+      ],
+      "sourceBodySha256": "46ce4fc78a2bae133a752fb61213f7cd61e0b002f0aa7cc29b90064228dcea9b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Muscle fibre types",
+      "draftLearningTask": "Compare representative fibre types by structure and function and explain the ionic basis of their electrical activity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378",
+      "subjectId": "physiology",
+      "code": "PY3.7",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        108.96,
+        107.8,
+        136.32
+      ],
+      "sourceBodySha256": "e08ad28d26566b88f80077c6049a0391a9d1ec2411c7ec9c902500a4d21997b2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skeletal muscle contraction",
+      "draftLearningTask": "Trace excitation-contraction coupling from membrane depolarization to cross-bridge cycling and relate it to muscle properties.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7d9046d29816f8c0b7b584a33643a34f39ba59b8278b54bb4dcee280b1911be4",
+      "subjectId": "physiology",
+      "code": "PY3.8",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        136.32,
+        107.8,
+        163.62
+      ],
+      "sourceBodySha256": "82ccbb5f0faf8ff531b7f1f0e2eeb4c0f0bb611969f5b7a22a0a06f15208951b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Smooth muscle contraction",
+      "draftLearningTask": "Explain electrical and calcium signalling, calmodulin-dependent activation and the basis of sustained force.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21",
+      "subjectId": "physiology",
+      "code": "PY3.9",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        163.62,
+        107.8,
+        196.38
+      ],
+      "sourceBodySha256": "a0a1a08fd0f3b04fa2c2d9e66ac529454810fa637e5e36a196824cb11cdc6006",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Muscle work and metabolism",
+      "draftLearningTask": "Compare isometric and isotonic contractions, identify energy sources and explain how recruitment and firing rate grade force.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ad6622ac201e657850ca429c73aebbc22f783947f017225bfd5f39226af43e87",
+      "subjectId": "physiology",
+      "code": "PY3.10",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        196.38,
+        107.8,
+        218.7
+      ],
+      "sourceBodySha256": "74149ebb94e38df21390d5592bd89f99acaaf7489a5c34fc26fb0086dd36854b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Myopathies",
+      "draftLearningTask": "Group representative myopathies by mechanism and relate them to impaired muscle function.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2f2658e88021b711413759d7a499a20fe7a94bd43ac2f50191d1e369e42c046f",
+      "subjectId": "physiology",
+      "code": "PY3.11",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        218.7,
+        107.8,
+        251.46
+      ],
+      "sourceBodySha256": "041b7c09b8f1a9a2f60b1b249364407819aaf608edab208979fa7b33d8e44933",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ergography",
+      "draftLearningTask": "Record contractions against a known load and calculate external work from the measured displacement.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f17b2e90f54786b626562d95eb3dabd582cf9fdad5670d02d8d18cd3e57ccec",
+      "subjectId": "physiology",
+      "code": "PY3.12",
+      "page": 152,
+      "rowBBox": [
+        58.5,
+        251.46,
+        107.8,
+        284.22
+      ],
+      "sourceBodySha256": "eb9014bc33d97ec64c80c3cb1547f9c6690f42c252fdeb8e31c8bc565934cc56",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Simulated amphibian experiments",
+      "draftLearningTask": "Observe nerve-muscle and cardiac experiments in a computer simulation and explain the recorded responses to representative interventions.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

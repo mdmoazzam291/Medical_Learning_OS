@@ -1,0 +1,2883 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    }
+  ],
+  "sourceHead": "6ebb38c1b86d7369386dfb7c20eb766ef6bdeb49",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 31,
+    "componentProposals": 152,
+    "familyParentsWithoutDecompositionProposal": 592
+  },
+  "rows": [
+    {
+      "parentNameKey": "ai in laboratory biochemistry",
+      "parentName": "AI in laboratory biochemistry",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC13.5",
+          "page": 168,
+          "rowBBox": [
+            58.7,
+            485.04,
+            108.5,
+            525.36
+          ],
+          "sourceBodySha256": "ea71e8a869926ba2bfc6a1e6e070ca5aae0cf159adea18b5c0d3b0ffecf4a6a5",
+          "editorialTaskSha256": "033ca2cfe6f241a9b5ac963847f1838c994dc7c727d1574cee5c674dc90c6a34",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:01:01",
+          "name": "AI in laboratory quality control",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:01:02",
+          "name": "AI in laboratory workflow",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:01:03",
+          "name": "AI in laboratory result review",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:01:04",
+          "name": "Laboratory AI local validation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:01:05",
+          "name": "Laboratory AI human oversight",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "airway adjuncts",
+      "parentName": "Airway adjuncts",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS11.4",
+          "page": 455,
+          "rowBBox": [
+            46.7,
+            504.84,
+            98.5,
+            532.2
+          ],
+          "sourceBodySha256": "3b9b91601be2838a6bdb80995d1210463e6b04c4c8fb41bc95e51cb76996c827",
+          "editorialTaskSha256": "77165b19c1a574a3e839181febc1375ec6e17ba51f0de2a395e12e8b8b0b3b67",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:02:01",
+          "name": "Oropharyngeal airway",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:02:02",
+          "name": "Nasopharyngeal airway",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:02:03",
+          "name": "Airway adjunct selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:02:04",
+          "name": "Airway adjunct sizing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:02:05",
+          "name": "Airway adjunct insertion simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "airway opening",
+      "parentName": "Airway opening",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS11.3",
+          "page": 455,
+          "rowBBox": [
+            46.7,
+            477.48,
+            98.5,
+            504.84
+          ],
+          "sourceBodySha256": "91a42a70086bb2b60a16f8e0460844549f79620c109ff013e6d6100465540150",
+          "editorialTaskSha256": "055682c7c6deb2174efe3cbbc4b2d1380804260cf751fb6408a8bf8160b44043",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:03:01",
+          "name": "Head tilt",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:03:02",
+          "name": "Chin lift",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:03:03",
+          "name": "Jaw thrust",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:03:04",
+          "name": "Airway opening manoeuvre selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:03:05",
+          "name": "Airway opening simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "alcohol-related liver disease",
+      "parentName": "Alcohol-related liver disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.4",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            282.24,
+            102.7,
+            322.92
+          ],
+          "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+          "editorialTaskSha256": "612e58f06b63fe27f5f61a79352449829f881a9d6b4304810337da90353e3138",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA24.4",
+          "page": 195,
+          "rowBBox": [
+            51.5,
+            355.14,
+            105.6,
+            389.88
+          ],
+          "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+          "editorialTaskSha256": "6b04a721b23b793deb78e5005bb882ac74f71ac06506ebf4fbb89b748adc1327",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:04:01",
+          "name": "Alcohol-related hepatic steatosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:02",
+          "name": "Alcohol-related hepatitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:03",
+          "name": "Alcohol-related cirrhosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:04",
+          "name": "Alcohol-related liver clinical evolution",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:05",
+          "name": "Alcohol-related hepatic steatosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:06",
+          "name": "Alcohol-related hepatitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:07",
+          "name": "Hepatic fibrosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:08",
+          "name": "Alcohol-related cirrhosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:04:09",
+          "name": "Alcohol-related liver lesion identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "allergic conjunctivitis",
+      "parentName": "Allergic conjunctivitis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f5e0205189ec9ec6010553f8fc954753821b9bb25fe53549b27a870c811058d0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP3.4",
+          "page": 415,
+          "rowBBox": [
+            49.5,
+            300.9,
+            103.5,
+            348.24
+          ],
+          "sourceBodySha256": "8f23c95245a8f4305b0577fce564b99406623f5d0e8496d3d54b4c36a791528c",
+          "editorialTaskSha256": "e9649565ff7bfb4405f5fa00e18b981f32196b3bf9751418c7346d1c05a8298c",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:05:01",
+          "name": "Vernal conjunctivitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5e0205189ec9ec6010553f8fc954753821b9bb25fe53549b27a870c811058d0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:05:02",
+          "name": "Allergic conjunctivitis presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5e0205189ec9ec6010553f8fc954753821b9bb25fe53549b27a870c811058d0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:05:03",
+          "name": "Vernal disease complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5e0205189ec9ec6010553f8fc954753821b9bb25fe53549b27a870c811058d0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:05:04",
+          "name": "Allergic conjunctivitis management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5e0205189ec9ec6010553f8fc954753821b9bb25fe53549b27a870c811058d0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "altitude physiology",
+      "parentName": "Altitude physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY6.8",
+          "page": 155,
+          "rowBBox": [
+            58.5,
+            169.02,
+            107.8,
+            191.34
+          ],
+          "sourceBodySha256": "e5576e172a84e0ffdc5960de0b05433af2c8daa57ede05007706a6ab94fd104c",
+          "editorialTaskSha256": "624970bff8691cc25698bde9d56c89195508d1798c7d40908df0e8fc5db8d1ac",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:06:01",
+          "name": "Hypobaric hypoxia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:06:02",
+          "name": "Altitude acclimatization",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:06:03",
+          "name": "Altitude ventilatory response",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:06:04",
+          "name": "Altitude acid–base response",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:06:05",
+          "name": "Altitude erythropoiesis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:463772c07f7aadedf99a11b6aa528d65ea0f62d07eb636b208d2b05e0acc9329"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "amino acids",
+      "parentName": "Amino acids",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC5.1",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            361.02,
+            108.5,
+            392.28
+          ],
+          "sourceBodySha256": "545630bbc32a3494a4cea199407adef2a5c9de76f6f6c7439971ae668be78fc2",
+          "editorialTaskSha256": "7dd200ce95dccae638a981452b6da74215bef561ec9c2b572de4b0173f5b8866",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:07:01",
+          "name": "Amino acid side-chain classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:07:02",
+          "name": "Amino acid nutritional classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:07:03",
+          "name": "Amino acid metabolic fate classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anaemia prevention programmes",
+      "parentName": "Anaemia prevention programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:867de5ae587443b9bc2b4b4a9b2f285656b5d0f8d8b777716bef208b15b73404",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.11",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            261.6,
+            102.7,
+            281.46
+          ],
+          "sourceBodySha256": "fae5bac07231cca01cda4bbe6a0ed0e9405060d487bf3303cd2bfe61a5b0dd3e",
+          "editorialTaskSha256": "342833d25341e4b2894685d50237730cab828a0909a6e8e145df9055adaa30bb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:08:01",
+          "name": "Programme-based anaemia prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:867de5ae587443b9bc2b4b4a9b2f285656b5d0f8d8b777716bef208b15b73404"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anaemia-associated parasites",
+      "parentName": "Anaemia-associated parasites",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.10",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            227.52,
+            108.8,
+            282.24
+          ],
+          "sourceBodySha256": "8d681a53d95ddadc792a977ff03a0e3780cac30e162edefc8f4e057e73674e9b",
+          "editorialTaskSha256": "f44f95968a539cac56eee27499b96ea34310554b23be03322520afea51061fbc",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:09:01",
+          "name": "Anaemia-associated parasite morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:09:02",
+          "name": "Anaemia-associated parasite life cycles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:09:03",
+          "name": "Parasitic anaemia mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:09:04",
+          "name": "Anaemia-associated parasite diagnosis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:09:05",
+          "name": "Anaemia-associated parasite prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anaerobic infection",
+      "parentName": "Anaerobic infection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI5.1",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            452.16,
+            108.8,
+            493.2
+          ],
+          "sourceBodySha256": "a8bf6b65cda5775bcb75031183cfc5c9cbd8a57716ceae171c8d08e5401385b7",
+          "editorialTaskSha256": "9af14252b84c2b680c361120528e2a3c7695fb989b3f5b7f9e98e663ac59f0b9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:10:01",
+          "name": "Anaerobic infection organisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:10:02",
+          "name": "Anaerobic infection risk factors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:10:03",
+          "name": "Anaerobic infection clinical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:10:04",
+          "name": "Anaerobic specimen handling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:10:05",
+          "name": "Anaerobic infection testing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anaesthesia principles",
+      "parentName": "Anaesthesia principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU11.2",
+          "page": 405,
+          "rowBBox": [
+            45,
+            333.66,
+            101.7,
+            353.52
+          ],
+          "sourceBodySha256": "0e3c7f7bde965de0f386478c730910d3623f8925d767b30e75445919c545cbea",
+          "editorialTaskSha256": "9fc25b8c914a552eecbed9287082d796af20c00e6887129eed4550c9c5614c44",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:11:01",
+          "name": "General anaesthesia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "general anaesthesia"
+            },
+            {
+              "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+              "nameKey": "general anaesthesia"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:11:02",
+          "name": "Regional anaesthesia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:11:03",
+          "name": "Local anaesthesia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:11:04",
+          "name": "Anaesthesia suitability",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:11:05",
+          "name": "Anaesthesia risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "analgesic drugs",
+      "parentName": "Analgesic drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS8.3",
+          "page": 455,
+          "rowBBox": [
+            46.7,
+            106.8,
+            98.5,
+            129.42
+          ],
+          "sourceBodySha256": "4bf611753b1b5154551df6723b072e194cb7da6bdf574d47f1325cd159069aa0",
+          "editorialTaskSha256": "d9a3bb837fd86c21871bc154d2d0339185f6dabcc25df0310412ca55d0429969",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:12:01",
+          "name": "Analgesic drug targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:12:02",
+          "name": "Analgesic clinical roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:12:03",
+          "name": "Analgesic adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "analytical toxicology",
+      "parentName": "Analytical toxicology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.10",
+          "page": 230,
+          "rowBBox": [
+            45.5,
+            110.28,
+            95.2,
+            179.82
+          ],
+          "sourceBodySha256": "b17650d15b7743e86f75a7698f500078d01d7d42292bbebdc62d97120df12d7c",
+          "editorialTaskSha256": "d349f28b568974f80bcf4d4a776b88c8992e986cc58c3419142372e42f1442ea",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:13:01",
+          "name": "Thin-layer chromatography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:13:02",
+          "name": "Gas chromatography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:13:03",
+          "name": "Liquid chromatography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:13:04",
+          "name": "Atomic absorption spectroscopy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:13:05",
+          "name": "Toxicological analytical purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:13:06",
+          "name": "Toxicological analytical limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6262ff58f8c1ec2cebfd16ab13c5404d2bfa750c376a9257b204e136e9411d2e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "aneurysms",
+      "parentName": "Aneurysms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.2",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            159.78
+          ],
+          "sourceBodySha256": "5a7520b9585c23b818e55df3b966c3e4f581f5e1d0b93a20e0066f476fba02da",
+          "editorialTaskSha256": "52fbe2ba42995f4e47f8dd1655ee269b98032f90ea5ff0568d87b2e4596b9f67",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:14:01",
+          "name": "Aortic aneurysm",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:14:02",
+          "name": "Aneurysm types",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:14:03",
+          "name": "Aneurysm causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:14:04",
+          "name": "Aneurysm wall remodelling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:14:05",
+          "name": "Aneurysm expansion",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:14:06",
+          "name": "Aneurysm complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "ankle fractures",
+      "parentName": "Ankle fractures",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR2.13",
+          "page": 446,
+          "rowBBox": [
+            49.1,
+            334.14,
+            103.1,
+            368.76
+          ],
+          "sourceBodySha256": "f2194f3dc592a5a23f5c682022a841aac96aced9cb4f8c6f25ba5f0fe7a45be0",
+          "editorialTaskSha256": "6f95a335a73004453227c384fc1cf9413bad26ab6ba2355bd4d914cb525793c9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:15:01",
+          "name": "Ankle fracture mechanism",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:15:02",
+          "name": "Ankle fracture imaging",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:15:03",
+          "name": "Ankle fracture stability",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:15:04",
+          "name": "Ankle fracture assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:15:05",
+          "name": "Ankle fracture management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anorectal anatomy",
+      "parentName": "Anorectal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:170d266b32fe27baa9de4420bedc789e361395f68835c09981bca6273ffd590b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.16",
+          "page": 411,
+          "rowBBox": [
+            45,
+            244.2,
+            101.7,
+            273.78
+          ],
+          "sourceBodySha256": "bb6377d37686f6159d96012b1cc20198422106e325e29e5fe76aee0f004c7c0b",
+          "editorialTaskSha256": "2c7afa8408f1cdd70a36f31d2cacbbdc67ce35dcdeb5a4ebe79b10bfaa95ac66",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:16:01",
+          "name": "Rectal landmarks",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:170d266b32fe27baa9de4420bedc789e361395f68835c09981bca6273ffd590b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:16:02",
+          "name": "Anal landmarks",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:170d266b32fe27baa9de4420bedc789e361395f68835c09981bca6273ffd590b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:16:03",
+          "name": "Anorectal congenital anomaly correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:170d266b32fe27baa9de4420bedc789e361395f68835c09981bca6273ffd590b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anorectal disorders",
+      "parentName": "Anorectal disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7c59fe7bb85508880d9a96a2d25b738b884804a30121c9f1539d9a1f1486a504",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.17",
+          "page": 411,
+          "rowBBox": [
+            45,
+            273.78,
+            101.7,
+            309.48
+          ],
+          "sourceBodySha256": "1284cbf070c47f6709cf00193f4b872a000384883792f2f75ad97269e20e8257",
+          "editorialTaskSha256": "d9c3923842932251dd6114b28c261c74422eaba7089134adb261667074fb7454",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:17:01",
+          "name": "Anorectal disorder presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c59fe7bb85508880d9a96a2d25b738b884804a30121c9f1539d9a1f1486a504"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:17:02",
+          "name": "Anorectal disorder investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c59fe7bb85508880d9a96a2d25b738b884804a30121c9f1539d9a1f1486a504"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:17:03",
+          "name": "Anorectal disorder management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c59fe7bb85508880d9a96a2d25b738b884804a30121c9f1539d9a1f1486a504"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anterior forearm muscles",
+      "parentName": "Anterior forearm muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3605d8ac14777f8eb9326739ea0d8eb8521868345e50b49fd8a6efe2ad20ca3d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN12.1",
+          "page": 113,
+          "rowBBox": [
+            51.2,
+            405.3,
+            120.4,
+            454.62
+          ],
+          "sourceBodySha256": "92ece79127beffc7352b7eb5228571be87f63b9041e4f198eea3db04b985ad28",
+          "editorialTaskSha256": "1ffe0605aeede093c9b53096ad01f5c2561d57761c9e249c1f55ac755ff4010f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:18:01",
+          "name": "Anterior forearm muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3605d8ac14777f8eb9326739ea0d8eb8521868345e50b49fd8a6efe2ad20ca3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:18:02",
+          "name": "Anterior forearm muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3605d8ac14777f8eb9326739ea0d8eb8521868345e50b49fd8a6efe2ad20ca3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:18:03",
+          "name": "Anterior forearm innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3605d8ac14777f8eb9326739ea0d8eb8521868345e50b49fd8a6efe2ad20ca3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:18:04",
+          "name": "Anterior forearm muscle actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3605d8ac14777f8eb9326739ea0d8eb8521868345e50b49fd8a6efe2ad20ca3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anterior leg muscles",
+      "parentName": "Anterior leg muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN18.1",
+          "page": 118,
+          "rowBBox": [
+            51.2,
+            189,
+            121.9,
+            238.32
+          ],
+          "sourceBodySha256": "6678cb37d16505b4262f0e22704e2c546d8c140a80dd50d74e66f017055ee22f",
+          "editorialTaskSha256": "0001091433cf9c647873e192ac5de7b98f4b004ad26c6fc0fc5a7ca43db0a813",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:19:01",
+          "name": "Anterior leg muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:19:02",
+          "name": "Anterior leg muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:19:03",
+          "name": "Anterior leg muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:19:04",
+          "name": "Anterior leg ankle movement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:19:05",
+          "name": "Anterior leg toe movement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anterior thigh muscles",
+      "parentName": "Anterior thigh muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN15.2",
+          "page": 116,
+          "rowBBox": [
+            51.2,
+            403.56,
+            121.6,
+            446.4
+          ],
+          "sourceBodySha256": "098a10c76c8d36c097a5031198f4113bbd1932ef5787c02916ae371df7c0c7bc",
+          "editorialTaskSha256": "3df554564ddc026399c26f4491d5511b09c1147e2ed41334fb0a415ba900655b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:20:01",
+          "name": "Anterior thigh muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:20:02",
+          "name": "Anterior thigh muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:20:03",
+          "name": "Anterior thigh muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:20:04",
+          "name": "Anterior thigh muscle actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anterior triangle subdivisions",
+      "parentName": "Anterior triangle subdivisions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN32.2",
+          "page": 128,
+          "rowBBox": [
+            51.2,
+            108.42,
+            121.9,
+            157.74
+          ],
+          "sourceBodySha256": "ee7d1074e89cd2f73aeb8fa7e6ff1300c2820620de91f3def7aa539904ec76e6",
+          "editorialTaskSha256": "8f4f2a038dd0e445e010a5b696604daff6895bdc7d80fe30ef4717e73fef7cd3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:21:01",
+          "name": "Muscular triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:21:02",
+          "name": "Carotid triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:21:03",
+          "name": "Digastric triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:21:04",
+          "name": "Submental triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:21:05",
+          "name": "Anterior triangle subdivision boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:21:06",
+          "name": "Anterior triangle subdivision contents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antibacterial classes",
+      "parentName": "Antibacterial classes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.3",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            68.22,
+            105.7,
+            130.56
+          ],
+          "sourceBodySha256": "c9f1b72564f2a44a50cba1b49ce478da473975b54c47b3e9fc6beaaf53d8ca81",
+          "editorialTaskSha256": "40a288c2507ffde1e92c8c498ff49b6ebb33cdae821ed4a3bbc3604d3dcb9182",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:22:01",
+          "name": "Sulfonamides",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:02",
+          "name": "Quinolones",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:03",
+          "name": "Beta-lactams",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:04",
+          "name": "Macrolides",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:05",
+          "name": "Tetracyclines",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:06",
+          "name": "Aminoglycosides",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:07",
+          "name": "Newer antibacterial agents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:08",
+          "name": "Antibacterial kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:09",
+          "name": "Antibacterial mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:10",
+          "name": "Antibacterial uses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:22:11",
+          "name": "Antibacterial harms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "anticancer medicines",
+      "parentName": "Anticancer medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.11",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            68.22,
+            105.7,
+            109.32
+          ],
+          "sourceBodySha256": "a28be24e68efb1d449aa5e62d61dd95c4a0d0ab8a28ee70ddb21f2fb987d205e",
+          "editorialTaskSha256": "d27a95fe7c1eff54088dbd3c1b1a3c65c4e4f94948d0e4e7c19063a39f18cabf",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:23:01",
+          "name": "Anticancer medicine classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:23:02",
+          "name": "Anticancer drug kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:23:03",
+          "name": "Anticancer mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:23:04",
+          "name": "Anticancer indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:23:05",
+          "name": "Anticancer toxicity",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:23:06",
+          "name": "Anticancer harm mitigation simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antifungal medicines",
+      "parentName": "Antifungal medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.8",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            432.42,
+            105.7,
+            473.16
+          ],
+          "sourceBodySha256": "32132158673f3ac08c43b8ac7ef8089af90dd3818e75a123d8508c85f7327324",
+          "editorialTaskSha256": "adb4896ab437ca27e9d23d828c736132107ee758b758dd925fc3f435ef06368d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:24:01",
+          "name": "Antifungal classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:24:02",
+          "name": "Antifungal kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:24:03",
+          "name": "Antifungal targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:24:04",
+          "name": "Antifungal spectrum",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:24:05",
+          "name": "Antifungal adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antihistamines",
+      "parentName": "Antihistamines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH2.6",
+          "page": 176,
+          "rowBBox": [
+            51.7,
+            199.32,
+            105.7,
+            244.32
+          ],
+          "sourceBodySha256": "925bfb68df3d83e9d9579dc969a82affc16351005202828c0b525902f04cdaba",
+          "editorialTaskSha256": "a67dcc46cb8c90cc456a8d0df15a78016467fbfcdb6d90d1018920144d40bf5e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:25:01",
+          "name": "Antihistamine classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:02",
+          "name": "Antihistamine kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:03",
+          "name": "Antihistamine effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:04",
+          "name": "Antihistamine uses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:05",
+          "name": "Antihistamine adverse reactions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:06",
+          "name": "Antihistamines in allergic rhinitis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:25:07",
+          "name": "Cold symptomatic care comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antihypertensives",
+      "parentName": "Antihypertensives",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.7",
+          "page": 178,
+          "rowBBox": [
+            51.7,
+            367.98,
+            105.7,
+            453.36
+          ],
+          "sourceBodySha256": "3b742ab4d2c32e0317d67f74b86664bb94b137c93cd9d092a0fcfdfaaaeefad0",
+          "editorialTaskSha256": "74ea72337c15321ecd6fca67e6142b407be47acf829a3c5e35a83d2fb94137f7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:26:01",
+          "name": "Antihypertensive classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:02",
+          "name": "Antihypertensive kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:03",
+          "name": "Antihypertensive mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:04",
+          "name": "Antihypertensive uses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:05",
+          "name": "Antihypertensive adverse reactions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:06",
+          "name": "Antihypertensive selection in diabetes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:07",
+          "name": "Antihypertensive selection in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:26:08",
+          "name": "Antihypertensive selection in severe hypertension",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antioxidant defences",
+      "parentName": "Antioxidant defences",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC12.2",
+          "page": 168,
+          "rowBBox": [
+            58.7,
+            251.94,
+            108.5,
+            283.32
+          ],
+          "sourceBodySha256": "5d3b2a46aecf8e88c1fd6e0caeca60bedc3fabcab2a13119aa79f69574cddaf8",
+          "editorialTaskSha256": "ffa28af1219a26ce6c53ed2509a8c042038e21447d701ba94a0ebf5c52796293",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:27:01",
+          "name": "Enzymatic antioxidant defences",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:27:02",
+          "name": "Non-enzymatic antioxidant defences",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:27:03",
+          "name": "Reactive species defence mapping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antiparasitic medicines",
+      "parentName": "Antiparasitic medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.7",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            351.36,
+            105.7,
+            432.42
+          ],
+          "sourceBodySha256": "017ab4692fcc7f0e7ba2a9fdd4dde765b05e1600eac2ab4f3522842a336c3f4b",
+          "editorialTaskSha256": "8acd8101c0c8c120a4827d86ae3b7b2210b8fc30b16ce8eb8d0c596f5448403a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:28:01",
+          "name": "Amoebiasis pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:02",
+          "name": "Visceral leishmaniasis pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:03",
+          "name": "Malaria pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:04",
+          "name": "Filariasis pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:05",
+          "name": "Antiparasitic kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:06",
+          "name": "Antiparasitic targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:28:07",
+          "name": "Antiparasitic adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antiplatelet drugs",
+      "parentName": "Antiplatelet drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.4",
+          "page": 178,
+          "rowBBox": [
+            51.7,
+            243.78,
+            105.7,
+            278.34
+          ],
+          "sourceBodySha256": "ce0ee7ae1b087991fcb64da89f7ce7439977c9c635887316e9e44ccac6890904",
+          "editorialTaskSha256": "f7b852251a19cd6201f9a73966ec4134374ccdd46e63be8661b098d9c2b8af83",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:29:01",
+          "name": "Antiplatelet classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:29:02",
+          "name": "Antiplatelet mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:29:03",
+          "name": "Antiplatelet kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:29:04",
+          "name": "Antiplatelet indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:29:05",
+          "name": "Antiplatelet adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "antiretroviral therapy",
+      "parentName": "Antiretroviral therapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.14",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            522.12,
+            102.7,
+            542.04
+          ],
+          "sourceBodySha256": "fe9b21b39739cb5efdc313c939975bfa0645b9b10fc69c0ead5ac2107989378c",
+          "editorialTaskSha256": "de059d127631c87240a0598957f6a930b0bb616046ee527d85ed7a1cd66af63e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-02:30:01",
+          "name": "Combination antiretroviral therapy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:30:02",
+          "name": "Antiretroviral drug classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-02:30:03",
+          "name": "Antiretroviral targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

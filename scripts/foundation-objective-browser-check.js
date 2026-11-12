@@ -6,6 +6,7 @@ import {join} from 'node:path';
 import {buildPages} from './build-pages.js';
 import {publicFileSet} from './public-surface.js';
 import {coveragePage,parseCoverageFilters} from '../src/domain/content-coverage.js';
+import {readFoundationDrafts} from '../supabase/functions/owner-api/_shared/nmc-learning-foundation.js';
 import draftSeed from '../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import sourceCatalogue from '../data/nmc-reference-catalogue.json' with {type:'json'};
 import {foundationDraftPage,canonicalIdentityDigest} from '../src/domain/nmc-learning-foundation.js';
@@ -18,6 +19,13 @@ for(const row of drafts.objectives){
  row.canonicalIdentitySha256=identityDigests.get(row.objective.conceptId);
  row.wording='Synthetic original objective <script>window.injected=true</script>';
 }
+const previewAdmin={
+ rpc:async()=>({data:{isAdmin:true}}),
+ from:name=>name==='study_catalog'
+  ?{select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[]}}})})})}
+  :{select:()=>({in:async()=>({data:[]})})},
+};
+const {namesOnlyPreview,namesOnlyRelationships}=await readFoundationDrafts({admin:previewAdmin,actor:'fixture',method:'GET',params:new URLSearchParams()});
 const engines=await import(process.env.PLAYWRIGHT_MODULE_URL||'playwright');
 const output=await mkdtemp(join(tmpdir(),'mlos-coverage-'));await buildPages({outputDirectory:output});
 const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname.slice(1);if(!publicFileSet.has(p)){res.writeHead(404);return res.end();}try{res.writeHead(200,{'Content-Type':p.endsWith('.html')?'text/html':p.endsWith('.css')?'text/css':'text/javascript'});res.end(await readFile(join(output,p)));}catch{res.writeHead(404);res.end();}});
@@ -38,18 +46,27 @@ try{
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/review-api/transfer-pairs'))return reply({pairs:[]});
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:2,questions:1,sources:0},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
-   if(path.endsWith('/owner-api/foundation-objective-drafts')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow)await new Promise(resolve=>setTimeout(resolve,400));return reply(await foundationDraftPage(drafts,sourceCatalogue,draftCatalog,Object.fromEntries(url.searchParams)));}
+   if(path.endsWith('/owner-api/foundation-objective-drafts')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow)await new Promise(resolve=>setTimeout(resolve,400));return reply({...await foundationDraftPage(drafts,sourceCatalogue,draftCatalog,Object.fromEntries(url.searchParams)),namesOnlyPreview,namesOnlyRelationships});}
    if(path.endsWith('/owner-api/content-coverage')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow&&url.searchParams.get('search')==='Alpha')await new Promise(resolve=>setTimeout(resolve,400));return reply(coveragePage(snapshot,parseCoverageFilters(url.searchParams)));}
    if(path.includes('/owner-api/'))return reply({flags:[],alerts:[]});
    return reply({});
   });
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(origin+'/web/admin.html#owner-coverage');
+  await page.goto(origin+'/web/admin.html#owner-foundation');
   const root=page.locator('#owner-foundation-objectives');
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).waitFor();
   await root.getByRole('button',{name:'Load objective drafts',exact:true}).click();
   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
-  await root.locator('summary').click();await root.getByText('Synthetic objective 0',{exact:true}).first().waitFor();
+  const preview=root.locator('details').filter({has:page.getByText('Names-only draft preview',{exact:true})});
+  await preview.locator('summary').click();
+  assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[121,2,6,1]);
+  assert.equal(await preview.locator('ul').last().textContent(),'PS2.1');
+  assert.equal(await preview.locator('ul').nth(2).getByText('PS2.1',{exact:true}).count(),0);
+  const relationships=root.locator('details').filter({has:page.getByText('Proposed concept relationships',{exact:true})});
+  await relationships.locator('summary').click();
+  assert.equal(await relationships.locator('li').count(),5);
+  await relationships.getByText('Delayed puberty (OG23.2) is narrower than Puberty (PY9.2)',{exact:true}).waitFor();
+  await root.getByText('Original objectives and canonical identities',{exact:true}).click();await root.getByText('Synthetic objective 0',{exact:true}).first().waitFor();
   assert.match(await root.textContent(),/AN57.5/);assert.match(await root.textContent(),/PY10.10/);assert.equal(await page.evaluate(()=>window.injected===true),false);
   await root.getByRole('button',{name:'Next references',exact:true}).click();await root.getByText(/showing 51–100/).waitFor();
   await root.getByLabel('Code or topic',{exact:true}).fill('AN57.5');await root.getByRole('button',{name:'Filter references',exact:true}).click();await root.getByText(/1 filtered source appearances/).waitFor();

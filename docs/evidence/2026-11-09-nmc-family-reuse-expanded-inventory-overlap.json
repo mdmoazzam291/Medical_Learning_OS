@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "a500a36ab594de5301277233e6298a599f79c33b",
+  "status": "proposed",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-mixed-disposition-coverage-and-sterilization.json",
+      "blobSha": "8c770e0ebe68e73b5b793ea3f924b98ec6e92d55"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-mixed-baseline-ledger-reconciliation.json",
+      "blobSha": "ae085596c8092e051f55ebc370b883373f191d96"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-consolidated-58-name-inventory.json",
+      "blobSha": "2b9cd653795ceb915c6f7b7b4afc01ef9d2932a3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-reuse-scope-proposals.json",
+      "blobSha": "03b9672d91a86efd44772a0665eea6255b4d3eb4"
+    }
+  ],
+  "totals": {
+    "labelMatches": 3,
+    "occurrenceOverlap": 1,
+    "targetOverlap": 8
+  },
+  "rows": [
+    {
+      "name": "Accommodation",
+      "nameKey": "accommodation",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Acute suppurative otitis media",
+      "nameKey": "acute suppurative otitis media",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [
+        {
+          "name": "Acute suppurative otitis media",
+          "kind": "context"
+        }
+      ],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Adaptive immunity",
+      "nameKey": "adaptive immunity",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related cirrhosis",
+      "nameKey": "alcohol-related cirrhosis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatic steatosis",
+      "nameKey": "alcohol-related hepatic steatosis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatitis",
+      "nameKey": "alcohol-related hepatitis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Anthropometry",
+      "nameKey": "anthropometry",
+      "priorDisposition": "retain-context-specific-scope",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Apoptosis",
+      "nameKey": "apoptosis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Appendicitis",
+      "nameKey": "appendicitis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Autoimmunity",
+      "nameKey": "autoimmunity",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [
+        {
+          "name": "Autoimmunity",
+          "kind": "proposal"
+        }
+      ],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Blood grouping",
+      "nameKey": "blood grouping",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Breastfeeding",
+      "nameKey": "breastfeeding",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cell organelles",
+      "nameKey": "cell organelles",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Central nervous system organization",
+      "nameKey": "central nervous system organization",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cerebellar connections",
+      "nameKey": "cerebellar connections",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Communicable disease control",
+      "nameKey": "communicable disease control",
+      "priorDisposition": "self-parent-context-only",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Complementary feeding",
+      "nameKey": "complementary feeding",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Contraceptive adverse effects",
+      "nameKey": "contraceptive adverse effects",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Contraceptive suitability",
+      "nameKey": "contraceptive suitability",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "CT imaging",
+      "nameKey": "ct imaging",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Dental evidence",
+      "nameKey": "dental evidence",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Dialysis indications",
+      "nameKey": "dialysis indications",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Differential leucocyte count",
+      "nameKey": "differential leucocyte count",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Disaster management",
+      "nameKey": "disaster management",
+      "priorDisposition": "self-parent-context-only",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Disc prolapse",
+      "nameKey": "disc prolapse",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Down syndrome",
+      "nameKey": "down syndrome",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug action",
+      "nameKey": "drug action",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Echocardiography",
+      "nameKey": "echocardiography",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Exercise cardiovascular responses",
+      "nameKey": "exercise cardiovascular responses",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Facial artery",
+      "nameKey": "facial artery",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fertilization",
+      "nameKey": "fertilization",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "First aid",
+      "nameKey": "first aid",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "FISH",
+      "nameKey": "fish",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Gametogenesis",
+      "nameKey": "gametogenesis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "General anaesthesia",
+      "nameKey": "general anaesthesia",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Genetic counselling",
+      "nameKey": "genetic counselling",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemoglobin estimation",
+      "nameKey": "haemoglobin estimation",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemophilia",
+      "nameKey": "haemophilia",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemostasis",
+      "nameKey": "haemostasis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62",
+        "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Health planning",
+      "nameKey": "health planning",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Healthcare-associated infection",
+      "nameKey": "healthcare-associated infection",
+      "priorDisposition": "self-parent-context-only",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hip dislocation",
+      "nameKey": "hip dislocation",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hypersensitivity",
+      "nameKey": "hypersensitivity",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "ICU monitoring",
+      "nameKey": "icu monitoring",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Immune thrombocytopenia",
+      "nameKey": "immune thrombocytopenia",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Implantation",
+      "nameKey": "implantation",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Infant feeding practices",
+      "nameKey": "infant feeding practices",
+      "priorDisposition": "self-parent-context-only",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Innate immunity",
+      "nameKey": "innate immunity",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Iodine deficiency",
+      "nameKey": "iodine deficiency",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Iron metabolism",
+      "nameKey": "iron metabolism",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Ischaemic heart disease",
+      "nameKey": "ischaemic heart disease",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Karyotyping",
+      "nameKey": "karyotyping",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Klinefelter syndrome",
+      "nameKey": "klinefelter syndrome",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Male contraceptive methods",
+      "nameKey": "male contraceptive methods",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "MRI imaging",
+      "nameKey": "mri imaging",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Newborn resuscitation principles",
+      "nameKey": "newborn resuscitation principles",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paget disease of bone",
+      "nameKey": "paget disease of bone",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "PCR",
+      "nameKey": "pcr",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Penile carcinoma",
+      "nameKey": "penile carcinoma",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peptic ulcer disease",
+      "nameKey": "peptic ulcer disease",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peripheral nervous system organization",
+      "nameKey": "peripheral nervous system organization",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Post-mortem imaging",
+      "nameKey": "post-mortem imaging",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Red cell count",
+      "nameKey": "red cell count",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Red cell indices",
+      "nameKey": "red cell indices",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Retinoblastoma",
+      "nameKey": "retinoblastoma",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Rheumatic heart disease",
+      "nameKey": "rheumatic heart disease",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [
+        {
+          "name": "Rheumatic heart disease",
+          "kind": "proposal"
+        }
+      ],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Sensorineural hearing loss",
+      "nameKey": "sensorineural hearing loss",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [
+        "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+      ],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Sickle cell disease",
+      "nameKey": "sickle cell disease",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spermatogenesis",
+      "nameKey": "spermatogenesis",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Standard precautions",
+      "nameKey": "standard precautions",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke mechanisms",
+      "nameKey": "stroke mechanisms",
+      "priorDisposition": "self-parent-context-only",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Termination complications",
+      "nameKey": "termination complications",
+      "priorDisposition": "retain-scoped-facet",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Toxidromes",
+      "nameKey": "toxidromes",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tumour markers",
+      "nameKey": "tumour markers",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Turner syndrome",
+      "nameKey": "turner syndrome",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Varicella",
+      "nameKey": "varicella",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [
+        "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc"
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vitamin A deficiency",
+      "nameKey": "vitamin a deficiency",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Wound healing",
+      "nameKey": "wound healing",
+      "priorDisposition": "shared-topic-name-candidate",
+      "labelMatches": [],
+      "occurrenceOverlap": [],
+      "targetOverlap": [],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Review source scopes for overlapping family leads before proposing reuse. Keep separate objectives and contextual roles."
+}

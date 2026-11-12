@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "scope": "Disposable PGlite diagnostic with synthetic Auth and digest fixtures",
+  "migrationCount": 105,
+  "passedInDiagnostic": 49,
+  "diagnosticOnlyOmission": "Historical visual interaction registration call in 20260928120011",
+  "nextBlocker": "20260928203738_m02b_retire_duplicate_candidate.sql",
+  "error": "correction_target_changed_or_reviewed",
+  "recommendation": "Rehearse a schema-only staging baseline with separate access and identity fixtures. Keep historical content correction migrations in the production history.",
+  "hostedChangesApplied": false
+}

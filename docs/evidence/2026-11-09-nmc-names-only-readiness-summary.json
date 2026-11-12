@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "ac79d6fd05d30fb39e228d97d7b6f7db97900b5f",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-completion-tracker-reconciliation.json",
+      "blobSha": "16d32c65e7134b1498d67e497df7f5611e27b36d"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-source-exception-heading-and-psychiatry-check.json",
+      "blobSha": "98c9c892fe1c6285543eb2a2d8eba85e165005ac"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-source-exception-alias-and-heading-review.json",
+      "blobSha": "41b056604be11777b266b12683584b4da7e814d8"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-source-exception-metadata-reconciliation.json",
+      "blobSha": "a6cd4615e2ae7c5f0fb9f58e278add0edfee0849"
+    }
+  ],
+  "namesOnlyAudit": "recorded-for-reviewed-cohorts",
+  "counts": {
+    "standalone": 570,
+    "mixedReuseLeads": 60,
+    "familyReuseLeads": 78,
+    "scopedTasks": 659,
+    "proposedNames": 78,
+    "reviewedReferenceCount": 338
+  },
+  "sourceExceptions": {
+    "counts": {
+      "official-replacement": 2,
+      "search-alias": 7,
+      "historical-deletion": 1,
+      "topic-group": 11
+    },
+    "officialDispositions": [
+      {
+        "referenceId": "nmc-2024-ref:f1411278a02f8752ae9b41ef3101491c5014bbe150ab071bd079f7d0fed9baf6",
+        "printedCode": "PY9.1",
+        "page": 157,
+        "route": "official-replacement",
+        "candidate": null,
+        "amendmentSource": "https://nmc.org.in/rules-regulation-nmc/34/file",
+        "status": "official-disposition-recorded",
+        "mappingAccepted": false
+      },
+      {
+        "referenceId": "nmc-2024-ref:690c424b466d13302a61e006cbd488690c7f87120ae69fa04691b5e2cb2e16b4",
+        "printedCode": "PE6.4",
+        "page": 331,
+        "route": "official-replacement",
+        "candidate": null,
+        "amendmentSource": "https://nmc.org.in/rules-regulation-nmc/34/file",
+        "status": "official-disposition-recorded",
+        "mappingAccepted": false
+      },
+      {
+        "referenceId": "nmc-2024-ref:bc188bbb069446bda90c6a526eb9e9db539cdde2040a3ed1e69de7adf42c6062",
+        "printedCode": "PS9.2",
+        "page": 353,
+        "route": "historical-deletion",
+        "candidate": null,
+        "amendmentSource": "https://nmc.org.in/rules-regulation-nmc/34/file",
+        "status": "official-disposition-recorded",
+        "mappingAccepted": false
+      }
+    ],
+    "provisionalHeadings": [
+      {
+        "name": "Pancreatic disorders",
+        "topicNumber": "SU24",
+        "references": [
+          {
+            "referenceId": "nmc-2024-ref:af976ff499dc2d79b35da2cb05691d32c5cd54abcfa367c460798bd81de2cdf1",
+            "printedCode": "SU24.1",
+            "page": 408,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 24 · Pancreatic disorders",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:df5d0fb4296539b3c0d8df0425c8ce5aec8b9c08c81454adc4b5a17550b0a0b5",
+            "printedCode": "SU24.2",
+            "page": 408,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 24 · Pancreatic disorders",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+            "printedCode": "SU24.3",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 24 · Pancreatic disorders",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          }
+        ],
+        "exactMatches": [],
+        "decision": "retain-provisional-navigation-heading"
+      },
+      {
+        "name": "Vascular and lymphatic disorders",
+        "topicNumber": "SU27",
+        "references": [
+          {
+            "referenceId": "nmc-2024-ref:afde2dbbb31f9c9a938c96cac43b36876618c0948669dcabc97a45fe2a501d77",
+            "printedCode": "SU27.1",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:cd91cb9cc687c595b75c76061465cbc3445a387e7b95502416e7a77fd103aaa9",
+            "printedCode": "SU27.2",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:e5579dc23d48cebd3b3ac0dbdd4d4d42635c76185c3015f63fffb7da94234178",
+            "printedCode": "SU27.3",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+            "printedCode": "SU27.4",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:97fa0972606477d89b208643ca1920d3da7c1257131828ea2eeabc9aa84fdd67",
+            "printedCode": "SU27.5",
+            "page": 409,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+            "printedCode": "SU27.6",
+            "page": 410,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+            "printedCode": "SU27.7",
+            "page": 410,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          },
+          {
+            "referenceId": "nmc-2024-ref:0dd1c053ec1f7ebe7ec74246257adaaba9d2b06d17838cfeb9621857df2cc0b5",
+            "printedCode": "SU27.8",
+            "page": 410,
+            "route": "topic-group",
+            "candidate": "Surgery Topic 27 · Vascular surgery",
+            "amendmentSource": null,
+            "status": "editorial-proposal-pending",
+            "mappingAccepted": false
+          }
+        ],
+        "exactMatches": [],
+        "decision": "retain-provisional-navigation-heading"
+      }
+    ],
+    "provisionalSearchAliases": [
+      {
+        "referenceId": "nmc-2024-ref:7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+        "printedCode": "14.1",
+        "page": 169,
+        "route": "search-alias",
+        "candidate": "BC14.1",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-inferred",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+            "searchCode": "BC13.5",
+            "observedCode": "BC13.5",
+            "pdfPage": 168
+          },
+          {
+            "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+            "searchCode": "BC14.2",
+            "observedCode": "BC14.2",
+            "pdfPage": 169
+          }
+        ]
+      },
+      {
+        "referenceId": "nmc-2024-ref:9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+        "printedCode": "PA.29.1",
+        "page": 200,
+        "route": "search-alias",
+        "candidate": "PA29.1",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-punctuation",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:dfa024775176801cf706574754e41745f2af4f97a47e72ff98c79c5f86bf410f",
+            "searchCode": "PA28.6",
+            "observedCode": "PA28.6",
+            "pdfPage": 200
+          },
+          {
+            "referenceId": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+            "searchCode": "PA29.2",
+            "observedCode": "PA29.2",
+            "pdfPage": 200
+          }
+        ]
+      },
+      {
+        "referenceId": "nmc-2024-ref:7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+        "printedCode": "MI 8.",
+        "page": 212,
+        "route": "search-alias",
+        "candidate": "MI8.3",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-inferred",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:e9af4329a314e4bade8c00066a88cf66d43825c9d2519e1c61008a2ba2a23cc1",
+            "searchCode": "MI8.2",
+            "observedCode": "MI 8.2",
+            "pdfPage": 212
+          },
+          {
+            "referenceId": "nmc-2024-ref:460bbe029de2ea2d5834013273347fa38089e1702db2cbc26248d0923c44f760",
+            "searchCode": "MI8.4",
+            "observedCode": "MI 8.4",
+            "pdfPage": 212
+          }
+        ]
+      },
+      {
+        "referenceId": "nmc-2024-ref:a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+        "printedCode": "FM2:12",
+        "page": 217,
+        "route": "search-alias",
+        "candidate": "FM2.12",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-punctuation",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:32fbd8b43044cd907b0dd3f0691066e8e282fe548994d9caf25fc565f4a14be8",
+            "searchCode": "FM2.11",
+            "observedCode": "FM2.11",
+            "pdfPage": 217
+          },
+          {
+            "referenceId": "nmc-2024-ref:56c0ecb02c6b3d72acdec8b5182357b77cf9dd852e2ca6934f5f753ee9efa738",
+            "searchCode": "FM2.13",
+            "observedCode": "FM2.13",
+            "pdfPage": 217
+          }
+        ]
+      },
+      {
+        "referenceId": "nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+        "printedCode": "OR2. 2.9",
+        "page": 445,
+        "route": "search-alias",
+        "candidate": "OR2.9",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-inferred",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:3238438774e6719671b4edf541d749957b4f5fc6b2b67c458aec94ce0505d300",
+            "searchCode": "OR2.8",
+            "observedCode": "OR2.8",
+            "pdfPage": 445
+          },
+          {
+            "referenceId": "nmc-2024-ref:3b2c6f39bd1c4d8cff6dab676a6233cf4d1b218e4bb1a898e11c85b83abf66d6",
+            "searchCode": "OR2.10",
+            "observedCode": "OR2.10",
+            "pdfPage": 446
+          }
+        ]
+      },
+      {
+        "referenceId": "nmc-2024-ref:26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+        "printedCode": "ASS.4",
+        "page": 454,
+        "route": "search-alias",
+        "candidate": "AS5.4",
+        "amendmentSource": null,
+        "status": "editorial-proposal-pending",
+        "mappingAccepted": false,
+        "review": "proposed-search-alias-inferred",
+        "adjacentRows": [
+          {
+            "referenceId": "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd",
+            "searchCode": "AS5.3",
+            "observedCode": "AS5.3",
+            "pdfPage": 454
+          },
+          {
+            "referenceId": "nmc-2024-ref:79c8bb2933932d865442b448e8fddaadd599d2ee63b8b7bc331ba8b071904c90",
+            "searchCode": "AS5.5",
+            "observedCode": "AS5.5",
+            "pdfPage": 454
+          }
+        ]
+      }
+    ],
+    "heldAlias": {
+      "printedCode": "PS 2.1*",
+      "alias": "PS2.1",
+      "decision": "hold",
+      "reason": "Official curriculum and compendium reproduce the mark. Its meaning was not verified.",
+      "sources": [
+        "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+        "https://www.nmc.org.in/MCIRest/open/getDocument?path=%2FDocuments%2FPublic%2FPortal%2FE_Compendium_of_NMC_2024%2F10.+Curriculum.pdf"
+      ]
+    }
+  },
+  "completionTrackerSnapshot": {
+    "totals": {
+      "appearances": 2634,
+      "withProposedObjectives": 11,
+      "withDraftArtifactBindings": 3,
+      "historicalDeletions": 1
+    },
+    "sourceAccountingComplete": true,
+    "foundationComplete": false,
+    "productionStateVerified": false
+  },
+  "foundationComplete": false,
+  "mappingAccepted": false,
+  "next": "Validate a source-linked names-only projection that distinguishes concept proposals, navigation headings, alias candidates and held entries."
+}

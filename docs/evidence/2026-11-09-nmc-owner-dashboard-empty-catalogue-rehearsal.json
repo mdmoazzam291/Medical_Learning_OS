@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "scope": "Disposable PostgreSQL, exact Owner dashboard SQL and synthetic dependency tables",
+  "verified": {
+    "ownerDashboardContract": true,
+    "emptyContentCounts": true,
+    "anonAndAuthenticatedDeniedDirectRpc": true
+  },
+  "remaining": [
+    "Owner access-summary RPC and full hosted schema bootstrap",
+    "Staging deployment and genuine reviewer and learner session verification"
+  ],
+  "hostedChangesApplied": false
+}

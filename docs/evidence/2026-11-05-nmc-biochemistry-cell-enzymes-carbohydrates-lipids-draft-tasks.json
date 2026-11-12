@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
+      "subjectId": "biochemistry",
+      "code": "BC1.1",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        192.48,
+        108.5,
+        250.44
+      ],
+      "sourceBodySha256": "9ed4387823ac0f04a74987b85cd3dbd183855b4ca732b651d03604dda5e83eb5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell and membranes",
+      "draftLearningTask": "Map molecular components to organelle functions and explain how membrane composition supports compartmentalization, transport and signalling.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
+      "subjectId": "biochemistry",
+      "code": "BC2.1",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        278.88,
+        108.5,
+        328.2
+      ],
+      "sourceBodySha256": "c52370d7919e818af0ec97ba0b914a723e3f33fbf0475055a53f96217e8d67f0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enzyme classification",
+      "draftLearningTask": "Distinguish enzymes, isoenzymes and coenzymes and classify representative reactions using IUBMB classes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63",
+      "subjectId": "biochemistry",
+      "code": "BC2.2",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        328.2,
+        108.5,
+        357.78
+      ],
+      "sourceBodySha256": "a405b28ca2c07fff045f1d110f766403825d3de598d97975870061eaa0e3850e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enzyme kinetics",
+      "draftLearningTask": "Interpret substrate–velocity curves and predict effects of concentration, temperature and pH on activity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183",
+      "subjectId": "biochemistry",
+      "code": "BC2.3",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        357.78,
+        108.5,
+        395.22
+      ],
+      "sourceBodySha256": "e8cc6f15e10cdd04204eb7b8c900ef7f2cd1726f0520e411843d1c303a443db0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enzyme inhibition and therapy",
+      "draftLearningTask": "Compare inhibition patterns and explain representative uses of enzyme inhibitors and therapeutic enzymes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8",
+      "subjectId": "biochemistry",
+      "code": "BC2.4",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        395.22,
+        108.5,
+        428.7
+      ],
+      "sourceBodySha256": "ece5779c4bd04b49627a8a73f2d4d9df9918e605ba87a814858c2c9e356c2205",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Serum enzyme markers",
+      "draftLearningTask": "Relate representative serum enzymes and isoenzymes to their tissue sources and mechanisms of elevation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
+      "subjectId": "biochemistry",
+      "code": "BC2.5",
+      "page": 162,
+      "rowBBox": [
+        58.7,
+        428.7,
+        108.5,
+        468.3
+      ],
+      "sourceBodySha256": "7f0d0b0a5d877be3f9d3cbd17910fa12b7d1f3cb07f265d1cdea787795935b14",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enzyme result interpretation",
+      "draftLearningTask": "Interpret representative enzyme panels and trends in clinical context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
+      "subjectId": "biochemistry",
+      "code": "BC3.1",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        124.5,
+        108.5,
+        179.64
+      ],
+      "sourceBodySha256": "3cfe43f1387d91b0b5ae091ad6c59349f8858a3efc62f461d71782c6218c7fd2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Carbohydrate classes",
+      "draftLearningTask": "Classify representative carbohydrates and relate their structures to fuel, storage and structural roles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930",
+      "subjectId": "biochemistry",
+      "code": "BC3.2",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        179.64,
+        108.5,
+        213.42
+      ],
+      "sourceBodySha256": "fd73301e8be945b3b744c705096ec06ed0668d4a51e5f9b282f8b4be4a836da4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Carbohydrate digestion",
+      "draftLearningTask": "Trace hydrolysis, intestinal uptake and portal transport and explain representative malabsorption mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+      "subjectId": "biochemistry",
+      "code": "BC3.3",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        213.42,
+        108.5,
+        271.44
+      ],
+      "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Major carbohydrate pathways",
+      "draftLearningTask": "Map glycolysis, gluconeogenesis, TCA, glycogen metabolism and pentose phosphate flux and relate regulation and pathway defects to physiological states.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+      "subjectId": "biochemistry",
+      "code": "BC3.4",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        271.44,
+        108.5,
+        315.3
+      ],
+      "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Minor carbohydrate pathways",
+      "draftLearningTask": "Compare representative fructose, galactose, polyol and uronic acid pathways and explain selected associated disorders.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+      "subjectId": "biochemistry",
+      "code": "BC3.5",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        315.3,
+        108.5,
+        373.26
+      ],
+      "sourceBodySha256": "a138a0ccaf90b6e5681cb97ab5b41f734b40f3f1e54f7adb2f2b7443a3a71bde",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Glucose homeostasis and diabetes",
+      "draftLearningTask": "Predict fed and fasting responses and compare major diabetes types, biochemical changes, complications and laboratory assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d",
+      "subjectId": "biochemistry",
+      "code": "BC3.6",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        373.26,
+        108.5,
+        416.88
+      ],
+      "sourceBodySha256": "858dbc55430aecdf642938d0345e17c9a92c1caca165d22a6bd722ac29cd5671",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Carbohydrate test interpretation",
+      "draftLearningTask": "Interpret representative glucose, HbA1c and related biochemical results and explain the limitations of each test.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
+      "subjectId": "biochemistry",
+      "code": "BC4.1",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        443.88,
+        108.5,
+        472.32
+      ],
+      "sourceBodySha256": "248e247d7f5eada18228313e8d1e85589357de3748f6621dd36477f6e5943aed",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lipid classes",
+      "draftLearningTask": "Classify representative lipids and relate their properties to storage, membranes and signalling.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e",
+      "subjectId": "biochemistry",
+      "code": "BC4.2",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        472.32,
+        108.5,
+        503.28
+      ],
+      "sourceBodySha256": "564b80c188d840611c7aa4e57d2257face2ef6166abc1030520f06f540f8790f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lipid digestion and uptake",
+      "draftLearningTask": "Trace emulsification, hydrolysis, micellar uptake and chylomicron assembly and explain representative malabsorption mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+      "subjectId": "biochemistry",
+      "code": "BC4.3",
+      "page": 163,
+      "rowBBox": [
+        58.7,
+        503.28,
+        108.5,
+        542.88
+      ],
+      "sourceBodySha256": "53cb7e7540d7313848578e86ebcabb25e005f21c9b4c5904fed7ce3730c1c110",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fatty acid oxidation and ketones",
+      "draftLearningTask": "Trace beta-oxidation, ketone synthesis and use, and explain representative disturbances.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+      "subjectId": "biochemistry",
+      "code": "BC4.4",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        124.5,
+        108.5,
+        168.06
+      ],
+      "sourceBodySha256": "6360ee07db2f6f90da15545410e815ace4230585cdb7dc19fa66d522bed857eb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Triglycerides and cholesterol",
+      "draftLearningTask": "Map synthesis, breakdown and regulation and relate altered flux to clinical patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
+      "subjectId": "biochemistry",
+      "code": "BC4.5",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        168.06,
+        108.5,
+        211.98
+      ],
+      "sourceBodySha256": "985400e3be8e67f6fbf9debdedb68632b556b33f25c0ecd52752731d9dafaed9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lipoproteins",
+      "draftLearningTask": "Trace major lipoprotein pathways, apolipoprotein roles and links to atherosclerosis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6",
+      "subjectId": "biochemistry",
+      "code": "BC4.6",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        211.98,
+        108.5,
+        250.08
+      ],
+      "sourceBodySha256": "5479887d021235c13cbb824f2dceadb262047394cf700d27f6812ce679625c8e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Eicosanoids",
+      "draftLearningTask": "Map major pathways from arachidonic acid and relate mediators, inhibitors and therapeutic uses.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+      "subjectId": "biochemistry",
+      "code": "BC4.7",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        250.08,
+        108.5,
+        287.58
+      ],
+      "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fatty liver, gallstones and obesity",
+      "draftLearningTask": "Compare biochemical mechanisms of hepatic lipid accumulation, cholesterol stone formation and excess adiposity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+      "subjectId": "biochemistry",
+      "code": "BC4.8",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        287.58,
+        108.5,
+        327.84
+      ],
+      "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lipid test interpretation",
+      "draftLearningTask": "Interpret a representative lipid panel and explain how sampling and calculation limitations affect the result.",
+      "mode": "knowledge"
+    }
+  ]
+}

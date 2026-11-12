@@ -23,6 +23,14 @@ jobs:
       - run: npm run check
       - run: npm run build:pages
       - run: npm test
+      - name: Verify endocarditis draft components and learning bundle
+        run: |
+          node ops/nmc/verify-endocarditis-blueprints.js
+          node ops/nmc/verify-endocarditis-bundle.js
+      - name: Verify NMC source accounting and draft learning bindings
+        run: |
+          node ops/nmc/verify-respiratory-bindings.js
+          node ops/nmc/report-completion-gaps.js > "$RUNNER_TEMP/nmc-completion-gaps.json"
       - run: python3 -m unittest discover -s ops/content-reset -p 'test_*.py' -v
       - name: Verify question intelligence against isolated PostgreSQL
         run: |

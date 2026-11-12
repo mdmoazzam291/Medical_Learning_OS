@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "33ea378070832ae304d1ab594a13cd0ef1db732b",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-scoped-task-overlap-source-review.json",
+      "blobSha": "8cd76bfa941031d9caacfc61d8b2ad7fa1b9e2e4"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-mixed-existing-scope-review.json",
+      "blobSha": "8da061c12ba70045e2cb9f7b7fa42357808b5bc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-scoped-task-final-disposition-coverage.json",
+      "blobSha": "2753c0b52756ea2e047b08fe5e3be000cd7656bb"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-family-final-disposition-coverage.json",
+      "blobSha": "1977f7d11b9e1cd68a0ae6c4b432aa3461690ed1"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-mixed-disposition-coverage-and-sterilization.json",
+      "blobSha": "8c770e0ebe68e73b5b793ea3f924b98ec6e92d55"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-standalone-disposition-coverage.json",
+      "blobSha": "b543d26193a91f39d849627b9d2f9ec188074524"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-family-alternate-label-and-name-consolidation.json",
+      "blobSha": "4c01fdfe3baa08cce56ee35b893dd34af3006d90"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-completion-audit.json",
+      "blobSha": "50f5387e88191e817ae57fded49a11c7621d9b55"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-context-parent-names-only-proposals.json",
+      "blobSha": "d677825e64f8a5ff1d607ee7ccc7d8ba9bd49402"
+    }
+  ],
+  "scopeDecisions": [
+    {
+      "proposalId": "nmc-scoped-home-13:06",
+      "facet": "Joint pain assessment",
+      "proposedParent": "Pain assessment",
+      "relatedTopic": "Joint pain",
+      "decision": "reuse-assessment-context-with-separate-source-evidence",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7cc979a4d27d4a30c5740db086c4a6f82c9dbba90fa73a75eaaa1a1b088ec416",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.3",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            447.6,
+            102.7,
+            474.96
+          ],
+          "sourceBodySha256": "aded2f6dea6d8f3dbbc4a995556c806301d0b0d48c7af0972fc940d3c063a752",
+          "editorialTaskSha256": "4a9fce4ec35a3b967afe0151be964050a55e88a6ee3074e5bc524ff14192a54a",
+          "mode": "knowledge"
+        }
+      ],
+      "contextComparisons": [
+        {
+          "reviewIndex": 21,
+          "sourceNameKey": "pain assessment",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+              "competencyCode": "AS8.2"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-13:21",
+      "facet": "Lipid test interpretation",
+      "relatedTopic": "Lipid metabolism",
+      "decision": "retain-diagnostic-interpretation-facet-separately-from-metabolic-mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC4.8",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            287.58,
+            108.5,
+            327.84
+          ],
+          "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+          "editorialTaskSha256": "14a9708c46e2a6e1b18c5036df2f6094ad659f0a308e233a649032fba0db30db",
+          "mode": "knowledge"
+        }
+      ],
+      "additionalEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
+          "code": "BC14.19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "namesOnly": {
+    "standalone": 570,
+    "mixedReuseLeads": 60,
+    "familyReuseLeads": 78,
+    "scopedTasks": 659,
+    "proposedNames": 78,
+    "reviewedReferenceCount": 338
+  },
+  "completionTrackerSnapshot": {
+    "totals": {
+      "appearances": 2634,
+      "withProposedObjectives": 11,
+      "withDraftArtifactBindings": 3,
+      "historicalDeletions": 1
+    },
+    "sourceAccountingComplete": true,
+    "foundationComplete": false,
+    "productionStateVerified": false
+  },
+  "next": "Reconcile the 21 source-exception records at the metadata level and identify any unresolved names-only scope."
+}

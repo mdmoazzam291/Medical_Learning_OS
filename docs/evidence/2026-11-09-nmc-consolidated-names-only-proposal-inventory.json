@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-exact-label-names-only-proposals.json",
+      "blobSha": "58dc68ff439b1382333ec3de64deb240baef6bfa"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-proposal-worklist-reconciliation.json",
+      "blobSha": "4651e1c79c06868e40171d036fcf014a5236a9bf"
+    }
+  ],
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body"
+  ],
+  "distinctSourceReferences": 75,
+  "duplicateNormalizedNames": 0,
+  "duplicateSourceReferences": 0,
+  "crossCohortMergeCandidates": [],
+  "scopeAssessment": "The earlier arterial sampling, endometrial carcinoma, peripheral IV and ocular names have distinct scope from the 25 exact-label names. Related clinical tasks such as blood pressure measurement and arterial sampling stay separate.",
+  "contextFacet": {
+    "name": "Emergency peripheral IV access",
+    "parentProposalName": "Peripheral IV cannulation",
+    "contextSourceRefs": [
+      {
+        "id": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+        "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+        "code": "PE24.13"
+      }
+    ],
+    "mappingAccepted": false
+  },
+  "proposedRelationship": {
+    "type": "narrower-scope",
+    "from": "Corneal foreign body",
+    "to": "Ocular foreign body"
+  },
+  "mappingAccepted": false
+}

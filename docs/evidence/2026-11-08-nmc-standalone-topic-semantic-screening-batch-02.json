@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-01.json",
+    "sha256": "446325416f9d3f09ac88aee5bd4203a80a436f4b2efdd974f9e353fcca51532d"
+  },
+  "reviewedTopics": 17,
+  "cumulativeReviewedTopics": 33,
+  "remainingTopics": 479,
+  "nextTopicNameKey": "autism",
+  "rows": [
+    {
+      "topicNameKey": "allergic rhinitis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2301693b81005a49d481d148ed0f0235b248dda7cb44a9ef60ddf917928bddc8",
+        "nmc-2024-ref:62a7ad1fcdb97dcd9ba1d194e797fa59f8a60c6b1d31f29e52cc9c1aa602db75"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0",
+        "nmc-2024-ref:f2a5c35d02a4f5c962054e717dd16490b36f709cccf5d089452e48642056550e",
+        "nmc-2024-ref:58a4d1439a3ec19c55c453f0a4793b3c39ac3bc6f6b9ff496eae35e114de55a8"
+      ],
+      "scopeComparison": "Preserve allergic rhinitis clinical objectives and age context. Drug comparison and nonallergic or broader rhinitis remain separate.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "amblyopia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:946230dea78b09e9dd815e566f9b26b29d24c51354844008c3ea060422cf2ba3"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain amblyopia classification and refractive amblyopia scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "amenorrhoea",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c345a57567bc79cdfb198160a977fa6815bdc690a57af9f946f43846f9e1f17b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain primary and secondary amenorrhoea assessment.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ammonia metabolism",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain ammonia production, transport and detoxification scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ammunition examination",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c3413a9d773488535459b1ba3188c899a44da52c9d1d2301a39c75a21968e09b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain forensic examination of ammunition components.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "amniocentesis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:60ed1df241190b97bf50920172b8e52b9bd8f086e63afdba9f3feaf756c75919"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:f9a4416841b1c78af4a9b38258675538f21ec4a5138c6277139f10586d18a60d"
+      ],
+      "scopeComparison": "Amniocentesis is a procedure within prenatal diagnosis. Keep diagram-based acquisition and limits distinct from method comparison.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "angle-closure glaucoma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:77d02d574787a68f447df385bbe5a50200632e20abc765da73d8aed68a675e28"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:12ebfe530e5fa2d5a14e91ca1f668265273afe8334ce0fa8bbecd4410cfa76e8",
+        "nmc-2024-ref:bc17f982c045fa7fa79c4709c232506d3972ae9e40e931e83556da8240d26568"
+      ],
+      "scopeComparison": "Keep acute angle closure distinct from open-angle and secondary mechanisms.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "anorectal examination",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2a089c5c6c5b893bcd555652ecd90139a365d2f045b000e88b437521736f85cd"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain mannequin anorectal assessment and consent.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "antepartum haemorrhage",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8270ae1505883fdc7e933197ec29f05ec4b223e15856d55e0a4c9ca87a95c8b2"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain antepartum bleeding causes and stabilization scope.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "antimicrobial chemotherapy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f7109b11ff659f2b31b5cd10210fa2eec569068cc9bd3eabeadec383db11d6c1"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:97158fb5442fe1a8dd5783aa8050979b155d8bd5dc59799a220b15267cc60507",
+        "nmc-2024-ref:f702cf08402c184aa2050eb44b358d7aec07f60409119cf267f2ce5757be8d3d"
+      ],
+      "scopeComparison": "Selective toxicity and exposure are distinct from stewardship decisions. Resistance provides a related link.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "antimicrobial stewardship",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:97158fb5442fe1a8dd5783aa8050979b155d8bd5dc59799a220b15267cc60507",
+        "nmc-2024-ref:f702cf08402c184aa2050eb44b358d7aec07f60409119cf267f2ce5757be8d3d"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:986f2075ab7d32e6a3dc22a4074c76e5114c4d72322a41c1b6c725fbfd8d1e74",
+        "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+        "nmc-2024-ref:8b1b67e430f3efa742d192e093464bb13f25b827914374f8230fcb62394469a3"
+      ],
+      "scopeComparison": "Preserve stewardship across both sources and retain separate empiric, susceptibility-guided and surgical prescribing objectives.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "aphakia",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:dc5e785357d8a8c998f16468c9efc26493f8e6bff0c82492e4c705b419223b8b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain aphakia assessment and optical rehabilitation.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "apoptosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4fcae1fedd037114cbafb572b4405eca78fcd8002573a67cdabae28b7c4a3d5f"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e"
+      ],
+      "scopeComparison": "Apoptosis is shared with the cell-death comparison. Retain pathway and morphology objectives separately.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "apparent death",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:a8e7055e0d3d8eb4cd5a73fc4c6535607317d517d9d8e88d3ea9eb816ab5d745"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain simulated recognition of circumstances mimicking death.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "arterial blood gas sampling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+        "nmc-2024-ref:0fb2b00f258b6b17a8ce8b0d224834da45e075a19b0e2242ca6e78c094042a8b"
+      ],
+      "scopeComparison": "Sampling overlaps with GM3.8. Keep indications and safety, specimen handling and blood gas interpretation distinct.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "arterial sampling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+        "nmc-2024-ref:0fb2b00f258b6b17a8ce8b0d224834da45e075a19b0e2242ca6e78c094042a8b"
+      ],
+      "scopeComparison": "Arterial sampling in this source specifically means blood gas sampling. Retain mannequin and handling objectives, with interpretation separate.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "ascitic fluid analysis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4901ce83fb21bf58612626e1f0a17cfd2f6086ea13a8bbd333f854ae2a61ecfe"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Retain supervised or simulated assistance and interpretation of the supplied ascitic fluid panel.",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

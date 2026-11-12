@@ -89,7 +89,7 @@ test('Admin expanded menu renders single destinations without cross-workspace pi
       href + ' must appear once when both parent and first child target it');
   }
   assert.match(local, /data-group="admin:content" open data-active="true"/);
-  assert.match(local, /href="\/web\/admin.html#owner-source-watch" aria-current="page"/);
+  assert.doesNotMatch(local, /href="\/web\/admin.html#owner-(?:integrity|source-watch)"/);
   assert.ok(!local.includes('Open Content &amp; Quality'));
 });
 

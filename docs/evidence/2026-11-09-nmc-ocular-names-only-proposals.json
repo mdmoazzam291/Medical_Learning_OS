@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "registryReadbackBlobSha": "f186f28a98fca32093d21adbff89243f943e43e4",
+  "scopeEvidenceBlobSha": "a561e9eba7e9695ad9b612ed2722032000e8eff1",
+  "identities": [
+    {
+      "name": "Ocular foreign body",
+      "sourceReferences": [
+        {
+          "id": "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+          "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "code": "OP3.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Corneal foreign body",
+      "sourceReferences": [
+        {
+          "id": "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+          "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "code": "OP4.9"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "proposedRelationship": {
+    "type": "narrower-scope",
+    "from": "Corneal foreign body",
+    "to": "Ocular foreign body"
+  }
+}

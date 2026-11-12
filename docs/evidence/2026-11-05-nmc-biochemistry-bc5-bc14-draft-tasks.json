@@ -1,0 +1,1208 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
+      "subjectId": "biochemistry",
+      "code": "BC5.1",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        361.02,
+        108.5,
+        392.28
+      ],
+      "sourceBodySha256": "545630bbc32a3494a4cea199407adef2a5c9de76f6f6c7439971ae668be78fc2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Amino acids",
+      "draftLearningTask": "Classify amino acids by side-chain properties, nutritional requirement and metabolic fate.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810",
+      "subjectId": "biochemistry",
+      "code": "BC5.2",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        392.28,
+        108.5,
+        423.6
+      ],
+      "sourceBodySha256": "ae695d85bb4451c5dc0ad517ff75cf53d06f75096954c8f1b1dabab0e7769f5b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Protein structure",
+      "draftLearningTask": "Compare protein classes and structural levels and relate folding or structural disruption to function and disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64",
+      "subjectId": "biochemistry",
+      "code": "BC5.3",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        423.6,
+        108.5,
+        455.28
+      ],
+      "sourceBodySha256": "6c1beec28d50bbf7200a28cbc0119eb5abbf672fa87fcc72dac0a51a57234434",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Protein digestion",
+      "draftLearningTask": "Trace proteolysis and uptake of amino acids and small peptides.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
+      "subjectId": "biochemistry",
+      "code": "BC5.4",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        455.28,
+        108.5,
+        499.2
+      ],
+      "sourceBodySha256": "9040c20facfa82f74f68d6b3c268bc779a4bf6c04896afa21d6e651b7c231c25",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Plasma proteins",
+      "draftLearningTask": "Relate major proteins to function and compare normal, inflammatory and representative abnormal electrophoretic patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
+      "subjectId": "biochemistry",
+      "code": "BC5.5",
+      "page": 164,
+      "rowBBox": [
+        58.7,
+        499.2,
+        108.5,
+        537.06
+      ],
+      "sourceBodySha256": "e74377023d6f665b9b60e31245e6e4598e5612d3c683acb8b1ee3dee882ccf67",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunoglobulins",
+      "draftLearningTask": "Map antibody domains to function, compare classes and disorders, and contrast humoral and cellular immunity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138",
+      "subjectId": "biochemistry",
+      "code": "BC5.6",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        124.5,
+        108.5,
+        153.66
+      ],
+      "sourceBodySha256": "84de6464ce951ccc68b62213794dd317789ed47e8d2391e8be4d9af167334d40",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ammonia metabolism",
+      "draftLearningTask": "Trace production, transport and detoxification of ammonia and explain the consequences of accumulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+      "subjectId": "biochemistry",
+      "code": "BC5.7",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        153.66,
+        108.5,
+        200.46
+      ],
+      "sourceBodySha256": "a5f2b925be58f9759488e26ac7218c3386b2b86f46cd35f8289ff2d1c61aa631",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Amino acid derivatives and screening",
+      "draftLearningTask": "Map specialized products and representative disorders for glycine, phenylalanine, tyrosine, tryptophan, methionine, branched-chain amino acids and arginine. Interpret a simulated newborn screening result and identify the need for confirmation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+      "subjectId": "biochemistry",
+      "code": "BC5.8",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        200.46,
+        108.5,
+        244.02
+      ],
+      "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haem and porphyrins",
+      "draftLearningTask": "Trace haem synthesis and degradation and distinguish biochemical mechanisms of porphyrias and jaundice.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+      "subjectId": "biochemistry",
+      "code": "BC5.9",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        244.02,
+        108.5,
+        287.88
+      ],
+      "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemoglobin forms",
+      "draftLearningTask": "Distinguish physiological forms, chemical derivatives and inherited variants by structure and functional consequences.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf",
+      "subjectId": "biochemistry",
+      "code": "BC6.1",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        309.48,
+        108.5,
+        351.24
+      ],
+      "sourceBodySha256": "28b60e8d0ded4eb88d454ff87bcacb38ae7da99e61401e236d938df9c8fcd76b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Extracellular matrix",
+      "draftLearningTask": "Group the major matrix components and explain their mechanical and signalling functions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378",
+      "subjectId": "biochemistry",
+      "code": "BC6.2",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        351.24,
+        108.5,
+        384.36
+      ],
+      "sourceBodySha256": "b3be91e69b787ea3ab7a707785acb21ade2b9f5b563454aae50c1ac3d192414e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Matrix disorders",
+      "draftLearningTask": "Relate defects in representative matrix proteins or their turnover to disease mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe",
+      "subjectId": "biochemistry",
+      "code": "BC6.3",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        384.36,
+        108.5,
+        417.48
+      ],
+      "sourceBodySha256": "c91504608edaa20512964bebee5a8994afb4b95a056ce6e4a876be0646e449e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Protein targeting",
+      "draftLearningTask": "Trace representative targeting and sorting signals and explain how disruption changes protein localization or function.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
+      "subjectId": "biochemistry",
+      "code": "BC7.1",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        448.74,
+        108.5,
+        475.08
+      ],
+      "sourceBodySha256": "f1bfdab5e470ada693c94b6ce6219bbb18ac22427f3374221f4086af18ebf0af",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Integrated metabolism",
+      "draftLearningTask": "Map carbohydrate, lipid and protein flux across tissues in fed, fasting and prolonged fasting states.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
+      "subjectId": "biochemistry",
+      "code": "BC7.2",
+      "page": 165,
+      "rowBBox": [
+        58.7,
+        475.08,
+        108.5,
+        508.56
+      ],
+      "sourceBodySha256": "43c0d2230ae255e491b0feb18477ea92735b2cbaf16da13e37d1253ab23620c1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cellular energy",
+      "draftLearningTask": "Compare substrate-level and oxidative phosphorylation and predict effects of disrupted electron transport or coupling.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
+      "subjectId": "biochemistry",
+      "code": "BC8.1",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        124.5,
+        108.5,
+        160.14
+      ],
+      "sourceBodySha256": "13969f767dc55675adcace7e8ecac6bd87aafa9f08096cf5a8478114ed310283",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vitamins",
+      "draftLearningTask": "Link each major vitamin to its biochemical role and predict representative deficiency findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+      "subjectId": "biochemistry",
+      "code": "BC8.2",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        160.14,
+        108.5,
+        195.78
+      ],
+      "sourceBodySha256": "eeac77f3c9ccea3f675b73b3c317ad5cf2c5ed34ec344de1ba4495ebf55530b6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dietary components",
+      "draftLearningTask": "Compare macronutrient and micronutrient roles and explain how fibre affects digestive and metabolic physiology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5",
+      "subjectId": "biochemistry",
+      "code": "BC8.3",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        195.78,
+        108.5,
+        227.52
+      ],
+      "sourceBodySha256": "2b5ba0a123834ac30c4179f796893b2c23fea3af993f79c70d57492d7c66169d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Protein–energy malnutrition",
+      "draftLearningTask": "Compare causes, biochemical consequences and representative clinical patterns of protein–energy malnutrition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d",
+      "subjectId": "biochemistry",
+      "code": "BC8.4",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        227.52,
+        108.5,
+        273.24
+      ],
+      "sourceBodySha256": "1212d76c40adcf116267b317a7344de4f21e14c053963c6d39a2ed5e2cd36912",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Dietary counselling",
+      "draftLearningTask": "Use simulated cases to communicate dietary priorities in childhood, adulthood, diabetes, coronary disease and pregnancy.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+      "subjectId": "biochemistry",
+      "code": "BC8.5",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        273.24,
+        108.5,
+        318.96
+      ],
+      "sourceBodySha256": "a548ba469c6c1143331763b59a9b96b151683f4902f0d9822337a36d6b09e85d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity and metabolic syndrome",
+      "draftLearningTask": "Connect dietary and other determinants to adiposity, metabolic changes and health risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899",
+      "subjectId": "biochemistry",
+      "code": "BC8.6",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        318.96,
+        108.5,
+        364.68
+      ],
+      "sourceBodySha256": "37c5262d12491c8b12f56d5fb812fc145f21d3ce75dc71194b5a9fe3fd884178",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Food composition",
+      "draftLearningTask": "Compare common foods including fruit and vegetables by nutrient composition and explain their dietary contributions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+      "subjectId": "biochemistry",
+      "code": "BC9.1",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        393.84,
+        108.5,
+        442.44
+      ],
+      "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Iron, calcium and copper",
+      "draftLearningTask": "Compare sources, uptake, transport, metabolism and functions and explain representative disorders of each mineral.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220",
+      "subjectId": "biochemistry",
+      "code": "BC9.2",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        442.44,
+        108.5,
+        479.22
+      ],
+      "sourceBodySha256": "19e39fd06aab913b28076f8a9477dfeee8b49b4f62168481751afac2a77d1b11",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Other minerals and trace elements",
+      "draftLearningTask": "Relate magnesium, zinc, phosphate and representative trace elements to biochemical functions and consequences of imbalance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+      "subjectId": "biochemistry",
+      "code": "BC9.3",
+      "page": 166,
+      "rowBBox": [
+        58.7,
+        479.22,
+        108.5,
+        523.14
+      ],
+      "sourceBodySha256": "b55c48ff3ecc010e4cbc234ddc8c1ad5faa8c5448772ef892df40cf8746b4588",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acid–base, water and electrolytes",
+      "draftLearningTask": "Use sample data to explain normal regulation and distinguish representative disturbances.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5",
+      "subjectId": "biochemistry",
+      "code": "BC10.1",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        156.18,
+        108.5,
+        184.98
+      ],
+      "sourceBodySha256": "bd4e89bac75db81d10770b91bb2f879fdfff2998c45fa685f9d6b12796756bdd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nucleotides and nucleic acids",
+      "draftLearningTask": "Compare structures and functions of nucleotides, DNA and RNA and relate selected abnormalities to disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227",
+      "subjectId": "biochemistry",
+      "code": "BC10.2",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        184.98,
+        108.5,
+        224.28
+      ],
+      "sourceBodySha256": "fbf4f100a01603304b4a5702b7616df595404355beeb709cab4a84f4531c7f3e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Purine synthesis",
+      "draftLearningTask": "Contrast de novo production and salvage and identify key substrates, enzymes and regulatory points.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+      "subjectId": "biochemistry",
+      "code": "BC10.3",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        224.28,
+        108.5,
+        266.34
+      ],
+      "sourceBodySha256": "87c32d6d87d0b3949d8531e1a1f6ad39bbcf2fd2eb360632c4c7a0ffad9d6835",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Purine degradation",
+      "draftLearningTask": "Trace degradation to urate and explain representative disorders of breakdown or accumulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+      "subjectId": "biochemistry",
+      "code": "BC10.4",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        266.34,
+        108.5,
+        308.46
+      ],
+      "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Information flow",
+      "draftLearningTask": "Diagram the major steps of DNA replication, transcription and translation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+      "subjectId": "biochemistry",
+      "code": "BC10.5",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        308.46,
+        108.5,
+        340.86
+      ],
+      "sourceBodySha256": "a38d58efb79aaf90ceb46c6c65d585ffade3f089704ce9bdac7eaed7406870ef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "DNA repair and mutations",
+      "draftLearningTask": "Compare repair pathways and mutation classes and link defects to representative disorders.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1",
+      "subjectId": "biochemistry",
+      "code": "BC10.6",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        340.86,
+        108.5,
+        371.82
+      ],
+      "sourceBodySha256": "892c67a33744517e296a293c814adb804ac6d2bb7bf088316ab7b602a75ad4e7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Gene expression",
+      "draftLearningTask": "Explain how regulatory elements, transcription factors and post-transcriptional processes alter expression.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+      "subjectId": "biochemistry",
+      "code": "BC10.7",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        371.82,
+        108.5,
+        429.06
+      ],
+      "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Molecular technologies",
+      "draftLearningTask": "Compare recombinant DNA, PCR, microarrays, FISH and CRISPR by mechanism, applications and limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+      "subjectId": "biochemistry",
+      "code": "BC11.1",
+      "page": 167,
+      "rowBBox": [
+        58.7,
+        456.78,
+        108.5,
+        493.56
+      ],
+      "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organ function panels",
+      "draftLearningTask": "Explain the purpose of renal, hepatic, thyroid and adrenal tests and interpret representative reports in context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+      "subjectId": "biochemistry",
+      "code": "BC11.2",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        124.5,
+        108.5,
+        188.94
+      ],
+      "sourceBodySha256": "15627baabcbfbe4fb5255bd54b990508ff26d4a6382eb4382c82576ab66f3a06",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reproductive markers",
+      "draftLearningTask": "Interpret LH, FSH, prolactin, beta-hCG, oestrogen, progesterone, testosterone and AMH in representative contexts and distinguish prenatal screening from diagnosis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786",
+      "subjectId": "biochemistry",
+      "code": "BC12.1",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        222.78,
+        108.5,
+        251.94
+      ],
+      "sourceBodySha256": "592b08263409417bcc4bae6fc3b62e1aa8dff589a284100d98e54a18846add6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Xenobiotic metabolism",
+      "draftLearningTask": "Trace representative xenobiotics through biotransformation and explain how detoxification or bioactivation affects health.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
+      "subjectId": "biochemistry",
+      "code": "BC12.2",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        251.94,
+        108.5,
+        283.32
+      ],
+      "sourceBodySha256": "5d3b2a46aecf8e88c1fd6e0caeca60bedc3fabcab2a13119aa79f69574cddaf8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antioxidant defences",
+      "draftLearningTask": "Map enzymatic and non-enzymatic defences to the reactive species they help control.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78",
+      "subjectId": "biochemistry",
+      "code": "BC12.3",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        283.32,
+        108.5,
+        323.64
+      ],
+      "sourceBodySha256": "7060afd7c59f25d2899695599e2fb3a9878508ed71da58ae774b16f40bf8242d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oxidative stress",
+      "draftLearningTask": "Relate oxidative injury to representative mechanisms in cancer, diabetes complications and atherosclerosis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2",
+      "subjectId": "biochemistry",
+      "code": "BC13.1",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        347.34,
+        108.5,
+        388.02
+      ],
+      "sourceBodySha256": "cba88cb115c861f1270812b58711de7d9ab371290ddd1de71a5c409daefcd75b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oncogenesis",
+      "draftLearningTask": "Distinguish oncogene activation from loss of tumour suppression and explain how p53 and apoptosis influence cell survival.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9",
+      "subjectId": "biochemistry",
+      "code": "BC13.2",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        388.02,
+        108.5,
+        421.86
+      ],
+      "sourceBodySha256": "a791cef0380f7ff516bf4f1c9d81c1623c859bcd4218025923dc30eb75619292",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tumour markers and therapy",
+      "draftLearningTask": "Compare representative biochemical markers by clinical purpose and explain the biochemical targets of selected therapies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2",
+      "subjectId": "biochemistry",
+      "code": "BC13.3",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        421.86,
+        108.5,
+        449.58
+      ],
+      "sourceBodySha256": "44510d3e7a8d84d1d9ebcea5ef1d76c3b032c03b0117521cbe341951e51bd8b5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV and biochemical changes",
+      "draftLearningTask": "Relate HIV disease to representative metabolic or laboratory changes and distinguish effects of infection and treatment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3",
+      "subjectId": "biochemistry",
+      "code": "BC13.4",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        449.58,
+        108.5,
+        485.04
+      ],
+      "sourceBodySha256": "c540ae040f9f66604fcc0eb032bee1680de5397e7e9dcab0076021835e9cf5c2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Alcohol metabolism",
+      "draftLearningTask": "Trace ethanol metabolism and relate altered redox state and chronic exposure to biochemical consequences.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+      "subjectId": "biochemistry",
+      "code": "BC13.5",
+      "page": 168,
+      "rowBBox": [
+        58.7,
+        485.04,
+        108.5,
+        525.36
+      ],
+      "sourceBodySha256": "ea71e8a869926ba2bfc6a1e6e070ca5aae0cf159adea18b5c0d3b0ffecf4a6a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "AI in laboratory biochemistry",
+      "draftLearningTask": "Compare representative uses in quality control, workflow or result review and explain why local validation and human oversight matter.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+      "subjectId": "biochemistry",
+      "code": "BC14.2",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        203.94,
+        108.2,
+        254.7
+      ],
+      "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "pH measurement",
+      "draftLearningTask": "Explain pH meter and blood gas analyser measurement and interpret acid–base findings in sample cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+      "subjectId": "biochemistry",
+      "code": "BC14.3",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        254.7,
+        108.2,
+        324.18
+      ],
+      "sourceBodySha256": "5f2e2948e4167f7a37554df27977f53d3b9946300e84d58f133690da71b31e3d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urinalysis",
+      "draftLearningTask": "Using control and sample materials, assess physical properties and normal and abnormal constituents, demonstrate dipstick use and interpret findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+      "subjectId": "biochemistry",
+      "code": "BC14.4",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        324.18,
+        108.2,
+        368.52
+      ],
+      "sourceBodySha256": "9d835c2377e6158fb350f41eada18e0e1427a406effe3436a39dc33961f80477",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urine reporting",
+      "draftLearningTask": "Identify abnormal constituents in supplied specimens, correlate findings with possible mechanisms and prepare a laboratory report.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+      "subjectId": "biochemistry",
+      "code": "BC14.5",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        368.52,
+        108.2,
+        419.28
+      ],
+      "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Metabolic urine screening",
+      "draftLearningTask": "Explain the rationale and limits of urine screening for inborn errors and how paper chromatography separates analytes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618",
+      "subjectId": "biochemistry",
+      "code": "BC14.6",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        419.28,
+        108.2,
+        460.32
+      ],
+      "sourceBodySha256": "ac3ee876f2a82f20b1b6116f39165254ec9c7667fea58ec5719e725f50109bcf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Optical assays",
+      "draftLearningTask": "Explain absorbance, wavelength selection, calibration and the distinction between colorimetry and spectrophotometry.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
+      "subjectId": "biochemistry",
+      "code": "BC14.7",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        460.32,
+        108.2,
+        501.06
+      ],
+      "sourceBodySha256": "abaa4fdd0479040920eb610d7dddcb51b876c349fc8973a5134e299f9a0002f7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Glucose estimation",
+      "draftLearningTask": "Measure glucose using a manual or semi-automated method, demonstrate glucometer use and interpret representative results.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4",
+      "subjectId": "biochemistry",
+      "code": "BC14.8",
+      "page": 169,
+      "rowBBox": [
+        58.5,
+        501.06,
+        108.2,
+        530.58
+      ],
+      "sourceBodySha256": "8ad77edff13c8e019501b15d5c2efd18a8db0207e4bf7c74f6a23cf3d0a8b891",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urea estimation",
+      "draftLearningTask": "Measure urea, convert to BUN using consistent units and interpret representative results.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
+      "subjectId": "biochemistry",
+      "code": "BC14.9",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        122.22,
+        108.2,
+        151.8
+      ],
+      "sourceBodySha256": "121c75d21f79f8c2161ce30a45682dffe9d864b34132afe1d1595d3e27014f7d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Creatinine estimation",
+      "draftLearningTask": "Measure serum creatinine and calculate timed creatinine clearance from supplied urine and serum data.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc",
+      "subjectId": "biochemistry",
+      "code": "BC14.10",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        151.8,
+        108.2,
+        180.96
+      ],
+      "sourceBodySha256": "9507c4f6b501291eef4313cdf702bc3e8c33d67c63e3795211c020af70b22eb3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Uric acid estimation",
+      "draftLearningTask": "Measure serum urate and interpret the result in a representative clinical scenario.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415",
+      "subjectId": "biochemistry",
+      "code": "BC14.11",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        180.96,
+        108.2,
+        210.06
+      ],
+      "sourceBodySha256": "eba8475815c149cf2974affe08c07efadb31b9773a4411ac65e81106c32fd67e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Serum protein estimation",
+      "draftLearningTask": "Measure total protein and albumin, derive globulin and calculate the albumin-to-globulin ratio.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b",
+      "subjectId": "biochemistry",
+      "code": "BC14.12",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        210.06,
+        108.2,
+        248.58
+      ],
+      "sourceBodySha256": "1178b4b1237a6728879daba347386f739f75e29b3fdcf357a304484a8a3aa2d6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Total cholesterol estimation",
+      "draftLearningTask": "Measure serum total cholesterol using a supervised assay and document quality control and the result.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521",
+      "subjectId": "biochemistry",
+      "code": "BC14.13",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        248.58,
+        108.2,
+        292.14
+      ],
+      "sourceBodySha256": "262469271ea0c3490afb5525e1f81b692e909ba4317d2b6879f2f55bef8fd6ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bilirubin estimation",
+      "draftLearningTask": "Measure serum bilirubin using a manual or semi-automated method and document the result.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f",
+      "subjectId": "biochemistry",
+      "code": "BC14.14",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        292.14,
+        108.2,
+        335.7
+      ],
+      "sourceBodySha256": "e7ad01d355c39c8be8c48981520c1c68188eda545d45e16e4dcb65d89475d804",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Calcium and phosphate assays",
+      "draftLearningTask": "Explain representative measurement methods and interpret results in context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d",
+      "subjectId": "biochemistry",
+      "code": "BC14.15",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        335.7,
+        108.2,
+        379.62
+      ],
+      "sourceBodySha256": "16567a7c85a7000c8c7e527f17cc4065d7d3e733cdd7bbd366e71b6a88a7570f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lipid assays and calculated LDL",
+      "draftLearningTask": "Explain triglyceride and HDL measurement, calculate LDL from suitable data and recognize calculation limits.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
+      "subjectId": "biochemistry",
+      "code": "BC14.16",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        379.62,
+        108.2,
+        423.18
+      ],
+      "sourceBodySha256": "691fc5a3e1179c0e8c3836baf337a7c8ccef11d70f273772a832b0f12712ae8e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver enzyme assays",
+      "draftLearningTask": "Explain AST, ALT and alkaline phosphatase measurement and compare representative result patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
+      "subjectId": "biochemistry",
+      "code": "BC14.17",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        423.18,
+        108.2,
+        467.1
+      ],
+      "sourceBodySha256": "471446bda0a5a03447d5a6349fcfaebf4dfe49df9cbf2c639c0c8efe99abbdf2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Body fluids and CSF",
+      "draftLearningTask": "Compare representative body fluids and describe normal CSF composition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+      "subjectId": "biochemistry",
+      "code": "BC14.18",
+      "page": 170,
+      "rowBBox": [
+        58.5,
+        467.1,
+        108.2,
+        534.78
+      ],
+      "sourceBodySha256": "d17f084646fc55ef7c271200692c3cbc30dcd81b5f0a0fcc40801e4f6889d614",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Laboratory technique observation",
+      "draftLearningTask": "Observe pH measurement, amino acid paper chromatography and protein electrophoresis and explain what each technique measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
+      "subjectId": "biochemistry",
+      "code": "BC14.19",
+      "page": 171,
+      "rowBBox": [
+        58.5,
+        216.96,
+        108.2,
+        459.36
+      ],
+      "sourceBodySha256": "533a057de60caa4097d7a0552eb77523007a602c1ca4b67e55ef7556a4a8d096",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Case-based test interpretation",
+      "draftLearningTask": "Select and interpret tests in representative glycaemic, lipid, cardiac, renal, hepatic, pancreatic, thyroid, genetic, nutritional, acid–base, mineral and electrolyte cases. Include gout, nephrotic syndrome, jaundice and vitamin deficiency.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
+      "subjectId": "biochemistry",
+      "code": "BC14.20",
+      "page": 171,
+      "rowBBox": [
+        58.5,
+        459.36,
+        108.2,
+        513.36
+      ],
+      "sourceBodySha256": "43af83f9e60c842d5b111140a57498d7fa486ed68410a59aaa7a68c9690d6a49",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Laboratory errors",
+      "draftLearningTask": "Identify pre-analytical, analytical and post-analytical errors in a simulated workflow, including order of draw and tourniquet technique.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e",
+      "subjectId": "biochemistry",
+      "code": "BC14.21",
+      "page": 172,
+      "rowBBox": [
+        58.5,
+        122.22,
+        108.2,
+        185.28
+      ],
+      "sourceBodySha256": "1dca0654a57488255d71eff29fe04593eac6d12932073faecb5545ca5fc14213",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Laboratory quality control",
+      "draftLearningTask": "Identify Levey–Jennings chart patterns and explain how controls help detect shifts, trends or random error.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+      "subjectId": "biochemistry",
+      "code": "BC14.22",
+      "page": 172,
+      "rowBBox": [
+        58.5,
+        185.28,
+        108.2,
+        266.28
+      ],
+      "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Glycaemic testing",
+      "draftLearningTask": "Explain OGTT, glucose challenge and HbA1c testing and interpret representative results in clinical context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+      "subjectId": "biochemistry",
+      "code": "BC14.23",
+      "page": 172,
+      "rowBBox": [
+        58.5,
+        266.28,
+        108.2,
+        307.32
+      ],
+      "sourceBodySha256": "4fcd0dd2f1698118e2455bc4ef168fd0ca718d04c08b87df7c5cb51fa18acdee",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Food energy and glycaemic index",
+      "draftLearningTask": "Calculate food energy from macronutrients and compare the dietary implications of high and low glycaemic index foods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+      "subjectId": "biochemistry",
+      "code": "BC14.24",
+      "page": 172,
+      "rowBBox": [
+        58.5,
+        307.32,
+        108.2,
+        348.06
+      ],
+      "sourceBodySha256": "239565fdd20fba949914bf9b802cfb97f5fff483c1bf45c03d9b602064d26bb4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Clinical laboratory follow-up",
+      "draftLearningTask": "Review simulated baseline, diagnostic, prognostic and discharge results and explain how each informs the next decision.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "35262bf7d16f9804205ddcbd60fa265060e8f436",
+  "reviewBasis": "Existing source-linked draft tasks. Blood culture collection and sampling share a proposed facet with separate references. Pelvic diaphragm has a distinct anatomical scope from the existing diaphragm label.",
+  "rows": [
+    {
+      "nameKey": "adherence counselling",
+      "proposedParent": "Adherence",
+      "proposedFacet": "adherence counselling",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:1a30b9ada6f982c66b96e97c66c9ebb8d0787b5f0c0bd7930ce5d9fc87954894",
+          "code": "GM6.20"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "antiplatelets in stroke",
+      "proposedParent": "Stroke",
+      "proposedFacet": "antiplatelets in stroke",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:78f51194d5366a0ec5cbc2019192d3955a74ad383b6c848a420b323f06e3e3ef",
+          "code": "GM18.12"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "arrhythmias in heart failure",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "arrhythmias in heart failure",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:edf5b88c879dcd78165f71b1e6adfa33cb8c24d03ba277a3f7e4e8a5d24ee637",
+          "code": "GM1.7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood culture collection",
+      "proposedParent": "Blood culture",
+      "proposedFacet": "Blood culture collection",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26",
+          "code": "GM1.20"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood culture sampling",
+      "proposedParent": "Blood culture",
+      "proposedFacet": "Blood culture collection",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+          "code": "GM3.12"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "haemorrhagic stroke care",
+      "proposedParent": "Stroke",
+      "proposedFacet": "haemorrhagic stroke care",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d3285911a5b3402cb4ba8b6c4569327432c31a8392cb627a202b7de929c4f567",
+          "code": "GM18.13"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure compensation",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure compensation",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:bdb2c13e100d1ae645af647c93d710c15e438902a37e4f2cfa789bcade3e9ed8",
+          "code": "GM1.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure examination",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure examination",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:6d2ca10b6ede9cb0898b4f7fe3189d74327f499e2d84b64fac5fe2284881cb65",
+          "code": "GM1.9"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure history",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure history",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:59116e71ee1c8c2d1e727a943fd52b9def8f0d5a34baa544977e1d7e72375ccb",
+          "code": "GM1.8"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure management plan",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure management plan",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0216b34fde94865426c7253ea9036ca099e093d5d97ca91ec741b1e485946836",
+          "code": "GM1.24"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure medicines",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure medicines",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e496f319f75847aa5e8d96d3b94d4d1b5064cfe01143b394f2c452b46e092282",
+          "code": "GM1.22"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure phenotypes",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure phenotypes",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:c5125466b57bc1cdb4367592fdedc58b60968722b798e3504a6e66db6e29d39b",
+          "code": "GM1.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure precipitants",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure precipitants",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:44168bb413e80962f83d88a8cdf4fac1f8393d73d255bb800663ab5c937bf28e",
+          "code": "GM1.6"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "heart failure stages",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "heart failure stages",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:dee02340b5ea0a1e3d835a9f6d1e54fc6bd5c005919ea33639f01df49fd776d4",
+          "code": "GM1.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "initial stroke support",
+      "proposedParent": "Stroke",
+      "proposedFacet": "initial stroke support",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:8757c33fbb3f47999686fc737ad2563facd8fed2108b822d7a2ef8dd6566a711",
+          "code": "GM18.10"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "ischaemic stroke treatment",
+      "proposedParent": "Stroke",
+      "proposedFacet": "ischaemic stroke treatment",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cb4d0b3893e63b807ff82bb9d1ddadd233e790ac69bc35c1b8973e0686a9611a",
+          "code": "GM18.11"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "joint pain assessment",
+      "proposedParent": "Pain assessment",
+      "proposedFacet": "joint pain assessment",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7cc979a4d27d4a30c5740db086c4a6f82c9dbba90fa73a75eaaa1a1b088ec416",
+          "code": "GM7.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "non-drug heart failure care",
+      "proposedParent": "Heart failure",
+      "proposedFacet": "non-drug heart failure care",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d1ff36cd320ba0fcc98b9ff482ac153c42da47797e1355b971e70d3221ed6d87",
+          "code": "GM1.21"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "pelvic diaphragm",
+      "proposedParent": null,
+      "proposedFacet": null,
+      "disposition": "distinct-anatomical-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:8effda3d184c352f02ae3bc77f85a40c3ae13bc8ae8058634764b1ab2c8cf768",
+          "code": "AN48.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "posterior triangle muscles",
+      "proposedParent": "Posterior triangle",
+      "proposedFacet": "posterior triangle muscles",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df",
+          "code": "AN29.5"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke counselling",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke counselling",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:78c4887778f0db0aeb0ddd0bbce2a45b57e9bef6df09e4f9be1711d228d5d83c",
+          "code": "GM18.16"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke examination",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke examination",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:036e7ebce65ac4b604c1b5ee7d736a478068c719888eb8f5548529e265f626ce",
+          "code": "GM18.4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke history",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke history",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cd0cf3810cfac598c68c26ba67ede36d6f6228c51db3b0c30579ea68048515a2",
+          "code": "GM18.3"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke imaging",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke imaging",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b57fbf369e42bdb0d9e03aef736c90681c9d60d1e6224d04709d3424ac267ca5",
+          "code": "GM18.8"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke in young adults",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke in young adults",
+      "disposition": "age-specific-context-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:937bba4b457c9dd463efa5501337beb0d08523e7ad4dd8f4dc52df0d54cd7f8f",
+          "code": "GM18.9"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke mechanisms",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke mechanisms",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:5f21e84be680313d3944d10c91106a6728623fb39581123ea1f870f8428f54af",
+          "code": "GM18.2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "stroke rehabilitation",
+      "proposedParent": "Stroke",
+      "proposedFacet": "stroke rehabilitation",
+      "disposition": "task-facet-proposal",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cfa749e661afdafb5bb1fb24933677ad0fc5b28cb71154fd2d3fd82bb7c5ac44",
+          "code": "GM18.15"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ]
+}

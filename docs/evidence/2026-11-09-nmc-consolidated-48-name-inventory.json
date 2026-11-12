@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "5f45e613ad43cce908b06a830fc366df8b8b80b6",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-names-only-inventory-scope-accounting.json",
+      "blobSha": "e78c8df16d27bf4ee29aa1955baaa5f3d2938516"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-eleven-distinct-scope-names-only-proposals.json",
+      "blobSha": "e89658e659127798a11912e6ed5f1d0b29682c88"
+    }
+  ],
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body",
+    "Fetal age estimation",
+    "Physiological vaginal discharge",
+    "Rheumatic fever",
+    "Attention-deficit/hyperactivity disorder",
+    "Medical cause-of-death certification",
+    "Peptic ulcer",
+    "Population sex ratio",
+    "Acute otitis media",
+    "Cause of death coding",
+    "Essential medicines list",
+    "External ear",
+    "Facial nerve palsy",
+    "Mucosal chronic otitis media",
+    "Otitis media with effusion",
+    "Recurrent pregnancy loss",
+    "Rheumatic heart disease",
+    "Squamosal chronic otitis media",
+    "Vitamin K deficiency bleeding"
+  ],
+  "aliases": [
+    {
+      "name": "Abnormal vaginal discharge",
+      "target": "Vaginal discharge"
+    },
+    {
+      "name": "ADHD",
+      "target": "Attention-deficit/hyperactivity disorder"
+    },
+    {
+      "name": "Cause of death certification",
+      "target": "Medical cause-of-death certification"
+    }
+  ],
+  "contexts": [
+    {
+      "name": "Emergency peripheral IV access",
+      "parentName": "Peripheral IV cannulation"
+    },
+    {
+      "name": "Radiographic age estimation",
+      "parentName": "Age estimation"
+    },
+    {
+      "name": "Acute suppurative otitis media",
+      "parentName": "Acute otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+          "competencyCode": "EN 4.3",
+          "objectiveVersionId": null
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "ocularRelationship": {
+    "type": "narrower-scope",
+    "from": "Corneal foreign body",
+    "to": "Ocular foreign body"
+  },
+  "distinctSourceReferences": 96,
+  "crossCohortReferenceOverlap": [],
+  "mappingAccepted": false
+}

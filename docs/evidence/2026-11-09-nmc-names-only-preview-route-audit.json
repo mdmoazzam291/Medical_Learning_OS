@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "e077685fb0907fba5303e165706bec80bb721bd8",
+  "status": "draft",
+  "findings": {
+    "learnerSubject": "Reads pinned reference catalogue and overlay.",
+    "learnerIntegrated": "Reads published concept discovery.",
+    "adminReview": "Existing gated objective review reads the objective draft pack, with a different schema.",
+    "namesOnlyProjection": "Repository evidence only. No existing consumer or public asset entry was identified."
+  },
+  "verification": {
+    "focusedTestsPassed": 10,
+    "testFiles": [
+      "tests/nmc-foundation-api.test.js",
+      "tests/nmc-foundation-view.test.js"
+    ],
+    "runtimeAndTestInputsMatchDraftHead": true,
+    "productionPreviewVerified": false
+  },
+  "next": "Define a read-only names-only preview within the existing authorized Foundation review surface, preserving category boundaries."
+}
