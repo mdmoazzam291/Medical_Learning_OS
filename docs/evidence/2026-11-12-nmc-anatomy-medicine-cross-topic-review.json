@@ -131,8 +131,40 @@
           }
         }
       ],
-      "disposition": "compound-label-needs-component-review",
-      "mappingAccepted": false
+      "disposition": "retain-compound-source-group-with-two-component-proposals",
+      "mappingAccepted": false,
+      "components": [
+        {
+          "name": "Cholelithiasis",
+          "sourceCodes": [
+            "PA24.8",
+            "GM5.7"
+          ]
+        },
+        {
+          "name": "Cholecystitis",
+          "sourceCodes": [
+            "PA24.8",
+            "GM5.7"
+          ],
+          "scopes": {
+            "PA24.8": "Acute cholecystitis",
+            "GM5.7": "Cholecystitis without an explicit acuity qualifier"
+          }
+        }
+      ],
+      "sourceVerification": [
+        {
+          "code": "PA24.8",
+          "page": 195,
+          "sha256": "e546d9748e2d2f364b7f7500b0180218e0946ebdbacaee3194ac1289aeb5a35a"
+        },
+        {
+          "code": "GM5.7",
+          "page": 290,
+          "sha256": "39039c0131683f95f6512943851c5cfcc11f1c0fb4d70fbdfc2e4b914e642b95"
+        }
+      ]
     },
     {
       "name": "Infective endocarditis",
