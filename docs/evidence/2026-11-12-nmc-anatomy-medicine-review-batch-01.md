@@ -23,3 +23,13 @@ Checked 2026-11-12T10:20:06Z. Parent: [PR #415](https://github.com/mdmoazzam291/
 
 ## Reconciliation
 Parent audit baseline: 2,427 indexed names, 121 preview labels, 81 exact matches, 2,346 not exact-matched; Anatomy 401 + Medicine 396 = 797, other subjects 1,549. This 80-row packet is not a claim that the remaining 2,346 has been reduced by 80.
+
+## 12 November 2026 continuation — verified source scopes and next queue
+
+The working branch now has independent source-scope verification supplements: **80 Medicine = 73 aligned + 7 held**, **76 Anatomy = 73 aligned + 3 held**. The official September 2024 NMC curriculum code tables were reviewed; alignments remain editorial and do not represent canonical, objective, clinical or source-rights approval.
+
+- Medicine supplement: `2026-11-12-nmc-medicine-source-scope-verification-batch-01.json`
+- Anatomy supplement: `2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json`
+- Exact next queue including ten held dispositions and 61 ordered Anatomy source rows AN13.1–AN21.11: `2026-11-12-nmc-anatomy-next-queue-an13-an21.json`
+
+All 156 names and source references are unique and remain in the original 797-name queue. **No canonical mapping was accepted and no learner activation occurred.** The original 2,346 exact-label unmatched count is unchanged. Original PDF source-body hashes were not independently rebuilt, UI tests and staging sign-in remain deferred. See the latest `docs/AI_HANDOFF.md` entry for exact unresolved evidence and next sequence.
