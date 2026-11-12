@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "status": "preliminary-scope-routing",
+  "input": "2026-11-12-nmc-anatomy-medicine-expansion-queue.json",
+  "basis": "Existing index labels and shared source reference IDs. Exact task-scope validation remains pending.",
+  "rows": [
+    {
+      "nameKey": "acute kidney injury course",
+      "name": "Acute kidney injury course",
+      "matches": [
+        {
+          "name": "Acute kidney injury",
+          "codes": [
+            "GM10.3"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "acute kidney injury management",
+      "name": "Acute kidney injury management",
+      "matches": [
+        {
+          "name": "Acute kidney injury",
+          "codes": [
+            "GM10.19"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "acute kidney injury mechanisms",
+      "name": "Acute kidney injury mechanisms",
+      "matches": [
+        {
+          "name": "Acute kidney injury",
+          "codes": [
+            "GM10.2"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "adherence barriers",
+      "name": "Adherence barriers",
+      "matches": [
+        {
+          "name": "Adherence",
+          "codes": [
+            "GM 14.12"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "advanced cardiac investigations",
+      "name": "Advanced cardiac investigations",
+      "matches": [
+        {
+          "name": "Echocardiography",
+          "codes": [
+            "GM 1.17"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "alcohol-related liver disease",
+      "name": "Alcohol-related liver disease",
+      "matches": [
+        {
+          "name": "Alcohol-related cirrhosis",
+          "codes": [
+            "GM 5.4",
+            "PA24.4"
+          ]
+        },
+        {
+          "name": "Alcohol-related hepatic steatosis",
+          "codes": [
+            "GM 5.4",
+            "PA24.4"
+          ]
+        },
+        {
+          "name": "Alcohol-related hepatitis",
+          "codes": [
+            "GM 5.4",
+            "PA24.4"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "applied pelvic anatomy",
+      "name": "Applied pelvic anatomy",
+      "matches": [
+        {
+          "name": "Uterine prolapse",
+          "codes": [
+            "AN48.5"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "applied vertebral anatomy",
+      "name": "Applied vertebral anatomy",
+      "matches": [
+        {
+          "name": "Disc prolapse",
+          "codes": [
+            "AN50.4"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "arterial sampling",
+      "name": "Arterial sampling",
+      "matches": [
+        {
+          "name": "Arterial blood gas sampling",
+          "codes": [
+            "GM3.8"
+          ]
+        }
+      ],
+      "disposition": "scope-verification-needed",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "atherosclerosis epidemiology",
+      "name": "Atherosclerosis epidemiology",
+      "matches": [
+        {
+          "name": "Atherosclerosis",
+          "codes": [
+            "GM 2.1"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "autoimmune mechanisms",
+      "name": "Autoimmune mechanisms",
+      "matches": [
+        {
+          "name": "Autoimmunity",
+          "codes": [
+            "GM7.1"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood culture interpretation",
+      "name": "Blood culture interpretation",
+      "matches": [
+        {
+          "name": "Blood culture",
+          "codes": [
+            "GM 3.13"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "blood pressure assessment",
+      "name": "Blood pressure assessment",
+      "matches": [
+        {
+          "name": "Blood pressure",
+          "codes": [
+            "GM 1.11"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cancer examination skills",
+      "name": "Cancer examination skills",
+      "matches": [
+        {
+          "name": "Cervical cytology sampling",
+          "codes": [
+            "GM13.9"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "coronary investigations",
+      "name": "Coronary investigations",
+      "matches": [
+        {
+          "name": "Echocardiography",
+          "codes": [
+            "GM 2.13"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cost-conscious type 2 diabetes care",
+      "name": "Cost-conscious type 2 diabetes care",
+      "matches": [
+        {
+          "name": "Type 2 diabetes",
+          "codes": [
+            "GM 11.17"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "diaphragm development",
+      "name": "Diaphragm development",
+      "matches": [
+        {
+          "name": "Diaphragm",
+          "codes": [
+            "AN52.5"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "first-trimester assessment",
+      "name": "First-trimester assessment",
+      "matches": [
+        {
+          "name": "Pregnancy recognition",
+          "codes": [
+            "AN79.6"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "gametogenesis",
+      "name": "Gametogenesis",
+      "matches": [
+        {
+          "name": "Spermatogenesis",
+          "codes": [
+            "AN77.3"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "genetic assessment",
+      "name": "Genetic assessment",
+      "matches": [
+        {
+          "name": "FISH",
+          "codes": [
+            "AN75.5"
+          ]
+        },
+        {
+          "name": "PCR",
+          "codes": [
+            "AN75.5"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "geriatrics",
+      "name": "Geriatrics",
+      "matches": [
+        {
+          "name": "Stroke",
+          "codes": [
+            "GM25.9"
+          ]
+        },
+        {
+          "name": "COPD",
+          "codes": [
+            "GM25.10"
+          ]
+        },
+        {
+          "name": "Hearing loss",
+          "codes": [
+            "GM25.17"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "hyperkalaemia ecg",
+      "name": "Hyperkalaemia ECG",
+      "matches": [
+        {
+          "name": "Hyperkalaemia",
+          "codes": [
+            "GM10.14"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "imaging principles",
+      "name": "Imaging principles",
+      "matches": [
+        {
+          "name": "CT imaging",
+          "codes": [
+            "AN54.1"
+          ]
+        },
+        {
+          "name": "MRI imaging",
+          "codes": [
+            "AN54.1"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "infectious diseases",
+      "name": "Infectious Diseases",
+      "matches": [
+        {
+          "name": "Malaria",
+          "codes": [
+            "GM26.30",
+            "GM26.29"
+          ]
+        },
+        {
+          "name": "Infectious diarrhoea",
+          "codes": [
+            "GM26.10"
+          ]
+        },
+        {
+          "name": "Prostatitis",
+          "codes": [
+            "GM26.11"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "lumbar puncture anatomy",
+      "name": "Lumbar puncture anatomy",
+      "matches": [
+        {
+          "name": "Lumbar puncture",
+          "codes": [
+            "AN50.3"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "lumbar puncture indications",
+      "name": "Lumbar puncture indications",
+      "matches": [
+        {
+          "name": "Lumbar puncture",
+          "codes": [
+            "GM17.7"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "lumbar puncture technique",
+      "name": "Lumbar puncture technique",
+      "matches": [
+        {
+          "name": "Lumbar puncture",
+          "codes": [
+            "GM17.8"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "muscle classification",
+      "name": "Muscle classification",
+      "matches": [
+        {
+          "name": "Cardiac muscle",
+          "codes": [
+            "AN3.1",
+            "AN67.2"
+          ]
+        },
+        {
+          "name": "Smooth muscle",
+          "codes": [
+            "AN3.1",
+            "AN67.2"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "name": "Obstructive Airway Diseases",
+      "matches": [
+        {
+          "name": "Oxygen therapy",
+          "codes": [
+            "GM28.19"
+          ]
+        }
+      ],
+      "disposition": "retain-source-group",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "sensory and motor muscle innervation",
+      "name": "Sensory and motor muscle innervation",
+      "matches": [
+        {
+          "name": "Skeletal muscle",
+          "codes": [
+            "AN7.5"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "skeletal muscle and attachments",
+      "name": "Skeletal muscle and attachments",
+      "matches": [
+        {
+          "name": "Skeletal muscle",
+          "codes": [
+            "AN3.2"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "urine ketones",
+      "name": "Urine ketones",
+      "matches": [
+        {
+          "name": "Urinalysis",
+          "codes": [
+            "GM 11.13"
+          ]
+        }
+      ],
+      "disposition": "proposed-task-facet",
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Validate 17 task-facet proposals against source tasks and inspect arterial sampling. Preserve the 14 broader source groups and their other components."
+}
