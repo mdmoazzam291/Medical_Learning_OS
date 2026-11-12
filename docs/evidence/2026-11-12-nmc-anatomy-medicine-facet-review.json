@@ -170,12 +170,23 @@
       "sourceCodes": [
         "GM11.13"
       ],
-      "disposition": "held-analyte-scope",
+      "disposition": "supported-task-facet-proposal",
       "mappingAccepted": false,
-      "reason": "Draft task describes generic urine dipstick use and interpretation. Check the original source row for ketone-specific scope."
+      "sourceVerification": {
+        "pdfPage": 300,
+        "sourceBodySha256": "542664e2cf02f1793c1141a2f43912d1538a589639003a41a5971df6b357c1ab",
+        "scope": "Urinary ketone estimation and interpretation by dipstick"
+      }
     }
   ],
   "sourceGroupsCarriedForward": 14,
   "arterialSamplingProposal": "Arterial blood gas sampling (GM3.8)",
-  "mappingAccepted": false
+  "mappingAccepted": false,
+  "arterialSamplingSourceVerification": {
+    "code": "GM3.8",
+    "pdfPage": 286,
+    "sourceBodySha256": "a9a0d0331eaa649d5ffa1ca495d2cf91459c595fe4447d44cd3c3a63cbb20933",
+    "scope": "Arterial blood gas sample collection on a mannequin"
+  },
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c"
 }
