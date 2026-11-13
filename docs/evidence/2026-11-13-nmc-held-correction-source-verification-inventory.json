@@ -1,13 +1,13 @@
 {
-  "checkedHead": "50fafa4ead5662e7a7e8959fd79dd186aabb0894",
-  "checkedAt": "2026-11-13T04:56:12.124Z",
+  "checkedHead": "83ae8fccc1f0e1db4fe2bf0a907198ea3de3c5d5",
+  "checkedAt": "2026-11-13T05:17:16.019Z",
   "counts": {
     "official-text-layer-evidence-linked": 154
   },
   "heldReferences": 154,
   "correctionProposals": 153,
   "verificationNote": "All 154 held references link to official PDF text-layer evidence. Rendered pages and PDF bytes were not independently verified. Scope amendments are editorial draft changes to apply to the full objectives. GM3.16 remains held with a draft interpretation.",
-  "nextAction": "Review the three flagged local assessment modes and fill missing structured source levels before completing the semantic scope audit.",
+  "nextAction": "Complete semantic scope audit of the 114 replacement drafts against official source findings.",
   "rows": [
     {
       "code": "AN35.2",
@@ -243,7 +243,13 @@
       "draftScopeRevision": "Define and classify pyrexia of unknown origin and cover infectious aetiopathogenesis and diagnostic modalities.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written assessment/ / Viva voce",
+        "sourceCodeLine": 14617
+      }
     },
     {
       "code": "PA26.7",
@@ -260,7 +266,13 @@
       "draftScopeRevision": "Include gross and microscopic pathology alongside cause, mechanism, diagnosis and complications of infective endocarditis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva voce",
+        "sourceCodeLine": 13543
+      }
     },
     {
       "code": "PA26.6",
@@ -277,7 +289,13 @@
       "draftScopeRevision": "Include presentations, gross and microscopic pathology, diagnostic tests and interpretation of cardiac function testing in ACS alongside the wider IHD scope.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva voce",
+        "sourceCodeLine": 13533
+      }
     },
     {
       "code": "PE11.4",
@@ -428,7 +446,13 @@
       "draftScopeRevision": "Include aetiopathogenesis and functional changes of COPD in older adults alongside presentation, identification, acute care, stabilization, management and rehabilitation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/viva voice",
+        "sourceCodeLine": 24361
+      }
     },
     {
       "code": "GM25.5",
@@ -462,7 +486,13 @@
       "draftScopeRevision": "Include dementia aetiopathogenesis and presentation in older adults alongside acute care, stabilization, management and rehabilitation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/viva voice",
+        "sourceCodeLine": 24308
+      }
     },
     {
       "code": "GM25.17",
@@ -479,7 +509,13 @@
       "draftScopeRevision": "Keep hearing loss in older adults explicit, including functional changes and acute care through rehabilitation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/viva voice",
+        "sourceCodeLine": 24444
+      }
     },
     {
       "code": "GM25.13",
@@ -581,7 +617,13 @@
       "draftScopeRevision": "Include mechanisms and functional changes of acute confusional states alongside identification, presentation and care through rehabilitation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/viva voice",
+        "sourceCodeLine": 24278
+      }
     },
     {
       "code": "GM25.7",
@@ -615,7 +657,13 @@
       "draftScopeRevision": "Cover common causes, clinical features and management of both encephalitis and meningitis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / question / / Viva voce",
+        "sourceCodeLine": 24630
+      }
     },
     {
       "code": "AN13.4",
@@ -666,7 +714,13 @@
       "draftScopeRevision": "Include common causes, clinical features and management of skin, muscle and soft tissue infections.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / question, Viva voce",
+        "sourceCodeLine": 24590
+      }
     },
     {
       "code": "GM26.27",
@@ -683,7 +737,13 @@
       "draftScopeRevision": "Include aetiopathogenesis, clinical features and management of aspergillosis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "MCQ/Written / / Viva voce",
+        "sourceCodeLine": 24793
+      }
     },
     {
       "code": "GM26.18",
@@ -700,7 +760,13 @@
       "draftScopeRevision": "Include causes, aetiopathogenesis, clinical features and management of bacterial zoonoses, retaining the four source examples.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question / / Viva voce",
+        "sourceCodeLine": 24703
+      }
     },
     {
       "code": "GM26.26",
@@ -717,7 +783,13 @@
       "draftScopeRevision": "Include aetiopathogenesis, clinical features and management of candidiasis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "MCQ/Written / / Viva voce",
+        "sourceCodeLine": 24783
+      }
     },
     {
       "code": "GM26.22",
@@ -749,7 +821,13 @@
       "draftScopeRevision": "Include aetiopathogenesis, clinical features, complications and management of amoebiasis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question",
+        "sourceCodeLine": 24803
+      }
     },
     {
       "code": "GM26.24",
@@ -828,7 +906,13 @@
       "draftScopeRevision": "Include aetiopathogenesis, clinical features, complications and management of herpes simplex infections.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "MCQ/Written / / Viva voce",
+        "sourceCodeLine": 24733
+      }
     },
     {
       "code": "GM26.11",
@@ -879,7 +963,13 @@
       "draftScopeRevision": "Define and measure obesity in the Indian population context. The row is K/KH.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "review-local-performance-mode-against-source-KH"
+      "assessmentAudit": "source-and-local-mode-distinct",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written / Viva voce",
+        "sourceCodeLine": 22669
+      }
     },
     {
       "code": "GM28.19",
@@ -913,7 +1003,13 @@
       "draftScopeRevision": "Retain societal and workplace effects alongside quality of life, wellbeing, work and family.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question/ / Viva voce",
+        "sourceCodeLine": 25401
+      }
     },
     {
       "code": "GM28.8",
@@ -977,7 +1073,13 @@
       "draftScopeRevision": "Explain beneficence as a guiding principle in patient care.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions/ Viva Voce",
+        "sourceCodeLine": 25477
+      }
     },
     {
       "code": "GM29.24",
@@ -994,7 +1096,13 @@
       "draftScopeRevision": "Identify, discuss and defend medico-legal, sociocultural, professional and ethical issues concerning impaired physicians.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / questions/ Viva Voce",
+        "sourceCodeLine": 25700
+      }
     },
     {
       "code": "GM29.7",
@@ -1011,7 +1119,13 @@
       "draftScopeRevision": "Include medico-legal, sociocultural and ethical issues in research involving study participants.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions/ Viva Voce",
+        "sourceCodeLine": 25517
+      }
     },
     {
       "code": "GM29.4",
@@ -1028,7 +1142,13 @@
       "draftScopeRevision": "Include medico-legal, sociocultural, economic and ethical issues concerning rights, equity and justice in healthcare access.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions/ Viva Voce",
+        "sourceCodeLine": 25487
+      }
     },
     {
       "code": "GM29.19",
@@ -1045,7 +1165,13 @@
       "draftScopeRevision": "Demonstrate forming and functioning in appropriate professional networks.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill assessment / Formative/ Viva voce",
+        "sourceCodeLine": 25650
+      }
     },
     {
       "code": "GM29.6",
@@ -1062,7 +1188,13 @@
       "draftScopeRevision": "Include medico-legal, sociocultural and ethical emergency decisions, including situations involving inability or lack of capacity to consent.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions/ Viva Voce",
+        "sourceCodeLine": 25507
+      }
     },
     {
       "code": "GM27.2",
@@ -1079,7 +1211,13 @@
       "draftScopeRevision": "Include tubercle bacillus microbiology, transmission, pathogenesis, clinical evolution and natural history of pulmonary and extrapulmonary forms.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question / / Viva voce",
+        "sourceCodeLine": 24926
+      }
     },
     {
       "code": "GM27.13",
@@ -1113,7 +1251,13 @@
       "draftScopeRevision": "Elicit, document and present TB history including risks, contacts, cough, fever, anorexia, weight loss, haemoptysis and extrapulmonary symptoms. Assessment includes cases and OSCE.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Short/long case , / Skill assessment -",
+        "sourceCodeLine": 24956
+      }
     },
     {
       "code": "GM27.9",
@@ -1145,7 +1289,13 @@
       "draftScopeRevision": "Include BCG origin, indications, administration technique, efficacy and complications.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Short note/ Viva / Voce",
+        "sourceCodeLine": 25049
+      }
     },
     {
       "code": "GM27.6",
@@ -1179,7 +1329,13 @@
       "draftScopeRevision": "Retain epidemiology and predisposing, microbial and treatment-related factors determining drug resistance.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question / / Viva voce",
+        "sourceCodeLine": 24946
+      }
     },
     {
       "code": "GM1.8",
@@ -1399,7 +1555,13 @@
       "draftScopeRevision": "Include FUO mechanisms, causes and clinical manifestations across the source-listed host contexts.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question, Viva voce",
+        "sourceCodeLine": 20473
+      }
     },
     {
       "code": "GM4.10",
@@ -1480,7 +1642,13 @@
       "draftScopeRevision": "Include CKD effects on quality of life, wellbeing, work and family and incorporate patient preferences into care.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "A/C",
+        "level": "KH",
+        "suggestedAssessmentCell": "observationbyfaculty/OSCE",
+        "sourceCodeLine": 22007
+      }
     },
     {
       "code": "GM11.7",
@@ -1512,7 +1680,13 @@
       "draftScopeRevision": "Perform and interpret urinary ketone dipstick estimation. Preserve source K/KH classification.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "review-local-performance-mode-against-source-KH"
+      "assessmentAudit": "source-and-local-mode-distinct",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written / Viva voce",
+        "sourceCodeLine": 22148
+      }
     },
     {
       "code": "GM11.18",
@@ -1544,7 +1718,13 @@
       "draftScopeRevision": "Demonstrate correct blood glucose self-monitoring technique and counsel the patient. Preserve K/KH.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "review-local-performance-mode-against-source-KH"
+      "assessmentAudit": "source-and-local-mode-distinct",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written / Viva voce",
+        "sourceCodeLine": 22231
+      }
     },
     {
       "code": "GM11.24",
@@ -1676,7 +1856,13 @@
       "draftScopeRevision": "Include indications, use and adverse effects of opioid analgesics for cancer pain.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Short note/Viva / Voice",
+        "sourceCodeLine": 22636
+      }
     },
     {
       "code": "GM14.1",
@@ -1693,7 +1879,13 @@
       "draftScopeRevision": "Define and measure obesity in the Indian population context. Preserve this appearance's distinct reference.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-and-local-mode-distinct",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/Viva voce",
+        "sourceCodeLine": 22669
+      }
     },
     {
       "code": "GM14.6",
@@ -1727,7 +1919,13 @@
       "draftScopeRevision": "Include general examination, abdominal obesity measurement, secondary causes and comorbidities. Perform, document and demonstrate.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skills assessment",
+        "sourceCodeLine": 22749
+      }
     },
     {
       "code": "GM17.1",
@@ -1744,7 +1942,13 @@
       "draftScopeRevision": "Define and classify headache and cover presenting features and precipitating, aggravating and relieving factors. Assessment includes application questions and viva.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based",
+        "sourceCodeLine": 23260
+      }
     },
     {
       "code": "GM17.2",
@@ -1776,7 +1980,13 @@
       "draftScopeRevision": "Generate, document and present the headache differential based on clinical features.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Long case/ Short / case Skill / assessment, OSCE",
+        "sourceCodeLine": 23323
+      }
     },
     {
       "code": "GM17.13",
@@ -1793,7 +2003,13 @@
       "draftScopeRevision": "Include pharmacology, dose, adverse reactions and regimens across bacterial, tuberculous and viral meningitis.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / question/ Viva voice",
+        "sourceCodeLine": 23403
+      }
     },
     {
       "code": "GM18.3",
@@ -1825,7 +2041,13 @@
       "draftScopeRevision": "Elicit, document and present the stroke speech examination and distinguish speech disorders by lesion site.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K / S",
+        "level": "KH / SH",
+        "suggestedAssessmentCell": "Application based question / Long case /Short case, Skills assessment, OSCE",
+        "sourceCodeLine": 23489
+      }
     },
     {
       "code": "GM18.14",
@@ -1842,7 +2064,13 @@
       "draftScopeRevision": "Enumerate surgical indications in haemorrhagic stroke.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "K",
+        "suggestedAssessmentCell": "Written / /Viva voice",
+        "sourceCodeLine": 23582
+      }
     },
     {
       "code": "GM18.15",
@@ -1859,7 +2087,13 @@
       "draftScopeRevision": "Include indications and modalities of multidisciplinary stroke rehabilitation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / question /Viva voice",
+        "sourceCodeLine": 23592
+      }
     },
     {
       "code": "GM19.3",
@@ -1910,7 +2144,13 @@
       "draftScopeRevision": "Define and distinguish seizures, convulsions and epilepsy.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "K",
+        "suggestedAssessmentCell": "Application based question, / Viva voce",
+        "sourceCodeLine": 23731
+      }
     },
     {
       "code": "GM20.2",
@@ -1927,7 +2167,13 @@
       "draftScopeRevision": "Include aetiological classification, mechanisms, clinical evaluation, recognition of types, diagnosis and diagnostic tests for epilepsy.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question, / Viva voce",
+        "sourceCodeLine": 23741
+      }
     },
     {
       "code": "GM21.1",
@@ -1944,7 +2190,13 @@
       "draftScopeRevision": "Cover distinguishing marks of each locally relevant venomous snake.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "K/ / KH",
+        "suggestedAssessmentCell": "MCQ/Written/ Viva / voce",
+        "sourceCodeLine": 23807
+      }
     },
     {
       "code": "GM21.4",
@@ -1961,7 +2213,13 @@
       "draftScopeRevision": "Elicit, document and present circumstances, timing, snake type and symptom evolution.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill assessment / OSCE / Viva voce",
+        "sourceCodeLine": 23837
+      }
     },
     {
       "code": "GM21.5",
@@ -1978,7 +2236,13 @@
       "draftScopeRevision": "Perform, document and present general, local, cardiac and neurological examination.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill assessment / OSCE / Viva voce",
+        "sourceCodeLine": 23847
+      }
     },
     {
       "code": "GM21.7",
@@ -1995,7 +2259,13 @@
       "draftScopeRevision": "Retain indications, pharmacology, dosing and adverse reactions including hypersensitivity.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/MCQ / Viva / voce",
+        "sourceCodeLine": 23867
+      }
     },
     {
       "code": "GM21.9",
@@ -2027,7 +2297,13 @@
       "draftScopeRevision": "Identify and describe the toxidrome from observed findings.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based question, Viva voce",
+        "sourceCodeLine": 23953
+      }
     },
     {
       "code": "GM22.6",
@@ -2074,7 +2350,13 @@
       "draftScopeRevision": "Include causes, clinical and laboratory features, diagnosis and management of hyponatraemia.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva voce",
+        "sourceCodeLine": 24099
+      }
     },
     {
       "code": "GM23.6",
@@ -2091,7 +2373,13 @@
       "draftScopeRevision": "Include causes, clinical and laboratory features, diagnostic approach and management of hypokalaemia.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva voce",
+        "sourceCodeLine": 24109
+      }
     },
     {
       "code": "GM29.1",
@@ -2108,7 +2396,13 @@
       "draftScopeRevision": "Explain non-maleficence as a guiding principle in patient care.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions/ / Viva Voce",
+        "sourceCodeLine": 25444
+      }
     },
     {
       "code": "GM7.8",
@@ -2140,7 +2434,13 @@
       "draftScopeRevision": "Examine all joints, muscles and skin systematically to establish diagnosis and severity.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill assessment",
+        "sourceCodeLine": 21190
+      }
     },
     {
       "code": "GM7.11",
@@ -2173,7 +2473,13 @@
       "draftScopeRevision": "Include indications for plain joint radiographs and interpretation.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill / assessment/OSCE",
+        "sourceCodeLine": 21230
+      }
     },
     {
       "code": "GM7.16",
@@ -2190,7 +2496,13 @@
       "draftScopeRevision": "Select, prescribe and communicate pain relief and preventive therapy for crystalline arthropathies.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K/C",
+        "level": "SH",
+        "suggestedAssessmentCell": "Application / based / questions/Skill / assessment/Written",
+        "sourceCodeLine": 21260
+      }
     },
     {
       "code": "GM7.17",
@@ -2207,7 +2519,13 @@
       "draftScopeRevision": "Select, prescribe and communicate treatment options for systemic rheumatologic conditions.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K/C",
+        "level": "SH",
+        "suggestedAssessmentCell": "Skill / assessment/OSCE",
+        "sourceCodeLine": 21270
+      }
     },
     {
       "code": "GM8.3",
@@ -2224,7 +2542,13 @@
       "draftScopeRevision": "Define and classify hypertension.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/Viva voce",
+        "sourceCodeLine": 21366
+      }
     },
     {
       "code": "GM8.8",
@@ -2256,7 +2580,13 @@
       "draftScopeRevision": "Define, describe and classify anaemia by red cell size and reticulocyte count.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Vivavoce",
+        "sourceCodeLine": 21545
+      }
     },
     {
       "code": "GM9.3",
@@ -2303,7 +2633,13 @@
       "draftScopeRevision": "Cover evolution, natural history and treatment of acute renal failure.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Vivavoce",
+        "sourceCodeLine": 21774
+      }
     },
     {
       "code": "GM10.9",
@@ -2335,7 +2671,13 @@
       "draftScopeRevision": "Include diet, volume, drug-dose adjustment, monitoring and indications for dialysis in acute renal failure.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K/C",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Vivavoce",
+        "sourceCodeLine": 21957
+      }
     },
     {
       "code": "GM10.20",
@@ -2352,7 +2694,13 @@
       "draftScopeRevision": "Include hyperphosphataemia and secondary hyperparathyroidism alongside the other named CKD supportive care domains.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Vivavoce",
+        "sourceCodeLine": 21967
+      }
     },
     {
       "code": "AN81.2",
@@ -2418,7 +2766,13 @@
       "draftScopeRevision": "Include combination antiretroviral therapy principles, drug classes, adverse reactions and interactions. Assessment includes application questions and viva.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based",
+        "sourceCodeLine": 20981
+      }
     },
     {
       "code": "GM6.15",
@@ -2435,7 +2789,13 @@
       "draftScopeRevision": "Cover both pathogenesis and management of IRIS.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based / question, Viva voce",
+        "sourceCodeLine": 21014
+      }
     },
     {
       "code": "GM6.16",
@@ -2467,7 +2827,13 @@
       "draftScopeRevision": "Enumerate indications for endoscopy, colonoscopy and other imaging in upper GI bleeding. Timing is outside the explicit row.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions / / Viva voce/",
+        "sourceCodeLine": 22968
+      }
     },
     {
       "code": "GM15.14",
@@ -2484,7 +2850,13 @@
       "draftScopeRevision": "Include indications, pharmacology and adverse effects of vasopressors in upper GI bleeding.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Application based questions / / Viva voce",
+        "sourceCodeLine": 23008
+      }
     },
     {
       "code": "GM16.10",
@@ -2516,7 +2888,13 @@
       "draftScopeRevision": "Cover attachments, innervation and actions of both pectoral muscles, plus clavipectoral fascia.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva / voce",
+        "sourceCodeLine": 3922
+      }
     },
     {
       "code": "AN10.11",
@@ -2533,7 +2911,13 @@
       "draftScopeRevision": "Describe and demonstrate attachments, action and clinical anatomy of serratus anterior. Innervation is outside the explicit row.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K,S",
+        "level": "SH",
+        "suggestedAssessmentCell": "Written/ Viva / voce/ skill / assessment",
+        "sourceCodeLine": 4070
+      }
     },
     {
       "code": "AN11.3",
@@ -2550,7 +2934,13 @@
       "draftScopeRevision": "Describe anatomical basis of cubital venipuncture. A comparison of venous patterns is outside the explicit row.",
       "revisedDraftStatus": "revised-draft",
       "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
-      "assessmentAudit": "source-level-not-structured-in-evidence"
+      "assessmentAudit": "source-level-recorded",
+      "officialAssessmentEvidence": {
+        "domain": "K",
+        "level": "KH",
+        "suggestedAssessmentCell": "Written/ Viva voce",
+        "sourceCodeLine": 4136
+      }
     }
   ],
   "draftCoverage": {
@@ -2559,8 +2949,16 @@
   },
   "replacementDraftAudit": {
     "linked": 114,
-    "localModeReview": 3,
-    "sourceLevelMetadataGaps": 62,
-    "scopeVerification": "Checked competency and source ID linkage, draft presence and evidence packet correspondence. Full semantic review remains pending."
+    "localModeReview": 0,
+    "sourceLevelMetadataGaps": 0,
+    "scopeVerification": "Checked competency and source ID linkage, draft presence and evidence packet correspondence. Full semantic review remains pending.",
+    "sourceLevelFieldsBackfilled": 62,
+    "sourceAndLocalModeDifferences": [
+      "GM14.1",
+      "GM11.13",
+      "GM11.20",
+      "GM14.1"
+    ],
+    "assessmentDecision": "Retain original local modes as draft metadata. Official levels and suggested assessments describe the source and do not establish local performance certification."
   }
 }
