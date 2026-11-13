@@ -1,3 +1,15 @@
+## NMC transfer follow-up — 2026-11-13T10:43:09.881559+00:00
+
+- Resumed sole-writer cleanup on draft PR #421 from remote `45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0`; parent/base unchanged. Current task is editorial provenance and recovery only; ownership released after remote readback.
+- Linked all **14** Anatomy/Medicine references outside the original queue to exact earlier editorial records and original task packets, with JSON pointers and SHA-256 hashes. These older name/scope proposals do **not** establish fresh official-source verification. All 14 retain that explicit verification gap; the 1,205 linked / 1,402 pending source-review audit counts are unchanged.
+- Reconciled **12** dirty-file appearances in two older worktrees: **8** byte-identical to saved branch, **3** earlier versions superseded by the saved branch, **1** unused staging workflow archived as inactive text. Preserved a reversible text patch for the three older versions and SHA-256 manifest for recovery files. Original worktrees unchanged; nothing installed, deployed or run from recovery.
+- Prepared an exact **60-reference Pathology queue PA1.1–PA16.2**, preserving full original task, source hash, page, mode and packet. This is a queued batch, **not 60 completed reviews**. The other 114 Pathology references remain in the full audit.
+- Evidence: `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json`, `2026-11-13-nmc-local-worktree-transfer-reconciliation.json`, `2026-11-13-nmc-pathology-next-review-batch.json`, and inert files in `docs/evidence/handoff-recovery/`.
+- Verification: exact references/codes, packet/input hashes, 14/14 prior evidence pointers, 60 unique queue references, recovery reconstruction, existing generated audit and whitespace checks passed. No runtime or checker code changed; prior 1,666 passing tests/full repository check remain the latest application validation. No new official PDF/clinical/browser/hosted verification claimed.
+- Next: the 14 references now have provenance links; verify official source scope before marking source review complete, or proceed with the ready Pathology queue while keeping them pending. Preserve original 154 holds, separate source exceptions and canonical acceptance tracks. Nothing merged or published; staging remains deferred.
+
+---
+
 ## NMC Foundation — verified review reconciliation and Claude transfer — 2026-11-13T10:35:41.777181+00:00
 
 **Current checkpoint; supersedes historical next-queue instructions below.** Read [NMC_CLAUDE_HANDOFF.md](NMC_CLAUDE_HANDOFF.md) for exact resume instructions, pending queues, evidence limits and transfer scope.

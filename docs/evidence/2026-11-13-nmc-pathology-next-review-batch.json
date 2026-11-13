@@ -1,0 +1,1812 @@
+{
+  "checkedHead": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+  "status": "queued-not-reviewed",
+  "sourceAudit": "2026-11-13-nmc-provider-handoff-review-audit.json",
+  "sourceAuditSha256": "6bfd5b634544537506fd56e0e9df2a0dd8412014ccf240eb691f5816b186f6d5",
+  "pathologyUnlinkedReferences": 174,
+  "batchReferences": 60,
+  "remainingAfterThisBatchIfReviewed": 114,
+  "instruction": "Search earlier evidence by exact reference first, then verify pinned official source scope and task mode. Preserve holds and do not accept mappings from shared wording.",
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:2225e2349df2331d7f306de3bccd7d8142a3b22a008e3e2fd4c966cb3cbdc7b8",
+      "subjectId": "pathology",
+      "code": "PA1.1",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:2225e2349df2331d7f306de3bccd7d8142a3b22a008e3e2fd4c966cb3cbdc7b8",
+        "subjectId": "pathology",
+        "code": "PA1.1",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          188.94,
+          105.6,
+          223.86
+        ],
+        "sourceBodySha256": "361253b9f823377629e23d77aa9670a3d684e4e28f4a63ff96bddb42e9d194b4",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Role of pathology",
+        "draftLearningTask": "Trace a specimen from clinical question through diagnosis and explain how pathology informs management.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092",
+      "subjectId": "pathology",
+      "code": "PA1.2",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092",
+        "subjectId": "pathology",
+        "code": "PA1.2",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          223.86,
+          105.6,
+          261.66
+        ],
+        "sourceBodySha256": "db79701de36d06f7989ada6aed77674da94dc285bc3363eae307385d06b5b2d0",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Pathology terminology",
+        "draftLearningTask": "Define common pathology terms and identify milestones in the discipline's development.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+      "subjectId": "pathology",
+      "code": "PA1.3",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+        "subjectId": "pathology",
+        "code": "PA1.3",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          261.66,
+          105.6,
+          298.38
+        ],
+        "sourceBodySha256": "917da6d32ba1e785d160d8482aad900d9d5399a1d6054bce1ddec537b799f7e3",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cell cycle and regeneration",
+        "draftLearningTask": "Map cell-cycle checkpoints and explain how stem cells support repair and regenerative medicine.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:9bf18c5e9efb532b6901a97eceb9ad49478cf00422a8c882bdbd4f98c2c5fa57",
+      "subjectId": "pathology",
+      "code": "PA2.1",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:9bf18c5e9efb532b6901a97eceb9ad49478cf00422a8c882bdbd4f98c2c5fa57",
+        "subjectId": "pathology",
+        "code": "PA2.1",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          320.28,
+          105.6,
+          351.66
+        ],
+        "sourceBodySha256": "c48649b8158abf22a73d54285d2bf291f39931b6adb223cacacd535fead50c50",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cell injury mechanisms",
+        "draftLearningTask": "Classify major insults and link mechanisms of injury to cellular and clinical consequences.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+      "subjectId": "pathology",
+      "code": "PA2.2",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+        "subjectId": "pathology",
+        "code": "PA2.2",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          351.66,
+          105.6,
+          387.66
+        ],
+        "sourceBodySha256": "5e00d117f67544717b5ebf651f3fb9da0de04905a0da67003ba90789ba52bb55",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Reversible and irreversible injury",
+        "draftLearningTask": "Compare mechanisms and morphological changes that distinguish reversible injury from irreversible injury.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130",
+      "subjectId": "pathology",
+      "code": "PA2.3",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130",
+        "subjectId": "pathology",
+        "code": "PA2.3",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          387.66,
+          105.6,
+          418.62
+        ],
+        "sourceBodySha256": "1f06218e3f6c492e10d58a22b6ac5a7f22a8bd7e917989f9fc8a496b0f259ca8",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Intracellular accumulations",
+        "draftLearningTask": "Distinguish lipid, protein, carbohydrate and pigment accumulation on representative images.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+      "subjectId": "pathology",
+      "code": "PA2.4",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+        "subjectId": "pathology",
+        "code": "PA2.4",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          418.62,
+          105.6,
+          452.4
+        ],
+        "sourceBodySha256": "1ffe5918c9efb5e08194799e2011cf2e345991cbc821e12854adeef497caadd0",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cell death",
+        "draftLearningTask": "Compare mechanisms and morphology of necrosis, apoptosis and autolysis.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:b36a42b0113bd0e5d591372df3a799bb72edaae87e2d2ece4f981c4190b57f61",
+      "subjectId": "pathology",
+      "code": "PA2.5",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:b36a42b0113bd0e5d591372df3a799bb72edaae87e2d2ece4f981c4190b57f61",
+        "subjectId": "pathology",
+        "code": "PA2.5",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          452.4,
+          105.6,
+          473.28
+        ],
+        "sourceBodySha256": "34a8f937caf622cdbc62262f4c79fca2aa50cf7de3835c7f0f709c8995f4dfb1",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Calcification and gangrene",
+        "draftLearningTask": "Compare dystrophic and metastatic calcification and distinguish representative patterns of gangrene.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+      "subjectId": "pathology",
+      "code": "PA2.6",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+        "subjectId": "pathology",
+        "code": "PA2.6",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          473.28,
+          105.6,
+          508.2
+        ],
+        "sourceBodySha256": "c2ccfb77d385cfbc46457f055d6fe79b0e5d327cda8426d938347ccef5a2ffd4",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cellular adaptation",
+        "draftLearningTask": "Compare atrophy, hypertrophy, hyperplasia and metaplasia, then distinguish dysplasia from carcinoma in situ.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767",
+      "subjectId": "pathology",
+      "code": "PA2.7",
+      "pdfPage": 187,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767",
+        "subjectId": "pathology",
+        "code": "PA2.7",
+        "page": 187,
+        "rowBBox": [
+          51.5,
+          508.2,
+          105.6,
+          523.68
+        ],
+        "sourceBodySha256": "7f46671614df578fc84d2c1ce694a3137c9ad97ebc3c5501360c35c815cca0dc",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cellular ageing",
+        "draftLearningTask": "Explain how cumulative damage, senescence and apoptotic pathways affect cellular ageing.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:41e340599f55497be1f41811c320d077a8166595db415bf80fbe52872c9d6e34",
+      "subjectId": "pathology",
+      "code": "PA2.8",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:41e340599f55497be1f41811c320d077a8166595db415bf80fbe52872c9d6e34",
+        "subjectId": "pathology",
+        "code": "PA2.8",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          124.5,
+          105.5,
+          159.42
+        ],
+        "sourceBodySha256": "07adddfd6c3c45165841e604feaed9f0912bed1a71f6c086e903222e58225a11",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cell injury specimens",
+        "draftLearningTask": "Identify patterns of injury on gross and microscopic specimens and explain their likely consequences.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0",
+      "subjectId": "pathology",
+      "code": "PA3.1",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0",
+        "subjectId": "pathology",
+        "code": "PA3.1",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          176.46,
+          105.5,
+          205.62
+        ],
+        "sourceBodySha256": "db2b93f303fe81fb4bb04be495755927c4586b835e6aacd242f032e2fc7a8537",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Acute and chronic inflammation",
+        "draftLearningTask": "Compare triggers, vascular changes and cellular responses across acute and chronic inflammation.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:6282fdefb2cea9a22a83c241409938c820dc2cebbf58893352fa4d671d81fae0",
+      "subjectId": "pathology",
+      "code": "PA3.2",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:6282fdefb2cea9a22a83c241409938c820dc2cebbf58893352fa4d671d81fae0",
+        "subjectId": "pathology",
+        "code": "PA3.2",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          205.62,
+          105.5,
+          233.34
+        ],
+        "sourceBodySha256": "2d25a8ae27f9c8980cb1604a58a06a31df0089a69eb4599ef7ff10d95020ea81",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Acute inflammatory mediators",
+        "draftLearningTask": "Group major mediators by source and relate them to vascular and cellular effects.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+      "subjectId": "pathology",
+      "code": "PA3.3",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+        "subjectId": "pathology",
+        "code": "PA3.3",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          233.34,
+          105.5,
+          267.54
+        ],
+        "sourceBodySha256": "3cf1948cef2bee9a1953b78b84e7c93c4c80e43eeebd0aff8c1cb6da5eeeb227",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Chronic inflammation",
+        "draftLearningTask": "Compare causes and features of nonspecific and granulomatous inflammation and give representative examples.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:f0961898e9b22e894c04a0e183de899b3ea217db1700d86bc3336b4b66d5e7c2",
+      "subjectId": "pathology",
+      "code": "PA3.4",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:f0961898e9b22e894c04a0e183de899b3ea217db1700d86bc3336b4b66d5e7c2",
+        "subjectId": "pathology",
+        "code": "PA3.4",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          267.54,
+          105.5,
+          302.1
+        ],
+        "sourceBodySha256": "4bfaf588b283e0cee41a1dc84acd25426b25761c8ce755432ce5ce55aac03780",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Inflammation specimens",
+        "draftLearningTask": "Identify acute and chronic inflammation in gross and microscopic examples and justify each classification.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346",
+      "subjectId": "pathology",
+      "code": "PA4.1",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346",
+        "subjectId": "pathology",
+        "code": "PA4.1",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          320.76,
+          105.5,
+          355.68
+        ],
+        "sourceBodySha256": "e1155673a49b661e64b9daa4b227fd54c4b8eaa1cd1c4b90e4713fc3ed132b15",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Repair and wound healing",
+        "draftLearningTask": "Compare regeneration and scarring and sequence healing by primary and secondary intention.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:20e1bdcdfe1457fd9c57ec95e8da4d780d77cd18972c458c243247a26a501312",
+      "subjectId": "pathology",
+      "code": "PA5.1",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:20e1bdcdfe1457fd9c57ec95e8da4d780d77cd18972c458c243247a26a501312",
+        "subjectId": "pathology",
+        "code": "PA5.1",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          378.72,
+          105.5,
+          413.28
+        ],
+        "sourceBodySha256": "e3f0e352a4048420e5ef9041babd834efb74e51e9e9c9af1be0bc25d8a13ce6f",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Oedema",
+        "draftLearningTask": "Classify oedema by mechanism and relate hydrostatic, oncotic, permeability and lymphatic changes to representative presentations.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269",
+      "subjectId": "pathology",
+      "code": "PA5.2",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269",
+        "subjectId": "pathology",
+        "code": "PA5.2",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          413.28,
+          105.5,
+          433.44
+        ],
+        "sourceBodySha256": "5fff0e11117dfe60174cbb2eda0e6216d5910e0a58f0a06bcaa8a4917e8a6a12",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Hyperemia, congestion and haemorrhage",
+        "draftLearningTask": "Distinguish active hyperaemia from passive congestion and classify representative haemorrhage patterns.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:ec1e54288562c3cef6fe15d294c3f1a77e85daf08a8aa3a5c2449854d08c8896",
+      "subjectId": "pathology",
+      "code": "PA5.3",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:ec1e54288562c3cef6fe15d294c3f1a77e85daf08a8aa3a5c2449854d08c8896",
+        "subjectId": "pathology",
+        "code": "PA5.3",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          433.44,
+          105.5,
+          456.84
+        ],
+        "sourceBodySha256": "2f5442d4ec1a9048925931cce9bfefd79a1677e943fa2d86c8bfe7831d15ca4e",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Shock",
+        "draftLearningTask": "Compare major causes of circulatory failure and explain the progression from compensation to irreversible injury.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+      "subjectId": "pathology",
+      "code": "PA5.4",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+        "subjectId": "pathology",
+        "code": "PA5.4",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          456.84,
+          105.5,
+          492.06
+        ],
+        "sourceBodySha256": "bc265f23be8a958db1603dd84cbba52d18f32f8efca7c4ae26f2e3f279aa0141",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Haemostasis and thrombosis",
+        "draftLearningTask": "Trace normal haemostasis and use Virchow's triad to explain thrombus formation and outcomes.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+      "subjectId": "pathology",
+      "code": "PA5.5",
+      "pdfPage": 188,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+        "subjectId": "pathology",
+        "code": "PA5.5",
+        "page": 188,
+        "rowBBox": [
+          51.4,
+          492.06,
+          105.5,
+          525.18
+        ],
+        "sourceBodySha256": "d8a3cd0cf2fb2bb704f356e3036cdb86332e7982b4e498feae4ec679e5e4be42",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Ischaemia, infarction and embolism",
+        "draftLearningTask": "Distinguish the three processes and relate causes and embolus type to distribution, morphology and clinical effects.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24",
+      "subjectId": "pathology",
+      "code": "PA5.6",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "a4bb9ef68a462e8ede58a9d029e911839f6861fe1da0c01936425d3f64ab880f",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24",
+        "subjectId": "pathology",
+        "code": "PA5.6",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          124.5,
+          105.6,
+          157.26
+        ],
+        "sourceBodySha256": "7a6c1cef3fd73de17fed8b5f833169a9ba2e5766bed9ecd094aba48dedb6dd73",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Infarct specimens",
+        "draftLearningTask": "Identify gross and microscopic features of representative infarcts and explain how tissue and timing affect appearance.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b",
+      "subjectId": "pathology",
+      "code": "PA6.1",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b",
+        "subjectId": "pathology",
+        "code": "PA6.1",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          179.58,
+          105.6,
+          223.44
+        ],
+        "sourceBodySha256": "783a7ad28bbf3a598bfbffda4b047886802f0afd91f990ca783b229b709fbe01",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Neoplasia",
+        "draftLearningTask": "Classify neoplasms by lineage and compare benign and malignant tumours by gross and microscopic features, behaviour and routes of spread.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:7ef1323578926700dea01d814057dddaa0c0283e548e93ece55181aba578d8ef",
+      "subjectId": "pathology",
+      "code": "PA6.2",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:7ef1323578926700dea01d814057dddaa0c0283e548e93ece55181aba578d8ef",
+        "subjectId": "pathology",
+        "code": "PA6.2",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          223.44,
+          105.6,
+          258.78
+        ],
+        "sourceBodySha256": "2802a27160104997a773f5996121008f32d6ca54edad7bf5d0b21c48849b433a",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Molecular basis of cancer",
+        "draftLearningTask": "Use breast and colorectal examples to explain how driver mutations, tumour suppressor loss and epigenetic changes contribute to progression.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249",
+      "subjectId": "pathology",
+      "code": "PA6.3",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249",
+        "subjectId": "pathology",
+        "code": "PA6.3",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          258.78,
+          105.6,
+          290.04
+        ],
+        "sourceBodySha256": "1b535244d2cfa1c5d0da40070783cf308541ddfffe077f6cf40d3c99a67cad5d",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Carcinogenesis",
+        "draftLearningTask": "Classify chemical, physical and biological carcinogens and compare mechanisms by which they initiate or promote cancer.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:c74a502cc8767213806731341aaf133ab941a6c28ba9457e0f4bd22ff2fbbda6",
+      "subjectId": "pathology",
+      "code": "PA6.4",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:c74a502cc8767213806731341aaf133ab941a6c28ba9457e0f4bd22ff2fbbda6",
+        "subjectId": "pathology",
+        "code": "PA6.4",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          290.04,
+          105.6,
+          323.94
+        ],
+        "sourceBodySha256": "45dacdf6d10d4b3553bfd7c93757c770c466724b943eb16b0eeabfb279c68e39",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Tumour effects on the host",
+        "draftLearningTask": "Distinguish local and metastatic effects from systemic effects and explain representative paraneoplastic syndromes.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+      "subjectId": "pathology",
+      "code": "PA6.5",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+        "subjectId": "pathology",
+        "code": "PA6.5",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          323.94,
+          105.6,
+          352.02
+        ],
+        "sourceBodySha256": "27c3a6669da3d24696bb911f66d811b62f4c26cbdc7cfdc5d9a7a20031207a85",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cancer diagnostics",
+        "draftLearningTask": "Compare tissue diagnosis, molecular profiling and tumour markers by purpose and limitations, and discuss an emerging diagnostic approach.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a872699c4d1d6fb11638fa4e356bb21614341f2cc6e2fc919445def7528fbea",
+      "subjectId": "pathology",
+      "code": "PA6.6",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:0a872699c4d1d6fb11638fa4e356bb21614341f2cc6e2fc919445def7528fbea",
+        "subjectId": "pathology",
+        "code": "PA6.6",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          352.02,
+          105.6,
+          380.1
+        ],
+        "sourceBodySha256": "18599c8a7b6630d2831bb825e0c52a6dd7b7f63538d33248b86e5568c266e811",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cancer immunity",
+        "draftLearningTask": "Explain immune recognition and escape and relate these mechanisms to the rationale for representative immunotherapies.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:735c5b8c572fb3a550dadfff61cff20de047001b281d54f78388fadb7e053cf1",
+      "subjectId": "pathology",
+      "code": "PA6.7",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:735c5b8c572fb3a550dadfff61cff20de047001b281d54f78388fadb7e053cf1",
+        "subjectId": "pathology",
+        "code": "PA6.7",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          380.1,
+          105.6,
+          409.62
+        ],
+        "sourceBodySha256": "1340a4985cacf3bc139b10a5cc2a56a97b22864bfd6719495716f66ef8c590cc",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Neoplasm specimens",
+        "draftLearningTask": "Identify gross and microscopic features in representative benign and malignant specimens and justify each classification.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:777ec4e39dc694be2ff1bf7f07212dc0904d3f72e4c2e71c2a56801c3021c548",
+      "subjectId": "pathology",
+      "code": "PA7.1",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:777ec4e39dc694be2ff1bf7f07212dc0904d3f72e4c2e71c2a56801c3021c548",
+        "subjectId": "pathology",
+        "code": "PA7.1",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          427.62,
+          105.6,
+          463.26
+        ],
+        "sourceBodySha256": "197da87871fa989b4c6e5751268157d00e47e59889eaeb6d8d0b32c196165cf8",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Diagnostic cytology",
+        "draftLearningTask": "Compare sample collection, preparation and staining methods and explain when cytology can inform care or requires tissue confirmation.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+      "subjectId": "pathology",
+      "code": "PA8.1",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+        "subjectId": "pathology",
+        "code": "PA8.1",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          485.94,
+          105.6,
+          508.98
+        ],
+        "sourceBodySha256": "be0a1d85a355df69a965d8ee54b9a836f5dce8975b07b45a8969fe4fcff9523c",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Immunity",
+        "draftLearningTask": "Compare innate and adaptive responses and trace antigen recognition, activation and effector mechanisms.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a",
+      "subjectId": "pathology",
+      "code": "PA8.2",
+      "pdfPage": 189,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a",
+        "subjectId": "pathology",
+        "code": "PA8.2",
+        "page": 189,
+        "rowBBox": [
+          51.5,
+          508.98,
+          105.6,
+          531.66
+        ],
+        "sourceBodySha256": "8d6a8e03e9a2f034cdf6f98f5faebf731cc21365d4800fe9c15f9235354acf35",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Hypersensitivity",
+        "draftLearningTask": "Classify reactions by mechanism and link each major type to representative tissue injury.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9",
+      "subjectId": "pathology",
+      "code": "PA8.3",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9",
+        "subjectId": "pathology",
+        "code": "PA8.3",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          124.5,
+          105.6,
+          152.64
+        ],
+        "sourceBodySha256": "1b31eeee89aeb32cacfaecf51abcee131a28ffb09a1685b25145656d74e3d4b4",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "HLA and transplantation",
+        "draftLearningTask": "Explain HLA matching and compare the immune mechanisms of hyperacute, acute and chronic rejection.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+      "subjectId": "pathology",
+      "code": "PA8.4",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+        "subjectId": "pathology",
+        "code": "PA8.4",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          152.64,
+          105.6,
+          181.08
+        ],
+        "sourceBodySha256": "27e85fb88637cd90b50643ce5e99dba6bf51c53bc38cfa3978ac8d9be7340429",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Autoimmunity",
+        "draftLearningTask": "Explain loss of self-tolerance and compare mechanisms in representative organ-specific and systemic autoimmune diseases.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+      "subjectId": "pathology",
+      "code": "PA8.5",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+        "subjectId": "pathology",
+        "code": "PA8.5",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          181.08,
+          105.6,
+          202.98
+        ],
+        "sourceBodySha256": "6a05cc19d762eb19e725af8b2594654cd629ac6db09178f3e7c4d03fc60a9e19",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Systemic lupus erythematosus",
+        "draftLearningTask": "Trace loss of tolerance, autoantibody formation and immune-complex injury and relate them to representative organ lesions.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41",
+      "subjectId": "pathology",
+      "code": "PA8.6",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41",
+        "subjectId": "pathology",
+        "code": "PA8.6",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          202.98,
+          105.6,
+          220.98
+        ],
+        "sourceBodySha256": "1f6cf64b211acf235b5712539682381f37aa0430743b8755a09873c7aafb4e02",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "HIV and AIDS pathology",
+        "draftLearningTask": "Trace target-cell infection and immune depletion and relate them to characteristic tissue changes and complications.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+      "subjectId": "pathology",
+      "code": "PA9.1",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+        "subjectId": "pathology",
+        "code": "PA9.1",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          241.86,
+          105.6,
+          261.66
+        ],
+        "sourceBodySha256": "0a50d167235107422529b8d368de4bde2730533dc8d31d3fb5f2f7f3f9db62df",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Amyloidosis",
+        "draftLearningTask": "Explain fibril formation and compare the causes, distribution and consequences of major forms of amyloid deposition.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+      "subjectId": "pathology",
+      "code": "PA9.2",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+        "subjectId": "pathology",
+        "code": "PA9.2",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          261.66,
+          105.6,
+          293.64
+        ],
+        "sourceBodySha256": "f8f9602083bdbead8ff0c1e742ba670ecafbf2aaa5204f897125e2f8528f84a0",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Amyloid specimens",
+        "draftLearningTask": "Identify representative gross and microscopic deposits, interpret Congo red findings and connect the affected organs to clinical consequences.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+      "subjectId": "pathology",
+      "code": "PA10.1",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+        "subjectId": "pathology",
+        "code": "PA10.1",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          315.6,
+          105.6,
+          334.32
+        ],
+        "sourceBodySha256": "a5d4ad1b164973833c90405659e6bccea4b9ece6d12853eea74ea960e1c9baaf",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Malaria pathology",
+        "draftLearningTask": "Relate erythrocyte infection, haemolysis and sequestration to representative organ pathology.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:65b46a3354f75c2b3d4f2b03b3631754ff81f996509eff7946ddde027c3a4eb4",
+      "subjectId": "pathology",
+      "code": "PA10.2",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:65b46a3354f75c2b3d4f2b03b3631754ff81f996509eff7946ddde027c3a4eb4",
+        "subjectId": "pathology",
+        "code": "PA10.2",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          334.32,
+          105.6,
+          354.12
+        ],
+        "sourceBodySha256": "b963f96f2cd2c35030a0cffcda8be1252d8e3e3bf5d95931c095a3ab02008b26",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Cysticercosis pathology",
+        "draftLearningTask": "Trace tissue larval deposition and explain how cyst location and degeneration influence inflammation and injury.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:09ec8deb3f35dc03a903356d4443c40d8728dbd1fe3066ff909438430d4c3003",
+      "subjectId": "pathology",
+      "code": "PA10.3",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:09ec8deb3f35dc03a903356d4443c40d8728dbd1fe3066ff909438430d4c3003",
+        "subjectId": "pathology",
+        "code": "PA10.3",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          354.12,
+          105.6,
+          372.48
+        ],
+        "sourceBodySha256": "cbf6a53990c041a22475dc91f1aceb610fcee552c1e288a604edc51efde60c20",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Leprosy pathology",
+        "draftLearningTask": "Compare tissue and nerve changes across the leprosy spectrum and relate them to host immunity and organism burden.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d",
+      "subjectId": "pathology",
+      "code": "PA10.4",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d",
+        "subjectId": "pathology",
+        "code": "PA10.4",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          372.48,
+          105.6,
+          410.64
+        ],
+        "sourceBodySha256": "4e102e6eb5234a8504821e24a1a50d9ff5e88b41863044c88271c7deeb031219",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Infectious tissue injury",
+        "draftLearningTask": "Compare representative bacterial, viral, protozoal and helminthic diseases by route of injury, host response and tissue morphology.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:be245daaa8dd97f4563a29877feb57195ab4f85258e6cb46838679c1de3f13f9",
+      "subjectId": "pathology",
+      "code": "PA10.5",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:be245daaa8dd97f4563a29877feb57195ab4f85258e6cb46838679c1de3f13f9",
+        "subjectId": "pathology",
+        "code": "PA10.5",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          410.64,
+          105.6,
+          439.74
+        ],
+        "sourceBodySha256": "a3f1dae23d46d561c281e44b8632cab09b0f15d2465acf530bcda2b91cff653c",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "COVID-19 pathology",
+        "draftLearningTask": "Relate viral and host responses to representative pulmonary and systemic lesions and interpret characteristic laboratory findings in context.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:219e030ef29a1a797e3a2e06941d3323c2563478e45601b557c4a9d0a2283e8d",
+      "subjectId": "pathology",
+      "code": "PA11.1",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:219e030ef29a1a797e3a2e06941d3323c2563478e45601b557c4a9d0a2283e8d",
+        "subjectId": "pathology",
+        "code": "PA11.1",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          461.7,
+          105.6,
+          493.02
+        ],
+        "sourceBodySha256": "266cdafad7b1a859757cf68119458a1bc8b989368d05f9eb040703f441a36dec",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Paediatric genetic pathology",
+        "draftLearningTask": "Compare representative chromosomal abnormalities and pathogenic variants by mechanism and phenotype and select suitable diagnostic modalities.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd8e45caed1bf9afc5ac506b20c53698ad3540f5f14673630d4a1be1c1d4d656",
+      "subjectId": "pathology",
+      "code": "PA11.2",
+      "pdfPage": 190,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:cd8e45caed1bf9afc5ac506b20c53698ad3540f5f14673630d4a1be1c1d4d656",
+        "subjectId": "pathology",
+        "code": "PA11.2",
+        "page": 190,
+        "rowBBox": [
+          51.5,
+          493.02,
+          105.6,
+          532.62
+        ],
+        "sourceBodySha256": "b7285e82cbc5acdd6cc07f3b49fd3355d7bacf6245a889a191b7bcdb043c66d5",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Paediatric tumours",
+        "draftLearningTask": "Compare representative childhood tumours and tumour-like lesions by developmental origin, typical age, site and morphology.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:ede99371c6978a3e345504eb132ae5d99551fa60acf200247fde7f0cc7a958d8",
+      "subjectId": "pathology",
+      "code": "PA11.3",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:ede99371c6978a3e345504eb132ae5d99551fa60acf200247fde7f0cc7a958d8",
+        "subjectId": "pathology",
+        "code": "PA11.3",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          124.5,
+          105.6,
+          152.28
+        ],
+        "sourceBodySha256": "abd4e3c803afc8c1221099473adeb06b49a6bea34b5eb65d1274a7505a2c9811",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Paediatric storage disorders",
+        "draftLearningTask": "Link representative enzyme defects to accumulated substrates and explain their organ-specific consequences.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:aef81bfd830c4d75b65fd228ca3a7959df5776e65aef63912b96dce134fae436",
+      "subjectId": "pathology",
+      "code": "PA12.1",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:aef81bfd830c4d75b65fd228ca3a7959df5776e65aef63912b96dce134fae436",
+        "subjectId": "pathology",
+        "code": "PA12.1",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          174.54,
+          105.6,
+          206.94
+        ],
+        "sourceBodySha256": "00ed1cc652de0b31ff48d5005c2f606a9c15fca8d1585695531394fe754b3fa4",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Environmental injury",
+        "draftLearningTask": "Relate air pollution, tobacco, alcohol and noise exposure to distinct mechanisms of tissue injury and representative disorders.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:bbc37750b8fa7317f9794f1199367ddb06b3dfb68dbd1a238a121b153fc4edd5",
+      "subjectId": "pathology",
+      "code": "PA12.2",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:bbc37750b8fa7317f9794f1199367ddb06b3dfb68dbd1a238a121b153fc4edd5",
+        "subjectId": "pathology",
+        "code": "PA12.2",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          206.94,
+          105.6,
+          239.7
+        ],
+        "sourceBodySha256": "e10d2bd6108a1a0e36ac9f14b26153c769afa9a32fdb99827326e22a47436d33",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Nutritional pathology",
+        "draftLearningTask": "Compare tissue and metabolic responses to protein–calorie malnutrition, vitamin deficiencies and starvation.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdbc139d546ab0671125a563dd82ed5cf500e7560bc5dbe0eb742496632c849a",
+      "subjectId": "pathology",
+      "code": "PA12.3",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "048a7ba7bfce029dc1e7dbd811303246d9957f32d4d681fa74c82631975904e0",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:bdbc139d546ab0671125a563dd82ed5cf500e7560bc5dbe0eb742496632c849a",
+        "subjectId": "pathology",
+        "code": "PA12.3",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          239.7,
+          105.6,
+          267.48
+        ],
+        "sourceBodySha256": "e3e234e49a17aceae9b1a0adf76949d07ca0b970d30e235867872c1a40a83af5",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Obesity pathology",
+        "draftLearningTask": "Explain how adipose dysfunction and insulin resistance contribute to metabolic syndrome and downstream organ injury.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd",
+      "subjectId": "pathology",
+      "code": "PA13.1",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd",
+        "subjectId": "pathology",
+        "code": "PA13.1",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          286.5,
+          105.6,
+          319.26
+        ],
+        "sourceBodySha256": "baa4e9e49f79810daeb1845bdfec23fd34502b5e6b71b6e89328112bf8ea7ec5",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Haematopoiesis",
+        "draftLearningTask": "Compare marrow and extramedullary blood formation and explain anticoagulant choice in haematology.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:8c2000177df50440935a89f81147139002eac13848bf91c8191a219b40121b9e",
+      "subjectId": "pathology",
+      "code": "PA13.2",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:8c2000177df50440935a89f81147139002eac13848bf91c8191a219b40121b9e",
+        "subjectId": "pathology",
+        "code": "PA13.2",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          319.26,
+          105.6,
+          348.78
+        ],
+        "sourceBodySha256": "ce85e108dcf617fab4d3c369db6968008e6123025063796d37a8579c10649134",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Anaemia evaluation",
+        "draftLearningTask": "Classify anaemia by indices and mechanism and construct an initial investigation sequence.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:95f0dd5e33f82fd00ec8d1e14c1acaaf19b3bc1a10119fa47d9de730b6f74677",
+      "subjectId": "pathology",
+      "code": "PA13.3",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:95f0dd5e33f82fd00ec8d1e14c1acaaf19b3bc1a10119fa47d9de730b6f74677",
+        "subjectId": "pathology",
+        "code": "PA13.3",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          348.78,
+          105.6,
+          378.72
+        ],
+        "sourceBodySha256": "b0f7d485786e9e91ca118590cf4e5f8049bf58add83c29df7d39082b077030eb",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Haematology specimen handling",
+        "draftLearningTask": "Demonstrate collection workflow and identify appropriate tubes, additives and instruments.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+      "subjectId": "pathology",
+      "code": "PA13.4",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+        "subjectId": "pathology",
+        "code": "PA13.4",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          378.72,
+          105.6,
+          408.18
+        ],
+        "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Basic haematology assays",
+        "draftLearningTask": "Measure haemoglobin and red and white cell counts and perform a differential using approved samples.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+      "subjectId": "pathology",
+      "code": "PA14.1",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+        "subjectId": "pathology",
+        "code": "PA14.1",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          426.18,
+          105.6,
+          455.7
+        ],
+        "sourceBodySha256": "dd5a91ac4c28b75973426de772ae94e3ea9d171e24489b3c7a78ac3aea41dc44",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Microcytic anaemia",
+        "draftLearningTask": "Trace iron metabolism and distinguish common microcytic causes using indices and iron studies.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:bd3e0147e2a354e6eeb9312f6281af6adcb2ec4628a07952e429296400a223b9",
+      "subjectId": "pathology",
+      "code": "PA14.2",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:bd3e0147e2a354e6eeb9312f6281af6adcb2ec4628a07952e429296400a223b9",
+        "subjectId": "pathology",
+        "code": "PA14.2",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          455.7,
+          105.6,
+          474.78
+        ],
+        "sourceBodySha256": "e74e20cd4a1481b1239962db876e3b2e6fceb35754592ffb8842b21bd46aafba",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Microcytic smear",
+        "draftLearningTask": "Identify microcytosis and hypochromia on a smear and describe accompanying findings.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796",
+      "subjectId": "pathology",
+      "code": "PA15.1",
+      "pdfPage": 191,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796",
+        "subjectId": "pathology",
+        "code": "PA15.1",
+        "page": 191,
+        "rowBBox": [
+          51.5,
+          494.88,
+          105.6,
+          536.34
+        ],
+        "sourceBodySha256": "d5104cd6c9c5ff059c159d07fd82fe2d77f87149bf55d1155d5ecfda0839e801",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Vitamin B12 and macrocytosis",
+        "draftLearningTask": "Explain B12 handling and deficiency and select tests for macrocytic anaemia.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:1410fca4088b10a3809fe86cfdb8ec87baf7f6a9c7e0dddce54b04afa715fa3b",
+      "subjectId": "pathology",
+      "code": "PA15.2",
+      "pdfPage": 192,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:1410fca4088b10a3809fe86cfdb8ec87baf7f6a9c7e0dddce54b04afa715fa3b",
+        "subjectId": "pathology",
+        "code": "PA15.2",
+        "page": 192,
+        "rowBBox": [
+          51.5,
+          124.5,
+          105.6,
+          165.54
+        ],
+        "sourceBodySha256": "e92aaf86a73510072307b854e233752e184d2231076dc6b114e16f36165aa0f7",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Megaloblastic anaemia",
+        "draftLearningTask": "Distinguish megaloblastic from other macrocytic patterns using causes and laboratory features.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:ef2fd78563d7d5c8e89253a2599905bd1d727ebc9dc5f983921d1cba7a2b353d",
+      "subjectId": "pathology",
+      "code": "PA15.3",
+      "pdfPage": 192,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:ef2fd78563d7d5c8e89253a2599905bd1d727ebc9dc5f983921d1cba7a2b353d",
+        "subjectId": "pathology",
+        "code": "PA15.3",
+        "page": 192,
+        "rowBBox": [
+          51.5,
+          165.54,
+          105.6,
+          195.06
+        ],
+        "sourceBodySha256": "493b0bd2c58623c3811011b15446a1f964ebd3f82f1bb3ffe413c8cfe90ab859",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Macrocytic smear",
+        "draftLearningTask": "Identify macrocytic patterns and report macro-ovalocytes or hypersegmented neutrophils when present.",
+        "mode": "performance-and-knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:4c0cc3c838c87ae238f4c3a6c40b023b6dbb2f9c524921ce34024e4ad5aba9f7",
+      "subjectId": "pathology",
+      "code": "PA16.1",
+      "pdfPage": 192,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:4c0cc3c838c87ae238f4c3a6c40b023b6dbb2f9c524921ce34024e4ad5aba9f7",
+        "subjectId": "pathology",
+        "code": "PA16.1",
+        "page": 192,
+        "rowBBox": [
+          51.5,
+          217.02,
+          105.6,
+          246.48
+        ],
+        "sourceBodySha256": "4265e4b2ee664bd5d5bbda12c13fc6d3e05d797f5da3a06fbafef085f8dea001",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Haemolysis",
+        "draftLearningTask": "Classify haemolysis and explain how its site and mechanism affect findings and indices.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    },
+    {
+      "referenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+      "subjectId": "pathology",
+      "code": "PA16.2",
+      "pdfPage": 192,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "status": "needs-review-evidence-reconciliation",
+      "sourcePacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
+      "originalTask": {
+        "referenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+        "subjectId": "pathology",
+        "code": "PA16.2",
+        "page": 192,
+        "rowBBox": [
+          51.5,
+          246.48,
+          105.6,
+          276.06
+        ],
+        "sourceBodySha256": "507718b2da85a647df7e3600fbfe074c80d377a9b75b9c361a3a192fba6d2383",
+        "state": "needs-objectives",
+        "sourceResolutionReasons": [],
+        "proposedObjectiveVersionIds": [],
+        "reviewLabel": "Sickle cell disease and thalassaemia",
+        "draftLearningTask": "Compare pathogenesis, indices, smear findings and distinguishing clinical features.",
+        "mode": "knowledge"
+      },
+      "mappingAccepted": false
+    }
+  ]
+}
