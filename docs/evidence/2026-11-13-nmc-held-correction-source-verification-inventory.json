@@ -1,15 +1,14 @@
 {
-  "checkedHead": "81bbd68971cfd57cc42a614d9428e726a7d60258",
-  "checkedAt": "2026-11-13T04:09:44.428Z",
+  "checkedHead": "25b90544b2d96afa6922481a27f785e1c82c4c05",
+  "checkedAt": "2026-11-13T04:16:02.899Z",
   "counts": {
-    "direct-source-check-queued": 28,
-    "editorial-review-recorded": 114,
-    "official-text-layer-evidence-linked": 12
+    "official-text-layer-evidence-linked": 40,
+    "editorial-review-recorded": 114
   },
   "heldReferences": 154,
   "correctionProposals": 153,
-  "verificationNote": "Queued entries are earlier wording refinements with no direct check linked by this reconciliation. GM3.16 has a source clarification and remains held.",
-  "nextAction": "Check queued refinements against official NMC text by competency code and source reference ID.",
+  "verificationNote": "Official PDF text-layer evidence is linked for 40 references. PDF bytes and rendered pages were not independently checked. GM3.16 remains held with a draft interpretation.",
+  "nextAction": "Reconcile the source findings into revised draft objectives, retaining the unresolved GM7.11 test labels and existing hold states.",
   "rows": [
     {
       "code": "AN35.2",
@@ -19,9 +18,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "needs-explicit-basic-morphology",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "AN35.6",
@@ -867,9 +867,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM1.18",
@@ -879,9 +880,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM1.22",
@@ -891,9 +893,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM1.26",
@@ -903,9 +906,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM2.6",
@@ -915,9 +919,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM2.7",
@@ -939,9 +944,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM2.19",
@@ -963,9 +969,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM3.6",
@@ -975,9 +982,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM3.7",
@@ -1036,9 +1044,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM4.11",
@@ -1060,9 +1069,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
     },
     {
       "code": "GM4.14",
@@ -1096,9 +1106,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM11.13",
@@ -1120,9 +1131,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM11.20",
@@ -1180,9 +1192,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM13.7",
@@ -1216,9 +1229,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM13.17",
@@ -1288,9 +1302,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM17.5",
@@ -1324,9 +1339,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM18.6",
@@ -1372,9 +1388,14 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "sourceContinuation": {
+        "lines": "23635–23641, 23657–23659",
+        "finding": "The row lists short case and OSCE skill assessment. The following page completes the objective with ‘disorder’."
+      }
     },
     {
       "code": "GM19.5",
@@ -1384,9 +1405,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM20.1",
@@ -1468,9 +1490,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM22.5",
@@ -1492,9 +1515,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM22.9",
@@ -1504,9 +1528,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM23.5",
@@ -1552,9 +1577,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM7.9",
@@ -1576,9 +1602,11 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "openSourceIssue": "The labels RA and DNA are preserved pending clarification."
     },
     {
       "code": "GM7.13",
@@ -1636,9 +1664,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM9.1",
@@ -1660,9 +1689,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM9.11",
@@ -1672,9 +1702,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM10.3",
@@ -1696,9 +1727,10 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "wording-refinement-proposed",
-      "sourceVerification": "direct-source-check-queued",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
     },
     {
       "code": "GM10.19",
